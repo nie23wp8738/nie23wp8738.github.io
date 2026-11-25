@@ -1,27 +1,177 @@
 {
+  "amc8-1985-q1": {
+    "summary": "Evaluate $\\dfrac{3\\cdot5}{9\\cdot11}\\cdot\\dfrac{7\\cdot9\\cdot11}{3\\cdot5\\cdot7}$. Options: A $1$, B $0$, C $49$, D $1/49$, E $50$.",
+    "summaryZh": "计算 $\\dfrac{3\\cdot5}{9\\cdot11}\\cdot\\dfrac{7\\cdot9\\cdot11}{3\\cdot5\\cdot7}$。选项为 A $1$，B $0$，C $49$，D $1/49$，E $50$。",
+    "answer": "A. $1$.", "answerZh": "A．$1$。",
+    "methods": [{"title":"Cancel common factors","titleZh":"约去公因数","topics":[{"en":"Fractions","zh":"分数运算"}],"steps":["Combine the factors into one fraction. Its numerator and denominator both contain exactly the factors $3,5,7,9,11$.","Cancel every matching factor; the quotient is $1$."],"stepsZh":["把两个分数合并，分子和分母都恰好含有因数 $3,5,7,9,11$。","逐一约去相同因数，结果为 $1$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/1"
+  },
   "amc8-1985-q2": {
-    "summary": "Evaluate $90 + 91 + 92 + \\cdots + 98 + 99$.",
-    "summaryZh": "求 $90 + 91 + 92 + \\cdots + 98 + 99$ 的值。",
-    "answer": "B. $945$.",
-    "answerZh": "B。$945$。",
-    "methods": [
-      {
-        "title": "Pair the endpoints",
-        "titleZh": "首尾配对",
-        "steps": [
-          "There are ten terms. Pairing the smallest with the largest gives five pairs, each of sum $90+99=189$. The total is $5\\cdot189=945$."
-        ],
-        "stepsZh": [
-          "共有十项。首尾依次配对得到五对，每对的和都是 $90+99=189$，所以总和为 $5\\cdot189=945$。"
-        ],
-        "topics": [
-          {
-            "en": "Arithmetic series",
-            "zh": "等差数列求和"
-          }
-        ]
-      }
-    ],
+    "summary": "Evaluate $90+91+92+\\cdots+98+99$. Options: A $845$, B $945$, C $1005$, D $1025$, E $1045$.",
+    "summaryZh": "求 $90+91+92+\\cdots+98+99$ 的值。选项为 A $845$，B $945$，C $1005$，D $1025$，E $1045$。",
+    "answer": "B. $945$.", "answerZh": "B．$945$。",
+    "methods": [{"title":"Pair the endpoints","titleZh":"首尾配对","topics":[{"en":"Arithmetic series","zh":"等差数列求和"}],"steps":["There are ten terms. Pair the smallest with the largest: each of the five pairs has sum $90+99=189$.","Therefore the total is $5\\cdot189=945$."],"stepsZh":["共有十项，首尾依次配对得到五对，每对的和都是 $90+99=189$。","所以总和为 $5\\cdot189=945$。"]}],
     "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/2"
+  },
+  "amc8-1985-q3": {
+    "summary": "Evaluate $10^7/(5\\cdot10^4)$. Options: A $0.002$, B $0.2$, C $20$, D $200$, E $2000$.",
+    "summaryZh": "计算 $10^7/(5\\cdot10^4)$。选项为 A $0.002$，B $0.2$，C $20$，D $200$，E $2000$。",
+    "answer": "D. $200$.", "answerZh": "D．$200$。",
+    "methods": [{"title":"Subtract exponents","titleZh":"指数相减","topics":[{"en":"Powers of ten","zh":"十的幂"}],"steps":["First divide the powers of ten: $10^7/10^4=10^3=1000$.","Then $1000/5=200$."],"stepsZh":["先计算十的幂：$10^7/10^4=10^3=1000$。","再算 $1000/5=200$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/3"
+  },
+  "amc8-1985-q4": {
+    "summary": "A rectilinear polygon is obtained from a $6$-by-$9$ rectangle by removing the lower-left rectangular corner. The remaining left vertical side is $5$, and the remaining bottom horizontal side is $4$. Find its area. Options: A $24$, B $30$, C $46$, D $66$, E $74$.",
+    "summaryZh": "从一个 $6\\times9$ 的长方形左下角挖去一个小长方形，所得直角折线多边形的左侧剩余竖边长为 $5$，底部剩余横边长为 $4$。求多边形面积。选项为 A $24$，B $30$，C $46$，D $66$，E $74$。",
+    "answer": "C. $46$ square units.", "answerZh": "C．$46$ 平方单位。",
+    "methods": [{"title":"Subtract the missing corner","titleZh":"整体减去缺角","topics":[{"en":"Area decomposition","zh":"面积分割"}],"steps":["The full rectangle has area $6\\cdot9=54$.","The removed corner has width $6-4=2$ and height $9-5=4$, so its area is $2\\cdot4=8$.","The required area is $54-8=46$."],"stepsZh":["完整长方形面积为 $6\\cdot9=54$。","缺角的宽为 $6-4=2$，高为 $9-5=4$，面积为 $2\\cdot4=8$。","所求面积为 $54-8=46$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/4"
+  },
+  "amc8-1985-q5": {
+    "summary": "A grade bar chart records $5,4,3,3,5$ students receiving grades A, B, C, D, F, respectively. If A through D are satisfactory, what fraction of the displayed grades are satisfactory? Options: A $1/2$, B $2/3$, C $3/4$, D $4/5$, E $9/10$.",
+    "summaryZh": "某成绩条形图中，获得 A、B、C、D、F 的人数依次为 $5,4,3,3,5$。若 A 至 D 均为合格成绩，图中合格成绩所占比例是多少？选项为 A $1/2$，B $2/3$，C $3/4$，D $4/5$，E $9/10$。",
+    "answer": "C. $3/4$.", "answerZh": "C．$3/4$。",
+    "methods": [{"title":"Read and total the bars","titleZh":"读取并汇总条形图","topics":[{"en":"Data interpretation","zh":"数据图表"},{"en":"Fractions","zh":"分数"}],"steps":["The satisfactory grades total $5+4+3+3=15$ students.","All five bars total $15+5=20$ students, so the fraction is $15/20=3/4$."],"stepsZh":["合格成绩人数为 $5+4+3+3=15$。","全部人数为 $15+5=20$，所以比例为 $15/20=3/4$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/5"
+  },
+  "amc8-1985-q6": {
+    "summary": "A stack of $500$ identical sheets is $5$ cm thick. Approximately how many sheets are in a $7.5$ cm stack? Options: A $250$, B $550$, C $667$, D $750$, E $1250$.",
+    "summaryZh": "$500$ 张相同的纸叠起来厚 $5$ cm。厚 $7.5$ cm 的同种纸约有多少张？选项为 A $250$，B $550$，C $667$，D $750$，E $1250$。",
+    "answer": "D. $750$ sheets.", "answerZh": "D．$750$ 张。",
+    "methods": [{"title":"Use a unit rate","titleZh":"使用单位量","topics":[{"en":"Direct proportion","zh":"正比例"}],"steps":["The stack contains $500/5=100$ sheets per centimetre.","Thus $7.5$ cm contains $100\\cdot7.5=750$ sheets."],"stepsZh":["每厘米厚度对应 $500/5=100$ 张纸。","因此 $7.5$ cm 对应 $100\\cdot7.5=750$ 张。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/6"
+  },
+  "amc8-1985-q7": {
+    "summary": "A stair-step pattern has row $n$ made of $n$ white squares separated by black squares, beginning and ending with white. How many black squares are in row $37$? Options: A $34$, B $35$, C $36$, D $37$, E $38$.",
+    "summaryZh": "阶梯图案的第 $n$ 行含 $n$ 个白色方格，白格之间各放一个黑格，并且每行都以白格开始和结束。第 $37$ 行有多少个黑格？选项为 A $34$，B $35$，C $36$，D $37$，E $38$。",
+    "answer": "C. $36$ black squares.", "answerZh": "C．$36$ 个黑格。",
+    "methods": [{"title":"Count gaps between white squares","titleZh":"数白格之间的空隙","topics":[{"en":"Pattern recognition","zh":"规律识别"},{"en":"Fencepost counting","zh":"间隔计数"}],"steps":["A row with $n$ white squares has exactly $n-1$ gaps between consecutive white squares.","Each gap contains one black square, so row $37$ has $37-1=36$ black squares."],"stepsZh":["一行有 $n$ 个白格时，相邻白格之间恰有 $n-1$ 个间隔。","每个间隔放一个黑格，因此第 $37$ 行有 $37-1=36$ 个黑格。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/7"
+  },
+  "amc8-1985-q8": {
+    "summary": "For $a=-2$, determine the largest member of $\\{-3a,4a,24/a,a^2,1\\}$. Options A through E list these five expressions in that order.",
+    "summaryZh": "当 $a=-2$ 时，求集合 $\\{-3a,4a,24/a,a^2,1\\}$ 中的最大数。A 至 E 依次对应上述五个式子。",
+    "answer": "A. $-3a=6$.", "answerZh": "A．$-3a=6$。",
+    "methods": [{"title":"Substitute and compare","titleZh":"代入比较","topics":[{"en":"Substitution","zh":"代入求值"}],"steps":["Substitution gives $-3a=6$, $4a=-8$, $24/a=-12$, $a^2=4$, and $1$.","The greatest value is $6$, supplied by $-3a$."],"stepsZh":["代入得到 $-3a=6$、$4a=-8$、$24/a=-12$、$a^2=4$ 以及 $1$。","其中最大值是 $6$，对应 $-3a$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/8"
+  },
+  "amc8-1985-q9": {
+    "summary": "Evaluate the nine-factor product $(1-1/2)(1-1/3)(1-1/4)\\cdots(1-1/10)$. Options: A $1/10$, B $1/9$, C $1/2$, D $10/11$, E $11/2$.",
+    "summaryZh": "计算九个因子的乘积 $(1-1/2)(1-1/3)(1-1/4)\\cdots(1-1/10)$。选项为 A $1/10$，B $1/9$，C $1/2$，D $10/11$，E $11/2$。",
+    "answer": "A. $1/10$.", "answerZh": "A．$1/10$。",
+    "methods": [{"title":"Telescope the product","titleZh":"裂项相消","topics":[{"en":"Telescoping products","zh":"连乘相消"}],"steps":["Rewrite each factor as $1-1/k=(k-1)/k$. The product becomes $(1/2)(2/3)(3/4)\\cdots(9/10)$.","Every interior numerator cancels the preceding denominator, leaving $1/10$."],"stepsZh":["把每个因子写成 $1-1/k=(k-1)/k$，乘积变为 $(1/2)(2/3)(3/4)\\cdots(9/10)$。","中间因子全部相消，只剩 $1/10$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/9"
+  },
+  "amc8-1985-q10": {
+    "summary": "Find the fraction halfway between $1/5$ and $1/3$ on the number line. Options: A $1/4$, B $2/15$, C $4/15$, D $53/200$, E $8/15$.",
+    "summaryZh": "在数轴上求 $1/5$ 与 $1/3$ 正中间的分数。选项为 A $1/4$，B $2/15$，C $4/15$，D $53/200$，E $8/15$。",
+    "answer": "C. $4/15$.", "answerZh": "C．$4/15$。",
+    "methods": [{"title":"Average the endpoints","titleZh":"求两端点平均数","topics":[{"en":"Midpoints","zh":"中点"},{"en":"Fractions","zh":"分数"}],"steps":["The midpoint is the average: $\\frac12(1/5+1/3)$.","Using denominator $15$ gives $\\frac12(3/15+5/15)=\\frac12(8/15)=4/15$."],"stepsZh":["中点等于两端点的平均数，即 $\\frac12(1/5+1/3)$。","通分后为 $\\frac12(3/15+5/15)=\\frac12(8/15)=4/15$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/10"
+  },
+  "amc8-1985-q11": {
+    "summary": "A cube net has three squares $U,V,W$ in a horizontal row. Square $X$ is directly below $V$, $Z$ is directly below $X$, and $Y$ is directly above $W$. After folding, which face is opposite $X$? Options: A $Z$, B $U$, C $V$, D $W$, E $Y$.",
+    "summaryZh": "一个正方体展开图中，$U,V,W$ 三格从左到右排成一行；$X$ 在 $V$ 的正下方，$Z$ 在 $X$ 的正下方，$Y$ 在 $W$ 的正上方。折成立方体后，与 $X$ 相对的是哪一面？选项为 A $Z$，B $U$，C $V$，D $W$，E $Y$。",
+    "answer": "E. Face $Y$.", "answerZh": "E．$Y$ 面。",
+    "methods": [{"title":"Fold around face V","titleZh":"以 V 面为中心折叠","topics":[{"en":"Cube nets","zh":"正方体展开图"},{"en":"Spatial reasoning","zh":"空间想象"}],"steps":["Take $V$ as the front face. Then $U$ and $W$ fold to the left and right, while $X$ folds to the bottom and $Z$ wraps to the back.","Because $Y$ is attached above the right face $W$, it folds to the top. Hence $Y$ is opposite the bottom face $X$."],"stepsZh":["把 $V$ 作为正面，则 $U,W$ 分别折成左、右面，$X$ 折成底面，$Z$ 绕到底面的后方成为背面。","$Y$ 连接在右面 $W$ 的上方，折叠后成为顶面，所以 $Y$ 与底面 $X$ 相对。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/11"
+  },
+  "amc8-1985-q12": {
+    "summary": "A square and a triangle have equal perimeters. The triangle sides are $6.2$, $8.3$, and $9.5$ cm. Find the square's area. Options: A $24$, B $36$, C $48$, D $64$, E $144$ square centimetres.",
+    "summaryZh": "一个正方形与一个三角形周长相等。三角形三边分别为 $6.2$、$8.3$、$9.5$ cm。求正方形面积。选项为 A $24$，B $36$，C $48$，D $64$，E $144$ 平方厘米。",
+    "answer": "B. $36\\text{ cm}^2$.", "answerZh": "B．$36\\text{ cm}^2$。",
+    "methods": [{"title":"Convert perimeter to side length","titleZh":"由周长求边长","topics":[{"en":"Perimeter and area","zh":"周长与面积"}],"steps":["The triangle perimeter is $6.2+8.3+9.5=24$ cm, so the square also has perimeter $24$ cm.","Its side is $24/4=6$ cm and its area is $6^2=36$ square centimetres."],"stepsZh":["三角形周长为 $6.2+8.3+9.5=24$ cm，因此正方形周长也是 $24$ cm。","正方形边长为 $24/4=6$ cm，面积为 $6^2=36$ 平方厘米。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/12"
+  },
+  "amc8-1985-q13": {
+    "summary": "Walk for $45$ minutes at $4$ mph, then run for $30$ minutes at $10$ mph. Find the total distance. Options: A $3.5$, B $8$, C $9$, D $25\\frac13$, E $480$ miles.",
+    "summaryZh": "先以每小时 $4$ 英里步行 $45$ 分钟，再以每小时 $10$ 英里跑步 $30$ 分钟。求总路程。选项为 A $3.5$，B $8$，C $9$，D $25\\frac13$，E $480$ 英里。",
+    "answer": "B. $8$ miles.", "answerZh": "B．$8$ 英里。",
+    "methods": [{"title":"Add the two travel legs","titleZh":"分段计算路程","topics":[{"en":"Distance, rate and time","zh":"路程、速度与时间"}],"steps":["Convert times to hours: $45$ minutes is $3/4$ hour and $30$ minutes is $1/2$ hour.","The distances are $4\\cdot3/4=3$ miles and $10\\cdot1/2=5$ miles, totaling $8$ miles."],"stepsZh":["先把时间化为小时：$45$ 分钟是 $3/4$ 小时，$30$ 分钟是 $1/2$ 小时。","两段路程分别为 $4\\cdot3/4=3$ 英里和 $10\\cdot1/2=5$ 英里，总计 $8$ 英里。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/13"
+  },
+  "amc8-1985-q14": {
+    "summary": "Find the difference between a $6.5\\%$ sales tax and a $6\\%$ sales tax on a 20-dollar item. Options: A $0.01$, B $0.10$, C $0.50$, D $1$, E $10$ dollars.",
+    "summaryZh": "一件税前价格为 $20$ 美元的商品，按 $6.5\\%$ 与按 $6\\%$ 计算的销售税相差多少？选项为 A $0.01$，B $0.10$，C $0.50$，D $1$，E $10$ 美元。",
+    "answer": "B. $0.10$ dollar.", "answerZh": "B．$0.10$ 美元。",
+    "methods": [{"title":"Apply the rate difference","titleZh":"先求税率差","topics":[{"en":"Percentages","zh":"百分数"}],"steps":["The tax rates differ by $6.5\\%-6\\%=0.5\\%=0.005$.","Applying that difference to $20$ dollars gives $0.005\\cdot20=0.10$ dollar."],"stepsZh":["两种税率相差 $6.5\\%-6\\%=0.5\\%=0.005$。","税额差为 $0.005\\cdot20=0.10$ 美元。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/14"
+  },
+  "amc8-1985-q15": {
+    "summary": "How many whole numbers from $100$ through $399$ contain at least one digit $2$? Options: A $100$, B $120$, C $138$, D $140$, E $148$.",
+    "summaryZh": "从 $100$ 到 $399$ 的整数中，有多少个至少含有一个数字 $2$？选项为 A $100$，B $120$，C $138$，D $140$，E $148$。",
+    "answer": "C. $138$.", "answerZh": "C．$138$。",
+    "methods": [{"title":"Count the complement","titleZh":"利用补集计数","topics":[{"en":"Complementary counting","zh":"补集计数"},{"en":"Digits","zh":"数位"}],"steps":["There are $300$ integers from $100$ through $399$.","To avoid digit $2$, the hundreds digit has $2$ choices ($1$ or $3$), and each other digit has $9$ choices. Thus $2\\cdot9\\cdot9=162$ numbers contain no $2$.","Therefore $300-162=138$ numbers contain at least one $2$."],"stepsZh":["从 $100$ 到 $399$ 共有 $300$ 个整数。","若不含数字 $2$，百位只能取 $1$ 或 $3$，十位和个位各有 $9$ 种选择，共 $2\\cdot9\\cdot9=162$ 个。","所以至少含一个 $2$ 的数有 $300-162=138$ 个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/15"
+  },
+  "amc8-1985-q16": {
+    "summary": "The ratio of boys to girls in a class is $2:3$, and the class has $30$ students. How many more girls than boys are there? Options: A $10$, B $5$, C $3$, D $6$, E $2$.",
+    "summaryZh": "班级中男生与女生人数之比为 $2:3$，全班共有 $30$ 人。女生比男生多多少人？选项为 A $10$，B $5$，C $3$，D $6$，E $2$。",
+    "answer": "D. $6$ students.", "answerZh": "D．$6$ 人。",
+    "methods": [{"title":"Scale the ratio parts","titleZh":"按比例份数计算","topics":[{"en":"Ratios","zh":"比"}],"steps":["The ratio has $2+3=5$ equal parts, so one part represents $30/5=6$ students.","Girls exceed boys by $3-2=1$ part, or $6$ students."],"stepsZh":["比例共有 $2+3=5$ 份，每份代表 $30/5=6$ 人。","女生比男生多 $3-2=1$ 份，即 $6$ 人。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/16"
+  },
+  "amc8-1985-q17": {
+    "summary": "The mean of the first six test scores is $84$, while the mean of the first seven is $85$. Find the seventh score. Options: A $86$, B $88$, C $90$, D $91$, E $92$.",
+    "summaryZh": "前六次数学测验的平均分是 $84$，前七次的平均分是 $85$。求第七次成绩。选项为 A $86$，B $88$，C $90$，D $91$，E $92$。",
+    "answer": "D. $91$.", "answerZh": "D．$91$。",
+    "methods": [{"title":"Subtract the running totals","titleZh":"总分作差","topics":[{"en":"Arithmetic mean","zh":"算术平均数"}],"steps":["The first seven scores total $7\\cdot85=595$, while the first six total $6\\cdot84=504$.","The seventh score is their difference, $595-504=91$."],"stepsZh":["前七次总分为 $7\\cdot85=595$，前六次总分为 $6\\cdot84=504$。","第七次成绩为两者之差 $595-504=91$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/17"
+  },
+  "amc8-1985-q18": {
+    "summary": "Nine copies of a pamphlet cost less than 10 dollars, but ten copies at the same unit price cost more than 11 dollars. Which listed unit price is possible? Options: A $1.07$, B $1.08$, C $1.09$, D $1.10$, E $1.11$ dollars.",
+    "summaryZh": "同一种小册子买九本总价低于 $10$ 美元，买十本总价高于 $11$ 美元。单价可能是哪一个？选项为 A $1.07$，B $1.08$，C $1.09$，D $1.10$，E $1.11$ 美元。",
+    "answer": "E. $1.11$ dollars.", "answerZh": "E．$1.11$ 美元。",
+    "methods": [{"title":"Intersect the two price bounds","titleZh":"联立价格范围","topics":[{"en":"Inequalities","zh":"不等式"}],"steps":["If the unit price is $p$, then $9p<10$ and $10p>11$. Hence $1.10<p<10/9\\approx1.111\\ldots$.","Among the choices only $1.11$ lies in this interval. Indeed, $9(1.11)=9.99<10$ and $10(1.11)=11.10>11$."],"stepsZh":["设单价为 $p$，则 $9p<10$ 且 $10p>11$，所以 $1.10<p<10/9\\approx1.111\\ldots$。","只有 $1.11$ 落在该区间内；验证得 $9(1.11)=9.99<10$，$10(1.11)=11.10>11$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/18"
+  },
+  "amc8-1985-q19": {
+    "summary": "Both the length and width of a rectangle increase by $10\\%$. By what percent does its perimeter increase? Options: A $1\\%$, B $10\\%$, C $20\\%$, D $21\\%$, E $40\\%$.",
+    "summaryZh": "一个长方形的长和宽都增加 $10\\%$。它的周长增加百分之多少？选项为 A $1\\%$，B $10\\%$，C $20\\%$，D $21\\%$，E $40\\%$。",
+    "answer": "B. $10\\%$.", "answerZh": "B．$10\\%$。",
+    "methods": [{"title":"Factor out the scale factor","titleZh":"提取伸缩倍数","topics":[{"en":"Perimeter scaling","zh":"周长伸缩"}],"steps":["The old perimeter is $2(L+W)$. The new perimeter is $2(1.1L+1.1W)=1.1\\cdot2(L+W)$.","Thus the perimeter is multiplied by $1.1$, an increase of $10\\%$."],"stepsZh":["原周长为 $2(L+W)$，新周长为 $2(1.1L+1.1W)=1.1\\cdot2(L+W)$。","所以周长变为原来的 $1.1$ 倍，即增加 $10\\%$。"]},{"title":"Check with a convenient rectangle","titleZh":"取特殊长方形验证","topics":[{"en":"Numerical modelling","zh":"数值建模"}],"steps":["For a $10$-by-$20$ rectangle the perimeter is $60$. After the increase it is $11$ by $22$, with perimeter $66$.","Since $66/60=1.1$, the increase is $10\\%$."],"stepsZh":["取长宽为 $10,20$ 的长方形，周长为 $60$；增加后长宽为 $11,22$，周长为 $66$。","因为 $66/60=1.1$，所以增加 $10\\%$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/19"
+  },
+  "amc8-1985-q20": {
+    "summary": "In one year, January contained exactly four Tuesdays and four Saturdays. On which weekday did January 1 fall? Options: A Monday, B Tuesday, C Wednesday, D Friday, E Saturday.",
+    "summaryZh": "某年的一月份恰有四个星期二和四个星期六。该年 $1$ 月 $1$ 日是星期几？选项为 A 星期一，B 星期二，C 星期三，D 星期五，E 星期六。",
+    "answer": "C. Wednesday.", "answerZh": "C．星期三。",
+    "methods": [{"title":"Identify the three extra weekdays","titleZh":"确定三个多出现一次的星期","topics":[{"en":"Calendar arithmetic","zh":"日历运算"},{"en":"Modular reasoning","zh":"模运算思想"}],"steps":["January has $31=4\\cdot7+3$ days. Every weekday occurs four times, and the weekdays of January 1, 2, and 3 occur once more.","Tuesday and Saturday must not be among those three consecutive extra weekdays. A Wednesday start makes the extras Wednesday, Thursday, and Friday, missing both.","Therefore January 1 was Wednesday."],"stepsZh":["一月有 $31=4\\cdot7+3$ 天，每个星期至少出现四次，而 $1,2,3$ 日对应的三个星期会多出现一次。","星期二和星期六都不能在这三个连续的星期中。从星期三开始时，多出的三个星期是星期三、四、五，恰好避开二者。","所以 $1$ 月 $1$ 日是星期三。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/20"
+  },
+  "amc8-1985-q21": {
+    "summary": "A salary receives a $10\\%$ raise in each of four successive years. Which interval contains the total percentage increase? Options: A less than $40\\%$, B exactly $40\\%$, C $44\\%$, D $45\\%$, E more than $45\\%$.",
+    "summaryZh": "某人的工资连续四年每年上涨 $10\\%$。四次上涨后的总涨幅属于哪一种？选项为 A 小于 $40\\%$，B 恰为 $40\\%$，C $44\\%$，D $45\\%$，E 大于 $45\\%$。",
+    "answer": "E. More than $45\\%$.", "answerZh": "E．大于 $45\\%$。",
+    "methods": [{"title":"Compound the four raises","titleZh":"计算四次复合增长","topics":[{"en":"Compound percentages","zh":"复合百分数"}],"steps":["Each raise multiplies the salary by $1.1$, so four raises multiply it by $1.1^4$.","Now $1.1^4=1.4641$, corresponding to a $46.41\\%$ increase, which is more than $45\\%$."],"stepsZh":["每次加薪都把工资乘以 $1.1$，四次后倍数为 $1.1^4$。","$1.1^4=1.4641$，即总涨幅为 $46.41\\%$，大于 $45\\%$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/21"
+  },
+  "amc8-1985-q22": {
+    "summary": "Every seven-digit string is an allowed telephone number except those beginning with $0$ or $1$. What fraction of allowed numbers begin with $9$ and end with $0$? Options: A $1/63$, B $1/80$, C $1/81$, D $1/90$, E $1/100$.",
+    "summaryZh": "除首位为 $0$ 或 $1$ 的情形外，每个七位数字串都可作为电话号码。合法号码中，以 $9$ 开头且以 $0$ 结尾的比例是多少？选项为 A $1/63$，B $1/80$，C $1/81$，D $1/90$，E $1/100$。",
+    "answer": "B. $1/80$.", "answerZh": "B．$1/80$。",
+    "methods": [{"title":"Count favourable and total numbers","titleZh":"分别计算有利情形与总数","topics":[{"en":"Multiplication principle","zh":"乘法原理"},{"en":"Counting ratios","zh":"计数比"}],"steps":["The first digit has $8$ choices ($2$ through $9$), and the other six have $10$ each, so there are $8\\cdot10^6$ allowed numbers.","For a number starting with $9$ and ending with $0$, the five middle digits are free, giving $10^5$ numbers.","The desired fraction is $10^5/(8\\cdot10^6)=1/80$."],"stepsZh":["首位有 $8$ 种选择（$2$ 至 $9$），其余六位各有 $10$ 种，因此合法号码共有 $8\\cdot10^6$ 个。","首位固定为 $9$、末位固定为 $0$ 时，中间五位任取，共 $10^5$ 个。","所求比例为 $10^5/(8\\cdot10^6)=1/80$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/22"
+  },
+  "amc8-1985-q23": {
+    "summary": "A school has $1200$ students. Each student attends $5$ classes daily; each class has $30$ students and one teacher; each teacher teaches $4$ classes. How many teachers are there? Options: A $30$, B $32$, C $40$, D $45$, E $50$.",
+    "summaryZh": "某校有 $1200$ 名学生，每人每天上 $5$ 节课；每班有 $30$ 名学生和一位教师；每位教师每天教 $4$ 节课。学校有多少位教师？选项为 A $30$，B $32$，C $40$，D $45$，E $50$。",
+    "answer": "E. $50$ teachers.", "answerZh": "E．$50$ 位教师。",
+    "methods": [{"title":"Double-count class enrolments","titleZh":"双重计数课堂人次","topics":[{"en":"Double counting","zh":"双重计数"}],"steps":["Students generate $1200\\cdot5=6000$ student-class enrolments. With $30$ students per class, the school runs $6000/30=200$ classes.","Each teacher covers $4$ classes, so the number of teachers is $200/4=50$."],"stepsZh":["学生一共形成 $1200\\cdot5=6000$ 个上课人次。每班 $30$ 人，因此共有 $6000/30=200$ 个班次。","每位教师承担 $4$ 个班次，所以教师人数为 $200/4=50$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/23"
+  },
+  "amc8-1985-q24": {
+    "summary": "Place the integers $10,11,12,13,14,15$ in six circles on the boundary of a triangle: one at each vertex and one at the midpoint of each side. The three numbers on every side must have the same sum $S$. Find the greatest possible $S$. Options: A $36$, B $37$, C $38$, D $39$, E $40$.",
+    "summaryZh": "把整数 $10,11,12,13,14,15$ 分别放入三角形边界上的六个圆：三个顶点各一个，每条边中点各一个。要求每条边上的三个数之和都等于 $S$。求 $S$ 的最大可能值。选项为 A $36$，B $37$，C $38$，D $39$，E $40$。",
+    "answer": "D. $S=39$.", "answerZh": "D．$S=39$。",
+    "methods": [{"title":"Double-count the vertices","titleZh":"双重计算顶点数","topics":[{"en":"Double counting","zh":"双重计数"},{"en":"Extremal arrangement","zh":"极值排列"}],"steps":["All six integers sum to $75$. Adding the three side sums counts every number once and each vertex once more, so $3S=75+$ (sum of the three vertices).","To maximise $S$, use $13,14,15$ at the vertices. Their sum is $42$, hence $3S=117$ and $S=39$.","This is attainable: the vertex-pair sums are $27,28,29$, and the remaining middle values $12,11,10$ complete each side to $39$."],"stepsZh":["六个整数总和为 $75$。把三条边的和相加时，每个数至少计算一次，三个顶点又各多算一次，所以 $3S=75+$（三个顶点之和）。","为使 $S$ 最大，把 $13,14,15$ 放在顶点，顶点和为 $42$，从而 $3S=117$，即 $S=39$。","该值可以达到：三组顶点对之和为 $27,28,29$，把剩余的 $12,11,10$ 分别放在相应边中点即可使每边和为 $39$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/24"
+  },
+  "amc8-1985-q25": {
+    "summary": "Five cards show $P,Q,3,4,6$. Each card has a letter on one face and a whole number on the other. Jane claims: if a card has a vowel on one face, then it has an even number on the other. Mary disproves the claim by turning over one card. Which visible card must she turn? Options: A $3$, B $4$, C $6$, D $P$, E $Q$.",
+    "summaryZh": "桌上五张卡片朝上的一面分别是 $P,Q,3,4,6$，每张卡一面是字母，另一面是整数。Jane 声称：若一面是元音字母，则另一面一定是偶数。Mary 只翻一张卡就推翻了该说法。她翻的是哪张？选项为 A $3$，B $4$，C $6$，D $P$，E $Q$。",
+    "answer": "A. The card showing $3$.", "answerZh": "A．正面为 $3$ 的卡片。",
+    "methods": [{"title":"Look for a counterexample","titleZh":"寻找反例","topics":[{"en":"Logical implication","zh":"逻辑蕴含"},{"en":"Counterexamples","zh":"反例"}],"steps":["The rule fails only if one card pairs a vowel with an odd number.","Turning $P$ or $Q$ cannot test a vowel, and turning $4$ or $6$ cannot expose an odd number. Only the card showing odd number $3$ can have a hidden vowel and contradict the rule.","Therefore Mary turned over the card showing $3$."],"stepsZh":["要推翻命题，必须找到一张“元音字母—奇数”的卡片。","翻 $P$ 或 $Q$ 不能检验元音条件，翻 $4$ 或 $6$ 也不可能暴露奇数；只有正面为奇数 $3$ 的卡片，背面若是元音就能形成反例。","所以 Mary 翻的是数字 $3$ 卡片。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/25"
   }
 }
