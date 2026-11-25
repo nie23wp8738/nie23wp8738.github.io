@@ -1,0 +1,414 @@
+{
+  "euclid-2019-q1": {
+    "summary": "(a) Two jars have equal capacity. One holds $300$ mL when three quarters full. How many millilitres does the other hold when one quarter full? (b) Find the integer $a$ for which $3<24/a<4$. (c) Solve $1/x^2-1/x=2$ over the reals.",
+    "summaryZh": "(a) 两个罐子的容量相等。一个罐子装到容量的四分之三时有 $300$ 毫升水。另一个装到四分之一时有多少毫升水？(b) 求满足 $3<24/a<4$ 的整数 $a$。(c) 求方程 $1/x^2-1/x=2$ 的全部实数解。",
+    "answer": "(a) $100$ mL. (b) $a=7$. (c) $x=-1$ or $x=1/2$.",
+    "answerZh": "(a) $100$ 毫升。(b) $a=7$。(c) $x=-1$ 或 $x=1/2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Use the common unit and clear denominators",
+        "titleZh": "比较相同单位的量，再消去分母",
+        "topics": [
+          {
+            "en": "Ratios and proportions",
+            "zh": "比与比例"
+          },
+          {
+            "en": "Inequalities",
+            "zh": "不等式"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "二次方程"
+          }
+        ],
+        "steps": [
+          "(a) The $300$ mL fills three quarter-jar units. The second jar holds one such unit, so its water measures $300/3=100$ mL.",
+          "(b) The quotient is positive, so $a>0$. Multiplication by $a$ preserves the inequality signs and gives $3a<24<4a$. Thus $6<a<8$, leaving exactly $a=7$.",
+          "(c) The equation requires $x\\ne0$. Multiplying by $x^2$ gives $1-x=2x^2$, or $(2x-1)(x+1)=0$. Both roots, $1/2$ and $-1$, are nonzero, so both solve the original equation."
+        ],
+        "stepsZh": [
+          "(a) 把四分之一罐作为一份。三份水共 $300$ 毫升，而第二个罐子的水正好是一份，即 $300/3=100$ 毫升。",
+          "(b) 商为正，故 $a>0$。乘以 $a$ 后不等号方向不变，得到 $3a<24<4a$，即 $6<a<8$。中间唯一的整数是 $7$。",
+          "(c) 原式要求 $x\\ne0$。两边同乘 $x^2$ 得 $1-x=2x^2$，整理为 $(2x-1)(x+1)=0$。两个根 $1/2$ 和 $-1$ 均非零，故都是原方程的解。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q2": {
+    "summary": "(a) Inside a disk of radius $2$ are two disks of radius $1$. Each smaller circle touches the larger circle internally, and the two small circles touch each other externally. Find the area inside the larger disk and outside both smaller disks. (b) Two runners follow the same straight route from start to finish. Mo runs at $6$ km/h from 10:00 a.m. to 11:00 a.m. Kari runs at $8$ km/h and also finishes at 11:00 a.m. When did Kari start? (c) The line $y=mx+b$ contains $(9,2)$ and is parallel to $x+3y=7$. Find $b$.",
+    "summaryZh": "(a) 半径为 $2$ 的圆内有两个半径为 $1$ 的小圆。两小圆都与大圆内切，彼此外切。求大圆内、两个小圆外的区域面积。(b) 两人沿同一直线路线从同一起点跑到同一终点。Mo 以每小时 $6$ 千米的恒定速度从上午 10 时跑到 11 时；Kari 以每小时 $8$ 千米的恒定速度跑步，也在 11 时到达。Kari 何时出发？(c) 直线 $y=mx+b$ 经过 $(9,2)$ 且平行于 $x+3y=7$，求 $b$。",
+    "answer": "(a) $2\\pi$ square units. (b) 10:15 a.m. (c) $b=5$.",
+    "answerZh": "(a) $2\\pi$ 平方单位。(b) 上午 10 时 15 分。(c) $b=5$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Subtract areas, recover the travel time, and use parallel lines",
+        "titleZh": "面积作差、由路程求时间、利用平行直线",
+        "topics": [
+          {
+            "en": "Circle area",
+            "zh": "圆的面积"
+          },
+          {
+            "en": "Distance, rate and time",
+            "zh": "路程、速度与时间"
+          },
+          {
+            "en": "Parallel lines",
+            "zh": "平行直线"
+          }
+        ],
+        "steps": [
+          "(a) Tangency makes the interiors of the two unit disks disjoint. Removing their areas from that of the large disk leaves $\\pi(2^2)-2\\pi(1^2)=2\\pi$.",
+          "(b) Mo runs for one hour, so the common route is $6$ km long. Kari needs $6/8=3/4$ hour, or $45$ minutes. Counting back $45$ minutes from 11:00 a.m. gives 10:15 a.m.",
+          "(c) Every line parallel to $x+3y=7$ has the form $x+3y=C$. Substituting $(9,2)$ yields $C=15$. At the $y$-intercept, $x=0$, so $3b=15$ and $b=5$."
+        ],
+        "stepsZh": [
+          "(a) 两小圆外切，内部没有重叠。从大圆面积减去两个小圆的面积，剩余 $\\pi(2^2)-2\\pi(1^2)=2\\pi$。",
+          "(b) Mo 跑了一小时，因此这条路线长 $6$ 千米。Kari 跑完全程需 $6/8=3/4$ 小时，即 $45$ 分钟。从上午 11 时往前推 $45$ 分钟，得到上午 10 时 15 分。",
+          "(c) 与 $x+3y=7$ 平行的直线可写作 $x+3y=C$。代入 $(9,2)$ 得 $C=15$。在纵截距处 $x=0$，于是 $3b=15$，得到 $b=5$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q3": {
+    "summary": "(a) Removing one entry from $5,10,15,16,24,28,33,37$ reduces the arithmetic mean by $1$. Which entry was removed? (b) Solve $16^{15/x}=32^{4/3}$ for $x$. (c) Find $a$ if $(2^{2022}+2^a)/2^{2019}=72$.",
+    "summaryZh": "(a) 从 $5,10,15,16,24,28,33,37$ 中删去一个数，其余数的算术平均数比原来小 $1$。删去的是哪个数？(b) 求解 $16^{15/x}=32^{4/3}$。(c) 若 $(2^{2022}+2^a)/2^{2019}=72$，求 $a$。",
+    "answer": "(a) $28$. (b) $x=9$. (c) $a=2025$.",
+    "answerZh": "(a) $28$。(b) $x=9$。(c) $a=2025$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Track the sum and compare exponents in base two",
+        "titleZh": "追踪总和，并把幂化为以二为底",
+        "topics": [
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Exponents and powers",
+            "zh": "指数与幂"
+          }
+        ],
+        "steps": [
+          "(a) The original sum is $168$ and the mean is $168/8=21$. The seven remaining numbers average $20$, so they add to $7\\cdot20=140$. The missing term is $168-140=28$.",
+          "(b) Write both sides as powers of $2$. Since $16=2^4$ and $32=2^5$, the exponents satisfy $60/x=20/3$. This gives $x=9$, an admissible nonzero value.",
+          "(c) Divide both terms in the numerator by $2^{2019}$. The resulting equation is $2^3+2^{a-2019}=72$, so $2^{a-2019}=64=2^6$. It follows that $a=2019+6=2025$."
+        ],
+        "stepsZh": [
+          "(a) 八个数之和为 $168$，平均数为 $168/8=21$。删去一项后，余下七项的平均数为 $20$，总和为 $7\\cdot20=140$。两次总和之差 $168-140=28$ 就是删去的数。",
+          "(b) 由 $16=2^4$ 和 $32=2^5$，等式两边可以写成底数为 $2$ 的幂。比较指数得 $60/x=20/3$，解出 $x=9$，满足 $x\\ne0$。",
+          "(c) 将分子中的两项分别除以 $2^{2019}$，得 $2^3+2^{a-2019}=72$，故 $2^{a-2019}=64=2^6$。比较指数即得 $a=2019+6=2025$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q4": {
+    "summary": "(a) Triangle $ABC$ is right-angled at $B$. The points $A,D,B$ lie in that order on one side, with $DB=10$. Given $\\angle ACD=30^\\circ$ and $\\angle CDB=60^\\circ$, find $AD$. (b) For which real values of $d$ are $(d,-d)$ and $(12-d,2d-6)$ on a common circle centred at the origin?",
+    "summaryZh": "(a) 三角形 $ABC$ 在 $B$ 处为直角。在边 $AB$ 上，$A,D,B$ 依次排列，且 $DB=10$。已知 $\\angle ACD=30^\\circ$、$\\angle CDB=60^\\circ$，求 $AD$。(b) 实数 $d$ 取哪些值时，$(d,-d)$ 与 $(12-d,2d-6)$ 位于同一个以原点为圆心的圆上？",
+    "answer": "(a) $AD=20$. (b) $d=6$ or $d=10$.",
+    "answerZh": "(a) $AD=20$。(b) $d=6$ 或 $d=10$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "An isosceles triangle and equal squared radii",
+        "titleZh": "识别等腰三角形，比较半径的平方",
+        "topics": [
+          {
+            "en": "Special right triangles",
+            "zh": "特殊直角三角形"
+          },
+          {
+            "en": "Isosceles triangles",
+            "zh": "等腰三角形"
+          },
+          {
+            "en": "Distance formula",
+            "zh": "距离公式"
+          }
+        ],
+        "steps": [
+          "(a) In right triangle $DBC$, the angle at $C$ is $30^\\circ$. Its opposite side $DB=10$ is half the hypotenuse, so $DC=20$. The straight angle at $D$ gives $\\angle ADC=120^\\circ$. Thus $\\angle CAD=30^\\circ=\\angle ACD$, and their opposite sides satisfy $AD=DC=20$.",
+          "(b) The squared distances from the origin must agree: $2d^2=(12-d)^2+(2d-6)^2$. Expanding and moving every term to one side gives $3d^2-48d+180=3(d-6)(d-10)=0$. At either root the two squared distances agree and are positive, so both roots give a circle."
+        ],
+        "stepsZh": [
+          "(a) 在直角三角形 $DBC$ 中，$C$ 角为 $30^\\circ$，其对边 $DB=10$ 是斜边的一半，故 $DC=20$。因 $A,D,B$ 共线，$\\angle ADC=120^\\circ$。于是 $\\angle CAD=30^\\circ=\\angle ACD$，相应对边相等，得到 $AD=DC=20$。",
+          "(b) 两点到原点的距离平方应相等，故 $2d^2=(12-d)^2+(2d-6)^2$。展开移项得 $3d^2-48d+180=3(d-6)(d-10)=0$。两个根下，两点到原点的距离平方均相等且为正，故都能确定所需的圆。"
+        ]
+      },
+      {
+        "title": "A second solution to (a) using the angle-bisector theorem",
+        "titleZh": "第 (a) 问的另一解法：角平分线定理",
+        "topics": [
+          {
+            "en": "Angle-bisector theorem",
+            "zh": "角平分线定理"
+          },
+          {
+            "en": "Special right triangles",
+            "zh": "特殊直角三角形"
+          }
+        ],
+        "steps": [
+          "Since $\\angle DCB=30^\\circ=\\angle ACD$, the segment $CD$ bisects $\\angle ACB$. Hence $\\angle ACB=60^\\circ$, so $\\angle CAB=30^\\circ$.",
+          "In triangle $ABC$, the hypotenuse $AC$ is twice the side $CB$ opposite the $30^\\circ$ angle. The angle-bisector theorem then gives $AD/DB=AC/CB=2$, so $AD=2\\cdot10=20$."
+        ],
+        "stepsZh": [
+          "由 $\\angle DCB=30^\\circ=\\angle ACD$ 知 $CD$ 平分 $\\angle ACB$。因此 $\\angle ACB=60^\\circ$，而 $\\angle CAB=30^\\circ$。",
+          "在三角形 $ABC$ 中，斜边 $AC$ 是 $30^\\circ$ 所对直角边 $CB$ 的两倍。应用角平分线定理，得 $AD/DB=AC/CB=2$，所以 $AD=2\\cdot10=20$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q5": {
+    "summary": "(a) Find the two pairs of positive integers $a<b$ such that $\\sqrt a+\\sqrt b=\\sqrt{50}$. (b) For how many nonnegative integers $k$ can one find integers $c,d$ with $c+d=2000$ and $c/d=k$?",
+    "summaryZh": "(a) 求满足 $\\sqrt a+\\sqrt b=\\sqrt{50}$ 且 $a<b$ 的两对正整数 $(a,b)$。(b) 有多少个非负整数 $k$ 能使方程组 $c+d=2000$、$c/d=k$ 有整数解 $(c,d)$？",
+    "answer": "(a) $(2,32)$ and $(8,18)$. (b) $20$ values.",
+    "answerZh": "(a) $(2,32)$ 和 $(8,18)$。(b) $20$ 个。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Identify the integer parameter in each part",
+        "titleZh": "分别找出可枚举的整数参数",
+        "topics": [
+          {
+            "en": "Radicals",
+            "zh": "根式"
+          },
+          {
+            "en": "Integer solutions",
+            "zh": "整数解"
+          },
+          {
+            "en": "Divisor counting",
+            "zh": "约数计数"
+          }
+        ],
+        "steps": [
+          "(a) Isolate $\\sqrt b=5\\sqrt2-\\sqrt a$ and square. This gives $b=50+a-10\\sqrt{2a}$, so $\\sqrt{2a}$ is rational. A rational square root of an integer is an integer: in lowest terms its denominator squared must divide its numerator squared. Since $2a$ is even, its integer square root is even as well. Write it as $2r$, so $a=2r^2$ for a positive integer $r$.",
+          "The original equation now gives $\\sqrt b=(5-r)\\sqrt2$. Since $0<\\sqrt a<\\sqrt b$, we need $0<r<5-r$, hence $r=1$ or $2$. Substituting yields $(a,b)=(2,32)$ or $(8,18)$, and in both cases the radicals sum to $5\\sqrt2$.",
+          "(b) The quotient requires $d\\ne0$, and $c=kd$ gives $(k+1)d=2000$. As $k+1$ is positive, it must be a positive divisor of $2000$. Conversely, each such divisor $t$ gives $k=t-1$, $d=2000/t$ and $c=kd$, an integer solution. Thus the answer is the number of divisors of $2000=2^4\\cdot5^3$, namely $(4+1)(3+1)=20$."
+        ],
+        "stepsZh": [
+          "(a) 移项得 $\\sqrt b=5\\sqrt2-\\sqrt a$，平方得 $b=50+a-10\\sqrt{2a}$，所以 $\\sqrt{2a}$ 是有理数。整数的有理平方根一定是整数：将这个平方根写成最简分数，其分母的平方必须整除分子的平方。又因 $2a$ 为偶数，这个整数平方根也是偶数。令其为 $2r$，便有 $a=2r^2$，其中 $r$ 为正整数。",
+          "代回原式得 $\\sqrt b=(5-r)\\sqrt2$。由 $0<\\sqrt a<\\sqrt b$，知 $0<r<5-r$，所以 $r$ 只能取 $1$ 或 $2$。相应的 $(a,b)$ 为 $(2,32)$ 与 $(8,18)$，代回后两根式之和均为 $5\\sqrt2$。",
+          "(b) 原式要求 $d\\ne0$。由 $c=kd$ 得 $(k+1)d=2000$，而 $k+1>0$，所以 $k+1$ 必为 $2000$ 的正约数。反之，对每个正约数 $t$ 取 $k=t-1$、$d=2000/t$、$c=kd$，就得到一组整数解。因此只需求 $2000=2^4\\cdot5^3$ 的正约数个数，即 $(4+1)(3+1)=20$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q6": {
+    "summary": "(a) A regular pentagon partially covers a regular $n$-gon. The exposed boundary of the $n$-gon runs from one crossing point to the other along five consecutive sides, passing through four vertices. Two adjacent pentagon edges, meeting at a single pentagon vertex, form the rest of the boundary of the exposed region. At the two crossings the interior angles of this region sum to $88^\\circ$. Find $n$. (b) In trapezoid $ABCD$ (vertices in order), $AD\\parallel BC$ and $AB\\perp BC$. If $AD,AB,BC$ in this order are consecutive terms of a geometric sequence, prove that $AC\\perp BD$.",
+    "summaryZh": "(a) 一个正五边形盖住正 $n$ 边形的一部分。从两条边界的一个交点到另一个交点，沿正 $n$ 边形露出的边界依次经过五条边（首、末两边只露出一部分）和四个顶点。露出区域的其余边界由正五边形相邻两边的一部分组成，这两段交于正五边形的一个顶点。露出区域在两个交点处的内角之和为 $88^\\circ$。求 $n$。(b) 梯形 $ABCD$ 的顶点按顺序排列，$AD\\parallel BC$，$AB\\perp BC$。已知 $AD,AB,BC$ 依次为等比数列的连续三项，证明 $AC\\perp BD$。",
+    "answer": "(a) $n=9$. (b) The diagonals are perpendicular.",
+    "answerZh": "(a) $n=9$。(b) 两条对角线互相垂直。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Angles of the exposed region and vectors of the diagonals",
+        "titleZh": "露出区域的内角与对角线向量",
+        "topics": [
+          {
+            "en": "Polygon angle sum",
+            "zh": "多边形内角和"
+          },
+          {
+            "en": "Geometric sequences",
+            "zh": "等比数列"
+          },
+          {
+            "en": "Dot product",
+            "zh": "向量点积"
+          }
+        ],
+        "steps": [
+          "(a) The five exposed side segments and the two pentagon segments enclose a heptagon. Its angle at the pentagon vertex is reflex: the covered pentagon occupies $108^\\circ$, leaving $252^\\circ$ in the exposed region. Its four uncut $n$-gon angles each measure $180^\\circ-360^\\circ/n$.",
+          "The heptagon has angle sum $900^\\circ$. Thus $4(180-360/n)+252+88=900$, or $1440/n=160$, giving $n=9$.",
+          "(b) Put $u=AD$, $h=AB$, and $v=BC$; the geometric progression gives $h^2=uv$. Choose $B=(0,0)$, $A=(0,h)$, $C=(v,0)$, and $D=(u,h)$. Then $\\overrightarrow{AC}=(v,-h)$ and $\\overrightarrow{BD}=(u,h)$ have dot product $uv-h^2=0$, which proves perpendicularity."
+        ],
+        "stepsZh": [
+          "(a) 露出的五段边与五边形的两段边围成七边形。在五边形的那个顶点，被盖住的一侧占 $108^\\circ$，所以露出区域的内角是 $252^\\circ$ 的优角。其余四个完整的正 $n$ 边形内角各为 $180^\\circ-360^\\circ/n$。",
+          "七边形内角和为 $900^\\circ$，所以 $4(180-360/n)+252+88=900$。整理得 $1440/n=160$，从而 $n=9$。",
+          "(b) 记 $u=AD,h=AB,v=BC$。由等比关系 $h^2=uv$。取 $B=(0,0), A=(0,h), C=(v,0),D=(u,h)$，则 $\\overrightarrow{AC}=(v,-h),\\overrightarrow{BD}=(u,h)$，点积 $uv-h^2=0$，所以二者垂直。"
+        ]
+      },
+      {
+        "title": "Part (b) · Similar right triangles",
+        "titleZh": "第 (b) 问 · 相似直角三角形",
+        "topics": [
+          {
+            "en": "Triangle similarity",
+            "zh": "三角形相似"
+          },
+          {
+            "en": "Complementary angles",
+            "zh": "余角"
+          }
+        ],
+        "steps": [
+          "Since $AD/AB=AB/BC$, the right triangles $DAB$ and $ABC$ are similar in the stated order (the included angles at $A$ and $B$ are right). Thus $\\angle ABD=\\angle BCA$. If the diagonals meet at $P$, then $\\angle PBC=90^\\circ-\\angle ABD$ and $\\angle BCP=\\angle BCA$. Their sum is $90^\\circ$, so $\\angle BPC=90^\\circ$."
+        ],
+        "stepsZh": [
+          "由 $AD/AB=AB/BC$，直角三角形 $DAB$ 与 $ABC$ 按该顺序相似（夹角均为直角），故 $\\angle ABD=\\angle BCA$。设两对角线交于 $P$，则 $\\angle PBC=90^\\circ-\\angle ABD$，而 $\\angle BCP=\\angle BCA$。两角之和为 $90^\\circ$，所以 $\\angle BPC=90^\\circ$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q7": {
+    "summary": "(a) Find every real $x$ satisfying $2\\log_2(x-1)=1-\\log_2(x+2)$. (b) For $f(t)=t^2-2t$, find all real $x$ such that $f(f(f(x)))=3$.",
+    "summaryZh": "(a) 求方程 $2\\log_2(x-1)=1-\\log_2(x+2)$ 的所有实数解。(b) 设 $f(t)=t^2-2t$，求 $f(f(f(x)))=3$ 的全部实数解。",
+    "answer": "(a) $\\sqrt3$. (b) $-1,\\,1-\\sqrt2,\\,1,\\,1+\\sqrt2,\\,3$.",
+    "answerZh": "(a) $\\sqrt3$。(b) $-1,\\,1-\\sqrt2,\\,1,\\,1+\\sqrt2,\\,3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Combine logarithms and trace preimages",
+        "titleZh": "合并对数与逐层求原像",
+        "topics": [
+          {
+            "en": "Logarithmic equations",
+            "zh": "对数方程"
+          },
+          {
+            "en": "Polynomial factorization",
+            "zh": "多项式因式分解"
+          },
+          {
+            "en": "Function iteration",
+            "zh": "函数迭代"
+          }
+        ],
+        "steps": [
+          "(a) Both logarithms are defined exactly when $x>1$. On this domain their laws give $\\log_2((x-1)^2(x+2))=1$. Exponentiation yields $(x-1)^2(x+2)=2$, hence $x^3-3x=0$. Of $0,\\sqrt3,-\\sqrt3$, only $\\sqrt3$ belongs to the domain; the steps are reversible there.",
+          "(b) For a real target $u$, solving $f(t)=u$ amounts to $(t-1)^2=u+1$. The preimages of $3$ are $3,-1$; the only preimage of $-1$ is $1$; the preimages of $1$ are $1\\pm\\sqrt2$.",
+          "Thus $f(f(x))$ lies in $\\{3,-1\\}$, then $f(x)$ lies in $\\{3,-1,1\\}$. Taking the preimages of these three targets gives precisely $\\{-1,1-\\sqrt2,1,1+\\sqrt2,3\\}$. Every step takes all real preimages, so all listed values work."
+        ],
+        "stepsZh": [
+          "(a) 两个对数都有定义的条件为 $x>1$。在此范围内，合并后为 $\\log_2((x-1)^2(x+2))=1$。化为指数式得 $(x-1)^2(x+2)=2$，展开得 $x^3-3x=0$。候选根 $0,\\sqrt3,-\\sqrt3$ 中只有 $\\sqrt3$ 落在定义域内，且上述变形在定义域内可逆。",
+          "(b) 给定实数 $u$，方程 $f(t)=u$ 可写成 $(t-1)^2=u+1$。于是 $3$ 的原像是 $3,-1$，$-1$ 的原像只有 $1$，而 $1$ 的原像是 $1\\pm\\sqrt2$。",
+          "从最外层逆推，$f(f(x))$ 可取 $3,-1$，再得 $f(x)$ 可取 $3,-1,1$。对这三个数分别求原像并取并集，得 $\\{-1,1-\\sqrt2,1,1+\\sqrt2,3\\}$。每一步都列出了全部实数原像，所以这些解均成立且无遗漏。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q8": {
+    "summary": "(a) A unit circle centred at $O$ is inscribed in convex quadrilateral $ABCD$. The points of tangency on $AB,BC,CD,DA$ are $P,Q,S,T$, respectively. The successive angles $AOB,BOC,COD,DOA$ at $O$ are equal. Given $AO=3$, find $DS$. (b) For $0<x<\\pi/2$ suppose $\\cos\\!\\left(\\tfrac32\\cos x\\right)=\\sin\\!\\left(\\tfrac32\\sin x\\right)$. Find every possible value of $\\sin(2x)$ in the form $(a\\pi^2+b\\pi+c)/d$ with integer coefficients.",
+    "summaryZh": "(a) 以 $O$ 为圆心的单位圆内切于凸四边形 $ABCD$，在 $AB,BC,CD,DA$ 上的切点依次为 $P,Q,S,T$。绕 $O$ 依次相邻的四个角 $\\angle AOB,\\angle BOC,\\angle COD,\\angle DOA$ 相等。已知 $AO=3$，求 $DS$。(b) 已知 $0<x<\\pi/2$ 且 $\\cos\\!\\left(\\tfrac32\\cos x\\right)=\\sin\\!\\left(\\tfrac32\\sin x\\right)$。求 $\\sin(2x)$ 所有可能值，并写成整数系数的 $(a\\pi^2+b\\pi+c)/d$。",
+    "answer": "(a) $\\sqrt2/4$. (b) $(\\pi^2-9)/9$.",
+    "answerZh": "(a) $\\sqrt2/4$。(b) $(\\pi^2-9)/9$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "The altitude to a hypotenuse and complementary angles",
+        "titleZh": "斜边上的高与互余角",
+        "topics": [
+          {
+            "en": "Altitude to hypotenuse",
+            "zh": "直角三角形斜边上的高"
+          },
+          {
+            "en": "Equal tangent segments",
+            "zh": "切线长定理"
+          },
+          {
+            "en": "Double-angle identity",
+            "zh": "二倍角公式"
+          }
+        ],
+        "steps": [
+          "(a) Each central angle is $90^\\circ$. In right triangle $AOD$, $OT$ is the altitude to hypotenuse $AD$ because a radius is perpendicular to its tangent. By Pythagoras in $AOT$, $AT=\\sqrt{3^2-1^2}=2\\sqrt2$.",
+          "The two small right triangles cut off by $OT$ are similar, giving $AT\\cdot TD=OT^2=1$. Hence $TD=1/(2\\sqrt2)$. The two tangents from $D$ have equal lengths, so $DS=DT=\\sqrt2/4$.",
+          "(b) Put $u=(3/2)\\cos x$ and $v=(3/2)\\sin x$. Both lie strictly between $0$ and $3/2<\\pi/2$. Since cosine is one-to-one on $(0,\\pi/2)$ and $\\sin v=\\cos(\\pi/2-v)$, the original condition is equivalent to $u+v=\\pi/2$, or $\\cos x+\\sin x=\\pi/3$.",
+          "Squaring gives $1+\\sin(2x)=\\pi^2/9$. This value is attained: the continuous function $\\cos x+\\sin x$ takes values $1$ at $0$ and $\\sqrt2$ at $\\pi/4$, and $1<\\pi/3<\\sqrt2$, so it attains $\\pi/3$ at an interior point."
+        ],
+        "stepsZh": [
+          "(a) 四个圆心角各为 $90^\\circ$。在直角三角形 $AOD$ 中，因半径垂直于切线，$OT$ 是斜边 $AD$ 上的高。由三角形 $AOT$ 的勾股定理，$AT=\\sqrt{3^2-1^2}=2\\sqrt2$。",
+          "高 $OT$ 分出的两个小直角三角形相似，故 $AT\\cdot TD=OT^2=1$，得 $TD=1/(2\\sqrt2)$。从 $D$ 引出的两条切线段等长，所以 $DS=DT=\\sqrt2/4$。",
+          "(b) 令 $u=(3/2)\\cos x,v=(3/2)\\sin x$，两者均位于 $0$ 与 $3/2<\\pi/2$ 之间。由于余弦在第一象限严格单调，且 $\\sin v=\\cos(\\pi/2-v)$，原条件等价于 $u+v=\\pi/2$，即 $\\cos x+\\sin x=\\pi/3$。",
+          "两边平方得 $1+\\sin(2x)=\\pi^2/9$。还需验证可以取到：连续函数 $\\cos x+\\sin x$ 在 $0$ 与 $\\pi/4$ 的值分别为 $1$ 和 $\\sqrt2$，而 $1<\\pi/3<\\sqrt2$，故在两者之间有点使函数值等于 $\\pi/3$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q9": {
+    "summary": "For positive integers $a,b$, set $f(a,b)=a/b+b/a+1/(ab)$. (a) Evaluate $f(2,5)$. (b) Find all positive integers $a$ for which $f(a,a)$ is integral. (c) Prove that every integral value of $f(a,b)$ is a multiple of $3$. (d) Exhibit four distinct pairs $(a,b)$ with $2<a<b$ for which $f(a,b)$ is integral.",
+    "summaryZh": "对正整数 $a,b$，定义 $f(a,b)=a/b+b/a+1/(ab)$。(a) 求 $f(2,5)$。(b) 求使 $f(a,a)$ 为整数的所有正整数 $a$。(c) 证明只要 $f(a,b)$ 为整数，它就是 $3$ 的倍数。(d) 找出四组不同的正整数对 $(a,b)$，使 $2<a<b$ 且 $f(a,b)$ 为整数。",
+    "answer": "(a) $3$. (b) $a=1$. (c) $3\\mid f(a,b)$ whenever the value is integral. (d) Examples are $(5,13),(13,34),(34,89),(89,233)$, all with value $3$.",
+    "answerZh": "(a) $3$。(b) $a=1$。(c) 若函数值为整数，则 $3\\mid f(a,b)$。(d) 例如 $(5,13),(13,34),(34,89),(89,233)$，函数值都为 $3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Reduce modulo three and use the other quadratic root",
+        "titleZh": "模三的平方剩余与二次方程的另一根",
+        "topics": [
+          {
+            "en": "Quadratic residues modulo three",
+            "zh": "模三的平方剩余"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          },
+          {
+            "en": "Vieta's formulas",
+            "zh": "韦达定理"
+          }
+        ],
+        "steps": [
+          "(a) Putting everything over $ab$ gives $f(a,b)=(a^2+b^2+1)/(ab)$, hence $f(2,5)=(4+25+1)/10=3$. (b) On the diagonal $f(a,a)=2+1/a^2$. For $a=1$ it is $3$; for $a\\ge2$ it is strictly between $2$ and $3$.",
+          "(c) Write $k=f(a,b)\\in\\mathbb Z$. If $3\\mid a$, reducing $kab=a^2+b^2+1$ modulo $3$ gives $b^2\\equiv2\\pmod3$, impossible since squares are $0$ or $1$ modulo $3$. By symmetry $3\\nmid b$ as well. Thus $a^2+b^2+1\\equiv1+1+1=0\\pmod3$. Since $3\\nmid ab$, this forces $3\\mid k$.",
+          "(d) Keep the value $k=3$. If $(a,b)$ gives this value, then $a$ is one root of $t^2-3bt+(b^2+1)=0$. The other root is $3b-a$. The formula for $f$ is symmetric, so $(b,3b-a)$ again gives $3$. Starting from $(2,5)$ and applying this operation four times gives $(5,13),(13,34),(34,89),(89,233)$, all satisfying the strict inequalities."
+        ],
+        "stepsZh": [
+          "(a) 通分得 $f(a,b)=(a^2+b^2+1)/(ab)$，故 $f(2,5)=(4+25+1)/10=3$。(b) 当两数相等时，$f(a,a)=2+1/a^2$。若 $a=1$，值为 $3$；若 $a\\ge2$，值严格介于 $2,3$ 之间。",
+          "(c) 令 $k=f(a,b)\\in\\mathbb Z$。若 $3\\mid a$，由 $kab=a^2+b^2+1$ 两边对 $3$ 取模得 $b^2\\equiv2\\pmod3$，但平方数模 $3$ 只能为 $0$ 或 $1$。故 $3\\nmid a$，由对称性也有 $3\\nmid b$。于是 $a^2+b^2+1\\equiv1+1+1=0\\pmod3$。因 $3\\nmid ab$，必有 $3\\mid k$。",
+          "(d) 保持 $k=3$。若 $(a,b)$ 的函数值为 $3$，则 $a$ 是 $t^2-3bt+(b^2+1)=0$ 的一根，另一根为 $3b-a$。又因 $f$ 对称，所以 $(b,3b-a)$ 的函数值仍为 $3$。从 $(2,5)$ 连用四次，得到 $(5,13),(13,34),(34,89),(89,233)$，四组均满足严格不等式。"
+        ]
+      }
+    ]
+  },
+  "euclid-2019-q10": {
+    "summary": "(a) Amir has two cards of each of three colours (red, yellow, green). Brigitte has two of each of two other colours (purple, white). Starting with Amir, they alternate drawing a uniformly random card from their own remaining hand and placing it on the table. The first to play two cards of one colour wins immediately. Find Amir's probability of winning. (b) Fourteen coins are flipped independently, once each; coin $k$ has probability $h_k$ of heads. If the probability of an even number of heads is $1/2$, must some $h_k=1/2$? Justify your answer. (c) Two independent machines each print one digit from $1$ to $6$, with respective probabilities $p_i$ and $q_i$ of digit $i$. If $S(i)$ is the probability that the digits sum to $i$, and $S(2)=S(12)=S(7)/2$ with $S(7)>0$, prove $p_1=p_6$ and $q_1=q_6$.",
+    "summaryZh": "(a) Amir 有红、黄、绿三种颜色的牌，每色两张；Brigitte 有紫、白两种颜色的牌，每色两张。Amir 先出，之后两人交替从自己剩余的牌中等概率抽一张放到桌上。谁先出过两张同色牌，谁立即获胜。求 Amir 获胜的概率。(b) 将十四枚硬币分别独立抛掷一次，第 $k$ 枚正面朝上的概率为 $h_k$。若正面个数为偶数的概率恰为 $1/2$，是否必有某个 $h_k=1/2$？证明你的判断。(c) 两台独立的机器各输出一个 $1$ 至 $6$ 的数字，输出 $i$ 的概率分别为 $p_i,q_i$。记 $S(i)$ 为两个数字之和等于 $i$ 的概率。若 $S(2)=S(12)=S(7)/2$ 且 $S(7)>0$，证明 $p_1=p_6$ 且 $q_1=q_6$。",
+    "answer": "(a) $7/15$. (b) Yes, at least one coin is fair. (c) The two endpoint probabilities are equal within each machine.",
+    "answerZh": "(a) $7/15$。(b) 是，至少有一枚公平硬币。(c) 对每台机器，输出 $1$ 与 $6$ 的概率相等。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "First repeat, parity of heads and equality in AM–GM",
+        "titleZh": "首次同色、正面数的奇偶性与均值不等式的等号",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Arithmetic–geometric mean inequality",
+            "zh": "算术–几何平均不等式"
+          }
+        ],
+        "steps": [
+          "(a) Brigitte has only two colours, so by her third turn she must have a repeat. Amir can therefore win only on his second or third turn. On his second turn one of his five remaining cards matches the first, giving probability $1/5$.",
+          "For Amir to win on turn three, his second card must differ from his first (probability $4/5$), and Brigitte's second must differ from hers ($2/3$). Of Amir's four remaining cards, two now match one of his earlier colours ($2/4$). The two winning cases are disjoint, giving $1/5+(4/5)(2/3)(2/4)=7/15$.",
+          "(b) Set $D_j=\\Pr(\\text{even after }j)-\\Pr(\\text{odd after }j)$, with $D_0=1$. A tail preserves parity and a head reverses it, so independence gives $D_j=((1-h_j)-h_j)D_{j-1}$. Thus $D_{14}=\\prod_{j=1}^{14}(1-2h_j)$. The hypothesis gives $D_{14}=0$; a factor vanishes, so some $h_j=1/2$.",
+          "(c) Let $t=S(2)=S(12)>0$. Independence gives $p_1q_1=p_6q_6=t$, so all four factors are positive. The two endpoint ways of summing to $7$ give $2t=S(7)\\ge p_1q_6+p_6q_1\\ge2\\sqrt{(p_1q_1)(p_6q_6)}=2t$. Both inequalities are equalities; equality in AM–GM gives $p_1q_6=p_6q_1$.",
+          "It follows that $p_1/p_6=q_1/q_6$ from the cross products, while $p_1/p_6=q_6/q_1$ from the equal endpoint products. These positive ratios must equal $1$, proving both claims."
+        ],
+        "stepsZh": [
+          "(a) Brigitte 只有两种颜色，最迟在她的第三次出牌就会有同色。因此 Amir 只能在自己第二次或第三次出牌时获胜。第二次时，剩下的五张中有一张与第一张同色，概率为 $1/5$。",
+          "要在第三次出牌获胜，Amir 的第二张须与第一张异色（概率 $4/5$），Brigitte 的第二张也须与她的第一张异色（概率 $2/3$）。这时 Amir 剩下四张，其中两张与先前某张同色，概率 $2/4$。两种获胜情形互斥，故总概率为 $1/5+(4/5)(2/3)(2/4)=7/15$。",
+          "(b) 设 $D_j$ 为前 $j$ 枚中正面数为偶数的概率减去为奇数的概率，故 $D_0=1$。反面保持奇偶性，正面使奇偶性互换。由独立性，$D_j=((1-h_j)-h_j)D_{j-1}$，从而 $D_{14}=\\prod_{j=1}^{14}(1-2h_j)$。题设给出 $D_{14}=0$，所以至少一个因子为零，相应的 $h_j=1/2$。",
+          "(c) 记 $t=S(2)=S(12)>0$。由独立性，$p_1q_1=p_6q_6=t$，所以四个因子均为正。数字和为 $7$ 的情形包含 $(1,6),(6,1)$，故 $2t=S(7)\\ge p_1q_6+p_6q_1\\ge2\\sqrt{(p_1q_1)(p_6q_6)}=2t$。首尾相等，两处都取等号；由均值不等式的等号条件，$p_1q_6=p_6q_1$。",
+          "交叉乘积相等给出 $p_1/p_6=q_1/q_6$，端点乘积相等又给出 $p_1/p_6=q_6/q_1$。正数与自身倒数相等只可能均为 $1$，所以 $p_1=p_6,q_1=q_6$。"
+        ]
+      }
+    ]
+  }
+}
