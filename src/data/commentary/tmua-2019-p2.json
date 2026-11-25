@@ -1,0 +1,694 @@
+{
+  "tmua-2019-p2-q1": {
+    "summary": "In $x^2(2x+x^{-1})^6$, what number multiplies $x^4$ after like powers have been collected? Choose A $15$, B $30$, C $60$, D $120$, or E $240$.",
+    "summaryZh": "把 $x^2(2x+x^{-1})^6$ 展开并合并同类项，求 $x^4$ 的系数。选项为 A $15$，B $30$，C $60$，D $120$，E $240$。",
+    "answer": "E. $240$",
+    "answerZh": "E．$240$",
+    "methods": [
+      {
+        "title": "Count the choices of reciprocal factors",
+        "titleZh": "计算选取倒数项的方式",
+        "topics": [
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          },
+          {
+            "en": "Laws of indices",
+            "zh": "指数运算"
+          }
+        ],
+        "steps": [
+          "Select $x^{-1}$ from $r$ of the six brackets and $2x$ from the other $6-r$. Including the outside $x^2$, the power is $2+(6-r)-r=8-2r$. It equals $4$ only for $r=2$.",
+          "Each such choice contributes $2^4x^4$. There are $\\binom62=15$ choices of the two brackets, giving coefficient $15\\cdot16=240$."
+        ],
+        "stepsZh": [
+          "设六个括号中有 $r$ 个取 $x^{-1}$，其余 $6-r$ 个取 $2x$。计入括号外的 $x^2$，所得指数为 $2+(6-r)-r=8-2r$。令它等于 $4$，得 $r=2$。",
+          "每种选法贡献 $2^4x^4$，而从六个括号中挑出两个有 $\\binom62=15$ 种选法，故系数为 $15\\cdot16=240$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=3"
+  },
+  "tmua-2019-p2-q2": {
+    "summary": "The cubic $f(x)=2x^3+px^2+q$ has both $x-2$ and $2x+1$ as factors. Evaluate $2p+q$. The options are A $-10$, B $-38/5$, C $-22/3$, D $22/3$, E $38/5$, F $10$.",
+    "summaryZh": "三次多项式 $f(x)=2x^3+px^2+q$ 同时含有因式 $x-2$ 和 $2x+1$。求 $2p+q$。选项为 A $-10$，B $-38/5$，C $-22/3$，D $22/3$，E $38/5$，F $10$。",
+    "answer": "C. $-22/3$",
+    "answerZh": "C．$-22/3$",
+    "methods": [
+      {
+        "title": "Use the two known roots",
+        "titleZh": "代入两个已知零点",
+        "topics": [
+          {
+            "en": "Factor theorem",
+            "zh": "因式定理"
+          },
+          {
+            "en": "Simultaneous linear equations",
+            "zh": "二元一次方程组"
+          }
+        ],
+        "steps": [
+          "The two roots give $f(2)=16+4p+q=0$ and $4f(-1/2)=-1+p+4q=0$.",
+          "From the second equation $p=1-4q$. The first becomes $20-15q=0$, so $q=4/3$ and $p=-13/3$. Consequently $2p+q=(-26+4)/3=-22/3$."
+        ],
+        "stepsZh": [
+          "由两个零点得到 $f(2)=16+4p+q=0$ 和 $4f(-1/2)=-1+p+4q=0$。",
+          "第二式给出 $p=1-4q$，代入第一式得 $20-15q=0$。于是 $q=4/3$、$p=-13/3$，故 $2p+q=(-26+4)/3=-22/3$。"
+        ]
+      },
+      {
+        "title": "Recover the third linear factor",
+        "titleZh": "由一次项系数求第三个因式",
+        "topics": [
+          {
+            "en": "Comparison of coefficients",
+            "zh": "比较系数"
+          },
+          {
+            "en": "Polynomial factorisation",
+            "zh": "多项式因式分解"
+          }
+        ],
+        "steps": [
+          "Matching the leading coefficient allows $f(x)=(2x+1)(x-2)(x-r)=(2x^2-3x-2)(x-r)$. The coefficient of $x$ is $3r-2$. The given cubic has no linear term, so $r=2/3$.",
+          "Reading off the other coefficients gives $p=-3-2r=-13/3$ and $q=2r=4/3$, hence $2p+q=-22/3$."
+        ],
+        "stepsZh": [
+          "由首项系数可写 $f(x)=(2x+1)(x-2)(x-r)=(2x^2-3x-2)(x-r)$。展开后 $x$ 的系数为 $3r-2$，而原式一次项系数为零，因此 $r=2/3$。",
+          "再比较二次项与常数项，得到 $p=-3-2r=-13/3$、$q=2r=4/3$，故 $2p+q=-22/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=4"
+  },
+  "tmua-2019-p2-q3": {
+    "summary": "Suppose $a,b,c$ are real and $ab=ac$. Which of these conclusions hold for every such triple? I $a=0$. II At least one of $b,c$ is zero. III $b=c$. A none, B I, C II, D III, E I and II, F I and III, G II and III, H all three.",
+    "summaryZh": "设实数 $a,b,c$ 满足 $ab=ac$。哪些结论对每组这样的数都成立？I $a=0$；II $b,c$ 中至少一个为零；III $b=c$。A 无，B 仅 I，C 仅 II，D 仅 III，E 仅 I、II，F 仅 I、III，G 仅 II、III，H 三项全部成立。",
+    "answer": "A. None of I, II and III is individually forced.",
+    "answerZh": "A．三项中没有一项必然成立。",
+    "methods": [
+      {
+        "title": "Test a zero product in both branches",
+        "titleZh": "分别检验乘积为零的两种情形",
+        "topics": [
+          {
+            "en": "Zero-product property",
+            "zh": "零乘积性质"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "Rearranging gives $a(b-c)=0$. Thus at least one of $a=0$ and $b=c$ holds, but a particular one need not hold for every triple.",
+          "For $(a,b,c)=(1,2,2)$ the hypothesis holds whereas I and II fail. For $(a,b,c)=(0,1,2)$ it still holds whereas III fails. These two examples exclude every proposed individual conclusion."
+        ],
+        "stepsZh": [
+          "移项得 $a(b-c)=0$，即 $a=0$ 或 $b=c$。这个析取命题成立，只保证两者至少有一个成立。",
+          "取 $(a,b,c)=(1,2,2)$，等式成立而 I、II 均不成立。另取 $(0,1,2)$，等式仍成立而 III 不成立。两个反例已排除全部三项。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=5"
+  },
+  "tmua-2019-p2-q4": {
+    "summary": "A claim about decimal notation says that every integer written as a $1$, an odd number of zeros, and one more $1$ is prime. Which of these give counterexamples? I: $101$, a prime. II: $1001=7\\cdot11\\cdot13$. III: $10001=73\\cdot137$. A none, B I, C II, D III, E I and II, F I and III, G II and III, H all three.",
+    "summaryZh": "有人猜想，十进制首尾均为 $1$、中间恰有奇数个 $0$ 且没有其他数字的正整数一定是素数。以下哪些数构成反例？I：素数 $101$；II：$1001=7\\cdot11\\cdot13$；III：$10001=73\\cdot137$。A 无，B 仅 I，C 仅 II，D 仅 III，E 仅 I、II，F 仅 I、III，G 仅 II、III，H 三项均为反例。",
+    "answer": "D. III alone, namely $10001$.",
+    "answerZh": "D．仅 III，即 $10001$。",
+    "methods": [
+      {
+        "title": "Require a true hypothesis and a false conclusion",
+        "titleZh": "同时检验前提和结论",
+        "topics": [
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          },
+          {
+            "en": "Prime and composite numbers",
+            "zh": "素数与合数"
+          }
+        ],
+        "steps": [
+          "A counterexample must pass both tests: its interior zero count must be odd and the number must have a nontrivial factor.",
+          "The interior counts for I, II, III are $1,2,3$, respectively. I passes the first test but is prime. II is composite but has an even count. III passes both tests, as its displayed factors are greater than one."
+        ],
+        "stepsZh": [
+          "要推翻猜想，应找一个满足数字排列条件的合数。因此中间既要有奇数个零，该数又要有非平凡因数。",
+          "I、II、III 的中间零数依次为 $1,2,3$。I 合乎形式但为素数。II 虽然是合数，零的个数却为偶数。只有 III 既有三个零，又有题中给出的两个大于 $1$ 的因数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=6"
+  },
+  "tmua-2019-p2-q5": {
+    "summary": "Take positive integers $a,b,n$. For the assertion $n\\mid ab$, classify the condition $n\\mid a$ or $n\\mid b$ (at least one). A necessary only, B sufficient only, C necessary and sufficient, D neither.",
+    "summaryZh": "设 $a,b,n$ 均为正整数。对于结论 $n\\mid ab$，条件“$n\\mid a$ 或 $n\\mid b$（至少一项成立）”属于哪一类？A 仅必要，B 仅充分，C 充要，D 两者均非。",
+    "answer": "B. Sufficient only.",
+    "answerZh": "B．充分而非必要。",
+    "methods": [
+      {
+        "title": "Prove the forward implication and test the converse",
+        "titleZh": "证明正向蕴含，再检验逆向蕴含",
+        "topics": [
+          {
+            "en": "Necessary and sufficient conditions",
+            "zh": "必要条件与充分条件"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ],
+        "steps": [
+          "If $a=nu$ for some integer $u$, then $ab=n(ub)$. The same reasoning applies when $n\\mid b$, proving sufficiency.",
+          "For necessity, test $n=6$, $a=2$, $b=3$. Their product is $6$, yet neither factor is divisible by $6$. Thus the converse fails."
+        ],
+        "stepsZh": [
+          "若 $a=nu$，其中 $u$ 为整数，则 $ab=n(ub)$。当 $n\\mid b$ 时同理。故这个条件足以推出结论。",
+          "反过来，令 $n=6$、$a=2$、$b=3$，则 $ab=6$ 可被 $6$ 整除，但两个因数都不能被 $6$ 整除。这就否定了必要性。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=7"
+  },
+  "tmua-2019-p2-q6": {
+    "summary": "Audit an attempted solution of $\\cos x+\\sin x\\tan x=2\\sin x-1$ on $[0,2\\pi]$. Abbreviate $s=\\sin x$, $c=\\cos x$, $t=\\tan x$. The successive claims are (I) $c-s+st-s=-1$; (II) $(s-c)(t-1)=-1$; (III) $s-c=-1$ or $t-1=-1$; (IV) $(s-c)^2=1$ or $t=0$; (V) $2sc=0$ or $t=0$; (VI) $x\\in\\{0,\\pi/2,\\pi,3\\pi/2,2\\pi\\}$. In which line does the first error occur? A all valid; B I; C II; D III; E extra values in IV; F extra values in V; G undefined tangent overlooked in VI.",
+    "summaryZh": "有人在 $[0,2\\pi]$ 上解 $\\cos x+\\sin x\\tan x=2\\sin x-1$。记 $s=\\sin x$、$c=\\cos x$、$t=\\tan x$。其推导依次为 (I) $c-s+st-s=-1$；(II) $(s-c)(t-1)=-1$；(III) $s-c=-1$ 或 $t-1=-1$；(IV) $(s-c)^2=1$ 或 $t=0$；(V) $2sc=0$ 或 $t=0$；(VI) $x\\in\\{0,\\pi/2,\\pi,3\\pi/2,2\\pi\\}$。最早的错误在哪里？A 全部正确；B 在 I；C 在 II；D 在 III；E 在 IV 引入增根；F 在 V 引入增根；G 在 VI 漏删正切无定义的值。",
+    "answer": "D. Line III makes the first invalid inference.",
+    "answerZh": "D．第一处错误在第 III 行。",
+    "methods": [
+      {
+        "title": "Expand the product before judging the split",
+        "titleZh": "先展开核对，再判断能否分情况",
+        "topics": [
+          {
+            "en": "Checking a proof",
+            "zh": "推理检验"
+          },
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Zero-product property",
+            "zh": "零乘积性质"
+          }
+        ],
+        "steps": [
+          "Line I subtracts $2s$ from the two sides. On the original domain $c\\ne0$, we have $ct=s$. Thus $(s-c)(t-1)=st-ct-s+c=st-s-s+c$, which verifies II.",
+          "A product equal to $-1$ only forces its factors to be nonzero negative reciprocals. For example, $2(-1/2)=-1$, but neither factor is $-1$. The split in III wrongly treats this as a zero-product equation. Later squaring or domain checks cannot repair this first inference."
+        ],
+        "stepsZh": [
+          "第 I 行将两边同时减去 $2s$。原方程要求 $c\\ne0$，因而 $ct=s$。于是 $(s-c)(t-1)=st-ct-s+c=st-s-s+c$，第 II 行也成立。",
+          "乘积等于 $-1$ 只说明两因数非零，且一个是另一个倒数的相反数。例如 $2(-1/2)=-1$，两因数均不等于 $-1$。第 III 行误用了只适用于零乘积的分情况方法，这是第一处错误。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=8"
+  },
+  "tmua-2019-p2-q7": {
+    "summary": "Use the numerical identity $12^2+16^2=20^2$ to disprove one of four assertions about positive integers. A: Every Pythagorean triple with greatest common divisor $1$ has two odd entries. B: $a^4+b^2=c^2$ has no solution. C: $a^4+b^4=c^4$ has no solution. D: In every Pythagorean triple one entry equals the mean of the other two. Which assertion does this identity refute?",
+    "summaryZh": "要用 $12^2+16^2=20^2$ 反驳下列关于正整数的一个断言。A：最大公因数为 $1$ 的每组勾股数恰有两个奇数；B：$a^4+b^2=c^2$ 无解；C：$a^4+b^4=c^4$ 无解；D：每组勾股数中都有一项等于其余两项的算术平均数。这个等式可以反驳哪项？",
+    "answer": "B. $(a,b,c)=(4,12,20)$ solves $a^4+b^2=c^2$.",
+    "answerZh": "B．$(a,b,c)=(4,12,20)$ 满足 $a^4+b^2=c^2$。",
+    "methods": [
+      {
+        "title": "Convert the square of a square to a fourth power",
+        "titleZh": "将完全平方数的平方改写为四次幂",
+        "topics": [
+          {
+            "en": "Integer powers",
+            "zh": "整数幂"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          },
+          {
+            "en": "Pythagorean triples",
+            "zh": "勾股数"
+          }
+        ],
+        "steps": [
+          "Since $16=4^2$, the term $16^2$ equals $4^4$. Interchanging the two terms on the left gives $4^4+12^2=20^2$, a positive integer solution to the equation in B.",
+          "The given triple has common divisor $4$, so it does not contradict A. The displayed identity does not give fourth powers for all three terms as C would require. For D it exhibits the stated mean, since $(12+20)/2=16$."
+        ],
+        "stepsZh": [
+          "注意 $16=4^2$，因此 $16^2=4^4$。把左侧两项交换，可写成 $4^4+12^2=20^2$，这就是 B 所声称不存在的一组正整数解。",
+          "原三数有公因数 $4$，不满足 A 的前提。C 的反例要求等式三项均为四次幂，原式不具备该形式。又因 $(12+20)/2=16$，原三数恰好符合 D 的平均数条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=9"
+  },
+  "tmua-2019-p2-q8": {
+    "summary": "Real numbers satisfy $a<b<c<0$. Identify all universally valid inequalities among I $ac<ab<a^2$, II $b(c+a)>0$, III $c/b>a/b$. A none, B I, C II, D III, E I and II, F I and III, G II and III, H all three.",
+    "summaryZh": "已知实数 $a<b<c<0$。判断以下哪些不等式一定成立：I $ac<ab<a^2$；II $b(c+a)>0$；III $c/b>a/b$。A 无，B 仅 I，C 仅 II，D 仅 III，E 仅 I、II，F 仅 I、III，G 仅 II、III，H 三项全部成立。",
+    "answer": "E. I and II only.",
+    "answerZh": "E．仅 I、II。",
+    "methods": [
+      {
+        "title": "Track the sign of each multiplier",
+        "titleZh": "检查乘数与除数的符号",
+        "topics": [
+          {
+            "en": "Inequalities with negative numbers",
+            "zh": "负数与不等号方向"
+          },
+          {
+            "en": "Signs of products",
+            "zh": "乘积符号"
+          }
+        ],
+        "steps": [
+          "Multiplying $a<b<c$ by the negative number $a$ reverses both signs, giving $a^2>ab>ac$. Read in the opposite order, this is I.",
+          "Both $b$ and $c+a$ are negative, so their product is positive and II holds. Since $c>a$ but $b<0$, division by $b$ gives $c/b<a/b$. III has the opposite sign."
+        ],
+        "stepsZh": [
+          "用负数 $a$ 乘 $a<b<c$ 的各项，两个不等号都要反向，得到 $a^2>ab>ac$。从右往左读，正是 I。",
+          "$b$ 和 $c+a$ 都是负数，故两者乘积为正，II 成立。虽然 $c>a$，但除以 $b<0$ 后应得 $c/b<a/b$，故 III 不成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=10"
+  },
+  "tmua-2019-p2-q9": {
+    "summary": "There are $40$ chairs in a ring. Find the minimum number of chairs that can be occupied in an arrangement where every empty chair has an occupied neighbour. A $9$, B $10$, C $13$, D $14$, E $19$, F $20$.",
+    "summaryZh": "圆桌周围排着 $40$ 把椅子。若要通过安排座位使每把空椅的左右两侧至少一侧有人，最少需要多少人？选项为 A $9$，B $10$，C $13$，D $14$，E $19$，F $20$。",
+    "answer": "D. $14$ occupants.",
+    "answerZh": "D．$14$ 人。",
+    "methods": [
+      {
+        "title": "Cover the cycle by short blocks",
+        "titleZh": "用相邻三座覆盖圆周",
+        "topics": [
+          {
+            "en": "Extremal arrangements",
+            "zh": "极值排列"
+          },
+          {
+            "en": "Lower bounds and constructions",
+            "zh": "下界与构造"
+          }
+        ],
+        "steps": [
+          "Count a seated person and the two immediately adjacent chairs as a block. Every chair must belong to at least one block, so $k$ occupants can succeed only if $3k\\ge40$. Hence $k\\ge14$.",
+          "Number the chairs cyclically from $1$ to $40$. Seat people at $1,4,7,\\ldots,37$ and $39$. This uses $13+1=14$ chairs. Between consecutive occupied chairs there are at most two empty chairs, including the gap from $39$ back to $1$, so every empty chair touches an occupied one."
+        ],
+        "stepsZh": [
+          "每人最多覆盖三个位置，即自己的椅子与两侧紧邻的椅子。要使 $40$ 把椅子全部得到覆盖，人数 $k$ 必须满足 $3k\\ge40$，故 $k\\ge14$。",
+          "把椅子按圆周顺序编号为 $1$ 到 $40$，安排人在 $1,4,7,\\ldots,37$ 号以及 $39$ 号落座，共 $13+1=14$ 人。相邻两位就座者之间至多隔两把空椅，跨过编号起点的一段也一样，故每把空椅都紧邻有人座位。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=11"
+  },
+  "tmua-2019-p2-q10": {
+    "summary": "A quadrilateral has vertices $P,Q,R,S$ in anticlockwise order. Which condition holds in every parallelogram but can also hold in a quadrilateral that is not a parallelogram? A $PQ=SR$ and $PS\\parallel QR$; B $PQ=SR$ and $PQ\\parallel SR$; C $PQ=QR=SR=PS$; D $PR=QS$.",
+    "summaryZh": "按逆时针依次标记四边形的顶点为 $P,Q,R,S$。以下哪项是平行四边形的必要而非充分条件？A $PQ=SR$ 且 $PS\\parallel QR$；B $PQ=SR$ 且 $PQ\\parallel SR$；C $PQ=QR=SR=PS$；D $PR=QS$。",
+    "answer": "A. $PQ=SR$ and $PS\\parallel QR$.",
+    "answerZh": "A．$PQ=SR$ 且 $PS\\parallel QR$。",
+    "methods": [
+      {
+        "title": "Separate the two pairs of opposite sides",
+        "titleZh": "区分等长与平行所指的两组对边",
+        "topics": [
+          {
+            "en": "Parallelogram criteria",
+            "zh": "平行四边形的判定"
+          },
+          {
+            "en": "Necessary and sufficient conditions",
+            "zh": "必要条件与充分条件"
+          },
+          {
+            "en": "Coordinate counterexamples",
+            "zh": "坐标反例"
+          }
+        ],
+        "steps": [
+          "Every parallelogram satisfies A: the opposite sides $PQ,SR$ are equal in length, and the other opposite sides $PS,QR$ are parallel. To test sufficiency take $P=(0,0)$, $Q=(3,1)$, $R=(3,3)$, $S=(0,4)$. Here $PS$ and $QR$ are vertical, and $PQ=SR=\\sqrt{10}$. Yet the slopes of $PQ$ and $SR$ are $1/3$ and $-1/3$. Thus A also holds in this non-parallelogram.",
+          "In B, equality and parallelism apply to the same opposite pair, which suffices for a parallelogram. C fails for any non-square rectangle. D need not hold either: a parallelogram with adjacent side vectors $(2,0)$ and $(1,1)$ has diagonals of lengths $\\sqrt{10}$ and $\\sqrt2$."
+        ],
+        "stepsZh": [
+          "平行四边形的对边分别等长且平行，故必有 $PQ=SR$、$PS\\parallel QR$。为检验充分性，取 $P=(0,0)$、$Q=(3,1)$、$R=(3,3)$、$S=(0,4)$。边 $PS,QR$ 都竖直，且 $PQ=SR=\\sqrt{10}$，但 $PQ,SR$ 的斜率分别为 $1/3,-1/3$，不平行。故 A 不足以判定平行四边形。",
+          "B 的平行与等长落在同一组对边上，是平行四边形的充分条件。非正方形的矩形可排除 C 的必要性。对于 D，相邻边向量为 $(2,0)$ 和 $(1,1)$ 的平行四边形，两条对角线长度分别为 $\\sqrt{10}$ 和 $\\sqrt2$，并不相等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=12"
+  },
+  "tmua-2019-p2-q11": {
+    "summary": "An arithmetic progression of $n$ integers has sum $20$. Decide which properties are forced: I, its first term is even; II, $n$ is even; III, its common difference is even. Select A for none, B for I, C for II, D for III, E for I and II, F for I and III, G for II and III, or H for all three. Each choice lists exactly the statements claimed to be necessary.",
+    "summaryZh": "一个由 $n$ 个整数组成的等差数列的各项和为 $20$。判断哪些性质必然成立：I，首项为偶数；II，$n$ 为偶数；III，公差为偶数。A 至 H 依次代表均非必然、仅 I、仅 II、仅 III、仅 I 与 II、仅 I 与 III、仅 II 与 III、三项均必然。",
+    "answer": "A. None of I, II and III is necessary.",
+    "answerZh": "A．三项均非必然。",
+    "methods": [
+      {
+        "title": "Test each parity claim with a progression",
+        "titleZh": "构造数列检验奇偶性",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "The two-term progression $9,11$ sums to $20$ and starts with an odd term. Thus I can fail.",
+          "The five consecutive integers $2,3,4,5,6$ also sum to $20$. Here $n=5$ and the common difference is $1$, so II and III can both fail. A necessary condition must hold for every admissible progression."
+        ],
+        "stepsZh": [
+          "两项数列 $9,11$ 的和为 $20$，首项却是奇数，故 I 不一定成立。",
+          "五个连续整数 $2,3,4,5,6$ 的和也是 $20$，其中 $n=5$，公差为 $1$，故 II 与 III 都不一定成立。必要条件须对每个符合题设的数列成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=13"
+  },
+  "tmua-2019-p2-q12": {
+    "summary": "At a large college a majority of students take mathematics and some do not. Draw three different students uniformly, in order. Let $R$ be the probability that at least one takes mathematics, $S$ that the second does, and $T$ that all three do. Order these probabilities. A: $R<S<T$; B: $R<T<S$; C: $S<R<T$; D: $S<T<R$; E: $T<R<S$; F: $T<S<R$.",
+    "summaryZh": "某大学的大多数学生修数学，另有学生未修。从中等概率地依次抽取三个不同的人。设 $R$ 是至少一人修数学的概率，$S$ 是第二人修数学的概率，$T$ 是三人都修数学的概率。判断大小顺序。A：$R<S<T$；B：$R<T<S$；C：$S<R<T$；D：$S<T<R$；E：$T<R<S$；F：$T<S<R$。",
+    "answer": "F. $T<S<R$.",
+    "answerZh": "F．$T<S<R$。",
+    "methods": [
+      {
+        "title": "Compare the events by inclusion",
+        "titleZh": "利用事件的包含关系比较概率",
+        "topics": [
+          {
+            "en": "Event inclusion",
+            "zh": "事件的包含关系"
+          },
+          {
+            "en": "Sampling without replacement",
+            "zh": "不放回抽样"
+          }
+        ],
+        "steps": [
+          "If all three take mathematics, the second does. If the second does, at least one does. Nesting these events gives $T\\le S\\le R$.",
+          "Both differences contain possible outcomes. In the order (mathematics, mathematics, other), the second student takes mathematics but the three do not all do so. In the order (mathematics, other, mathematics), someone takes mathematics but the second does not. Each order has positive probability, so both inequalities are strict."
+        ],
+        "stepsZh": [
+          "三人都修数学必然推出第二人修数学，而第二人修数学又推出至少一人修数学。由事件包含关系得 $T\\le S\\le R$。",
+          "两处包含都是严格的。按“修、修、未修”的顺序抽到三人时，第二人修数学，但并非三人都修；按“修、未修、修”的顺序抽到三人时，有人修数学，但第二人未修。这两种结果均有正概率，故两个不等号都应取严格形式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=14"
+  },
+  "tmua-2019-p2-q13": {
+    "summary": "On $[a,b]$, four equal strips in the trapezium rule give a value above $\\int_a^b\\sin^2x\\,dx$. Test these predictions using four equal strips each time. I: the estimate of $\\int_{-b}^{-a}\\sin^2x\\,dx$ is too large. II: the estimate of $\\int_a^b\\cos^2x\\,dx$ is too small. Choose A neither, B I alone, C II alone, or D both.",
+    "summaryZh": "在 $[a,b]$ 上用四个等宽梯形估算 $\\int_a^b\\sin^2x\\,dx$，所得数值大于真实值。下列两次仍各取四个等宽梯形。I：估算 $\\int_{-b}^{-a}\\sin^2x\\,dx$ 时会高估；II：估算 $\\int_a^b\\cos^2x\\,dx$ 时会低估。选 A 两项均非必然，B 仅 I，C 仅 II，D 两项均必然。",
+    "answer": "D. Both predictions hold.",
+    "answerZh": "D．两项均成立。",
+    "methods": [
+      {
+        "title": "Reflect the nodes and use linearity",
+        "titleZh": "反射取样节点，再利用线性性",
+        "topics": [
+          {
+            "en": "Trapezium rule",
+            "zh": "梯形法则"
+          },
+          {
+            "en": "Even functions",
+            "zh": "偶函数"
+          },
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          }
+        ],
+        "steps": [
+          "The reflection $x\\mapsto -x$ reverses the order of the five nodes. Because $\\sin^2(-x)=\\sin^2x$, it preserves all heights, the strip widths and the endpoint weights. It also preserves the exact integral by substitution. The reflected error is therefore the same positive number, proving I.",
+          "Write $Q(f)$ for the trapezium estimate and $I(f)$ for the exact integral on $[a,b]$. Both are linear and $Q(1)=I(1)=b-a$. Since $\\cos^2x=1-\\sin^2x$, we have $Q(\\cos^2)-I(\\cos^2)=-[Q(\\sin^2)-I(\\sin^2)]<0$. This proves II."
+        ],
+        "stepsZh": [
+          "变换 $x\\mapsto -x$ 将五个节点的次序反转。因 $\\sin^2(-x)=\\sin^2x$，各节点的函数值、每段宽度以及端点权重都对应相同。换元也说明精确积分值相同。故反射后的误差仍为同一个正数，I 成立。",
+          "以 $Q(f)$ 表示梯形近似值、$I(f)$ 表示 $[a,b]$ 上的精确积分。两者都是线性的，且 $Q(1)=I(1)=b-a$。由 $\\cos^2x=1-\\sin^2x$ 得 $Q(\\cos^2)-I(\\cos^2)=-[Q(\\sin^2)-I(\\sin^2)]<0$，这就证明了 II。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=15"
+  },
+  "tmua-2019-p2-q14": {
+    "summary": "A polynomial $p$ increases on $[a,b]$ with $a<b$. Which endpoint comparisons are necessary? I: $p(a)\\le p(b)$; II: $p'(a)\\le p'(b)$; III: $p''(a)\\le p''(b)$. Select A for none, B for I, C for II, D for III, E for I and II, F for I and III, G for II and III, or H for all three. Each choice lists exactly the statements claimed to be necessary.",
+    "summaryZh": "多项式 $p$ 在 $[a,b]$ 上递增，其中 $a<b$。以下哪些端点比较是必要的？I：$p(a)\\le p(b)$；II：$p'(a)\\le p'(b)$；III：$p''(a)\\le p''(b)$。A 至 H 依次代表均非必然、仅 I、仅 II、仅 III、仅 I 与 II、仅 I 与 III、仅 II 与 III、三项均必然。",
+    "answer": "B. Only I.",
+    "answerZh": "B．仅 I。",
+    "methods": [
+      {
+        "title": "Use one increasing cubic to test both derivative conditions",
+        "titleZh": "用一个递增三次函数同时检验两项导数条件",
+        "topics": [
+          {
+            "en": "Increasing functions",
+            "zh": "递增函数"
+          },
+          {
+            "en": "Derivative tests",
+            "zh": "导数判别法"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "Increasing values on the interval imply $p(a)\\le p(b)$ immediately, so I is necessary.",
+          "Take $[a,b]=[0,1]$ and $p(x)=4x-x^3$. The derivative $p'(x)=4-3x^2\\ge1$ throughout, so $p$ is strictly increasing. But $p'(0)=4>1=p'(1)$, and $p''(x)=-6x$ gives $p''(0)=0>-6=p''(1)$. An increasing polynomial can thus violate both II and III."
+        ],
+        "stepsZh": [
+          "由区间上递增的定义，必有 $p(a)\\le p(b)$，所以 I 必要。",
+          "取 $[a,b]=[0,1]$ 与 $p(x)=4x-x^3$。在此区间内 $p'(x)=4-3x^2\\ge1$，故 $p$ 严格递增。但 $p'(0)=4>1=p'(1)$；同时 $p''(x)=-6x$，故 $p''(0)=0>-6=p''(1)$。这一个反例同时否定了 II 和 III 的必要性。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=16"
+  },
+  "tmua-2019-p2-q15": {
+    "summary": "For $a,b,c>1$, logarithms with one common base satisfy $\\log(ab^2c)=7$, $\\log(a^2bc^2)=11$ and $\\log(a^2b^2c^3)=15$. Which describes the base? A: $a$; B: $b$; C: $c$; D: uniquely identifiable and different from all three; E: undetermined.",
+    "summaryZh": "已知 $a,b,c>1$，三个对数的底数相同，且 $\\log(ab^2c)=7$、$\\log(a^2bc^2)=11$、$\\log(a^2b^2c^3)=15$。这个底数是什么？A：$a$；B：$b$；C：$c$；D：可唯一确定，且与三者均不同；E：无法确定。",
+    "answer": "B. The base is $b$.",
+    "answerZh": "B．底数为 $b$。",
+    "methods": [
+      {
+        "title": "Cancel two unknowns by taking a quotient",
+        "titleZh": "利用商消去两个未知量",
+        "topics": [
+          {
+            "en": "Logarithm laws",
+            "zh": "对数运算律"
+          },
+          {
+            "en": "Elimination",
+            "zh": "消元法"
+          }
+        ],
+        "steps": [
+          "Twice the first logarithm minus the second equals $14-11=3$. The quotient inside the resulting logarithm is $(ab^2c)^2/(a^2bc^2)=b^3$. Hence $3\\log b=3$, so $\\log b=1$ and the common base must be $b$.",
+          "For a check, the first equation now gives $\\log a+\\log c=5$. The third gives $2\\log a+3\\log c=13$, whence $\\log c=3$ and $\\log a=2$. These are consistent and neither equals $1$."
+        ],
+        "stepsZh": [
+          "把第一个对数乘二后减去第二个，得 $14-11=3$。将对数合并，真数等于 $(ab^2c)^2/(a^2bc^2)=b^3$。故 $3\\log b=3$，即 $\\log b=1$，因此共同底数恰为 $b$。",
+          "进一步检验，第一式给出 $\\log a+\\log c=5$，第三式给出 $2\\log a+3\\log c=13$。由此解得 $\\log c=3$、$\\log a=2$，与原式一致，且两者均不等于 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=17"
+  },
+  "tmua-2019-p2-q16": {
+    "summary": "For $p>0$, the graph $y=px^2+qx+p$ cuts the $x$-axis twice. Choose the region of all possible $(p,q)$. The diagrams are specified below by their shaded regions in the right half-plane, with $p$ horizontal, $q$ vertical and the oblique boundary lines excluded. A: $q<2p$; B: $q>2p$; C: $q<p$; D: $q>p$; E: $|q|<2p$; F: $|q|>2p$; G: $|q|<p$; H: $|q|>p$.",
+    "summaryZh": "设 $p>0$，抛物线 $y=px^2+qx+p$ 与 $x$ 轴有两个不同的交点。选出所有可能的 $(p,q)$ 组成的区域。原图横轴为 $p$、纵轴为 $q$；在 $p>0$ 的半平面内，八幅图的阴影可依次表述如下，斜边界均不包含。A：$q<2p$；B：$q>2p$；C：$q<p$；D：$q>p$；E：$|q|<2p$；F：$|q|>2p$；G：$|q|<p$；H：$|q|>p$。",
+    "answer": "F. $p>0$ and $|q|>2p$.",
+    "answerZh": "F．$p>0$ 且 $|q|>2p$。",
+    "methods": [
+      {
+        "title": "Translate distinct roots into a region",
+        "titleZh": "将两个不同实根的条件写成区域",
+        "topics": [
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次方程判别式"
+          },
+          {
+            "en": "Regions defined by inequalities",
+            "zh": "不等式表示的区域"
+          }
+        ],
+        "steps": [
+          "The leading and constant coefficients are both $p$. Two distinct crossings require and are guaranteed by $q^2-4p^2>0$.",
+          "With $p>0$, this means either $q>2p$ or $q<-2p$. Thus the two shaded sectors are above the upper line and below the lower line, in the right half-plane. Points on either line give a repeated root and are excluded."
+        ],
+        "stepsZh": [
+          "二次项与常数项的系数均为 $p$。图像与横轴有两个不同交点的充要条件是判别式 $q^2-4p^2>0$。",
+          "因为 $p>0$，该条件等价于 $q>2p$ 或 $q<-2p$。故应选择右半平面内位于上方直线之上和下方直线之下的两块阴影。两条斜线上的点对应重根，应排除。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=18"
+  },
+  "tmua-2019-p2-q17": {
+    "summary": "Let $P(x)$ be a statement about a real number. Exactly one of the following four assertions, interpreted for all real $x$, is correct. Which is it? A: $P(x)\\iff x>1$; B: $x>1\\Rightarrow P(x)$; C: $P(x)\\iff x>2$; D: $x>2\\Rightarrow P(x)$.",
+    "summaryZh": "设 $P(x)$ 是关于实数 $x$ 的命题。以下四项均指对每个实数 $x$ 成立，已知其中恰有一项正确，求这一项。A：$P(x)\\iff x>1$；B：$x>1\\Rightarrow P(x)$；C：$P(x)\\iff x>2$；D：$x>2\\Rightarrow P(x)$。",
+    "answer": "D. Whenever $x>2$, the statement is true.",
+    "answerZh": "D．当 $x>2$ 时命题必真。",
+    "methods": [
+      {
+        "title": "Follow the implications among the choices",
+        "titleZh": "追踪四项之间的蕴含关系",
+        "topics": [
+          {
+            "en": "Logical implication",
+            "zh": "逻辑蕴含"
+          },
+          {
+            "en": "Necessary and sufficient conditions",
+            "zh": "充要条件"
+          }
+        ],
+        "steps": [
+          "A implies B, since an equivalence includes each direction. B implies D, since every $x>2$ is also greater than $1$. C likewise implies D by taking one direction of its equivalence. Thus A, B or C being true would force at least two true options in each case.",
+          "Only D can stand alone. As a consistency check, take $P(x)$ to mean $x\\ge2$. D holds, B fails at $x=1.5$, A fails there too, and C fails at $x=2$."
+        ],
+        "stepsZh": [
+          "双向等价包含两个方向，所以 A 推出 B。每个 $x>2$ 的数都大于 $1$，因此 B 又推出 D。同理，取等价命题 C 的一个方向即可推出 D。可见 A、B、C 中任何一项正确，都会使至少两项正确。",
+          "只剩 D 可能单独成立。举例验证，令 $P(x)$ 表示 $x\\ge2$。此时 D 成立，取 $x=1.5$ 即可否定 A 和 B，取 $x=2$ 则可否定 C。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=19"
+  },
+  "tmua-2019-p2-q18": {
+    "summary": "For which real constants $a$ does $a|x|+1\\le |x-2|$ hold for every real $x$? The proposed ranges are A: $a\\le3/2$; B: $a\\le1$; C: $a\\le1/2$; D: $a\\le0$; E: $a\\le-1/2$; F: $a\\le-1$; G: $a\\le-3/2$; H: the empty set.",
+    "summaryZh": "求全体实数 $a$，使不等式 $a|x|+1\\le |x-2|$ 对每个实数 $x$ 都成立。备选范围为 A：$a\\le3/2$；B：$a\\le1$；C：$a\\le1/2$；D：$a\\le0$；E：$a\\le-1/2$；F：$a\\le-1$；G：$a\\le-3/2$；H：空集。",
+    "answer": "E. $a\\le-1/2$.",
+    "answerZh": "E．$a\\le-1/2$。",
+    "methods": [
+      {
+        "title": "Test the kink and use the triangle inequality",
+        "titleZh": "代入折点，再用三角不等式证明",
+        "topics": [
+          {
+            "en": "Absolute values",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          },
+          {
+            "en": "Sharp bounds",
+            "zh": "最优界"
+          }
+        ],
+        "steps": [
+          "At $x=2$ the right side vanishes, giving $2a+1\\le0$. Hence $a\\le-1/2$ is necessary.",
+          "Conversely, the triangle inequality gives $2=|x-(x-2)|\\le|x|+|x-2|$. Thus $2-|x|\\le|x-2|\\le2|x-2|$, or $1-|x|/2\\le|x-2|$. For every $a\\le-1/2$ we also have $a|x|+1\\le1-|x|/2$, proving sufficiency."
+        ],
+        "stepsZh": [
+          "代入 $x=2$，右端为零，得 $2a+1\\le0$。故 $a\\le-1/2$ 是必要条件。",
+          "反过来，三角不等式给出 $2=|x-(x-2)|\\le|x|+|x-2|$。于是 $2-|x|\\le|x-2|\\le2|x-2|$，即 $1-|x|/2\\le|x-2|$。当 $a\\le-1/2$ 时还有 $a|x|+1\\le1-|x|/2$，从而充分性成立。"
+        ]
+      },
+      {
+        "title": "Compare the three linear pieces",
+        "titleZh": "分区间比较直线",
+        "topics": [
+          {
+            "en": "Piecewise-linear functions",
+            "zh": "分段线性函数"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "The test $x=2$ gives the bound $a\\le-1/2$. For fixed $x$ the left side is nondecreasing in $a$, so it suffices to check $a=-1/2$.",
+          "For $x\\le0$ the left side is at most $1$, while the right side is at least $2$. For $0\\le x\\le2$ the left side is $(2-x)/2$, at most the right side $2-x$. For $x\\ge2$ the left side is nonpositive and the right side is nonnegative. These ranges cover the real line."
+        ],
+        "stepsZh": [
+          "取 $x=2$ 得必要界 $a\\le-1/2$。固定 $x$ 时左端关于 $a$ 单调不减，故验证充分性只需检验 $a=-1/2$。",
+          "若 $x\\le0$，左端至多为 $1$，右端至少为 $2$。若 $0\\le x\\le2$，左端为 $(2-x)/2$，不超过右端 $2-x$。若 $x\\ge2$，左端非正，右端非负。三个区间覆盖全部实数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=20"
+  },
+  "tmua-2019-p2-q19": {
+    "summary": "Evaluate $\\sqrt{8-4\\sqrt2+1}+\\sqrt{9-12\\sqrt2+8}$ using principal square roots. Choose from A: $\\sqrt{26-16\\sqrt2}$; B: $4\\sqrt2-4$; C: $-2$; D: $4-4\\sqrt2$; E: $2$; F: $\\sqrt{26}-4\\sqrt2$; G: $1$.",
+    "summaryZh": "按算术平方根计算 $\\sqrt{8-4\\sqrt2+1}+\\sqrt{9-12\\sqrt2+8}$。A：$\\sqrt{26-16\\sqrt2}$；B：$4\\sqrt2-4$；C：$-2$；D：$4-4\\sqrt2$；E：$2$；F：$\\sqrt{26}-4\\sqrt2$；G：$1$。",
+    "answer": "E. $2$.",
+    "answerZh": "E．$2$。",
+    "methods": [
+      {
+        "title": "Recognise two distances from the same point",
+        "titleZh": "将两个平方根视为同一点到两端的距离",
+        "topics": [
+          {
+            "en": "Surds",
+            "zh": "二次根式"
+          },
+          {
+            "en": "Absolute values",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Difference squared",
+            "zh": "完全平方公式"
+          }
+        ],
+        "steps": [
+          "Set $t=2\\sqrt2$, so $t^2=8$. The two radicands become $t^2-2t+1=(t-1)^2$ and $9-6t+t^2=(3-t)^2$. Their principal square roots sum to $|t-1|+|3-t|$.",
+          "Because $1<8<9$, taking square roots gives $1<t<3$. The two distances therefore add to the length of the interval from $1$ to $3$: $(t-1)+(3-t)=2$."
+        ],
+        "stepsZh": [
+          "令 $t=2\\sqrt2$，则 $t^2=8$。两个被开方数分别为 $t^2-2t+1=(t-1)^2$ 和 $9-6t+t^2=(3-t)^2$。取算术平方根后，原式为 $|t-1|+|3-t|$。",
+          "由 $1<8<9$ 开方可知 $1<t<3$。因此两段距离之和等于区间 $[1,3]$ 的长度，即 $(t-1)+(3-t)=2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=21"
+  },
+  "tmua-2019-p2-q20": {
+    "summary": "The graph of $f:\\mathbb R\\to\\mathbb R$ can be reflected across the $y$-axis or shifted two units left. Reflect first and then shift to get the graph of $g$; shift first and then reflect to get that of $h$. Which identity, holding for every $x$, is necessary and sufficient for $g=h$? The choices all have left side $f(x)$; the right sides are A: $f(x+2)$; B: $f(x+4)$; C: $f(x+8)$; D: $f(-x)$; E: $f(2-x)$; F: $f(4-x)$; G: $f(8-x)$.",
+    "summaryZh": "对 $f:\\mathbb R\\to\\mathbb R$ 的图像可以作两种变换：关于 $y$ 轴对称，或向左平移两个单位。先对称后平移得到 $g$ 的图像，先平移后对称得到 $h$ 的图像。哪个对所有 $x$ 成立的恒等式是 $g=h$ 的充要条件？各项左端均为 $f(x)$，右端依次为 A：$f(x+2)$；B：$f(x+4)$；C：$f(x+8)$；D：$f(-x)$；E：$f(2-x)$；F：$f(4-x)$；G：$f(8-x)$。",
+    "answer": "B. $f(x)=f(x+4)$ for every real $x$.",
+    "answerZh": "B．对每个实数 $x$ 均有 $f(x)=f(x+4)$。",
+    "methods": [
+      {
+        "title": "Compose the two substitutions in order",
+        "titleZh": "按顺序复合两次自变量代换",
+        "topics": [
+          {
+            "en": "Graph transformations",
+            "zh": "函数图像变换"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "Reflection changes $u(x)$ into $u(-x)$, while a shift left by two changes it into $u(x+2)$. Applying the second change to the already reflected function gives $g(x)=f(-(x+2))=f(-x-2)$. Reflecting the already shifted function gives $h(x)=f(-x+2)$.",
+          "Now $g(x)=h(x)$ for every real $x$ exactly when $f(-x-2)=f(-x+2)$ for all $x$. Put $t=-x-2$. As $x$ ranges over the reals, so does $t$, and the equality becomes $f(t)=f(t+4)$. This substitution works both ways. Four is a period, though a smaller period is possible."
+        ],
+        "stepsZh": [
+          "关于 $y$ 轴对称把 $u(x)$ 变为 $u(-x)$，向左平移两个单位把 $u(x)$ 变为 $u(x+2)$。将平移作用于已经对称的函数，得 $g(x)=f(-(x+2))=f(-x-2)$；将对称作用于已经平移的函数，得 $h(x)=f(-x+2)$。",
+          "所以两图像相同当且仅当对所有实数 $x$ 都有 $f(-x-2)=f(-x+2)$。令 $t=-x-2$；当 $x$ 取遍实数时 $t$ 也取遍实数，等式化为 $f(t)=f(t+4)$。代换可逆，因此条件既必要又充分。这里 $4$ 是一个周期，也可能有更小的周期。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf#page=22"
+  }
+}
