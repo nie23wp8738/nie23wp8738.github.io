@@ -21,7 +21,7 @@ export function hasWorkedSolution(q) {
 }
 
 export function matchesReading(q, reading) {
-  if (reading === 'full') return Boolean(q.inline || q.published?.collection === 'euclid');
+  if (reading === 'full') return Boolean(q.inline || q.hasCommentary || q.outlinePdf || q.published?.collection === 'euclid');
   if (reading === 'solutions') return hasWorkedSolution(q) || Boolean(q.outlinePdf) || q.published?.collection === 'euclid';
   if (reading === 'allsolutions') return hasWorkedSolution(q) || Boolean(q.published);
   if (reading === 'answers') return hasWorkedSolution(q) || Boolean(q.published) || q.keyAnswer != null;
