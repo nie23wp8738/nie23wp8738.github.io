@@ -1,0 +1,224 @@
+{
+  "imo-1964-q1": {
+    "summary": "For a positive integer $n$, (a) determine exactly when $7\\mid 2^n-1$, and (b) show that $7\\mid 2^n+1$ never occurs.",
+    "summaryZh": "设 $n$ 为正整数。（a）求使 $2^n-1$ 是 $7$ 的倍数的所有 $n$。（b）证明 $2^n+1$ 对每个正整数 $n$ 都不能被 $7$ 整除。",
+    "answer": "(a) The positive multiples of $3$. (b) There are no such positive integers.",
+    "answerZh": "（a）$3$ 的所有正倍数。（b）没有满足条件的正整数。",
+    "methods": [
+      {
+        "title": "List one cycle of powers",
+        "titleZh": "写出一个完整的幂剩余周期",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余运算"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "Write $n=3q+r$ with $0\\le r<3$. Since $2^3=8\\equiv1\\pmod7$, the residue of $2^n$ is that of $2^r$. For $r=0,1,2$ these residues are $1,2,4$, respectively.",
+          "In (a) we need residue $1$, which occurs exactly when $r=0$. In (b) we need residue $-1\\equiv6\\pmod7$, which is absent from the list."
+        ],
+        "stepsZh": [
+          "写成 $n=3q+r$，其中 $0\\le r<3$。由于 $2^3=8\\equiv1\\pmod7$，$2^n$ 与 $2^r$ 同余。当 $r$ 依次为 $0,1,2$ 时，余数分别是 $1,2,4$。",
+          "（a）要求余数为 $1$，恰好对应 $r=0$。（b）要求余数为 $-1\\equiv6\\pmod7$，而一个完整周期中都没有余数 $6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1"
+  },
+  "imo-1964-q2": {
+    "summary": "Let $a,b,c$ be the side lengths of a triangle. Establish the bound $a^2(b+c-a)+b^2(c+a-b)+c^2(a+b-c)\\le 3abc$.",
+    "summaryZh": "三角形的三边长为 $a,b,c$。证明 $a^2(b+c-a)+b^2(c+a-b)+c^2(a+b-c)\\le3abc$。",
+    "answer": "The bound holds, with equality precisely for an equilateral triangle.",
+    "answerZh": "不等式成立，当且仅当三角形为等边三角形时取等号。",
+    "methods": [
+      {
+        "title": "Order the sides and factor the difference",
+        "titleZh": "将三边排序后对差式分组因式分解",
+        "topics": [
+          {
+            "en": "Schur's inequality",
+            "zh": "舒尔不等式"
+          },
+          {
+            "en": "Symmetric polynomials",
+            "zh": "对称多项式"
+          }
+        ],
+        "steps": [
+          "By symmetry label the sides so that $a\\ge b\\ge c>0$. Subtract the left side from $3abc$ and expand. The resulting expression is $a(a-b)(a-c)+b(b-c)(b-a)+c(c-a)(c-b)$.",
+          "Combine the first two terms. Their sum is $(a-b)[a(a-c)-b(b-c)]=(a-b)^2(a+b-c)$. The remaining term is $c(a-c)(b-c)$. Both are nonnegative, so the difference is nonnegative.",
+          "Since $a+b-c>0$, equality requires $a=b$. The remaining term is then $c(a-c)^2$, so also $a=c$. Conversely all three sides equal gives equality."
+        ],
+        "stepsZh": [
+          "利用对称性，可设 $a\\ge b\\ge c>0$。将 $3abc$ 减去左边并展开，可写成 $a(a-b)(a-c)+b(b-c)(b-a)+c(c-a)(c-b)$。",
+          "合并前两项，得到 $(a-b)[a(a-c)-b(b-c)]=(a-b)^2(a+b-c)$。剩下一项为 $c(a-c)(b-c)$。这两部分都非负，因此原不等式成立。",
+          "由于 $a+b-c>0$，取等号首先要求 $a=b$。此时后一项为 $c(a-c)^2$，故还须 $a=c$。等边三角形确实取等号。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1"
+  },
+  "imo-1964-q3": {
+    "summary": "Triangle $ABC$ has side lengths $a=BC$, $b=CA$ and $c=AB$ and an incircle. For each side, draw the other tangent to the incircle parallel to that side. It cuts off a smaller triangle at the opposite vertex. Inscribe a circle in each of these three triangles. Express the sum of the four disk areas using only $a,b,c$.",
+    "summaryZh": "在三角形 $ABC$ 中，$BC=a,CA=b,AB=c$。对每一条边，作其内切圆的另一条平行于该边的切线，这条切线在对顶点处截出一个小三角形。在三个小三角形内各作内切圆。用 $a,b,c$ 表示这三个圆和原内切圆的面积之和。",
+    "answer": "Writing $s=(a+b+c)/2$, the total area is $\\pi(a^2+b^2+c^2)(s-a)(s-b)(s-c)/s^3$.",
+    "answerZh": "记 $s=(a+b+c)/2$，面积之和为 $\\pi(a^2+b^2+c^2)(s-a)(s-b)(s-c)/s^3$。",
+    "methods": [
+      {
+        "title": "Compare the corner triangles with the full triangle",
+        "titleZh": "由顶角处小三角形的相似比求半径",
+        "topics": [
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          },
+          {
+            "en": "Inradii",
+            "zh": "内切圆半径"
+          },
+          {
+            "en": "Heron's formula",
+            "zh": "海伦公式"
+          }
+        ],
+        "steps": [
+          "Let the original radius be $r$, its triangle's area be $K$, and the altitude from $A$ be $h_a=2K/a$. The two parallel tangents are at distance $2r$, so the corner triangle at $A$ has altitude $h_a-2r$. It is similar to $ABC$.",
+          "Its linear scale factor is $1-2r/h_a=1-ar/K=1-a/s$, since $K=rs$. Its inradius is consequently $r(1-a/s)$. The analogous corner radii at $B,C$ are $r(1-b/s)$ and $r(1-c/s)$.",
+          "After division by $\\pi r^2$, the required total is $1+(1-a/s)^2+(1-b/s)^2+(1-c/s)^2=(a^2+b^2+c^2)/s^2$, using $a+b+c=2s$. Finally $r^2=K^2/s^2=(s-a)(s-b)(s-c)/s$ by Heron's formula, giving the stated expression."
+        ],
+        "stepsZh": [
+          "设原内切圆半径为 $r$，三角形面积为 $K$，顶点 $A$ 到 $BC$ 的高为 $h_a=2K/a$。两条平行切线间距为直径 $2r$，故顶点 $A$ 处小三角形的高为 $h_a-2r$。两三角形因底边平行而相似。",
+          "由 $K=rs$ 可知相似比为 $1-2r/h_a=1-ar/K=1-a/s$。所以小三角形的内切圆半径是 $r(1-a/s)$。类似地，另外两个半径为 $r(1-b/s)$ 与 $r(1-c/s)$。",
+          "面积之和除以 $\\pi r^2$，得 $1+(1-a/s)^2+(1-b/s)^2+(1-c/s)^2=(a^2+b^2+c^2)/s^2$，其中用了 $a+b+c=2s$。用海伦公式代入 $r^2=K^2/s^2=(s-a)(s-b)(s-c)/s$，即得所求。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1"
+  },
+  "imo-1964-q4": {
+    "summary": "Each unordered pair in a group of $17$ correspondents writes about just one subject. The subject assigned to any pair comes from the same list of three. Show that some group of three has the same subject on all three of its pairs.",
+    "summaryZh": "有 $17$ 位通信者，每两人都通信，而且这一对之间只谈一个固定话题。所有话题都来自同一个含三个话题的列表。证明可以找出三个人，他们之间的三对通信都谈同一话题。",
+    "answer": "There must be three such correspondents.",
+    "answerZh": "一定存在满足条件的三位通信者。",
+    "methods": [
+      {
+        "title": "Use a two-colour argument inside a neighbourhood",
+        "titleZh": "在同色邻点中使用双色三角形论证",
+        "topics": [
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          },
+          {
+            "en": "Ramsey theory",
+            "zh": "拉姆齐理论"
+          },
+          {
+            "en": "Edge colouring",
+            "zh": "边染色"
+          }
+        ],
+        "steps": [
+          "Represent people by vertices and subjects by red, blue and green edges. A chosen vertex has $16$ neighbours. At least $\\lceil16/3\\rceil=6$ are joined to it in one colour, say red. Keep six such neighbours.",
+          "A red edge among the six completes a red triangle with the chosen vertex. Otherwise the edges within the six are all blue or green. Fix a vertex of the six. Among its five edges to the other five, at least three have the same colour, say blue after interchanging the two colours if necessary.",
+          "If any edge between those three blue neighbours is blue, it closes a blue triangle. If none is blue, all three edges between them are green and form a green triangle. In every case the three edges give the required three pairs."
+        ],
+        "stepsZh": [
+          "把人画成顶点，三个话题用红、蓝、绿三种边色表示。任选一位，他与其余 $16$ 位之间的边至少有 $\\lceil16/3\\rceil=6$ 条同色，不妨设为红色。保留其中六个邻点。",
+          "若六点之间有红边，就与最初选定的顶点组成红三角形。否则六点间只有蓝、绿两种边色。任选六点中的一个，它连向其余五点的五条边至少有三条同色。交换蓝绿色名后，可设这三条都是蓝边。",
+          "这三个蓝色邻点间如有一条蓝边，就得到蓝三角形。若没有蓝边，它们之间的三条边全绿，故有绿三角形。无论哪种情形，都得到三对通信使用同一话题的三个人。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1"
+  },
+  "imo-1964-q5": {
+    "summary": "Take five points in the plane whose ten joining lines are distinct, with no two parallel or perpendicular. Through each of the five points draw a perpendicular to each of the six joining lines determined by the other four points. What is the greatest possible number of distinct intersection points among these perpendicular lines? Give the tally both including the five starting points and excluding them.",
+    "summaryZh": "平面上有五点。两两连线所得十条直线互不重合，任意两条既不平行也不垂直。对每一点，过它分别作其余四点两两连成的六条直线的垂线。所作各垂线最多能产生多少个不同交点？分别给出计入原有五点与只计新增交点的数目。",
+    "answer": "There can be $315$ distinct intersections in total, of which $310$ are new points.",
+    "answerZh": "所有交点最多 $315$ 个，扣掉原有五点后最多有 $310$ 个新增交点。",
+    "methods": [
+      {
+        "title": "Count intersecting pairs and exhibit coordinates attaining the bound",
+        "titleZh": "先数相交线对，再用坐标构造达到上界的例子",
+        "topics": [
+          {
+            "en": "Line arrangements",
+            "zh": "直线排列"
+          },
+          {
+            "en": "Orthocentres",
+            "zh": "垂心"
+          },
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          },
+          {
+            "en": "Homogeneous coordinates",
+            "zh": "齐次坐标"
+          }
+        ],
+        "steps": [
+          "There are $30$ lines, partitioned into ten parallel families of three by their normal directions. Within a family the three lines are distinct, since otherwise a joining line between two starting points would be perpendicular to the family's normal direction. Thus there are $\\binom{30}{2}-10\\binom32=405$ intersecting pairs of lines.",
+          "A point incident with $m$ lines is counted $\\binom m2$ times but is only one intersection. At each starting point the six constructed lines give an excess of $15-1=14$. A line constructed at another point cannot pass through this starting point, because two joining lines would then be perpendicular.",
+          "Each of the ten triangles determined by the five points contributes three concurrent altitudes at its orthocentre. No starting point is an orthocentre. For a triangle vertex this would make the triangle right. For an outside vertex, a joining line to a triangle vertex would be perpendicular to the opposite side. The ten orthocentres are distinct. For triangles sharing an edge, their altitudes from the two different third vertices are parallel distinct lines. For triangles sharing only one vertex, the two distinct altitudes from that vertex can meet only there. Thus the orthocentres give a further excess of at least $10(3-1)=20$. The upper bound is $405-5(14)-20=315$.",
+          "For an exact construction, use $(0,0),(8,2),(3,6),(10,7),(5,4)$. Their ten joining slopes in pair order are $1/4,2,7/10,4/5,-4/5,5/2,-2/3,1/7,-1,3/5$. They are distinct and no pair has product $-1$. The following finite count verifies attainment and gives a reproducible way to check the coordinates.",
+          "For each pair $P_i,P_j$ take $(u,v)=P_j-P_i$. For each other point $(x_k,y_k)$ append the line triple $(u,v,-ux_k-vy_k)$ to a list. For each unordered pair of triples $(a,b,c),(d,e,f)$ compute $(X,Y,Z)=(bf-ce,cd-af,ae-bd)$. Skip $Z=0$. Store the rational pair $(X/Z,Y/Z)$ in a tally, increasing it by one on each occurrence. Grouping equal pairs produces $300$ entries of tally $1$, $10$ of tally $3$, and $5$ of tally $15$ (these account for $300+30+75=405$ line pairs). Therefore $300+10+5=315$ distinct points occur, including the five original points."
+        ],
+        "stepsZh": [
+          "一共作出 $30$ 条直线。按照所垂直的连线方向分为十组，每组三条平行线。同组两线若重合，它们所过的两个原有点的连线就会与该组的法向方向垂直，违背条件。因此恰有 $\\binom{30}{2}-10\\binom32=405$ 对相交直线。",
+          "若某点有 $m$ 条直线经过，按线对会数到 $\\binom m2$ 次，实际只有一个点。每个原有点有六条所作直线经过，至少重复计了 $15-1=14$ 次。过其他点所作的垂线不能经过它，否则两条原有连线会垂直。",
+          "五点确定十个三角形，每个三角形的三条高线都是所作垂线，交于垂心。垂心不可能是原有点。若是该三角形的顶点，三角形即为直角三角形。若是另外一个原有点，则它到某个顶点的连线垂直于该顶点的对边。十个垂心也彼此不同。两个三角形若共边，两个第三顶点到公共边的高线平行且不同。若仅共一个顶点，从该点所作的两条不同高线只交于该点。因此十个垂心又至少造成 $10(3-1)=20$ 次重复。不同交点至多 $405-5(14)-20=315$ 个。",
+          "取五点 $(0,0),(8,2),(3,6),(10,7),(5,4)$。依次枚举点对，十条连线的斜率为 $1/4,2,7/10,4/5,-4/5,5/2,-2/3,1/7,-1,3/5$。它们各不相同，任意两个之积也不为 $-1$。下面用有理数运算验证这个例子恰好达到上界。",
+          "对每一对 $P_i,P_j$，记 $(u,v)=P_j-P_i$。对另外每一点 $(x_k,y_k)$，把直线系数 $(u,v,-ux_k-vy_k)$ 加入列表。对于列表中每一对 $(a,b,c),(d,e,f)$，计算 $(X,Y,Z)=(bf-ce,cd-af,ae-bd)$。跳过 $Z=0$ 的情形，其余情况按有理坐标 $(X/Z,Y/Z)$ 归类并累计出现次数。结果为出现一次的坐标 $300$ 个、出现三次的 $10$ 个、出现十五次的 $5$ 个，合计覆盖 $300+30+75=405$ 对相交直线。因此该构型确有 $300+10+5=315$ 个交点，其中包含原有五点。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1"
+  },
+  "imo-1964-q6": {
+    "summary": "In a nondegenerate tetrahedron $ABCD$, let $P$ be the centroid of the base $ABC$. Through $A,B,C$ draw lines parallel to $PD$. They meet the opposite face planes $BCD,CAD,ABD$ at $A_1,B_1,C_1$, respectively. Prove that the volume of $P A_1B_1C_1$ is three times that of $ABCD$. Decide whether the same relation holds when $P$ is any interior point of the base.",
+    "summaryZh": "在非退化四面体 $ABCD$ 中，取底面三角形 $ABC$ 的重心 $P$。过 $A,B,C$ 分别作平行于 $PD$ 的直线，依次与对面所在的平面 $BCD,CAD,ABD$ 交于 $A_1,B_1,C_1$。证明四面体 $P A_1B_1C_1$ 的体积是 $ABCD$ 的三倍，并判断将 $P$ 换成底面内任意一点后是否仍然成立。",
+    "answer": "Yes. The volume ratio is $3:1$ for every interior $P$, including the centroid.",
+    "answerZh": "成立。对任意底面内点 $P$，包括重心，两个四面体的体积比都为 $3:1$。",
+    "methods": [
+      {
+        "title": "Use the area coordinates of the interior point",
+        "titleZh": "用底面内点的面积坐标计算体积",
+        "topics": [
+          {
+            "en": "Barycentric coordinates",
+            "zh": "重心坐标"
+          },
+          {
+            "en": "Tetrahedron volumes",
+            "zh": "四面体体积"
+          },
+          {
+            "en": "Scalar triple product",
+            "zh": "混合积"
+          }
+        ],
+        "steps": [
+          "Write $P=\\alpha A+\\beta B+\\gamma C$ in affine coordinates, with positive weights of sum one. Thus $\\alpha=[PBC]/[ABC]$, $\\beta=[PCA]/[ABC]$, $\\gamma=[PAB]/[ABC]$, where brackets denote triangle area. Set $v=D-P$. In the affine expansion of $A+t v$ using $A,B,C,D$, the coefficient of $A$ is $1-t\\alpha$. It must vanish on the plane $BCD$. Hence $A_1=A+v/\\alpha$, and cyclically $B_1=B+v/\\beta$, $C_1=C+v/\\gamma$.",
+          "In the centroid case all three weights are $1/3$. The new triangle is the translate of $ABC$ by $3v$, hence has the same area. Its plane is three times as far from $P$ as $D$ is from the base, proving the requested ratio in this case.",
+          "For the general case put $a=A-P,b=B-P,c=C-P$ and orient the base $ABC$ so that $\\Delta=\\det(B-A,C-A,v)>0$ (equivalently choose the sign of the determinant). Its value is six times the volume of $ABCD$. Since $a,b,c$ lie in the base plane, their determinant vanishes. By multilinearity, $\\det(a+v/\\alpha,b+v/\\beta,c+v/\\gamma)=\\det(v,b,c)/\\alpha+\\det(a,v,c)/\\beta+\\det(a,b,v)/\\gamma$; terms with two copies of $v$ vanish.",
+          "The three determinants on the right before division are $\\alpha\\Delta,\\beta\\Delta,\\gamma\\Delta$. Indeed, each is a cyclic permutation of a determinant of two base vectors and $v$, so its ratio to $\\Delta$ is the oriented area ratio of $PBC,PCA,PAB$, respectively, to $ABC$. All three signs agree because $P$ is inside. The new determinant is $3\\Delta$, which proves the same volume ratio for every interior point."
+        ],
+        "stepsZh": [
+          "以仿射坐标表示 $P=\\alpha A+\\beta B+\\gamma C$，三个系数均正且和为一。记方括号为三角形面积，则 $\\alpha=[PBC]/[ABC]$，$\\beta=[PCA]/[ABC]$，$\\gamma=[PAB]/[ABC]$。令 $v=D-P$。将 $A+t v$ 用 $A,B,C,D$ 仿射表示，其中 $A$ 的系数为 $1-t\\alpha$。点在平面 $BCD$ 上恰好要求这个系数为零，故 $A_1=A+v/\\alpha$。同理 $B_1=B+v/\\beta$，$C_1=C+v/\\gamma$。",
+          "若 $P$ 是重心，三个系数都等于 $1/3$，于是新三角形恰是 $ABC$ 沿 $3v$ 平移的结果，面积相同。$P$ 到新三角形平面的距离为 $D$ 到底面距离的三倍，故所求体积比为三。",
+          "对一般内点，记 $a=A-P,b=B-P,c=C-P$，选择空间定向使 $\\Delta=\\det(B-A,C-A,v)>0$，则 $\\Delta$ 是四面体 $ABCD$ 体积的六倍。由于 $a,b,c$ 共面，其行列式为零。按各列的线性展开，得 $\\det(a+v/\\alpha,b+v/\\beta,c+v/\\gamma)=\\det(v,b,c)/\\alpha+\\det(a,v,c)/\\beta+\\det(a,b,v)/\\gamma$，其中含两个或三个 $v$ 的项均为零。",
+          "右边三个分子依次为 $\\alpha\\Delta,\\beta\\Delta,\\gamma\\Delta$。这是因为循环交换列不改变行列式，每项都可写成两个底面向量与 $v$ 的混合积。与 $\\Delta$ 相比，高度因子相同，故其比值依次等于 $PBC,PCA,PAB$ 对 $ABC$ 的有向面积比。因 $P$ 位于内部，三个符号都为正。故新行列式为 $3\\Delta$，体积也正好为原来的三倍。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1"
+  }
+}
