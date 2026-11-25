@@ -72,5 +72,121 @@
       }
     ],
     "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_5"
+  },
+  "usamo-2012-q2": {
+    "summary": "A circle is marked by $432$ equally spaced points. Exactly $108$ points are red, $108$ green, $108$ blue, and $108$ yellow. Prove that one can choose three points of each color so that the four monochromatic triangles are congruent.",
+    "summaryZh": "圆周上有 $432$ 个等距标记点，其中红、绿、蓝、黄各有 $108$ 个。证明：可以从每种颜色中各选三个点，使所得四个单色三角形全等。",
+    "answer": "Such four congruent monochromatic triangles always exist.",
+    "answerZh": "无论怎样按题设染色，都一定存在四个全等的单色三角形。",
+    "methods": [
+      {
+        "title": "Build nested color patterns by averaging rotations",
+        "titleZh": "对旋转重合数取平均，逐层构造同形点集",
+        "topics": [
+          {"en": "Double counting", "zh": "双重计数"},
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"},
+          {"en": "Rotations", "zh": "旋转变换"}
+        ],
+        "steps": [
+          "Label the rotations through multiples of $2\\pi/432$ by $T_0,T_1,\\ldots,T_{431}$, and denote the four color classes by $R,G,B,Y$. For every ordered pair $(r,g)\\in R\\times G$, exactly one rotation sends $r$ to $g$. Therefore $\\sum_{j=0}^{431}|T_j(R)\\cap G|=108^2$. The identity rotation contributes zero, so some nonidentity $T_{i_1}$ has at least $\\lceil108^2/431\\rceil=28$ overlaps. Put $C_1=T_{i_1}(R)\\cap G$ and choose any $28$ of its points if it is larger.",
+          "Now $C_1$ is a rotated copy of $28$ red points and itself consists of $28$ green points. Counting pairs in $C_1\\times B$ gives $28\\cdot108$ incidences over all rotations. Two rotations give no blue overlap: $T_0(C_1)\\subseteq G$ and $T_{-i_1}(C_1)\\subseteq R$. Among the other $430$ rotations, one therefore has at least $\\lceil28\\cdot108/430\\rceil=8$ overlaps with blue. Let $C_2=T_{i_2}(C_1)\\cap B$, retaining eight points. These eight points have matching rotated copies in red, green, and blue.",
+          "Count overlaps of $C_2$ with $Y$. The rotations $T_0,T_{-i_2},T_{-(i_1+i_2)}$ place $C_2$ wholly inside the blue, green, and red classes, so all three have zero yellow overlap. The remaining $429$ rotations carry $8\\cdot108$ incidences; hence some $T_{i_3}$ has at least $\\lceil8\\cdot108/429\\rceil=3$ yellow overlaps. Choose three points from $T_{i_3}(C_2)\\cap Y$. Rotating this triple back successively by $-i_3$, $-(i_3+i_2)$, and $-(i_3+i_2+i_1)$ produces blue, green, and red triples. All four triples are rotations of one another, so their triangles are congruent."
+        ],
+        "stepsZh": [
+          "把绕圆心旋转 $2\\pi j/432$ 记为 $T_j$，四色点集记为 $R,G,B,Y$。对每个有序对 $(r,g)\\in R\\times G$，恰有一个旋转把 $r$ 送到 $g$，所以 $\\sum_{j=0}^{431}|T_j(R)\\cap G|=108^2$。恒等旋转的交集为空，因此某个非恒等旋转 $T_{i_1}$ 至少产生 $\\lceil108^2/431\\rceil=28$ 个重合点。令 $C_1=T_{i_1}(R)\\cap G$；若点数更多，就任取其中 $28$ 个。",
+          "$C_1$ 本身由 $28$ 个绿点组成，同时也是 $28$ 个红点的旋转像。对 $C_1\\times B$ 再作双重计数，全部旋转中的重合数总和为 $28\\cdot108$。其中 $T_0(C_1)\\subseteq G$，$T_{-i_1}(C_1)\\subseteq R$，这两个旋转均不与蓝点重合。因此其余 $430$ 个旋转中，某个 $T_{i_2}$ 至少有 $\\lceil28\\cdot108/430\\rceil=8$ 个蓝色重合点。取 $C_2=T_{i_2}(C_1)\\cap B$ 中八点；它们在红、绿、蓝三色中都有彼此旋转对应的副本。",
+          "最后统计 $C_2$ 的旋转像与 $Y$ 的重合。旋转 $T_0,T_{-i_2},T_{-(i_1+i_2)}$ 分别把 $C_2$ 放回蓝、绿、红点集，故这三项与黄点的交集为空。其余 $429$ 个旋转承载 $8\\cdot108$ 次重合，所以某个 $T_{i_3}$ 至少有 $\\lceil8\\cdot108/429\\rceil=3$ 个黄点。选取其中三点，再依次反向旋转 $-i_3$、$-(i_3+i_2)$、$-(i_3+i_2+i_1)$，便得到蓝、绿、红三色三点组。四个三角形互为旋转像，因而全等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_2"
+  },
+  "usamo-2012-q3": {
+    "summary": "Determine all integers $n>1$ for which there exists an infinite sequence of nonzero integers $a_1,a_2,\\ldots$ satisfying $a_k+2a_{2k}+\\cdots+n a_{nk}=0$ for every positive integer $k$.",
+    "summaryZh": "求所有整数 $n>1$，使得存在一个由非零整数组成的无穷数列 $a_1,a_2,\\ldots$，并且对每个正整数 $k$ 都有 $a_k+2a_{2k}+\\cdots+n a_{nk}=0$。",
+    "answer": "Exactly all integers $n\\ge3$.",
+    "answerZh": "恰为所有整数 $n\\ge3$。",
+    "methods": [
+      {
+        "title": "Construct a completely multiplicative sequence",
+        "titleZh": "构造完全积性数列",
+        "topics": [
+          {"en": "Completely multiplicative sequences", "zh": "完全积性数列"},
+          {"en": "Bézout identity", "zh": "贝祖等式"},
+          {"en": "Prime valuations", "zh": "素因子指数"}
+        ],
+        "steps": [
+          "When $n=2$, the relation gives $a_k=-2a_{2k}$. Iterating from $k=1$ yields $a_1=(-2)^r a_{2^r}$ for every $r$, so the nonzero integer $a_1$ would be divisible by arbitrarily large powers of $2$. This is impossible.",
+          "For $n\\ge3$, it is enough to construct a completely multiplicative nonzero integer sequence, since then $a_{jk}=a_j a_k$ and $a_k+2a_{2k}+\\cdots+n a_{nk}=a_k(1a_1+2a_2+\\cdots+n a_n)$. Thus we only need to prescribe nonzero integer values on primes so that $\\sum_{j=1}^n j a_j=0$.",
+          "For $n=3,4,5,6,7$, respectively, use $a_m=(-1)^{v_3(m)}$; $a_m=(-1)^{v_2(m)+v_3(m)}$; $a_m=(-2)^{v_5(m)}$; $a_m=5^{v_2(m)}3^{v_3(m)}(-42)^{v_5(m)}$; and $a_m=(-3)^{v_7(m)}$. Direct substitution gives the required weighted sum zero in each case. For $n=8$, set $a_5=a_7=-2$ and every other prime value to $1$. For $n=9$, set $a_5=6$, $a_7=-9$, and every other prime value to $1$. These give $\\sum_{j=1}^n j a_j=0$.",
+          "For $n\\ge10$, put $h=\\lfloor n/2\\rfloor$. Bertrand's postulate gives a prime $q$ with $h<q<2h$. Since $q\\ge7$, applying the postulate again to $(q-1)/2$ gives a prime $p$ with $(q-1)/2<p<q-1$; in particular $p\\ge5$. Hence $2q>n$, $4p>n$, $p^2>n$, and $p,q$ are distinct odd primes. Give every prime other than $p,q$ the value $1$. The terms affected up to $n$ are $q$ and either just $p$, or $p,2p$, or $p,2p,3p$. Their total coefficients are $q$ and $w\\in\\{p,3p,6p\\}$. Since $\\gcd(w,q)=1$, Bézout's identity gives integer values $a_p,a_q$ solving $w a_p+q a_q=w+q-n(n+1)/2$; the general solution has infinitely many choices, so values with $a_p=0$ or $a_q=0$ can be avoided. All prime values are therefore nonzero, and the resulting completely multiplicative sequence has the required weighted sum zero."
+        ],
+        "stepsZh": [
+          "当 $n=2$ 时，关系式为 $a_k=-2a_{2k}$。从 $k=1$ 开始反复使用，得到对任意 $r$ 都有 $a_1=(-2)^r a_{2^r}$。这会迫使非零整数 $a_1$ 被任意高次的 $2$ 整除，矛盾。",
+          "对 $n\\ge3$，只需构造完全积性的非零整数数列。此时 $a_{jk}=a_j a_k$，从而 $a_k+2a_{2k}+\\cdots+n a_{nk}=a_k(1a_1+2a_2+\\cdots+n a_n)$。所以只要给各素数指定非零整数值，使 $\\sum_{j=1}^n j a_j=0$ 即可。",
+          "对 $n=3,4,5,6,7$，依次取 $a_m=(-1)^{v_3(m)}$；$a_m=(-1)^{v_2(m)+v_3(m)}$；$a_m=(-2)^{v_5(m)}$；$a_m=5^{v_2(m)}3^{v_3(m)}(-42)^{v_5(m)}$；$a_m=(-3)^{v_7(m)}$。逐项代入可验证加权和均为零。对 $n=8$，在素数 $5,7$ 处取 $a_5=a_7=-2$，其他素数处取值 $1$。对 $n=9$，取 $a_5=6,a_7=-9$，其他素数处取值 $1$。这些构造均满足 $\\sum_{j=1}^n j a_j=0$。",
+          "当 $n\\ge10$ 时，令 $h=\\lfloor n/2\\rfloor$。由 Bertrand 定理，存在素数 $q$ 满足 $h<q<2h$。由于 $q\\ge7$，再对 $(q-1)/2$ 应用 Bertrand 定理，可取素数 $p$ 满足 $(q-1)/2<p<q-1$；特别地 $p\\ge5$。于是 $2q>n,4p>n,p^2>n$，且 $p,q$ 是不同的奇素数。除 $p,q$ 外，所有素数处都取值 $1$。在 $1$ 至 $n$ 中，被改变的项只有 $q$，以及 $p$、$2p$、$3p$ 中实际不超过 $n$ 的那些项；对应系数分别为 $q$ 与 $w\\in\\{p,3p,6p\\}$。因为 $\\gcd(w,q)=1$，贝祖等式保证存在整数解 $a_p,a_q$ 使 $w a_p+q a_q=w+q-n(n+1)/2$。通解有无穷多组，因而可以避开 $a_p=0$ 或 $a_q=0$。于是所有素数处取值均非零，所得完全积性数列满足要求。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_3"
+  },
+  "usamo-2012-q4": {
+    "summary": "Find all functions $f:\\mathbb Z_{>0}\\to\\mathbb Z_{>0}$ such that $f(n!)=f(n)!$ for every positive integer $n$, and $m-n$ divides $f(m)-f(n)$ whenever $m\\ne n$.",
+    "summaryZh": "求所有函数 $f:\\mathbb Z_{>0}\\to\\mathbb Z_{>0}$，使得对每个正整数 $n$ 都有 $f(n!)=f(n)!$，并且当 $m\\ne n$ 时，$m-n$ 整除 $f(m)-f(n)$。",
+    "answer": "$f(n)=1$ for all $n$; $f(n)=2$ for all $n$; or $f(n)=n$ for all $n$.",
+    "answerZh": "全部解为常值函数 $f(n)=1$、常值函数 $f(n)=2$，以及恒等函数 $f(n)=n$。",
+    "methods": [
+      {
+        "title": "Separate the fixed-point and no-fixed-point cases",
+        "titleZh": "按是否存在大于二的固定点分类",
+        "topics": [
+          {"en": "Functional equations", "zh": "函数方程"},
+          {"en": "Wilson's theorem", "zh": "Wilson 定理"},
+          {"en": "Divisibility", "zh": "整除性"}
+        ],
+        "steps": [
+          "The three stated functions satisfy both conditions. Conversely, $f(1)=f(1)!$ and $f(2)=f(2)!$ show that $f(1),f(2)\\in\\{1,2\\}$.",
+          "Suppose first that $f(a)=a$ for some $a>2$. Then $a!, (a!)!,\\ldots$ are also fixed points, giving an unbounded sequence $M$ with $f(M)=M$. For any fixed $n$, the congruence condition says $M-n\\mid f(M)-f(n)=M-f(n)$, hence $M-n\\mid n-f(n)$. Taking $M>|n-f(n)|+n$ forces $f(n)=n$. Thus one fixed point greater than $2$ makes $f$ the identity.",
+          "Now assume there is no fixed point above $2$. Let $p>3$ be prime. Wilson's theorem gives $(p-2)!\\equiv1\\pmod p$. Applying the congruence condition to $(p-2)!$ and $1$, and then using the factorial condition, gives $f(p-2)!\\equiv f(1)\\pmod p$. Hence $f(p-2)<p$; moreover $f(p-2)\\ne p-1$, because $(p-1)!\\equiv-1\\pmod p$ while $f(1)$ is $1$ or $2$. Therefore $f(p-2)\\le p-2$.",
+          "The congruence condition applied to $p-2$ and $1$ now says $p-3\\mid f(p-2)-f(1)$. Within the established bounds, either $f(p-2)=f(1)$ or $f(p-2)=p-2$; the latter would be a forbidden fixed point. Thus $f(p-2)=f(1)$ for every prime $p>3$. For arbitrary $n$ and arbitrarily large primes $p$, we have $p-2-n\\mid f(1)-f(n)$. The divisor becomes unbounded, so $f(n)=f(1)$ for every $n$. Finally the factorial condition permits only the constant values $1$ and $2$."
+        ],
+        "stepsZh": [
+          "题中列出的三个函数都满足条件。反过来，由 $f(1)=f(1)!$ 和 $f(2)=f(2)!$ 可知 $f(1),f(2)\\in\\{1,2\\}$。",
+          "先假设存在 $a>2$ 使 $f(a)=a$。由阶乘条件，$a!,(a!)!,\\ldots$ 也都是固定点，因而得到一列无界的固定点 $M$。对任意固定的 $n$，同余条件给出 $M-n\\mid f(M)-f(n)=M-f(n)$，于是 $M-n\\mid n-f(n)$。取 $M>|n-f(n)|+n$，只能有 $f(n)=n$。所以只要存在一个大于 $2$ 的固定点，$f$ 就是恒等函数。",
+          "以下假设不存在大于 $2$ 的固定点。取素数 $p>3$。Wilson 定理给出 $(p-2)!\\equiv1\\pmod p$。把整除条件用于 $(p-2)!$ 与 $1$，再使用阶乘条件，得到 $f(p-2)!\\equiv f(1)\\pmod p$。因此 $f(p-2)<p$；又不能有 $f(p-2)=p-1$，因为 $(p-1)!\\equiv-1\\pmod p$，而 $f(1)$ 只能为 $1$ 或 $2$。故 $f(p-2)\\le p-2$。",
+          "再把整除条件用于 $p-2$ 与 $1$，得 $p-3\\mid f(p-2)-f(1)$。结合刚才的范围，只有 $f(p-2)=f(1)$ 或 $f(p-2)=p-2$；后一种会产生被排除的固定点。因此每个素数 $p>3$ 都满足 $f(p-2)=f(1)$。固定任意 $n$，让素数 $p$ 任意增大，则 $p-2-n\\mid f(1)-f(n)$。除数无界，只能有 $f(n)=f(1)$。最后由阶乘条件，常值只能是 $1$ 或 $2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_4"
+  },
+  "usamo-2012-q6": {
+    "summary": "Let $n\\ge2$ and let real numbers $x_1,\\ldots,x_n$ satisfy $\\sum_i x_i=0$ and $\\sum_i x_i^2=1$. For $A\\subseteq\\{1,\\ldots,n\\}$ put $S_A=\\sum_{i\\in A}x_i$. Prove that for every $\\lambda>0$, at most $2^{n-3}/\\lambda^2$ subsets satisfy $S_A\\ge\\lambda$, and determine every equality case.",
+    "summaryZh": "设 $n\\ge2$，实数 $x_1,\\ldots,x_n$ 满足 $\\sum_i x_i=0$、$\\sum_i x_i^2=1$。对 $A\\subseteq\\{1,\\ldots,n\\}$，令 $S_A=\\sum_{i\\in A}x_i$。证明：对任意 $\\lambda>0$，满足 $S_A\\ge\\lambda$ 的子集至多有 $2^{n-3}/\\lambda^2$ 个，并确定所有等号情形。",
+    "answer": "Equality holds exactly when, after a permutation, $(x_1,\\ldots,x_n)=(1/\\sqrt2,-1/\\sqrt2,0,\\ldots,0)$ and $\\lambda=1/\\sqrt2$.",
+    "answerZh": "等号成立当且仅当适当重排后 $(x_1,\\ldots,x_n)=(1/\\sqrt2,-1/\\sqrt2,0,\\ldots,0)$，且 $\\lambda=1/\\sqrt2$。",
+    "methods": [
+      {
+        "title": "Sum the second moments over all subsets",
+        "titleZh": "对全部子集的平方和作二阶矩计算",
+        "topics": [
+          {"en": "Second-moment method", "zh": "二阶矩方法"},
+          {"en": "Complementary subsets", "zh": "补集配对"},
+          {"en": "Equality conditions", "zh": "等号条件"}
+        ],
+        "steps": [
+          "Choose a subset $A$ uniformly at random and let $\\varepsilon_i$ be its indicator. Then $S_A=\\sum_i\\varepsilon_i x_i$. Since $\\mathbb E\\varepsilon_i=\\mathbb E\\varepsilon_i^2=1/2$ and $\\mathbb E(\\varepsilon_i\\varepsilon_j)=1/4$ for $i\\ne j$, we get $\\mathbb E S_A^2=\\tfrac12\\sum_i x_i^2+\\tfrac12\\sum_{i<j}x_i x_j$. The identity $(\\sum_i x_i)^2=0$ gives $\\sum_{i<j}x_i x_j=-1/2$, so $\\mathbb E S_A^2=1/4$. Hence $\\sum_A S_A^2=2^{n-2}$.",
+          "Complementary subsets satisfy $S_{A^c}=-S_A$. Therefore exactly half of the total square mass belongs to positive sums: $\\sum_{S_A>0}S_A^2=2^{n-3}$. If $N$ subsets satisfy $S_A\\ge\\lambda$, their contribution is at least $N\\lambda^2$, proving $N\\le2^{n-3}/\\lambda^2$.",
+          "For equality, every positive subset sum must equal $\\lambda$, and there can be no positive subset sum below $\\lambda$; by complements, every subset sum lies in $\\{-\\lambda,0,\\lambda\\}$. In particular each singleton $x_i$ has one of these three values. Two positive coordinates would have sum $2\\lambda$, impossible, and similarly there are not two negative coordinates. Since the coordinates sum to zero and their squares sum to one, there is exactly one positive and one negative coordinate, equal to $1/\\sqrt2$ and $-1/\\sqrt2$, while the rest are zero; also $\\lambda=1/\\sqrt2$. Conversely, this configuration has exactly $2^{n-2}$ subsets containing the positive coordinate but not the negative one, and $2^{n-2}=2^{n-3}/\\lambda^2$, so equality is attained."
+        ],
+        "stepsZh": [
+          "从所有子集中等概率选取 $A$，以 $\\varepsilon_i$ 表示 $i$ 是否属于 $A$，则 $S_A=\\sum_i\\varepsilon_i x_i$。因为 $\\mathbb E\\varepsilon_i=\\mathbb E\\varepsilon_i^2=1/2$，且 $i\\ne j$ 时 $\\mathbb E(\\varepsilon_i\\varepsilon_j)=1/4$，所以 $\\mathbb E S_A^2=\\tfrac12\\sum_i x_i^2+\\tfrac12\\sum_{i<j}x_i x_j$。由 $(\\sum_i x_i)^2=0$ 得 $\\sum_{i<j}x_i x_j=-1/2$，从而 $\\mathbb E S_A^2=1/4$。因此 $\\sum_A S_A^2=2^{n-2}$。",
+          "补集满足 $S_{A^c}=-S_A$，所以全部平方和中恰有一半来自正的子集和，即 $\\sum_{S_A>0}S_A^2=2^{n-3}$。若有 $N$ 个子集满足 $S_A\\ge\\lambda$，它们对平方和的贡献至少为 $N\\lambda^2$，故 $N\\le2^{n-3}/\\lambda^2$。",
+          "若取等号，则每个正的子集和都必须等于 $\\lambda$，并且不能存在介于 $0$ 与 $\\lambda$ 之间的正子集和；配合补集可知，每个子集和都属于 $\\{-\\lambda,0,\\lambda\\}$。特别地，每个单项 $x_i$ 也只能取这三个值。若有两个正坐标，它们的和为 $2\\lambda$，矛盾；负坐标同理至多一个。再由坐标和为零、平方和为一，必有且仅有一个坐标为 $1/\\sqrt2$、一个为 $-1/\\sqrt2$，其余为零，并且 $\\lambda=1/\\sqrt2$。反过来，这一构型中，包含正坐标而不包含负坐标的子集恰有 $2^{n-2}$ 个，且 $2^{n-2}=2^{n-3}/\\lambda^2$，所以确实取等号。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_6"
   }
 }
