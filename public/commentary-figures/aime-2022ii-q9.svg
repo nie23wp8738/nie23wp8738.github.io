@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="327" height="157" viewBox="0 0 327 157" role="img">
+  <title>Three points on one parallel line and two on the other</title>
+  <path d="M12,34H315 M12,128H315" fill="none" stroke="#25374a" stroke-width="1.6"/>
+  <path d="M35,34 L66,128" fill="none" stroke="#476979" stroke-width="1.35"/>
+  <path d="M35,34 L244,128" fill="none" stroke="#476979" stroke-width="1.35"/>
+  <path d="M125,34 L66,128" fill="none" stroke="#476979" stroke-width="1.35"/>
+  <path d="M125,34 L244,128" fill="none" stroke="#476979" stroke-width="1.35"/>
+  <path d="M281,34 L66,128" fill="none" stroke="#476979" stroke-width="1.35"/>
+  <path d="M281,34 L244,128" fill="none" stroke="#476979" stroke-width="1.35"/>
+  <circle cx="35" cy="34" r="2.5" fill="#25374a"/><text x="35" y="25" text-anchor="middle" font-family="serif" font-size="14">A<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+  <circle cx="125" cy="34" r="2.5" fill="#25374a"/><text x="125" y="25" text-anchor="middle" font-family="serif" font-size="14">A<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+  <circle cx="281" cy="34" r="2.5" fill="#25374a"/><text x="281" y="25" text-anchor="middle" font-family="serif" font-size="14">A<tspan baseline-shift="sub" font-size="10">3</tspan></text>
+  <circle cx="66" cy="128" r="2.5" fill="#25374a"/><text x="66" y="148" text-anchor="middle" font-family="serif" font-size="14">B<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+  <circle cx="244" cy="128" r="2.5" fill="#25374a"/><text x="244" y="148" text-anchor="middle" font-family="serif" font-size="14">B<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+</svg>

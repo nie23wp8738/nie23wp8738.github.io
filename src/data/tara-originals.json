@@ -13,6 +13,7 @@
     "methodEn": "Identifying the main conclusion",
     "level": "基础",
     "statement": "An archive plans to discard its handwritten shelf cards as soon as their contents have been typed into a catalogue. The cards should be kept until a sample of the entries has been checked against them. A mistyped shelf code can point to a real but incorrect box, so a search for nonexistent codes will miss some mistakes. Comparing a sample with the cards would be a cheap way to look for these mistakes. Checking every entry would take months.\n\nWhich statement best expresses the main conclusion?",
+    "statementZh": "一家档案馆打算把手写架位卡的内容全部录入目录后，立即丢弃这些卡片。档案馆应当先保留原卡，等抽取一部分目录条目与原卡核对后再处理。如果架位编号输错，它仍可能指向一个实际存在、却装着其他档案的箱子。因此，只查找不存在的编号会漏掉一些错误。抽样对照原卡，就能以较低成本检查这类错误。逐条核对则要花好几个月。\n\n下列哪一项最能概括这段论证的主要结论？",
     "options": [
       "Some typing errors give the code of a box that actually exists.",
       "Checking every catalogue entry would take several months.",
@@ -20,7 +21,15 @@
       "A computer search for nonexistent codes will miss certain mistakes.",
       "Comparing a sample with the cards is a low-cost way of finding mistakes."
     ],
+    "optionsZh": [
+      "有些录入错误会产生一个实际存在的档案箱编号。",
+      "核对目录中的每一个条目需要好几个月。",
+      "档案馆应推迟丢弃原卡，等抽样核对完成后再处理。",
+      "用计算机搜索不存在的编号会漏掉某些错误。",
+      "抽取部分条目与原卡比对，是一种成本较低的查错方法。"
+    ],
     "hint": "Which claim gives the archive a course of action?",
+    "hintZh": "哪一项向档案馆提出了具体的行动建议？",
     "answer": "C. The archive should postpone discarding the cards until a sample has been checked.",
     "answerZh": "C。档案馆应等抽样核对完成后，再丢弃原卡片。",
     "solutions": [
@@ -73,6 +82,7 @@
     "methodEn": "Identifying an assumption",
     "level": "提高",
     "statement": "A historian knew of one account dating the installation of a town clock to 1884. She has now found the same date in a guidebook and a catalogue. She argues that the date now has independent corroboration because it appears in three accounts.\n\nWhich assumption is essential to this argument?",
+    "statementZh": "一位历史学者原本只知道一份记载，称某镇的大钟安装于 1884 年。如今，她又在一本指南和一份目录中找到了相同的年份。她认为，既然三份记载都提到这个年份，它就得到了独立的佐证。\n\n这段论证必须依赖下列哪个假设？",
     "options": [
       "All three accounts were published in the year the clock was installed.",
       "At least two of the accounts derive their date from independent lines of evidence.",
@@ -80,7 +90,15 @@
       "The catalogue was published before the guidebook.",
       "None of the three accounts makes any mistakes about other events."
     ],
+    "optionsZh": [
+      "三份记载都发表于大钟安装的那一年。",
+      "至少有两份记载所载的年份来自相互独立的证据。",
+      "这位学者知道三份记载各自最初由谁撰写。",
+      "目录比指南出版得早。",
+      "三份记载在叙述其他事件时都没有出错。"
+    ],
     "hint": "Could three documents repeat a single original claim?",
+    "hintZh": "三份文献会不会都只是在转述同一个原始说法？",
     "answer": "B. At least two of the accounts derive their date from independent lines of evidence.",
     "answerZh": "B。至少有两份记载的日期来自相互独立的证据链。",
     "solutions": [
@@ -133,6 +151,7 @@
     "methodEn": "Identifying a flaw",
     "level": "提高",
     "statement": "At a seed exchange every packet has either a handwritten label or a printed label. Of the packets returned unopened last spring, three quarters had handwritten labels. The organiser concludes that a packet issued with a handwritten label was more likely to be returned unopened than a packet issued with a printed label.\n\nWhat is the main flaw in the organiser's reasoning?",
+    "statementZh": "在一次种子交换活动中，每个种子袋上贴的不是手写标签，就是印刷标签。去年春天，未开封便被退回的种子袋中，有四分之三贴着手写标签。组织者据此认为，与发出时贴着印刷标签的种子袋相比，贴着手写标签的种子袋更容易被原封退回。\n\n组织者的推理主要有什么缺陷？",
     "options": [
       "It gives no reason why someone would decide to return a packet.",
       "It does not establish that the same pattern will occur next spring.",
@@ -140,7 +159,15 @@
       "It overlooks how many packets of each label type were issued in the first place.",
       "It fails to distinguish different styles of handwriting."
     ],
+    "optionsZh": [
+      "没有说明人们为什么会决定退回种子袋。",
+      "没有证明明年春天也会出现同样的情况。",
+      "假设每一个开封袋中的种子都成功种了下去。",
+      "忽略了最初发出的手写标签袋和印刷标签袋各有多少。",
+      "没有区分不同的手写笔迹风格。"
+    ],
     "hint": "Which group supplies the denominator for each return rate?",
+    "hintZh": "计算每类种子袋的退回率时，分母应当是哪一组种子袋的数量？",
     "answer": "D. It overlooks how many packets of each label type were issued in the first place.",
     "answerZh": "D。忽略了最初分别发出多少手写标签和印刷标签种子袋。",
     "solutions": [
@@ -193,6 +220,7 @@
     "methodEn": "Weakening an argument",
     "level": "提高",
     "statement": "A theatre offers the same production on several nights. On half the nights, a five-minute audio introduction is played before the performance. When booking, people choose freely between nights with and without an introduction. After the play, attendees on introduction nights score three points higher on average on a plot quiz. The theatre concludes that hearing the introduction improved their understanding.\n\nWhich finding, if true, most weakens that conclusion?",
+    "statementZh": "一家剧院连续数晚演出同一剧目，其中半数场次会在演出前播放五分钟的导赏录音。观众订票时可以自由选择有导赏或无导赏的场次。演出结束后，在一项剧情测验中，有导赏场次的观众平均高出三分。剧院据此认为，听导赏加深了观众对剧情的理解。\n\n下列哪项发现如果属实，最能削弱这一结论？",
     "options": [
       "Before any introduction or performance, the introduction-night group already averaged three points more on a comparable quiz about the same plot.",
       "The audio recording was made by someone who had seen the play many times.",
@@ -200,7 +228,15 @@
       "The quizzes were scored by people who did not know which night each attendee had chosen.",
       "Few attendees on either kind of night left before the end of the play."
     ],
+    "optionsZh": [
+      "在听导赏或观看演出之前，有导赏场次的观众在一项针对同一剧情、可供比较的测验中，就已经平均高出三分。",
+      "制作导赏录音的人曾多次观看这部戏。",
+      "所有场次的主要角色均由同一批演员饰演。",
+      "批改测验的人不知道每位观众选了哪一个场次。",
+      "两类场次中，都很少有观众在演出结束前离场。"
+    ],
     "hint": "What would make the later score difference possible even if the audio had no effect?",
+    "hintZh": "即使导赏毫无作用，什么情况也可能使两组在演后出现这样的分差？",
     "answer": "A. Before any introduction or performance, the introduction-night group already averaged three points more on a comparable quiz about the same plot.",
     "answerZh": "A。在观看演出或听导赏之前，导赏组对同一剧情的可比测验就已平均高出三分。",
     "solutions": [
@@ -253,6 +289,7 @@
     "methodEn": "Strengthening an argument",
     "level": "提高",
     "statement": "A nursery supplies several pairs of plant varieties whose names differ by just one letter. It has introduced labels that underline the letter that differs within each pair. Orders now contain fewer wrong varieties. The manager thinks the labels work because the underlining directs the picker's attention to the distinguishing letter.\n\nWhich further finding most strongly supports this particular explanation?",
+    "statementZh": "一家苗圃供应的植物中，有几对品种的名称彼此只差一个字母。苗圃改用了新标签，在每对名称中相异的那个字母下方画线。此后，订单中拿错品种的情况减少了。经理认为，标签之所以有效，是因为下划线把拣货员的注意力引向了用于区分品种的字母。\n\n下列哪项进一步的发现最能支持经理提出的这一具体解释？",
     "options": [
       "Most of the nursery's orders are packed by experienced staff.",
       "There were more mistakes with similar names than with very different names before the change.",
@@ -260,7 +297,15 @@
       "Packers say that all of the nursery's new labels look more professional.",
       "In a randomised trial with the same pairs of names, pickers made fewer errors when the differing letter was underlined than when a shared letter was underlined."
     ],
+    "optionsZh": [
+      "苗圃的大多数订单都由经验丰富的员工打包。",
+      "在更换标签之前，名称相近的品种比名称差别很大的品种更容易拿错。",
+      "新标签是在业务较清淡的季节开始时启用的。",
+      "打包员说，苗圃所有的新标签看起来都更专业。",
+      "一项随机试验使用相同的几对品种名称。与在两个名称共有的字母下画线相比，在相异的字母下画线时，拣货员出错更少。"
+    ],
     "hint": "Which comparison keeps underlining itself while changing what it draws attention to?",
+    "hintZh": "哪项比较都保留了下划线，只改变它把注意力引向哪个字母？",
     "answer": "E. In a randomised trial with the same pairs of names, pickers made fewer errors when the differing letter was underlined than when a shared letter was underlined.",
     "answerZh": "E。在随机对照试验中，标出相异字母比标出共同字母更能减少拿错。",
     "solutions": [
@@ -313,6 +358,7 @@
     "methodEn": "Matching argument structure",
     "level": "挑战",
     "statement": "Any parcel dispatched by rail must either bear a blue seal or appear on the station manifest, and it may do both. This parcel bears no blue seal and does not appear on the manifest. It cannot have been dispatched by rail.\n\nWhich argument most closely matches this pattern of reasoning?",
+    "statementZh": "凡是经铁路寄出的包裹，至少符合以下一项：盖有蓝色封印，或列在车站货运清单上；两项也可能都符合。眼前这件包裹既没有蓝色封印，也不在货运清单上。因此，它不可能是经铁路寄出的。\n\n下列哪段论证与上述推理的结构最接近？",
     "options": [
       "Any accepted article is both edited and typeset. This article has not been typeset, so it has not been accepted.",
       "Every advance ticket purchase leaves an email receipt, a booking-office record, or both. This purchase left neither, so it was not an advance purchase.",
@@ -320,7 +366,15 @@
       "Every delivery here comes by bicycle or by van. This delivery did not come by van, so it came by bicycle.",
       "Any message sent from this terminal shows both a date and a user ID. This message shows neither, so it did not come from this terminal."
     ],
+    "optionsZh": [
+      "凡被录用的文章都经过编辑和排版。这篇文章没有排版，所以没有被录用。",
+      "凡是提前购票，都至少会留下电子邮件收据或售票处记录中的一种，也可能两者都有。这次购票两种记录都没有留下，因此不是提前购票。",
+      "用这台机器生成的扫描件会标有日期或序列号。这份扫描件标有序列号，所以是用这台机器生成的。",
+      "送到这里的每一件货物都是用自行车或货车送来的。这件货不是用货车送来的，所以是用自行车送来的。",
+      "从这台终端发出的消息都同时显示日期和用户 ID。这条消息两者都没有显示，所以不是从这台终端发出的。"
+    ],
     "hint": "Preserve the difference between at least one trace and two required traces.",
+    "hintZh": "留意“至少留下一种记录”与“必须同时留下两种记录”的区别。",
     "answer": "B. Every advance ticket purchase leaves an email receipt, a booking-office record, or both. This purchase left neither, so it was not an advance purchase.",
     "answerZh": "B。B 与原论证同构：若发生某事，至少留下两种迹象之一；两种迹象都没有，故该事没有发生。",
     "solutions": [
@@ -373,6 +427,7 @@
     "methodEn": "Relevant selection",
     "level": "基础",
     "statement": "A courier reports on two depots. At East, 82 of the 90 parcels due before noon were on time; 98 of the 120 parcels due later were on time. At West, 50 of the 60 parcels due before noon were on time; 67 of the 70 parcels due later were on time. Of all parcels due before noon at these two depots, what percentage were late?",
+    "statementZh": "一家快递公司汇总了两个配送站的情况。东站有 90 件包裹应在中午前送达，其中 82 件准时；另有 120 件应在较晚时段送达，其中 98 件准时。西站有 60 件包裹应在中午前送达，其中 50 件准时；另有 70 件应在较晚时段送达，其中 67 件准时。将两站应在中午前送达的包裹合在一起，迟到的占百分之几？",
     "options": [
       "8%",
       "10%",
@@ -380,7 +435,15 @@
       "13%",
       "15%"
     ],
+    "optionsZh": [
+      "8%",
+      "10%",
+      "12%",
+      "13%",
+      "15%"
+    ],
     "hint": "Keep only the parcels due before noon. Should the two depots receive equal weight?",
+    "hintZh": "只考虑应在中午前送达的包裹。计算时，两个配送站应占相同的权重吗？",
     "answer": "C. 12%",
     "answerZh": "C．12%。",
     "solutions": [
@@ -433,6 +496,7 @@
     "methodEn": "Relevant selection",
     "level": "提高",
     "statement": "A theatre sold 240 online tickets in 60 one-ticket orders and 90 two-ticket orders. It also sold 110 tickets for cash at the door. Two payment services each charge 10 cents per cash ticket. Cedar's other charges are 72 dollars per month plus 50 cents per online order. Pine's other charges are 36 dollars per month plus 50 cents per online ticket. For a month with the sales described, which service costs less and by how much?",
+    "statementZh": "一家剧院通过网络卖出 240 张票，其中 60 笔订单各买一张，90 笔订单各买两张。剧院还在门口以现金售出 110 张票。两家支付服务商均对每张现金售出的票收取 10 美分。在此之外，Cedar 每月收取 72 美元，并对每笔网络订单收取 50 美分；Pine 每月收取 36 美元，并对每张网络售出的票收取 50 美分。对于上述销售情况的这个月，哪家服务商收费较低，低多少？",
     "options": [
       "Pine by 36 dollars",
       "Cedar by 45 dollars",
@@ -440,7 +504,15 @@
       "Cedar by 9 dollars",
       "The two services cost the same"
     ],
+    "optionsZh": [
+      "Pine 少收 36 美元",
+      "Cedar 少收 45 美元",
+      "Pine 少收 9 美元",
+      "Cedar 少收 9 美元",
+      "两家服务商的费用相同"
+    ],
     "hint": "A two-ticket order triggers one online fee at Cedar and two at Pine.",
+    "hintZh": "一笔购买两张票的网络订单，Cedar 收一次网络手续费，Pine 收两次。",
     "answer": "D. Cedar by 9 dollars",
     "answerZh": "D．Cedar 便宜 9 美元。",
     "solutions": [
@@ -493,6 +565,7 @@
     "methodEn": "Finding procedures",
     "level": "挑战",
     "statement": "A food cooperative must move 53 crates in a single trip. A small van holds up to 6 crates and costs 19 credits to hire. A large van holds up to 11 crates and costs 32 credits. The depot has at most four large vans and plenty of small vans. Vans may leave partly empty. What is the lowest total hire cost?",
+    "statementZh": "一家食品合作社必须在一趟行程内运完 53 箱货物。小货车最多装 6 箱，每辆租金为 19 个代币。大货车最多装 11 箱，每辆租金为 32 个代币。车场最多可提供 4 辆大货车，小货车数量充足。货车不必装满才出发。最低总租金是多少？",
     "options": [
       "160 credits",
       "165 credits",
@@ -500,7 +573,15 @@
       "171 credits",
       "172 credits"
     ],
+    "optionsZh": [
+      "160 个代币",
+      "165 个代币",
+      "166 个代币",
+      "171 个代币",
+      "172 个代币"
+    ],
     "hint": "A large van costs less per place when full, but how much space will the last van actually use?",
+    "hintZh": "满载时，大货车平均每个箱位的成本更低。但最后一辆车实际会用到多少个箱位？",
     "answer": "B. 165 credits",
     "answerZh": "B．165 个计费单位。",
     "solutions": [
@@ -553,6 +634,7 @@
     "methodEn": "Finding procedures",
     "level": "提高",
     "statement": "Two scanners start at 09:00 with 12 rolls of film waiting. Scanner A takes exactly 6 minutes per roll and scanner B takes exactly 9. Each scanner handles one whole roll at a time. B must be idle from 09:18 until 09:28; it may finish a roll at 09:18 and start another at 09:28. A roll cannot be interrupted or transferred. What is the earliest time by which all 12 rolls can be finished?",
+    "statementZh": "上午 09:00，两台扫描仪开始处理等候扫描的 12 卷胶片。扫描仪 A 每卷恰好用 6 分钟，扫描仪 B 每卷恰好用 9 分钟。每台一次只能扫描一整卷。B 从 09:18 至 09:28 必须停机，可以在 09:18 恰好完成一卷，并在 09:28 开始下一卷。扫描一卷的过程不能中断，也不能中途转给另一台扫描仪。最早何时能全部完成？",
     "options": [
       "09:42",
       "09:45",
@@ -560,7 +642,15 @@
       "09:48",
       "09:54"
     ],
+    "optionsZh": [
+      "09:42",
+      "09:45",
+      "09:46",
+      "09:48",
+      "09:54"
+    ],
     "hint": "Keep a separate record of completions for each scanner around 09:28.",
+    "hintZh": "分别记录两台扫描仪完成各卷的时间，特别留意 09:28 前后。",
     "answer": "D. 09:48",
     "answerZh": "D．09:48。",
     "solutions": [
@@ -613,6 +703,7 @@
     "methodEn": "Identifying similarity",
     "level": "基础",
     "statement": "Each direct rail link joins two different towns. A clerk asks every town to list its incident links, totals the list lengths and divides by two to find the number of links. Which procedure is valid for the same counting reason?",
+    "statementZh": "每条直达铁路线恰好连接两个不同的城镇。一名职员请每个城镇列出与本镇直接相连的所有线路，把各镇清单的条目数相加，再除以二，算出线路总数。下列哪种做法基于相同的计数原理，也是正确的？",
     "options": [
       "Total the numbers of fixtures played by all league teams and halve the result to count league fixtures, each played by two league teams.",
       "Total the books borrowed by club members and halve the result to count distinct titles, since each member borrowed two books.",
@@ -620,7 +711,15 @@
       "Total the sizes of two age groups and halve the result to count club members, since every member belongs to exactly one group.",
       "Total depot visits and halve the result to count parcel journeys, since each journey visits exactly three depots."
     ],
+    "optionsZh": [
+      "将各支联赛球队参加的联赛场数相加，再除以二，得到联赛比赛总场数，因为每场比赛恰有两支联赛球队参加。",
+      "将俱乐部成员借阅的书本数相加，再除以二，得到不同书名的数量，因为每位成员都借了两本书。",
+      "将上午和晚上的包裹检查次数相加，再除以二，得到不同包裹的总数，因为每个包裹都接受了一次或两次检查。",
+      "将两个年龄组的人数相加，再除以二，得到俱乐部成员总数，因为每位成员恰好属于其中一组。",
+      "将到访各配送站的次数相加，再除以二，得到包裹的运送行程数，因为每趟行程恰好到访三个配送站。"
+    ],
     "hint": "Ask how often each object you want to count appears in the total.",
+    "hintZh": "在相加得到的总数中，每一个要统计的对象恰好出现了几次？",
     "answer": "A. Total the numbers of fixtures played by all league teams and halve the result to count league fixtures, each played by two league teams.",
     "answerZh": "A．把所有球队的参赛场次相加后除以二，可得到联赛的比赛场数。",
     "solutions": [
@@ -673,6 +772,7 @@
     "methodEn": "Identifying similarity",
     "level": "挑战",
     "statement": "A study room charges 15 credits for a booking of one or two slots. Each slot after the second adds 3 credits until the total reaches 27; further slots cost nothing. Which museum plan gives the same net cost for every positive number of visits as the room charges for that many slots?",
+    "statementZh": "预订自习室一个或两个时段都收取 15 个代币。从第三个时段起，每增加一个时段加收 3 个代币，直至总价达到 27 个代币；此后再增加时段均免费。对于任意正整数次参观，下列哪项博物馆方案的实际花费始终与预订相同时段数的自习室收费相同？",
     "options": [
       "Pay 15 credits for the first two visits, then 3 per additional visit, up to a total of 24.",
       "Pay 15 credits for the first three visits, then 3 per additional visit, up to a total of 27.",
@@ -680,7 +780,15 @@
       "Pay 27 credits for a five-visit card and receive 3 credits for each unused visit, with the total refund capped at 12. Extra visits are free.",
       "Pay 27 credits for a six-visit card and receive 3 credits for each unused visit, with the total refund capped at 12. Extra visits are free."
     ],
+    "optionsZh": [
+      "前两次参观共付 15 个代币，之后每增加一次加收 3 个代币，总费用上限为 24 个代币。",
+      "前三次参观共付 15 个代币，之后每增加一次加收 3 个代币，总费用上限为 27 个代币。",
+      "用 27 个代币购买六次卡。每有一次未使用，就退还 2 个代币。超过六次的参观免费。",
+      "用 27 个代币购买五次卡。每有一次未使用，就退还 3 个代币，退款总额上限为 12 个代币。超过五次的参观免费。",
+      "用 27 个代币购买六次卡。每有一次未使用，就退还 3 个代币，退款总额上限为 12 个代币。超过六次的参观免费。"
+    ],
     "hint": "Find the first number of visits at which the room charges 27. Then work backwards.",
+    "hintZh": "先找出自习室的收费最早在预订几个时段时达到 27 个代币，再从这个数往回推。",
     "answer": "E. Pay 27 credits for a six-visit card and receive 3 credits for each unused visit, with the total refund capped at 12. Extra visits are free.",
     "answerZh": "E．六次卡售价 27，未用次数每次退 3，最多退 12；超过六次免费。",
     "solutions": [
@@ -733,7 +841,9 @@
     "methodEn": "Comparing principles of fairness",
     "level": "基础",
     "statement": "Consider the claim: \"When a free public workshop has fewer places than applicants, a lottery is the fairest way to allocate them.\" Explain what fairness means under this claim. Develop the strongest objection you can to using a lottery, then defend your own judgement about when it should be used. Write in English in no more than 750 words.",
+    "statementZh": "请考虑这一主张：“当免费的公共工作坊名额少于申请人数时，抽签是分配名额最公平的办法。”解释这里的“公平”是什么意思。充分阐述你能提出的最有力的反对抽签的理由，然后论证你对何时应该采用抽签的判断。请使用英语作答，不超过 750 个英文单词。",
     "hint": "Imagine two workshops: an introductory pottery class and the final session of a project already under way. Would the same rule be fair in both?",
+    "hintZh": "设想两场工作坊，一场是陶艺入门课，另一场是一个已经开展的项目的最后一节课。同一种规则在这两种情形中都公平吗？",
     "answer": "Open-ended. A defensible judgement should identify what gives applicants equal or unequal claims, and explain how the proposed rule treats them.",
     "answerZh": "开放题。可以支持或质疑抽签，但应说明申请人的资格为什么相同或不同，以及分配规则如何体现这一点。",
     "solutions": [
@@ -793,7 +903,9 @@
     "methodEn": "Evaluating evidence and measures",
     "level": "提高",
     "statement": "Consider the claim: \"A project that achieves its numerical target deserves to be run again.\" Explain the reasoning behind the claim. Give an argument against treating the target as sufficient evidence, then say how much weight you would give it when deciding whether to repeat a project. Write in English in no more than 750 words.",
+    "statementZh": "请考虑这一主张：“一个项目只要达到了它的量化目标，就值得再开展一次。”解释这一主张背后的推理。提出一个理由，说明为什么达标未必足以证明项目值得重办，再阐述你在决定是否重办时会赋予达标这一事实多大的分量。请使用英语作答，不超过 750 个英文单词。",
     "hint": "Separate three questions: what mattered, what was counted, and what would have happened without the project.",
+    "hintZh": "分开考虑三个问题：真正重要的是什么，实际统计了什么，以及如果没有这个项目又会发生什么。",
     "answer": "Open-ended. Explain what achieving the target establishes and identify the evidence that could change your decision about a repeat.",
     "answerZh": "开放题。说明达标能够证明什么，并指出哪些证据可能改变你对项目是否值得再次开展的判断。",
     "solutions": [
@@ -853,7 +965,9 @@
     "methodEn": "Distinguishing standards of judgement",
     "level": "挑战",
     "statement": "Consider the claim: \"Someone who publicly changes an opinion deserves to be trusted more than before.\" Explain what kind of trust the claim might concern. Give a reason for doubting it and assess how far a public change of opinion should affect a listener's trust. Write in English in no more than 750 words.",
+    "statementZh": "请考虑这一主张：“一个人公开改变了自己的观点，就比以前更值得信任。”解释这一主张所说的信任可能是哪一种。提出一个质疑这一主张的理由，并评估公开改变观点应该在多大程度上影响听者对发言者的信任。请使用英语作答，不超过 750 个英文单词。",
     "hint": "A listener might trust someone's honesty, their judgement, or a particular new claim. Would a public correction affect all three equally?",
+    "hintZh": "听者可能相信发言者诚实、信赖其判断力，或相信某个具体的新说法。一次公开更正对这三方面的影响会一样吗？",
     "answer": "Open-ended. Identify the kind of trust at stake, test a reason for doubt, and justify the conditions under which trust should change.",
     "answerZh": "开放题。先界定所讨论的是哪一种信任，再检验怀疑的理由，并说明在什么条件下应调整信任。",
     "solutions": [

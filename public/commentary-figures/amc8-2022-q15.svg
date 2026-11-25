@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273 254">
+<title>Thirty package weights in ounces and prices in dollars</title>
+<path d="M30 218L258 218" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M30 218L30 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<text x="30" y="233" text-anchor="middle" fill="#203c4a" style="font:11px Georgia,serif">0</text>
+<text x="24" y="222" text-anchor="end" fill="#203c4a" style="font:11px Georgia,serif">0</text>
+<path d="M30 183L258 183" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M68 218L68 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<text x="68" y="233" text-anchor="middle" fill="#203c4a" style="font:11px Georgia,serif">1</text>
+<text x="24" y="187" text-anchor="end" fill="#203c4a" style="font:11px Georgia,serif">1</text>
+<path d="M30 148L258 148" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M106 218L106 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<text x="106" y="233" text-anchor="middle" fill="#203c4a" style="font:11px Georgia,serif">2</text>
+<text x="24" y="152" text-anchor="end" fill="#203c4a" style="font:11px Georgia,serif">2</text>
+<path d="M30 113L258 113" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M144 218L144 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<text x="144" y="233" text-anchor="middle" fill="#203c4a" style="font:11px Georgia,serif">3</text>
+<text x="24" y="117" text-anchor="end" fill="#203c4a" style="font:11px Georgia,serif">3</text>
+<path d="M30 78L258 78" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M182 218L182 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<text x="182" y="233" text-anchor="middle" fill="#203c4a" style="font:11px Georgia,serif">4</text>
+<text x="24" y="82" text-anchor="end" fill="#203c4a" style="font:11px Georgia,serif">4</text>
+<path d="M30 43L258 43" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M220 218L220 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<text x="220" y="233" text-anchor="middle" fill="#203c4a" style="font:11px Georgia,serif">5</text>
+<text x="24" y="47" text-anchor="end" fill="#203c4a" style="font:11px Georgia,serif">5</text>
+<path d="M30 8L258 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<path d="M258 218L258 8" fill="none" stroke="#bcc8cd" stroke-width="0.9"/>
+<circle cx="68" cy="176" r="2.6" fill="#203c4a"/>
+<circle cx="68" cy="158.5" r="2.6" fill="#203c4a"/>
+<circle cx="68" cy="148" r="2.6" fill="#203c4a"/>
+<circle cx="68" cy="120" r="2.6" fill="#203c4a"/>
+<circle cx="87" cy="144.5" r="2.6" fill="#203c4a"/>
+<circle cx="87" cy="113" r="2.6" fill="#203c4a"/>
+<circle cx="87" cy="102.5" r="2.6" fill="#203c4a"/>
+<circle cx="87" cy="85" r="2.6" fill="#203c4a"/>
+<circle cx="106" cy="148" r="2.6" fill="#203c4a"/>
+<circle cx="106" cy="116.5" r="2.6" fill="#203c4a"/>
+<circle cx="106" cy="113" r="2.6" fill="#203c4a"/>
+<circle cx="106" cy="78" r="2.6" fill="#203c4a"/>
+<circle cx="106" cy="67.5" r="2.6" fill="#203c4a"/>
+<circle cx="106" cy="50" r="2.6" fill="#203c4a"/>
+<circle cx="125" cy="123.5" r="2.6" fill="#203c4a"/>
+<circle cx="125" cy="88.5" r="2.6" fill="#203c4a"/>
+<circle cx="125" cy="71" r="2.6" fill="#203c4a"/>
+<circle cx="125" cy="64" r="2.6" fill="#203c4a"/>
+<circle cx="144" cy="130.5" r="2.6" fill="#203c4a"/>
+<circle cx="144" cy="99" r="2.6" fill="#203c4a"/>
+<circle cx="144" cy="71" r="2.6" fill="#203c4a"/>
+<circle cx="163" cy="85" r="2.6" fill="#203c4a"/>
+<circle cx="163" cy="60.5" r="2.6" fill="#203c4a"/>
+<circle cx="163" cy="50" r="2.6" fill="#203c4a"/>
+<circle cx="182" cy="81.5" r="2.6" fill="#203c4a"/>
+<circle cx="182" cy="39.5" r="2.6" fill="#203c4a"/>
+<circle cx="201" cy="50" r="2.6" fill="#203c4a"/>
+<circle cx="201" cy="43" r="2.6" fill="#203c4a"/>
+<circle cx="220" cy="60.5" r="2.6" fill="#203c4a"/>
+<circle cx="220" cy="43" r="2.6" fill="#203c4a"/>
+<text x="21" y="12" text-anchor="middle" fill="#203c4a" style="font:14px Georgia,serif">$</text>
+<text x="145" y="249" text-anchor="middle" fill="#203c4a" style="font:14px Georgia,serif">oz</text>
+</svg>

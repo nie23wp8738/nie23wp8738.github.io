@@ -1,0 +1,525 @@
+{
+  "aime-2022ii-q1": {
+    "summary": "At a concert the adult fraction changed from $5/12$ to $11/25$ when fifty people joined. What is the smallest possible adult count after their arrival?",
+    "summaryZh": "一场音乐会的成年观众占比原为 $5/12$，又来了五十人后变为 $11/25$。求此时成年观众人数的最小值。",
+    "answer": "154",
+    "answerZh": "154",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/1",
+    "methods": [
+      {
+        "title": "Use the denominators to constrain the crowd size",
+        "titleZh": "用分母限制总人数",
+        "topics": [
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          },
+          {
+            "en": "Fractions",
+            "zh": "分数"
+          }
+        ],
+        "steps": [
+          "The initial crowd size $T$ is divisible by twelve. Since $25\\mid T+50$, we also have $25\\mid T$. The smallest possible positive $T$ is $300$.",
+          "This gives $125$ adults initially and $350(11/25)=154$ afterwards. A bus with $29$ adults and $21$ others achieves these counts."
+        ],
+        "stepsZh": [
+          "原总人数 $T$ 是十二的倍数。因 $25\\mid T+50$，故 $25\\mid T$。所以最小的正整数 $T$ 是 $300$。",
+          "此时原有成年人 $125$ 名，后来有 $350(11/25)=154$ 名。五十名新观众中取 $29$ 名成人及 $21$ 名其他观众即可实现。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q2": {
+    "summary": "A four-player tennis tournament chooses semifinal pairings uniformly and advances each winner to the final. Azar beats Carl with probability $2/3$. Each of Azar and Carl beats either of the other players, Jon and Sergey, with probability $3/4$. Matches are independent. Give the sum of the reduced numerator and denominator of Carl’s championship probability.",
+    "summaryZh": "网球赛四名选手随机配对进行半决赛，胜者进入决赛。阿扎尔对卡尔的胜率为 $2/3$；他们两人中任何一人对另外两位选手乔恩或谢尔盖的胜率均为 $3/4$。各场独立。求卡尔夺冠概率的既约分子分母之和。",
+    "answer": "125",
+    "answerZh": "125",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/2",
+    "methods": [
+      {
+        "title": "Condition on Carl’s semifinal opponent",
+        "titleZh": "按卡尔的半决赛对手分类",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          }
+        ],
+        "steps": [
+          "With probability $1/3$ Carl faces Azar immediately. His conditional title chance then is $(1/3)(3/4)=1/4$.",
+          "Otherwise Carl must first beat one of the other two. If he does, his final opponent is Azar with chance $3/4$. Thus this branch has conditional title probability $(3/4)[(3/4)(1/3)+(1/4)(3/4)]=21/64$.",
+          "Combining the branches gives $(1/3)(1/4)+(2/3)(21/64)=29/96$, so the answer is $125$."
+        ],
+        "stepsZh": [
+          "卡尔有 $1/3$ 的概率在半决赛遇上阿扎尔。此时他连续赢两场的条件概率为 $(1/3)(3/4)=1/4$。",
+          "否则卡尔须先战胜另一名选手，若晋级，则决赛对手为阿扎尔的概率是 $3/4$。此分支夺冠的条件概率为 $(3/4)[(3/4)(1/3)+(1/4)(3/4)]=21/64$。",
+          "两分支合并，得 $(1/3)(1/4)+(2/3)(21/64)=29/96$，所求为 $125$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q3": {
+    "summary": "The five vertices of a right square pyramid of base edge $6$ and volume $54$ lie on a sphere. Reduce its radius to a fraction and add its numerator and denominator.",
+    "summaryZh": "一个正四棱锥底面边长为 $6$、体积为 $54$，五个顶点都在一个球面上。求其半径的既约分子与分母之和。",
+    "answer": "021",
+    "answerZh": "021",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/3",
+    "methods": [
+      {
+        "title": "Compare apex and base-vertex distances",
+        "titleZh": "比较球心到顶点和底面角点的距离",
+        "topics": [
+          {
+            "en": "Pyramid volume",
+            "zh": "棱锥体积"
+          },
+          {
+            "en": "Circumsphere",
+            "zh": "外接球"
+          }
+        ],
+        "steps": [
+          "The height is $3(54)/6^2=9/2$. By symmetry the sphere center lies on the pyramid axis. At signed height $t$ above the base its squared distances to a base corner and to the apex are $t^2+18$ and $(9/2-t)^2$.",
+          "Equating them gives $t=1/4$. The radius is $9/2-1/4=17/4$, so the answer is $21$."
+        ],
+        "stepsZh": [
+          "棱锥高为 $3(54)/6^2=9/2$。由对称性知球心在棱锥轴线上。设球心相对于底面的有向高度为 $t$，它到底面角点和锥顶的距离平方分别为 $t^2+18$、$(9/2-t)^2$。",
+          "令二者相等，得 $t=1/4$。半径为 $9/2-1/4=17/4$，答案为 $21$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q4": {
+    "summary": "For some $x>0$ other than $1/20$ and $1/2$, $\\log_{20x}(22x)=\\log_{2x}(202x)$. Write this common value as $\\log_{10}(m/n)$ in lowest terms. Find $m+n$.",
+    "summaryZh": "某个正实数 $x$ 不等于 $1/20$ 或 $1/2$，并满足 $\\log_{20x}(22x)=\\log_{2x}(202x)$。将公共值写成 $\\log_{10}(m/n)$，其中 $m/n$ 已约分，求 $m+n$。",
+    "answer": "112",
+    "answerZh": "112",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/4",
+    "methods": [
+      {
+        "title": "Divide the two exponential equations",
+        "titleZh": "将两个指数等式相除",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Exponent laws",
+            "zh": "指数运算"
+          }
+        ],
+        "steps": [
+          "Let $t$ be the common value. The two equations are $(20x)^t=22x$ and $(2x)^t=202x$. Division eliminates $x$ and gives $10^t=11/101$. Hence $m+n=112$."
+        ],
+        "stepsZh": [
+          "令公共值为 $t$，得 $(20x)^t=22x$、$(2x)^t=202x$。两式相除消去 $x$，有 $10^t=11/101$，故 $m+n=112$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q5": {
+    "summary": "Label twenty points on a circle $1$ through $20$ clockwise. Join two labels if their absolute difference is prime. How many triangles have all three sides drawn and all vertices labeled?",
+    "summaryZh": "在圆周上顺时针标出 $1$ 至 $20$ 共二十个点，两点的编号之差的绝对值为质数时连线。求以标号点为顶点且三边均已连出的三角形数。",
+    "answer": "072",
+    "answerZh": "072",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/5",
+    "methods": [
+      {
+        "title": "Order the vertices and examine the gaps",
+        "titleZh": "按编号排列并考察间距",
+        "topics": [
+          {
+            "en": "Prime numbers",
+            "zh": "质数"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "For labels $i<j<k$, the two successive gaps and their sum must all be prime. One gap must be two, since otherwise the prime sum would be even and greater than two. If the other gap is $p$, then $p,p+2$ are twin primes with $p+2\\le19$.",
+          "The possible spans $p+2$ are $5,7,13,19$. For span $s$, choose the smallest label in $20-s$ ways and the gap order in two ways. This gives $2(15+13+7+1)=72$ triangles."
+        ],
+        "stepsZh": [
+          "若顶点编号为 $i<j<k$，相邻两间距及其和均须为质数。若两间距都不为二，则间距之和是大于二的偶数，故其中一间距须为二。另一间距 $p$ 满足 $p,p+2$ 都是质数，且 $p+2\\le19$。",
+          "总跨度 $p+2$ 的可能值为 $5,7,13,19$。对跨度 $s$，最小编号有 $20-s$ 种选法，两间距有两种次序。故共有 $2(15+13+7+1)=72$ 个三角形。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q6": {
+    "summary": "One hundred real numbers satisfy $x_1\\le\\cdots\\le x_{100}$, $\\sum x_j=0$ and $\\sum|x_j|=1$. Express the maximum of $x_{76}-x_{16}$ as a reduced fraction and add the numerator and denominator.",
+    "summaryZh": "一百个实数满足 $x_1\\le\\cdots\\le x_{100}$，且 $\\sum x_j=0,\\sum|x_j|=1$。将 $x_{76}-x_{16}$ 的最大值写为既约分数，求分子与分母之和。",
+    "answer": "841",
+    "answerZh": "841",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/6",
+    "methods": [
+      {
+        "title": "Allocate the positive and negative sums",
+        "titleZh": "分别分配正数和与负数和",
+        "topics": [
+          {
+            "en": "Order statistics",
+            "zh": "顺序统计量"
+          },
+          {
+            "en": "Sharp inequalities",
+            "zh": "最优不等式"
+          }
+        ],
+        "steps": [
+          "The positive terms sum to $1/2$ and the negative terms to $-1/2$. The first sixteen terms could not all fall below $-1/32$, so $x_{16}\\ge-1/32$. Likewise the last twenty-five cannot all exceed $1/50$, so $x_{76}\\le1/50$.",
+          "Both bounds are attained together with sixteen copies of $-1/32$, fifty-nine zeros and twenty-five copies of $1/50$. The maximum is $41/800$, giving $841$."
+        ],
+        "stepsZh": [
+          "正项总和为 $1/2$，负项总和为 $-1/2$。前十六项不可能全小于 $-1/32$，故 $x_{16}\\ge-1/32$。同理，后面二十五项不可能全大于 $1/50$，故 $x_{76}\\le1/50$。",
+          "取十六个 $-1/32$、五十九个零及二十五个 $1/50$，即可同时取等。最大差为 $41/800$，所求为 $841$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q7": {
+    "summary": "Two externally tangent circles have radii $6$ and $24$. Determine the area of the triangle formed by their three common tangent lines.",
+    "summaryZh": "两个外切圆的半径分别为 $6$ 和 $24$。求三条公切线围成的三角形面积。",
+    "answer": "192",
+    "answerZh": "192",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/7",
+    "methods": [
+      {
+        "title": "Locate the external center of similitude",
+        "titleZh": "确定外位似中心",
+        "topics": [
+          {
+            "en": "Circle tangents",
+            "zh": "圆的切线"
+          },
+          {
+            "en": "Similarity",
+            "zh": "相似"
+          }
+        ],
+        "steps": [
+          "The two outer common tangents meet at $V$ beyond the smaller circle on the line of centers. Center distances from $V$ have ratio $1:4$ by the similar radius-to-tangent right triangles. Their difference is $30$, so they are $10,40$.",
+          "The tangent at the shared circle contact is perpendicular to the centerline and lies $10+6=16$ from $V$. The outer tangents make half-angle $\\theta$ there with $\\sin\\theta=6/10$, $\\tan\\theta=3/4$. The half-base is $16(3/4)=12$, hence the area is $24(16)/2=192$."
+        ],
+        "stepsZh": [
+          "两条外公切线交于 $V$，它位于连心线上小圆一侧的延长线上。由半径与切线组成的两个直角三角形相似，$V$ 到两圆心的距离之比为 $1:4$，而距离之差为 $30$，故距离分别是 $10,40$。",
+          "两圆切点处的公切线垂直连心线，它到 $V$ 的距离为 $10+6=16$。外公切线与连心线的夹角 $\\theta$ 满足 $\\sin\\theta=6/10$，故 $\\tan\\theta=3/4$。于是三角形半底为 $16(3/4)=12$，面积为 $24(16)/2=192$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q8": {
+    "summary": "For how many $1\\le n\\le600$ does the triple $(\\lfloor n/4\\rfloor,\\lfloor n/5\\rfloor,\\lfloor n/6\\rfloor)$ identify $n$ uniquely? Consider how the answer depends on whether the candidate pool is also bounded by $600$.",
+    "summaryZh": "在 $1\\le n\\le600$ 中，有多少个整数的三个数值 $(\\lfloor n/4\\rfloor,\\lfloor n/5\\rfloor,\\lfloor n/6\\rfloor)$ 能唯一确定 $n$？分别考虑候选数是否也被限制在 $600$ 以内。",
+    "answer": "080 / 081",
+    "answerZh": "080 / 081",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/8",
+    "methods": [
+      {
+        "title": "Find isolated steps of the floor functions",
+        "titleZh": "识别取整函数的孤立台阶",
+        "topics": [
+          {
+            "en": "Floor functions",
+            "zh": "取整函数"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "The three coordinates are nondecreasing. For $n>1$, the value is unique exactly when it differs from both neighbors. That happens if each of $n$ and $n+1$ is divisible by at least one of $4,5,6$. The endpoint $n=1$ shares its triple with $2$.",
+          "Test this condition in one period of $60$. The only adjacent multiples must use $5$ on one side and $4$ or $6$ on the other. The permitted starting residues are $4,5,15,24,35,44,54,55$. Ten full periods give $80$ values when all positive integers are candidates.",
+          "If all candidates must be at most $600$, only the upper endpoint changes: $600$ differs from $599$ but has the same triple as $601$. Discarding $601$ and larger numbers makes $600$ unique and gives $81$. Both answers were accepted."
+        ],
+        "stepsZh": [
+          "三个坐标都单调不减。对 $n>1$，当且仅当它的三元组同时异于两侧相邻整数的三元组时才唯一，即 $n,n+1$ 各自至少被 $4,5,6$ 中的一个数整除。端点 $n=1$ 与 $2$ 有相同的三元组。",
+          "条件以六十为周期。两个相邻整数中，必有一方是五的倍数，另一方是四或六的倍数。一个周期内符合的起始余数为 $4,5,15,24,35,44,54,55$。在所有正整数中判断唯一性时，十个周期共 $80$ 个。",
+          "若候选数本身也不得超过 $600$，只有上端点受影响：$600$ 的三元组与 $599$ 不同，却与 $601$ 相同。排除 $601$ 及更大的数后，$600$ 也能唯一确定，计数为 $81$。本题这两个答案均获认可。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q9": {
+    "summary": "On two parallel lines mark seven distinct points on one and five on the other. Draw all $35$ segments joining points on opposite lines. No three segments meet strictly between the lines. Count the bounded regions in the diagram consisting of the two lines and all the segments. The drawing illustrates the smaller case of three and two points, which has eight bounded regions.",
+    "summaryZh": "在两条平行线上分别标七个和五个互不相同的点，把异线上每对点连成线段，共 $35$ 条。两线之间没有三条线段共点。求两条直线及所有线段划出的有界区域个数。 图中以三点和两点的较小例子示意，此时有八个有界区域。",
+    "answer": "244",
+    "answerZh": "244",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/9",
+    "methods": [
+      {
+        "title": "Count segment crossings with Euler’s formula",
+        "titleZh": "以欧拉公式由交点计数",
+        "topics": [
+          {
+            "en": "Planar graphs",
+            "zh": "平面图"
+          },
+          {
+            "en": "Euler’s formula",
+            "zh": "欧拉公式"
+          }
+        ],
+        "steps": [
+          "Each choice of two points on each line gives one crossing, namely the diagonals of their trapezoid. Thus $X=\\binom72\\binom52=210$; the hypothesis prevents coincidences.",
+          "Trim each line at its outermost marked points, preserving all bounded faces. The connected graph has $V=7+5+X$ vertices. Along the supporting lines there are $6+4$ edges; each crossing splits two connecting segments, giving $E=6+4+35+2X$. Therefore the bounded-face count is $E-V+1=34+210=244$."
+        ],
+        "stepsZh": [
+          "每条线上各选两点得到一个梯形，其两对角线恰有一个交点。故内部交点数 $X=\\binom72\\binom52=210$，且题设保证没有重合。",
+          "将两条直线在最外侧标记点处截断，所有有界面都保留。所得连通图有 $V=7+5+X$ 个顶点，两条平行线上有 $6+4$ 条边；每个内部交点将两条连接线段各多分出一条边，因此 $E=6+4+35+2X$。欧拉公式给出有界面数 $E-V+1=34+210=244$。"
+        ]
+      }
+    ],
+    "figure": {
+      "url": "/commentary-figures/aime-2022ii-q9.svg",
+      "alt": "Smaller example: the six joining segments between three upper points and two lower points form eight bounded regions with the supporting lines.",
+      "altZh": "小例：上方三点、下方两点之间的六条连接线段与两条平行线围出八个有界区域。"
+    }
+  },
+  "aime-2022ii-q10": {
+    "summary": "Find the remainder modulo $1000$ of $\\sum_{j=3}^{40}\\binom{\\binom j2}{2}$.",
+    "summaryZh": "求 $\\sum_{j=3}^{40}\\binom{\\binom j2}{2}$ 除以 $1000$ 的余数。",
+    "answer": "004",
+    "answerZh": "004",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/10",
+    "methods": [
+      {
+        "title": "Count pairs of edges by their vertex set",
+        "titleZh": "按边对所用的顶点数计数",
+        "topics": [
+          {
+            "en": "Binomial coefficients",
+            "zh": "组合数"
+          },
+          {
+            "en": "Hockey-stick identity",
+            "zh": "曲棍球棒恒等式"
+          }
+        ],
+        "steps": [
+          "Choosing two edges on $j$ labeled vertices uses either three vertices or four. On three vertices there are three choices of the common vertex; on four there are three perfect matchings. Thus the summand is $3\\binom j3+3\\binom j4=3\\binom{j+1}4$.",
+          "Summing by the hockey-stick identity gives $3\\binom{42}5=42\\cdot41\\cdot39\\cdot38=(40^2-4)(40^2-1)$. The residue is $4$."
+        ],
+        "stepsZh": [
+          "在 $j$ 个标号顶点间选两条不同的边，只可能共用三个或四个顶点。用三个顶点时可三选一作公共顶点；用四个时有三种两两配对法。因此每项为 $3\\binom j3+3\\binom j4=3\\binom{j+1}4$。",
+          "用曲棍球棒恒等式求和，得 $3\\binom{42}5=42\\cdot41\\cdot39\\cdot38=(40^2-4)(40^2-1)$。模千余数为 $4$。"
+        ]
+      },
+      {
+        "title": "Factor the summand into four consecutive integers",
+        "titleZh": "将每一项化为四个连续整数的乘积",
+        "topics": [
+          {
+            "en": "Binomial identities",
+            "zh": "组合恒等式"
+          }
+        ],
+        "steps": [
+          "With $M=j(j-1)/2$, we have $M-1=(j+1)(j-2)/2$. Hence $\\binom M2=(j+1)j(j-1)(j-2)/8=3\\binom{j+1}4$.",
+          "Pascal’s identity turns this into $3[\\binom{j+2}5-\\binom{j+1}5]$. The sum telescopes to $3\\binom{42}5=(1600-4)(1600-1)$. This is $1600^2-8000+4$, with remainder $4$."
+        ],
+        "stepsZh": [
+          "令 $M=j(j-1)/2$，则 $M-1=(j+1)(j-2)/2$，所以 $\\binom M2=(j+1)j(j-1)(j-2)/8=3\\binom{j+1}4$。",
+          "帕斯卡恒等式将它化为 $3[\\binom{j+2}5-\\binom{j+1}5]$。逐项抵消后，和为 $3\\binom{42}5=(1600-4)(1600-1)=1600^2-8000+4$，故余数为 $4$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q11": {
+    "summary": "A convex quadrilateral $ABCD$ satisfies $AB=2$, $AD=7$, $CD=3$. The internal bisectors of the acute angles at $A,D$ meet at the midpoint of $BC$. What is the square of its area?",
+    "summaryZh": "凸四边形 $ABCD$ 中，$AB=2,AD=7,CD=3$，顶点 $A,D$ 处的两个锐角的内角平分线交于 $BC$ 中点。求四边形面积的平方。",
+    "answer": "180",
+    "answerZh": "180",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/11",
+    "methods": [
+      {
+        "title": "Reflect the short sides onto the base",
+        "titleZh": "将两条短边反射到底边上",
+        "topics": [
+          {
+            "en": "Reflection",
+            "zh": "反射"
+          },
+          {
+            "en": "Thales’ theorem",
+            "zh": "泰勒斯定理"
+          },
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          }
+        ],
+        "steps": [
+          "Let $A=(0,0),D=(7,0)$, with midpoint $M$ of $BC$ above the axis. Reflect $B$ in $AM$ to get $T=(2,0)$, and $C$ in $DM$ to get $U=(4,0)$. Now $MT=MB=MC=MU$, so $M=(3,h)$ and $T,U$ are on the circle with diameter $BC$.",
+          "Thus $CT$ is perpendicular to $BT$, hence parallel to the mirror $AM$; similarly $BU$ is parallel to $DM$. Write $C=T+k(3,h)$ and $B=U+l(-4,h)$. Their midpoint is $M$, so $k+l=2$ and $3k=4l$. Thus $l=6/7$, $B=(4/7,6h/7)$. The condition $AB=2$ gives $h^2=5$.",
+          "The area divides into triangles $ABM,AMD,DMC$. Reflections identify the first and last areas with those of $ATM,DMU$. Their bases on $AD$ are $2,7,3$ and their height is $h$, so the total is $6h$. Squaring gives $36(5)=180$."
+        ],
+        "stepsZh": [
+          "取 $A=(0,0),D=(7,0)$，使 $BC$ 的中点 $M$ 位于横轴上方。将 $B$ 关于 $AM$ 反射到 $T=(2,0)$，将 $C$ 关于 $DM$ 反射到 $U=(4,0)$。由于 $MT=MB=MC=MU$，有 $M=(3,h)$，且 $T,U$ 在以 $BC$ 为直径的圆上。",
+          "故 $CT$ 垂直于 $BT$，从而平行于反射轴 $AM$；同理 $BU$ 平行于 $DM$。写 $C=T+k(3,h)$、$B=U+l(-4,h)$。两者中点为 $M$ 给出 $k+l=2,3k=4l$，故 $l=6/7$，$B=(4/7,6h/7)$。由 $AB=2$ 得 $h^2=5$。",
+          "将四边形分为三角形 $ABM,AMD,DMC$。反射使首末两个三角形的面积分别等于 $ATM,DMU$ 的面积。三块换算后的底依次长 $2,7,3$，高均为 $h$，故总面积为 $6h$，其平方为 $36(5)=180$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q12": {
+    "summary": "Real numbers $a>4,b>1,x,y$ satisfy $x^2/a^2+y^2/(a^2-16)=1$ and $(x-20)^2/(b^2-1)+(y-11)^2/b^2=1$. Minimize $a+b$.",
+    "summaryZh": "实数 $a>4,b>1,x,y$ 满足 $x^2/a^2+y^2/(a^2-16)=1$ 和 $(x-20)^2/(b^2-1)+(y-11)^2/b^2=1$。求 $a+b$ 的最小值。",
+    "answer": "023",
+    "answerZh": "023",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/12",
+    "methods": [
+      {
+        "title": "Pair the foci across the two ellipses",
+        "titleZh": "将两个椭圆的焦点交叉配对",
+        "topics": [
+          {
+            "en": "Ellipse foci",
+            "zh": "椭圆焦点"
+          },
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          }
+        ],
+        "steps": [
+          "For $P=(x,y)$ the first ellipse fixes its distance sum to $F=(-4,0)$ and $G=(4,0)$ at $2a$. The second has foci $H=(20,10)$ and $J=(20,12)$, with distance sum $2b$.",
+          "By the triangle inequality $2(a+b)=(PF+PH)+(PG+PJ)\\ge FH+GJ=26+20=46$. The segments $FH,GJ$ intersect at $(14,15/2)$. There the first two focal distances for the first ellipse are $39/2,25/2$, giving $a=16$; the second ellipse gives $b=7$. Hence the lower bound $23$ is attained."
+        ],
+        "stepsZh": [
+          "令 $P=(x,y)$。第一个椭圆的两个焦点为 $F=(-4,0),G=(4,0)$，距离和为 $2a$。第二个椭圆的焦点为 $H=(20,10),J=(20,12)$，距离和为 $2b$。",
+          "三角不等式给出 $2(a+b)=(PF+PH)+(PG+PJ)\\ge FH+GJ=26+20=46$。线段 $FH,GJ$ 交于 $(14,15/2)$，此时到第一个椭圆两焦点的距离分别为 $39/2,25/2$，故 $a=16$；第二个椭圆对应 $b=7$。下界 $23$ 可以达到。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q13": {
+    "summary": "A polynomial agrees on $0<x<1$ with $(1-x^{2310})^6/[(1-x^{105})(1-x^{70})(1-x^{42})(1-x^{30})]$. Determine its coefficient of $x^{2022}$.",
+    "summaryZh": "一个多项式在 $0<x<1$ 上等于 $(1-x^{2310})^6/[(1-x^{105})(1-x^{70})(1-x^{42})(1-x^{30})]$。求 $x^{2022}$ 的系数。",
+    "answer": "220",
+    "answerZh": "220",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/13",
+    "methods": [
+      {
+        "title": "Separate the exponent variables by congruences",
+        "titleZh": "用同余条件分离四个指数变量",
+        "topics": [
+          {
+            "en": "Generating functions",
+            "zh": "生成函数"
+          },
+          {
+            "en": "Stars and bars",
+            "zh": "隔板法"
+          }
+        ],
+        "steps": [
+          "At degree $2022$ only the numerator’s constant term contributes. Expanding each inverse denominator factor as a geometric series, the coefficient counts nonnegative solutions of $105u+70v+42w+30t=2022$.",
+          "Reducing modulo $2,3,5,7$ successively gives $u=2i,v=3j,w=5k+1,t=7l+3$. Substitution leaves $210(i+j+k+l)=2022-42-90=1890$, or $i+j+k+l=9$. The number of weak compositions is $\\binom{12}{3}=220$."
+        ],
+        "stepsZh": [
+          "在 $2022$ 次项中分子只贡献常数项。将分母各因子的倒数展开成等比级数，所求系数就是 $105u+70v+42w+30t=2022$ 的非负整数解数。",
+          "依次模 $2,3,5,7$，得 $u=2i,v=3j,w=5k+1,t=7l+3$。代回得到 $210(i+j+k+l)=2022-42-90=1890$，即 $i+j+k+l=9$。用隔板法，解数为 $\\binom{12}{3}=220$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q14": {
+    "summary": "For integer denominations $1\\le a<b<c$, let $f(a,b,c)$ be the minimum number of stamps in a collection containing every denomination at least once and allowing every total from $1$ to $1000$ cents as a subcollection. Add the three smallest $c$ for which some $a,b$ give $f=97$.",
+    "summaryZh": "给定整数面值 $1\\le a<b<c$，选一组邮票，使三种面值各至少出现一张，且通过选取其中一些邮票可以凑出 $1$ 至 $1000$ 分中的每个整数。所需最少张数记为 $f(a,b,c)$。求存在 $a,b$ 使 $f=97$ 的最小三个 $c$ 之和。",
+    "answer": "188",
+    "answerZh": "188",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/14",
+    "methods": [
+      {
+        "title": "Bound the worst possible gap between denominations",
+        "titleZh": "为各种面值构造统一上界",
+        "topics": [
+          {
+            "en": "Subset sums",
+            "zh": "子集和"
+          },
+          {
+            "en": "Extremal bounds",
+            "zh": "极值界"
+          }
+        ],
+        "steps": [
+          "We need $a=1$. A collection already covering $0$ through $S$ still covers an unbroken interval after adding a stamp of value at most $S+1$. Conversely at least $b-1$ ones are necessary before the first $b$-stamp. If $c\\le10$, even $97$ stamps cannot total $1000$.",
+          "For $12\\le c\\le87$ and any $2\\le b<c$, start with $b-1$ ones and $c-b$ stamps of value $b$. They cover all values up to $L=b-1+b(c-b)\\ge2c-3$, because the difference is $(b-2)(c-b-1)$. This is at least $c-1$, so adding $97-c$ stamps of value $c$ gives $96$ stamps and covers through $L+c(97-c)\\ge c(99-c)-3$. This concave quadratic is at least $1041$ on the interval, checked at its endpoints.",
+          "For $c=11$ choose $b=7$. Six ones and one seven are mandatory and reach $13$; exactly $90$ elevens finish the job, since even the largest $89$ extra stamps fall short. For $c=88,89$ take $b=87$. The required $86$ ones and one $87$ reach $173$; nine more stamps fall short, and ten of value $c$ suffice. These three minima are all $97$, so the answer is $11+88+89=188$."
+        ],
+        "stepsZh": [
+          "为凑出一分必须 $a=1$。若已经能够凑出 $0$ 至 $S$ 的整段，再加入一张不超过 $S+1$ 的邮票，仍能连续覆盖到新总值。反过来，为凑出 $b-1$ 必须至少有 $b-1$ 张一分邮票。若 $c\\le10$，则 $97$ 张的总值尚不足千分。",
+          "对 $12\\le c\\le87$ 及任意 $2\\le b<c$，先取 $b-1$ 张一分和 $c-b$ 张 $b$ 分邮票，连续覆盖至 $L=b-1+b(c-b)\\ge2c-3$，两边之差为 $(b-2)(c-b-1)$。因 $L\\ge c-1$，再加 $97-c$ 张 $c$ 分邮票，合计 $96$ 张，连续覆盖至 $L+c(97-c)\\ge c(99-c)-3$。右边是开口向下的二次函数，代入两端点可知在区间内至少为 $1041$。",
+          "若 $c=11$，选 $b=7$，必需的六张一分与一张七分可凑至 $13$，即使再加 $89$ 张最大面值也不足，总共再加 $90$ 张十一分恰可满足要求。若 $c=88,89$，均选 $b=87$，必需的 $86$ 张一分和一张 $87$ 分达到 $173$，再加九张仍不足，加十张 $c$ 分即可。三种情形的最少张数均为 $97$，故所求为 $11+88+89=188$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022ii-q15": {
+    "summary": "Two externally tangent circles have centers $O_1,O_2$ separated by $15$. A further circle through both centers meets the first circle at $B,C$ and the second at $A,D$. The six points occur around that circle as the convex hexagon $A,B,O_1,C,D,O_2$. Given $AB=2$ and $CD=16$, find its area.",
+    "summaryZh": "两圆外切，圆心 $O_1,O_2$ 相距 $15$。另有一圆过两圆心，与第一圆交于 $B,C$，与第二圆交于 $A,D$。这六点依次组成凸六边形 $A,B,O_1,C,D,O_2$。已知 $AB=2,CD=16$，求六边形面积。",
+    "answer": "140",
+    "answerZh": "140",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022II/problem/15",
+    "methods": [
+      {
+        "title": "Compare the circumradii on opposite sides of the shared diagonal",
+        "titleZh": "比较公共对角线两侧四边形的外接圆半径",
+        "topics": [
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "圆内接四边形"
+          },
+          {
+            "en": "Brahmagupta’s formula",
+            "zh": "婆罗摩笈多公式"
+          }
+        ],
+        "steps": [
+          "Let the two radii be $u,v$, so $u+v=15$, and set $p=uv$. Cutting along $O_1O_2$ gives cyclic quadrilaterals with consecutive sides $u,s,v,15$, where $s$ equals $2$ or $16$. For a quadrilateral of sides $a,b,c,d$ in cyclic order, area $K$ and circumradius $R$, one has $16K^2R^2=(ab+cd)(ac+bd)(ad+bc)$. Indeed the diagonal $e$ opposite the angle $T$ between $a,b$ satisfies $e^2=(ac+bd)(ad+bc)/(ab+cd)$ by the cosine rule at supplementary opposite angles. Also $2K=(ab+cd)\\sin T$ and $e=2R\\sin T$.",
+          "Brahmagupta’s formula $K^2=(h-a)(h-b)(h-c)(h-d)$, with $h$ the semiperimeter, gives $K_2^2=14(p+16)$ and $K_{16}^2=56(p+184)$. In the radius formula the numerator becomes $(p+15s)[3375s+(15-s)^2p]$ on using $u+v=15$.",
+          "The two expressions for $16R^2$ are equal, so $(p+30)(169p+6750)/[14(p+16)]=(p+240)(p+54000)/[56(p+184)]$. Clearing the denominators and factoring gives $(p-40)(225p^2+48136p+486000)=0$. Positivity forces $p=40$.",
+          "The areas are now $\\sqrt{14(56)}=28$ and $\\sqrt{56(224)}=112$. Their sum is $140$."
+        ],
+        "stepsZh": [
+          "令两圆半径为 $u,v$，则 $u+v=15$；记 $p=uv$。用 $O_1O_2$ 分割，得到两圆内接四边形，按次序各边为 $u,s,v,15$，其中 $s$ 分别为 $2,16$。若一圆内接四边形顺次边长为 $a,b,c,d$，面积为 $K$，外接圆半径为 $R$，则 $16K^2R^2=(ab+cd)(ac+bd)(ad+bc)$。事实上，设 $a,b$ 的夹角为 $T$，其所对的对角线为 $e$；在两个互补对角处用余弦定理得 $e^2=(ac+bd)(ad+bc)/(ab+cd)$，而且 $2K=(ab+cd)\\sin T$、$e=2R\\sin T$。",
+          "婆罗摩笈多公式 $K^2=(h-a)(h-b)(h-c)(h-d)$（$h$ 是半周长）给出 $K_2^2=14(p+16)$、$K_{16}^2=56(p+184)$。利用 $u+v=15$，半径公式右端的三因子乘积可以写为 $(p+15s)[3375s+(15-s)^2p]$。",
+          "两个四边形的 $16R^2$ 相等，即 $(p+30)(169p+6750)/[14(p+16)]=(p+240)(p+54000)/[56(p+184)]$。去分母并因式分解得 $(p-40)(225p^2+48136p+486000)=0$。因 $p>0$，只可能 $p=40$。",
+          "两块面积分别为 $\\sqrt{14(56)}=28$ 和 $\\sqrt{56(224)}=112$，相加为 $140$。"
+        ]
+      },
+      {
+        "title": "Pair opposite chord half-angles",
+        "titleZh": "配对圆弧所对的半圆心角",
+        "topics": [
+          {
+            "en": "Chord lengths and sum-to-product identities",
+            "zh": "弦长与和差化积"
+          }
+        ],
+        "steps": [
+          "In boundary order let the six half-arc angles be $a,b,b,c,d,d$, so $a+c+2t=\\pi$ for $t=b+d$. Repeated angles come from equal radius chords; complementary half-angles for equal chords cannot occur, as the remaining arcs would have no room. Put $u=O_1B$, $v=O_2A$, $R$ the common circumradius. Then $2R\\sin a=2$, $2R\\sin c=16$, $2R\\sin(a+t)=15$ and $u+v=15$.",
+          "Since $\\sin c=\\sin(a+2t)$, summing the first two chord lengths gives $18=4R\\sin(a+t)\\cos t=30\\cos t$, hence $\\cos t=3/5$. Multiplying them gives $32=4R^2[\\sin^2(a+t)-\\sin^2t]=225-4R^2\\sin^2t$.",
+          "Using $u=2R\\sin b,v=2R\\sin d$ and $(\\sin b+\\sin d)^2=\\sin^2t+2\\sin b\\sin d(1-\\cos t)$ gives $225=193+2uv(1-3/5)$, so $uv=40$. The two cyclic quadrilaterals with common side $15$ have semiperimeters $16,23$; Brahmagupta’s formula gives areas $\\sqrt{14(16+uv)}=28$ and $\\sqrt{56(184+uv)}=112$. Their sum is $140$."
+        ],
+        "stepsZh": [
+          "依边界次序记各段弧的圆心角之半为 $a,b,b,c,d,d$，令 $t=b+d$，则 $a+c+2t=\\pi$。对应等长半径弦的两个角相等；若二者互补，则其余弧不可能存在。记 $u=O_1B,v=O_2A$，公共外接圆半径为 $R$。有 $2R\\sin a=2,2R\\sin c=16,2R\\sin(a+t)=15$，并且 $u+v=15$。",
+          "由于 $\\sin c=\\sin(a+2t)$，将前两弦长相加得 $18=4R\\sin(a+t)\\cos t=30\\cos t$，故 $\\cos t=3/5$。将其相乘得 $32=4R^2[\\sin^2(a+t)-\\sin^2t]=225-4R^2\\sin^2t$。",
+          "由 $u=2R\\sin b,v=2R\\sin d$ 及恒等式 $(\\sin b+\\sin d)^2=\\sin^2t+2\\sin b\\sin d(1-\\cos t)$，得 $225=193+2uv(1-3/5)$，故 $uv=40$。以 $15$ 为公共边的两个圆内接四边形半周长为 $16,23$，用婆罗摩笈多公式求得面积分别为 $\\sqrt{14(16+uv)}=28$ 和 $\\sqrt{56(184+uv)}=112$，相加即 $140$。"
+        ]
+      }
+    ],
+    "figure": {
+      "url": "/commentary-figures/aime-2022ii-q15.svg",
+      "alt": "Two externally tangent circles, a third circle through their centers, and cyclic hexagon A, B, O1, C, D, O2 with the segment joining the centers.",
+      "altZh": "两圆外切，第三个圆通过它们的圆心；六边形顶点依次为 A、B、O1、C、D、O2，虚线连接两圆心。"
+    }
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "aime-2022i-q1": {
+    "summary": "Two quadratics agree at $(16,54)$ and $(20,53)$. Their leading coefficients are $2$ and $-2$. Find the sum of their values at zero.",
+    "summaryZh": "两个二次函数的图像均过 $(16,54)$ 和 $(20,53)$，其二次项系数分别为 $2,-2$。求两函数在零处的值之和。",
+    "answer": "116",
+    "answerZh": "116",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/1",
+    "methods": [
+      {
+        "title": "Interpolate their sum",
+        "titleZh": "对两函数之和作线性插值",
+        "topics": [
+          {
+            "en": "Linear interpolation",
+            "zh": "线性插值"
+          }
+        ],
+        "steps": [
+          "The quadratic terms cancel, so the sum is linear. Its values at $16$ and $20$ are $108$ and $106$, hence its slope is $-1/2$. Moving sixteen units left from $16$ increases its value by $8$, giving $116$."
+        ],
+        "stepsZh": [
+          "二次项相消，两函数之和是一次函数。它在 $16$ 和 $20$ 处的值分别为 $108,106$，故斜率为 $-1/2$。从 $16$ 向左移十六个单位，函数值增加 $8$，得 $116$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q2": {
+    "summary": "A three-digit decimal number has digits $a,b,c$ in that order, but in base nine its digits are $b,c,a$. Digits may repeat. Find the decimal number.",
+    "summaryZh": "某三位正整数的十进制数字依次为 $a,b,c$，而它的九进制数字依次为 $b,c,a$，各数字可重复。求该数的十进制写法。",
+    "answer": "227",
+    "answerZh": "227",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/2",
+    "methods": [
+      {
+        "title": "Compare the place values modulo nine",
+        "titleZh": "将位值等式模九化简",
+        "topics": [
+          {
+            "en": "Base conversion",
+            "zh": "进制转换"
+          },
+          {
+            "en": "Congruences",
+            "zh": "同余"
+          }
+        ],
+        "steps": [
+          "Expanding both representations gives $99a=71b+8c$. All the digits are at most eight and $a,b$ are nonzero. Reduction modulo nine gives $b+c\\equiv0\\pmod9$, so $b+c=9$.",
+          "Substitution yields $11a=7b+8$. Hence $a\\equiv2\\pmod7$, forcing $a=2$. Then $b=2,c=7$ and the answer is $227$."
+        ],
+        "stepsZh": [
+          "展开两种进制表示得 $99a=71b+8c$。三数字均至多为八，且 $a,b$ 非零。模九得 $b+c\\equiv0\\pmod9$，故 $b+c=9$。",
+          "代回得 $11a=7b+8$，所以 $a\\equiv2\\pmod7$。唯一可能是 $a=2$，进而 $b=2,c=7$，原数为 $227$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q3": {
+    "summary": "An isosceles trapezoid has bases $AB=500$, $CD=650$ and legs $AD=BC=333$. Let $P$ be the intersection of the internal bisectors at $A,D$, and $Q$ the analogous intersection for $B,C$. Find $PQ$.",
+    "summaryZh": "等腰梯形 $ABCD$ 的两底为 $AB=500$、$CD=650$，两腰各长 $333$。$A,D$ 两角的内角平分线相交于 $P$，$B,C$ 两角的内角平分线相交于 $Q$，求 $PQ$。",
+    "answer": "242",
+    "answerZh": "242",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/3",
+    "methods": [
+      {
+        "title": "Measure offsets along the midline",
+        "titleZh": "沿梯形中位线计算偏移量",
+        "topics": [
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          },
+          {
+            "en": "Trapezoid midsegment",
+            "zh": "梯形中位线"
+          }
+        ],
+        "steps": [
+          "Each intersection is equidistant from the two bases and its adjacent leg, so lies on the midline, at perpendicular distance $h/2$ from the leg if $h$ is the height. The midpoints of the legs on this line are $(500+650)/2=575$ apart.",
+          "If a leg makes acute angle $\\theta$ with a base, then $\\sin\\theta=h/333$. The horizontal distance from the midpoint of each leg to its interior bisector intersection is $(h/2)/\\sin\\theta=333/2$. Subtract these two inward offsets to get $PQ=575-333=242$."
+        ],
+        "stepsZh": [
+          "每个交点到两底及相邻腰的距离相等，故都在中位线上。设梯形高为 $h$，则交点到相邻腰的垂距为 $h/2$。两腰中点的距离是 $(500+650)/2=575$。",
+          "腰与底所夹锐角 $\\theta$ 满足 $\\sin\\theta=h/333$，所以沿中位线从每条腰的中点向内走到交点的距离为 $(h/2)/\\sin\\theta=333/2$。扣除两端的偏移量即得 $PQ=575-333=242$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q4": {
+    "summary": "Let $w=(\\sqrt3+i)/2$ and $z=(-1+i\\sqrt3)/2$, with $i^2=-1$. Count ordered integer pairs $1\\le r,s\\le100$ for which $iw^r=z^s$.",
+    "summaryZh": "设 $i^2=-1$，$w=(\\sqrt3+i)/2,z=(-1+i\\sqrt3)/2$。求满足 $iw^r=z^s$ 且 $1\\le r,s\\le100$ 的有序整数对个数。",
+    "answer": "834",
+    "answerZh": "834",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/4",
+    "methods": [
+      {
+        "title": "Compare angles in units of thirty degrees",
+        "titleZh": "以三十度为单位比较辐角",
+        "topics": [
+          {
+            "en": "Complex arguments",
+            "zh": "复数辐角"
+          },
+          {
+            "en": "Modular counting",
+            "zh": "同余计数"
+          }
+        ],
+        "steps": [
+          "In units of $30^\\circ$ the arguments of $i,w,z$ are $3,1,4$. Their moduli are one, so the equation is equivalent to $r\\equiv4s-3\\pmod{12}$.",
+          "The residues $s\\equiv1,2,0\\pmod3$ occur $34,33,33$ times respectively. They require $r\\equiv1,5,9\\pmod{12}$, occurring $9,8,8$ times. The total is $34(9)+33(8)+33(8)=834$."
+        ],
+        "stepsZh": [
+          "以 $30^\\circ$ 为单位，$i,w,z$ 的辐角依次为 $3,1,4$。三者的模均为一，故等式等价于 $r\\equiv4s-3\\pmod{12}$。",
+          "$s$ 模三余 $1,2,0$ 的情况分别有 $34,33,33$ 种，需要 $r$ 模十二分别余 $1,5,9$，相应取值有 $9,8,8$ 种。总数为 $34(9)+33(8)+33(8)=834$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q5": {
+    "summary": "Two swimmers start together from the south bank of a $264$-metre-wide straight river. The downstream swimmer starts $D$ metres east of the other. The current is $14$ m/min eastward; their speeds through the water are $80$ and $60$ m/min, respectively. Both swim straight to the same point on the north bank, equally distant from the two starts, and arrive together. Find $D$.",
+    "summaryZh": "两名游泳者同时从宽 $264$ 米的河流南岸出发，下游者在另一人以东 $D$ 米。水流以每分钟 $14$ 米向东流动，两人相对于水的速度大小分别为每分钟 $80$ 米和 $60$ 米。他们直线游向北岸同一点，该点到两个起点等距，且同时到达。求 $D$。",
+    "answer": "550",
+    "answerZh": "550",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/5",
+    "methods": [
+      {
+        "title": "Subtract the squared velocity equations",
+        "titleZh": "将相对速度的平方相减",
+        "topics": [
+          {
+            "en": "Relative velocity",
+            "zh": "相对速度"
+          },
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          }
+        ],
+        "steps": [
+          "The destination lies above the midpoint of the two starts. Let the ground velocities have common northward component $v$ and opposite eastward components of magnitude $u$. Subtracting the current gives $(u+14)^2+v^2=80^2$ for the faster swimmer and $(u-14)^2+v^2=60^2$ for the other.",
+          "Subtract to get $56u=2800$, so $u=50$ and $v=\\sqrt{60^2-36^2}=48$. The crossing takes $264/48=11/2$ minutes, during which the horizontal separation closes at $2u=100$ m/min. Thus $D=550$."
+        ],
+        "stepsZh": [
+          "终点在两起点中点的正北方。设对地速度的向北分量同为 $v$，两个向东分量绝对值均为 $u$、方向相反。减去水速后，快者满足 $(u+14)^2+v^2=80^2$，慢者满足 $(u-14)^2+v^2=60^2$。",
+          "相减得 $56u=2800$，所以 $u=50$，$v=\\sqrt{60^2-36^2}=48$。渡河用时 $264/48=11/2$ 分钟，两人每分钟缩短水平距离 $2u=100$ 米，故 $D=550$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q6": {
+    "summary": "Insert integers $a,b$ so that $3,4,5,a,b,30,40,50$ is strictly increasing and contains no four-term arithmetic progression, whether consecutive or not in the list. Count the possible ordered pairs.",
+    "summaryZh": "插入整数 $a,b$，使 $3,4,5,a,b,30,40,50$ 严格递增，并且任选其中四项都不能按从小到大排列成等差数列。求有序对 $(a,b)$ 的个数。",
+    "answer": "228",
+    "answerZh": "228",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/6",
+    "methods": [
+      {
+        "title": "Tabulate progressions by common difference",
+        "titleZh": "按公差枚举不允许的组合",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          }
+        ],
+        "steps": [
+          "Initially there are $\\binom{24}2=276$ ways to choose $a,b$ from $6$ through $29$. Take a potential four-term progression with first term $t\\ge3$ and integer step $1\\le d\\le15$; its last term $t+3d$ must be at most $50$.",
+          "For each $d$, run $t$ from $3$ to $50-3d$. Delete the fixed numbers $3,4,5,30,40,50$ from the four terms and keep the resulting list only if it has at most two entries, all between $6$ and $29$. The nonempty results by step are: $d=1$: $\\{6\\},\\{6,7\\}$; $d=2$: $\\{7,9\\}$; $d=9$: $\\{12,21\\}$; $d=10$: $\\{20\\},\\{10,20\\}$; $d=12$: $\\{16,28\\}$. The other steps give none.",
+          "Pairs containing $6$ or $20$ account for $23+23-1=45$ failures. Three further pairs remain: $(7,9),(12,21),(16,28)$. Therefore $276-45-3=228$ work."
+        ],
+        "stepsZh": [
+          "最初可从 $6$ 至 $29$ 中选两数，共 $\\binom{24}2=276$ 种。若四项构成等差数列，设首项为 $t\\ge3$、正整数公差为 $d$，则 $1\\le d\\le15$ 且 $t+3d\\le50$。",
+          "对每个 $d$ 让 $t$ 从 $3$ 取到 $50-3d$，从四项中删去已固定的 $3,4,5,30,40,50$；只保留剩余项数至多二、且全在 $6$ 至 $29$ 之间的情况。按公差得到：$d=1$ 对应 $\\{6\\},\\{6,7\\}$；$d=2$ 对应 $\\{7,9\\}$；$d=9$ 对应 $\\{12,21\\}$；$d=10$ 对应 $\\{20\\},\\{10,20\\}$；$d=12$ 对应 $\\{16,28\\}$。其余公差均无结果。",
+          "含 $6$ 或 $20$ 的选法已有 $23+23-1=45$ 种。除此之外仅 $(7,9),(12,21),(16,28)$ 三对违规，故合格数为 $276-45-3=228$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q7": {
+    "summary": "Use the digits $1$ through $9$ once each as $a,b,c,d,e,f,g,h,i$. Reduce the smallest positive value of $(abc-def)/(ghi)$, where juxtaposition means multiplication. Find the sum of its numerator and denominator.",
+    "summaryZh": "将 $1$ 至 $9$ 不重复地填入 $a,b,c,d,e,f,g,h,i$。取 $(abc-def)/(ghi)$ 的最小正值，字母之间均表示乘法。求其既约分数的分子与分母之和。",
+    "answer": "289",
+    "answerZh": "289",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/7",
+    "methods": [
+      {
+        "title": "Test whether two products can be consecutive",
+        "titleZh": "判断两个乘积能否相差一",
+        "topics": [
+          {
+            "en": "Factorization",
+            "zh": "因数分解"
+          },
+          {
+            "en": "Extremal reasoning",
+            "zh": "极值推理"
+          }
+        ],
+        "steps": [
+          "The products $2\\cdot3\\cdot6=36$ and $1\\cdot5\\cdot7=35$ leave denominator $4\\cdot8\\cdot9=288$, attaining $1/288$. A numerator of at least two cannot improve this, since the largest denominator is $7\\cdot8\\cdot9=504$.",
+          "For numerator one and denominator $D>288$, the two triple products must be consecutive numbers $k,k+1$ with $k(k+1)=9!/D$. The only such denominator candidates, obtained by listing three distinct factors, are $315,336,360,378,432,504$.",
+          "Their complementary products are $1152,1080,1008,960,840,720$. For each, test $k=\\lfloor\\sqrt{9!/D}\\rfloor$, respectively $33,32,31,30,28,26$; none satisfies $k(k+1)=9!/D$. Hence the minimum is $1/288$ and the answer is $289$."
+        ],
+        "stepsZh": [
+          "$2\\cdot3\\cdot6=36$ 与 $1\\cdot5\\cdot7=35$ 相差一，剩余数字可作分母 $4\\cdot8\\cdot9=288$，实现 $1/288$。若分子至少为二，因最大分母为 $7\\cdot8\\cdot9=504$，不可能取得更小的值。",
+          "若分子为一且分母 $D>288$，则两组三数的积应是相邻整数 $k,k+1$，满足 $k(k+1)=9!/D$。枚举由三个不同数字组成的积，超过 $288$ 的只有 $315,336,360,378,432,504$。",
+          "相应的 $9!/D$ 为 $1152,1080,1008,960,840,720$。逐一检验 $k=\\lfloor\\sqrt{9!/D}\\rfloor$，即 $33,32,31,30,28,26$，均不满足上述等式。因此最小值为 $1/288$，所求为 $289$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q8": {
+    "summary": "An equilateral triangle is inscribed in a circle of radius $18$. For each vertex draw the circle tangent to the two incident sides and internally tangent to the circumcircle. The six pairwise intersections form two equilateral triangles: the three intersections nearest the original vertices form the larger one. Write the smaller triangle’s side as $\\sqrt a-\\sqrt b$ for positive integers $a,b$. Find $a+b$.",
+    "summaryZh": "等边三角形的外接圆半径为 $18$。对每个顶点，画出与其两条邻边相切、且与外接圆内切的圆。三圆两两相交共有六点，其中各自最接近原三顶点的三个交点构成较大的等边三角形，其余三点构成较小的等边三角形。将小三角形的边长写作 $\\sqrt a-\\sqrt b$，求 $a+b$。",
+    "answer": "378",
+    "answerZh": "378",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/8",
+    "methods": [
+      {
+        "title": "Intersect equal circles on a symmetry axis",
+        "titleZh": "在对称轴上求等圆交点",
+        "topics": [
+          {
+            "en": "Circle tangency",
+            "zh": "圆的相切"
+          },
+          {
+            "en": "Equilateral triangles",
+            "zh": "等边三角形"
+          }
+        ],
+        "steps": [
+          "Let $O$ be the circumcenter. A new center at distance $d$ from its vertex is on the angle bisector and has radius $d\\sin30^\\circ=d/2$. Internal tangency gives $|18-d|=18-d/2$. The positive solution is $d=24$, so each new circle has radius $12$ and its center lies six units beyond $O$.",
+          "Put one vertex at $(0,18)$ and $O$ at the origin. The two new centers associated with the other vertices are $(\\pm3\\sqrt3,3)$. Their intersection ordinates solve $27+(y-3)^2=144$, giving $y=3\\pm\\sqrt{117}$.",
+          "The nearer-to-origin intersection is at distance $\\sqrt{117}-3$ from $O$. Its two rotated copies form the smaller triangle, whose side is $\\sqrt3(\\sqrt{117}-3)=\\sqrt{351}-\\sqrt{27}$. Therefore $a+b=378$."
+        ],
+        "stepsZh": [
+          "设外心为 $O$。一个新圆的圆心在顶角平分线上，到该顶点距离为 $d$，故圆半径为 $d\\sin30^\\circ=d/2$。内切条件是 $|18-d|=18-d/2$，其正解为 $d=24$。所以新圆半径均为 $12$，圆心从顶点向 $O$ 延长六个单位。",
+          "以 $O$ 为原点，将一个顶点置于 $(0,18)$，其余两顶点所对应的新圆圆心为 $(\\pm3\\sqrt3,3)$。它们的交点在纵轴上，满足 $27+(y-3)^2=144$，即 $y=3\\pm\\sqrt{117}$。",
+          "较靠近原点的交点离 $O$ 为 $\\sqrt{117}-3$。它和旋转所得的另两点构成小等边三角形，其边长为 $\\sqrt3(\\sqrt{117}-3)=\\sqrt{351}-\\sqrt{27}$。故 $a+b=378$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q9": {
+    "summary": "Randomly arrange two blocks of each of six colors in a row. What is the probability that each same-color pair has an even number of blocks between its members? Add the reduced numerator and denominator.",
+    "summaryZh": "六种颜色的积木各有两块，随机排成一行。求每对同色积木之间的积木数均为偶数的概率，并将既约分子与分母相加。",
+    "answer": "247",
+    "answerZh": "247",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/9",
+    "methods": [
+      {
+        "title": "Select the blocks in the odd positions",
+        "titleZh": "选定奇数位置上的积木",
+        "topics": [
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "Temporarily distinguish the two copies of each color, which keeps every color arrangement equally likely. The six blocks at the odd positions form a uniform six-element subset of the twelve.",
+          "An even number of intervening blocks means the separation in position is odd. Exactly one copy of each color must therefore occupy an odd position. The probability is $2^6/\\binom{12}6=16/231$, giving $247$."
+        ],
+        "stepsZh": [
+          "暂时给每种颜色的两块积木分别编号，所有颜色排列仍等可能。占据六个奇数位置的积木等可能地构成十二块中的任一六元子集。",
+          "中间隔偶数块等价于两位置之差为奇数，故每种颜色恰有一块位于奇数位置。概率为 $2^6/\\binom{12}6=16/231$，所以答案为 $247$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q10": {
+    "summary": "Mutually externally tangent spheres of radii $11,13,19$ are cut by one plane into congruent circles centered at $A,B,C$, respectively. All sphere centers are on the same side of the plane. Given $AB^2=560$, determine $AC^2$.",
+    "summaryZh": "半径为 $11,13,19$ 的三个球两两外切。某平面将三球截成全等圆，圆心依次为 $A,B,C$；三球心均在平面同侧。若 $AB^2=560$，求 $AC^2$。",
+    "answer": "756",
+    "answerZh": "756",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/10",
+    "methods": [
+      {
+        "title": "Recover the heights of the sphere centers",
+        "titleZh": "求球心到截面的高度",
+        "topics": [
+          {
+            "en": "Orthogonal projection",
+            "zh": "正射影"
+          },
+          {
+            "en": "Sphere cross sections",
+            "zh": "球截面"
+          }
+        ],
+        "steps": [
+          "Denote the respective center heights by $u,v,w$. The common section radius implies $v^2-u^2=13^2-11^2=48$. Projecting the first two centers onto the plane gives $(v-u)^2=(11+13)^2-560=16$.",
+          "Hence $v-u=4$, $v+u=12$, so $u=4$. The common squared section radius is $11^2-4^2=105$, giving $w=\\sqrt{19^2-105}=16$. Another projection yields $AC^2=30^2-(16-4)^2=756$."
+        ],
+        "stepsZh": [
+          "设三个球心的高度依次为 $u,v,w$。由于截圆半径相等，$v^2-u^2=13^2-11^2=48$。连接前两球心并投影到平面，得 $(v-u)^2=(11+13)^2-560=16$。",
+          "所以 $v-u=4,v+u=12$，得 $u=4$。截圆半径平方为 $11^2-4^2=105$，故 $w=\\sqrt{19^2-105}=16$。再作投影得 $AC^2=30^2-(16-4)^2=756$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q11": {
+    "summary": "In parallelogram $ABCD$ with $\\angle DAB$ acute, a circle touches segments $DA,AB,BC$. Along diagonal $AC$ its intersection points occur in the order $A,P,Q,C$, with $AP=3$, $PQ=9$, $QC=16$. Write the parallelogram’s area as $m\\sqrt n$ with $n$ squarefree. Find $m+n$.",
+    "summaryZh": "平行四边形 $ABCD$ 的 $\\angle DAB$ 是锐角，一个圆与边 $DA,AB,BC$ 都相切。沿对角线 $AC$ 的点依次为 $A,P,Q,C$，其中 $P,Q$ 在圆上，且 $AP=3,PQ=9,QC=16$。面积为 $m\\sqrt n$，其中 $n$ 无平方因子，求 $m+n$。",
+    "answer": "150",
+    "answerZh": "150",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/11",
+    "methods": [
+      {
+        "title": "Use tangent lengths as horizontal distances",
+        "titleZh": "将切线长化为水平距离",
+        "topics": [
+          {
+            "en": "Power of a point",
+            "zh": "点幂"
+          },
+          {
+            "en": "Tangent lengths",
+            "zh": "切线长"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "The tangent lengths from $A$ and $C$ are $\\sqrt{3\\cdot12}=6$ and $\\sqrt{16\\cdot25}=20$. Take $A=(0,0)$, direct $AD$ rightward, and place the opposite side at height $h>0$. The two parallel tangents touch the circle on the same vertical line $x=6$. Since the upper contact lies on $BC$, its right endpoint $C$ has coordinate $x=26$.",
+          "Now $AC=28$, so $h=\\sqrt{28^2-26^2}=6\\sqrt3$. Write $B=(b,h)$. The tangent from $B$ to the upper contact has length $6-b$; the two endpoint tangent lengths along $AB$ give $AB=6+(6-b)=12-b$.",
+          "Thus $b^2+108=(12-b)^2$, giving $b=3/2$ and $BC=26-b=49/2$. The area is $(49/2)(6\\sqrt3)=147\\sqrt3$, so $m+n=150$."
+        ],
+        "stepsZh": [
+          "由点幂，$A,C$ 两点处的切线长分别为 $\\sqrt{3\\cdot12}=6$ 和 $\\sqrt{16\\cdot25}=20$。令 $A=(0,0)$，$AD$ 水平向右，对边位于高度 $h>0$。两平行切线的切点在同一竖线 $x=6$ 上。上方切点在边 $BC$ 上，其右端点 $C$ 的横坐标为 $26$。",
+          "由 $AC=28$ 得 $h=\\sqrt{28^2-26^2}=6\\sqrt3$。记 $B=(b,h)$，则从 $B$ 到上方切点的距离为 $6-b$，同点引切线长相等，所以 $AB=6+(6-b)=12-b$。",
+          "于是 $b^2+108=(12-b)^2$，解得 $b=3/2$，$BC=26-b=49/2$。面积为 $(49/2)(6\\sqrt3)=147\\sqrt3$，故 $m+n=150$。"
+        ]
+      }
+    ],
+    "figure": {
+      "url": "/commentary-figures/aime-2022i-q11.svg",
+      "alt": "Parallelogram ABCD with a circle tangent to three sides. The diagonal from A to C crosses the circle first at P, then at Q.",
+      "altZh": "圆与平行四边形 ABCD 的三条边相切，从 A 到 C 的对角线依次在 P、Q 两点穿过圆。"
+    }
+  },
+  "aime-2022i-q12": {
+    "summary": "For all ordered pairs $(A,B)$ of equally large subsets of $\\{1,\\ldots,n\\}$, let $S_n$ be the total of $|A\\cap B|$. Reduce $S_{2022}/S_{2021}=p/q$, then find $(p+q)\\bmod1000$.",
+    "summaryZh": "对集合 $\\{1,\\ldots,n\\}$ 的所有等大小子集有序对 $(A,B)$，将 $|A\\cap B|$ 相加得到 $S_n$。将 $S_{2022}/S_{2021}$ 约为 $p/q$，求 $p+q$ 除以千的余数。",
+    "answer": "245",
+    "answerZh": "245",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/12",
+    "methods": [
+      {
+        "title": "Mark an element of the intersection",
+        "titleZh": "标记交集中的一个元素",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          },
+          {
+            "en": "Vandermonde identity",
+            "zh": "范德蒙德恒等式"
+          }
+        ],
+        "steps": [
+          "Count triples consisting of $A,B$ and one marked common element. Choose the element in $n$ ways. On two disjoint copies of the remaining $n-1$ elements choose $A$’s other members from the first copy and the complement of $B$’s other members from the second. Since the sizes of $A,B$ match, exactly $n-1$ items in total are chosen, and any such choice works.",
+          "Thus $S_n=n\\binom{2n-2}{n-1}$. Canceling factorials gives $S_{2022}/S_{2021}=2(2022)(4041)/2021^2$. The denominator is coprime to each of $2$, $2022=2021+1$ and $4041=2(2021)-1$.",
+          "The required residue is $(2\\cdot22\\cdot41+21^2)\\bmod1000=245$."
+        ],
+        "stepsZh": [
+          "计数由集合 $A,B$ 和一个标记的公共元素组成的三元组。标记元素有 $n$ 种选择。把剩余的 $n-1$ 个元素复制成两份，在第一份中选 $A$ 的其余成员，在第二份中选不属于 $B$ 的成员。由于 $A,B$ 等大，两份合计恰须选 $n-1$ 个，反之每种选择都可还原所求三元组。",
+          "所以 $S_n=n\\binom{2n-2}{n-1}$。约去阶乘得 $S_{2022}/S_{2021}=2(2022)(4041)/2021^2$。分母分别与 $2$、$2022=2021+1$、$4041=2(2021)-1$ 互质。",
+          "故余数为 $(2\\cdot22\\cdot41+21^2)\\bmod1000=245$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q13": {
+    "summary": "Form all positive repeating decimals $0.\\overline{abcd}$ with four displayed digits (leading zeros and shorter fundamental periods are allowed). Reduce each to lowest terms. How many distinct numerators occur, modulo $1000$?",
+    "summaryZh": "考虑所有正循环小数 $0.\\overline{abcd}$，所写循环节有四个数字，可有前导零，最短循环节也可短于四位。将各数约成既约分数，求不同分子的个数模 $1000$。",
+    "answer": "392",
+    "answerZh": "392",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/13",
+    "methods": [
+      {
+        "title": "Choose the largest allowable denominator",
+        "titleZh": "选取互质条件下的最大分母",
+        "topics": [
+          {
+            "en": "Repeating decimals",
+            "zh": "循环小数"
+          },
+          {
+            "en": "Euler totient",
+            "zh": "欧拉函数"
+          },
+          {
+            "en": "Inclusion-exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "These numbers are $j/9999$ for $1\\le j\\le9999$, and $9999=9\\cdot11\\cdot101$. A numerator $k$ occurs precisely when $k\\le D$, where $D$ is the largest divisor of $9999$ coprime to $k$: then $k/D$ is already reduced.",
+          "If none of $3,11,101$ divides $k$, the count is $\\varphi(9999)=6\\cdot10\\cdot100=6000$. If only $3$ divides it, $D=1111$ and there are $370-33-3=334$ multiples of three excluding multiples of $33$ and $303$. If only $11$ divides it, $D=909$ and the count is $82-27=55$.",
+          "If both $3$ and $11$ divide $k$ but $101$ does not, $D=101$ permits $33,66,99$. If $101$ divides $k$, then $D\\le99<k$. In total $N=6000+334+55+3=6392$, with remainder $392$."
+        ],
+        "stepsZh": [
+          "这些数为 $j/9999$，其中 $1\\le j\\le9999$，且 $9999=9\\cdot11\\cdot101$。取 $D$ 为 $9999$ 中与 $k$ 互质的最大约数。$k$ 能作为既约分子恰当且仅当 $k\\le D$，此时 $k/D$ 就是一个符合条件的分数。",
+          "若 $3,11,101$ 均不整除 $k$，有 $\\varphi(9999)=6\\cdot10\\cdot100=6000$ 个。若三者中只有 $3$ 整除 $k$，则 $D=1111$，排除 $33$ 和 $303$ 的倍数后尚有 $370-33-3=334$ 个。若只有 $11$ 整除 $k$，则 $D=909$，有 $82-27=55$ 个。",
+          "若 $3,11$ 同时整除 $k$ 而 $101$ 不整除，则 $D=101$，只有 $33,66,99$ 三个。若 $101$ 整除 $k$，则 $D\\le99<k$，没有合格值。总数为 $6000+334+55+3=6392$，余数为 $392$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q14": {
+    "summary": "A line through a point on a triangle’s boundary splits it into polygons of equal perimeter. In triangle $ABC$ two such lines, one through the midpoint of $AB$ and the other through the midpoint of $AC$, meet at $30^\\circ$. If $BC=219$ and $AB,AC$ are positive integers, find the perimeter.",
+    "summaryZh": "过三角形边界上一点的直线把三角形分成周长相等的两部分。在三角形 $ABC$ 中，分别经过 $AB,AC$ 中点的两条这种直线以 $30^\\circ$ 相交。已知 $BC=219$ 且 $AB,AC$ 均为正整数，求周长。",
+    "answer": "459",
+    "answerZh": "459",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/14",
+    "methods": [
+      {
+        "title": "Identify the cleavers, then restrict the side sum",
+        "titleZh": "确定平分周长直线的方向，再约束两边和",
+        "topics": [
+          {
+            "en": "Triangle angle bisectors",
+            "zh": "三角形角平分线"
+          },
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Quadratic residues",
+            "zh": "平方剩余"
+          }
+        ],
+        "steps": [
+          "A splitting chord must divide the original boundary length equally, since the shared chord cancels. Let $a=BC,b=CA,c=AB$. With $C$ as origin write $A=b\\mathbf u,B=a\\mathbf v$ for unit vectors. If $a\\ge b$, the other endpoint of the chord from midpoint $M$ of $AB$ lies on $CB$ at $X=(a-b)\\mathbf v/2$: the path $MBX$ has length $(a+b+c)/2$. Thus $M-X=b(\\mathbf u+\\mathbf v)/2$, parallel to the internal bisector at $C$. Exchanging $A,B$ covers $a<b$.",
+          "The other splitting line is likewise parallel to the bisector at $B$, so their acute angle is $90^\\circ-A/2=30^\\circ$. The cosine rule at $A=120^\\circ$ gives $a^2=b^2+bc+c^2$. With $p=b+c$ and $k=|b-c|$, this becomes $k^2+3p^2=4(219)^2$. Modulo three first $3\\mid k$, then $3\\mid p$ by dividing by three. Set $k=3m,p=3r$, obtaining $m^2+3r^2=146^2$.",
+          "The triangle inequality and $m^2\\ge0$ give $74\\le r\\le84$. Modulo seven the squares $0,1,2,4$ allow only $r\\equiv0,\\pm3$; modulo five the squares $0,1,4$ allow only $r\\equiv0,\\pm2$. The two candidates are $77,80$. At $77$, $m^2=3529$ lies strictly between $59^2$ and $60^2$; at $80$, $m=46$. This gives sides $51,189,219$, hence perimeter $459$."
+        ],
+        "stepsZh": [
+          "两部分共有分割弦，故只需原三角形边界的两条路径等长。令 $a=BC,b=CA,c=AB$，以 $C$ 为原点，写 $A=b\\mathbf u,B=a\\mathbf v$，其中两向量为单位向量。若 $a\\ge b$，从 $AB$ 中点 $M$ 引出的平分弦的另一端是 $CB$ 上的 $X=(a-b)\\mathbf v/2$，因为路径 $MBX$ 长 $(a+b+c)/2$。于是 $M-X=b(\\mathbf u+\\mathbf v)/2$，平行于 $C$ 的内角平分线。若 $a<b$，交换 $A,B$ 即可。",
+          "另一条分割线同样平行于 $B$ 的内角平分线，两线锐夹角为 $90^\\circ-A/2=30^\\circ$。在 $A=120^\\circ$ 处用余弦定理得 $a^2=b^2+bc+c^2$。记 $p=b+c,k=|b-c|$，可改写为 $k^2+3p^2=4(219)^2$。模三先得 $3\\mid k$，再将等式除以三，得 $3\\mid p$。令 $k=3m,p=3r$，即 $m^2+3r^2=146^2$。",
+          "由三角形不等式及 $m^2\\ge0$ 知 $74\\le r\\le84$。模七的平方剩余为 $0,1,2,4$，故 $r\\equiv0,\\pm3$；模五的平方剩余为 $0,1,4$，故 $r\\equiv0,\\pm2$。区间内只余 $77,80$。当 $r=77$ 时，$m^2=3529$ 在 $59^2$ 与 $60^2$ 之间；当 $r=80$ 时 $m=46$。所得三边为 $51,189,219$，周长为 $459$。"
+        ]
+      }
+    ]
+  },
+  "aime-2022i-q15": {
+    "summary": "Suppose $x,y,z>0$. For ordered pairs $(u,v)=(x,y),(y,z),(z,x)$, the expressions $\\sqrt{u(2-v)}+\\sqrt{v(2-u)}$ equal $1,\\sqrt2,\\sqrt3$, respectively. Reduce $[(1-x)(1-y)(1-z)]^2$ and give the sum of its numerator and denominator.",
+    "summaryZh": "设 $x,y,z>0$。依次取 $(u,v)=(x,y),(y,z),(z,x)$，表达式 $\\sqrt{u(2-v)}+\\sqrt{v(2-u)}$ 的值依次为 $1,\\sqrt2,\\sqrt3$。将 $[(1-x)(1-y)(1-z)]^2$ 化为既约分数，求分子与分母之和。",
+    "answer": "033",
+    "answerZh": "033",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2022I/problem/15",
+    "methods": [
+      {
+        "title": "Turn the radicals into sines of angle sums",
+        "titleZh": "将根式化为两角和的正弦",
+        "topics": [
+          {
+            "en": "Trigonometric substitution",
+            "zh": "三角代换"
+          },
+          {
+            "en": "Double-angle identities",
+            "zh": "二倍角公式"
+          }
+        ],
+        "steps": [
+          "Reality of the radicals bounds all three variables by two. Set $x=2\\sin^2 A,y=2\\sin^2 B,z=2\\sin^2 C$ with angles in $(0,90^\\circ]$. The equations become $2\\sin(A+B)=1$, $2\\sin(B+C)=\\sqrt2$, $2\\sin(C+A)=\\sqrt3$.",
+          "The first sum is $30^\\circ$ or $150^\\circ$. Replacing all angles by their complements preserves all three sines and negates every $1-x,1-y,1-z$, so preserves the desired square. We may consider nonnegative angles at most $90^\\circ$ with $A+B=30^\\circ$. Then $B+C\\le120^\\circ$, excluding $135^\\circ$, so $B+C=45^\\circ$. It follows that $C+A\\le75^\\circ$, excluding $120^\\circ$; hence $C+A=60^\\circ$.",
+          "Solving yields $(2A,2B,2C)=(45^\\circ,15^\\circ,75^\\circ)$. The product before squaring is $\\cos45^\\circ\\cos15^\\circ\\sin15^\\circ=(\\sqrt2/2)(\\sin30^\\circ/2)=\\sqrt2/8$. Its square is $1/32$, giving $33$."
+        ],
+        "stepsZh": [
+          "由根式有意义可知三个变量均不超过二。令 $x=2\\sin^2 A,y=2\\sin^2 B,z=2\\sin^2 C$，其中各角均在 $(0,90^\\circ]$。方程变为 $2\\sin(A+B)=1$、$2\\sin(B+C)=\\sqrt2$、$2\\sin(C+A)=\\sqrt3$。",
+          "前两角之和是 $30^\\circ$ 或 $150^\\circ$。三个角同时换成余角不改变任何两角和的正弦，却使 $1-x,1-y,1-z$ 一同变号，故所求平方不变。于是只需考察不超过 $90^\\circ$ 的非负角且 $A+B=30^\\circ$ 的情形。此时 $B+C\\le120^\\circ$，排除 $135^\\circ$，故 $B+C=45^\\circ$。于是 $C+A\\le75^\\circ$，不可能为 $120^\\circ$，故 $C+A=60^\\circ$。",
+          "解得 $(2A,2B,2C)=(45^\\circ,15^\\circ,75^\\circ)$。平方前的乘积为 $\\cos45^\\circ\\cos15^\\circ\\sin15^\\circ=(\\sqrt2/2)(\\sin30^\\circ/2)=\\sqrt2/8$，所求平方即 $1/32$，答案为 $33$。"
+        ]
+      }
+    ]
+  }
+}

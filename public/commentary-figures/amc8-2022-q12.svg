@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 120">
+<title>Independent four-sector spinners A and B</title>
+<circle cx="55" cy="53" r="41" fill="#f4f7f8" stroke="#516c79" stroke-width="1.5"/>
+<path d="M14 53L96 53" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M55 12L55 94" fill="none" stroke="#516c79" stroke-width="1"/>
+<text x="55" y="112" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">A</text>
+<text x="38" y="41" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">5</text>
+<text x="72" y="41" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">6</text>
+<text x="72" y="74" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">7</text>
+<text x="38" y="74" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">8</text>
+<circle cx="161" cy="53" r="41" fill="#f4f7f8" stroke="#516c79" stroke-width="1.5"/>
+<path d="M120 53L202 53" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M161 12L161 94" fill="none" stroke="#516c79" stroke-width="1"/>
+<text x="161" y="112" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">B</text>
+<text x="144" y="41" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">1</text>
+<text x="178" y="41" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">2</text>
+<text x="178" y="74" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">3</text>
+<text x="144" y="74" text-anchor="middle" fill="#203c4a" style="font:16px Georgia,serif">4</text>
+</svg>

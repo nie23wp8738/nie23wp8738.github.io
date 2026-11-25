@@ -51,15 +51,22 @@ function typeset(text) {
   }).join('');
 }
 
-async function figure(key) {
+async function figure(key, printHeightPt) {
   if (!key) return '';
   if (!/^[a-zA-Z0-9_-]+$/.test(key) || !values.figures) throw new Error('Invalid figure ' + key);
+  let size = '';
+  if (printHeightPt !== undefined) {
+    if (!Number.isFinite(printHeightPt) || printHeightPt < 120 || printHeightPt > 325) {
+      throw new Error('Figure '+key+' printHeightPt must be a number between 120 and 325.');
+    }
+    size = ' style="height:'+printHeightPt+'pt;max-height:'+printHeightPt+'pt;object-fit:contain"';
+  }
   for (const ext of ['.svg','.png','.jpg','.webp']) {
     const file = path.resolve(values.figures, key + ext);
     try {
       await fs.access(file);
       figureDigests[key + ext] ??= await fileDigest(file);
-      return '<img alt="" src="' + encode(pathToFileURL(file)) + '">';
+      return '<img alt="" src="' + encode(pathToFileURL(file)) + '"' + size + '>';
     } catch (error) {
       if (error.code !== 'ENOENT') throw error;
     }
@@ -77,17 +84,17 @@ async function renderQuestion(page, scratch, question) {
   ].filter(Boolean).join(' · ');
   const blocks = ['<header><b>' + encode(values.title) + ', Question ' + number + '</b><small>' +
     creditHtml + '</small></header>'];
-  async function block(text, image, label, response) {
+  async function block(text, image, printHeightPt, label, response) {
     if (!text && !image) return;
     const responseLabel = {short:'Short answer',full:'Full solution'}[response];
     const prefix = (label ? '<strong>(' + encode(label) + ')</strong> ' : '') +
       (responseLabel ? '<i>[' + responseLabel + ']</i> ' : '');
-    blocks.push('<section>' + prefix + typeset(text || '') + (await figure(image)) + '</section>');
+    blocks.push('<section>' + prefix + typeset(text || '') + (await figure(image, printHeightPt)) + '</section>');
   }
   if (source.instructions) blocks.push('<aside>' + typeset(source.instructions) + '</aside>');
-  await block(question.intro, question.introFigure);
-  for (const p of question.parts || []) await block(p.text, p.figure, p.label, p.response);
-  await block(question.outro, question.outroFigure);
+  await block(question.intro, question.introFigure, question.introFigurePrintHeightPt);
+  for (const p of question.parts || []) await block(p.text, p.figure, p.figurePrintHeightPt, p.label, p.response);
+  await block(question.outro, question.outroFigure, question.outroFigurePrintHeightPt);
   if (blocks.length < 2) throw new Error('Missing question text for ' + question.id);
 
   const katexCss = pathToFileURL(require.resolve('katex/dist/katex.min.css'));

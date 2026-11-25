@@ -32,6 +32,90 @@
     ],
     "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_1"
   },
+  "usamo-2011-q2": {
+    "summary": "Five integers of total $2011$ are placed at the vertices of a regular pentagon. A move chooses an edge and an integer $m$, subtracts $m$ from both ends of that edge, and adds $2m$ at the vertex opposite the edge. Show that exactly one vertex can eventually hold the entire $2011$ with the other four entries all zero.",
+    "summaryZh": "正五边形五个顶点各标一个整数，和为 $2011$。每步选择一条边及一个整数 $m$，在该边两端各减去 $m$，并在与该边正对的顶点加上 $2m$。证明恰有一个顶点可以通过若干步操作独占 $2011$，而其余四处全为零。",
+    "answer": "Index the vertices $0,1,2,3,4$ in star order. If their starting entries are $a_i$, the unique winning label is $\\sum i a_i\\pmod5$.",
+    "answerZh": "按五角星路径将各顶点编号为 $0,1,2,3,4$。若初值为 $a_i$，唯一可获胜的位置编号为 $\\sum i a_i\\pmod5$。",
+    "methods": [
+      {
+        "title": "Solve the cyclic difference equations",
+        "titleZh": "解循环差分方程",
+        "topics": [
+          {
+            "en": "Modular invariants",
+            "zh": "模不变量"
+          },
+          {
+            "en": "Difference equations",
+            "zh": "差分方程"
+          },
+          {
+            "en": "Constructive proof",
+            "zh": "构造证明"
+          }
+        ],
+        "steps": [
+          "Label the vertices in the order obtained by jumping over one vertex each time around the original pentagon. With indices modulo $5$, a move centred at $i$ adds $2m$ there and subtracts $m$ at $i-1,i+1$: these two star-neighbours are the ends of the opposite original edge. Both the total and the weighted sum $W=\\sum_{i=0}^4 i a_i\\pmod5$ are unchanged. A win at $j$ has weighted sum $2011j\\equiv j\\pmod5$, so there is at most one winning label.",
+          "Take the label $j$ with this residue. Let $z_i$ be the desired entry ($2011$ at $j$, zero elsewhere) minus the entry initially at $i$. Then $\\sum z_i=0$ and $\\sum i z_i\\equiv0\\pmod5$. We will obtain this change using integer moves of sizes $t_i$ centred at $i$, which require $2t_i-t_{i-1}-t_{i+1}=z_i$.",
+          "Set $g_0=(4z_0+3z_1+2z_2+z_3)/5$. This is an integer since the numerator is congruent to $-\\sum(i+1)z_i$ modulo $5$. Define $g_{i+1}=g_i-z_i$ for $0\\le i\\le4$. Their sum condition gives $g_5=g_0$, and adding the expressions for $g_0,\\ldots,g_4$ yields $\\sum_{i=0}^4 g_i=5g_0-(4z_0+3z_1+2z_2+z_3)=0$.",
+          "Now choose $t_0=0$ and $t_i=t_{i-1}+g_i$ for $1\\le i\\le4$. Because the $g_i$ sum to zero we also have $t_0-t_4=g_0$. Thus everywhere on the cycle $2t_i-t_{i-1}-t_{i+1}=g_i-g_{i+1}=z_i$. Performing the five permitted moves reaches the claimed target."
+        ],
+        "stepsZh": [
+          "给原五边形编号时每次越过一个顶点，按这样得到的五角星路径编号。下标按模 $5$ 计算。在 $i$ 处加 $2m$ 的操作恰在 $i-1,i+1$ 处各减 $m$，因为这两个星形邻点正是原图中对边的端点。操作同时保持总和以及加权和 $W=\\sum_{i=0}^4 i a_i\\pmod5$。若在 $j$ 获胜，加权和为 $2011j\\equiv j\\pmod5$，所以至多一个编号可能获胜。",
+          "取与 $W$ 同余的编号 $j$。记目标值（$j$ 处为 $2011$，其余为零）减去当前值所得的差为 $z_i$，则 $\\sum z_i=0$ 且 $\\sum i z_i\\equiv0\\pmod5$。若在顶点 $i$ 进行参数为 $t_i$ 的操作，合计改变为 $2t_i-t_{i-1}-t_{i+1}$，现在构造整数 $t_i$ 使之等于 $z_i$。",
+          "令 $g_0=(4z_0+3z_1+2z_2+z_3)/5$。分子模 $5$ 同余于 $-\\sum(i+1)z_i$，所以 $g_0$ 是整数。对 $0\\le i\\le4$ 定义 $g_{i+1}=g_i-z_i$。由差值之和为零，$g_5=g_0$；累加 $g_0,\\ldots,g_4$ 的表达式又得 $\\sum_{i=0}^4 g_i=5g_0-(4z_0+3z_1+2z_2+z_3)=0$。",
+          "取 $t_0=0$，对 $1\\le i\\le4$ 令 $t_i=t_{i-1}+g_i$。由 $g_i$ 之和为零，也有 $t_0-t_4=g_0$。因此环上每点均满足 $2t_i-t_{i-1}-t_{i+1}=g_i-g_{i+1}=z_i$。依次进行这五个合法操作即可到达目标。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_2"
+  },
+  "usamo-2011-q3": {
+    "summary": "A simple nonconvex hexagon has consecutive vertices $A,B,C,D,E,F$. No two opposite sides are parallel. Its interior angles obey $\\angle A=3\\angle D$, $\\angle C=3\\angle F$, $\\angle E=3\\angle B$, and its side lengths obey $AB=DE$, $BC=EF$, $CD=FA$. Prove that the lines of the diagonals $AD,BE,CF$ pass through one point.",
+    "summaryZh": "简单不自交的非凸六边形的顶点依次为 $A,B,C,D,E,F$。任一组对边均不平行。内角满足 $\\angle A=3\\angle D,\\ \\angle C=3\\angle F,\\ \\angle E=3\\angle B$，边长满足 $AB=DE,BC=EF,CD=FA$。证明对角线 $AD,BE,CF$ 所在直线共点。",
+    "answer": "The three diagonal lines are the altitude lines of triangle $ACE$ and meet at its orthocentre.",
+    "answerZh": "这三条对角线所在直线正是三角形 $ACE$ 的三条高线，交点为垂心。",
+    "methods": [
+      {
+        "title": "Reconstruct the hexagon from a triangle and three reflections",
+        "titleZh": "由一个三角形及其三次反射重建六边形",
+        "topics": [
+          {
+            "en": "Reflection",
+            "zh": "反射"
+          },
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          },
+          {
+            "en": "Vector dependence",
+            "zh": "向量线性相关"
+          },
+          {
+            "en": "Orthocentre",
+            "zh": "垂心"
+          }
+        ],
+        "steps": [
+          "Write $\\beta=\\angle B$, $\\delta=\\angle D$, $\\phi=\\angle F$. The six interior angles sum to $4\\pi$, so $\\beta+\\delta+\\phi=\\pi$. Each is less than $2\\pi/3$ since the triple of each is an interior angle. Construct a triangle $A_0C_0E_0$ whose angles at these vertices are $\\delta,\\phi,\\beta$, respectively. Reflect $E_0$ across $A_0C_0$ to get $B_0$, reflect $A_0$ across $C_0E_0$ to get $D_0$, and reflect $C_0$ across $E_0A_0$ to get $F_0$.",
+          "The boundary of the central triangle and the three attached reflected triangles is $A_0B_0C_0D_0E_0F_0$. Indeed, at each central vertex the three adjoining triangular sectors have total angle less than $2\\pi$ and disjoint interiors. Any two attached triangles share such a vertex and lie in its respective sectors, so they do not overlap elsewhere. The six boundary angles are exactly $3\\delta,\\beta,3\\phi,\\delta,3\\beta,\\phi$. Reflection gives the three required equalities of opposite side lengths.",
+          "We show that these angles and opposite-side equalities determine the hexagon up to similarity. Orient both boundaries counterclockwise and rotate them to align their first sides. Their oriented sides have the same six unit vectors $u_1,\\ldots,u_6$: each step turns by $\\pi$ minus the intervening interior angle, including at reflex vertices. Put $v_i=u_i+u_{i+3}$ for $i=1,2,3$. All are nonzero because opposite sides of the given hexagon are not parallel. If the first three side lengths are $x,y,z$, closing the boundary gives $xv_1+yv_2+zv_3=0$.",
+          "The direction of the nonzero sum of two unit vectors is their mean direction modulo $\\pi$, by the equal-side parallelogram law. The turn from $v_1$ to $v_2$ modulo $\\pi$ therefore equals half the sum of the turns at $B,E$, namely $\\pi-2\\beta$. Likewise the turn from $v_2$ to $v_3$ is $\\pi-2\\phi$. These cannot both be zero modulo $\\pi$, since that would give $\\beta=\\phi=\\pi/2$ and $\\delta=0$. Thus the three column vectors span the plane. Their homogeneous linear equation in $x,y,z$ has a one-dimensional solution space.",
+          "The original and constructed hexagons both give positive solutions, so their side lengths differ by a single positive scale. With all directions already aligned they are similar. In the constructed figure each line joining a point to its reflected image is perpendicular to the mirror side. The lines $A_0D_0,B_0E_0,C_0F_0$ are precisely the three altitude lines of $A_0C_0E_0$, hence concurrent. Similarity transports this concurrence to the given hexagon."
+        ],
+        "stepsZh": [
+          "设 $\\beta=\\angle B,\\delta=\\angle D,\\phi=\\angle F$。六个内角和为 $4\\pi$，故 $\\beta+\\delta+\\phi=\\pi$。由于每个角的三倍都是六边形内角，它们都小于 $2\\pi/3$。作三角形 $A_0C_0E_0$，令这三个顶点处的内角依次为 $\\delta,\\phi,\\beta$。把 $E_0$ 关于 $A_0C_0$ 反射到 $B_0$，把 $A_0$ 关于 $C_0E_0$ 反射到 $D_0$，把 $C_0$ 关于 $E_0A_0$ 反射到 $F_0$。",
+          "中心三角形与三个外接的反射像共同组成的图形，其边界依次为 $A_0B_0C_0D_0E_0F_0$。事实上，在每个中心顶点处，三个依次相连的三角形角域总角度小于 $2\\pi$，各角域内部互不重叠；任意两个外接三角形有这样一个公共顶点，并分别位于该顶点不同的角域中，因此它们在别处也不重叠。六个边界内角依次是 $3\\delta,\\beta,3\\phi,\\delta,3\\beta,\\phi$。由反射保距，三组对边长度也分别相等。",
+          "下面证明，上述内角和对边等长条件把六边形唯一确定到相似。将两个六边形都取逆时针方向并旋转，使其第一边方向相同。随后各条有向边的单位向量 $u_1,\\ldots,u_6$ 也依次一致，因为每次转角是 $\\pi$ 减去该处内角，在凹顶点同样成立。对 $i=1,2,3$ 令 $v_i=u_i+u_{i+3}$。原六边形对边不平行，因此这三个和均非零。若前三条边长为 $x,y,z$，则边界闭合给出 $xv_1+yv_2+zv_3=0$。",
+          "由菱形对角线平分顶角，两个单位向量的非零和的方向，就是两方向角的平均值（模 $\\pi$）。因此从 $v_1$ 到 $v_2$ 的转角模 $\\pi$ 等于 $B,E$ 两处转角和的一半，即 $\\pi-2\\beta$；从 $v_2$ 到 $v_3$ 同理为 $\\pi-2\\phi$。这两者不可能都为 $\\pi$ 的倍数，否则 $\\beta=\\phi=\\pi/2$，从而 $\\delta=0$。故三个向量张成平面，上述关于 $x,y,z$ 的齐次线性方程组的解空间为一维。",
+          "原六边形和所构造的六边形各给出其中一个正解，因此两者全部边长只差同一正常数因子。各边方向又已对齐，所以两六边形相似。在构造图中，点与其反射像的连线垂直于相应对称轴。于是 $A_0D_0,B_0E_0,C_0F_0$ 正是三角形 $A_0C_0E_0$ 的三条高线，交于垂心。将这个结论按相似关系移回原图即得所证。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_3"
+  },
   "usamo-2011-q4": {
     "summary": "For $n\\ge2$, divide $2^{2^n}$ by $2^n-1$ and take its least nonnegative remainder. Is this remainder always a power of four? Prove the assertion or exhibit a counterexample and verify it.",
     "summaryZh": "对任意整数 $n\\ge2$，计算 $2^{2^n}$ 除以 $2^n-1$ 的最小非负余数。此余数是否总是 $4$ 的幂？证明该命题或给出反例并验证。",
@@ -62,5 +146,81 @@
       }
     ],
     "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_4"
+  },
+  "usamo-2011-q5": {
+    "summary": "Let $P,Q_1,Q_2$ lie inside a convex quadrilateral $ABCD$. Assume $\\angle Q_1BC=\\angle ABP$, $\\angle Q_1CB=\\angle DCP$, $\\angle Q_2AD=\\angle BAP$, and $\\angle Q_2DA=\\angle CDP$. Prove that the joining line $Q_1Q_2$ is parallel to $AB$ exactly when it is parallel to $CD$.",
+    "summaryZh": "在凸四边形 $ABCD$ 内取点 $P,Q_1,Q_2$，满足 $\\angle Q_1BC=\\angle ABP$、$\\angle Q_1CB=\\angle DCP$、$\\angle Q_2AD=\\angle BAP$、$\\angle Q_2DA=\\angle CDP$。证明连接 $Q_1,Q_2$ 的直线平行于 $AB$，当且仅当它平行于 $CD$。",
+    "answer": "The distances of $Q_1,Q_2$ to $AB$ are equal exactly when their distances to $CD$ are equal.",
+    "answerZh": "$Q_1,Q_2$ 到 $AB$ 的距离相等，当且仅当它们到 $CD$ 的距离相等。",
+    "methods": [
+      {
+        "title": "Compare products of distances to the sides",
+        "titleZh": "比较到两腰距离的乘积",
+        "topics": [
+          {
+            "en": "Distance to a line",
+            "zh": "点到直线的距离"
+          },
+          {
+            "en": "Isogonal lines",
+            "zh": "等角共轭直线"
+          },
+          {
+            "en": "Parallel lines",
+            "zh": "平行线"
+          }
+        ],
+        "steps": [
+          "Write $d(X,L)$ for perpendicular distance to line $L$. If rays $UP,UQ$ lie inside an angle with side lines $L,M$ and are mirror images in its bisector, then $d(P,L)d(Q,L)=d(P,M)d(Q,M)$. To see this, let the angle between $UP$ and $L$ be $s$, and that between $UP$ and $M$ be $t$. The respective distances for $P$ are $UP\\sin s,UP\\sin t$, while for $Q$ the two sines are interchanged.",
+          "At vertex $B$ the hypothesis says that $BP,BQ_1$ are such mirror rays. Thus the products of distances for $P,Q_1$ to $AB$ and to $BC$ agree. At $C$ the analogous products for $BC$ and $CD$ agree. Hence $d(P,AB)d(Q_1,AB)=d(P,CD)d(Q_1,CD)$.",
+          "Apply the same argument using $A,D$ and $Q_2$, this time passing through side $AD$. Dividing by the positive distances of the interior point $P$ gives $d(Q_i,AB)/d(Q_i,CD)=d(P,CD)/d(P,AB)$ for $i=1,2$. Therefore $Q_1,Q_2$ have equal distances to $AB$ exactly when they have equal distances to $CD$.",
+          "Inside the quadrilateral both points are on the same side of either sideline. Within a given open half-plane a level set of distance from its boundary is a parallel line. Applying this observation to each side gives the desired equivalence for $Q_1Q_2$. The equal-distance statement itself also covers coincident $Q_1,Q_2$."
+        ],
+        "stepsZh": [
+          "记点 $X$ 到直线 $L$ 的垂距为 $d(X,L)$。若角的两边所在直线为 $L,M$，角内射线 $UP,UQ$ 关于角平分线对称，则 $d(P,L)d(Q,L)=d(P,M)d(Q,M)$。设 $UP$ 分别与 $L,M$ 所成的角为 $s,t$，则 $P$ 的两项距离是 $UP\\sin s,UP\\sin t$；对于点 $Q$，正弦因子的顺序交换，乘积便相等。",
+          "在 $B$ 处，题设说明 $BP,BQ_1$ 正是这样的对称射线。因此 $P,Q_1$ 到 $AB$ 的两项距离之积等于到 $BC$ 的距离之积。再在 $C$ 处应用同一结论，可从 $BC$ 换至 $CD$，得到 $d(P,AB)d(Q_1,AB)=d(P,CD)d(Q_1,CD)$。",
+          "对点 $Q_2$ 在 $A,D$ 处同理，这次通过 $AD$ 转换。因内点 $P$ 到各边距离均为正数，可以相除，得到 $d(Q_i,AB)/d(Q_i,CD)=d(P,CD)/d(P,AB)$（$i=1,2$）。因此两点到 $AB$ 等距，当且仅当它们到 $CD$ 等距。",
+          "凸四边形的两个内点总在每条边所在直线的同侧。在某一开半平面内，到边界直线的距离取定时，点的轨迹就是一条平行于边界的直线。分别对两边应用这个事实，即得关于连线平行的等价关系。即使 $Q_1,Q_2$ 重合，上述等距表述仍然成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_5"
+  },
+  "usamo-2011-q6": {
+    "summary": "A set of $225$ elements has eleven subsets $A_1,\\ldots,A_{11}$ of size $45$ each. Every pair of different subsets has exactly $9$ common elements. Show that their union contains at least $165$ elements, and construct an example attaining this bound.",
+    "summaryZh": "某集合有 $225$ 个元素，其子集 $A_1,\\ldots,A_{11}$ 各有 $45$ 个元素，任意两个不同子集的交集都有 $9$ 个元素。证明其并集至少有 $165$ 个元素，并构造一个取等的例子。",
+    "answer": "The minimum union size is $165$. A sharp example uses all triples of an eleven-element label set.",
+    "answerZh": "并集最小为 $165$。可利用十一种标号构成的所有三元子集达到等号。",
+    "methods": [
+      {
+        "title": "Count memberships twice and construct the equality case",
+        "titleZh": "双重计数后按等号条件构造",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          },
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          },
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          }
+        ],
+        "steps": [
+          "For each element $x$ of the union $U$, let $r_x$ be the number of subsets containing it. Counting occurrences gives $\\sum r_x=11\\cdot45=495$. Counting an element together with two subsets containing it gives $\\sum\\binom{r_x}{2}=9\\binom{11}{2}=495$. Thus $\\sum r_x^2=495+2\\cdot495=1485$.",
+          "By Cauchy–Schwarz, $495^2\\le |U|\\cdot1485$, hence $|U|\\ge165$. Equality would require the same multiplicity for all union elements, namely three.",
+          "Take as union elements all three-element subsets of $\\{1,\\ldots,11\\}$, and add $60$ unused elements to form the ambient set of $225$. Let $A_i$ consist of triples containing $i$. Each $A_i$ has $\\binom{10}{2}=45$ members, and a specified pair of labels lies in $9$ triples. All $\\binom{11}{3}=165$ triples occur, proving sharpness."
+        ],
+        "stepsZh": [
+          "对并集 $U$ 的每个元素 $x$，记含它的子集个数为 $r_x$。按元素出现次数计数，得 $\\sum r_x=11\\cdot45=495$。同时选择一个元素及两个均含它的子集，得 $\\sum\\binom{r_x}{2}=9\\binom{11}{2}=495$。于是 $\\sum r_x^2=495+2\\cdot495=1485$。",
+          "由柯西不等式 $495^2\\le |U|\\cdot1485$，故 $|U|\\ge165$。若取等，并集内每个元素的出现次数须相同，即均出现三次。",
+          "把 $\\{1,\\ldots,11\\}$ 的所有三元子集作为并集的元素，另添 $60$ 个不使用的元素，使全集大小为 $225$。定义 $A_i$ 为含标号 $i$ 的全部三元组，则 $|A_i|=\\binom{10}{2}=45$。固定两个标号后第三个标号有 $9$ 种选法，两两交集大小正是 $9$。共出现全部 $\\binom{11}{3}=165$ 个三元组，故下界可达。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_6"
   }
 }

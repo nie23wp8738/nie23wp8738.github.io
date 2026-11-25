@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="274" viewBox="0 0 350 274" role="img" aria-labelledby="title desc">
+<title id="title">Triangle with a point on its median</title><desc id="desc">P lies on AM. B and C are joined to P. Single marks indicate AB equals CP; double marks show M is the midpoint of BC.</desc>
+<path d="M 130.092,43.854 L 35.000,239.000 L 313.000,239.000 Z" fill="#faf9f4" stroke="#263f4c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 130.092,43.854 L 174.000,239.000" fill="none" stroke="#58727a" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 35.000,239.000 L 143.488,103.390 L 313.000,239.000" fill="none" stroke="#325f70" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 78.950,139.675 L 86.142,143.179" fill="none" stroke="#6d5437" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 230.743,168.072 L 225.745,174.319" fill="none" stroke="#6d5437" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 102.500,235.000 L 102.500,243.000" fill="none" stroke="#6d5437" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M 106.500,235.000 L 106.500,243.000" fill="none" stroke="#6d5437" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 241.500,235.000 L 241.500,243.000" fill="none" stroke="#6d5437" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M 245.500,235.000 L 245.500,243.000" fill="none" stroke="#6d5437" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="130.092" cy="43.854" r="2.65" fill="#233a46"/><text x="127.092" y="33.854" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#172e37">A</text>
+<circle cx="35.000" cy="239.000" r="2.65" fill="#233a46"/><text x="18.000" y="251.000" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#172e37">B</text>
+<circle cx="313.000" cy="239.000" r="2.65" fill="#233a46"/><text x="320.000" y="251.000" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#172e37">C</text>
+<circle cx="143.488" cy="103.390" r="2.65" fill="#233a46"/><text x="151.488" y="97.390" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#172e37">P</text>
+<circle cx="174.000" cy="239.000" r="2.65" fill="#233a46"/><text x="168.000" y="261.000" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#172e37">M</text>
+</svg>

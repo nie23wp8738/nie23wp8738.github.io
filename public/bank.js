@@ -23,7 +23,8 @@ function startBank(root) {
   const translations = JSON.parse(get('tag-translations').textContent);
   const originals = JSON.parse(get('practice-data').textContent).map(p => ({
     ...p, kind:'practice', topicKeys:[p.topicKey], href:prefix + '/problems/' + p.id + '/',
-    search:compact([p.id,p.title,...p.exam,p.topic,p.method,p.level,p.statement].join(' ')),
+    preview:zh ? p.statementZh : p.statement,
+    search:compact([p.id,p.title,...p.exam,p.topic,p.method,p.level,p.statement,zh ? p.statementZh : ''].join(' ')),
   }));
   const guides = JSON.parse(get('guide-data').textContent).map(q => ({
     ...q, topicKeys:[q.topicKey], href:prefix+'/tara/guide/'+q.id+'/',
@@ -104,7 +105,7 @@ function startBank(root) {
     root.querySelectorAll('[data-practice-only]').forEach(x => { x.hidden = kind !== 'practice'; x.querySelector('select').disabled = kind !== 'practice'; });
     const exams = historical ? [...new Set(past.map(q=>q.exam[0]))] : kind === 'guide' ? ['TARA'] : originalExams;
     replaceOptions(control('exam'),exams.sort(),t('All exams','全部考试'));
-    control('q').placeholder = historical ? t('Exam, year, paper or question number','考试、年份、试卷或题号') : t('Title, keyword or question text','题名、关键词或英文题干');
+    control('q').placeholder = historical ? t('Exam, year, paper or question number','考试、年份、试卷或题号') : t('Title, keyword or question text','题名、关键词或题干');
   }
   function syncURL() {
     const url = new URL(location.href);

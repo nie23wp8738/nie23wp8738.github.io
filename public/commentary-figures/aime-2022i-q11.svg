@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="324" height="170" viewBox="0 0 324 170" role="img">
+  <title>Circle and diagonal of a parallelogram</title>
+  <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 25,139 L 40,35.077 L 285,35.077 L 270,139 Z" stroke="#25374a" stroke-width="1.8"/>
+    <circle cx="85" cy="87.0385" r="51.9615" stroke="#476979" stroke-width="1.5"/>
+    <path d="M 25,139 L 285,35.077" stroke="#25374a" stroke-width="1.4"/>
+  </g>
+  <g fill="#25374a">
+    <circle cx="52.857" cy="127.865" r="2.3"/>
+    <circle cx="136.429" cy="94.462" r="2.3"/>
+  </g>
+  <g font-family="serif" font-size="15" font-style="italic" fill="#162433">
+    <text x="10" y="153">A</text>
+    <text x="30" y="26">B</text>
+    <text x="290" y="37">C</text>
+    <text x="273" y="153">D</text>
+    <text x="53" y="123">P</text>
+    <text x="143" y="104">Q</text>
+  </g>
+</svg>

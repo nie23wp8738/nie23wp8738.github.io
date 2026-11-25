@@ -1,0 +1,234 @@
+{
+  "step-2023-p2-q1": {
+    "summary": "Let $F(x)=(1+x^2)^{-3/2}$. For $0<a<b$, show that $x=1/t$ sends $\\int_a^b F(x)\\,dx$ to $\\int_{1/a}^{1/b}-tF(t)\\,dt$. Evaluate the integrals of $F$ over $[1/2,2]$ and $[-2,2]$. Now integrate over $[1/2,2]$ throughout. Show that the integrals of $(1+x^2)^{-2}$ and $x^2(1+x^2)^{-2}$ both equal half the integral of $(1+x^2)^{-1}$ and obtain their value. Finally integrate $(1-x)/(x\\sqrt{1+x^2})$ over the same interval.",
+    "summaryZh": "令 $F(x)=(1+x^2)^{-3/2}$。对 $0<a<b$，证明 $x=1/t$ 将 $\\int_a^b F(x)\\,dx$ 化为 $\\int_{1/a}^{1/b}-tF(t)\\,dt$。分别求 $F$ 在 $[1/2,2]$ 和 $[-2,2]$ 上的积分。以下积分区间均取 $[1/2,2]$。证明 $(1+x^2)^{-2}$ 与 $x^2(1+x^2)^{-2}$ 的积分都等于 $(1+x^2)^{-1}$ 的积分的一半，求其值。最后求 $(1-x)/(x\\sqrt{1+x^2})$ 在同一区间上的积分。",
+    "answer": "The first values are $1/\\sqrt5$ and $4/\\sqrt5$. The two equal integrals are each $\\tfrac12\\arctan(3/4)$. The final integral is $0$.",
+    "answerZh": "前两积分依次为 $1/\\sqrt5$、$4/\\sqrt5$。相等的两积分均为 $\\tfrac12\\arctan(3/4)$。最后的积分为 $0$。",
+    "topics": [
+      {
+        "en": "Reciprocal substitution",
+        "zh": "倒数换元"
+      },
+      {
+        "en": "Definite integrals",
+        "zh": "定积分"
+      },
+      {
+        "en": "Symmetry",
+        "zh": "对称性"
+      }
+    ]
+  },
+  "step-2023-p2-q2": {
+    "summary": "A three-variable system is formed from a map $D$ by $y=D(x)$, $z=D(y)$, $x=D(z)$. First take $D(t)=2t/(1-t^2)$. Set $x=\\tan\\alpha$, derive $y=\\tan(2\\alpha)$ and $\\tan\\alpha=\\tan(8\\alpha)$, and find every ordered real triple. Express each coordinate as a tangent of an angle in $(-\\pi/2,\\pi/2)$. Count the real triples for $D(t)=(3t-t^3)/(1-3t^2)$, respecting all denominator restrictions. Finally take $D(t)=2t^2-1$. Count the solutions with all coordinates in $[-1,1]$, then use the degree of the resulting polynomial in $x$ to prove there are no others.",
+    "summaryZh": "对映射 $D$ 考虑三元方程组 $y=D(x)$、$z=D(y)$、$x=D(z)$。先取 $D(t)=2t/(1-t^2)$。令 $x=\\tan\\alpha$，导出 $y=\\tan(2\\alpha)$ 与 $\\tan\\alpha=\\tan(8\\alpha)$，求所有有序实数解，并将每一坐标表示成 $(-\\pi/2,\\pi/2)$ 内某角的正切。再取 $D(t)=(3t-t^3)/(1-3t^2)$，注意分母限制，求实数解组数。最后令 $D(t)=2t^2-1$，求三个坐标都落在 $[-1,1]$ 内的解组数，并利用消元所得关于 $x$ 的多项式次数证明没有其他解。",
+    "answer": "Let $[j]$ denote the representative of $j$ modulo 7 in $\\{-3,-2,-1,0,1,2,3\\}$ and put $T_j=\\tan([j]\\pi/7)$. The first seven triples are $(T_j,T_{2j},T_{4j})$ for $-3\\le j\\le3$. The triple-angle system has $25$ solutions. The quadratic map has eight, exhausting the degree-eight equation.",
+    "answerZh": "令 $[j]$ 表示 $j$ 模 7 在 $\\{-3,-2,-1,0,1,2,3\\}$ 中的代表，记 $T_j=\\tan([j]\\pi/7)$。首问七组解为 $(T_j,T_{2j},T_{4j})$，$-3\\le j\\le3$。三倍角系统有 $25$ 组解；二次映射有八组解，已穷尽八次方程可能的根。",
+    "topics": [
+      {
+        "en": "Tangent multiple-angle formulas",
+        "zh": "正切倍角公式"
+      },
+      {
+        "en": "Function iteration",
+        "zh": "函数迭代"
+      },
+      {
+        "en": "Polynomial degree",
+        "zh": "多项式次数"
+      }
+    ]
+  },
+  "step-2023-p2-q3": {
+    "summary": "Suppose $p$ is a degree-$n$ polynomial positive on the whole real line, and define $q=\\sum_{k=0}^n p^{(k)}$ with $p^{(0)}=p$. Explain the parity of $n$, prove that $q$ is positive somewhere, and obtain $q'=q-p$. Establish $q>0$ everywhere by three separate arguments: (1) locate $q$ relative to $p$ at every stationary point of $q$; (2) examine the monotonicity of $e^{-x}q(x)$; (3) prove by parts that $\\int_0^\\infty p(x+t)e^{-t}\\,dt=p(x)+\\int_0^\\infty p'(x+t)e^{-t}\\,dt$, and iterate to identify the integral with $q(x)$.",
+    "summaryZh": "设 $n$ 次多项式 $p$ 在整个实轴上为正，定义 $q=\\sum_{k=0}^n p^{(k)}$，其中 $p^{(0)}=p$。说明 $n$ 的奇偶性、证明存在 $x$ 使 $q(x)>0$，并导出 $q'=q-p$。分别用三种方法证明 $q$ 处处为正：(1) 考察 $q$ 的每个驻点处 $q$ 与 $p$ 的关系；(2) 考察 $e^{-x}q(x)$ 的单调性；(3) 分部积分证明 $\\int_0^\\infty p(x+t)e^{-t}\\,dt=p(x)+\\int_0^\\infty p'(x+t)e^{-t}\\,dt$，再反复使用以说明左边等于 $q(x)$。",
+    "answer": "$n$ is even. A nonconstant $q$ takes its global minimum where $q=p>0$; the constant case is immediate. Also $(e^{-x}q)'=-e^{-x}p<0$ and its limit at $+\\infty$ is zero. Finally $q(x)=\\int_0^\\infty p(x+t)e^{-t}\\,dt>0$.",
+    "answerZh": "$n$ 为偶数。非常数 $q$ 在全局极小点满足 $q=p>0$，常数情形直接成立。此外 $(e^{-x}q)'=-e^{-x}p<0$，且 $e^{-x}q$ 在正无穷处趋于零。积分法则给出 $q(x)=\\int_0^\\infty p(x+t)e^{-t}\\,dt>0$。",
+    "topics": [
+      {
+        "en": "Polynomial derivatives",
+        "zh": "多项式导数"
+      },
+      {
+        "en": "Stationary points",
+        "zh": "驻点"
+      },
+      {
+        "en": "Integration by parts",
+        "zh": "分部积分"
+      }
+    ]
+  },
+  "step-2023-p2-q4": {
+    "summary": "Eliminate radicals to produce integer polynomials. From $(x-\\sqrt2)^2=3$, derive $x^4-10x^2+1=0$ and confirm that $\\sqrt2+\\sqrt3$ is a root. Give a degree-eight polynomial vanishing at $\\sqrt2+\\sqrt3+\\sqrt5$. If $a,b,c$ are the roots of $t^3-3t+1=0$, find one degree-six polynomial vanishing at each of $a+\\sqrt2,b+\\sqrt2,c+\\sqrt2$. Finally find a polynomial vanishing at $\\sqrt[3]2+\\sqrt[3]3$. Give the last three polynomials fully expanded.",
+    "summaryZh": "通过消去根式构造整系数多项式。从 $(x-\\sqrt2)^2=3$ 推出 $x^4-10x^2+1=0$，并验证 $\\sqrt2+\\sqrt3$ 是根。求以 $\\sqrt2+\\sqrt3+\\sqrt5$ 为根的八次多项式。若 $a,b,c$ 为 $t^3-3t+1=0$ 的三根，求同时以 $a+\\sqrt2,b+\\sqrt2,c+\\sqrt2$ 为根的六次多项式。最后求以 $\\sqrt[3]2+\\sqrt[3]3$ 为根的多项式。后三个多项式都须写成完全展开形式。",
+    "answer": "One choice for each in order is $x^8-40x^6+352x^4-960x^2+576$, $x^6-12x^4+2x^3+21x^2+6x-1$, and $x^9-15x^6-87x^3-125$.",
+    "answerZh": "依次可取 $x^8-40x^6+352x^4-960x^2+576$、$x^6-12x^4+2x^3+21x^2+6x-1$ 和 $x^9-15x^6-87x^3-125$。",
+    "topics": [
+      {
+        "en": "Radical elimination",
+        "zh": "根式消元"
+      },
+      {
+        "en": "Polynomial construction",
+        "zh": "多项式构造"
+      }
+    ]
+  },
+  "step-2023-p2-q5": {
+    "summary": "Start $x_0=y_0=1$. The first iteration is $x_{n+1}=(x_n+2)/(x_n+1)$. Show $x_n\\ge1$ and that $x_n^2-2$ changes sign at every step while $|x_{n+1}^2-2|\\le|x_n^2-2|/4$. Bound $x_{10}^2$ between $2-10^{-6}$ and $2$. The other iteration is $y_{n+1}=(y_n^2+2)/(2y_n)$. Derive $y_{n+1}-\\sqrt2=(y_n-\\sqrt2)^2/(2y_n)$ and $y_n\\ge1$. For $n\\ge1$ prove $y_n-\\sqrt2\\le2[(\\sqrt2-1)/2]^{2^n}$. Using $\\sqrt2-1<1/2$ or otherwise, show $\\sqrt2\\le y_{10}\\le\\sqrt2+10^{-600}$.",
+    "summaryZh": "取 $x_0=y_0=1$。第一种迭代为 $x_{n+1}=(x_n+2)/(x_n+1)$。证明 $x_n\\ge1$，$x_n^2-2$ 每一步变号，且 $|x_{n+1}^2-2|\\le|x_n^2-2|/4$。据此证明 $2-10^{-6}\\le x_{10}^2\\le2$。第二种迭代为 $y_{n+1}=(y_n^2+2)/(2y_n)$。导出 $y_{n+1}-\\sqrt2=(y_n-\\sqrt2)^2/(2y_n)$ 及 $y_n\\ge1$。对 $n\\ge1$ 证明 $y_n-\\sqrt2\\le2[(\\sqrt2-1)/2]^{2^n}$；利用 $\\sqrt2-1<1/2$ 或其他方法，证明 $\\sqrt2\\le y_{10}\\le\\sqrt2+10^{-600}$。",
+    "answer": "$x_{n+1}^2-2=-(x_n^2-2)/(x_n+1)^2$, so $0<2-x_{10}^2\\le4^{-10}<10^{-6}$. The second iteration squares the normalised error, giving $0<y_{10}-\\sqrt2<2(1/4)^{1024}<10^{-600}$.",
+    "answerZh": "$x_{n+1}^2-2=-(x_n^2-2)/(x_n+1)^2$，故 $0<2-x_{10}^2\\le4^{-10}<10^{-6}$。后一迭代将归一化误差平方，得 $0<y_{10}-\\sqrt2<2(1/4)^{1024}<10^{-600}$。",
+    "topics": [
+      {
+        "en": "Iterative approximation",
+        "zh": "迭代逼近"
+      },
+      {
+        "en": "Error bounds",
+        "zh": "误差界"
+      },
+      {
+        "en": "Quadratic convergence",
+        "zh": "二次收敛"
+      }
+    ]
+  },
+  "step-2023-p2-q6": {
+    "summary": "Let $F_0=0,F_1=1,F_{n+2}=F_{n+1}+F_n$. For $Q=\\left(\\begin{smallmatrix}1&1\\\\1&0\\end{smallmatrix}\\right)$ prove by induction that $Q^n$ has rows $(F_{n+1},F_n)$ and $(F_n,F_{n-1})$ for $n\\ge1$. Deduce $F_{n+1}F_{n-1}-F_n^2=(-1)^n$ and, for $m,n\\ge1$, $F_{m+n}=F_{m+1}F_n+F_mF_{n-1}$. Prove $Q^2=I+Q$. You may use the matrix binomial theorem for $(I+A)^n$. Writing $C_k=\\binom nk$ and summing from $k=0$ to $n$, establish $F_{2n}=\\sum C_kF_k$, $F_{3n}=\\sum C_k2^kF_k=\\sum C_kF_{n+k}$, and $\\sum(-1)^{n+k}C_kF_{n+k}=0$.",
+    "summaryZh": "令 $F_0=0,F_1=1,F_{n+2}=F_{n+1}+F_n$。对 $Q=\\left(\\begin{smallmatrix}1&1\\\\1&0\\end{smallmatrix}\\right)$，归纳证明 $n\\ge1$ 时 $Q^n$ 的两行为 $(F_{n+1},F_n)$、$(F_n,F_{n-1})$。导出 $F_{n+1}F_{n-1}-F_n^2=(-1)^n$，以及 $m,n\\ge1$ 时 $F_{m+n}=F_{m+1}F_n+F_mF_{n-1}$。证明 $Q^2=I+Q$。可使用 $(I+A)^n$ 的矩阵二项式定理。记 $C_k=\\binom nk$，求和范围均为 $0\\le k\\le n$，证明 $F_{2n}=\\sum C_kF_k$、$F_{3n}=\\sum C_k2^kF_k=\\sum C_kF_{n+k}$ 及 $\\sum(-1)^{n+k}C_kF_{n+k}=0$。",
+    "answer": "Take determinants and multiply powers for the first identities. For the sums use $Q^{2n}=(I+Q)^n$, $Q^{3n}=(I+2Q)^n=Q^n(I+Q)^n$, and $Q^n(Q-I)^n=I$, whose off-diagonal entry is zero.",
+    "answerZh": "前两组恒等式分别来自行列式和幂的乘法。对各和式使用 $Q^{2n}=(I+Q)^n$、$Q^{3n}=(I+2Q)^n=Q^n(I+Q)^n$ 和 $Q^n(Q-I)^n=I$；最后一个右端的非对角元为零。",
+    "topics": [
+      {
+        "en": "Fibonacci numbers",
+        "zh": "斐波那契数"
+      },
+      {
+        "en": "Matrix powers",
+        "zh": "矩阵幂"
+      },
+      {
+        "en": "Binomial theorem",
+        "zh": "二项式定理"
+      }
+    ]
+  },
+  "step-2023-p2-q7": {
+    "summary": "For $z=a+ib,w=c+id$, prove $|zw|=|z||w|$. Use $2+i$ and $10+11i$ to represent $5\\cdot221$ as the sum of two positive integer squares. Give such a representation for $8045$, and then for $36\\cdot50805$ using $102^2+201^2=50805$. Find three distinct pairs of positive integers $(r,s)$ with $r<s$ and $r^2+s^2=25\\cdot1002082$. Given $109\\cdot9193=1002037$, find a positive integer pair whose squares sum to $9193$.",
+    "summaryZh": "设 $z=a+ib,w=c+id$，证明 $|zw|=|z||w|$。利用 $2+i$ 和 $10+11i$，把 $5\\cdot221$ 表为两个正整数的平方和。再对 $8045$ 作这样的表示，并利用 $102^2+201^2=50805$ 表示 $36\\cdot50805$。求三组不同的正整数 $(r,s)$，满足 $r<s$ 且 $r^2+s^2=25\\cdot1002082$。已知 $109\\cdot9193=1002037$，求平方和为 $9193$ 的一对正整数。",
+    "answer": "The first three pairs may be $(9,32)$, $(46,77)$ and $(612,1206)$. For $25\\cdot1002082$ take $(45,5005),(2967,4031),(3039,3977)$. Finally $9193=27^2+92^2$.",
+    "answerZh": "前三问可依次取 $(9,32)$、$(46,77)$、$(612,1206)$。对 $25\\cdot1002082$ 可取 $(45,5005),(2967,4031),(3039,3977)$。最后有 $9193=27^2+92^2$。",
+    "topics": [
+      {
+        "en": "Complex modulus",
+        "zh": "复数的模"
+      },
+      {
+        "en": "Sums of two squares",
+        "zh": "两平方和"
+      }
+    ]
+  },
+  "step-2023-p2-q8": {
+    "summary": "Call a nondegenerate tetrahedron isosceles when opposite edges are equal in each of its three pairs. Prove this is equivalent to equality of all four face perimeters. In an isosceles tetrahedron $OABC$, write $a,b,c$ for the position vectors of $A,B,C$ from $O$. Use $OA=BC$ to derive $2b\\cdot c=|b|^2+|c|^2-|a|^2$, and establish $a\\cdot(b+c)=|a|^2$. Show the centroid with vector $(a+b+c)/4$ is equidistant from all four vertices. Use $|a-b-c|$ or another argument to exclude obtuse angles between edges meeting at a vertex, and decide whether a right angle can occur.",
+    "summaryZh": "称非退化四面体为等腰四面体，若三对相对棱的长度分别相等。证明这与四个面的周长都相等互为充要条件。在等腰四面体 $OABC$ 中，设 $A,B,C$ 相对于 $O$ 的位置向量为 $a,b,c$。用 $OA=BC$ 导出 $2b\\cdot c=|b|^2+|c|^2-|a|^2$，并证明 $a\\cdot(b+c)=|a|^2$。证明位置向量为 $(a+b+c)/4$ 的重心至四顶点等距。利用 $|a-b-c|$ 或其他方法排除共顶点两棱之间的钝角，并判断是否可以出现直角。",
+    "answer": "The centroid is also the circumcentre. The identity $4b\\cdot c=|a-b-c|^2$ shows that the angle is nonobtuse. Equality forces $a=b+c$, making the four points coplanar. By relabelling, every face angle is acute.",
+    "answerZh": "重心也是外接球心。由 $4b\\cdot c=|a-b-c|^2$，棱间夹角不可能为钝角；取等号将迫使 $a=b+c$，从而四点共面。通过重命名顶点可知所有面角都是锐角。",
+    "topics": [
+      {
+        "en": "Tetrahedron geometry",
+        "zh": "四面体几何"
+      },
+      {
+        "en": "Vector dot products",
+        "zh": "向量点积"
+      },
+      {
+        "en": "Circumcentres",
+        "zh": "外心"
+      }
+    ]
+  },
+  "step-2023-p2-q9": {
+    "summary": "A truck of mass $M$ tows a trailer of mass $kM$ with a light rigid bar parallel to the road. Its constant driving force $D$ acts along the road; only the trailer experiences resistance, given by friction coefficient $\\mu>0$. Compare travel uphill at inclination $\\alpha$, on level ground, and downhill at the same acute inclination. Write $a_1,a_2,a_3$ for accelerations along the direction of travel and $T_1,T_2,T_3$ for bar tensions in this order. Prove $T_1=T_3$ and $M(a_1+a_3-2a_2)=2(T_2-T_1)$. With $\\mu<1$ establish $a_2<(a_1+a_3)/2<a_3$ and separately show $a_1<a_2$.",
+    "summaryZh": "质量 $M$ 的货车以平行路面的轻质刚杆牵引质量 $kM$ 的拖车。恒定牵引力 $D$ 沿路面，阻力仅为拖车所受的摩擦，系数 $\\mu>0$。依次考虑仰角 $\\alpha$ 的上坡、平路以及相同锐角的下坡。记顺行进方向的加速度为 $a_1,a_2,a_3$，对应杆内拉力为 $T_1,T_2,T_3$。证明 $T_1=T_3$ 及 $M(a_1+a_3-2a_2)=2(T_2-T_1)$。再设 $\\mu<1$，证明 $a_2<(a_1+a_3)/2<a_3$，并另证 $a_1<a_2$。",
+    "answer": "$T_1=T_3=k(D+\\mu Mg\\cos\\alpha)/(1+k)$ and $T_2=k(D+\\mu Mg)/(1+k)$. In the stated friction range the accelerations satisfy $a_1<a_2<(a_1+a_3)/2<a_3$.",
+    "answerZh": "$T_1=T_3=k(D+\\mu Mg\\cos\\alpha)/(1+k)$，$T_2=k(D+\\mu Mg)/(1+k)$。在所给摩擦范围内有 $a_1<a_2<(a_1+a_3)/2<a_3$。",
+    "topics": [
+      {
+        "en": "Connected particles",
+        "zh": "连接体运动"
+      },
+      {
+        "en": "Friction on inclines",
+        "zh": "斜面摩擦力"
+      },
+      {
+        "en": "Newton’s laws",
+        "zh": "牛顿运动定律"
+      }
+    ]
+  },
+  "step-2023-p2-q10": {
+    "summary": "Use horizontal axes $x,y$ and upward axis $z$ under constant gravity $g$. A point $P_\\alpha$ leaves the origin with speed $u$ at elevation $0<\\alpha<\\pi/2$ along positive $x$ in the plane $y=0$. If its path is tangent to $E:z=A-Bx^2,\\ y=0$, prove $u^2-2gA=u^2(1-4AB)\\cos^2\\alpha$. Determine $A,B$ if this holds by tangency for every such $\\alpha$. Suppose particles start at the same instant from the origin with speed $u$ in all directions and move freely for $t\\ge0$. Describe their reachable set, then find the centre and radius of their sphere of positions at time $t$. A further point $Q$ starts at $(0,0,A)$ with horizontal velocity $(u,0,0)$. Show its trajectory stays on $E$ and find the delay in its start required to meet $P_\\alpha$.",
+    "summaryZh": "取水平轴 $x,y$、竖直向上轴 $z$，重力加速度为常数 $g$。质点 $P_\\alpha$ 自原点在 $y=0$ 平面内沿正 $x$ 方向、以仰角 $0<\\alpha<\\pi/2$ 和速率 $u$ 出发。若轨迹与 $E:z=A-Bx^2,\\ y=0$ 相切，证明 $u^2-2gA=u^2(1-4AB)\\cos^2\\alpha$。若对所有此类 $\\alpha$ 均相切，求 $A,B$。现有质点同时从原点以速率 $u$ 向各个方向出发，$t\\ge0$ 时自由运动。说明可达点的集合，再求时刻 $t$ 各质点所在球面的球心及半径。另有质点 $Q$ 从 $(0,0,A)$ 以水平速度 $(u,0,0)$ 出发。证明其轨迹位于 $E$ 上，并求使其与 $P_\\alpha$ 相遇所需的出发延迟。",
+    "answer": "$A=u^2/(2g)$ and $B=g/(2u^2)$. Reachable points satisfy $z\\le A-B(x^2+y^2)$. At time $t$ the centre is $(0,0,-gt^2/2)$ and the radius $ut$. The required delay is $u(1-\\cos\\alpha)/(g\\sin\\alpha)$.",
+    "answerZh": "$A=u^2/(2g)$、$B=g/(2u^2)$。可达集合由 $z\\le A-B(x^2+y^2)$ 给出。时刻 $t$ 的球心为 $(0,0,-gt^2/2)$、半径为 $ut$。所需延迟为 $u(1-\\cos\\alpha)/(g\\sin\\alpha)$。",
+    "topics": [
+      {
+        "en": "Projectile motion",
+        "zh": "抛体运动"
+      },
+      {
+        "en": "Envelopes of curves",
+        "zh": "曲线包络"
+      },
+      {
+        "en": "Parametric motion",
+        "zh": "参数运动"
+      }
+    ]
+  },
+  "step-2023-p2-q11": {
+    "summary": "A mixture $Y$ selects distribution $X_1$ with probability $p$, or $X_2$ with probability $q=1-p$. Both variables have finite support, with means $\\mu_i$ and variances $\\sigma_i^2$. Find $E[Y]$ and show $\\operatorname{Var}(Y)=p\\sigma_1^2+q\\sigma_2^2+pq(\\mu_1-\\mu_2)^2$. For a fresh fair coin and fair die, score 1 if heads accompanies a six or tails accompanies a non-six, and 0 otherwise. Let $Z_1$ total $n$ independent scores. Identify its binomial law and use a normal approximation to show the probability of being within 10% of its mean tends to one. Now toss just one fair coin for all $n$ independent dice. On heads let $Z_2$ count sixes and on tails let it count non-sixes. Find its mean and variance, explain why a single normal with those moments is unsuitable, and show its probability of being within 10% of its mean tends to zero.",
+    "summaryZh": "混合随机变量 $Y$ 以概率 $p$ 选用 $X_1$ 的分布，以概率 $q=1-p$ 选用 $X_2$ 的分布。二者均取有限个值，均值为 $\\mu_i$、方差为 $\\sigma_i^2$。求 $E[Y]$ 并证明 $\\operatorname{Var}(Y)=p\\sigma_1^2+q\\sigma_2^2+pq(\\mu_1-\\mu_2)^2$。每次独立抛公平硬币并掷公平骰子，正面配六点或反面配非六点得 1 分，其余得 0 分。$Z_1$ 为 $n$ 次独立得分之和，写出其二项分布，并用正态近似证明它落在均值上下 10% 内的概率趋于一。现在 $n$ 枚独立骰子共用一次公平硬币结果；正面时 $Z_2$ 数六点个数，反面时数非六点个数。求均值和方差，说明为何不能以相同均值、方差的单一正态分布良好逼近，并证明它落在均值上下 10% 内的概率趋于零。",
+    "answer": "$E[Y]=p\\mu_1+q\\mu_2$. The fresh-coin total is $Z_1\\sim\\operatorname{Bin}(n,1/2)$. The shared-coin total has mean $n/2$ and variance $5n/36+n^2/9$. It concentrates in two separate groups near $n/6$ and $5n/6$.",
+    "answerZh": "$E[Y]=p\\mu_1+q\\mu_2$。每次重新抛币时 $Z_1\\sim\\operatorname{Bin}(n,1/2)$。共用一次结果时 $Z_2$ 均值为 $n/2$，方差为 $5n/36+n^2/9$，分布的质量分别集中在 $n/6$ 和 $5n/6$ 附近。",
+    "topics": [
+      {
+        "en": "Mixture distributions",
+        "zh": "混合分布"
+      },
+      {
+        "en": "Total variance",
+        "zh": "全方差公式"
+      },
+      {
+        "en": "Normal approximation",
+        "zh": "正态近似"
+      }
+    ]
+  },
+  "step-2023-p2-q12": {
+    "summary": "Let $Y$ be the maximum of $n$ independent draws with density $\\tfrac12\\sin x$ on $[0,\\pi]$, zero elsewhere. If $F$ is the distribution function of one draw, justify $P(Y\\le t)=F(t)^n$ and derive the density of $Y$. Determine its median $m(n)$ and how it changes with $n$. Prove that the mean is $\\mu(n)=\\pi-2^{-n}\\int_0^\\pi(1-\\cos x)^n\\,dx$, show it increases with $n$, and prove $\\mu(2)<m(2)$.",
+    "summaryZh": "从密度为 $\\tfrac12\\sin x$（$0\\le x\\le\\pi$，区间外为零）的分布中独立抽样 $n$ 次，令 $Y$ 为最大值。记单次分布函数为 $F$，说明 $P(Y\\le t)=F(t)^n$ 并求 $Y$ 的密度。求中位数 $m(n)$ 并说明它如何随 $n$ 变化。证明均值为 $\\mu(n)=\\pi-2^{-n}\\int_0^\\pi(1-\\cos x)^n\\,dx$，再证明它随 $n$ 递增，且 $\\mu(2)<m(2)$。",
+    "answer": "The density on $[0,\\pi]$ is $n\\sin x(1-\\cos x)^{n-1}/2^n$. The median $\\arccos(1-2^{1-1/n})$ increases to $\\pi$. At $n=2$ the mean is $5\\pi/8$ while the median is $\\arccos(1-\\sqrt2)>5\\pi/8$.",
+    "answerZh": "在 $[0,\\pi]$ 上密度为 $n\\sin x(1-\\cos x)^{n-1}/2^n$。中位数 $\\arccos(1-2^{1-1/n})$ 递增趋于 $\\pi$。当 $n=2$ 时均值为 $5\\pi/8$，而中位数为 $\\arccos(1-\\sqrt2)>5\\pi/8$。",
+    "topics": [
+      {
+        "en": "Order statistics",
+        "zh": "顺序统计量"
+      },
+      {
+        "en": "Medians",
+        "zh": "中位数"
+      },
+      {
+        "en": "Integration by parts",
+        "zh": "分部积分"
+      }
+    ]
+  }
+}

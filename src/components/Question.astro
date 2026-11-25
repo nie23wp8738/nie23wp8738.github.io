@@ -15,6 +15,7 @@ const p = localPractice(problem, lang);
 const root = zh ? '/zh' : '';
 const tara = p.exam.includes('TARA');
 const writing = p.module === 'writing-task';
+const options = zh ? p.optionsZh : p.options;
 const topicHref = root + '/topics/?topic=' + encodeURIComponent(p.topicKey) + (tara ? '&exam=TARA&kind=original#questions' : '');
 const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#worksheet';
 ---
@@ -26,15 +27,15 @@ const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#wo
       <a href={topicHref}>{p.topic}</a>
     </nav>
     <div class="question-meta">
-      {p.exam.join(' / ')} · {p.level} · {zh ? '原创练习（英文）' : 'Original practice'}
+      {p.exam.join(' / ')} · {p.level} · {zh ? '原创练习' : 'Original practice'}
     </div>
     <h1>{p.title}</h1>
-    <p lang="en" class="statement" style={tara ? 'white-space: pre-line' : undefined}>{p.statement}</p>
-    {p.options && <form class="answer-options" data-answer-options data-correct={p.correctOption} data-lang={lang}>
+    <p class="statement" style={tara ? 'white-space: pre-line' : undefined}>{zh ? p.statementZh : p.statement}</p>
+    {options && <form class="answer-options" data-answer-options data-correct={p.correctOption} data-lang={lang}>
       <fieldset><legend>{zh?'请选择一个答案':'Choose one answer'}</legend>
-        {p.options.map((option,index)=><label>
+        {options.map((option,index)=><label>
           <input type="radio" name="choice" value={index} required />
-          <span lang="en"><b>{String.fromCharCode(65+index)}.</b> {option}</span>
+          <span><b>{String.fromCharCode(65+index)}.</b> {option}</span>
         </label>)}
       </fieldset>
       <button type="submit" class="button light" hidden>{zh?'核对选项':'Check choice'}</button>
@@ -45,8 +46,8 @@ const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#wo
       <a class="button light" href={topicHref}>{zh ? '同知识点练习' : 'More questions on this topic'}</a>
     </div>
     <details>
-      <summary>{zh ? '提示（英文）' : 'Hint'}</summary>
-      <p lang="en">{p.hint}</p>
+      <summary>{zh ? '提示' : 'Hint'}</summary>
+      <p>{zh ? p.hintZh : p.hint}</p>
     </details>
     <WorkedAnswer answer={originalAnswer(problem)} lang={lang} id={p.id} original={true} writing={writing} />
   </article>

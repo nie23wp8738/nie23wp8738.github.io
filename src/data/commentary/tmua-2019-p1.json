@@ -1,0 +1,676 @@
+{
+  "tmua-2019-p1-q1": {
+    "summary": "A quadratic graph has vertex $(-1,3)$ and contains $(1,-1)$. Determine its equation.",
+    "summaryZh": "一条二次函数图像的顶点为 $(-1,3)$，且经过 $(1,-1)$。求其方程。",
+    "answer": "A. $y=-x^2-2x+2$",
+    "answerZh": "A．$y=-x^2-2x+2$",
+    "methods": [
+      {
+        "title": "Fit the vertex form",
+        "titleZh": "用已知点确定顶点式",
+        "topics": [
+          {
+            "en": "Quadratic graphs",
+            "zh": "二次函数图像"
+          },
+          {
+            "en": "Vertex form",
+            "zh": "顶点式"
+          }
+        ],
+        "steps": [
+          "The vertex fixes the form $y=a(x+1)^2+3$. At $(1,-1)$ this gives $-1=4a+3$, so $a=-1$.",
+          "Expanding $-(x+1)^2+3$ yields $-x^2-2x+2$."
+        ],
+        "stepsZh": [
+          "由顶点可设 $y=a(x+1)^2+3$。代入 $(1,-1)$ 得 $-1=4a+3$，所以 $a=-1$。",
+          "展开 $-(x+1)^2+3$ 即得 $-x^2-2x+2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=3"
+  },
+  "tmua-2019-p1-q2": {
+    "summary": "For which real $k$ is $x^2+kx+2x+1-2k$ strictly positive for every real $x$?",
+    "summaryZh": "对于哪些实数 $k$，$x^2+kx+2x+1-2k$ 对所有实数 $x$ 都严格为正？",
+    "answer": "A. $-12<k<0$",
+    "answerZh": "A．$-12<k<0$",
+    "methods": [
+      {
+        "title": "Exclude all real zeros",
+        "titleZh": "排除一切实根",
+        "topics": [
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          },
+          {
+            "en": "Polynomial inequalities",
+            "zh": "多项式不等式"
+          }
+        ],
+        "steps": [
+          "The expression is an upward-opening quadratic in $x$, so it is strictly positive everywhere precisely when its discriminant is negative.",
+          "Compute $(k+2)^2-4(1-2k)=k^2+12k=k(k+12)$. The product is negative between its two roots, giving $-12<k<0$."
+        ],
+        "stepsZh": [
+          "该式是关于 $x$ 的开口向上的二次式，处处严格为正恰好等价于判别式为负。",
+          "判别式为 $(k+2)^2-4(1-2k)=k^2+12k=k(k+12)$。它在两个零点之间为负，故 $-12<k<0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=4"
+  },
+  "tmua-2019-p1-q3": {
+    "summary": "Find the coefficient of $x$ in $\\sum_{j=0}^{80}(1+x)^j$.",
+    "summaryZh": "求 $\\sum_{j=0}^{80}(1+x)^j$ 中一次项 $x$ 的系数。",
+    "answer": "E. $3240$",
+    "answerZh": "E．$3240$",
+    "methods": [
+      {
+        "title": "Sum the individual linear coefficients",
+        "titleZh": "将各项的一次系数相加",
+        "topics": [
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          },
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差求和"
+          }
+        ],
+        "steps": [
+          "For $j\\ge1$, obtaining a single $x$ from $(1+x)^j$ means choosing one of its $j$ factors, so its coefficient is $j$. The constant summand at $j=0$ contributes nothing.",
+          "The total coefficient is $1+2+\\cdots+80=80\\cdot81/2=3240$."
+        ],
+        "stepsZh": [
+          "对于 $j\\ge1$，从 $(1+x)^j$ 中取得一次项，只需在 $j$ 个括号中选择一个提供 $x$，故系数为 $j$。$j=0$ 时为常数，无贡献。",
+          "总系数为 $1+2+\\cdots+80=80\\cdot81/2=3240$。"
+        ]
+      },
+      {
+        "title": "Sum a geometric polynomial",
+        "titleZh": "利用多项式的等比和",
+        "topics": [
+          {
+            "en": "Geometric series",
+            "zh": "等比级数"
+          }
+        ],
+        "steps": [
+          "Let $S(x)=\\sum_{j=0}^{80}(1+x)^j$. Multiplying by $x=(1+x)-1$ telescopes the sum to $xS(x)=(1+x)^{81}-1$.",
+          "The coefficient of $x$ in $S(x)$ equals the coefficient of $x^2$ in the right-hand side, which is $\\binom{81}{2}=3240$."
+        ],
+        "stepsZh": [
+          "设 $S(x)=\\sum_{j=0}^{80}(1+x)^j$。乘以 $x=(1+x)-1$ 后各项依次相消，得到 $xS(x)=(1+x)^{81}-1$。",
+          "$S(x)$ 的一次项系数即右边的二次项系数，等于 $\\binom{81}{2}=3240$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=5"
+  },
+  "tmua-2019-p1-q4": {
+    "summary": "A sequence starts at $x_1=10$ and each new term is the square root of its predecessor. Express $x_{100}$ as a single power of $10$.",
+    "summaryZh": "数列满足 $x_1=10$，每一项都是前一项的算术平方根。把 $x_{100}$ 写成以 $10$ 为底的幂。",
+    "answer": "C. $10^{2^{-99}}$",
+    "answerZh": "C．$10^{2^{-99}}$",
+    "methods": [
+      {
+        "title": "Track the exponent",
+        "titleZh": "追踪指数的变化",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Fractional powers",
+            "zh": "分数指数幂"
+          }
+        ],
+        "steps": [
+          "Write $x_n=10^{e_n}$. Taking a square root halves the exponent, so $e_1=1$ and $e_{n+1}=e_n/2$.",
+          "The step from term $1$ to term $100$ uses $99$ halvings, giving $e_{100}=1/2^{99}$."
+        ],
+        "stepsZh": [
+          "写作 $x_n=10^{e_n}$。每取一次平方根，指数减半，因此 $e_1=1$ 且 $e_{n+1}=e_n/2$。",
+          "从第 $1$ 项到第 $100$ 项共减半 $99$ 次，故 $e_{100}=1/2^{99}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=6"
+  },
+  "tmua-2019-p1-q5": {
+    "summary": "A real geometric sequence has $S_6=9S_3$, where $S_j$ is the sum of the first $j$ terms. Its seventh term is $360$. Find its initial term.",
+    "summaryZh": "实等比数列的前 $j$ 项和记为 $S_j$，已知 $S_6=9S_3$，第七项为 $360$。求首项。",
+    "answer": "E. $\\dfrac{45}{8}$",
+    "answerZh": "E．$\\dfrac{45}{8}$",
+    "methods": [
+      {
+        "title": "Compare two blocks of three",
+        "titleZh": "比较前后两组三项",
+        "topics": [
+          {
+            "en": "Geometric sequences",
+            "zh": "等比数列"
+          },
+          {
+            "en": "Partial sums",
+            "zh": "部分和"
+          }
+        ],
+        "steps": [
+          "For ratio $r$ the second block of three is $r^3$ times the first, hence $S_6=(1+r^3)S_3$. If the initial term is $a$, then $S_3=a(1+r+r^2)\\ne0$: the seventh term is nonzero and $1+r+r^2=(r+1/2)^2+3/4>0$.",
+          "Cancel $S_3$ to get $r^3=8$, or $r=2$. The seventh term is $ar^6=64a=360$, giving $a=45/8$."
+        ],
+        "stepsZh": [
+          "公比为 $r$ 时，第二组三项是第一组三项分别乘 $r^3$，故 $S_6=(1+r^3)S_3$。设首项为 $a$，则 $S_3=a(1+r+r^2)\\ne0$：第七项非零，且 $1+r+r^2=(r+1/2)^2+3/4>0$。",
+          "约去 $S_3$ 得 $r^3=8$，故 $r=2$。第七项为 $ar^6=64a=360$，解得 $a=45/8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=7"
+  },
+  "tmua-2019-p1-q6": {
+    "summary": "Circles centred at $(-4,-1)$ and $(8,4)$ have radii $8$ and $r>0$ respectively. They meet in exactly one point. Find the difference between the two possible radii $r$.",
+    "summaryZh": "两圆的圆心分别为 $(-4,-1)$ 和 $(8,4)$，半径分别为 $8$ 和 $r>0$。它们只有一个公共点。求两个可能的 $r$ 值之差。",
+    "answer": "C. $16$",
+    "answerZh": "C．$16$",
+    "methods": [
+      {
+        "title": "Separate internal and external tangency",
+        "titleZh": "区分内切与外切",
+        "topics": [
+          {
+            "en": "Circle tangency",
+            "zh": "圆的相切"
+          },
+          {
+            "en": "Distance formula",
+            "zh": "距离公式"
+          }
+        ],
+        "steps": [
+          "The centre distance is $\\sqrt{12^2+5^2}=13$. External tangency gives $8+r=13$, so $r=5$.",
+          "Internal tangency requires $|r-8|=13$. Its positive solution is $r=21$. The two radii differ by $21-5=16$."
+        ],
+        "stepsZh": [
+          "圆心距为 $\\sqrt{12^2+5^2}=13$。外切时 $8+r=13$，故 $r=5$。",
+          "内切时 $|r-8|=13$，正解为 $r=21$。两半径之差为 $21-5=16$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=8"
+  },
+  "tmua-2019-p1-q7": {
+    "summary": "For $y=(2q-x^2)(2qx+3)$, choose $q$ to minimise the slope at $x=-1$.",
+    "summaryZh": "设 $y=(2q-x^2)(2qx+3)$。取何值 $q$ 能使曲线在 $x=-1$ 处的斜率最小？",
+    "answer": "F. $\\dfrac34$",
+    "answerZh": "F．$\\dfrac34$",
+    "methods": [
+      {
+        "title": "Differentiate first, then minimise in the parameter",
+        "titleZh": "先对横坐标求导再对参数求最值",
+        "topics": [
+          {
+            "en": "Product rule",
+            "zh": "乘积求导"
+          },
+          {
+            "en": "Quadratic extrema",
+            "zh": "二次函数最值"
+          }
+        ],
+        "steps": [
+          "By the product rule $y'=-2x(2qx+3)+2q(2q-x^2)$. At $x=-1$ the slope is $4q^2-6q+6$.",
+          "This upward quadratic has its vertex at $q=6/8=3/4$, so that parameter gives the least slope."
+        ],
+        "stepsZh": [
+          "由乘积求导法则有 $y'=-2x(2qx+3)+2q(2q-x^2)$。代入 $x=-1$，斜率为 $4q^2-6q+6$。",
+          "该二次式开口向上，顶点对应 $q=6/8=3/4$，故此时斜率最小。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=9"
+  },
+  "tmua-2019-p1-q8": {
+    "summary": "For $0<f<1$ on $[0,1]$, a fixed equal-strip trapezium rule underestimates the integral of $f$. Which transformation guarantees an overestimate with the same strip count: add one, double, translate or reflect the interval with the graph, or take $1-f$?",
+    "summaryZh": "在 $[0,1]$ 上有 $0<f<1$，用固定等分数的梯形法估算 $f$ 的积分时得到低估值。保持分段数，哪种变换必使估值变成高估：加一、加倍、将图像连同区间平移或左右反射、或取 $1-f$？",
+    "answer": "E. Use $1-f(x)$ on $[0,1]$",
+    "answerZh": "E．在 $[0,1]$ 上取 $1-f(x)$",
+    "methods": [
+      {
+        "title": "Use linearity of the estimate and the integral",
+        "titleZh": "利用估值和积分的线性",
+        "topics": [
+          {
+            "en": "Trapezium rule",
+            "zh": "梯形法"
+          },
+          {
+            "en": "Linearity of integration",
+            "zh": "积分的线性"
+          }
+        ],
+        "steps": [
+          "Write the trapezium sum as $T(f)$ and the true integral as $I(f)$, so $T(f)<I(f)$. The rule integrates the constant $1$ exactly on the unit interval.",
+          "Therefore $T(1-f)=1-T(f)>1-I(f)=I(1-f)$. Adding a constant, doubling, or reordering the same strips through a horizontal transformation preserves the original underestimation."
+        ],
+        "stepsZh": [
+          "设梯形估值为 $T(f)$，真实积分为 $I(f)$，则 $T(f)<I(f)$。在单位区间上，梯形法对常数 $1$ 给出的值恰为 $1$。",
+          "因此 $T(1-f)=1-T(f)>1-I(f)=I(1-f)$。加常数、正倍数缩放，或通过水平变换重新排列相同的分段，都不会改变原先低估的方向。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=10"
+  },
+  "tmua-2019-p1-q9": {
+    "summary": "For $p>0$, determine the area enclosed by $y=p\\sqrt{x}$ and $x=p\\sqrt{y}$.",
+    "summaryZh": "设 $p>0$，求曲线 $y=p\\sqrt{x}$ 与 $x=p\\sqrt{y}$ 围成的面积。",
+    "answer": "D. $\\dfrac{p^4}{3}$",
+    "answerZh": "D．$\\dfrac{p^4}{3}$",
+    "methods": [
+      {
+        "title": "Integrate between the two graphs",
+        "titleZh": "对两函数之差积分",
+        "topics": [
+          {
+            "en": "Area between curves",
+            "zh": "曲线间面积"
+          },
+          {
+            "en": "Fractional powers",
+            "zh": "分数指数幂"
+          }
+        ],
+        "steps": [
+          "The second curve is $y=x^2/p^2$ with $x\\ge0$. The curves meet at $x=0$ and $x=p^2$, from $p\\sqrt{x}=x^2/p^2$. The square-root curve is above the other in between.",
+          "Integrating yields $\\left[(2p/3)x^{3/2}-x^3/(3p^2)\\right]_0^{p^2}=2p^4/3-p^4/3=p^4/3$."
+        ],
+        "stepsZh": [
+          "第二条曲线可写作 $y=x^2/p^2$，其中 $x\\ge0$。由 $p\\sqrt{x}=x^2/p^2$ 得两个交点的横坐标为 $0,p^2$，两者之间根号曲线在上方。",
+          "对差积分得 $\\left[(2p/3)x^{3/2}-x^3/(3p^2)\\right]_0^{p^2}=2p^4/3-p^4/3=p^4/3$。"
+        ]
+      },
+      {
+        "title": "Use reflection in the diagonal of a square",
+        "titleZh": "利用正方形对角线的反射",
+        "topics": [
+          {
+            "en": "Reflection symmetry",
+            "zh": "轴对称"
+          }
+        ],
+        "steps": [
+          "The curves are reflections in $y=x$ and meet at the opposite corners of the square $[0,p^2]\\times[0,p^2]$. The area under the lower curve in the square is $\\int_0^{p^2} x^2/p^2\\,dx=p^4/3$.",
+          "Reflection takes the region under that lower curve to the region above the upper curve. Removing these two equal regions from the square of area $p^4$ leaves $p^4-2p^4/3=p^4/3$."
+        ],
+        "stepsZh": [
+          "两条曲线关于 $y=x$ 对称，在正方形 $[0,p^2]\\times[0,p^2]$ 的两个相对顶点处相交。方形中下方曲线以下的面积为 $\\int_0^{p^2} x^2/p^2\\,dx=p^4/3$。",
+          "沿对角线反射，这块区域正好变为上方曲线以上的区域。从面积 $p^4$ 的正方形中扣除两块相等区域，余下 $p^4-2p^4/3=p^4/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=11"
+  },
+  "tmua-2019-p1-q10": {
+    "summary": "Compute $\\int_{-1}^{3}|x|(1-x)\\,dx$.",
+    "summaryZh": "求 $\\int_{-1}^{3}|x|(1-x)\\,dx$。",
+    "answer": "F. $-\\dfrac{11}{3}$",
+    "answerZh": "F．$-\\dfrac{11}{3}$",
+    "methods": [
+      {
+        "title": "Split where the absolute value changes",
+        "titleZh": "在绝对值变号处分段",
+        "topics": [
+          {
+            "en": "Absolute value",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Definite integrals",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "For $-1\\le x\\le0$, the integrand equals $-x+x^2$, giving integral $5/6$.",
+          "For $0\\le x\\le3$, it equals $x-x^2$, giving $9/2-9=-9/2$. The total is $5/6-9/2=-11/3$."
+        ],
+        "stepsZh": [
+          "在 $-1\\le x\\le0$ 时，被积函数为 $-x+x^2$，积分为 $5/6$。",
+          "在 $0\\le x\\le3$ 时，被积函数为 $x-x^2$，积分为 $9/2-9=-9/2$。相加得 $5/6-9/2=-11/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=12"
+  },
+  "tmua-2019-p1-q11": {
+    "summary": "Find the sum of all distinct $x$ arising in solutions of $\\log_3(xy^2)=1$ and $(\\log_3x)(\\log_3y)=-3$.",
+    "summaryZh": "联立 $\\log_3(xy^2)=1$ 和 $(\\log_3x)(\\log_3y)=-3$，求所有不同 $x$ 值的和。",
+    "answer": "H. $27+\\dfrac19$",
+    "answerZh": "H．$27+\\dfrac19$",
+    "methods": [
+      {
+        "title": "Use logarithmic coordinates",
+        "titleZh": "用对数作新坐标",
+        "topics": [
+          {
+            "en": "Logarithmic equations",
+            "zh": "对数方程"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ],
+        "steps": [
+          "Let $u=\\log_3x$ and $v=\\log_3y$. Then $u+2v=1$ and $uv=-3$. Replacing $v$ by $(1-u)/2$ gives $u^2-u-6=0$.",
+          "The roots are $u=3,-2$, giving $x=27,1/9$. Each has a real $v$, hence a positive $y$. Their sum is $27+1/9$."
+        ],
+        "stepsZh": [
+          "令 $u=\\log_3x$、$v=\\log_3y$。则 $u+2v=1$ 且 $uv=-3$。用 $(1-u)/2$ 替换 $v$，得 $u^2-u-6=0$。",
+          "解得 $u=3,-2$，对应 $x=27,1/9$。二者均有实数 $v$，从而给出正的 $y$，故所求和为 $27+1/9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=13"
+  },
+  "tmua-2019-p1-q12": {
+    "summary": "For $t\\ge1$, a quantity satisfies $V'(t)=24\\pi(t-1)/(1+\\sqrt{t})$ and $V(1)=7$. Find $V(9)$.",
+    "summaryZh": "当 $t\\ge1$ 时，$V'(t)=24\\pi(t-1)/(1+\\sqrt{t})$，且 $V(1)=7$。求 $V(9)$。",
+    "answer": "C. $224\\pi+7$",
+    "answerZh": "C．$224\\pi+7$",
+    "methods": [
+      {
+        "title": "Factor before integrating",
+        "titleZh": "先分解再积分",
+        "topics": [
+          {
+            "en": "Difference of squares",
+            "zh": "平方差公式"
+          },
+          {
+            "en": "Accumulation of change",
+            "zh": "变化量积分"
+          }
+        ],
+        "steps": [
+          "Factor $t-1=(\\sqrt{t}-1)(\\sqrt{t}+1)$, so $V'(t)=24\\pi(\\sqrt{t}-1)$.",
+          "The total change equals $24\\pi[(2/3)t^{3/2}-t]_1^9=24\\pi(9+1/3)=224\\pi$. Add the initial value $7$."
+        ],
+        "stepsZh": [
+          "分解 $t-1=(\\sqrt{t}-1)(\\sqrt{t}+1)$，所以 $V'(t)=24\\pi(\\sqrt{t}-1)$。",
+          "总变化量为 $24\\pi[(2/3)t^{3/2}-t]_1^9=24\\pi(9+1/3)=224\\pi$。加上初值 $7$ 即得答案。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=14"
+  },
+  "tmua-2019-p1-q13": {
+    "summary": "What is the largest value of $4^{\\sin x}-4\\cdot2^{\\sin x}+17/4$ for real $x$?",
+    "summaryZh": "当 $x$ 遍历实数时，求 $4^{\\sin x}-4\\cdot2^{\\sin x}+17/4$ 的最大值。",
+    "answer": "B. $\\dfrac52$",
+    "answerZh": "B．$\\dfrac52$",
+    "methods": [
+      {
+        "title": "Maximise a square on a restricted interval",
+        "titleZh": "在限定区间内最大化平方项",
+        "topics": [
+          {
+            "en": "Exponential functions",
+            "zh": "指数函数"
+          },
+          {
+            "en": "Quadratic extrema",
+            "zh": "二次函数最值"
+          }
+        ],
+        "steps": [
+          "Put $u=2^{\\sin x}$. Since $-1\\le\\sin x\\le1$, its range is $[1/2,2]$. The expression becomes $(u-2)^2+1/4$.",
+          "The farthest admissible $u$ from $2$ is $1/2$, attained when $\\sin x=-1$. The maximum is $(3/2)^2+1/4=5/2$."
+        ],
+        "stepsZh": [
+          "令 $u=2^{\\sin x}$。由 $-1\\le\\sin x\\le1$，其值域为 $[1/2,2]$。原式变为 $(u-2)^2+1/4$。",
+          "区间内离 $2$ 最远的是 $1/2$，在 $\\sin x=-1$ 时取到。最大值为 $(3/2)^2+1/4=5/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=15"
+  },
+  "tmua-2019-p1-q14": {
+    "summary": "For $0^\\circ\\le x\\le360^\\circ$, solve $\\sin2x+\\sqrt3\\cos2x=-1$ and $\\sqrt3\\sin2x-\\cos2x=\\sqrt3$ simultaneously, and sum the solutions.",
+    "summaryZh": "在 $0^\\circ\\le x\\le360^\\circ$ 内联立 $\\sin2x+\\sqrt3\\cos2x=-1$、$\\sqrt3\\sin2x-\\cos2x=\\sqrt3$，求所有解之和。",
+    "answer": "B. $330^\\circ$",
+    "answerZh": "B．$330^\\circ$",
+    "methods": [
+      {
+        "title": "Solve for sine and cosine first",
+        "titleZh": "先解正弦与余弦",
+        "topics": [
+          {
+            "en": "Simultaneous equations",
+            "zh": "联立方程"
+          },
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          }
+        ],
+        "steps": [
+          "Add the first equation to $\\sqrt3$ times the second. This gives $4\\sin2x=2$, whence $\\sin2x=1/2$. Substitution gives $\\cos2x=-\\sqrt3/2$.",
+          "For $0^\\circ\\le2x\\le720^\\circ$, the angles with this pair are $150^\\circ$ and $510^\\circ$. Thus $x=75^\\circ,255^\\circ$, summing to $330^\\circ$."
+        ],
+        "stepsZh": [
+          "第一式加上第二式的 $\\sqrt3$ 倍，得 $4\\sin2x=2$，所以 $\\sin2x=1/2$。代回得 $\\cos2x=-\\sqrt3/2$。",
+          "在 $0^\\circ\\le2x\\le720^\\circ$ 中，满足这组正余弦值的角为 $150^\\circ$ 与 $510^\\circ$。故 $x=75^\\circ,255^\\circ$，其和为 $330^\\circ$。"
+        ]
+      },
+      {
+        "title": "Combine the equations with an angle shift",
+        "titleZh": "用角度平移合并两个条件",
+        "topics": [
+          {
+            "en": "Angle addition formulas",
+            "zh": "和角公式"
+          }
+        ],
+        "steps": [
+          "Put $v=2x+60^\\circ$. The sine addition formula turns the first left-hand side into $2\\sin v$, and the cosine addition formula turns the second into $-2\\cos v$.",
+          "Thus $\\sin v=-1/2$ and $\\cos v=-\\sqrt3/2$, so $v=210^\\circ$ modulo $360^\\circ$. In the stated interval this gives $x=75^\\circ$ and $255^\\circ$, with sum $330^\\circ$."
+        ],
+        "stepsZh": [
+          "令 $v=2x+60^\\circ$。由正弦和角公式，第一式左边等于 $2\\sin v$；由余弦和角公式，第二式左边等于 $-2\\cos v$。",
+          "于是 $\\sin v=-1/2$、$\\cos v=-\\sqrt3/2$，故 $v$ 与 $210^\\circ$ 相差 $360^\\circ$ 的整数倍。在指定区间内得 $x=75^\\circ,255^\\circ$，和为 $330^\\circ$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=16"
+  },
+  "tmua-2019-p1-q15": {
+    "summary": "Find the nonzero real solution of $2^{9^x}/8^{3^x}=1/4$.",
+    "summaryZh": "求 $2^{9^x}/8^{3^x}=1/4$ 的非零实数解。",
+    "answer": "A. $\\log_3 2$",
+    "answerZh": "A．$\\log_3 2$",
+    "methods": [
+      {
+        "title": "Compare the exponents of two",
+        "titleZh": "比较底数为二的幂的指数",
+        "topics": [
+          {
+            "en": "Exponential equations",
+            "zh": "指数方程"
+          },
+          {
+            "en": "Substitution",
+            "zh": "换元"
+          }
+        ],
+        "steps": [
+          "Let $u=3^x>0$, so $9^x=u^2$. The given ratio is $2^{u^2-3u}=2^{-2}$.",
+          "Hence $(u-1)(u-2)=0$. The first root gives $x=0$, which is excluded; $u=2$ yields $x=\\log_3 2$."
+        ],
+        "stepsZh": [
+          "令 $u=3^x>0$，则 $9^x=u^2$。原式成为 $2^{u^2-3u}=2^{-2}$。",
+          "可得 $(u-1)(u-2)=0$。第一根给出需排除的 $x=0$，而 $u=2$ 给出 $x=\\log_3 2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=17"
+  },
+  "tmua-2019-p1-q16": {
+    "summary": "Suppose $2\\int_0^1 f(x)\\,dx+5\\int_1^2 f(x)\\,dx=14$ and $\\int_0^1 f(x+1)\\,dx=6$. Find $\\int_0^2 f(x)\\,dx$.",
+    "summaryZh": "已知 $2\\int_0^1 f(x)\\,dx+5\\int_1^2 f(x)\\,dx=14$ 且 $\\int_0^1 f(x+1)\\,dx=6$，求 $\\int_0^2 f(x)\\,dx$。",
+    "answer": "C. $-2$",
+    "answerZh": "C．$-2$",
+    "methods": [
+      {
+        "title": "Shift an integration interval",
+        "titleZh": "平移积分区间",
+        "topics": [
+          {
+            "en": "Change of variables",
+            "zh": "积分换元"
+          },
+          {
+            "en": "Additivity of integrals",
+            "zh": "积分的可加性"
+          }
+        ],
+        "steps": [
+          "Substitute $u=x+1$ in the second integral. Its bounds become $1,2$, so $\\int_1^2 f(u)\\,du=6$.",
+          "Write $A=\\int_0^1 f$. The first relation gives $2A+30=14$, whence $A=-8$. The whole integral is $-8+6=-2$."
+        ],
+        "stepsZh": [
+          "在第二个积分中令 $u=x+1$，上下限变为 $1,2$，所以 $\\int_1^2f(u)\\,du=6$。",
+          "写作 $A=\\int_0^1 f$，第一式为 $2A+30=14$，解得 $A=-8$。全区间积分为 $-8+6=-2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=18"
+  },
+  "tmua-2019-p1-q17": {
+    "summary": "On what fraction of $[0,\\pi]$ is $(\\sin(2\\theta)-1/2)(\\sin\\theta-\\cos\\theta)\\ge0$?",
+    "summaryZh": "在 $[0,\\pi]$ 上，满足 $(\\sin(2\\theta)-1/2)(\\sin\\theta-\\cos\\theta)\\ge0$ 的部分占区间长度的几分之几？",
+    "answer": "C. $\\dfrac14$",
+    "answerZh": "C．$\\dfrac14$",
+    "methods": [
+      {
+        "title": "Match the signs of the two factors",
+        "titleZh": "匹配两个因子的符号",
+        "topics": [
+          {
+            "en": "Trigonometric inequalities",
+            "zh": "三角不等式"
+          },
+          {
+            "en": "Sign analysis",
+            "zh": "符号分析"
+          }
+        ],
+        "steps": [
+          "The first factor is positive on $(\\pi/12,5\\pi/12)$ and negative elsewhere apart from its two zeros. The second switches from negative to positive at $\\pi/4$.",
+          "The product is nonnegative on $[0,\\pi/12]\\cup[\\pi/4,5\\pi/12]$. The combined length is $\\pi/12+2\\pi/12=\\pi/4$, one quarter of the interval."
+        ],
+        "stepsZh": [
+          "第一个因子在 $(\\pi/12,5\\pi/12)$ 为正，在两端点为零，其余处为负。第二个因子在 $\\pi/4$ 处由负变正。",
+          "乘积非负的区间是 $[0,\\pi/12]\\cup[\\pi/4,5\\pi/12]$。总长度为 $\\pi/12+2\\pi/12=\\pi/4$，占原区间的四分之一。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=19"
+  },
+  "tmua-2019-p1-q18": {
+    "summary": "Find the minimum distance from a point on $y=x^2+4$ to a point on $y=2x-2$.",
+    "summaryZh": "求曲线 $y=x^2+4$ 上一点与直线 $y=2x-2$ 上一点之间的最短距离。",
+    "answer": "B. $\\sqrt5$",
+    "answerZh": "B．$\\sqrt5$",
+    "methods": [
+      {
+        "title": "Minimise the point-to-line distance",
+        "titleZh": "最小化点到直线的距离",
+        "topics": [
+          {
+            "en": "Distance to a line",
+            "zh": "点到直线的距离"
+          },
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          }
+        ],
+        "steps": [
+          "The distance from $(t,t^2+4)$ to the line $2x-y-2=0$ is $|2t-(t^2+4)-2|/\\sqrt5$. Its numerator simplifies to $(t-1)^2+5$.",
+          "The numerator attains its minimum $5$ at $t=1$, and the perpendicular foot lies on the line. Thus the smallest distance is $5/\\sqrt5=\\sqrt5$."
+        ],
+        "stepsZh": [
+          "点 $(t,t^2+4)$ 到直线 $2x-y-2=0$ 的距离为 $|2t-(t^2+4)-2|/\\sqrt5$。分子化简为 $(t-1)^2+5$。",
+          "在 $t=1$ 处分子最小为 $5$，且垂足位于所给直线上。因此最短距离是 $5/\\sqrt5=\\sqrt5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=20"
+  },
+  "tmua-2019-p1-q19": {
+    "summary": "Evaluate $\\sum_{k=0}^{90}\\sin((10+90k)^\\circ)$.",
+    "summaryZh": "求 $\\sum_{k=0}^{90}\\sin((10+90k)^\\circ)$。",
+    "answer": "C. $\\sin100^\\circ$",
+    "answerZh": "C．$\\sin100^\\circ$",
+    "methods": [
+      {
+        "title": "Cancel full cycles of four",
+        "titleZh": "消去完整的四项周期",
+        "topics": [
+          {
+            "en": "Trigonometric sums",
+            "zh": "三角函数求和"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "In any four consecutive terms the third is the negative of the first, and the fourth is the negative of the second. Thus each four-term block sums to zero.",
+          "Of the $91$ terms, $88$ form complete blocks. The final three have values $\\sin10^\\circ,\\sin100^\\circ,-\\sin10^\\circ$, leaving $\\sin100^\\circ$."
+        ],
+        "stepsZh": [
+          "任意连续四项中，第三项与第一项互为相反数，第四项与第二项互为相反数，故每四项之和为零。",
+          "共 $91$ 项，其中 $88$ 项组成完整周期。最后三项的值为 $\\sin10^\\circ,\\sin100^\\circ,-\\sin10^\\circ$，合计 $\\sin100^\\circ$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=21"
+  },
+  "tmua-2019-p1-q20": {
+    "summary": "For which $k$ do $y=x^3-12x$ and $y=k-(x-2)^2$ have three distinct intersections with exactly two positive abscissas?",
+    "summaryZh": "对于哪些 $k$，$y=x^3-12x$ 与 $y=k-(x-2)^2$ 有三个不同交点，且恰有两个交点的横坐标为正？",
+    "answer": "E. $-16<k<4$",
+    "answerZh": "E．$-16<k<4$",
+    "methods": [
+      {
+        "title": "Count positive crossings first",
+        "titleZh": "先计算正半轴上的交点",
+        "topics": [
+          {
+            "en": "Cubic graphs",
+            "zh": "三次函数图像"
+          },
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          }
+        ],
+        "steps": [
+          "Equating the graphs gives $k=h(x)=x^3+x^2-16x+4$. Its derivative is $(3x+8)(x-2)$. On the positive axis $h$ decreases from $h(0)=4$ to $h(2)=-16$, then strictly increases without bound.",
+          "A level crosses both positive branches strictly inside them exactly for $-16<k<4$. For these levels $h(0)>k$ while $h(x)$ tends to negative infinity to the left, so there is a negative root too. A cubic has at most three distinct roots."
+        ],
+        "stepsZh": [
+          "联立得 $k=h(x)=x^3+x^2-16x+4$，导数为 $(3x+8)(x-2)$。在正半轴上，$h$ 先从 $h(0)=4$ 降至 $h(2)=-16$，再严格递增至正无穷。",
+          "水平线在两段正半轴分支的内部各交一次，恰需 $-16<k<4$。此时 $h(0)>k$，而向左 $h(x)$ 趋于负无穷，故还存在一个负根。三次方程至多有三个不同根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf#page=22"
+  }
+}

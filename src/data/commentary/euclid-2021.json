@@ -1,0 +1,398 @@
+{
+  "euclid-2021-q1": {
+    "summary": "(a) Solve $(a-1)+(2a-3)=14$. (b) Solve $(c^2-c)+(2c-3)=9$. (c) Find all real $x$ with $1/x^2+3/(2x^2)=10$.",
+    "summaryZh": "(a) 解 $(a-1)+(2a-3)=14$。(b) 解 $(c^2-c)+(2c-3)=9$。(c) 求满足 $1/x^2+3/(2x^2)=10$ 的所有实数 $x$。",
+    "answer": "(a) $6$. (b) $-4,3$. (c) $-1/2,1/2$.",
+    "answerZh": "(a) $6$；(b) $-4,3$；(c) $-1/2,1/2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Collect terms before solving",
+        "titleZh": "合并同类项后求解",
+        "steps": [
+          "(a) Combining like terms gives $3a-4=14$, so $3a=18$ and $a=6$.",
+          "(b) The equation is $c^2+c-12=0$, which factors as $(c+4)(c-3)=0$. Both $-4$ and $3$ satisfy it.",
+          "(c) The denominators require $x\\ne0$. Multiplying by $2x^2$ gives $5=20x^2$, so $x^2=1/4$. Both square roots are allowed."
+        ],
+        "stepsZh": [
+          "(a) 合并同类项得 $3a-4=14$，故 $3a=18$，解得 $a=6$。",
+          "(b) 方程为 $c^2+c-12=0$，即 $(c+4)(c-3)=0$，根为 $-4,3$。",
+          "(c) 分母要求 $x\\ne0$。两边乘 $2x^2$ 得 $5=20x^2$，所以 $x^2=1/4$，正负两个平方根均满足。"
+        ],
+        "topics": [
+          {
+            "en": "Linear equations",
+            "zh": "一次方程"
+          },
+          {
+            "en": "Quadratics",
+            "zh": "二次方程"
+          },
+          {
+            "en": "Fractions",
+            "zh": "分式"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q2": {
+    "summary": "(a) Find the digit sum of $(10^3+1)^2$. (b) Two small cookies initially cost $1.50$ dollars each and one large cookie costs $2.00$ dollars. Small-cookie prices rise by $10\\%$ and large-cookie prices by $5\\%$. What is the percentage increase for this purchase? (c) Qing is twice Rayna's age and four years younger than Paolo. Their three ages average $13$. Find each age.",
+    "summaryZh": "(a) 求 $(10^3+1)^2$ 的数位和。(b) 两块小饼干原来每块 $1.50$ 元，一块大饼干原价 $2.00$ 元。小饼干涨价 $10\\%$，大饼干涨价 $5\\%$，求这次购买总价的涨幅。(c) Qing 的年龄是 Rayna 的两倍，比 Paolo 小四岁。三人平均年龄为 $13$ 岁，求各自年龄。",
+    "answer": "(a) $4$. (b) $8\\%$. (c) Rayna $7$, Qing $14$, Paolo $18$ years.",
+    "answerZh": "(a) $4$；(b) $8\\%$；(c) Rayna 为 $7$ 岁，Qing 为 $14$ 岁，Paolo 为 $18$ 岁。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Expand the square and compare totals",
+        "titleZh": "展开平方与比较总量",
+        "steps": [
+          "(a) The expansion is $10^6+2\\cdot10^3+1=1002001$, whose digits sum to $1+2+1=4$.",
+          "(b) The original bill is $2(1.50)+2.00=5.00$ dollars. The increases total $2(0.15)+0.10=0.40$ dollars, giving a fractional increase of $0.40/5=0.08$.",
+          "(c) Write Rayna's age as $r$. The other ages are $2r$ and $2r+4$, so $5r+4=3\\cdot13=39$. Thus $r=7$ and the other ages are $14$ and $18$."
+        ],
+        "stepsZh": [
+          "(a) 展开得 $10^6+2\\cdot10^3+1=1002001$，其数位和为 $1+2+1=4$。",
+          "(b) 原总价为 $2(1.50)+2.00=5.00$ 元，共上涨 $2(0.15)+0.10=0.40$ 元，故涨幅为 $0.40/5=0.08$。",
+          "(c) 设 Rayna 为 $r$ 岁，另两人分别为 $2r$ 和 $2r+4$ 岁。于是 $5r+4=3\\cdot13=39$，得 $r=7$，另两人分别为 $14,18$ 岁。"
+        ],
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "十进位值"
+          },
+          {
+            "en": "Percentages",
+            "zh": "百分数"
+          },
+          {
+            "en": "Arithmetic means",
+            "zh": "平均数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q3": {
+    "summary": "(a) A quadrilateral has vertices $(0,12),(5,0),(0,-12),(-5,0)$ in order. Find its perimeter. (b) In triangle $ABC$, $A=(0,8)$ and the midpoints of $AB,BC$ are $(3,9),(7,6)$ respectively. Find the slope of $AC$. (c) The graph $y=-2x^2+4x+c$ has vertex $(1,18)$. Find the area of the triangle formed by its vertical-axis intercept and its two horizontal-axis intercepts.",
+    "summaryZh": "(a) 四边形的顶点依次为 $(0,12),(5,0),(0,-12),(-5,0)$，求周长。(b) 三角形 $ABC$ 中 $A=(0,8)$，$AB,BC$ 中点分别为 $(3,9),(7,6)$。求 $AC$ 的斜率。(c) 抛物线 $y=-2x^2+4x+c$ 的顶点为 $(1,18)$，求其三个坐标轴截点围成的三角形面积。",
+    "answer": "(a) $52$. (b) $-3/4$. (c) $48$.",
+    "answerZh": "(a) $52$；(b) $-3/4$；(c) $48$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Use coordinate differences, midpoints and intercepts",
+        "titleZh": "利用坐标差、中点与截距",
+        "steps": [
+          "(a) Each side changes the coordinates by absolute values $5,12$, so each has length $\\sqrt{5^2+12^2}=13$. The perimeter is $4\\cdot13=52$.",
+          "(b) The line joining the midpoints is parallel to $AC$. Its slope is $(6-9)/(7-3)=-3/4$.",
+          "(c) At $x=1$ we have $18=-2+4+c$, giving $c=16$. Now $y=-2(x-4)(x+2)$. The horizontal intercepts are $6$ units apart and the vertical intercept lies $16$ units above them, so the area is $6\\cdot16/2=48$."
+        ],
+        "stepsZh": [
+          "(a) 相邻顶点坐标差的绝对值均为 $5,12$，故边长为 $\\sqrt{5^2+12^2}=13$，周长为 $4\\cdot13=52$。",
+          "(b) 两中点的连线平行于 $AC$，其斜率为 $(6-9)/(7-3)=-3/4$。",
+          "(c) 当 $x=1$ 时 $18=-2+4+c$，故 $c=16$。于是 $y=-2(x-4)(x+2)$。两横截点相距 $6$，纵截点距横轴 $16$，面积为 $6\\cdot16/2=48$。"
+        ],
+        "topics": [
+          {
+            "en": "Distance formula",
+            "zh": "距离公式"
+          },
+          {
+            "en": "Triangle midsegments",
+            "zh": "三角形中位线"
+          },
+          {
+            "en": "Quadratic roots",
+            "zh": "二次方程的根"
+          }
+        ]
+      },
+      {
+        "title": "Part (b) · Recover the endpoints",
+        "titleZh": "第 (b) 问 · 还原端点",
+        "steps": [
+          "Let $M=(3,9)$ and $N=(7,6)$ be the given midpoints. Doubling coordinates gives $B=2M-A=(6,10)$ and $C=2N-B=(8,2)$. Consequently the slope from $A=(0,8)$ to $C$ is $(2-8)/(8-0)=-3/4$."
+        ],
+        "stepsZh": [
+          "记两个中点为 $M=(3,9),N=(7,6)$。由中点公式得 $B=2M-A=(6,10)$，再得 $C=2N-B=(8,2)$。所以从 $A=(0,8)$ 到 $C$ 的斜率为 $(2-8)/(8-0)=-3/4$。"
+        ],
+        "topics": [
+          {
+            "en": "Midpoint formula",
+            "zh": "中点公式"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q4": {
+    "summary": "(a) Find real $x$ if $3\\cdot8^x+5\\cdot8^x=2^{61}$. (b) The numbers $3n^2,m^2,2(n+1)^2$ are consecutive increasing integers, with $m,n$ real. Determine all $m$.",
+    "summaryZh": "(a) 已知 $3\\cdot8^x+5\\cdot8^x=2^{61}$，求实数 $x$。(b) $3n^2,m^2,2(n+1)^2$ 依次为三个连续递增整数，其中 $m,n$ 为实数，求所有可能的 $m$。",
+    "answer": "(a) $58/3$. (b) $m=\\pm1,\\pm7$.",
+    "answerZh": "(a) $58/3$；(b) $m=\\pm1,\\pm7$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Compare exponents and use the endpoint difference",
+        "titleZh": "比较指数与首末两项的差",
+        "steps": [
+          "(a) The left side is $8^{x+1}=2^{3x+3}$. Hence $3x+3=61$ and $x=58/3$.",
+          "(b) The last term exceeds the first by $2$, so $2(n+1)^2-3n^2=2$, or $n(n-4)=0$. For $n=0$ the list is $0,1,2$, yielding $m=\\pm1$. For $n=4$ the list is $48,49,50$, yielding $m=\\pm7$."
+        ],
+        "stepsZh": [
+          "(a) 左边为 $8^{x+1}=2^{3x+3}$，故 $3x+3=61$，即 $x=58/3$。",
+          "(b) 末项比首项大 $2$，故 $2(n+1)^2-3n^2=2$，化为 $n(n-4)=0$。取 $n=0$ 得 $0,1,2$，故 $m=\\pm1$；取 $n=4$ 得 $48,49,50$，故 $m=\\pm7$。"
+        ],
+        "topics": [
+          {
+            "en": "Exponents",
+            "zh": "指数"
+          },
+          {
+            "en": "Consecutive integers",
+            "zh": "连续整数"
+          },
+          {
+            "en": "Quadratics",
+            "zh": "二次方程"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q5": {
+    "summary": "(a) Reflect a point in the horizontal axis, translate it up by $2$, then reflect it in the vertical axis. Applying the entire operation six times yields $(-7,-1)$. Find the initial point. (b) Rectangle $ABDE$ and an outward-pointing equilateral triangle $BCD$ share the side $BD$. We have $AE=2x$ and $AD\\parallel BC$. Find (i) $AB$ in terms of $x$ and (ii) positive integers $r,s$ such that $AC/AD=\\sqrt{r/s}$.",
+    "summaryZh": "(a) 将一点关于横轴反射，上移 $2$ 个单位，再关于纵轴反射。上述整套操作连续执行六次后得到 $(-7,-1)$。求起点。(b) 矩形 $ABDE$ 和向矩形外部作的等边三角形 $BCD$ 共边 $BD$，已知 $AE=2x$ 且 $AD\\parallel BC$。求 (i) 用 $x$ 表示 $AB$；(ii) 正整数 $r,s$ 使 $AC/AD=\\sqrt{r/s}$。",
+    "answer": "(a) $(-7,-1)$. (b)(i) $AB=2\\sqrt3\\,x$. (ii) $r=7,s=4$.",
+    "answerZh": "(a) $(-7,-1)$；(b)(i) $AB=2\\sqrt3\\,x$；(ii) $r=7,s=4$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Compose the transformations and locate the equilateral vertex",
+        "titleZh": "复合几何变换与确定等边三角形的顶点",
+        "steps": [
+          "(a) The combined map sends $(u,v)$ to $(-u,2-v)$. Applying it twice sends $(u,v)$ back to itself. Six applications are three such pairs, so the initial point equals the final point.",
+          "(b) Set $E=(0,0),A=(0,2x),D=(w,0),B=(w,2x)$. The equilateral triangle on the right has $C=(w+\\sqrt3 x,x)$, because its altitude has length $\\sqrt3 x$. The slopes of $AD$ and $BC$ are $-2x/w$ and $-1/\\sqrt3$. Equality gives (i) $w=2\\sqrt3 x$.",
+          "(ii) The coordinate differences give $AD^2=w^2+4x^2=16x^2$ and $AC^2=(3\\sqrt3 x)^2+x^2=28x^2$. Thus $(AC/AD)^2=7/4$."
+        ],
+        "stepsZh": [
+          "(a) 整套操作把 $(u,v)$ 映到 $(-u,2-v)$。连续做两次回到 $(u,v)$。六次可分为三对，故起点就是终点。",
+          "(b) 取 $E=(0,0),A=(0,2x),D=(w,0),B=(w,2x)$。右侧等边三角形的高为 $\\sqrt3 x$，故 $C=(w+\\sqrt3 x,x)$。$AD,BC$ 的斜率分别为 $-2x/w,-1/\\sqrt3$。两者相等，得 (i) $w=2\\sqrt3 x$。",
+          "(ii) 由坐标差得 $AD^2=w^2+4x^2=16x^2$，同时 $AC^2=(3\\sqrt3 x)^2+x^2=28x^2$，故 $(AC/AD)^2=7/4$。"
+        ],
+        "topics": [
+          {
+            "en": "Reflections",
+            "zh": "反射"
+          },
+          {
+            "en": "Equilateral triangles",
+            "zh": "等边三角形"
+          },
+          {
+            "en": "Parallel lines",
+            "zh": "平行线"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q6": {
+    "summary": "(a) An arithmetic sequence has $n>5$ terms, $t_3=5,t_{n-2}=95$, and total $1000$. Find $n$. (b) A geometric sequence with real first term $a$ and nonzero real ratio $r$ has four-term sum $6+6\\sqrt2$ and eight-term sum $30+30\\sqrt2$. Find all possible $a$.",
+    "summaryZh": "(a) 一个 $n>5$ 项的等差数列满足 $t_3=5,\\ t_{n-2}=95$，总和为 $1000$。求 $n$。(b) 等比数列的实数首项为 $a$，非零实数公比为 $r$。前四项和为 $6+6\\sqrt2$，前八项和为 $30+30\\sqrt2$，求所有可能的 $a$。",
+    "answer": "(a) $20$. (b) $2$ or $-6-4\\sqrt2$.",
+    "answerZh": "(a) $20$；(b) $2$ 或 $-6-4\\sqrt2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Pair symmetric terms and group the geometric sums",
+        "titleZh": "对称配对与等比数列分组",
+        "steps": [
+          "(a) The third and third-last terms are symmetric, so their sum $100$ equals $t_1+t_n$. The mean of the whole sequence is $50$, hence $n=1000/50=20$.",
+          "(b) The next four terms are $r^4$ times the first four. Thus the ratio of the eight-term sum to the four-term sum is $1+r^4=5$, giving $r=\\sqrt2$ or $-\\sqrt2$. The four-term sum is $a(1+r)(1+r^2)=3a(1+r)$. Hence $a=2(1+\\sqrt2)/(1+r)$, which is respectively $2$ or $-6-4\\sqrt2$. Each choice reproduces both sums."
+        ],
+        "stepsZh": [
+          "(a) 第三项与倒数第三项位置对称，两者之和 $100$ 等于首末两项之和。全数列平均数为 $50$，故 $n=1000/50=20$。",
+          "(b) 后四项分别等于前四项的 $r^4$ 倍，因此前八项和与前四项和之比为 $1+r^4=5$，故 $r=\\sqrt2$ 或 $-\\sqrt2$。前四项和为 $a(1+r)(1+r^2)=3a(1+r)$，所以 $a=2(1+\\sqrt2)/(1+r)$，分别得 $2$ 或 $-6-4\\sqrt2$。两种取法都满足题设。"
+        ],
+        "topics": [
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Geometric sequences",
+            "zh": "等比数列"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q7": {
+    "summary": "(a) Draw balls uniformly without replacement from a bag containing three greens and four reds. Stop as soon as a colour appears twice. What is the probability that both colours have appeared by then? (b) Let $f(u)=2u^2-3u+1$ and $g(v)=\\log_{1/2}v$. Find $\\theta\\in[0,2\\pi]$ with $f(g(\\sin\\theta))=0$.",
+    "summaryZh": "(a) 从装有三绿四红的袋中等可能地不放回抽球，一有某种颜色出现两次即停止。求停止时两种颜色均已出现的概率。(b) 设 $f(u)=2u^2-3u+1,\\ g(v)=\\log_{1/2}v$。求满足 $f(g(\\sin\\theta))=0$ 的所有 $\\theta\\in[0,2\\pi]$。",
+    "answer": "(a) $4/7$. (b) $\\pi/6,\\pi/4,3\\pi/4,5\\pi/6$.",
+    "answerZh": "(a) $4/7$；(b) $\\pi/6,\\pi/4,3\\pi/4,5\\pi/6$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Examine the first two draws and invert the functions",
+        "titleZh": "考察前两抽与反解复合函数",
+        "steps": [
+          "(a) If the first two colours agree, the process ends immediately. If they differ, the third draw repeats a colour and both colours are present. The desired probability is $(3/7)(4/6)+(4/7)(3/6)=4/7$.",
+          "(b) Factor $f(u)=(2u-1)(u-1)$. Thus $g(\\sin\\theta)$ is $1/2$ or $1$, and $\\sin\\theta$ is $1/\\sqrt2$ or $1/2$. Both arguments are positive as required. Their reference angles are $\\pi/4$ and $\\pi/6$; using the first two quadrants gives the four listed angles."
+        ],
+        "stepsZh": [
+          "(a) 前两球同色就立即停止；异色则第三球必重复一种颜色，且两色均已出现。故所求概率为 $(3/7)(4/6)+(4/7)(3/6)=4/7$。",
+          "(b) 分解 $f(u)=(2u-1)(u-1)$。所以 $g(\\sin\\theta)$ 为 $1/2$ 或 $1$，从而 $\\sin\\theta$ 为 $1/\\sqrt2$ 或 $1/2$，均为正且在对数定义域内。参考角为 $\\pi/4,\\pi/6$，分别取第一、二象限便得四个解。"
+        ],
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          }
+        ]
+      },
+      {
+        "title": "Part (a) · Count the same-colour pairs instead",
+        "titleZh": "第 (a) 问 · 数前两球同色的反面事件",
+        "steps": [
+          "Among $\\binom72=21$ unordered first pairs, $\\binom32+\\binom42=3+6=9$ have the same colour. Those are precisely the cases where only one colour has appeared on stopping. The desired probability is $(21-9)/21=4/7$."
+        ],
+        "stepsZh": [
+          "前两球的无序组合共有 $\\binom72=21$ 种，其中同色的有 $\\binom32+\\binom42=3+6=9$ 种。这些恰好是停止时只有一种颜色的情形，故所求概率为 $(21-9)/21=4/7$。"
+        ],
+        "topics": [
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q8": {
+    "summary": "(a) Choose five distinct entries from $1,\\ldots,8$ and place them in order in a row. Each new row consists of the products of consecutive pairs of the preceding row, until one number remains. How many initial rows produce $9\\,953\\,280\\,000$? (b) Prove $(1!2!\\cdots400!)/200!$ is a perfect square, with the numerator understood as a product of all the indicated factorials.",
+    "summaryZh": "(a) 从 $1$ 至 $8$ 中任选五个不同的数依次排成首行。每一新行由上一行每对相邻数的乘积组成，直到只剩一个数。问多少种首行能得到 $9\\,953\\,280\\,000$？(b) 证明 $\\bigl(\\prod_{j=1}^{400}j!\\bigr)/200!$ 是完全平方数。",
+    "answer": "(a) $8$. (b) The quotient is $\\bigl(2^{100}\\prod_{j=1}^{200}(2j-1)!\\bigr)^2$.",
+    "answerZh": "(a) $8$；(b) 该商等于 $\\bigl(2^{100}\\prod_{j=1}^{200}(2j-1)!\\bigr)^2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Track exponents and group adjacent factorials",
+        "titleZh": "追踪指数与将相邻阶乘配对",
+        "steps": [
+          "(a) With initial row $A,B,C,D,E$, each multiplication adds exponents from adjacent entries. After four rounds the single product is $AB^4C^6D^4E$. The target factors as $2^{16}3^5 5^4$. Thus $7$ is absent and $5$ must be one of $B,D$, since only those slots have exponent $4$.",
+          "The exponent of $3$ forces one of $3,6$ into the other fourth-power slot, and the other number into an endpoint. The two unused slots are the centre and the other endpoint, both powers of two from $1,2,4,8$. Write these as $2^u,2^v$ respectively, $0\\le u,v\\le3$. If $6$ is the endpoint, $6u+v=15$, forcing $(u,v)=(2,3)$. If $6$ is raised to the fourth power, $6u+v=12$, forcing $(u,v)=(2,0)$.",
+          "All chosen entries are distinct in both cases. There are two choices of the slot of $5$, two choices of which of $3,6$ fills the other fourth-power slot, and two choices of which endpoint holds the multiple of three. Their product gives $8$.",
+          "(b) Pair $(2j-1)!$ with $(2j)!$. Their product is $(2j)((2j-1)!)^2$. Multiplying for $j=1,\\ldots,200$ gives a square times $\\prod_{j=1}^{200}2j=2^{200}200!$. The denominator cancels $200!$, leaving the stated square."
+        ],
+        "stepsZh": [
+          "(a) 记首行为 $A,B,C,D,E$。每做一次相邻乘法，质因数的指数相加。四轮后得到 $AB^4C^6D^4E$。目标数分解为 $2^{16}3^5 5^4$。故不能用 $7$，而 $5$ 只能在指数为 $4$ 的 $B,D$ 中占一位。",
+          "$3$ 的指数为 $5$，因此 $3,6$ 中一个必须占另一四次方位置，另一个占端点。余下的中心与另一端点取 $1,2,4,8$ 中的 $2$ 的幂，分别写作 $2^u,2^v$，其中 $0\\le u,v\\le3$。若 $6$ 在端点，得 $6u+v=15$，只有 $(u,v)=(2,3)$。若 $6$ 在四次方位置，得 $6u+v=12$，只有 $(u,v)=(2,0)$。",
+          "上述两种情形中的数均互异。$5$ 的位置有两种，另一四次方位置用 $3$ 还是 $6$ 有两种，$3$ 的倍数放左端还是右端又有两种。相乘得 $8$。",
+          "(b) 将 $(2j-1)!$ 与 $(2j)!$ 配成一对，乘积为 $(2j)((2j-1)!)^2$。对 $j=1,\\ldots,200$ 相乘，除平方部分外，余下 $\\prod_{j=1}^{200}2j=2^{200}200!$。约去分母 $200!$ 后即为答案所示的平方。"
+        ],
+        "topics": [
+          {
+            "en": "Prime exponents",
+            "zh": "质因数指数"
+          },
+          {
+            "en": "Pascal’s triangle",
+            "zh": "杨辉三角"
+          },
+          {
+            "en": "Factorials",
+            "zh": "阶乘"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q9": {
+    "summary": "Consider $K^2+3L^2=a^2+b^2-ab$ in integers. (a) For $a=5,b=4$, list every $(K,L)$. (b) For every $K,L$, construct integers $a,b$ giving equality. (c) Conversely, for every $a,b$, construct integers $K,L$ giving equality.",
+    "summaryZh": "考虑整数等式 $K^2+3L^2=a^2+b^2-ab$。(a) 当 $a=5,b=4$ 时，列出所有 $(K,L)$。(b) 对每组整数 $K,L$，构造满足等式的整数 $a,b$。(c) 反过来，对每组整数 $a,b$，构造满足等式的整数 $K,L$。",
+    "answer": "(a) $(\\pm3,\\pm2)$ with independent signs. (b) $a=K+L,\\ b=K-L$. (c) Use the half-sum and half-difference for equal parities, or halve the even input as detailed below.",
+    "answerZh": "(a) $(\\pm3,\\pm2)$，符号独立；(b) $a=K+L,\\ b=K-L$；(c) 同奇偶时取半和、半差，异奇偶时按下述方法将偶数取半。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "(a) Enumerate squares; (b,c) complete a square with the right parity",
+        "titleZh": "枚举平方数并按奇偶性配方",
+        "steps": [
+          "(a) The right side is $25+16-20=21$. We must have $|L|\\le2$. For $|L|=0,1,2$ the possible $K^2$ are $21,18,9$ respectively. Only $9$ is square, giving the four sign choices stated.",
+          "(b) Expanding $(K+L)^2+(K-L)^2-(K+L)(K-L)$ gives $K^2+3L^2$. This supplies integers $a,b$ for every integer pair $K,L$.",
+          "(c) If $a,b$ have the same parity, take $K=(a+b)/2,\\ L=(a-b)/2$ and apply (b). Otherwise one input is even. By symmetry call it $b$. Then $a^2+b^2-ab=(a-b/2)^2+3(b/2)^2$, so take $K=a-b/2,\\ L=b/2$. When $a$ is the even input interchange $a,b$ in these formulas."
+        ],
+        "stepsZh": [
+          "(a) 右边为 $25+16-20=21$，故 $|L|\\le2$。当 $|L|=0,1,2$ 时，$K^2$ 分别为 $21,18,9$，仅 $9$ 为平方数，因此有答案所示四种符号组合。",
+          "(b) 展开 $(K+L)^2+(K-L)^2-(K+L)(K-L)$ 得 $K^2+3L^2$，所以任意整数 $K,L$ 都得到一组整数 $a,b$。",
+          "(c) 若 $a,b$ 同奇偶，取 $K=(a+b)/2,\\ L=(a-b)/2$ 即可套用 (b)。若异奇偶，其中一个为偶数。由对称性先设 $b$ 为偶数，因 $a^2+b^2-ab=(a-b/2)^2+3(b/2)^2$，取 $K=a-b/2,\\ L=b/2$。若 $a$ 为偶数，则对调公式中的 $a,b$。"
+        ],
+        "topics": [
+          {
+            "en": "Quadratic forms",
+            "zh": "二次型"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2021-q10": {
+    "summary": "(a) A circle of radius $4$ is externally tangent to ten surrounding circles. In cyclic order their radii are $r,2,1,2,1,2,1,2,1,2$ and each is externally tangent to its two neighbours. Determine positive integers $s,t$ with $r=s/t$. (b) Around a circle of integer radius $c$, four circles of radii $a,b,a,b$ in that cyclic order each touch the central circle and both neighbours externally. For $c<a<b$ integers let $f(c)$ count the possible pairs $(a,b)$. For which positive integers $c$ is $f(c)$ even?",
+    "summaryZh": "(a) 一个半径为 $4$ 的圆与周围十个圆都外切。外侧圆的半径按圆周顺序为 $r,2,1,2,1,2,1,2,1,2$，每个圆又与左右邻圆外切。求正整数 $s,t$ 使 $r=s/t$。(b) 在半径为正整数 $c$ 的圆的周围，四圆的半径依次是 $a,b,a,b$，每圆与中央圆及两个邻圆外切。令 $f(c)$ 表示整数 $c<a<b$ 时可行数对 $(a,b)$ 的个数。求使 $f(c)$ 为偶数的所有正整数 $c$。",
+    "answer": "(a) $r=25538/2053$, so take $s=25538,t=2053$. (b) Exactly $c=2^{2h+1}u$ with $h\\ge0$ an integer and $u$ a positive odd integer.",
+    "answerZh": "(a) $r=25538/2053$，可取 $s=25538,t=2053$；(b) 恰为 $c=2^{2h+1}u$，其中 $h$ 为非负整数，$u$ 为正奇数。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Add the angles at the centre and count divisor pairs",
+        "titleZh": "中央圆心角求和与因数配对",
+        "steps": [
+          "(a) Let $\\alpha$ be the angle at the central centre between adjacent outer circles of radii $1,2$, and $\\beta$ the corresponding angle for $r,2$. There are eight of the former and two of the latter, so $\\beta=180^\\circ-4\\alpha$. In the first triangle of centres the sides are $5,6,3$, so $\\cos\\alpha=(25+36-9)/60=13/15$.",
+          "The double-angle formula gives $\\cos 2\\alpha=113/225$ and $\\cos\\beta=1-2(113/225)^2=25087/50625$. In the other triangle, the sides adjacent to $\\beta$ are $r+4$ and $6$ and the opposite side is $r+2$. Thus $\\cos\\beta=((r+4)^2+36-(r+2)^2)/(12(r+4))=(r+12)/(3r+12)$. Solving the linear equation gives $r=25538/2053$.",
+          "(b) Each of the four triangles at the central centre has sides $a+c,b+c,a+b$, so the four central angles agree and each is $90^\\circ$. The Pythagorean relation $(a+c)^2+(b+c)^2=(a+b)^2$ simplifies to $(a-c)(b-c)=2c^2$. Conversely, given this equation, place the outer centres on the four coordinate rays at alternating distances $a+c,b+c$. Their adjacent distances are $a+b$, so all required tangencies hold.",
+          "Every smaller–larger positive divisor pair of $2c^2$ determines exactly one $(a,b)$ by adding $c$ to the two divisors. This number is never square since its exponent of $2$ is odd. Write $c=2^v\\prod p_i^{e_i}$ with odd primes $p_i$. The number of divisors of $2c^2$ is $(2v+2)\\prod(2e_i+1)$, so $f(c)=(v+1)\\prod(2e_i+1)$. All factors in the product are odd. The count is even exactly when $v$ is odd."
+        ],
+        "stepsZh": [
+          "(a) 在中央圆心处，半径 $1,2$ 的相邻外圆所夹的角记为 $\\alpha$，半径 $r,2$ 的相应夹角记为 $\\beta$。前者八个、后者两个，故 $\\beta=180^\\circ-4\\alpha$。第一类圆心三角形的三边为 $5,6,3$，所以 $\\cos\\alpha=(25+36-9)/60=13/15$。",
+          "二倍角公式给出 $\\cos 2\\alpha=113/225$，故 $\\cos\\beta=1-2(113/225)^2=25087/50625$。另一类圆心三角形中，夹 $\\beta$ 的两边为 $r+4,6$，对边为 $r+2$。故 $\\cos\\beta=((r+4)^2+36-(r+2)^2)/(12(r+4))=(r+12)/(3r+12)$。解此一次方程得 $r=25538/2053$。",
+          "(b) 四个圆心三角形的边长均为 $a+c,b+c,a+b$，故四个中央圆心角相等，各为 $90^\\circ$。由勾股关系 $(a+c)^2+(b+c)^2=(a+b)^2$ 得 $(a-c)(b-c)=2c^2$。反之，若此式成立，将四个外圆心置于四条坐标半轴上，到原点的距离交替取 $a+c,b+c$，则相邻圆心相距 $a+b$，可实现全部所需的相切关系。",
+          "$2c^2$ 的每对较小、较大正因数各加 $c$，恰好给出一组 $(a,b)$。因 $2$ 的指数为奇数，$2c^2$ 必非完全平方数。设 $c=2^v\\prod p_i^{e_i}$，其中 $p_i$ 均为奇质数，则 $2c^2$ 的正因数有 $(2v+2)\\prod(2e_i+1)$ 个，配对后 $f(c)=(v+1)\\prod(2e_i+1)$。乘积中的因子均为奇数，故计数为偶数当且仅当 $v$ 为奇数。"
+        ],
+        "topics": [
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Circle tangency",
+            "zh": "圆的相切"
+          },
+          {
+            "en": "Divisor function",
+            "zh": "约数个数函数"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -67,10 +67,10 @@ try {
           for (const [i, method] of note.methods.entries()) {
             parts.push({label:'Method '+(i+1),text:[method.title,'Topics: '+method.topics.map(t=>t.en).join(', '),method.steps[0]].join('\n\n')});
             for (const step of method.steps.slice(1)) parts.push({text:step});
-            if (method.figure) parts.push({figure:figureKey(method.figure,true)});
+            if (method.figure) parts.push({figure:figureKey(method.figure,true),figurePrintHeightPt:method.figure.printHeightPt});
           }
         }
-        return {id, intro:note.summary, introFigure:figureKey(note.figure), parts};
+        return {id, intro:note.summary, introFigure:figureKey(note.figure), introFigurePrintHeightPt:note.figure?.printHeightPt, parts};
       });
       const input = path.join(scratch,kind+'.json');
       await fs.writeFile(input,JSON.stringify(rows));

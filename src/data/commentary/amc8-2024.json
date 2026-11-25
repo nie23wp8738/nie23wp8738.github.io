@@ -321,7 +321,8 @@
     "figure": {
       "url": "/commentary-figures/amc8-2024-q6.svg",
       "alt": "Plans of routes P, Q, R and S. Solid lines show the routes; dashed lines show unused parts of the rink boundaries.",
-      "altZh": "路线 P、Q、R、S 的平面图，实线标示滑行路线，虚线标示未经过的冰场外边界。"
+      "altZh": "路线 P、Q、R、S 的平面图，实线标示滑行路线，虚线标示未经过的冰场外边界。",
+      "printHeightPt": 220
     }
   },
   "amc8-2024-q7": {

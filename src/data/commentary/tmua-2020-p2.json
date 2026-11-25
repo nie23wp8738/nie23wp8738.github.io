@@ -57,6 +57,24 @@
           "给定的半周范围中，正切为正的角在第三象限，所以余弦为负。",
           "利用 $1/\\cos^2\\theta=1+\\tan^2\\theta=5$，可得 $\\cos\\theta=-1/\\sqrt5$。"
         ]
+      },
+      {
+        "title": "Choose a reference triangle",
+        "titleZh": "构造参考直角三角形",
+        "topics": [
+          {
+            "en": "Right-triangle trigonometry",
+            "zh": "直角三角形三角比"
+          }
+        ],
+        "steps": [
+          "A reference triangle with opposite leg $2$ and adjacent leg $1$ has hypotenuse $\\sqrt5$, so the magnitude of the cosine is $1/\\sqrt5$.",
+          "To give positive tangent below the horizontal axis, the ray must also point left. Its horizontal component is negative, giving $\\cos\\theta=-1/\\sqrt5$."
+        ],
+        "stepsZh": [
+          "取对边为 $2$、邻边为 $1$ 的参考直角三角形，其斜边为 $\\sqrt5$，故余弦的绝对值是 $1/\\sqrt5$。",
+          "角的终边位于横轴下方，要使正切为正，终边还须指向左侧。因此水平分量为负，$\\cos\\theta=-1/\\sqrt5$。"
+        ]
       }
     ],
     "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=4"
@@ -460,6 +478,24 @@
           "令 $u=\\sqrt3/2$。每六项依次为 $u,u,0,-u,-u,0$，总和为零，所以可略去完整的六项组。",
           "一个周期前一至六项的部分和依次为 $u,2u,2u,u,0,0$。目标恰在 $n$ 除以 $6$ 余 $1$ 或 $4$ 时达到，等价于 $n\\equiv1\\pmod3$。"
         ]
+      },
+      {
+        "title": "Telescope differences of cosines",
+        "titleZh": "用余弦差消去中间项",
+        "topics": [
+          {
+            "en": "Sum-to-product identities",
+            "zh": "和差化积"
+          }
+        ],
+        "steps": [
+          "The identity $\\cos(u-v)-\\cos(u+v)=2\\sin u\\sin v$, with $u=k\\pi/3$ and $v=\\pi/6$, writes each summand as $\\cos((2k-1)\\pi/6)-\\cos((2k+1)\\pi/6)$.",
+          "Summing leaves $\\cos(\\pi/6)-\\cos((2n+1)\\pi/6)$. The desired value is $\\cos(\\pi/6)$, so we require $(2n+1)\\pi/6=\\pi/2+j\\pi$, or $n=1+3j$."
+        ],
+        "stepsZh": [
+          "在恒等式 $\\cos(u-v)-\\cos(u+v)=2\\sin u\\sin v$ 中，令 $u=k\\pi/3$、$v=\\pi/6$，可将每项写成 $\\cos((2k-1)\\pi/6)-\\cos((2k+1)\\pi/6)$。",
+          "相加后中间项相消，得 $\\cos(\\pi/6)-\\cos((2n+1)\\pi/6)$。目标值就是 $\\cos(\\pi/6)$，故须 $(2n+1)\\pi/6=\\pi/2+j\\pi$，即 $n=1+3j$。"
+        ]
       }
     ],
     "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=17"
@@ -490,6 +526,24 @@
         "stepsZh": [
           "令 $F(u)=\\int_0^u t^2\\,dt$，则 $F'(u)=u^2$。前两步正确地把原式写成 $F(2x)-F(x)$，并得到 $F'(x)=x^2$。",
           "第 III 步对 $F(2x)$ 求导时缺少内层导数 $2$，正确结果是 $2(2x)^2=8x^2$。再减去 $x^2$ 得 $7x^2$。"
+        ]
+      },
+      {
+        "title": "Integrate before differentiating",
+        "titleZh": "先求积分再求导",
+        "topics": [
+          {
+            "en": "Power rule",
+            "zh": "幂函数运算"
+          }
+        ],
+        "steps": [
+          "Evaluating the integral directly gives $[(t^3/3)]_x^{2x}=7x^3/3$, and its derivative is $7x^2$.",
+          "In particular, the upper portion $\\int_0^{2x} t^2\\,dt=8x^3/3$ has derivative $8x^2$. This identifies the first erroneous value as the $4x^2$ in III."
+        ],
+        "stepsZh": [
+          "直接算出定积分为 $[(t^3/3)]_x^{2x}=7x^3/3$，再求导得 $7x^2$。",
+          "尤其是上段积分 $\\int_0^{2x} t^2\\,dt=8x^3/3$ 的导数为 $8x^2$。因此最早错误就是第 III 步写出的 $4x^2$。"
         ]
       }
     ],

@@ -127,7 +127,8 @@
     "figure": {
       "url": "/commentary-figures/amc8-2023-q4.svg",
       "alt": "Spiral grid with its first seven entries and four shaded cells.",
-      "altZh": "螺旋方格中给出前七个数和四个着色格。"
+      "altZh": "螺旋方格中给出前七个数和四个着色格。",
+      "printHeightPt": 126
     }
   },
   "amc8-2023-q5": {
@@ -267,7 +268,8 @@
     "figure": {
       "url": "/commentary-figures/amc8-2023-q9.svg",
       "alt": "Height in metres against time in seconds, with gridlines at unit intervals.",
-      "altZh": "滑雪高度（米）与时间（秒）的图像，网格间隔均为一个单位。"
+      "altZh": "滑雪高度（米）与时间（秒）的图像，网格间隔均为一个单位。",
+      "printHeightPt": 180
     }
   },
   "amc8-2023-q10": {

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281 208">
+<title>Triangular-prism net with fold lines and right angles at J and I</title>
+<path d="M69.8 18.6L121 57L185 57L261.8 159.4L223.4 188.2L185 137L121 137L31.4 69.8Z" fill="#e2edf0" stroke="#203c4a" stroke-width="1.6"/>
+<path d="M121 57L82.6 108.2" fill="none" stroke="#516c79" stroke-width="1.2" stroke-dasharray="4 3"/>
+<path d="M121 57L121 137" fill="none" stroke="#516c79" stroke-width="1.2" stroke-dasharray="4 3"/>
+<path d="M185 57L185 137" fill="none" stroke="#516c79" stroke-width="1.2" stroke-dasharray="4 3"/>
+<path d="M185 137L223.4 108.2" fill="none" stroke="#516c79" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="68.8" y="13.6" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">A</text>
+<text x="122" y="52" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">B</text>
+<text x="187" y="52" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">C</text>
+<text x="232.4" y="109.2" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">I</text>
+<text x="269.8" y="163.4" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">D</text>
+<text x="224.4" y="202.2" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">E</text>
+<text x="186" y="150" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">F</text>
+<text x="120" y="150" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">G</text>
+<text x="75.6" y="116.2" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">J</text>
+<text x="22.4" y="73.8" text-anchor="middle" fill="#203c4a" style="font:13px Georgia,serif">H</text>
+<path d="M86.6 111.2L89.6 107.2L85.6 104.2" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M219.4 111.2L216.4 107.2L220.4 104.2" fill="none" stroke="#516c79" stroke-width="1"/>
+</svg>

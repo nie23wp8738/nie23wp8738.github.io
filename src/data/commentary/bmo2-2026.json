@@ -1,0 +1,153 @@
+{
+  "bmo2-2026-q1": {
+    "summary": "For a prime $p>3$, count ordered positive integer pairs $(m,n)$ for which $\\gcd(m,n)+\\operatorname{lcm}(m,n)=p^4$. What is the smallest value this count can take?",
+    "summaryZh": "对于素数 $p>3$，统计满足 $\\gcd(m,n)+\\operatorname{lcm}(m,n)=p^4$ 的正整数有序对 $(m,n)$。当 $p$ 变化时，这个计数的最小值是多少？",
+    "answer": "$18$, attained at $p=5$.",
+    "answerZh": "最小值为 $18$，在 $p=5$ 时达到。",
+    "methods": [
+      {
+        "title": "Assign whole prime powers to coprime factors",
+        "titleZh": "将完整素数幂分配给互素因子",
+        "topics": [
+          {
+            "en": "Greatest common divisor",
+            "zh": "最大公因数"
+          },
+          {
+            "en": "Prime factorization",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "Set $m=du,n=dv$ with $d=\\gcd(m,n)$ and $\\gcd(u,v)=1$. The equation is $d(uv+1)=p^4$. As $uv+1\\ge2$, it must equal $p^j$ for some $1\\le j\\le4$, and then $d=p^{4-j}$.",
+          "For each $j$, each prime power in $p^j-1$ goes entirely to $u$ or entirely to $v$. Writing $\\omega(t)$ for the number of distinct prime factors, the contribution is $2^{\\omega(p^j-1)}$.",
+          "For $j=1$ there is at least the factor 2. For $j=2$ there are 2 and 3, since $p\\equiv\\pm1\\pmod3$. For $j=3$, the even number $p-1$ and the odd factor $p^2+p+1>1$ ensure at least two primes. For $j=4$, $p^4-1=(p^2-1)(p^2+1)$. The first factor contributes 2 and 3. The second is 2 modulo 8 and greater than 2, so it has an odd prime factor. Since the two factors differ by 2, this odd prime is new.",
+          "The lower bound is $2+4+4+8=18$. At $p=5$ the four products $uv$ are $4,24,124=4\\cdot31,624=16\\cdot3\\cdot13$. Their counts attain every bound."
+        ],
+        "stepsZh": [
+          "设 $d=\\gcd(m,n)$，写成 $m=du,n=dv$，其中 $u,v$ 互素。原式化为 $d(uv+1)=p^4$。由于 $uv+1\\ge2$，故 $uv+1=p^j$，其中 $1\\le j\\le4$，从而 $d=p^{4-j}$。",
+          "对每个 $j$，$p^j-1$ 的每个素因子及其全部幂次只能整体分给 $u$ 或 $v$。记 $\\omega(t)$ 为不同素因子的个数，则该项有 $2^{\\omega(p^j-1)}$ 个有序对。",
+          "当 $j=1$ 时至少有素因子 2。$j=2$ 时因 $p\\equiv\\pm1\\pmod3$，至少有 2、3。$j=3$ 时 $p-1$ 为偶数，另一因子 $p^2+p+1>1$ 为奇数，故至少有两种素因子。$j=4$ 时分解为 $(p^2-1)(p^2+1)$，前者有素因子 2、3；后者除以 8 余 2 且大于 2，必有奇素因子。两因子之差为 2，故此奇素因子是新的。",
+          "得到下界 $2+4+4+8=18$。取 $p=5$，四个 $uv$ 分别为 $4,24,124=4\\cdot31,624=16\\cdot3\\cdot13$，每一项都达到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2"
+  },
+  "bmo2-2026-q2": {
+    "summary": "Let $X$ be the intersection of the diagonals of a convex quadrilateral $ABCD$. Sides $AD$ and $BC$ are not parallel. Their perpendicular bisectors meet at a point $Y$ strictly inside triangle $XCD$. Prove that $AC=BD$ exactly when $XY$ bisects $\\angle DXC$.",
+    "summaryZh": "凸四边形 $ABCD$ 的对角线交于 $X$。边 $AD$ 与 $BC$ 不平行，它们的垂直平分线交于三角形 $XCD$ 内部一点 $Y$。证明 $AC=BD$ 与 $XY$ 平分 $\\angle DXC$ 等价。",
+    "answer": "Both conditions are equivalent to $XD-XA=XC-XB$.",
+    "answerZh": "两个条件都等价于 $XD-XA=XC-XB$。",
+    "methods": [
+      {
+        "title": "Project onto the two diagonal rays",
+        "titleZh": "在两条对角线方向上投影",
+        "topics": [
+          {
+            "en": "Scalar products",
+            "zh": "向量内积"
+          },
+          {
+            "en": "Perpendicular bisectors",
+            "zh": "垂直平分线"
+          }
+        ],
+        "steps": [
+          "Put $X$ at the origin and let $e,f$ be unit vectors towards $C,D$. Write $A=-ae$, $B=-bf$, $C=ce$, $D=df$ with positive lengths. For the position vector $y$ of $Y$, set $u=2y\\cdot e$, $v=2y\\cdot f$. The equal distances $YA=YD$ and $YB=YC$ give, after squaring, $au+dv=d^2-a^2$ and $cu+bv=c^2-b^2$.",
+          "Since $Y$ is strictly inside the angle, its two projections agree exactly when it lies on the internal bisector: $u=v$ is equivalent to equality of the cosines of the angles that $XY$ makes with the two rays. If $u=v$, the equations give $u=d-a=c-b$. This says $a+c=b+d$, or $AC=BD$.",
+          "Conversely, suppose $a+c=b+d$. The pair $u=v=d-a=c-b$ solves the two equations. Their determinant is $ab-cd$, which cannot vanish: if it did, the coefficient pairs $(a,d)$ and $(c,b)$ would be proportional, so the vectors $ae+df$ and $ce+bf$ along $AD$ and $BC$ would be parallel. The solution is unique, so the actual projections agree and $XY$ is the internal bisector."
+        ],
+        "stepsZh": [
+          "以 $X$ 为原点，向 $C,D$ 的单位向量分别为 $e,f$。写成 $A=-ae,B=-bf,C=ce,D=df$，其中四个长度均为正。设 $Y$ 的位置向量为 $y$，并记 $u=2y\\cdot e,v=2y\\cdot f$。由 $YA=YD,YB=YC$ 平方展开得 $au+dv=d^2-a^2$ 与 $cu+bv=c^2-b^2$。",
+          "因 $Y$ 位于角内，两投影相等恰好说明 $XY$ 与两边所成角的余弦相等，等价于 $XY$ 平分内角。若 $u=v$，两方程给出 $u=d-a=c-b$，即 $a+c=b+d$，所以 $AC=BD$。",
+          "反过来，若 $a+c=b+d$，则 $u=v=d-a=c-b$ 为方程组的一组解。行列式 $ab-cd$ 不能为零，否则 $(a,d)$ 与 $(c,b)$ 成比例，边 $AD,BC$ 的方向向量 $ae+df$ 与 $ce+bf$ 就会平行。因此解唯一，实际投影相等，$XY$ 平分内角。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2",
+    "figure": {
+      "url": "/commentary-figures/bmo2-2026-q2.svg",
+      "alt": "Diagonals AC and BD meet at X. The dashed perpendicular bisectors of AD and BC meet at Y inside triangle XCD. Segment XY is drawn.",
+      "altZh": "对角线 AC、BD 交于 X。虚线为 AD、BC 的垂直平分线，交于三角形 XCD 内的 Y，并连接 XY。"
+    }
+  },
+  "bmo2-2026-q3": {
+    "summary": "Fill a square array with 30 rows and 30 columns using 300 copies each of $-1$, $0$ and $1$. Can the resulting list of 30 row totals and 30 column totals have no repeated value? Prove your answer.",
+    "summaryZh": "在一个 30 行、30 列的方阵中填入 $-1$、$0$ 和 $1$ 各 300 个。30 个行和与 30 个列和合成的 60 个数能否两两不同？证明你的结论。",
+    "answer": "No. Distinct totals would have squared sum $18{,}910$, but every such grid has squared sum at most $18{,}000$.",
+    "answerZh": "不能。若彼此不同，行和与列和的平方总和应为 $18{,}910$，但它至多为 $18{,}000$。",
+    "methods": [
+      {
+        "title": "Bound the combined squared line totals",
+        "titleZh": "估计全部行和与列和的平方和",
+        "topics": [
+          {
+            "en": "Sum of squares",
+            "zh": "平方和"
+          },
+          {
+            "en": "Double counting",
+            "zh": "重复计数"
+          },
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西–施瓦茨不等式"
+          }
+        ],
+        "steps": [
+          "Let $a_{ij}$ be the entries and write $R_i,C_j$ for the row and column totals. Since there are equally many $1$ and $-1$ entries, $\\sum_i R_i=\\sum_j C_j=0$. Every line total is an integer from $-30$ to $30$.",
+          "If the 60 totals were distinct, they would contain all but one of these 61 integers. The sum of all 61 is zero, as is the sum of the 60 totals. Thus the omitted integer must be zero. Consequently $L=\\sum_i R_i^2+\\sum_j C_j^2=2\\sum_{k=1}^{30}k^2=18{,}910$.",
+          "Count the contribution of each cell when multiplying entries by their line totals. We get $\\sum_{i,j}a_{ij}(R_i+C_j)=L$. Also $\\sum_{i,j}(R_i+C_j)^2=30L+2(\\sum_iR_i)(\\sum_jC_j)=30L$: each row or column occurs 30 times.",
+          "Only 600 entries have nonzero square. Cauchy–Schwarz now yields $L^2\\le (\\sum_{i,j}a_{ij}^2)\\sum_{i,j}(R_i+C_j)^2=600\\cdot30L$. As $L>0$ under the distinctness assumption, this forces $L\\le18{,}000$, a contradiction."
+        ],
+        "stepsZh": [
+          "记格内数字为 $a_{ij}$，行和、列和分别为 $R_i,C_j$。因为 $1$ 和 $-1$ 的个数相等，$\\sum_iR_i=\\sum_jC_j=0$。每个行和或列和都是 $-30$ 至 $30$ 之间的整数。",
+          "假设 60 个和两两不同，则在这 61 个整数中恰漏掉一个。61 个整数之和为零，所选 60 个和的总和也为零，所以漏掉的必为零。于是 $L=\\sum_iR_i^2+\\sum_jC_j^2=2\\sum_{k=1}^{30}k^2=18{,}910$。",
+          "将每格的数分别乘以本行行和及本列列和，再相加，可得 $\\sum_{i,j}a_{ij}(R_i+C_j)=L$。同时每一行、每一列各出现 30 次，故 $\\sum_{i,j}(R_i+C_j)^2=30L+2(\\sum_iR_i)(\\sum_jC_j)=30L$。",
+          "只有 600 个格子的平方非零。使用柯西–施瓦茨不等式，得到 $L^2\\le(\\sum_{i,j}a_{ij}^2)\\sum_{i,j}(R_i+C_j)^2=600\\cdot30L$。在两两不同的假设下 $L>0$，约去 $L$ 即得 $L\\le18{,}000$，矛盾。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2"
+  },
+  "bmo2-2026-q4": {
+    "summary": "Fix a positive integer $N$ and any sequence $k_n\\in\\{1,\\ldots,N\\}$. Choose $x_1,\\ldots,x_N$ to be arbitrary integers. For $n>N$ make $x_n$ the sum of the immediately preceding $k_n$ terms. Prove that either the set of indices with $x_n>0$ is finite or the set with $x_n<0$ is finite.",
+    "summaryZh": "固定正整数 $N$，并给定任意整数序列 $1\\le k_n\\le N$。任取整数 $x_1,\\ldots,x_N$ 为初始项。当 $n>N$ 时，令 $x_n$ 等于它前面紧邻的 $k_n$ 项之和。证明：正项和负项中至少有一类只出现有限次。",
+    "answer": "The sequence is eventually nonnegative or eventually nonpositive; an eventually zero sequence satisfies both alternatives.",
+    "answerZh": "从某一项起，数列要么全部非负，要么全部非正。若最终恒为零，则两个结论都成立。",
+    "methods": [
+      {
+        "title": "Track a rolling extremum of the partial sums",
+        "titleZh": "追踪部分和窗口的极值",
+        "topics": [
+          {
+            "en": "Partial sums",
+            "zh": "部分和"
+          },
+          {
+            "en": "Extremal principle",
+            "zh": "极值原理"
+          },
+          {
+            "en": "Integer sequences",
+            "zh": "整数数列"
+          }
+        ],
+        "steps": [
+          "Put $S_0=0$ and $S_n=x_1+\\cdots+x_n$. For $n>N$, the sum defining $x_n$ telescopes to $S_{n-1}-S_{n-k_n-1}$. Hence $S_n=2S_{n-1}-S_{n-k_n-1}$.",
+          "Suppose $t\\ge N$ and $S_t$ is at least every one of $S_{t-N},\\ldots,S_{t-1}$. The index $t-k_{t+1}$ lies in this window, so $S_{t+1}-S_t=S_t-S_{t-k_{t+1}}\\ge0$. Consequently $S_{t+1}$ is also at least the preceding $N$ values. Induction shows every later $x_n$ is nonnegative. Reversing the inequalities shows that a window minimum yields only nonpositive terms thereafter.",
+          "Let $m$ and $M$ be the minimum and maximum of $S_0,\\ldots,S_N$. If a later partial sum ever leaves $[m,M]$, take the first one that does. It exceeds all earlier values or is below all earlier values. In either case the window argument applies.",
+          "Otherwise all partial sums stay in $[m,M]$. They are integers, so only finitely many values are available. Let $H$ be the largest value that occurs infinitely often. Every value above $H$ disappears after some finite index, and there are only finitely many such values. Choose an occurrence $S_t=H$ with $t\\ge N$ so late that none of the preceding $N$ values exceeds $H$. This is a window maximum, and hence all subsequent terms are nonnegative. The two cases cover every sequence."
+        ],
+        "stepsZh": [
+          "令 $S_0=0$，并记 $S_n=x_1+\\cdots+x_n$。当 $n>N$ 时，由定义得 $x_n=S_{n-1}-S_{n-k_n-1}$，从而 $S_n=2S_{n-1}-S_{n-k_n-1}$。",
+          "设 $t\\ge N$，且 $S_t$ 不小于它之前的 $S_{t-N},\\ldots,S_{t-1}$ 中的每一项。下标 $t-k_{t+1}$ 在这一窗口中，因此 $S_{t+1}-S_t=S_t-S_{t-k_{t+1}}\\ge0$。所以 $S_{t+1}$ 仍不小于它之前的 $N$ 项。归纳可知往后每个 $x_n$ 均非负。反向使用同一推理：若某个部分和不大于此前 $N$ 项，则往后每项均非正。",
+          "令 $m,M$ 分别为 $S_0,\\ldots,S_N$ 的最小和最大值。若以后的部分和曾走出 $[m,M]$，取首次走出的一项；它要么大于之前的所有部分和，要么小于之前的所有部分和。两种情形都可应用上一步。",
+          "否则所有部分和都留在 $[m,M]$，而它们是整数，所以只有有限种取值。设 $H$ 是无穷多次出现的值中最大的。比 $H$ 大的取值种类有限，且每种都只出现有限次。取足够靠后的一次 $S_t=H$，使 $t\\ge N$ 且此前 $N$ 个部分和都不超过 $H$。这是一个窗口最大值，因此以后的 $x_n$ 全部非负。两种情况合起来即得结论。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2"
+  }
+}

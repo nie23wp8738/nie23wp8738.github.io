@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224">
+<title>Cross-shaped region on a one-inch square grid</title>
+<path d="M48 80L80 48L112 80L144 48L176 80L144 112L176 144L144 176L112 144L80 176L48 144L80 112Z" fill="#c2d6de" stroke="#203c4a" stroke-width="2"/>
+<path d="M16 16L16 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 16L208 16" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M48 16L48 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 48L208 48" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M80 16L80 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 80L208 80" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M112 16L112 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 112L208 112" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M144 16L144 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 144L208 144" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M176 16L176 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 176L208 176" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M208 16L208 208" fill="none" stroke="#516c79" stroke-width="1"/>
+<path d="M16 208L208 208" fill="none" stroke="#516c79" stroke-width="1"/>
+</svg>

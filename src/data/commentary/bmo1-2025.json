@@ -1,0 +1,243 @@
+{
+  "bmo1-2025-q1": {
+    "summary": "For $3\\le n\\le12$, decide when $n$ distinct positive integers can be placed on a circle so that two of them are comparable by divisibility (one divides the other) exactly when they are neighbours.",
+    "summaryZh": "对于 $3\\le n\\le12$，判断何时能够把 $n$ 个不同的正整数排成一圈，使两个数中有一个整除另一个，当且仅当它们在圈上相邻。",
+    "answer": "$n=3,4,6,8,10,12$.",
+    "answerZh": "$n=3,4,6,8,10,12$。",
+    "methods": [
+      {
+        "title": "Orient the cycle and construct its peaks",
+        "titleZh": "给圆环定向并构造峰值",
+        "topics": [
+          {
+            "en": "Divisibility orders",
+            "zh": "整除偏序"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "For $n=3$, the values $1,2,4$ work since every pair is adjacent. For $n\\ge4$, direct each edge from the divisor to its multiple. Two successive edges cannot form a directed path: the two endpoints would then be non-neighbours, yet comparable by transitivity. The directions must alternate, hence $n$ is even.",
+          "For $n=2k$, $k\\ge2$, take distinct primes $p_1,\\ldots,p_k,r_1,\\ldots,r_k$. List the $p_i$ in cyclic order and insert $p_ip_{i+1}r_i$ between $p_i$ and $p_{i+1}$ (indices modulo $k$).",
+          "A prime divides precisely its two adjacent products. Two different primes do not divide each other. Nor can two products divide one another, since each has a private factor $r_i$. For $k=2$ the private factors also keep the two products distinct. Thus all the listed even sizes work."
+        ],
+        "stepsZh": [
+          "$n=3$ 时取 $1,2,4$ 即可，因为任意两个数都相邻。对于 $n\\ge4$，每条边由约数指向倍数。连续两条边不能构成有向路径，否则其两个端点虽不相邻，却由整除的传递性而可比。因此边的方向必须交替，$n$ 必为偶数。",
+          "设 $n=2k,k\\ge2$，取两两不同的素数 $p_1,\\ldots,p_k,r_1,\\ldots,r_k$。按圆周排列 $p_i$，在 $p_i,p_{i+1}$ 之间插入 $p_ip_{i+1}r_i$，下标循环。",
+          "每个 $p_i$ 恰整除其相邻两项。不同素数互不整除，不同乘积也因各有专属素因子 $r_i$ 而互不整除。$k=2$ 时这两个专属因子还保证两个乘积不同。由此完成偶数情形的构造。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2"
+  },
+  "bmo1-2025-q2": {
+    "summary": "Arrange the cards $1,\\ldots,n$ in advance. Starting with any integer $x$, each card of value $c$ replaces the current number $s$ by $c-s$. Determine which positive integers $n$ allow an order whose final number always equals $-x$.",
+    "summaryZh": "预先排列标有 $1,\\ldots,n$ 的卡片。从任意整数 $x$ 开始，每翻到数值 $c$，就把当前数 $s$ 换成 $c-s$。求哪些正整数 $n$ 能通过同一种排列，使最终数恒为 $-x$。",
+    "answer": "Exactly $n\\equiv3\\pmod4$.",
+    "answerZh": "恰为 $n\\equiv3\\pmod4$。",
+    "methods": [
+      {
+        "title": "Track the sign and extend by four cards",
+        "titleZh": "跟踪符号，每次补四张牌",
+        "topics": [
+          {
+            "en": "Alternating sums",
+            "zh": "交错和"
+          },
+          {
+            "en": "Constructive induction",
+            "zh": "构造性归纳"
+          }
+        ],
+        "steps": [
+          "After $n$ cards the coefficient of $x$ is $(-1)^n$, and the constant is a signed sum of the cards. Hence $n$ must be odd and the positive and negative groups must have the same sum. In particular the total $n(n+1)/2$ is even. For odd $n$ this forces $n\\equiv3\\pmod4$.",
+          "For three cards, use the order $1,3,2$, which sends $x$ to $-x$. Given a valid order of length $n$, append $n+1,n+2,n+4,n+3$ in this order.",
+          "The four additional steps leave every incoming value unchanged: the added constant is $-(n+1)+(n+2)-(n+4)+(n+3)=0$ and the sign is positive again. This constructs an order for every $n\\equiv3\\pmod4$."
+        ],
+        "stepsZh": [
+          "翻完 $n$ 张牌后，$x$ 的系数为 $(-1)^n$，常数部分是各张牌的带符号和。因此 $n$ 必为奇数，且正号与负号两组的数字和相等。于是总和 $n(n+1)/2$ 为偶数，对于奇数 $n$，这要求 $n\\equiv3\\pmod4$。",
+          "三张牌按 $1,3,2$ 排列，可把 $x$ 变为 $-x$。若已有 $n$ 张牌的可行顺序，在末尾依次加入 $n+1,n+2,n+4,n+3$。",
+          "这四步的新增常数为 $-(n+1)+(n+2)-(n+4)+(n+3)=0$，而符号又翻正，因此保持进入这四步前的数值不变。由此得到每个 $n\\equiv3\\pmod4$ 的构造。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2"
+  },
+  "bmo1-2025-q3": {
+    "summary": "Two players alternate starting from $10^6$, with Rhian first. From $n$, choose unequal positive factors $a,b$ with $ab=n$ and replace $n$ by their absolute difference. A player without a legal move loses. Who can force a win?",
+    "summaryZh": "两名玩家从 $10^6$ 开始轮流行动，Rhian 先行。每次从当前数 $n$ 选取两个不相等的正因数 $a,b$，使 $ab=n$，并用二者之差的绝对值替换 $n$。不能行动者输。谁能保证获胜？",
+    "answer": "Rhian, the first player.",
+    "answerZh": "先手 Rhian 必胜。",
+    "methods": [
+      {
+        "title": "Leave an odd number on every turn",
+        "titleZh": "每次给对方留下奇数",
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Winning strategies",
+            "zh": "必胜策略"
+          }
+        ],
+        "steps": [
+          "If $n$ is even, take $1,n$. They are different, and the result $n-1$ is odd. From an odd $n>1$, every factor pair consists of odd numbers, so every legal move leaves a positive even number.",
+          "All legal moves strictly decrease $n$: for $1\\le a<b$ the difference $b-a$ lies between 1 and $ab-1$. Every $n>1$ has the legal pair $1,n$, so 1 is the only terminal position.",
+          "Since $10^6$ is even, Rhian can leave an odd number on every turn. Jack must return an even number whenever he can move. The game must finish, and the terminal odd value 1 is therefore left for Jack."
+        ],
+        "stepsZh": [
+          "若 $n$ 为偶数，选取 $1,n$ 即可；两数不同，且所得 $n-1$ 为奇数。由奇数 $n>1$ 分解得到的两因数都是奇数，所以任何合法一步都会留下一个正偶数。",
+          "每一步都严格变小：若 $1\\le a<b$，则 $1\\le b-a\\le ab-1$。任何 $n>1$ 都能取 $1,n$，所以只有 1 是终止局面。",
+          "起点 $10^6$ 为偶数，Rhian 每回合都能交给对方一个奇数，而 Jack 如果能走，就只能交回偶数。游戏必定结束，不能走的奇数 1 将留给 Jack。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2"
+  },
+  "bmo1-2025-q4": {
+    "summary": "In an acute triangle $ABC$ with $AB<AC<BC$, let $M$ be the midpoint of $BC$. A point $P$ on segment $AM$ satisfies $CP=AB$ and $\\angle BAP=\\angle BCP$. Show that $PB$ and $PC$ are perpendicular.",
+    "summaryZh": "锐角三角形 $ABC$ 的边长满足 $AB<AC<BC$。设 $M$ 为 $BC$ 的中点，点 $P$ 在线段 $AM$ 上，且 $CP=AB$、$\\angle BAP=\\angle BCP$。证明 $PB\\perp PC$。",
+    "answer": "$P$ is on the circle with diameter $BC$, so $\\angle CPB=90^\\circ$.",
+    "answerZh": "$P$ 在以 $BC$ 为直径的圆上，因此 $\\angle CPB=90^\\circ$。",
+    "methods": [
+      {
+        "title": "Reflect across the midpoint to obtain an isosceles triangle",
+        "titleZh": "关于中点作中心对称，构造等腰三角形",
+        "topics": [
+          {
+            "en": "Central symmetry",
+            "zh": "中心对称"
+          },
+          {
+            "en": "Isosceles triangles",
+            "zh": "等腰三角形"
+          },
+          {
+            "en": "Thales’ theorem",
+            "zh": "直径所对的圆周角"
+          }
+        ],
+        "steps": [
+          "We have $P\\ne M$: at $M$ the angle $BCP$ would be zero, whereas $\\angle BAM>0$. Let $D$ be the reflection of $A$ in $M$. The same half-turn carries $B$ to $C$, so $CD=AB=CP$. Along the median the order is $D,M,P,A$.",
+          "Thus $\\angle CDP=\\angle DPC$ in isosceles triangle $DCP$. The rays $DP$ and $DC$ are opposite in direction to $AP$ and $AB$, respectively, so $\\angle CDP=\\angle BAP$. Also $PD$ is the same ray as $PM$, and $CB$ the same ray as $CM$. The given angle equality now reads $\\angle MPC=\\angle MCP$.",
+          "Consequently $MP=MC=MB$, so the circle centred at $M$ through $B,C$ contains $P$. The inscribed angle subtending diameter $BC$ is right."
+        ],
+        "stepsZh": [
+          "$P$ 不可能是 $M$，否则 $\\angle BCP=0$ 而 $\\angle BAM>0$。将 $A$ 关于 $M$ 作中心对称得 $D$。同一变换将 $B$ 映到 $C$，故 $CD=AB=CP$。中线所在直线上各点依次为 $D,M,P,A$。",
+          "三角形 $DCP$ 为等腰三角形，故 $\\angle CDP=\\angle DPC$。射线 $DP,DC$ 的方向分别与 $AP,AB$ 相反，所以 $\\angle CDP=\\angle BAP$。又 $PD$ 与 $PM$ 为同一射线，$CB$ 与 $CM$ 为同一射线。由题设角相等，得 $\\angle MPC=\\angle MCP$。",
+          "于是 $MP=MC=MB$，点 $P$ 在以 $M$ 为圆心且经过 $B,C$ 的圆上。直径 $BC$ 所对的圆周角为直角。"
+        ]
+      },
+      {
+        "title": "Use the sine rule on opposite sides of the median",
+        "titleZh": "对中线两侧的三角形使用正弦定理",
+        "topics": [
+          {
+            "en": "Sine rule",
+            "zh": "正弦定理"
+          },
+          {
+            "en": "Supplementary angles",
+            "zh": "互补角"
+          },
+          {
+            "en": "Thales’ theorem",
+            "zh": "直径所对的圆周角"
+          }
+        ],
+        "steps": [
+          "Since $P=M$ would contradict $\\angle BAP=\\angle BCP$, the triangles $ABM$ and $CPM$ are nondegenerate. At $M$, $MA$ and $MP$ are the same ray while $MB$ and $MC$ are opposite. Hence $\\angle AMB$ and $\\angle PMC$ have the same sine. Also $\\angle BAM=\\angle MCP$ by hypothesis.",
+          "The sine rule gives $BM/AB=\\sin\\angle BAM/\\sin\\angle AMB$ and $PM/CP=\\sin\\angle MCP/\\sin\\angle PMC$. The ratios agree, and $AB=CP$, so $PM=BM=CM$. The circle with diameter $BC$ therefore passes through $P$, giving $PB\\perp PC$."
+        ],
+        "stepsZh": [
+          "若 $P=M$ 会与 $\\angle BAP=\\angle BCP$ 矛盾，故 $ABM,CPM$ 均为非退化三角形。在 $M$ 处，$MA$ 与 $MP$ 为同一射线，$MB$ 与 $MC$ 方向相反。因此 $\\angle AMB$ 与 $\\angle PMC$ 互补，正弦相等。题设还给出 $\\angle BAM=\\angle MCP$。",
+          "两次使用正弦定理，得 $BM/AB=\\sin\\angle BAM/\\sin\\angle AMB$ 及 $PM/CP=\\sin\\angle MCP/\\sin\\angle PMC$。两个比值相等，再由 $AB=CP$ 得 $PM=BM=CM$。于是 $P$ 在以 $BC$ 为直径的圆上，故 $PB\\perp PC$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+    "figure": {
+      "url": "/commentary-figures/bmo1-2025-q4.svg",
+      "alt": "P lies on median AM. Segments BP and CP are drawn. Matching marks show AB = CP and BM = MC.",
+      "altZh": "P 在中线 AM 上。连接 BP 与 CP，相同刻痕分别表示 AB=CP、BM=MC。"
+    }
+  },
+  "bmo1-2025-q5": {
+    "summary": "Fix a prime $p$, and let $n$ be the first integer greater than $1$ whose sixth power is congruent to $1$ modulo $p$. Prove that another integer with this property occurs among $n+1,n+2$.",
+    "summaryZh": "固定素数 $p$。在所有六次方模 $p$ 余 $1$ 的整数中，令 $n$ 为大于 $1$ 的最小者。证明 $n+1,n+2$ 中至少有一个数的六次方模 $p$ 也余 $1$。",
+    "answer": "If $n\\equiv-1\\pmod p$, then $n+2$ works. For $p\\ge5$ every other possible minimal root satisfies $n^2+n+1\\equiv0\\pmod p$, in which case $n+1$ works.",
+    "answerZh": "若 $n\\equiv-1\\pmod p$，则 $n+2$ 可取；对 $p\\ge5$，其余可能的最小根都满足 $n^2+n+1\\equiv0\\pmod p$，此时 $n+1$ 可取。",
+    "methods": [
+      {
+        "title": "Pair the quadratic factors by shifting the variable",
+        "titleZh": "用平移将两个二次因式配对",
+        "topics": [
+          {
+            "en": "Polynomial factorisation",
+            "zh": "多项式因式分解"
+          },
+          {
+            "en": "Congruences",
+            "zh": "同余"
+          },
+          {
+            "en": "Minimality",
+            "zh": "最小性"
+          }
+        ],
+        "steps": [
+          "For $p=2$ the first admissible integer is $3$ and $5$ works next. For $p=3$ it is $2$ and $4$ works. Now suppose $p\\ge5$. Since $p-1$ has sixth power $1$ modulo $p$, we have $2\\le n\\le p-1$, and in particular $p\\nmid n-1$.",
+          "Factor $x^6-1=(x-1)(x+1)(x^2+x+1)(x^2-x+1)$. At $x=n$ some factor is divisible by the prime $p$. If $p\\mid n+1$, then $n+2\\equiv1\\pmod p$, as required. If $p\\mid n^2+n+1$, note that $(n+1)^2-(n+1)+1=n^2+n+1$, so the factorisation at $x=n+1$ supplies another sixth root.",
+          "The remaining possible factor is $n^2-n+1$. But it equals $(n-1)^2+(n-1)+1$, so its vanishing would make $n-1$ another sixth root. By minimality this forces $n-1=1$. Then the factor is $3$, impossible for $p\\ge5$. Together these cases prove the claim."
+        ],
+        "stepsZh": [
+          "若 $p=2$，第一个符合条件的数是 $3$，接下来的 $5$ 也符合；若 $p=3$，第一个是 $2$，而 $4$ 也符合。以下设 $p\\ge5$。因为 $p-1$ 的六次方模 $p$ 余 $1$，所以 $2\\le n\\le p-1$，特别地 $p\\nmid n-1$。",
+          "分解 $x^6-1=(x-1)(x+1)(x^2+x+1)(x^2-x+1)$。代入 $x=n$ 后必有某个因子被素数 $p$ 整除。若 $p\\mid n+1$，则 $n+2\\equiv1\\pmod p$，已满足结论。若 $p\\mid n^2+n+1$，由 $(n+1)^2-(n+1)+1=n^2+n+1$，在 $x=n+1$ 时有一个因式被 $p$ 整除，故找到了另一个六次单位根。",
+          "剩下的可能因子是 $n^2-n+1$。然而它等于 $(n-1)^2+(n-1)+1$，故若它模 $p$ 为零，$n-1$ 的六次方也模 $p$ 余 $1$。由 $n$ 的最小性只能有 $n-1=1$，此时该因子等于 $3$，与 $p\\ge5$ 矛盾。所有情形均已涵盖。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2"
+  },
+  "bmo1-2025-q6": {
+    "summary": "A $4\\times4\\times4$ solid is built from unit cubes of three possible flavours. Prove that some flavour has twelve cubes that can be grouped into six disjoint pairs, with the same centre-to-centre distance in every pair.",
+    "summaryZh": "用三种口味的单位方糖堆成一个 $4\\times4\\times4$ 的大立方体。证明可选出同一种口味的十二块方糖，将它们分成六个互不重叠的数对，使每对方糖的中心距离都相等。",
+    "answer": "The six pairs can always be chosen at distance $\\sqrt2$.",
+    "answerZh": "总能使这六对方糖的中心距离均为 $\\sqrt2$。",
+    "methods": [
+      {
+        "title": "Partition the centres into sixteen regular tetrahedra",
+        "titleZh": "将中心分成十六组正四面体顶点",
+        "topics": [
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Spatial distance",
+            "zh": "空间距离"
+          }
+        ],
+        "steps": [
+          "Partition the large cube into eight $2\\times2\\times2$ blocks. In one block, use coordinates $0,1$ for the two possible centre positions along each axis. Group the eight binary triples by the parity of their coordinate sum. There are four centres in either group.",
+          "Two different triples of the same parity differ in exactly two coordinates: the number of differences is even, positive, and at most three. Thus any two different centres in that group are at distance $\\sqrt{1^2+1^2}=\\sqrt2$. The entire solid is now partitioned into $16$ such four-centre groups.",
+          "With only three flavours available, each group contains two cubes of the same flavour. Choose one such pair in each group. These $16$ pairs are disjoint and all have the same distance. If every flavour supplied at most five pairs there would be at most $15$ pairs; some flavour therefore supplies at least six. Select any six of that flavour."
+        ],
+        "stepsZh": [
+          "把大立方体分成八个 $2\\times2\\times2$ 小块。在一个小块内，每个坐标方向上两个可能的中心位置分别记为 $0,1$，于是八个中心对应八组三元组。按三个坐标之和的奇偶性分成两组，每组四个。",
+          "同组两个不同三元组恰有两个坐标不同：不同坐标数必须为正偶数，且不超过三。因此同组任两中心的距离都为 $\\sqrt{1^2+1^2}=\\sqrt2$。这样，整个大立方体的中心被分成 $16$ 个互不相交的四点组。",
+          "每组四块方糖只有三种口味，至少两块同味；在每组任选这样的一对。由各组互不相交，所得 $16$ 对都不重叠，且对内中心距离相同。如果每种口味至多有五对，则总数至多 $15$，矛盾。因此至少一种口味占六对或更多，选其中六对即可。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2"
+  }
+}

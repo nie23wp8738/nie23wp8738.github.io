@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 324 308">
+<title>Five proposed distance–time graphs. Vertical units are miles; horizontal times use a 24-hour clock.</title>
+<path d="M24 73L143 73" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="76" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">0</text>
+<path d="M24 60.4L143 60.4" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 47.8L143 47.8" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="50.8" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">60</text>
+<path d="M24 35.2L143 35.2" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 22.6L143 22.6" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="25.6" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">120</text>
+<path d="M24 10L143 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 73L24 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="24" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">8</text>
+<path d="M38 73L38 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M52 73L52 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="52" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">10</text>
+<path d="M66 73L66 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M80 73L80 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="80" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">12</text>
+<path d="M94 73L94 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M108 73L108 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="108" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">14</text>
+<path d="M122 73L122 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M136 73L136 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="136" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">16</text>
+<path d="M24 73L52 35.2L94 35.2L122 73" fill="none" stroke="#203c4a" stroke-width="1.8"/>
+<circle cx="24" cy="73" r="1.7" fill="#203c4a"/>
+<circle cx="52" cy="35.2" r="1.7" fill="#203c4a"/>
+<circle cx="94" cy="35.2" r="1.7" fill="#203c4a"/>
+<circle cx="122" cy="73" r="1.7" fill="#203c4a"/>
+<text x="80" y="97" text-anchor="middle" fill="#203c4a" style="font:12px Georgia,serif">A</text>
+<path d="M191 73L310 73" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="188" y="76" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">0</text>
+<path d="M191 60.4L310 60.4" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M191 47.8L310 47.8" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="188" y="50.8" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">60</text>
+<path d="M191 35.2L310 35.2" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M191 22.6L310 22.6" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="188" y="25.6" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">120</text>
+<path d="M191 10L310 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M191 73L191 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="191" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">8</text>
+<path d="M205 73L205 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M219 73L219 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="219" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">10</text>
+<path d="M233 73L233 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M247 73L247 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="247" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">12</text>
+<path d="M261 73L261 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M275 73L275 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="275" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">14</text>
+<path d="M289 73L289 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M303 73L303 10" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="303" y="83" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">16</text>
+<path d="M191 73L219 54.1L261 54.1L289 73" fill="none" stroke="#203c4a" stroke-width="1.8"/>
+<circle cx="191" cy="73" r="1.7" fill="#203c4a"/>
+<circle cx="219" cy="54.1" r="1.7" fill="#203c4a"/>
+<circle cx="261" cy="54.1" r="1.7" fill="#203c4a"/>
+<circle cx="289" cy="73" r="1.7" fill="#203c4a"/>
+<text x="247" y="97" text-anchor="middle" fill="#203c4a" style="font:12px Georgia,serif">B</text>
+<path d="M24 177L143 177" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="180" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">0</text>
+<path d="M24 164.4L143 164.4" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 151.8L143 151.8" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="154.8" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">60</text>
+<path d="M24 139.2L143 139.2" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 126.6L143 126.6" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="129.6" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">120</text>
+<path d="M24 114L143 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 177L24 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="24" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">8</text>
+<path d="M38 177L38 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M52 177L52 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="52" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">10</text>
+<path d="M66 177L66 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M80 177L80 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="80" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">12</text>
+<path d="M94 177L94 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M108 177L108 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="108" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">14</text>
+<path d="M122 177L122 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M136 177L136 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="136" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">16</text>
+<path d="M24 177L52 158.1L94 158.1L115 177" fill="none" stroke="#203c4a" stroke-width="1.8"/>
+<circle cx="24" cy="177" r="1.7" fill="#203c4a"/>
+<circle cx="52" cy="158.1" r="1.7" fill="#203c4a"/>
+<circle cx="94" cy="158.1" r="1.7" fill="#203c4a"/>
+<circle cx="115" cy="177" r="1.7" fill="#203c4a"/>
+<text x="80" y="201" text-anchor="middle" fill="#203c4a" style="font:12px Georgia,serif">C</text>
+<path d="M191 177L310 177" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="188" y="180" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">0</text>
+<path d="M191 164.4L310 164.4" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M191 151.8L310 151.8" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="188" y="154.8" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">60</text>
+<path d="M191 139.2L310 139.2" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M191 126.6L310 126.6" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="188" y="129.6" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">120</text>
+<path d="M191 114L310 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M191 177L191 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="191" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">8</text>
+<path d="M205 177L205 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M219 177L219 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="219" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">10</text>
+<path d="M233 177L233 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M247 177L247 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="247" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">12</text>
+<path d="M261 177L261 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M275 177L275 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="275" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">14</text>
+<path d="M289 177L289 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M303 177L303 114" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="303" y="187" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">16</text>
+<path d="M191 177L219 126.6L261 126.6L307.2 177" fill="none" stroke="#203c4a" stroke-width="1.8"/>
+<circle cx="191" cy="177" r="1.7" fill="#203c4a"/>
+<circle cx="219" cy="126.6" r="1.7" fill="#203c4a"/>
+<circle cx="261" cy="126.6" r="1.7" fill="#203c4a"/>
+<circle cx="307.2" cy="177" r="1.7" fill="#203c4a"/>
+<text x="247" y="201" text-anchor="middle" fill="#203c4a" style="font:12px Georgia,serif">D</text>
+<path d="M24 281L143 281" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="284" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">0</text>
+<path d="M24 268.4L143 268.4" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 255.8L143 255.8" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="258.8" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">60</text>
+<path d="M24 243.2L143 243.2" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 230.6L143 230.6" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="21" y="233.6" text-anchor="end" fill="#203c4a" style="font:8px Georgia,serif">120</text>
+<path d="M24 218L143 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M24 281L24 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="24" y="291" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">8</text>
+<path d="M38 281L38 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M52 281L52 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="52" y="291" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">10</text>
+<path d="M66 281L66 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M80 281L80 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="80" y="291" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">12</text>
+<path d="M94 281L94 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M108 281L108 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="108" y="291" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">14</text>
+<path d="M122 281L122 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<path d="M136 281L136 218" fill="none" stroke="#b9c6ca" stroke-width="0.7"/>
+<text x="136" y="291" text-anchor="middle" fill="#203c4a" style="font:8px Georgia,serif">16</text>
+<path d="M24 281L52 243.2L94 243.2L115 281" fill="none" stroke="#203c4a" stroke-width="1.8"/>
+<circle cx="24" cy="281" r="1.7" fill="#203c4a"/>
+<circle cx="52" cy="243.2" r="1.7" fill="#203c4a"/>
+<circle cx="94" cy="243.2" r="1.7" fill="#203c4a"/>
+<circle cx="115" cy="281" r="1.7" fill="#203c4a"/>
+<text x="80" y="305" text-anchor="middle" fill="#203c4a" style="font:12px Georgia,serif">E</text>
+</svg>

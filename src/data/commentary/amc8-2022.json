@@ -1,0 +1,798 @@
+{
+  "amc8-2022-q1": {
+    "summary": "On the one-inch grid shown, the shaded multiplication sign is one connected region. Find its area in square inches.  (A) $10$ (B) $12$ (C) $13$ (D) $14$ (E) $15$",
+    "summaryZh": "图中每个网格小正方形的边长为一英寸。求阴影乘号图案的面积，单位为平方英寸。  (A) $10$ (B) $12$ (C) $13$ (D) $14$ (E) $15$",
+    "answer": "A. $10$ square inches.",
+    "answerZh": "A．$10$ 平方英寸。",
+    "methods": [
+      {
+        "title": "Find five congruent diamonds",
+        "titleZh": "划分为五个全等菱形",
+        "topics": [
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          }
+        ],
+        "steps": [
+          "Join adjacent inward corners of the cross. This separates the central diamond and the four arms, each itself a diamond with horizontal and vertical diagonals of length 2.",
+          "Each diamond has area $2\\cdot2/2=2$, and the five interiors are disjoint. The total is $5\\cdot2=10$."
+        ],
+        "stepsZh": [
+          "把相邻的内凹顶点连起来，图案被分成正中的菱形和四臂上的菱形。每个菱形的水平、竖直对角线均长 2。",
+          "每个菱形面积是 $2\\cdot2/2=2$，五者内部互不重叠，总面积为 $5\\cdot2=10$。"
+        ]
+      },
+      {
+        "title": "Subtract the missing portions of a square",
+        "titleZh": "从外接正方形中扣除空白",
+        "topics": [
+          {
+            "en": "Complementary area",
+            "zh": "补形法"
+          }
+        ],
+        "steps": [
+          "The cross fits exactly inside a $4\\times4$ square. The four missing corner triangles each have legs 1 and area $1/2$.",
+          "Midway along each side is another missing triangle with base 2 and height 1, area 1. Subtracting all eight gaps gives $16-4(1/2)-4(1)=10$."
+        ],
+        "stepsZh": [
+          "乘号的外接正方形为 $4\\times4$。四角各缺一个两直角边为 1 的小三角形，面积各 $1/2$。",
+          "各边中点处另缺一个底 2、高 1 的三角形，面积各 1。因此阴影面积为 $16-4(1/2)-4(1)=10$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/1",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q1.svg",
+      "alt": "Multiplication sign on a square grid, composed of five edge-sharing diamonds with diagonal lengths 2.",
+      "altZh": "方格上的乘号由五个共边、对角线长为 2 的菱形构成。"
+    }
+  },
+  "amc8-2022-q2": {
+    "summary": "Define $D(a,b)=a^2-b^2$ and $S(a,b)=(a-b)^2$. Evaluate $S(D(5,3),6)$.  (A) $-20$ (B) $4$ (C) $16$ (D) $100$ (E) $220$",
+    "summaryZh": "定义 $D(a,b)=a^2-b^2$ 与 $S(a,b)=(a-b)^2$，求 $S(D(5,3),6)$。  (A) $-20$ (B) $4$ (C) $16$ (D) $100$ (E) $220$",
+    "answer": "D. $100$.",
+    "answerZh": "D．$100$。",
+    "methods": [
+      {
+        "title": "Evaluate the inner operation first",
+        "titleZh": "先计算内层运算",
+        "topics": [
+          {
+            "en": "Function composition",
+            "zh": "复合运算"
+          }
+        ],
+        "steps": [
+          "$D(5,3)=25-9=16$. Use this as the first input of $S$.",
+          "Thus $S(16,6)=(16-6)^2=100$."
+        ],
+        "stepsZh": [
+          "$D(5,3)=25-9=16$。将它作为 $S$ 的第一个输入。",
+          "故 $S(16,6)=(16-6)^2=100$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/2"
+  },
+  "amc8-2022-q3": {
+    "summary": "Count the increasing triples of positive integers $a<b<c$ with $abc=100$.  (A) $0$ (B) $1$ (C) $2$ (D) $3$ (E) $4$",
+    "summaryZh": "满足 $a<b<c$ 且 $abc=100$ 的正整数三元组共有几组？  (A) $0$ (B) $1$ (C) $2$ (D) $3$ (E) $4$",
+    "answer": "E. $4$.",
+    "answerZh": "E．$4$ 组。",
+    "methods": [
+      {
+        "title": "Fix the smallest factor",
+        "titleZh": "固定最小因数",
+        "topics": [
+          {
+            "en": "Factor triples",
+            "zh": "因数三元组"
+          }
+        ],
+        "steps": [
+          "Since $a^3<100$ and $a$ divides 100, its only possibilities are 1, 2 and 4. For $a=1$, the ordered factor pairs of 100 with $1<b<c$ are $(2,50),(4,25),(5,20)$.",
+          "For $a=2$, we need $bc=50$ with $2<b<c$, leaving only $(5,10)$. For $a=4$, the product 25 has no pair with $4<b<c$. The count is $3+1=4$."
+        ],
+        "stepsZh": [
+          "因 $a^3<100$ 且 $a$ 整除 100，故 $a$ 只能是 1、2、4。若 $a=1$，满足 $1<b<c$ 的 100 的因数对是 $(2,50),(4,25),(5,20)$。",
+          "若 $a=2$，需 $bc=50,2<b<c$，只有 $(5,10)$。若 $a=4$，不存在满足 $4<b<c$ 且 $bc=25$ 的组合。总数为 $3+1=4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/3"
+  },
+  "amc8-2022-q4": {
+    "summary": "The first panel shows an upright M, the horizontal mirror $p$ and the rising $45^\\circ$ mirror $q$. Reflect the letter in $q$ first and then in $p$. Which of panels A–E has the correct position and orientation?",
+    "summaryZh": "第一幅图给出正立的 M、水平镜线 $p$ 与向右上倾斜 $45^\\circ$ 的镜线 $q$。先关于 $q$ 反射，再关于 $p$ 反射。在 A 至 E 中选出位置和朝向都正确的图。",
+    "answer": "E. Panel E, a clockwise quarter-turn.",
+    "answerZh": "E．图 E，即顺时针转四分之一圈。",
+    "methods": [
+      {
+        "title": "Track two coordinate reflections",
+        "titleZh": "逐次跟踪坐标反射",
+        "topics": [
+          {
+            "en": "Geometric transformations",
+            "zh": "几何变换"
+          }
+        ],
+        "steps": [
+          "Take the mirrors’ intersection as the origin. Reflection in $q$, the line $y=x$, swaps coordinates; reflection in $p$, the horizontal axis, then changes the sign of the second coordinate. Thus $(x,y)\\mapsto(y,-x)$.",
+          "This moves the entire letter clockwise through $90^\\circ$. The original upper-right position becomes lower-right and the top of the M points right. Only E satisfies both checks."
+        ],
+        "stepsZh": [
+          "取两镜线交点为原点。先关于 $q$ 即 $y=x$ 反射，交换两个坐标；再关于水平轴 $p$ 反射，令第二个坐标变号，所以 $(x,y)\\mapsto(y,-x)$。",
+          "整幅字形顺时针转 $90^\\circ$。原来右上方的位置转到右下，原来向上的字顶转为向右。两点均符合的只有 E。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/4",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q4.svg",
+      "alt": "An upright M above the northeast diagonal ray. Choices A and E are southeast with opposite rotations; B and C are northwest; D is southwest.",
+      "altZh": "原图的 M 位于右上对角射线上方。A、E 在右下但转向相反，B、C 在左上，D 在左下。",
+      "printHeightPt": 183
+    }
+  },
+  "amc8-2022-q5": {
+    "summary": "Five years ago, on her sixth birthday, Bella was given a newborn kitten. Today the ages of Bella, Anna and the kitten total 30 years. By how many years is Anna older than Bella?  (A) $1$ (B) $2$ (C) $3$ (D) $4$ (E) $5$",
+    "summaryZh": "五年前，Bella 六岁生日时收到一只刚出生的小猫。今天 Bella、Anna 和小猫的年龄之和为 30 岁。Anna 比 Bella 大几岁？  (A) $1$ (B) $2$ (C) $3$ (D) $4$ (E) $5$",
+    "answer": "C. $3$ years.",
+    "answerZh": "C．$3$ 岁。",
+    "methods": [
+      {
+        "title": "Move all ages to today",
+        "titleZh": "把年龄统一到今天",
+        "topics": [
+          {
+            "en": "Age problems",
+            "zh": "年龄问题"
+          }
+        ],
+        "steps": [
+          "Bella is now $6+5=11$ and the kitten is 5. Their combined age is 16.",
+          "Anna is $30-16=14$, so she is $14-11=3$ years older than Bella."
+        ],
+        "stepsZh": [
+          "Bella 现在 $6+5=11$ 岁，小猫 5 岁，两者合计 16 岁。",
+          "Anna 是 $30-16=14$ 岁，比 Bella 大 $14-11=3$ 岁。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/5"
+  },
+  "amc8-2022-q6": {
+    "summary": "Three equally spaced positive integers have middle term 15. The largest is four times the smallest. Find the smallest.  (A) $4$ (B) $5$ (C) $6$ (D) $7$ (E) $8$",
+    "summaryZh": "三个正整数依次等距，中间数为 15，最大数是最小数的四倍。求最小数。  (A) $4$ (B) $5$ (C) $6$ (D) $7$ (E) $8$",
+    "answer": "C. $6$.",
+    "answerZh": "C．$6$。",
+    "methods": [
+      {
+        "title": "Use the midpoint average",
+        "titleZh": "利用中项是两端平均数",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Write the endpoints as $s$ and $4s$. Their average equals the middle term, so $s+4s=2\\cdot15$.",
+          "Consequently $5s=30$ and $s=6$. The three terms are 6, 15 and 24."
+        ],
+        "stepsZh": [
+          "设两端分别为 $s,4s$。中项等于它们的平均数，故 $s+4s=2\\cdot15$。",
+          "得 $5s=30$、$s=6$。三项为 6、15、24。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/6"
+  },
+  "amc8-2022-q7": {
+    "summary": "A 4.2-megabyte file downloads at 56 kilobits per second. Given 8000 kilobits in one megabyte, how many minutes does it take?  (A) $0.6$ (B) $10$ (C) $1800$ (D) $7200$ (E) $36000$",
+    "summaryZh": "以每秒 56 千比特的速度下载一个 4.2 兆字节的文件。按每兆字节 8000 千比特换算，需要几分钟？  (A) $0.6$ (B) $10$ (C) $1800$ (D) $7200$ (E) $36000$",
+    "answer": "B. $10$ minutes.",
+    "answerZh": "B．$10$ 分钟。",
+    "methods": [
+      {
+        "title": "Convert both units",
+        "titleZh": "作两次单位换算",
+        "topics": [
+          {
+            "en": "Unit conversions",
+            "zh": "单位换算"
+          }
+        ],
+        "steps": [
+          "The file contains $4.2\\cdot8000=33600$ kilobits. Divide by the rate to obtain $33600/56=600$ seconds.",
+          "There are 60 seconds per minute, so the time is $600/60=10$ minutes."
+        ],
+        "stepsZh": [
+          "文件大小为 $4.2\\cdot8000=33600$ 千比特。除以下载速率得 $33600/56=600$ 秒。",
+          "一分钟为 60 秒，因此用时 $600/60=10$ 分钟。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/7"
+  },
+  "amc8-2022-q8": {
+    "summary": "Reduce $\\prod_{k=1}^{20}\\frac{k}{k+2}$ to a fraction in lowest terms.  (A) $\\frac{1}{462}$ (B) $\\frac{1}{231}$ (C) $\\frac{1}{132}$ (D) $\\frac{2}{213}$ (E) $\\frac{1}{22}$",
+    "summaryZh": "将连乘积 $\\prod_{k=1}^{20}\\frac{k}{k+2}$ 化为最简分数。  (A) $\\frac{1}{462}$ (B) $\\frac{1}{231}$ (C) $\\frac{1}{132}$ (D) $\\frac{2}{213}$ (E) $\\frac{1}{22}$",
+    "answer": "B. $1/231$.",
+    "answerZh": "B．$1/231$。",
+    "methods": [
+      {
+        "title": "Line up numerator and denominator factors",
+        "titleZh": "排列上下两行再约分",
+        "topics": [
+          {
+            "en": "Telescoping products",
+            "zh": "连乘消去"
+          }
+        ],
+        "steps": [
+          "The numerator is the product from 1 through 20; the denominator is the product from 3 through 22. The factors from 3 through 20 cancel.",
+          "The remaining ratio is $(1\\cdot2)/(21\\cdot22)=1/231$."
+        ],
+        "stepsZh": [
+          "分子是 1 至 20 的乘积，分母是 3 至 22 的乘积。把公共因数 3 至 20 全部约掉。",
+          "剩余 $(1\\cdot2)/(21\\cdot22)=1/231$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/8"
+  },
+  "amc8-2022-q9": {
+    "summary": "Water starts at $212^\\circ\\mathrm F$ in a room held at $68^\\circ\\mathrm F$. The temperature difference halves every five minutes. What is the water temperature after 15 minutes?  (A) $77$ (B) $86$ (C) $92$ (D) $98$ (E) $104$",
+    "summaryZh": "水温初为 $212^\\circ\\mathrm F$，室温恒为 $68^\\circ\\mathrm F$。水和室温的温差每五分钟减半。求 15 分钟后的水温。  (A) $77$ (B) $86$ (C) $92$ (D) $98$ (E) $104$",
+    "answer": "B. $86^\\circ\\mathrm F$.",
+    "answerZh": "B．$86^\\circ\\mathrm F$。",
+    "methods": [
+      {
+        "title": "Track the excess above room temperature",
+        "titleZh": "跟踪高出室温的温差",
+        "topics": [
+          {
+            "en": "Exponential decay",
+            "zh": "指数衰减"
+          }
+        ],
+        "steps": [
+          "The starting excess is $212-68=144$ degrees. Fifteen minutes contain three halving intervals, reducing that excess to $144/2^3=18$.",
+          "Add the unchanged room temperature: $68+18=86$."
+        ],
+        "stepsZh": [
+          "初始温差为 $212-68=144$ 度。15 分钟恰有三个减半周期，剩余温差为 $144/2^3=18$ 度。",
+          "将室温加回，得 $68+18=86$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/9"
+  },
+  "amc8-2022-q10": {
+    "summary": "A car leaves home at 8 AM, drives at 45 mph until 10 AM, stays parked for a three-hour hike, and returns along the same route at 60 mph. Which graph A–E shows its distance from home? Horizontal labels use the 24-hour clock, and vertical values are miles.",
+    "summaryZh": "汽车早上 8 时离家，以每小时 45 英里行驶到 10 时；停车徒步三小时后，以每小时 60 英里沿原路返回。图 A 至 E 中哪幅表示汽车离家的距离？横轴按 24 小时制标时，纵轴为英里。",
+    "answer": "E. Graph E.",
+    "answerZh": "E．图 E。",
+    "methods": [
+      {
+        "title": "Determine the graph’s turning points",
+        "titleZh": "确定折线转折点",
+        "topics": [
+          {
+            "en": "Distance–time graphs",
+            "zh": "路程与时间图像"
+          }
+        ],
+        "steps": [
+          "The outward journey covers $2\\cdot45=90$ miles. The car stays 90 miles from home from 10:00 to 13:00, giving a flat section there.",
+          "The return takes $90/60=1.5$ hours, ending at 14:30. The graph through $(8,0),(10,90),(13,90),(14.5,0)$ is E."
+        ],
+        "stepsZh": [
+          "去程为 $2\\cdot45=90$ 英里。10 时至 13 时汽车停在原处，故图像在距离 90 处水平。",
+          "回程用 $90/60=1.5$ 小时，14:30 到家。经过 $(8,0),(10,90),(13,90),(14.5,0)$ 的折线是 E。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/10",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q10.svg",
+      "alt": "Distance–time options. A and E level at 90 miles; A returns at 15:00, E at 14:30. B and C level at 45 miles; D levels at 120 miles.",
+      "altZh": "路程与时间选项。A、E 的平台高 90 英里，分别于 15:00、14:30 返回。B、C 的平台高 45 英里，D 高 120 英里。",
+      "printHeightPt": 304
+    }
+  },
+  "amc8-2022-q11": {
+    "summary": "Each time a 3-inch segment is eaten out of the interior of one strand of pasta, the strand splits into two pieces. Starting from one strand, ten pieces remain with a total length of 17 inches. How long was the original strand?  (A) $34$ (B) $38$ (C) $41$ (D) $44$ (E) $47$",
+    "summaryZh": "从一根面条开始，每次吃掉某一段中间长 3 英寸的一截，将该段一分为二。最后十段面条共长 17 英寸。原面条长多少英寸？  (A) $34$ (B) $38$ (C) $41$ (D) $44$ (E) $47$",
+    "answer": "D. $44$ inches.",
+    "answerZh": "D．$44$ 英寸。",
+    "methods": [
+      {
+        "title": "Count cuts from the net piece increase",
+        "titleZh": "由段数变化求次数",
+        "topics": [
+          {
+            "en": "Counting invariants",
+            "zh": "计数不变量"
+          }
+        ],
+        "steps": [
+          "Each bite increases the piece count by exactly one. Reaching ten from one therefore takes nine bites.",
+          "The eaten length is $9\\cdot3=27$ inches, so the original length was $17+27=44$."
+        ],
+        "stepsZh": [
+          "每吃一次，面条段数恰增加一。从一段变为十段共吃了九次。",
+          "吃掉 $9\\cdot3=27$ 英寸，加上剩余 17 英寸，原长为 $17+27=44$ 英寸。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/11"
+  },
+  "amc8-2022-q12": {
+    "summary": "Use two independent spinners, each with four equal sectors. A displays 5, 6, 7, 8 and B displays 1, 2, 3, 4. Make a number with A as its tens digit and B as its units digit. What is the chance of a perfect square?  (A) $\\frac{1}{16}$ (B) $\\frac{1}{8}$ (C) $\\frac{1}{4}$ (D) $\\frac{3}{8}$ (E) $\\frac{1}{2}$",
+    "summaryZh": "两个独立转盘各有四个等大扇区。A 标 5、6、7、8，B 标 1、2、3、4。以 A 的结果为十位、B 的结果为个位，所得数为完全平方数的概率是多少？  (A) $\\frac{1}{16}$ (B) $\\frac{1}{8}$ (C) $\\frac{1}{4}$ (D) $\\frac{3}{8}$ (E) $\\frac{1}{2}$",
+    "answer": "B. $1/8$.",
+    "answerZh": "B．$1/8$。",
+    "methods": [
+      {
+        "title": "List the squares in range",
+        "titleZh": "列出范围内的完全平方数",
+        "topics": [
+          {
+            "en": "Equally likely outcomes",
+            "zh": "等可能结果"
+          }
+        ],
+        "steps": [
+          "Each ordered digit pair has probability $1/16$. The resulting numbers lie between 51 and 84. Only $8^2=64$ and $9^2=81$ are squares in that interval.",
+          "Both have allowed digits in the correct positions, so the chance is $2/16=1/8$."
+        ],
+        "stepsZh": [
+          "每个有序数字对的概率均为 $1/16$。所得数在 51 至 84 之间，区间中只有 $8^2=64$ 和 $9^2=81$ 为平方数。",
+          "两数的十位与个位均符合转盘范围，故概率为 $2/16=1/8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/12",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q12.svg",
+      "alt": "Four equal sectors on each spinner. A lists 5, 6, 7, 8; B lists 1, 2, 3, 4.",
+      "altZh": "两个转盘各四等分，A 标 5、6、7、8，B 标 1、2、3、4。"
+    }
+  },
+  "amc8-2022-q13": {
+    "summary": "Two positive integers sum to 28. One exceeds twice the other by a positive integer $d$. How many different values can $d$ take?  (A) $6$ (B) $7$ (C) $8$ (D) $9$ (E) $10$",
+    "summaryZh": "两个正整数之和为 28。一个数比另一个数的两倍多一个正整数 $d$。问 $d$ 有多少个不同取值？  (A) $6$ (B) $7$ (C) $8$ (D) $9$ (E) $10$",
+    "answer": "D. $9$.",
+    "answerZh": "D．$9$ 个。",
+    "methods": [
+      {
+        "title": "Parameterize by the smaller integer",
+        "titleZh": "按较小整数参数化",
+        "topics": [
+          {
+            "en": "Linear Diophantine equations",
+            "zh": "一次不定方程"
+          }
+        ],
+        "steps": [
+          "Write the two numbers as $s,2s+d$. Their sum condition becomes $3s+d=28$, so $d=28-3s$.",
+          "Positivity allows $s=1,2,\\ldots,9$. They give nine distinct positive values of $d$, from 25 down to 1."
+        ],
+        "stepsZh": [
+          "把两数写成 $s,2s+d$，则 $3s+d=28$，即 $d=28-3s$。",
+          "由正性得 $s=1,2,\\ldots,9$，对应九个不同的正整数 $d$，从 25 依次减至 1。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/13"
+  },
+  "amc8-2022-q14": {
+    "summary": "In how many distinct rearrangements of BEEKEEPER are no two copies of E adjacent?  (A) $1$ (B) $4$ (C) $12$ (D) $24$ (E) $120$",
+    "summaryZh": "重排 BEEKEEPER 的字母，要求任意两个 E 都不相邻。共有多少种不同的排列？  (A) $1$ (B) $4$ (C) $12$ (D) $24$ (E) $120$",
+    "answer": "D. $24$.",
+    "answerZh": "D．$24$ 种。",
+    "methods": [
+      {
+        "title": "Fill the gaps between non-E letters",
+        "titleZh": "将 E 插入其余字母的空隙",
+        "topics": [
+          {
+            "en": "Gap method",
+            "zh": "插空法"
+          }
+        ],
+        "steps": [
+          "The four non-E letters are B, K, P and R, all distinct. In any ordering they create five available gaps, including the two ends.",
+          "The five identical Es must fill exactly one per gap, with no choice left. The four other letters can be ordered in $4!=24$ ways."
+        ],
+        "stepsZh": [
+          "非 E 字母为互异的 B、K、P、R。任意排好四者后，连同两端共有五个可插空隙。",
+          "恰有五个相同的 E，每个空隙必须放一个。故只有四个其他字母的顺序可选，共 $4!=24$ 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/14"
+  },
+  "amc8-2022-q15": {
+    "summary": "The plot shows the prices in dollars of thirty pepper packages against their weights in ounces. What is the weight of the lowest-cost package per ounce?  (A) $1$ (B) $2$ (C) $3$ (D) $4$ (E) $5$",
+    "summaryZh": "散点图列出三十包胡椒的重量（盎司）与价格（美元）。每盎司价格最低的是多重的一包？  (A) $1$ (B) $2$ (C) $3$ (D) $4$ (E) $5$",
+    "answer": "C. $3$ ounces.",
+    "answerZh": "C．$3$ 盎司。",
+    "methods": [
+      {
+        "title": "Compare slopes from the origin",
+        "titleZh": "比较各点与原点连线的斜率",
+        "topics": [
+          {
+            "en": "Unit price and slope",
+            "zh": "单价与斜率"
+          }
+        ],
+        "steps": [
+          "At each weight only the lowest point can be optimal. For weights $1,1.5,2,2.5,3,3.5,4,4.5,5$ the lowest prices read from the plot are approximately $1.2,2.1,2.0,2.7,2.5,3.8,3.9,4.8,4.5$ respectively.",
+          "Price divided by weight is the slope from the origin. The 3-ounce package costs $2.5/3\\approx0.83$ dollars per ounce. The next-lowest of these ratios is $4.5/5=0.90$, so 3 ounces is the unique minimum."
+        ],
+        "stepsZh": [
+          "同一重量只需考虑最低的点。重量依次为 $1,1.5,2,2.5,3,3.5,4,4.5,5$ 时，读图可得最低总价约为 $1.2,2.1,2.0,2.7,2.5,3.8,3.9,4.8,4.5$ 美元。",
+          "每盎司价格就是各点与原点连线的斜率。3 盎司装每盎司 $2.5/3\\approx0.83$ 美元，下一个较低单价是 $4.5/5=0.90$，故最低的是 3 盎司装。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/15",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q15.svg",
+      "alt": "Scatter plot of package price against weight. At weights 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5 and 5 ounces, the lowest prices in dollars are 1.2, 2.1, 2, 2.7, 2.5, 3.8, 3.9, 4.8 and 4.5.",
+      "altZh": "横坐标为重量、纵坐标为价格。在 1、1.5、2、2.5、3、3.5、4、4.5、5 盎司处，最低价格（美元）依次为 1.2、2.1、2、2.7、2.5、3.8、3.9、4.8、4.5。",
+      "printHeightPt": 192
+    }
+  },
+  "amc8-2022-q16": {
+    "summary": "In a row of four numbers, the means of the first pair, the middle pair and the last pair are 21, 26 and 30. What is the mean of the two end numbers?  (A) $24$ (B) $25$ (C) $26$ (D) $27$ (E) $28$",
+    "summaryZh": "四个数排成一行，前两个、中间两个、后两个的平均数分别为 21、26、30。求首尾两数的平均数。  (A) $24$ (B) $25$ (C) $26$ (D) $27$ (E) $28$",
+    "answer": "B. $25$.",
+    "answerZh": "B．$25$。",
+    "methods": [
+      {
+        "title": "Subtract the middle pair from the whole",
+        "titleZh": "从总和扣除中间两项",
+        "topics": [
+          {
+            "en": "Pair sums",
+            "zh": "两数之和"
+          }
+        ],
+        "steps": [
+          "Using first and last pairs, the total of all four is $2(21+30)=102$. The middle two sum to $2\\cdot26=52$.",
+          "Subtracting leaves 50 for the first and last, whose average is 25."
+        ],
+        "stepsZh": [
+          "按前两项与后两项计算，四项总和为 $2(21+30)=102$。中间两项和为 $2\\cdot26=52$。",
+          "相减得首尾之和为 50，平均数为 25。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/16"
+  },
+  "amc8-2022-q17": {
+    "summary": "For even $n>0$, let $n!!=2\\cdot4\\cdot6\\cdots n$. Find the final digit of $2!!+4!!+\\cdots+2022!!$.  (A) $0$ (B) $2$ (C) $4$ (D) $6$ (E) $8$",
+    "summaryZh": "对正偶数 $n$，定义 $n!!=2\\cdot4\\cdot6\\cdots n$。求 $2!!+4!!+\\cdots+2022!!$ 的个位数字。  (A) $0$ (B) $2$ (C) $4$ (D) $6$ (E) $8$",
+    "answer": "B. $2$.",
+    "answerZh": "B．$2$。",
+    "methods": [
+      {
+        "title": "Discard multiples of ten",
+        "titleZh": "略去 10 的倍数",
+        "topics": [
+          {
+            "en": "Units digits",
+            "zh": "个位数字"
+          }
+        ],
+        "steps": [
+          "Every term from $10!!$ onward contains a factor of 10 and thus contributes zero in the units place.",
+          "Compute the remaining terms: $2,8,48,384$. Their sum $442$ ends in 2."
+        ],
+        "stepsZh": [
+          "从 $10!!$ 起每项都包含因数 10，所以它们对个位均无贡献。",
+          "前四项分别为 $2,8,48,384$，和为 $442$，个位是 2。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/17"
+  },
+  "amc8-2022-q18": {
+    "summary": "The side midpoints of a rectangle are $(-3,0),(2,0),(5,4),(0,4)$. Find the area of the original rectangle.  (A) $20$ (B) $25$ (C) $40$ (D) $50$ (E) $80$",
+    "summaryZh": "一个长方形的四条边中点分别为 $(-3,0),(2,0),(5,4),(0,4)$。求原长方形的面积。  (A) $20$ (B) $25$ (C) $40$ (D) $50$ (E) $80$",
+    "answer": "C. $40$ square units.",
+    "answerZh": "C．$40$ 平方单位。",
+    "methods": [
+      {
+        "title": "Use opposite side midpoints",
+        "titleZh": "连接对边的中点",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "The midpoints listed in boundary order form a parallelogram. Each of its diagonals joins two opposite side midpoints of the original rectangle, so its length is one side length of that rectangle.",
+          "The two lengths are $\\sqrt{8^2+4^2}=4\\sqrt5$ and $\\sqrt{(-2)^2+4^2}=2\\sqrt5$. Multiplying gives 40."
+        ],
+        "stepsZh": [
+          "四中点按所给围合次序构成平行四边形。它的每条对角线连接原长方形一对对边中点，长度恰等于原长方形的一条边。",
+          "两个长度分别为 $\\sqrt{8^2+4^2}=4\\sqrt5$ 和 $\\sqrt{(-2)^2+4^2}=2\\sqrt5$，乘积为 40。"
+        ]
+      },
+      {
+        "title": "Use the midpoint quadrilateral",
+        "titleZh": "利用中点四边形面积",
+        "topics": [
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          }
+        ],
+        "steps": [
+          "The midpoint parallelogram has horizontal base length 5 and height 4, hence area 20.",
+          "In a rectangle of width $w$ and height $h$, the four corner triangles outside the midpoint figure each have area $wh/8$. The midpoint figure therefore occupies half the rectangle, so the original area is $2\\cdot20=40$."
+        ],
+        "stepsZh": [
+          "中点平行四边形的水平底边长 5、高为 4，面积 20。",
+          "在宽 $w$、高 $h$ 的长方形中，四个角上切下的三角形各有面积 $wh/8$。中点图形占总面积的一半，故原面积为 $2\\cdot20=40$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/18"
+  },
+  "amc8-2022-q19": {
+    "summary": "The plot gives twenty test scores. A correction awards exactly five more points to each of some students and raises the median to 85. What is the smallest possible number of students receiving the increase?  (A) $2$ (B) $3$ (C) $4$ (D) $5$ (E) $6$",
+    "summaryZh": "图中给出二十人的原成绩。订正时给其中若干名学生各加五分，订正后的中位数为 85。最少给多少人加了分？  (A) $2$ (B) $3$ (C) $4$ (D) $5$ (E) $6$",
+    "answer": "C. $4$ students.",
+    "answerZh": "C．$4$ 人。",
+    "methods": [
+      {
+        "title": "Bound the upper middle score",
+        "titleZh": "限制较大的中间项",
+        "topics": [
+          {
+            "en": "Order statistics",
+            "zh": "顺序统计量"
+          }
+        ],
+        "steps": [
+          "The counts at $65,70,75,80,85,90,95,100$ are $2,2,4,5,2,3,1,1$. At most seven scores can reach 90, since only seven initially reached 85. Therefore the 11th score in increasing order cannot reach 90; that would require ten such scores. Scores remain multiples of five.",
+          "For the 10th and 11th scores to average 85, both must therefore equal 85. At least eleven students must have 85 or more. Only seven started there, requiring four increases.",
+          "Raise four of the five 80s to 85. Exactly nine scores then remain below 85, and the 10th and 11th are indeed both 85."
+        ],
+        "stepsZh": [
+          "在 $65,70,75,80,85,90,95,100$ 各分数处的人数为 $2,2,4,5,2,3,1,1$。原来达到 85 分的只有七人，所以新成绩中达到 90 的至多七人。升序第 11 项若至少为 90 就需要十人，故不可能；所有分数仍是五的倍数。",
+          "第 10、11 项平均数要等于 85，因而两项都必须为 85。至少十一人达到 85，此前只有七人，至少要提升四人。",
+          "从五名 80 分学生中选四人加至 85，此时恰有九人低于 85，第 10、11 项都为 85，达到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/19",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q19.svg",
+      "alt": "Scores 65, 70, 75, 80, 85, 90, 95, 100 occur 2, 2, 4, 5, 2, 3, 1, 1 times respectively.",
+      "altZh": "分数 65、70、75、80、85、90、95、100 的人数依次为 2、2、4、5、2、3、1、1。"
+    }
+  },
+  "amc8-2022-q20": {
+    "summary": "Every row and column of $\\begin{pmatrix}-2&9&5\\\\a&b&-1\\\\x&c&8\\end{pmatrix}$ has the same sum. The four letters are integers, with $x$ strictly larger than $a,b,c$. Find the smallest $x$.  (A) $-1$ (B) $5$ (C) $6$ (D) $8$ (E) $9$",
+    "summaryZh": "方阵 $\\begin{pmatrix}-2&9&5\\\\a&b&-1\\\\x&c&8\\end{pmatrix}$ 的各行、各列之和相同。四个字母代表整数，且 $x$ 大于 $a,b,c$ 中的每一个。求 $x$ 的最小值。  (A) $-1$ (B) $5$ (C) $6$ (D) $8$ (E) $9$",
+    "answer": "D. $8$.",
+    "answerZh": "D．$8$。",
+    "methods": [
+      {
+        "title": "Express the other entries in terms of x",
+        "titleZh": "用 x 表示其余各格",
+        "topics": [
+          {
+            "en": "Linear constraints",
+            "zh": "线性约束"
+          }
+        ],
+        "steps": [
+          "The first row sets the common total to $-2+9+5=12$. Column one gives $a=14-x$; the bottom row gives $c=4-x$. The second column then gives $b=x-1$. These expressions also satisfy the middle row and final column.",
+          "The strongest strict inequality is $x>14-x$, hence $x>7$. At $x=8$ the other entries are $a=6,b=7,c=-4$, all smaller, so 8 works."
+        ],
+        "stepsZh": [
+          "由首行知公共和是 $-2+9+5=12$。首列给出 $a=14-x$，末行给出 $c=4-x$，再由第二列得 $b=x-1$。这些表达式也满足中行和末列条件。",
+          "最强的严格不等式是 $x>14-x$，即 $x>7$。取 $x=8$ 时 $a=6,b=7,c=-4$ 均较小，可行。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/20"
+  },
+  "amc8-2022-q21": {
+    "summary": "One player makes 15 of 20 shots in the first half and 10 of 10 in the second. A second player takes 12 and 18 shots respectively, has a strictly lower percentage in each half, yet ties the first player’s overall percentage. How many more shots does the second player make in the second half than in the first?  (A) $7$ (B) $8$ (C) $9$ (D) $10$ (E) $11$",
+    "summaryZh": "一名球员上半场 20 投 15 中、下半场 10 投全中。另一名球员上下半场分别出手 12、18 次，两个半场命中率均严格较低，但全场命中率相同。第二名球员下半场比上半场多投中几球？  (A) $7$ (B) $8$ (C) $9$ (D) $10$ (E) $11$",
+    "answer": "C. $9$.",
+    "answerZh": "C．$9$ 球。",
+    "methods": [
+      {
+        "title": "Use both strict percentage bounds",
+        "titleZh": "同时利用两段命中率的严格上界",
+        "topics": [
+          {
+            "en": "Rates and inequalities",
+            "zh": "比率与不等式"
+          }
+        ],
+        "steps": [
+          "Both players took 30 shots, so the second also made $15+10=25$. In the first half she made strictly less than $(15/20)12=9$, hence at most 8. In the second she made fewer than 18, hence at most 17.",
+          "The two maxima add to exactly 25, so both are attained. The difference is $17-8=9$."
+        ],
+        "stepsZh": [
+          "两人均出手 30 次，第二人也命中 $15+10=25$ 球。上半场她命中数严格少于 $(15/20)12=9$，故至多为 8；下半场不能全中，至多为 17。",
+          "两个上界恰好合计 25，必同时达到。相差 $17-8=9$ 球。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/21"
+  },
+  "amc8-2022-q22": {
+    "summary": "A bus drives two minutes between consecutive stops and pauses one minute at each. A walker needs five minutes per stop interval. They depart simultaneously with the bus three stops behind. At each stop the walker waits if the bus has reached the previous stop, and otherwise keeps walking. How many minutes elapse until the walker boards?  (A) $17$ (B) $19$ (C) $20$ (D) $21$ (E) $23$",
+    "summaryZh": "公交车每两站间行驶两分钟，到站停一分钟。步行者走相邻两站需五分钟。二者同时出发，公交落后三站。步行者每到一站，若车已到达前一站就停下等车，否则继续步行。经过多少分钟能够上车？  (A) $17$ (B) $19$ (C) $20$ (D) $21$ (E) $23$",
+    "answer": "A. $17$ minutes.",
+    "answerZh": "A．$17$ 分钟。",
+    "methods": [
+      {
+        "title": "Compare the bus against the previous stop",
+        "titleZh": "逐次比较公交与前一站的位置",
+        "topics": [
+          {
+            "en": "Timetables",
+            "zh": "时刻表"
+          }
+        ],
+        "steps": [
+          "Number the bus’s starting stop 0. It first arrives at stop $k\\ge1$ at minute $3k-1$, including the one-minute waits at the intervening stops. The walker starts at 3, then reaches stops 4, 5 and 6 at minutes 5, 10 and 15 if still walking.",
+          "At minute 5 the bus has not reached stop 3 (arrival 8). At minute 10 it has not reached stop 4 (arrival 11). At minute 15 it has reached stop 5 (arrival 14), so the walker waits at 6. The bus arrives there at minute $3\\cdot6-1=17$."
+        ],
+        "stepsZh": [
+          "公交起点编号为 0。车首次到达第 $k\\ge1$ 站的时刻是第 $3k-1$ 分钟，途中各站均停一分钟。步行者从第 3 站出发，若继续步行，将在第 5、10、15 分钟依次抵达第 4、5、6 站。",
+          "第 5 分钟车尚未到第 3 站（第 8 分钟到）；第 10 分钟尚未到第 4 站（第 11 分钟到）；第 15 分钟已到过第 5 站（第 14 分钟到），所以步行者在第 6 站等候。公交第 $3\\cdot6-1=17$ 分钟到达。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/22"
+  },
+  "amc8-2022-q23": {
+    "summary": "In each cell of a three-by-three grid place a triangle or a circle. How many boards have both a complete line of three triangles and a complete line of three circles? Lines may be rows, columns or either main diagonal.  (A) $39$ (B) $42$ (C) $78$ (D) $84$ (E) $96$",
+    "summaryZh": "在三行三列的每格放一个三角形或圆形。要求同时有三个三角形连成整线、三个圆形也连成整线。允许横行、纵列或两条大对角线。这样的棋盘有几种？  (A) $39$ (B) $42$ (C) $78$ (D) $84$ (E) $96$",
+    "answer": "D. $84$.",
+    "answerZh": "D．$84$ 种。",
+    "methods": [
+      {
+        "title": "Count parallel monochromatic lines",
+        "titleZh": "数平行的单色整线",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "The two monochromatic lines cannot meet. Every diagonal meets every other line, and rows meet columns, so the two lines are either parallel rows or parallel columns. These cases cannot both occur because a uniform row prevents a uniform column of the opposite type.",
+          "For the row case, each of the three rows has $2^3=8$ binary patterns. To have at least one all-triangle row and at least one all-circle row, exclude boards missing either pattern by inclusion–exclusion: $8^3-2\\cdot7^3+6^3=42$.",
+          "There are another 42 with columns instead of rows, giving 84."
+        ],
+        "stepsZh": [
+          "两条单色线不能相交。每条大对角线均与其他整线相交，横纵也相交，故只有两条平行横行或两条平行纵列两种情况。两类不能同时出现：任一单色行都会阻止另一种颜色的单色列。",
+          "先看横行。每行有 $2^3=8$ 种模式。要求至少有一行全是三角形，又至少有一行全是圆形，用容斥得到 $8^3-2\\cdot7^3+6^3=42$。",
+          "纵列情形对称，也是 42 种，总计 84。"
+        ]
+      },
+      {
+        "title": "Sort by the number of triangles",
+        "titleZh": "按三角形总数分类",
+        "topics": [
+          {
+            "en": "Counting by cases",
+            "zh": "分类计数"
+          }
+        ],
+        "steps": [
+          "If there are three triangles, they must form a whole row or column, giving 6 boards. A diagonal cannot work because it meets every possible circle line. By interchanging the symbols, six triangles also give 6 boards.",
+          "With four triangles, the three on a line must again make a row or column. The remaining triangle can go in any of the other six cells: one of the two parallel lines is still all circles. A set of four triangles cannot contain two distinct lines of three, so this gives $6\\cdot6=36$ boards. Five triangles give another 36 by symmetry.",
+          "The possible counts are 3 through 6. Adding $6+36+36+6$ gives 84."
+        ],
+        "stepsZh": [
+          "若恰有三个三角形，它们必须占满一行或一列，有 6 种。不能占对角线，因为那样会与任一圆形整线相交。互换图形，六个三角形时也是 6 种。",
+          "若有四个三角形，成线的三个仍占一行或一列，第四个可放在其他六格中的任意一格，另一条平行线上仍全为圆形。四个三角形不可能构成两条不同整线，故无重复，计 $6\\cdot6=36$。由对称性五个三角形也是 36 种。",
+          "三角形总数只能为 3 至 6，合计 $6+36+36+6=84$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/23"
+  },
+  "amc8-2022-q24": {
+    "summary": "The pictured net, folded at its dashed lines, makes a right triangular prism. The marked sides have $AH=EF=8$ and $GH=14$. What is the volume?  (A) $112$ (B) $128$ (C) $192$ (D) $240$ (E) $288$",
+    "summaryZh": "将图示展开图沿虚线折叠，可得直三棱柱。已知 $AH=EF=8$、$GH=14$，求棱柱体积。  (A) $112$ (B) $128$ (C) $192$ (D) $240$ (E) $288$",
+    "answer": "C. $192$ cubic units.",
+    "answerZh": "C．$192$ 立方单位。",
+    "methods": [
+      {
+        "title": "Identify the matching prism edges",
+        "titleZh": "辨认展开图中的对应边",
+        "topics": [
+          {
+            "en": "Prism nets",
+            "zh": "棱柱展开图"
+          }
+        ],
+        "steps": [
+          "The two triangular ends are $BJG$ and $CIF$. In the rectangle attached along $FI$, the side $FE=8$ is the prism length, so all edges linking corresponding ends, including $HJ$ and $GF$, have length 8.",
+          "The line segment $HG$ consists of $HJ$ and $JG$. Thus $JG=14-8=6$. The other leg of right triangle $BJG$ is $BJ=AH=8$, opposite it on the left rectangle.",
+          "The base area is $6\\cdot8/2=24$. Multiplying by the prism length 8 gives $192$."
+        ],
+        "stepsZh": [
+          "两个三角形底面是 $BJG$ 和 $CIF$。在与 $FI$ 相连的矩形中，$FE=8$ 是棱柱的长，因此对应底面顶点之间的各条侧棱，包括 $HJ$ 和 $GF$，也都长 8。",
+          "线段 $HG$ 由 $HJ$ 与 $JG$ 两段组成，故 $JG=14-8=6$。直角三角形 $BJG$ 的另一直角边 $BJ$ 是左侧矩形中 $AH$ 的对边，亦为 8。",
+          "底面积为 $6\\cdot8/2=24$，乘以柱长 8 得体积 $192$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/24",
+    "figure": {
+      "url": "/commentary-figures/amc8-2022-q24.svg",
+      "alt": "The middle rectangle BCFG shares BG with right triangle BJG and CF with right triangle CIF. Rectangles AHJB and FIDE attach at BJ and FI. J lies between H and G.",
+      "altZh": "中间的矩形 BCFG 以 BG、CF 为两边，分别连接直角三角形 BJG、CIF。另两个矩形通过 BJ 和 FI 与三角形相接。J 在 H、G 之间。",
+      "printHeightPt": 132
+    }
+  },
+  "amc8-2022-q25": {
+    "summary": "On each hop a cricket moves from its current leaf to one of the other three leaves, all equally likely. What is the probability that its fourth hop ends on its original leaf?  (A) $\\frac{2}{9}$ (B) $\\frac{19}{80}$ (C) $\\frac{20}{81}$ (D) $\\frac{1}{4}$ (E) $\\frac{7}{27}$",
+    "summaryZh": "蟋蟀在四片叶子间跳动，每次等概率跳到另外三片中的一片。第四跳结束时回到最初那片叶子的概率是多少？  (A) $\\frac{2}{9}$ (B) $\\frac{19}{80}$ (C) $\\frac{20}{81}$ (D) $\\frac{1}{4}$ (E) $\\frac{7}{27}$",
+    "answer": "E. $7/27$.",
+    "answerZh": "E．$7/27$。",
+    "methods": [
+      {
+        "title": "Condition on the middle of the walk",
+        "titleZh": "按走完两步后的位置分类",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          }
+        ],
+        "steps": [
+          "After two hops the cricket is back at its start with probability $1/3$. From that state, returning again two hops later also has probability $1/3$.",
+          "Otherwise it is at another leaf (probability $2/3$). To be back two hops later, it must first go to one of the two leaves that are neither its current leaf nor the start, then to the start. The probability is $(2/3)(1/3)=2/9$.",
+          "Combining the cases gives $(1/3)(1/3)+(2/3)(2/9)=7/27$."
+        ],
+        "stepsZh": [
+          "走完两步回到起点的概率是 $1/3$。从起点再走两步回到起点，概率仍为 $1/3$。",
+          "否则位于另一片叶子，概率为 $2/3$。随后两步回到起点，第一步需走到既非当前位置也非起点的两片之一，再跳向起点，概率为 $(2/3)(1/3)=2/9$。",
+          "合计 $(1/3)(1/3)+(2/3)(2/9)=7/27$。"
+        ]
+      },
+      {
+        "title": "Track just the chance of being home",
+        "titleZh": "仅递推位于起点的概率",
+        "topics": [
+          {
+            "en": "Probability recurrences",
+            "zh": "概率递推"
+          }
+        ],
+        "steps": [
+          "Let $p_k$ be the probability of being on the original leaf after $k$ hops. From any other leaf the next hop goes home with probability $1/3$, while from home a hop always leaves. Thus $p_{k+1}=(1-p_k)/3$.",
+          "Starting at $p_0=1$, this gives $p_1=0,p_2=1/3,p_3=2/9,p_4=7/27$."
+        ],
+        "stepsZh": [
+          "记 $p_k$ 为第 $k$ 跳后在起点的概率。在别处时下一跳以 $1/3$ 的概率回去，在起点则下一跳必定离开，故 $p_{k+1}=(1-p_k)/3$。",
+          "从 $p_0=1$ 出发，得 $p_1=0,p_2=1/3,p_3=2/9,p_4=7/27$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2022/problem/25"
+  }
+}
