@@ -223,10 +223,10 @@ function startBank(root) {
     root.querySelectorAll('[name=paper-layout]').forEach(input=>input.checked=input.value===layout);
     root.querySelectorAll('[data-pdf]').forEach(b=>b.disabled=exporting || rows.length===0 || rows.length!==selected.length);
     const answers = root.querySelector('[data-pdf=solutions]');
-    if (rows.length && refs === rows.length) answers.textContent = t('Download reference sheet PDF','下载题源索引 PDF');
-    else if (rows.length && keys === rows.length) answers.textContent = t('Download answer key PDF','下载答案卷 PDF');
-    else if (refs || keys) answers.textContent = t('Download answer guide PDF','下载答案汇编 PDF');
-    else answers.textContent = t('Download solutions PDF','下载解析卷 PDF');
+    if (rows.length && refs === rows.length) answers.textContent = t('Download reference sheet PDF','下载英文题源索引 PDF');
+    else if (rows.length && keys === rows.length) answers.textContent = t('Download answer key PDF','下载英文答案卷 PDF');
+    else if (refs || keys) answers.textContent = t('Download answer guide PDF','下载英文答案汇编 PDF');
+    else answers.textContent = t('Download solutions PDF','下载英文解析卷 PDF');
   }
   function changed(message) { save(); renderSheet(); get('status').textContent=message; }
   function addIncoming() {

@@ -1,0 +1,601 @@
+{
+  "aime-2021i-q1": {
+    "summary": "Zou and Chou run six 100-metre races. Zou wins race one. At each later race, the previous winner has probability $2/3$ of winning again and the other runner has probability $1/3$. Write the probability that Zou wins exactly five races as the reduced fraction $m/n$. Find $m+n$.",
+    "summaryZh": "Zou 和 Chou 进行六场百米赛跑，第一场由 Zou 获胜。此后每场比赛，上一场的胜者再赢的概率为 $2/3$，另一人获胜的概率为 $1/3$。将 Zou 恰好赢五场的概率写成最简分数 $m/n$，求 $m+n$。",
+    "answer": "097",
+    "answerZh": "097",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/1",
+    "methods": [
+      {
+        "title": "Count changes of winner",
+        "titleZh": "按胜者发生变化的次数计算",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "Five wins mean a single loss, which must be in races 2 through 6. If that loss is last, the five transitions contain four repeats of the previous winner and one change. This contributes $(2/3)^4(1/3)=16/243$.",
+          "A lone loss in race 2, 3, 4 or 5 has a change on either side and three repeats. Each of these four paths has probability $(1/3)^2(2/3)^3=8/243$. The five paths are disjoint, giving $(16+4\\cdot8)/243=16/81$. Hence $m+n=97$."
+        ],
+        "stepsZh": [
+          "恰好赢五场意味着仅输一场，且只能输在第 2 至第 6 场。若输最后一场，五次相邻比赛之间有四次胜者不变、一次更换胜者，概率为 $(2/3)^4(1/3)=16/243$。",
+          "若唯一一次输在第 2、3、4 或 5 场，则进入该场和离开该场时各更换一次胜者，其余三次不变。这四种情形各有概率 $(1/3)^2(2/3)^3=8/243$。五种情形互斥，故总概率为 $(16+4\\cdot8)/243=16/81$，所求为 $97$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q2": {
+    "summary": "A $3$-by-$11$ rectangle $ABCD$ has $A$ upper left, $B$ lower left, $C$ lower right and $D$ upper right, so $AB=3$. A second rectangle with cyclic vertex order $A,E,C,F$ has $AF=7$ and $FC=9$. Its vertex $F$ is above line $AD$ and $E$ is below line $BC$. The area common to the two rectangles is the reduced fraction $m/n$. Find $m+n$.",
+    "summaryZh": "长方形 $ABCD$ 的左上、左下、右下、右上顶点依次为 $A,B,C,D$，其中 $AB=3,BC=11$。另一个长方形的四个顶点沿边界依次为 $A,E,C,F$，其中 $AF=7,FC=9$。$F$ 在直线 $AD$ 的上方，$E$ 在直线 $BC$ 的下方。将两个长方形的重叠面积写成最简分数 $m/n$，求 $m+n$。",
+    "answer": "109",
+    "answerZh": "109",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/2",
+    "methods": [
+      {
+        "title": "Find the constant horizontal width",
+        "titleZh": "求重叠区域的水平宽度",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Perpendicular vectors",
+            "zh": "垂直向量"
+          },
+          {
+            "en": "Area of a parallelogram",
+            "zh": "平行四边形面积"
+          }
+        ],
+        "steps": [
+          "Take $B=(0,0),A=(0,3),C=(11,0)$. Let $(u,v)$ be the unit direction from $A$ to $F$. Because $F$ is above $AD$ and $C$ is to the right, the perpendicular direction from $F$ to $C$ is $(v,-u)$. Thus $(11,-3)=7(u,v)+9(v,-u)$, giving $u=4/5,\\ v=3/5$.",
+          "The edges $AE$ and $FC$ therefore slope down four units for every three units east. On the top line $AD$, edge $FC$ is $9/4$ units to the left of $D$ because it has risen $3$ units from $C$. The common top edge has length $11-9/4=35/4$.",
+          "At height $y$ for $0\\le y\\le3$, the two sloping edges have horizontal coordinates $3(3-y)/4$ and $11-3y/4$. Both lie inside the first rectangle. The other two edges of the second rectangle run above and below this band between these endpoints (they have positive slope through $A$ and $C$). Thus the overlap is a parallelogram of height $3$ and width $35/4$. Its area is $105/4$, giving $109$."
+        ],
+        "stepsZh": [
+          "取 $B=(0,0),A=(0,3),C=(11,0)$。设由 $A$ 指向 $F$ 的单位向量为 $(u,v)$。因为 $F$ 在 $AD$ 上方且 $C$ 在右方，由 $F$ 指向 $C$ 的垂直单位向量为 $(v,-u)$。因此 $(11,-3)=7(u,v)+9(v,-u)$，解得 $u=4/5,v=3/5$。",
+          "边 $AE$ 和 $FC$ 每向右走 $3$ 个单位就下降 $4$ 个单位。从 $C$ 沿 $CF$ 上升 $3$ 个单位到达 $AD$ 时，水平向左移了 $9/4$。因此重叠区域的上底长为 $11-9/4=35/4$。",
+          "在高度 $0\\le y\\le3$ 处，两条斜边的横坐标分别是 $3(3-y)/4$ 与 $11-3y/4$，均在第一个长方形内。第二个长方形的另外两边分别过 $A,C$ 且斜率为正，在这一段水平截线的上方和下方。因此重叠区域为高 $3$、水平底长 $35/4$ 的平行四边形。面积是 $105/4$，所求为 $109$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q3": {
+    "summary": "How many different integers $N$ with $1\\le N<1000$ admit a representation $N=2^r-2^s$ with integer exponents $r,s$?",
+    "summaryZh": "在 $1\\le N<1000$ 的整数中，有多少个不同的 $N$ 可写成 $2^r-2^s$，其中 $r,s$ 均为整数？",
+    "answer": "050",
+    "answerZh": "050",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/3",
+    "methods": [
+      {
+        "title": "Recover the exponents from the odd part",
+        "titleZh": "用奇数部分确定两个指数",
+        "topics": [
+          {
+            "en": "Powers of two",
+            "zh": "二的幂"
+          },
+          {
+            "en": "Unique factorisation",
+            "zh": "唯一分解"
+          },
+          {
+            "en": "Counting representations",
+            "zh": "表示法计数"
+          }
+        ],
+        "steps": [
+          "Positivity forces $r>s$. Factor $N=2^s(2^{r-s}-1)$. The parenthesis is odd, so $s<0$ would leave a power of two in the denominator. Hence $s\\ge0$, and $s$ is exactly the exponent of $2$ in $N$. The odd part then determines $r-s$, so no two exponent pairs produce the same $N$.",
+          "For fixed $r$, the smallest difference is $2^r-2^{r-1}=2^{r-1}$. Hence $r\\le10$. For $1\\le r\\le9$, every $s=0,\\ldots,r-1$ works, giving $1+2+\\cdots+9=45$ choices. For $r=10$ the condition is $1024-2^s<1000$, or $2^s>24$. Precisely $s=5,6,7,8,9$ work. The total is $50$."
+        ],
+        "stepsZh": [
+          "由正性得 $r>s$。分解为 $N=2^s(2^{r-s}-1)$，括号中是奇数，所以若 $s<0$，分母中的二的幂不能约去。故 $s\\ge0$，且正好是 $N$ 所含因子 $2$ 的次数。再由奇数部分可唯一确定 $r-s$，所以不会重复计数。",
+          "固定 $r$ 时，最小的差为 $2^r-2^{r-1}=2^{r-1}$，因此 $r\\le10$。当 $1\\le r\\le9$ 时，$s=0,\\ldots,r-1$ 全都可取，共 $1+2+\\cdots+9=45$ 种。当 $r=10$ 时须有 $1024-2^s<1000$，即 $2^s>24$，只有 $s=5,6,7,8,9$。合计 $50$ 个。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q4": {
+    "summary": "Count the positive integer triples $a<b<c$ with $a+b+c=66$. They describe distributing $66$ identical coins into three nonempty piles in strictly increasing order of size.",
+    "summaryZh": "将 $66$ 枚相同硬币分成三个非空堆，堆的枚数严格递增。求满足 $0<a<b<c$ 且 $a+b+c=66$ 的整数三元组数。",
+    "answer": "331",
+    "answerZh": "331",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/4",
+    "methods": [
+      {
+        "title": "Remove ties before dividing by permutations",
+        "titleZh": "先排除相等情形，再按排列数相除",
+        "topics": [
+          {
+            "en": "Stars and bars",
+            "zh": "隔板法"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          }
+        ],
+        "steps": [
+          "Ignoring order restrictions, two dividers in the $65$ gaps between coins produce $\\binom{65}{2}=2080$ positive ordered triples. With $a=b=t$, the last entry is $66-2t>0$, giving $32$ choices. Each of the other two possible equalities occurs equally often.",
+          "The triple $(22,22,22)$ belongs to all three equality classes; every other triple with a repeated entry belongs to just one. Hence $3\\cdot32-2=94$ triples have a tie. Each set of three distinct sizes has $6$ orderings and exactly one is increasing. The desired count is $(2080-94)/6=331$."
+        ],
+        "stepsZh": [
+          "先不限制大小顺序，在 $65$ 个相邻硬币间隙中选两个放隔板，共得 $\\binom{65}{2}=2080$ 个正整数有序三元组。若 $a=b=t$，余下一堆有 $66-2t>0$ 枚，故 $t$ 有 $32$ 种选择。其余两对相等情形各有同样的数目。",
+          "$(22,22,22)$ 被三类相等情形重复数了三次，其他带有相等项的三元组只出现一次，故有相等项的共 $3\\cdot32-2=94$ 个。三个不同的数有六种排列，恰有一种严格递增，故答案为 $(2080-94)/6=331$。"
+        ]
+      },
+      {
+        "title": "Reflect lattice points across a rectangle's centre",
+        "titleZh": "绕矩形中心配对格点",
+        "topics": [
+          {
+            "en": "Integer partitions",
+            "zh": "整数分拆"
+          },
+          {
+            "en": "Lattice-point counting",
+            "zh": "格点计数"
+          }
+        ],
+        "steps": [
+          "Set $i=a-1,j=b-a-1,k=c-b-1$. All three are nonnegative, and $3i+2j+k=60$. Thus each admissible lattice point $(i,j)$ with $3i+2j\\le60$ gives exactly one triple.",
+          "The surrounding rectangle $0\\le i\\le20,\\ 0\\le j\\le30$ contains $21\\cdot31=651$ lattice points. Its central reflection interchanges the two sides of the diagonal $3i+2j=60$. On that diagonal $i$ must be even, giving $11$ points. Including the diagonal, the count is $(651+11)/2=331$."
+        ],
+        "stepsZh": [
+          "令 $i=a-1,j=b-a-1,k=c-b-1$，则三者均为非负整数且 $3i+2j+k=60$。因此每个满足 $3i+2j\\le60$ 的非负格点 $(i,j)$ 恰好对应一个三元组。",
+          "外接矩形 $0\\le i\\le20,0\\le j\\le30$ 内共有 $21\\cdot31=651$ 个格点。绕中心旋转半周可交换对角线 $3i+2j=60$ 两侧的点。在对角线上 $i$ 必为偶数，对应 $11$ 个格点。将边界也算入，得到 $(651+11)/2=331$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q5": {
+    "summary": "Take a strictly increasing three-term arithmetic progression of integers. It qualifies if the sum of its three squared terms equals the middle term multiplied by the square of its common difference. Add the last terms over all qualifying progressions.",
+    "summaryZh": "取由三项整数组成的严格递增等差数列。若三项的平方和恰等于中间一项乘以公差的平方，则称该数列符合要求。求所有符合要求的数列的末项之和。",
+    "answer": "031",
+    "answerZh": "031",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/5",
+    "methods": [
+      {
+        "title": "Make the middle term give a divisor of twelve",
+        "titleZh": "从中项构造十二的正因子",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          },
+          {
+            "en": "Perfect squares",
+            "zh": "完全平方数"
+          }
+        ],
+        "steps": [
+          "Write the terms as $b-d,b,b+d$ with positive integer $d$. The condition reduces to $3b^2+2d^2=bd^2$, so $(b-2)d^2=3b^2$. Here $b=0$ is impossible, and the positive right side gives $b>2$.",
+          "Set $t=b-2>0$. Then $d^2=3(t+2)^2/t=3t+12+12/t$. Integrality forces $t\\mid12$. At $t=1,2,3,4,6,12$, the respective values of $d^2$ are $27,24,25,27,32,49$.",
+          "Only $25$ and $49$ are squares. They give $(b,d)=(5,5),(14,7)$, and both satisfy the original equality. The progressions end in $10$ and $21$, whose sum is $31$."
+        ],
+        "stepsZh": [
+          "设三项依次为 $b-d,b,b+d$，其中 $d$ 是正整数。条件化为 $3b^2+2d^2=bd^2$，即 $(b-2)d^2=3b^2$。$b=0$ 时等式不成立，故右边为正，从而 $b>2$。",
+          "令 $t=b-2>0$，得 $d^2=3(t+2)^2/t=3t+12+12/t$。由整数性须有 $t\\mid12$。依次取 $t=1,2,3,4,6,12$，得到 $d^2$ 的候选值为 $27,24,25,27,32,49$。",
+          "其中仅有 $25,49$ 是平方数，对应 $(b,d)=(5,5),(14,7)$。两组均满足原等式。末项分别为 $10,21$，所求之和为 $31$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q6": {
+    "summary": "In a cube, $B,C,D$ are the three vertices adjacent to vertex $A$, and $G$ is the opposite vertex across the body diagonal. For a point $P$ in space the given distances are $PB=60\\sqrt{10}$, $PC=60\\sqrt5$, $PD=120\\sqrt2$, and $PG=36\\sqrt7$. Determine $PA$.",
+    "summaryZh": "立方体中，与顶点 $A$ 相邻的三个顶点为 $B,C,D$，体对角线的另一端为 $G$。空间一点 $P$ 满足 $PB=60\\sqrt{10}$、$PC=60\\sqrt5$、$PD=120\\sqrt2$、$PG=36\\sqrt7$。求 $PA$。",
+    "answer": "192",
+    "answerZh": "192",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/6",
+    "methods": [
+      {
+        "title": "Eliminate the cube's side length",
+        "titleZh": "组合距离平方以消去棱长",
+        "topics": [
+          {
+            "en": "Three-dimensional coordinates",
+            "zh": "空间直角坐标"
+          },
+          {
+            "en": "Squared distances",
+            "zh": "距离平方"
+          }
+        ],
+        "steps": [
+          "Take $A$ as the origin, and let the edges to $B,C,D$ be coordinate axes of length $s$. Write $P=(x,y,z)$ and $R=PA^2=x^2+y^2+z^2$. Then $PB^2=R+s^2-2sx$, with the same formula involving $y$ and $z$ for $PC^2$ and $PD^2$.",
+          "Since $G=(s,s,s)$, we have $PG^2=R+3s^2-2s(x+y+z)$. Subtracting this from the sum of the first three squared distances leaves $2R$. Thus $2R=36000+18000+28800-9072=73728$, and $PA=\\sqrt{36864}=192$."
+        ],
+        "stepsZh": [
+          "取 $A$ 为原点，以长为 $s$ 的三条棱 $AB,AC,AD$ 的方向为三个坐标轴。设 $P=(x,y,z)$，记 $R=PA^2=x^2+y^2+z^2$。于是 $PB^2=R+s^2-2sx$，同理将 $x$ 换成 $y,z$ 得 $PC^2,PD^2$。",
+          "因 $G=(s,s,s)$，故 $PG^2=R+3s^2-2s(x+y+z)$。将前三个距离平方相加再减去 $PG^2$，只剩 $2R$。代入得 $2R=36000+18000+28800-9072=73728$，所以 $PA=\\sqrt{36864}=192$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q7": {
+    "summary": "Count the integer pairs $1\\le m<n\\le30$ for which at least one real angle $x$ satisfies $\\sin(mx)+\\sin(nx)=2$.",
+    "summaryZh": "在满足 $1\\le m<n\\le30$ 的整数对中，有多少对使得方程 $\\sin(mx)+\\sin(nx)=2$ 至少有一个实数解 $x$？",
+    "answer": "063",
+    "answerZh": "063",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/7",
+    "methods": [
+      {
+        "title": "Classify integers by their power of two and odd residue",
+        "titleZh": "按二的幂次和奇数部分的模四余数分类",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Powers of two",
+            "zh": "二的幂"
+          },
+          {
+            "en": "Congruences modulo four",
+            "zh": "模四同余"
+          },
+          {
+            "en": "Pair counting",
+            "zh": "数对计数"
+          }
+        ],
+        "steps": [
+          "Both sines must attain $1$. Thus $mx=(4j+1)\\pi/2$ and $nx=(4k+1)\\pi/2$ for some integers $j,k$, giving $n(4j+1)=m(4k+1)$. Both multipliers are odd, so $m,n$ contain the same power $2^e$ of two. After cancellation, their odd parts must agree modulo $4$.",
+          "Conversely, suppose $m=2^e a,n=2^e b$ and $a,b$ are odd and lie in the same residue class $r=1$ or $3$ modulo $4$. Take $x=r\\pi/(2\\cdot2^e)$. Since $ra\\equiv rb\\equiv r^2\\equiv1\\pmod4$, both sines equal $1$. This proves that matching these two labels characterises all eligible pairs.",
+          "For $e=0$ the odd parts can range up to $30$, giving class sizes $8,7$ for residues $1,3$. For $e=1$ they range up to $15$, giving sizes $4,4$; for $e=2$ they range up to $7$, giving $2,2$. When $e\\ge3$ each class has at most one member. Choosing two members from a class counts each increasing pair once, so the answer is $\\binom82+\\binom72+2\\binom42+2\\binom22=63$."
+        ],
+        "stepsZh": [
+          "两个正弦值都必须等于 $1$，故存在整数 $j,k$ 使 $mx=(4j+1)\\pi/2,\\ nx=(4k+1)\\pi/2$，从而 $n(4j+1)=m(4k+1)$。两侧的括号都是奇数，所以 $m,n$ 所含的因子 $2$ 的次数相同，记为 $e$。约去 $2^e$ 后再模 $4$，可知两个奇数部分也必须同余。",
+          "反之，设 $m=2^e a,n=2^e b$，其中 $a,b$ 为奇数，且模 $4$ 同余于 $r$，$r$ 取 $1$ 或 $3$。令 $x=r\\pi/(2\\cdot2^e)$，则 $ra\\equiv rb\\equiv r^2\\equiv1\\pmod4$，确有两个正弦都等于 $1$。因此两项分类条件也充分。",
+          "当 $e=0$ 时奇数部分不超过 $30$，模 $4$ 余 $1,3$ 的两类分别有 $8,7$ 个。当 $e=1$ 时奇数部分不超过 $15$，两类各有 $4$ 个；当 $e=2$ 时不超过 $7$，两类各有 $2$ 个。当 $e\\ge3$ 时，每一类至多有一个数。从同一类任取两个，按从小到大排列便恰得一个数对，因此总数为 $\\binom82+\\binom72+2\\binom42+2\\binom22=63$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q8": {
+    "summary": "For how many integer values of $c$ does the equation $\\bigl|\\lvert20\\lvert x\\rvert-x^2\\rvert-c\\bigr|=21$ have exactly twelve distinct real roots?",
+    "summaryZh": "有多少个整数 $c$ 能使方程 $\\bigl|\\lvert20\\lvert x\\rvert-x^2\\rvert-c\\bigr|=21$ 有恰好十二个互不相同的实根？",
+    "answer": "057",
+    "answerZh": "057",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/8",
+    "methods": [
+      {
+        "title": "Count intersections with each of two horizontal levels",
+        "titleZh": "分别数两条水平线与图像的交点",
+        "topics": [
+          {
+            "en": "Absolute values",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Quadratic graphs",
+            "zh": "二次函数图像"
+          },
+          {
+            "en": "Number of real roots",
+            "zh": "实根个数"
+          }
+        ],
+        "steps": [
+          "Put $t=|x|\\ge0$ and $H(t)=|t(20-t)|$. The outer absolute value gives two distinct levels, $H(t)=c-21$ and $H(t)=c+21$. On $0\\le t\\le20$, $H(t)=100-(t-10)^2$ rises to $100$ and falls back to $0$. For $t>20$, $H(t)=(t-10)^2-100$ rises strictly from $0$ without bound.",
+          "A level strictly between $0$ and $100$ consequently has three positive preimages $t$, each giving two real roots $x$. Level $100$ has two positive preimages and four roots. Above $100$ there are two roots. Level zero gives only $0,\\pm20$, and negative levels give none. Thus six is the largest possible number at any single level.",
+          "The two levels cannot share a root, so twelve roots require each to give six. This occurs exactly if $0<c-21<c+21<100$, equivalently $21<c<79$. The integers $22$ through $78$ give $78-22+1=57$ choices."
+        ],
+        "stepsZh": [
+          "令 $t=|x|\\ge0$，记 $H(t)=|t(20-t)|$。去掉最外层绝对值得到两个不同高度 $c-21$ 与 $c+21$。在 $0\\le t\\le20$ 上，$H(t)=100-(t-10)^2$ 先上升至 $100$，再下降至 $0$；在 $t>20$ 上，$H(t)=(t-10)^2-100$ 从 $0$ 严格递增且趋于无穷。",
+          "介于 $0,100$ 之间的每个高度对应三个正的 $t$，每个又给两个实数 $x$，共六根。高度恰为 $100$ 时有两个正的 $t$，共四根；高于 $100$ 时只有两根；零高度仅有 $0,\\pm20$ 三根；负高度无根。因此单个高度最多给六根。",
+          "不同高度不能给出同一根。要有十二根，两个高度就必须各给六根，即 $0<c-21<c+21<100$，等价于 $21<c<79$。从 $22$ 到 $78$ 一共有 $78-22+1=57$ 个整数。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q9": {
+    "summary": "In isosceles trapezoid $ABCD$, the parallel sides are $AB$ and $CD$, with $AB<CD$, and the legs satisfy $AD=BC$. The perpendicular distances from $A$ to the lines $BC$, $CD$, and $BD$ are $15$, $18$, and $10$, in that order. What is the area of the trapezoid multiplied by $\\sqrt2$?",
+    "summaryZh": "等腰梯形 $ABCD$ 的两底满足 $AB\\parallel CD$ 且 $AB<CD$，两腰满足 $AD=BC$。从 $A$ 到直线 $BC,CD,BD$ 的垂直距离依次为 $15,18,10$。求梯形面积与 $\\sqrt2$ 的乘积。",
+    "answer": "567",
+    "answerZh": "567",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/9",
+    "methods": [
+      {
+        "title": "Use three altitudes to fix the side ratios",
+        "titleZh": "用三条高确定边长之比",
+        "topics": [
+          {
+            "en": "Triangle areas",
+            "zh": "三角形面积"
+          },
+          {
+            "en": "Ptolemy’s theorem",
+            "zh": "托勒密定理"
+          }
+        ],
+        "steps": [
+          "Triangles $ABC$ and $BAD$ are mirror images. Twice their common area, using bases $BC$, $AB$, and $BD$, gives $15BC=18AB=10BD$. Write $AB=5u$, $AD=BC=6u$, and $AC=BD=9u$.",
+          "An isosceles trapezoid is cyclic. By Ptolemy, $(9u)^2=5u\\cdot CD+(6u)^2$, so $CD=9u$. Dropping perpendiculars from both ends of the shorter base leaves a horizontal length $(9u-5u)/2=2u$ on each side. The leg therefore satisfies $(6u)^2=18^2+(2u)^2$, giving $u=9\\sqrt2/4$.",
+          "The area is the mean base times the height, $7u\\cdot18$. Multiplication by $\\sqrt2$ gives $567$."
+        ],
+        "stepsZh": [
+          "由梯形的对称性，三角形 $ABC$ 与 $BAD$ 全等。分别取 $BC,AB,BD$ 为底，将两倍面积写成三种形式，得 $15BC=18AB=10BD$。设 $AB=5u$，则 $AD=BC=6u$，$AC=BD=9u$。",
+          "等腰梯形是圆内接四边形。托勒密定理给出 $(9u)^2=5u\\cdot CD+(6u)^2$，从而 $CD=9u$。从短底两端向长底作垂线，长底两端各余 $(9u-5u)/2=2u$。对腰所在的直角三角形用勾股定理得 $(6u)^2=18^2+(2u)^2$，所以 $u=9\\sqrt2/4$。",
+          "梯形面积等于两底平均长乘高，即 $7u\\cdot18$。再乘 $\\sqrt2$ 得 $567$。"
+        ]
+      },
+      {
+        "title": "Recover the base overhang without a circle theorem",
+        "titleZh": "用勾股定理直接求长底的伸出量",
+        "topics": [
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          },
+          {
+            "en": "Symmetry of a trapezoid",
+            "zh": "等腰梯形的对称性"
+          }
+        ],
+        "steps": [
+          "The altitudes to $BC,AB,BD$ in the congruent triangles $ABC,BAD$ give the common double area $15BC=18AB=10BD$. Thus $AB=5u$, $BC=6u$, and $BD=9u$. By symmetry the long base extends the same distance $x$ beyond each end of the short base.",
+          "The horizontal runs of $BC$ and $BD$ are $x$ and $x+5u$ respectively. Both have vertical rise $18$, so subtracting their squared lengths cancels the height: $(x+5u)^2-x^2=(9u)^2-(6u)^2=45u^2$. Hence $x=2u$. Now $(6u)^2=(2u)^2+18^2$ gives $u^2=81/8$. The mean base is $5u+x=7u$, so the requested product is $\\sqrt2\\cdot18\\cdot7u=567$."
+        ],
+        "stepsZh": [
+          "全等的三角形 $ABC,BAD$ 中，分别利用到 $BC,AB,BD$ 的高，得到两倍面积 $15BC=18AB=10BD$。所以可设 $AB=5u$、$BC=6u$、$BD=9u$。由对称性，长底在短底的两端各伸出一段相同的水平距离 $x$。",
+          "腰 $BC$ 与对角线 $BD$ 的水平跨度分别为 $x$ 和 $x+5u$，竖直高度均为 $18$。将勾股定理的两式相减以消去高度：$(x+5u)^2-x^2=(9u)^2-(6u)^2=45u^2$，解得 $x=2u$。于是 $(6u)^2=(2u)^2+18^2$，得到 $u^2=81/8$。两底的平均长度为 $5u+x=7u$，所求为 $\\sqrt2\\cdot18\\cdot7u=567$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q10": {
+    "summary": "Start with $a_1=2020/2021$. To compute each next term, first express $a_k=m/n$ in lowest terms, then set $a_{k+1}=(m+18)/(n+19)$. Sum all positive indices $j$ for which $a_j=t/(t+1)$ with $t$ a positive integer.",
+    "summaryZh": "设 $a_1=2020/2021$。每一步先把 $a_k$ 化为最简正分数 $m/n$，再令 $a_{k+1}=(m+18)/(n+19)$。求所有满足 $a_j=t/(t+1)$（$t$ 为正整数）的正整数下标 $j$ 之和。",
+    "answer": "059",
+    "answerZh": "059",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/10",
+    "methods": [
+      {
+        "title": "Track the next cancellation",
+        "titleZh": "追踪下一次约分",
+        "topics": [
+          {
+            "en": "Greatest common divisors",
+            "zh": "最大公因数"
+          },
+          {
+            "en": "Prime factorization",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "A term of the desired kind is already reduced. Write it as $(18+u)/(19+u)$. Counting this term as $h=1$, the unreduced expressions through the first cancellation are $(18h+u)/(19h+u)$, because each step adds $18$ and $19$. Their gcd is $\\gcd(18h+u,h)=\\gcd(u,h)$.",
+          "For $u>1$, let $p$ be its smallest prime factor. Up to $h=p-1$ the fractions stay reduced, and the denominator exceeds the numerator by $h$, so none with $h>1$ qualify. At $h=p$ division by $p$ produces $(18+u/p)/(19+u/p)$. This is the next qualifying term, $p-1$ positions later.",
+          "Initially $u=2002=2\\cdot7\\cdot11\\cdot13$. Successively adding $1,6,10,12$ to the starting index $1$ gives $1,2,8,18,30$. At the last of these $u=1$, so no further cancellation is possible and all subsequent differences exceed one. The indices sum to $59$."
+        ],
+        "stepsZh": [
+          "凡是 $t/(t+1)$ 都已经是最简分数。将它写成 $(18+u)/(19+u)$，把这一项记为 $h=1$。首次约分前，每步分子加 $18$、分母加 $19$，故第 $h$ 个表达式是 $(18h+u)/(19h+u)$。分子分母的最大公因数为 $\\gcd(18h+u,h)=\\gcd(u,h)$。",
+          "当 $u>1$ 时，设 $p$ 为 $u$ 的最小质因数。$h<p$ 时分数最简，分母与分子之差为 $h$，故 $1<h<p$ 的项均不合条件。到 $h=p$ 时约去 $p$，得到 $(18+u/p)/(19+u/p)$。这就是下一个符合条件的项，与起点相隔 $p-1$ 个下标。",
+          "最初 $u=2002=2\\cdot7\\cdot11\\cdot13$。从下标 $1$ 依次加 $1,6,10,12$，得到 $1,2,8,18,30$。最后一次约分后 $u=1$，此后永不能约分，且分子分母之差都大于一。因此下标之和为 $59$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q11": {
+    "summary": "The successive sides $AB,BC,CD,DA$ of a cyclic quadrilateral have lengths $4,5,6,7$. Project $A$ and $C$ perpendicularly onto the line $BD$, obtaining $A_1,C_1$; project $B$ and $D$ onto the line $AC$, obtaining $B_1,D_1$. If the perimeter of $A_1B_1C_1D_1$ is the reduced fraction $m/n$, find $m+n$.",
+    "summaryZh": "圆内接四边形 $ABCD$ 的四边 $AB,BC,CD,DA$ 依次长 $4,5,6,7$。从 $A,C$ 向直线 $BD$ 作垂线，垂足分别为 $A_1,C_1$；从 $B,D$ 向直线 $AC$ 作垂线，垂足分别为 $B_1,D_1$。将四边形 $A_1B_1C_1D_1$ 的周长写为最简正分数 $m/n$，求 $m+n$。",
+    "answer": "301",
+    "answerZh": "301",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/11",
+    "methods": [
+      {
+        "title": "Find the common scale factor of the projected sides",
+        "titleZh": "求各条投影边的公共比例",
+        "topics": [
+          {
+            "en": "Orthogonal projection",
+            "zh": "正交投影"
+          },
+          {
+            "en": "Dot products",
+            "zh": "向量点积"
+          },
+          {
+            "en": "Ptolemy’s theorem",
+            "zh": "托勒密定理"
+          }
+        ],
+        "steps": [
+          "Use the diagonal intersection as origin. Take unit vectors $\\mathbf e,\\mathbf f$ in the directions $A$ to $C$ and $B$ to $D$, and put $c=\\mathbf e\\cdot\\mathbf f$. A vertex at $u\\mathbf e$ projects to $uc\\mathbf f$ on the other diagonal; one at $v\\mathbf f$ projects to $vc\\mathbf e$. The squared distance of these two feet is $c^2(u^2+v^2-2uvc)$, exactly $c^2$ times the squared distance of the original vertices. Signed coordinates handle all four sides.",
+          "Expanding squared lengths gives $2\\overrightarrow{AC}\\cdot\\overrightarrow{BD}=AD^2+BC^2-AB^2-CD^2=49+25-16-36=22$. Ptolemy gives $AC\\cdot BD=AB\\cdot CD+BC\\cdot AD=59$. Hence the cosine factor is $c=11/59$.",
+          "The projected perimeter is $(4+5+6+7)(11/59)=242/59$. The numerator and denominator are coprime, so $m+n=301$."
+        ],
+        "stepsZh": [
+          "以两条对角线的交点为原点，取从 $A$ 到 $C$、从 $B$ 到 $D$ 的单位方向向量 $\\mathbf e,\\mathbf f$，记 $c=\\mathbf e\\cdot\\mathbf f$。顶点 $u\\mathbf e$ 在另一条对角线上的投影为 $uc\\mathbf f$；顶点 $v\\mathbf f$ 的投影为 $vc\\mathbf e$。两垂足的距离平方为 $c^2(u^2+v^2-2uvc)$，恰为两原顶点距离平方的 $c^2$ 倍。$u,v$ 可以有正负，四条边均适用。",
+          "将长度平方展开，得 $2\\overrightarrow{AC}\\cdot\\overrightarrow{BD}=AD^2+BC^2-AB^2-CD^2=49+25-16-36=22$。托勒密定理给出 $AC\\cdot BD=AB\\cdot CD+BC\\cdot AD=59$，所以 $c=11/59$。",
+          "垂足四边形的周长为 $(4+5+6+7)(11/59)=242/59$。分子分母互质，故 $m+n=301$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q12": {
+    "summary": "The vertices of a $12$-gon are $A_1,\\ldots,A_{12}$ in cyclic order. Three frogs start at $A_4,A_8,A_{12}$. At the end of every minute, all three jump simultaneously. Each independently chooses either neighboring vertex with probability $1/2$. They stop the first time at least two land on the same vertex. Write the expected waiting time in minutes as a reduced fraction $m/n$. Find $m+n$.",
+    "summaryZh": "十二边形的顶点按环形顺序记为 $A_1,\\ldots,A_{12}$。三只青蛙分别从 $A_4,A_8,A_{12}$ 出发。每分钟末三只同时跳跃，每只独立地以相同概率跳到两个相邻顶点之一。首次有至少两只落在同一顶点时停止。将等待时间的期望（分钟）写成最简分数 $m/n$，求 $m+n$。",
+    "answer": "019",
+    "answerZh": "019",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/12",
+    "methods": [
+      {
+        "title": "Count changes in the three gaps",
+        "titleZh": "按三个间隔统计状态转移",
+        "topics": [
+          {
+            "en": "First-step analysis",
+            "zh": "按第一步分类"
+          },
+          {
+            "en": "Symmetry of a cycle",
+            "zh": "环的对称性"
+          }
+        ],
+        "steps": [
+          "Count the sides in each of the three successive clockwise gaps between frogs. Each gap changes by $0$ or $\\pm2$, so it stays even, and a frog cannot pass another without first meeting it. Before a meeting the gaps are positive and sum to $12$. Up to rotation and reversal the only states are $A=(4,4,4)$, $B=(2,4,6)$, and $C=(2,2,8)$.",
+          "Number the frogs clockwise and encode their jumps by $\\epsilon_i=+1$ clockwise or $-1$ counterclockwise. The new gap after frog $i$ is $g_i+\\epsilon_{i+1}-\\epsilon_i$ (cyclic indices). A zero means a meeting. Substituting the eight equally likely sign triples gives these counts in the order $(A,B,C,\\text{meeting})$: from $A$ they are $(2,6,0,0)$, from $B$ they are $(1,4,1,2)$, and from $C$ they are $(0,2,2,4)$. From every state a meeting within two jumps has probability at least $(6/8)(2/8)$, so the expected time is finite.",
+          "Let $a,b,c$ be the respective expected times. Counting the next minute gives $8a=8+2a+6b$, $8b=8+a+4b+c$, and $8c=8+2b+2c$. Thus $a=b+4/3$, $c=(4+b)/3$, and substitution in the middle equation gives $b=4$. The frogs start in $A$, so the expectation is $16/3$ and $m+n=19$."
+        ],
+        "stepsZh": [
+          "沿顺时针方向数相邻两只青蛙之间的边数，得到三个间隔。每次各间隔的变化量为 $0$ 或 $\\pm2$，故始终是偶数；一只青蛙要越过另一只，必须先与它相遇。相遇前这些间隔都是正数，和为 $12$。忽略旋转和反向排列，只有 $A=(4,4,4)$、$B=(2,4,6)$、$C=(2,2,8)$ 三种状态。",
+          "把青蛙按顺时针编号，顺时针跳记为 $\\epsilon_i=+1$，反向记为 $-1$。从第 $i$ 只到下一只的顺时针间隔变成 $g_i+\\epsilon_{i+1}-\\epsilon_i$，下标循环。若出现零就相遇了。代入八组等可能的正负号，按 「$A$、$B$、$C$、相遇」 的顺序数结果：从 $A$ 出发为 $(2,6,0,0)$，从 $B$ 出发为 $(1,4,1,2)$，从 $C$ 出发为 $(0,2,2,4)$。任一状态在两步内相遇的概率至少为 $(6/8)(2/8)$，所以期望有限。",
+          "设三种状态的等待时间期望为 $a,b,c$。计入下一分钟得 $8a=8+2a+6b$，$8b=8+a+4b+c$，$8c=8+2b+2c$。首尾两式给出 $a=b+4/3$、$c=(4+b)/3$，代入中式得 $b=4$。起点是 $A$，期望为 $16/3$，故 $m+n=19$。"
+        ]
+      },
+      {
+        "title": "A product that measures remaining time",
+        "titleZh": "用间隔乘积表示剩余时间",
+        "topics": [
+          {
+            "en": "Expected change",
+            "zh": "期望变化量"
+          },
+          {
+            "en": "Stopping times",
+            "zh": "停时"
+          }
+        ],
+        "steps": [
+          "Until a collision let $g_1,g_2,g_3$ be the clockwise gaps in edges and $P=g_1g_2g_3$; set $P=0$ after stopping. Each gap is even, so the frogs cannot change cyclic order before meeting. Give each jump an independent sign $\\epsilon_i=\\pm1$ for its direction. Then the increment in gap $i$ is $d_i=\\epsilon_{i+1}-\\epsilon_i$, with cyclic indices.",
+          "Each $d_i$ has mean zero. For distinct $i,j$, the two increments contain one shared sign with opposite coefficients. The other cross products have zero mean by independence, so $\\mathbb E[d_i d_j]=-1$. Reversing all signs negates $d_1d_2d_3$, so its mean is zero. Expanding $(g_1+d_1)(g_2+d_2)(g_3+d_3)$ at each active step now gives expected change $-(g_1+g_2+g_3)=-12$, including jumps that produce a zero gap.",
+          "The initial product is $4^3=64$. If $T$ is the stopping time, summing the expected changes over the first $N$ minutes gives $\\mathbb E[P_N]=64-12\\,\\mathbb E[\\min(T,N)]$, since only minutes before stopping contribute. This bounds $\\mathbb E[\\min(T,N)]$ by $64/12$, hence $T$ is finite almost surely. The bounded product tends to zero after stopping, giving $\\mathbb E[T]=64/12=16/3$ as $N$ tends to infinity. Thus $m+n=19$."
+        ],
+        "stepsZh": [
+          "相遇前令 $g_1,g_2,g_3$ 为三只青蛙之间顺时针方向的边数，记 $P=g_1g_2g_3$；停止后取 $P=0$。各间隔恒为偶数，因而青蛙在相遇前不会改变环形次序。用相互独立的 $\\epsilon_i=\\pm1$ 表示每只青蛙的跳跃方向，则第 $i$ 个间隔的增量为 $d_i=\\epsilon_{i+1}-\\epsilon_i$，下标循环。",
+          "每个 $d_i$ 的均值为零。当 $i\\ne j$ 时，$d_i,d_j$ 共用一个符号变量，且它的系数相反；其余交叉项的期望因独立性为零，故 $\\mathbb E[d_id_j]=-1$。将所有符号反向会使 $d_1d_2d_3$ 变号，所以其均值为零。展开 $(g_1+d_1)(g_2+d_2)(g_3+d_3)$，可见每次未停止时跳一步，乘积的期望变化量都是 $-(g_1+g_2+g_3)=-12$，这也涵盖某个间隔变成零的情形。",
+          "初始乘积为 $4^3=64$。设停止时刻为 $T$。累加前 $N$ 分钟的期望变化量，只有尚未停止时的一步有贡献，所以 $\\mathbb E[P_N]=64-12\\,\\mathbb E[\\min(T,N)]$。由 $P_N\\ge0$ 知 $\\mathbb E[\\min(T,N)]\\le64/12$，故 $T$ 以概率一有限。乘积有界，且停止后为零，令 $N$ 趋于无穷即可得 $\\mathbb E[T]=64/12=16/3$，故 $m+n=19$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q13": {
+    "summary": "Two circles of radii $961$ and $625$ cross at distinct points $A$ and $B$. A third circle touches each of them externally. The line through $A,B$ cuts the third circle at $P,Q$, where its minor arc from $P$ to $Q$ measures $120^\\circ$. Determine the distance between the centers of the first two circles.",
+    "summaryZh": "半径为 $961$ 和 $625$ 的两圆相交于不同的两点 $A,B$。第三个圆与前两圆均外切。直线 $AB$ 与第三圆相交于 $P,Q$，第三圆上的劣弧 $PQ$ 为 $120^\\circ$。求前两圆的圆心距。",
+    "answer": "672",
+    "answerZh": "672",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/13",
+    "methods": [
+      {
+        "title": "Subtract squared distances to the two centers",
+        "titleZh": "将到两圆心的距离平方相减",
+        "topics": [
+          {
+            "en": "Circle equations",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Chord and central angle",
+            "zh": "弦与圆心角"
+          }
+        ],
+        "steps": [
+          "Place the first two centers at $(0,0)$ and $(d,0)$ with radii $R=961$ and $S=625$. Subtracting their circle equations at either intersection gives $2dx=d^2+R^2-S^2$. Thus $AB$ is the vertical line $x=u=(d^2+R^2-S^2)/(2d)$.",
+          "If the third circle has center $(v,w)$ and radius $r$, external tangency gives squared distances $(R+r)^2$ and $(S+r)^2$ to the first two centers. Subtract once more to get $2dv=d^2+(R+r)^2-(S+r)^2$. It follows that $v-u=r(R-S)/d>0$.",
+          "The perpendicular from the third center to chord $PQ$ bisects its $120^\\circ$ central angle, so its length is $r\\cos60^\\circ=r/2$. This is also $v-u$. Cancelling $r$ yields $d=2(R-S)=672$."
+        ],
+        "stepsZh": [
+          "把前两圆的圆心放在 $(0,0)$、$(d,0)$，半径记为 $R=961$、$S=625$。在任一交点处将两个圆的方程相减，得 $2dx=d^2+R^2-S^2$，所以直线 $AB$ 的方程为 $x=u=(d^2+R^2-S^2)/(2d)$。",
+          "设第三圆的圆心为 $(v,w)$、半径为 $r$。由外切可知它到前两圆心的距离平方分别为 $(R+r)^2$、$(S+r)^2$。再次作差得 $2dv=d^2+(R+r)^2-(S+r)^2$，从而 $v-u=r(R-S)/d>0$。",
+          "从第三圆圆心向弦 $PQ$ 作垂线，它平分 $120^\\circ$ 的圆心角，长度为 $r\\cos60^\\circ=r/2$。这个长度也等于 $v-u$。两式相等后约去 $r$，得 $d=2(R-S)=672$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q14": {
+    "summary": "Let $\\sigma(a)$ be the sum of the positive divisors of the positive integer $a$. Among all positive integer exponents $n$ for which $2021$ divides $\\sigma(a^n)-1$ for every positive integer $a$, choose the smallest. Find the sum of the prime factors in the prime factorization of this $n$.",
+    "summaryZh": "用 $\\sigma(a)$ 表示正整数 $a$ 的全部正因数之和。寻找最小正整数 $n$，使得对每个正整数 $a$，数 $\\sigma(a^n)-1$ 都能被 $2021$ 整除。求这个 $n$ 的质因数分解中各质因数之和。",
+    "answer": "125",
+    "answerZh": "125",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/14",
+    "methods": [
+      {
+        "title": "Test prime powers modulo each factor of 2021",
+        "titleZh": "在两个素数模数下考察素数幂",
+        "topics": [
+          {
+            "en": "Multiplicative functions",
+            "zh": "积性函数"
+          },
+          {
+            "en": "Multiplicative order",
+            "zh": "乘法阶"
+          },
+          {
+            "en": "Fermat’s little theorem",
+            "zh": "费马小定理"
+          }
+        ],
+        "steps": [
+          "Factor $2021=43\\cdot47$. For either prime modulus $q$, we need $\\sigma(a^n)\\equiv1\\pmod q$. Since $\\sigma$ is multiplicative on coprime inputs (every divisor factorizes uniquely across them), it suffices to check $a=p^h$ for primes $p$. Then $\\sigma(p^{hn})=1+p+\\cdots+p^{hn}$.",
+          "Necessity: choose the prime $p=173$ for $q=43$, or $p=283$ for $q=47$. In each case $p\\equiv1\\pmod q$, so taking $h=1$ gives $1+n\\equiv1\\pmod q$, hence $q\\mid n$. Taking $p=5$, multiplying the geometric sum minus $1$ by $5-1$ gives $5(5^n-1)$, so $5^n\\equiv1\\pmod q$.",
+          "The order of $5$ is $q-1$ in both cases. By Fermat it divides $q-1$; to rule out all proper divisors it suffices to test $(q-1)/\\ell$ for each prime $\\ell\\mid q-1$. Modulo $43$, powers with exponents $21,14,6$ give residues $42,36,16$ respectively. Modulo $47$, exponents $23,2$ give $46,25$. None is $1$. Thus $q-1\\mid n$.",
+          "Conversely take $n$ divisible by all of $42,43,46,47$. Modulo $q$, the sum is $1$ if $p\\equiv0$, and $1+hn\\equiv1$ if $p\\equiv1$. Otherwise $p^{hn}\\equiv1$ by Fermat, and $\\sigma(p^{hn})-1=p(p^{hn}-1)/(p-1)\\equiv0$ since $p-1$ is invertible. Hence the least valid $n$ is $\\operatorname{lcm}(42,43,46,47)=2\\cdot3\\cdot7\\cdot23\\cdot43\\cdot47$. The six primes sum to $125$."
+        ],
+        "stepsZh": [
+          "分解 $2021=43\\cdot47$。对两个素数模数 $q$，都需 $\\sigma(a^n)\\equiv1\\pmod q$。互质整数之积的每个因数都唯一分解为两者因数之积，故 $\\sigma$ 对互质整数具有积性，只需考察 $a=p^h$，其中 $p$ 为素数。此时 $\\sigma(p^{hn})=1+p+\\cdots+p^{hn}$。",
+          "先证必要性。对 $q=43$ 取素数 $p=173$，对 $q=47$ 取素数 $p=283$，均有 $p\\equiv1\\pmod q$。取 $h=1$ 得 $1+n\\equiv1\\pmod q$，所以 $q\\mid n$。再取 $p=5$，将几何级数之和减一再乘 $5-1$，得 $5(5^n-1)$，故 $5^n\\equiv1\\pmod q$。",
+          "在这两个模数下 $5$ 的乘法阶均为 $q-1$。由费马小定理，其阶整除 $q-1$；要排除所有真因数，只需对每个质因数 $\\ell\\mid q-1$ 检查指数 $(q-1)/\\ell$。模 $43$ 时，$5$ 的 $21,14,6$ 次幂余数分别为 $42,36,16$；模 $47$ 时，$23,2$ 次幂余数分别为 $46,25$。它们均非 $1$，所以 $q-1\\mid n$。",
+          "反过来，若 $n$ 是 $42,43,46,47$ 的公倍数，模 $q$ 时，若 $p\\equiv0$，因数和显然余 $1$；若 $p\\equiv1$，则因数和为 $1+hn\\equiv1$。其余情形由费马小定理有 $p^{hn}\\equiv1$，且 $p-1$ 可逆，所以 $\\sigma(p^{hn})-1=p(p^{hn}-1)/(p-1)\\equiv0$。因此最小的 $n$ 是 $\\operatorname{lcm}(42,43,46,47)=2\\cdot3\\cdot7\\cdot23\\cdot43\\cdot47$，质因数之和为 $125$。"
+        ]
+      }
+    ]
+  },
+  "aime-2021i-q15": {
+    "summary": "Call a positive integer $k$ admissible if the parabolas $y=x^2-k$ and $x=2(y-20)^2-k$ have four distinct common points and a circle of radius at most $21$ passes through all four. Add the smallest admissible $k$ to the largest.",
+    "summaryZh": "称正整数 $k$ 合格，如果抛物线 $y=x^2-k$ 与 $x=2(y-20)^2-k$ 有四个不同的公共点，且存在一个半径不超过 $21$ 的圆经过这四点。求最小与最大合格整数之和。",
+    "answer": "285",
+    "answerZh": "285",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021I/problem/15",
+    "methods": [
+      {
+        "title": "Separate the circle radius from the root count",
+        "titleZh": "分别确定圆半径与交点个数",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Intermediate value theorem",
+            "zh": "介值定理"
+          },
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          }
+        ],
+        "steps": [
+          "At a common point, $x^2=y+k$ and $(y-20)^2=(x+k)/2$. Adding and completing squares gives $(x-1/4)^2+(y-41/2)^2=325/16+3k/2$. If there are four distinct common points, this is their unique circle, since three distinct points on a circle are noncollinear. The squared radius bound is $325+24k\\le7056$, hence $k\\le280$.",
+          "Put $t=k+20$. Substitution of $y=x^2-k$ shows that the intersections correspond one-to-one to the real roots of $F(x)=2(x^2-t)^2-x-k$. For $1\\le k\\le4$ and $x<-k$, the term $-x-k$ is positive. For $-k\\le x\\le0$, one has $x^2\\le16$ and $t\\ge21$, giving $F(x)\\ge50-k>0$. All real roots would be positive, yet four positive roots cannot have sum zero, as required by the vanishing cubic coefficient.",
+          "For $k\\ge6$, $k>\\sqrt t$. Thus $F(-\\sqrt t)<0$, $F(\\sqrt t)<0$, and $F(0)=2t^2-k>0$. As $F$ tends to positive infinity at both ends, these signs give four distinct roots, one in each interval cut out by $-\\sqrt t,0,\\sqrt t$.",
+          "At $k=5$, $F(x)=(x+5)[2(x+5)(x-5)^2-1]$. The bracket has signs $-,+,-,+$ at $-5,0,5,6$, giving three distinct roots in the open intervals between them, besides the root $-5$ from the linear factor. Thus the extremes are $5$ and $280$, with sum $285$."
+        ],
+        "stepsZh": [
+          "在公共点上有 $x^2=y+k$ 和 $(y-20)^2=(x+k)/2$。相加后配方得 $(x-1/4)^2+(y-41/2)^2=325/16+3k/2$。若有四个不同的公共点，这就是它们唯一的外接圆，因为圆上三个不同的点不共线。半径限制给出 $325+24k\\le7056$，即 $k\\le280$。",
+          "记 $t=k+20$，代入 $y=x^2-k$，可见交点与 $F(x)=2(x^2-t)^2-x-k$ 的实根一一对应。当 $1\\le k\\le4$ 时，若 $x<-k$，则 $-x-k>0$；若 $-k\\le x\\le0$，则 $x^2\\le16$ 且 $t\\ge21$，所以 $F(x)\\ge50-k>0$。实根只能是正数，但四个正根的和不可能为零，而三次项系数为零要求四根之和为零。",
+          "对 $k\\ge6$ 有 $k>\\sqrt t$，故 $F(-\\sqrt t)<0$，$F(\\sqrt t)<0$，而 $F(0)=2t^2-k>0$。又因 $x$ 趋于正负无穷时 $F$ 均趋于正无穷，各变号区间内至少有一根。分界点 $-\\sqrt t,0,\\sqrt t$ 共给出四个不同实根。",
+          "当 $k=5$ 时，$F(x)=(x+5)[2(x+5)(x-5)^2-1]$。方括号内的多项式在 $-5,0,5,6$ 依次为负、正、负、正，故在相邻各点间共有三个不同实根，另有一次因式给出的实根 $-5$。于是最小值为 $5$、最大值为 $280$，其和为 $285$。"
+        ]
+      }
+    ]
+  }
+}
