@@ -1,0 +1,254 @@
+{
+  "usamo-2014-q1": {
+    "summary": "A monic quartic $P(t)=t^4+at^3+bt^2+ct+d$ has real coefficients and four real roots $r_1,r_2,r_3,r_4$, counted with multiplicity. Subject to $b-d\\ge5$, determine the least possible value of $\\prod_{j=1}^4(1+r_j^2)$.",
+    "summaryZh": "设首一多项式 $P(t)=t^4+at^3+bt^2+ct+d$ 的系数均为实数，四个根 $r_1,r_2,r_3,r_4$ 均为实根，按重数计。在 $b-d\\ge5$ 的条件下，求 $\\prod_{j=1}^4(1+r_j^2)$ 的最小值。",
+    "answer": "The minimum is $16$, attained when all four roots are $1$.",
+    "answerZh": "最小值为 $16$。四个根均为 $1$ 时取到。",
+    "methods": [
+      {
+        "title": "Read the product from a complex value of the quartic",
+        "titleZh": "利用多项式在虚数单位处的模",
+        "topics": [
+          {
+            "en": "Complex modulus",
+            "zh": "复数的模"
+          },
+          {
+            "en": "Factorization by roots",
+            "zh": "按根分解多项式"
+          },
+          {
+            "en": "Sharp lower bounds",
+            "zh": "最优下界"
+          }
+        ],
+        "steps": [
+          "For a real root $r$, the squared distance from $i$ to $r$ in the complex plane is $|i-r|^2=1+r^2$. Since $P$ is monic, multiplying this identity over all four roots gives the target product as $|P(i)|^2$.",
+          "The even powers in $P(i)$ give $1-b+d$, and the odd powers give $(c-a)i$. Thus $|P(i)|^2=(b-d-1)^2+(c-a)^2$. The first term is at least $4^2$, since $b-d-1\\ge4$, and the second is nonnegative.",
+          "For equality try $P(t)=(t-1)^4$. Its expansion has $b=6,d=1,a=c=-4$, so the constraint holds with equality and each factor of the target product is $2$. This attains the lower bound."
+        ],
+        "stepsZh": [
+          "对任一实根 $r$，复平面上 $i$ 到 $r$ 的距离平方为 $|i-r|^2=1+r^2$。由于 $P$ 是首一多项式，对全部四个根将这些等式相乘，恰得所求乘积为 $|P(i)|^2$。",
+          "将 $i$ 代入，偶次幂对应实部 $1-b+d$，奇次幂对应虚部 $c-a$，故 $|P(i)|^2=(b-d-1)^2+(c-a)^2$。由 $b-d-1\\ge4$，第一项至少为 $16$，第二项非负。",
+          "取 $P(t)=(t-1)^4$，展开得 $b=6,d=1,a=c=-4$，满足题设。此时乘积的四个因子均为 $2$，恰好取到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAMO_Problems/Problem_1"
+  },
+  "usamo-2014-q2": {
+    "summary": "Determine every map $f:\\mathbb Z\\to\\mathbb Z$ for which the identity $x f(2f(y)-x)+y^2 f(2x-f(y))=f(x)^2/x+f(yf(y))$ holds whenever $x$ is a nonzero integer and $y$ is any integer.",
+    "summaryZh": "设 $f:\\mathbb Z\\to\\mathbb Z$。对任意非零整数 $x$ 和任意整数 $y$，都有 $x f(2f(y)-x)+y^2 f(2x-f(y))=f(x)^2/x+f(yf(y))$。求所有这样的函数。",
+    "answer": "The two functions are $f(n)=0$ for all $n$ and $f(n)=n^2$ for all $n$.",
+    "answerZh": "恰有两个函数：对所有 $n$ 都有 $f(n)=0$，或对所有 $n$ 都有 $f(n)=n^2$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Use divisibility and force the choices at different inputs to agree",
+        "titleZh": "先用整除性确定取值，再证明各点的选择一致",
+        "topics": [
+          {
+            "en": "Functional equations on the integers",
+            "zh": "整数上的函数方程"
+          },
+          {
+            "en": "Prime divisibility",
+            "zh": "素数整除性"
+          },
+          {
+            "en": "Residue classes modulo four",
+            "zh": "模四剩余类"
+          }
+        ],
+        "steps": [
+          "Put $c=f(0)$ and take $y=0$. After multiplying by $x$ we get $x^2 f(2c-x)=f(x)^2+xc$. Setting $x=p$ for an arbitrary prime $p$ shows $p\\mid f(p)^2$, hence $p\\mid f(p)$. The same equality now shows $p^2\\mid pc$, so $p\\mid c$. This is possible for every prime only if $c=0$.",
+          "For $x\\ne0$ the preceding equality becomes $x^2 f(-x)=f(x)^2$. Set $u=f(x)/x^2$ and $v=f(-x)/x^2$. Applying the equality at both $x$ and $-x$ gives $v=u^2$ and $u=v^2$. Thus $u=u^4$, so $u=0$ or $1$, and $v=u$. The function is even and at each $x$ its value is either $0$ or $x^2$.",
+          "If it never vanishes away from zero, we already have the square function. Otherwise fix $t\\ne0$ with $f(t)=0$ and set $y=t$ in the given identity. The terms $xf(-x)$ and $f(x)^2/x$ cancel, and $f(0)=0$, so $t^2f(2x)=0$ for all $x\\ne0$. Therefore the function vanishes on every even integer.",
+          "Suppose an odd integer $y$ has $f(y)=y^2$. Substituting $x=2k$ for any $k\\ne0$ gives $y^2 f(4k-y^2)=f(y^3)$, since the other two terms are zero at even inputs. The right side is independent of $k$. If it were nonzero, then $f(4k-y^2)$ would have to equal $(4k-y^2)^2$ for every $k\\ne0$, which grows without bound as $k$ grows. Hence $f(y^3)=0$ and $f(4k-y^2)=0$ for all $k\\ne0$.",
+          "Since $y^2\\equiv1\\pmod4$, those inputs run through the class $3\\bmod 4$ with just $-y^2$ omitted. Evenness gives zero throughout the class $1\\bmod 4$ with just $y^2$ possibly omitted. Thus the nonzero value at $y$ requires $y=\\pm y^2$, forcing $y=\\pm1$. But then $y^3=y$ and we just proved $f(y^3)=0$, a contradiction. In the case where a nonzero input is a zero of $f$, the function is therefore identically zero.",
+          "Finally the zero function satisfies the identity. For the square function the left side expands to $x(2y^2-x)^2+y^2(2x-y^2)^2=x^3+y^6$, exactly the right side. Both proposed functions work."
+        ],
+        "stepsZh": [
+          "记 $c=f(0)$。令 $y=0$，两边乘以 $x$，得到 $x^2 f(2c-x)=f(x)^2+xc$。取任意素数 $p$，令 $x=p$，可知 $p\\mid f(p)^2$，故 $p\\mid f(p)$。再看同一等式，$p^2\\mid pc$，即 $p\\mid c$。所有素数都整除 $c$，所以 $c=0$。",
+          "对 $x\\ne0$，上式化为 $x^2f(-x)=f(x)^2$。记 $u=f(x)/x^2$，$v=f(-x)/x^2$，分别代入 $x$ 和 $-x$ 得 $v=u^2$，$u=v^2$。于是 $u=u^4$，实数解仅有 $0,1$，且 $v=u$。因此 $f$ 是偶函数，每个整数 $x$ 处的函数值只能是 $0$ 或 $x^2$。",
+          "若每个非零整数处函数值都非零，则 $f(x)=x^2$。否则取 $t\\ne0$ 使 $f(t)=0$，在原式中令 $y=t$。由上一步，$xf(-x)$ 与 $f(x)^2/x$ 抵消，又有 $f(0)=0$，故对任意 $x\\ne0$ 都有 $t^2f(2x)=0$。由此 $f$ 在所有偶数处均为零。",
+          "假设有奇数 $y$ 满足 $f(y)=y^2$。对任意 $k\\ne0$ 令 $x=2k$；原式中有两项的函数自变量为偶数，这两项为零，得到 $y^2 f(4k-y^2)=f(y^3)$。右端与 $k$ 无关。如果右端非零，左端的函数值就只能取 $(4k-y^2)^2$，而这个数随 $k$ 增大而无界，与等式矛盾。因此 $f(y^3)=0$，并且任意 $k\\ne0$ 都有 $f(4k-y^2)=0$。",
+          "因为 $y^2\\equiv1\\pmod4$，上述自变量遍历模 $4$ 余 $3$ 的整数，只漏掉 $-y^2$。利用偶性，模 $4$ 余 $1$ 的整数中也只有 $y^2$ 可能取非零函数值。因此 $f(y)\\ne0$ 要求 $y=\\pm y^2$，即 $y=\\pm1$。此时 $y^3=y$，却已知 $f(y^3)=0$，矛盾。可见只要有一个非零整数是零点，$f$ 就是零函数。",
+          "最后验算：零函数显然满足原式。对平方函数，左边展开为 $x(2y^2-x)^2+y^2(2x-y^2)^2=x^3+y^6$，也正是右边。两个函数都合题意。"
+        ]
+      }
+    ]
+  },
+  "usamo-2014-q3": {
+    "summary": "Construct a family of distinct points $P_j$ in the plane, one for each integer $j$ (positive, zero or negative). For every three distinct indices $a,b,c$, the points $P_a,P_b,P_c$ must lie on one line exactly when $a+b+c=2014$. Prove that the construction works in both directions.",
+    "summaryZh": "在平面上为每个整数 $j$（含正数、零与负数）选取一个点 $P_j$，各点互不相同。要求对任意三个两两不同的整数 $a,b,c$，三点 $P_a,P_b,P_c$ 共线当且仅当 $a+b+c=2014$。给出一种构造并证明这个等价关系。",
+    "answer": "One choice is $P_j=(j,j^3-2014j^2)$ for every integer $j$.",
+    "answerZh": "可对所有整数 $j$ 取 $P_j=(j,j^3-2014j^2)$。",
+    "methods": [
+      {
+        "title": "Use the sum of a cubic's three intersections with a line",
+        "titleZh": "用三次曲线与直线交点的横坐标之和构造",
+        "topics": [
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Collinearity",
+            "zh": "三点共线"
+          },
+          {
+            "en": "Polynomial constructions",
+            "zh": "多项式构造"
+          }
+        ],
+        "steps": [
+          "A nonvertical line $y=mx+h$ meets the curve $y=x^3-2014x^2$ where $x^3-2014x^2-mx-h=0$. The coefficient of $x^2$ fixes the sum of the three roots independently of $m$ and $h$. Put $P_j=(j,j^3-2014j^2)$; different indices have different first coordinates.",
+          "If three of these points lie on a line, it is nonvertical. Their three distinct indices exhaust the roots of that monic cubic. Vieta's formula therefore gives $a+b+c=2014$.",
+          "Conversely take distinct $a,b,c$ with that sum. Draw the unique line through $P_a$ and $P_b$. The intersection cubic already has roots $a$ and $b$; after division by $(x-a)(x-b)$ its remaining linear factor has root $2014-a-b=c$. Hence the third point on the curve with that first coordinate is $P_c$ and is on the same line."
+        ],
+        "stepsZh": [
+          "将非竖直直线 $y=mx+h$ 代入曲线 $y=x^3-2014x^2$，交点的横坐标满足 $x^3-2014x^2-mx-h=0$。二次项系数控制三根之和，且与所选直线无关。于是取 $P_j=(j,j^3-2014j^2)$；不同下标给出不同横坐标。",
+          "若三点共线，该直线不可能竖直。三个互异下标正好是上述首一三次方程的全部根。由韦达定理得 $a+b+c=2014$。",
+          "反之，设三个互异整数之和为 $2014$。作经过 $P_a,P_b$ 的唯一直线，交点方程已有根 $a,b$。把它除以 $(x-a)(x-b)$ 得到一次因式，其根必为 $2014-a-b=c$。所以横坐标为 $c$ 的曲线上的点 $P_c$ 也落在这条直线上。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAMO_Problems/Problem_3"
+  },
+  "usamo-2014-q4": {
+    "summary": "An infinite board of edge-sharing regular hexagons starts empty. Players $A$ and $B$ alternate, with $A$ first. On each turn $A$ places one counter in each of two empty cells sharing an edge. On each turn $B$ removes any one counter. For a positive integer $k$, $A$ wins the moment a straight row of $k$ successive cells is occupied. Find the least $k$ for which $B$ can prevent such a win forever, or prove that none exists.",
+    "summaryZh": "无限多的正六边形沿边拼成棋盘，开始时棋盘为空。$A$ 先行，双方轮流操作。$A$ 每次选两个共边的空格，各放一枚棋子；$B$ 每次任意拿走一枚棋子。给定正整数 $k$，只要出现沿直线连续占满的 $k$ 个格子，$A$ 就立即获胜。求使 $B$ 能一直阻止 $A$ 获胜的最小 $k$，或证明它不存在。",
+    "answer": "$6$.",
+    "answerZh": "$6$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Defend by coloring, attack in two staggered rows",
+        "titleZh": "三色防守与双排进攻",
+        "topics": [
+          {
+            "en": "Lattice coloring",
+            "zh": "格点染色"
+          },
+          {
+            "en": "Invariants",
+            "zh": "不变量"
+          },
+          {
+            "en": "Finite game strategies",
+            "zh": "有限步博弈策略"
+          },
+          {
+            "en": "Runs and gaps",
+            "zh": "连续段与空隙"
+          }
+        ],
+        "steps": [
+          "For the defense, label the cell centers by coordinates $(u,v)$ along two adjacent lattice directions $60^\\circ$ apart. A step along a row changes coordinates by one of $\\pm(1,0),\\pm(0,1),\\pm(1,-1)$. Mark cells with $u-v\\equiv0\\pmod 3$. Adjacent cells cannot both be marked, and along any straight row every third cell is marked.",
+          "After every move of $A$, $B$ removes the new counter on a marked cell if there is one, and otherwise removes any counter. Induction shows that all marked cells are empty after each move of $B$, and at most one is occupied even immediately after a move of $A$. Six successive cells contain two marked ones. Thus $B$ prevents a row of six.",
+          "For the attack, choose 14 consecutive cells in a horizontal row. In the row immediately below, take all 15 cells touching these 14. $A$ plays any adjacent empty pair inside this strip while possible. Each full round increases the number of counters in the strip by one: the two new ones lie inside, and every counter available for removal also lies inside. Thus, unless $A$ has already won, some turn of $A$ begins with no adjacent empty pair in the strip. All cells outside are still empty.",
+          "At that turn, four consecutive occupied cells in either row suffice: if an end already has an occupied neighbor along the row, five are present. Otherwise play on an empty extension cell together with a neighbor on the outer side of that row, beyond the strip. In the upper row, two consecutive occupied runs separated by one empty cell also suffice if their lengths sum to at least four. Fill their separating cell and its neighbor in the untouched row above.",
+          "Suppose neither finish is available. Each occupied run in the upper row then has length at most three. No two empty cells are adjacent. If there were at most three runs, they and their intervening or end gaps could cover at most $3\\cdot3+4=13$ cells. So there are at least four runs. The second and third runs are both interior and their lengths sum to at most three. At least one is a single counter with an empty cell immediately on each side.",
+          "Each of these two empty upper cells touches two cells of the lower row. Because lower cells sit between upper cells, these are four distinct consecutive lower cells. Each must be occupied, since otherwise there would be an adjacent empty pair. This provides the four-cell finish after all. Hence $A$ can force five in finitely many moves, and with that also every smaller target. The least target $B$ can prevent is six."
+        ],
+        "stepsZh": [
+          "先考虑防守。以两条夹角 $60^\\circ$ 的相邻格线方向为基底，用整数 $(u,v)$ 表示格心。沿一条格线走一步，坐标增量属于 $\\pm(1,0),\\pm(0,1),\\pm(1,-1)$。标记满足 $u-v\\equiv0\\pmod 3$ 的格子。两个共边格不可能同时有标记；沿每条直线格道，每三格恰有一格被标记。",
+          "$A$ 下完后，若在标记格上放了棋子，$B$ 就拿走它；否则任意取走一子。由归纳法，每次 $B$ 下完后所有标记格都空着，即使在 $A$ 刚下完时也至多占了一个标记格。连续六格含两个标记格，因此 $B$ 能阻止六连。",
+          "再考虑进攻。在一条水平格道取连续的 14 格，并在紧贴其下的一排取与之相邻的全部 15 格。只要这两排组成的区域内还有共边空格，$A$ 就任选这样的一对落子。每一轮双方都下完后，区域内的棋子恰好多一枚，因为所放两子与所取一子均在区域内。因此，若尚未获胜，有限轮后必会轮到 $A$ 而区域内没有共边空格，区域外则一直为空。",
+          "此时，只要任一排已有四连，$A$ 就能取胜：若一端沿该排的邻格有子，已构成五连；否则选一个空的延长格和它在区域外侧相邻的空格一起落子。另一个机会是上排相邻的两段棋子只隔一个空格，且两段长度之和至少为四。填上这个空格，再在它上方相邻的区域外空格放一子，即成五连。",
+          "假定这两种机会均未出现。上排的每一段连续棋子至多有三枚，相邻两格又不能同时为空。如果最多只有三段，算上段间及两端至多四个空格，总长度至多为 $3\\cdot3+4=13$，不足 14 格。故至少有四段。第二段和第三段都是内部的段，它们的长度之和至多为三；其中至少一段只有一枚棋子，其左右各有一个空格。",
+          "这两个上排空格各与下排两格共边。由于两排错开半格，所触及的是下排互不相同的四个连续格。每格都必须有子，否则会存在共边空格。这样下排就出现了前述四连，仍可取胜。$A$ 能在有限步内迫出五连，自然也能达到所有更小的目标。因此最小值为六。"
+        ]
+      }
+    ]
+  },
+  "usamo-2014-q5": {
+    "summary": "Start with a triangle $ABC$ and its orthocenter $H$. Draw the circle through $A,H,C$. The internal angle bisector at $A$ meets this circle again at $P$. Construct the circumcenter $X$ of $ABP$ and the orthocenter $Y$ of $ACP$. Show that $XY$ has the same length as a radius of the circumcircle of $ABC$. For the original exam, the first page of a geometry solution had to include a large, accurately scaled, labeled diagram drawn with instruments. Omitting any of these requirements cost one point.",
+    "summaryZh": "在三角形 $ABC$ 中，$H$ 为垂心。过 $A,H,C$ 作圆，$\\angle BAC$ 的内角平分线与该圆除 $A$ 外再交于 $P$。令 $X$ 为三角形 $ABP$ 的外心，$Y$ 为三角形 $ACP$ 的垂心。证明线段 $XY$ 的长度等于三角形 $ABC$ 的外接圆半径。 原考试还要求在几何题解答的第一页用作图工具绘制足够大、按比例且标注清楚的图；未满足其中任一项扣一分。",
+    "answer": "If $O$ is the circumcenter of $ABC$, then $XY=AO$.",
+    "answerZh": "设 $O$ 为三角形 $ABC$ 的外心，则 $XY=AO$。",
+    "sourceUrl": "https://f.hubspotusercontent30.net/hubfs/981338/Math%20Competition%20Problems_PDFS/2014USAMO_Day2.pdf#page=1",
+    "figure": {
+      "url": "/commentary-figures/usamo-2014-q5.svg",
+      "alt": "Triangle ABC, orthocenter H, and angle bisector AP crossing circle AHC. A segment joins the circumcenter X of ABP and the orthocenter Y of ACP.",
+      "altZh": "三角形 ABC 的垂心为 H，角平分线 AP 与圆 AHC 相交。图中连出了 ABP 的外心 X 与 ACP 的垂心 Y。",
+      "printHeightPt": 160
+    },
+    "methods": [
+      {
+        "title": "Construct a distance-preserving map sending A to X and O to Y",
+        "titleZh": "构造把 A 映到 X、把外心 O 映到 Y 的保距变换",
+        "topics": [
+          {
+            "en": "Half-turns and circumcenters",
+            "zh": "中心对称与外心"
+          },
+          {
+            "en": "Reflection across an angle bisector",
+            "zh": "关于角平分线的反射"
+          },
+          {
+            "en": "Perpendicular bisectors and altitudes",
+            "zh": "垂直平分线与高线"
+          }
+        ],
+        "steps": [
+          "Let $O$ and $K$ be the circumcenters of $ABC$ and $AHC$, respectively. Rotate the plane by $180^\\circ$ about the midpoint of $AC$, sending $B$ to $D$. Then $AD\\parallel BC$ and $CD\\parallel AB$. The altitudes $AH$ and $CH$ therefore give $AD\\perp AH$ and $CD\\perp CH$. Both $A$ and $C$ lie on the circle with diameter $DH$. So the half-turn takes circle $ABC$ to circle $CDA$, which is exactly circle $AHC$. In particular it takes $O$ to $K$.",
+          "Put $A=(0,0)$ and use the angle bisector $AP$ as the horizontal axis. Write $P=(2d,0)$ and $O=(u,v)$. Both $X$ and $K$ are equidistant from $A$ and $P$, so both have first coordinate $d$. Write $X=(d,e)$. The midpoint of $OK$ is the midpoint of $AC$ (equivalently, the half-turn sends $O$ to $K$), hence the first coordinate of $C$ is $u+d$.",
+          "Consider the map $F(s,t)=(s+d,e-t)$. It reflects in $AP$ and then translates by $(d,e)$, so it preserves lengths and right angles. It sends $A$ to $X$ and $X$ to $P$. The perpendicular bisector of $AB$ contains both $O$ and $X$. Reflection in the angle bisector takes the direction of $AB$ to that of $AC$, and translation preserves directions. Thus the image of this perpendicular bisector is the line through $P$ perpendicular to $AC$. In particular $F(O)$ lies on that altitude of $ACP$.",
+          "Also $F(O)=(u+d,e-v)$ has the same first coordinate as $C$. It lies on the vertical line through $C$, the altitude perpendicular to $AP$. The two altitudes meet at $Y$, so $F(O)=Y$. The image of $AO$ is consequently $XY$, and $XY=AO$ is the required circumradius."
+        ],
+        "stepsZh": [
+          "分别记三角形 $ABC$ 与 $AHC$ 的外心为 $O,K$。将平面绕 $AC$ 的中点旋转 $180^\\circ$，设 $B$ 的像为 $D$。由 $AD\\parallel BC$、$CD\\parallel AB$，再利用高线 $AH$、$CH$，得 $AD\\perp AH$、$CD\\perp CH$。故 $A,C$ 都在以 $DH$ 为直径的圆上。这次旋转把圆 $ABC$ 映到圆 $CDA$，即圆 $AHC$，于是把外心 $O$ 映到外心 $K$。",
+          "取 $A=(0,0)$，以角平分线 $AP$ 为横轴。设 $P=(2d,0)$、$O=(u,v)$。$X,K$ 到 $A,P$ 均等距，所以两点的横坐标都是 $d$。记 $X=(d,e)$。由上述旋转，$O,K$ 关于 $AC$ 的中点对称，因而两点横坐标之和等于 $A,C$ 横坐标之和。于是 $C$ 的横坐标为 $u+d$。",
+          "定义 $F(s,t)=(s+d,e-t)$，即先关于 $AP$ 反射，再平移向量 $(d,e)$。它保持距离和直角，并满足 $F(A)=X$、$F(X)=P$。$O$ 与 $X$ 都在 $AB$ 的垂直平分线上。关于角平分线的反射把 $AB$ 的方向映为 $AC$ 的方向，而平移保持方向，故这条垂直平分线的像是过 $P$ 且垂直于 $AC$ 的直线。因此 $F(O)$ 在三角形 $ACP$ 从 $P$ 引出的高线上。",
+          "$F(O)=(u+d,e-v)$ 与 $C$ 的横坐标相同，也就位于过 $C$ 且垂直于 $AP$ 的另一条高线上。两条高线交于 $Y$，所以 $F(O)=Y$。于是 $AO$ 的像为 $XY$，两线段等长，而 $AO$ 正是所求的外接圆半径。"
+        ]
+      }
+    ]
+  },
+  "usamo-2014-q6": {
+    "summary": "Take two blocks of consecutive integers $a,a+1,\\ldots,a+n$ and $b,b+1,\\ldots,b+n$, where $a,b,n$ are positive integers. Each choice of one number from each block gives a pair with a common divisor greater than $1$. Prove that some absolute constant $c>0$ works for every such pair of blocks in the inequality $\\min(a,b)>c^n n^{n/2}$.",
+    "summaryZh": "设 $a,b,n$ 为正整数。有两列连续整数 $a,a+1,\\ldots,a+n$ 与 $b,b+1,\\ldots,b+n$。从两列中各任取一个数，这两个数总有大于 $1$ 的公因数。证明存在一个与 $a,b,n$ 均无关的常数 $c>0$，使得 $\\min(a,b)>c^n n^{n/2}$。",
+    "answer": "The inequality holds. For example, $c=1/400$ works for all positive $n$.",
+    "answerZh": "不等式成立。例如，取 $c=1/400$ 对所有正整数 $n$ 都适用。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Count the common primes in a square array",
+        "titleZh": "在方阵中计数公质因数",
+        "topics": [
+          {
+            "en": "Prime divisibility",
+            "zh": "质数整除性"
+          },
+          {
+            "en": "Double counting and averaging",
+            "zh": "双重计数与平均原理"
+          },
+          {
+            "en": "Telescoping sums",
+            "zh": "裂项求和"
+          }
+        ],
+        "steps": [
+          "Set $N=n+1$. Make one row for each $a+i$ and one column for each $b+j$. In each cell write any prime dividing both numbers. A prime $p>n$ cannot appear twice in a row: it would divide the nonzero difference between two column entries, whose absolute value is at most $n$. It cannot appear twice in a column either. Thus a row with many large labels gives many distinct prime factors of a single integer.",
+          "To estimate how often small labels can occur, we need a little room below $1/2$ in the sum of reciprocal prime squares. All primes besides $2,3$ lie among the odd numbers $2k+1$ with $k\\ge2$. As $(2k+1)^2>4k(k+1)$, we get $\\sum_{p\\text{ prime}}1/p^2\\le 1/4+1/9+\\tfrac14\\sum_{k=2}^{\\infty}(1/k-1/(k+1))=35/72$.",
+          "Each block of $N$ consecutive integers contains at most $N/p+1$ multiples of $p$, since successive multiples are $p$ apart. Hence $p$ can label at most $(N/p+1)^2$ cells. Sum this over primes $p\\le n$ and expand the square. The number of cells with small labels is at most $(35/72)N^2+2N\\sum_{p\\le n}1/p+n$, where the last term bounds the number of primes counted.",
+          "The sum of $1/k$ for $1\\le k\\le n$ is at most $2\\sqrt n$: the terms with $k\\le\\sqrt n$ contribute at most $\\sqrt n$, and each remaining term is at most $1/\\sqrt n$. For $n\\ge400^2$, the last two terms of the preceding cell count therefore total at most $N(4\\sqrt n+1)\\le5N\\sqrt n\\le Nn/80<N^2/72$. Fewer than $(35/72+1/72)N^2=N^2/2$ cells have a small label.",
+          "More than half of all labels exceed $n$, so one row contains more than $N/2$ of them. They are distinct and each is at least $N$. Their product divides that row's integer, so $a+i>N^{N/2}$ for some $0\\le i\\le n$. Likewise some column gives $b+j>N^{N/2}$. Here $n\\ge400^2$, so $N^{N/2}>\\sqrt n\\,n^{n/2}\\ge 2n^{n/2}$ and $n\\le n^{n/2}$. Subtracting at most $n$ gives both $a>n^{n/2}$ and $b>n^{n/2}$.",
+          "Choose $c=1/400$. The bound just proved is more than enough for $n\\ge400^2$. For $1\\le n<400^2$, the desired right-hand side is $(\\sqrt n/400)^n<1$, while $a,b\\ge1$. This also gives the required strict inequality for every smaller $n$."
+        ],
+        "stepsZh": [
+          "记 $N=n+1$。用每个 $a+i$ 标记一行，每个 $b+j$ 标记一列，每个格子内任写一个既整除行标又整除列标的质数。质数 $p>n$ 不会在同一行内出现两次，否则它整除两个不同列标之差，而该差的绝对值至多为 $n$。同理，它在同一列也至多出现一次。因此，若一行中有许多个大质数，这些数就是同一个行标的互异质因数。",
+          "先给质数平方倒数之和找一个略小于 $1/2$ 的上界。除 $2,3$ 外的质数都在 $2k+1$（$k\\ge2$）这些奇数中。由 $(2k+1)^2>4k(k+1)$，裂项求和得 $\\sum_{p\\text{ 为质数}}1/p^2\\le 1/4+1/9+\\tfrac14\\sum_{k=2}^{\\infty}(1/k-1/(k+1))=35/72$。",
+          "相邻两个 $p$ 的倍数相差 $p$，故任意 $N$ 个连续整数中至多有 $N/p+1$ 个 $p$ 的倍数。填入 $p$ 的格子必须同时选中这样的行和列，最多有 $(N/p+1)^2$ 个。对所有 $p\\le n$ 的质数求和并展开平方，填入小质数的格子数至多为 $(35/72)N^2+2N\\sum_{p\\le n}1/p+n$。末项用 $n$ 估计所计质数的个数。",
+          "在 $1\\le k\\le n$ 内，$1/k$ 的总和至多为 $2\\sqrt n$。其中 $k\\le\\sqrt n$ 的部分至多为 $\\sqrt n$，其余每一项至多为 $1/\\sqrt n$。当 $n\\ge400^2$ 时，上一步格子数上界的后两项之和至多为 $N(4\\sqrt n+1)\\le5N\\sqrt n\\le Nn/80<N^2/72$。所以填入小质数的格子少于 $(35/72+1/72)N^2=N^2/2$ 个。",
+          "超过半数的格子填着大于 $n$ 的质数，于是至少有一行含有超过 $N/2$ 个这样的大质数。它们互不相同且均至少为 $N$，其乘积整除行标，因此某个 $a+i>N^{N/2}$。按列取平均也得到某个 $b+j>N^{N/2}$。此时 $n\\ge400^2$，故 $N^{N/2}>\\sqrt n\\,n^{n/2}\\ge2n^{n/2}$，且 $n\\le n^{n/2}$。减去至多为 $n$ 的下标后，仍有 $a>n^{n/2}$ 和 $b>n^{n/2}$。",
+          "取 $c=1/400$。当 $n\\ge400^2$ 时，上一步已给出更强的下界。当 $1\\le n<400^2$ 时，题中右端为 $(\\sqrt n/400)^n<1$，而 $a,b\\ge1$。从而较小的 $n$ 也全部满足所需的严格不等式。"
+        ]
+      }
+    ]
+  }
+}
