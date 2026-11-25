@@ -1,6 +1,6 @@
 ---
 import { getPastPapers, localPractice, topicEntries, tagLabel } from '../lib/catalog.js';
-import problems from '../data/problems.json';
+import problems from '../lib/practice.js';
 import '../styles/archive.css';
 const { lang = 'en' } = Astro.props;
 const zh = lang === 'zh';
@@ -22,6 +22,7 @@ const topics = topicEntries.filter(t => counts.get(t.key) || practice.some(p => 
     <h1>{zh ? '按知识点找题' : 'Questions by topic'}</h1>
     <p>{zh ? '选择知识点，再按考试或年份细选。可以勾选多道题，按自己的顺序组卷。' : 'Choose a topic, narrow it by exam or year, and select questions for your worksheet.'}</p>
     <a class="arch-inline" href={prefix+'/esat/'}>{zh?'ESAT 请使用官方分科练习':'ESAT practice by module'}</a>
+    <a class="arch-inline" href={prefix+'/tara/'}>{zh?'TARA 分模块练习':'TARA practice by module'}</a>
     <a class="arch-inline" href={prefix+'/topics/methods/'}>{zh?'按知识点找解法':'Browse solution methods by topic'}</a>
   </header>
   <nav class="arch-topic-grid" aria-label={zh ? '知识点' : 'Mathematical topics'}>

@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import originals from '../data/tara-originals.json';
+import modules from '../data/tara-modules.json';
+import guide from '../data/tara-guide.json';
+import legacy from '../data/tara-legacy.json';
+import '../styles/archive.css';
+
+const {lang='en'} = Astro.props;
+const zh = lang === 'zh';
+const t = (en:string, cn:string) => zh ? cn : en;
+const prefix = zh ? '/zh' : '';
+const title = t('TARA question bank','TARA 题库');
+const intro = t('Test of Academic Reasoning for Admissions','学术推理入学考试（Test of Academic Reasoning for Admissions）');
+const pageURL = (page:number) => guide.url + '#page=' + page;
+---
+<Layout title={title} description={intro} current="past" lang={lang}>
+  <article class="shell archive-shell tara-bank">
+    <nav class="breadcrumb" aria-label={t('Breadcrumb','当前位置')}><a href={prefix+'/past-papers/'}>{t('Past papers','历年真题')}</a> / TARA</nav>
+    <header class="archive-hero">
+      <h1>{title}</h1>
+      <p>{intro}</p>
+    </header>
+
+    <section aria-labelledby="originals" class="tara-section tara-first">
+      <div class="section-heading">
+        <h2 id="originals">{t('Original practice questions','站内原创练习')}</h2>
+        <a href={prefix+'/problems/?kind=practice&exam=TARA'}>{t('Build a TARA worksheet','选择 TARA 题目组卷')}</a>
+      </div>
+      <p>{t('Open a question to read it, reveal the worked approaches or add it to a worksheet.','点击题目可在站内阅读、展开参考解法，或将题目加入自己的试卷。')}</p>
+      <div class="tara-grid">
+        {modules.map(module=><section id={module.id} class="tara-module">
+          <h3>{t(module.title,module.titleZh)}</h3>
+          <p class="module-format">{module.id==='writing-task' ? t('In the exam, choose 1 of 3 prompts · 40 min · up to 750 words','正式考试三选一 · 40 分钟 · 最多 750 个英文单词') : t('22 multiple-choice questions in the exam · 40 min','正式考试共 22 道选择题 · 40 分钟')}</p>
+          <ul class="question-list">{originals.filter(question=>question.module===module.id).map(question=>
+            <li><a href={prefix+'/problems/'+question.id+'/'}>{t(question.titleEn,question.title)}</a></li>
+          )}</ul>
+        </section>)}
+      </div>
+    </section>
+
+    <section aria-labelledby="guide" class="tara-section">
+      <h2 id="guide">{t('Official worked examples','官方例题')}</h2>
+      <p>{t('Read individual examples in the June 2026 UAT-UK Question Guide. The writing section includes advice on planning and developing a response.','按题打开 UAT-UK 2026 年 6 月官方题型指南。写作部分附审题、构思与论证建议。')}</p>
+      <div class="tara-grid">{modules.map(module=><section class="guide-module">
+        <h3>{t(module.title,module.titleZh)}</h3>
+        <ul class="guide-list">{guide.questions.filter(q=>q.module===module.id).map(q=>{
+          const label=t(q.label,q.labelZh);
+          return <li><a href={pageURL(q.page)}>{label}</a>
+            {q.answerPage && <a class="answer-link" href={pageURL(q.answerPage)} aria-label={label+' · '+t('Official explanation','官方解析')}>{t('Explanation','解析')}</a>}
+          </li>;
+        })}</ul>
+      </section>)}</div>
+    </section>
+
+    <section aria-labelledby="pearson" class="tara-section">
+      <h2 id="pearson">{t('Official practice tests','官方机考练习')}</h2>
+      <p>{t('Pearson offers two practice sets, each split into three modules. Open a module on a desktop computer to use the exam player.','培生发布了两套备考测试，每套分为三个模块。请在电脑上打开相应模块，使用官方机考界面。')}</p>
+      <table class="pearson-tests">
+        <thead><tr><th scope="col">{t('Module','模块')}</th><th scope="col">{t('Specimen test','官方样题')}</th><th scope="col">{t('Practice test','模拟练习')}</th></tr></thead>
+        <tbody>{modules.map(module=><tr>
+          <th scope="row">{t(module.title,module.titleZh)}</th>
+          <td><a href={module.specimenURL} aria-label={t(module.title+' specimen test',module.titleZh+'官方样题')}>{t('Open specimen','打开样题')}</a></td>
+          <td><a href={module.practiceURL} aria-label={t(module.title+' practice test',module.titleZh+'模拟练习')}>{t('Open practice','打开练习')}</a></td>
+        </tr>)}</tbody>
+      </table>
+      <a class="reference" href="https://www.pearsonvue.com/us/en/uatuk.html">{t('Pearson VUE test directory','培生官方测试目录')}</a>
+    </section>
+
+    <section aria-labelledby="related" class="tara-section">
+      <h2 id="related">{t('Related BMAT and TSA papers','相关考试历年卷 · BMAT 与 TSA')}</h2>
+      <p>{t('UAT-UK recommends these earlier tests for additional practice in critical thinking and problem solving. Each entry is a past paper from the exam named below.','UAT-UK 推荐使用以下考试的历年卷补充练习批判性思维与问题解决。下列试卷均按实际考试名称收录。')}</p>
+      {['BMAT','TSA'].map(exam=>{
+        const entries=legacy.filter(p=>p.exam===exam).sort((a,b)=>b.year-a.year);
+        return <details class="legacy-index">
+          <summary>{exam} {t('Section 1','第一部分')} · {entries.at(-1)?.year}–{entries[0]?.year}</summary>
+          <ul class="legacy-papers">{entries.map(p=><li>
+            <a href={p.url}>{p.year} {p.exam} · {t('Question paper','试卷')}</a>
+            <a href={p.solutionsUrl} aria-label={p.year+' '+p.exam+' · '+t('Answer key','答案表')}>{t('Answer key','答案表')}</a>
+            {p.explainedUrl && <a href={p.explainedUrl} aria-label={p.year+' '+p.exam+' · '+t('Worked answers','解析')}>{t('Worked answers','解析')}</a>}
+          </li>)}</ul>
+        </details>;
+      })}
+      <a class="reference" href="https://esat-tmua.ac.uk/tara-preparation-materials/">{t('UAT-UK preparation archive','UAT-UK 官方备考档案')}</a>
+    </section>
+  </article>
+</Layout>
+<style>
+  .tara-bank { max-width: 1100px; }
+  .tara-bank .archive-hero { margin-bottom: 1.75rem; }
+  .tara-section { margin: 0 0 2.4rem; }
+  .tara-section h2 { margin: 0; font: 650 clamp(23px,2.6vw,32px)/1.3 var(--serif); }
+  .tara-section h3 { margin: 0 0 .3rem; font: 650 20px/1.4 var(--serif); }
+  .tara-section > p { margin: .45rem 0 .9rem; color: var(--muted); max-width: 78ch; }
+  .section-heading { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; }
+  .section-heading a,.reference,.answer-link { color:var(--accent); font-weight:600; }
+  .tara-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.9rem 1.3rem; }
+  .tara-module,.guide-module { min-width:0; border-top:1px solid var(--line); padding-top:.8rem; }
+  .module-format { margin:.12rem 0 .65rem; color:var(--muted); font-size:.88rem; }
+  .question-list,.guide-list,.legacy-papers { list-style:none; margin:0; padding:0; }
+  .tara-section a { text-underline-offset:3px; overflow-wrap:anywhere; }
+  .question-list li { margin:.55rem 0; }
+  .question-list a { color:var(--navy); font-weight:600; }
+  .guide-list li { margin:.5rem 0; }
+  .answer-link { display:inline-block; font-size:.83rem; margin-inline-start:.6rem; }
+  .pearson-tests { width:100%; max-width:54rem; border-collapse:collapse; margin:.7rem 0; }
+  .pearson-tests th,.pearson-tests td { padding:.45rem .55rem .45rem 0; text-align:start; border-bottom:1px solid var(--line); vertical-align:top; }
+  .pearson-tests thead th { color:var(--muted); font-weight:600; }
+  .reference { display:inline-block; font-size:.91rem; margin-top:.35rem; }
+  .legacy-papers li { display:flex; flex-wrap:wrap; gap:.3rem 1rem; }
+  @media(max-width:700px) {
+    .tara-grid { grid-template-columns:1fr; }
+    .pearson-tests { font-size:.9rem; }
+  }
+</style>

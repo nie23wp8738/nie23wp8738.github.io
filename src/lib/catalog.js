@@ -24,7 +24,8 @@ const taxonomy = [
   ['statistics','Statistics','统计'], ['mechanics','Mechanics','力学'],
   ['trigonometry','Trigonometry','三角学'], ['sequences','Sequences & series','数列与级数'],
   ['vectors','Vectors','向量'], ['arithmetic','Arithmetic','算术'],
-  ['problem-solving','Problem-solving strategies','解题策略']
+  ['problem-solving','Problem-solving strategies','解题策略'],
+  ['critical-thinking','Critical thinking','批判性思维'], ['argument-writing','Argumentative writing','论证写作']
 ];
 export const topicEntries = taxonomy.map(([key,en,zh]) => ({key,en,zh}));
 const topics = new Map(topicEntries.map(topic => [topic.key,topic]));
@@ -80,9 +81,9 @@ const methods = {
 const levels = {'基础':['basic','Foundation'],'提高':['intermediate','Intermediate'],'挑战':['challenge','Challenge']};
 const originalTopics = {'组合计数':'counting','代数':'algebra','数论':'number-theory','逻辑与证明':'logic'};
 export function localPractice(p, lang='en') {
-  const topicKey = p.id === 'count-coin-runs' ? 'probability' : originalTopics[p.topic];
+  const topicKey = p.topicKey || (p.id === 'count-coin-runs' ? 'probability' : originalTopics[p.topic]);
   const [levelKey,englishLevel] = levels[p.level];
-  return {...p, title:lang === 'zh' ? p.title : titles[p.id], topic:topicLabel(topicKey,lang),
-    topicKey, method:lang === 'zh' ? p.method : methods[p.method],
+  return {...p, title:lang === 'zh' ? p.title : p.titleEn || titles[p.id], topic:topicLabel(topicKey,lang),
+    topicKey, method:lang === 'zh' ? p.method : p.methodEn || methods[p.method],
     level:lang === 'zh' ? p.level : englishLevel, levelKey};
 }

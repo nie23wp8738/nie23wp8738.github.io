@@ -208,14 +208,19 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
       y -= solutions ? 12 : 27;
       return;
     }
+    if (problem.exam?.includes('TARA')) paragraph('TARA-style original practice', 'label', 9, 13);
     paragraph(problem.statement);
+    for (const [i,option] of (problem.options || []).entries()) {
+      paragraph(String.fromCharCode(65+i) + '. ' + option);
+    }
     if (solutions) {
       y -= 4;
-      section('Answer', problem.answer);
+      const writing = problem.module === 'writing-task';
+      section(writing ? 'Approaching the prompt' : 'Answer', problem.answer);
       for (const [methodIndex, method] of problem.solutions.entries()) {
         const topics = (method.topics || []).map(topic => plainLabel(topic.en)).filter(Boolean);
         const body = topics.length ? 'Topics: ' + topics.join(', ') + '\n' + method.text : method.text;
-        section('Method ' + (methodIndex + 1) + ' - ' + method.title, body);
+        section((writing ? 'Sample response ' : 'Method ') + (methodIndex + 1) + ' - ' + method.title, body);
       }
     }
     y -= solutions ? 15 : 32;
@@ -320,7 +325,7 @@ export async function downloadWorksheet(problems, { solutions = false, layout = 
       }
       continue;
     }
-    const fields = [problem.statement];
+    const fields = [problem.statement,...(problem.options || [])];
     if (solutions) {
       fields.push(problem.answer, ...problem.solutions.flatMap(method => [method.title, method.text]));
     }

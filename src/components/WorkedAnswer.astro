@@ -2,20 +2,20 @@
 import TypesetText from './TypesetText.astro';
 import { methodTopicKey } from '../lib/answers.js';
 import '../styles/solutions.css';
-const { answer, lang, id, sourceUrl, original=false } = Astro.props;
+const { answer, lang, id, sourceUrl, original=false, writing=false } = Astro.props;
 const zh = lang === 'zh';
 const t = (en,cn) => zh ? cn : en;
 const topicHref = (en) => (zh ? '/zh' : '') + '/topics/methods/?' + new URLSearchParams({topic:methodTopicKey(en)});
 ---
 <section class="worked-answer" aria-label={t('Answers and methods','答案与解法')}>
   <details id="solutions" class="answer-panel">
-    <summary>{t('Show answer and methods','查看答案与解法')} <span class="method-count">{t(answer.methods.length+' methods',answer.methods.length+' 种解法')}</span></summary>
+    <summary>{writing ? t('View sample responses','查看写作范例') : t('Show answer and methods','查看答案与解法')} <span class="method-count">{writing ? t(answer.methods.length+' approaches',answer.methods.length+' 种思路') : t(answer.methods.length+' methods',answer.methods.length+' 种解法')}</span></summary>
     <div class="answer-result">
-      <h2>{t('Answer','答案')}</h2>
+      <h2>{writing ? t('Approaching the prompt','作答思路') : t('Answer','答案')}</h2>
       {original ? <p>{t(answer.answer,answer.answerZh)}</p> : <TypesetText id={id} text={t(answer.answer,answer.answerZh)} />}
     </div>
     {answer.methods.map((method,index) => <details class="method-panel" id={'method-'+(index+1)}>
-      <summary><span class="method-number">{t('Method '+(index+1),'解法 '+(index+1))}</span> {t(method.title,method.titleZh)}</summary>
+      <summary><span class="method-number">{writing ? t('Sample '+(index+1),'范例 '+(index+1)) : t('Method '+(index+1),'解法 '+(index+1))}</span> {t(method.title,method.titleZh)}</summary>
       <div class="method-content">
         <div class="method-topics"><strong>{t('Topics used','本解法用到的知识点')}</strong>
           {method.topics.map(topic => <a href={topicHref(topic.en)}>{t(topic.en,topic.zh)}</a>)}

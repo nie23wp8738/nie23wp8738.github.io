@@ -21,8 +21,10 @@ async function runArchive(root) {
   const prefix = zh ? '/zh' : '';
   const isTopics = root.dataset.archive === 'topics';
   const t = (en, cn) => zh ? cn : en;
-  if (new URLSearchParams(location.search).get('exam') === 'ESAT') {
-    location.replace(prefix + '/esat/');
+  const practiceRoute = exam => exam === 'ESAT' ? '/esat/' : !isTopics && exam === 'TARA' ? '/tara/' : '';
+  const initialRoute = practiceRoute(new URLSearchParams(location.search).get('exam'));
+  if (initialRoute) {
+    location.replace(prefix + initialRoute);
     return;
   }
   const labels = JSON.parse(root.querySelector('[data-topics]').textContent);
@@ -312,7 +314,8 @@ async function runArchive(root) {
     const entry = Object.entries(controls).find(([,field]) => field === event.target);
     if (!entry) return;
     const [key,field] = entry;
-    if (key === 'exam' && field.value === 'ESAT') { location.assign(prefix + '/esat/'); return; }
+    const route = key === 'exam' && practiceRoute(field.value);
+    if (route) { location.assign(prefix + route); return; }
     const changes = {page:'',paper:'',[key]:field.value};
     if (key === 'exam' || key === 'year') changes.tag = '';
     history.pushState(null,'',urlWith(changes)); render();

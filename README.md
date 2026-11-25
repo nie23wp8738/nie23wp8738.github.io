@@ -4,6 +4,7 @@ A bilingual mathematics question bank at <https://nie23wp8738.github.io/>. The d
 
 - `/past-papers/` — find an exam paper by year and browse its individual questions.
 - `/esat/` — open official specimen and practice tests by module, or find separately labelled ENGAA and NSAA precursor papers.
+- `/tara/` — practise TARA-style questions, try the official tests and guide examples, or browse related BMAT and TSA papers.
 - `/topics/` — find questions across papers by subject area and specific concept.
 - `/topics/methods/` — find individual worked solutions by the concepts used in each method. A link ending in `#solutions` opens the answer; `#method-2` also opens the second proof.
 - `/problems/` — select and reorder questions and download a worksheet or solution/reference PDF.
@@ -26,6 +27,7 @@ Historical records in `src/data/past-*.json` store paper and question references
 | IMO | [International Mathematical Olympiad](https://www.imo-official.org/problems/) |
 | NZMO | [New Zealand Mathematical Olympiad Committee](https://www.mathsolympiad.org.nz/resources/) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | ESAT practice | [Pearson VUE](https://www.pearsonvue.com/us/en/uatuk.html) |
+| TARA | [UAT-UK preparation materials](https://esat-tmua.ac.uk/tara-preparation-materials/) and [Pearson VUE](https://www.pearsonvue.com/us/en/uatuk.html). The TARA practice page identifies the official samples, guide examples, related BMAT/TSA papers and original questions. |
 | STEP | [Cambridge STEP Support Programme](https://step.maths.org/questions) and [OCR](https://www.ocr.org.uk/students/step-mathematics/preparing-for-step/) |
 | TMUA | [UAT-UK historical preparation papers](https://esat-tmua.ac.uk/tmua-preparation-materials/) |
 

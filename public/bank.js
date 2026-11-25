@@ -114,7 +114,7 @@ function startBank(root) {
   }
   function applyURL() {
     const params = new URLSearchParams(location.search);
-    const kind = params.get('kind') || (params.has('method') || params.has('level') ? 'practice' : 'past');
+    const kind = params.get('kind') || (params.has('method') || params.has('level') || params.get('exam')==='TARA' ? 'practice' : 'past');
     control('kind').value = kind === 'practice' ? 'practice' : 'past';
     refreshMode();
     for (const key of filters.slice(1)) {
@@ -292,7 +292,10 @@ function startBank(root) {
     exporting=true;renderSheet();get('status').textContent=t('Preparing PDF…','正在生成 PDF…');
     try{
       const {downloadWorksheet}=await import('/worksheet-pdf.js');
-      await downloadWorksheet(selected.map(id=>byId.get(id)),{solutions:b.dataset.pdf==='solutions',layout});
+      const items = selected.map(id=>byId.get(id));
+      const taraCount = items.filter(q=>q.exam.includes('TARA')).length;
+      const title = taraCount===items.length ? 'TARA Practice' : taraCount ? 'Practice Worksheet' : undefined;
+      await downloadWorksheet(items,{solutions:b.dataset.pdf==='solutions',layout,title});
       get('status').textContent=t('PDF downloaded.','PDF 已生成。');
     }catch {get('status').textContent=t('Could not create the PDF. Please try again.','PDF 生成失败，请重试。');}
     finally {exporting=false;renderSheet();}

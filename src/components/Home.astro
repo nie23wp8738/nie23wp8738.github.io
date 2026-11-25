@@ -4,6 +4,7 @@ import GridFigure from './GridFigure.astro';
 import {getPastPapers,topicLabel} from '../lib/catalog.js';
 import {examGroups,examNames} from '../lib/exams.js';
 import esat from '../data/practice-esat.json';
+import tara from '../data/tara-originals.json';
 const {lang='en'} = Astro.props;
 const zh = lang === 'zh';
 const root = zh ? '/zh' : '';
@@ -15,7 +16,11 @@ for (const {exam,year,questions} of papers) {
   row.from = Math.min(row.from,year); row.to = Math.max(row.to,year);
   counts.set(exam,row);
 }
-const groups = examGroups.map(group=>({...group, exams: group.exams.filter(exam=>counts.has(exam) || exam === 'ESAT')}));
+const practiceExams = {
+  ESAT: {path:'/esat/',summary:zh?esat.length+' 套官方样题和练习':'Official samples & practice · '+esat.length+' tests'},
+  TARA: {path:'/tara/',summary:zh?'官方样题 · '+tara.length+' 道站内原创练习':'Official samples · '+tara.length+' original questions'},
+};
+const groups = examGroups.map(group=>({...group, exams: group.exams.filter(exam=>counts.has(exam) || practiceExams[exam])}));
 const featuredTopics = ['algebra','geometry','counting','number-theory','logic','calculus','probability','mechanics'];
 ---
 <Layout lang={lang} current="home" title={zh?'首页':'Home'}>
@@ -38,11 +43,11 @@ const featuredTopics = ['algebra','geometry','counting','number-theory','logic',
       {groups.map(group=><div class="exam-group"><h3>{zh?group.zh:group.en}</h3><div class="paper-family">
         {group.exams.map(exam=>{
           const stats=counts.get(exam);
-          const practice=exam==='ESAT';
-          return <a class="course-tile" href={root+(practice?'/esat/':'/past-papers/?exam='+encodeURIComponent(exam))}>
+          const practice=practiceExams[exam];
+          return <a class="course-tile" href={root+(practice?practice.path:'/past-papers/?exam='+encodeURIComponent(exam))}>
             <h4>{exam}</h4>
             {examNames[exam] && <div class="exam-full-name">{examNames[exam][zh?1:0]}</div>}
-            {practice ? <p>{zh?esat.length+' 套官方样题和练习':'Official samples & practice · '+esat.length+' tests'}</p> : <>
+            {practice ? <p>{practice.summary}</p> : <>
               <small>{stats.from}–{stats.to}</small>
               <p>{zh?stats.editions+' 份试卷 · '+stats.questions.toLocaleString('en-US')+' 道题':stats.editions+' papers · '+stats.questions.toLocaleString('en-US')+' questions'}</p></>}
           </a>;

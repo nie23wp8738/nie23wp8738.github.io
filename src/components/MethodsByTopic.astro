@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import practice from '../data/problems.json';
+import practice from '../lib/practice.js';
 import { getPastPapers,localPractice } from '../lib/catalog.js';
 import { getWorkedAnswer,originalAnswer,methodTopicKey } from '../lib/answers.js';
 const {lang='en'} = Astro.props;

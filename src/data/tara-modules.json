@@ -1,0 +1,23 @@
+[
+  {
+    "id": "critical-thinking",
+    "title": "Critical Thinking",
+    "titleZh": "批判性思维",
+    "specimenURL": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ct-s.html",
+    "practiceURL": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ct-p.html"
+  },
+  {
+    "id": "problem-solving",
+    "title": "Problem Solving",
+    "titleZh": "问题解决",
+    "specimenURL": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ps-s.html",
+    "practiceURL": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ps-p.html"
+  },
+  {
+    "id": "writing-task",
+    "title": "Writing Task",
+    "titleZh": "写作任务",
+    "specimenURL": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-wt-s.html",
+    "practiceURL": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-wt-p.html"
+  }
+]

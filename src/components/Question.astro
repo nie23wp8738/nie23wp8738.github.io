@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { localPractice } from '../lib/catalog.js';
-import practice from '../data/problems.json';
+import practice from '../lib/practice.js';
 import WorkedAnswer from './WorkedAnswer.astro';
 import { originalAnswer } from '../lib/answers.js';
 
@@ -13,13 +13,15 @@ const { lang, problem } = Astro.props;
 const zh = lang === 'zh';
 const p = localPractice(problem, lang);
 const root = zh ? '/zh' : '';
-const topicHref = root + '/topics/?topic=' + encodeURIComponent(p.topicKey);
+const tara = p.exam.includes('TARA');
+const writing = p.module === 'writing-task';
+const topicHref = root + '/topics/?topic=' + encodeURIComponent(p.topicKey) + (tara ? '&exam=TARA&kind=original#questions' : '');
 const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#worksheet';
 ---
 <Layout title={p.title} current="problems" lang={lang}>
   <article class="shell question">
     <nav class="breadcrumb" aria-label={zh ? '当前位置' : 'Breadcrumb'}>
-      <a href={root + '/problems/?kind=practice'}>{zh ? '练习题库' : 'Practice bank'}</a>
+      <a href={tara ? root+'/tara/#'+p.module : root+'/problems/?kind=practice'}>{tara ? (zh ? 'TARA 练习' : 'TARA practice') : (zh ? '练习题库' : 'Practice bank')}</a>
       <span aria-hidden="true"> / </span>
       <a href={topicHref}>{p.topic}</a>
     </nav>
@@ -27,7 +29,17 @@ const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#wo
       {p.exam.join(' / ')} · {p.level} · {zh ? '原创练习（英文）' : 'Original practice'}
     </div>
     <h1>{p.title}</h1>
-    <p lang="en" class="statement">{p.statement}</p>
+    <p lang="en" class="statement" style={tara ? 'white-space: pre-line' : undefined}>{p.statement}</p>
+    {p.options && <form class="answer-options" data-answer-options data-correct={p.correctOption} data-lang={lang}>
+      <fieldset><legend>{zh?'请选择一个答案':'Choose one answer'}</legend>
+        {p.options.map((option,index)=><label>
+          <input type="radio" name="choice" value={index} required />
+          <span lang="en"><b>{String.fromCharCode(65+index)}.</b> {option}</span>
+        </label>)}
+      </fieldset>
+      <button type="submit" class="button light" hidden>{zh?'核对选项':'Check choice'}</button>
+      <span role="status" aria-live="polite" class="choice-status"></span>
+    </form>}
     <div class="btnrow">
       <a class="button" href={worksheetHref}>{zh ? '加入我的试卷' : 'Add to worksheet'}</a>
       <a class="button light" href={topicHref}>{zh ? '同知识点练习' : 'More questions on this topic'}</a>
@@ -36,6 +48,29 @@ const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#wo
       <summary>{zh ? '提示（英文）' : 'Hint'}</summary>
       <p lang="en">{p.hint}</p>
     </details>
-    <WorkedAnswer answer={originalAnswer(problem)} lang={lang} id={p.id} original={true} />
+    <WorkedAnswer answer={originalAnswer(problem)} lang={lang} id={p.id} original={true} writing={writing} />
   </article>
 </Layout>
+<style>
+  .answer-options { margin: 1rem 0 1.5rem; }
+  .answer-options fieldset { border:0; padding:0; margin:0 0 .65rem; }
+  .answer-options legend { color:var(--muted); margin-bottom:.5rem; }
+  .answer-options label { display:flex; align-items:baseline; gap:.65rem; padding:.5rem .25rem; cursor:pointer; line-height:1.5; }
+  .answer-options input { accent-color:var(--accent); }
+  .answer-options button[hidden] { display:none; }
+  .choice-status { margin-inline-start:.75rem; }
+</style>
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-answer-options]').forEach(form=>{
+    const status=form.querySelector<HTMLElement>('[role=status]')!;
+    const zh=form.dataset.lang==='zh';
+    form.querySelector<HTMLButtonElement>('button')!.hidden=false;
+    form.addEventListener('input',()=>{status.textContent='';});
+    form.addEventListener('submit',event=>{
+      event.preventDefault();
+      const selected=new FormData(form).get('choice');
+      status.textContent=selected===form.dataset.correct ? (zh?'答对了。':'Correct.') :
+        (zh?'这个选项不正确。可以再试一次，或展开下方解析。':'That choice is incorrect. Try again or open the worked answer below.');
+    });
+  });
+</script>

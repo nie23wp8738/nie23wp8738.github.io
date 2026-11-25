@@ -1,0 +1,92 @@
+{
+  "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf",
+  "questions": [
+    {
+      "id": "tara-guide-ct-1",
+      "module": "critical-thinking",
+      "label": "Locate the main conclusion",
+      "labelZh": "识别主要结论",
+      "page": 4,
+      "answerPage": 4
+    },
+    {
+      "id": "tara-guide-ct-2",
+      "module": "critical-thinking",
+      "label": "Draw a conclusion from the evidence",
+      "labelZh": "从证据推出结论",
+      "page": 5,
+      "answerPage": 5
+    },
+    {
+      "id": "tara-guide-ct-3",
+      "module": "critical-thinking",
+      "label": "Find an unstated assumption",
+      "labelZh": "找出隐含假设",
+      "page": 6,
+      "answerPage": 6
+    },
+    {
+      "id": "tara-guide-ct-4",
+      "module": "critical-thinking",
+      "label": "Weigh new evidence against a claim",
+      "labelZh": "评估新证据对论点的影响",
+      "page": 7,
+      "answerPage": 7
+    },
+    {
+      "id": "tara-guide-ct-5",
+      "module": "critical-thinking",
+      "label": "Spot an error in an inference",
+      "labelZh": "识别推理错误",
+      "page": 8,
+      "answerPage": 8
+    },
+    {
+      "id": "tara-guide-ct-6",
+      "module": "critical-thinking",
+      "label": "Match the logical form of two arguments",
+      "labelZh": "比较两个论证的逻辑结构",
+      "page": 9,
+      "answerPage": 10
+    },
+    {
+      "id": "tara-guide-ct-7",
+      "module": "critical-thinking",
+      "label": "Apply a principle to a new case",
+      "labelZh": "将原则应用于新情境",
+      "page": 11,
+      "answerPage": 11
+    },
+    {
+      "id": "tara-guide-ps-1",
+      "module": "problem-solving",
+      "label": "Select the relevant timetable data",
+      "labelZh": "筛选课程表中的相关信息",
+      "page": 12,
+      "answerPage": 13
+    },
+    {
+      "id": "tara-guide-ps-2",
+      "module": "problem-solving",
+      "label": "Calculate a fare after several price changes",
+      "labelZh": "计算多项变动后的票价",
+      "page": 14,
+      "answerPage": 14
+    },
+    {
+      "id": "tara-guide-ps-3",
+      "module": "problem-solving",
+      "label": "Compare a bar chart and a pie chart",
+      "labelZh": "比较条形图与饼图",
+      "page": 15,
+      "answerPage": 16
+    },
+    {
+      "id": "tara-guide-wt-1",
+      "module": "writing-task",
+      "label": "Evaluate a claim about public speech",
+      "labelZh": "评议有关公共言论的主张",
+      "page": 17
+    }
+  ]
+}

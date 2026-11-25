@@ -1,6 +1,6 @@
 ---
 import Question from '../../../components/Question.astro';
-import problems from '../../../data/problems.json';
+import problems from '../../../lib/practice.js';
 export function getStaticPaths() {
   return problems.map(problem => ({params: {id: problem.id}, props: {problem}}));
 }

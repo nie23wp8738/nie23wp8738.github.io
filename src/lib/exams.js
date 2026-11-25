@@ -2,7 +2,7 @@
 export const examGroups = [
   { en: 'United States', zh: '美国数学竞赛', exams: ['AMC 8','AMC 10','AMC 12','AIME','USAJMO','USAMO'] },
   { en: 'Other national and international competitions', zh: '其他国家及国际数学竞赛', exams: ['Euclid','BMO','NZMO','IMO'] },
-  { en: 'University admissions tests', zh: '大学入学考试', exams: ['STEP','TMUA','ESAT'] },
+  { en: 'University admissions tests', zh: '大学入学考试', exams: ['STEP','TMUA','ESAT','TARA'] },
 ];
 export const examNames = {
   'Euclid': ['Euclid Mathematics Contest','欧几里得数学竞赛'],
@@ -12,4 +12,5 @@ export const examNames = {
   'USAJMO': ['USA Junior Mathematical Olympiad','美国青少年数学奥林匹克'],
   'USAMO': ['USA Mathematical Olympiad','美国数学奥林匹克'],
   'ESAT': ['Engineering and Science Admissions Test','工程与科学入学考试'],
+  'TARA': ['Test of Academic Reasoning for Admissions','学术推理入学考试'],
 };

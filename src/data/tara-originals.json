@@ -1,0 +1,902 @@
+[
+  {
+    "id": "tara-ct-shelf-cards",
+    "title": "档案卡何时可以丢弃",
+    "titleEn": "When to discard the shelf cards",
+    "exam": [
+      "TARA"
+    ],
+    "module": "critical-thinking",
+    "topic": "批判性思维",
+    "topicKey": "critical-thinking",
+    "method": "识别主要结论",
+    "methodEn": "Identifying the main conclusion",
+    "level": "基础",
+    "statement": "An archive plans to discard its handwritten shelf cards as soon as their contents have been typed into a catalogue. The cards should be kept until a sample of the entries has been checked against them. A mistyped shelf code can point to a real but incorrect box, so a search for nonexistent codes will miss some mistakes. Comparing a sample with the cards would be a cheap way to look for these mistakes. Checking every entry would take months.\n\nWhich statement best expresses the main conclusion?",
+    "options": [
+      "Some typing errors give the code of a box that actually exists.",
+      "Checking every catalogue entry would take several months.",
+      "The archive should postpone discarding the cards until a sample has been checked.",
+      "A computer search for nonexistent codes will miss certain mistakes.",
+      "Comparing a sample with the cards is a low-cost way of finding mistakes."
+    ],
+    "hint": "Which claim gives the archive a course of action?",
+    "answer": "C. The archive should postpone discarding the cards until a sample has been checked.",
+    "answerZh": "C。档案馆应等抽样核对完成后，再丢弃原卡片。",
+    "solutions": [
+      {
+        "title": "Trace the chain of reasons",
+        "text": "A wrong code can still look valid, which explains why the computer check misses mistakes. The cheap sample check offers a remedy. Together these points support the recommendation to retain the cards until that check is complete. That recommendation is C.",
+        "titleZh": "沿理由链找终点",
+        "textZh": "错误编号也可能对应真实箱子，这解释了为什么电脑检查会漏错。抽样对照卡片则提供了成本较低的补救办法。这两条理由最终支持的是保留卡片直到完成抽查，因此选 C。",
+        "topics": [
+          {
+            "en": "Argument structure",
+            "zh": "论证结构"
+          },
+          {
+            "en": "Intermediate conclusions",
+            "zh": "中间结论"
+          }
+        ]
+      },
+      {
+        "title": "Test the proposed alternatives",
+        "text": "Imagine accepting A, B, D and E. The archive still needs to decide what to do with its cards; C answers that question. Conversely, a decision to keep the cards would not establish how long a complete check takes or which errors a computer can detect. The support runs towards C.",
+        "titleZh": "检验各选项的作用",
+        "textZh": "即使接受 A、B、D、E，档案馆仍要决定如何处理卡片，C 正好回答这一问题。反过来，保留卡片的决定本身无法证明全面检查需要多久，或电脑会漏掉哪些错误。论据的支持方向指向 C。",
+        "topics": [
+          {
+            "en": "Main conclusion",
+            "zh": "主要结论"
+          },
+          {
+            "en": "Premise and conclusion",
+            "zh": "前提与结论"
+          }
+        ]
+      }
+    ],
+    "correctOption": 2
+  },
+  {
+    "id": "tara-ct-clock-date",
+    "title": "三个来源能否独立佐证",
+    "titleEn": "Three accounts of a clock",
+    "exam": [
+      "TARA"
+    ],
+    "module": "critical-thinking",
+    "topic": "批判性思维",
+    "topicKey": "critical-thinking",
+    "method": "识别隐含假设",
+    "methodEn": "Identifying an assumption",
+    "level": "提高",
+    "statement": "A historian knew of one account dating the installation of a town clock to 1884. She has now found the same date in a guidebook and a catalogue. She argues that the date now has independent corroboration because it appears in three accounts.\n\nWhich assumption is essential to this argument?",
+    "options": [
+      "All three accounts were published in the year the clock was installed.",
+      "At least two of the accounts derive their date from independent lines of evidence.",
+      "The historian knows who originally wrote each of the three accounts.",
+      "The catalogue was published before the guidebook.",
+      "None of the three accounts makes any mistakes about other events."
+    ],
+    "hint": "Could three documents repeat a single original claim?",
+    "answer": "B. At least two of the accounts derive their date from independent lines of evidence.",
+    "answerZh": "B。至少有两份记载的日期来自相互独立的证据链。",
+    "solutions": [
+      {
+        "title": "Negate the proposed assumption",
+        "text": "If B is false, none of the three accounts supplies a line of evidence for the date independent of another: all three may merely repeat a single report. The number of mentions then cannot establish the claimed independent corroboration. This challenges the argument even if the clock really was installed in 1884.",
+        "titleZh": "否定假设",
+        "textZh": "若 B 不成立，三份记载中找不到两条相互独立的日期证据链，三次提及完全可能只是转述同一报告。记载数便无法证明有独立佐证，即使真实安装年份确实是 1884 年，推理仍有缺口。",
+        "topics": [
+          {
+            "en": "Negation test",
+            "zh": "假设否定检验"
+          },
+          {
+            "en": "Independent evidence",
+            "zh": "独立证据"
+          }
+        ]
+      },
+      {
+        "title": "Build a case where the other conditions fail",
+        "text": "Suppose an anonymous guidebook used a dated installation photograph and a later anonymous catalogue used a separate payment record. Both were published long after 1884, and both contain errors on other matters. The date could still be independently corroborated. This shows why A, C, D and E need not hold and why the origin of the evidence in B matters.",
+        "titleZh": "构造反例排除多余条件",
+        "textZh": "假设一本匿名指南依据安装当天的带日期照片，一本更晚出版的匿名目录依据独立的付款记录。两书都出版于 1884 年之后，记载其他事情时也犯过错误，但这个日期仍能得到独立佐证。因此 A、C、D、E 均非必要，关键在 B 所说的证据来源。",
+        "topics": [
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          },
+          {
+            "en": "Necessary assumptions",
+            "zh": "必要假设"
+          }
+        ]
+      }
+    ],
+    "correctOption": 1
+  },
+  {
+    "id": "tara-ct-seed-labels",
+    "title": "退回的种子袋",
+    "titleEn": "Unopened seed packets",
+    "exam": [
+      "TARA"
+    ],
+    "module": "critical-thinking",
+    "topic": "批判性思维",
+    "topicKey": "critical-thinking",
+    "method": "识别推理错误",
+    "methodEn": "Identifying a flaw",
+    "level": "提高",
+    "statement": "At a seed exchange every packet has either a handwritten label or a printed label. Of the packets returned unopened last spring, three quarters had handwritten labels. The organiser concludes that a packet issued with a handwritten label was more likely to be returned unopened than a packet issued with a printed label.\n\nWhat is the main flaw in the organiser's reasoning?",
+    "options": [
+      "It gives no reason why someone would decide to return a packet.",
+      "It does not establish that the same pattern will occur next spring.",
+      "It assumes that every packet that was opened was successfully planted.",
+      "It overlooks how many packets of each label type were issued in the first place.",
+      "It fails to distinguish different styles of handwriting."
+    ],
+    "hint": "Which group supplies the denominator for each return rate?",
+    "answer": "D. It overlooks how many packets of each label type were issued in the first place.",
+    "answerZh": "D。忽略了最初分别发出多少手写标签和印刷标签种子袋。",
+    "solutions": [
+      {
+        "title": "Compare the required denominators",
+        "text": "The three-quarters statistic divides handwritten returns by all returns. To compare return rates, the organiser instead needs handwritten returns divided by all handwritten packets issued, and printed returns divided by all printed packets issued. The statement gives neither issue total. That is D.",
+        "titleZh": "比较分母",
+        "textZh": "题干中的四分之三，是用退回的手写袋数除以所有退回袋数。比较退回率却需要分别用两类退回数除以各自的发放总数。题干没有给出这两个分母，故选 D。",
+        "topics": [
+          {
+            "en": "Conditional proportions",
+            "zh": "条件比例"
+          },
+          {
+            "en": "Base rates",
+            "zh": "基数"
+          }
+        ]
+      },
+      {
+        "title": "Reverse the conclusion with numbers",
+        "text": "Suppose 900 handwritten and 100 printed packets were issued. If 30 handwritten and 10 printed packets came back unopened, 30 of the 40 returns had handwritten labels, exactly as stated. Yet the return rates were 1/30 for handwritten and 1/10 for printed. The conclusion can be false even when the evidence is true.",
+        "titleZh": "用具体数字颠倒结论",
+        "textZh": "假设发出 900 个手写袋和 100 个印刷袋，未开封退回的分别为 30 个和 10 个。手写袋确实占退回总数的四分之三，但它的退回率只有 1/30，印刷袋却是 1/10。这个反例完整保留了题干事实。",
+        "topics": [
+          {
+            "en": "Numerical counterexamples",
+            "zh": "数值反例"
+          },
+          {
+            "en": "Comparing rates",
+            "zh": "比较比率"
+          }
+        ]
+      }
+    ],
+    "correctOption": 3
+  },
+  {
+    "id": "tara-ct-theatre-introduction",
+    "title": "演前导赏的效果",
+    "titleEn": "The theatre introduction",
+    "exam": [
+      "TARA"
+    ],
+    "module": "critical-thinking",
+    "topic": "批判性思维",
+    "topicKey": "critical-thinking",
+    "method": "削弱论证",
+    "methodEn": "Weakening an argument",
+    "level": "提高",
+    "statement": "A theatre offers the same production on several nights. On half the nights, a five-minute audio introduction is played before the performance. When booking, people choose freely between nights with and without an introduction. After the play, attendees on introduction nights score three points higher on average on a plot quiz. The theatre concludes that hearing the introduction improved their understanding.\n\nWhich finding, if true, most weakens that conclusion?",
+    "options": [
+      "Before any introduction or performance, the introduction-night group already averaged three points more on a comparable quiz about the same plot.",
+      "The audio recording was made by someone who had seen the play many times.",
+      "The same actors played the leading roles on all the nights.",
+      "The quizzes were scored by people who did not know which night each attendee had chosen.",
+      "Few attendees on either kind of night left before the end of the play."
+    ],
+    "hint": "What would make the later score difference possible even if the audio had no effect?",
+    "answer": "A. Before any introduction or performance, the introduction-night group already averaged three points more on a comparable quiz about the same plot.",
+    "answerZh": "A。在观看演出或听导赏之前，导赏组对同一剧情的可比测验就已平均高出三分。",
+    "solutions": [
+      {
+        "title": "Compare the groups at the start",
+        "text": "Because attendees chose their nights, the two groups may have differed in prior knowledge. A supplies direct evidence of a three-point gap before exposure to the audio. That gap provides an explanation for the entire later difference without requiring an effect of the introduction.",
+        "titleZh": "比较两组的起点",
+        "textZh": "观众自行选场，因此两组原有的剧情知识可能不同。A 表明导赏开始前便有三分差距，后测的整段差距都可能由原有差异解释。",
+        "topics": [
+          {
+            "en": "Self-selection",
+            "zh": "自我选择"
+          },
+          {
+            "en": "Baseline differences",
+            "zh": "基线差异"
+          }
+        ]
+      },
+      {
+        "title": "Compare changes rather than final scores",
+        "text": "For example, the two groups could move from 11 and 8 points before the play to 15 and 12 afterwards. Both improve by four points, yet the advertised three-point advantage remains. A makes this scenario plausible. C, D and E instead remove possible differences between nights or measurements, and B tells us little about the effect.",
+        "titleZh": "从得分变化检验",
+        "textZh": "例如，两组从演前的 11 分和 8 分变为演后的 15 分和 12 分，两组都提高了 4 分，而演后仍相差 3 分。A 使这种解释成为可能。C、D、E 反而排除了一些演出或测量上的干扰；B 只讲录音者的经历。",
+        "topics": [
+          {
+            "en": "Change scores",
+            "zh": "变化量比较"
+          },
+          {
+            "en": "Alternative explanations",
+            "zh": "替代解释"
+          }
+        ]
+      }
+    ],
+    "correctOption": 0
+  },
+  {
+    "id": "tara-ct-nursery-labels",
+    "title": "苗圃标签为何奏效",
+    "titleEn": "Why the nursery labels work",
+    "exam": [
+      "TARA"
+    ],
+    "module": "critical-thinking",
+    "topic": "批判性思维",
+    "topicKey": "critical-thinking",
+    "method": "加强论证",
+    "methodEn": "Strengthening an argument",
+    "level": "提高",
+    "statement": "A nursery supplies several pairs of plant varieties whose names differ by just one letter. It has introduced labels that underline the letter that differs within each pair. Orders now contain fewer wrong varieties. The manager thinks the labels work because the underlining directs the picker's attention to the distinguishing letter.\n\nWhich further finding most strongly supports this particular explanation?",
+    "options": [
+      "Most of the nursery's orders are packed by experienced staff.",
+      "There were more mistakes with similar names than with very different names before the change.",
+      "The new labels were introduced at the start of a quieter season.",
+      "Packers say that all of the nursery's new labels look more professional.",
+      "In a randomised trial with the same pairs of names, pickers made fewer errors when the differing letter was underlined than when a shared letter was underlined."
+    ],
+    "hint": "Which comparison keeps underlining itself while changing what it draws attention to?",
+    "answer": "E. In a randomised trial with the same pairs of names, pickers made fewer errors when the differing letter was underlined than when a shared letter was underlined.",
+    "answerZh": "E。在随机对照试验中，标出相异字母比标出共同字母更能减少拿错。",
+    "solutions": [
+      {
+        "title": "Isolate the active feature",
+        "text": "In E, the varieties and the presence of an underline are held constant. Random allocation changes whether the mark points to a distinguishing letter or a shared one. The observed advantage therefore supports the manager's specific explanation about the location of the mark.",
+        "titleZh": "隔离真正起作用的因素",
+        "textZh": "E 中两组使用相同的品种名称，标签也都画了下划线。随机改变的只是下划线标出相异字母还是共同字母，结果恰好支持了经理关于标记位置的解释。",
+        "topics": [
+          {
+            "en": "Controlled comparisons",
+            "zh": "控制变量比较"
+          },
+          {
+            "en": "Causal mechanisms",
+            "zh": "因果机制"
+          }
+        ]
+      },
+      {
+        "title": "Separate competing predictions",
+        "text": "If any conspicuous underline simply encouraged packers to read more carefully, both kinds of underline could work equally well. If drawing attention to the one differing letter matters, underlining that letter should work better. E reports the result that favours the second prediction. B explains why the task is difficult but cannot distinguish the two mechanisms.",
+        "titleZh": "区分竞争性预测",
+        "textZh": "若下划线的作用只是提醒员工认真阅读，两种标法都可能同样有效。若真正关键的是把注意力引向相异字母，标出相异字母应当更有效。E 报告了后一个预测；B 只说明任务原本有难度，无法区分这两种机制。",
+        "topics": [
+          {
+            "en": "Testing predictions",
+            "zh": "检验预测"
+          },
+          {
+            "en": "Alternative explanations",
+            "zh": "替代解释"
+          }
+        ]
+      }
+    ],
+    "correctOption": 4
+  },
+  {
+    "id": "tara-ct-dispatch-records",
+    "title": "哪种论证结构最相似",
+    "titleEn": "Matching a dispatch argument",
+    "exam": [
+      "TARA"
+    ],
+    "module": "critical-thinking",
+    "topic": "批判性思维",
+    "topicKey": "critical-thinking",
+    "method": "匹配平行论证",
+    "methodEn": "Matching argument structure",
+    "level": "挑战",
+    "statement": "Any parcel dispatched by rail must either bear a blue seal or appear on the station manifest, and it may do both. This parcel bears no blue seal and does not appear on the manifest. It cannot have been dispatched by rail.\n\nWhich argument most closely matches this pattern of reasoning?",
+    "options": [
+      "Any accepted article is both edited and typeset. This article has not been typeset, so it has not been accepted.",
+      "Every advance ticket purchase leaves an email receipt, a booking-office record, or both. This purchase left neither, so it was not an advance purchase.",
+      "A scan from this machine bears a date or a serial number. This scan bears a serial number, so it came from this machine.",
+      "Every delivery here comes by bicycle or by van. This delivery did not come by van, so it came by bicycle.",
+      "Any message sent from this terminal shows both a date and a user ID. This message shows neither, so it did not come from this terminal."
+    ],
+    "hint": "Preserve the difference between at least one trace and two required traces.",
+    "answer": "B. Every advance ticket purchase leaves an email receipt, a booking-office record, or both. This purchase left neither, so it was not an advance purchase.",
+    "answerZh": "B。B 与原论证同构：若发生某事，至少留下两种迹象之一；两种迹象都没有，故该事没有发生。",
+    "solutions": [
+      {
+        "title": "Replace the subject matter with symbols",
+        "text": "Let R stand for rail dispatch, S for the seal and M for the manifest entry. The rule says that R implies S or M. The observation rules out S and rules out M, so R is impossible. B has the same roles: advance purchase is R, and the receipt and office record are the two possible traces.",
+        "titleZh": "抽象成条件结构",
+        "textZh": "令 R 表示铁路寄送，S 表示蓝封条，M 表示列在清单。规则是 R 蕴含 S 或 M；观察到 S、M 都没有，便能排除 R。B 中的预购、邮件回执和售票处记录恰好分别对应这三个角色。",
+        "topics": [
+          {
+            "en": "Logical form",
+            "zh": "逻辑形式"
+          },
+          {
+            "en": "Contraposition",
+            "zh": "逆否推理"
+          }
+        ]
+      },
+      {
+        "title": "Try removing just one trace",
+        "text": "In the rail argument, a missing seal alone tells us too little: the parcel could still be on the manifest. A missing email receipt alone is equally inconclusive in B. In A and E, either missing required feature already rules out the event. C infers the event from one trace, and D chooses the remaining alternative. Only B needs both absences for the original reason.",
+        "titleZh": "只撤掉一种迹象试验",
+        "textZh": "在原论证中，仅仅没有封条还不够，因为包裹仍可能列在清单上。B 中仅仅没有邮件回执同样不够。A、E 的两个特征却都是各自必需的，只缺一个就能排除事件；C 从迹象倒推事件，D 排除一个选项后选另一个。只有 B 与题干一样需要同时排除两种迹象。",
+        "topics": [
+          {
+            "en": "Necessary conditions",
+            "zh": "必要条件"
+          },
+          {
+            "en": "Disjunction",
+            "zh": "析取命题"
+          }
+        ]
+      }
+    ],
+    "correctOption": 1
+  },
+  {
+    "id": "tara-ps-morning-deliveries",
+    "title": "上午到期的包裹",
+    "titleEn": "Morning deliveries",
+    "exam": [
+      "TARA"
+    ],
+    "module": "problem-solving",
+    "topic": "解题策略",
+    "topicKey": "problem-solving",
+    "method": "筛选相关信息",
+    "methodEn": "Relevant selection",
+    "level": "基础",
+    "statement": "A courier reports on two depots. At East, 82 of the 90 parcels due before noon were on time; 98 of the 120 parcels due later were on time. At West, 50 of the 60 parcels due before noon were on time; 67 of the 70 parcels due later were on time. Of all parcels due before noon at these two depots, what percentage were late?",
+    "options": [
+      "8%",
+      "10%",
+      "12%",
+      "13%",
+      "15%"
+    ],
+    "hint": "Keep only the parcels due before noon. Should the two depots receive equal weight?",
+    "answer": "C. 12%",
+    "answerZh": "C．12%。",
+    "solutions": [
+      {
+        "title": "Combine the late counts",
+        "titleZh": "合并迟到件数",
+        "text": "East had 90 - 82 = 8 late morning parcels and West had 60 - 50 = 10. Of the 90 + 60 = 150 morning parcels, 18 were late, so the rate was 18/150 = 12%.",
+        "textZh": "东站上午到期的包裹有 90−82=8 件迟到，西站有 60−50=10 件。两站上午到期的包裹共 150 件，有 18 件迟到，因此迟到率为 18/150=12%。",
+        "topics": [
+          {
+            "en": "Choosing a denominator",
+            "zh": "选择分母"
+          },
+          {
+            "en": "Combining frequencies",
+            "zh": "合并频数"
+          }
+        ]
+      },
+      {
+        "title": "Weight the on-time rates",
+        "titleZh": "给准时率加权",
+        "text": "East handled 3/5 of the morning parcels and West handled 2/5. The combined on-time rate was (3/5)(82/90) + (2/5)(50/60) = 132/150 = 88%. The remaining 12% were late. A simple average would give each depot the same weight despite their different loads.",
+        "textZh": "上午到期的包裹中，东站占 3/5，西站占 2/5。准时率的加权平均为 (3/5)×(82/90)+(2/5)×(50/60)=132/150=88%。其余 12% 迟到。直接平均两个准时率会错误地给业务量不同的两个站点相同的权重。",
+        "topics": [
+          {
+            "en": "Weighted means",
+            "zh": "加权平均"
+          },
+          {
+            "en": "Complementary percentages",
+            "zh": "互补百分比"
+          }
+        ]
+      }
+    ],
+    "correctOption": 2
+  },
+  {
+    "id": "tara-ps-ticket-fees",
+    "title": "按订单还是按票收费",
+    "titleEn": "Ticket processing fees",
+    "exam": [
+      "TARA"
+    ],
+    "module": "problem-solving",
+    "topic": "解题策略",
+    "topicKey": "problem-solving",
+    "method": "筛选相关信息",
+    "methodEn": "Relevant selection",
+    "level": "提高",
+    "statement": "A theatre sold 240 online tickets in 60 one-ticket orders and 90 two-ticket orders. It also sold 110 tickets for cash at the door. Two payment services each charge 10 cents per cash ticket. Cedar's other charges are 72 dollars per month plus 50 cents per online order. Pine's other charges are 36 dollars per month plus 50 cents per online ticket. For a month with the sales described, which service costs less and by how much?",
+    "options": [
+      "Pine by 36 dollars",
+      "Cedar by 45 dollars",
+      "Pine by 9 dollars",
+      "Cedar by 9 dollars",
+      "The two services cost the same"
+    ],
+    "hint": "A two-ticket order triggers one online fee at Cedar and two at Pine.",
+    "answer": "D. Cedar by 9 dollars",
+    "answerZh": "D．Cedar 便宜 9 美元。",
+    "solutions": [
+      {
+        "title": "Calculate both bills",
+        "titleZh": "分别计算账单",
+        "text": "There were 60 + 90 = 150 online orders. The cash fees totalled 11 dollars on each plan. Cedar charged 72 + 0.50(150) + 11 = 158 dollars. Pine charged 36 + 0.50(240) + 11 = 167 dollars. Cedar was cheaper by 9 dollars.",
+        "textZh": "网上订单共 60+90=150 笔，两种方案的现场售票费都是 11 美元。Cedar 收取 72+0.50×150+11=158 美元，Pine 收取 36+0.50×240+11=167 美元，Cedar 便宜 9 美元。",
+        "topics": [
+          {
+            "en": "Counting units",
+            "zh": "区分计费单位"
+          },
+          {
+            "en": "Fixed and variable costs",
+            "zh": "固定与可变费用"
+          }
+        ]
+      },
+      {
+        "title": "Price only the differences",
+        "titleZh": "只比较有差异的收费",
+        "text": "The cash sales and single-ticket orders cost the same under both plans. Each of the 90 two-ticket orders costs 50 cents less under Cedar, saving 45 dollars. Cedar's monthly base is 72 - 36 = 36 dollars higher, leaving a net saving of 9 dollars.",
+        "textZh": "两种方案对现场售票和网上单票订单收费相同。每笔双票订单在 Cedar 少收 0.50 美元，90 笔共节省 45 美元。Cedar 的月费高 72−36=36 美元，抵消后仍节省 9 美元。",
+        "topics": [
+          {
+            "en": "Incremental comparison",
+            "zh": "比较费用增量"
+          },
+          {
+            "en": "Cancelling common costs",
+            "zh": "抵消共同费用"
+          }
+        ]
+      }
+    ],
+    "correctOption": 3
+  },
+  {
+    "id": "tara-ps-crate-fleet",
+    "title": "一天的货车租金",
+    "titleEn": "Choosing a delivery fleet",
+    "exam": [
+      "TARA"
+    ],
+    "module": "problem-solving",
+    "topic": "解题策略",
+    "topicKey": "problem-solving",
+    "method": "寻找解题步骤",
+    "methodEn": "Finding procedures",
+    "level": "挑战",
+    "statement": "A food cooperative must move 53 crates in a single trip. A small van holds up to 6 crates and costs 19 credits to hire. A large van holds up to 11 crates and costs 32 credits. The depot has at most four large vans and plenty of small vans. Vans may leave partly empty. What is the lowest total hire cost?",
+    "options": [
+      "160 credits",
+      "165 credits",
+      "166 credits",
+      "171 credits",
+      "172 credits"
+    ],
+    "hint": "A large van costs less per place when full, but how much space will the last van actually use?",
+    "answer": "B. 165 credits",
+    "answerZh": "B．165 个计费单位。",
+    "solutions": [
+      {
+        "title": "Fix the number of large vans",
+        "titleZh": "按大车数量枚举",
+        "text": "For 0, 1, 2, 3 and 4 large vans, the remaining loads are 53, 42, 31, 20 and 9 crates. Rounding each up to a whole number of small vans gives 9, 7, 6, 4 and 2. The respective bills are 171, 165, 178, 172 and 166 credits. One large van and seven small vans carry exactly 53 crates for 165 credits.",
+        "textZh": "大车数依次取 0、1、2、3、4，剩余箱数分别为 53、42、31、20、9。每辆小车最多装 6 箱，向上取整得小车数 9、7、6、4、2，对应总费用 171、165、178、172、166。1 辆大车和 7 辆小车恰能运完 53 箱，费用为 165。",
+        "topics": [
+          {
+            "en": "Finite enumeration",
+            "zh": "有限枚举"
+          },
+          {
+            "en": "Rounding up",
+            "zh": "向上取整"
+          }
+        ]
+      },
+      {
+        "title": "Fix the fleet size and upgrade vans",
+        "titleZh": "先定车数再升级",
+        "text": "For k vans, hiring them all as small vans gives capacity 6k and cost 19k. Each upgrade adds 5 places for 13 credits. Five vans or fewer carry at most 4(11)+6 = 50 crates. Six vans need four upgrades, costing 114+52=166. Seven need three, costing 133+39=172. Eight need one, costing 152+13=165. Nine or more already cost at least 171 before upgrades.",
+        "textZh": "若共租 k 辆车，全用小车时可装 6k 箱，花费 19k。每把一辆小车换成大车，就多出 5 个位置，增加 13 个计费单位。最多只有 4 辆大车，因此 5 辆或更少的车最多装 4×11+6=50 箱。6 辆车至少升级 4 辆，费用为 166；7 辆至少升级 3 辆，费用为 172；8 辆只需升级 1 辆，费用为 165。9 辆或以上即使用小车也至少花 171。",
+        "topics": [
+          {
+            "en": "Capacity bounds",
+            "zh": "容量界限"
+          },
+          {
+            "en": "Incremental comparison",
+            "zh": "比较费用增量"
+          }
+        ]
+      }
+    ],
+    "correctOption": 1
+  },
+  {
+    "id": "tara-ps-scanner-break",
+    "title": "扫描设备的停机时段",
+    "titleEn": "A break in the scanning schedule",
+    "exam": [
+      "TARA"
+    ],
+    "module": "problem-solving",
+    "topic": "解题策略",
+    "topicKey": "problem-solving",
+    "method": "寻找解题步骤",
+    "methodEn": "Finding procedures",
+    "level": "提高",
+    "statement": "Two scanners start at 09:00 with 12 rolls of film waiting. Scanner A takes exactly 6 minutes per roll and scanner B takes exactly 9. Each scanner handles one whole roll at a time. B must be idle from 09:18 until 09:28; it may finish a roll at 09:18 and start another at 09:28. A roll cannot be interrupted or transferred. What is the earliest time by which all 12 rolls can be finished?",
+    "options": [
+      "09:42",
+      "09:45",
+      "09:46",
+      "09:48",
+      "09:54"
+    ],
+    "hint": "Keep a separate record of completions for each scanner around 09:28.",
+    "answer": "D. 09:48",
+    "answerZh": "D．09:48。",
+    "solutions": [
+      {
+        "title": "Merge two completion schedules",
+        "titleZh": "合并两台设备的完成时刻",
+        "text": "Starting work whenever possible makes every completion as early as possible. By 09:42, A has finished seven rolls and B has finished three, at 09:09, 09:18 and 09:37. B finishes the eleventh roll overall at 09:46. A's next completion, at 09:48, is the twelfth.",
+        "textZh": "两台设备只要能开工就开工，各自的每次完成时刻都已尽可能早。到 09:42，A 完成 7 卷，B 在 09:09、09:18、09:37 各完成 1 卷，共完成 10 卷。B 在 09:46 完成总计第 11 卷，A 在 09:48 完成第 12 卷。",
+        "topics": [
+          {
+            "en": "Scheduling",
+            "zh": "排程"
+          },
+          {
+            "en": "Event ordering",
+            "zh": "事件排序"
+          }
+        ]
+      },
+      {
+        "title": "Show an earlier finish is impossible",
+        "titleZh": "排除所有更早的完成时刻",
+        "text": "Strictly before 09:48, A can finish at most 7 rolls. B can finish at most 2 before its break and 2 after it, so an earlier total cannot exceed 11. At 09:48 A can have finished 8 rolls and B can have finished 4, which makes the bound attainable.",
+        "textZh": "若要求早于 09:48 完成，A 至多扫完 7 卷。B 停机前最多扫完 2 卷，复工后也最多再扫完 2 卷，因此两台设备总共最多完成 11 卷。到 09:48，A 可扫完 8 卷，B 可扫完 4 卷，恰好完成任务。",
+        "topics": [
+          {
+            "en": "Capacity bounds",
+            "zh": "容量界限"
+          },
+          {
+            "en": "Attainability",
+            "zh": "界限的可达性"
+          }
+        ]
+      }
+    ],
+    "correctOption": 3
+  },
+  {
+    "id": "tara-ps-fixture-ledger",
+    "title": "一份记录为何恰好出现两次",
+    "titleEn": "Two entries for each event",
+    "exam": [
+      "TARA"
+    ],
+    "module": "problem-solving",
+    "topic": "解题策略",
+    "topicKey": "problem-solving",
+    "method": "识别相似结构",
+    "methodEn": "Identifying similarity",
+    "level": "基础",
+    "statement": "Each direct rail link joins two different towns. A clerk asks every town to list its incident links, totals the list lengths and divides by two to find the number of links. Which procedure is valid for the same counting reason?",
+    "options": [
+      "Total the numbers of fixtures played by all league teams and halve the result to count league fixtures, each played by two league teams.",
+      "Total the books borrowed by club members and halve the result to count distinct titles, since each member borrowed two books.",
+      "Total morning and evening parcel checks and halve the result to count distinct parcels, since each parcel was checked either once or twice.",
+      "Total the sizes of two age groups and halve the result to count club members, since every member belongs to exactly one group.",
+      "Total depot visits and halve the result to count parcel journeys, since each journey visits exactly three depots."
+    ],
+    "hint": "Ask how often each object you want to count appears in the total.",
+    "answer": "A. Total the numbers of fixtures played by all league teams and halve the result to count league fixtures, each played by two league teams.",
+    "answerZh": "A．把所有球队的参赛场次相加后除以二，可得到联赛的比赛场数。",
+    "solutions": [
+      {
+        "title": "Count appearances of one object",
+        "titleZh": "追踪同一个对象出现几次",
+        "text": "A rail link contributes one entry at each of its two ends. Likewise, each fixture contributes exactly one game to each of its two teams' records. Every fixture is therefore counted exactly twice, independent of how many games each team plays.",
+        "textZh": "一条铁路线在两个端点城镇的清单上各出现一次。同理，一场联赛在两支参赛球队的统计中各记一次。无论每支球队参加几场，每一场比赛都恰好被统计两次。",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          },
+          {
+            "en": "Identifying similarity",
+            "zh": "识别相似结构"
+          }
+        ]
+      },
+      {
+        "title": "Test the rival counting rules",
+        "titleZh": "用小例子检验其他规则",
+        "text": "One reader may borrow two different titles: halving two loans would give one title. A parcel checked once would give half a parcel. Two people, one per age group, would give one member. One journey with three depot visits would give 1.5 journeys. Each rule fails on a permitted example. In A, a single fixture gives two team appearances, and every extra fixture always adds two more.",
+        "textZh": "一名读者可借两本不同书名的书，借阅数除以 2 会错算成一个书名。一件只检查一次的包裹会被算作半件；两个年龄组各一人会被算作一人；一趟经过三个站点的运输会被算作 1.5 趟。其余四项都有反例。A 中一场比赛对应两次球队出场，此后每增加一场都恰好多两次出场。",
+        "topics": [
+          {
+            "en": "Testing counterexamples",
+            "zh": "反例检验"
+          },
+          {
+            "en": "Constant multiplicity",
+            "zh": "固定重复次数"
+          }
+        ]
+      }
+    ],
+    "correctOption": 0
+  },
+  {
+    "id": "tara-ps-museum-refunds",
+    "title": "退费规则与阶梯价格",
+    "titleEn": "Refunds and a stepped price",
+    "exam": [
+      "TARA"
+    ],
+    "module": "problem-solving",
+    "topic": "解题策略",
+    "topicKey": "problem-solving",
+    "method": "识别相似结构",
+    "methodEn": "Identifying similarity",
+    "level": "挑战",
+    "statement": "A study room charges 15 credits for a booking of one or two slots. Each slot after the second adds 3 credits until the total reaches 27; further slots cost nothing. Which museum plan gives the same net cost for every positive number of visits as the room charges for that many slots?",
+    "options": [
+      "Pay 15 credits for the first two visits, then 3 per additional visit, up to a total of 24.",
+      "Pay 15 credits for the first three visits, then 3 per additional visit, up to a total of 27.",
+      "Pay 27 credits for a six-visit card and receive 2 credits for each unused visit. Extra visits are free.",
+      "Pay 27 credits for a five-visit card and receive 3 credits for each unused visit, with the total refund capped at 12. Extra visits are free.",
+      "Pay 27 credits for a six-visit card and receive 3 credits for each unused visit, with the total refund capped at 12. Extra visits are free."
+    ],
+    "hint": "Find the first number of visits at which the room charges 27. Then work backwards.",
+    "answer": "E. Pay 27 credits for a six-visit card and receive 3 credits for each unused visit, with the total refund capped at 12. Extra visits are free.",
+    "answerZh": "E．六次卡售价 27，未用次数每次退 3，最多退 12；超过六次免费。",
+    "solutions": [
+      {
+        "title": "Read the price schedule backwards",
+        "titleZh": "从封顶价格反推",
+        "text": "The room reaches 27 credits at six slots. Count backwards: five slots cost 3 less, four cost 6 less, three cost 9 less, and two cost 12 less. One still costs 15, so the reduction from 27 stops at 12. This is precisely a six-visit card with a refund of 3 per unused visit, capped at 12, as in E.",
+        "textZh": "房间在 6 个时段时收费达到 27。逆向计算：5 个时段比 27 少 3，4 个少 6，3 个少 9，2 个少 12。1 个时段也收 15，因此最多只比 27 少 12。这恰好对应 E 的六次卡、每次退 3、最多退 12。",
+        "topics": [
+          {
+            "en": "Working backwards",
+            "zh": "逆向推理"
+          },
+          {
+            "en": "Piecewise pricing",
+            "zh": "分段计费"
+          }
+        ]
+      },
+      {
+        "title": "Compare breakpoints",
+        "titleZh": "比较收费转折点",
+        "text": "For 1, 3 and 6 visits the target costs are 15, 18 and 27. A charges only 24 for six; B charges 15 for three; C charges 17 for one; D charges 21 for three. E matches these checks. Its refund stays at 12 through visit two, falls by 3 with each visit from three through six, and stays at zero afterwards. Those are exactly the room's price changes.",
+        "textZh": "取 1 次、3 次、6 次三个检验点，目标费用依次为 15、18、27。A 在 6 次时只收 24；B 在 3 次时收 15；C 在 1 次时收 17；D 在 3 次时收 21。E 通过检验：前两次都退 12，从第 3 次到第 6 次每多一次少退 3，第 6 次以后退款恒为零，恰好产生相同的收费变化。",
+        "topics": [
+          {
+            "en": "Testing boundary values",
+            "zh": "检验边界值"
+          },
+          {
+            "en": "Incremental comparison",
+            "zh": "比较费用增量"
+          }
+        ]
+      }
+    ],
+    "correctOption": 4
+  },
+  {
+    "id": "tara-wt-workshop-seats",
+    "title": "满额工作坊的座位如何分配",
+    "titleEn": "Allocating workshop places",
+    "exam": [
+      "TARA"
+    ],
+    "module": "writing-task",
+    "topic": "论证写作",
+    "topicKey": "argument-writing",
+    "method": "比较公平原则",
+    "methodEn": "Comparing principles of fairness",
+    "level": "基础",
+    "statement": "Consider the claim: \"When a free public workshop has fewer places than applicants, a lottery is the fairest way to allocate them.\" Explain what fairness means under this claim. Develop the strongest objection you can to using a lottery, then defend your own judgement about when it should be used. Write in English in no more than 750 words.",
+    "hint": "Imagine two workshops: an introductory pottery class and the final session of a project already under way. Would the same rule be fair in both?",
+    "answer": "Open-ended. A defensible judgement should identify what gives applicants equal or unequal claims, and explain how the proposed rule treats them.",
+    "answerZh": "开放题。可以支持或质疑抽签，但应说明申请人的资格为什么相同或不同，以及分配规则如何体现这一点。",
+    "solutions": [
+      {
+        "title": "An equal chance for applicants with equal claims",
+        "titleZh": "当申请理由同等充分时，保障机会均等",
+        "text": "A lottery interprets fairness as giving people with equally good claims the same chance. Consider a free beginners' pottery workshop. Its purpose is to give residents a first experience of the craft. Awarding seats to the first people online at noon would favour those who can interrupt their work, although being free at noon has little bearing on learning pottery. Drawing names after an application period avoids that advantage. A serious objection concerns applicants who have already invested time. If residents have attended five sessions to make a pot, losing the firing session to a newcomer wastes their work and breaks a reasonable expectation. Organisers should reserve places needed to finish an announced sequence. For a genuinely independent session, however, I would draw lots among all eligible applicants and use the same draw to order the waiting list. Each decision then follows from the purpose residents were given.",
+        "textZh": "抽签体现的是一种机会公平：当人们申请座位的理由同样充分时，他们获得座位的机会也应相同。假设一场免费的陶艺入门课旨在让居民第一次接触陶艺。若规定中午开放报名、先到先得，就会偏向能在那时停下工作的人，而能否在中午上网与学习陶艺关系很小。留出报名期后统一抽签，就能避免这一优势。反对抽签的一个有力理由是，有些人已经为课程投入了时间。如果居民已经上过五节课并做好了陶罐，却在最后的烧制课上被新学员抽走了名额，他们的劳动会白费，参加完整课程的合理预期也会落空。因此，主办方应为已公布的连续课程预留完成项目所需的名额。若课程确实彼此独立，我则会让所有符合条件者抽签，并用同一次抽签排出候补顺序。每一项决定都与事先向居民说明的课程目的相符。",
+        "topics": [
+          {
+            "en": "Equal opportunity",
+            "zh": "机会均等"
+          },
+          {
+            "en": "Purpose of a rule",
+            "zh": "规则的目的"
+          },
+          {
+            "en": "Qualifying a claim",
+            "zh": "限定论点的适用范围"
+          }
+        ]
+      },
+      {
+        "title": "Compare what applicants would lose",
+        "titleZh": "比较申请者失去名额的代价",
+        "text": "The claim gives every name in the hat equal weight. I would give priority to people who would otherwise lose the opportunity altogether. Suppose a repair workshop has one place left. One applicant can attend an identical session next week, while the other must leave town before then. A coin toss gives them equal chances today, yet one outcome leaves a person with no chance to learn. Offering the place to the departing applicant and a guaranteed place next week to the other lets both learn. This principle has a weakness: intrusive questions about people's lives could deter applicants or reward a convincing story. Organisers should therefore use only simple, relevant information, such as availability for published alternative dates. If priority claims are equally strong or cannot be compared without undue intrusion, a draw is a fair tie-breaker. Its value depends on what can reasonably be known before drawing.",
+        "textZh": "这一主张让抽签箱里的每个名字具有同样的分量。我会优先考虑那些若失去名额便再无机会参加的人。假设维修工作坊只剩一个位置。一位申请人下周还能参加完全相同的一场，另一位届时已经离开这座城市。抛硬币让两人今天的机会相等，却可能导致其中一人再也学不到。若把今天的名额分给即将离开的人，同时保证另一人下周能参加，两人就都能学习。这一原则也有弱点：若要追问私人生活才分得出谁更需要名额，既可能吓退申请者，也可能偏向擅长讲述理由的人。因此，只宜询问简单且相关的信息，例如能否参加已经公布的其他场次。如果双方理由同样充分，或进一步比较会过度侵犯隐私，那么抽签是公平的决胜方式。它是否合适，取决于抽签前能合理掌握哪些信息。",
+        "topics": [
+          {
+            "en": "Opportunity cost",
+            "zh": "机会成本"
+          },
+          {
+            "en": "Privacy and proportionality",
+            "zh": "隐私与适度性"
+          },
+          {
+            "en": "Fair tie-breaking",
+            "zh": "公平处理同等资格"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tara-wt-targets",
+    "title": "达到数字目标之后",
+    "titleEn": "After a target is met",
+    "exam": [
+      "TARA"
+    ],
+    "module": "writing-task",
+    "topic": "论证写作",
+    "topicKey": "argument-writing",
+    "method": "评价证据与指标",
+    "methodEn": "Evaluating evidence and measures",
+    "level": "提高",
+    "statement": "Consider the claim: \"A project that achieves its numerical target deserves to be run again.\" Explain the reasoning behind the claim. Give an argument against treating the target as sufficient evidence, then say how much weight you would give it when deciding whether to repeat a project. Write in English in no more than 750 words.",
+    "hint": "Separate three questions: what mattered, what was counted, and what would have happened without the project.",
+    "answer": "Open-ended. Explain what achieving the target establishes and identify the evidence that could change your decision about a repeat.",
+    "answerZh": "开放题。说明达标能够证明什么，并指出哪些证据可能改变你对项目是否值得再次开展的判断。",
+    "solutions": [
+      {
+        "title": "Test what the number measures",
+        "titleZh": "检查数字衡量的究竟是什么",
+        "text": "A numerical target promises a public test of success. When a project passes the test agreed in advance, its organisers have a reasonable claim to continued support. But that depends on what the number measures. Imagine a library setting a target of a thousand books borrowed during a reading campaign. The target could be met by regular readers borrowing several more books each, even though the purpose was to reach residents who rarely visit. The count could be accurate and still answer the wrong question. I would examine how many new readers returned after their first visit and ask some what helped or discouraged them. Return visits also have limits as a measure: a reader may have borrowed just the book they needed. Together, however, the figures and accounts bear on the goal. I would repeat the project if they show it reached the intended readers at a cost the library can sustain.",
+        "textZh": "数字目标提供了一个可以公开检验的成功标准。项目达到事先约定的目标，组织者就有理由申请继续获得支持。但理由有多强，取决于数字衡量了什么。假设一家图书馆为阅读推广活动设定了借出一千本书的目标。常客每人多借几本就可能达标，即使本次活动原本是为了吸引那些很少进馆的居民。统计完全准确，也可能回答了错误的问题。我会调查有多少新读者首次到访后又来过，并请其中一些人讲讲什么促使他们回来，或什么使他们不想再来。回访次数本身也有局限：有些读者第一次就借到了唯一需要的书。不过，数字和当事人的说明结合起来，更能反映活动目的。若它们显示活动确实触及目标读者，且费用在图书馆可承担的范围内，我会支持继续开展。",
+        "topics": [
+          {
+            "en": "Validity of a measure",
+            "zh": "指标的有效性"
+          },
+          {
+            "en": "Alternative explanations",
+            "zh": "替代解释"
+          },
+          {
+            "en": "Combining evidence",
+            "zh": "综合不同证据"
+          }
+        ]
+      },
+      {
+        "title": "Ask what would have happened anyway",
+        "titleZh": "检验没有项目时会发生什么",
+        "text": "Reaching an agreed target is a reason to take a project seriously: it has delivered a result that the organisers thought worth having. Still, even a perfectly chosen target leaves a causal question. Suppose a school starts a breakfast club to reduce lateness and achieves its target of twenty fewer late arrivals. If a new bus timetable began that month, the improvement might have occurred without a single breakfast being served. Comparing this school with a similar school affected by the same timetable but without a club would help; checking whether their lateness rates had moved together beforehand would make the comparison stronger. Such evidence takes time. For a cheap, reversible project I would allow a short repeat while collecting it. For an expensive permanent commitment, reaching the target would prompt an investigation, and approval would depend on evidence that the club itself made a worthwhile difference.",
+        "textZh": "达到了事先约定的目标，说明项目得到了组织者原先认为有价值的结果，因此值得认真考虑。但即使指标选得十分恰当，因果关系依然需要检验。假设一所学校为了减少迟到开办了早餐俱乐部，而且确实达到了迟到少二十人次的目标。如果同月公交车也调整了班次，那么即使没有供应一份早餐，迟到也可能减少。可以拿另一所同样受公交调班影响、却没有早餐俱乐部的相似学校作比较；如果两校过去的迟到率走势也相近，这个比较就更有说服力。收集这样的证据需要时间。对于费用较低、容易停止的项目，我会同意短期续办，同时继续收集证据。若要长期投入大量经费，达标足以启动调查，是否批准则要看俱乐部本身是否带来了值得付出成本的改善。",
+        "topics": [
+          {
+            "en": "Counterfactual reasoning",
+            "zh": "反事实推理"
+          },
+          {
+            "en": "Confounding factors",
+            "zh": "混杂因素"
+          },
+          {
+            "en": "Reversibility of decisions",
+            "zh": "决策的可逆性"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tara-wt-changing-minds",
+    "title": "公开改变观点与信任",
+    "titleEn": "Changing a view in public",
+    "exam": [
+      "TARA"
+    ],
+    "module": "writing-task",
+    "topic": "论证写作",
+    "topicKey": "argument-writing",
+    "method": "区分判断标准",
+    "methodEn": "Distinguishing standards of judgement",
+    "level": "挑战",
+    "statement": "Consider the claim: \"Someone who publicly changes an opinion deserves to be trusted more than before.\" Explain what kind of trust the claim might concern. Give a reason for doubting it and assess how far a public change of opinion should affect a listener's trust. Write in English in no more than 750 words.",
+    "hint": "A listener might trust someone's honesty, their judgement, or a particular new claim. Would a public correction affect all three equally?",
+    "answer": "Open-ended. Identify the kind of trust at stake, test a reason for doubt, and justify the conditions under which trust should change.",
+    "answerZh": "开放题。先界定所讨论的是哪一种信任，再检验怀疑的理由，并说明在什么条件下应调整信任。",
+    "solutions": [
+      {
+        "title": "Look for a correction others can test",
+        "titleZh": "看公开更正能否接受核查",
+        "text": "The trust at stake might be confidence that a speaker will correct a mistake even when doing so is embarrassing. Suppose the organiser of a school play first says that everyone who auditioned received feedback. A student shows that a group was missed. The organiser acknowledges the error publicly, describes how it arose, and later reports how many replies were sent. There is now evidence about the organiser's willingness to repair an error that listeners lacked before. A publicity-minded person might also make a conspicuous small correction to cultivate a reputation for honesty. That objection matters when all the audience sees is a change of words. It matters less when the correction names evidence that others can check and promises action they can monitor. I would increase my trust in this organiser's readiness to correct mistakes, while still checking the next claim about how many students were contacted.",
+        "textZh": "这里的信任可以指一种信心：即使承认错误令人难堪，发言者也愿意纠正它。假设校园戏剧的负责人最初说所有参加试演的人都收到了反馈。一位学生指出有一组被遗漏了。负责人公开认错，说明疏漏的原因，随后又公布补发了多少份反馈。听众因此多了一条此前没有的证据，可以用来判断此人是否愿意弥补错误。一个注重形象的人也可能故意高调纠正小错，为自己赢得诚实的名声。如果大家只看到说法变了，这个质疑就很有力。如果更正指出了旁人能够核查的证据，又承诺采取可监督的行动，质疑的分量便会降低。我会更信任这位负责人纠正错误的意愿，但他下一次公布联系到多少名学生时，我仍会核查数字。",
+        "topics": [
+          {
+            "en": "Testable commitments",
+            "zh": "可检验的承诺"
+          },
+          {
+            "en": "Evidence of honesty",
+            "zh": "判断诚实的证据"
+          },
+          {
+            "en": "Reply to an objection",
+            "zh": "回应反驳"
+          }
+        ]
+      },
+      {
+        "title": "Judge the decision process over time",
+        "titleZh": "考察长期的判断过程",
+        "text": "If trust means relying on someone's judgement when making a decision, a public reversal alone tells us very little. Imagine two people estimating demand for a concert. One changes her estimate after every enthusiastic comment online. The other sets out in advance how she will use paid bookings, and revises her estimate only when those bookings depart sharply from her forecast. Both announce a change, yet I would rely on the second person's estimate because her rule gives relevant evidence a consistent role. One might object that the first person at least listens to criticism. That is evidence of openness, but openness to an unrepresentative comment can make a forecast worse. I would judge each person's series of forecasts against the bookings that follow and ask whether revisions tend to improve accuracy. A public reversal gives listeners a chance to carry out that check. The results of the check determine how much trust is warranted.",
+        "textZh": "如果信任意味着作决定时愿意依赖某人的判断，那么仅凭一次公开改口，很难得出结论。设想两个人各自预测音乐会的观众人数。第一位每看到一条热情的网上留言就调整预测；第二位预先说明怎样利用付费订票数据，只有当实际订票明显偏离预测时才修正估计。两人都公开改变了看法，但我会依赖第二个人，因为她始终用同一套规则对待相关证据。有人可能反驳，第一位至少愿意听取不同意见。这的确体现了开放态度，但一条缺乏代表性的评论也可能使预测更不准确。我会把两人历次预测分别与随后实际收到的订票对照，看修正是否通常能提高准确性。公开改变观点给了听众进行核查的机会；核查所得的结果才决定应当给予多少信任。",
+        "topics": [
+          {
+            "en": "Reliability of judgement",
+            "zh": "判断的可靠性"
+          },
+          {
+            "en": "Representativeness of evidence",
+            "zh": "证据的代表性"
+          },
+          {
+            "en": "Testing a prediction",
+            "zh": "检验预测"
+          }
+        ]
+      }
+    ]
+  }
+]
