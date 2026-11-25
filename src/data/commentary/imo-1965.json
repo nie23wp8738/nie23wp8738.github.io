@@ -1,0 +1,179 @@
+{
+  "imo-1965-q1": {
+    "summary": "Determine every $x$ with $0\\le x\\le2\\pi$ for which $2\\cos x\\le\\left|\\sqrt{1+\\sin2x}-\\sqrt{1-\\sin2x}\\right|\\le\\sqrt2$.",
+    "summaryZh": "求所有满足 $0\\le x\\le2\\pi$ 且 $2\\cos x\\le\\left|\\sqrt{1+\\sin2x}-\\sqrt{1-\\sin2x}\\right|\\le\\sqrt2$ 的 $x$。",
+    "answer": "$x\\in[\\pi/4,7\\pi/4]$.",
+    "answerZh": "$x\\in[\\pi/4,7\\pi/4]$。",
+    "methods": [
+      {
+        "title": "Square the radical expression and separate the sign cases",
+        "titleZh": "平方化简根式并按余弦符号分类",
+        "topics": [
+          {"en": "Trigonometric identities", "zh": "三角恒等式"},
+          {"en": "Absolute values", "zh": "绝对值"},
+          {"en": "Inequalities", "zh": "不等式"}
+        ],
+        "steps": [
+          "Put $D=|\\sqrt{1+\\sin2x}-\\sqrt{1-\\sin2x}|$. Both radicals are defined, and $D^2=2-2\\sqrt{1-\\sin^22x}=2-2|\\cos2x|$. Hence $0\\le D\\le\\sqrt2$, so the upper bound is automatic.",
+          "If the two-sided inequality holds, then $2\\cos x\\le\\sqrt2$, so $\\cos x\\le1/\\sqrt2$. On $[0,2\\pi]$ this is exactly $x\\in[\\pi/4,7\\pi/4]$.",
+          "Conversely, take $x$ in that interval. If $\\cos x\\le0$, then $2\\cos x\\le0\\le D$. If $\\cos x>0$, then $\\cos x\\le1/\\sqrt2$, so $\\cos2x\\le0$ and $D^2=2+2\\cos2x=4\\cos^2x$. Thus $D=2\\cos x$. The lower bound holds in both cases, completing the equivalence."
+        ],
+        "stepsZh": [
+          "记 $D=|\\sqrt{1+\\sin2x}-\\sqrt{1-\\sin2x}|$。两个根式始终有定义，并且 $D^2=2-2\\sqrt{1-\\sin^22x}=2-2|\\cos2x|$。因此 $0\\le D\\le\\sqrt2$，右侧不等式恒成立。",
+          "若原不等式成立，则 $2\\cos x\\le\\sqrt2$，即 $\\cos x\\le1/\\sqrt2$。在 $[0,2\\pi]$ 上，这恰好等价于 $x\\in[\\pi/4,7\\pi/4]$。",
+          "反过来，取此区间内的 $x$。若 $\\cos x\\le0$，则 $2\\cos x\\le0\\le D$。若 $\\cos x>0$，则 $\\cos x\\le1/\\sqrt2$，故 $\\cos2x\\le0$，从而 $D^2=2+2\\cos2x=4\\cos^2x$，即 $D=2\\cos x$。两种情形都满足左侧不等式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1"
+  },
+  "imo-1965-q2": {
+    "summary": "A homogeneous linear system $\\sum_{j=1}^3a_{ij}x_j=0$ has positive diagonal coefficients, negative off-diagonal coefficients, and a positive sum of coefficients in every row. Prove that its only solution is $x_1=x_2=x_3=0$.",
+    "summaryZh": "齐次线性方程组 $\\sum_{j=1}^3a_{ij}x_j=0$ 的对角系数为正，非对角系数为负，且每一行系数之和为正。证明其唯一解为 $x_1=x_2=x_3=0$。",
+    "answer": "The zero vector is the unique solution.",
+    "answerZh": "零向量是唯一解。",
+    "methods": [
+      {
+        "title": "Apply strict diagonal dominance to the largest coordinate",
+        "titleZh": "对绝对值最大的坐标使用严格对角占优",
+        "topics": [
+          {"en": "Linear systems", "zh": "线性方程组"},
+          {"en": "Diagonal dominance", "zh": "对角占优"},
+          {"en": "Triangle inequality", "zh": "三角不等式"}
+        ],
+        "steps": [
+          "The sign conditions and the positive row sum give $a_{ii}>-\\sum_{j\\ne i}a_{ij}=\\sum_{j\\ne i}|a_{ij}|$ for each row $i$.",
+          "Assume a nonzero solution exists and choose $k$ with $|x_k|=M=\\max_i|x_i|>0$. From row $k$, $a_{kk}x_k=-\\sum_{j\\ne k}a_{kj}x_j$.",
+          "Taking absolute values gives $a_{kk}M\\le\\sum_{j\\ne k}|a_{kj}|\\,|x_j|\\le M\\sum_{j\\ne k}|a_{kj}|<Ma_{kk}$, a contradiction. Thus every coordinate is zero, and the zero vector plainly satisfies the system."
+        ],
+        "stepsZh": [
+          "由系数符号及每行系数和为正，对每个 $i$ 都有 $a_{ii}>-\\sum_{j\\ne i}a_{ij}=\\sum_{j\\ne i}|a_{ij}|$。",
+          "反设存在非零解，选取 $k$ 使 $|x_k|=M=\\max_i|x_i|>0$。第 $k$ 行给出 $a_{kk}x_k=-\\sum_{j\\ne k}a_{kj}x_j$。",
+          "取绝对值后得到 $a_{kk}M\\le\\sum_{j\\ne k}|a_{kj}|\\,|x_j|\\le M\\sum_{j\\ne k}|a_{kj}|<Ma_{kk}$，矛盾。因此所有坐标均为零，而零向量显然满足原方程组。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1"
+  },
+  "imo-1965-q3": {
+    "summary": "In tetrahedron $ABCD$, the opposite edges $AB$ and $CD$ have lengths $a,b$, distance $d$, and angle $\\omega$. A plane $\\varepsilon$ parallel to both edges divides the tetrahedron; its distances from $AB$ and $CD$ are in the ratio $k$. Find the ratio of the two resulting volumes.",
+    "summaryZh": "在四面体 $ABCD$ 中，异面棱 $AB,CD$ 的长度分别为 $a,b$，距离为 $d$，夹角为 $\\omega$。平面 $\\varepsilon$ 同时平行于这两条棱并截分四面体；它到 $AB$ 与 $CD$ 的距离之比为 $k$。求两部分的体积比。",
+    "answer": "The solid adjacent to $AB$ and the solid adjacent to $CD$ have volume ratio $k^2(k+3):(3k+1)$.",
+    "answerZh": "靠近 $AB$ 的部分与靠近 $CD$ 的部分的体积比为 $k^2(k+3):(3k+1)$。",
+    "methods": [
+      {
+        "title": "Parameterise the parallel cross-section and decompose the solid",
+        "titleZh": "参数化平行截面并分割几何体",
+        "topics": [
+          {"en": "Tetrahedron volumes", "zh": "四面体体积"},
+          {"en": "Similar triangles", "zh": "相似三角形"},
+          {"en": "Parallel cross-sections", "zh": "平行截面"}
+        ],
+        "steps": [
+          "Let the distances of $\\varepsilon$ from $AB$ and $CD$ be $h$ and $\\ell$, so $h/\\ell=k$. Put $t=h/(h+\\ell)=k/(1+k)$. Let the plane meet $AC,BC,BD,AD$ at $E,F,G,H$, respectively. Linear variation of signed distance gives $AE/AC=BF/BC=BG/BD=AH/AD=t$.",
+          "Face similarity shows $EF\\parallel GH\\parallel AB$ and $FG\\parallel EH\\parallel CD$, so $EFGH$ is a parallelogram. Write $V=[ABCD]$. The part adjacent to $AB$ is the union of tetrahedron $ABFG$ and the pyramid with apex $A$ and base $EFGH$.",
+          "Since $\\triangle BFG\\sim\\triangle BCD$ with scale $t$, $[ABFG]=t^2V$. A diagonal of $EFGH$ divides its pyramid into two equal tetrahedra. Each has volume $t^2(1-t)V$: its relevant base area has factor $t^2$ and its height has factor $1-t$. Thus $V_{AB}=t^2(3-2t)V$.",
+          "Consequently $V_{CD}=V-V_{AB}=(1-t)^2(1+2t)V$. Substitution of $t=k/(1+k)$ yields $V_{AB}/V_{CD}=k^2(k+3)/(3k+1)$. Notice that $a,b,d,\\omega$ cancel because affine slicing alone determines the ratio."
+        ],
+        "stepsZh": [
+          "设 $\\varepsilon$ 到 $AB,CD$ 的距离分别为 $h,\\ell$，则 $h/\\ell=k$。令 $t=h/(h+\\ell)=k/(1+k)$。平面依次与 $AC,BC,BD,AD$ 交于 $E,F,G,H$。有向距离在线段上呈线性变化，因此 $AE/AC=BF/BC=BG/BD=AH/AD=t$。",
+          "由各侧面内的相似关系，$EF\\parallel GH\\parallel AB$ 且 $FG\\parallel EH\\parallel CD$，所以 $EFGH$ 是平行四边形。记原四面体体积为 $V$。靠近 $AB$ 的部分可分成四面体 $ABFG$ 和以 $A$ 为顶点、$EFGH$ 为底的棱锥。",
+          "因 $\\triangle BFG\\sim\\triangle BCD$，相似比为 $t$，故 $[ABFG]=t^2V$。平行四边形的一条对角线把后一个棱锥分成两个等体积四面体；每个四面体的底面积缩放因子为 $t^2$，高的缩放因子为 $1-t$，故体积均为 $t^2(1-t)V$。于是 $V_{AB}=t^2(3-2t)V$。",
+          "另一部分为 $V_{CD}=V-V_{AB}=(1-t)^2(1+2t)V$。代入 $t=k/(1+k)$，得到 $V_{AB}/V_{CD}=k^2(k+3)/(3k+1)$。参数 $a,b,d,\\omega$ 消去，是因为体积比例只由仿射截分位置决定。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1"
+  },
+  "imo-1965-q4": {
+    "summary": "Find all ordered quadruples of real numbers $(x_1,x_2,x_3,x_4)$ such that each number plus the product of the other three equals $2$.",
+    "summaryZh": "求所有实数有序四元组 $(x_1,x_2,x_3,x_4)$，使任意一个数与其余三个数之积的和都等于 $2$。",
+    "answer": "$(1,1,1,1)$ and every permutation of $(3,-1,-1,-1)$.",
+    "answerZh": "$(1,1,1,1)$，以及 $(3,-1,-1,-1)$ 的所有排列。",
+    "methods": [
+      {
+        "title": "Subtract pairs of the four symmetric equations",
+        "titleZh": "两两相减四个对称方程",
+        "topics": [
+          {"en": "Symmetric systems", "zh": "对称方程组"},
+          {"en": "Factorisation", "zh": "因式分解"},
+          {"en": "Vieta's formulas", "zh": "韦达定理"}
+        ],
+        "steps": [
+          "Write the numbers as $a,b,c,d$. If all are equal to $u$, then $u+u^3=2$, or $(u-1)(u^2+u+2)=0$. The quadratic factor is positive, so $u=1$.",
+          "Otherwise relabel so $a\\ne b$. Subtracting $a+bcd=2$ and $b+acd=2$ gives $(a-b)(1-cd)=0$, hence $cd=1$ and then $a+b=2$.",
+          "Subtracting $c+abd=2$ and $d+abc=2$ gives $(c-d)(1-ab)=0$. If $ab=1$, then $a+b=2$ forces $a=b=1$, impossible; therefore $c=d$. Since $cd=1$, either $c=d=1$ or $c=d=-1$.",
+          "The first choice would give $ab=1$, again impossible. Thus $c=d=-1$, and $c+abd=2$ gives $ab=-3$. Together with $a+b=2$, Vieta's formulas give $\\{a,b\\}=\\{3,-1\\}$. Direct substitution verifies all listed quadruples."
+        ],
+        "stepsZh": [
+          "把四个数记为 $a,b,c,d$。若它们全等于 $u$，则 $u+u^3=2$，即 $(u-1)(u^2+u+2)=0$。二次因子恒正，故 $u=1$。",
+          "否则重新编号，使 $a\\ne b$。将 $a+bcd=2$ 与 $b+acd=2$ 相减，得 $(a-b)(1-cd)=0$，从而 $cd=1$，并由原式得到 $a+b=2$。",
+          "将 $c+abd=2$ 与 $d+abc=2$ 相减，得 $(c-d)(1-ab)=0$。若 $ab=1$，结合 $a+b=2$ 会迫使 $a=b=1$，矛盾；所以 $c=d$。再由 $cd=1$，有 $c=d=1$ 或 $c=d=-1$。",
+          "第一种情形又会得到 $ab=1$，仍矛盾。因此 $c=d=-1$，代入 $c+abd=2$ 得 $ab=-3$。结合 $a+b=2$，由韦达定理知 $\\{a,b\\}=\\{3,-1\\}$。直接代入可验证所有列出的四元组。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1"
+  },
+  "imo-1965-q5": {
+    "summary": "Triangle $OAB$ has acute angle $AOB$. From a point $M\\ne O$, drop perpendiculars to $OA,OB$ with feet $P,Q$. Let $H$ be the orthocentre of $\\triangle OPQ$. Find the locus of $H$ when $M$ ranges over (a) segment $AB$, and (b) the interior of $\\triangle OAB$.",
+    "summaryZh": "三角形 $OAB$ 的角 $AOB$ 为锐角。由点 $M\\ne O$ 分别向 $OA,OB$ 作垂线，垂足为 $P,Q$；令 $H$ 为 $\\triangle OPQ$ 的垂心。求当 $M$ 遍历（a）线段 $AB$；（b）$\\triangle OAB$ 内部时，$H$ 的轨迹。",
+    "answer": "Let $A'$ and $B'$ be the feet from $A$ to $OB$ and from $B$ to $OA$. The loci are (a) the closed segment $A'B'$ and (b) the open interior of $\\triangle OA'B'$.",
+    "answerZh": "设 $A'$ 为 $A$ 到 $OB$ 的垂足，$B'$ 为 $B$ 到 $OA$ 的垂足。轨迹分别为（a）闭线段 $A'B'$；（b）$\\triangle OA'B'$ 的内部，不含边界。",
+    "methods": [
+      {
+        "title": "Express the orthocentre by affine coordinates",
+        "titleZh": "用仿射坐标表示垂心",
+        "topics": [
+          {"en": "Orthogonal projection", "zh": "正交投影"},
+          {"en": "Orthocentres", "zh": "垂心"},
+          {"en": "Affine coordinates", "zh": "仿射坐标"}
+        ],
+        "steps": [
+          "Take $O$ as origin. Let unit vectors $\\mathbf u,\\mathbf v$ point along $OA,OB$, put $OA=a$, $OB=b$, and $c=\\cos\\angle AOB$; then $0<c<1$. If $A',B'$ are the stated perpendicular feet, their vectors are $\\mathbf a'=ac\\mathbf v$ and $\\mathbf b'=bc\\mathbf u$.",
+          "Write $\\mathbf m=\\lambda a\\mathbf u+\\mu b\\mathbf v$. Orthogonal projection gives $\\mathbf p=(\\lambda a+\\mu bc)\\mathbf u$ and $\\mathbf q=(\\lambda ac+\\mu b)\\mathbf v$.",
+          "Set $\\mathbf h=\\lambda\\mathbf a'+\\mu\\mathbf b'=\\lambda ac\\mathbf v+\\mu bc\\mathbf u$. Directly, $(\\mathbf h-\\mathbf p)\\cdot\\mathbf v=0$ and $(\\mathbf h-\\mathbf q)\\cdot\\mathbf u=0$. Thus $PH\\perp OQ$ and $QH\\perp OP$, so this point is the orthocentre of $OPQ$.",
+          "For $M$ on $AB$, $\\lambda,\\mu\\ge0$ and $\\lambda+\\mu=1$, so $H=\\lambda A'+\\mu B'$ traces exactly the closed segment $A'B'$. For $M$ inside $OAB$, $\\lambda>0$, $\\mu>0$, and $\\lambda+\\mu<1$; the same formula gives precisely the points having positive barycentric coordinates with respect to $O,A',B'$, namely the open interior of $OA'B'$."
+        ],
+        "stepsZh": [
+          "以 $O$ 为原点，取沿 $OA,OB$ 方向的单位向量 $\\mathbf u,\\mathbf v$，令 $OA=a$、$OB=b$、$c=\\cos\\angle AOB$，则 $0<c<1$。设 $A',B'$ 为题述垂足，其位置向量分别是 $\\mathbf a'=ac\\mathbf v$ 与 $\\mathbf b'=bc\\mathbf u$。",
+          "写成 $\\mathbf m=\\lambda a\\mathbf u+\\mu b\\mathbf v$。正交投影给出 $\\mathbf p=(\\lambda a+\\mu bc)\\mathbf u$、$\\mathbf q=(\\lambda ac+\\mu b)\\mathbf v$。",
+          "令 $\\mathbf h=\\lambda\\mathbf a'+\\mu\\mathbf b'=\\lambda ac\\mathbf v+\\mu bc\\mathbf u$。直接计算得 $(\\mathbf h-\\mathbf p)\\cdot\\mathbf v=0$ 且 $(\\mathbf h-\\mathbf q)\\cdot\\mathbf u=0$。因此 $PH\\perp OQ$、$QH\\perp OP$，该点正是 $OPQ$ 的垂心。",
+          "当 $M$ 在线段 $AB$ 上时，$\\lambda,\\mu\\ge0$ 且 $\\lambda+\\mu=1$，所以 $H=\\lambda A'+\\mu B'$ 恰好遍历闭线段 $A'B'$。当 $M$ 在 $OAB$ 内部时，$\\lambda>0$、$\\mu>0$、$\\lambda+\\mu<1$；同一公式给出相对于 $O,A',B'$ 三点的三个重心坐标均为正，故轨迹恰为三角形 $OA'B'$ 的开内部。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1"
+  },
+  "imo-1965-q6": {
+    "summary": "Among $n\\ge3$ distinct points in the plane, call a pair a diameter when its distance equals the largest distance $d$ occurring in the set. Prove that there are at most $n$ diameters.",
+    "summaryZh": "平面内给定 $n\\ge3$ 个不同点。若一对点的距离等于点集中出现的最大距离 $d$，就称其连线为一条直径。证明直径条数至多为 $n$。",
+    "answer": "The number of diameter pairs is at most $n$; a regular $n$-gon for odd $n$ shows that equality can occur.",
+    "answerZh": "直径点对至多有 $n$ 对；当 $n$ 为奇数时，正 $n$ 边形说明等号可以达到。",
+    "methods": [
+      {
+        "title": "Find a degree-one endpoint and induct on the diameter graph",
+        "titleZh": "在直径图中寻找度为一的端点并归纳",
+        "topics": [
+          {"en": "Extremal geometry", "zh": "极值几何"},
+          {"en": "Graph degrees", "zh": "图的度数"},
+          {"en": "Induction", "zh": "数学归纳法"},
+          {"en": "Dot products", "zh": "向量点积"}
+        ],
+        "steps": [
+          "Scale so $d=1$ and form the graph whose edges join pairs at distance $1$. We first prove a lemma: if a vertex $O$ has at least three diameter neighbours, then one of those neighbours has degree exactly one.",
+          "Take $O$ as origin and fix one unit neighbour $U$. Every unit neighbour $X$ of $O$ also satisfies $|X-U|\\le1$, so $X\\cdot U=(2-|X-U|^2)/2\\ge1/2$. Hence all neighbours of $O$ lie on one $120^\\circ$ arc of the unit circle. Choose three in angular order, $A,B,C$. The ray $OB$ meets the interior of chord $AC$, so $B=\\lambda A+\\mu C$ for some $\\lambda,\\mu>0$. Since the three are distinct unit vectors, $1=|B|^2=(\\lambda+\\mu)^2-\\lambda\\mu|A-C|^2$, hence $\\lambda+\\mu>1$.",
+          "For any other point $Q\\ne O$, the diameter bound gives $|Q-A|,|Q-C|\\le1$, hence $2Q\\cdot A\\ge|Q|^2$ and $2Q\\cdot C\\ge|Q|^2$. Therefore $|Q-B|^2=|Q|^2+1-2Q\\cdot B\\le1-(\\lambda+\\mu-1)|Q|^2<1$. Thus $B$ is joined by a diameter only to $O$, proving the lemma.",
+          "Induct on $n$. If every vertex has degree at most two, the handshake lemma gives $2E\\le2n$, so $E\\le n$. Otherwise apply the lemma and delete its degree-one vertex $B$. At least two diameter neighbours of $O$ remain, so the maximum distance of the remaining set is still $1$. By induction it has at most $n-1$ diameter edges; restoring $B$ adds exactly one, giving at most $n$."
+        ],
+        "stepsZh": [
+          "缩放使 $d=1$，并建立直径图：距离为 $1$ 的点对相连。先证引理：若顶点 $O$ 至少有三个直径邻点，则这些邻点中有一个点的度恰为一。",
+          "以 $O$ 为原点，固定一个单位邻点 $U$。$O$ 的任一单位邻点 $X$ 还满足 $|X-U|\\le1$，所以 $X\\cdot U=(2-|X-U|^2)/2\\ge1/2$。故 $O$ 的所有邻点都落在单位圆的一段 $120^\\circ$ 圆弧上。按角度顺序取三个点 $A,B,C$，射线 $OB$ 穿过弦 $AC$ 的内部，因此 $B=\\lambda A+\\mu C$，其中 $\\lambda,\\mu>0$。三点是不同的单位向量，故 $1=|B|^2=(\\lambda+\\mu)^2-\\lambda\\mu|A-C|^2$，从而 $\\lambda+\\mu>1$。",
+          "对任意另一点 $Q\\ne O$，最大距离条件给出 $|Q-A|,|Q-C|\\le1$，所以 $2Q\\cdot A\\ge|Q|^2$ 且 $2Q\\cdot C\\ge|Q|^2$。于是 $|Q-B|^2=|Q|^2+1-2Q\\cdot B\\le1-(\\lambda+\\mu-1)|Q|^2<1$。因此 $B$ 只与 $O$ 构成直径，引理得证。",
+          "对 $n$ 归纳。若每个顶点的度至多为二，由握手定理 $2E\\le2n$，故 $E\\le n$。否则使用引理，删去度为一的点 $B$。$O$ 至少还保留两个直径邻点，所以剩余点集的最大距离仍为 $1$。由归纳假设，剩余图至多有 $n-1$ 条直径边；恢复 $B$ 只增加边 $OB$，总数至多为 $n$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=2"
+  }
+}
