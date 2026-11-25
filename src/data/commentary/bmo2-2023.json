@@ -1,0 +1,178 @@
+{
+  "bmo2-2023-q1": {
+    "summary": "Triangle $ABC$ has an obtuse angle at $A$ and incentre $I$. The circles through $A,B,I$ and through $A,C,I$ meet the line $BC$ again at $X$ and $Y$, respectively. Define $P=AX\\cap BI$ and $Q=AY\\cap CI$, using the full lines. Prove that $B,C,Q,P$ are concyclic.",
+    "summaryZh": "三角形 $ABC$ 的角 $A$ 为钝角，内心为 $I$。经过 $A,B,I$ 的圆与直线 $BC$ 再交于 $X$，经过 $A,C,I$ 的圆与直线 $BC$ 再交于 $Y$。在完整直线上定义 $P=AX\\cap BI$、$Q=AY\\cap CI$。证明 $B,C,Q,P$ 四点共圆。",
+    "answer": "Both products $IP\\cdot IB$ and $IQ\\cdot IC$ equal $IA^2$, which is the required power relation.",
+    "answerZh": "两个乘积 $IP\\cdot IB$ 与 $IQ\\cdot IC$ 都等于 $IA^2$，由点幂关系即可得到结论。",
+    "methods": [
+      {
+        "title": "Obtain equal secant products from two similar triangles",
+        "titleZh": "由两组相似三角形得到相等的割线乘积",
+        "topics": [
+          {
+            "en": "Incentre and angle bisectors",
+            "zh": "内心与角平分线"
+          },
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "圆内接四边形"
+          },
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          },
+          {
+            "en": "Power of a point",
+            "zh": "点幂定理"
+          }
+        ],
+        "steps": [
+          "Because $A,B,I,X$ are concyclic, $\\angle XAI=\\angle XBI$. Since $X$ lies on $BC$ and $BI$ bisects angle $B$, we also have $\\angle XBI=\\angle IBA$. As $P$ lies on $AX$ and $BI$, this gives $\\angle PAI=\\angle IBA$.",
+          "Using directed angles on the lines $P,I,B$, the remaining angles show $\\triangle AIP\\sim\\triangle BIA$. The corresponding sides therefore give $IP/IA=IA/IB$, or $IP\\cdot IB=IA^2$.",
+          "The same argument with the cyclic quadrilateral $A,C,I,Y$ and the angle bisector $CI$ gives $\\triangle AIQ\\sim\\triangle CIA$, hence $IQ\\cdot IC=IA^2$.",
+          "Thus $IP\\cdot IB=IQ\\cdot IC$. The two lines through $I$ meet the four points in the pairs $(P,B)$ and $(Q,C)$. By the converse of the intersecting-secants theorem, these four points lie on one circle."
+        ],
+        "stepsZh": [
+          "由于 $A,B,I,X$ 四点共圆，有 $\\angle XAI=\\angle XBI$。又因 $X$ 在直线 $BC$ 上，且 $BI$ 平分角 $B$，所以 $\\angle XBI=\\angle IBA$。结合 $P$ 位于 $AX$ 与 $BI$ 上，得到 $\\angle PAI=\\angle IBA$。",
+          "在直线 $P,I,B$ 上使用有向角，另一组角也对应相等，因此 $\\triangle AIP\\sim\\triangle BIA$。由对应边关系可得 $IP/IA=IA/IB$，即 $IP\\cdot IB=IA^2$。",
+          "对圆内接四边形 $A,C,I,Y$ 及角平分线 $CI$ 作完全相同的论证，得 $\\triangle AIQ\\sim\\triangle CIA$，从而 $IQ\\cdot IC=IA^2$。",
+          "所以 $IP\\cdot IB=IQ\\cdot IC$。经过 $I$ 的两条直线分别经过点对 $(P,B)$ 与 $(Q,C)$。由相交割线定理的逆定理，$B,C,Q,P$ 四点共圆。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2"
+  },
+  "bmo2-2023-q2": {
+    "summary": "Start with the ordered list $1,2,\\ldots,n$, where $n>1$. Two moves are allowed: rotate three consecutive entries $(x,y,z)$ to $(y,z,x)$ when $3\\mid x+y+z$, or interchange two consecutive entries $(x,y)$ when $3\\mid x-y$. Determine exactly when the list can be transformed into $n,1,2,\\ldots,n-1$.",
+    "summaryZh": "从有序数列 $1,2,\\ldots,n$ 出发，其中 $n>1$。允许两类操作：若三个相邻数 $(x,y,z)$ 的和被 $3$ 整除，可将其循环移位为 $(y,z,x)$；若两个相邻数 $(x,y)$ 的差被 $3$ 整除，可交换二者。求何时能把原数列变为 $n,1,2,\\ldots,n-1$。",
+    "answer": "Exactly the integers $n\\equiv0$ or $1\\pmod3$.",
+    "answerZh": "恰为所有满足 $n\\equiv0$ 或 $1\\pmod3$ 的整数。",
+    "methods": [
+      {
+        "title": "Construct by induction and obstruct the remaining residue class",
+        "titleZh": "用归纳法构造，并用不变量排除剩余同余类",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Invariants",
+            "zh": "不变量"
+          },
+          {
+            "en": "Induction",
+            "zh": "数学归纳法"
+          },
+          {
+            "en": "Permutations",
+            "zh": "排列"
+          }
+        ],
+        "steps": [
+          "For $n=3$, apply the three-entry rotation twice to obtain $(3,1,2)$. For $n=4$, rotate the last triple twice to obtain $(1,4,2,3)$, then interchange $1$ and $4$, whose difference is divisible by $3$.",
+          "Suppose $n\\ge5$, $n\\equiv0$ or $1\\pmod3$, and the claim is known for $n-3$. Rotate the final triple $(n-2,n-1,n)$ twice, moving $n$ to the first place within that triple. Then interchange the adjacent entries $n-3,n$. The list now begins $1,2,\\ldots,n-4,n$ and ends $n-3,n-2,n-1$.",
+          "The rules depend only on residues modulo $3$, and $n\\equiv n-3\\pmod3$. Relabel the last entry of the displayed prefix as $n-3$ and apply the induction hypothesis to its first $n-3$ positions. This moves $n$ to the front and yields the desired list. Hence every $n\\equiv0,1\\pmod3$ works.",
+          "For necessity, if the entries $a_1,\\ldots,a_n$ occupy positions $1,\\ldots,n$, put $T=\\sum_{i=1}^n i a_i$ modulo $3$. Interchanging adjacent $x,y$ changes $T$ by $x-y$, and rotating an allowed triple changes it by $2x-y-z\\equiv-(x+y+z)\\pmod3$. Thus both permitted moves preserve $T$.",
+          "Moving from $(1,2,\\ldots,n)$ to $(n,1,\\ldots,n-1)$ changes $T$ by $-n(n-1)/2$. If $n\\equiv2\\pmod3$, this is non-zero modulo $3$, contradicting invariance. Therefore no such $n$ works, completing the classification."
+        ],
+        "stepsZh": [
+          "当 $n=3$ 时，对三个数连续作两次循环移位便得到 $(3,1,2)$。当 $n=4$ 时，对末三个数循环移位两次得到 $(1,4,2,3)$，再交换差为 $3$ 的相邻数 $1,4$。",
+          "设 $n\\ge5$ 且 $n\\equiv0$ 或 $1\\pmod3$，并假设 $n-3$ 的结论成立。对末三个数 $(n-2,n-1,n)$ 作两次循环移位，使 $n$ 移到这三个位置的最前面。随后交换相邻的 $n-3,n$。此时数列开头为 $1,2,\\ldots,n-4,n$，末尾为 $n-3,n-2,n-1$。",
+          "操作规则只取决于各数模 $3$ 的余数，而 $n\\equiv n-3\\pmod3$。把上述前缀的末项 $n$ 暂时看作 $n-3$，对前 $n-3$ 个位置使用归纳假设，就能把 $n$ 移到最前面，得到目标排列。因此所有 $n\\equiv0,1\\pmod3$ 都可行。",
+          "为证必要性，若位置 $1,ldots,n$ 上的数依次为 $a_1,ldots,a_n$，定义 $T=\\sum_{i=1}^n ia_i\\pmod3$。交换相邻的 $x,y$ 使 $T$ 改变 $x-y$；循环移位一个允许的三元组使其改变 $2x-y-z\\equiv-(x+y+z)\\pmod3$。故两类操作都保持 $T$ 不变。",
+          "从 $(1,2,\\ldots,n)$ 变为 $(n,1,\\ldots,n-1)$，$T$ 的改变量为 $-n(n-1)/2$。若 $n\\equiv2\\pmod3$，该数模 $3$ 非零，与不变量矛盾。所以这一同余类均不可行，分类完成。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2"
+  },
+  "bmo2-2023-q3": {
+    "summary": "For $n\\ge3$, an $n$-list is a tuple $(a_1,\\ldots,a_n)$ with every $a_i\\in\\{1,\\ldots,n\\}$. For $1\\le k<n$, let $M_k$ be the least positive value that can occur as the absolute difference between the averages of the first $k+1$ and first $k$ entries. Call a list ideal when this difference equals $M_k$ for every $k$. Count the ideal $n$-lists.",
+    "summaryZh": "设 $n\\ge3$。若数列 $(a_1,\\ldots,a_n)$ 的每一项都属于 $\\{1,ldots,n\\}$，称其为一个 $n$-数列。对 $1\\le k<n$，令 $M_k$ 为前 $k+1$ 项平均数与前 $k$ 项平均数之差的绝对值所能取得的最小正值。若对每个 $k$，该差值都等于 $M_k$，则称数列理想。求理想 $n$-数列的个数。",
+    "answer": "There are $4(n-1)$ ideal lists.",
+    "answerZh": "理想数列共有 $4(n-1)$ 个。",
+    "methods": [
+      {
+        "title": "Determine the minimum jump and force the tail",
+        "titleZh": "先求平均数的最小跳幅，再强制确定后续各项",
+        "topics": [
+          {
+            "en": "Averages",
+            "zh": "平均数"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          },
+          {
+            "en": "Induction",
+            "zh": "数学归纳法"
+          },
+          {
+            "en": "Counting",
+            "zh": "计数"
+          }
+        ],
+        "steps": [
+          "Write $S_k=a_1+\\cdots+a_k$. The change in average is $(k a_{k+1}-S_k)/[k(k+1)]$. Its numerator is an integer, so every non-zero change has size at least $1/[k(k+1)]$. The list beginning $(2,1,1,\\ldots)$ attains this value for every $k$, hence $M_k=1/[k(k+1)]$.",
+          "At $k=1$, ideality says $|a_2-a_1|=1$, so the first two entries are consecutive. Write them as $r,r+1$ in either order. At $k=2$, the equation $|2a_3-(2r+1)|=1$ shows that $a_3$ is either $r$ or $r+1$.",
+          "Put $c=a_3$ and write $a_1+a_2=2c+\\varepsilon$, where $\\varepsilon\\in\\{-1,1\\}$. Suppose $a_3=\\cdots=a_k=c$ for some $k\\ge3$, and set $x=a_{k+1}$. Then $S_k=kc+\\varepsilon$, and ideality gives $|k(x-c)-\\varepsilon|=1$.",
+          "Thus $k(x-c)=\\varepsilon\\pm1$. The right side is one of $-2,0,2$; for $k\\ge3$, its only possible multiple of $k$ is $0$. Hence $x=c$. Induction proves that all entries from the third onward equal the chosen value $c$.",
+          "There are $n-1$ choices for the consecutive pair $\\{r,r+1\\}$, two possible orders for the first two entries, and two choices for whether the constant tail equals the smaller or larger member. Therefore the total is $4(n-1)$."
+        ],
+        "stepsZh": [
+          "记 $S_k=a_1+\\cdots+a_k$。相邻两个前缀平均数之差为 $(ka_{k+1}-S_k)/[k(k+1)]$。分子是整数，所以非零差值至少为 $1/[k(k+1)]$。以 $(2,1,1,\\ldots)$ 开头的数列对每个 $k$ 都能取到该值，故 $M_k=1/[k(k+1)]$。",
+          "当 $k=1$ 时，理想条件给出 $|a_2-a_1|=1$，所以前两项为相邻整数，记作 $r,r+1$，次序任意。当 $k=2$ 时，方程 $|2a_3-(2r+1)|=1$ 表明 $a_3$ 只能是 $r$ 或 $r+1$。",
+          "令 $c=a_3$，并写成 $a_1+a_2=2c+\\varepsilon$，其中 $\\varepsilon\\in\\{-1,1\\}$。假设对某个 $k\\ge3$ 已有 $a_3=\\cdots=a_k=c$，再令 $x=a_{k+1}$。此时 $S_k=kc+\\varepsilon$，理想条件化为 $|k(x-c)-\\varepsilon|=1$。",
+          "于是 $k(x-c)=\\varepsilon\\pm1$。右端只可能是 $-2,0,2$；当 $k\\ge3$ 时，其中唯一能被 $k$ 整除的数是 $0$。故 $x=c$。由归纳法，从第三项起所有项都等于选定的 $c$。",
+          "相邻整数对 $\\{r,r+1\\}$ 有 $n-1$ 种选择，前两项的次序有两种，常值尾项取较小者或较大者又有两种。因此总数为 $4(n-1)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2"
+  },
+  "bmo2-2023-q4": {
+    "summary": "Let $a=BC$, $b=CA$ and $c=AB$ be positive integer side lengths of a triangle $ABC$, with $\\gcd(a,b,c)=1$. If $\\angle A=3\\angle B$, prove that at least one of $a,b,c$ is a perfect cube.",
+    "summaryZh": "设三角形 $ABC$ 的边长 $a=BC,b=CA,c=AB$ 均为正整数，且 $\\gcd(a,b,c)=1$。若 $\\angle A=3\\angle B$，证明 $a,b,c$ 中至少有一个是完全立方数。",
+    "answer": "In fact, the side $b$ opposite angle $B$ must be a perfect cube.",
+    "answerZh": "事实上，与角 $B$ 相对的边 $b$ 必为完全立方数。",
+    "methods": [
+      {
+        "title": "Derive a cubic factorisation from an auxiliary isosceles triangle",
+        "titleZh": "借助辅助等腰三角形导出三次方关系",
+        "topics": [
+          {
+            "en": "Angle construction",
+            "zh": "角度构造"
+          },
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Prime valuations",
+            "zh": "素因子赋值"
+          },
+          {
+            "en": "Perfect cubes",
+            "zh": "完全立方数"
+          }
+        ],
+        "steps": [
+          "Choose $D$ on $BC$ so that $DB=DA$. Since $\\angle ABD=B$, the base angle $\\angle BAD$ also equals $B$. Hence $\\angle DAC=2B$. The exterior-angle relation at $D$ gives $\\angle CDA=2B$, so $\\triangle ACD$ is isosceles and $DC=AC=b$. Therefore $DB=a-b$ and $DA=a-b$.",
+          "In the isosceles triangle $ABD$, the base has length $c=2(a-b)\\cos B$. The cosine rule in $ABC$ gives $2c\\cos B=(a^2+c^2-b^2)/a$. Eliminating $\\cos B$ yields $(a-b)(a^2+c^2-b^2)=ac^2$.",
+          "Expanding and rearranging the last identity gives $a^3=b(a^2+ab-b^2+c^2)$. Let $p$ be any prime divisor of $b$. Then $p\\mid a^3$, so $p\\mid a$. Primitivity of the three side lengths implies $p\\nmid c$.",
+          "The factor in parentheses is congruent to $c^2$ modulo $p$, and is therefore not divisible by $p$. Taking the exponent of $p$ on both sides gives $3v_p(a)=v_p(b)$. Thus the exponent of every prime in $b$ is a multiple of $3$, so $b$ is a perfect cube."
+        ],
+        "stepsZh": [
+          "在 $BC$ 上取点 $D$，使 $DB=DA$。因 $\\angle ABD=B$，等腰三角形的另一底角 $\\angle BAD$ 也等于 $B$，从而 $\\angle DAC=2B$。由点 $D$ 处的外角关系得 $\\angle CDA=2B$，所以 $\\triangle ACD$ 也是等腰三角形，且 $DC=AC=b$。因此 $DB=a-b$、$DA=a-b$。",
+          "在等腰三角形 $ABD$ 中，底边长度满足 $c=2(a-b)\\cos B$。对三角形 $ABC$ 使用余弦定理，得 $2c\\cos B=(a^2+c^2-b^2)/a$。消去 $\\cos B$ 后得到 $(a-b)(a^2+c^2-b^2)=ac^2$。",
+          "展开并整理该恒等式，得到 $a^3=b(a^2+ab-b^2+c^2)$。任取素数 $p\\mid b$，则 $p\\mid a^3$，故 $p\\mid a$。由于三条边的最大公因数为 $1$，必有 $p\\nmid c$。",
+          "括号内的因子模 $p$ 同余于 $c^2$，所以不被 $p$ 整除。比较等式两端素因子 $p$ 的指数，得 $3v_p(a)=v_p(b)$。因此 $b$ 的每个素因子指数都是 $3$ 的倍数，故 $b$ 是完全立方数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2"
+  }
+}
