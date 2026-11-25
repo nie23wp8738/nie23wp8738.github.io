@@ -1,0 +1,164 @@
+{
+  "bmo2-2024-q1": {
+    "summary": "Let $A_n$ be the positive integer formed by the first $n$ digits of the recurring decimal $10/13=0.769230769230\\ldots$. Among $A_1,\\ldots,A_{60}$, prove that at least $49$ terms have at least three prime factors when prime factors are counted with multiplicity.",
+    "summaryZh": "把循环小数 $10/13=0.769230769230\\ldots$ 的小数点后前 $n$ 位依次写成正整数，记为 $A_n$。证明在 $A_1,\\ldots,A_{60}$ 中，至少有 $49$ 项含有不少于三个素因子，素因子按重数计算。",
+    "answer": "At least the $30$ terms with $n\\equiv0,2,4\\pmod6$, the $10$ terms with $n\\equiv5\\pmod6$, and the $9$ terms $n\\equiv1\\pmod6$ with $n>1$ have the required property.",
+    "answerZh": "满足条件的至少包括 $n\\equiv0,2,4\\pmod6$ 的 $30$ 项、$n\\equiv5\\pmod6$ 的 $10$ 项，以及 $n>1$ 且 $n\\equiv1\\pmod6$ 的 $9$ 项，共 $49$ 项。",
+    "methods": [
+      {
+        "title": "Classify the final digit, then factor the terms ending in 7",
+        "titleZh": "先按末位分类，再分解末位为 7 的各项",
+        "topics": [
+          {
+            "en": "Recurring decimals",
+            "zh": "循环小数"
+          },
+          {
+            "en": "Divisibility tests",
+            "zh": "整除判定"
+          },
+          {
+            "en": "Difference of squares",
+            "zh": "平方差分解"
+          },
+          {
+            "en": "Prime factors with multiplicity",
+            "zh": "带重数的素因子"
+          }
+        ],
+        "steps": [
+          "The repeating block is $769230$. If $n\\equiv2$ or $4\\pmod6$, the last two digits of $A_n$ are $76$ or $92$, so $4\\mid A_n$ and $A_n>4$. If $n\\equiv0\\pmod6$, the number ends in $0$, so $10\\mid A_n$ and $A_n>10$. Every one of these $30$ terms therefore has at least three prime factors counted with multiplicity.",
+          "If $n\\equiv5\\pmod6$, the digits consist of some complete blocks followed by $76923$. Every complete block and this final string have digit sum $27$. Hence $9\\mid A_n$, and $A_n>9$. These $10$ terms each contribute at least two factors $3$ and one further prime factor.",
+          "It remains to use nine of the ten indices congruent to $1$ modulo $6$. Write $n=6q+1$ with $1\\le q\\le9$. Division by $13$ gives $A_n=(10^{6q+2}-9)/13$. With $x=10^{3q+1}$ this becomes $13A_n=(x-3)(x+3)$.",
+          "The decimal expansion of $A_n$ is $q$ copies of the block $769230$ followed by $7$. Both $769230$ and $7$ are divisible by $7$, so $7\\mid A_n$. Equivalently, since $10^3\\equiv-1\\pmod7$, exactly one of $x-3,x+3$ is divisible by $7$. Exactly one is also divisible by $13$, because their product is $13A_n$ and their difference is $6$. After allocating the factors $7$ and $13$ to these two brackets, both remaining quotients are greater than $1$ for $q\\ge1$. Thus $A_n$ is a product of three integers greater than $1$, and hence has at least three prime factors.",
+          "The three classes supply $30+10+9=49$ different terms among the first $60$, which proves the required lower bound."
+        ],
+        "stepsZh": [
+          "循环节为 $769230$。若 $n\\equiv2$ 或 $4\\pmod6$，则 $A_n$ 的末两位分别为 $76$ 或 $92$，所以 $4\\mid A_n$ 且 $A_n>4$。若 $n\\equiv0\\pmod6$，则末位为 $0$，故 $10\\mid A_n$ 且 $A_n>10$。这 $30$ 项按重数计算都至少含有三个素因子。",
+          "若 $n\\equiv5\\pmod6$，其数字由若干完整循环节及末尾的 $76923$ 组成。每个完整循环节与末尾字符串的数字和都是 $27$，故 $9\\mid A_n$，且 $A_n>9$。这 $10$ 项各含两个因子 $3$ 以及至少一个额外的素因子。",
+          "还需利用模 $6$ 余 $1$ 的十个下标中的九个。令 $n=6q+1$，其中 $1\\le q\\le9$。作除法可得 $A_n=(10^{6q+2}-9)/13$。再令 $x=10^{3q+1}$，便有 $13A_n=(x-3)(x+3)$。",
+          "$A_n$ 的十进制写法是 $q$ 个循环节 $769230$ 后接一个 $7$。因为 $769230$ 与 $7$ 都被 $7$ 整除，所以 $7\\mid A_n$。也可由 $10^3\\equiv-1\\pmod7$ 看出 $x-3,x+3$ 中恰有一个被 $7$ 整除。两式乘积为 $13A_n$，差为 $6$，故其中也恰有一个被 $13$ 整除。把因子 $7$ 和 $13$ 分配到相应括号后，当 $q\\ge1$ 时余下的两个商都大于 $1$。所以 $A_n$ 可写成三个大于 $1$ 的整数之积，从而至少含三个素因子。",
+          "上述三类共给出 $30+10+9=49$ 个互不相同的项，结论成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2"
+  },
+  "bmo2-2024-q2": {
+    "summary": "Determine every function $f:\\mathbb Z\\to\\mathbb Z$ satisfying $2f(f(n))=5f(n)-2n$ for each integer $n$.",
+    "summaryZh": "求所有满足下式的函数 $f:\\mathbb Z\\to\\mathbb Z$。对每个整数 $n$，都有 $2f(f(n))=5f(n)-2n$。",
+    "answer": "The unique solution is $f(n)=2n$ for every integer $n$.",
+    "answerZh": "唯一解为对所有整数 $n$ 均有 $f(n)=2n$。",
+    "methods": [
+      {
+        "title": "Measure the error from the expected linear solution",
+        "titleZh": "考察函数与预期线性解之间的误差",
+        "topics": [
+          {
+            "en": "Functional equations",
+            "zh": "函数方程"
+          },
+          {
+            "en": "Iteration",
+            "zh": "函数迭代"
+          },
+          {
+            "en": "Infinite divisibility",
+            "zh": "无限整除"
+          }
+        ],
+        "steps": [
+          "The function $f(n)=2n$ satisfies the equation. To prove uniqueness, define the integer-valued error $g(n)=f(n)-2n$.",
+          "Rearranging the original equation gives $f(f(n))-2f(n)=(f(n)-2n)/2$. In terms of $g$, this is $g(f(n))=g(n)/2$, or $g(n)=2g(f(n))$.",
+          "Iterating the last identity yields $g(n)=2^k g(f^{\\circ k}(n))$ for every positive integer $k$. All quantities on the right are integers, so $2^k$ divides the fixed integer $g(n)$ for every $k$.",
+          "The only integer divisible by arbitrarily large powers of $2$ is $0$. Hence $g(n)=0$ for every integer $n$, and therefore $f(n)=2n$. Substitution already verified that this function works."
+        ],
+        "stepsZh": [
+          "函数 $f(n)=2n$ 确实满足原式。为证明唯一性，定义整数值误差函数 $g(n)=f(n)-2n$。",
+          "整理原方程可得 $f(f(n))-2f(n)=(f(n)-2n)/2$。用 $g$ 表示即为 $g(f(n))=g(n)/2$，也就是 $g(n)=2g(f(n))$。",
+          "反复使用上式，对任意正整数 $k$ 都有 $g(n)=2^k g(f^{\\circ k}(n))$。右端的函数值均为整数，因此固定整数 $g(n)$ 被每个 $2^k$ 整除。",
+          "只有整数 $0$ 能被任意高次的 $2$ 整除。所以对每个整数 $n$ 都有 $g(n)=0$，进而 $f(n)=2n$。代回原式可知它确为解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2"
+  },
+  "bmo2-2024-q3": {
+    "summary": "Let $ABC$ be an acute triangle with $AB>AC$. The tangents at $B$ and $C$ to its circumcircle meet at $P$. The line through the midpoints of $PB$ and $PC$ meets the full lines $AB$ and $AC$ at $X$ and $Y$, respectively. Prove that $A,X,P,Y$ lie on one circle.",
+    "summaryZh": "设 $ABC$ 为锐角三角形，且 $AB>AC$。三角形外接圆在 $B,C$ 两点的切线交于 $P$。过线段 $PB,PC$ 中点的直线分别交直线 $AB,AC$ 于 $X,Y$。证明 $A,X,P,Y$ 四点共圆。",
+    "answer": "The circle through $P,X,Y$ also passes through $A$.",
+    "answerZh": "经过 $P,X,Y$ 的圆也经过 $A$。",
+    "methods": [
+      {
+        "title": "Use symmetric coordinates centred at the tangent intersection",
+        "titleZh": "以两条切线的交点为原点建立对称坐标",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "解析几何"
+          },
+          {
+            "en": "Tangents to a circle",
+            "zh": "圆的切线"
+          },
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "圆内接四边形"
+          }
+        ],
+        "steps": [
+          "Scale and rotate the diagram so that $P=(0,0)$, $PB=PC=1$, $B=(c,s)$ and $C=(c,-s)$, where $c,s>0$ and $c^2+s^2=1$. The circle tangent to $PB$ at $B$ and to $PC$ at $C$ has centre $(1/c,0)$, so if $A=(u,v)$ then $u^2+v^2+1=2u/c$.",
+          "The midpoints of $PB$ and $PC$ lie on the vertical line $x=h$, where $h=c/2$. Since $A$ is different from $B,C$, we have $u\\ne c$. Intersecting $AB$ and $AC$ with $x=h$ gives $X=(h,r+t)$ and $Y=(h,r-t)$, where $r=vc/[2(c-u)]$ and $t=s(c/2-u)/(c-u)$.",
+          "A circle through $P=(0,0)$ has equation $x^2+y^2+Dx+Ey=0$. Substitution of $X$ and $Y$ first gives $E=-2r$ and then $D=-(h^2+t^2-r^2)/h$. Thus these values define the unique circle through $P,X,Y$.",
+          "Substituting $A=(u,v)$ into this circle equation and simplifying gives\n$u^2+v^2+Du-2rv=\\dfrac{u(2u-c)\\{c(u^2+v^2+1)-2u\\}}{2c(u-c)^2}$.\nThe expression in braces is $0$ by the circumcircle relation from the first step. Therefore $A$ lies on the circle through $P,X,Y$, proving the claim."
+        ],
+        "stepsZh": [
+          "对图形作相似变换并旋转坐标，使 $P=(0,0)$、$PB=PC=1$，且 $B=(c,s),C=(c,-s)$，其中 $c,s>0$、$c^2+s^2=1$。在 $B,C$ 处分别与 $PB,PC$ 相切的圆，其圆心为 $(1/c,0)$。所以若 $A=(u,v)$，则 $u^2+v^2+1=2u/c$。",
+          "$PB,PC$ 的中点都位于竖直线 $x=h$ 上，其中 $h=c/2$。由于 $A$ 不等于 $B,C$，有 $u\\ne c$。分别求直线 $AB,AC$ 与 $x=h$ 的交点，可得 $X=(h,r+t),Y=(h,r-t)$，其中 $r=vc/[2(c-u)]$、$t=s(c/2-u)/(c-u)$。",
+          "任一经过 $P=(0,0)$ 的圆可写为 $x^2+y^2+Dx+Ey=0$。依次代入 $X,Y$，先得 $E=-2r$，再得 $D=-(h^2+t^2-r^2)/h$。这便确定了经过 $P,X,Y$ 的唯一圆。",
+          "把 $A=(u,v)$ 代入该圆的方程并整理，得到\n$u^2+v^2+Du-2rv=\\dfrac{u(2u-c)\\{c(u^2+v^2+1)-2u\\}}{2c(u-c)^2}$。\n由第一步的外接圆关系，花括号内的式子等于 $0$。因此 $A$ 也在经过 $P,X,Y$ 的圆上，结论成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2"
+  },
+  "bmo2-2024-q4": {
+    "summary": "Let $m<n$ be positive integers. Initially there are $n$ piles, each containing $m$ objects. In one move, choose two distinct piles and remove a total of exactly $n$ objects from those two piles, without removing more objects than either pile contains. Determine all pairs $(m,n)$ for which all piles can be emptied.",
+    "summaryZh": "设 $m<n$ 为正整数。开始时有 $n$ 堆物品，每堆恰有 $m$ 个。一次操作选择两堆，并从这两堆中合计取走恰好 $n$ 个物品，且不能从任何一堆取走超过其现有数量的物品。求所有能通过若干次操作清空全部物品的数对 $(m,n)$。",
+    "answer": "Exactly the pairs $m=n-k$ where $k$ is a positive divisor of $n$.",
+    "answerZh": "恰为 $m=n-k$，其中 $k$ 是 $n$ 的正因子。",
+    "methods": [
+      {
+        "title": "Encode the chosen pairs as a graph",
+        "titleZh": "把每次选中的两堆表示为图的一条边",
+        "topics": [
+          {
+            "en": "Graph components",
+            "zh": "图的连通分支"
+          },
+          {
+            "en": "Greatest common divisors",
+            "zh": "最大公因数"
+          },
+          {
+            "en": "Constructive sufficiency",
+            "zh": "充分性的构造证明"
+          }
+        ],
+        "steps": [
+          "The total number of objects is $mn$, and each move removes $n$, so any successful schedule uses exactly $m$ moves. Form a graph whose $n$ vertices are the piles and whose edges are the pairs selected in the moves. The same pair cannot be selected twice: two such moves would remove $2n$ objects from two piles that initially contain only $2m<2n$. Hence this is a simple graph with exactly $m$ edges.",
+          "Let a connected component have $v$ vertices. No move crosses from it to another component, so all $vm$ objects initially in those piles are removed by whole moves of size $n$. Thus $n\\mid vm$. If $g=\\gcd(m,n)$, then $n/g\\mid v$. Every component therefore has at least $n/g$ vertices, and the graph has at most $g$ components.",
+          "A graph on $n$ vertices with at most $g$ components has at least $n-g$ edges. Since our graph has $m$ edges, $m\\ge n-g$. Put $k=n-m>0$. Then $k\\le g$. On the other hand, $g$ divides both $m$ and $n$, so it divides $k=n-m$ and hence $g\\le k$. Therefore $g=k$, which shows $m=n-k$ and $k\\mid n$.",
+          "Conversely suppose $k\\mid n$ and $m=n-k$. Reserve $k$ of the original piles. Conceptually divide each reserved pile into $m/k=n/k-1$ packets of $k$ objects, producing $m$ packets in total. Pair these packets one-to-one with the remaining $m$ whole piles. For each pair, choose the corresponding two original piles and remove $k$ objects from the reserved pile and all $m$ objects from the other pile. Each move removes $k+m=n$ objects. Every non-reserved pile is emptied once, and every reserved pile loses $(m/k)k=m$ objects. Thus all piles are emptied, proving sufficiency."
+        ],
+        "stepsZh": [
+          "物品总数为 $mn$，每次取走 $n$ 个，所以任何成功方案都恰好进行 $m$ 次操作。建立一张图，以 $n$ 堆为顶点，每次选中的两堆对应一条边。同一对堆不可能被选两次，因为两次操作会从这两堆共取走 $2n$ 个，而它们开始时合计只有 $2m<2n$ 个。因此得到一张恰有 $m$ 条边的简单图。",
+          "设某个连通分支有 $v$ 个顶点。没有操作连接该分支与其他分支，因此这些堆原有的 $vm$ 个物品必由若干次每次取走 $n$ 个的完整操作清空，故 $n\\mid vm$。令 $g=\\gcd(m,n)$，则 $n/g\\mid v$。所以每个连通分支至少有 $n/g$ 个顶点，整张图至多有 $g$ 个连通分支。",
+          "一张有 $n$ 个顶点且至多有 $g$ 个连通分支的图，至少有 $n-g$ 条边。这里边数为 $m$，所以 $m\\ge n-g$。令 $k=n-m>0$，则 $k\\le g$。另一方面，$g$ 同时整除 $m,n$，所以也整除 $k=n-m$，从而 $g\\le k$。因此 $g=k$，即 $m=n-k$ 且 $k\\mid n$。",
+          "反过来，设 $k\\mid n$ 且 $m=n-k$。先保留其中 $k$ 个原始堆，把每个保留堆在概念上分成 $m/k=n/k-1$ 份，每份 $k$ 个，于是共有 $m$ 份。将这些小份与其余 $m$ 个完整堆一一配对。每次选择相应的两个原始堆，从保留堆取走 $k$ 个，并把另一堆的 $m$ 个全部取走，共取走 $k+m=n$ 个。每个非保留堆恰好清空一次，而每个保留堆共减少 $(m/k)k=m$ 个。因此所有堆都能清空，充分性得证。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2"
+  }
+}
