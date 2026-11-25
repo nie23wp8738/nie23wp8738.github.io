@@ -1,0 +1,1362 @@
+{
+  "amc8-2024-q1": {
+    "summary": "Start with the six-digit integer made entirely of twos. Subtract each of the five shorter positive integers made entirely of twos, using each length once. Determine the final units digit.",
+    "summaryZh": "从六位数 $222222$ 中分别减去由数字 2 组成的五位数、四位数、三位数、两位数和一位数各一个，求结果的个位数字。",
+    "answer": "B. $2$.",
+    "answerZh": "B．$2$。",
+    "methods": [
+      {
+        "title": "Keep only the residue",
+        "titleZh": "只看模 10 的余数",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余"
+          },
+          {
+            "en": "Units digit",
+            "zh": "个位数字"
+          }
+        ],
+        "steps": [
+          "Every number in the subtraction is congruent to $2\\pmod{10}$. Replacing the six entries by their residues gives $2-5(2)=-8$.",
+          "Add $10$ to put the residue in the range $0$ through $9$. Since $-8\\equiv 2\\pmod{10}$, the required digit is $2$."
+        ],
+        "stepsZh": [
+          "六个数除以 $10$ 的余数都是 $2$。将各数换成余数，得到 $2-5\\times2=-8$。",
+          "$-8$ 加上 $10$ 就落在 $0$ 至 $9$ 之间，所以 $-8\\equiv2\\pmod{10}$，个位是 $2$。"
+        ]
+      },
+      {
+        "title": "Cancel the matching tail",
+        "titleZh": "先消去末尾相同的部分",
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "十进位值"
+          },
+          {
+            "en": "Regrouping",
+            "zh": "凑整计算"
+          }
+        ],
+        "steps": [
+          "The first subtraction cancels five matching digits: $222222-22222=200000$.",
+          "The four quantities still to subtract have sum $2222+222+22+2=2468$. The final number is $197532$, whose last digit is $2$."
+        ],
+        "stepsZh": [
+          "前两个数的末五位完全相同，相减得 $222222-22222=200000$。",
+          "其余四个减数合计 $2222+222+22+2=2468$。计算 $200000-2468=197532$，读出个位是 $2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/1"
+  },
+  "amc8-2024-q2": {
+    "summary": "Evaluate $44/11+110/44+44/1100$ and express the result as a decimal.",
+    "summaryZh": "将 $44/11+110/44+44/1100$ 的和写成小数。",
+    "answer": "C. $6.54$.",
+    "answerZh": "C．$6.54$。",
+    "methods": [
+      {
+        "title": "Simplify before converting",
+        "titleZh": "先约分再化为小数",
+        "topics": [
+          {
+            "en": "Fraction reduction",
+            "zh": "分数约分"
+          },
+          {
+            "en": "Terminating decimals",
+            "zh": "有限小数"
+          }
+        ],
+        "steps": [
+          "The three quotients reduce to $4$, $5/2$, and $1/25$. For the last fraction, multiplying top and bottom by $4$ gives $4/100$.",
+          "Adding by place value gives $4+2.5+0.04=6.54$."
+        ],
+        "stepsZh": [
+          "三项约分后依次是 $4$、$5/2$、$1/25$。最后一项分子分母同乘 $4$，即 $4/100$。",
+          "按数位相加得到 $4+2.5+0.04=6.54$。"
+        ]
+      },
+      {
+        "title": "Work in hundredths",
+        "titleZh": "把各项统一为百分之一",
+        "topics": [
+          {
+            "en": "Scaling",
+            "zh": "倍数缩放"
+          },
+          {
+            "en": "Place value",
+            "zh": "十进位值"
+          }
+        ],
+        "steps": [
+          "Let $s$ be the sum. Compute $100s$ instead: its addends are $4400/11=400$, $11000/44=250$, and $4400/1100=4$.",
+          "Hence $100s=654$. Moving the decimal point two places back yields $s=6.54$."
+        ],
+        "stepsZh": [
+          "设原式为 $s$。先求 $100s$，三项分别为 $4400/11=400$、$11000/44=250$、$4400/1100=4$。",
+          "所以 $100s=654$。除以 $100$，得到 $s=6.54$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/2"
+  },
+  "amc8-2024-q3": {
+    "summary": "Nested squares share a corner and have side lengths $4,7,9,10$. Find the combined area of the two bands between sides $4$ and $7$, and between sides $9$ and $10$.",
+    "summaryZh": "四个同向的正方形共用一个角，边长分别为 $4,7,9,10$。求边长由 $4$ 增至 $7$ 和由 $9$ 增至 $10$ 时新增区域的总面积。",
+    "answer": "E. $52$ square units.",
+    "answerZh": "E．$52$ 平方单位。",
+    "methods": [
+      {
+        "title": "Subtract the two covered squares",
+        "titleZh": "分别扣除被覆盖的面积",
+        "topics": [
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          },
+          {
+            "en": "Area of a square",
+            "zh": "正方形面积"
+          }
+        ],
+        "steps": [
+          "The shaded part of the side-$7$ square has area $49-16=33$. The outer shaded band has area $100-81=19$.",
+          "The bands do not overlap, so their areas add to $33+19=52$."
+        ],
+        "stepsZh": [
+          "边长为 $7$ 的正方形中，着色部分为 $49-16=33$。最外层的着色面积为 $100-81=19$。",
+          "两块区域没有重叠，总面积为 $33+19=52$。"
+        ]
+      },
+      {
+        "title": "Count the unit-width layers",
+        "titleZh": "按一格宽的折形逐层计数",
+        "topics": [
+          {
+            "en": "Unit-square counting",
+            "zh": "数单位方格"
+          },
+          {
+            "en": "Odd numbers",
+            "zh": "奇数"
+          }
+        ],
+        "steps": [
+          "Increasing the side of a square from $k-1$ to $k$ appends a row of $k$ cells and a column of $k-1$ additional cells, for $2k-1$ cells in that layer.",
+          "The shaded layers end at sides $5,6,7$ and $10$. Their cell counts are $9,11,13,19$, giving $9+11+13+19=52$."
+        ],
+        "stepsZh": [
+          "边长从 $k-1$ 增至 $k$ 时，新添一排 $k$ 格和一列 $k-1$ 格，这一层共有 $2k-1$ 格。",
+          "涂色的是外边长为 $5,6,7,10$ 的四层，格数依次为 $9,11,13,19$。相加得到 $52$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/3"
+  },
+  "amc8-2024-q4": {
+    "summary": "Delete one summand from $1+2+\\cdots +9$ so that the remaining eight numbers add to a perfect square. Which summand was deleted?",
+    "summaryZh": "将 $1$ 到 $9$ 中的某个数去掉，其余八数之和恰好是完全平方数。求去掉的数。",
+    "answer": "E. $9$.",
+    "answerZh": "E．$9$。",
+    "methods": [
+      {
+        "title": "Trap the sum between consecutive squares",
+        "titleZh": "用相邻平方数确定范围",
+        "topics": [
+          {
+            "en": "Arithmetic series",
+            "zh": "等差数列求和"
+          },
+          {
+            "en": "Perfect squares",
+            "zh": "完全平方数"
+          }
+        ],
+        "steps": [
+          "The sum of all nine terms is $9(10)/2=45$. Deleting a value between $1$ and $9$ leaves a number between $36$ and $44$ inclusive.",
+          "The only square in this interval is $36$, since $6^2=36$ and $7^2=49$. The deleted term must be $45-36=9$."
+        ],
+        "stepsZh": [
+          "九项总和为 $9\\times 10/2=45$。去掉的数介于 $1$ 和 $9$ 之间，余下的和只能在 $36$ 至 $44$ 之间。",
+          "这个范围内只有 $6^2=36$ 一个平方数，下一个是 $7^2=49$。因此去掉的是 $45-36=9$。"
+        ]
+      },
+      {
+        "title": "Build a square by pairing the eight terms",
+        "titleZh": "将八个数配对构造平方数",
+        "topics": [
+          {
+            "en": "Pairing",
+            "zh": "配对"
+          },
+          {
+            "en": "Bounds",
+            "zh": "界估计"
+          }
+        ],
+        "steps": [
+          "Try omitting the largest term. Pairing $1$ with $8$, $2$ with $7$, $3$ with $6$, and $4$ with $5$ makes four pairs of $9$, which total $36=6^2$.",
+          "Omitting any smaller term replaces it by $9$ in this set of eight. This increases the sum by at most $8$, less than the $13$ needed to reach $7^2$. Therefore only omitting $9$ works."
+        ],
+        "stepsZh": [
+          "尝试去掉最大数 $9$。将 $1$ 与 $8$、$2$ 与 $7$、$3$ 与 $6$、$4$ 与 $5$ 配对，每对和为 $9$，总和为 $36=6^2$。",
+          "若去掉的是某个较小数，就相当于把这八个数中的一个换为 $9$。总和最多增加 $8$，而到下一个平方数 $7^2$ 需要增加 $13$，故只有去掉 $9$ 可行。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/4"
+  },
+  "amc8-2024-q5": {
+    "summary": "Two die faces $a,b$ lie between $1$ and $6$ and satisfy $6\\mid ab$. Which integer in the interval from $5$ through $9$ cannot equal $a+b$?",
+    "summaryZh": "两个标准骰子的点数为 $a,b$，并且 $ab$ 能被 $6$ 整除。在 $5$ 至 $9$ 的五个整数中，哪一个不可能等于 $a+b$？",
+    "answer": "B. A sum of $6$ is impossible.",
+    "answerZh": "B．点数和不可能为 $6$。",
+    "methods": [
+      {
+        "title": "Separate rolls containing a six",
+        "titleZh": "按是否出现点数 6 分类",
+        "topics": [
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          },
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "If a die shows $6$, every value on the other die is allowed. The possible sums are $7$ through $12$.",
+          "Without a $6$, the only face supplying a factor of $3$ is $3$. The other die must supply a factor of $2$, so it shows $2$ or $4$. This adds only sums $5$ and $7$. The missing value in the given range is $6$."
+        ],
+        "stepsZh": [
+          "若出现点数 $6$，另一枚骰子可取 $1$ 到 $6$，所得和为 $7$ 至 $12$。",
+          "若不出现 $6$，只有点数 $3$ 能提供因子 $3$。另一枚必须提供因子 $2$，只能是 $2$ 或 $4$。这样只得到和 $5$、$7$；给定范围中唯独缺少 $6$。"
+        ]
+      },
+      {
+        "title": "Test the exceptional sum directly",
+        "titleZh": "直接排除例外的点数和",
+        "topics": [
+          {
+            "en": "Unordered pairs",
+            "zh": "无序数对"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例与举例"
+          }
+        ],
+        "steps": [
+          "For a sum of $6$, the unordered pairs are $(1,5),(2,4),(3,3)$. Their products $5,8,9$ all fail the divisibility test.",
+          "For completeness, sums $5,7,8,9$ occur with pairs $(2,3),(3,4),(2,6),(3,6)$, respectively. Each of these products is divisible by $6$."
+        ],
+        "stepsZh": [
+          "若和为 $6$，忽略顺序后只有 $(1,5),(2,4),(3,3)$。对应的积 $5,8,9$ 都不能被 $6$ 整除。",
+          "其余四个和 $5,7,8,9$ 可分别由 $(2,3),(3,4),(2,6),(3,6)$ 实现，每对的积都能被 $6$ 整除。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/5"
+  },
+  "amc8-2024-q6": {
+    "summary": "Rank the four marked skating routes by length, from shortest to longest. The rinks have identical rectangular middles capped by semicircles. $P$ follows the perimeter. $Q$ traces both arcs and the diagonals of both half-height rectangles. $R$ follows the straight sides and two chords in each cap. $S$ traces both arcs and the diagonals of the whole rectangle.",
+    "summaryZh": "将图中四条滑行路线从短到长排列。四块冰场形状相同，中部是长方形，上下两端是半圆。$P$ 沿外边界前进；$Q$ 经过两端圆弧，并沿上下两个半高长方形各自的两条对角线行进；$R$ 走长方形的两条竖边，并在每个半圆内走两段弦；$S$ 经过两端圆弧及整个长方形的两条对角线。",
+    "answer": "D. $R<P<S<Q$.",
+    "answerZh": "D．$R<P<S<Q$。",
+    "methods": [
+      {
+        "title": "Compare one replacement at a time",
+        "titleZh": "逐段替换并比较长度",
+        "topics": [
+          {
+            "en": "Arc and chord",
+            "zh": "弧与弦"
+          },
+          {
+            "en": "Right triangles",
+            "zh": "直角三角形"
+          }
+        ],
+        "steps": [
+          "The chords at the ends of $R$ cut inside the circular arcs in $P$. Each chord is shorter than the arc joining the same endpoints. The middle portions match, so $R<P$.",
+          "The diagonals of $S$ rise the same height as the straight sides of $P$ but also cross the width. Each is a hypotenuse longer than the corresponding vertical side, giving $P<S$.",
+          "Bisect the two diagonals of $S$ to obtain four equal segments. A segment of $Q$ rises just as far as each half-diagonal but travels twice as far horizontally. All four segments lengthen, so $S<Q$."
+        ],
+        "stepsZh": [
+          "在 $R$ 的两端，用弦走过 $P$ 所走的圆弧。相同端点之间弦比弧短，而中段长度相同，所以 $R<P$。",
+          "在 $S$ 中，每条对角线的纵向位移与 $P$ 的一条直边相同，还横跨了场地。斜边比这条直角边长，因此 $P<S$。",
+          "把 $S$ 的两条对角线各自平分，得到四段。$Q$ 的每一段纵向位移与这样的半条对角线相同，横向位移却是它的两倍。四段均变长，故 $S<Q$。"
+        ]
+      },
+      {
+        "title": "Use the rise and run of each segment",
+        "titleZh": "用纵横位移计算直线段",
+        "topics": [
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          },
+          {
+            "en": "Comparing radicals",
+            "zh": "比较根式大小"
+          }
+        ],
+        "steps": [
+          "Write $h,w>0$ for the height and width of the rectangular part. After removing the common arcs from $P,S,Q$, their lengths are respectively $2h$, $2\\sqrt{h^2+w^2}$, and $4\\sqrt{h^2/4+w^2}=2\\sqrt{h^2+4w^2}$.",
+          "The radicands $h^2$, $h^2+w^2$, and $h^2+4w^2$ increase strictly. Thus $P<S<Q$. Route $R$ retains the $2h$ straight portion of $P$ but shortens each circular end with chords, placing $R$ first."
+        ],
+        "stepsZh": [
+          "设矩形高度和宽度为 $h,w>0$。扣除 $P,S,Q$ 公共的圆弧后，三者的直线段总长依次为 $2h$、$2\\sqrt{h^2+w^2}$、$4\\sqrt{h^2/4+w^2}=2\\sqrt{h^2+4w^2}$。",
+          "$h^2$、$h^2+w^2$、$h^2+4w^2$ 严格递增，故 $P<S<Q$。$R$ 保留了 $P$ 长为 $2h$ 的直边部分，两端的弦路比原弧短，因此 $R$ 排在最前。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/6",
+    "figure": {
+      "url": "/commentary-figures/amc8-2024-q6.svg",
+      "alt": "Plans of routes P, Q, R and S. Solid lines show the routes; dashed lines show unused parts of the rink boundaries.",
+      "altZh": "路线 P、Q、R、S 的平面图，实线标示滑行路线，虚线标示未经过的冰场外边界。"
+    }
+  },
+  "amc8-2024-q7": {
+    "summary": "Cover a $3\\times7$ board using $1\\times1$, $2\\times2$, and $1\\times4$ tiles, without overlaps or gaps. What is the fewest $1\\times1$ tiles a covering can use?",
+    "summaryZh": "用 $1\\times1$、$2\\times2$ 和 $1\\times4$ 三种规格的砖铺满 $3\\times7$ 棋盘，砖块不能重叠或留空。最少需要几块 $1\\times1$ 的砖？",
+    "answer": "E. $5$ unit tiles.",
+    "answerZh": "E．最少 $5$ 块单位方格。",
+    "methods": [
+      {
+        "title": "Combine row parity with total area",
+        "titleZh": "结合每行奇偶性和总面积",
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余"
+          },
+          {
+            "en": "Construction",
+            "zh": "构造"
+          }
+        ],
+        "steps": [
+          "Every straight tetromino must lie horizontally, since the grid is only three rows high. In each row every large tile therefore covers $0$, $2$, or $4$ cells. Each of the three odd-length rows needs at least one unit tile.",
+          "If there are $u$ unit tiles, then $21-u$ is divisible by $4$, so $u\\equiv1\\pmod4$. The first such value that is at least $3$ is $5$.",
+          "To attain $5$, place one horizontal bar in the first four cells of each row. The remaining board is $3\\times 3$. Put a $2\\times 2$ square in one corner and use unit tiles for its five remaining cells."
+        ],
+        "stepsZh": [
+          "棋盘只有三行，长条只能横放。每块大拼板在任一行所占格数都是 $0$、$2$ 或 $4$。每行共 $7$ 格，是奇数，三行各自至少需要一块单位方格。",
+          "若单位方格共 $u$ 块，$21-u$ 必须被 $4$ 整除，即 $u\\equiv1\\pmod4$。不小于 $3$ 的此类数中最小的是 $5$。",
+          "每行的前四格各放一根横条，剩下 $3\\times 3$。在其一角放一块 $2\\times 2$ 方块，余下的五格各用一块单位方格，即可达到下界。"
+        ]
+      },
+      {
+        "title": "Count the scarce column color",
+        "titleZh": "数较少的一种列颜色",
+        "topics": [
+          {
+            "en": "Coloring argument",
+            "zh": "染色法"
+          },
+          {
+            "en": "Packing bounds",
+            "zh": "拼板数量界"
+          }
+        ],
+        "steps": [
+          "Color columns $2,4,6$ blue, leaving the others white. There are only $9$ blue cells. Every $2\\times 2$ square and every legal four-cell bar uses exactly two blue cells.",
+          "Five large tiles would require ten blue cells. Therefore at most four large tiles fit, leaving at least $21-4(4)=5$ unit cells. Four large tiles do fit: use three parallel bars side by side in a $3\\times 4$ block and one square in the remaining $3\\times 3$ block."
+        ],
+        "stepsZh": [
+          "将第 $2,4,6$ 列涂蓝，其余列留白，全盘只有 $9$ 个蓝格。每个 $2\\times 2$ 方块和每根能放入棋盘的横条都恰好占两个蓝格。",
+          "若放五块大拼板，至少需要十个蓝格。因此最多放四块，至少剩 $21-4\\times 4=5$ 个单位格。在 $3\\times 4$ 区域并排放三根横条，在余下的 $3\\times 3$ 区域放一个方块，恰好用四块大拼板。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/7"
+  },
+  "amc8-2024-q8": {
+    "summary": "Beginning with $2$, apply either $x\\mapsto x+3$ or $x\\mapsto 2x$ at each of three steps. Count the distinct possible final values.",
+    "summaryZh": "从 $2$ 出发，每一步可以加 $3$ 或乘 $2$，共走三步。最终能得到多少个不同的数？",
+    "answer": "D. $6$ distinct values.",
+    "answerZh": "D．$6$ 个不同的数。",
+    "methods": [
+      {
+        "title": "Merge equal intermediate values",
+        "titleZh": "逐步合并相同的数值",
+        "topics": [
+          {
+            "en": "Reachable states",
+            "zh": "可达状态"
+          },
+          {
+            "en": "Set union",
+            "zh": "集合并集"
+          }
+        ],
+        "steps": [
+          "After one step the set is $\\{4,5\\}$. After two it is $\\{7,8,10\\}$: both $4\\times2$ and $5+3$ lead to $8$.",
+          "The last step produces $\\{10,14\\}$ from $7$, $\\{11,16\\}$ from $8$, and $\\{13,20\\}$ from $10$. These six values are distinct."
+        ],
+        "stepsZh": [
+          "第一步后是 $\\{4,5\\}$。第二步后是 $\\{7,8,10\\}$，其中 $4\\times2$ 和 $5+3$ 都得到 $8$。",
+          "最后一步从 $7$ 得 $\\{10,14\\}$，从 $8$ 得 $\\{11,16\\}$，从 $10$ 得 $\\{13,20\\}$。这六个数互不相同。"
+        ]
+      },
+      {
+        "title": "Classify by the number of doublings",
+        "titleZh": "按乘 2 的次数分类",
+        "topics": [
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          },
+          {
+            "en": "Order of operations",
+            "zh": "运算顺序"
+          }
+        ],
+        "steps": [
+          "With zero doublings the endpoint is $11$, and with three it is $16$.",
+          "With exactly one doubling, putting it first, second or last gives $10,13,16$. With exactly two doublings, putting the sole addition first, second or last gives $20,14,11$.",
+          "The two middle cases supply six different numbers. The zero- and three-doubling cases repeat two of them, so the total is $6$."
+        ],
+        "stepsZh": [
+          "乘 $2$ 零次时终点为 $11$，乘三次时终点为 $16$。",
+          "若只乘一次，把它放在第一、第二或第三步，依次得到 $10,13,16$。若乘两次，把唯一的加法放在第一、第二或第三步，依次得到 $20,14,11$。",
+          "中间两类共给出六个不同终点，零次和三次的终点都已包含在内，因此共有 $6$ 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/8"
+  },
+  "amc8-2024-q9": {
+    "summary": "Three color counts satisfy $G=2R$ and $B=2G$. Which total in the interval $24$ through $28$ is achievable?",
+    "summaryZh": "三种颜色的数量满足 $G=2R$ 和 $B=2G$。在 $24$ 至 $28$ 之间，哪个整数可能是总数？",
+    "answer": "E. $28$ marbles.",
+    "answerZh": "E．$28$ 颗。",
+    "methods": [
+      {
+        "title": "Form one ratio packet",
+        "titleZh": "按最小整数比分组",
+        "topics": [
+          {
+            "en": "Ratios and proportions",
+            "zh": "比和比例"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          }
+        ],
+        "steps": [
+          "For every red marble, there are two green and four blue. A complete ratio packet has $1+2+4=7$ marbles. The total is therefore divisible by $7$.",
+          "Within the specified interval only $28$ is divisible by $7$. Four packets give $4$ red, $8$ green and $16$ blue, verifying that it works."
+        ],
+        "stepsZh": [
+          "每一颗红色对应两颗绿色和四颗蓝色。按比例组成一组，就有 $1+2+4=7$ 颗，总数必须是 $7$ 的倍数。",
+          "在给定范围内，只有 $28$ 能被 $7$ 整除。取四组得到红 $4$、绿 $8$、蓝 $16$，符合条件。"
+        ]
+      },
+      {
+        "title": "Bound the smallest color count",
+        "titleZh": "从最少的一种颜色估计",
+        "topics": [
+          {
+            "en": "Bounding",
+            "zh": "范围估计"
+          },
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          }
+        ],
+        "steps": [
+          "If there are at most three red marbles, there are at most six green and twelve blue, so the total is at most $21$. If there are at least five red marbles, there are at least ten green and twenty blue, for a total of at least $35$.",
+          "Every candidate is strictly between $21$ and $35$. The red count must therefore be four; the other counts are eight and sixteen, and the total is $28$."
+        ],
+        "stepsZh": [
+          "若红色至多三颗，则绿色至多六颗、蓝色至多十二颗，总数至多 $21$。若红色至少五颗，则绿色至少十颗、蓝色至少二十颗，总数至少 $35$。",
+          "所有候选总数都严格在 $21$ 和 $35$ 之间，故红色只能有四颗。绿色八颗、蓝色十六颗，总数为 $28$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/9"
+  },
+  "amc8-2024-q10": {
+    "summary": "Model a concentration starting at $338$ ppm in January 1980 with a constant yearly increase of $1.515$ ppm. Predict the January 2030 reading to the nearest whole ppm.",
+    "summaryZh": "设 1980 年 1 月的浓度为 $338$ ppm，此后每年增加 $1.515$ ppm。按此模型估算 2030 年 1 月的浓度，并取最接近的整数。",
+    "answer": "B. $414$ ppm.",
+    "answerZh": "B. $414$ ppm。",
+    "methods": [
+      {
+        "title": "Count intervals, then multiply",
+        "titleZh": "先数时间间隔，再求累计增量",
+        "steps": [
+          "One year takes the reading from January 1980 to January 1981. There are $2030-1980=50$ such intervals.",
+          "The cumulative increase is $50(1.515)=75.75$ ppm. Adding it to the starting value gives $413.75$ ppm, which rounds to $414$ ppm."
+        ],
+        "stepsZh": [
+          "从 1980 年 1 月到 1981 年 1 月才算一次增长；到 2030 年 1 月一共经过 $2030-1980=50$ 个间隔。",
+          "总增量为 $50(1.515)=75.75$ ppm。加回初值，预测读数为 $413.75$ ppm，取整得到 $414$ ppm。"
+        ],
+        "topics": [
+          {
+            "en": "Linear growth",
+            "zh": "线性增长"
+          },
+          {
+            "en": "Rounding",
+            "zh": "四舍五入"
+          }
+        ]
+      },
+      {
+        "title": "Estimate first and bound the correction",
+        "titleZh": "先估算，再用误差范围取整",
+        "steps": [
+          "At exactly $1.5$ ppm per year, the prediction after fifty years would be $338+75=413$ ppm.",
+          "The true rate exceeds $1.5$ by more than $0.01$ and less than $0.02$. The fifty-year correction is therefore strictly between $0.5$ and $1$ ppm. Every value strictly between $413.5$ and $414$ rounds to $414$."
+        ],
+        "stepsZh": [
+          "若年增量恰为 $1.5$ ppm，五十年后的估计值就是 $338+75=413$ ppm。",
+          "实际年增量比 $1.5$ 多出的部分大于 $0.01$、小于 $0.02$。五十年累计修正量就在 $0.5$ 与 $1$ 之间；预测值严格介于 $413.5$ 和 $414$ 之间，取整必为 $414$。"
+        ],
+        "topics": [
+          {
+            "en": "Estimation",
+            "zh": "估算"
+          },
+          {
+            "en": "Inequalities",
+            "zh": "不等式"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/10"
+  },
+  "amc8-2024-q11": {
+    "summary": "A triangle of area $12$ has two vertices $(5,7)$ and $(11,7)$. Its third vertex lies on $x=3$ above the line $y=7$. Find its vertical coordinate.",
+    "summaryZh": "一个面积为 $12$ 的三角形，有两个顶点 $(5,7)$ 和 $(11,7)$。第三个顶点位于直线 $x=3$ 上，且高于 $y=7$，求其纵坐标。",
+    "answer": "D. $y=11$.",
+    "answerZh": "D. $y=11$。",
+    "methods": [
+      {
+        "title": "Use the horizontal base",
+        "titleZh": "选取水平底边",
+        "steps": [
+          "The two given points determine a horizontal base of length $11-5=6$. Its supporting line is $y=7$, so the perpendicular height is $y-7$ even though the perpendicular meets the extension of the base.",
+          "Since $12=6(y-7)/2$, the height is $4$. The required coordinate is $7+4=11$."
+        ],
+        "stepsZh": [
+          "已知的两个点给出一条长为 $11-5=6$ 的水平底边。底边所在直线是 $y=7$，即使垂足落在延长线上，高仍为 $y-7$。",
+          "由 $12=6(y-7)/2$ 得高为 $4$，所以所求纵坐标为 $7+4=11$。"
+        ],
+        "topics": [
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ]
+      },
+      {
+        "title": "Compare two triangles with a common altitude",
+        "titleZh": "比较两个同高三角形",
+        "steps": [
+          "Drop the third vertex vertically to $(3,7)$. From that foot to the near endpoint the horizontal distance is $2$, and from there to the far endpoint it is another $6$. These two adjacent base segments make triangles with the same altitude.",
+          "The small triangle on base $2$ has one third of the given triangle's area, hence area $4$. Its legs have lengths $2$ and $y-7$, so its area also equals $y-7$. This gives $y=11$."
+        ],
+        "stepsZh": [
+          "从第三个顶点向下作垂线到 $(3,7)$。从垂足到靠近的已知顶点，水平距离为 $2$；再到另一个顶点的距离为 $6$。相邻两段作底时，两个三角形的高相同。",
+          "以长为 $2$ 的一段作底的小三角形，面积是原三角形的三分之一，即 $4$。它的两条直角边长为 $2$ 和 $y-7$，面积又恰好等于 $y-7$。所以 $y=11$。"
+        ],
+        "topics": [
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          },
+          {
+            "en": "Right triangles",
+            "zh": "直角三角形"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/11"
+  },
+  "amc8-2024-q12": {
+    "summary": "Four tanks together hold $90$ guppies. Compared with the tank immediately before it, the second has one more fish, the third has two more, and the fourth has three more. How many guppies are in the fourth tank?",
+    "summaryZh": "四个鱼缸共养了 $90$ 条孔雀鱼。与前一个缸相比，第二缸多一条，第三缸多两条，第四缸多三条。第四缸中有多少条鱼？",
+    "answer": "E. $26$ guppies.",
+    "answerZh": "E. 第四缸有 $26$ 条鱼。",
+    "methods": [
+      {
+        "title": "Build the counts from the first tank",
+        "titleZh": "从第一缸逐项累加",
+        "steps": [
+          "If the first tank holds $x$, the counts in order are $x$, $x+1$, $x+3$, and $x+6$. The increases stated in the problem are successive differences.",
+          "Adding gives $4x+10=90$, so $x=20$. The fourth tank holds $20+6=26$."
+        ],
+        "stepsZh": [
+          "设第一缸有 $x$ 条鱼。后面各缸应依次加上前面的全部增量，所以四缸分别为 $x,x+1,x+3,x+6$。",
+          "由总数得 $4x+10=90$，解出 $x=20$。第四缸有 $20+6=26$ 条。"
+        ],
+        "topics": [
+          {
+            "en": "Linear equations",
+            "zh": "一次方程"
+          },
+          {
+            "en": "Cumulative sums",
+            "zh": "累加"
+          }
+        ]
+      },
+      {
+        "title": "Top up the three smaller tanks",
+        "titleZh": "把前三缸补到与第四缸相同",
+        "steps": [
+          "Imagine topping each tank up to the fourth tank's level. The third needs $3$, the second needs $3+2=5$, and the first needs $3+2+1=6$.",
+          "Adding these $14$ imaginary fish gives four equal tanks containing $104$ fish altogether. Their common count, already present in the fourth tank, is $104/4=26$."
+        ],
+        "stepsZh": [
+          "以第四缸为标准补齐各缸。第三缸差 $3$ 条，第二缸差 $3+2=5$ 条，第一缸差 $3+2+1=6$ 条。",
+          "总共补入 $14$ 条，四个相同的缸合计就有 $104$ 条。每缸 $104/4=26$ 条，这正是第四缸原有的数量。"
+        ],
+        "topics": [
+          {
+            "en": "Equalisation",
+            "zh": "补齐法"
+          },
+          {
+            "en": "Working backwards",
+            "zh": "逆推"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/12"
+  },
+  "amc8-2024-q13": {
+    "summary": "Count six-step walks that begin and end at height $0$, move by $+1$ or $-1$ at each step, and never visit a negative height.",
+    "summaryZh": "从高度 $0$ 出发，每一步上升或下降 $1$，全程高度不能为负。求六步后恰好回到 $0$ 的走法数。",
+    "answer": "B. $5$ sequences.",
+    "answerZh": "B. $5$ 种走法。",
+    "methods": [
+      {
+        "title": "Split at the first return",
+        "titleZh": "按第一次回到地面的时刻分类",
+        "steps": [
+          "The first return to height zero can occur on step $2$, $4$, or $6$. A nonnegative four-step walk that returns to zero is either $UUDD$ or $UDUD$, where $U$ means up and $D$ means down.",
+          "A first return at step $2$ starts with $UD$ and leaves two possible four-step walks. A first return at step $4$ must start with $UUDD$ and finish with $UD$, giving one possibility.",
+          "For a first return at step $6$, remove the opening $U$ and closing $D$. The middle four steps form a return walk above the old floor, with their new floor at height one. There are two possibilities. Thus $2+1+2=5$."
+        ],
+        "stepsZh": [
+          "第一次回到高度零只可能发生在第 $2,4,6$ 步。记上行为 $U$、下行为 $D$；四步之内不低于起点并回到起点的序列只有 $UUDD$ 和 $UDUD$。",
+          "若第 $2$ 步首次返回，前缀是 $UD$，余下四步有两种。若第 $4$ 步首次返回，前缀只能是 $UUDD$，余下只能走 $UD$，得一种。",
+          "若第 $6$ 步才首次返回，删掉首步 $U$ 与末步 $D$；把高度一当作新地面，中间四步便是一个不能低于新地面的往返序列，有两种。因此总数为 $2+1+2=5$。"
+        ],
+        "topics": [
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          },
+          {
+            "en": "Lattice paths",
+            "zh": "格点路径"
+          }
+        ]
+      },
+      {
+        "title": "Reflect the walks that go below zero",
+        "titleZh": "把越过地面的路径作反射",
+        "steps": [
+          "Without the floor, any choice of three of the six steps for the upward moves returns to zero, so there are $\\binom{6}{3}=20$ candidates.",
+          "For an invalid walk, interchange up and down through its first visit to $-1$. That prefix used to have one more down than up; it now has one more up than down. The transformed six-step walk therefore has four ups and two downs.",
+          "Every walk with four ups and two downs visits $+1$; reflecting through its first such visit reverses the construction. Hence exactly $\\binom{6}{2}=15$ candidates go below zero, leaving $20-15=5$."
+        ],
+        "stepsZh": [
+          "先忽略地面。六步中只要选出三步上行，最后就会回到零，共有 $\\binom{6}{3}=20$ 个候选序列。",
+          "对一条不合规路径，找到首次到达 $-1$ 的时刻，把截至该时刻的所有上、下步对换。这段原本多一个下步，现在多一个上步，整条路径变成四上两下。",
+          "反过来，四上两下的路径必定经过 $+1$；在首次到达 $+1$ 时反射前缀，就能还原原来的违规路径。这类路径有 $\\binom{6}{2}=15$ 条，因此合规路径有 $20-15=5$ 条。"
+        ],
+        "topics": [
+          {
+            "en": "Reflection principle",
+            "zh": "反射原理"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/13"
+  },
+  "amc8-2024-q14": {
+    "summary": "Find the shortest directed route from $A$ to $Z$. Outgoing edges (destination, km) are $A:(X,5),(M,8)$; $X:(M,2),(Y,10)$; $M:(Y,6),(C,14),(Z,25)$; $Y:(C,5),(Z,17)$; $C:(Z,10)$.",
+    "summaryZh": "求 $A$ 到 $Z$ 的最短有向路径。按起点列出每条出边的终点和公里数，$A:(X,5),(M,8)$；$X:(M,2),(Y,10)$；$M:(Y,6),(C,14),(Z,25)$；$Y:(C,5),(Z,17)$；$C:(Z,10)$。",
+    "answer": "A. $28$ km.",
+    "answerZh": "A. $28$ 千米。",
+    "methods": [
+      {
+        "title": "Compare distances when entering each town",
+        "titleZh": "依次比较到达各城镇的距离",
+        "steps": [
+          "From $A$ the cheapest distances to $X$ and $M$ are $5$ and $\\min(8,5+2)=7$. To reach $Y$, compare $5+10$ with $7+6$ and keep $13$.",
+          "The minimum at $C$ is $\\min(7+14,13+5)=18$. At $Z$ it is $\\min(7+25,13+17,18+10)=28$. Each minimum uses all of that town's possible incoming edges, so no other route can be shorter."
+        ],
+        "stepsZh": [
+          "从 $A$ 到 $X$ 的最短距离是 $5$，到 $M$ 是 $\\min(8,5+2)=7$。到 $Y$ 时比较 $5+10$ 和 $7+6$，取 $13$。",
+          "到 $C$ 的最短距离为 $\\min(7+14,13+5)=18$。到 $Z$ 时取 $\\min(7+25,13+17,18+10)=28$。每次都已比较该点所有可能的入边，故没有遗漏更短路线。"
+        ],
+        "topics": [
+          {
+            "en": "Shortest paths",
+            "zh": "最短路径"
+          },
+          {
+            "en": "Dynamic programming",
+            "zh": "动态规划"
+          }
+        ]
+      },
+      {
+        "title": "Replace every shortcut by a cheaper detour",
+        "titleZh": "逐一排除较贵的跨站直达路线",
+        "steps": [
+          "Consider the chain $A,X,M,Y,C,Z$. Its consecutive edges cost $5,2,6,5,10$. Direct edges that skip towns can be compared with the corresponding piece of this chain.",
+          "$A$ to $M$ costs $8$ directly against $7$ along the chain. The comparisons for $X$ to $Y$, $M$ to $C$, $M$ to $Z$, and $Y$ to $Z$ are respectively $10>8$, $14>11$, $25>21$, and $17>15$.",
+          "Every route that skips a town can therefore be improved. Following the entire chain gives the minimum $5+2+6+5+10=28$ km."
+        ],
+        "stepsZh": [
+          "考察经过所有城镇的链 $A,X,M,Y,C,Z$。五段依次长 $5,2,6,5,10$；凡是跳过中间城镇的直达边，都可与链上相应一段比较。",
+          "$A$ 到 $M$ 直达长 $8$，经过 $X$ 只要 $7$。类似地，$X$ 到 $Y$、$M$ 到 $C$、$M$ 到 $Z$、$Y$ 到 $Z$ 的比较分别为 $10>8$、$14>11$、$25>21$、$17>15$。",
+          "所有跨站直达边都可换成更短的分段路线。故沿整条链行驶最短，全长 $5+2+6+5+10=28$ 千米。"
+        ],
+        "topics": [
+          {
+            "en": "Dominance",
+            "zh": "比较与排除"
+          },
+          {
+            "en": "Weighted graphs",
+            "zh": "带权图"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/14"
+  },
+  "amc8-2024-q15": {
+    "summary": "A six-digit number is formed by repeating a three-digit block $a$ twice. Multiplying it by $8$ gives two copies of another three-digit block $b$. All six digit positions across the two blocks are distinct. For the largest admissible $a$, find $a+b$.",
+    "summaryZh": "把三位数 $a$ 连写两遍得到六位数；把这个六位数乘 $8$，恰好得到另一个三位数 $b$ 连写两遍的结果。两个三位数所用的六个数字互不相同。取最大的可行 $a$，求 $a+b$。",
+    "answer": "C. $1107$.",
+    "answerZh": "C. $1107$。",
+    "methods": [
+      {
+        "title": "Bound the smaller block",
+        "titleZh": "先界定较小数字块的范围",
+        "steps": [
+          "Repeating a three-digit block multiplies it by $1001$, so $8(1001a)=1001b$ reduces to $b=8a$. Maximising the six-digit input is equivalent to maximising $a$.",
+          "Since $b$ has three digits, $a\\leq\\lfloor999/8\\rfloor=124$. But $8(124)=992$ repeats the digit $9$. For the next value, $8(123)=984$, and $1,2,3,9,8,4$ are distinct. Thus $a+b=123+984=1107$."
+        ],
+        "stepsZh": [
+          "三位数字块连写两遍，相当于乘 $1001$。因此 $8(1001a)=1001b$ 可化为 $b=8a$。要使原六位数最大，只需让 $a$ 最大。",
+          "$b$ 是三位数，故 $a\\leq\\lfloor999/8\\rfloor=124$。但 $8(124)=992$ 中的 $9$ 重复。退到 $123$ 时，$8(123)=984$，六个数字 $1,2,3,9,8,4$ 两两不同，故 $a+b=123+984=1107$。"
+        ],
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "十进制位值"
+          },
+          {
+            "en": "Digit constraints",
+            "zh": "数字约束"
+          }
+        ]
+      },
+      {
+        "title": "Bound the product using distinct digits",
+        "titleZh": "用互异数字限制乘积上界",
+        "steps": [
+          "Writing the repeated numbers as $1001a$ and $1001b$ gives $b=8a$. The largest three-digit number with different digits is $987$ (choose the digits from left to right).",
+          "The greatest multiple of $8$ at most $987$ is $984$, since $984=8(123)$ and the next multiple is $992$. The blocks $984$ and $123$ satisfy every digit restriction. They maximise both $b$ and $a$, and their sum is $1107$."
+        ],
+        "stepsZh": [
+          "把连写后的数记作 $1001a$ 和 $1001b$，约去公因数得 $b=8a$。百位、十位、个位从左到右选取最大的不同数字，得到 $b\\leq987$。",
+          "不超过 $987$ 的最大 $8$ 的倍数是 $984=8(123)$，下一个是 $992$。$984$ 与 $123$ 的六个数字符合全部限制，于是二者同时最大，所求和为 $1107$。"
+        ],
+        "topics": [
+          {
+            "en": "Extremal bounds",
+            "zh": "极值界"
+          },
+          {
+            "en": "Multiples",
+            "zh": "倍数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/15"
+  },
+  "amc8-2024-q16": {
+    "summary": "Arrange the integers $1$ through $81$ once each in a $9\\times9$ grid. Form the nine row products and the nine column products. What is the least number of these eighteen products that can be divisible by $3$?",
+    "summaryZh": "把 $1$ 到 $81$ 这八十一个整数各用一次填入 $9\\times9$ 方格。分别计算九行及九列中各数的乘积。这十八个乘积中，最少能有几个被 $3$ 整除？",
+    "answer": "D. $11$ rows and columns in total.",
+    "answerZh": "D. 行数与列数之和最小为 $11$。",
+    "methods": [
+      {
+        "title": "Bound the enclosing rectangle",
+        "titleZh": "用覆盖这些格子的矩形计数",
+        "steps": [
+          "Since $3$ is prime, a product is divisible by $3$ exactly when one of its factors is a multiple of $3$. There are $27$ multiples of $3$. If they occupy $r$ different rows and $c$ different columns, all of them must lie in the $rc$ intersections, so $rc\\ge27$.",
+          "If $r+c\\le10$, then $4rc=(r+c)^2-(r-c)^2\\le100$. That would allow at most $25$ cells. Thus at least $11$ lines are necessary.",
+          "A $4\\times7$ rectangle contains $28$ cells. Choose any $27$ of them for the multiples and put the remaining numbers in the other cells. This uses all four selected rows and all seven selected columns, giving exactly $11$."
+        ],
+        "stepsZh": [
+          "由于 $3$ 是质数，乘积能被 $3$ 整除当且仅当其因数中有 $3$ 的倍数。在 $1$ 到 $81$ 中有 $27$ 个 $3$ 的倍数。若它们占据 $r$ 行和 $c$ 列，便都落在这 $rc$ 个交点上，必须有 $rc\\ge27$。",
+          "若 $r+c\\le10$，则 $4rc=(r+c)^2-(r-c)^2\\le100$，最多容纳 $25$ 个格子。因此至少需要 $11$ 条行或列。",
+          "取一个 $4\\times7$ 矩形，从 $28$ 格中任选 $27$ 格填倍数，其余位置填其他数。这时恰好涉及 $4$ 行与 $7$ 列，最小值可以达到。"
+        ],
+        "topics": [
+          {
+            "en": "Product bounds",
+            "zh": "乘积上界"
+          },
+          {
+            "en": "Extremal constructions",
+            "zh": "极值构造"
+          }
+        ]
+      },
+      {
+        "title": "Classify by the shorter side",
+        "titleZh": "按照行数与列数中的较小值分类",
+        "steps": [
+          "Mark the $27$ multiples of $3$. By primality, precisely the rows and columns meeting a mark contribute a divisible product. Interchange rows and columns if necessary so that the number of occupied rows $r$ does not exceed the number of occupied columns $c$. With two rows or fewer even nine columns hold at most $18$ multiples.",
+          "Three rows need all nine columns. Four rows need at least seven columns, and five rows need at least six. With six or more rows the assumption $c\\ge r$ already forces at least $12$ lines. Every feasible case has at least $11$.",
+          "To realise the five-row case, reserve a $5\\times6$ block. Fill any $27$ of its $30$ cells with the multiples. Removing only three cells cannot empty a full row or column of the block, so exactly $5+6=11$ lines are counted."
+        ],
+        "stepsZh": [
+          "标出 $27$ 个 $3$ 的倍数。由于 $3$ 是质数，恰好是有标记的行或列，其乘积可被 $3$ 整除。必要时交换行与列，设占用的行数 $r$ 不超过占用的列数 $c$。若最多占用两行，即使用足九列，也只能容纳 $18$ 个倍数。",
+          "若有三行，就要占用九列；若有四行，至少要七列；若有五行，至少要六列。若行数达到六，列数也至少为六。以上各种可行情形都至少涉及 $11$ 条行或列。",
+          "在一个 $5\\times6$ 方块的 $30$ 格中任选 $27$ 格填写这些倍数。空出三格不足以空掉整行或整列，故这一摆法恰好占到 $5+6=11$ 条。"
+        ],
+        "topics": [
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          },
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/16"
+  },
+  "amc8-2024-q17": {
+    "summary": "On a $3\\times3$ board, place one white king and one black king on different squares. Count placements where the two squares are nonadjacent, including diagonal adjacency among the forbidden cases.",
+    "summaryZh": "在 $3\\times3$ 棋盘上给黑王和白王各选一个不同的格子，要求两格不能水平、竖直或对角相邻。求可行摆法数。",
+    "answer": "E. $32$ placements.",
+    "answerZh": "E. $32$ 种摆法。",
+    "methods": [
+      {
+        "title": "Group the white king's squares by symmetry",
+        "titleZh": "按白王的位置类型分类",
+        "steps": [
+          "In a corner the white king rules out its own square and the three neighbouring squares. This leaves five choices for black, and there are four possible white corners.",
+          "At the midpoint of an edge, white rules out its own square and five others, leaving three choices in each of four cases. A white king in the centre leaves no legal square. The total is $4(5)+4(3)+1(0)=32$."
+        ],
+        "stepsZh": [
+          "白王在角上时，除自身格外还攻击三个相邻格，黑王剩五格可选。白王有四个角可放。",
+          "白王在边的中点时，除自身格外还攻击五格，黑王剩三格可选，这类边格也有四个。若白王居中，则黑王无处可放。合计 $4(5)+4(3)+1(0)=32$ 种。"
+        ],
+        "topics": [
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          {
+            "en": "Multiplication principle",
+            "zh": "乘法原理"
+          }
+        ]
+      },
+      {
+        "title": "Separate by two rows or by two columns",
+        "titleZh": "按行距或列距为二计数",
+        "steps": [
+          "Two kings are safe exactly when their row numbers differ by two or their column numbers differ by two. For rows differing by two, choose which colour is on the top row in two ways and give each colour one of three columns. This accounts for $2(3)(3)=18$ placements.",
+          "The same count $18$ applies to columns differing by two. Both conditions hold only for opposite corners: there are four choices for white and then the black corner is forced. Inclusion–exclusion gives $18+18-4=32$."
+        ],
+        "stepsZh": [
+          "两王互不攻击，当且仅当行号相差二，或列号相差二。行号相差二时，先选哪一种颜色在最上行，有两种；再为每一种颜色各选一列，有 $2(3)(3)=18$ 种。",
+          "列号相差二同样有 $18$ 种。两项都满足时，双方恰在相对的角上，白王可选四个角，而黑王的位置唯一。用容斥原理得 $18+18-4=32$。"
+        ],
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Ordered pairs",
+            "zh": "有序对"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/17"
+  },
+  "amc8-2024-q18": {
+    "summary": "Work in a disk of radius 3. Radii 1 and 2 cut it into three bands. The middle band is colored in full, the center is blank, and only a sector of the outer band is colored. Find the sector angle when the two colors cover equal areas.",
+    "summaryZh": "半径为 3 的圆盘按半径 1、2 分区。中间的圆环全部着色，最内层不着色，最外层只着色一个环形扇区。若着色区占圆盘的一半，求该扇区的圆心角。",
+    "answer": "A. $108^\\circ$.",
+    "answerZh": "A．$108^\\circ$。",
+    "methods": [
+      {
+        "title": "Determine the required fraction of the outer ring",
+        "titleZh": "求最外层所需的面积比例",
+        "steps": [
+          "Measure area in units of $\\pi$. The disk has area $9$, so the target is $9/2$. The middle ring already contributes $2^2-1^2=3$.",
+          "The missing $9/2-3=3/2$ must come from the outer ring, whose area is $3^2-2^2=5$. The fraction to color is $(3/2)/5=3/10$, so the angle is $(3/10)360^\\circ=108^\\circ$."
+        ],
+        "stepsZh": [
+          "用 $\\pi$ 作面积单位。整个圆盘面积为 $9$，着色面积应为 $9/2$，中间圆环已占 $2^2-1^2=3$。",
+          "最外环共 $3^2-2^2=5$ 个面积单位，还需取出 $9/2-3=3/2$。所占比例为 $(3/2)/5=3/10$，对应圆心角为 $(3/10)360^\\circ=108^\\circ$。"
+        ],
+        "topics": [
+          {
+            "en": "Annulus area",
+            "zh": "圆环面积"
+          },
+          {
+            "en": "Sector angle",
+            "zh": "扇形圆心角"
+          }
+        ]
+      },
+      {
+        "title": "Start with a half-ring and rebalance",
+        "titleZh": "从半个外环出发调整面积",
+        "steps": [
+          "Temporarily color exactly half the outer ring. Its two halves cancel in the comparison, so colored area exceeds blank area by $3\\pi-\\pi=2\\pi$ from the two inner regions.",
+          "Moving area $\\pi$ from colored to blank closes this gap, because it changes both totals. This is one fifth of the outer ring, equivalent to $72^\\circ$. The desired angle is $180^\\circ-72^\\circ=108^\\circ$."
+        ],
+        "stepsZh": [
+          "暂取半个外环着色。最外层着色和空白部分等大，内层中间圆环比中心圆盘大 $3\\pi-\\pi=2\\pi$，所以着色总面积多 $2\\pi$。",
+          "把 $\\pi$ 的面积由着色改为空白，一边减少、另一边增加，差恰好消失。改色部分是外环的五分之一，即 $72^\\circ$，所以所求角为 $180^\\circ-72^\\circ=108^\\circ$。"
+        ],
+        "topics": [
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          {
+            "en": "Area comparison",
+            "zh": "面积比较"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/18"
+  },
+  "amc8-2024-q19": {
+    "summary": "A collection contains $15$ pairs of sneakers. Three fifths of the pairs are red, and two thirds of the pairs are high-tops. What is the smallest possible fraction of the collection that is both red and high-top? Give a common fraction.",
+    "summaryZh": "一共有 $15$ 双运动鞋，其中五分之三是红色，三分之二是高帮。既是红色又是高帮的鞋，最少占全部运动鞋的几分之几？",
+    "answer": "C. $\\frac{4}{15}$.",
+    "answerZh": "C．$\\frac{4}{15}$。",
+    "methods": [
+      {
+        "title": "Use the capacity of the low-top group",
+        "titleZh": "利用低帮组的容量",
+        "steps": [
+          "The two group sizes are $15(3/5)=9$ and $15(2/3)=10$. There are only $15-10=5$ low-top pairs. Even if all five are red, at least $9-5=4$ red pairs must be high-top.",
+          "This bound is possible: make all five low-top pairs red and let the high tops consist of the other four red pairs and six white pairs. The required minimum is $4/15$."
+        ],
+        "stepsZh": [
+          "红色与高帮两类的数量分别为 $15(3/5)=9$ 双和 $15(2/3)=10$ 双。低帮只有 $15-10=5$ 双。即使这五双全是红色，仍有至少 $9-5=4$ 双红鞋必须放进高帮组。",
+          "令五双低帮全是红色，高帮由其余四双红鞋和六双白鞋组成，恰好满足条件。最小比例为 $4/15$。"
+        ],
+        "topics": [
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          },
+          {
+            "en": "Extremal arrangements",
+            "zh": "极端配置"
+          }
+        ]
+      },
+      {
+        "title": "Count a union",
+        "titleZh": "用集合的并集计数",
+        "steps": [
+          "The two group sizes are $15(3/5)=9$ and $15(2/3)=10$. Let $x$ be the number in both groups. Counting red pairs and high-top pairs separately counts $9+10-x$ different pairs. This cannot exceed $15$, giving $x\\ge4$.",
+          "Equality means every pair is red or high-top. Put the six nonred pairs in the high-top group, together with four red pairs. This realizes $x=4$, hence $4/15$ of the collection."
+        ],
+        "stepsZh": [
+          "红色与高帮两类的数量分别为 $15(3/5)=9$ 双和 $15(2/3)=10$ 双。设两类的交集有 $x$ 双。红色与高帮并集共有 $9+10-x$ 双，不能多于 $15$，故 $x\\ge4$。",
+          "取等要求每双鞋至少属于一类。把六双非红鞋都归到高帮组，再补四双红鞋即可实现。交集占 $4/15$。"
+        ],
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Fractions",
+            "zh": "分数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/19"
+  },
+  "amc8-2024-q20": {
+    "summary": "Fix a corner of a cube. Count the equilateral triangles that include this corner and have their other two vertices at cube corners.",
+    "summaryZh": "固定正方体的一个顶点，求以它和另两个正方体顶点组成的等边三角形个数。",
+    "answer": "D. $3$ triangles.",
+    "answerZh": "D．$3$ 个。",
+    "methods": [
+      {
+        "title": "Compare three possible distances",
+        "titleZh": "比较三种顶点距离",
+        "steps": [
+          "For a unit cube the other corners are at distance $1$, $\\sqrt2$, or $\\sqrt3$. Two edges from the fixed corner meet at right angles, and only one corner is at distance $\\sqrt3$. Both remaining vertices must therefore be at distance $\\sqrt2$.",
+          "There are three possible face-diagonal endpoints. Each pair of endpoints is connected by the diagonal of another face, so each pair works. There are $\\binom32=3$ pairs."
+        ],
+        "stepsZh": [
+          "设棱长为 $1$，其余顶点到固定点的距离为 $1$、$\\sqrt2$ 或 $\\sqrt3$。从同一顶点引出的两条棱互相垂直，空间对角线的另一端只有一个。因此等边三角形的两条邻边只能是面对角线。",
+          "固定点可连到三个面对角线端点，它们中任意两点又恰好是另一条面对角线的两端。任选两点均可，共 $\\binom32=3$ 个。"
+        ],
+        "topics": [
+          {
+            "en": "Spatial geometry",
+            "zh": "立体几何"
+          },
+          {
+            "en": "Choosing pairs",
+            "zh": "选取无序对"
+          }
+        ]
+      },
+      {
+        "title": "Use the cube’s two vertex colors",
+        "titleZh": "对正方体顶点进行二染色",
+        "steps": [
+          "Use binary coordinates $(x,y,z)$ for the corners and color them by the parity of $x+y+z$. Two distinct corners of the same color differ in exactly two coordinates, so their distance is $\\sqrt2$.",
+          "Among any three corners two have the same color. An equilateral triangle therefore has side $\\sqrt2$; moving such a distance always preserves color. All its vertices must have the fixed corner’s color. Of the other three corners of that color, any two give a triangle, for a total of three."
+        ],
+        "stepsZh": [
+          "以 $(x,y,z)$ 表示顶点，坐标各取 $0$ 或 $1$，按 $x+y+z$ 的奇偶染色。同色的两个不同顶点恰好有两项坐标不同，距离均为 $\\sqrt2$。",
+          "任意三个顶点必有两个同色，故等边三角形的边长只能是 $\\sqrt2$。按这个距离相连的点总是同色，因此三个顶点都与固定点同色。同色的另外三个点任选两个就构成一个等边三角形，共三个。"
+        ],
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Regular tetrahedron",
+            "zh": "正四面体"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/20"
+  },
+  "amc8-2024-q21": {
+    "summary": "A frog population has two color groups. Green to yellow begins at $3:1$. Three greens become yellow and five yellows become green, changing the ratio to $4:1$. Find the final excess of green over yellow.",
+    "summaryZh": "一群青蛙最初的绿黄数量比为 $3:1$。三只由绿变黄，五只由黄变绿后，绿黄比变为 $4:1$。求最后绿蛙比黄蛙多多少只。",
+    "answer": "E. $24$ frogs.",
+    "answerZh": "E．$24$ 只。",
+    "methods": [
+      {
+        "title": "Track the yellow share of the total",
+        "titleZh": "跟踪黄蛙占总数的比例",
+        "steps": [
+          "The yellow count falls by $5-3=2$. Its share of the unchanged population falls from $1/4$ to $1/5$.",
+          "Thus $1/4-1/5=1/20$ of the population corresponds to two frogs, giving $40$ in total. The final difference is $(4/5-1/5)40=24$."
+        ],
+        "stepsZh": [
+          "黄蛙净减少 $5-3=2$ 只。青蛙总数固定，黄蛙所占比例从 $1/4$ 降至 $1/5$。",
+          "总数的 $1/4-1/5=1/20$ 对应两只，所以总数为 $40$。最后两类的数量差为 $(4/5-1/5)40=24$。"
+        ],
+        "topics": [
+          {
+            "en": "Conservation of totals",
+            "zh": "总量不变"
+          },
+          {
+            "en": "Ratios",
+            "zh": "比与比例"
+          }
+        ]
+      },
+      {
+        "title": "Reverse the change",
+        "titleZh": "从最终状态倒推",
+        "steps": [
+          "Write the final numbers as $4u$ green and $u$ yellow. Undoing the net transfer of two frogs to green gives the initial counts $4u-2$ and $u+2$.",
+          "The initial ratio yields $4u-2=3(u+2)$, so $u=8$. The final excess is $4u-u=3u=24$."
+        ],
+        "stepsZh": [
+          "设最后有 $4u$ 只绿蛙和 $u$ 只黄蛙。撤销两只由黄转绿的净变化，最初的数量分别为 $4u-2$ 和 $u+2$。",
+          "最初绿黄比为 $3:1$，所以 $4u-2=3(u+2)$，解得 $u=8$。最后相差 $4u-u=3u=24$ 只。"
+        ],
+        "topics": [
+          {
+            "en": "Working backwards",
+            "zh": "倒推法"
+          },
+          {
+            "en": "Linear equations",
+            "zh": "一元一次方程"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/21"
+  },
+  "amc8-2024-q22": {
+    "summary": "Estimate the length of tape of thickness $0.015$ inch packed between diameters 2 and 4 inches. Report the result to the nearest hundred inches.",
+    "summaryZh": "胶带厚 $0.015$ 英寸，卷成内径 2 英寸、外径 4 英寸的圆环。估算展开的长度，四舍五入到整百英寸。",
+    "answer": "B. $600$ inches.",
+    "answerZh": "B．$600$ 英寸。",
+    "methods": [
+      {
+        "title": "Unroll the cross section",
+        "titleZh": "比较展开前后的截面积",
+        "steps": [
+          "The relevant radii are $2$ and $1$ inches. If $L$ denotes the length in inches, a side view of the straight strip has area $0.015L$ square inches.",
+          "This equals the packed cross-sectional area $\\pi(2^2-1^2)=3\\pi$. Consequently $L=200\\pi\\approx628.3$ inches, which rounds to $600$."
+        ],
+        "stepsZh": [
+          "外、内半径分别为 $2$ 和 $1$ 英寸。设胶带长 $L$ 英寸，拉直后侧面的截面积为 $0.015L$ 平方英寸。",
+          "卷起时同一截面为面积 $\\pi(2^2-1^2)=3\\pi$ 的圆环。令二者相等得 $L=200\\pi\\approx628.3$ 英寸，取整百为 $600$。"
+        ],
+        "topics": [
+          {
+            "en": "Area conservation",
+            "zh": "面积守恒"
+          },
+          {
+            "en": "Rounding",
+            "zh": "四舍五入"
+          }
+        ]
+      },
+      {
+        "title": "Average the lengths of the turns",
+        "titleZh": "用平均每圈长度估算",
+        "steps": [
+          "The thickness of the wound section in the radial direction is $2-1=1$ inch. The number of turns is about $1/0.015=200/3$.",
+          "Each new turn increases the diameter by approximately the same amount. The average turn diameter is therefore about $(2+4)/2=3$ inches. Multiplying its circumference by the turn count gives $3\\pi(200/3)=200\\pi$ inches, or $600$ inches to the requested precision."
+        ],
+        "stepsZh": [
+          "沿半径方向共堆叠了 $2-1=1$ 英寸，因此圈数约为 $1/0.015=200/3$。",
+          "各圈直径近似等差增加，平均直径约为 $(2+4)/2=3$ 英寸。用平均每圈周长乘以圈数，得 $3\\pi(200/3)=200\\pi$ 英寸，取整百约为 $600$ 英寸。"
+        ],
+        "topics": [
+          {
+            "en": "Circumference",
+            "zh": "圆周长"
+          },
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Estimation",
+            "zh": "估算"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/22"
+  },
+  "amc8-2024-q23": {
+    "summary": "On a unit square grid, draw the segment joining $(2000,3000)$ to $(5000,8000)$. How many distinct squares have an interior point on the segment? Touching only a corner does not count.",
+    "summaryZh": "在单位方格纸上连接格点 $(2000,3000)$ 与 $(5000,8000)$。这条线段经过多少个不同方格的内部？仅在顶点接触的方格不算。",
+    "answer": "C. $7000$ squares.",
+    "answerZh": "C．$7000$ 格。",
+    "methods": [
+      {
+        "title": "Correct for double-counted crossings",
+        "titleZh": "扣除格点处的重复计数",
+        "steps": [
+          "The horizontal displacement is $5000-2000=3000$ and the vertical displacement is $8000-3000=5000$. Start in one cell. Before the endpoint there are $2999$ vertical and $4999$ horizontal line crossings. Each crossing enters one new cell, except that simultaneous vertical and horizontal crossings must be counted as one event.",
+          "The displacement is $1000(3,5)$ and $3,5$ are coprime, so the $999$ intermediate multiples of $(3,5)$ are exactly the simultaneous crossings. The count is $1+2999+4999-999=7000$."
+        ],
+        "stepsZh": [
+          "线段横向跨过 $5000-2000=3000$ 格，纵向跨过 $8000-3000=5000$ 格。从起始方格算起，终点前线段跨过 $2999$ 条竖线和 $4999$ 条横线。每次跨线会进入一个新方格，但在格点同时跨过横、竖线，只能算一次。",
+          "位移向量为 $1000(3,5)$，且 $3,5$ 互素，因此中间 $999$ 个 $(3,5)$ 的整数倍恰是全部同时跨线处。答案为 $1+2999+4999-999=7000$。"
+        ],
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Greatest common divisor",
+            "zh": "最大公因数"
+          }
+        ]
+      },
+      {
+        "title": "Inspect a three-column pattern",
+        "titleZh": "按三列为一组观察",
+        "steps": [
+          "Shift the start to the origin. Subtracting its coordinates from those of the end gives $(3000,5000)$. After three columns the height has increased by exactly five units, so the same pattern repeats $3000/3=1000$ times.",
+          "In the first three columns the heights at the boundaries are $0,5/3,10/3,5$. The segment passes through the interiors of two cells in the first column, three in the second, and two in the third. Distinct column groups share no cell interiors; hence $1000(2+3+2)=7000$."
+        ],
+        "stepsZh": [
+          "把起点平移至原点，终点的相对坐标为 $(5000-2000,8000-3000)=(3000,5000)$。每前进三列恰好升高五格，方格中的走向重复，共有 $3000/3=1000$ 组。",
+          "前三列四条边界上的高度依次为 $0,5/3,10/3,5$。第一列穿过两个方格内部，第二列穿过三个，第三列穿过两个。不同列组不共享方格内部，共经过 $1000(2+3+2)=7000$ 格。"
+        ],
+        "topics": [
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          },
+          {
+            "en": "Slope",
+            "zh": "斜率"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/23"
+  },
+  "amc8-2024-q24": {
+    "summary": "Two straight-sided mountain peaks, $8$ and $12$ feet high, form a single silhouette on level ground. Each sloping side makes a $45^\\circ$ angle with the ground. The silhouette has area $183$ square feet. How far above the ground do the two inward-facing slopes meet?",
+    "summaryZh": "同一水平地面上有一高一低两座山峰，高分别为 $8$ 和 $12$ 英尺。山坡均为直线，与地面成 $45^\\circ$ 角。两山的整体轮廓面积为 $183$ 平方英尺。两条内侧山坡的交点距地面多高？",
+    "answer": "B. $5$ feet.",
+    "answerZh": "B．$5$ 英尺。",
+    "methods": [
+      {
+        "title": "Subtract the shared triangular region",
+        "titleZh": "扣除重叠三角形",
+        "steps": [
+          "For a peak of height $t$, descending at slope of magnitude one takes $t$ horizontal feet on each side. Its area is $(2t)t/2=t^2$.",
+          "The overlap is another triangle of this shape, with its apex at the valley and height $h$. Its area is both $h^2$ and $8^2+12^2-183=25$. The positive height is $5$ feet."
+        ],
+        "stepsZh": [
+          "高度为 $t$ 的山峰，沿任一侧下降 $t$ 英尺时也平移 $t$ 英尺，因此底长为 $2t$，面积为 $(2t)t/2=t^2$。",
+          "两座山的重叠区仍是同形三角形，谷底就是它的顶点。设高为 $h$，则重叠面积既等于 $h^2$，又等于 $8^2+12^2-183=25$。取正值得 $h=5$ 英尺。"
+        ],
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Isosceles right triangles",
+            "zh": "等腰直角三角形"
+          }
+        ]
+      },
+      {
+        "title": "Partition the skyline into four strips",
+        "titleZh": "按轮廓折点竖切成四块",
+        "steps": [
+          "Draw verticals from the two peaks and the valley. The two outer strips are right triangles of areas $8^2/2$ and $12^2/2$.",
+          "The strip between the first peak and the valley has width $8-h$ and end heights $8,h$, hence area $(8-h)(8+h)/2$. The other inner strip contributes $(12-h)(12+h)/2$.",
+          "The sum of all four areas simplifies to $208-h^2$. Equating this with $183$ gives $h=5$."
+        ],
+        "stepsZh": [
+          "从两个峰顶和谷底分别作垂线。左右最外面的两块是直角三角形，面积为 $8^2/2$ 和 $12^2/2$。",
+          "第一个峰顶到谷底的横向距离为 $8-h$，两端高为 $8,h$，所以梯形面积为 $(8-h)(8+h)/2$。另一块中间梯形面积为 $(12-h)(12+h)/2$。",
+          "四块面积之和化简为 $208-h^2$，令其等于 $183$，解得正值 $h=5$。"
+        ],
+        "topics": [
+          {
+            "en": "Trapezoid area",
+            "zh": "梯形面积"
+          },
+          {
+            "en": "Geometric decomposition",
+            "zh": "图形分割"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/24"
+  },
+  "amc8-2024-q25": {
+    "summary": "Twelve seats form four rows of three. Eight passengers take seats, with each possible set of eight occupied seats equally likely. What is the probability that two more passengers can take neighboring seats in the same row? Give a common fraction.",
+    "summaryZh": "十二个座位分为四排，每排三个。已有八名乘客就座，任意八座被占用的组合等可能。再来两名乘客，他们能在同一排找到左右相邻的两个空座的概率是多少？请用分数表示。",
+    "answer": "C. $\\frac{20}{33}$.",
+    "answerZh": "C．$\\frac{20}{33}$。",
+    "methods": [
+      {
+        "title": "Classify the arrangements with no free neighbors",
+        "titleZh": "按每排空座数分类求补集",
+        "steps": [
+          "The four unoccupied seats are the complement of the eight occupied ones, so all four-seat patterns are equally likely. There are $\\binom{12}{4}=495$ equally likely patterns. If no two free seats are neighbors in a row, each row has at most two free seats; if it has two, they must be the end seats.",
+          "The four free seats can then be split among rows in only three ways. For $1+1+1+1$ there are $3^4=81$ choices. For $2+1+1+0$, choose the double row, the empty-of-free-seats row, then the two single seats: $4\\cdot3\\cdot3^2=108$. For $2+2+0+0$ there are $\\binom42=6$.",
+          "There are $81+108+6=195$ failures. Thus the desired probability is $(495-195)/495=20/33$."
+        ],
+        "stepsZh": [
+          "四个空座与八个已占座位恰为补集，因此每组四个空座等可能。所有空座位置共有 $\\binom{12}{4}=495$ 种。若没有相邻空座，每排至多有两个空座，有两个时只能占两端。",
+          "四个空座按排分配只有三种情况。$1+1+1+1$ 有 $3^4=81$ 种；$2+1+1+0$ 先选双空座排、再选全坐满的一排，最后在两排中各选一个空座，共 $4\\cdot3\\cdot3^2=108$ 种；$2+2+0+0$ 有 $\\binom42=6$ 种。",
+          "无相邻空座的情形共 $81+108+6=195$ 种，所求概率为 $(495-195)/495=20/33$。"
+        ],
+        "topics": [
+          {
+            "en": "Complementary probability",
+            "zh": "对立事件"
+          },
+          {
+            "en": "Counting by cases",
+            "zh": "分类计数"
+          }
+        ]
+      },
+      {
+        "title": "Count successful rows directly",
+        "titleZh": "直接计算出现相邻空座的排数",
+        "steps": [
+          "Exactly four seats are available, and their sets are equiprobable. Fix a row. To include a particular adjacent pair among the four free seats, choose the other two from the remaining ten. There are two adjacent pairs in the row. Their overlap consists of all three seats in that row plus any one of the other nine. This gives $2\\binom{10}{2}-9=81$ successful patterns for the chosen row.",
+          "Adding over all four rows gives $324$, but any pattern with successful pairs in two rows is counted twice. Choose those rows in $\\binom42$ ways and the pair in each in $2$ ways: $\\binom42\\cdot2^2=24$. Three successful rows would require at least six free seats.",
+          "There are $324-24=300$ favorable patterns, giving $300/\\binom{12}{4}=20/33$."
+        ],
+        "stepsZh": [
+          "尚有四个空座，每组四座的出现概率相同。固定一排及其中一对相邻座位。若这两个都空着，其余两个空座从剩下十座中选取。这一排有两对相邻座位，两对都空对应整排三座全空，再从排外九座中任选一座。故指定一排出现相邻空座共有 $2\\binom{10}{2}-9=81$ 种。",
+          "把四排相加得 $324$，其中有两排同时出现相邻空座的情形算了两次。选两排有 $\\binom42$ 种，每排选相邻空座对各有两种，因此需扣除 $\\binom42\\cdot2^2=24$ 种。若三排都有相邻空座，至少要六个空座，不可能。",
+          "有利情形共 $324-24=300$ 种，概率为 $300/\\binom{12}{4}=20/33$。"
+        ],
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2024/problem/25"
+  }
+}

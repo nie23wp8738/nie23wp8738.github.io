@@ -1,0 +1,10 @@
+---
+import TaraGuide from '../../../../components/TaraGuide.astro';
+import guide from '../../../../data/tara-guide.json';
+
+export function getStaticPaths() {
+  return guide.questions.map(question => ({ params: { id: question.id }, props: { question } }));
+}
+const { question } = Astro.props;
+---
+<TaraGuide lang="zh" question={question} />

@@ -1,0 +1,446 @@
+{
+  "tara-guide-ct-1": {
+    "outline": "A scientific society holds shares in fossil-fuel businesses while publishing research on environmental harm. A critic mentions other institutions that changed their investments. What is the critic ultimately asking this society to do?",
+    "outlineZh": "一个科学学会一面持有化石燃料企业的股份，一面发表有关环境损害的研究。评论者还提到已有其他机构改变了投资安排。他最终希望这个学会采取哪项行动？",
+    "answer": "D. Divest the society’s fossil-fuel holdings.",
+    "answerZh": "D。出售学会持有的化石燃料投资。",
+    "methods": [
+      {
+        "title": "Follow the chain from evidence to action",
+        "titleZh": "从事实顺推到行动",
+        "topics": [
+          {
+            "en": "Argument structure",
+            "zh": "论证结构"
+          }
+        ],
+        "steps": [
+          "Separate the observations from the recommendation. The research and the portfolio are the observations. Together they support a criticism of the society’s consistency. The critic then uses that criticism to recommend changing the portfolio. The final link in this chain is D."
+        ],
+        "stepsZh": [
+          "先列出可以核实的事实：学会研究什么，资金又投向哪里。把两项事实放在一起，才得出“言行不一致”的批评。作者接着用这一批评支持改变投资，因此论证的终点是 D。"
+        ]
+      },
+      {
+        "title": "Test the direction of support",
+        "titleZh": "辨别支持方向",
+        "topics": [
+          {
+            "en": "Intermediate conclusions",
+            "zh": "中间结论"
+          }
+        ],
+        "steps": [
+          "Ask why someone should sell the shares. The conflict of commitments supplies an answer. Now reverse the question: why believe there is a conflict? The proposal to sell is no evidence for that claim. Likewise, the other institutions provide a precedent; copying them is not the central demand."
+        ],
+        "stepsZh": [
+          "问“为什么要出售持股”，言行之间的冲突可以回答。反过来问“为什么相信存在冲突”，出售持股的建议却不能充当证据。其他机构的先例同样只是支持行动的理由。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ct-2": {
+    "outline": "Owners can receive compensation for sheep lost to wolves. Damage caused by dogs can look similar, wild dogs are more numerous, and the payment exceeds the value of the animal. How confidently should the cause of an individual loss be accepted?",
+    "outlineZh": "羊只若被认定为遭狼袭击，物主可获超过该羊价值的赔偿。野狗比狼多，两者留下的痕迹又难以分辨。面对一次具体的损失申报，能够合理得出什么判断？",
+    "answer": "B. Verify the attribution to a wolf before relying on the claim.",
+    "answerZh": "B。应审慎核实致损动物是否为狼。",
+    "methods": [
+      {
+        "title": "Consider another explanation",
+        "titleZh": "考虑竞争性解释",
+        "topics": [
+          {
+            "en": "Alternative explanations",
+            "zh": "替代解释"
+          }
+        ],
+        "steps": [
+          "A genuine loss can have two possible causes. Even a completely honest observer may identify the wrong one. The payment also makes a wolf classification financially attractive. Both considerations justify checking an individual report."
+        ],
+        "stepsZh": [
+          "羊的确遭到袭击，也仍然有两种可能的致损动物。即使申报人诚实，也可能看错；而且按狼袭击申报还有经济诱因。这两个理由都支持核实每项申报。"
+        ]
+      },
+      {
+        "title": "Check the strength of the claim",
+        "titleZh": "检查结论强弱",
+        "topics": [
+          {
+            "en": "Limits of inference",
+            "zh": "推断的边界"
+          }
+        ],
+        "steps": [
+          "Imagine that wolves rarely visit the area but attack sheep disproportionately often. All the numerical facts could still hold. Population sizes alone do not give the fraction of losses due to wolves. The passage supports caution, but neither a count of false claims nor abolition of the scheme."
+        ],
+        "stepsZh": [
+          "假设狼虽少，每只狼袭羊的频率却很高，题中关于动物数量的事实仍可成立。数量本身无法确定多少损失由狼造成，所以证据足以支持谨慎核查，却不足以估算虚报数量或要求废除赔偿。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ct-3": {
+    "outline": "Some families ranked a secular school first and received a place at a religious school. An argument takes this as evidence that a religious education was forced on many families. What must it assume about their preferences?",
+    "outlineZh": "一些家庭把非宗教学校填为首选，结果获派宗教学校。有人据此认为，许多家庭被迫接受了宗教教育。这一推论需要对家长的意愿作出什么假设？",
+    "answer": "B. Many of the affected parents actually objected to a religious-school placement.",
+    "answerZh": "B。受影响的家长中，有许多人确实不愿孩子就读宗教学校。",
+    "methods": [
+      {
+        "title": "Distinguish a ranking from a refusal",
+        "titleZh": "区分偏好排序与拒绝",
+        "topics": [
+          {
+            "en": "Necessary assumptions",
+            "zh": "必要假设"
+          }
+        ],
+        "steps": [
+          "Putting school X first establishes a comparison between choices. A family may still be happy with school Y. To infer an unwanted religious placement, the writer needs evidence or an assumption about the acceptability of Y to the affected families."
+        ],
+        "stepsZh": [
+          "把甲校排在第一，只说明甲优先于其他学校，家长仍可能乐于接受乙校。要推出宗教教育违背意愿，还需补足一个前提：对许多获派家庭而言，这类学校确实不可接受。"
+        ]
+      },
+      {
+        "title": "Try a counterexample",
+        "titleZh": "构造反例",
+        "topics": [
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "Suppose the secular schools were popular because of their short commutes, and nearly every family also welcomed a religious-school offer. The placement data would stay the same, yet the claim about widespread imposition would lose its support. This is the gap B closes."
+        ],
+        "stepsZh": [
+          "设家长选非宗教学校主要为了路近，同时几乎人人也乐于接受宗教学校。派位数据完全可以保持不变，但“普遍违背意愿”便失去依据。选项 B 恰好填补这个缺口。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ct-4": {
+    "outline": "The argument predicts that a person’s decision to take a symptom reliever could affect other people’s exposure to flu. Which additional fact, taken as true for this reasoning exercise, would support that particular prediction?",
+    "outlineZh": "论证提出，患流感者使用缓解症状的药物，可能影响他人的接触风险。在本题设定中，哪条新增信息最能支持这个特定推断？",
+    "answer": "B. Earlier return to the workplace while still infectious would support the prediction.",
+    "answerZh": "B。若患者仍具传染性时更可能因症状缓解而返岗，这会支持题中的推断。",
+    "methods": [
+      {
+        "title": "Trace the relevant consequence",
+        "titleZh": "追踪相关后果",
+        "topics": [
+          {
+            "en": "Strengthening arguments",
+            "zh": "加强论证"
+          }
+        ],
+        "steps": [
+          "The conclusion concerns transmission to others. In the situation described by B, feeling well enough to return brings the person back into contact with coworkers during the relevant period. That supplies a route from the decision to the predicted consequence."
+        ],
+        "stepsZh": [
+          "结论讨论的是他人的接触风险。若 B 所述情况发生，症状缓解可能让患者在相关时段更早与同事接触。这样，个人决定与预测后果之间就多了一条联系。"
+        ]
+      },
+      {
+        "title": "Specify the outcome before comparing options",
+        "titleZh": "先界定待解释的结果",
+        "topics": [
+          {
+            "en": "Relevance of evidence",
+            "zh": "证据的相关性"
+          }
+        ],
+        "steps": [
+          "Write “other people’s exposure” at the top of the page. Information about relief of headaches or unintended effects on the patient addresses other outcomes. Evidence drawn from a less comparable population would reduce confidence in an inference about workers. B targets the stated outcome and supports it in the required direction."
+        ],
+        "stepsZh": [
+          "先把“他人是否更容易接触到病原”列为要判断的结果。头痛能否缓解、服药者自身会否受到影响，都指向其他结果；研究人群若可比性更差，也会减弱推断。B 同时满足结局相关和支持方向正确这两个要求。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ct-5": {
+    "outline": "Across two historical periods, average family size fell and women’s average lifespan rose. A writer infers that the number of births is what explains the shorter lives. Which gap in the comparison matters most?",
+    "outlineZh": "比较两个历史时期发现，平均生育数下降，而女性的平均寿命上升。作者据此把较短寿命归因于较多次生育。这个比较遗漏了什么？",
+    "answer": "E. Other changes over time could account for the rise in life expectancy.",
+    "answerZh": "E。同期的其他变化也可能解释平均寿命的增长。",
+    "methods": [
+      {
+        "title": "Identify an uncontrolled difference",
+        "titleZh": "识别未控制的差异",
+        "topics": [
+          {
+            "en": "Confounding",
+            "zh": "混杂因素"
+          }
+        ],
+        "steps": [
+          "The groups differ in the era in which they lived. For example, improved sanitation could help people live longer independently of family size. The two averages do not separate a childbirth effect from the effect of changes shared by a whole generation."
+        ],
+        "stepsZh": [
+          "两组人生活在不同年代。例如，卫生条件改善本身就可能延长寿命。仅有两个时期的平均值，无法把生育次数的作用与整个世代共同经历的变化分离开。"
+        ]
+      },
+      {
+        "title": "Design a more informative comparison",
+        "titleZh": "设计更有信息量的比较",
+        "topics": [
+          {
+            "en": "Comparison groups",
+            "zh": "比较组"
+          }
+        ],
+        "steps": [
+          "Ask what evidence the explanation predicts. Within a group living under similar conditions, people with different numbers of births should also differ in the predicted direction, once other relevant differences are addressed. The passage supplies no such comparison. E identifies why the historical trend alone is insufficient."
+        ],
+        "stepsZh": [
+          "问这一解释还会产生什么可检验的预测：若生活条件相近，在处理其他重要差异后，不同生育次数的人之间也应出现相应差别。题中没有提供这样的比较。选项 E 说明了单凭年代趋势为何不足以确定原因。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ct-6": {
+    "outline": "A hospital’s sale of land is presented as proof of its financial motive, on the ground that a hospital pursuing that motive would look for property to sell. Which option repeats the same direction of inference?",
+    "outlineZh": "有人认为，若医院重视控制开支，就会考虑出售资产。现在这家医院确实出售了土地，于是他断定医院正是出于控制开支的动机。哪一选项重复了同样的推理方式？",
+    "answer": "E. The reading-speed argument likewise infers a proposed aim from an observed feature.",
+    "answerZh": "E。由阅读速度推断求学意图，与题中从现象反推动机的结构相同。",
+    "methods": [
+      {
+        "title": "Replace claims with variables",
+        "titleZh": "用变量表示命题",
+        "topics": [
+          {
+            "en": "Affirming the consequent",
+            "zh": "肯定后件"
+          }
+        ],
+        "steps": [
+          "Let A denote a proposed aim and B an observable feature expected of someone with that aim. The argument goes from A implies B and observed B to inferred A. E assigns A to intending to study English and B to reading quickly. It uses both parts in the same roles."
+        ],
+        "stepsZh": [
+          "设 A 为某种目标，B 为追求该目标者应有的特征。结构是“A 推出 B，已知 B，于是认定 A”。在 E 中，A 是打算学习英语专业，B 是阅读速度快，两者的角色与原论证完全对应。"
+        ]
+      },
+      {
+        "title": "Invent a counterexample to the converse",
+        "titleZh": "为逆命题找反例",
+        "topics": [
+          {
+            "en": "Conditional reasoning",
+            "zh": "条件推理"
+          }
+        ],
+        "steps": [
+          "A property sale can serve another purpose. Likewise, a person might become a fast reader for work and never plan to study English. These two counterexamples expose the same error. An option that moves forward from the stated aim to a feature would not have that vulnerability."
+        ],
+        "stepsZh": [
+          "出售土地可以另有目的；一个人也可能因工作需要而练出快速阅读能力，完全没有就读英语专业的打算。这两个反例揭示了同一种错误。若选项是从目标正向推出特征，就没有这一漏洞。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ct-7": {
+    "outline": "A buyer appeals to a manufacturer’s unfair behaviour to defend knowingly purchasing an imitation. The argument rejects that defence. Which other judgement would follow from the same moral rule?",
+    "outlineZh": "一位买家试图用厂商的不公行为为自己明知是假货仍购买的行为辩护。题中论证拒绝了这种理由。哪项判断运用了相同的原则？",
+    "answer": "B. A partner’s earlier betrayal does not excuse later dishonesty towards that person.",
+    "answerZh": "B。对方先有背信行为，本身不能成为后来造谣伤害对方的理由。",
+    "methods": [
+      {
+        "title": "Remove the subject matter",
+        "titleZh": "抽去具体情境",
+        "topics": [
+          {
+            "en": "Applying principles",
+            "zh": "原则迁移"
+          }
+        ],
+        "steps": [
+          "Use two roles. Person 1 behaves badly. Person 2 then offers that fact as permission for a separate wrong. The passage rejects the permission. In B the first act is betrayal and the second is spreading falsehoods. Both roles remain intact."
+        ],
+        "stepsZh": [
+          "用两个角色复述原则：甲有过错，乙便把此事当作自己另行做错事的理由。原文否定这种辩护。B 中，先前的背信与后来的造谣分别占据这两个位置，结构一致。"
+        ]
+      },
+      {
+        "title": "Test what a similar-looking rule actually judges",
+        "titleZh": "辨别看似相近的规则",
+        "topics": [
+          {
+            "en": "Analogical reasoning",
+            "zh": "类比推理"
+          }
+        ],
+        "steps": [
+          "Imagine a vendor overcharges you. One question is whether the price is fair; another is whether overcharging permits you to deceive the vendor afterwards. Only the second addresses the principle under examination. B makes precisely that second kind of judgement."
+        ],
+        "stepsZh": [
+          "设商家向你收取过高价格。“价格公平吗”与“这是否允许你随后欺骗商家”是两个问题。原题考查后一种判断，因此仅谴责定价过高的选项抓错了重点。B 对随后行为能否被正当化作出了判断。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ps-1": {
+    "outline": "The bag holds five books. A locker can be used at the start of the day and at lunch. Could the pupil skip the break-time locker visit on any day? For the three lessons before lunch, the book counts in chronological order are Monday (3, 1, 2), Tuesday (1, 2, 3), Wednesday (3, 2, 2), Thursday (1, 1, 3) and Friday (1, 3, 2). Each lesson uses different books.",
+    "outlineZh": "书包能装五本书，早晨和午餐时都能在储物柜更换课本。哪一天可以省去课间换书？午餐前三节课的用书数量依次为：周一（3，1，2）、周二（1，2，3）、周三（3，2，2）、周四（1，1，3）、周五（1，3，2）。这三节课用书互不相同。",
+    "answer": "D. Thursday.",
+    "answerZh": "D。星期四。",
+    "methods": [
+      {
+        "title": "Work between the two available locker visits",
+        "titleZh": "锁定两次换书之间的时段",
+        "topics": [
+          {
+            "en": "Capacity constraints",
+            "zh": "容量约束"
+          }
+        ],
+        "steps": [
+          "A lunchtime change makes the afternoon irrelevant. Add each morning’s three entries to obtain 6, 6, 7, 5 and 6 books. Only the fourth total fits. Capacity five includes a load of exactly five."
+        ],
+        "stepsZh": [
+          "午餐时还能换书，所以下午的课不影响答案。依次把每天上午的三个数相加，得到 6、6、7、5、6。只有第四个总数不超限，正好五本也符合条件。"
+        ]
+      },
+      {
+        "title": "Classify the mornings by book sizes",
+        "titleZh": "按用书数量的组合分类",
+        "topics": [
+          {
+            "en": "Elimination",
+            "zh": "排除法"
+          }
+        ],
+        "steps": [
+          "Every morning includes a three-book lesson, leaving two spaces. Both other lessons must therefore be one-book lessons: even one two-book lesson plus the other lesson exceeds the limit. Inspecting the pairs beside the three-book entry leaves Thursday alone."
+        ],
+        "stepsZh": [
+          "每天上午都有一节用三本书的课，占去三格后只剩两格。另外两节各至少要一本，所以它们只能各用一本；只要其中一节用到两本就必定超限。检查其余两节，只有周四符合。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ps-2": {
+    "outline": "A ticket previously cost $330 including a $50 booking fee. The rest was split between the fare and the airport charge in the ratio 3 to 2. The fare rises by 20%, the airport part by 10%, and the booking fee falls by half. Find the new total.",
+    "outlineZh": "一张机票原价共 330 美元，含 50 美元订票费。其余金额按 3∶2 分给基础票价和机场收费。基础票价上调 20%，机场收费上调 10%，订票费减半。新总价是多少？",
+    "answer": "C. $349.80.",
+    "answerZh": "C。349.80 美元。",
+    "methods": [
+      {
+        "title": "Calculate the change in each component",
+        "titleZh": "分别计算各项的变化量",
+        "topics": [
+          {
+            "en": "Ratios and percentages",
+            "zh": "比例与百分数"
+          }
+        ],
+        "steps": [
+          "Removing the fee leaves $280. One ratio unit is $56, so the two components are $168 and $112. The changes are +$33.60, +$11.20 and −$25. The net increase is $19.80. Add this to the original $330 to obtain $349.80."
+        ],
+        "stepsZh": [
+          "扣除订票费后还剩 280 美元，每一份是 56 美元，基础票价和机场费分别为 168 与 112 美元。三笔变化分别是增加 33.60、增加 11.20、减少 25，净增 19.80 美元。原来的 330 加上净增额就是 349.80 美元。"
+        ]
+      },
+      {
+        "title": "Use a weighted multiplier",
+        "titleZh": "使用加权倍率",
+        "topics": [
+          {
+            "en": "Weighted averages",
+            "zh": "加权平均"
+          }
+        ],
+        "steps": [
+          "Of the $280 subtotal, three fifths is multiplied by 1.20 and two fifths by 1.10. Its combined multiplier is (3 × 1.20 + 2 × 1.10) ÷ 5 = 1.16. The updated subtotal is $324.80. Add the new $25 booking fee to reach $349.80."
+        ],
+        "stepsZh": [
+          "280 美元中的五分之三乘以 1.20，五分之二乘以 1.10，因此整体倍率为（3 × 1.20 + 2 × 1.10）÷ 5 = 1.16。更新后小计 324.80 美元，再加新的 25 美元订票费，得到 349.80 美元。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-ps-3": {
+    "outline": "From Monday to Friday the daily sales are 80, 30, 100, 120 and 70. A pie chart uses four of the days; a diameter divides its four sectors into two pairs, one pair on each side. Identify the missing day.",
+    "outlineZh": "周一至周五的销售额分别为 80、30、100、120、70。饼图收录了其中四天，图上有一条直径把四个扇区分为两对，每侧两个。缺少的是哪一天？",
+    "answer": "C. Wednesday, with sales of 100.",
+    "answerZh": "C。缺少的是销售额为 100 的星期三。",
+    "methods": [
+      {
+        "title": "Pair the two halves",
+        "titleZh": "给两个半圆配对",
+        "topics": [
+          {
+            "en": "Equivalent representations",
+            "zh": "不同图表的等价关系"
+          }
+        ],
+        "steps": [
+          "Each half-circle represents the same total. Of the ten possible pair sums, 150 occurs twice: 30 + 120 and 70 + 80. The other sums are 100, 110, 130, 170, 180, 190, 200 and 220, all different. The two equal pairs use four days and leave out 100."
+        ],
+        "stepsZh": [
+          "两个半圆所代表的销售总额相同。十种两数之和中，150 出现两次，对应 30 + 120 和 70 + 80；其余各和为 100、110、130、170、180、190、200、220，互不相同。取走等和的两对后，只剩周三的 100。"
+        ]
+      },
+      {
+        "title": "Eliminate possible omissions by parity",
+        "titleZh": "利用奇偶性排除缺项",
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "Divide the values by ten. The five numbers total 40. Omitting 3 or 7 would leave an odd total that cannot split into equal integer halves. Omitting 8 would require a pair summing to 16 among 3, 10, 12, 7; none exists. Omitting 12 requires a pair summing to 14 among 8, 3, 10, 7; none exists. Omitting 10 works because 3 + 12 = 7 + 8."
+        ],
+        "stepsZh": [
+          "把每个数除以 10，五数总和为 40。去掉 3 或 7 会剩下奇数，不能分成整数等和的两组。若去掉 8，需要在 3、10、12、7 中找一对和为 16 的数；若去掉 12，需要在 8、3、10、7 中找一对和为 14 的数。两者都找不到。去掉 10 则有 3 + 12 = 7 + 8。"
+        ]
+      }
+    ]
+  },
+  "tara-guide-wt-1": {
+    "outline": "Consider the claim that a democratic society should give public speech absolute protection. Clarify what that protection would mean, make the strongest objection you can, and decide how far the claim should be accepted.",
+    "outlineZh": "思考这样一个主张：民主社会应当给予公共表达绝对保护。先厘清“绝对保护”的含义，提出一个有说服力的反对理由，再说明你在何种程度上赞同这项主张。",
+    "answer": "A defensible response defines “absolute”, considers a difficult case, and explains where its own principle draws the line. The two short responses illustrate different starting points.",
+    "answerZh": "可以先界定“绝对”的含义，再以一个棘手情形检验它，最后说明自己的判断标准。下面两篇短文展示不同的论证起点。",
+    "methods": [
+      {
+        "title": "Start from the freedom to challenge power",
+        "titleZh": "从质疑权力的自由出发",
+        "topics": [
+          {
+            "en": "Testing a principle",
+            "zh": "检验原则"
+          }
+        ],
+        "steps": [
+          "A democratic promise of free speech gives the citizen who challenges the majority the same opportunity to be heard as its favourite spokesperson. Imagine a town meeting at which a lone resident questions the cost of a popular project. A rule against embarrassing the committee would remove precisely the criticism that public debate is meant to uncover.",
+          "Absolute protection, however, would also cover a speaker who repeatedly threatens members of the audience until they leave. The cost is then borne by people who lose their own chance to speak. I would protect even severe criticism of a proposal, while allowing a narrowly drawn rule against credible threats. The test is whether the interference prevents others from participating. Discomfort or embarrassment, by itself, would fail that test."
+        ],
+        "stepsZh": [
+          "民主社会承诺表达自由，意味着质疑多数意见的公民，与多数人欣赏的发言者一样有机会被听见。设想在一次居民会议上，只有一人质疑某个热门项目的成本。倘若规定不得让委员会难堪，被排除的恰好就是公共讨论原本最能揭示的问题。",
+          "然而，绝对保护也会涵盖另一种情形：发言者不断威胁听众，直至他们离场。代价由失去发言机会的人承担。我主张即使措辞尖锐，对提案的批评也应受到保护，同时允许对可信威胁作出范围明确的限制。判断依据是他人的参与机会是否真的受到阻碍；仅仅感到不舒服或尴尬，不足以达到这个标准。"
+        ]
+      },
+      {
+        "title": "Start from equal access to a discussion",
+        "titleZh": "从平等参与讨论出发",
+        "topics": [
+          {
+            "en": "Evaluating objections",
+            "zh": "评估反对意见"
+          }
+        ],
+        "steps": [
+          "At a public hearing each resident may have permission to speak, yet one speaker can use every minute and silence the rest. A fair chair may limit everyone to three minutes. That is a restriction on public speech, but it gives the permission to speak practical value for more people. An unrestricted floor can favour whoever already controls the room.",
+          "The objection is that a chair might enforce even a neutral rule selectively against critics. A defensible limit must therefore be announced in advance, applied on equal terms and open to challenge. I support a strong presumption that any viewpoint can be presented. I would still allow rules about when, where and for how long people take turns if those rules can be justified to the least powerful participant."
+        ],
+        "stepsZh": [
+          "在公共听证会上，人人名义上都能发言，但只要有一人占去全部时间，其他人的许可就毫无实际作用。主持人可以规定每人发言三分钟。这个限制确实约束了公共表达，却让更多人真正得到表达机会。完全没有规则的讨论，往往使本来就占优势的人受益。",
+          "反对者可以指出，主持人也可能借中性规则选择性地打断批评者。因此，合理的限制应当预先公布、平等适用，并允许提出异议。我赞成各种立场原则上都能进入讨论。同时，只要能向最缺乏影响力的参与者说明理由，我也接受关于发言次序、时段及长度的规则。"
+        ]
+      }
+    ]
+  }
+}

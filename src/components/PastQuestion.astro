@@ -69,15 +69,15 @@ const instructions = zh && edition.instructionsZh ? edition.instructionsZh : edi
     </div>
     <div class="btnrow">
       <a class="button" href={worksheetHref}>{t('Add to my worksheet','加入我的试卷')}</a>
-      {!answer && solutionHref && <a class="button light" href={solutionHref}>{t('Published solutions','查看原卷解答')}</a>}
+      {!answer && solutionHref && <a class="button light" href={solutionHref} target="_blank" rel="noopener noreferrer">{t('Published solutions (external)','原卷解答（外站）')}</a>}
     </div>
     {answer && <WorkedAnswer answer={answer} lang={lang} id={id} sourceUrl={solutionHref} />}
     <footer class="reader-source">
       <p>{edition.credit}{question.author && <> · {t('Problem by','命题人')} {question.author}</>}</p>
-      <p><a href={reference.url || edition.sourceURL}>{t('Original question','原题出处')}</a>
+      <p><a href={reference.url || edition.sourceURL} target="_blank" rel="noopener noreferrer">{t('Original question (external)','原题出处（外站）')}</a>
         <span aria-hidden="true"> · </span><a href={edition.licenseURL}>{edition.license}</a>
         {changes && <> · <span lang={zh && edition.changesZh ? 'zh-CN' : 'en'}>{changes}</span></>}
-        {answer && solutionHref && <> · <a href={solutionHref}>{t('Official solution notes','官方解答')}</a></>}
+        {answer && solutionHref && <> · <a href={solutionHref} target="_blank" rel="noopener noreferrer">{t('Official solution notes (external)','官方解答（外站）')}</a></>}
       </p>
     </footer>
     <nav class="reader-pagination" aria-label={t('Questions in this paper','本卷题目')}>

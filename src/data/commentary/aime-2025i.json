@@ -1,0 +1,777 @@
+{
+  "aime-2025i-q1": {
+    "summary": "Interpret $17$ and $97$ in the same integer base $b>9$. Add the bases for which dividing the second number by the first gives an integer.",
+    "summaryZh": "在同一个整数进制 $b>9$ 下读出 $17$ 和 $97$。若后者除以前者能整除，求所有符合条件的进制之和。",
+    "answer": "070",
+    "answerZh": "070",
+    "methods": [
+      {
+        "title": "Remove the variable from the divisor test",
+        "titleZh": "消去被除式中的变量",
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "进位制"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          }
+        ],
+        "steps": [
+          "The place values give $17_b=b+7$ and $97_b=9b+7$. Nine copies of the first number exceed the second by exactly $56$, independently of the base.",
+          "Thus the division works exactly when $b+7$ is a divisor of $56$. This divisor is at least $17$. Since $56=2^3\\cdot7$, the only eligible divisors are $28$ and $56$. Subtracting $7$ gives the bases $21$ and $49$, with sum $70$."
+        ],
+        "stepsZh": [
+          "根据位值，$17_b=b+7$，$97_b=9b+7$。前一个数的九倍恰好比后一个数大 $56$，与进制无关。",
+          "于是条件等价于 $b+7$ 是 $56$ 的正因数，且该因数至少为 $17$。由 $56=2^3\\cdot7$，只有 $28$ 和 $56$ 符合。各减去 $7$ 得进制 $21$ 和 $49$，之和为 $70$。"
+        ]
+      },
+      {
+        "title": "Bound the possible quotient",
+        "titleZh": "先确定整数商的范围",
+        "topics": [
+          {
+            "en": "Inequalities",
+            "zh": "不等式"
+          },
+          {
+            "en": "Finite casework",
+            "zh": "有限分类"
+          }
+        ],
+        "steps": [
+          "Let $k=(9b+7)/(b+7)=9-56/(b+7)$. Since $b+7\\ge17$, the quotient lies strictly between $5$ and $9$. Its integer possibilities are $6,7,8$.",
+          "Solving $b=(7k-7)/(9-k)$ in these three cases gives $35/3,21,49$, respectively. The two integer bases greater than $9$ sum to $70$."
+        ],
+        "stepsZh": [
+          "设商为 $k=(9b+7)/(b+7)=9-56/(b+7)$。由 $b+7\\ge17$ 得 $5<k<9$，整数商只能是 $6,7,8$。",
+          "由等式解出 $b=(7k-7)/(9-k)$。代入三个商依次得到 $35/3,21,49$。后两个是大于 $9$ 的整数，和为 $70$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/1"
+  },
+  "aime-2025i-q2": {
+    "summary": "In triangle $ABC$, points $D,E$ divide $AB$ in the ratio $1:4:2$ from $A$ to $B$, and $F,G$ divide $AC$ in the same ratio from $A$ to $C$. Reflect $D$ about point $F$ to obtain $M$, and $G$ about point $E$ to obtain $N$. The area of $DEGF$ is $288$. Determine the area inside the polygon with successive vertices $A,F,N,B,C,E,M$.",
+    "summaryZh": "三角形 $ABC$ 中，$D,E$ 将从 $A$ 到 $B$ 的边依次分为 $1:4:2$ 三段，$F,G$ 将从 $A$ 到 $C$ 的边也依次分为 $1:4:2$ 三段。$D$ 关于点 $F$ 的对称点是 $M$，$G$ 关于点 $E$ 的对称点是 $N$。已知四边形 $DEGF$ 面积为 $288$，求依次连接 $A,F,N,B,C,E,M$ 所成七边形的面积。",
+    "answer": "588",
+    "answerZh": "588",
+    "methods": [
+      {
+        "title": "Choose coordinates along the sides",
+        "titleZh": "用两条边作坐标轴",
+        "topics": [
+          {
+            "en": "Affine coordinates",
+            "zh": "仿射坐标"
+          },
+          {
+            "en": "Shoelace formula",
+            "zh": "鞋带公式"
+          },
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          }
+        ],
+        "steps": [
+          "Use $\\overrightarrow{AD}$ and $\\overrightarrow{AF}$ as basis vectors. The coordinate pairs are $A=(0,0)$, $D=(1,0)$, $E=(5,0)$, $B=(7,0)$, $F=(0,1)$, $G=(0,5)$, and $C=(0,7)$. In these coordinates all areas have the same scale factor, even if the physical axes are oblique.",
+          "The coordinate area of $DEGF$ is the difference of two right-triangle areas in the coordinate diagram: $(5\\cdot5-1\\cdot1)/2=12$. Each coordinate area unit therefore represents $288/12=24$ actual area units.",
+          "A midpoint reflection gives $M=2F-D=(-1,2)$ and $N=2E-G=(10,-5)$. For two consecutive vertices $(x,y),(u,v)$, record $xv-yu$. Around $AFNBCEM$ the seven entries are $0,-10,35,49,-35,10,0$. Their sum is $49$, so the coordinate area is $49/2$. Restoring the scale gives $(49/2)\\cdot24=588$."
+        ],
+        "stepsZh": [
+          "取 $\\overrightarrow{AD}$ 和 $\\overrightarrow{AF}$ 为基向量。于是 $A=(0,0)$，$D=(1,0)$，$E=(5,0)$，$B=(7,0)$，$F=(0,1)$，$G=(0,5)$，$C=(0,7)$。即使实际的两条轴不垂直，所有图形从坐标图到原图的面积比例仍相同。",
+          "在普通直角坐标纸上画出这些坐标，四边形 $DEGF$ 的面积等于两个直角三角形的面积差 $(5\\cdot5-1\\cdot1)/2=12$。因此坐标图上每一单位面积对应实际面积 $288/12=24$。",
+          "由中点关系得 $M=2F-D=(-1,2)$，$N=2E-G=(10,-5)$。对相邻顶点 $(x,y),(u,v)$ 计算 $xv-yu$。沿 $AFNBCEM$ 一周，七项依次为 $0,-10,35,49,-35,10,0$，和为 $49$。鞋带公式给出坐标面积 $49/2$，乘实际比例得 $(49/2)\\cdot24=588$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/2"
+  },
+  "aime-2025i-q3": {
+    "summary": "Assign nine distinct people to three labelled nonempty groups in such a way that their sizes are strictly decreasing in label order. Find the assignment count modulo $1000$.",
+    "summaryZh": "九个不同的人进入三个有固定名称的非空组，三个组的人数按指定顺序严格递减。求分组方案数除以 $1000$ 的余数。",
+    "answer": "016",
+    "answerZh": "016",
+    "methods": [
+      {
+        "title": "Classify by the smallest group",
+        "titleZh": "从人数最少的组开始分类",
+        "topics": [
+          {
+            "en": "Integer partitions",
+            "zh": "整数分拆"
+          },
+          {
+            "en": "Multinomial coefficients",
+            "zh": "多项式系数"
+          }
+        ],
+        "steps": [
+          "If the smallest size is $1$, the other sizes are two unequal integers greater than $1$ summing to $8$: the possible pairs are $(6,2)$ and $(5,3)$. If it is $2$, only $(4,3)$ works. A smallest size of at least $3$ would require at least $3+4+5=12$ people.",
+          "Choose the members of the two smaller groups in order. The three contributions are $\\binom91\\binom82=252$, $\\binom91\\binom83=504$, and $\\binom92\\binom73=1260$. Their sum is $2016$, whose remainder is $16$."
+        ],
+        "stepsZh": [
+          "最小组为 $1$ 人时，另两组都大于 $1$，人数不同且和为 $8$，只能为 $(6,2)$ 或 $(5,3)$。最小组为 $2$ 人时，只能为 $(4,3)$。若最小组至少三人，总人数至少为 $3+4+5=12$。",
+          "依次选择最小组和中间组的成员。三种情况下的方案数分别为 $\\binom91\\binom82=252$、$\\binom91\\binom83=504$、$\\binom92\\binom73=1260$。合计 $2016$，余数是 $16$。"
+        ]
+      },
+      {
+        "title": "Discard ties before ordering the labels",
+        "titleZh": "先扣除等人数的情况，再排列组名",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          }
+        ],
+        "steps": [
+          "Ignoring the ordering but keeping all groups nonempty leaves $3^9-3\\cdot2^9+3=18150$ assignments, by inclusion–exclusion on the missing labels.",
+          "For a specified pair of equal groups of size $k$, the count is $9!/(k!^2(9-2k)!)$. If exactly two groups tie, $k$ is $1,2,$ or $4$; the three counts are $72,756,630$. Any of the three pairs of groups can tie. When all sizes are $3$ there are $9!/(3!)^3=1680$ additional assignments.",
+          "The number with three different sizes is $18150-3(72+756+630)-1680=12096$. Relabelling the three groups realizes all six strict orderings equally often. The required count is $12096/6=2016$, with remainder $16$."
+        ],
+        "stepsZh": [
+          "先只要求各组非空。对缺失的组名用容斥原理，方案数为 $3^9-3\\cdot2^9+3=18150$。",
+          "指定两组人数相同且各为 $k$，方案数为 $9!/(k!^2(9-2k)!)$。若恰有这两组相等，$k$ 可为 $1,2,4$，对应 $72,756,630$ 种。相等的两个组有三种选法。三组都为 $3$ 人时还要扣去 $9!/(3!)^3=1680$ 种。",
+          "三组人数互不相同的共 $18150-3(72+756+630)-1680=12096$ 种。交换组名会使六种严格大小顺序等数出现，所以指定顺序有 $12096/6=2016$ 种，余数为 $16$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/3"
+  },
+  "aime-2025i-q4": {
+    "summary": "Count lattice points in the closed square $[-100,100]^2$ on the quadratic curve $12x^2-xy-6y^2=0$.",
+    "summaryZh": "计算闭正方形 $[-100,100]^2$ 内满足 $12x^2-xy-6y^2=0$ 的整点个数。",
+    "answer": "117",
+    "answerZh": "117",
+    "methods": [
+      {
+        "title": "Use the primitive vectors of the two lines",
+        "titleZh": "沿两条直线的最简整步计数",
+        "topics": [
+          {
+            "en": "Factoring",
+            "zh": "因式分解"
+          },
+          {
+            "en": "Lattice points",
+            "zh": "整点"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "Expand $(4x-3y)(3x+2y)$ to recover the given polynomial. The curve thus consists of two lines through the origin. Their integer points are exactly the integer multiples of $(3,4)$ and $(2,-3)$, respectively, because each direction vector has coprime coordinates.",
+          "On the first line the multiplier can range from $-25$ to $25$. On the second it ranges from $-33$ to $33$. Only the origin lies on both lines. Counting it once gives $51+67-1=117$."
+        ],
+        "stepsZh": [
+          "展开 $(4x-3y)(3x+2y)$ 即得题中的二次式，所以图形由两条过原点的直线组成。各自方向向量的两坐标互素，故直线上的整点分别恰为 $(3,4)$ 和 $(2,-3)$ 的整数倍。",
+          "第一条直线上的倍数范围为 $-25$ 至 $25$，第二条为 $-33$ 至 $33$。两条直线只在原点重合，原点计一次，得 $51+67-1=117$。"
+        ]
+      },
+      {
+        "title": "Solve for the slope and exploit central symmetry",
+        "titleZh": "求斜率后利用中心对称",
+        "topics": [
+          {
+            "en": "Quadratic formula",
+            "zh": "一元二次方程求根"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          }
+        ],
+        "steps": [
+          "If $x=0$, the only solution is the origin. Otherwise $t=y/x$ satisfies $6t^2+t-12=0$, whose discriminant is $289=17^2$. Hence $t=4/3$ or $t=-3/2$.",
+          "Count just the points with positive $x$. For the first slope, $x$ must be a multiple of $3$ no larger than $75$, giving $25$ points. For the second, $x$ must be even and $3x/2\\le100$, giving $33$. Reflect in the origin for the same number with negative $x$ and add the origin: $2(25+33)+1=117$."
+        ],
+        "stepsZh": [
+          "若 $x=0$，唯一解是原点。否则设 $t=y/x$，则 $6t^2+t-12=0$。判别式为 $289=17^2$，两根为 $4/3$ 和 $-3/2$。",
+          "先计 $x>0$ 的点。斜率为 $4/3$ 时，$x$ 必须是至多 $75$ 的正三倍数，共 $25$ 个。斜率为 $-3/2$ 时，$x$ 为偶数且 $3x/2\\le100$，共 $33$ 个。把这些点关于原点对称即得 $x<0$ 的全部点，最后补原点，共 $2(25+33)+1=117$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/4"
+  },
+  "aime-2025i-q5": {
+    "summary": "Let $N$ count arrangements of the eight different digits $1$ through $8$ that form a multiple of $22$. How far is $N$ from $2025$?",
+    "summaryZh": "将数字 $1$ 至 $8$ 各用一次组成八位数。设其中 $22$ 的倍数共有 $N$ 个，求 $N$ 与 $2025$ 的差。",
+    "answer": "279",
+    "answerZh": "279",
+    "methods": [
+      {
+        "title": "Pair multiples of eleven by changing every digit",
+        "titleZh": "用数字替换将 11 的倍数配对",
+        "topics": [
+          {
+            "en": "Divisibility by 11",
+            "zh": "11 的整除判别法"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "互补计数"
+          },
+          {
+            "en": "Involutions",
+            "zh": "对合映射"
+          }
+        ],
+        "steps": [
+          "Let $s$ be the sum at the four odd positions. The total digit sum is $36$, so the alternating sum is $2s-36$. Since $10\\le s\\le26$, this is an even number in $[-16,16]$. Its only possible multiple of $11$ is $0$, hence $s=18$.",
+          "When a sum-$18$ four-digit set contains $8$, the remaining three digits must total $10$. The possibilities are $(1,2,7),(1,3,6),(1,4,5),(2,3,5)$. Taking the four complements supplies all sets without $8$. Thus $8(4!)^2=4608$ arrangements are divisible by $11$.",
+          "Replacing every digit $d$ by $9-d$ preserves the digit set and changes the sign of the alternating sum. The last digit changes parity, and doing the replacement twice returns to the original arrangement. Exactly one arrangement per pair is even, so $N=4608/2=2304$ and $N-2025=279$."
+        ],
+        "stepsZh": [
+          "设奇数位置四个数字的和为 $s$，全部数字之和为 $36$，所以奇偶位之差为 $2s-36$。由 $10\\le s\\le26$ 知此差是 $[-16,16]$ 内的偶数，其中只有 $0$ 能被 $11$ 整除，故 $s=18$。",
+          "若和为 $18$ 的四元组含 $8$，另外三数之和为 $10$，可取 $(1,2,7),(1,3,6),(1,4,5),(2,3,5)$。各取补集就得到所有不含 $8$ 的组合。因此共有 $8(4!)^2=4608$ 个八位数被 $11$ 整除。",
+          "把每个数字 $d$ 换成 $9-d$，仍使用原来八个数字，奇偶位之差变号，末位的奇偶性却翻转。重复替换两次回到原数，因此每一对中恰有一个偶数。于是 $N=4608/2=2304$，所求差为 $279$。"
+        ]
+      },
+      {
+        "title": "Place the units digit inside a balanced four-digit set",
+        "titleZh": "在和相等的四元组中安排个位",
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Systematic enumeration",
+            "zh": "系统枚举"
+          },
+          {
+            "en": "Permutations",
+            "zh": "排列"
+          }
+        ],
+        "steps": [
+          "Divisibility by $11$ forces each group of four alternating positions to sum to $18$: the alternating difference is even and has magnitude at most $26-10=16$. A group summing to $18$ needs two odd and two even digits. Four odd digits would total $16$ and four even digits would total $20$.",
+          "Choose the two odd digits for the even-numbered positions. Their sum can be $4,6,8,10,12$ with multiplicities $1,1,2,1,1$. To make $18$, the two even digits must respectively sum to $14,12,10,8,6$ with multiplicities $1,1,2,1,1$. This gives $1+1+4+1+1=8$ eligible four-digit sets.",
+          "The units position belongs to the even-numbered positions. For each set, choose one of its two even digits to go last, permute the remaining three digits in these positions, and permute the four digits in the odd positions. Hence $N=8\\cdot2\\cdot3!\\cdot4!=2304$, giving difference $279$."
+        ],
+        "stepsZh": [
+          "被 $11$ 整除要求奇、偶位各组的数字和都是 $18$，因为两组之差是偶数且绝对值至多 $26-10=16$。和为 $18$ 的四个数字必须两奇两偶：若全奇，和为 $16$；若全偶，和为 $20$。",
+          "为偶数位置选择两个奇数字，它们的和可为 $4,6,8,10,12$，选法依次有 $1,1,2,1,1$ 种。另两个偶数字的和相应须为 $14,12,10,8,6$，选法也依次有 $1,1,2,1,1$ 种。于是可用的四元组共 $1+1+4+1+1=8$ 个。",
+          "个位是第八个位置，在偶数位置组内。每组先选两个偶数字之一放在个位，再排列其余三个位置，并任意排列奇数位置的四个数字。故 $N=8\\cdot2\\cdot3!\\cdot4!=2304$，所求差为 $279$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/5"
+  },
+  "aime-2025i-q6": {
+    "summary": "An isosceles trapezoid of area $72$ circumscribes a circle of radius $3$. For its two unequal base lengths $r,s$, compute $r^2+s^2$.",
+    "summaryZh": "一个面积为 $72$ 的等腰梯形有半径为 $3$ 的内切圆。设两条不等长的底为 $r,s$，求 $r^2+s^2$。",
+    "answer": "504",
+    "answerZh": "504",
+    "methods": [
+      {
+        "title": "Recover the leg and its horizontal projection",
+        "titleZh": "由腰长求水平投影",
+        "steps": [
+          "The parallel bases support opposite sides of the circle, so the height is $6$. From the trapezoid area formula, $3(r+s)=72$, hence $r+s=24$.",
+          "From each vertex, the two tangent segments to the circle have equal length. Adding the segments along both bases therefore gives the combined length of both legs. Each leg is $12$.",
+          "Centre the shorter base over the longer one. The horizontal displacement along a leg is $|r-s|/2$. Thus $(r-s)^2=4(12^2-6^2)=432$. Adding this to $(r+s)^2$ and dividing by two yields $r^2+s^2=504$."
+        ],
+        "stepsZh": [
+          "内切圆与两底相切，梯形的高为直径 $6$。利用面积得 $3(r+s)=72$，即 $r+s=24$。",
+          "从同一顶点引向圆的两条切线段等长。把两个底上的各段换成腰上的对应切线段，得两底之和等于两腰之和。因此每条腰长 $12$。",
+          "两底的中垂线重合，腰的水平投影长为 $|r-s|/2$。由勾股定理，$(r-s)^2=4(12^2-6^2)=432$。把它与 $(r+s)^2$ 相加再除以二，得到 $r^2+s^2=504$。"
+        ],
+        "topics": [
+          {
+            "en": "Tangency",
+            "zh": "相切"
+          },
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          }
+        ]
+      },
+      {
+        "title": "Use the altitude to a right triangle's hypotenuse",
+        "titleZh": "在直角三角形中用斜边上的高",
+        "steps": [
+          "Let $O$ be the circle centre and $P,Q$ the ends of one leg. Their interior angles are supplementary. Since $PO$ and $QO$ bisect those angles, triangle $POQ$ is right-angled at $O$.",
+          "The radius to the tangency point on $PQ$ is the altitude of length $3$ to its hypotenuse. By symmetry each base is touched at its midpoint. Equal tangents from $P$ and $Q$ therefore cut the hypotenuse into lengths $r/2$ and $s/2$. The altitude theorem gives $9=rs/4$.",
+          "Height $6$ and area $72$ give $r+s=24$. Consequently $r^2+s^2=24^2-2(36)=504$."
+        ],
+        "stepsZh": [
+          "记圆心为 $O$，取一条腰的两端为 $P,Q$。两端内角互补，而 $PO,QO$ 分别平分它们，所以三角形 $POQ$ 在 $O$ 处为直角。",
+          "从 $O$ 到腰上切点的半径恰为斜边上的高，长 $3$。由对称性，两底都在中点与圆相切；再用同点所引切线段等长，得斜边被高分为 $r/2,s/2$ 两段。由射影定理，$9=rs/4$。",
+          "梯形高 $6$，面积 $72$，故 $r+s=24$。于是 $r^2+s^2=24^2-2(36)=504$。"
+        ],
+        "topics": [
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          },
+          {
+            "en": "Geometric mean theorem",
+            "zh": "射影定理"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/6"
+  },
+  "aime-2025i-q7": {
+    "summary": "Uniformly match $A$ through $L$ in unordered pairs. Write each pair with the earlier letter first and sort the six pairs alphabetically. If the chance that the last pair includes $G$ is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "将 $A$ 至 $L$ 等可能地两两配对；每对将较早的字母写在前面，再将六对按字母顺序排列。若最后一对含 $G$ 的概率约分后为 $m/n$，求 $m+n$。",
+    "answer": "821",
+    "answerZh": "821",
+    "methods": [
+      {
+        "title": "Count matchings at two alphabetic cutoffs",
+        "titleZh": "用两个字母分界点计数",
+        "steps": [
+          "Let $S$ be the largest of the six first letters. These first letters are distinct, so $S$ cannot be earlier than $F$. The sample space has $11\\cdot9\\cdot7\\cdot5\\cdot3=10395$ matchings by repeatedly choosing a partner for the first unused letter.",
+          "For $S\\le G$, each of $H$ through $L$ must take a distinct partner among the first seven letters. This gives $7\\cdot6\\cdot5\\cdot4\\cdot3=2520$ matchings; the remaining two letters pair automatically. For $S=F$, the halves $A$–$F$ and $G$–$L$ must be matched across in $6!=720$ ways.",
+          "If $S=G$, the last pair certainly contains $G$, giving $2520-720=1800$ cases. For $S=F$, the last pair must be $FG$; fixing it leaves $5!=120$ cases. Larger $S$ excludes $G$. Thus $P=(1800+120)/10395=128/693$ and $m+n=821$."
+        ],
+        "stepsZh": [
+          "设六对的首字母中最晚的为 $S$。六个首字母互异，所以 $S$ 至少为 $F$。每次取尚未配对的最早字母，为它选伙伴，总样本数为 $11\\cdot9\\cdot7\\cdot5\\cdot3=10395$。",
+          "若 $S\\le G$，则从 $H$ 到 $L$ 的五个字母必须各自在前七个字母中选取不同伙伴，共 $7\\cdot6\\cdot5\\cdot4\\cdot3=2520$ 种，余下两个字母自动成对。若 $S=F$，前六个字母与后六个字母必须一一配对，共 $6!=720$ 种。",
+          "若 $S=G$，末对一定含 $G$，有 $2520-720=1800$ 种。若 $S=F$，必须固定 $FG$，还剩 $5!=120$ 种。$S$ 晚于 $G$ 时末对不可能含 $G$。概率为 $(1800+120)/10395=128/693$，故 $m+n=821$。"
+        ],
+        "topics": [
+          {
+            "en": "Perfect matchings",
+            "zh": "完全匹配"
+          },
+          {
+            "en": "Cumulative counting",
+            "zh": "累积计数"
+          }
+        ]
+      },
+      {
+        "title": "Condition on the partner of G",
+        "titleZh": "按 G 的配对对象求条件概率",
+        "steps": [
+          "Each of the other eleven letters is equally likely to partner $G$. If the partner precedes $F$, then the pair starts before $F$, and six distinct starting letters cannot all be that early.",
+          "If $G$ is paired with $F$, each of $H$ through $L$ must pick a partner in $A$ through $E$. Exposing the five partners in order gives conditional probability $(5/9)(4/7)(3/5)(2/3)(1/1)=8/63$.",
+          "If the partner follows $G$ (five possibilities), the four unpaired letters larger than $G$ must each choose one of the six earlier letters. The conditional probability is $(6/9)(5/7)(4/5)(3/3)=8/21$. Weighting the cases gives $(1/11)(8/63)+(5/11)(8/21)=128/693$. The sum is $821$."
+        ],
+        "stepsZh": [
+          "$G$ 与其余十一个字母中任何一个配对的概率相同。若伙伴在 $F$ 之前，该对的首字母就早于 $F$，而六个互异的首字母不可能全部这么早，因此该对排不到最后。",
+          "若伙伴是 $F$，则 $H$ 至 $L$ 必须分别从 $A$ 至 $E$ 中找伙伴。依次揭开它们的伙伴，条件概率为 $(5/9)(4/7)(3/5)(2/3)(1/1)=8/63$。",
+          "若伙伴晚于 $G$，共有五种选择。余下四个比 $G$ 晚的字母必须各自选到前六个字母中的一个，条件概率为 $(6/9)(5/7)(4/5)(3/3)=8/21$。加权相加得 $(1/11)(8/63)+(5/11)(8/21)=128/693$，所求和为 $821$。"
+        ],
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Sequential counting",
+            "zh": "分步计数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/7"
+  },
+  "aime-2025i-q8": {
+    "summary": "For a real shift $k$, consider the circle with centre $(25,20)$ and radius $5$. Its points equidistant from $(k+4,0)$ and $(k,3)$ are the complex solutions in the problem. Take all shifts giving one solution; express their sum as reduced $m/n$ and compute $m+n$.",
+    "summaryZh": "在复平面中，考虑圆心 $(25,20)$、半径 $5$ 的圆。圆上与 $(k+4,0)$、$(k,3)$ 等距的点对应原题的复数解，其中 $k$ 为实数。找出恰有一个解时的全部 $k$，将它们的和约为 $m/n$，求 $m+n$。",
+    "answer": "077",
+    "answerZh": "077",
+    "methods": [
+      {
+        "title": "Find the extreme values of a linear functional",
+        "titleZh": "求圆上线性式的最大值与最小值",
+        "steps": [
+          "Expanding equality of squared distances for $(x,y)$ cancels both quadratic terms and leaves $8k+7=8x-6y$. Write $x=25+u$, $y=20+v$, with $u^2+v^2=25$.",
+          "Now $8k+7=80+8u-6v$. The quantity $8u-6v$ ranges from $-50$ to $50$, since $(8,-6)$ has length $10$ and $(u,v)$ length $5$. At either extreme the vectors are parallel, giving a unique point. At any interior level the corresponding line cuts the circle in two points.",
+          "The two extreme shifts are $k=(73-50)/8$ and $(73+50)/8$. Their sum is $73/4$, so the entry is $73+4=77$."
+        ],
+        "stepsZh": [
+          "对点 $(x,y)$ 写出两段距离的平方相等，展开后所有二次项抵消，剩下 $8k+7=8x-6y$。令 $x=25+u,y=20+v$，则 $u^2+v^2=25$。",
+          "因此 $8k+7=80+8u-6v$。向量 $(8,-6)$ 的长为 $10$，$(u,v)$ 的长为 $5$，点积 $8u-6v$ 的范围为 $-50$ 到 $50$。在两个端点处向量共线，各只对应圆上一点；中间的取值对应的直线则与圆交于两点。",
+          "两个临界值为 $k=(73-50)/8$ 和 $(73+50)/8$。它们之和为 $73/4$，故填 $73+4=77$。"
+        ],
+        "topics": [
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          },
+          {
+            "en": "Tangency",
+            "zh": "相切"
+          }
+        ]
+      },
+      {
+        "title": "Find the middle line of the two parallel tangents",
+        "titleZh": "先求两条平行切线的中线",
+        "steps": [
+          "As $k$ changes, the two marked points translate horizontally together. Their perpendicular bisector has constant slope $4/3$ and passes through their midpoint $(k+2,3/2)$. Exactly two bisectors in this parallel family touch the circle at a single point.",
+          "The two tangents are exchanged by a half turn about $(25,20)$. Because the intercept depends linearly on $k$, its central line corresponds to the arithmetic mean $k_0$ of the two tangent shifts.",
+          "On that central line $20-3/2=(4/3)(25-(k_0+2))$, giving $k_0=73/8$. The required sum is $2k_0=73/4$, hence $m+n=77$."
+        ],
+        "stepsZh": [
+          "改变 $k$ 时，两个已知点一起水平移动。它们的垂直平分线斜率恒为 $4/3$，并过中点 $(k+2,3/2)$。这族平行直线中恰有两条与圆相切，各产生唯一解。",
+          "绕圆心 $(25,20)$ 旋转半周，两条切线互换。由于平分线的截距关于 $k$ 是一次函数，两条切线对应的 $k$ 的平均值 $k_0$ 对应经过圆心的中线。",
+          "代入圆心坐标有 $20-3/2=(4/3)(25-(k_0+2))$，解得 $k_0=73/8$。所求和为 $2k_0=73/4$，所以 $m+n=77$。"
+        ],
+        "topics": [
+          {
+            "en": "Central symmetry",
+            "zh": "中心对称"
+          },
+          {
+            "en": "Perpendicular bisectors",
+            "zh": "垂直平分线"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/8"
+  },
+  "aime-2025i-q9": {
+    "summary": "Rotate $y=x^2-4$ anticlockwise through $60^\\circ$ about the origin. Its unique fourth-quadrant intersection with the unrotated graph has ordinate $(a-\\sqrt b)/c$, with the positive integers $a,c$ coprime. Find $a+b+c$.",
+    "summaryZh": "将抛物线 $y=x^2-4$ 绕原点逆时针旋转 $60^\\circ$。新旧曲线在第四象限的唯一交点的纵坐标为 $(a-\\sqrt b)/c$，其中 $a,b,c$ 为正整数，$a,c$ 互素。求 $a+b+c$。",
+    "answer": "062",
+    "answerZh": "062",
+    "methods": [
+      {
+        "title": "Start on the bisector of the two downward axes",
+        "titleZh": "在两条向下对称轴的角平分线上构造交点",
+        "steps": [
+          "The original downward axis makes direction angle $-90^\\circ$; the rotated downward axis has angle $-30^\\circ$. Take the ray halfway between them, at $-60^\\circ$. For any point on this ray, rotating it back $60^\\circ$ gives exactly its reflection in the original vertical axis. A point of the original parabola on this ray therefore lies on both curves.",
+          "Along the ray $y=-\\sqrt3 x$, so $x^2=y^2/3$. Substitution into $y=x^2-4$ gives $y^2-3y-12=0$. The negative root is $(3-\\sqrt{57})/2$ and its corresponding $x$ is positive.",
+          "This constructs a fourth-quadrant intersection. The uniqueness supplied in the problem identifies it as the required point. We obtain $3+57+2=62$."
+        ],
+        "stepsZh": [
+          "原抛物线向下的对称轴方向角为 $-90^\\circ$，旋转后变为 $-30^\\circ$。取居中的 $-60^\\circ$ 射线。此射线上一点顺时针转 $60^\\circ$ 后，恰好得到它关于原纵轴的对称点。因此原抛物线在这条射线上的点也落在旋转后的曲线上。",
+          "射线方程为 $y=-\\sqrt3 x$，故 $x^2=y^2/3$。代入 $y=x^2-4$ 得 $y^2-3y-12=0$。取负根 $(3-\\sqrt{57})/2$，相应的 $x$ 为正。",
+          "所得点确在第四象限。由题设该象限的交点唯一，它就是目标交点，故 $3+57+2=62$。"
+        ],
+        "topics": [
+          {
+            "en": "Reflection symmetry",
+            "zh": "反射对称"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "二次方程"
+          }
+        ]
+      },
+      {
+        "title": "Compare the radii before and after rotation",
+        "titleZh": "比较旋转前后的半径平方",
+        "steps": [
+          "Let $(x,y)$ be a fourth-quadrant intersection, and let $v=(y-\\sqrt3 x)/2$ be the ordinate after undoing the rotation. Both the given point and this predecessor lie on the original parabola. A point on that parabola of ordinate $t$ has squared distance $t^2+t+4$ from the origin.",
+          "Equal radii therefore imply $(v-y)(v+y+1)=0$. Since $0<x<2$ and $y=x^2-4$, we have $2(v+y)=3x^2-12-\\sqrt3 x<(6-\\sqrt3)x-12<-2\\sqrt3<-2$. Thus $v+y$ cannot equal $-1$.",
+          "It follows that $v=y$, so $y=-\\sqrt3 x$. Then $y^2=3(y+4)$, giving the unique negative ordinate $(3-\\sqrt{57})/2$ and the entry $62$."
+        ],
+        "stepsZh": [
+          "设第四象限的交点为 $(x,y)$，逆旋转后它的纵坐标为 $v=(y-\\sqrt3 x)/2$。这两个点都在原抛物线上。对纵坐标为 $t$ 的抛物线上的点，其到原点的距离平方为 $t^2+t+4$。",
+          "旋转保持距离，故 $(v-y)(v+y+1)=0$。又 $0<x<2$ 且 $y=x^2-4$，所以 $2(v+y)=3x^2-12-\\sqrt3 x<(6-\\sqrt3)x-12<-2\\sqrt3<-2$，排除 $v+y=-1$。",
+          "因此 $v=y$，即 $y=-\\sqrt3 x$。由 $y^2=3(y+4)$ 取唯一负根 $(3-\\sqrt{57})/2$，得填答数 $62$。"
+        ],
+        "topics": [
+          {
+            "en": "Rotation matrices",
+            "zh": "旋转矩阵"
+          },
+          {
+            "en": "Factorisation",
+            "zh": "因式分解"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/9"
+  },
+  "aime-2025i-q10": {
+    "summary": "Count the fillings of a $3\\times9$ strip with digits $1$–$9$ in which each row and each of the three disjoint $3\\times3$ boxes contains all nine digits. For the resulting count $N=\\prod p^{e_p}$, evaluate $\\sum pe_p$.",
+    "summaryZh": "用数字 $1$ 至 $9$ 填一个 $3\\times9$ 的条形表格。每行及三个互不重叠的 $3\\times3$ 宫都包含全部九个数字。设摆法数分解为 $N=\\prod p^{e_p}$，求 $\\sum pe_p$。",
+    "answer": "081",
+    "answerZh": "081",
+    "methods": [
+      {
+        "title": "Assign a cyclic direction to every digit",
+        "titleZh": "按数字在下一宫的行走向分类",
+        "steps": [
+          "The left box can be filled in $9!$ ways. Fix such a filling and label its three rows cyclically $0,1,2$. The next copy of a digit in the middle box must move from its old row $i$ to either $i+1$ or $i-1$ modulo $3$.",
+          "Write $f_i$ for how many of the three digits from row $i$ move forward. The new population of row $i$ equals $f_{i-1}+3-f_{i+1}$, which must be $3$. This forces all $f_i$ to have a common value $f$.",
+          "For each of the three source rows choose which $f$ digits move forward. Summing gives $\\sum_{f=0}^3\\binom3f^3=1+27+27+1=56$ middle-box assignments to rows. Each digit goes in its one unused row in the right box; that row receives exactly the three digits missing from its first six cells.",
+          "Each of the six three-cell row segments in the last two boxes admits $3!$ orders. Hence $N=9!\\cdot56\\cdot6^6=2^{16}3^{10}5^1 7^2$. The requested weighted sum is $2(16)+3(10)+5+7(2)=81$."
+        ],
+        "stepsZh": [
+          "左宫有 $9!$ 种填法。固定一种，把三行循环编号为 $0,1,2$。一个数字在中宫出现时，必须从原来所在的第 $i$ 行移到第 $i+1$ 或第 $i-1$ 行，行号按模 $3$ 计算。",
+          "设原来第 $i$ 行的三个数字中有 $f_i$ 个向前移动。中宫第 $i$ 行接收的数字数为 $f_{i-1}+3-f_{i+1}$，必须等于 $3$，即所有 $f_i$ 相等，记为 $f$。",
+          "在原来的三行中，各选 $f$ 个数字向前移动。合计中宫的行分配数为 $\\sum_{f=0}^3\\binom3f^3=1+27+27+1=56$。进入右宫时，每个数字只能去它还没出现过的那一行，故每一行恰好得到前六格所缺的三个数字。",
+          "后两宫共六个三格行段，其内部次序各有 $3!$ 种。故 $N=9!\\cdot56\\cdot6^6=2^{16}3^{10}5^1 7^2$。所求为 $2(16)+3(10)+5+7(2)=81$。"
+        ],
+        "topics": [
+          {
+            "en": "Permutations",
+            "zh": "排列"
+          },
+          {
+            "en": "Multiplication principle",
+            "zh": "乘法原理"
+          },
+          {
+            "en": "Prime factorisation",
+            "zh": "质因数分解"
+          }
+        ]
+      },
+      {
+        "title": "Classify the six possible paths of a digit",
+        "titleZh": "把每个数字的行轨迹分成六类",
+        "steps": [
+          "Record for each digit the rows it occupies in the three boxes from left to right. The record must be a permutation of $123$. Split the six records into the cyclic triples $123,231,312$ and their reversals $321,132,213$. Once all records are assigned, each of the nine box–row segments can be internally ordered in $3!$ ways.",
+          "Let the counts for $123,231,312$ be $a,b,c$. In the first box row $1$ uses only records $123,132$, so the count for $132$ is $3-a$. In the second box row $3$ uses only $231,132$, so $b=a$. In the third box row $2$ uses only $312,132$, so $c=a$. Applying the same three-per-cell condition to the other first-box rows makes the counts of $321$ and $213$ also $3-a$.",
+          "Conversely these counts satisfy every three-per-cell condition. For fixed $a$, assign nine labelled digits to these six record types in $9!/(a!^3(3-a)!^3)$ ways. Multiplying by $6^9$ and summing over $a=0,1,2,3$ yields $9!\\cdot6^6(1+27+27+1)$. Its prime powers $2^{16}3^{10}5^1 7^2$ give $81$."
+        ],
+        "stepsZh": [
+          "把一个数字从左宫到右宫依次所在的行号记下来，所得记录一定是 $123$ 的某个排列。六种记录分为循环排列 $123,231,312$ 及它们的逆序 $321,132,213$。九个数字的记录选好后，九个宫内行段各有 $3!$ 种内部次序。",
+          "设三种循环记录的数字数依次为 $a,b,c$。第一宫第一行只接收 $123,132$ 两种记录，所以 $132$ 有 $3-a$ 个。第二宫第三行只接收 $231,132$，故 $b=a$；第三宫第二行只接收 $312,132$，故 $c=a$。再数第一宫的其余两行，得到 $321,213$ 也各有 $3-a$ 个。",
+          "反过来，上述数字数保证每个宫内行段恰有三位。给定 $a$，九个不同数字分配到六种记录的方式数是 $9!/(a!^3(3-a)!^3)$。乘上 $6^9$，再将 $a=0,1,2,3$ 的结果相加，得到 $9!\\cdot6^6(1+27+27+1)$。其质因数分解为 $2^{16}3^{10}5^1 7^2$，所求为 $81$。"
+        ],
+        "topics": [
+          {
+            "en": "Multinomial coefficients",
+            "zh": "多项式系数"
+          },
+          {
+            "en": "Double counting",
+            "zh": "双计数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/10"
+  },
+  "aime-2025i-q11": {
+    "summary": "Intersect $x=34y^2$ with a triangular wave of period 4. Its rising segment joins $(-1,-1)$ to $(1,1)$ and its falling segment ends at $(3,-1)$. Write the sum of the intersection heights as $(a+b\\sqrt c)/d$ in lowest terms with squarefree $c$; find $a+b+c+d$.",
+    "summaryZh": "周期为 4 的三角波在 $(-1,-1)$ 与 $(1,1)$ 之间上升，再下降至 $(3,-1)$。把它与 $x=34y^2$ 的所有交点纵坐标之和写成既约形式 $(a+b\\sqrt c)/d$，其中 $c$ 无平方因子，求 $a+b+c+d$。",
+    "answer": "259",
+    "answerZh": "259",
+    "methods": [
+      {
+        "title": "Pair roots on each line segment",
+        "titleZh": "按线段配对二次方程的根",
+        "steps": [
+          "Every intersection has $-1\\le y\\le1$, hence $0\\le x\\le34$. On a rising segment $x=4k+y$. For $k=0,\\ldots,8$ solve $34y^2-y-4k=0$. For $k\\ge1$ its value is negative at zero and positive at both endpoints $\\pm1$; for $k=0$ the roots are $0,1/34$. Thus each of these nine pairs is valid and contributes $1/34$ by Vieta.",
+          "On falling segments write $x=m-y$, where $m=2,6,\\ldots,34$. For the first eight centers $m\\le30$, the equation $34y^2+y-m=0$ again has one root on each side of zero inside $[-1,1]$. Each pair contributes $-1/34$.",
+          "For $m=34$ the quadratic is still negative at $y=-1$, so only the positive root $(-1+5\\sqrt{185})/68$ belongs. No wave endpoint contributes twice because none of the roots is $\\pm1$. The sum is $(1+5\\sqrt{185})/68$, and $1+5+185+68=259$."
+        ],
+        "stepsZh": [
+          "每个交点都满足 $-1\\le y\\le1$，故 $0\\le x\\le34$。上升段可写成 $x=4k+y$，其中 $k=0,\\ldots,8$。交点满足 $34y^2-y-4k=0$。当 $k\\ge1$ 时，左边在零点为负，在 $\\pm1$ 处均为正，故两根都在线段内。$k=0$ 时两根为 $0,1/34$。每一对根之和均为 $1/34$，共有九对。",
+          "下降段写成 $x=m-y$，其中 $m=2,6,\\ldots,34$。当前八个中心 $m\\le30$ 时，方程 $34y^2+y-m=0$ 在 $[-1,0)$ 和 $(0,1]$ 中各有一根，每对之和为 $-1/34$。",
+          "最后 $m=34$ 时，左端点 $y=-1$ 处的二次式仍为负，所以只取正根 $(-1+5\\sqrt{185})/68$。没有根等于 $\\pm1$，不同线段不会重复计算同一交点。综合得 $(1+5\\sqrt{185})/68$，所求为 $1+5+185+68=259$。"
+        ],
+        "topics": [
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Periodic functions",
+            "zh": "周期函数"
+          },
+          {
+            "en": "Domain restrictions",
+            "zh": "定义域限制"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/11"
+  },
+  "aime-2025i-q12": {
+    "summary": "On $x+y+z=75$, compare the three quantities $x-yz$, $y-zx$, and $z-xy$ in that strict increasing order. Among the three resulting components, the bounded component has area $a\\sqrt b$ for squarefree $b$. Compute $a+b$.",
+    "summaryZh": "在平面 $x+y+z=75$ 上，依次要求 $x-yz$、$y-zx$、$z-xy$ 严格递增。所得三个连通区域中有一个有界，其面积为 $a\\sqrt b$，其中 $b$ 无平方因子，求 $a+b$。",
+    "answer": "510",
+    "answerZh": "510",
+    "methods": [
+      {
+        "title": "Translate the factors and find the triangle",
+        "titleZh": "平移坐标后确定三角形",
+        "steps": [
+          "Use $u=x+1$, $v=y+1$, $w=z+1$. Subtracting consecutive expressions factors the conditions as $(u-v)w<0$ and $(v-w)u<0$, on the translated plane $u+v+w=78$. Translation preserves distances.",
+          "Take $u,w>0$. The inequalities reduce to $0<u<v<w$, giving a bounded triangular region. Neither $u$ nor $w$ can pass through zero under the strict inequalities, so this convex nonempty sign region is an entire component. The stated uniqueness identifies it as the required component.",
+          "Its three vertices in the closure are $(0,0,78)$, $(0,39,39)$, and $(26,26,26)$, obtained by making pairs among $u=0$, $u=v$, $v=w$ equalities. Two edge vectors are $(0,39,-39)$ and $(26,26,-52)$. Their cross product is $(-1014,-1014,-1014)$; the area is half its length, $507\\sqrt3$. Hence $507+3=510$."
+        ],
+        "stepsZh": [
+          "设 $u=x+1$、$v=y+1$、$w=z+1$。相邻两式相减并因式分解，得到 $(u-v)w<0$ 及 $(v-w)u<0$，同时 $u+v+w=78$。平移保持长度和面积。",
+          "考虑 $u,w>0$ 的区域，两个不等式化为 $0<u<v<w$，形成一个有界三角形内部。严格不等式不允许 $u$ 或 $w$ 为零，因此此非空凸区域是完整的连通分支。由题中有界区域的唯一性可知，这就是所求区域。",
+          "令三条边界 $u=0$、$u=v$、$v=w$ 两两相交，得闭包的三个顶点 $(0,0,78)$、$(0,39,39)$、$(26,26,26)$。两条边向量为 $(0,39,-39)$ 与 $(26,26,-52)$，叉积为 $(-1014,-1014,-1014)$。其模的一半为 $507\\sqrt3$，故答案是 $507+3=510$。"
+        ],
+        "topics": [
+          {
+            "en": "Factoring",
+            "zh": "因式分解"
+          },
+          {
+            "en": "Polyhedral regions",
+            "zh": "多面体区域"
+          },
+          {
+            "en": "Vector area",
+            "zh": "向量面积"
+          }
+        ]
+      },
+      {
+        "title": "Use permutation symmetry in the positive triangle",
+        "titleZh": "利用正坐标截面中的排列对称",
+        "steps": [
+          "Set $u=x+1$, $v=y+1$, $w=z+1$. The inequalities are $(u-v)w<0$, $(v-w)u<0$. Then the positive part of the plane $u+v+w=78$ is an equilateral triangle with intercepts $(78,0,0)$ and its permutations. Its side is $78\\sqrt2$ and its area is $(\\sqrt3/4)(78\\sqrt2)^2=3042\\sqrt3$.",
+          "The six possible strict orderings of $u,v,w$ partition this triangle up to boundaries. Permuting coordinates is an isometry, so each ordering has area $3042\\sqrt3/6=507\\sqrt3$. The ordering $u<v<w$ satisfies both inequalities and is a full bounded component since $u,w$ cannot cross zero. This also gives $510$."
+        ],
+        "stepsZh": [
+          "令 $u=x+1$、$v=y+1$、$w=z+1$，两个不等式变为 $(u-v)w<0$ 和 $(v-w)u<0$。平面 $u+v+w=78$ 在正坐标区域内截出等边三角形，三个截点为 $(78,0,0)$ 及其坐标排列。边长 $78\\sqrt2$，面积为 $(\\sqrt3/4)(78\\sqrt2)^2=3042\\sqrt3$。",
+          "忽略面积为零的边界，三坐标的六种严格大小顺序把大三角形分成六块。置换坐标是等距变换，所以每块面积为 $3042\\sqrt3/6=507\\sqrt3$。其中 $u<v<w$ 满足两个不等式，而 $u,w$ 均不能越过零，故该块是完整的有界分支，答案仍为 $510$。"
+        ],
+        "topics": [
+          {
+            "en": "Permutation symmetry",
+            "zh": "排列对称"
+          },
+          {
+            "en": "Equilateral triangles",
+            "zh": "等边三角形"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/12"
+  },
+  "aime-2025i-q13": {
+    "summary": "Begin with the four sectors of a disk formed by perpendicular diameters. Add 25 independent random chords, each formed by uniform perimeter endpoints conditioned to occupy different quadrants. Find the expected number of pieces.",
+    "summaryZh": "一圆盘先由两条垂直直径分成四份。再独立加入 25 条随机弦，每条弦的两端均匀取自圆周，条件是两端位于不同象限。求最后区域数的期望。",
+    "answer": "204",
+    "answerZh": "204",
+    "methods": [
+      {
+        "title": "Condition on which quadrants the endpoints occupy",
+        "titleZh": "按弦端点的象限组合计算交叉概率",
+        "steps": [
+          "Each new chord adds one region plus one for each earlier segment it crosses. Degeneracies such as three random segments meeting at a point have probability zero. A chord uses one of six unordered pairs of quadrants uniformly. Four pairs are adjacent and cross one diameter; two are opposite and cross both. Thus there are $4/3$ expected diameter crossings per chord.",
+          "For two random chords there are $6^2=36$ ordered choices of their quadrant pairs. In 6 choices the pairs coincide: the endpoint orders in the two shared quadrants are independent, so exactly half the time the endpoints alternate and the chords cross. In 24 choices there is just one shared quadrant: switching the order of its two endpoints toggles whether the endpoints alternate, again giving probability $1/2$.",
+          "The remaining 6 choices use disjoint quadrant pairs. Only the two ordered choices of opposite-quadrant chords have alternating endpoints. The overall crossing probability is therefore $(6/2+24/2+2)/36=17/36$.",
+          "Starting with four regions and summing over all new chords and all unordered pairs of new chords gives $4+25(1+4/3)+\\binom{25}{2}(17/36)=204$."
+        ],
+        "stepsZh": [
+          "一条新弦产生的新增区域数，等于它与已有线段的交点数加一。随机线段三线共点等退化事件的概率为零。弦所在的无序象限对有六种且等可能，其中四种相邻、穿过一条直径；两种相对、穿过两条直径。因此每条新弦与直径的平均交点数为 $4/3$。",
+          "两条弦对应 $6^2=36$ 种有序的象限对组合。其中六种选择完全相同：在两个共同象限内，两个端点的先后次序相互独立，恰有一半概率在圆周上交替出现，从而相交。有 24 种选择仅共有一个象限；交换该象限内两个端点的次序，就会在相交与不相交之间切换，概率仍为 $1/2$。",
+          "余下六种选择使用互不相交的象限对。只有两条弦分别连接两组相对象限时四端点才交替，计两种有序选择。因此两随机弦相交概率为 $(6/2+24/2+2)/36=17/36$。",
+          "从初始四个区域出发，对所有新增弦及其无序对求和，得到 $4+25(1+4/3)+\\binom{25}{2}(17/36)=204$。"
+        ],
+        "topics": [
+          {
+            "en": "Linearity of expectation",
+            "zh": "期望的线性性"
+          },
+          {
+            "en": "Random chords",
+            "zh": "随机弦"
+          },
+          {
+            "en": "Circular order",
+            "zh": "圆周次序"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/13"
+  },
+  "aime-2025i-q14": {
+    "summary": "A convex pentagon has consecutive side lengths $AB,BC,CD,DE,EA=14,7,24,13,26$ and $60^\\circ$ angles at $B$ and $E$. If the minimum total distance from a point to its five vertices is $m+n\\sqrt p$ with squarefree $p$, find $m+n+p$.",
+    "summaryZh": "凸五边形 $ABCDE$ 的顺次边长为 $14,7,24,13,26$，且 $B,E$ 两个内角均为 $60^\\circ$。若平面上一点到五个顶点的距离和的最小值是 $m+n\\sqrt p$（$p$ 无平方因子），求 $m+n+p$。",
+    "answer": "060",
+    "answerZh": "060",
+    "methods": [
+      {
+        "title": "Certify the minimum with three unit vectors",
+        "titleZh": "用三个单位向量证明最小值",
+        "steps": [
+          "By the cosine rule $AC=7\\sqrt3$ and $AD=13\\sqrt3$. Triangles $ABC,AED$ are consequently right at $C,D$, with $30^\\circ$ angles at $A$. For $\\theta=\\angle CAD$ the sides of $ACD$ give $\\cos\\theta=1/7$ and $\\sin\\theta=4\\sqrt3/7$. Thus $\\cos\\angle BAE=\\cos(\\theta+60^\\circ)=-11/14$ and $BE=38$ by the cosine rule.",
+          "Take $BE$ horizontal and drop $AF$ perpendicular to it. With $F$ as origin write $B=(-a,0)$, $E=(b,0)$, $A=(0,h)$. From the sides of $ABE$, $a=(14^2+38^2-26^2)/76=241/19$, $b=481/19$, $h=65\\sqrt3/19$. In particular $F$ is on the segment $BE$.",
+          "Put $u=(\\sqrt3a-h)/4$ and $v=(\\sqrt3b-h)/4$; both are positive. Rotating the vector $BA$ clockwise through $60^\\circ$ and halving it gives $BC$, hence $C=(-\\sqrt3u,-u)$. Rotating $EA$ counterclockwise through $60^\\circ$ and halving it similarly gives $D=(\\sqrt3v,-v)$. Convexity places $C,D$ on the opposite side of $BE$ from $A$.",
+          "The unit vectors from $F$ toward $A,C,D$ are $(0,1)$, $(-\\sqrt3/2,-1/2)$ and $(\\sqrt3/2,-1/2)$, with sum zero. For each of these three vertices $P$, project $P-X$ onto its unit vector $e_P$: $|P-X|\\ge (P-X)\\cdot e_P$. Summing cancels the $X$ term, giving $AX+CX+DX\\ge FA+FC+FD$. Also $BX+EX\\ge BE$; both bounds are attained at $X=F$.",
+          "The minimum is $38+h+2u+2v=38+\\sqrt3(a+b)/2=38+19\\sqrt3$. Therefore the three-digit response is $060$."
+        ],
+        "stepsZh": [
+          "由余弦定理得 $AC=7\\sqrt3$、$AD=13\\sqrt3$。因此 $ABC,AED$ 分别在 $C,D$ 处为直角，且各自在 $A$ 处的角均为 $30^\\circ$。设 $\\theta=\\angle CAD$，由 $ACD$ 的三边算出 $\\cos\\theta=1/7$、$\\sin\\theta=4\\sqrt3/7$。于是 $\\cos\\angle BAE=\\cos(\\theta+60^\\circ)=-11/14$，再用余弦定理得 $BE=38$。",
+          "令 $BE$ 水平，$A$ 向该直线作垂线，垂足为原点 $F$。取 $B=(-a,0)$、$E=(b,0)$、$A=(0,h)$。由三角形 $ABE$ 的边长可得 $a=(14^2+38^2-26^2)/76=241/19$、$b=481/19$、$h=65\\sqrt3/19$，所以 $F$ 确在线段 $BE$ 上。",
+          "令 $u=(\\sqrt3a-h)/4$、$v=(\\sqrt3b-h)/4$，二者均为正。向量 $BA$ 顺时针旋转 $60^\\circ$ 后减半即为 $BC$，所以 $C=(-\\sqrt3u,-u)$。同理，向量 $EA$ 逆时针旋转 $60^\\circ$ 后减半即为 $ED$，得到 $D=(\\sqrt3v,-v)$。五边形凸性确定了旋转方向，$C,D$ 与 $A$ 分居 $BE$ 两侧。",
+          "从 $F$ 分别指向 $A,C,D$ 的单位向量为 $(0,1)$、$(-\\sqrt3/2,-1/2)$、$(\\sqrt3/2,-1/2)$，其和为零。对三个顶点中的每个 $P$，向对应单位向量 $e_P$ 投影，得 $|P-X|\\ge(P-X)\\cdot e_P$。求和后与 $X$ 有关的项相消，得到 $AX+CX+DX\\ge FA+FC+FD$。另有 $BX+EX\\ge BE$；取 $X=F$ 时两式均取等。",
+          "因此最小值为 $38+h+2u+2v=38+\\sqrt3(a+b)/2=38+19\\sqrt3$，三位数答案为 $060$。"
+        ],
+        "topics": [
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Vector projections",
+            "zh": "向量投影"
+          },
+          {
+            "en": "Distance minimization",
+            "zh": "距离和最小值"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/14"
+  },
+  "aime-2025i-q15": {
+    "summary": "Count ordered triples $(a,b,c)$ from $1$ through $729$ for which $a^3+b^3+c^3$ is divisible by $2187$. Report the last three digits of the count.",
+    "summaryZh": "取 $1$ 至 $729$ 的三个整数形成有序三元组 $(a,b,c)$。求使 $a^3+b^3+c^3$ 被 $2187$ 整除的三元组个数的末三位。",
+    "answer": "735",
+    "answerZh": "735",
+    "methods": [
+      {
+        "title": "Classify unit cubes and reduce the modulus",
+        "titleZh": "分类处理单位立方并降低模数",
+        "steps": [
+          "For $k\\ge2$, cubing the units modulo $3^{k-1}$ gives exactly once each residue of $1$ or $-1$ modulo 9 among the residues modulo $3^k$. To see this, changing a representative by $3^{k-1}$ preserves its cube modulo $3^k$. If $r^3\\equiv s^3\\pmod{3^k}$ then $r\\equiv s\\pmod3$; writing $r=s+3t$ shows $r^2+rs+s^2=3(s^2+3st+3t^2)$ has exactly one factor 3. Thus $3^{k-1}\\mid r-s$. This proves injectivity and the two finite sets both have size $2\\cdot3^{k-2}$; direct reduction modulo 9 gives the stated image.",
+          "Only zero or two of the entries can be units: one unit or three signs $\\pm1$ cannot sum to zero modulo 9. For exactly two units, choose the position of the multiple of 3, its value, and one designated remaining unit (use the earlier remaining position). The cube of the last entry is forced and is $\\pm1$ modulo 9, hence has exactly one allowed unit root. With $k=7$ this yields $3\\cdot243\\cdot486=354294$ triples.",
+          "When all entries are divisible by 3, divide them by 3. The new entries run from 1 to 243 and their cube sum must vanish modulo $81=3^4$. Cubes modulo 81 depend only on the entries modulo 27, each residue occurring nine times. It suffices to count valid triples from 1 to 27, then multiply by $9^3$.",
+          "For entries from 1 to 27, the exactly-two-units count is $3\\cdot9\\cdot18=486$, applying the same argument with $k=4$. If all three entries are multiples of 3, divide again: the three quotients run from 1 to 9 and their cube sum must vanish modulo 3. Since $t^3\\equiv t\\pmod3$, any choice of the first two quotients permits exactly three choices for the last. This adds $9^2\\cdot3=243$, for a subtotal of $729$.",
+          "Combining the two outer cases gives $354294+9^3\\cdot729=885735$, with remainder $735$ modulo 1000."
+        ],
+        "stepsZh": [
+          "对 $k\\ge2$，模 $3^{k-1}$ 的可逆剩余类取立方，刚好各一次得到模 $3^k$ 下所有模 9 余 $1$ 或 $-1$ 的数。将代表元加上 $3^{k-1}$ 不改变其立方模 $3^k$ 的值。若 $r^3\\equiv s^3\\pmod{3^k}$，则 $r\\equiv s\\pmod3$。写成 $r=s+3t$，则 $r^2+rs+s^2=3(s^2+3st+3t^2)$ 恰含一个因子 3，故 $3^{k-1}\\mid r-s$，这就证明单射。单位立方模 9 只可能是 $\\pm1$，且两边的剩余类数均为 $2\\cdot3^{k-2}$，故一一对应。",
+          "三个数中不被 3 整除的数只能有零个或两个，因为一个或三个 $\\pm1$ 之和都不能模 9 为零。若有两个，先选 3 的倍数所在位置及其数值，再给另外两个位置中靠前的一个选取可逆数。最后一个数的立方已经确定，且模 9 为 $\\pm1$，由上述一一对应恰有一个可取值。令 $k=7$，此类共有 $3\\cdot243\\cdot486=354294$ 个。",
+          "若三数都是 3 的倍数，全部除以 3。商的范围为 1 至 243，立方和须被 $81=3^4$ 整除。立方模 81 仅由商模 27 的余数决定，每个余数出现九次。因此可先在 1 至 27 中计数，再乘 $9^3$。",
+          "在 1 至 27 中取数，用同一论证令 $k=4$，恰有两个可逆数的情形共 $3\\cdot9\\cdot18=486$ 个。若三个数全是 3 的倍数，再除以 3，三个商均在 1 至 9，立方和须模 3 为零。因 $t^3\\equiv t\\pmod3$，前两个商任取后，最后一个商有三种选法，增加 $9^2\\cdot3=243$ 个，合计 $729$ 个。",
+          "两大类总数为 $354294+9^3\\cdot729=885735$，除以 1000 的余数为 $735$。"
+        ],
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余与模运算"
+          },
+          {
+            "en": "Cube residues",
+            "zh": "立方剩余"
+          },
+          {
+            "en": "Recursive counting",
+            "zh": "递推计数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025I/problem/15"
+  }
+}

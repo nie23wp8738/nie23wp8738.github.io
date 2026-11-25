@@ -40,7 +40,7 @@ const topics = topicEntries.filter(t => counts.get(t.key) || practice.some(p => 
       <label>{zh ? '考试' : 'Exam'}<select data-exam><option value="">{zh ? '所有考试' : 'All exams'}</option>{exams.map(exam => <option value={exam}>{exam}</option>)}</select></label>
       <label>{zh ? '年份' : 'Year'}<select data-year><option value="">{zh ? '所有年份' : 'All years'}</option>{years.map(year => <option value={year}>{year}</option>)}</select></label>
       <label>{zh ? '细分知识点' : 'Subtopic'}<select data-tag><option value="">{zh ? '所有细分知识点' : 'All subtopics'}</option></select></label>
-      <label>{zh ? '题目来源' : 'Question source'}<select data-kind><option value="">{zh ? '全部' : 'All sources'}</option><option value="past">{zh ? '历年真题' : 'Past questions'}</option><option value="full">{zh ? '站内全文真题' : 'Past questions with full text'}</option><option value="original">{zh ? '原创练习' : 'Original practice'}</option></select></label>
+      <label>{zh ? '题目来源' : 'Question source'}<select data-kind><option value="">{zh ? '全部' : 'All sources'}</option><option value="solutions">{zh ? '有站内解析' : 'Worked solutions on this site'}</option><option value="answers">{zh ? '有站内答案（含解析题）' : 'On-site answers, including worked solutions'}</option><option value="past">{zh ? '历年真题' : 'Past questions'}</option><option value="full">{zh ? '站内全文真题' : 'Past questions with full text'}</option><option value="original">{zh ? '原创练习' : 'Original practice'}</option></select></label>
     </div>
     <section class="arch-results" data-results aria-live="polite"></section>
   </div>

@@ -1,5 +1,6 @@
 import { getInlineRecord } from './inline-editions.js';
 import { getWorkedAnswer } from './answers.js';
+import answerKeys from '../data/answer-keys.json';
 
 // Keep the question browser's index light. Full text lives on static reader pages.
 const archives = import.meta.glob('../data/past-*.json', { eager: true, import: 'default' });
@@ -31,19 +32,36 @@ export const topicEntries = taxonomy.map(([key,en,zh]) => ({key,en,zh}));
 const topics = new Map(topicEntries.map(topic => [topic.key,topic]));
 const paperIndex = Object.values(archives).flat().map(paper => ({
   ...paper,
+  ...(answerKeys[paper.id] ? {keySource:answerKeys[paper.id].sourceUrl} : {}),
   questions: (paper.questions || []).map(question => {
     const id = paper.id + '-q' + question.n;
     const record = getInlineRecord(id);
+    const answer = getWorkedAnswer(id);
+    const keyAnswer = answerKeys[paper.id]?.answers[question.n];
     return {
       ...question,
+      ...(keyAnswer ? {keyAnswer} : {}),
+      ...(answerKeys[paper.id]?.values?.[question.n] ? {keyValue:answerKeys[paper.id].values[question.n]} : {}),
+      ...(answerKeys[paper.id]?.notes?.[question.n] ? {keyNote:answerKeys[paper.id].notes[question.n]} : {}),
+      ...(answer ? {hasWorkedSolution:true} : {}),
+      ...(answer?.summary ? {hasCommentary:true, commentary:{
+        pdf:'/commentary-pdf/questions/' + id + '.pdf', solutionPdf:'/commentary-pdf/solutions/' + id + '.pdf'
+      }} : {}),
       ...(record ? {inline: {pdf: '/inline-pdf/' + id + '.pdf', licenseUrl: record.edition.licenseURL,
-        ...(getWorkedAnswer(id) ? {solutionPdf:'/solution-pdf/' + id + '.pdf'} : {})}} : {}),
+        ...(answer ? {solutionPdf:'/solution-pdf/' + id + '.pdf'} : {})}} : {}),
       ...(question.tags ? {tags: [...new Set(question.tags.map(tag => topics.has(tag) ? tag : canonicalTag(tag)))]} : {})
     };
   })
 })).sort((a,b) =>
   b.year - a.year || a.exam.localeCompare(b.exam, 'en') || a.label.localeCompare(b.label, 'en', {numeric:true}));
 export function getPastPapers() { return paperIndex; }
+
+export function getReadingPaths() {
+  return paperIndex.flatMap(paper => paper.questions.filter(q => q.inline || q.hasCommentary).map(q => {
+    const id = paper.id + '-q' + q.n;
+    return {params:{id}, props:{record:getInlineRecord(id), paperId:paper.id, number:q.n}};
+  }));
+}
 
 export function topicLabel(key, lang='en') {
   return topics.get(key)?.[lang] ?? key;

@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/reader.css';
+import '../styles/solutions.css';
+const {lang='en'} = Astro.props;
+const zh = lang === 'zh', root = zh ? '/zh' : '';
+const t = (en,cn) => zh ? cn : en;
+---
+<Layout lang={lang} current="past" title={t('Question record','历年真题')}>
+  <article class="shell question past-reader" data-entry data-lang={lang}>
+    <nav class="breadcrumb" aria-label={t('Breadcrumb','当前位置')}><a href={root+'/past-papers/'}>{t('Past papers','历年真题')}</a> <span data-parent></span></nav>
+    <h1 data-title>{t('Question record','历年真题')}</h1>
+    <p role="status" data-status>{t('Loading question information…','正在加载题目信息…')}</p>
+    <noscript>{t('Enable JavaScript to look up this question by number.','请启用 JavaScript，以便按题号查阅本站记录。')}</noscript>
+    <div data-record hidden>
+      <p class="question-meta" data-topics></p>
+      <div class="worked-answer">
+        <details class="answer-panel" id="solutions" data-answer-panel>
+          <summary>{t('Show answer key','查看站内答案')}</summary>
+          <div class="answer-result"><h2>{t('Answer','答案')}</h2><p data-answer></p><p data-key-note hidden></p></div>
+          <p>{t('A worked solution has not yet been added for this question.','这道题已收录答案，逐步解析尚待补充。')}</p>
+        </details>
+        <p data-pending hidden>{t('This record lists the source and topics. An answer and a worked solution have not yet been added.','本站已收录本题的出处和知识点，答案与逐步解析尚待补充。')}</p>
+      </div>
+      <div class="btnrow"><a class="button" data-add>{t('Add to worksheet','加入我的试卷')}</a><a class="button light" data-related>{t('Browse this paper','查看同卷题目')}</a></div>
+      <details class="reader-source"><summary>{t('Original sources (external)','原始资料（外部网站）')}</summary>
+        <p data-source-name></p><nav class="reader-topics" data-sources></nav>
+      </details>
+      <nav class="reader-pagination" aria-label={t('Questions in this paper','本卷题目')} data-adjacent></nav>
+    </div>
+  </article>
+  <script type="module" src="/question-entry.js" is:inline></script>
+</Layout>

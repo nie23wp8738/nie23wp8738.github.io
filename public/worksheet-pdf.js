@@ -80,11 +80,12 @@ function safeURL(value) {
 }
 
 function assetFor(problem, solutions) {
-  return solutions ? problem.inline?.solutionPdf : problem.inline?.pdf;
+  const assets = problem.inline || problem.commentary;
+  return solutions ? assets?.solutionPdf : assets?.pdf;
 }
 
 function sheetKind(problems, solutions) {
-  const refs = problems.filter(p => p.kind === 'past' && !assetFor(p, solutions)).length;
+  const refs = problems.filter(p => p.kind === 'past' && !assetFor(p, solutions) && !(solutions && p.keyAnswer)).length;
   if (refs === 0) return solutions ? 'Solutions' : 'Question paper';
   if (refs === problems.length) return solutions ? 'Source guide' : 'Question references';
   return solutions ? 'Solutions and sources' : 'Questions and references';
@@ -157,7 +158,7 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
 
   function richSourceLinks(problem) {
     let x = margin;
-    const sources = [['Original paper', problem.sourceURL], ['Licence', problem.inline.licenseUrl]];
+    const sources = [['Question on this site', problem.permalink], ['Original source', problem.sourceURL], ['Licence', problem.inline?.licenseUrl]];
     if (solutions && problem.solutionURL) sources.push(['Published solutions', problem.solutionURL]);
     for (const [label, target] of sources) {
       const url = safeURL(target);
@@ -199,12 +200,16 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
     if (problem.kind === 'past') {
       const edition = plainLabel(problem.paperTitle) || plainLabel(problem.exam.join(' ') + ' ' + problem.year);
       paragraph(edition + ', Question ' + problem.n);
-      sourceLink('Open original question', problem.sourceURL);
-      if (solutions && problem.solutionURL) sourceLink('Open published solutions', problem.solutionURL);
-      if (solutions && !problem.solutionURL) {
-        paragraph('For solutions, consult the source if available.', 'body', 11, 16);
+      if (solutions && problem.keyAnswer) {
+        section('Answer key', plainLabel(problem.keyAnswer + (problem.keyValue ? ' - ' + problem.keyValue : '')));
+        if (problem.keyNote?.en) paragraph(plainLabel(problem.keyNote.en), 'body', 11, 16);
+        paragraph('A worked solution has not yet been added.', 'body', 11, 16);
+      } else if (solutions) {
+        paragraph('An answer and a worked solution have not yet been added for this question.', 'body', 11, 16);
       }
-      paragraph('Reference: ' + problem.permalink, 'body', 9, 14);
+      sourceLink(solutions && problem.keyAnswer ? 'View answer on this site' : 'View question record on this site',
+        problem.permalink + (solutions && problem.keyAnswer ? '#solutions' : ''));
+      sourceLink('Original question (external)', problem.sourceURL);
       y -= solutions ? 12 : 27;
       return;
     }

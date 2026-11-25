@@ -30,10 +30,10 @@ const featuredTopics = ['algebra','geometry','counting','number-theory','logic',
         <h1>{zh?'数学真题库':'Mathematics Question Bank'}</h1>
         <p>{zh?'按考试和年份查阅历年真题，或按知识点跨试卷选题，组成自己的练习卷。':'Explore past mathematics questions by exam and year, or choose a topic and build your own worksheet.'}</p>
         <div class="btnrow">
-          <a class="button" href={root+'/past-papers/'}>{zh?'浏览历年真题':'Browse past papers'}</a>
+          <a class="button" href={root+'/topics/?topic=all&kind=solutions#questions'}>{zh?'站内做题与看解析':'Practise with solutions'}</a>
           <a class="button light" href={root+'/topics/'}>{zh?'按知识点查题':'Browse by topic'}</a>
         </div>
-        <a class="section-link" href={root+'/past-papers/?reading=full'}>{zh?'查看可在站内阅读全文的真题':'Explore papers with full question text'}</a>
+        <a class="section-link" href={root+'/past-papers/'}>{zh?'浏览全部历年试卷':'Browse all past papers'}</a>
       </div>
       <a class="feature-card" href={root+'/problems/count-detour/'}>
         <figure><GridFigure zh={zh} /><figcaption><span class="fig-title">{zh?'绕开封闭路口':'Around a closed intersection'}</span><span class="fig-type">{zh?'原创练习 · 组合计数':'Original practice · Counting'}</span></figcaption></figure>

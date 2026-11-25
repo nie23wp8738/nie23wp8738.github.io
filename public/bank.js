@@ -1,4 +1,4 @@
-import { sourceAnswer } from './answer-links.js';
+import { answerLabel, hasWorkedSolution, matchesReading, questionPath, sourceAnswer } from './answer-links.js';
 
 function startBank(root) {
   const zh = root.dataset.lang === 'zh';
@@ -62,10 +62,11 @@ function startBank(root) {
         const concepts = tags.filter(key => !topicNames.has(key)).map(tag => translations[tag] || tag);
         const topicKeys = [...new Set([q.topic,...(q.topics || []),...tags].filter(key => key && topicNames.has(key)))];
         const topic = topicKeys.map(key => topicNames.get(key)).join(zh ? '、' : ' · ');
-        const path = q.inline ? '/questions/' + id + '/' : '/past-papers/?paper=' + encodeURIComponent(paper.id) + '#q-' + q.n;
+        const path = questionPath(id, q);
         const answerSource = sourceAnswer(paper,q);
         const record = {
           id, kind:'past', paperId:paper.id, paperTitle, n:q.n, year:String(paper.year), exam:[paper.exam], inline:q.inline,
+          hasCommentary:q.hasCommentary, commentary:q.commentary, hasWorkedSolution:hasWorkedSolution(q), keyNote:q.keyNote, keyAnswer:q.keyAnswer, keyValue:q.keyValue,
           source:paper.source, sourceURL:safeWebURL(q.url) || safeWebURL(paper.url), solutionURL:safeWebURL(answerSource?.url), solutionScope:answerSource?.scope,
           title:paperTitle + t(' · Question ',' · 第 ') + q.n + (zh ? ' 题' : ''), topicKeys, topic, concepts,
           href:prefix + path, permalink:'https://nie23wp8738.github.io' + path,
@@ -156,13 +157,12 @@ function startBank(root) {
     }
     const foot = el('div',null,'bank-card-foot');
     if (isPast) {
-      foot.append(q.inline ? link(t('Read full question','站内阅读全文'),q.href,'bank-card-source') : link(t('Open original question','打开原题'),q.sourceURL,'bank-card-source'));
-    } else foot.append(el('span',q.method));
-    if (!isPast || q.inline?.solutionPdf) {
-      foot.append(link(t('Answer & methods','答案与解法'),q.href+'#solutions','bank-card-source'));
-    } else if (q.solutionURL) {
-      const title=q.solutionScope==='paper' ? t('Source paper solutions','原卷解答') : t('Solution at source','原站单题解答');
-      foot.append(link(title,q.solutionURL,'bank-card-source'));
+      if (q.inline) foot.append(link(t('Read full question','站内阅读全文'),q.href,'bank-card-source'));
+      const label = answerLabel(q, t);
+      if (label) foot.append(link(label, q.href+'#solutions','bank-card-source'));
+      else foot.append(el('span',t('Index only · Answer pending','题目索引 · 暂无站内答案')));
+    } else {
+      foot.append(el('span',q.method),link(t('Answer & methods','答案与解法'),q.href+'#solutions','bank-card-source'));
     }
     foot.append(addButton(q));
     article.append(foot); return article;
@@ -174,7 +174,7 @@ function startBank(root) {
     const filtered = (isPast ? past : originals).filter(q =>
       (!values.exam || q.exam.includes(values.exam)) && (!values.topic || q.topicKeys.includes(values.topic))
       && (!values.year || q.year === values.year) && (!values.number || String(q.n) === values.number)
-      && (values.reading !== 'full' || q.inline) && (values.reading !== 'solutions' || q.inline?.solutionPdf)
+      && matchesReading(q, values.reading)
       && (!values.method || q.methodKey === values.method) && (!values.level || q.levelKey === values.level)
       && tokens.every(word=>q.search.includes(word)));
     maxPages = Math.max(1,Math.ceil(filtered.length / pageSize));
@@ -205,16 +205,19 @@ function startBank(root) {
     });
     const known = new Set(selected);
     list.querySelectorAll('[data-add]').forEach(b=>styleAddButton(b,known.has(b.dataset.add)));
-    const refs = rows.filter(q=>q.kind==='past' && !q.inline?.solutionPdf).length;
+    const refs = rows.filter(q=>q.kind==='past' && !matchesReading(q,'answers')).length;
+    const keys = rows.filter(q=>q.kind==='past' && !hasWorkedSolution(q) && q.keyAnswer != null).length;
     get('sheet-count').textContent = countLabel(rows.length);
     get('mobile-count').textContent = rows.length;
     get('empty').hidden = rows.length>0; get('sheet-actions').hidden=rows.length===0;
-    get('reference-note').hidden=refs===0;
+    get('reference-note').hidden=refs===0 && keys===0;
     root.querySelectorAll('[name=paper-layout]').forEach(input=>input.checked=input.value===layout);
     root.querySelectorAll('[data-pdf]').forEach(b=>b.disabled=exporting || rows.length===0 || rows.length!==selected.length);
     const answers = root.querySelector('[data-pdf=solutions]');
-    answers.textContent = refs === 0 ? t('Download solutions PDF','下载解析卷 PDF') : refs === rows.length ?
-      t('Download source guide PDF','下载题源索引 PDF') : t('Download solutions & sources PDF','下载解析与题源 PDF');
+    if (rows.length && refs === rows.length) answers.textContent = t('Download reference sheet PDF','下载题源索引 PDF');
+    else if (rows.length && keys === rows.length) answers.textContent = t('Download answer key PDF','下载答案卷 PDF');
+    else if (refs || keys) answers.textContent = t('Download answer guide PDF','下载答案汇编 PDF');
+    else answers.textContent = t('Download solutions PDF','下载解析卷 PDF');
   }
   function changed(message) { save(); renderSheet(); get('status').textContent=message; }
   function addIncoming() {

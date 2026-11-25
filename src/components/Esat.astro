@@ -15,21 +15,21 @@ const modules = [
   <article class="shell archive-shell">
     <nav class="breadcrumb" aria-label={t('Breadcrumb','当前位置')}><a href={(zh?'/zh':'')+'/past-papers/'}>{t('Past papers','历年真题')}</a> / ESAT</nav>
     <header class="archive-hero"><h1>{t('ESAT official practice','ESAT 官方练习')}</h1>
-      <p>{t('Choose a module to open the official specimen or practice test in Pearson’s desktop test player.','选择科目，在培生的桌面考试系统中打开对应的官方样题或练习测试。')}</p>
-      <p class="sample-note">{t('These are preparation tests published by UAT-UK and Pearson VUE.','这些是 UAT-UK 与 Pearson VUE 公开的备考样题和练习测试。')} <a href="https://www.pearsonvue.com/us/en/uatuk.html">{t('Official test directory','官方测试目录')}</a></p>
+      <p>{t('Choose a module to open the official specimen or practice test in Pearson’s test player on a computer. Official test and paper links open an external site in a new tab.','选择科目，在电脑上使用培生考试系统。官方机考、原卷和答案链接会在新标签页打开外站。')}</p>
+      <p class="sample-note">{t('These are preparation tests published by UAT-UK and Pearson VUE.','这些是 UAT-UK 与 Pearson VUE 公开的备考样题和练习测试。')} <a target="_blank" rel="noopener noreferrer" href="https://www.pearsonvue.com/us/en/uatuk.html">{t('Official test directory','官方测试目录')}</a></p>
     </header>
     <nav class="esat-modules" aria-label={t('Subject modules','考试模块')}>{modules.map(([en,cn,slug])=><a href={'#'+slug}>{t(en,cn)}</a>)}</nav>
     {modules.map(([en,cn,slug])=><section id={slug} class="sample-module">
       <h2>{t(en,cn)}</h2><div class="module-papers">{tests.filter(test=>test.module===en).map(test=><article class="sample-test">
         <h3>{test.kind==='specimen'?t('Specimen test','官方样题'):t('Practice test','练习测试')}</h3>
-        <p>{zh?test.descriptionZh:test.description}</p><a href={test.url} aria-label={zh?test.titleZh:test.title}>{t('Open test','打开测试')}</a>
+        <p>{zh?test.descriptionZh:test.description}</p><a href={test.url} target="_blank" rel="noopener noreferrer" aria-label={t(test.title+' (Pearson, external)',test.titleZh+'（培生外站）')}>{t('Take test on Pearson','前往培生机考')}</a>
       </article>)}</div>
     </section>)}
     <section class="sample-module"><h2>{t('Earlier ENGAA and NSAA papers','前身考试 ENGAA 与 NSAA 历年卷')}</h2>
       <p>{t('UAT-UK also recommends selected papers from the earlier Engineering and Natural Sciences admissions assessments. Check the marked changes in syllabus when choosing questions.','UAT-UK 还提供早期工程与自然科学入学考试的原卷，供 ESAT 备考使用。选题时请留意考纲差异。')}</p>
       {['ENGAA','NSAA'].map(exam=><details class="legacy-index"><summary>{exam}</summary><ul>
-        {historical.filter(x=>x.exam===exam).map(x=><li><a href={x.url}>{x.year} {x.exam}  ({x.format})</a>{x.solutionsUrl && <> · <a href={x.solutionsUrl}>{t('Answer key','答案表')}</a></>}</li>)}</ul></details>)}
-      <p class="sample-note"><a href="https://esat-tmua.ac.uk/esat-preparation-materials/">{t('UAT-UK preparation archive','UAT-UK 官方备考资料库')}</a></p>
+        {historical.filter(x=>x.exam===exam).map(x=><li><a href={x.url} target="_blank" rel="noopener noreferrer">{x.year} {x.exam}  ({x.format})</a>{x.solutionsUrl && <> · <a href={x.solutionsUrl} target="_blank" rel="noopener noreferrer">{t('Publisher’s answer key (external)','官方答案表（外站）')}</a></>}</li>)}</ul></details>)}
+      <p class="sample-note"><a target="_blank" rel="noopener noreferrer" href="https://esat-tmua.ac.uk/esat-preparation-materials/">{t('UAT-UK preparation archive','UAT-UK 官方备考资料库')}</a></p>
     </section>
   </article>
 </Layout>

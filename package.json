@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/verify-inline-pdfs.mjs",
+    "prebuild": "node scripts/verify-answer-keys.mjs && node scripts/verify-inline-pdfs.mjs && node scripts/typeset-commentary.mjs",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "predev": "node scripts/typeset-commentary.mjs"
   },
   "dependencies": {
     "astro": "7.4.13",

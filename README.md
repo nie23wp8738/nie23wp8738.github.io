@@ -12,11 +12,11 @@ A bilingual mathematics question bank at <https://nie23wp8738.github.io/>. The d
 
 ## Development
 
-Use Node.js 24. Run `npm ci` and `npm run dev` for development or `npm run build` to generate `dist/`. Pushes to the main branch are built and published by the GitHub Pages workflow.
+Use Node.js 24. Run `npm ci`, then install Chromium with `npx playwright install chromium` or set `CHROME_BIN` to an installed Chrome executable. Use `npm run dev` for development or `npm run build` to generate `dist/`. Pushes to the main branch are built and published by the GitHub Pages workflow.
 
 ## Question sources
 
-Historical records in `src/data/past-*.json` store paper and question references and topics. Each licensed full-text edition has one record in `src/data/editions/`, linked to the same stable question IDs. Each record provides the English source with LaTeX, figure references, attribution, licence and changes. Full-text questions have localized reader pages under `/questions/` and print in the worksheet. Other questions include the source reference. Keep IDs stable for students' bookmarks and saved worksheets.
+Historical records in `src/data/past-*.json` store paper and question references and topics. Each licensed full-text edition has one record in `src/data/editions/`, linked to the same stable question IDs. Each record provides the English source with LaTeX, figure references, attribution, licence and changes. Full-text questions have localized reader pages under `/questions/` and print in the worksheet. Annotated papers use site-authored outlines and bilingual proofs. Other catalogued questions open an internal record with any verified answer key, scoring notes, topics and optional external sources. Keep IDs stable for students' bookmarks and saved worksheets.
 
 | Exam | Source |
 | --- | --- |
@@ -48,3 +48,9 @@ npm run build
 To use an existing Chromium executable, add `--chromium /path/to/chromium`. Commit the edited source, any diagrams, the generated question PDFs and the edition's `.build.json` manifest together. The build checks their digests so the printable worksheet matches the reader. If the typesetting script changes, regenerate every full-text edition.
 
 For a paper with in-site worked solutions, edit its matching file in `src/data/answers/`. It stores the answer, worked methods, topic labels and adaptation credits. Run `node scripts/typeset-solutions.mjs --edition nzmo2-2025` (optionally with `--chromium`) to regenerate its English solution downloads. Include the corresponding PDFs and manifest under `public/solution-pdf/`. The build checks that the solution sheets match the current question and solution text.
+
+### On-site answers and worked commentaries
+
+The verified answer key for each objective paper lives in `src/data/answer-keys.json`. Entries use the catalogue paper ID and printed question number. Keep AIME entries as strings to preserve leading zeroes. Source URLs and scoring notes stay with the key.
+
+A worked commentary in `src/data/commentary/<paper-id>.json` includes an independently written question outline in each language, an answer, and one or more bilingual methods with topic labels. It has a static, localised reader under `/questions/<question-id>/`. Building the site typesets each outline and its solution for worksheet downloads. A generic question record requests only its own paper from `/question-data/`.

@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import practice from '../lib/practice.js';
+import guide from '../data/tara-guide.json';
+import guideNotes from '../data/tara-guide-notes.json';
 import { getPastPapers,localPractice } from '../lib/catalog.js';
 import { getWorkedAnswer,originalAnswer,methodTopicKey } from '../lib/answers.js';
 const {lang='en'} = Astro.props;
@@ -19,10 +21,11 @@ function addMethods(answer, question, path) {
   });
 }
 for (const paper of getPastPapers()) for (const question of paper.questions) {
-  if (!question.inline?.solutionPdf) continue;
+  if (!question.hasWorkedSolution) continue;
   const id=paper.id+'-q'+question.n;
   addMethods(getWorkedAnswer(id),paper.label+t(' · Question ',' · 第 ')+question.n+t('',' 题'),'/questions/'+id+'/');
 }
+for (const q of guide.questions) addMethods(guideNotes[q.id],t(q.label,q.labelZh),'/tara/guide/'+q.id+'/');
 for (const p of practice) addMethods(originalAnswer(p),localPractice(p,lang).title,'/problems/'+p.id+'/');
 const options=[...topics].sort((a,b)=>a[1].localeCompare(b[1],zh?'zh-CN':'en'));
 ---

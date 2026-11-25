@@ -1,4 +1,4 @@
-const files = import.meta.glob('../data/answers/*.json', { eager: true, import: 'default' });
+const files = import.meta.glob(['../data/answers/*.json','../data/commentary/*.json'], { eager: true, import: 'default' });
 const answers = new Map();
 for (const file of Object.values(files)) {
   for (const [id, answer] of Object.entries(file)) {

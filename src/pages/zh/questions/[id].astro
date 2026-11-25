@@ -1,9 +1,8 @@
 ---
 import PastQuestion from '../../../components/PastQuestion.astro';
-import { getInlineQuestions } from '../../../lib/inline-editions.js';
-export function getStaticPaths() {
-  return getInlineQuestions().map(record => ({params:{id:record.id}, props:{record}}));
-}
-const {record} = Astro.props;
+import Commentary from '../../../components/Commentary.astro';
+import { getReadingPaths } from '../../../lib/catalog.js';
+export function getStaticPaths() { return getReadingPaths(); }
+const {record, paperId, number} = Astro.props;
 ---
-<PastQuestion lang="zh" record={record} />
+{record ? <PastQuestion lang="zh" record={record} /> : <Commentary lang="zh" paperId={paperId} number={number} />}

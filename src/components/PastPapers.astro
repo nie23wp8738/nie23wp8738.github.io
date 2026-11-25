@@ -14,18 +14,21 @@ const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh 
 <section class="archive-shell shell" data-archive="papers" data-lang={lang}>
   <header class="archive-hero">
     <h1>{zh ? '历年真题' : 'Past papers'}</h1>
-    <p>{zh ? '按考试和年份查找原卷。选择「站内全文」可以逐题阅读，并将完整题干加入试卷。' : 'Browse by exam and year. Choose full text to read questions here and include them in your worksheet.'}</p>
-    <a class="arch-inline" href={prefix + '/topics/'}>{zh ? '按知识点查看真题' : 'Find questions by topic'}</a>
+    <p>{zh ? '按考试和年份查找原卷。选择「有站内解析」可逐题阅读解题步骤，选择「有站内答案」也会显示只收录答案的题目。' : 'Browse by exam and year. Filter for worked solutions to see each step, or include questions with an answer key.'}</p>
+    <nav class="arch-links" aria-label={zh?'站内逐题解析':'Worked papers'}>
+      {['amc8-2024','aime-2025i'].map(id=>papers.find(p=>p.id===id)).filter(p=>p?.questions.some(q=>q.hasCommentary)).map(p=><a class="arch-inline" href={prefix+'/past-papers/?paper='+p.id}>{p.label} {zh?'逐题解析':'worked solutions'}</a>)}
+      <a class="arch-inline" href={prefix + '/topics/'}>{zh ? '按知识点查看真题' : 'Find questions by topic'}</a>
+    </nav>
   </header>
   <div class="archive-search" role="search" aria-label={zh ? '筛选试卷' : 'Filter papers'}>
     <label>{zh ? '考试' : 'Exam'}<select data-exam><option value="">{zh ? '所有考试' : 'All exams'}</option>{exams.map(exam => <option value={exam}>{zh && exam==='Euclid'?'Euclid · 欧几里得':exam}</option>)}<option value="ESAT">{zh?'ESAT · 官方练习':'ESAT · Official practice'}</option><option value="TARA">{zh?'TARA · 样题与练习':'TARA · Samples and practice'}</option></select></label>
     <label>{zh ? '年份' : 'Year'}<select data-year><option value="">{zh ? '所有年份' : 'All years'}</option>{years.map(year => <option value={year}>{year}</option>)}</select></label>
-    <label>{zh ? '阅读方式' : 'Reading options'}<select data-reading><option value="">{zh ? '全部' : 'All papers'}</option><option value="full">{zh ? '站内全文' : 'Full text on this site'}</option></select></label>
+    <label>{zh ? '阅读方式' : 'Reading options'}<select data-reading><option value="">{zh ? '全部' : 'All papers'}</option><option value="solutions">{zh ? '有站内解析' : 'Worked solutions on this site'}</option><option value="answers">{zh ? '有站内答案（含解析题）' : 'On-site answers, including worked solutions'}</option><option value="full">{zh ? '站内全文' : 'Full text on this site'}</option></select></label>
   </div>
   {euclidPractice.map(test=><aside class="practice-strip" data-euclid-practice hidden>
     <strong>{zh?test.titleZh:test.title}</strong>
-    <p>{zh?test.descriptionZh:test.description} <a href={test.url}>{zh?'打开练习卷':'Open practice paper'}</a>
-    {test.solutionsUrl && <> · <a href={test.solutionsUrl}>{zh?'解答':'Solutions'}</a></>}</p>
+    <p>{zh?test.descriptionZh:test.description} <a href={test.url} target="_blank" rel="noopener noreferrer">{zh?'练习卷（外站）':'Practice paper (external)'}</a>
+    {test.solutionsUrl && <> · <a href={test.solutionsUrl} target="_blank" rel="noopener noreferrer">{zh?'来源方解答（外站）':'Publisher’s solutions (external)'}</a></>}</p>
   </aside>)}
   <section class="arch-results"  data-results aria-live="polite" aria-busy="true">
     <p class="arch-muted" data-loading>{zh ? '正在加载试卷…' : 'Loading papers…'}</p>
@@ -44,8 +47,13 @@ const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh 
       <li>TMUA · <a href="https://esat-tmua.ac.uk/tmua-preparation-materials/">{zh ? 'UAT-UK 正式公开的 2016–2023 年历年卷' : 'UAT-UK’s released 2016–2023 past papers'}</a></li>
     </ul>
   </details>
-  <noscript><h2>{zh ? '试卷链接' : 'Paper links'}</h2>
-    <ul>{papers.map(p => <li><a href={p.url}>{p.exam} · {p.year} · {p.label}</a></li>)}</ul>
+  <noscript>
+    <p>{zh ? '启用 JavaScript 可使用完整索引和筛选。下列题目可直接阅读站内解析。' : 'Enable JavaScript for the full index and filters. These worked solutions are available directly.'}</p>
+    {papers.filter(p => p.questions.some(q => q.inline?.solutionPdf || q.hasCommentary)).map(p => (
+      <details><summary>{p.label}</summary><ul>{p.questions.filter(q => q.inline?.solutionPdf || q.hasCommentary).map(q =>
+        <li><a href={prefix+'/questions/'+p.id+'-q'+q.n+'/#solutions'}>{zh?'第 '+q.n+' 题':'Question '+q.n}</a></li>
+      )}</ul></details>
+    ))}
   </noscript>
   <script type="application/json" data-tags set:html={JSON.stringify(tagLabels).replace(/</g, '\\u003c')} />
   <script type="application/json" data-topics set:html={JSON.stringify(topicLabels).replace(/</g, '\\u003c')} />

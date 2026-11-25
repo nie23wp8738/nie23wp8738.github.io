@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkedAnswer from './WorkedAnswer.astro';
+import guide from '../data/tara-guide.json';
+import modules from '../data/tara-modules.json';
+import notes from '../data/tara-guide-notes.json';
+
+const { question, lang } = Astro.props;
+const zh = lang === 'zh';
+const prefix = zh ? '/zh' : '';
+const t = (en:string,cn:string) => zh ? cn : en;
+const module = modules.find(item => item.id === question.module);
+const note = notes[question.id as keyof typeof notes];
+if (!module || !note) throw new Error('Missing TARA guide example: ' + question.id);
+const moduleLabel = t(module.title,module.titleZh);
+const title = t(question.label,question.labelZh);
+const writing = module.id === 'writing-task';
+const url = (page:number) => guide.url + '#page=' + page;
+---
+<Layout title={title+' · TARA'} lang={lang} current="past">
+  <article class="shell question guide-reader">
+    <nav class="breadcrumb" aria-label={t('Breadcrumb','当前位置')}>
+      <a href={prefix+'/tara/#guide'}>{t('TARA guide examples','TARA 指南例题')}</a> / {moduleLabel}
+    </nav>
+    <header>
+      <p class="question-meta">{t('UAT-UK Question Guide · June 2026','UAT-UK 题型指南 · 2026 年 6 月')}</p>
+      <h1>{title}</h1>
+    </header>
+    <section aria-labelledby="outline">
+      <h2 id="outline">{t('Question in brief','题意概述')}</h2>
+      <p class="statement">{t(note.outline,note.outlineZh)}</p>
+    </section>
+    <WorkedAnswer id={question.id} lang={lang} answer={note} original={true} writing={writing} />
+    <footer class="guide-source">
+      <p>{t('Source: UAT-UK Question Guide. The question outline and worked commentary on this page were written for this site.','来源为 UAT-UK 官方题型指南。本页的题意概述、推理过程及写作示例均为本站撰写。')}</p>
+      <a href={url(question.page)} target="_blank" rel="external noopener">{t('Official original · external PDF, page '+question.page,'官方原题 · 外站 PDF，第 '+question.page+' 页')}</a>
+      {question.answerPage && question.answerPage !== question.page && <>
+        <span aria-hidden="true"> · </span>
+        <a href={url(question.answerPage)} target="_blank" rel="external noopener">{t('Official commentary · external PDF, page '+question.answerPage,'官方解答 · 外站 PDF，第 '+question.answerPage+' 页')}</a>
+      </>}
+    </footer>
+  </article>
+</Layout>
+<style>
+  .guide-reader h2#outline { color: var(--muted); font: 550 .875rem/1.55 var(--sans); margin: 1.15rem 0 .3rem; }
+  .guide-reader p.statement { margin: 0 0 1.35rem; }
+  .guide-source { border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+  .guide-source p { margin: 0 0 .35rem; }
+</style>

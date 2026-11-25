@@ -12,7 +12,7 @@ const t = (en:string, cn:string) => zh ? cn : en;
 const prefix = zh ? '/zh' : '';
 const title = t('TARA question bank','TARA 题库');
 const intro = t('Test of Academic Reasoning for Admissions','学术推理入学考试（Test of Academic Reasoning for Admissions）');
-const pageURL = (page:number) => guide.url + '#page=' + page;
+const guideReader = (id:string) => prefix + '/tara/guide/' + id + '/';
 ---
 <Layout title={title} description={intro} current="past" lang={lang}>
   <article class="shell archive-shell tara-bank">
@@ -41,13 +41,13 @@ const pageURL = (page:number) => guide.url + '#page=' + page;
 
     <section aria-labelledby="guide" class="tara-section">
       <h2 id="guide">{t('Official worked examples','官方例题')}</h2>
-      <p>{t('Read individual examples in the June 2026 UAT-UK Question Guide. The writing section includes advice on planning and developing a response.','按题打开 UAT-UK 2026 年 6 月官方题型指南。写作部分附审题、构思与论证建议。')}</p>
+      <p>{t('Read each example in brief, then open our worked explanations or sample writing responses here.','点击查看官方例题的题意概述，再在站内展开解法或写作范例。')}</p>
       <div class="tara-grid">{modules.map(module=><section class="guide-module">
         <h3>{t(module.title,module.titleZh)}</h3>
         <ul class="guide-list">{guide.questions.filter(q=>q.module===module.id).map(q=>{
           const label=t(q.label,q.labelZh);
-          return <li><a href={pageURL(q.page)}>{label}</a>
-            {q.answerPage && <a class="answer-link" href={pageURL(q.answerPage)} aria-label={label+' · '+t('Official explanation','官方解析')}>{t('Explanation','解析')}</a>}
+          return <li><a href={guideReader(q.id)}>{label}</a>
+            <a class="answer-link" href={guideReader(q.id)+'#method-1'} aria-label={label+' · '+t('On-site commentary','站内解析')}>{q.module==='writing-task' ? t('Sample responses','写作范例') : t('Worked answer','站内解析')}</a>
           </li>;
         })}</ul>
       </section>)}</div>
@@ -55,33 +55,33 @@ const pageURL = (page:number) => guide.url + '#page=' + page;
 
     <section aria-labelledby="pearson" class="tara-section">
       <h2 id="pearson">{t('Official practice tests','官方机考练习')}</h2>
-      <p>{t('Pearson offers two practice sets, each split into three modules. Open a module on a desktop computer to use the exam player.','培生发布了两套备考测试，每套分为三个模块。请在电脑上打开相应模块，使用官方机考界面。')}</p>
+      <p>{t('Pearson offers two practice sets, each split into three modules. Each link opens the external Pearson exam player in a new tab. Use a desktop computer.','培生发布了两套备考测试，每套分为三个模块。以下入口将在新标签页打开培生外站的机考界面，建议使用电脑。')}</p>
       <table class="pearson-tests">
         <thead><tr><th scope="col">{t('Module','模块')}</th><th scope="col">{t('Specimen test','官方样题')}</th><th scope="col">{t('Practice test','模拟练习')}</th></tr></thead>
         <tbody>{modules.map(module=><tr>
           <th scope="row">{t(module.title,module.titleZh)}</th>
-          <td><a href={module.specimenURL} aria-label={t(module.title+' specimen test',module.titleZh+'官方样题')}>{t('Open specimen','打开样题')}</a></td>
-          <td><a href={module.practiceURL} aria-label={t(module.title+' practice test',module.titleZh+'模拟练习')}>{t('Open practice','打开练习')}</a></td>
+          <td><a href={module.specimenURL} target="_blank" rel="external noopener" aria-label={t(module.title+' specimen test',module.titleZh+'官方样题')}>{t('Open specimen','打开样题')}</a></td>
+          <td><a href={module.practiceURL} target="_blank" rel="external noopener" aria-label={t(module.title+' practice test',module.titleZh+'模拟练习')}>{t('Open practice','打开练习')}</a></td>
         </tr>)}</tbody>
       </table>
-      <a class="reference" href="https://www.pearsonvue.com/us/en/uatuk.html">{t('Pearson VUE test directory','培生官方测试目录')}</a>
+      <a class="reference" href="https://www.pearsonvue.com/us/en/uatuk.html" target="_blank" rel="external noopener">{t('Pearson VUE test directory (external)','培生官方测试目录（外站）')}</a>
     </section>
 
     <section aria-labelledby="related" class="tara-section">
       <h2 id="related">{t('Related BMAT and TSA papers','相关考试历年卷 · BMAT 与 TSA')}</h2>
-      <p>{t('UAT-UK recommends these earlier tests for additional practice in critical thinking and problem solving. Each entry is a past paper from the exam named below.','UAT-UK 推荐使用以下考试的历年卷补充练习批判性思维与问题解决。下列试卷均按实际考试名称收录。')}</p>
+      <p>{t('UAT-UK recommends these earlier tests for additional practice in critical thinking and problem solving. The papers and answer keys below open as external PDFs in a new tab.','UAT-UK 推荐使用以下考试的历年卷补充练习批判性思维与问题解决。以下试卷、答案表和解析为官方 PDF，点击将在新标签页打开外站文件。')}</p>
       {['BMAT','TSA'].map(exam=>{
         const entries=legacy.filter(p=>p.exam===exam).sort((a,b)=>b.year-a.year);
         return <details class="legacy-index">
           <summary>{exam} {t('Section 1','第一部分')} · {entries.at(-1)?.year}–{entries[0]?.year}</summary>
           <ul class="legacy-papers">{entries.map(p=><li>
-            <a href={p.url}>{p.year} {p.exam} · {t('Question paper','试卷')}</a>
-            <a href={p.solutionsUrl} aria-label={p.year+' '+p.exam+' · '+t('Answer key','答案表')}>{t('Answer key','答案表')}</a>
-            {p.explainedUrl && <a href={p.explainedUrl} aria-label={p.year+' '+p.exam+' · '+t('Worked answers','解析')}>{t('Worked answers','解析')}</a>}
+            <a href={p.url} target="_blank" rel="external noopener">{p.year} {p.exam} · {t('Question paper','试卷')}</a>
+            <a href={p.solutionsUrl} target="_blank" rel="external noopener" aria-label={p.year+' '+p.exam+' · '+t('Answer key','答案表')}>{t('Answer key','答案表')}</a>
+            {p.explainedUrl && <a href={p.explainedUrl} target="_blank" rel="external noopener" aria-label={p.year+' '+p.exam+' · '+t('Worked answers','解析')}>{t('Worked answers','解析')}</a>}
           </li>)}</ul>
         </details>;
       })}
-      <a class="reference" href="https://esat-tmua.ac.uk/tara-preparation-materials/">{t('UAT-UK preparation archive','UAT-UK 官方备考档案')}</a>
+      <a class="reference" href="https://esat-tmua.ac.uk/tara-preparation-materials/" target="_blank" rel="external noopener">{t('UAT-UK preparation archive (external)','UAT-UK 官方备考档案（外站）')}</a>
     </section>
   </article>
 </Layout>
