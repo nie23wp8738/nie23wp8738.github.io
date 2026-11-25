@@ -1,0 +1,340 @@
+{
+  "aime-2020i-q1": {
+    "summary": "In isosceles triangle $ABC$ with $AB=AC$, points $D$ on $AC$ and $E$ on $AB$ satisfy $AE=ED=DB=BC$. If $\\angle ABC=m/n$ degrees in lowest terms, find $m+n$.",
+    "summaryZh": "在等腰三角形 $ABC$ 中，$AB=AC$。点 $D,E$ 分别在边 $AC,AB$ 的内部，并满足 $AE=ED=DB=BC$。若 $\\angle ABC=m/n$ 度且分数最简，求 $m+n$。",
+    "answer": "547",
+    "answerZh": "547",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/1",
+    "methods": [{
+      "title": "Chase angles through three isosceles triangles",
+      "titleZh": "沿三个等腰三角形追角",
+      "topics": [{"en":"Isosceles triangles","zh":"等腰三角形"},{"en":"Angle chasing","zh":"角度追踪"}],
+      "steps": [
+        "Let $\\angle BAC=\\alpha$. Since $AE=ED$, triangle $AED$ gives $\\angle ADE=\\alpha$, and its exterior angle gives $\\angle DEB=2\\alpha$.",
+        "Since $ED=DB$, triangle $EDB$ has $\\angle DBE=2\\alpha$ and $\\angle EDB=180^\\circ-4\\alpha$. Along the straight line $AC$, this forces $\\angle BDC=3\\alpha$.",
+        "Now $DB=BC$, so $\\angle BCD=3\\alpha$. Also $AB=AC$, hence both base angles of $ABC$ equal $3\\alpha$. Thus $\\alpha+6\\alpha=180^\\circ$, and $\\angle ABC=540/7$ degrees. Therefore $m+n=547$."
+      ],
+      "stepsZh": [
+        "设 $\\angle BAC=\\alpha$。由 $AE=ED$，三角形 $AED$ 中 $\\angle ADE=\\alpha$，其在 $E$ 点的外角给出 $\\angle DEB=2\\alpha$。",
+        "由 $ED=DB$，三角形 $EDB$ 中 $\\angle DBE=2\\alpha$、$\\angle EDB=180^\\circ-4\\alpha$。在直线 $AC$ 上列平角关系，得到 $\\angle BDC=3\\alpha$。",
+        "再由 $DB=BC$，有 $\\angle BCD=3\\alpha$。而 $AB=AC$ 说明 $ABC$ 的两个底角均为 $3\\alpha$。故 $\\alpha+6\\alpha=180^\\circ$，从而 $\\angle ABC=540/7$ 度，答案为 $547$。"
+      ]
+    }]
+  },
+  "aime-2020i-q2": {
+    "summary": "A unique positive $x$ makes $\\log_8(2x),\\log_4x,\\log_2x$, in that order, a geometric progression with positive ratio. Write $x=m/n$ in lowest terms and find $m+n$.",
+    "summaryZh": "唯一的正实数 $x$ 使 $\\log_8(2x),\\log_4x,\\log_2x$ 按此顺序构成公比为正的等比数列。将 $x$ 写成最简分数 $m/n$，求 $m+n$。",
+    "answer": "017",
+    "answerZh": "017",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/2",
+    "methods": [{
+      "title": "Change every logarithm to base two",
+      "titleZh": "把所有对数换成以二为底",
+      "topics": [{"en":"Logarithms","zh":"对数"},{"en":"Geometric progressions","zh":"等比数列"}],
+      "steps": [
+        "Set $t=\\log_2x$. The three terms are $(1+t)/3,t/2,t$.",
+        "The middle-term condition gives $(t/2)^2=t(1+t)/3$. The case $t=0$ would not give a geometric progression with a defined positive ratio, so division by $t$ yields $3t=4+4t$ and $t=-4$.",
+        "Thus $x=2^{-4}=1/16$. The terms are $-1,-2,-4$ with positive ratio $2$, so the required answer is $1+16=17$, recorded as $017$."
+      ],
+      "stepsZh": [
+        "令 $t=\\log_2x$，三个数依次为 $(1+t)/3,t/2,t$。",
+        "等比数列中项平方等于首末项之积，所以 $(t/2)^2=t(1+t)/3$。$t=0$ 时公比无定义，舍去；约去 $t$ 后得 $3t=4+4t$，故 $t=-4$。",
+        "于是 $x=2^{-4}=1/16$，三个数为 $-1,-2,-4$，公比确为正数 $2$。所以 $m+n=17$，按 AIME 格式记为 $017$。"
+      ]
+    }]
+  },
+  "aime-2020i-q3": {
+    "summary": "A positive integer $N$ is written as the three-digit base-$11$ number $\\overline{abc}_{11}$ and the four-digit base-$8$ number $\\overline{1bca}_8$, where $a,b,c$ are digits. Find the least possible $N$ in base ten.",
+    "summaryZh": "正整数 $N$ 的十一进制表示为三位数 $\\overline{abc}_{11}$，八进制表示为四位数 $\\overline{1bca}_8$，其中 $a,b,c$ 为数码。求最小的十进制 $N$。",
+    "answer": "621",
+    "answerZh": "621",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/3",
+    "methods": [{
+      "title": "Equate the two place-value expansions",
+      "titleZh": "令两种进位制的位值展开相等",
+      "topics": [{"en":"Number bases","zh":"进位制"},{"en":"Digit bounds","zh":"数码范围"}],
+      "steps": [
+        "Equating base-ten values gives $121a+11b+c=512+64b+8c+a$, or $120a=512+53b+7c$.",
+        "All three symbols are base-eight digits, so $0\\le a,b,c\\le7$, and $a\\ge1$. The right side is at least $512$, hence $a\\ge5$. Since $N=121a+11b+c$, the smallest solution must use the first feasible $a$.",
+        "For $a=5$, $53b+7c=88$. Bounds force $b=1$, then $c=5$. This gives $N=121(5)+11+5=621$, whose representations are $515_{11}$ and $1155_8$."
+      ],
+      "stepsZh": [
+        "把两种表示都展开成十进制，得 $121a+11b+c=512+64b+8c+a$，即 $120a=512+53b+7c$。",
+        "$a,b,c$ 都是八进制数码，故 $0\\le a,b,c\\le7$，且首位 $a\\ge1$。右边至少为 $512$，所以 $a\\ge5$。又因 $N=121a+11b+c$，最小解应取第一个可行的 $a$。",
+        "令 $a=5$，得到 $53b+7c=88$。由数码范围只能有 $b=1,c=5$。于是 $N=121\\cdot5+11+5=621$，确有 $515_{11}=1155_8=621$。"
+      ]
+    }]
+  },
+  "aime-2020i-q4": {
+    "summary": "A positive integer ends in the four digits $2020$. After deleting those digits, the remaining positive integer must divide the original number. Find the total of all digits across every such integer.",
+    "summaryZh": "一个正整数的末四位为 $2020$。删去末四位后所得正整数必须整除原数。求所有满足条件的整数的全部数码之和。",
+    "answer": "093",
+    "answerZh": "093",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/4",
+    "methods": [{
+      "title": "Reduce the condition to divisors of 2020",
+      "titleZh": "把条件化为枚举 2020 的因数",
+      "topics": [{"en":"Divisibility","zh":"整除性"},{"en":"Digit sums","zh":"数码和"}],
+      "steps": [
+        "Write the number as $N=10000k+2020$ with $k\\ge1$. The condition $k\\mid N$ is equivalent to $k\\mid2020$.",
+        "Since $2020=2^2\\cdot5\\cdot101$, its divisors are $1,2,4,5,10,20,101,202,404,505,1010,2020$. Their digit sums total $45$.",
+        "Each resulting $N$ contributes the digit sum of $k$ plus $2+0+2+0=4$. There are $12$ choices, so the total is $45+12\\cdot4=93$, or $093$."
+      ],
+      "stepsZh": [
+        "把原数写成 $N=10000k+2020$，其中 $k\\ge1$。条件 $k\\mid N$ 等价于 $k\\mid2020$。",
+        "因 $2020=2^2\\cdot5\\cdot101$，其十二个正因数为 $1,2,4,5,10,20,101,202,404,505,1010,2020$，这些因数的数码和总计为 $45$。",
+        "每个 $N$ 的数码和等于对应 $k$ 的数码和再加 $2+0+2+0=4$。因此总和为 $45+12\\cdot4=93$，按三位数写作 $093$。"
+      ]
+    }]
+  },
+  "aime-2020i-q5": {
+    "summary": "Arrange cards numbered $1$ through $6$ in a row. Count the arrangements from which one card can be removed so that the remaining five cards are in ascending or descending order.",
+    "summaryZh": "把编号 $1$ 至 $6$ 的六张卡片排成一行。求有多少种排列可以删去一张卡片，使剩余五张按升序或降序排列。",
+    "answer": "052",
+    "answerZh": "052",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/5",
+    "methods": [{
+      "title": "Insert the removable card and correct overcounting",
+      "titleZh": "插入待删除卡片并修正重复计数",
+      "topics": [{"en":"Permutations","zh":"排列"},{"en":"Overcounting","zh":"重复计数"}],
+      "steps": [
+        "For an arrangement repairable to ascending order, choose the removable card and insert it into one of the six gaps of the other five sorted cards: $6\\cdot6=36$ constructions.",
+        "The fully sorted row is produced six times rather than once. Each of the five adjacent swaps is produced twice rather than once. Every other construction is unique, so the ascending count is $36-5-5=26$.",
+        "Reversing all orders gives $26$ descending cases. An arrangement cannot contain both an increasing and a decreasing subsequence of length five, since the two would require at least $5+5-1=9$ positions. Thus the total is $52$, recorded as $052$."
+      ],
+      "stepsZh": [
+        "先数删去一张后成为升序的排列。选定待删除卡片，再把它插入其余五张升序卡片的六个空位，共有 $6\\cdot6=36$ 次构造。",
+        "完全升序排列被构造六次，应比一次多减 $5$；五个相邻交换排列各被构造两次，应各多减 $1$。其余构造互不重复，所以升序类共有 $36-5-5=26$ 个。",
+        "反向可知降序类也有 $26$ 个。一个六项排列不可能同时含长度为五的升序与降序子序列，因为至少需要 $5+5-1=9$ 个位置。因此总数为 $52$，记为 $052$。"
+      ]
+    }]
+  },
+  "aime-2020i-q6": {
+    "summary": "A board has circular holes of radii $1$ and $2$ whose centres are $7$ apart. Equal spheres rest in the holes on the same side of the board and are tangent. If their squared radius is $m/n$, find $m+n$.",
+    "summaryZh": "一块平板上有半径为 $1,2$ 的两个圆孔，圆心相距 $7$。两个等半径球体在平板同一侧分别落在两孔中并彼此相切。若球半径平方为最简分数 $m/n$，求 $m+n$。",
+    "answer": "173",
+    "answerZh": "173",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/6",
+    "methods": [{
+      "title": "Relate sphere-centre heights to the hole radii",
+      "titleZh": "利用球心高度与圆孔半径的关系",
+      "topics": [{"en":"Three-dimensional geometry","zh":"立体几何"},{"en":"Pythagorean theorem","zh":"勾股定理"}],
+      "steps": [
+        "If the sphere radius is $r$, a sphere in a hole of radius $a$ has centre at distance $\\sqrt{r^2-a^2}$ from the board. Hence the vertical separation of the two centres is $\\sqrt{r^2-1}-\\sqrt{r^2-4}$.",
+        "Their horizontal separation is $7$ and tangency makes the centre distance $2r$. Therefore $49+(\\sqrt{r^2-1}-\\sqrt{r^2-4})^2=4r^2$.",
+        "Expansion gives $\\sqrt{(r^2-1)(r^2-4)}=22-r^2$. Squaring and cancelling $r^4$ yields $39r^2=480$, so $r^2=160/13$ and $m+n=173$."
+      ],
+      "stepsZh": [
+        "若球半径为 $r$，落在半径为 $a$ 的圆孔中时，球心到平板的距离为 $\\sqrt{r^2-a^2}$。因此两球心的竖直距离为 $\\sqrt{r^2-1}-\\sqrt{r^2-4}$。",
+        "两球心的水平距离为 $7$，相切又说明球心距为 $2r$。故 $49+(\\sqrt{r^2-1}-\\sqrt{r^2-4})^2=4r^2$。",
+        "展开得 $\\sqrt{(r^2-1)(r^2-4)}=22-r^2$。平方并约去 $r^4$，得到 $39r^2=480$，所以 $r^2=160/13$，答案为 $173$。"
+      ]
+    }]
+  },
+  "aime-2020i-q7": {
+    "summary": "From $11$ men and $12$ women, count committees having exactly one more woman than man. If the count is $N$, find the sum of the distinct prime divisors of $N$.",
+    "summaryZh": "从 $11$ 名男性和 $12$ 名女性中选委员会，要求女性人数恰比男性多一人。若方案数为 $N$，求 $N$ 的所有不同质因数之和。",
+    "answer": "081",
+    "answerZh": "081",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/7",
+    "methods": [{
+      "title": "Collapse the committee sum with Vandermonde's identity",
+      "titleZh": "用范德蒙德恒等式合并委员会计数",
+      "topics": [{"en":"Binomial coefficients","zh":"二项式系数"},{"en":"Vandermonde's identity","zh":"范德蒙德恒等式"},{"en":"Prime factorisation","zh":"质因数分解"}],
+      "steps": [
+        "With $k$ men there must be $k+1$ women, so $N=\\sum_{k=0}^{11}\\binom{11}{k}\\binom{12}{k+1}=\\sum_{k=0}^{11}\\binom{11}{k}\\binom{12}{11-k}=\\binom{23}{11}$.",
+        "Legendre's formula shows $\\binom{23}{11}=2\\cdot7\\cdot13\\cdot17\\cdot19\\cdot23$. In particular the primes $3,5,11$ cancel from $23!/(11!12!)$.",
+        "The required sum is $2+7+13+17+19+23=81$, recorded as $081$."
+      ],
+      "stepsZh": [
+        "若选 $k$ 名男性，就必须选 $k+1$ 名女性。因此 $N=\\sum_{k=0}^{11}\\binom{11}{k}\\binom{12}{k+1}=\\sum_{k=0}^{11}\\binom{11}{k}\\binom{12}{11-k}=\\binom{23}{11}$。",
+        "用勒让德公式分解 $23!/(11!12!)$，得到 $\\binom{23}{11}=2\\cdot7\\cdot13\\cdot17\\cdot19\\cdot23$；质数 $3,5,11$ 的指数均被约去。",
+        "所求不同质因数之和为 $2+7+13+17+19+23=81$，记为 $081$。"
+      ]
+    }]
+  },
+  "aime-2020i-q8": {
+    "summary": "A bug starts at $O$, walks $5$ units east, then each night turns $60^\\circ$ counterclockwise and the next day walks half the previous distance. It approaches $P$. If $OP^2=m/n$, find $m+n$.",
+    "summaryZh": "一只虫从 $O$ 出发，第一天向东走 $5$ 个单位。此后每天方向相对前一天逆时针转 $60^\\circ$，路程减半。它趋近于点 $P$。若 $OP^2=m/n$ 为最简分数，求 $m+n$。",
+    "answer": "103",
+    "answerZh": "103",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/8",
+    "methods": [{
+      "title": "Sum the displacement as a complex geometric series",
+      "titleZh": "把位移写成复数等比级数",
+      "topics": [{"en":"Complex numbers","zh":"复数"},{"en":"Infinite geometric series","zh":"无穷等比级数"}],
+      "steps": [
+        "Represent east by the positive real axis. Each displacement is obtained from the previous one by multiplication by $z=\\tfrac12e^{i\\pi/3}=\\tfrac14+\\tfrac{\\sqrt3}{4}i$.",
+        "The limiting displacement is $P=5(1+z+z^2+\\cdots)=5/(1-z)$ because $|z|<1$.",
+        "$|1-z|^2=(3/4)^2+(\\sqrt3/4)^2=3/4$, so $OP^2=25/(3/4)=100/3$. Hence $m+n=103$."
+      ],
+      "stepsZh": [
+        "把向东记为复平面的正实轴。每天的位移由前一天乘以 $z=\\tfrac12e^{i\\pi/3}=\\tfrac14+\\tfrac{\\sqrt3}{4}i$ 得到。",
+        "由于 $|z|<1$，极限总位移为 $P=5(1+z+z^2+\\cdots)=5/(1-z)$。",
+        "$|1-z|^2=(3/4)^2+(\\sqrt3/4)^2=3/4$，所以 $OP^2=25/(3/4)=100/3$，答案为 $103$。"
+      ]
+    }]
+  },
+  "aime-2020i-q9": {
+    "summary": "Choose $a_1,a_2,a_3$ independently and uniformly from the positive divisors of $20^9$. The probability that $a_1\\mid a_2$ and $a_2\\mid a_3$ is $m/n$ in lowest terms. Find $m$.",
+    "summaryZh": "从 $20^9$ 的正因数中独立等概率选取 $a_1,a_2,a_3$。若 $a_1\\mid a_2$ 且 $a_2\\mid a_3$ 的概率为最简分数 $m/n$，求 $m$。",
+    "answer": "077",
+    "answerZh": "077",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/9",
+    "methods": [{
+      "title": "Count nondecreasing prime-exponent triples",
+      "titleZh": "计数非降的质因数指数三元组",
+      "topics": [{"en":"Prime exponents","zh":"质因数指数"},{"en":"Combinations with repetition","zh":"可重复组合"},{"en":"Probability","zh":"概率"}],
+      "steps": [
+        "$20^9=2^{18}5^9$, so a divisor corresponds to exponents $(x,y)$ with $0\\le x\\le18$ and $0\\le y\\le9$. There are $190$ divisors.",
+        "The divisibility chain holds exactly when both exponent triples are nondecreasing. From $19$ possible $x$ values there are $\\binom{21}{3}$ nondecreasing triples, and from $10$ possible $y$ values there are $\\binom{12}{3}$.",
+        "Thus the probability is $\\binom{21}{3}\\binom{12}{3}/190^3=77/1805$. The fraction is reduced, so $m=77$, recorded as $077$."
+      ],
+      "stepsZh": [
+        "$20^9=2^{18}5^9$，每个因数对应指数对 $(x,y)$，其中 $0\\le x\\le18$、$0\\le y\\le9$，共有 $190$ 个因数。",
+        "整除链成立当且仅当两个质因数的三项指数都非降。$x$ 有 $19$ 个可能值，非降三元组数为 $\\binom{21}{3}$；$y$ 有 $10$ 个可能值，对应 $\\binom{12}{3}$。",
+        "所求概率为 $\\binom{21}{3}\\binom{12}{3}/190^3=77/1805$。分数已经最简，所以 $m=77$，记为 $077$。"
+      ]
+    }]
+  },
+  "aime-2020i-q10": {
+    "summary": "Positive integers $m,n$ satisfy $\\gcd(m+n,210)=1$, $n^n\\mid m^m$, and $n\\nmid m$. Find the least possible value of $m+n$.",
+    "summaryZh": "正整数 $m,n$ 满足 $\\gcd(m+n,210)=1$、$n^n\\mid m^m$，但 $n\\nmid m$。求 $m+n$ 的最小值。",
+    "answer": "407",
+    "answerZh": "407",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/10",
+    "methods": [{
+      "title": "Compare deficient prime exponents",
+      "titleZh": "比较不足的质因数指数",
+      "topics": [{"en":"Prime valuations","zh":"质因数赋值"},{"en":"Extremal argument","zh":"极值论证"}],
+      "steps": [
+        "Every prime dividing $n$ must divide $m$ and hence $m+n$. Coprimality with $210$ means every prime factor of $n$ is at least $11$. Since $n\\nmid m$, choose $p$ with $a=v_p(n)>b=v_p(m)\\ge1$.",
+        "From $n^n\\mid m^m$, $an\\le bm$, so $a\\ge2$ and $m\\ge(a/b)n$. Thus $n\\ge11^2=121$. Taking $n=121$ forces $m\\ge242$ and $11\\mid m$ but $121\\nmid m$.",
+        "Below $m=286$, the possible multiples $253,264,275$ make $m+n$ divisible by $2,5,$ or $7$, while $242$ is a multiple of $121$. The choice $m=286$ works and gives $m+n=407$.",
+        "For minimality, if $m+n<407$, then $a\\ge3$ would make $n\\ge11^3>407$. Hence $a=2,b=1$, so $m\\ge2n$ and $n\\le135$. The only allowable $n$ in this range containing a square of a prime at least $11$ is $121$, already exhausted."
+      ],
+      "stepsZh": [
+        "任一整除 $n$ 的质数都整除 $m$，因而也整除 $m+n$。由 $\\gcd(m+n,210)=1$，$n$ 的质因数都至少为 $11$。又因 $n\\nmid m$，可取质数 $p$ 使 $a=v_p(n)>b=v_p(m)\\ge1$。",
+        "由 $n^n\\mid m^m$ 得 $an\\le bm$，因此 $a\\ge2$ 且 $m\\ge(a/b)n$。所以 $n\\ge11^2=121$。取 $n=121$ 时必须有 $m\\ge242$、$11\\mid m$ 但 $121\\nmid m$。",
+        "在 $m=286$ 之前，候选 $253,264,275$ 分别使 $m+n$ 含质因数 $2,5,7$，而 $242$ 本身是 $121$ 的倍数。$m=286$ 确实满足条件，且 $m+n=407$。",
+        "若存在小于 $407$ 的解，则 $a\\ge3$ 会推出 $n\\ge11^3>407$，故只能 $a=2,b=1$。于是 $m\\ge2n$ 且 $n\\le135$。在该范围内唯一可能含有不小于 $11$ 的质数平方且无小质因数的 $n$ 是 $121$，上述枚举已经穷尽。"
+      ]
+    }]
+  },
+  "aime-2020i-q11": {
+    "summary": "For integers $a,b,c,d$, let $f(x)=x^2+ax+b$ and $g(x)=x^2+cx+d$. Count ordered triples $(a,b,c)$ with $|a|,|b|,|c|\\le10$ for which some integer $d$ makes $g(f(2))=g(f(4))=0$.",
+    "summaryZh": "对整数 $a,b,c,d$，令 $f(x)=x^2+ax+b$、$g(x)=x^2+cx+d$。求满足 $|a|,|b|,|c|\\le10$ 且存在整数 $d$ 使 $g(f(2))=g(f(4))=0$ 的有序三元组 $(a,b,c)$ 数量。",
+    "answer": "510",
+    "answerZh": "510",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/11",
+    "methods": [{
+      "title": "Separate equal and distinct roots of the outer quadratic",
+      "titleZh": "区分外层二次式的相同根与不同根",
+      "topics": [{"en":"Vieta's formulas","zh":"韦达定理"},{"en":"Casework","zh":"分类讨论"},{"en":"Lattice counting","zh":"格点计数"}],
+      "steps": [
+        "$f(2)=4+2a+b$ and $f(4)=16+4a+b$. They are equal exactly when $a=-6$. Then arbitrary $b,c$ work after choosing $d=-f(2)^2-cf(2)$, contributing $21^2=441$ triples.",
+        "Otherwise these values are the two roots of $g$, so Vieta gives $c=-(20+6a+2b)$. The bound $|c|\\le10$ becomes $-15\\le3a+b\\le-5$.",
+        "For each of the $11$ integers $h=3a+b$ in this interval, exactly $7$ of the $21$ choices of $b$ have $b\\equiv h\\pmod3$, and the resulting $a$ remains in range. This gives $77$ pairs, but $8$ have $a=-6$ and were already counted. The total is $441+77-8=510$."
+      ],
+      "stepsZh": [
+        "$f(2)=4+2a+b$、$f(4)=16+4a+b$，二者相等当且仅当 $a=-6$。此时任取 $b,c$，令 $d=-f(2)^2-cf(2)$ 即可，共有 $21^2=441$ 个三元组。",
+        "否则这两个数是 $g$ 的两个不同根。由韦达定理，$c=-(20+6a+2b)$。条件 $|c|\\le10$ 等价于 $-15\\le3a+b\\le-5$。",
+        "对区间内每个整数 $h=3a+b$，$b$ 的 $21$ 个取值中恰有 $7$ 个满足 $b\\equiv h\\pmod3$，所得 $a$ 也在范围内。因此有 $11\\cdot7=77$ 对，其中 $8$ 对满足 $a=-6$，已经在前一类中计数。总数为 $441+77-8=510$。"
+      ]
+    }]
+  },
+  "aime-2020i-q12": {
+    "summary": "Let $n$ be the least positive integer for which $149^n-2^n$ is divisible by $3^3\\cdot5^5\\cdot7^7$. Find the number of positive divisors of $n$.",
+    "summaryZh": "设 $n$ 是使 $149^n-2^n$ 能被 $3^3\\cdot5^5\\cdot7^7$ 整除的最小正整数。求 $n$ 的正因数个数。",
+    "answer": "270",
+    "answerZh": "270",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/12",
+    "methods": [{
+      "title": "Apply lifting the exponent prime by prime",
+      "titleZh": "对三个质数分别使用指数提升",
+      "topics": [{"en":"Lifting the exponent","zh":"指数提升引理"},{"en":"Multiplicative order","zh":"乘法阶"},{"en":"Divisor counting","zh":"因数计数"}],
+      "steps": [
+        "Because $149-2=147=3\\cdot7^2$, LTE gives $v_3(149^n-2^n)=1+v_3(n)$ and $v_7(149^n-2^n)=2+v_7(n)$. Thus $3^2\\mid n$ and $7^5\\mid n$.",
+        "Modulo $5$, equality requires $2^n\\equiv1$, so $4\\mid n$. Write $n=4k$. Since $v_5(149^4-2^4)=1$, LTE applied to the fourth powers gives $v_5(149^n-2^n)=1+v_5(k)$, hence $5^4\\mid k$.",
+        "The least $n$ is therefore $2^2\\cdot3^2\\cdot5^4\\cdot7^5$. Its divisor count is $(2+1)(2+1)(4+1)(5+1)=270$."
+      ],
+      "stepsZh": [
+        "由于 $149-2=147=3\\cdot7^2$，指数提升引理给出 $v_3(149^n-2^n)=1+v_3(n)$、$v_7(149^n-2^n)=2+v_7(n)$。故必须有 $3^2\\mid n$、$7^5\\mid n$。",
+        "模 $5$ 时需有 $2^n\\equiv1$，因此 $4\\mid n$。写成 $n=4k$。又因 $v_5(149^4-2^4)=1$，对四次幂使用指数提升可得 $v_5(149^n-2^n)=1+v_5(k)$，所以 $5^4\\mid k$。",
+        "最小的 $n$ 为 $2^2\\cdot3^2\\cdot5^4\\cdot7^5$，其正因数个数为 $(2+1)(2+1)(4+1)(5+1)=270$。"
+      ]
+    }]
+  },
+  "aime-2020i-q13": {
+    "summary": "In triangle $ABC$, $AD$ bisects angle $A$ and meets $BC$ at $D$. The perpendicular bisector of $AD$ meets the internal angle bisectors at $B,C$ at $E,F$. Given $AB=4,BC=5,CA=6$, write $[AEF]=m\\sqrt n/p$ in the required reduced form and find $m+n+p$.",
+    "summaryZh": "在三角形 $ABC$ 中，$AD$ 为 $\\angle A$ 的角平分线并交 $BC$ 于 $D$。$AD$ 的垂直平分线分别与 $\\angle B,\\angle C$ 的内角平分线交于 $E,F$。已知 $AB=4,BC=5,CA=6$，把 $[AEF]$ 写成规定的最简形式 $m\\sqrt n/p$，求 $m+n+p$。",
+    "answer": "036",
+    "answerZh": "036",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/13",
+    "methods": [{
+      "title": "Use arc midpoints and half-angle tangents",
+      "titleZh": "利用弧中点与半角正切",
+      "topics": [{"en":"Angle bisectors","zh":"角平分线"},{"en":"Half-angle formulas","zh":"半角公式"},{"en":"Triangle area","zh":"三角形面积"}],
+      "steps": [
+        "In triangle $ABD$, point $E$ is the midpoint of arc $AD$ on its circumcircle, so $\\angle EAD=B/2$. Similarly $\\angle FAD=C/2$, with $E,F$ on opposite sides of $AD$.",
+        "Let $M$ be the midpoint of $AD$. Then $EF=AM(\\tan(B/2)+\\tan(C/2))$ and the distance from $A$ to $EF$ is $AM$. Hence $[AEF]=\\tfrac12AM^2(\\tan(B/2)+\\tan(C/2))$.",
+        "The angle-bisector theorem gives $BD=2,DC=3$, and Stewart's theorem gives $AD^2=AB\\cdot AC-BD\\cdot DC=18$, so $AM^2=9/2$.",
+        "The cosine rule gives $\\cos B=1/8$ and $\\cos C=3/4$, so $\\tan(B/2)=\\sqrt7/3$ and $\\tan(C/2)=1/\\sqrt7$. Therefore $[AEF]=15\\sqrt7/14$ and $m+n+p=15+7+14=36$."
+      ],
+      "stepsZh": [
+        "在三角形 $ABD$ 中，$E$ 是其外接圆上不含 $B$ 的弧 $AD$ 中点，因此 $\\angle EAD=B/2$。同理 $\\angle FAD=C/2$，且 $E,F$ 位于 $AD$ 两侧。",
+        "设 $M$ 为 $AD$ 中点，则 $EF=AM(\\tan(B/2)+\\tan(C/2))$，而 $A$ 到 $EF$ 的距离为 $AM$。故 $[AEF]=\\tfrac12AM^2(\\tan(B/2)+\\tan(C/2))$。",
+        "角平分线定理给出 $BD=2,DC=3$；由斯特瓦尔特定理，$AD^2=AB\\cdot AC-BD\\cdot DC=18$，所以 $AM^2=9/2$。",
+        "余弦定理给出 $\\cos B=1/8$、$\\cos C=3/4$，故 $\\tan(B/2)=\\sqrt7/3$、$\\tan(C/2)=1/\\sqrt7$。于是 $[AEF]=15\\sqrt7/14$，答案为 $15+7+14=36$，记为 $036$。"
+      ]
+    }]
+  },
+  "aime-2020i-q14": {
+    "summary": "A monic quadratic $P$ with complex coefficients has $P(P(x))=0$ with four distinct roots $3,4,a,b$. Find the sum of all possible values of $(a+b)^2$.",
+    "summaryZh": "首项系数为 $1$ 的复系数二次多项式 $P$ 满足方程 $P(P(x))=0$ 有四个不同根 $3,4,a,b$。求 $(a+b)^2$ 所有可能值之和。",
+    "answer": "085",
+    "answerZh": "085",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/14",
+    "methods": [{
+      "title": "Pair preimages of the two roots of the quadratic",
+      "titleZh": "按二次多项式两个根的原像配对",
+      "topics": [{"en":"Polynomial composition","zh":"多项式复合"},{"en":"Vieta's formulas","zh":"韦达定理"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": [
+        "Write $P(x)=x^2+px+q$. The four roots split into two pairs solving $P(x)=r_1$ and $P(x)=r_2$, where $r_1,r_2$ are the roots of $P$. Each pair has sum $-p$.",
+        "If $3,4$ form one pair, then $-p=7$ and the other pair has $a+b=7$, giving $(a+b)^2=49$. This case is attainable over the complex numbers.",
+        "Otherwise set $3+a=4+b=-p=s$. Then $P(3),P(4)$ are the two roots of $P$. Their sum gives $q=4s-25/2$, while their product gives $(7/2)(s-7/2)=q$. Hence $s=1/2$.",
+        "Now $a=s-3=-5/2$ and $b=s-4=-7/2$, so $(a+b)^2=36$. Both cases have four distinct roots, and the requested sum is $49+36=85$, or $085$."
+      ],
+      "stepsZh": [
+        "写成 $P(x)=x^2+px+q$。方程的四个根分成两对，分别满足 $P(x)=r_1$、$P(x)=r_2$，其中 $r_1,r_2$ 是 $P$ 的两个根。每一对解的和都为 $-p$。",
+        "若 $3,4$ 属于同一对，则 $-p=7$，另一对也满足 $a+b=7$，所以 $(a+b)^2=49$。在复数范围内此情形可以实现。",
+        "否则令 $3+a=4+b=-p=s$。此时 $P(3),P(4)$ 是 $P$ 的两个根。根和条件给出 $q=4s-25/2$，根积条件给出 $(7/2)(s-7/2)=q$，解得 $s=1/2$。",
+        "于是 $a=-5/2,b=-7/2$，所以 $(a+b)^2=36$。两种情形的四根都互异，所求总和为 $49+36=85$，记为 $085$。"
+      ]
+    }]
+  },
+  "aime-2020i-q15": {
+    "summary": "Acute triangle $ABC$ has circumcircle $\\omega$ and orthocentre $H$. The tangent at $H$ to the circumcircle of $HBC$ meets $\\omega$ at $X,Y$. Given $HA=3,HX=2,HY=6$, write $[ABC]=m\\sqrt n$ with $n$ squarefree and find $m+n$.",
+    "summaryZh": "锐角三角形 $ABC$ 的外接圆为 $\\omega$，垂心为 $H$。三角形 $HBC$ 的外接圆在 $H$ 点的切线与 $\\omega$ 交于 $X,Y$。已知 $HA=3,HX=2,HY=6$，把 $[ABC]$ 写成 $m\\sqrt n$（$n$ 无平方因子），求 $m+n$。",
+    "answer": "058",
+    "answerZh": "058",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020I/problem/15",
+    "methods": [{
+      "title": "Convert the tangent line into a chord perpendicular to $OA$",
+      "titleZh": "把切线转化为垂直于 $OA$ 的弦",
+      "topics": [{"en":"Circumcircles","zh":"外接圆"},{"en":"Orthocentres","zh":"垂心"},{"en":"Vector geometry","zh":"向量几何"}],
+      "steps": [
+        "Reflecting $H$ across $BC$ places it on $\\omega$, so the circumcircle of $HBC$ is the reflection of $\\omega$ across $BC$. With circumcentre $O$ as origin, its centre is $B+C=H-A$. Therefore the tangent $XY$ at $H$ is perpendicular to the vector $A$, hence to $OA$.",
+        "Set $A=(0,R)$ and let the horizontal chord $XY$ have height $h$. Since $HX=2,HY=6$, its half-length is $4$ and $H$ is $2$ from the chord midpoint. From $HA=3$, $(R-h)^2+2^2=9$, so $R-h=\\sqrt5$.",
+        "The chord relation gives $R^2-h^2=16$. Thus $\\sqrt5(2R-\\sqrt5)=16$, so $R=21/(2\\sqrt5)$. Also $B+C=H-A=(\\pm2,-\\sqrt5)$, so the midpoint $M$ of $BC$ has $OM=3/2$.",
+        "Hence $BC=2\\sqrt{R^2-OM^2}=2\\sqrt{99/5}$. The distance from $A$ to line $BC$ is $5$, so $[ABC]=\\tfrac12\\cdot2\\sqrt{99/5}\\cdot5=3\\sqrt{55}$. Therefore $m+n=3+55=58$, recorded as $058$."
+      ],
+      "stepsZh": [
+        "把 $H$ 关于 $BC$ 对称，所得点在 $\\omega$ 上，因此三角形 $HBC$ 的外接圆是 $\\omega$ 关于 $BC$ 的对称圆。以外心 $O$ 为原点，其圆心向量为 $B+C=H-A$。所以在 $H$ 点的切线 $XY$ 垂直于向量 $A$，也就是垂直于 $OA$。",
+        "令 $A=(0,R)$，把水平弦 $XY$ 的高度记为 $h$。由 $HX=2,HY=6$，弦半长为 $4$，且 $H$ 到弦中点的水平距离为 $2$。再由 $HA=3$，有 $(R-h)^2+2^2=9$，故 $R-h=\\sqrt5$。",
+        "弦长关系给出 $R^2-h^2=16$，所以 $\\sqrt5(2R-\\sqrt5)=16$，解得 $R=21/(2\\sqrt5)$。又 $B+C=H-A=(\\pm2,-\\sqrt5)$，故 $BC$ 中点 $M$ 满足 $OM=3/2$。",
+        "于是 $BC=2\\sqrt{R^2-OM^2}=2\\sqrt{99/5}$。点 $A$ 到直线 $BC$ 的距离为 $5$，所以 $[ABC]=\\tfrac12\\cdot2\\sqrt{99/5}\\cdot5=3\\sqrt{55}$。答案为 $3+55=58$，记为 $058$。"
+      ]
+    }]
+  }
+}
