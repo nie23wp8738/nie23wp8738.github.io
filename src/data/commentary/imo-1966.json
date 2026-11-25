@@ -1,0 +1,181 @@
+{
+  "imo-1966-q1": {
+    "summary": "In a contest, 25 students solved at least one of problems $A,B,C$. Among students who did not solve $A$, twice as many solved $B$ as solved $C$. The number who solved only $A$ was one more than the number who solved $A$ together with another problem. Among students who solved exactly one problem, half did not solve $A$. How many solved only $B$?",
+    "summaryZh": "一次竞赛有 $A,B,C$ 三道题，25 名学生至少解出一道。未解出 $A$ 的学生中，解出 $B$ 的人数是解出 $C$ 的两倍。只解出 $A$ 的人数比解出 $A$ 且还解出其他题的人数多一人。在恰好解出一道题的学生中，一半没有解出 $A$。求只解出 $B$ 的人数。",
+    "answer": "$6$ students.",
+    "answerZh": "$6$ 人。",
+    "methods": [
+      {
+        "title": "Translate the Venn regions into integer equations",
+        "titleZh": "把维恩图各区域转化为整数方程",
+        "topics": [
+          {"en": "Venn diagrams", "zh": "维恩图"},
+          {"en": "Integer equations", "zh": "整数方程"},
+          {"en": "Inequalities", "zh": "不等式"}
+        ],
+        "steps": [
+          "Let $a,b,c$ be the numbers who solved only $A$, only $B$, and only $C$. Let $d$ be the number who solved $B$ and $C$ but not $A$. The last condition says $a=b+c$.",
+          "Among students who did not solve $A$, the numbers who solved $B$ and $C$ are $b+d$ and $c+d$. Hence $b+d=2(c+d)$, so $d=b-2c$. The number who solved $A$ and at least one other problem is $a-1$.",
+          "Partition all 25 students into the four displayed regions and the group that solved $A$ with another problem: $25=a+b+c+d+(a-1)$. Substituting $a=b+c$ and $d=b-2c$ gives $4b+c=26$.",
+          "Because $c\\ge0$, $b\\le6$. Because $d=b-2c\\ge0$, we have $c\\le b/2$, and therefore $26=4b+c\\le9b/2$, so $b\\ge6$. Thus $b=6$. Indeed $c=2,d=2,a=8$, and the remaining group has $7$ students, so every condition and the total are satisfied."
+        ],
+        "stepsZh": [
+          "设只解出 $A$、只解出 $B$、只解出 $C$ 的人数分别为 $a,b,c$，解出 $B,C$ 但未解出 $A$ 的人数为 $d$。由最后一个条件，$a=b+c$。",
+          "在未解出 $A$ 的学生中，解出 $B$ 与解出 $C$ 的人数分别为 $b+d$ 和 $c+d$。因此 $b+d=2(c+d)$，即 $d=b-2c$。解出 $A$ 且还解出至少一道其他题的人数为 $a-1$。",
+          "把 25 人分成上述四个区域以及“解出 $A$ 且还解出其他题”这一组，得到 $25=a+b+c+d+(a-1)$。代入 $a=b+c$、$d=b-2c$，化为 $4b+c=26$。",
+          "由 $c\\ge0$ 得 $b\\le6$；由 $d=b-2c\\ge0$ 得 $c\\le b/2$，所以 $26=4b+c\\le9b/2$，从而 $b\\ge6$。故 $b=6$。此时 $c=2,d=2,a=8$，余下那组有 $7$ 人，所有条件与总人数均得到验证。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1"
+  },
+  "imo-1966-q2": {
+    "summary": "A triangle has side lengths $a,b,c$ opposite angles $\\alpha,\\beta,\\gamma$. Prove that if $a+b=\\tan(\\gamma/2)(a\\tan\\alpha+b\\tan\\beta)$, then the triangle is isosceles.",
+    "summaryZh": "三角形的边长 $a,b,c$ 分别对应角 $\\alpha,\\beta,\\gamma$。证明：若 $a+b=\\tan(\\gamma/2)(a\\tan\\alpha+b\\tan\\beta)$，则该三角形为等腰三角形。",
+    "answer": "The condition forces $\\alpha=\\beta$, hence $a=b$.",
+    "answerZh": "条件必然推出 $\\alpha=\\beta$，从而 $a=b$。",
+    "methods": [
+      {
+        "title": "Use the sine rule and reduce to a square",
+        "titleZh": "使用正弦定理并化为平方项",
+        "topics": [
+          {"en": "Sine rule", "zh": "正弦定理"},
+          {"en": "Sum-to-product identities", "zh": "和差化积"},
+          {"en": "Trigonometric identities", "zh": "三角恒等式"}
+        ],
+        "steps": [
+          "The displayed condition contains $\\tan\\alpha$ and $\\tan\\beta$, so $\\cos\\alpha\\cos\\beta\\ne0$. By the sine rule, division by the common factor $2R$ changes the hypothesis into $\\sin\\alpha+\\sin\\beta=\\tan(\\gamma/2)(\\sin^2\\alpha/\\cos\\alpha+\\sin^2\\beta/\\cos\\beta)$.",
+          "Since $\\alpha+\\beta=\\pi-\\gamma$, the sum-to-product formulas give $\\tan(\\gamma/2)=\\cot((\\alpha+\\beta)/2)=(\\cos\\alpha+\\cos\\beta)/(\\sin\\alpha+\\sin\\beta)$.",
+          "Substitute this expression and multiply by $(\\sin\\alpha+\\sin\\beta)\\cos\\alpha\\cos\\beta$. After moving all terms to one side and expanding, the equation becomes $(\\sin\\alpha\\cos\\beta-\\sin\\beta\\cos\\alpha)^2=0$.",
+          "Thus $\\sin(\\alpha-\\beta)=0$. Both angles lie in $(0,\\pi)$, so $-\\pi<\\alpha-\\beta<\\pi$ and consequently $\\alpha=\\beta$. Equal angles in a triangle subtend equal sides, hence $a=b$."
+        ],
+        "stepsZh": [
+          "题设出现 $\\tan\\alpha$ 与 $\\tan\\beta$，故 $\\cos\\alpha\\cos\\beta\\ne0$。由正弦定理，把各边除以共同因子 $2R$，题设等价于 $\\sin\\alpha+\\sin\\beta=\\tan(\\gamma/2)(\\sin^2\\alpha/\\cos\\alpha+\\sin^2\\beta/\\cos\\beta)$。",
+          "由于 $\\alpha+\\beta=\\pi-\\gamma$，和差化积给出 $\\tan(\\gamma/2)=\\cot((\\alpha+\\beta)/2)=(\\cos\\alpha+\\cos\\beta)/(\\sin\\alpha+\\sin\\beta)$。",
+          "代入上式，并同乘 $(\\sin\\alpha+\\sin\\beta)\\cos\\alpha\\cos\\beta$。移项展开后，方程恰好化为 $(\\sin\\alpha\\cos\\beta-\\sin\\beta\\cos\\alpha)^2=0$。",
+          "因此 $\\sin(\\alpha-\\beta)=0$。两个角都在 $(0,\\pi)$ 内，所以 $-\\pi<\\alpha-\\beta<\\pi$，只能有 $\\alpha=\\beta$。三角形中等角对等边，故 $a=b$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1"
+  },
+  "imo-1966-q3": {
+    "summary": "Let $O$ be the circumcentre of a regular tetrahedron. Prove that the sum of the distances from its four vertices to $O$ is strictly smaller than the sum of their distances to any other point in space.",
+    "summaryZh": "设 $O$ 为正四面体的外接球球心。证明：四个顶点到 $O$ 的距离之和，严格小于它们到空间中任意其他点的距离之和。",
+    "answer": "If the circumradius is $R$, the minimum sum is $4R$, attained uniquely at $O$.",
+    "answerZh": "若外接球半径为 $R$，距离和的最小值为 $4R$，且只在 $O$ 处取得。",
+    "methods": [
+      {
+        "title": "Centre the vertex vectors and apply Cauchy--Schwarz",
+        "titleZh": "以球心为原点并使用柯西不等式",
+        "topics": [
+          {"en": "Vectors in space", "zh": "空间向量"},
+          {"en": "Regular tetrahedra", "zh": "正四面体"},
+          {"en": "Cauchy--Schwarz inequality", "zh": "柯西不等式"},
+          {"en": "Equality cases", "zh": "等号条件"}
+        ],
+        "steps": [
+          "Let the vertices have position vectors $\\mathbf v_1,\\ldots,\\mathbf v_4$ with origin $O$, and let the circumradius be $R$. All $\\|\\mathbf v_i\\|=R$, and all pairwise dot products $\\mathbf v_i\\cdot\\mathbf v_j$ for $i\\ne j$ are equal because all six edges have the same length.",
+          "Put $\\mathbf s=\\sum_i\\mathbf v_i$. Then $\\mathbf s\\cdot\\mathbf v_i$ has the same value for every $i$, so $\\mathbf s$ is perpendicular to $\\mathbf v_1-\\mathbf v_4$, $\\mathbf v_2-\\mathbf v_4$, and $\\mathbf v_3-\\mathbf v_4$. These three edge-direction vectors span space, hence $\\mathbf s=\\mathbf0$.",
+          "For an arbitrary point $P$ with position vector $\\mathbf p$, Cauchy--Schwarz gives $R\\,PA_i=\\|\\mathbf v_i\\|\\,\\|\\mathbf v_i-\\mathbf p\\|\\ge\\mathbf v_i\\cdot(\\mathbf v_i-\\mathbf p)=R^2-\\mathbf v_i\\cdot\\mathbf p$. Summing over the four vertices and using $\\sum_i\\mathbf v_i=\\mathbf0$ yields $R\\sum_iPA_i\\ge4R^2$, so $\\sum_iPA_i\\ge4R=\\sum_iOA_i$.",
+          "Equality would require every vector $\\mathbf v_i-\\mathbf p$ to be a nonnegative scalar multiple of $\\mathbf v_i$. Thus $\\mathbf p$ would be parallel to every $\\mathbf v_i$. The four vertex vectors are not collinear, so this is possible only when $\\mathbf p=\\mathbf0$, namely $P=O$. The inequality is therefore strict for every other point."
+        ],
+        "stepsZh": [
+          "以 $O$ 为原点，把四个顶点的位置向量记为 $\\mathbf v_1,\\ldots,\\mathbf v_4$，外接球半径为 $R$。所有 $\\|\\mathbf v_i\\|=R$；又因六条棱等长，任意 $i\\ne j$ 的点积 $\\mathbf v_i\\cdot\\mathbf v_j$ 都相等。",
+          "令 $\\mathbf s=\\sum_i\\mathbf v_i$。于是 $\\mathbf s\\cdot\\mathbf v_i$ 对每个 $i$ 都取同一值，故 $\\mathbf s$ 同时垂直于 $\\mathbf v_1-\\mathbf v_4$、$\\mathbf v_2-\\mathbf v_4$、$\\mathbf v_3-\\mathbf v_4$。这三个棱方向张成整个三维空间，所以 $\\mathbf s=\\mathbf0$。",
+          "任取空间点 $P$，位置向量为 $\\mathbf p$。由柯西不等式，$R\\,PA_i=\\|\\mathbf v_i\\|\\,\\|\\mathbf v_i-\\mathbf p\\|\\ge\\mathbf v_i\\cdot(\\mathbf v_i-\\mathbf p)=R^2-\\mathbf v_i\\cdot\\mathbf p$。对四个顶点求和并使用 $\\sum_i\\mathbf v_i=\\mathbf0$，得 $R\\sum_iPA_i\\ge4R^2$，即 $\\sum_iPA_i\\ge4R=\\sum_iOA_i$。",
+          "若取等号，则每个 $\\mathbf v_i-\\mathbf p$ 都必须是 $\\mathbf v_i$ 的非负倍数，因此 $\\mathbf p$ 必须同时平行于所有 $\\mathbf v_i$。四个顶点向量不共线，所以只有 $\\mathbf p=\\mathbf0$，即 $P=O$ 时可能取等号。因此对其他点不等式严格成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1"
+  },
+  "imo-1966-q4": {
+    "summary": "For every natural number $n$ and every real $x\\ne k\\pi/2^t$ for $t=0,1,\\ldots,n$ and integer $k$, prove $\\sum_{j=1}^{n}1/\\sin(2^jx)=\\cot x-\\cot(2^nx)$.",
+    "summaryZh": "对任意自然数 $n$ 及满足 $x\\ne k\\pi/2^t$（$t=0,1,\\ldots,n$，$k$ 为整数）的实数 $x$，证明 $\\sum_{j=1}^{n}1/\\sin(2^jx)=\\cot x-\\cot(2^nx)$。",
+    "answer": "The identity holds by telescoping the differences $\\cot(2^{j-1}x)-\\cot(2^jx)$.",
+    "answerZh": "把每一项写成 $\\cot(2^{j-1}x)-\\cot(2^jx)$ 后望远镜相消即可。",
+    "methods": [
+      {
+        "title": "Create a telescoping cotangent sum",
+        "titleZh": "构造余切函数的望远镜求和",
+        "topics": [
+          {"en": "Telescoping sums", "zh": "望远镜求和"},
+          {"en": "Trigonometric identities", "zh": "三角恒等式"},
+          {"en": "Domain restrictions", "zh": "定义域限制"}
+        ],
+        "steps": [
+          "The restriction on $x$ ensures that every sine and cotangent appearing below is defined. Whenever $\\sin y\\sin2y\\ne0$, $\\cot y-\\cot2y=(\\cos y\\sin2y-\\sin y\\cos2y)/(\\sin y\\sin2y)=\\sin y/(\\sin y\\sin2y)=1/\\sin2y$.",
+          "Set $y=2^{j-1}x$. Then $1/\\sin(2^jx)=\\cot(2^{j-1}x)-\\cot(2^jx)$ for $j=1,\\ldots,n$.",
+          "Summing these $n$ identities cancels every intermediate cotangent term and leaves $\\sum_{j=1}^{n}1/\\sin(2^jx)=\\cot x-\\cot(2^nx)$. If one includes $0$ among the natural numbers, the case $n=0$ is also true by the empty-sum convention."
+        ],
+        "stepsZh": [
+          "对 $x$ 的限制保证下文所有正弦与余切都有定义。只要 $\\sin y\\sin2y\\ne0$，就有 $\\cot y-\\cot2y=(\\cos y\\sin2y-\\sin y\\cos2y)/(\\sin y\\sin2y)=\\sin y/(\\sin y\\sin2y)=1/\\sin2y$。",
+          "令 $y=2^{j-1}x$，则对 $j=1,\\ldots,n$，$1/\\sin(2^jx)=\\cot(2^{j-1}x)-\\cot(2^jx)$。",
+          "把这 $n$ 个恒等式相加，中间的余切项全部抵消，留下 $\\sum_{j=1}^{n}1/\\sin(2^jx)=\\cot x-\\cot(2^nx)$。若把 $0$ 也视为自然数，则按空和为零的约定，$n=0$ 时同样成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1"
+  },
+  "imo-1966-q5": {
+    "summary": "Let $a_1,a_2,a_3,a_4$ be distinct real numbers. Solve the four equations $\\sum_{j\\ne i}|a_i-a_j|x_j=1$ for $i=1,2,3,4$. This is the intended symmetric system; the official English paper contains two typographical omissions in its displayed second and third equations.",
+    "summaryZh": "设 $a_1,a_2,a_3,a_4$ 为互不相同的实数。求解四个方程 $\\sum_{j\\ne i}|a_i-a_j|x_j=1$（$i=1,2,3,4$）。这里采用题目原意的对称方程组；官方英文试卷所列第二、第三个方程有两处排印遗漏。",
+    "answer": "Let $m=\\min_i a_i$ and $M=\\max_i a_i$. Then $x_i=1/(M-m)$ when $a_i\\in\\{m,M\\}$, and $x_i=0$ for the other two indices.",
+    "answerZh": "令 $m=\\min_i a_i$、$M=\\max_i a_i$。当 $a_i\\in\\{m,M\\}$ 时 $x_i=1/(M-m)$；其余两个 $x_i$ 为 $0$。",
+    "methods": [
+      {
+        "title": "Order the parameters and subtract neighbouring equations",
+        "titleZh": "将参数排序并相减相邻方程",
+        "topics": [
+          {"en": "Linear systems", "zh": "线性方程组"},
+          {"en": "Absolute values", "zh": "绝对值"},
+          {"en": "Symmetry", "zh": "对称性"}
+        ],
+        "steps": [
+          "Simultaneously permuting the pairs $(a_i,x_i)$ preserves the system. Assume therefore that $a_1<a_2<a_3<a_4$.",
+          "Subtract equation 1 from equation 2, equation 2 from equation 3, and equation 3 from equation 4. After resolving the absolute values, the results are $(a_2-a_1)(x_1-x_2-x_3-x_4)=0$, $(a_3-a_2)(x_1+x_2-x_3-x_4)=0$, and $(a_4-a_3)(x_1+x_2+x_3-x_4)=0$.",
+          "All three coefficient differences are positive. Subtracting the first resulting relation from the second gives $2x_2=0$; subtracting the second from the third gives $2x_3=0$. The relations then give $x_1=x_4$.",
+          "The first original equation becomes $(a_4-a_1)x_4=1$, hence $x_1=x_4=1/(a_4-a_1)$. Substitution verifies every equation because $(|a_i-a_1|+|a_i-a_4|)/(a_4-a_1)=1$. Restoring the original labels yields the stated formula, and the deductions also prove uniqueness."
+        ],
+        "stepsZh": [
+          "同时置换各对 $(a_i,x_i)$ 不改变方程组。因此不妨设 $a_1<a_2<a_3<a_4$。",
+          "依次用第二式减第一式、第三式减第二式、第四式减第三式。拆去绝对值后分别得到 $(a_2-a_1)(x_1-x_2-x_3-x_4)=0$、$(a_3-a_2)(x_1+x_2-x_3-x_4)=0$、$(a_4-a_3)(x_1+x_2+x_3-x_4)=0$。",
+          "三个系数差都为正。后一个关系减前一个关系，依次得到 $2x_2=0$ 与 $2x_3=0$；再代回可知 $x_1=x_4$。",
+          "第一条原方程化为 $(a_4-a_1)x_4=1$，所以 $x_1=x_4=1/(a_4-a_1)$。代入任一方程，其左端为 $(|a_i-a_1|+|a_i-a_4|)/(a_4-a_1)=1$，故解确实成立。恢复原来的指标顺序便得到所述公式，而上述推导同时说明解唯一。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1"
+  },
+  "imo-1966-q6": {
+    "summary": "Choose points $K,L,M$ in the interiors of sides $BC,CA,AB$ of triangle $ABC$, respectively. Prove that at least one of triangles $AML,BKM,CLK$ has area at most one quarter of the area of $ABC$.",
+    "summaryZh": "在三角形 $ABC$ 的边 $BC,CA,AB$ 内部分别任取点 $K,L,M$。证明三角形 $AML,BKM,CLK$ 中至少有一个的面积不超过 $ABC$ 面积的四分之一。",
+    "answer": "$\\min\\{[AML],[BKM],[CLK]\\}\\le[ABC]/4$, with equality possible when $K,L,M$ are the side midpoints.",
+    "answerZh": "$\\min\\{[AML],[BKM],[CLK]\\}\\le[ABC]/4$；当 $K,L,M$ 均为边中点时可以取等号。",
+    "methods": [
+      {
+        "title": "Multiply three area ratios",
+        "titleZh": "相乘三个面积比",
+        "topics": [
+          {"en": "Area ratios", "zh": "面积比"},
+          {"en": "AM--GM principle", "zh": "均值思想"},
+          {"en": "Extremal inequalities", "zh": "极值不等式"}
+        ],
+        "steps": [
+          "Write $S=[ABC]$ and set $x=AM/AB$, $y=BK/BC$, and $z=CL/CA$. Because the three points are interior, $0<x,y,z<1$.",
+          "Using the area formula with the included angle at each vertex gives $[AML]/S=x(1-z)$, $[BKM]/S=y(1-x)$, and $[CLK]/S=z(1-y)$.",
+          "Multiply the three ratios: $[AML][BKM][CLK]/S^3=x(1-x)y(1-y)z(1-z)$. For every real $t$, $t(1-t)=1/4-(t-1/2)^2\\le1/4$, so the product is at most $1/64$.",
+          "If all three small areas were greater than $S/4$, their product would exceed $S^3/64$, contradicting the preceding bound. Hence at least one is at most $S/4$. When the three points are midpoints, $x=y=z=1/2$ and all three areas equal $S/4$, confirming sharpness."
+        ],
+        "stepsZh": [
+          "记 $S=[ABC]$，并令 $x=AM/AB$、$y=BK/BC$、$z=CL/CA$。由于三点都在边的内部，$0<x,y,z<1$。",
+          "在三个顶点处分别使用含角面积公式，得到 $[AML]/S=x(1-z)$、$[BKM]/S=y(1-x)$、$[CLK]/S=z(1-y)$。",
+          "三个面积比相乘可得 $[AML][BKM][CLK]/S^3=x(1-x)y(1-y)z(1-z)$。对任意实数 $t$，$t(1-t)=1/4-(t-1/2)^2\\le1/4$，故该乘积不超过 $1/64$。",
+          "若三个小三角形面积都大于 $S/4$，它们的乘积就会大于 $S^3/64$，与上界矛盾。因此至少有一个面积不超过 $S/4$。当三点均为边中点时，$x=y=z=1/2$，三个面积都等于 $S/4$，说明界是精确的。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=2"
+  }
+}
