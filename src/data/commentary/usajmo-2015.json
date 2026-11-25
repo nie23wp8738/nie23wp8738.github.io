@@ -1,0 +1,204 @@
+{
+  "usajmo-2015-q1": {
+    "summary": "A move on a finite sequence of real numbers chooses two terms and replaces both by their arithmetic mean. Construct a sequence of 2015 distinct real numbers such that, after any possible first move, further moves can always turn the sequence into a constant sequence.",
+    "summaryZh": "对一个有限实数序列，一次操作可任选两项，并把这两项都替换为它们的算术平均数。构造一个由 2015 个互不相同实数组成的序列，使得无论第一次怎样操作，之后总能经过有限次操作把序列变成常数序列。",
+    "answer": "The sequence $0,1,2,\\ldots,2014$ works; every permitted first move can be completed to the constant sequence whose terms are all $1007$.",
+    "answerZh": "序列 $0,1,2,\\ldots,2014$ 满足要求；任意第一次操作后，都能继续变成每项均为 $1007$ 的常数序列。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAJMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Pair numbers symmetric about the preserved mean",
+        "titleZh": "围绕保持不变的平均数配对",
+        "topics": [
+          { "en": "Constructive algorithms", "zh": "构造性算法" },
+          { "en": "Invariants", "zh": "不变量" },
+          { "en": "Symmetric pairing", "zh": "对称配对" }
+        ],
+        "steps": [
+          "Take the sequence $0,1,\\ldots,2014$. Its sum, and hence its mean $1007$, is preserved by every move. Call $u$ and $u^*=2014-u$ opposites; averaging an opposite pair produces two copies of $1007$.",
+          "Suppose the first move averages $a,b\\ne1007$ and produces two copies of $c=(a+b)/2$. If $a$ and $b$ are opposites, then $c=1007$ and every untouched term can simply be averaged with its opposite.",
+          "Otherwise $a,b,a^*,b^*$ are four distinct original terms. Average $a^*$ with $b^*$, producing two copies of $c^*=2014-c$. Now pair each copy of $c$ with a copy of $c^*$; these two moves turn all four terms into $1007$. Average every remaining untouched opposite pair.",
+          "It remains to handle a first move using $1007$ and some $a\\ne1007$. It produces $c,c$, where $c=(a+1007)/2$. Choose an untouched number $k$ different from $a,a^*$ and average $k$ with $k^*$, producing two copies of $1007$.",
+          "Average $a^*$ with one of those copies of $1007$. Both become $c^*=(a^*+1007)/2=2014-c$. The five affected entries are now $c,c,c^*,c^*,1007$; two opposite-pair moves turn them all into $1007$. Finish by averaging all remaining untouched opposite pairs. Thus every first move has a finite completion."
+        ],
+        "stepsZh": [
+          "取序列 $0,1,\\ldots,2014$。每次操作都保持总和不变，因此平均数始终为 $1007$。把 $u$ 与 $u^*=2014-u$ 称为一对相反数；对一对相反数操作，会得到两个 $1007$。",
+          "先设第一次操作选择了均不等于 $1007$ 的 $a,b$，并产生两个 $c=(a+b)/2$。若 $a,b$ 本来就是相反数，则 $c=1007$，随后只需把所有未动过的相反数逐对取平均。",
+          "否则 $a,b,a^*,b^*$ 是四个互不相同的原序列项。先对 $a^*,b^*$ 操作，得到两个 $c^*=2014-c$；再把两个 $c$ 分别与两个 $c^*$ 配对操作，四项全部变为 $1007$。最后处理其余未动过的相反数对。",
+          "再考虑第一次操作选择了 $1007$ 与某个 $a\\ne1007$，得到两个 $c=(a+1007)/2$。任选一个尚未使用且不同于 $a,a^*$ 的数 $k$，先对 $k,k^*$ 操作，得到两个 $1007$。",
+          "把 $a^*$ 与其中一个 $1007$ 取平均，二者都变成 $c^*=(a^*+1007)/2=2014-c$。此时五个受影响项为 $c,c,c^*,c^*,1007$；再进行两次相反数配对，它们全部变为 $1007$。其余项仍按相反数配对即可。因此任意第一次操作后都能在有限步内完成。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2015-q2": {
+    "summary": "Determine all ordered pairs of integers $(x,y)$ satisfying $x^2+xy+y^2=\\left(\\frac{x+y}{3}+1\\right)^3$.",
+    "summaryZh": "求所有满足 $x^2+xy+y^2=\\left(\\frac{x+y}{3}+1\\right)^3$ 的整数有序对 $(x,y)$。",
+    "answer": "For any $n\\in\\mathbb Z$, $(x,y)=(n^3+3n^2-1,-n^3+3n+1)$ and the pair obtained by interchanging the two coordinates; these are all the solutions.",
+    "answerZh": "对任意 $n\\in\\mathbb Z$，$(x,y)=(n^3+3n^2-1,-n^3+3n+1)$，以及交换两个坐标后所得的有序对；除此之外没有其他解。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAJMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Use the sum and difference to expose a square",
+        "titleZh": "以和与差代换，化出完全平方结构",
+        "topics": [
+          { "en": "Diophantine equations", "zh": "丢番图方程" },
+          { "en": "Parity", "zh": "奇偶性" },
+          { "en": "Perfect-square factorization", "zh": "完全平方因式分解" }
+        ],
+        "steps": [
+          "Put $a=x+y$ and $b=x-y$. Then $a,b$ are integers of the same parity, and the equation becomes $3a^2+b^2=4(a/3+1)^3$. If $3\\nmid a$, the denominator $27$ on the right cannot cancel, so write $a=3c$.",
+          "Substitution gives $b^2=(c-2)^2(4c+1)$. Thus $4c+1=m^2$ for an odd integer $m$ (the case $c=2$ is included as $m=\\pm3$), and $b=\\pm(c-2)m$.",
+          "Write $m=2n+1$. From $x=(a+b)/2$ and $y=(a-b)/2$, one sign gives $x=n^3+3n^2-1$ and $y=-n^3+3n+1$; the other sign interchanges $x,y$.",
+          "Conversely, the formulas give $x+y=3n(n+1)$ and $x-y=(2n+1)(n^2+n-2)$. Direct substitution in the equivalent equation verifies every listed pair, completing both necessity and sufficiency."
+        ],
+        "stepsZh": [
+          "令 $a=x+y$、$b=x-y$。则 $a,b$ 为同奇偶的整数，原式化为 $3a^2+b^2=4(a/3+1)^3$。若 $3\\nmid a$，右端分母中的 $27$ 无法消去，故记 $a=3c$。",
+          "代入得 $b^2=(c-2)^2(4c+1)$。因此 $4c+1=m^2$，其中 $m$ 为奇整数（$c=2$ 对应 $m=\\pm3$，也包含在内），并有 $b=\\pm(c-2)m$。",
+          "写成 $m=2n+1$。由 $x=(a+b)/2$、$y=(a-b)/2$，其中一个符号给出 $x=n^3+3n^2-1$、$y=-n^3+3n+1$；另一个符号交换 $x,y$。",
+          "反过来，参数式满足 $x+y=3n(n+1)$ 与 $x-y=(2n+1)(n^2+n-2)$。代回等价方程即可验证每一组所列有序对，故必要性与充分性均已证明。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2015-q3": {
+    "summary": "A cyclic quadrilateral $APBQ$ satisfies $\\angle APB=\\angle AQB=90^\\circ$ and $AP=AQ<BP$. A point $X$ varies on $PQ$. The line $AX$ meets the circumcircle again at $S$, and $T$ is the point on arc $AQB$ for which $XT\\perp AX$. If $M$ is the midpoint of $ST$, prove that $M$ lies on a fixed circle.",
+    "summaryZh": "圆内接四边形 $APBQ$ 满足 $\\angle APB=\\angle AQB=90^\\circ$ 且 $AP=AQ<BP$。点 $X$ 在线段 $PQ$ 上移动，直线 $AX$ 与外接圆再交于 $S$；点 $T$ 位于弧 $AQB$ 上并满足 $XT\\perp AX$。若 $M$ 为 $ST$ 的中点，证明 $M$ 位于一个定圆上。",
+    "answer": "Let $O$ and $R$ be the center and radius of the original circle. The fixed circle has center the midpoint of $AO$ and radius $\\sqrt{R^2/4+AQ^2/2}$.",
+    "answerZh": "设原圆的圆心为 $O$、半径为 $R$。所求定圆的圆心为 $AO$ 的中点，半径为 $\\sqrt{R^2/4+AQ^2/2}$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAJMO_Problems/Problem_3",
+    "figure": {
+      "url": "/commentary-figures/usamo-2015-q2.svg",
+      "alt": "Cyclic quadrilateral APBQ with X on PQ, secant AXS, perpendicular XT, midpoint M of ST, and the fixed-locus center C at the midpoint of AO.",
+      "altZh": "圆内接四边形 APBQ；X 位于 PQ 上，A、X、S 共线且 XT 垂直于 AX，M 为 ST 中点，定轨迹圆心 C 为 AO 中点。",
+      "printHeightPt": 175
+    },
+    "methods": [
+      {
+        "title": "Track the nine-point center of triangle AST",
+        "titleZh": "追踪三角形 AST 的九点圆圆心",
+        "topics": [
+          { "en": "Nine-point circle", "zh": "九点圆" },
+          { "en": "Power of a point", "zh": "点幂" },
+          { "en": "Euler line vectors", "zh": "欧拉线向量关系" }
+        ],
+        "steps": [
+          "Let $O,R$ be the center and radius of the given circle, and let $N$ be the nine-point center of triangle $AST$. Since $A,S,T$ lie on the given circle, this triangle has circumcenter $O$ and circumradius $R$.",
+          "The point $X$ is the foot of the altitude from $T$ to $AS$. If $Y$ is the midpoint of $AS$, then $X,Y,M$ lie on the nine-point circle of triangle $AST$, whose center and radius are $N$ and $R/2$.",
+          "The power of $A$ to this circle is $AX\\cdot AY=\\tfrac12AX\\cdot AS$. Intersecting chords in the original circle give $AX\\cdot XS=XP\\cdot XQ$. Since $AP=AQ$, with $D$ the midpoint of $PQ$ we have $AD\\perp PQ$ and $AX^2+XP\\cdot XQ=AD^2+DX^2+DP^2-DX^2=AQ^2$. Hence $AX\\cdot AS=AQ^2$.",
+          "Therefore $AN^2-(R/2)^2=AQ^2/2$, so $AN=\\sqrt{R^2/4+AQ^2/2}$ is constant.",
+          "If $G$ is the centroid of triangle $AST$, then $M=(3G-A)/2$, while the Euler-line relation gives $G=(2N+O)/3$. Thus $M=N+(O-A)/2$, a fixed translation. The locus is a circle of the same radius centered at $(A+O)/2$."
+        ],
+        "stepsZh": [
+          "设原圆的圆心、半径为 $O,R$，并设 $N$ 为三角形 $AST$ 的九点圆圆心。由于 $A,S,T$ 都在原圆上，该三角形的外心为 $O$，外接圆半径为 $R$。",
+          "$X$ 是从 $T$ 向 $AS$ 所作高的垂足。若 $Y$ 为 $AS$ 中点，则 $X,Y,M$ 都在三角形 $AST$ 的九点圆上，其圆心、半径分别为 $N,R/2$。",
+          "点 $A$ 对该圆的幂为 $AX\\cdot AY=\\tfrac12AX\\cdot AS$。在原圆中，相交弦定理给出 $AX\\cdot XS=XP\\cdot XQ$。又因 $AP=AQ$，若 $D$ 为 $PQ$ 中点，则 $AD\\perp PQ$，且 $AX^2+XP\\cdot XQ=AD^2+DX^2+DP^2-DX^2=AQ^2$。所以 $AX\\cdot AS=AQ^2$。",
+          "因此 $AN^2-(R/2)^2=AQ^2/2$，从而 $AN=\\sqrt{R^2/4+AQ^2/2}$ 为常数。",
+          "若 $G$ 为三角形 $AST$ 的重心，则 $M=(3G-A)/2$；欧拉线关系给出 $G=(2N+O)/3$。故 $M=N+(O-A)/2$，这是固定平移。所求轨迹是以 $(A+O)/2$ 为圆心、半径不变的圆。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2015-q4": {
+    "summary": "Determine all functions $f:\\mathbb Q\\to\\mathbb Q$ such that $f(x)+f(t)=f(y)+f(z)$ whenever rational numbers $x<y<z<t$ form an arithmetic progression.",
+    "summaryZh": "求所有函数 $f:\\mathbb Q\\to\\mathbb Q$，使得每当有理数 $x<y<z<t$ 构成等差数列时，都满足 $f(x)+f(t)=f(y)+f(z)$。",
+    "answer": "Exactly the affine functions $f(q)=\\alpha q+\\beta$, where $\\alpha,\\beta\\in\\mathbb Q$.",
+    "answerZh": "恰为所有仿射函数 $f(q)=\\alpha q+\\beta$，其中 $\\alpha,\\beta\\in\\mathbb Q$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAJMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Derive the midpoint equation and then additivity",
+        "titleZh": "先推出中点等式，再推出可加性",
+        "topics": [
+          { "en": "Functional equations", "zh": "函数方程" },
+          { "en": "Arithmetic progressions", "zh": "等差数列" },
+          { "en": "Jensen midpoint equation", "zh": "詹森中点方程" }
+        ],
+        "steps": [
+          "For arbitrary $a\\in\\mathbb Q$ and positive $d\\in\\mathbb Q$, apply the condition to $(a,a+d,a+2d,a+3d)$ and to $(a-d,a,a+d,a+2d)$. Adding the resulting equations and cancelling gives $f(a-d)+f(a+3d)=2f(a+d)$.",
+          "Given any rational $u<v$, choose $d=(v-u)/4$ and $a=u+d$. Then the preceding identity becomes $f(u)+f(v)=2f((u+v)/2)$. It also holds when $u=v$.",
+          "Put $g(q)=f(q)-f(0)$. Then $g(0)=0$ and the same midpoint identity holds. Taking one endpoint to be $0$ gives $g(q/2)=g(q)/2$, or equivalently $g(2q)=2g(q)$.",
+          "Consequently $g(u+v)=2g((u+v)/2)=g(u)+g(v)$ for all rationals $u,v$. Additivity gives $g(n)=ng(1)$ for integers $n$, and then $q\\,g(p/q)=g(p)=p\\,g(1)$, so $g(p/q)=(p/q)g(1)$.",
+          "Thus $f(q)=\\alpha q+\\beta$, with $\\alpha=g(1)$ and $\\beta=f(0)$. Direct substitution shows every such function satisfies the required relation, because the outer terms and inner terms of an arithmetic progression have equal sums."
+        ],
+        "stepsZh": [
+          "任取 $a\\in\\mathbb Q$ 与正有理数 $d$，分别把条件用于 $(a,a+d,a+2d,a+3d)$ 和 $(a-d,a,a+d,a+2d)$。将所得等式相加并消项，得到 $f(a-d)+f(a+3d)=2f(a+d)$。",
+          "对任意有理数 $u<v$，取 $d=(v-u)/4$、$a=u+d$，上式变为 $f(u)+f(v)=2f((u+v)/2)$。当 $u=v$ 时也显然成立。",
+          "令 $g(q)=f(q)-f(0)$，则 $g(0)=0$ 且仍满足同一中点等式。令一个端点为 $0$，得到 $g(q/2)=g(q)/2$，等价地 $g(2q)=2g(q)$。",
+          "于是对任意有理数 $u,v$，$g(u+v)=2g((u+v)/2)=g(u)+g(v)$。可加性给出整数 $n$ 时 $g(n)=ng(1)$；再由 $qg(p/q)=g(p)=pg(1)$，得到 $g(p/q)=(p/q)g(1)$。",
+          "所以 $f(q)=\\alpha q+\\beta$，其中 $\\alpha=g(1)$、$\\beta=f(0)$。直接代入可知每个这样的函数都成立，因为等差数列的两端之和等于中间两项之和。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2015-q5": {
+    "summary": "Let $ABCD$ be a convex cyclic quadrilateral. Prove that there is a point $X$ on $BD$ satisfying $\\angle BAC=\\angle XAD$ and $\\angle BCA=\\angle XCD$ if and only if there is a point $Y$ on $AC$ satisfying $\\angle CBD=\\angle YBA$ and $\\angle CDB=\\angle YDA$.",
+    "summaryZh": "设 $ABCD$ 为凸圆内接四边形。证明：在线段 $BD$ 上存在点 $X$，使 $\\angle BAC=\\angle XAD$ 且 $\\angle BCA=\\angle XCD$，当且仅当在线段 $AC$ 上存在点 $Y$，使 $\\angle CBD=\\angle YBA$ 且 $\\angle CDB=\\angle YDA$。",
+    "answer": "Each of the two existence statements is equivalent to $AB\\cdot CD=AD\\cdot BC$; hence they are equivalent to one another.",
+    "answerZh": "两个存在性命题都等价于 $AB\\cdot CD=AD\\cdot BC$，因此二者互相等价。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAJMO_Problems/Problem_5",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2015-q5.svg",
+      "alt": "A convex cyclic quadrilateral ABCD with diagonals AC and BD and candidate points X on BD and Y on AC.",
+      "altZh": "凸圆内接四边形 ABCD，画出两条对角线 AC、BD，并标出 BD 上的 X 与 AC 上的 Y。",
+      "printHeightPt": 170
+    },
+    "methods": [
+      {
+        "title": "Convert each pair of angle conditions into the same side-product identity",
+        "titleZh": "把两组角条件都化为同一个边长乘积恒等式",
+        "topics": [
+          { "en": "Trigonometric cevian ratios", "zh": "三角形内分点的正弦比" },
+          { "en": "Cyclic quadrilaterals", "zh": "圆内接四边形" },
+          { "en": "Extended sine rule", "zh": "正弦定理的外接圆形式" }
+        ],
+        "steps": [
+          "For a point $X$ on $BD$, an area comparison in triangle $ABD$ gives $BX/XD=AB\\sin\\angle BAX/(AD\\sin\\angle XAD)$. The requested angle at $A$ makes this $AB\\sin\\angle CAD/(AD\\sin\\angle BAC)$.",
+          "The same area comparison in triangle $BCD$ gives $BX/XD=BC\\sin\\angle BCX/(CD\\sin\\angle XCD)=BC\\sin\\angle ACD/(CD\\sin\\angle BCA)$. Thus the two rays meet the same point of $BD$ exactly when these two ratios are equal.",
+          "All four vertices lie on one circle of radius $R$. Therefore $\\sin\\angle CAD=CD/(2R)$, $\\sin\\angle BAC=BC/(2R)$, $\\sin\\angle ACD=AD/(2R)$, and $\\sin\\angle BCA=AB/(2R)$. The equality of the two ratios reduces precisely to $AB\\cdot CD=AD\\cdot BC$. This proves that the point $X$ exists exactly under that identity.",
+          "Now construct the two prescribed rays for $Y$ on $AC$. Comparing areas in triangles $ABC$ and $ADC$ gives, respectively, $AY/YC=AB\\sin\\angle CBD/(BC\\sin\\angle ABD)$ and $AY/YC=AD\\sin\\angle CDB/(CD\\sin\\angle ADB)$.",
+          "Using the same circle, replace the four sines by $CD/(2R),AD/(2R),BC/(2R),AB/(2R)$. Equality of the two ratios is again equivalent to $AB\\cdot CD=AD\\cdot BC$. Hence $Y$ exists exactly when $X$ exists, proving both directions."
+        ],
+        "stepsZh": [
+          "对 $BD$ 上的点 $X$，在三角形 $ABD$ 中比较面积可得 $BX/XD=AB\\sin\\angle BAX/(AD\\sin\\angle XAD)$。利用题设的 $A$ 点角条件，此式变为 $AB\\sin\\angle CAD/(AD\\sin\\angle BAC)$。",
+          "在三角形 $BCD$ 中作同样的面积比较，得到 $BX/XD=BC\\sin\\angle BCX/(CD\\sin\\angle XCD)=BC\\sin\\angle ACD/(CD\\sin\\angle BCA)$。因此，从 $A,C$ 作出的两条指定射线恰好交于 $BD$ 上同一点，当且仅当这两个比值相等。",
+          "四个顶点位于半径为 $R$ 的同一圆上，所以 $\\sin\\angle CAD=CD/(2R)$、$\\sin\\angle BAC=BC/(2R)$、$\\sin\\angle ACD=AD/(2R)$、$\\sin\\angle BCA=AB/(2R)$。两个比值相等恰好化为 $AB\\cdot CD=AD\\cdot BC$。因此 $X$ 存在当且仅当该恒等式成立。",
+          "再在 $AC$ 上考虑点 $Y$。分别在三角形 $ABC$ 与 $ADC$ 中比较面积，得到 $AY/YC=AB\\sin\\angle CBD/(BC\\sin\\angle ABD)$ 与 $AY/YC=AD\\sin\\angle CDB/(CD\\sin\\angle ADB)$。",
+          "仍用同一外接圆，把其中四个正弦依次换成 $CD/(2R),AD/(2R),BC/(2R),AB/(2R)$。两个比值相等再次等价于 $AB\\cdot CD=AD\\cdot BC$。故 $Y$ 与 $X$ 的存在条件完全相同，两个方向同时得证。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2015-q6": {
+    "summary": "Distribute $m\\ge1$ indistinguishable stones among the cells of an $n\\times n$ grid, with no limit per cell. A move chooses the four corners of a rectangle and transfers one stone from each end of one diagonal to the corresponding ends of the other diagonal. Two distributions are equivalent if moves connect them. Determine the number of equivalence classes.",
+    "summaryZh": "把 $m\\ge1$ 枚无区别的石子放入 $n\\times n$ 方格，每格数量不限。一次操作选取某个矩形的四个顶点格，把一条对角线两端各一枚石子分别移到另一条对角线两端。若两个摆放可通过若干次操作互相得到，则称它们等价。求等价类的数量。",
+    "answer": "$\\displaystyle \\binom{m+n-1}{n-1}^2$.",
+    "answerZh": "$\\displaystyle \\binom{m+n-1}{n-1}^2$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAJMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Use row and column sums as a complete signature",
+        "titleZh": "用行和与列和构成完全不变量",
+        "topics": [
+          { "en": "Invariants", "zh": "不变量" },
+          { "en": "Permutations by transpositions", "zh": "用换位生成排列" },
+          { "en": "Stars and bars", "zh": "隔板法" }
+        ],
+        "steps": [
+          "Record the ordered row sums $(r_1,\\ldots,r_n)$ and column sums $(c_1,\\ldots,c_n)$. Every rectangle move preserves both lists.",
+          "Temporarily label the stones and write their positions as $(x_i,y_i)$. The row sums specify the multiset of $x_i$, and the column sums specify the multiset of $y_i$. Configurations with the same signature differ only in how the two coordinate lists are paired.",
+          "Any re-pairing is a permutation of the $y_i$, hence a product of transpositions. Swapping two $y$-coordinates in distinct rows and columns is one rectangle move; if the rows or columns agree, the swap does not change the unlabeled configuration. Thus equal signatures imply equivalence.",
+          "Every pair of signatures is realizable by listing each row label $r_i$ times and each column label $c_j$ times and pairing the two lists arbitrarily.",
+          "Each ordered list of row sums is a weak composition of $m$ into $n$ parts, giving $\\binom{m+n-1}{n-1}$ choices. The column list has the same independent count, so the number of classes is the square of this binomial coefficient."
+        ],
+        "stepsZh": [
+          "记录有序行和 $(r_1,\\ldots,r_n)$ 与列和 $(c_1,\\ldots,c_n)$。每次矩形操作都保持这两个列表不变。",
+          "暂时给石子编号，把位置写成 $(x_i,y_i)$。行和确定全部 $x_i$ 的多重集，列和确定全部 $y_i$ 的多重集。签名相同的摆放只在两列坐标的配对方式上不同。",
+          "任意重新配对都是 $y_i$ 的一个排列，因而可分解为换位。不同行、不同列的两枚石子交换 $y$ 坐标，正是一次矩形操作；若同行或同列，交换后无标号摆放不变。因此签名相同必然等价。",
+          "任意一对签名都可实现：把行号 $i$ 重复 $r_i$ 次，把列号 $j$ 重复 $c_j$ 次，再任意逐项配对并放置石子。",
+          "有序行和是把 $m$ 分成 $n$ 个非负整数的弱组合，共有 $\\binom{m+n-1}{n-1}$ 种；列和有同样多且独立的选择，故等价类数为该二项式系数的平方。"
+        ]
+      }
+    ]
+  }
+}
