@@ -1,0 +1,262 @@
+{
+  "usamo-2013-q1": {
+    "summary": "In triangle $ABC$ choose $P$ on $BC$, $Q$ on $CA$, and $R$ on $AB$. On segment $AP$, let $X$ be the second intersection with the circle through $A,Q,R$, and let $Y,Z$ be the second intersections (besides $P$) with the circles through $B,R,P$ and $C,P,Q$, respectively. Prove the internal-division formula $YX/XZ=BP/PC$ whenever the indicated ratio is defined.",
+    "summaryZh": "在三角形 $ABC$ 的边 $BC,CA,AB$ 上分别取点 $P,Q,R$。线段 $AP$ 与圆 $AQR$ 除 $A$ 外再交于 $X$，与圆 $BRP,CPQ$ 除 $P$ 外分别再交于 $Y,Z$。证明在比值有定义时，$YX/XZ=BP/PC$。",
+    "answer": "$PC\\cdot YX=BP\\cdot XZ$. If $Y\\ne Z$, this gives $YX/XZ=BP/PC$.",
+    "answerZh": "$PC\\cdot YX=BP\\cdot XZ$。当 $Y\\ne Z$ 时，即有 $YX/XZ=BP/PC$。",
+    "methods": [
+      {
+        "title": "Interpolate the equation of the circle through A",
+        "titleZh": "对过 A 的圆方程作线性插值",
+        "topics": [
+          {
+            "en": "Power of a point",
+            "zh": "点幂"
+          },
+          {
+            "en": "Circle equations",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Vectors",
+            "zh": "向量"
+          }
+        ],
+        "steps": [
+          "Use $A$ as vector origin. If $O$ is the centre of the circle $AQR$, each point $T$ on that circle satisfies $|T|^2=2O\\cdot T$, by expanding $|T-O|^2=|O|^2$. Define the linear function $L(T)=2O\\cdot T$. Since $R,Q,X$ lie on the rays $AB,AC,AP$, scaling their vectors gives $L(B)=AB\\cdot AR$, $L(C)=AC\\cdot AQ$, and $L(P)=AP\\cdot AX$.",
+          "The power of $A$ with respect to circle $BRP$, using its two secants $AB$ and $AP$, gives $AB\\cdot AR=AP\\cdot AY$. Circle $CPQ$ gives $AC\\cdot AQ=AP\\cdot AZ$.",
+          "Write $b=BP$ and $c=PC$. The point dividing segment $BC$ in this ratio has vector $P=(cB+bC)/(b+c)$. Apply $L$, substitute the preceding identities, and cancel $AP>0$ to obtain $(b+c)AX=c\\,AY+b\\,AZ$.",
+          "All three points lie on the same ray from $A$. If $Y\\ne Z$, the weighted average places $X$ strictly between them. Subtracting $AY$ and $AX$ in turn, then taking absolute values, gives $YX=b\\,YZ/(b+c)$ and $XZ=c\\,YZ/(b+c)$. If $Y=Z$ the same identity forces $X=Y=Z$: the cross-multiplied equality still holds, while the quotient would be $0/0$."
+        ],
+        "stepsZh": [
+          "以 $A$ 为向量原点，设 $O$ 是圆 $AQR$ 的圆心。圆上任一点 $T$ 满足 $|T-O|^2=|O|^2$，展开即 $|T|^2=2O\\cdot T$。定义线性函数 $L(T)=2O\\cdot T$。因 $R,Q,X$ 分别在射线 $AB,AC,AP$ 上，将对应向量按长度成比例放大，得 $L(B)=AB\\cdot AR$、$L(C)=AC\\cdot AQ$、$L(P)=AP\\cdot AX$。",
+          "对圆 $BRP$，从 $A$ 作割线 $AB,AP$，由点幂得 $AB\\cdot AR=AP\\cdot AY$。同理对圆 $CPQ$ 有 $AC\\cdot AQ=AP\\cdot AZ$。",
+          "记 $b=BP,c=PC$，按此比例内分 $BC$ 的点向量为 $P=(cB+bC)/(b+c)$。两边作用 $L$，代入前述各式并约去 $AP>0$，得 $(b+c)AX=c\\,AY+b\\,AZ$。",
+          "三点同在从 $A$ 出发的射线上。当 $Y\\ne Z$ 时，此加权平均表明 $X$ 严格位于两者之间。分别作差并取绝对值，得 $YX=b\\,YZ/(b+c)$、$XZ=c\\,YZ/(b+c)$，相除即证。若 $Y=Z$，同一等式迫使 $X=Y=Z$，此时交叉相乘的结论仍成立，而直接相除为 $0/0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAMO_Problems/Problem_1",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2013-q3.svg",
+      "alt": "The three circumcircles intersect the cevian AP at X, Y and Z. P divides BC, Q lies on CA and R on AB.",
+      "altZh": "三圆与线段 AP 的第二交点分别为 X、Y、Z。P 在 BC 上，Q 在 CA 上，R 在 AB 上。"
+    }
+  },
+  "usamo-2013-q2": {
+    "summary": "Place a token at a marked vertex of a regular $n$-gon, $n\\ge3$. Each move advances one or two edges clockwise. A move is identified by its starting vertex and its step length. Let $a_n$ count walks starting and ending at the mark that travel exactly two circuits and never use the same move twice. Prove $a_{n-1}+a_n=2^n$ for $n\\ge4$.",
+    "summaryZh": "在正 $n$ 边形的一个标记顶点放一枚棋子，$n\\ge3$。每步沿顺时针前进一条或两条边；一次走法由出发顶点和步长共同确定。令 $a_n$ 表示恰绕两圈、回到标记点且从不重复同一走法的路径数。证明对 $n\\ge4$ 有 $a_{n-1}+a_n=2^n$。",
+    "answer": "$a_{n-1}+a_n=2^n$.",
+    "answerZh": "$a_{n-1}+a_n=2^n$。",
+    "methods": [
+      {
+        "title": "Encode the two laps by three column types",
+        "titleZh": "以三种列编码两圈的访问记录",
+        "topics": [
+          {
+            "en": "Bijection",
+            "zh": "双射"
+          },
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Counting walks",
+            "zh": "路径计数"
+          }
+        ],
+        "steps": [
+          "Unroll the two laps to integer positions $0,1,\\ldots,2n$. Record $p_i=1$ if the walk lands at $i$ and $0$ if it skips $i$. The endpoints have $p_0=p_{2n}=1$, and the complete bit string uniquely specifies the walk. Form the $n+1$ columns $C_i=(p_i,p_{n+i})$ for $0\\le i\\le n$. The bits from each lap form one row; their common bit $p_n$ appears twice.",
+          "An interior column cannot be $(0,0)$: skipping both positions entails the same two-step move from the preceding vertex on both laps. Thus each column is one of $U=(1,0),V=(0,1),W=(1,1)$. Consecutive columns cannot both be $U$ or both be $V$, since this skips consecutive integer positions in one lap. Consecutive $W$ columns would repeat a one-step move. Conversely these are all restrictions: unequal adjacent columns prevent consecutive skipped positions and prevent repeated one-step moves, while exclusion of $(0,0)$ prevents any two-step move being used twice. Joining the two rows at their common endpoint recovers the path.",
+          "If $p_n=0$ the endpoint columns are $U,V$ in that order; if $p_n=1$ they are $W,W$. Let $S_k$ count strings on these three letters having $k$ transitions, neighbouring letters unequal, and specified identical endpoints. Let $D_k$ denote the count for a specified ordered pair of different endpoints. Relabelling letters makes each count independent of the particular endpoints. Thus $a_n=S_n+D_n$.",
+          "Starting at a fixed letter there are two choices at each transition, so $S_n+2D_n=2^n$. For a string with fixed different endpoints, the penultimate letter is either the starting letter or the third letter, giving $D_n=S_{n-1}+D_{n-1}=a_{n-1}$ when $n\\ge4$. It follows that $a_n+a_{n-1}=S_n+2D_n=2^n$."
+        ],
+        "stepsZh": [
+          "将两圈沿圆周展开为 $0,1,\\ldots,2n$。设 $p_i=1$ 表示棋子落在 $i$，$p_i=0$ 表示跳过 $i$。端点满足 $p_0=p_{2n}=1$，整个零一串唯一确定路径。对 $0\\le i\\le n$ 构造 $n+1$ 列 $C_i=(p_i,p_{n+i})$。两圈分别成为两行，公共位置 $p_n$ 在两行各出现一次。",
+          "内部列不可能为 $(0,0)$，否则两圈都跳过此处，即两次从它前面的同一顶点跳两步。因此列仅有 $U=(1,0),V=(0,1),W=(1,1)$ 三种。相邻列不能同为 $U$ 或同为 $V$，否则有一圈连续跳过两个位置；也不能同为 $W$，否则同一步长一的走法用了两次。反之，这些限制已足够：相邻列不同就排除了连续跳过两格及重复的一步走法，而不出现 $(0,0)$ 排除了重复的两步走法。将两行在公共端点接合即可还原路径。",
+          "若 $p_n=0$，首末列依次为 $U,V$；若 $p_n=1$，首末均为 $W$。记 $S_k$ 为经 $k$ 次转移、相邻字母不同、首末均为指定同一字母的三字母串数；$D_k$ 则指定首末为某一对不同字母。由三字母对称性，两者与具体指定的字母无关。从而 $a_n=S_n+D_n$。",
+          "指定首字母后每次转移有两种选择，得 $S_n+2D_n=2^n$。若首末预定且不同，倒数第二个字母要么是首字母，要么是第三种字母，故当 $n\\ge4$ 时 $D_n=S_{n-1}+D_{n-1}=a_{n-1}$。所以 $a_n+a_{n-1}=S_n+2D_n=2^n$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAMO_Problems/Problem_2"
+  },
+  "usamo-2013-q3": {
+    "summary": "Build a triangular lattice of two-sided tokens, with $1,2,\\ldots,n$ tokens in its successive rows and $n\\ge1$. Start with every black face visible. A move reverses every token on a chosen line in any of the three directions parallel to a side. For each reachable black-and-white board, count the fewest moves needed from the start. Find the largest of those minimum counts as a function of $n$.",
+    "summaryZh": "用双面棋子排列成三角形点阵，各行依次有 $1,2,\\ldots,n$ 枚，$n\\ge1$。初始时全部黑面朝上，每步选择一条与三边之一平行的直线，把这条线上的棋子全部翻面。对每个可达的黑白局面，考虑从初始局面到它的最少步数。求这些最少步数中的最大值。",
+    "answer": "Write $n=4k+r$, $0\\le r<4$. The maximum is $6k+r=n+2\\lfloor n/4\\rfloor$.",
+    "answerZh": "写 $n=4k+r$，其中 $0\\le r<4$。最大值为 $6k+r=n+2\\lfloor n/4\\rfloor$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Classify equivalent flip lists and balance each parity group",
+        "titleZh": "刻画等效操作，并平衡每个奇偶组",
+        "topics": [
+          {
+            "en": "Linear algebra over the two-element field",
+            "zh": "二元域上的线性代数"
+          },
+          {
+            "en": "Parity invariants",
+            "zh": "奇偶不变量"
+          },
+          {
+            "en": "Averaging principle",
+            "zh": "平均原理"
+          },
+          {
+            "en": "Extremal construction",
+            "zh": "极值构造"
+          }
+        ],
+        "steps": [
+          "Write $N=n-1$ and index the tokens by triples $(i,j,k)$ of nonnegative integers with $i+j+k=N$. Lines of the three directions have fixed $i$, $j$ or $k$. Repeated flips cancel and flips commute. Thus a move list is specified by three binary strings of length $n$, marking the lines used an odd number of times. Its cost is the number of marked lines. For $n=1$ the answer is one; assume $n\\ge2$.",
+          "Two lists produce the same board if their difference modulo two changes nothing. Write that difference as $(A_i,B_j,C_k)$. We need $A_i+B_j+C_k=0$ modulo two whenever $i+j+k=N$. Compare the tokens $(i+1,0,N-1-i)$ and $(i,1,N-1-i)$: every consecutive difference of $A$ equals $B_1-B_0$. Permuting the coordinates shows that all three strings have one common difference $d$. Consequently every null change is exactly $A_i=p+di$, $B_j=q+dj$, $C_k=p+q+d(N+k)$, for arbitrary bits $p,q,d$. Substitution checks the converse. There are eight such changes.",
+          "For a fixed move list, group its $3n$ bits by direction and by even/odd index, making six groups. In group $g$ let $b_g$ be the number of zeros minus the number of ones. Under a null change the whole group is kept or complemented. Put $\\chi_g=+1$ or $-1$ accordingly. The six signs have form $(-1)^L$, with the six distinct nonzero binary linear forms $L=p,p+d,q,q+d,p+q,p+q+d$ in some order. The minimum cost for our board is therefore $(3n-M)/2$, where $M$ is the maximum of $S=\\sum_g b_g\\chi_g$ over the eight choices of $(p,q,d)$.",
+          "A nonconstant sign has mean zero: switching a bit with nonzero coefficient reverses the sign. Likewise any two different signs have mean product zero, since their product uses a nonzero form. Thus $S$ has mean zero and its mean conditional on $\\chi_g=+1$ or $-1$ is respectively $b_g$ or $-b_g$. In particular $M\\ge |b_g|$ for each group, and $M\\ge0$. Every value of $S$ has the same parity as $3n$ because it is the excess of zeros over ones in $3n$ positions.",
+          "We claim $M\\ge r$. For $r=0$ this follows from the mean; for $r=1$ use odd parity as well. For $r=2$ each group has odd size $2k+1$, so $|b_g|\\ge1$ and even parity yields $M\\ge2$. For $r=3$ the even-index groups have size $2k+2$ and the odd-index groups have size $2k+1$. If any $|b_g|\\ge2$, odd parity gives $M\\ge3$. Otherwise the even groups are balanced and the three odd groups have $b_g=\\pm1$. Their forms are $p+d,q+d,p+q+d$, since $N$ is even. They are independent: their sum gives $d$, then the first two recover $p,q$. Choose the three signs to make every contribution $+1$, giving $S=3$. Hence every board costs at most $(3n-r)/2=6k+r$.",
+          "For the matching lower bound, first consider side lengths $r=0,1,2,3$, treating the empty board as cost zero. With side one, a white token costs one. With side two, all three white tokens require at least two flips, since one line has at most two tokens; flipping one two-token row and the remaining singleton attains it. With side three the nine move bits give $2^9/8=64$ distinct reachable boards by the null-change calculation. At most $1+9+\\binom92=46$ can be reached with at most two flips, so some reachable board needs at least three.",
+          "Take any list for such a side-$r$ board and copy its bits to indices $0,\\ldots,r-1$ of each direction on the side-$n$ board. In each direction the remaining $4k$ lines have $2k$ indices of each parity. Mark exactly $k$ of each parity. Any null change keeps or complements each group, so the added lines always contribute exactly $6k$ moves. On the copied indices it restricts to a null change for the small board: the formula uses $N=n-1$ only modulo two, and $n-r=4k$. For $r=1$ it likewise flips an even number of the three labels of the single token. Thus the copied part still needs at least $r$ moves. The constructed board needs at least $6k+r$, proving equality."
+        ],
+        "stepsZh": [
+          "记 $N=n-1$，用满足 $i+j+k=N$ 的非负整数三元组 $(i,j,k)$ 标记各棋子。三个方向的直线分别固定 $i,j,k$。翻转的顺序可交换，同一条线翻两次相消，因此只需用三个长度为 $n$ 的二进制串记录各直线是否翻转奇数次。该表示的操作数就是其中一的个数。$n=1$ 时答案为一；以下设 $n\\ge2$。",
+          "两种表示产生同一局面，当且仅当它们逐位模二之差 $(A_i,B_j,C_k)$ 翻转后不改变任何棋子。条件是每当 $i+j+k=N$ 时，$A_i+B_j+C_k=0$（模二）。比较 $(i+1,0,N-1-i)$ 和 $(i,1,N-1-i)$ 两点可知，$A$ 的每个相邻差都等于 $B_1-B_0$。轮换坐标即知三串的相邻差均为同一数 $d$。故所有保持局面的变换恰为 $A_i=p+di$、$B_j=q+dj$、$C_k=p+q+d(N+k)$，其中 $p,q,d$ 各为零或一。反向代入即可验证，共八种。",
+          "给定一组操作，按直线方向与下标奇偶把 $3n$ 个二进制位分成六组。在组 $g$ 中，令 $b_g$ 为零的个数减去一的个数。上述变换对整组要么保持，要么逐位取反，分别记符号 $\\chi_g=+1,-1$。这六个符号形如 $(-1)^L$，其中 $L$ 恰为六个互不相同的非零模二线性式 $p,p+d,q,q+d,p+q,p+q+d$。设 $S=\\sum_g b_g\\chi_g$ 在八种 $(p,q,d)$ 选择中的最大值为 $M$，则此局面的最少操作数为 $(3n-M)/2$。",
+          "每个非常值符号的均值为零，因为改变一个非零系数所对应的位就会使它变号。两个不同符号的乘积也对应非零线性式，故乘积的均值为零。因此 $S$ 的均值为零；给定 $\\chi_g=+1$ 或 $-1$ 时，其条件均值分别为 $b_g$ 或 $-b_g$。故每组都有 $M\\ge |b_g|$，并且 $M\\ge0$。此外，$S$ 是 $3n$ 个位置上零的个数减去一的个数，所以与 $3n$ 同奇偶。",
+          "下面证 $M\\ge r$。$r=0$ 时用均值即可；$r=1$ 时再利用奇偶性。$r=2$ 时每组大小均为奇数 $2k+1$，所以 $|b_g|\\ge1$，而 $M$ 为偶数，故 $M\\ge2$。$r=3$ 时偶下标组大小为 $2k+2$，奇下标组大小为 $2k+1$。若某个 $|b_g|\\ge2$，则 $M$ 为奇数，故至少为三。否则偶下标组均平衡，三个奇下标组的 $b_g$ 均为 $\\pm1$。此时 $N$ 为偶数，三组的线性式为 $p+d,q+d,p+q+d$。它们独立，因为相加可得 $d$，再用前两个可求 $p,q$。因此可同时指定三个符号，使每组贡献均为 $+1$，得到 $S=3$。综上，每一局面的最少操作数至多为 $(3n-r)/2=6k+r$。",
+          "为给出下界，先考察边长 $r=0,1,2,3$，并约定空棋盘需零步。边长一时，把唯一一枚翻白需一步。边长二时，一条直线至多经过两枚，故全白至少需两步；先翻一排两枚，再单翻剩余的一枚即可。边长三时有九个操作位，每一局面恰有八种表示，共有 $2^9/8=64$ 个可达局面。至多两步只能产生至多 $1+9+\\binom92=46$ 个局面，因此至少有一个可达局面需要三步或更多。",
+          "取上述一个边长 $r$ 的局面的操作表示，按方向复制到大棋盘下标为 $0,\\ldots,r-1$ 的直线上。每个方向剩余 $4k$ 个下标，其中奇偶各 $2k$ 个；各选 $k$ 个记为一。每种保持局面的变换对每个奇偶组同时保持或取反，故新增部分总是贡献恰好 $6k$ 步。其在复制部分的限制也保持小棋盘局面：公式中 $N=n-1$ 只取模二，而 $n-r=4k$。$r=1$ 时它同样只会翻动单枚棋子的三个标签中的偶数个。于是复制部分仍至少需 $r$ 步，所构造的局面至少需 $6k+r$ 步，与上界相等。"
+        ]
+      }
+    ]
+  },
+  "usamo-2013-q4": {
+    "summary": "Find all real triples with $x,y,z\\ge1$ for which $\\min\\{\\sqrt{x+xyz},\\sqrt{y+xyz},\\sqrt{z+xyz}\\}=\\sqrt{x-1}+\\sqrt{y-1}+\\sqrt{z-1}$.",
+    "summaryZh": "求出满足 $x,y,z\\ge1$ 及 $\\min\\{\\sqrt{x+xyz},\\sqrt{y+xyz},\\sqrt{z+xyz}\\}=\\sqrt{x-1}+\\sqrt{y-1}+\\sqrt{z-1}$ 的所有实数三元组。",
+    "answer": "For $t>0$, take $(1+1/(t+1/t)^2,\\ 1+t^2,\\ 1+t^{-2})$ and all permutations.",
+    "answerZh": "对任意 $t>0$，取 $(1+1/(t+1/t)^2,\\ 1+t^2,\\ 1+t^{-2})$ 及其所有排列。",
+    "methods": [
+      {
+        "title": "Express the squared gap as two squares",
+        "titleZh": "把平方差分解为两个平方项",
+        "topics": [
+          {
+            "en": "Sum of squares",
+            "zh": "平方和分解"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          {
+            "en": "Equality conditions",
+            "zh": "等号条件"
+          }
+        ],
+        "steps": [
+          "By symmetry assume $x$ is a smallest coordinate. Set $s=\\sqrt{x-1}$, $u=\\sqrt{y-1}$ and $v=\\sqrt{z-1}$. The minimum on the left is $\\sqrt{x+xyz}$. Both sides are nonnegative, so we may square.",
+          "The square of the left side is $(1+s^2)(1+(1+u^2)(1+v^2))$. Use $(1+u^2)(1+v^2)=(u+v)^2+(uv-1)^2$. On subtracting $(s+u+v)^2$ the exact difference is $(s(u+v)-1)^2+(1+s^2)(uv-1)^2$.",
+          "Therefore equality holds exactly when $uv=1$ and $s=1/(u+v)$. Writing $u=t>0$, $v=1/t$ gives the displayed coordinates. Conversely $1/(u+v)$ is smaller than both $u$ and $v$ when $uv=1$, since $u(u+v)=u^2+1>1$ and likewise for $v$. Hence the designated $x$ really is the minimum, both squares vanish, and every displayed permutation works."
+        ],
+        "stepsZh": [
+          "由对称性可设 $x$ 为最小坐标。令 $s=\\sqrt{x-1},u=\\sqrt{y-1},v=\\sqrt{z-1}$。左侧最小根式即 $\\sqrt{x+xyz}$。两边均非负，可将等式平方。",
+          "左侧平方为 $(1+s^2)(1+(1+u^2)(1+v^2))$。利用 $(1+u^2)(1+v^2)=(u+v)^2+(uv-1)^2$，再减去右侧平方 $(s+u+v)^2$，所得差恰为 $(s(u+v)-1)^2+(1+s^2)(uv-1)^2$。",
+          "所以等号成立当且仅当 $uv=1$ 且 $s=1/(u+v)$。设 $u=t>0,v=1/t$，即得所列三元组。反过来，当 $uv=1$ 时，因 $u(u+v)=u^2+1>1$ 且 $v(v+u)>1$，故 $1/(u+v)$ 确实小于 $u,v$。于是所设 $x$ 确为最小坐标，两个平方均为零，所列各组及其排列都满足原式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAMO_Problems/Problem_4"
+  },
+  "usamo-2013-q5": {
+    "summary": "For arbitrary positive integers $m$ and $n$, prove that a single positive multiplier $c$ can make the decimal expansions of $cm$ and $cn$ have the same nonzero digits, counted with multiplicity.",
+    "summaryZh": "对任意两个正整数 $m,n$，证明存在同一个正整数乘数 $c$，使 $cm$ 与 $cn$ 的十进制表示具有相同的非零数字，各数字的出现次数也相同。",
+    "answer": "Such a $c$ always exists. The two decimal strings can even be made cyclic rotations after padding with leading zeros.",
+    "answerZh": "这样的 $c$ 总是存在。在开头补零以对齐位数后，两个十进制数字串甚至可以互为循环移位。",
+    "methods": [
+      {
+        "title": "Construct a rotation modulus",
+        "titleZh": "构造使十进制数字循环移位的模数",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Decimal representation",
+            "zh": "十进制表示"
+          },
+          {
+            "en": "Constructive proof",
+            "zh": "构造证明"
+          }
+        ],
+        "steps": [
+          "Write $n=hs$ where $h$ contains exactly the powers of $2$ and $5$ in $n$, so $\\gcd(s,10)=1$. Choose $e$ large enough that $10^e/h$ is an integer multiple of $10$ and $D=(10^e m-n)/h>\\max(m,n)$. This is possible because $h$ has no prime factor other than $2$ or $5$. Since $D=(10^e/h)m-s\\equiv-s\\pmod{10}$, we have $\\gcd(D,10)=1$. By construction $10^em\\equiv n\\pmod D$.",
+          "As $10$ is invertible modulo $D$, some positive power $10^k$ is $1$ modulo $D$ (two powers repeat among finitely many residues, and we may cancel the smaller power). Put $M=10^k-1$ and $c=M/D$. These are positive integers. Because $m,n<D$, both $cm$ and $cn$ lie strictly between $0$ and $M$. Multiplying the preceding congruence by $c$ yields $10^e(cm)\\equiv cn\\pmod M$.",
+          "Write a number $u$ with $0<u<M$ using exactly $k$ decimal places, padding on the left with zeros. If its leading digit is $d$ and its remaining block represents $r$, then $u=d10^{k-1}+r$ and $10u\\equiv10r+d\\pmod M$. This moves the leading digit to the right end. The rotated word is neither all zeros nor all nines, so its value is the unique residue in $(0,M)$.",
+          "Apply this rotation $e$ times to the padded string for $cm$. Its value is congruent to $cn$ and lies in the same interval, hence equals $cn$. Rotation preserves the number of occurrences of every digit. Removing any leading zeros afterwards leaves precisely equal multiplicities of every nonzero digit, as claimed."
+        ],
+        "stepsZh": [
+          "写 $n=hs$，其中 $h$ 收集 $n$ 中素因子 $2$ 和 $5$ 的全部幂次，因此 $\\gcd(s,10)=1$。取足够大的 $e$，使 $10^e/h$ 是 $10$ 的整数倍，且 $D=(10^e m-n)/h>\\max(m,n)$。因 $h$ 的素因子只可能为 $2,5$，这样的 $e$ 存在。又 $D=(10^e/h)m-s\\equiv-s\\pmod{10}$，故 $\\gcd(D,10)=1$；按定义还有 $10^em\\equiv n\\pmod D$。",
+          "因为 $10$ 在模 $D$ 下可逆，所以存在正整数 $k$ 使 $10^k\\equiv1\\pmod D$：在有限个剩余类中有两个幂相同，约去较小的幂即可。令 $M=10^k-1,c=M/D$，两者都是正整数。由 $m,n<D$，知 $cm,cn$ 均严格介于 $0$ 和 $M$ 之间。将前一同余式乘 $c$，得 $10^e(cm)\\equiv cn\\pmod M$。",
+          "将 $0<u<M$ 写成恰好 $k$ 位，位数不足就在左边补零。若首位为 $d$，后面各位构成数 $r$，则 $u=d10^{k-1}+r$，故 $10u\\equiv10r+d\\pmod M$。这恰把首位移到末尾。所得数字串既不全为零也不全为九，所以其数值就是区间 $(0,M)$ 中的唯一相应剩余数。",
+          "将 $cm$ 补零后的数字串这样移位 $e$ 次，所得值与 $cn$ 同余又落在同一区间，因而就是 $cn$。循环移位保留每个数字的出现次数；最后删去可能的前导零，所有非零数字的出现次数仍分别相等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAMO_Problems/Problem_5"
+  },
+  "usamo-2013-q6": {
+    "summary": "In triangle $ABC$, choose $P$ on side $BC$ so both circles $\\omega_1=(ABP)$ and $\\omega_2=(ACP)$ are defined. Each of their two common external tangents meets line $AP$; denote the intersections by $X,Y$. Determine every $P$ for which $(AP/XY)^2+(BP\\cdot PC)/(AB\\cdot AC)=1$.",
+    "summaryZh": "在三角形 $ABC$ 的边 $BC$ 上取点 $P$，使三角形 $ABP,ACP$ 的外接圆都有定义。两圆的两条公外切线分别交直线 $AP$ 于 $X,Y$。求使 $(AP/XY)^2+(BP\\cdot PC)/(AB\\cdot AC)=1$ 成立的所有点 $P$。",
+    "answer": "The two division ratios are $BP:PC=AB:AC$ and $BP:PC=AC:AB$. If $AB=AC$, the midpoint is the sole solution.",
+    "answerZh": "两种分点满足 $BP:PC=AB:AC$ 或 $BP:PC=AC:AB$。若 $AB=AC$，唯一解是 $BC$ 的中点。",
+    "figure": {
+      "url": "/commentary-figures/usamo-2013-q6.svg",
+      "alt": "An arbitrary interior point P on BC, the circles through ABP and ACP, and their external tangent intersections X and Y on the common chord line AP.",
+      "altZh": "边 BC 上任取内点 P，图中画出过 ABP、ACP 的两个圆以及两条公外切线与公共弦所在直线 AP 的交点 X、Y。"
+    },
+    "methods": [
+      {
+        "title": "Use the common tangents to compare two lengths",
+        "titleZh": "利用两条公外切线比较线段长度",
+        "topics": [
+          {
+            "en": "Power of a point",
+            "zh": "圆幂定理"
+          },
+          {
+            "en": "Common external tangents",
+            "zh": "公外切线"
+          },
+          {
+            "en": "Extended sine rule",
+            "zh": "扩展正弦定理"
+          },
+          {
+            "en": "Angle-bisector theorem",
+            "zh": "角平分线定理"
+          }
+        ],
+        "steps": [
+          "Write $a=BC$, $b=CA$, $c=AB$, $L=AP$, and let $h$ be the perpendicular distance from $A$ to the line $BC$. Write $O_1,O_2$ for the centres of the circles on $APB,APC$ and $r,s$ for their radii. Since $\\sin\\angle APB=\\sin\\angle APC=h/L$, the extended sine rule gives $r=cL/(2h)$ and $s=bL/(2h)$.",
+          "Both centres lie on the perpendicular bisector of $AP$. Their perpendicular projections onto $BC$ are the midpoints of $BP$ and $PC$, spaced $a/2$ apart. The absolute projection factor onto $BC$ for a direction perpendicular to $AP$ is $h/L$. It follows that $d=O_1O_2=aL/(2h)$.",
+          "Fix one common external tangent, with contact points $U,V$ in this order of circles. Projecting $O_1O_2$ along and perpendicular to the tangent gives $UV^2=d^2-(r-s)^2$. This is positive since $a>|b-c|$. In particular the tangent meets the radical axis $AP$: along the tangent the two powers are the squared distances to $U,V$, and these are equal precisely at the midpoint of $UV$. Call this midpoint $X$.",
+          "Let $M$ be the midpoint of $AP$. Reflection about $O_1O_2$ fixes both circles, swaps the two common external tangents and sends $X$ to $Y$. It also swaps $A$ and $P$, so $M$ is the midpoint of $XY$ on the same line. Power of $X$ in either circle is $XU^2=XM^2-(L/2)^2$. Since $XU=UV/2$ and $XY=2XM$, this reads $XY^2=L^2+UV^2$. The argument includes the case of parallel common tangents when $r=s$.",
+          "Consequently $XY^2/L^2=1+[a^2-(b-c)^2]/(4h^2)$. Put $\\theta=\\angle BAC$. The cosine rule gives $a^2-(b-c)^2=4bc\\sin^2(\\theta/2)$, and the area formula gives $h=bc\\sin\\theta/a$. Thus the fraction after the $1$ is $a^2/[4bc\\cos^2(\\theta/2)]=a^2/[(b+c)^2-a^2]$. Inverting yields $(AP/XY)^2=1-a^2/(b+c)^2$, independent of $P$.",
+          "Now write $u=BP$, so $PC=a-u$. The requested equation says $u(a-u)=a^2bc/(b+c)^2$. Its two roots, allowing a repeated root, are $u=ab/(b+c)$ and $u=ac/(b+c)$. Both are strictly between $0$ and $a$, and all previous identities hold for every interior $P$, so both work. By the angle-bisector theorem one is the foot on $BC$ of the internal bisector at $A$; the other is its reflection in the midpoint of $BC$. When $b=c$ they coincide."
+        ],
+        "stepsZh": [
+          "记 $a=BC$、$b=CA$、$c=AB$、$L=AP$，$h$ 为 $A$ 到直线 $BC$ 的距离。设三角形 $APB,APC$ 的外心分别为 $O_1,O_2$，外接圆半径分别为 $r,s$。由于 $\\sin\\angle APB=\\sin\\angle APC=h/L$，扩展正弦定理给出 $r=cL/(2h)$、$s=bL/(2h)$。",
+          "两个圆心均位于 $AP$ 的垂直平分线上。它们在 $BC$ 上的正投影分别为 $BP,PC$ 的中点，相距 $a/2$。垂直于 $AP$ 的方向投影到 $BC$ 上时，长度乘以 $h/L$。因此 $d=O_1O_2=aL/(2h)$。",
+          "取一条公外切线，设它与两圆依次切于 $U,V$。将圆心连线沿切线方向和垂直于切线的方向分解，得 $UV^2=d^2-(r-s)^2$。由 $a>|b-c|$ 可知此值为正。切线上一点对两圆的幂分别等于它到 $U,V$ 的距离平方，两者相等当且仅当该点为 $UV$ 中点。两圆的等幂线是 $AP$，故该中点正是交点 $X$。",
+          "记 $M$ 为 $AP$ 中点。关于 $O_1O_2$ 的反射保持两圆不变，交换两条公外切线，并把 $X$ 映到 $Y$。此反射也交换 $A,P$，故 $M$ 同时是共线线段 $XY$ 的中点。点 $X$ 的圆幂给出 $XU^2=XM^2-(L/2)^2$。由 $XU=UV/2$ 和 $XY=2XM$，得 $XY^2=L^2+UV^2$。若 $r=s$，两公外切线平行，上述推理仍成立。",
+          "于是 $XY^2/L^2=1+[a^2-(b-c)^2]/(4h^2)$。设 $\\theta=\\angle BAC$，余弦定理给出 $a^2-(b-c)^2=4bc\\sin^2(\\theta/2)$，面积公式给出 $h=bc\\sin\\theta/a$。故加在 $1$ 后的分数为 $a^2/[4bc\\cos^2(\\theta/2)]=a^2/[(b+c)^2-a^2]$。取倒数得 $(AP/XY)^2=1-a^2/(b+c)^2$，与 $P$ 的选取无关。",
+          "令 $u=BP$，故 $PC=a-u$。题设等式等价于 $u(a-u)=a^2bc/(b+c)^2$，两根为 $u=ab/(b+c)$、$u=ac/(b+c)$，允许两根重合。它们均严格介于 $0,a$ 之间，且以上恒等式对所有内点有效，故两根都可取。由角平分线定理，一点是 $A$ 的内角平分线与 $BC$ 的交点，另一点是其关于 $BC$ 中点的对称点。当 $b=c$ 时两点重合。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAMO_Problems/Problem_6"
+  }
+}

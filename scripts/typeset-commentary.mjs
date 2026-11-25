@@ -6,6 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
+import {credits} from '../public/published-pdf.js';
 
 const site = fileURLToPath(new URL('../', import.meta.url));
 const commentary = path.join(site, 'src/data/commentary');
@@ -42,7 +43,10 @@ try {
     if (!paper) throw new Error('Unknown commentary paper ' + paperId);
     const json = await fs.readFile(path.join(dir,filename),'utf8');
     const notes = Object.entries(JSON.parse(json));
-    const signature = createHash('sha256').update(json).update(paper.label);
+    const sourceCredit = paper.exam === 'Euclid'
+      ? ' | Problem adapted from ' + credits.euclid.name + ', ' + credits.euclid.license + ' (' + credits.euclid.licenseUrl + '). Free noncommercial use.'
+      : '';
+    const signature = createHash('sha256').update(json).update(paper.label).update(sourceCredit);
     for (const code of tools) signature.update(code);
     const figures = path.join(site,'public/commentary-figures');
     for (const [,note] of notes) {
@@ -75,7 +79,7 @@ try {
       const input = path.join(scratch,kind+'.json');
       await fs.writeFile(input,JSON.stringify(rows));
       const args = [generator,'--questions',input,'--figures',figures,'--title',paper.label,'--output',path.join(output,kind),
-        '--credit','DR.WANG Mathematics | '+(kind === 'solutions' ? 'Problem outline and worked solutions' : 'Problem outline')];
+        '--credit','DR.WANG Mathematics | '+(kind === 'solutions' ? 'Problem outline and worked solutions' : 'Problem outline') + sourceCredit];
       if (exe) args.push('--chromium',exe);
       const run = spawnSync(process.execPath,args,{stdio:'inherit'});
       if (run.error || run.status !== 0) throw run.error || new Error('Could not render '+filename+'; install Chromium with npx playwright install chromium.');

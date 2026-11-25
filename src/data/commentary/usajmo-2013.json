@@ -1,0 +1,286 @@
+{
+  "usajmo-2013-q1": {
+    "summary": "Can two integers $a,b$ make both $a^5b+3$ and $ab^5+3$ integral cubes? The integers and the cube roots may have either sign.",
+    "summaryZh": "是否存在整数 $a,b$，使 $a^5b+3$ 和 $ab^5+3$ 均为某个整数的立方？这里整数和立方根均可为负数或零。",
+    "answer": "No such integer pair exists.",
+    "answerZh": "这样的整数对不存在。",
+    "methods": [
+      {
+        "title": "Multiply two restricted cubic residues",
+        "titleZh": "将两个受限的剩余类相乘",
+        "topics": [
+          {
+            "en": "Cubic residues",
+            "zh": "立方剩余"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "Every cube modulo $9$ is $0,1$, or $-1$, as one sees by cubing $3k,3k+1,3k-1$. If $3\\mid a$, then $a^5b+3\\equiv3\\pmod9$, impossible. Likewise $3\\mid b$ is impossible by the other expression.",
+          "Now both cubes would be units modulo $9$, so each must be $1$ or $-1$. Subtracting $3$ shows that both $a^5b$ and $ab^5$ have residues in $\\{5,7\\}$. Multiplying two members of this set gives $7,8$, or $4$ modulo $9$.",
+          "But their product is $(ab)^6$. Since $3\\nmid ab$, its cube is $\\pm1\\pmod9$ and its sixth power is $1\\pmod9$. This contradicts every possible product residue."
+        ],
+        "stepsZh": [
+          "将 $3k,3k+1,3k-1$ 分别立方可知，整数的立方模 $9$ 只可能为 $0,1,-1$。若 $3\\mid a$，则 $a^5b+3\\equiv3\\pmod9$，矛盾；若 $3\\mid b$，考察另一式同样矛盾。",
+          "因此两立方数都不被 $3$ 整除，模 $9$ 只能取 $1$ 或 $-1$。减去 $3$ 后，$a^5b$ 与 $ab^5$ 的余数均在 $\\{5,7\\}$ 中。取其中两个数相乘，模 $9$ 的结果只可能是 $7,8,4$。",
+          "然而这两个数之积为 $(ab)^6$。因 $3\\nmid ab$，其三次方模 $9$ 为 $\\pm1$，所以六次方必为 $1$，与上列三种结果均矛盾。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAJMO_Problems/Problem_1"
+  },
+  "usajmo-2013-q2": {
+    "summary": "Fill an $m\\times n$ rectangular grid with nonnegative integers, where $m,n\\ge1$. Values in cells sharing a side must differ by at most $1$. Every cell with no strictly smaller side-neighbour must contain zero. How many fillings satisfy both rules?",
+    "summaryZh": "在 $m\\times n$ 的矩形方格中填入非负整数，其中 $m,n\\ge1$。共边两格的数相差至多 $1$；若某格没有比它小的共边邻格，则该格必须填零。符合条件的填法共有多少种？",
+    "answer": "$2^{mn}-1$.",
+    "answerZh": "$2^{mn}-1$ 种。",
+    "methods": [
+      {
+        "title": "Recover the filling from its zero cells",
+        "titleZh": "由零格集合恢复整张表",
+        "topics": [
+          {
+            "en": "Bijection",
+            "zh": "双射"
+          },
+          {
+            "en": "Shortest paths",
+            "zh": "最短路"
+          },
+          {
+            "en": "Grid distance",
+            "zh": "网格距离"
+          }
+        ],
+        "steps": [
+          "In any legal filling a cell of minimum value must be zero. Let $S$ be the nonempty set of all zero cells, and consider a cell marked $d$. A path from it to $S$ needs at least $d$ steps, since each step can lower the value by at most one.",
+          "Whenever the current value is positive it has a smaller neighbour by the second rule. That neighbour has value exactly one less by the first rule. Continue for $d$ steps to reach zero. Thus the value in every cell equals its shortest side-step distance to $S$.",
+          "Conversely, choose any nonempty set $S$ and fill with these shortest distances. Neighbouring distances differ by at most one, by extending a shortest path by a single edge. A positive-distance cell has a smaller neighbour on such a path. The zeros are exactly $S$, so different choices give different fillings. Of the $2^{mn}$ subsets only the empty one is excluded."
+        ],
+        "stepsZh": [
+          "任一合法填法中，全表最小值所在的格子一定为零。设 $S$ 为所有零格构成的非空集合。若某格填了 $d$，因为一步至多下降 $1$，从该格沿共边走到 $S$ 至少需要 $d$ 步。",
+          "只要当前格为正数，依第二条规则就一定有更小的邻格，依第一条规则那个数恰小 $1$。如此走 $d$ 步便到达零格。因此每格的数恰是它到 $S$ 的最短共边步数。",
+          "反过来，任取非空集合 $S$，按到它的最短步数填表。相邻格可彼此多走一步再接上最短路，所以距离之差至多为一。距离为正的格子在最短路上一定有距离更小的邻格。零格集合正是 $S$，不同集合对应不同填法。在 $2^{mn}$ 个子集中仅空集不能取。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAJMO_Problems/Problem_2"
+  },
+  "usajmo-2013-q3": {
+    "summary": "In triangle $ABC$ choose $P$ on $BC$, $Q$ on $CA$, and $R$ on $AB$. On segment $AP$, let $X$ be the second intersection with the circle through $A,Q,R$, and let $Y,Z$ be the second intersections (besides $P$) with the circles through $B,R,P$ and $C,P,Q$, respectively. Prove the internal-division formula $YX/XZ=BP/PC$ whenever the indicated ratio is defined.",
+    "summaryZh": "在三角形 $ABC$ 的边 $BC,CA,AB$ 上分别取点 $P,Q,R$。线段 $AP$ 与圆 $AQR$ 除 $A$ 外再交于 $X$，与圆 $BRP,CPQ$ 除 $P$ 外分别再交于 $Y,Z$。证明在比值有定义时，$YX/XZ=BP/PC$。",
+    "answer": "$PC\\cdot YX=BP\\cdot XZ$. If $Y\\ne Z$, this gives $YX/XZ=BP/PC$.",
+    "answerZh": "$PC\\cdot YX=BP\\cdot XZ$。当 $Y\\ne Z$ 时，即有 $YX/XZ=BP/PC$。",
+    "methods": [
+      {
+        "title": "Interpolate the equation of the circle through A",
+        "titleZh": "对过 A 的圆方程作线性插值",
+        "topics": [
+          {
+            "en": "Power of a point",
+            "zh": "点幂"
+          },
+          {
+            "en": "Circle equations",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Vectors",
+            "zh": "向量"
+          }
+        ],
+        "steps": [
+          "Use $A$ as vector origin. If $O$ is the centre of the circle $AQR$, each point $T$ on that circle satisfies $|T|^2=2O\\cdot T$, by expanding $|T-O|^2=|O|^2$. Define the linear function $L(T)=2O\\cdot T$. Since $R,Q,X$ lie on the rays $AB,AC,AP$, scaling their vectors gives $L(B)=AB\\cdot AR$, $L(C)=AC\\cdot AQ$, and $L(P)=AP\\cdot AX$.",
+          "The power of $A$ with respect to circle $BRP$, using its two secants $AB$ and $AP$, gives $AB\\cdot AR=AP\\cdot AY$. Circle $CPQ$ gives $AC\\cdot AQ=AP\\cdot AZ$.",
+          "Write $b=BP$ and $c=PC$. The point dividing segment $BC$ in this ratio has vector $P=(cB+bC)/(b+c)$. Apply $L$, substitute the preceding identities, and cancel $AP>0$ to obtain $(b+c)AX=c\\,AY+b\\,AZ$.",
+          "All three points lie on the same ray from $A$. If $Y\\ne Z$, the weighted average places $X$ strictly between them. Subtracting $AY$ and $AX$ in turn, then taking absolute values, gives $YX=b\\,YZ/(b+c)$ and $XZ=c\\,YZ/(b+c)$. If $Y=Z$ the same identity forces $X=Y=Z$: the cross-multiplied equality still holds, while the quotient would be $0/0$."
+        ],
+        "stepsZh": [
+          "以 $A$ 为向量原点，设 $O$ 是圆 $AQR$ 的圆心。圆上任一点 $T$ 满足 $|T-O|^2=|O|^2$，展开即 $|T|^2=2O\\cdot T$。定义线性函数 $L(T)=2O\\cdot T$。因 $R,Q,X$ 分别在射线 $AB,AC,AP$ 上，将对应向量按长度成比例放大，得 $L(B)=AB\\cdot AR$、$L(C)=AC\\cdot AQ$、$L(P)=AP\\cdot AX$。",
+          "对圆 $BRP$，从 $A$ 作割线 $AB,AP$，由点幂得 $AB\\cdot AR=AP\\cdot AY$。同理对圆 $CPQ$ 有 $AC\\cdot AQ=AP\\cdot AZ$。",
+          "记 $b=BP,c=PC$，按此比例内分 $BC$ 的点向量为 $P=(cB+bC)/(b+c)$。两边作用 $L$，代入前述各式并约去 $AP>0$，得 $(b+c)AX=c\\,AY+b\\,AZ$。",
+          "三点同在从 $A$ 出发的射线上。当 $Y\\ne Z$ 时，此加权平均表明 $X$ 严格位于两者之间。分别作差并取绝对值，得 $YX=b\\,YZ/(b+c)$、$XZ=c\\,YZ/(b+c)$，相除即证。若 $Y=Z$，同一等式迫使 $X=Y=Z$，此时交叉相乘的结论仍成立，而直接相除为 $0/0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAJMO_Problems/Problem_3",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2013-q3.svg",
+      "alt": "The three circumcircles intersect the cevian AP at X, Y and Z. P divides BC, Q lies on CA and R on AB.",
+      "altZh": "三圆与线段 AP 的第二交点分别为 X、Y、Z。P 在 BC 上，Q 在 CA 上，R 在 AB 上。"
+    }
+  },
+  "usajmo-2013-q4": {
+    "summary": "Let $f(n)$ count ordered lists with entries drawn from $1,2,4,8,\\ldots$ whose sum is $n$. For example the one-term list $(4)$ and the two-term list $(2,2)$ are different. Find the least $n>2013$ with $f(n)$ odd.",
+    "summaryZh": "令 $f(n)$ 表示各项均为 $2$ 的非负整数次幂（包含 $2^0=1$）且总和为 $n$ 的有序列表个数。例如 $(4)$ 与 $(2,2)$ 是不同的列表。求使 $f(n)$ 为奇数的最小整数 $n>2013$。",
+    "answer": "$2047=2^{11}-1$.",
+    "answerZh": "$2047=2^{11}-1$。",
+    "methods": [
+      {
+        "title": "Pair unequal powers in the parity recurrence",
+        "titleZh": "在奇偶递推中将不等的幂配对",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Involution",
+            "zh": "对合"
+          }
+        ],
+        "steps": [
+          "Allow the empty list at $0$, so $f(0)=1$. Choosing the last part gives $f(n)=\\sum_{2^j\\le n} f(n-2^j)$ for $n>0$, with $j\\ge0$. We claim $f(n)$ is odd exactly when $n+1$ is a power of two, true at $0$.",
+          "Assume this for smaller inputs. The odd terms in the recurrence correspond to ordered exponent pairs $(j,k)$ satisfying $n+1=2^j+2^k$, because $n-2^j+1$ must be a power of two. Swapping $j,k$ pairs up all solutions with unequal exponents. Thus the parity equals the number of diagonal pairs $j=k$, modulo two.",
+          "There is one such pair when $n+1=2^{j+1}$ and none otherwise. This proves the claim by induction. The first power of two above $2014$ is $2048$, giving $n=2047$."
+        ],
+        "stepsZh": [
+          "把空列表作为 $0$ 的一种写法，得 $f(0)=1$。按末项分类，$n>0$ 时 $f(n)=\\sum_{2^j\\le n}f(n-2^j)$，其中 $j\\ge0$。下面证明 $f(n)$ 为奇数当且仅当 $n+1$ 是二的幂；$n=0$ 时成立。",
+          "假设结论对较小的输入成立。递推式中的奇数项对应于有序指数对 $(j,k)$ 满足 $n+1=2^j+2^k$，因为 $n-2^j+1$ 必为二的幂。交换 $j,k$ 可将所有不等指数的解两两配对。因此奇偶性只由 $j=k$ 的解数决定。",
+          "若 $n+1=2^{j+1}$ 则这样的解恰有一个，否则没有。归纳完成。大于 $2014$ 的最小二的幂是 $2048$，故所求 $n=2047$。"
+        ]
+      },
+      {
+        "title": "Invert a formal series modulo two",
+        "titleZh": "在模二形式幂级数中求逆",
+        "topics": [
+          {
+            "en": "Generating functions",
+            "zh": "生成函数"
+          },
+          {
+            "en": "Formal power series",
+            "zh": "形式幂级数"
+          }
+        ],
+        "steps": [
+          "In power series with coefficients modulo two, set $S=x+x^2+x^4+x^8+\\cdots$. Lists of length $k$ have generating function $S^k$. Thus $F=\\sum_{n\\ge0}f(n)x^n=1+S+S^2+\\cdots$ satisfies $(1+S)F=1$. Each coefficient uses only finitely many list lengths.",
+          "Squaring in characteristic two cancels every mixed term, so $S^2=x^2+x^4+x^8+\\cdots=S+x$. It follows that $S(1+S)=x$, hence $F=S/x=1+x+x^3+x^7+\\cdots$. Its nonzero coefficients occur exactly at $2^k-1$, and the first such exponent above $2013$ is $2047$."
+        ],
+        "stepsZh": [
+          "在系数按模二计算的形式幂级数中，令 $S=x+x^2+x^4+x^8+\\cdots$。长度恰为 $k$ 的列表对应生成函数 $S^k$，故 $F=\\sum_{n\\ge0}f(n)x^n=1+S+S^2+\\cdots$ 满足 $(1+S)F=1$。每一项系数只涉及有限种列表长度。",
+          "模二平方时所有交叉项成对抵消，故 $S^2=x^2+x^4+x^8+\\cdots=S+x$。因此 $S(1+S)=x$，得到 $F=S/x=1+x+x^3+x^7+\\cdots$。系数非零的下标恰为 $2^k-1$，第一个超过 $2013$ 的是 $2047$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAJMO_Problems/Problem_4"
+  },
+  "usajmo-2013-q5": {
+    "summary": "On a semicircle with diameter $XY$ the boundary points have arc order $X,A,B,Y$. Segments $AY$ and $BX$ cross at $P$, and $Z$ is the perpendicular projection of $P$ onto $XY$. Choose $C$ on the semicircle so that $XC\\perp AZ$, and put $Q=AY\\cap XC$. Prove $BY/XP+CY/XQ=AY/AX$.",
+    "summaryZh": "半圆的直径是 $XY$，其弧上各点依次为 $X,A,B,Y$。线段 $AY,BX$ 交于 $P$，从 $P$ 向 $XY$ 作垂线，垂足为 $Z$。取半圆上的 $C$，使 $XC\\perp AZ$，并令 $Q=AY\\cap XC$。证明 $BY/XP+CY/XQ=AY/AX$。",
+    "answer": "The two ratios add to $AY/AX$.",
+    "answerZh": "两个比值之和为 $AY/AX$。",
+    "methods": [
+      {
+        "title": "Use the slopes of the two rays from X",
+        "titleZh": "用从 X 出发的两条射线的斜率",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "解析几何"
+          },
+          {
+            "en": "Circle equations",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Perpendicular lines",
+            "zh": "垂直直线"
+          }
+        ],
+        "steps": [
+          "Use $X=(0,0),Y=(1,0)$ with the semicircle above the horizontal axis. Write $AY$ as $y=t(1-x)$, $t>0$, and let $u$ be the slope of $XB$. The equation of the semicircle is $x^2+y^2=x$. Intersecting it with $AY$ gives $A=(t^2/(1+t^2),t/(1+t^2))$. Also $Z=(t/(t+u),0)$ by intersecting $y=ux$ with $AY$ and dropping vertically.",
+          "Let $v$ be the slope of $XC$. Perpendicularity to $AZ$ gives $v=(Z_x-A_x)/A_y=(1-tu)/(t+u)$, hence $t(u+v)=1-uv$. The specified arc order gives $0<u<1/t$, so both slopes $u,v$ are positive.",
+          "For either slope $w=u$ or $v$, let its ray cut the semicircle at $K$ and $AY$ at $H$. The intersection coordinates are $K=(1,w)/(1+w^2)$ and $H=t(1,w)/(t+w)$. Therefore $KY=w/\\sqrt{1+w^2}$ and $XH=t\\sqrt{1+w^2}/(t+w)$, whence $KY/XH=w(t+w)/(t(1+w^2))$.",
+          "From $t=(1-uv)/(u+v)$ follows $t+u=(1+u^2)/(u+v)$ and $t+v=(1+v^2)/(u+v)$. Substitution makes the ratios for $B,P$ and $C,Q$ equal to $u/(t(u+v))$ and $v/(t(u+v))$. Their sum is $1/t$, which equals $AY/AX$ by the coordinates of $A$."
+        ],
+        "stepsZh": [
+          "取 $X=(0,0),Y=(1,0)$，半圆位于横轴上方。设 $AY$ 的方程为 $y=t(1-x)$，其中 $t>0$，$XB$ 的斜率为 $u$。半圆方程为 $x^2+y^2=x$，与 $AY$ 联立得 $A=(t^2/(1+t^2),t/(1+t^2))$。将 $y=ux$ 与 $AY$ 联立再垂直投影，得 $Z=(t/(t+u),0)$。",
+          "设 $XC$ 的斜率为 $v$。由它与 $AZ$ 垂直，有 $v=(Z_x-A_x)/A_y=(1-tu)/(t+u)$，即 $t(u+v)=1-uv$。由题设弧序得 $0<u<1/t$，所以 $u,v$ 均为正。",
+          "对 $w=u,v$ 中任一斜率，设对应射线与半圆交于 $K$，与 $AY$ 交于 $H$。联立方程可得 $K=(1,w)/(1+w^2)$、$H=t(1,w)/(t+w)$。于是 $KY=w/\\sqrt{1+w^2}$，$XH=t\\sqrt{1+w^2}/(t+w)$，故 $KY/XH=w(t+w)/(t(1+w^2))$。",
+          "由 $t=(1-uv)/(u+v)$ 得 $t+u=(1+u^2)/(u+v)$、$t+v=(1+v^2)/(u+v)$。代入上式后，对应 $B,P$ 及 $C,Q$ 的两个比值分别为 $u/(t(u+v))$ 和 $v/(t(u+v))$，相加即 $1/t$，而由 $A$ 的坐标可知 $AY/AX=1/t$。"
+        ]
+      },
+      {
+        "title": "Split a cosine difference",
+        "titleZh": "将余弦差角公式拆成两项",
+        "topics": [
+          {
+            "en": "Inscribed angles",
+            "zh": "圆周角"
+          },
+          {
+            "en": "Sine rule",
+            "zh": "正弦定理"
+          },
+          {
+            "en": "Cosine difference formula",
+            "zh": "余弦差角公式"
+          }
+        ],
+        "steps": [
+          "Normalise $XY=1$ and put $\\alpha=\\angle AYX$, $\\beta=\\angle BXY$. Since the ray $XB$ lies closer to $XY$ than $XA$, we have $\\alpha+\\beta<90^\\circ$. Also $AX\\perp AP$ and $XZ\\perp ZP$, so $A,X,Z,P$ lie on the circle with diameter $XP$.",
+          "The angles $\\angle AZX$ and $\\angle APX$ subtend the same chord $AX$ and are equal (both $P,Z$ lie on the same side of $AX$). Now $\\angle APX=\\alpha+\\beta$ by triangle $XPY$ and the extension of $YP$. Since $XC\\perp AZ$, the acute angle $\\gamma=\\angle CXY$ is $90^\\circ-\\alpha-\\beta$.",
+          "The right triangles with hypotenuse $XY$ give $BY=\\sin\\beta$, $CY=\\sin\\gamma=\\cos(\\alpha+\\beta)$, $AY=\\cos\\alpha$ and $AX=\\sin\\alpha$. The sine rule in $XPY$ gives $XP=\\sin\\alpha/\\sin(\\alpha+\\beta)$; in $XQY$ it gives $XQ=\\sin\\alpha/\\sin(\\alpha+\\gamma)=\\sin\\alpha/\\cos\\beta$.",
+          "After multiplying the desired sum by $\\sin\\alpha$, its left side becomes $\\sin\\beta\\sin(\\alpha+\\beta)+\\cos\\beta\\cos(\\alpha+\\beta)=\\cos\\alpha$. This is also $\\sin\\alpha\\cdot AY/AX$, proving the result."
+        ],
+        "stepsZh": [
+          "将 $XY$ 归一化为 $1$，记 $\\alpha=\\angle AYX,\\beta=\\angle BXY$。从 $X$ 看，射线 $XB$ 比 $XA$ 更靠近 $XY$，故 $\\alpha+\\beta<90^\\circ$。又 $AX\\perp AP$、$XZ\\perp ZP$，所以 $A,X,Z,P$ 在以 $XP$ 为直径的圆上。",
+          "$\\angle AZX$ 与 $\\angle APX$ 同对弦 $AX$，且 $P,Z$ 在直线 $AX$ 同侧，故两角相等。由三角形 $XPY$ 在 $P$ 处的外角知 $\\angle APX=\\alpha+\\beta$。因 $XC\\perp AZ$，得锐角 $\\gamma=\\angle CXY=90^\\circ-\\alpha-\\beta$。",
+          "以 $XY$ 为斜边的各直角三角形给出 $BY=\\sin\\beta$、$CY=\\sin\\gamma=\\cos(\\alpha+\\beta)$、$AY=\\cos\\alpha$、$AX=\\sin\\alpha$。在 $XPY$ 中用正弦定理得 $XP=\\sin\\alpha/\\sin(\\alpha+\\beta)$；在 $XQY$ 中得 $XQ=\\sin\\alpha/\\sin(\\alpha+\\gamma)=\\sin\\alpha/\\cos\\beta$。",
+          "将待证等式两边同乘 $\\sin\\alpha$，左侧变为 $\\sin\\beta\\sin(\\alpha+\\beta)+\\cos\\beta\\cos(\\alpha+\\beta)=\\cos\\alpha$，而右侧 $\\sin\\alpha\\cdot AY/AX$ 也等于 $\\cos\\alpha$，结论成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAJMO_Problems/Problem_5",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2013-q5.svg",
+      "alt": "The semicircle has diameter XY. AY meets XB at P and XC at Q; Z is directly below P on the diameter.",
+      "altZh": "半圆直径为 XY，AY 与 XB 交于 P、与 XC 交于 Q；P 在直径上的垂足为 Z。"
+    }
+  },
+  "usajmo-2013-q6": {
+    "summary": "Find all real triples with $x,y,z\\ge1$ for which $\\min\\{\\sqrt{x+xyz},\\sqrt{y+xyz},\\sqrt{z+xyz}\\}=\\sqrt{x-1}+\\sqrt{y-1}+\\sqrt{z-1}$.",
+    "summaryZh": "求出满足 $x,y,z\\ge1$ 及 $\\min\\{\\sqrt{x+xyz},\\sqrt{y+xyz},\\sqrt{z+xyz}\\}=\\sqrt{x-1}+\\sqrt{y-1}+\\sqrt{z-1}$ 的所有实数三元组。",
+    "answer": "For $t>0$, take $(1+1/(t+1/t)^2,\\ 1+t^2,\\ 1+t^{-2})$ and all permutations.",
+    "answerZh": "对任意 $t>0$，取 $(1+1/(t+1/t)^2,\\ 1+t^2,\\ 1+t^{-2})$ 及其所有排列。",
+    "methods": [
+      {
+        "title": "Express the squared gap as two squares",
+        "titleZh": "把平方差分解为两个平方项",
+        "topics": [
+          {
+            "en": "Sum of squares",
+            "zh": "平方和分解"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          {
+            "en": "Equality conditions",
+            "zh": "等号条件"
+          }
+        ],
+        "steps": [
+          "By symmetry assume $x$ is a smallest coordinate. Set $s=\\sqrt{x-1}$, $u=\\sqrt{y-1}$ and $v=\\sqrt{z-1}$. The minimum on the left is $\\sqrt{x+xyz}$. Both sides are nonnegative, so we may square.",
+          "The square of the left side is $(1+s^2)(1+(1+u^2)(1+v^2))$. Use $(1+u^2)(1+v^2)=(u+v)^2+(uv-1)^2$. On subtracting $(s+u+v)^2$ the exact difference is $(s(u+v)-1)^2+(1+s^2)(uv-1)^2$.",
+          "Therefore equality holds exactly when $uv=1$ and $s=1/(u+v)$. Writing $u=t>0$, $v=1/t$ gives the displayed coordinates. Conversely $1/(u+v)$ is smaller than both $u$ and $v$ when $uv=1$, since $u(u+v)=u^2+1>1$ and likewise for $v$. Hence the designated $x$ really is the minimum, both squares vanish, and every displayed permutation works."
+        ],
+        "stepsZh": [
+          "由对称性可设 $x$ 为最小坐标。令 $s=\\sqrt{x-1},u=\\sqrt{y-1},v=\\sqrt{z-1}$。左侧最小根式即 $\\sqrt{x+xyz}$。两边均非负，可将等式平方。",
+          "左侧平方为 $(1+s^2)(1+(1+u^2)(1+v^2))$。利用 $(1+u^2)(1+v^2)=(u+v)^2+(uv-1)^2$，再减去右侧平方 $(s+u+v)^2$，所得差恰为 $(s(u+v)-1)^2+(1+s^2)(uv-1)^2$。",
+          "所以等号成立当且仅当 $uv=1$ 且 $s=1/(u+v)$。设 $u=t>0,v=1/t$，即得所列三元组。反过来，当 $uv=1$ 时，因 $u(u+v)=u^2+1>1$ 且 $v(v+u)>1$，故 $1/(u+v)$ 确实小于 $u,v$。于是所设 $x$ 确为最小坐标，两个平方均为零，所列各组及其排列都满足原式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2013_USAJMO_Problems/Problem_6"
+  }
+}

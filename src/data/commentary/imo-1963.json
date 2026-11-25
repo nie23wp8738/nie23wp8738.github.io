@@ -1,0 +1,236 @@
+{
+  "imo-1963-q1": {
+    "summary": "For each real value of $p$, determine the full set of real $x$ solving $\\sqrt{x^2-p}+2\\sqrt{x^2-1}=x$, with both square roots taken nonnegative.",
+    "summaryZh": "对每个实参数 $p$，求方程 $\\sqrt{x^2-p}+2\\sqrt{x^2-1}=x$ 的全部实数解，两处根号均取非负值。",
+    "answer": "A unique solution $x=(4-p)/\\sqrt{16-8p}$ exists for $0\\le p\\le4/3$. All other parameter values give no real solution.",
+    "answerZh": "当 $0\\le p\\le4/3$ 时唯一解为 $x=(4-p)/\\sqrt{16-8p}$；其余参数值均无实数解。",
+    "methods": [
+      {
+        "title": "Normalise by the positive unknown",
+        "titleZh": "以正的未知数作归一化",
+        "topics": [
+          {
+            "en": "Radical equations",
+            "zh": "根式方程"
+          },
+          {
+            "en": "Parameter ranges",
+            "zh": "参数范围"
+          }
+        ],
+        "steps": [
+          "A solution has $x\\ge0$ from the right side and $x^2\\ge1$ from the second radical, so $x\\ge1$. Set $t=\\sqrt{x^2-1}/x$. Then $x^2=1/(1-t^2)$, and the other radical must equal $x(1-2t)$. Its sign forces $0\\le t\\le1/2$.",
+          "Squaring that last identity gives $p=x^2[1-(1-2t)^2]=4t/(1+t)$. This expression is strictly increasing for $0\\le t\\le1/2$, with endpoints $0$ and $4/3$. Thus each admissible parameter determines the single value $t=p/(4-p)$.",
+          "Conversely, for this $t$ put $x=1/\\sqrt{1-t^2}$. Then $\\sqrt{x^2-1}=xt$ and $x^2-p=x^2(1-2t)^2$. Since $1-2t\\ge0$, both original radicals take the required signs and their weighted sum is $x$. Substituting $t$ yields $x=(4-p)/\\sqrt{16-8p}$, including the two endpoints."
+        ],
+        "stepsZh": [
+          "方程左端非负，所以 $x\\ge0$；又由第二个根号知 $x^2\\ge1$，故 $x\\ge1$。令 $t=\\sqrt{x^2-1}/x$，则 $x^2=1/(1-t^2)$，另一根式应等于 $x(1-2t)$。它非负，因此 $0\\le t\\le1/2$。",
+          "将后一等式平方，得 $p=x^2[1-(1-2t)^2]=4t/(1+t)$。该表达式在 $[0,1/2]$ 上严格递增，端点值为 $0$ 和 $4/3$。因此可行的 $p$ 恰好确定唯一的 $t=p/(4-p)$。",
+          "反之，取此 $t$ 并令 $x=1/\\sqrt{1-t^2}$，则 $\\sqrt{x^2-1}=xt$ 且 $x^2-p=x^2(1-2t)^2$。由于 $1-2t\\ge0$，开方后的符号无误，代回原式两边相等。化简得 $x=(4-p)/\\sqrt{16-8p}$，两个端点也包括在内。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1"
+  },
+  "imo-1963-q2": {
+    "summary": "Fix a point $A$ and a line segment $BC$ in three-dimensional space. Describe all vertices $P$ from which two perpendicular rays can be drawn, one containing $A$ and the other meeting $BC$. A ray includes its endpoint.",
+    "summaryZh": "空间中给定一点 $A$ 和线段 $BC$。求所有点 $P$ 的轨迹，使得以 $P$ 为端点能画出两条互相垂直的射线，一条包含 $A$，另一条与线段 $BC$ 有公共点。射线包括其端点。",
+    "answer": "The points lie in the closed ball of diameter $AB$ and outside the interior of the ball of diameter $AC$, or vice versa. The full surfaces of both balls belong to the locus.",
+    "answerZh": "所求点属于以 $AB$ 为直径的闭球且不在以 $AC$ 为直径的球的内部，或两球的角色互换。两个球面的全部点均包括在内。",
+    "methods": [
+      {
+        "title": "Test where a perpendicular plane cuts the segment",
+        "titleZh": "用垂直平面与线段的相交条件判定",
+        "topics": [
+          {
+            "en": "Spatial loci",
+            "zh": "空间轨迹"
+          },
+          {
+            "en": "Sphere with a given diameter",
+            "zh": "直径球"
+          },
+          {
+            "en": "Dot products",
+            "zh": "向量点积"
+          }
+        ],
+        "steps": [
+          "For fixed $P$, set $F(D)=(P-A)\\cdot(P-D)$. A right-angle configuration needs an $X\\in BC$ with $F(X)=0$. If neither incident point equals $P$, this is exactly the perpendicularity of $PA$ and $PX$. If $P=A$ or $P=X$, the ray whose required point is already its endpoint can be chosen perpendicular to the other ray. If both coincide, any perpendicular pair works.",
+          "Writing $X=(1-t)B+tC$ gives $F(X)=(1-t)F(B)+tF(C)$ for $0\\le t\\le1$. This sweeps out the interval with endpoints $F(B),F(C)$, so it contains zero precisely when $F(B)F(C)\\le0$. This proves necessity and sufficiency, including endpoint contacts.",
+          "Let $M$ be the midpoint of $AD$. Completing the square gives $F(D)=|P-M|^2-|A-D|^2/4$. Its sign detects whether $P$ is inside, on or outside the sphere of diameter $AD$. Opposite signs, or either value zero, give exactly the claimed region. The formula also covers a diameter of length zero.",
+          "If one uses the stricter convention that both marked points on the rays must differ from the vertex, omit $A$ and omit $P\\in BC$, $P\\ne A$, unless $AP\\perp BC$. Indeed, the plane through such a $P$ perpendicular to $AP$ meets the line $BC$ only at $P$ unless it contains that line."
+        ],
+        "stepsZh": [
+          "固定 $P$，令 $F(D)=(P-A)\\cdot(P-D)$。需要在线段 $BC$ 上找到 $X$ 使 $F(X)=0$。当两个指定点都不同于 $P$ 时，这正是 $PA$ 与 $PX$ 垂直；若 $P=A$ 或 $P=X$，相应射线已在端点处满足通过指定点的要求，可选为另一射线的垂线。若三点重合，任意一对垂直射线都可。",
+          "写 $X=(1-t)B+tC$，则 $F(X)=(1-t)F(B)+tF(C)$，其中 $0\\le t\\le1$。它恰好取遍以 $F(B),F(C)$ 为两端的区间，其中包含零当且仅当 $F(B)F(C)\\le0$。因此条件充分且必要，也包括线段端点处相交的情形。",
+          "设 $M$ 为 $AD$ 的中点，配方得 $F(D)=|P-M|^2-|A-D|^2/4$。其符号判定 $P$ 在以 $AD$ 为直径的球内、球面上或球外。两值异号或至少有一值为零，就得到所述区域。即使某一直径为零，该公式仍适用。",
+          "若另行约定两个指定点都必须异于直角顶点，则应去掉 $A$；对 $P\\in BC$ 且 $P\\ne A$，只有 $AP\\perp BC$ 时才保留。因为经过 $P$ 且垂直于 $AP$ 的平面，除非包含直线 $BC$，否则与该直线只交于 $P$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1"
+  },
+  "imo-1963-q3": {
+    "summary": "Traverse a simple $n$-sided polygon in boundary order and record its side lengths $a_1,\\ldots,a_n$. Suppose the interior angles are all equal and $a_1\\ge a_2\\ge\\cdots\\ge a_n$. Show that all the side lengths coincide.",
+    "summaryZh": "沿一个简单 $n$ 边形的边界依次记下边长 $a_1,\\ldots,a_n$。若所有内角相同，且 $a_1\\ge a_2\\ge\\cdots\\ge a_n$，证明所有边等长。",
+    "answer": "The polygon is equilateral, and therefore regular.",
+    "answerZh": "该多边形等边，因而是正多边形。",
+    "methods": [
+      {
+        "title": "Express the closure condition in terms of successive drops",
+        "titleZh": "按相邻边长的差改写闭合条件",
+        "topics": [
+          {
+            "en": "Polygon geometry",
+            "zh": "多边形几何"
+          },
+          {
+            "en": "Roots of unity",
+            "zh": "单位根"
+          },
+          {
+            "en": "Nonnegative sums",
+            "zh": "非负和"
+          }
+        ],
+        "steps": [
+          "Each interior angle is $(n-2)\\pi/n<\\pi$, so taking the counterclockwise orientation gives the same exterior turn $2\\pi/n$ at every vertex. We can arrange this orientation without changing the side order by reflecting the polygon if necessary. Rotate the picture so its first edge points along the positive real axis.",
+          "Put $\\omega=e^{2\\pi i/n}$. The directed edges in order are $a_1,a_2\\omega,\\ldots,a_n\\omega^{n-1}$. Their sum is zero because the path closes. Multiplying this sum by $1-\\omega$ and using $\\omega^n=1$ gives $a_1-a_n=\\sum_{j=1}^{n-1}(a_j-a_{j+1})\\omega^j$.",
+          "The left side is also $\\sum_{j=1}^{n-1}(a_j-a_{j+1})$. Taking real parts and subtracting yields $\\sum_{j=1}^{n-1}(a_j-a_{j+1})(1-\\cos(2\\pi j/n))=0$. Each first factor is nonnegative and each second factor strictly positive. Hence every adjacent difference vanishes."
+        ],
+        "stepsZh": [
+          "每个内角为 $(n-2)\\pi/n<\\pi$，所以逆时针绕行时每个顶点的外转角都是 $2\\pi/n$。必要时把整图镜像，既保持指定边序，又可使绕行方向为逆时针。再旋转图形，使第一条边沿正实轴。",
+          "令 $\\omega=e^{2\\pi i/n}$。有向边依次为 $a_1,a_2\\omega,\\ldots,a_n\\omega^{n-1}$；由多边形闭合可知其和为零。将此和乘以 $1-\\omega$，利用 $\\omega^n=1$ 整理得 $a_1-a_n=\\sum_{j=1}^{n-1}(a_j-a_{j+1})\\omega^j$。",
+          "左边又等于 $\\sum_{j=1}^{n-1}(a_j-a_{j+1})$。取实部并相减，得到 $\\sum_{j=1}^{n-1}(a_j-a_{j+1})(1-\\cos(2\\pi j/n))=0$。第一因子非负，第二因子对各个 $j$ 均严格为正，故每个相邻边长之差均为零。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1"
+  },
+  "imo-1963-q4": {
+    "summary": "For a real parameter $y$, classify the real five-tuples $(x_1,x_2,x_3,x_4,x_5)$ in which every entry multiplied by $y$ equals the sum of its two cyclic neighbours. Thus $x_{i-1}+x_{i+1}=yx_i$ with indices read modulo five.",
+    "summaryZh": "给定实参数 $y$，求所有实数五元组 $(x_1,x_2,x_3,x_4,x_5)$，使每项乘 $y$ 等于与它循环相邻的两项之和，即 $x_{i-1}+x_{i+1}=yx_i$，下标按模 5 读取。",
+    "answer": "The zero tuple works for every $y$. For $y=2$ all constant tuples occur. For $y=(-1\\pm\\sqrt5)/2$ the solutions are $(a,b,yb-a,-y(a+b),ya-b)$ with arbitrary real $a,b$. No other $y$ admits a nonzero tuple.",
+    "answerZh": "零向量对任意 $y$ 都成立。$y=2$ 时解为所有常数五元组。当 $y=(-1\\pm\\sqrt5)/2$ 时，解为 $(a,b,yb-a,-y(a+b),ya-b)$，其中 $a,b$ 为任意实数。其他 $y$ 无非零解。",
+    "methods": [
+      {
+        "title": "Sum the equations around the five-cycle",
+        "titleZh": "沿五项循环求和",
+        "topics": [
+          {
+            "en": "Cyclic systems",
+            "zh": "循环方程组"
+          },
+          {
+            "en": "Linear recurrences",
+            "zh": "线性递推"
+          }
+        ],
+        "steps": [
+          "Set $S=\\sum x_i$. Summing the five equations gives $(y-2)S=0$. Applying the neighbour relation twice at entry $i$ gives $y^2x_i=x_{i-2}+2x_i+x_{i+2}$. Since a five-cycle consists of $i$ and its four neighbours at distances one and two, addition gives $(y^2+y-1)x_i=S$ for each $i$.",
+          "If $y=2$, the last relation reads $5x_i=S$, so precisely the constant tuples work. If $y\\ne2$, then $S=0$. Unless $y^2+y-1=0$, this forces $x_i=0$ for all five entries.",
+          "Now assume $y^2=1-y$. Fix $x_1=a,x_2=b$. The recurrence $x_{i+1}=yx_i-x_{i-1}$ yields $x_3=yb-a$, $x_4=-y(a+b)$ and $x_5=ya-b$. The second, third and fourth cyclic equations hold by construction.",
+          "The two wraparound equations hold as well: $x_5+x_2=ya$ and $x_4+x_1=(1-y)a-yb=y(ya-b)=yx_5$. Thus every $a,b$ works and the recurrence leaves no other possibilities."
+        ],
+        "stepsZh": [
+          "记 $S=\\sum x_i$。五式相加得 $(y-2)S=0$。在第 $i$ 项连续用两次相邻关系，得 $y^2x_i=x_{i-2}+2x_i+x_{i+2}$。五元循环中 $i$ 及其左右各两项刚好构成全部五项，故 $(y^2+y-1)x_i=S$ 对每个 $i$ 成立。",
+          "若 $y=2$，则 $5x_i=S$，所以且仅有常数五元组成立。若 $y\\ne2$，则 $S=0$；只要 $y^2+y-1\\ne0$，便有所有 $x_i=0$。",
+          "现在设 $y^2=1-y$，任取 $x_1=a,x_2=b$。用 $x_{i+1}=yx_i-x_{i-1}$ 得 $x_3=yb-a$、$x_4=-y(a+b)$、$x_5=ya-b$。这些表达式已经满足第二、三、四个循环方程。",
+          "首尾衔接的两式也满足：$x_5+x_2=ya$，且 $x_4+x_1=(1-y)a-yb=y(ya-b)=yx_5$。因此任意 $a,b$ 均可，而递推又表明不可能出现其他解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1"
+  },
+  "imo-1963-q5": {
+    "summary": "Evaluate the alternating sum $\\cos(\\pi/7)-\\cos(2\\pi/7)+\\cos(3\\pi/7)$ exactly, proving that it equals $1/2$.",
+    "summaryZh": "精确计算交错和 $\\cos(\\pi/7)-\\cos(2\\pi/7)+\\cos(3\\pi/7)$，证明其值为 $1/2$。",
+    "answer": "$1/2$.",
+    "answerZh": "$1/2$。",
+    "methods": [
+      {
+        "title": "Make a short telescoping sine sum",
+        "titleZh": "构造可消去中间项的正弦和",
+        "topics": [
+          {
+            "en": "Angle-sum formulas",
+            "zh": "和角公式"
+          },
+          {
+            "en": "Telescoping sums",
+            "zh": "裂项求和"
+          }
+        ],
+        "steps": [
+          "Put $u=\\pi/7$. Supplementary angles have opposite cosines, so $\\cos u=-\\cos6u$ and $\\cos3u=-\\cos4u$. The target is therefore $-(\\cos2u+\\cos4u+\\cos6u)$.",
+          "For $j=1,2,3$, the sine subtraction identity gives $2\\sin u\\cos(2ju)=\\sin((2j+1)u)-\\sin((2j-1)u)$. Adding cancels all the middle terms, leaving $2\\sin u\\sum_{j=1}^3\\cos(2ju)=\\sin7u-\\sin u=-\\sin u$.",
+          "Since $\\sin u>0$, the sum of the three even-angle cosines is $-1/2$. Negating gives the result."
+        ],
+        "stepsZh": [
+          "令 $u=\\pi/7$。互补角的余弦互为相反数，故 $\\cos u=-\\cos6u$、$\\cos3u=-\\cos4u$，原式为 $-(\\cos2u+\\cos4u+\\cos6u)$。",
+          "对 $j=1,2,3$，正弦和差公式给出 $2\\sin u\\cos(2ju)=\\sin((2j+1)u)-\\sin((2j-1)u)$。三式相加，中间项抵消，留下 $2\\sin u\\sum_{j=1}^3\\cos(2ju)=\\sin7u-\\sin u=-\\sin u$。",
+          "因 $\\sin u>0$，这三个偶数倍角余弦之和为 $-1/2$。取相反数即得结论。"
+        ]
+      },
+      {
+        "title": "Take the real part of a regular heptagon sum",
+        "titleZh": "取正七边形顶点复数和的实部",
+        "topics": [
+          {
+            "en": "Roots of unity",
+            "zh": "单位根"
+          },
+          {
+            "en": "Complex conjugate pairs",
+            "zh": "共轭复数对"
+          }
+        ],
+        "steps": [
+          "Let $z=e^{2\\pi i/7}$. The geometric sum $1+z+\\cdots+z^6=(z^7-1)/(z-1)=0$. Pair $z^j$ with $z^{7-j}=\\overline{z^j}$ for $j=1,2,3$.",
+          "Taking real parts gives $1+2[\\cos(2\\pi/7)+\\cos(4\\pi/7)+\\cos(6\\pi/7)]=0$. The last two cosines are respectively $-\\cos(3\\pi/7)$ and $-\\cos(\\pi/7)$. Rearranging yields the claim."
+        ],
+        "stepsZh": [
+          "令 $z=e^{2\\pi i/7}$，等比数列求和得 $1+z+\\cdots+z^6=(z^7-1)/(z-1)=0$。对 $j=1,2,3$，将 $z^j$ 与 $z^{7-j}=\\overline{z^j}$ 配对。",
+          "取实部得 $1+2[\\cos(2\\pi/7)+\\cos(4\\pi/7)+\\cos(6\\pi/7)]=0$。后两个余弦分别为 $-\\cos(3\\pi/7)$ 和 $-\\cos(\\pi/7)$，移项即得结论。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1"
+  },
+  "imo-1963-q6": {
+    "summary": "Five students finish in some order, with no ties. A forecast $ABCDE$ gets no position right, and none of its four ordered adjacent pairs occurs in the actual ranking. Another forecast $DAECB$ gets exactly two positions right, and two disjoint ordered adjacent pairs from it occur in the actual ranking. Recover the finishing order. An ordered pair $UV$ means $U$ finishes immediately before $V$.",
+    "summaryZh": "五名学生的名次互不相同。预测 $ABCDE$ 没猜中任何人的名次，其中四个有向相邻对也全错。另一预测 $DAECB$ 恰好猜中两人的名次，且其中有两个不共用人的有向相邻对也猜中。确定实际名次。这里有向相邻对 $UV$ 表示 $U$ 恰在 $V$ 前一名。",
+    "answer": "$EDACB$, from first to last.",
+    "answerZh": "从第一名到第五名依次是 $EDACB$。",
+    "methods": [
+      {
+        "title": "Arrange the correctly predicted adjacent pairs as blocks",
+        "titleZh": "把猜中的相邻对合成两块",
+        "topics": [
+          {
+            "en": "Constrained permutations",
+            "zh": "限制排列"
+          },
+          {
+            "en": "Exhaustive case analysis",
+            "zh": "分类穷举"
+          }
+        ],
+        "steps": [
+          "The directed adjacencies in the second forecast are $DA,AE,EC,CB$. Its two disjoint true pairs must be one of $(DA,EC)$, $(DA,CB)$ or $(AE,CB)$. Treat each chosen pair as a two-letter block, with the one remaining contestant as a third block. There are just six orders of these three blocks in each case.",
+          "Discard any order with $A$ first, $B$ second, $C$ third, $D$ fourth or $E$ fifth, or with an adjacent $AB,BC,CD$ or $DE$. For blocks $DA,EC,B$, the six strings are $DAECB,DABEC,ECDAB,ECBDA,BDAEC,BECDA$; only $DAECB,BDAEC$ survive.",
+          "For blocks $DA,CB,E$, the six strings are $DACBE,DAECB,CBDAE,CBEDA,EDACB,ECBDA$; the survivors are $DAECB,EDACB$. For blocks $AE,CB,D$, the strings are $AECBD,AEDCB,CBAED,CBDAE,DAECB,DCBAE$; only $DAECB$ survives.",
+          "Among the three distinct survivors, $DAECB$ agrees with the second forecast in all five places and $BDAEC$ in none. In $EDACB$, precisely $C$ and $B$ have their forecast positions, and the disjoint blocks $DA$ and $CB$ occur as required. It is the unique answer."
+        ],
+        "stepsZh": [
+          "第二项预测的有向相邻对为 $DA,AE,EC,CB$。两个不相交的正确相邻对只能是 $(DA,EC)$、$(DA,CB)$ 或 $(AE,CB)$。把每个正确相邻对当成一块，加上剩余的一人，共三块；每种情形只须检查六种块的顺序。",
+          "凡满足 $A$ 第一、$B$ 第二、$C$ 第三、$D$ 第四、$E$ 第五中的任何一条，或出现相邻的 $AB,BC,CD,DE$，均剔除。对三块 $DA,EC,B$，六种结果为 $DAECB,DABEC,ECDAB,ECBDA,BDAEC,BECDA$，仅保留 $DAECB,BDAEC$。",
+          "对三块 $DA,CB,E$，六种结果为 $DACBE,DAECB,CBDAE,CBEDA,EDACB,ECBDA$，保留 $DAECB,EDACB$。对三块 $AE,CB,D$，六种结果为 $AECBD,AEDCB,CBAED,CBDAE,DAECB,DCBAE$，只保留 $DAECB$。",
+          "去重后三个候选中，$DAECB$ 与第二项预测五个位置全同，$BDAEC$ 一个都不同。$EDACB$ 中恰好 $C,B$ 的位置被猜中，而且出现不相交的 $DA$ 和 $CB$。因此它是唯一答案。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=2"
+  }
+}

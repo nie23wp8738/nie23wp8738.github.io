@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="602" height="518" viewBox="0 0 602 518" role="img" aria-labelledby="title desc"><title id="title">Three circles and one cevian</title><desc id="desc">The circumcircles of AQR, BRP and CPQ cut segment AP again at X, Y and Z respectively.</desc>
+<circle cx="353.264" cy="113.342" r="91.342" fill="none" stroke="#68837b" stroke-width="1.35" stroke-dasharray="5 3"/>
+<circle cx="170.813" cy="211.878" r="149.813" fill="none" stroke="#97775b" stroke-width="1.35" stroke-dasharray="3 3"/>
+<circle cx="417.878" cy="328.927" r="163.122" fill="none" stroke="#688398" stroke-width="1.35"/>
+<path d="M308.485,33.729 L86.721,335.864 L580.852,335.864 L308.485,33.729" fill="none" stroke="#293f4a" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M308.485,33.729 L254.904,335.864" fill="none" stroke="#364b56" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="308.485" cy="33.729" r="2.7" fill="#203842"/><text x="312.485" y="28.729" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">A</text>
+<circle cx="86.721" cy="335.864" r="2.7" fill="#203842"/><text x="73.721" y="348.864" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">B</text>
+<circle cx="580.852" cy="335.864" r="2.7" fill="#203842"/><text x="584.852" y="348.864" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">C</text>
+<circle cx="254.904" cy="335.864" r="2.7" fill="#203842"/><text x="249.904" y="352.864" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">P</text>
+<circle cx="427.822" cy="166.109" r="2.7" fill="#203842"/><text x="432.822" y="165.109" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">Q</text>
+<circle cx="263.889" cy="94.487" r="2.7" fill="#203842"/><text x="249.889" y="93.487" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">R</text>
+<circle cx="283.839" cy="172.702" r="2.7" fill="#203842"/><text x="287.839" y="172.702" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">X</text>
+<circle cx="292.411" cy="124.370" r="2.7" fill="#203842"/><text x="297.411" y="125.370" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">Y</text>
+<circle cx="267.228" cy="266.373" r="2.7" fill="#203842"/><text x="272.228" y="268.373" font-style="italic" font-size="16" font-family="Georgia,serif" fill="#152b35" stroke="#fff" stroke-width="2.6" paint-order="stroke">Z</text>
+</svg>
