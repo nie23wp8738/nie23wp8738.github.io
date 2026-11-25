@@ -1,4 +1,6 @@
-// Archived files contain bibliographic and topic metadata, with links to the source.
+import { getInlineRecord } from './inline-editions.js';
+
+// Keep the question browser's index light. Full text lives on static reader pages.
 const archives = import.meta.glob('../data/past-*.json', { eager: true, import: 'default' });
 const translations = import.meta.glob('../data/*-concepts.json', { eager: true, import: 'default' });
 const sourceLabels = Object.assign({}, ...Object.values(translations));
@@ -27,10 +29,15 @@ export const topicEntries = taxonomy.map(([key,en,zh]) => ({key,en,zh}));
 const topics = new Map(topicEntries.map(topic => [topic.key,topic]));
 const paperIndex = Object.values(archives).flat().map(paper => ({
   ...paper,
-  questions: (paper.questions || []).map(question => ({
-    ...question,
-    ...(question.tags ? {tags: [...new Set(question.tags.map(tag => topics.has(tag) ? tag : canonicalTag(tag)))]} : {})
-  }))
+  questions: (paper.questions || []).map(question => {
+    const id = paper.id + '-q' + question.n;
+    const record = getInlineRecord(id);
+    return {
+      ...question,
+      ...(record ? {inline: {pdf: '/inline-pdf/' + id + '.pdf', licenseUrl: record.edition.licenseURL}} : {}),
+      ...(question.tags ? {tags: [...new Set(question.tags.map(tag => topics.has(tag) ? tag : canonicalTag(tag)))]} : {})
+    };
+  })
 })).sort((a,b) =>
   b.year - a.year || a.exam.localeCompare(b.exam, 'en') || a.label.localeCompare(b.label, 'en', {numeric:true}));
 export function getPastPapers() { return paperIndex; }

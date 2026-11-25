@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TypesetText from './TypesetText.astro';
+import { getPastPapers, tagLabel, topicEntries, topicLabel } from '../lib/catalog.js';
+import '../styles/reader.css';
+
+const { lang, record } = Astro.props;
+const { id, question, number, edition, previousId, nextId } = record;
+const zh = lang === 'zh';
+const t = (en: string, cn: string) => zh ? cn : en;
+const prefix = zh ? '/zh' : '';
+const paper = getPastPapers().find(p => p.id === edition.paperId);
+const reference = paper?.questions.find(q => q.n === number);
+if (!reference) throw new Error('Missing archive record for ' + id);
+const title = paper.label + t(' · Question ', ' · 第 ') + number + t('', ' 题');
+const paperHref = prefix + '/past-papers/?paper=' + encodeURIComponent(paper.id) + '#q-' + number;
+const worksheetHref = prefix + '/problems/?add=' + encodeURIComponent(id) + '#worksheet';
+const readerHref = (target: string) => prefix + '/questions/' + target + '/';
+const topicKeys = new Set(topicEntries.map(topic => topic.key));
+const tags = [...new Set([reference.topic, ...(reference.tags || [])].filter(Boolean))];
+const topics = tags.map(key => {
+  const broad = topicKeys.has(key);
+  const params = new URLSearchParams({topic:broad ? key : reference.topic || 'all'});
+  if (!broad) params.set('tag',key);
+  return {label:broad ? topicLabel(key, lang) : tagLabel(key, lang), href:prefix + '/topics/?' + params + '#questions'};
+});
+const blocks = [
+  {text:question.intro, figure:question.introFigure},
+  ...(question.parts || []),
+  {text:question.outro, figure:question.outroFigure},
+].filter(block => block.text || block.figure).map(block => {
+  const image = block.figure ? edition.figures?.[block.figure] : null;
+  if (block.figure && (!image?.url || !image?.alt)) throw new Error('Missing figure ' + block.figure + ' in ' + id);
+  return {...block, image};
+});
+if (!blocks.length) throw new Error('Missing question content for ' + id);
+const solutionHref = reference.solutionsUrl || paper.solutionsUrl;
+const changes = zh && edition.changesZh ? edition.changesZh : edition.changes;
+const instructions = zh && edition.instructionsZh ? edition.instructionsZh : edition.instructions;
+---
+<Layout title={title} current="past" lang={lang}>
+  <article class="shell question past-reader">
+    <nav class="breadcrumb" aria-label={t('Breadcrumb','当前位置')}>
+      <a href={prefix + '/past-papers/'}>{t('Past papers','历年真题')}</a>
+      <span aria-hidden="true"> / </span>
+      <a href={paperHref}>{paper.label}</a>
+    </nav>
+    <h1>{title}</h1>
+    {topics.length > 0 && <nav class="reader-topics" aria-label={t('Topics','知识点')}>
+      {topics.map(topic => <a href={topic.href}>{topic.label}</a>)}
+    </nav>}
+    {instructions && <p class="reader-instructions" lang={zh && edition.instructionsZh ? 'zh-CN' : 'en'}>
+      {instructions}
+    </p>}
+    <div class="reader-statement" lang="en" data-full-statement>
+      {blocks.map(block => <div class:list={['reader-block', {'reader-part':!!block.label}]}>
+        {block.label && <span class="reader-part-label">({block.label})</span>}
+        <div class="reader-part-body">
+          {block.response && <p class="reader-response" lang={zh ? 'zh-CN' : 'en'}>
+            {block.response === 'short' ? t('Short answer','简答') : t('Show your work','须写出解题过程')}
+          </p>}
+          {block.text && <TypesetText text={block.text} id={id} />}
+          {block.image && <figure><img src={block.image.url} alt={block.image.alt} /></figure>}
+        </div>
+      </div>)}
+    </div>
+    <div class="btnrow">
+      <a class="button" href={worksheetHref}>{t('Add to my worksheet','加入我的试卷')}</a>
+      {solutionHref && <a class="button light" href={solutionHref}>{t('Published solutions','查看原卷解答')}</a>}
+    </div>
+    <footer class="reader-source">
+      <p>{edition.credit}{question.author && <> · {t('Problem by','命题人')} {question.author}</>}</p>
+      <p><a href={reference.url || edition.sourceURL}>{t('Original question','原题出处')}</a>
+        <span aria-hidden="true"> · </span><a href={edition.licenseURL}>{edition.license}</a>
+        {changes && <> · <span lang={zh && edition.changesZh ? 'zh-CN' : 'en'}>{changes}</span></>}
+      </p>
+    </footer>
+    <nav class="reader-pagination" aria-label={t('Questions in this paper','本卷题目')}>
+      {previousId && <a href={readerHref(previousId)} rel="prev">← {t('Previous question','上一题')}</a>}
+      {nextId && <a href={readerHref(nextId)} rel="next">{t('Next question','下一题')} →</a>}
+    </nav>
+  </article>
+</Layout>

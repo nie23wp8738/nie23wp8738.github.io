@@ -1,0 +1,38 @@
+{
+  "paperId": "nzmo2-2025",
+  "credit": "New Zealand Mathematical Olympiad Committee",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceURL": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025",
+  "changes": "Transcribed into LaTeX and reformatted. Minor punctuation and grammar have been regularised.",
+  "changesZh": "题目已转录为 LaTeX 并重新排版，个别标点和语法作了调整。",
+  "instructionsZh": "所有题目均须说明理由，包括只问结果的题目。",
+  "instructions": "Solutions (answers with justifications) are required for all problems, including those which ask for an answer.",
+  "questions": [
+    {
+      "id": "nzmo2-2025-q1",
+      "intro": "Find all pairs of positive integers $m$ and $n$ such that the centres of the unit squares in an $m$ by $n$ grid of unit squares can be paired up so that the distance between the centres of each pair is exactly $2$. (A unit square has side length $1$.)",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2025-q2",
+      "intro": "For which positive integers $n$ does there exist a sequence of real numbers $(x_1,x_2,\\ldots,x_n)$ such that all of the following hold?\n$$-2<x_i<2 \\quad \\text{for all } i,$$\n$$x_1+x_2+x_3+\\cdots+x_n=0,$$\n$$x_1^4+x_2^4+x_3^4+\\cdots+x_n^4\\ge 32.$$",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2025-q3",
+      "intro": "Let $ABC$ be an acute scalene triangle with $AC>BC>AB$. Let the orthocentre be $H$ and circumcentre be $O$. Suppose that lines $BO$ and $CH$ intersect at a point $D$. Point $E$ (where $E\\ne C$) lies on side $AC$ so that $OECD$ is cyclic. Point $F$ (where $F\\ne C$) lies on side $BC$ such that $CE=FE$. Prove that $BHDF$ is cyclic. (The orthocentre of a triangle is the point of intersection of its altitudes.)",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2025-q4",
+      "intro": "The function $r_n(x)$ is the remainder when $x$ is divided by $n$, where $0\\le r_n(x)<n$. For which $n$ does there exist some ordering $\\{a_1,\\ldots,a_{n-1}\\}$ of $\\{1,2,\\ldots,n-1\\}$ such that\n$$\\{r_n(a_1),r_n(2\\times a_2),\\ldots,r_n((n-1)\\times a_{n-1})\\}$$\nis an ordering of $\\{1,2,\\ldots,n-1\\}$? (An ordering of $\\{1,2,\\ldots,n-1\\}$ is the sequence of numbers $1$ to $n-1$ in some order.)",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2025-q5",
+      "intro": "Let $a,b,c$ be positive real numbers satisfying $abc=1$. Determine the smallest possible value of\n$$\\frac{a^2+2025}{a^3(b+c)}+\\frac{b^2+2025}{b^3(c+a)}+\\frac{c^2+2025}{c^3(a+b)}.$$",
+      "parts": []
+    }
+  ]
+}

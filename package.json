@@ -4,9 +4,19 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/verify-inline-pdfs.mjs",
     "build": "astro build",
     "preview": "astro preview"
   },
-  "dependencies": { "astro": "7.4.13" },
-  "engines": { "node": ">=22.23.4" }
+  "dependencies": {
+    "astro": "7.4.13",
+    "katex": "0.16.27",
+    "pdf-lib": "1.17.1"
+  },
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
 }

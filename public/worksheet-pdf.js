@@ -80,13 +80,13 @@ function safeURL(value) {
 }
 
 function sheetKind(problems, solutions) {
-  const refs = problems.filter(p => p.kind === 'past').length;
+  const refs = problems.filter(p => p.kind === 'past' && (solutions || !p.inline?.pdf)).length;
   if (refs === 0) return solutions ? 'Solutions' : 'Question paper';
   if (refs === problems.length) return solutions ? 'Source guide' : 'Question references';
   return solutions ? 'Solutions and sources' : 'Questions and references';
 }
 
-function renderPages(problems, { solutions, layout, title }) {
+function renderPages(problems, { solutions, layout, title }, questionStrips) {
   const pages = [];
   let ops;
   let links;
@@ -97,7 +97,7 @@ function renderPages(problems, { solutions, layout, title }) {
   function newPage(continuing = false) {
     ops = [];
     links = [];
-    pages.push({ops, links});
+    pages.push({ops, links, strips:[]});
     drawText(ops, 'DR.WANG', margin, height - 51, 11, 'label');
     const headerKind = kind.toUpperCase();
     drawText(ops, headerKind, width - margin - textWidth(headerKind, 'label', 9),
@@ -151,10 +151,26 @@ function renderPages(problems, { solutions, layout, title }) {
     y -= 5;
   }
 
+  function richSourceLinks(problem) {
+    let x = margin;
+    for (const [label, target] of [['Original paper', problem.sourceURL], ['Licence', problem.inline.licenseUrl]]) {
+      const url = safeURL(target);
+      if (!url) continue;
+      const right = x + textWidth(label, 'label', 9);
+      drawText(ops, label, x, y, 9, 'label', .34);
+      ops.push(`0.4 G 0.45 w ${x} ${y-2} m ${right.toFixed(2)} ${y-2} l S`);
+      links.push({url, rect:[x, y-3, right, y+9]});
+      x = right + 18;
+    }
+    y -= 14;
+  }
+
   newPage();
   problems.forEach((problem, index) => {
     currentProblem = index + 1;
-    if (index > 0 && (layout === 'spaced' || y - 46 < bottom)) newPage();
+    const strips = questionStrips?.get(problem.id);
+    const required = strips ? 37 + strips[0].height : 46;
+    if (index > 0 && (layout === 'spaced' || y - required < bottom)) newPage();
     const heading = 'Question ' + currentProblem;
     drawText(ops, heading, margin, y, 14, 'label');
     if (Array.isArray(problem.exam)) {
@@ -164,6 +180,16 @@ function renderPages(problems, { solutions, layout, title }) {
       }
     }
     y -= 23;
+    if (strips) {
+      richSourceLinks(problem);
+      for (const strip of strips) {
+        if (y - strip.height < bottom) newPage(true);
+        y -= strip.height;
+        pages[pages.length - 1].strips.push({...strip, x:margin, y});
+      }
+      y -= 22;
+      return;
+    }
     if (problem.kind === 'past') {
       const edition = plainLabel(problem.paperTitle) || plainLabel(problem.exam.join(' ') + ' ' + problem.year);
       paragraph(edition + ', Question ' + problem.n);
@@ -235,7 +261,45 @@ function serializePages(pages, description) {
   return new Blob([file], {type: 'application/pdf'});
 }
 
-export function downloadWorksheet(problems, { solutions = false, layout = 'spaced', title = 'Mathematics Practice' } = {}) {
+async function buildRichWorksheet(problems, options, description) {
+  const {PDFDocument} = await import('/worksheet-engine.js');
+  const assets = new Map();
+  const strips = new Map();
+  for (const problem of problems) {
+    if (problem.kind !== 'past' || !problem.inline?.pdf) continue;
+    const url = new URL(problem.inline.pdf, location.origin);
+    if (url.origin !== location.origin) throw new Error('Invalid question PDF location.');
+    if (!assets.has(url.href)) {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Question PDF unavailable.');
+      const document = await PDFDocument.load(await response.arrayBuffer());
+      const parts = document.getPages().map(page => {
+        const size = page.getSize();
+        const scale = Math.min(1, bodyWidth / size.width);
+        const height = size.height * scale;
+        if (!(height > 0 && height < 575)) throw new Error('Invalid question PDF height.');
+        return {page, width:size.width * scale, height};
+      });
+      if (!parts.length) throw new Error('Empty question PDF.');
+      assets.set(url.href, parts);
+    }
+    strips.set(problem.id, assets.get(url.href));
+  }
+  const pages = renderPages(problems, options, strips);
+  const base = serializePages(pages, description);
+  const output = await PDFDocument.load(await base.arrayBuffer());
+  const embedded = new Map();
+  for (const [index, page] of pages.entries()) {
+    const target = output.getPage(index);
+    for (const strip of page.strips) {
+      if (!embedded.has(strip.page)) embedded.set(strip.page, await output.embedPage(strip.page));
+      target.drawPage(embedded.get(strip.page), {x:strip.x, y:strip.y, width:strip.width, height:strip.height});
+    }
+  }
+  return new Blob([await output.save()], {type:'application/pdf'});
+}
+
+export async function downloadWorksheet(problems, { solutions = false, layout = 'spaced', title = 'Mathematics Practice' } = {}) {
   if (!problems.length) throw new Error('Select at least one problem.');
   // The stored statements and methods are intentionally written in printable ASCII.
   // Avoid an unsupported browser-provided title corrupting the PDF byte offsets.
@@ -258,8 +322,10 @@ export function downloadWorksheet(problems, { solutions = false, layout = 'space
 
   const kind = sheetKind(problems, solutions);
   const description = title + ' - ' + kind;
-  const pages = renderPages(problems, { solutions, layout, title });
-  const blob = serializePages(pages, description);
+  const options = {solutions, layout, title};
+  const hasInline = !solutions && problems.some(p => p.kind === 'past' && p.inline?.pdf);
+  const blob = hasInline ? await buildRichWorksheet(problems, options, description)
+    : serializePages(renderPages(problems, options), description);
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;

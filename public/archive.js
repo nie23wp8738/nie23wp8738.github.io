@@ -31,7 +31,8 @@ async function runArchive(root) {
     exam: root.querySelector('[data-exam]'),
     year: root.querySelector('[data-year]'),
     kind: root.querySelector('[data-kind]'),
-    tag: root.querySelector('[data-tag]')
+    tag: root.querySelector('[data-tag]'),
+    reading: root.querySelector('[data-reading]')
   };
   const picked = new Set();
   const locale = zh ? 'zh-CN' : 'en';
@@ -88,8 +89,8 @@ async function runArchive(root) {
     return header;
   }
   const worksheetHelp = t(
-    'Past questions open at the source. Worksheets include their references and links; original practice includes full questions and solutions.',
-    '历年真题可在来源网站阅读。组卷 PDF 收录真题题号和链接，原创练习提供完整题干与解析。'
+    'Select questions for a worksheet. Full-text questions print in full. Source-only entries print with their original links.',
+    '勾选题目即可组卷。标有「站内阅读全文」的真题会完整印入题目卷，其他真题附原题链接。'
   );
   function addPickBar() {
     const bar = node('div','arch-bulk');
@@ -125,7 +126,8 @@ async function runArchive(root) {
     const title = inPaper ? no : paperTitle(p) + ' · ' + no;
     const main = node('div', 'arch-row-main');
     const heading = node('h3');
-    heading.append(link(title, q.url || p.url));
+    const readUrl = q.inline ? prefix + '/questions/' + id + '/' : q.url || p.url;
+    heading.append(link(title, readUrl));
     main.append(heading);
     const values = [...new Set([q.topic, ...(q.tags || [])].filter(Boolean))];
     if (values.length) {
@@ -141,9 +143,9 @@ async function runArchive(root) {
       main.append(meta);
     }
     const links = node('div', 'arch-links');
-    links.append(link(t('Open source', '查看原题'), q.url || p.url));
+    links.append(q.inline ? link(t('Read full question','站内阅读全文'),readUrl) : link(t('Open source', '查看原题'), readUrl));
     if (!inPaper) links.append(link(t('View paper', '查看整卷'), paperLink(p, q.n)));
-    links.append(link(t('Add reference', '加入题号'), worksheetLink([id])), pickControl(id, title));
+    links.append(link(q.inline ? t('Add question','加入题目') : t('Add reference', '加入题号'), worksheetLink([id])), pickControl(id, title));
     row.append(main, links);
     return row;
   }
@@ -191,7 +193,7 @@ async function runArchive(root) {
   function renderPapers(params) {
     const active = papers.find(p => p.id === params.get('paper'));
     const euclidPractice = root.querySelector('[data-euclid-practice]');
-    if (euclidPractice) euclidPractice.hidden = !!active || controls.exam.value !== 'Euclid'
+    if (euclidPractice) euclidPractice.hidden = !!active || controls.reading.value === 'full' || controls.exam.value !== 'Euclid'
       || (controls.year.value !== '' && controls.year.value !== '2020');
     if (active) {
       const qs = active.questions || [];
@@ -211,7 +213,9 @@ async function runArchive(root) {
       if (/^#q-\d+$/.test(location.hash)) requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView());
       return;
     }
-    const filtered = papers.filter(p => (!controls.exam.value || p.exam === controls.exam.value) && (!controls.year.value || p.year === Number(controls.year.value)));
+    const filtered = papers.filter(p => (!controls.exam.value || p.exam === controls.exam.value)
+      && (!controls.year.value || p.year === Number(controls.year.value))
+      && (controls.reading.value !== 'full' || p.questions.some(q => q.inline)));
     addResultsHeader(t('Paper index','试卷目录'),qty(filtered.length,'paper','papers','份试卷'));
     if (!filtered.length) results.append(node('p','arch-note',t('No papers match these filters. Select another exam or year.','当前条件下没有试卷，请更换考试或年份。')));
     showPage(filtered,15,params,p => {
@@ -240,8 +244,10 @@ async function runArchive(root) {
       else a.removeAttribute('aria-current');
     });
     if (!active) return;
+    const fullOnly = controls.kind.value === 'full';
     const items = classified.filter(({p,q}) =>
       (key === 'all' || q.topic === key || q.tags?.includes(key))
+      && (!fullOnly || q.inline)
       && (!controls.exam.value || controls.exam.value === p.exam)
       && (!controls.year.value || Number(controls.year.value) === p.year));
     const selectedTag = params.get('tag') || '';
@@ -254,7 +260,7 @@ async function runArchive(root) {
     }
     tagControl.value = selectedTag;
     const past = controls.kind.value === 'original' ? [] : items.filter(({q}) => !selectedTag || q.tags?.includes(selectedTag));
-    const original = controls.kind.value === 'past' || selectedTag || controls.year.value ? [] : originals
+    const original = controls.kind.value === 'past' || fullOnly || selectedTag || controls.year.value ? [] : originals
       .filter(o => (key === 'all' || o.topic === key) && (!controls.exam.value || o.exam.includes(controls.exam.value)));
     const matched = [...past,...original];
     addResultsHeader(key === 'all' ? t('All topics','所有知识点') : labels[key],[

@@ -14,7 +14,7 @@ Use Node.js 24. Run `npm ci` and `npm run dev` for development or `npm run build
 
 ## Question sources
 
-Historical records in `src/data/past-*.json` store the paper, year, source URL and question links and topics. Original statements stay at the linked source. Worksheets include clickable source references for past questions and full text for original practice. Within each file, keep existing paper IDs and question numbers stable because students can bookmark them or save them to worksheets.
+Historical records in `src/data/past-*.json` store paper and question references and topics. Each licensed full-text edition has one record in `src/data/editions/`, linked to the same stable question IDs. Each record provides the English source with LaTeX, figure references, attribution, licence and changes. Full-text questions have localized reader pages under `/questions/` and print in the worksheet. Other questions include the source reference. Keep IDs stable for students' bookmarks and saved worksheets.
 
 | Exam | Source |
 | --- | --- |
@@ -23,8 +23,23 @@ Historical records in `src/data/past-*.json` store the paper, year, source URL a
 | Euclid | [Waterloo CEMC](https://cemc.uwaterloo.ca/resources/past-contests) |
 | BMO | [British Mathematical Olympiad archive](https://bmos.ukmt.org.uk/home/bmo.shtml) |
 | IMO | [International Mathematical Olympiad](https://www.imo-official.org/problems/) |
+| NZMO | [New Zealand Mathematical Olympiad Committee](https://www.mathsolympiad.org.nz/resources/) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | ESAT practice | [Pearson VUE](https://www.pearsonvue.com/us/en/uatuk.html) |
 | STEP | [Cambridge STEP Support Programme](https://step.maths.org/questions) and [OCR](https://www.ocr.org.uk/students/step-mathematics/preparing-for-step/) |
 | TMUA | [UAT-UK historical preparation papers](https://esat-tmua.ac.uk/tmua-preparation-materials/) |
 
 Bilingual concept labels are in `src/data/*-concepts.json`. Maintain the original practice questions in `src/data/problems.json` and the original question translations and topic mapping in `src/lib/catalog.js`. Original worksheet text uses English with printable ASCII mathematical notation.
+
+### Updating a full-text paper
+
+Edit the question records in `src/data/editions/<paper-id>.json` and the matching catalogue entry in `src/data/past-*.json`. For a question containing a diagram, place the image under `public/inline-figures/` and give its entry in the edition a same-site URL and English alt text. Use the same stable figure ID for the filename stem and the question's reference.
+
+Run `npm ci` and `npx playwright install chromium` once on an authoring machine. From the repository root, regenerate the affected edition with the exact paper title from its catalogue entry. For example:
+
+```sh
+node scripts/typeset-questions.mjs --questions src/data/editions/nzmo2-2025.json \
+  --title "2025 NZMO Round 2" --figures public/inline-figures --output public/inline-pdf
+npm run build
+```
+
+To use an existing Chromium executable, add `--chromium /path/to/chromium`. Commit the edited source, any diagrams, the generated question PDFs and the edition's `.build.json` manifest together. The build checks their digests so the printable worksheet matches the reader. If the typesetting script changes, regenerate every full-text edition.

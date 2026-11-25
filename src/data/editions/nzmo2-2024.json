@@ -1,0 +1,38 @@
+{
+  "paperId": "nzmo2-2024",
+  "credit": "New Zealand Mathematical Olympiad Committee",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceURL": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024",
+  "changes": "Transcribed into LaTeX and reformatted.",
+  "changesZh": "题目已转录为 LaTeX 并重新排版。",
+  "instructionsZh": "所有题目均须说明理由，包括只问结果的题目。",
+  "instructions": "Solutions (answers with justifications) are required for all problems, including those which ask for an answer.",
+  "questions": [
+    {
+      "id": "nzmo2-2024-q1",
+      "intro": "At each vertex of a regular $14$-gon lies a coin. Initially $7$ coins are heads, and $7$ coins are tails. Determine the minimum number $t$ such that it is always possible to turn over at most $t$ of the coins so that in the resulting $14$-gon, no two adjacent coins are both heads and no two adjacent coins are both tails.",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2024-q2",
+      "intro": "Consider the sequence $a_1,a_2,a_3,\\ldots$ defined by $a_1=2024^{2024}$ and, for each positive integer $n$,\n$$a_{n+1}=\\left|a_n-\\sqrt{2}\\right|.$$\nProve that there exists an integer $k$ such that $a_{k+2}=a_k$. Here $|x|$ denotes the absolute value of $x$.",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2024-q3",
+      "intro": "Let $A,B,C,D,E$ be five different points on the circumference of a circle in that (cyclic) order. Let $F$ be the intersection of chords $BD$ and $CE$. Show that if $AB=AE=AF$ then lines $AF$ and $CD$ are perpendicular.",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2024-q4",
+      "intro": "Determine all positive integers $n$ less than $2024$ such that for all positive integers $x$, the greatest common divisor of $9x+1$ and $nx+1$ is $1$.",
+      "parts": []
+    },
+    {
+      "id": "nzmo2-2024-q5",
+      "intro": "Determine the least real number $L$ such that\n$$\\frac{1}{a}+\\frac{a}{b}+\\frac{b}{c}+\\frac{c}{d}\\le L$$\nfor all quadruples $(a,b,c,d)$ of integers satisfying $1<a<b<c<d$.",
+      "parts": []
+    }
+  ]
+}

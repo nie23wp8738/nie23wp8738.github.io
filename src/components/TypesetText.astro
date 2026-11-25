@@ -1,0 +1,37 @@
+---
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
+const { text, id } = Astro.props;
+
+// Keep prose as text nodes. Only the output of KaTeX is inserted as markup.
+function segments(paragraph: string) {
+  const pieces: {text?:string; math?:string}[] = [];
+  const delimiter = /\\\$|\$\$([\s\S]+?)\$\$|\$((?:\\[\s\S]|[^$\\])+)\$/g;
+  let start = 0;
+  function prose(value: string) {
+    if (value.includes('$')) throw new Error('Unmatched math delimiter in ' + id);
+    if (value) pieces.push({text:value});
+  }
+  for (const match of paragraph.matchAll(delimiter)) {
+    prose(paragraph.slice(start, match.index));
+    if (match[0] === '\\$') {
+      pieces.push({text:'$'});
+    } else {
+      try {
+        pieces.push({math:katex.renderToString(match[1] ?? match[2], {
+          displayMode:match[1] !== undefined, output:'htmlAndMathml', throwOnError:true, strict:'error', trust:false,
+        })});
+      } catch (error) {
+        throw new Error('Invalid math in ' + id, {cause:error});
+      }
+    }
+    start = match.index! + match[0].length;
+  }
+  prose(paragraph.slice(start));
+  return pieces;
+}
+const paragraphs = text.trim().split(/\n\s*\n/).filter(Boolean).map(segments);
+---
+{paragraphs.map(p => <p class="reader-paragraph">{p.map(part =>
+  part.math ? <Fragment set:html={part.math} /> : part.text
+)}</p>)}

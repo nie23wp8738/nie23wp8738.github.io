@@ -1,0 +1,128 @@
+[
+  {
+    "id": "nzmo2-2024",
+    "exam": "NZMO",
+    "year": 2024,
+    "label": "2024 NZMO Round 2",
+    "source": "New Zealand Mathematical Olympiad Committee",
+    "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024",
+    "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2024",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2024#page=1",
+        "topic": "counting",
+        "tags": [
+          "Cyclic arrangements",
+          "Parity",
+          "Extremal arrangements"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2024#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "Periodic sequences",
+          "Absolute value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2024#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Concyclic points",
+          "Angle chasing"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2024#page=4",
+        "topic": "number-theory",
+        "tags": [
+          "Greatest common divisor",
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2024#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2024#page=5",
+        "topic": "algebra",
+        "tags": [
+          "Sharp bounds",
+          "Integer optimization"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nzmo2-2025",
+    "exam": "NZMO",
+    "year": 2025,
+    "label": "2025 NZMO Round 2",
+    "source": "New Zealand Mathematical Olympiad Committee",
+    "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025",
+    "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2025",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2025#page=1",
+        "topic": "counting",
+        "tags": [
+          "Grid matchings",
+          "Parity"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2025#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Bounds on sums",
+          "Case analysis"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2025#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Cyclic quadrilaterals",
+          "Triangle centres",
+          "Angle chasing"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2025#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Permutations",
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&year=2025#page=2",
+        "solutionsUrl": "https://www.mathsolympiad.org.nz/competitions/nzmo/files/problems.php?round=2&type=solutions&year=2025#page=4",
+        "topic": "algebra",
+        "tags": [
+          "Algebraic inequalities",
+          "AM-GM Inequality",
+          "Cyclic sums"
+        ]
+      }
+    ]
+  }
+]

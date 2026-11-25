@@ -8,6 +8,7 @@ function startBank(root) {
     Euclid: 'Waterloo Euclid 欧几里得 滑铁卢',
     BMO: 'British Mathematical Olympiad 英国数学奥林匹克',
     IMO: 'International Mathematical Olympiad 国际数学奥林匹克',
+    NZMO: 'New Zealand Mathematical Olympiad 新西兰数学奥林匹克',
   };
   const countLabel = n => t(n + (n === 1 ? ' question' : ' questions'), n + ' 道题');
   const compact = s => String(s || '').normalize('NFKC').toLocaleLowerCase().trim();
@@ -28,7 +29,7 @@ function startBank(root) {
   const pageSize = 20;
   let past = [], sourceState = 'loading', selected = [], layout = 'spaced', exporting = false, dragId;
   let page = 1, maxPages = 1;
-  const filters = ['kind','q','exam','topic','year','number','method','level'];
+  const filters = ['kind','q','exam','topic','year','number','reading','method','level'];
   function el(tag, text, cls) {
     const item = document.createElement(tag);
     if (text != null) item.textContent = text;
@@ -59,9 +60,9 @@ function startBank(root) {
         const concepts = tags.filter(key => !topicNames.has(key)).map(tag => translations[tag] || tag);
         const topicKeys = [...new Set([q.topic,...(q.topics || []),...tags].filter(key => key && topicNames.has(key)))];
         const topic = topicKeys.map(key => topicNames.get(key)).join(zh ? '、' : ' · ');
-        const path = '/past-papers/?paper=' + encodeURIComponent(paper.id) + '#q-' + q.n;
+        const path = q.inline ? '/questions/' + id + '/' : '/past-papers/?paper=' + encodeURIComponent(paper.id) + '#q-' + q.n;
         const record = {
-          id, kind:'past', paperId:paper.id, paperTitle, n:q.n, year:String(paper.year), exam:[paper.exam],
+          id, kind:'past', paperId:paper.id, paperTitle, n:q.n, year:String(paper.year), exam:[paper.exam], inline:q.inline,
           source:paper.source, sourceURL:safeWebURL(q.url) || safeWebURL(paper.url), solutionURL:safeWebURL(q.solutionsUrl) || safeWebURL(paper.solutionsUrl),
           title:paperTitle + t(' · Question ',' · 第 ') + q.n + (zh ? ' 题' : ''), topicKeys, topic, concepts,
           href:prefix + path, permalink:'https://nie23wp8738.github.io' + path,
@@ -151,7 +152,10 @@ function startBank(root) {
       const statement = el('p',q.statement); statement.lang = 'en'; article.append(statement);
     }
     const foot = el('div',null,'bank-card-foot');
-    foot.append(isPast ? link(t('Open original question','打开原题'),q.sourceURL,'bank-card-source') : el('span',q.method),addButton(q));
+    if (isPast) {
+      foot.append(q.inline ? link(t('Read full question','站内阅读全文'),q.href,'bank-card-source') : link(t('Open original question','打开原题'),q.sourceURL,'bank-card-source'));
+    } else foot.append(el('span',q.method));
+    foot.append(addButton(q));
     article.append(foot); return article;
   }
   function renderResults() {
@@ -161,6 +165,7 @@ function startBank(root) {
     const filtered = (isPast ? past : originals).filter(q =>
       (!values.exam || q.exam.includes(values.exam)) && (!values.topic || q.topicKeys.includes(values.topic))
       && (!values.year || q.year === values.year) && (!values.number || String(q.n) === values.number)
+      && (values.reading !== 'full' || q.inline)
       && (!values.method || q.methodKey === values.method) && (!values.level || q.levelKey === values.level)
       && tokens.every(word=>q.search.includes(word)));
     maxPages = Math.max(1,Math.ceil(filtered.length / pageSize));

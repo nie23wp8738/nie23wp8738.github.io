@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "title": "2024 NZMO Round 2",
+  "sourceSha256": "79ee0fb1ce0b768dde1ba660b67dc4948439442c3947e4d0ba4e06645ce67702",
+  "generatorSha256": "12bf3171158cfdd67b2425f4393d10a1f1553c5d698314d1aa84886843e76864",
+  "figures": {},
+  "pdfs": {
+    "nzmo2-2024-q1.pdf": "14918cd7219feccd2474bf82e87dca3607ffbdb22cbfce1faa2bd3f8f9c1e056",
+    "nzmo2-2024-q2.pdf": "5965d45e4ca90626bae4dd58f062509122ae32c18262a04dbc2d2d8fb907554d",
+    "nzmo2-2024-q3.pdf": "e1c4d90190c3ce5aa056e9569d2c3621c9a115f9290545a3adea5c2223c2003e",
+    "nzmo2-2024-q4.pdf": "fcc099dc47729025352af2b91de9fdc291df78b23f6eee11270874e8151d90c8",
+    "nzmo2-2024-q5.pdf": "953889257d02949f9151dba96a7392c8edc5df004ce0e8b76ec1bfa447164a08"
+  }
+}

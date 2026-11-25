@@ -14,12 +14,13 @@ const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh 
 <section class="archive-shell shell" data-archive="papers" data-lang={lang}>
   <header class="archive-hero">
     <h1>{zh ? '历年真题' : 'Past papers'}</h1>
-    <p>{zh ? '按考试和年份查找原卷，或打开单题，在原题来源阅读题目。' : 'Browse papers by exam and year, or open an individual question at its source.'}</p>
+    <p>{zh ? '按考试和年份查找原卷。选择「站内全文」可以逐题阅读，并将完整题干加入试卷。' : 'Browse by exam and year. Choose full text to read questions here and include them in your worksheet.'}</p>
     <a class="arch-inline" href={prefix + '/topics/'}>{zh ? '按知识点查看真题' : 'Find questions by topic'}</a>
   </header>
   <div class="archive-search" role="search" aria-label={zh ? '筛选试卷' : 'Filter papers'}>
     <label>{zh ? '考试' : 'Exam'}<select data-exam><option value="">{zh ? '所有考试' : 'All exams'}</option>{exams.map(exam => <option value={exam}>{zh && exam==='Euclid'?'Euclid · 欧几里得':exam}</option>)}<option value="ESAT">{zh?'ESAT · 官方练习':'ESAT · Official practice'}</option></select></label>
     <label>{zh ? '年份' : 'Year'}<select data-year><option value="">{zh ? '所有年份' : 'All years'}</option>{years.map(year => <option value={year}>{year}</option>)}</select></label>
+    <label>{zh ? '阅读方式' : 'Reading options'}<select data-reading><option value="">{zh ? '全部' : 'All papers'}</option><option value="full">{zh ? '站内全文' : 'Full text on this site'}</option></select></label>
   </div>
   {euclidPractice.map(test=><aside class="practice-strip" data-euclid-practice hidden>
     <strong>{zh?test.titleZh:test.title}</strong>
@@ -36,6 +37,7 @@ const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh 
       <li>Euclid · <a href="https://cemc.uwaterloo.ca/resources/past-contests">University of Waterloo CEMC</a></li>
       <li>BMO · <a href="https://bmos.ukmt.org.uk/home/bmo.shtml">British Mathematical Olympiad Subtrust</a></li>
       <li>IMO · <a href="https://www.imo-official.org/problems/">International Mathematical Olympiad</a></li>
+      <li>NZMO · <a href="https://www.mathsolympiad.org.nz/resources/">New Zealand Mathematical Olympiad Committee</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
       <li>ESAT · <a href={prefix+'/esat/'}>{zh?'官方分科样题与练习':'Official module practice tests'}</a></li>
       <li>STEP · <a href="https://step.maths.org/questions">{zh ? '剑桥大学真题库' : 'Cambridge STEP question database'}</a> · <a href="https://www.ocr.org.uk/students/step-mathematics/preparing-for-step/">{zh ? 'OCR 历年原卷' : 'OCR past papers'}</a></li>
       <li>TMUA · <a href="https://esat-tmua.ac.uk/tmua-preparation-materials/">{zh ? 'UAT-UK 正式公开的 2016–2023 年历年卷' : 'UAT-UK’s released 2016–2023 past papers'}</a></li>
