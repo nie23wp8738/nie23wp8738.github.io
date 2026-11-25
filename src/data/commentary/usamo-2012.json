@@ -1,0 +1,76 @@
+{
+  "usamo-2012-q1": {
+    "summary": "For which integers $n\\ge3$ does the following hold? Every list of $n$ positive real numbers whose largest entry is at most $n$ times its smallest contains three entries that can be the side lengths of an acute triangle.",
+    "summaryZh": "求所有满足以下性质的整数 $n\\ge3$：若 $n$ 个正实数中最大值不超过最小值的 $n$ 倍，则总能从中选出三个数作为锐角三角形的三边。",
+    "answer": "Exactly the integers $n\\ge13$.",
+    "answerZh": "恰为所有 $n\\ge13$ 的整数。",
+    "methods": [
+      {
+        "title": "Identify the extremal sequence of squared lengths",
+        "titleZh": "求边长平方的临界数列",
+        "topics": [
+          {
+            "en": "Fibonacci sequence",
+            "zh": "斐波那契数列"
+          },
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Extremal principle",
+            "zh": "极值原理"
+          }
+        ],
+        "steps": [
+          "Scale by the smallest entry, sort, then square the numbers to obtain $1=u_1\\le u_2\\le\\cdots\\le u_n\\le n^2$. Three sorted lengths make an acute triangle exactly when the sum of the two smaller squares exceeds the largest square: this inequality also implies the triangle inequality. Among pairs before $u_k$, the largest sum is $u_{k-2}+u_{k-1}$. Thus no acute triangle exists exactly when $u_k\\ge u_{k-1}+u_{k-2}$ for all $k\\ge3$.",
+          "Let $F_1=F_2=1$ and $F_k=F_{k-1}+F_{k-2}$. In a list with no acute triple we have $u_k\\ge F_k$ by induction, hence $F_n\\le n^2$. Conversely, if $F_n\\le n^2$, the actual lengths $\\sqrt{F_1},\\ldots,\\sqrt{F_n}$ meet the ratio condition and, by the preceding test, have no acute triple.",
+          "From $F_3$ to $F_{14}$ the values are $2,3,5,8,13,21,34,55,89,144,233,377$. In particular $F_n\\le n^2$ for $3\\le n\\le12$ (equality at $12$), while $F_{13}>13^2$ and $F_{14}>14^2$. For $k\\ge13$ we have $k^2+(k+1)^2>(k+2)^2$, so the recurrence propagates this strict inequality to all larger indices. Therefore exactly $n\\ge13$ force an acute triangle."
+        ],
+        "stepsZh": [
+          "所有数同除以最小值，排序后分别平方，得到 $1=u_1\\le u_2\\le\\cdots\\le u_n\\le n^2$。依大小排列的三条边能构成锐角三角形，当且仅当较小两边的平方和严格大于最大边的平方；这一条件也蕴含三角不等式。对给定的 $u_k$，前方任意两项的最大和为 $u_{k-2}+u_{k-1}$。因此完全选不出锐角三角形，等价于每个 $k\\ge3$ 都有 $u_k\\ge u_{k-1}+u_{k-2}$。",
+          "令 $F_1=F_2=1$，$F_k=F_{k-1}+F_{k-2}$。在选不出锐角三角形的情形中，由归纳法 $u_k\\ge F_k$，故 $F_n\\le n^2$。反之，若 $F_n\\le n^2$，取实际边长 $\\sqrt{F_1},\\ldots,\\sqrt{F_n}$，它们满足最大值与最小值之比的限制，由上一步判据又确实选不出锐角三角形。",
+          "从 $F_3$ 到 $F_{14}$ 依次是 $2,3,5,8,13,21,34,55,89,144,233,377$。故 $3\\le n\\le12$ 时 $F_n\\le n^2$（在 $12$ 处取等号），而 $F_{13}>13^2,F_{14}>14^2$。因 $k\\ge13$ 时 $k^2+(k+1)^2>(k+2)^2$，递推式保证以后的每项也严格大于对应平方数。所以所求整数恰为 $n\\ge13$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_1"
+  },
+  "usamo-2012-q5": {
+    "summary": "Take a triangle $ABC$, a point $P$, and a mirror line through $P$. Reflect the three lines $PA,PB,PC$ in this mirror. Wherever the intersections are uniquely defined, denote their intersections with $BC,CA,AB$, respectively, by $A^{\\prime},B^{\\prime},C^{\\prime}$. Show that the three resulting points lie on one line.",
+    "summaryZh": "给定三角形 $ABC$、平面内一点 $P$ 以及经过 $P$ 的一条对称轴。把直线 $PA,PB,PC$ 关于该轴反射，所得三条直线依次与 $BC,CA,AB$ 的所在直线交于 $A^{\\prime},B^{\\prime},C^{\\prime}$（各交点均有唯一定义）。证明这三个交点共线。",
+    "answer": "The three intersections of the reflected lines with the opposite sidelines are collinear.",
+    "answerZh": "三条反射直线在对应对边所在直线上截得的三个点共线。",
+    "methods": [
+      {
+        "title": "A symmetric equation for reflected directions",
+        "titleZh": "用对称的代数式描述反射方向",
+        "topics": [
+          {
+            "en": "Reflections",
+            "zh": "反射"
+          },
+          {
+            "en": "Vectors in the plane",
+            "zh": "平面向量"
+          },
+          {
+            "en": "Collinearity",
+            "zh": "共线性"
+          }
+        ],
+        "steps": [
+          "Use $P$ as origin and the mirror as horizontal axis. For vectors $U=(u,v)$ and $V=(s,t)$ set $H(U,V)=ut+vs$. This expression is symmetric in its two arguments and linear in each. For nonzero $U$, the equation $H(U,V)=0$ says exactly that $V$ lies on the line with direction $(u,-v)$, the reflected line of $PU$.",
+          "Use the point names for their position vectors and let $x=H(B,C)$, $y=H(C,A)$, $z=H(A,B)$. On line $BC$, the point with position vector $(yB-zC)/(y-z)$ has coefficients summing to one. It also satisfies $H(A,(yB-zC)/(y-z))=0$, since $H(A,B)=z$ and $H(A,C)=y$. Hence it is $A^{\\prime}$. Here $y\\ne z$: if they were equal, $H(A,\\cdot)$ would be constant along $BC$, giving either no intersection or a whole coincident line. The same argument applies cyclically.",
+          "We have $(y-z)A^{\\prime}=yB-zC$, $(z-x)B^{\\prime}=zC-xA$, and $(x-y)C^{\\prime}=xA-yB$. Adding gives zero. The three coefficients on the left also sum to zero, so $(y-z)(A^{\\prime}-C^{\\prime})+(z-x)(B^{\\prime}-C^{\\prime})=0$. Since the coefficients are nonzero, the two difference vectors are linearly dependent, which proves the required collinearity."
+        ],
+        "stepsZh": [
+          "以 $P$ 为原点，对称轴为横轴。对于向量 $U=(u,v),V=(s,t)$，令 $H(U,V)=ut+vs$。这个式子交换两个自变量后不变，且对每个自变量都是线性的。若 $U$ 非零，$H(U,V)=0$ 恰好表示 $V$ 在方向为 $(u,-v)$ 的直线上，也就是在 $PU$ 的反射直线上。",
+          "用点名表示位置向量，令 $x=H(B,C),y=H(C,A),z=H(A,B)$。向量 $(yB-zC)/(y-z)$ 中 $B,C$ 的系数和为一，所表示的点在 $BC$ 所在直线上。又因 $H(A,B)=z,H(A,C)=y$，故 $H(A,(yB-zC)/(y-z))=0$。这个点就是 $A^{\\prime}$。这里必有 $y\\ne z$，否则 $H(A,\\cdot)$ 在直线 $BC$ 上为常数，反射直线与它要么没有交点，要么完全重合。对另两边同理。",
+          "于是 $(y-z)A^{\\prime}=yB-zC$，$(z-x)B^{\\prime}=zC-xA$，$(x-y)C^{\\prime}=xA-yB$。三式相加，右边为零；左边的三个系数之和也为零。因此 $(y-z)(A^{\\prime}-C^{\\prime})+(z-x)(B^{\\prime}-C^{\\prime})=0$。两系数均非零，说明从 $C^{\\prime}$ 指向另两点的向量线性相关，因此三点共线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAMO_Problems/Problem_5"
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "euclid-2024-q1": {
+    "summary": "(a) Evaluate $(x^4+3x^2)/x^2$ at $x=2$. (b) A right triangle has legs $10,t-1$ and hypotenuse $t+1$. Find $t$. (c) Solve $2/y+3/(2y)=14$.",
+    "summaryZh": "(a) 当 $x=2$ 时，求 $(x^4+3x^2)/x^2$。(b) 直角三角形的两条直角边为 $10,t-1$，斜边为 $t+1$，求 $t$。(c) 解 $2/y+3/(2y)=14$。",
+    "answer": "(a) $7$. (b) $25$. (c) $1/4$.",
+    "answerZh": "(a) $7$；(b) $25$；(c) $1/4$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Factor before substituting",
+        "titleZh": "先因式分解再代入",
+        "steps": [
+          "(a) Cancelling $x^2$ gives $x^2+3$. At $x=2$ this is $4+3=7$.",
+          "(b) The Pythagorean theorem gives $100=(t+1)^2-(t-1)^2$. Factoring the difference gives $100=2(2t)$, so $t=25$. The sides are $10,24,26$.",
+          "(c) Since $y\\ne0$, multiply by $2y$. The resulting equation $4+3=28y$ gives $y=1/4$."
+        ],
+        "stepsZh": [
+          "(a) 约去 $x^2$ 得 $x^2+3$。代入 $x=2$ 得 $4+3=7$。",
+          "(b) 由勾股定理，$100=(t+1)^2-(t-1)^2$。用平方差公式得 $100=2(2t)$，故 $t=25$，三边为 $10,24,26$。",
+          "(c) 因为 $y\\ne0$，两边乘 $2y$ 得 $4+3=28y$，所以 $y=1/4$。"
+        ],
+        "topics": [
+          {
+            "en": "Algebraic fractions",
+            "zh": "分式"
+          },
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          },
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q2": {
+    "summary": "(a) Each term after the second in a six-term sequence is the sum of its two predecessors. The fourth and sixth terms are $13$ and $36$. Find the first. (b) For $r\\ne0$, the sum of the last two entries of $(5r,5r^2,5r^3)$ equals the square of the first. Find $r$. (c) The first three of four test scores average $65$ and the last three average $80$. The last score is twice the first. Find the last score.",
+    "summaryZh": "(a) 一个六项数列从第三项起，每项等于前两项之和。第四项为 $13$、第六项为 $36$，求首项。(b) 设 $r\\ne0$，在 $(5r,5r^2,5r^3)$ 中，后两项之和等于首项的平方，求 $r$。(c) 四次考试中，前三次平均分为 $65$，后三次平均分为 $80$，末次分数是首次的两倍。求末次分数。",
+    "answer": "(a) $7$. (b) $4$. (c) $90$.",
+    "answerZh": "(a) $7$；(b) $4$；(c) $90$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Recover missing terms and cancel shared quantities",
+        "titleZh": "倒推数列与消去公共项",
+        "steps": [
+          "(a) The fifth term is $36-13=23$. Work backwards by subtraction to get the third term $23-13=10$, the second $13-10=3$, and the first $10-3=7$.",
+          "(b) Dividing $5r^2+5r^3=25r^2$ by the nonzero $5r^2$ gives $1+r=5$ and hence $r=4$.",
+          "(c) Subtracting the sums of the two overlapping groups cancels the middle scores. The last score exceeds the first by $3(80-65)=45$. Since the last score is twice the first, their difference equals the first score itself, and the last is $90$."
+        ],
+        "stepsZh": [
+          "(a) 第五项为 $36-13=23$。逐项倒推，第三项为 $23-13=10$，第二项为 $13-10=3$，首项为 $10-3=7$。",
+          "(b) 将 $5r^2+5r^3=25r^2$ 两边除以非零的 $5r^2$，得 $1+r=5$，故 $r=4$。",
+          "(c) 将两组三次成绩的总分相减，中间两次成绩相消。末次比首次多 $3(80-65)=45$ 分。又因末次是首次的两倍，这个差正好等于首次成绩，所以末次为 $90$ 分。"
+        ],
+        "topics": [
+          {
+            "en": "Recurrences",
+            "zh": "递推数列"
+          },
+          {
+            "en": "Means",
+            "zh": "平均数"
+          },
+          {
+            "en": "Algebraic equations",
+            "zh": "代数方程"
+          }
+        ]
+      },
+      {
+        "title": "Part (a) · Express the sequence in its first two terms",
+        "titleZh": "第 (a) 问 · 用首两项表示数列",
+        "topics": [
+          {
+            "en": "Linear systems",
+            "zh": "线性方程组"
+          },
+          {
+            "en": "Recurrences",
+            "zh": "递推数列"
+          }
+        ],
+        "steps": [
+          "If the first two terms are $a,b$, the six terms are $a,b,a+b,a+2b,2a+3b,3a+5b$. Thus $a+2b=13$ and $3a+5b=36$.",
+          "Subtract the sixth term from three times the fourth: $b=39-36=3$. Hence $a=13-6=7$."
+        ],
+        "stepsZh": [
+          "设首两项为 $a,b$，则六项依次为 $a,b,a+b,a+2b,2a+3b,3a+5b$。已知 $a+2b=13,\\ 3a+5b=36$。",
+          "第四项的三倍减去第六项恰好为 $b$，因此 $b=39-36=3$，回代得 $a=13-6=7$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q3": {
+    "summary": "(a) The graph of $y=r(x-3)(x-r)$ has vertical intercept $48$. Find $r$. (b) A tax rate of $13\\%$ instead of $5\\%$ adds $24$ dollars to the price paid for a bicycle. Find its pretax price. (c) A function on positive integers satisfies $f(1)=3$, $f(2n)=f(n)^2$, and $f(2n+1)=3f(2n)$ for $n\\ge1$. Calculate $f(2)+f(3)+f(4)$.",
+    "summaryZh": "(a) 已知 $y=r(x-3)(x-r)$ 的纵截距为 $48$，求 $r$。(b) 同一辆自行车按 $13\\%$ 和 $5\\%$ 的税率计算，含税价格相差 $24$ 元，求税前价格。(c) 正整数上的函数满足 $f(1)=3$，且对 $n\\ge1$ 有 $f(2n)=f(n)^2,\\ f(2n+1)=3f(2n)$。求 $f(2)+f(3)+f(4)$。",
+    "answer": "(a) $r=-4$ or $4$. (b) $300$ dollars. (c) $117$.",
+    "answerZh": "(a) $r=-4$ 或 $4$；(b) $300$ 元；(c) $117$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Use the intercept, tax difference and recurrence",
+        "titleZh": "利用截距、税额差和递推式",
+        "steps": [
+          "(a) Put $x=0$ to obtain $48=r(-3)(-r)=3r^2$. Thus $r^2=16$, and both signs work.",
+          "(b) The $8$ percentage-point difference in tax equals $24$ dollars on the same base price. That price is $24/0.08=300$ dollars.",
+          "(c) Doubling the input from $1$ to $2$ squares the value, so $f(2)=9$. The odd-index rule gives $f(3)=3\\cdot9=27$. Doubling $2$ gives $f(4)=9^2=81$. The sum is $9+27+81=117$."
+        ],
+        "stepsZh": [
+          "(a) 令 $x=0$ 得 $48=r(-3)(-r)=3r^2$，所以 $r^2=16$，两个符号都符合。",
+          "(b) 在相同的税前价格上，两种税率相差八个百分点，对应金额为 $24$ 元。故税前价格为 $24/0.08=300$ 元。",
+          "(c) 自变量从 $1$ 翻倍至 $2$ 时函数值平方，故 $f(2)=9$。由奇数项规则 $f(3)=3\\cdot9=27$。再将 $2$ 翻倍得 $f(4)=9^2=81$，三项和为 $9+27+81=117$。"
+        ],
+        "topics": [
+          {
+            "en": "Intercepts",
+            "zh": "截距"
+          },
+          {
+            "en": "Percentages",
+            "zh": "百分数"
+          },
+          {
+            "en": "Function evaluation",
+            "zh": "函数求值"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q4": {
+    "summary": "(a) Points $C,B,D$ lie on a line in that order, with $CB=6$. Segment $AB$ is perpendicular to that line, $AB=12$, and $\\angle ADB=45^\\circ$. The perpendicular from $C$ to $AD$ meets $AD$ at $P$ and $AB$ at $N$. Find the area of $APN$. (b) The line $y=-3x+6$ meets the axes at $A$ on the horizontal and $B$ on the vertical. A positive-slope line through $D=(0,1)$ meets $AB$ at $C$. Find $C$ if triangle $ACD$ has half the area of $ABO$, where $O=(0,0)$.",
+    "summaryZh": "(a) $C,B,D$ 依次共线，$CB=6$。线段 $AB$ 垂直于此直线，$AB=12$，$\\angle ADB=45^\\circ$。过 $C$ 作 $AD$ 的垂线，交 $AD$ 于 $P$、交 $AB$ 于 $N$。求三角形 $APN$ 的面积。(b) 直线 $y=-3x+6$ 交横轴于 $A$、交纵轴于 $B$。过 $D=(0,1)$ 的正斜率直线交 $AB$ 于 $C$。若三角形 $ACD$ 的面积是 $ABO$ 的一半，且 $O=(0,0)$，求 $C$。",
+    "answer": "(a) $9$. (b) $C=(4/5,18/5)$.",
+    "answerZh": "(a) $9$；(b) $C=(4/5,18/5)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Choose axes and compare areas on one line",
+        "titleZh": "建系与共高三角形的面积比",
+        "steps": [
+          "(a) Choose $B=(0,0),A=(0,12),C=(-6,0)$. The right isosceles triangle $ABD$ gives $D=(12,0)$. Thus $AD$ has equation $y=12-x$ and its perpendicular through $C$ has equation $y=x+6$. They meet at $P=(3,9)$, while $N=(0,6)$. Using $AN=6$ as base and the horizontal distance $3$ from $P$ as height gives area $9$.",
+          "(b) The intercepts are $A=(2,0)$ and $B=(0,6)$. Triangle $ABO$ has area $6$, giving $[ACD]=3$. Triangle $ABD$ has base $BD=5$, height $2$ and area $5$. Taking bases $AC$ and $AB$ gives the same altitude from $D$, so $AC/AB=3/5$. Thus $C=A+\\frac35(B-A)=(4/5,18/5)$."
+        ],
+        "stepsZh": [
+          "(a) 取 $B=(0,0),A=(0,12),C=(-6,0)$。由等腰直角三角形 $ABD$ 得 $D=(12,0)$。故 $AD$ 的方程为 $y=12-x$，过 $C$ 的垂线为 $y=x+6$。两线交于 $P=(3,9)$，且 $N=(0,6)$。以 $AN=6$ 为底、$P$ 到纵轴的距离 $3$ 为高，面积为 $9$。",
+          "(b) 截点为 $A=(2,0),B=(0,6)$。三角形 $ABO$ 面积为 $6$，所以 $[ACD]=3$。三角形 $ABD$ 以 $BD=5$ 为底，高为 $2$，面积为 $5$。改取共线的 $AC,AB$ 为底，点 $D$ 到底的高相同，故 $AC/AB=3/5$。于是 $C=A+\\frac35(B-A)=(4/5,18/5)$。"
+        ],
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Perpendicular slopes",
+            "zh": "垂直直线的斜率"
+          },
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          }
+        ]
+      },
+      {
+        "title": "Part (a) · Use the two isosceles right triangles",
+        "titleZh": "第 (a) 问 · 利用两个等腰直角三角形",
+        "topics": [
+          {
+            "en": "Isosceles right triangles",
+            "zh": "等腰直角三角形"
+          },
+          {
+            "en": "Area",
+            "zh": "面积"
+          }
+        ],
+        "steps": [
+          "Line $AD$ makes an angle of $45^\\circ$ with the horizontal line $CD$, so its perpendicular $CP$ does too. The right triangle $CBN$ therefore has $BN=CB=6$. Hence $AN=12-6=6$.",
+          "Triangle $APN$ is right at $P$ and has angle $45^\\circ$ at $A$. Each leg has length $AN/\\sqrt2=3\\sqrt2$, so its area is $\\frac12(3\\sqrt2)^2=9$."
+        ],
+        "stepsZh": [
+          "直线 $AD$ 与水平线 $CD$ 成 $45^\\circ$，其垂线 $CP$ 也与水平线成 $45^\\circ$。故直角三角形 $CBN$ 满足 $BN=CB=6$，从而 $AN=12-6=6$。",
+          "三角形 $APN$ 在 $P$ 处为直角，$A$ 处为 $45^\\circ$。两直角边均为 $AN/\\sqrt2=3\\sqrt2$，故面积为 $\\frac12(3\\sqrt2)^2=9$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q5": {
+    "summary": "(a) A horizontal and a vertical cut divide a rectangle into a two-by-two grid. Its four cell areas in some order are $2,3,6,a$. What values are possible for $a$? (b) For $y=x^2-4tx+5t^2-6t$, choose $t$ to maximise the distance between two distinct real roots.",
+    "summaryZh": "(a) 矩形经水平和竖直各切一次后分成四格，各格面积按某种排列为 $2,3,6,a$。求 $a$ 的所有可能值。(b) 抛物线 $y=x^2-4tx+5t^2-6t$ 有两个不同的实根，求使两根距离最大的 $t$。",
+    "answer": "(a) $1,4,9$. (b) $t=3$.",
+    "answerZh": "(a) $1,4,9$；(b) $t=3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Multiply opposite areas and complete the square",
+        "titleZh": "对角格面积的乘积与配方",
+        "steps": [
+          "(a) Opposite cell areas have equal products, since each product includes both column widths and both row heights. If the area opposite $a$ is $2,3$ or $6$, then $a$ is $3\\cdot6/2=9$, $2\\cdot6/3=4$ or $2\\cdot3/6=1$. Every placement works: write a grid of areas with top row $u,v$ and bottom-left area $w$. Column widths $u,v$ and row heights $1,w/u$ realise it.",
+          "(b) At a root, completing the square gives $(x-2t)^2=6t-t^2=9-(t-3)^2$. With two distinct roots, their separation is $2\\sqrt{9-(t-3)^2}$. It is at most $6$, with equality precisely when $t=3$."
+        ],
+        "stepsZh": [
+          "(a) 两组对角格的面积乘积相等，因为每个乘积都包含两个列宽和两个行高。若 $a$ 对面的格子为 $2,3,6$，则 $a$ 依次为 $3\\cdot6/2=9,\\ 2\\cdot6/3=4,\\ 2\\cdot3/6=1$。三种均可实现：设首行面积为 $u,v$，左下格面积为 $w$，只需取列宽 $u,v$、行高 $1,w/u$。",
+          "(b) 根满足 $(x-2t)^2=6t-t^2=9-(t-3)^2$。若两根不同，根距为 $2\\sqrt{9-(t-3)^2}$，其最大值为 $6$，恰在 $t=3$ 时取得。"
+        ],
+        "topics": [
+          {
+            "en": "Area products",
+            "zh": "面积乘积"
+          },
+          {
+            "en": "Quadratic roots",
+            "zh": "二次方程的根"
+          },
+          {
+            "en": "Optimisation",
+            "zh": "最优化"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q6": {
+    "summary": "(a) How many five-digit multiples of $21$ have last digit $1$? (b) A school has $500<N<600$ students. Fractions $2/5$ and $1/4$ of all students belong to the physics and mathematics clubs respectively. Among physics members, the number outside the mathematics club is twice the number inside it. How many students belong to neither?",
+    "summaryZh": "(a) 末位是 $1$ 的五位正整数中有多少个是 $21$ 的倍数？(b) 学校有 $500<N<600$ 名学生，物理和数学社团分别占全校人数的 $2/5,1/4$。物理社成员中，未参加数学社的人数是参加数学社人数的两倍。求两个社都没参加的人数。",
+    "answer": "(a) $429$. (b) $261$.",
+    "answerZh": "(a) $429$；(b) $261$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Count one residue class and use inclusion–exclusion",
+        "titleZh": "按余数计数与容斥原理",
+        "steps": [
+          "(a) Write the number as $21k$. Its last digit is that of $k$, and its size forces $477\\le k\\le4761$. The admissible multipliers are $481,491,\\ldots,4761$. Including both endpoints gives $(4761-481)/10+1=429$.",
+          "(b) One third of physics members are also mathematics members, so the intersection is $2N/15$. This is an integer, as is the mathematics count $N/4$. Hence $N$ is divisible by $15$ and $4$, and the only possible $N$ is $540$. Inclusion–exclusion leaves $540-(216+135-72)=261$ students in neither club."
+        ],
+        "stepsZh": [
+          "(a) 写成 $21k$ 后，末位与 $k$ 的末位相同。五位数条件给出 $477\\le k\\le4761$，所以可行的乘数是 $481,491,\\ldots,4761$。计入首尾，共 $(4761-481)/10+1=429$ 个。",
+          "(b) 物理社成员中有三分之一也在数学社，所以交集人数为 $2N/15$。它与数学社人数 $N/4$ 都是整数，故 $N$ 同时被 $15$ 和 $4$ 整除，范围内只有 $540$ 符合。由容斥原理，两社均未参加的人数为 $540-(216+135-72)=261$。"
+        ],
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ]
+      },
+      {
+        "title": "Part (a) · Start with the last digit",
+        "titleZh": "第 (a) 问 · 从个位数出发",
+        "topics": [
+          {
+            "en": "Congruences",
+            "zh": "同余"
+          },
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Write the candidate as $10a+1$, where $1000\\le a\\le9999$. The condition $10a+1\\equiv0\\pmod{21}$ gives $a\\equiv2\\pmod{21}$ because $10\\cdot2\\equiv-1\\pmod{21}$ and $10$ is invertible modulo $21$.",
+          "The first and last such values are $1010=21\\cdot48+2$ and $9998=21\\cdot476+2$. The integer indices from $48$ to $476$ give $429$ possibilities."
+        ],
+        "stepsZh": [
+          "将五位数写成 $10a+1$，其中 $1000\\le a\\le9999$。由 $10a+1\\equiv0\\pmod{21}$，且 $10\\cdot2\\equiv-1\\pmod{21}$、$10$ 与 $21$ 互质，可知 $a\\equiv2\\pmod{21}$。",
+          "范围内首末两项为 $1010=21\\cdot48+2$ 和 $9998=21\\cdot476+2$。从 $48$ 到 $476$ 共有 $429$ 个整数指标。"
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q7": {
+    "summary": "(a) Two runners start at opposite points on a circular track, travel in opposite directions at different constant speeds, and meet. Runner $A$ covers $100$ m before the first meeting. Runner $B$ travels $150$ m between the first and second meetings. Find the circumference. (b) Solve $4^{1+\\cos^3\\theta}=2^{2-\\cos\\theta}8^{\\cos^2\\theta}$ for $0^\\circ\\le\\theta\\le360^\\circ$.",
+    "summaryZh": "(a) 两名跑者从圆形跑道上一对直径端点出发，以不同的恒定速度相向跑。第一次相遇前 $A$ 跑了 $100$ 米；从第一次至第二次相遇，$B$ 跑了 $150$ 米。求跑道周长。(b) 在 $0^\\circ\\le\\theta\\le360^\\circ$ 内解 $4^{1+\\cos^3\\theta}=2^{2-\\cos\\theta}8^{\\cos^2\\theta}$。",
+    "answer": "(a) $350$ m. (b) $0^\\circ,60^\\circ,90^\\circ,270^\\circ,300^\\circ,360^\\circ$.",
+    "answerZh": "(a) $350$ 米；(b) $0^\\circ,60^\\circ,90^\\circ,270^\\circ,300^\\circ,360^\\circ$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Compare meeting intervals and put the powers on one base",
+        "titleZh": "比较相遇时间与统一指数底数",
+        "steps": [
+          "(a) At the first meeting their distances add to half a lap. Between meetings their distances add to a full lap. Their combined speed is constant, so the second time interval is twice the first. In that interval $A$ covers $200$ m and $B$ covers $150$ m. Their sum is the circumference, $350$ m.",
+          "(b) Let $c=\\cos\\theta$. Rewriting both sides as powers of $2$ gives $2+2c^3=2-c+3c^2$. Thus $c(2c-1)(c-1)=0$. On the closed interval the angles for $c=0$ are $90^\\circ,270^\\circ$, those for $c=1/2$ are $60^\\circ,300^\\circ$, and those for $c=1$ are both endpoints."
+        ],
+        "stepsZh": [
+          "(a) 第一次相遇时两人的路程之和为半圈，相邻两次相遇之间两人的路程之和为一圈。速度之和不变，因此第二段用时是第一段的两倍。第二段 $A$ 跑 $200$ 米，$B$ 跑 $150$ 米，合计一圈为 $350$ 米。",
+          "(b) 记 $c=\\cos\\theta$，将两边写成以 $2$ 为底的幂，得 $2+2c^3=2-c+3c^2$，即 $c(2c-1)(c-1)=0$。在给定闭区间内，$c=0$ 对应 $90^\\circ,270^\\circ$，$c=1/2$ 对应 $60^\\circ,300^\\circ$，$c=1$ 对应区间两端点。"
+        ],
+        "topics": [
+          {
+            "en": "Relative speed",
+            "zh": "相对速度"
+          },
+          {
+            "en": "Exponents",
+            "zh": "指数"
+          },
+          {
+            "en": "Unit circle",
+            "zh": "单位圆"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q8": {
+    "summary": "(a) An isosceles triangle $CMN$ contains two circles of radii $4$ and $3$, each tangent to both legs $CM,CN$. Their centres $A$ (larger) and $B$ (smaller) lie on the altitude from $C$ in the order $C,B,A,T$, with $T$ on the base $MN$. The base is tangent to the larger circle and $AB=3$. Find the triangle's area. (b) Solve $\\log_9x+\\log_9y+\\log_3z=2$, $\\log_{16}x+\\log_4y+\\log_{16}z=1$, $\\log_5x+\\log_{25}y+\\log_{25}z=0$.",
+    "summaryZh": "(a) 等腰三角形 $CMN$ 内有半径分别为 $4,3$ 的两个圆，均与两腰 $CM,CN$ 相切。大圆圆心 $A$、小圆圆心 $B$ 均在顶点 $C$ 到底边 $MN$ 的高上，顺序为 $C,B,A,T$，其中 $T$ 为垂足。底边与大圆相切，且 $AB=3$。求三角形面积。(b) 解方程组 $\\log_9x+\\log_9y+\\log_3z=2,\\ \\log_{16}x+\\log_4y+\\log_{16}z=1,\\ \\log_5x+\\log_{25}y+\\log_{25}z=0$。",
+    "answer": "(a) $64\\sqrt2$. (b) $(x,y,z)=(1/6,8/3,27/2)$.",
+    "answerZh": "(a) $64\\sqrt2$；(b) $(x,y,z)=(1/6,8/3,27/2)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Use the half-angle and combine the logarithms",
+        "titleZh": "利用半顶角与合并对数",
+        "steps": [
+          "(a) Let $\\alpha$ be the angle between the altitude and $CM$. The perpendicular distances from $A,B$ to $CM$ are their radii, so $CA\\sin\\alpha=4$ and $CB\\sin\\alpha=3$. Subtracting gives $3\\sin\\alpha=1$, hence $CA=12$ and $CT=12+4=16$.",
+          "Now $\\tan\\alpha=1/\\sqrt8$. Half the base is $CT\\tan\\alpha=4\\sqrt2$, so the area is $(4\\sqrt2)(16)=64\\sqrt2$.",
+          "(b) All variables must be positive. On converting the three equations to bases $9,16,25$ respectively, the log rules give $xyz^2=81$, $xy^2z=16$, $x^2yz=1$. Write $K=xyz$. Multiplication gives $K^4=1296=6^4$, so $K=6$.",
+          "The equations read $Kz=81$, $Ky=16$, $Kx=1$, which yield the stated triple. Its entries are positive and have product $6$, so all three original equations hold."
+        ],
+        "stepsZh": [
+          "(a) 设高与 $CM$ 的夹角为 $\\alpha$。因切线与切点处半径垂直，$A,B$ 到 $CM$ 的距离分别为两圆半径，故 $CA\\sin\\alpha=4,\\ CB\\sin\\alpha=3$。相减得 $3\\sin\\alpha=1$，于是 $CA=12,\\ CT=12+4=16$。",
+          "此时 $\\tan\\alpha=1/\\sqrt8$，半个底边为 $CT\\tan\\alpha=4\\sqrt2$，故面积为 $(4\\sqrt2)(16)=64\\sqrt2$。",
+          "(b) 三个变量均须为正。将三个方程中的对数依次化为底数 $9,16,25$，再合并，得 $xyz^2=81,\\ xy^2z=16,\\ x^2yz=1$。记 $K=xyz$，三式相乘得 $K^4=1296=6^4$，故 $K=6$。",
+          "三个方程即 $Kz=81,\\ Ky=16,\\ Kx=1$，因此得到答案中的三元组。三数均为正且乘积为 $6$，代回三个方程均成立。"
+        ],
+        "topics": [
+          {
+            "en": "Tangency",
+            "zh": "圆的切线"
+          },
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q9": {
+    "summary": "A walk starts at $0$ and takes $n$ steps, each $+1$ or $-1$, finishing at $d$. Write $c$ for the number of changes of direction. (a) Count the walks with $n=9,d=5$. (b) For $n=9,d=3$, count those with even $c$. (c) For how many attainable integer pairs $(d,n)$ with $d\\ge0$ and $1\\le n\\le2024$ do exactly half of the walks have even $c$?",
+    "summaryZh": "从 $0$ 出发走 $n$ 步，每一步为 $+1$ 或 $-1$，终点为 $d$，方向改变次数记作 $c$。(a) $n=9,d=5$ 时有多少条路径？(b) $n=9,d=3$ 时，多少条路径的 $c$ 为偶数？(c) 对可达到的整数组合 $(d,n)$，其中 $d\\ge0,\\ 1\\le n\\le2024$，有多少组恰使一半路径的 $c$ 为偶数？",
+    "answer": "(a) $36$. (b) $42$. (c) $43$.",
+    "answerZh": "(a) $36$；(b) $42$；(c) $43$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Read the parity from the first and last steps",
+        "titleZh": "从首步和末步判断奇偶性",
+        "steps": [
+          "(a) If $p$ steps are positive and $m$ negative, then $p+m=n$ and $p-m=d$. Here $p=7,m=2$. Choose the two negative positions in $\\binom92=36$ ways.",
+          "(b) Every direction change reverses the current sign, so an even number of changes means the two end signs agree. Here $p=6,m=3$. With positive endpoints the middle seven slots contain three negatives, giving $\\binom73=35$. With negative endpoints they contain one negative, giving $7$ more, for $42$.",
+          "(c) For $n\\ge2$, a uniformly chosen ordering of the signs gives opposite endpoints with probability $2pm/[n(n-1)]$ by sampling two positions without replacement. Equal and opposite endpoints are equally likely exactly when $4pm=n(n-1)$. But $4pm=(p+m)^2-(p-m)^2=n^2-d^2$, so the condition is $d^2=n$.",
+          "For $n=1$ no walk changes direction and the condition fails. For every $d=2,\\ldots,44$, the number $n=d^2$ has the same parity as $d$ and is at least $d$, so the endpoint is attainable. Since $45^2=2025$, exactly $44-2+1=43$ pairs qualify."
+        ],
+        "stepsZh": [
+          "(a) 若正向有 $p$ 步、反向有 $m$ 步，则 $p+m=n,\\ p-m=d$。本问得 $p=7,m=2$，选两步反向的位置，有 $\\binom92=36$ 种。",
+          "(b) 每次变向使当前符号翻转，故变向偶数次等价于首末两步同号。此时 $p=6,m=3$。若首末均正，中间七步含三个负号，有 $\\binom73=35$ 种；若首末均负，中间七步只有一个负号，有 $7$ 种，共 $42$ 种。",
+          "(c) 当 $n\\ge2$，等可能排列所有正负步，首末步相当于不放回抽取两项，异号的概率为 $2pm/[n(n-1)]$。首末同号与异号各占一半，等价于 $4pm=n(n-1)$。又 $4pm=(p+m)^2-(p-m)^2=n^2-d^2$，故恰须 $d^2=n$。",
+          "$n=1$ 时每条路径均不转向，条件不成立。对 $d=2,\\ldots,44$，$n=d^2$ 与 $d$ 同奇偶且 $n\\ge d$，故这些终点均可达到。因 $45^2=2025$，合计 $44-2+1=43$ 组。"
+        ],
+        "topics": [
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Sampling without replacement",
+            "zh": "不放回抽样"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2024-q10": {
+    "summary": "In triangle $A=(-1,0),B=(0,4),C=(1,0)$ mark $S=(s,0)$ and $T=(-t,0)$, where $0<s,t\\le1$. Call $(s,t)$ balancing if there exist $P,Q$ in the interiors of $AB,BC$ such that $SP$ and $TQ$ intersect at $X$ and cut the triangle into four equal areas. (a) For a balancing pair with $s=1$, find $P$. (b) Find $d,e,f,g$ such that every balancing pair satisfies $s^2+t^2=dst+es+ft+g$. (c) Give infinitely many distinct rational pairs $0<s\\le t\\le1$ satisfying that equation.",
+    "summaryZh": "三角形顶点为 $A=(-1,0),B=(0,4),C=(1,0)$。在底边取 $S=(s,0),T=(-t,0)$，其中 $0<s,t\\le1$。若可分别在 $AB,BC$ 内部取 $P,Q$，使 $SP,TQ$ 相交于 $X$ 并将三角形分成四个等面积部分，则称 $(s,t)$ 为平衡数对。(a) 若平衡数对满足 $s=1$，求 $P$。(b) 求 $d,e,f,g$，使所有平衡数对满足 $s^2+t^2=dst+es+ft+g$。(c) 给出无穷多组满足此方程且 $0<s\\le t\\le1$ 的不同有理数对。",
+    "answer": "(a) $P=(-1/2,2)$. (b) $(d,e,f,g)=(-4,2,2,0)$. (c) Let $k=1+1/j$ for any positive integer $j$ and take $(s,t)=\\frac{2(1+k)}{1+4k+k^2}(1,k)$.",
+    "answerZh": "(a) $P=(-1/2,2)$；(b) $(d,e,f,g)=(-4,2,2,0)$；(c) 任取正整数 $j$，令 $k=1+1/j$，可取 $(s,t)=\\frac{2(1+k)}{1+4k+k^2}(1,k)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Track where each cutting line reaches a given height",
+        "titleZh": "在同一高度比较两条分割线的位置",
+        "steps": [
+          "(a) Each cutting segment separates two regions from the other two, hence bisects the total area. For $s=1$, $S=C$ and the bisector $CP$ joins a vertex to the opposite side. Equal areas with their common altitude from $C$ force $AP=PB$, giving the midpoint $P=(-1/2,2)$.",
+          "(b) The whole area is $4$. Both $APS$ and $CQT$ have area $2$, so the heights of $P,Q$ are $4/(1+s)$ and $4/(1+t)$. Their sides satisfy $x=y/4-1$ and $x=1-y/4$, respectively. Thus $P=(-s/(1+s),4/(1+s))$ and $Q=(t/(1+t),4/(1+t))$.",
+          "At height $h$, linear interpolation along $SP$ gives $x=s-h(s^2+2s)/4$. Along $TQ$ it gives $x=-t+h(t^2+2t)/4$. At $X$ these expressions agree, so $4(s+t)=h(s^2+t^2+2s+2t)$. Triangle $SXT$ has area $1$, hence $h=2/(s+t)$. Combining yields $s^2+t^2=-4st+2s+2t$.",
+          "(c) Put $t=ks$. Since $s>0$, substitution gives $s=2(1+k)/(1+4k+k^2)$. Take $k=1+1/j$ with $j=1,2,\\ldots$. Then $1<k\\le2$ ensures $0<s\\le t$. Also $t\\le1$ is equivalent to $k^2-2k-1\\le0$, which holds since $k(k-2)\\le0$. All entries are rational and the ratios $t/s=k$ distinguish the pairs."
+        ],
+        "stepsZh": [
+          "(a) 每条分割线将四部分中的两部分与另两部分隔开，故均平分总面积。$s=1$ 时 $S=C$，此时分割线 $CP$ 从顶点连至对边。以 $AP,PB$ 为底的两个三角形共高且等面积，所以 $AP=PB$，中点即 $P=(-1/2,2)$。",
+          "(b) 总面积为 $4$。三角形 $APS,CQT$ 的面积均为 $2$，所以 $P,Q$ 的纵坐标分别为 $4/(1+s),4/(1+t)$。两点所在的边满足 $x=y/4-1$ 和 $x=1-y/4$，因此 $P=(-s/(1+s),4/(1+s)),\\ Q=(t/(1+t),4/(1+t))$。",
+          "在高度 $h$ 处，沿 $SP$ 按比例得到 $x=s-h(s^2+2s)/4$，沿 $TQ$ 得 $x=-t+h(t^2+2t)/4$。在交点 $X$ 两式相等，故 $4(s+t)=h(s^2+t^2+2s+2t)$。又三角形 $SXT$ 面积为 $1$，所以 $h=2/(s+t)$。联立整理得 $s^2+t^2=-4st+2s+2t$。",
+          "(c) 设 $t=ks$。因为 $s>0$，代入得 $s=2(1+k)/(1+4k+k^2)$。令 $k=1+1/j$，取 $j=1,2,\\ldots$，则 $1<k\\le2$，故 $0<s\\le t$。条件 $t\\le1$ 等价于 $k^2-2k-1\\le0$，由 $k(k-2)\\le0$ 可知成立。各数对均为有理数对，且比值 $t/s=k$ 互不相同。"
+        ],
+        "topics": [
+          {
+            "en": "Area bisection",
+            "zh": "面积二等分"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Rational parametrisation",
+            "zh": "有理参数化"
+          }
+        ]
+      }
+    ]
+  }
+}

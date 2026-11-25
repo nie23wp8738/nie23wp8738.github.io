@@ -1,0 +1,487 @@
+{
+  "aime-2023i-q1": {
+    "summary": "Seat five men and nine women uniformly at random at the vertices of a regular $14$-gon. What is the probability that each man faces a woman across a diameter? Give the sum of the numerator and denominator in lowest terms.",
+    "summaryZh": "五男九女随机站在正十四边形的各顶点。求每名男子对面的顶点都是女子的概率，并求既约分数的分子与分母之和。",
+    "answer": "191",
+    "answerZh": "191",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/1",
+    "methods": [
+      {
+        "title": "Choose occupied diameters",
+        "titleZh": "选择男子所在的直径",
+        "topics": [
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          },
+          {
+            "en": "Probability",
+            "zh": "概率"
+          }
+        ],
+        "steps": [
+          "The five male positions are equally likely to be any of $\\binom{14}{5}$ subsets. At most one can belong to each of the seven opposite pairs.",
+          "Choose five of the seven pairs, then one endpoint of each. The probability is $\\binom75 2^5/\\binom{14}{5}=48/143$, giving $191$."
+        ],
+        "stepsZh": [
+          "男子所占的五个位置在 $\\binom{14}{5}$ 种子集中等可能。一条直径的两个端点至多有一个被男子占据。",
+          "在七条直径中选五条，再在每条上选一个端点。概率为 $\\binom75 2^5/\\binom{14}{5}=48/143$，故所求为 $191$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q2": {
+    "summary": "For $b,n>0$, $b\\ne1$, assume $\\sqrt{\\log_b n}=\\log_b\\sqrt n$ and $b\\log_b n=\\log_b(bn)$. Write $n=j/k$ in lowest terms. Find $j+k$.",
+    "summaryZh": "设 $b,n>0$，$b\\ne1$，并且 $\\sqrt{\\log_b n}=\\log_b\\sqrt n$、$b\\log_b n=\\log_b(bn)$。将 $n$ 化成既约分数 $j/k$，求 $j+k$。",
+    "answer": "881",
+    "answerZh": "881",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/2",
+    "methods": [
+      {
+        "title": "Solve for the logarithm first",
+        "titleZh": "先求对数的值",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Substitution",
+            "zh": "换元"
+          }
+        ],
+        "steps": [
+          "With $x=\\log_b n$, the equations become $\\sqrt x=x/2$ and $(b-1)x=1$. The first gives $x=0$ or $4$; the second rules out zero.",
+          "Now $b=5/4$, so $n=(5/4)^4=625/256$ and $625+256=881$."
+        ],
+        "stepsZh": [
+          "令 $x=\\log_b n$，两式化为 $\\sqrt x=x/2$ 和 $(b-1)x=1$。前式给出 $x=0$ 或 $4$，后式排除了零。",
+          "因此 $b=5/4$，$n=(5/4)^4=625/256$，所求为 $625+256=881$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q3": {
+    "summary": "Forty lines in the plane have distinct directions. For each $k=3,4,5,6$ there are exactly $k$ points incident with $k$ lines. No point lies on seven or more lines. How many intersections lie on exactly two?",
+    "summaryZh": "平面内有四十条方向互异的直线。对每个 $k=3,4,5,6$，恰有 $k$ 个点各通过 $k$ 条直线，没有点通过七条或更多直线。求恰有两条直线通过的点数。",
+    "answer": "607",
+    "answerZh": "607",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/3",
+    "methods": [
+      {
+        "title": "Count pairs of lines",
+        "titleZh": "按直线对计数",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          }
+        ],
+        "steps": [
+          "Every unordered pair meets once, for $\\binom{40}2=780$ pairwise incidences. A point where $k$ lines meet accounts for $\\binom{k}2$ of these.",
+          "The simple intersections account for $780-3(3)-4(6)-5(10)-6(15)=607$ pairs, one per point."
+        ],
+        "stepsZh": [
+          "每对直线恰交一次，共有 $\\binom{40}2=780$ 对。通过 $k$ 条直线的点占去了 $\\binom{k}2$ 对。",
+          "剩下的 $780-3(3)-4(6)-5(10)-6(15)=607$ 对分别给出互不相同的二线交点。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q4": {
+    "summary": "Add every positive integer $m$ for which $13!/m$ is an integer square. What is the sum of the exponents in the prime factorization of that total?",
+    "summaryZh": "将所有使 $13!/m$ 为完全平方整数的正整数 $m$ 相加。求所得总和的质因数分解中各指数之和。",
+    "answer": "012",
+    "answerZh": "012",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/4",
+    "methods": [
+      {
+        "title": "Sum allowable powers separately",
+        "titleZh": "分别求可选素数幂之和",
+        "topics": [
+          {
+            "en": "Prime factorization",
+            "zh": "质因数分解"
+          },
+          {
+            "en": "Divisor sums",
+            "zh": "约数和"
+          }
+        ],
+        "steps": [
+          "The exponents of $2,3,5,7,11,13$ in $13!$ are $10,5,2,1,1,1$. For each prime the exponent in $m$ must be at most this value and have the same parity.",
+          "Expanding a product to select one power for each prime gives the total $(1+4+16+64+256+1024)(3+27+243)(1+25)\\cdot7\\cdot11\\cdot13$.",
+          "The first three factors are $1365=3\\cdot5\\cdot7\\cdot13$, $273=3\\cdot7\\cdot13$, and $26=2\\cdot13$. Thus the exponent sum is $1+2+1+3+1+4=12$."
+        ],
+        "stepsZh": [
+          "$13!$ 中 $2,3,5,7,11,13$ 的指数分别为 $10,5,2,1,1,1$。每个质数在 $m$ 中的指数不能超过相应指数，且奇偶性须相同。",
+          "各质数的幂可独立选择，故总和等于 $(1+4+16+64+256+1024)(3+27+243)(1+25)\\cdot7\\cdot11\\cdot13$。",
+          "前三个因子分别为 $1365=3\\cdot5\\cdot7\\cdot13$、$273=3\\cdot7\\cdot13$、$26=2\\cdot13$。全部指数之和为 $1+2+1+3+1+4=12$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q5": {
+    "summary": "On the circumcircle of square $ABCD$, point $P$ satisfies $PA\\cdot PC=56$ and $PB\\cdot PD=90$. What is the square’s area?",
+    "summaryZh": "$P$ 在正方形 $ABCD$ 的外接圆上，且 $PA\\cdot PC=56$，$PB\\cdot PD=90$。求正方形面积。",
+    "answer": "106",
+    "answerZh": "106",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/5",
+    "methods": [
+      {
+        "title": "Use both diagonals as axes",
+        "titleZh": "以两条对角线为坐标轴",
+        "topics": [
+          {
+            "en": "Circle geometry",
+            "zh": "圆的几何"
+          },
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "Let $d$ be the diagonal and use the diagonals as coordinate axes with the center at the origin. Since $AC$ is a diameter, $APC$ is right. Computing its area with base $AC$ gives $PA\\cdot PC=d|y_P|$. Likewise $PB\\cdot PD=d|x_P|$.",
+          "Because $P$ is on the circle, $56^2+90^2=d^2(x_P^2+y_P^2)=d^4/4$. The square has area $d^2/2=\\sqrt{56^2+90^2}=106$."
+        ],
+        "stepsZh": [
+          "令对角线长为 $d$，取两条对角线为坐标轴，圆心为原点。直径 $AC$ 所对的圆周角是直角，以 $AC$ 为底计算三角形 $APC$ 的面积，得 $PA\\cdot PC=d|y_P|$。同理 $PB\\cdot PD=d|x_P|$。",
+          "点 $P$ 在圆上，因此 $56^2+90^2=d^2(x_P^2+y_P^2)=d^4/4$。正方形面积为 $d^2/2=\\sqrt{56^2+90^2}=106$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q6": {
+    "summary": "Six shuffled cards, three red and three black, are revealed successively. Before each reveal Alice guesses its color using everything already seen. For the maximum possible expected score, give the sum of the numerator and denominator in lowest terms; each correct guess scores one.",
+    "summaryZh": "三红三黑共六张牌洗匀后依次翻开。每次翻牌前，爱丽丝根据已翻出的牌猜下一张的颜色，猜对得一分。把最优策略的期望总分化为既约分数，求分子与分母之和。",
+    "answer": "051",
+    "answerZh": "051",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/6",
+    "methods": [
+      {
+        "title": "Condition on the next color",
+        "titleZh": "按下一张牌的颜色分情况",
+        "topics": [
+          {
+            "en": "Conditional expectation",
+            "zh": "条件期望"
+          },
+          {
+            "en": "Dynamic programming",
+            "zh": "动态规划"
+          }
+        ],
+        "steps": [
+          "Guesses do not change the future deck, so maximize each immediate chance by guessing a majority color. Let $E(r,b)$ be the expected remaining score. With $t=r+b$, $E(r,b)=[\\max(r,b)+rE(r-1,b)+bE(r,b-1)]/t$, with $E(r,0)=r$ and symmetry in $r,b$.",
+          "Substituting by increasing deck size gives $E(1,1)=3/2$, $E(2,1)=7/3$, $E(3,1)=13/4$, $E(2,2)=17/6$, $E(3,2)=18/5$. Hence $E(3,3)=1/2+18/5=41/10$, giving $51$."
+        ],
+        "stepsZh": [
+          "当前猜测不影响后续牌序，所以每步猜剩余较多的颜色即可。设还剩 $r$ 红 $b$ 黑时的期望为 $E(r,b)$。令 $t=r+b$，则 $E(r,b)=[\\max(r,b)+rE(r-1,b)+bE(r,b-1)]/t$，边界为 $E(r,0)=r$，且两种颜色对称。",
+          "按剩余牌数递推，得 $E(1,1)=3/2$，$E(2,1)=7/3$，$E(3,1)=13/4$，$E(2,2)=17/6$，$E(3,2)=18/5$。最后 $E(3,3)=1/2+18/5=41/10$，故答案为 $51$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q7": {
+    "summary": "Count the positive integers below $1000$ whose five remainders modulo $2,3,4,5,6$ are all different.",
+    "summaryZh": "求小于 $1000$ 的正整数中，分别除以 $2,3,4,5,6$ 所得的五个余数两两不同的整数个数。",
+    "answer": "049",
+    "answerZh": "049",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/7",
+    "methods": [
+      {
+        "title": "Combine the periods 12 and 5",
+        "titleZh": "合并模十二和模五的周期",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "First inspect residues modulo $12$ for divisors $2,3,4,6$. Testing $0$ through $11$, the pairs of equal remainders for $0,1$ use divisors $2,3$; for $2,3$ use $4,6$; for $4,5$ use $2,4$; for $6,7$ use $2,6$; and for $8,9$ use $2,4$. Only $10,11$ survive; their four remainders are $(0,1,2,4)$ and $(1,2,3,5)$.",
+          "In the first case $n\\bmod5$ must be $3$, in the second it can be $0$ or $4$. In a period of $60$ this gives $58$ in the first case and $35,59$ in the second. The first $960$ integers contain $48$ successes, and the remaining $39$ contain only $960+35$, giving $49$."
+        ],
+        "stepsZh": [
+          "先看模 $2,3,4,6$ 的四个余数，它们以 $12$ 为周期。直接代入 $0$ 到 $11$，只有 $10,11$ 的四个余数互异，分别为 $(0,1,2,4)$、$(1,2,3,5)$。例如 $6,7$ 模二和模六的余数相同，$8,9$ 模二和模四的余数相同。",
+          "第一种情况下模五只能余 $3$，第二种只能余 $0$ 或 $4$。在模 $60$ 的一个周期内，对应的数分别是 $58$ 和 $35,59$。前 $960$ 个正整数中有 $48$ 个，后面至 $999$ 又有 $960+35$ 一个，共 $49$ 个。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q8": {
+    "summary": "In rhombus $ABCD$, angle $DAB$ is acute. A point on its incircle is $9$, $5$, and $16$ units from the lines $DA$, $AB$, and $BC$, respectively. Find the perimeter.",
+    "summaryZh": "菱形 $ABCD$ 的角 $DAB$ 为锐角。其内切圆上一点到直线 $DA,AB,BC$ 的距离依次为 $9,5,16$。求菱形周长。",
+    "answer": "125",
+    "answerZh": "125",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/8",
+    "methods": [
+      {
+        "title": "Recover the inclination of the third tangent",
+        "titleZh": "求第三条切线的倾角",
+        "topics": [
+          {
+            "en": "Tangent lines",
+            "zh": "切线"
+          },
+          {
+            "en": "Trigonometry",
+            "zh": "三角函数"
+          }
+        ],
+        "steps": [
+          "The parallel lines $DA$ and $BC$ are $25$ apart. Center the circle at the origin with $DA$ at $y=25/2$ and $BC$ at $y=-25/2$. The point has $y=7/2$ and hence $x=\\pm12$.",
+          "Write $\\alpha=\\angle DAB$. Reflect the horizontal coordinate if needed so $AB$ has an inward unit normal $(\\sin\\alpha,\\cos\\alpha)$; its upward component is positive because the interior angle at the upper line is acute. The point’s distance to $AB$ is $25/2+x\\sin\\alpha+(7/2)\\cos\\alpha=5$. Therefore $x=-12$ and $24\\sin\\alpha-7\\cos\\alpha=15$.",
+          "The left side increases on $(0,90^\\circ)$. The pair $(\\sin\\alpha,\\cos\\alpha)=(4/5,3/5)$ satisfies it. The side is $25/\\sin\\alpha=125/4$, giving perimeter $125$."
+        ],
+        "stepsZh": [
+          "平行线 $DA$、$BC$ 相距 $25$。取圆心为原点，将两线置于 $y=25/2$ 和 $y=-25/2$。圆上所给点的纵坐标为 $7/2$，所以横坐标为 $\\pm12$。",
+          "令 $\\alpha=\\angle DAB$。上边处的内角为锐角，故切线 $AB$ 指向菱形内部的法向量纵分量为正。适当选取横轴方向，其单位法向量可写成 $(\\sin\\alpha,\\cos\\alpha)$。所给点到它的距离满足 $25/2+x\\sin\\alpha+(7/2)\\cos\\alpha=5$，故 $x=-12$，即 $24\\sin\\alpha-7\\cos\\alpha=15$。",
+          "左边在锐角区间内严格递增，且 $(\\sin\\alpha,\\cos\\alpha)=(4/5,3/5)$ 满足等式。菱形边长为 $25/\\sin\\alpha=125/4$，周长为 $125$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q9": {
+    "summary": "For monic $p(x)=x^3+ax^2+bx+c$, each coefficient $a,b,c$ is an integer from $-20$ through $20$. How many such polynomials have precisely one integer $m\\ne2$ satisfying $p(m)=p(2)$?",
+    "summaryZh": "首一三次多项式 $p(x)=x^3+ax^2+bx+c$ 的系数 $a,b,c$ 均为 $-20$ 至 $20$ 的整数。恰有一个整数 $m\\ne2$ 满足 $p(m)=p(2)$ 的多项式有多少个？",
+    "answer": "738",
+    "answerZh": "738",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/9",
+    "methods": [
+      {
+        "title": "List the two possible root multiplicities",
+        "titleZh": "按根的重数分两类",
+        "topics": [
+          {
+            "en": "Factorization",
+            "zh": "因式分解"
+          },
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          }
+        ],
+        "steps": [
+          "Factor $p(x)-p(2)=(x-2)[x^2+(a+2)x+2a+b+4]$. If one root of the quadratic is an integer, so is the other because their sum is an integer. Thus its roots must be either $2,k$ or $k,k$ with $k\\ne2$.",
+          "Roots $2,k$ give $a=-k-4$, $b=4k+4$, which fit the bounds for $-6\\le k\\le4$, leaving ten choices after excluding two. Roots $k,k$ give $a=-2k-2$, $b=k^2+4k$, allowed for $-6\\le k\\le2$ and leaving eight choices.",
+          "The cases are disjoint. Each permits all $41$ choices for $c$, giving $18\\cdot41=738$."
+        ],
+        "stepsZh": [
+          "$p(x)-p(2)=(x-2)[x^2+(a+2)x+2a+b+4]$。二次因子的两根之和是整数，因此一根为整数则另一根也是。其根只能是 $2,k$ 或 $k,k$，其中 $k\\ne2$。",
+          "两根为 $2,k$ 时，$a=-k-4$、$b=4k+4$，边界给出 $-6\\le k\\le4$，去掉 $2$ 后有十种。重根为 $k$ 时，$a=-2k-2$、$b=k^2+4k$，要求 $-6\\le k\\le2$，去掉 $2$ 后有八种。",
+          "两类没有重叠。常数项每次均有 $41$ 种，故总数为 $18\\cdot41=738$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q10": {
+    "summary": "Let $U=\\sum_{n=1}^{2023}\\lfloor(n^2-an)/5\\rfloor$. Exactly one positive integer $a$ makes $-1000<U<1000$. Find $a+U$.",
+    "summaryZh": "设 $U=\\sum_{n=1}^{2023}\\lfloor(n^2-an)/5\\rfloor$。恰有一个正整数 $a$ 使 $-1000<U<1000$。求 $a+U$。",
+    "answer": "944",
+    "answerZh": "944",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/10",
+    "methods": [
+      {
+        "title": "Cancel the unrounded sum",
+        "titleZh": "先使未取整之和抵消",
+        "topics": [
+          {
+            "en": "Sums of powers",
+            "zh": "幂和"
+          },
+          {
+            "en": "Floor functions",
+            "zh": "取整函数"
+          },
+          {
+            "en": "Residues",
+            "zh": "同余"
+          }
+        ],
+        "steps": [
+          "Without floors the sum equals $(1349-a)\\sum_{n=1}^{2023}n/5$, since $\\sum n^2/\\sum n=(2\\cdot2023+1)/3=1349$. A change of one in $a$ shifts this by over $400000$; the total floor error is less than $2023$. Thus only $a=1349$ can work.",
+          "Now $n^2-an\\equiv n(n+1)\\pmod5$. Its least nonnegative residues for $n=1,2,3,4,5$ are $2,1,2,0,0$. Their sum over $404$ periods and three extra terms is $404\\cdot5+5=2025$.",
+          "The unrounded sum is zero, and subtracting the residues gives $U=-2025/5=-405$. Hence $a+U=944$."
+        ],
+        "stepsZh": [
+          "不取整时，和为 $(1349-a)\\sum_{n=1}^{2023}n/5$，因为 $\\sum n^2/\\sum n=(2\\cdot2023+1)/3=1349$。改变 $a$ 一个单位，原和就改变四十万以上，而取整总误差小于 $2023$。所以只有 $a=1349$ 可能符合条件。",
+          "此时 $n^2-an\\equiv n(n+1)\\pmod5$。从 $n=1$ 起，一个周期的非负余数依次为 $2,1,2,0,0$，共 $404$ 个整周期和三项，余数总和为 $404\\cdot5+5=2025$。",
+          "原和为零，扣除余数后 $U=-2025/5=-405$，故 $a+U=944$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q11": {
+    "summary": "How many subsets of $\\{1,2,\\ldots,10\\}$ contain exactly one pair $\\{j,j+1\\}$?",
+    "summaryZh": "$\\{1,2,\\ldots,10\\}$ 的子集中，恰好包含一对相邻整数 $\\{j,j+1\\}$ 的有多少个？",
+    "answer": "235",
+    "answerZh": "235",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/11",
+    "methods": [
+      {
+        "title": "Arrange runs of chosen positions",
+        "titleZh": "排列连续选中段",
+        "topics": [
+          {
+            "en": "Stars and bars",
+            "zh": "隔板法"
+          },
+          {
+            "en": "Runs in binary strings",
+            "zh": "二进制串中的连续段"
+          }
+        ],
+        "steps": [
+          "If there are $r$ runs of chosen numbers, one run has length two and all the others length one. Thus $r+1$ numbers are chosen, and there are $r$ choices for the long run.",
+          "The $9-r$ unchosen positions form $r+1$ gaps. Reserve one space in each of the $r-1$ internal gaps. The remaining $10-2r$ spaces give $\\binom{10-r}{r}$ allocations.",
+          "The total for $r=1,2,3,4,5$ is $9+56+105+60+5=235$."
+        ],
+        "stepsZh": [
+          "若选中的数形成 $r$ 段连续整数，必须恰有一段长二，其余各长一。共选中 $r+1$ 个数，长段的位置有 $r$ 种。",
+          "未选中的 $9-r$ 个位置分布在 $r+1$ 个空隙。先在每个内部空隙各留一位，还剩 $10-2r$ 个位置任意分配，依隔板法有 $\\binom{10-r}{r}$ 种。",
+          "对 $r=1,2,3,4,5$ 的贡献依次为 $9,56,105,60,5$，总和为 $235$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q12": {
+    "summary": "An equilateral triangle $ABC$ has side $55$. On $BC,CA,AB$ choose $D,E,F$ with $BD=7$, $CE=30$, $AF=40$. For an interior point $P$, the angles $AEP,BFP,CDP$ are equal. Find the square of their common tangent.",
+    "summaryZh": "等边三角形 $ABC$ 边长为 $55$。点 $D,E,F$ 依次在 $BC,CA,AB$ 上，且 $BD=7$、$CE=30$、$AF=40$。内部一点 $P$ 满足 $\\angle AEP=\\angle BFP=\\angle CDP$，求这个角的正切平方。",
+    "answer": "075",
+    "answerZh": "075",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/12",
+    "methods": [
+      {
+        "title": "Add the signed projections around the triangle",
+        "titleZh": "将绕三边的有向投影相加",
+        "topics": [
+          {
+            "en": "Vector projections",
+            "zh": "向量投影"
+          },
+          {
+            "en": "Viviani’s theorem",
+            "zh": "维维亚尼定理"
+          }
+        ],
+        "steps": [
+          "Orient the sides $B\\to C\\to A\\to B$. The sum of the signed projections of $P$ along the three sides, measured from their starting vertices, is constant: moving $P$ adds the dot product of its displacement with the sum of the three unit directions, which is zero. At the center each projection is $55/2$, so the sum is $165/2$.",
+          "Measuring instead from $D,E,F$ subtracts $7+30+40$, leaving $11/2$. Each signed projection equals the distance from $P$ to that side times $\\cot\\theta$, for the common angle $\\theta$.",
+          "The three distances sum to the triangle height $55\\sqrt3/2$ by splitting its area into three triangles of base $55$. Therefore $\\cot\\theta=1/(5\\sqrt3)$ and $\\tan^2\\theta=75$."
+        ],
+        "stepsZh": [
+          "将三边定向为 $B\\to C\\to A\\to B$。从各边起点量到 $P$ 在该边垂足的有向长度，其和恒定，因为移动 $P$ 时变化量是位移与三个单位方向向量之和的点积，而三向量之和为零。取 $P$ 为中心时每项为 $55/2$，共 $165/2$。",
+          "若改从 $D,E,F$ 起算，则扣除 $7+30+40$，总计 $11/2$。设公共角为 $\\theta$，每个有向长度等于 $P$ 到对应边的距离乘以 $\\cot\\theta$。",
+          "连接 $P$ 与三个顶点并按面积求和，得三边距离之和为原三角形的高 $55\\sqrt3/2$。故 $\\cot\\theta=1/(5\\sqrt3)$，$\\tan^2\\theta=75$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q13": {
+    "summary": "Two noncongruent parallelepipeds have rhombus faces, each with diagonals $\\sqrt{21}$ and $\\sqrt{31}$. Reduce the ratio of the larger volume to the smaller volume and add its numerator and denominator.",
+    "summaryZh": "两个不全等的平行六面体的各面都是菱形，每个面的两条对角线长为 $\\sqrt{21}$、$\\sqrt{31}$。求大体积与小体积之比的既约分数的分子与分母之和。",
+    "answer": "125",
+    "answerZh": "125",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/13",
+    "methods": [
+      {
+        "title": "Evaluate the Gram determinant of three edges",
+        "titleZh": "计算三条棱的格拉姆行列式",
+        "topics": [
+          {
+            "en": "Vector dot products",
+            "zh": "向量点积"
+          },
+          {
+            "en": "Volume",
+            "zh": "体积"
+          }
+        ],
+        "steps": [
+          "For three edge vectors at one vertex, each squared length is $(21+31)/4=13$. Each pairwise dot product has magnitude $(31-21)/4=5/2$, by taking the difference of squared diagonals.",
+          "If the three off-diagonal dot products are $u,v,w$, the squared volume is the determinant $13^3-13(u^2+v^2+w^2)+2uvw$. Only the sign of the product matters. Edges can be reversed by choosing a different vertex; this changes two signs at a time, so a given product sign gives a single shape up to congruence.",
+          "With $uvw$ positive or negative, the two squared volumes are $3969/2$ and $1922=3844/2$. Their volume ratio is $\\sqrt{3969/3844}=63/62$, yielding $125$."
+        ],
+        "stepsZh": [
+          "从同一顶点出发的三条棱向量的长度平方均为 $(21+31)/4=13$。利用两条对角线平方之差可知，各对棱的点积绝对值均为 $(31-21)/4=5/2$。",
+          "记三个点积为 $u,v,w$，体积平方等于格拉姆行列式 $13^3-13(u^2+v^2+w^2)+2uvw$，只取决于乘积的正负。改选顶点可使一条棱反向，同时改变两个点积的符号。因此相同乘积符号的格拉姆矩阵可以化为相同，立体全等。",
+          "正、负号给出的体积平方分别为 $3969/2$ 和 $1922=3844/2$。体积比为 $\\sqrt{3969/3844}=63/62$，故所求为 $125$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q14": {
+    "summary": "Two distinguishable clock hands start at $12$. Each move advances just one hand by one hour clockwise. In $144$ moves the hands return to the start and the ordered hand positions immediately after the moves run through all $144$ possibilities exactly once. How many move sequences are there modulo $1000$?",
+    "summaryZh": "两根可区分的钟针均从十二点出发。每步恰将一根针顺时针拨过一格。共走 $144$ 步回到起点，每步走完后的有序位置组合恰好遍历全部 $144$ 种。求走法数模 $1000$。",
+    "answer": "608",
+    "answerZh": "608",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/14",
+    "methods": [
+      {
+        "title": "Study the twelve diagonals of the clock-state grid",
+        "titleZh": "考察钟针状态方格的十二条对角线",
+        "topics": [
+          {
+            "en": "Hamiltonian cycles",
+            "zh": "哈密顿回路"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "Write the positions as $(x,y)$ modulo $12$. Each move raises $x+y$ by one. On a diagonal $x+y=t$, the outgoing move takes first coordinate $x$ to either $x$ or $x+1$ on the next diagonal. Since every state must have one predecessor, these twelve images must be distinct.",
+          "If choices were mixed around this cyclic row, somewhere a choice of $x+1$ would be followed by a choice to stay, producing the same image twice. Thus every state on a given diagonal advances the same hand. The full word repeats its first twelve moves.",
+          "If $k$ of those moves advance the first hand, each block shifts its position by $k$ on returning to a diagonal. All twelve positions occur exactly when $\\gcd(k,12)=1$. Hence the count is $\\binom{12}1+\\binom{12}5+\\binom{12}7+\\binom{12}{11}=1608$, with remainder $608$."
+        ],
+        "stepsZh": [
+          "用模 $12$ 的有序对 $(x,y)$ 记两针位置。每步使 $x+y$ 加一。在同一对角线 $x+y=t$ 上，第一坐标 $x$ 到下一条对角线时要么保持，要么变为 $x+1$。每一状态恰有一个前驱，故十二个像必须互异。",
+          "若环形排列的十二个位置中两种选择都有，必有一处先选择加一，紧接着的位置选择保持，两者产生相同的像。因此每条对角线上的状态都拨同一根针，整套动作每十二步重复。",
+          "若每周期第一根针动 $k$ 次，则回到任一对角线时，第一坐标比上周期增加 $k$。恰能遍历十二个坐标当且仅当 $\\gcd(k,12)=1$。总数为 $\\binom{12}1+\\binom{12}5+\\binom{12}7+\\binom{12}{11}=1608$，余数为 $608$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023i-q15": {
+    "summary": "Find the greatest prime $p<1000$ expressible as $|z|^2$ for a Gaussian integer $z$ such that $p,\\operatorname{Re}(z^3),\\operatorname{Im}(z^3)$ are side lengths of a nondegenerate triangle.",
+    "summaryZh": "求小于 $1000$ 的最大质数 $p$，使得存在实部、虚部均为整数的复数 $z$，满足 $|z|^2=p$，且 $p,\\operatorname{Re}(z^3),\\operatorname{Im}(z^3)$ 可作非退化三角形的三边。",
+    "answer": "349",
+    "answerZh": "349",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023I/problem/15",
+    "methods": [
+      {
+        "title": "Trap the slope between consecutive integers",
+        "titleZh": "用斜率界缩小整数搜索范围",
+        "topics": [
+          {
+            "en": "Gaussian integers",
+            "zh": "高斯整数"
+          },
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          }
+        ],
+        "steps": [
+          "For odd $p$ use conjugation and rotations through right angles to take component magnitudes $a>b>0$ of opposite parity. These symmetries also allow both cube components to be positive. Let $R,I$ be the real and imaginary parts of $(a+bi)^3$. We have $R+I=(a-b)(p+4ab)>p$ and $R-I=(a+b)(p-4ab)$. Since the sum and difference of $|R|,|I|$ in magnitude are the larger and smaller of $|R+I|,|R-I|$, the triangle condition is exactly $(a+b)|p-4ab|<p$.",
+          "Write $s=2-\\sqrt3$ and $t=2+\\sqrt3$. Then $p-4ab=(a-sb)(a-tb)$. If $b<a\\le\\sqrt3 b$, the quadratic $a^2-4ab+b^2$ decreases from $-2b^2$, so its magnitude exceeds $p/(a+b)<a\\le\\sqrt3 b$. For $a>\\sqrt3 b$, expansion gives $(a+b)(a-sb)-p=(1-s)b(a-\\sqrt3 b)>0$. The triangle condition now implies $|a-tb|<1$.",
+          "As $a\\le31$, this bound gives $b\\le8$. For each $b=1,\\ldots,8$ only the one of $\\lfloor tb\\rfloor,\\lceil tb\\rceil$ opposite in parity to $b$ can work. In order these are $a=4,7,12,15,18,23,26,29$, giving $p=17,53,153,241,349,565,725,905$. The last three are divisible by five.",
+          "Trial division by primes through $17$ confirms that $349$ is prime. For $z=18+5i$, its cube is $4482+4735i$ and $4735-4482=253<349<4482+4735$, proving attainability."
+        ],
+        "stepsZh": [
+          "对奇质数 $p$，利用共轭和旋转直角，可取两分量的绝对值为异奇偶的 $a>b>0$，这些对称也能把三次方的两分量调为正。设 $(a+bi)^3$ 的实部、虚部分别为 $R,I$，则 $R+I=(a-b)(p+4ab)>p$，$R-I=(a+b)(p-4ab)$。$|R|,|I|$ 的和与差的绝对值恰是 $|R+I|,|R-I|$ 中较大和较小者，故成三角形恰要求 $(a+b)|p-4ab|<p$。",
+          "记 $s=2-\\sqrt3$、$t=2+\\sqrt3$，有 $p-4ab=(a-sb)(a-tb)$。若 $b<a\\le\\sqrt3 b$，二次式 $a^2-4ab+b^2$ 从 $-2b^2$ 起递减，其绝对值大于 $p/(a+b)<a\\le\\sqrt3 b$，不合条件。若 $a>\\sqrt3 b$，展开可得 $(a+b)(a-sb)-p=(1-s)b(a-\\sqrt3 b)>0$，于是三角形条件推出 $|a-tb|<1$。",
+          "由 $a\\le31$ 可知 $b\\le8$。对 $b=1,\\ldots,8$，$\\lfloor tb\\rfloor,\\lceil tb\\rceil$ 中只有和 $b$ 奇偶性相反的一数需检验，依次为 $a=4,7,12,15,18,23,26,29$。对应 $p=17,53,153,241,349,565,725,905$，最后三项均被五整除。",
+          "试除不超过 $17$ 的质数可验 $349$ 为质数。取 $z=18+5i$，则 $z^3=4482+4735i$，且 $253=4735-4482<349<4482+4735$，故这个最大值确实可以取得。"
+        ]
+      }
+    ]
+  }
+}

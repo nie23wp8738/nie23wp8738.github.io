@@ -1,0 +1,676 @@
+{
+  "tmua-2021-p2-q1": {
+    "summary": "Calculate the definite integral of $3\\sqrt{x}+4/x^2$ from $x=1$ to $x=4$.",
+    "summaryZh": "求 $3\\sqrt{x}+4/x^2$ 在区间 $[1,4]$ 上的定积分。",
+    "answer": "D. $17$",
+    "answerZh": "D．$17$",
+    "methods": [
+      {
+        "title": "Integrate each power",
+        "titleZh": "逐项按幂函数积分",
+        "topics": [
+          {
+            "en": "Power rule",
+            "zh": "幂函数积分"
+          },
+          {
+            "en": "Definite integrals",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "An antiderivative of $3x^{1/2}+4x^{-2}$ is $F(x)=2x^{3/2}-4/x$.",
+          "Subtract the endpoint values: $F(4)-F(1)=(16-1)-(2-4)=17$."
+        ],
+        "stepsZh": [
+          "$3x^{1/2}+4x^{-2}$ 的一个原函数为 $F(x)=2x^{3/2}-4/x$。",
+          "代入上下限相减得 $F(4)-F(1)=(16-1)-(2-4)=17$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=3"
+  },
+  "tmua-2021-p2-q2": {
+    "summary": "The endpoints of one diagonal of a square are $(0,2)$ and $(4,0)$. Find the line containing the other diagonal.",
+    "summaryZh": "一个正方形的一条对角线以 $(0,2)$、$(4,0)$ 为端点。求另一条对角线所在直线的方程。",
+    "answer": "E. $y=2x-3$",
+    "answerZh": "E．$y=2x-3$",
+    "methods": [
+      {
+        "title": "Bisect the first diagonal perpendicularly",
+        "titleZh": "作第一条对角线的垂直平分线",
+        "topics": [
+          {
+            "en": "Square diagonals",
+            "zh": "正方形对角线"
+          },
+          {
+            "en": "Linear equations",
+            "zh": "直线方程"
+          }
+        ],
+        "steps": [
+          "The two diagonals share the midpoint $(2,1)$. The given diagonal has slope $(0-2)/(4-0)=-1/2$.",
+          "Perpendicularity gives slope $2$ for the other diagonal, so $y-1=2(x-2)$."
+        ],
+        "stepsZh": [
+          "两条对角线的公共中点为 $(2,1)$，已知对角线的斜率为 $(0-2)/(4-0)=-1/2$。",
+          "由垂直关系，另一条对角线的斜率是 $2$，所以 $y-1=2(x-2)$。"
+        ]
+      },
+      {
+        "title": "Equate distances to the opposite vertices",
+        "titleZh": "利用到两顶点等距",
+        "topics": [
+          {
+            "en": "Distance formula",
+            "zh": "距离公式"
+          }
+        ],
+        "steps": [
+          "Both ends of the other diagonal are equidistant from $(0,2)$ and $(4,0)$ because all square sides are equal. Its line is their equidistance locus.",
+          "For a general point $(x,y)$, equate squared distances: $x^2+(y-2)^2=(x-4)^2+y^2$. Cancelling quadratic terms leaves $8x-4y-12=0$, or $y=2x-3$."
+        ],
+        "stepsZh": [
+          "正方形边长相等，另一条对角线的两个端点到 $(0,2)$、$(4,0)$ 都等距，故该对角线位于它们的等距轨迹上。",
+          "对于动点 $(x,y)$，令距离平方相等：$x^2+(y-2)^2=(x-4)^2+y^2$。消去二次项得 $8x-4y-12=0$，即 $y=2x-3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=4"
+  },
+  "tmua-2021-p2-q3": {
+    "summary": "If a uniformly selected class member wears glasses with probability $4/15$, which conditions must hold? I: exactly 11 do not wear glasses. II: the class size is divisible by 3. III: 8 out of 30 students wear glasses.",
+    "summaryZh": "从一个班等概率抽取一人，其戴眼镜的概率为 $4/15$。判断哪些条件必成立：I．恰有 11 人不戴眼镜；II．班级人数为 3 的倍数；III．全班 30 人，其中 8 人戴眼镜。",
+    "answer": "C. II only",
+    "answerZh": "C．仅 II",
+    "methods": [
+      {
+        "title": "Scale the fraction in lowest terms",
+        "titleZh": "利用最简分数确定人数比例",
+        "topics": [
+          {
+            "en": "Probability",
+            "zh": "概率"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ],
+        "steps": [
+          "Since $4/15$ is reduced, there must be $4k$ students wearing glasses in a class of $15k$, for some positive integer $k$. The class size is therefore divisible by $3$.",
+          "There are $11k$ students without glasses, so I would require $k=1$. III would require $k=2$. Neither value is forced."
+        ],
+        "stepsZh": [
+          "由于 $4/15$ 已是最简分数，全班应有 $15k$ 人，其中 $4k$ 人戴眼镜，$k$ 为正整数。故全班人数一定是 $3$ 的倍数。",
+          "不戴眼镜的有 $11k$ 人。I 要求 $k=1$，III 要求 $k=2$，但题设没有限定 $k$ 的值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=5"
+  },
+  "tmua-2021-p2-q4": {
+    "summary": "Test the implication $a\\mid bc\\Rightarrow a\\mid b$ or $a\\mid c$. Which triples $(a,b,c)$ disprove it: I $(5,10,20)$, II $(8,4,4)$, III $(6,7,12)$?",
+    "summaryZh": "检验“$a\\mid bc$ 推出 $a\\mid b$ 或 $a\\mid c$”。在三组 $(a,b,c)$ 中，哪些是反例：I $(5,10,20)$，II $(8,4,4)$，III $(6,7,12)$？",
+    "answer": "C. II only",
+    "answerZh": "C．仅 II",
+    "methods": [
+      {
+        "title": "Check divisibility before and after multiplication",
+        "titleZh": "分别检验整除因子与乘积",
+        "topics": [
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "A counterexample needs $a$ to divide the product without dividing either factor. In I, $5$ already divides $10$. In III, $6$ already divides $12$.",
+          "For II, $8$ divides $4\\cdot4=16$ but does not divide $4$, so the implication fails."
+        ],
+        "stepsZh": [
+          "反例须满足 $a$ 能整除乘积，却不能整除任何一个因子。I 中 $5$ 已能整除 $10$，III 中 $6$ 已能整除 $12$。",
+          "II 中 $8$ 整除 $4\\cdot4=16$，却不整除 $4$，所以恰为反例。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=6"
+  },
+  "tmua-2021-p2-q5": {
+    "summary": "An argument begins (A) $\\sin^2x+\\cos^2x=1$, (B) $\\cos x=\\sqrt{1-\\sin^2x}$ for every real $x$, then adds $1$, squares, and substitutes $\\pi$ to claim $0=4$. Identify the earliest invalid step.",
+    "summaryZh": "一段推理先写 (A) $\\sin^2x+\\cos^2x=1$，再写 (B) 对所有实数 $x$ 都有 $\\cos x=\\sqrt{1-\\sin^2x}$，然后加 $1$、平方、代入 $\\pi$，得出 $0=4$。最早哪一步出错？",
+    "answer": "B. B: taking the principal square root",
+    "answerZh": "B．B：取主平方根时漏掉绝对值",
+    "methods": [
+      {
+        "title": "Track the sign of a square root",
+        "titleZh": "注意平方根的符号",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Principal square roots",
+            "zh": "算术平方根"
+          }
+        ],
+        "steps": [
+          "A is the Pythagorean identity. It gives $\\sqrt{1-\\sin^2x}=\\sqrt{\\cos^2x}=|\\cos x|$.",
+          "At $x=\\pi$ the square root is $1$ and the cosine is $-1$. Thus B is already false."
+        ],
+        "stepsZh": [
+          "A 是平方和的三角恒等式，推出的是 $\\sqrt{1-\\sin^2x}=\\sqrt{\\cos^2x}=|\\cos x|$。",
+          "当 $x=\\pi$ 时，平方根为 $1$，余弦却为 $-1$，因此 B 已经出错。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=7"
+  },
+  "tmua-2021-p2-q6": {
+    "summary": "For a polynomial $f$, let P mean that $f$ has exactly three distinct real roots and Q that $f'$ has exactly two. Is P necessary or sufficient for Q?",
+    "summaryZh": "对多项式 $f$，记 P 为“$f$ 恰有三个不同实根”，Q 为“$f'$ 恰有两个不同实根”。P 是 Q 的必要条件还是充分条件？",
+    "answer": "D. Neither necessary nor sufficient",
+    "answerZh": "D．既不必要也不充分",
+    "methods": [
+      {
+        "title": "Build counterexamples in each direction",
+        "titleZh": "分别构造两个方向的反例",
+        "topics": [
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式根"
+          },
+          {
+            "en": "Necessary and sufficient conditions",
+            "zh": "充分必要条件"
+          }
+        ],
+        "steps": [
+          "For $f(x)=x(x^2-1)^2$, the distinct roots are $-1,0,1$, but $f'(x)=(x^2-1)(5x^2-1)$ has four distinct roots. Thus P does not suffice.",
+          "For $f(x)=x^3-3x+5$, the derivative has two roots, $-1$ and $1$. Both turning heights, $7$ and $3$, are positive, so the cubic crosses zero just once. P is unnecessary."
+        ],
+        "stepsZh": [
+          "取 $f(x)=x(x^2-1)^2$，它的不同实根为 $-1,0,1$，但 $f'(x)=(x^2-1)(5x^2-1)$ 有四个不同实根，可见 P 不充分。",
+          "再取 $f(x)=x^3-3x+5$，导数的两个实根为 $-1$ 与 $1$。两个极值分别为 $7$ 和 $3$，均为正，故该三次函数只穿过横轴一次。P 也不必要。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=8"
+  },
+  "tmua-2021-p2-q7": {
+    "summary": "A single line halves the areas of a disk centred at $(9,-2)$ of radius $2$ and a square with corners $(\\pm1,0),(\\pm1,2)$. Find its horizontal intercept.",
+    "summaryZh": "一条直线同时平分两个图形的面积：圆心为 $(9,-2)$、半径为 $2$ 的圆盘，以及顶点为 $(\\pm1,0),(\\pm1,2)$ 的正方形。求横截距。",
+    "answer": "B. $3$",
+    "answerZh": "B．$3$",
+    "methods": [
+      {
+        "title": "Join the centres of symmetry",
+        "titleZh": "连接两个对称中心",
+        "topics": [
+          {
+            "en": "Central symmetry",
+            "zh": "中心对称"
+          },
+          {
+            "en": "Linear equations",
+            "zh": "直线方程"
+          }
+        ],
+        "steps": [
+          "For a disk or square every line through its centre bisects area by a half-turn. Parallel translation away from that central line strictly reduces the area on one side, so any bisector must pass through the centre.",
+          "The square's centre is $(0,1)$. Its line to $(9,-2)$ has equation $y=1-x/3$, meeting the horizontal axis at $x=3$."
+        ],
+        "stepsZh": [
+          "对圆盘或正方形，过中心的直线借助半周旋转将面积平分。将它平行移离中心，一侧的面积就会减小，因此平分面积的直线必过中心。",
+          "正方形的中心是 $(0,1)$。连接它与 $(9,-2)$ 的直线为 $y=1-x/3$，故横截距为 $3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=9"
+  },
+  "tmua-2021-p2-q8": {
+    "summary": "For a polynomial $p$ and $a<b$, determine whether $p(a)=p(b)$ is necessary or sufficient for $p'$ to vanish somewhere in $(a,b)$.",
+    "summaryZh": "设 $p$ 是多项式且 $a<b$。要使 $p'$ 在 $(a,b)$ 内某处为零，$p(a)=p(b)$ 是必要条件还是充分条件？",
+    "answer": "C. Sufficient only",
+    "answerZh": "C．仅充分",
+    "methods": [
+      {
+        "title": "Use Rolle's theorem and test its converse",
+        "titleZh": "应用罗尔定理并检验逆命题",
+        "topics": [
+          {
+            "en": "Rolle's theorem",
+            "zh": "罗尔定理"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "A polynomial is continuous on $[a,b]$ and differentiable inside it. When the endpoint values agree, Rolle's theorem supplies $c$ with $p'(c)=0$.",
+          "Conversely, take $p(x)=x^2$ on $[-1,2]$. The derivative vanishes at zero, although the endpoint values are $1$ and $4$."
+        ],
+        "stepsZh": [
+          "多项式在 $[a,b]$ 上连续、在内部可导。若两端函数值相等，罗尔定理保证存在 $c$ 使 $p'(c)=0$。",
+          "反过来，在 $[-1,2]$ 上取 $p(x)=x^2$。导数在零处为零，但两端的函数值为 $1$ 与 $4$，并不相等。"
+        ]
+      },
+      {
+        "title": "Find an interior extremum",
+        "titleZh": "寻找区间内部的极值点",
+        "topics": [
+          {
+            "en": "Extreme value theorem",
+            "zh": "最值定理"
+          }
+        ],
+        "steps": [
+          "If $p$ is constant on $[a,b]$, every interior derivative vanishes. Otherwise some interior value differs from the common endpoint value.",
+          "For a larger interior value the global maximum must occur in the interior, and for a smaller one the global minimum must. At either interior extremum the derivative vanishes. The example $p(x)=x^2$ on $[-1,2]$ again shows the converse fails."
+        ],
+        "stepsZh": [
+          "若 $p$ 在 $[a,b]$ 上为常数，任一内点的导数都为零。否则，某个内点的函数值不同于两端共同的函数值。",
+          "若它较大，全区间最大值必在内部取得；若它较小，全区间最小值必在内部取得。在内点极值处导数为零。而 $p(x)=x^2$ 在 $[-1,2]$ 上仍说明逆命题不成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=10"
+  },
+  "tmua-2021-p2-q9": {
+    "summary": "Which hypotheses separately guarantee that a real polynomial has a real root? I: it has degree three. II: its derivative vanishes somewhere. III: two of its values have negative product.",
+    "summaryZh": "判断哪些条件单独就能保证实系数多项式有实根。I．次数为三；II．导数在某点为零；III．某两个函数值的乘积为负。",
+    "answer": "C. I and III",
+    "answerZh": "C．I、III",
+    "methods": [
+      {
+        "title": "Use opposite signs and continuity",
+        "titleZh": "利用异号与连续性",
+        "topics": [
+          {
+            "en": "Intermediate value theorem",
+            "zh": "介值定理"
+          },
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式根"
+          }
+        ],
+        "steps": [
+          "A cubic has opposite signs sufficiently far to its left and right. A negative product also supplies two inputs with opposite signs directly. In both cases continuity gives an intermediate zero.",
+          "For II, $f(x)=x^2+1$ has derivative zero at $0$ but stays strictly positive."
+        ],
+        "stepsZh": [
+          "三次多项式在充分靠左和充分靠右处异号。若两个函数值的乘积为负，也直接得到一对异号值。两种情形都由连续性保证中间存在零点。",
+          "对于 II，反例 $f(x)=x^2+1$ 在 $0$ 处导数为零，却恒为正数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=11"
+  },
+  "tmua-2021-p2-q10": {
+    "summary": "The sequence begins $15,21,30,37,44,51,59$ at indices $1$ through $7$. Find the first counterexample to “a prime index always has a term divisible by $3$ or $5$.”",
+    "summaryZh": "数列从第 $1$ 项起依次为 $15,21,30,37,44,51,59$。求命题“若序号是质数，则该项能被 $3$ 或 $5$ 整除”的最小反例序号。",
+    "answer": "E. $n=5$",
+    "answerZh": "E．$n=5$",
+    "methods": [
+      {
+        "title": "Check prime indices in order",
+        "titleZh": "按升序检验质数序号",
+        "topics": [
+          {
+            "en": "Prime numbers",
+            "zh": "质数"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "The first prime indices are $2,3,5$. Their entries are $21,30,44$ respectively.",
+          "Both $21$ and $30$ are divisible by $3$, whereas $44$ is divisible by neither $3$ nor $5$. The first failure is at $5$."
+        ],
+        "stepsZh": [
+          "前三个质数序号为 $2,3,5$，对应的项依次为 $21,30,44$。",
+          "$21$ 与 $30$ 都能被 $3$ 整除，而 $44$ 既不能被 $3$ 整除也不能被 $5$ 整除，所以首次失败的序号是 $5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=12"
+  },
+  "tmua-2021-p2-q11": {
+    "summary": "For nonzero $a,b$, a proof aims to deduce the existence of real $x,y$ with $a=xy(x+y),\\,b=xy$ from $a^2-4b^3\\ge0$. It instead starts with $(x-y)^2\\ge0$, multiplies by $x^2y^2$, and substitutes $a,b$ to obtain the inequality. What has it proved?",
+    "summaryZh": "对非零 $a,b$，欲从 $a^2-4b^3\\ge0$ 推出存在实数 $x,y$ 满足 $a=xy(x+y),\\,b=xy$。某证明从 $(x-y)^2\\ge0$ 出发，乘以 $x^2y^2$ 并用 $a,b$ 代换，得到了题设不等式。它实际证明了什么？",
+    "answer": "C. The converse",
+    "answerZh": "C．原命题的逆命题",
+    "methods": [
+      {
+        "title": "Separate necessity from existence",
+        "titleZh": "区分必要性与存在性",
+        "topics": [
+          {
+            "en": "Converse statements",
+            "zh": "逆命题"
+          },
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          }
+        ],
+        "steps": [
+          "Assuming the representation exists, $a^2-4b^3=x^2y^2((x+y)^2-4xy)=x^2y^2(x-y)^2\\ge0$. This proves that the inequality is necessary.",
+          "To get existence from the inequality, take the roots of $t^2-(a/b)t+b=0$. Its discriminant $(a^2-4b^3)/b^2$ is nonnegative, and the sum and product of its roots give the desired representation."
+        ],
+        "stepsZh": [
+          "若所求表示已存在，则 $a^2-4b^3=x^2y^2((x+y)^2-4xy)=x^2y^2(x-y)^2\\ge0$。这只证明了不等式的必要性。",
+          "要由不等式推出存在性，可取 $t^2-(a/b)t+b=0$ 的两根。其判别式 $(a^2-4b^3)/b^2$ 非负，而两根的和与积恰好给出所需表示。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=13"
+  },
+  "tmua-2021-p2-q12": {
+    "summary": "For polynomials on $x\\ge0$, judge three implications. I: $f\\ge g$ implies their integrals from $0$ to every $x$ have the same order. II: $f\\ge g$ implies $f'\\ge g'$. III: $f'\\ge g'$ implies $f\\ge g$.",
+    "summaryZh": "对 $x\\ge0$ 上的多项式，判断三个推论。I．若 $f\\ge g$，则对每个 $x$，从 $0$ 到 $x$ 的定积分也保持该大小关系；II．若 $f\\ge g$ 则 $f'\\ge g'$；III．若 $f'\\ge g'$ 则 $f\\ge g$。",
+    "answer": "B. I only",
+    "answerZh": "B．仅 I",
+    "methods": [
+      {
+        "title": "Test integration and differentiation separately",
+        "titleZh": "分别检验积分和求导",
+        "topics": [
+          {
+            "en": "Integral inequalities",
+            "zh": "积分不等式"
+          },
+          {
+            "en": "Derivatives",
+            "zh": "导数"
+          }
+        ],
+        "steps": [
+          "The nonnegative function $f-g$ has nonnegative integral over every $[0,x]$, proving I. To refute II take $f=(x-1)^2$, $g=0$. Although $f\\ge0$, its derivative at zero is $-2$.",
+          "To refute III, take the constants $f=-1$, $g=0$. Their derivatives agree everywhere while $f<g$."
+        ],
+        "stepsZh": [
+          "非负函数 $f-g$ 在每个 $[0,x]$ 上的积分均非负，故 I 成立。对 II 取 $f=(x-1)^2$、$g=0$，虽有 $f\\ge0$，但其导数在 $0$ 处为 $-2$。",
+          "对 III，取常函数 $f=-1$、$g=0$，导数处处相等，却总有 $f<g$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=14"
+  },
+  "tmua-2021-p2-q13": {
+    "summary": "Throughout the region $y-x<3,\\;y-x^2<1$, which bounds must hold? I: $-1<x<2$. II: $(y-x)(y-x^2)<3$. III: $y<5$.",
+    "summaryZh": "在 $y-x<3,\\;y-x^2<1$ 的公共区域内，哪些结论对每一点成立？I．$-1<x<2$；II．$(y-x)(y-x^2)<3$；III．$y<5$。",
+    "answer": "A. None",
+    "answerZh": "A．均不成立",
+    "methods": [
+      {
+        "title": "Find points that violate the proposed bounds",
+        "titleZh": "选点反驳各个界限",
+        "topics": [
+          {
+            "en": "Simultaneous inequalities",
+            "zh": "联立不等式"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "At $(4,6)$ the left sides of the region's inequalities are $2$ and $-10$. The point belongs to the region but violates both I and III.",
+          "At $(0,-2)$ both left sides are $-2$, so this point also belongs. Their product is $4$, contradicting II."
+        ],
+        "stepsZh": [
+          "在点 $(4,6)$ 处，定义区域的两个不等式的左边分别为 $2$ 和 $-10$。该点属于区域，但同时违反 I 和 III。",
+          "在 $(0,-2)$ 处，两个左边都为 $-2$，所以也属于区域。它们的乘积却是 $4$，推翻 II。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=15"
+  },
+  "tmua-2021-p2-q14": {
+    "summary": "For which real $p$ does the pair $p\\,2^x+\\log_2 y=2$ and $2^x+\\log_2 y=1$ have a real solution?",
+    "summaryZh": "对于哪些实数 $p$，方程组 $p\\,2^x+\\log_2 y=2$、$2^x+\\log_2 y=1$ 存在实数解？",
+    "answer": "C. $p>1$",
+    "answerZh": "C．$p>1$",
+    "methods": [
+      {
+        "title": "Eliminate the logarithm",
+        "titleZh": "消去对数项",
+        "topics": [
+          {
+            "en": "Simultaneous equations",
+            "zh": "联立方程"
+          },
+          {
+            "en": "Exponential ranges",
+            "zh": "指数函数值域"
+          }
+        ],
+        "steps": [
+          "Subtracting gives $(p-1)2^x=1$. Since $2^x>0$, we need $p>1$.",
+          "Conversely, for any $p>1$ take $x=\\log_2(1/(p-1))$ and $y=2^{1-2^x}>0$. Both equations then hold."
+        ],
+        "stepsZh": [
+          "两式相减得 $(p-1)2^x=1$。由于 $2^x>0$，必须有 $p>1$。",
+          "反之，对于任意 $p>1$，取 $x=\\log_2(1/(p-1))$、$y=2^{1-2^x}>0$ 即可满足两个方程。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=16"
+  },
+  "tmua-2021-p2-q15": {
+    "summary": "A circle satisfies $x^2+ax+y^2+by+c=0$ with nonzero $a,b,c$. What condition is necessary and sufficient for tangency to the vertical axis?",
+    "summaryZh": "一个圆的方程为 $x^2+ax+y^2+by+c=0$，其中 $a,b,c$ 均非零。它与纵轴相切的充要条件是什么？",
+    "answer": "B. $b^2=4c$",
+    "answerZh": "B．$b^2=4c$",
+    "methods": [
+      {
+        "title": "Count the intercepts on the axis",
+        "titleZh": "计算与坐标轴的交点数",
+        "topics": [
+          {
+            "en": "Circles",
+            "zh": "圆"
+          },
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          }
+        ],
+        "steps": [
+          "On the vertical axis put $x=0$. Intersection heights satisfy $y^2+by+c=0$. Tangency requires exactly one distinct height.",
+          "This occurs exactly when $b^2-4c=0$. Under this condition the circle has radius $|a|/2>0$, so it is nondegenerate."
+        ],
+        "stepsZh": [
+          "在纵轴上令 $x=0$，交点的纵坐标须满足 $y^2+by+c=0$。相切恰好要求只有一个不同的纵坐标。",
+          "这等价于 $b^2-4c=0$。此时圆的半径为 $|a|/2>0$，确为非退化圆。"
+        ]
+      },
+      {
+        "title": "Compare the radius with the centre’s horizontal distance",
+        "titleZh": "比较半径与圆心到纵轴的距离",
+        "topics": [
+          {
+            "en": "Distance to a line",
+            "zh": "点到直线的距离"
+          }
+        ],
+        "steps": [
+          "Complete the squares to find centre $(-a/2,-b/2)$ and squared radius $(a^2+b^2)/4-c$. Its squared distance to the vertical axis is $a^2/4$.",
+          "Tangency is equivalent to equality of these squared distances. Cancelling $a^2/4$ gives $b^2=4c$."
+        ],
+        "stepsZh": [
+          "分别配方可知圆心为 $(-a/2,-b/2)$，半径平方为 $(a^2+b^2)/4-c$，圆心到纵轴的距离平方为 $a^2/4$。",
+          "相切恰好要求距离与半径相等。将两者平方相等，消去 $a^2/4$，得 $b^2=4c$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=17"
+  },
+  "tmua-2021-p2-q16": {
+    "summary": "As the real parameters $p,q$ vary, which numbers of distinct real solutions can $x|x|=px+q$ have?",
+    "summaryZh": "当实参数 $p,q$ 变化时，方程 $x|x|=px+q$ 的不同实根个数有哪些可能值？",
+    "answer": "E. $1,2,3$",
+    "answerZh": "E．$1,2,3$",
+    "methods": [
+      {
+        "title": "Count monotonic branches",
+        "titleZh": "按单调分支计数",
+        "topics": [
+          {
+            "en": "Piecewise functions",
+            "zh": "分段函数"
+          },
+          {
+            "en": "Number of roots",
+            "zh": "根的个数"
+          }
+        ],
+        "steps": [
+          "Let $h=x|x|-px$. It tends to opposite infinities at the two ends and has derivative $2|x|-p$. For $p\\le0$ it is increasing. For $p>0$ it has three monotonic branches, so a horizontal line meets it at least once and at most three times.",
+          "For one solution take $p=q=0$. With $p=2$, the level $q=1$ touches at $x=-1$ and cuts again at $x=1+\\sqrt2$, giving two. The level $q=0$ yields $-2,0,2$, giving three."
+        ],
+        "stepsZh": [
+          "令 $h=x|x|-px$，其两端分别趋于负、正无穷，且 $h'=2|x|-p$。当 $p\\le0$ 时函数递增；当 $p>0$ 时有三段单调区间。因此水平线至少交一次、最多交三次。",
+          "取 $p=q=0$ 只得一根。若 $p=2,q=1$，水平线在 $x=-1$ 处相切，又在 $x=1+\\sqrt2$ 处相交，共两根。若 $p=2,q=0$，根为 $-2,0,2$，共三根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=18"
+  },
+  "tmua-2021-p2-q17": {
+    "summary": "For $x>1$, set $f(x)=\\log_2(\\log_2\\sqrt{x})$ and $g(x)=\\log_2(\\sqrt{\\log_2x})$. Which constant always lies on the opposite side of $g(x)$ from $f(x)$, allowing equality: $0$, $1/2$ or $1$?",
+    "summaryZh": "对于 $x>1$，设 $f(x)=\\log_2(\\log_2\\sqrt{x})$，$g(x)=\\log_2(\\sqrt{\\log_2x})$。在 $0,1/2,1$ 中，哪个常数能保证 $g(x)$ 总在它与 $f(x)$ 之间（允许相等）？",
+    "answer": "F. $1\\le g(x)\\le f(x)$ or $f(x)\\le g(x)\\le1$",
+    "answerZh": "F．$1\\le g(x)\\le f(x)$ 或 $f(x)\\le g(x)\\le1$",
+    "methods": [
+      {
+        "title": "Express both functions in one parameter",
+        "titleZh": "用同一个参数表示两个函数",
+        "topics": [
+          {
+            "en": "Logarithm laws",
+            "zh": "对数运算"
+          },
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          }
+        ],
+        "steps": [
+          "Write $t=\\log_2(\\log_2 x)$. The inner logarithm in $f$ equals $(\\log_2x)/2$, hence $f=t-1$. The square root inside $g$ gives $g=t/2$.",
+          "Consequently $g=(f+1)/2$. It lies midway between $f$ and $1$, whichever is larger."
+        ],
+        "stepsZh": [
+          "记 $t=\\log_2(\\log_2 x)$。$f$ 的内层对数为 $(\\log_2x)/2$，故 $f=t-1$。$g$ 中的平方根则给出 $g=t/2$。",
+          "因而 $g=(f+1)/2$，它始终位于 $f$ 与 $1$ 的正中间，次序随两者大小而定。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=19"
+  },
+  "tmua-2021-p2-q18": {
+    "summary": "A triangle has $AB=1$, $\\sin A=x$ and $\\sin B=y$ where $0<x<y<1$. Which counts of noncongruent triangles can occur for some such pair: one, two or three?",
+    "summaryZh": "三角形满足 $AB=1$、$\\sin A=x$、$\\sin B=y$，且 $0<x<y<1$。随 $x,y$ 的选取，不全等三角形的个数可能是一、二、三中的哪些值？",
+    "answer": "C. Two only",
+    "answerZh": "C．仅可能为两个",
+    "methods": [
+      {
+        "title": "Compare the acute and supplementary angles",
+        "titleZh": "比较锐角及其补角",
+        "topics": [
+          {
+            "en": "Triangle angles",
+            "zh": "三角形内角"
+          },
+          {
+            "en": "Inverse trigonometric functions",
+            "zh": "反三角函数"
+          }
+        ],
+        "steps": [
+          "Set $\\alpha=\\arcsin x$ and $\\beta=\\arcsin y$, so $0<\\alpha<\\beta<\\pi/2$. If $A=\\pi-\\alpha$, even the smaller choice $B=\\beta$ gives $A+B>\\pi$. Thus $A=\\alpha$.",
+          "Both $B=\\beta$ and $B=\\pi-\\beta$ now work because $\\alpha<\\beta$. Each pair of angles and the fixed side determines one triangle. One has an obtuse $B$, while in the other any obtuse angle would be $C$; their angle sets cannot agree, since $\\alpha>0$ makes $\\pi-\\alpha-\\beta<\\pi-\\beta$."
+        ],
+        "stepsZh": [
+          "设 $\\alpha=\\arcsin x$、$\\beta=\\arcsin y$，有 $0<\\alpha<\\beta<\\pi/2$。若 $A=\\pi-\\alpha$，即使 $B$ 取较小值 $\\beta$，也有 $A+B>\\pi$。故必有 $A=\\alpha$。",
+          "因为 $\\alpha<\\beta$，此时 $B=\\beta$ 或 $B=\\pi-\\beta$ 均可。每组角配上固定的边唯一确定一个三角形。后者有钝角 $\\pi-\\beta$；前者如果有钝角，也只能是 $\\pi-\\alpha-\\beta$，严格更小，故两者不全等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=20"
+  },
+  "tmua-2021-p2-q19": {
+    "summary": "Among integer angles $1^\\circ$ through $360^\\circ$, how many satisfy $s\\sqrt{1+s}\\sqrt{1-s}+c\\sqrt{1+c}\\sqrt{1-c}=0$, where $s=\\sin\\theta,\\ c=\\cos\\theta$?",
+    "summaryZh": "在 $1^\\circ$ 至 $360^\\circ$ 的整数角中，令 $s=\\sin\\theta,\\ c=\\cos\\theta$，有多少个角满足 $s\\sqrt{1+s}\\sqrt{1-s}+c\\sqrt{1+c}\\sqrt{1-c}=0$？",
+    "answer": "F. $182$",
+    "answerZh": "F．$182$",
+    "methods": [
+      {
+        "title": "Reduce the radicals to absolute values",
+        "titleZh": "将根式化为绝对值",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Sign analysis",
+            "zh": "符号分析"
+          }
+        ],
+        "steps": [
+          "The two radical products simplify to $\\sqrt{1-s^2}=|c|$ and $\\sqrt{1-c^2}=|s|$. The condition is $s|c|+c|s|=0$, which holds for opposite signs or whenever either variable vanishes.",
+          "The open second and fourth quadrants contain $89$ integer angles each. Add the four axis angles to obtain $89+89+4=182$."
+        ],
+        "stepsZh": [
+          "两组根式分别等于 $\\sqrt{1-s^2}=|c|$ 与 $\\sqrt{1-c^2}=|s|$。原式化为 $s|c|+c|s|=0$，恰在两者异号或至少一个为零时成立。",
+          "第二、四象限内各有 $89$ 个整数角，再加上坐标轴上的四个角，合计 $89+89+4=182$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=21"
+  },
+  "tmua-2021-p2-q20": {
+    "summary": "Starting from $f_1(x)=|x|$, repeatedly set $f_{n+1}(x)=|f_n(x)+x|$. Compute $\\int_{-1}^{1} f_{99}(x)\\,dx$.",
+    "summaryZh": "从 $f_1(x)=|x|$ 出发，以 $f_{n+1}(x)=|f_n(x)+x|$ 递推。求 $\\int_{-1}^{1} f_{99}(x)\\,dx$。",
+    "answer": "E. $50$",
+    "answerZh": "E．$50$",
+    "methods": [
+      {
+        "title": "Split the recurrence at zero",
+        "titleZh": "在零点两侧分别处理递推",
+        "topics": [
+          {
+            "en": "Recursive functions",
+            "zh": "递归函数"
+          },
+          {
+            "en": "Piecewise integration",
+            "zh": "分段积分"
+          }
+        ],
+        "steps": [
+          "For $x\\ge0$, induction gives $f_n(x)=nx$. For $x<0$, the first two values are $-x$ and $0$, which repeat in alternation. The odd index $99$ therefore gives $-x$ on this half.",
+          "Integrate the two linear pieces: $\\int_{-1}^0(-x)\\,dx+\\int_0^1 99x\\,dx=1/2+99/2=50$."
+        ],
+        "stepsZh": [
+          "当 $x\\ge0$，归纳可得 $f_n(x)=nx$。当 $x<0$ 时，前两项为 $-x$ 和 $0$，之后交替重复。下标 $99$ 为奇数，故负半轴上的函数为 $-x$。",
+          "对两个线性函数分段积分得 $\\int_{-1}^0(-x)\\,dx+\\int_0^1 99x\\,dx=1/2+99/2=50$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf#page=22"
+  }
+}

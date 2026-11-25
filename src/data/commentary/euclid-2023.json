@@ -1,0 +1,402 @@
+{
+  "euclid-2023-q1": {
+    "summary": "(a) The mean of $n,2n,3n,4n,5n$ is $18$. Find $n$. (b) Given $2x+y=5$ and $x+2y=7$, find the mean of $x,y$. (c) The numbers $t^2,2t,3$ have mean $9$ and $t<0$. Find $t$.",
+    "summaryZh": "(a) $n,2n,3n,4n,5n$ 的平均数为 $18$，求 $n$。(b) 若 $2x+y=5,\\ x+2y=7$，求 $x,y$ 的平均数。(c) $t^2,2t,3$ 的平均数为 $9$ 且 $t<0$，求 $t$。",
+    "answer": "(a) $6$. (b) $2$. (c) $-6$.",
+    "answerZh": "(a) $6$；(b) $2$；(c) $-6$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Work with the total behind each mean",
+        "titleZh": "从平均数还原总和",
+        "steps": [
+          "(a) The sum is $15n$, so its fifth is $3n=18$. This gives $n=6$.",
+          "(b) Add the two equations to obtain $3(x+y)=12$. Since $x+y=4$, their mean is $2$.",
+          "(c) The sum is $27$. Thus $t^2+2t-24=(t+6)(t-4)=0$. Only the root $-6$ is negative."
+        ],
+        "stepsZh": [
+          "(a) 五个数的和为 $15n$，其五分之一为 $3n=18$，得 $n=6$。",
+          "(b) 两式相加得 $3(x+y)=12$。因 $x+y=4$，所以平均数为 $2$。",
+          "(c) 三数之和为 $27$，于是 $t^2+2t-24=(t+6)(t-4)=0$。其中只有 $-6$ 是负根。"
+        ],
+        "topics": [
+          {
+            "en": "Arithmetic means",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Linear systems",
+            "zh": "线性方程组"
+          },
+          {
+            "en": "Factoring",
+            "zh": "因式分解"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q2": {
+    "summary": "(a) The midpoint of $(1,p)$ and $(r,5)$ is $(5,3)$. Find $p,r$. (b) Lines of slopes $3$ and $-1$ pass through $(3,6)$. How far apart are their horizontal-axis intercepts? (c) Lines $y=tx+t$ and $y=2x+7$ are perpendicular. Find their intersection.",
+    "summaryZh": "(a) $(1,p)$ 和 $(r,5)$ 的中点为 $(5,3)$，求 $p,r$。(b) 斜率为 $3$ 与 $-1$ 的两条直线都经过 $(3,6)$，两条直线与横轴的交点相距多少？(c) 直线 $y=tx+t$ 与 $y=2x+7$ 垂直，求其交点。",
+    "answer": "(a) $p=1,r=9$. (b) $8$. (c) $(-3,1)$.",
+    "answerZh": "(a) $p=1,r=9$；(b) $8$；(c) $(-3,1)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Recover coordinates from midpoints and slopes",
+        "titleZh": "从中点与斜率确定坐标",
+        "steps": [
+          "(a) Adding corresponding endpoint coordinates gives twice the midpoint: $1+r=10$, $p+5=6$. Hence $r=9,p=1$.",
+          "(b) To reach the horizontal axis the vertical change is $-6$. Dividing by each slope gives horizontal changes $-2$ and $6$. From $x=3$ these lead to $x=1,9$, whose distance is $8$.",
+          "(c) The slopes have product $-1$, giving $t=-1/2$. Equating the two expressions for $y$ leads to $-(x+1)=4x+14$. Thus $x=-3$ and $y=1$."
+        ],
+        "stepsZh": [
+          "(a) 两端点的对应坐标之和等于中点对应坐标的两倍，故 $1+r=10,\\ p+5=6$，即 $r=9,p=1$。",
+          "(b) 从给定点降到横轴，纵坐标变化为 $-6$。分别除以两条斜率，得横坐标变化 $-2,6$。从 $x=3$ 出发到达 $x=1,9$，相距 $8$。",
+          "(c) 斜率之积为 $-1$，所以 $t=-1/2$。令纵坐标相等，化为 $-(x+1)=4x+14$，得 $x=-3,y=1$。"
+        ],
+        "topics": [
+          {
+            "en": "Midpoints",
+            "zh": "中点"
+          },
+          {
+            "en": "Slope",
+            "zh": "斜率"
+          },
+          {
+            "en": "Perpendicular lines",
+            "zh": "垂直直线"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q3": {
+    "summary": "(a) Find the sum of all positive divisors of $64$. (b) Three of four consecutive integers sum to $847$. Find the omitted integer. (c) Seven terms of an arithmetic progression with first term $d^2$ and difference $d$ total $756$. Find all possible $d$.",
+    "summaryZh": "(a) 求 $64$ 的所有正因数之和。(b) 四个连续整数中，三个数之和为 $847$，求余下的数。(c) 一个七项等差数列的首项为 $d^2$，公差为 $d$，总和为 $756$。求所有可能的 $d$。",
+    "answer": "(a) $127$. (b) $283$. (c) $9$ and $-12$.",
+    "answerZh": "(a) $127$；(b) $283$；(c) $9$ 和 $-12$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Use powers, remainders and the middle term",
+        "titleZh": "利用幂、余数和中间项",
+        "steps": [
+          "(a) Since $64=2^6$, its divisors are exactly $2^0$ through $2^6$. Their geometric sum is $2^7-1=127$.",
+          "(b) Write the integers as $a,a+1,a+2,a+3$ and the omitted one as $a+j$, $0\\le j\\le3$. The remaining sum is $3a+6-j=847$. Reduction modulo $3$ gives $j\\equiv2\\pmod3$, hence $j=2$. Now $3a+4=847$ gives $a=281$, so the omitted integer is $283$.",
+          "(c) The mean of the seven terms equals their middle term $d^2+3d$. Equating this to $756/7=108$ gives $(d-9)(d+12)=0$. Both values give the required sum."
+        ],
+        "stepsZh": [
+          "(a) $64=2^6$，它的正因数为 $2^0$ 至 $2^6$，等比求和得 $2^7-1=127$。",
+          "(b) 设这四数为 $a,a+1,a+2,a+3$，余下的一数记为 $a+j$，其中 $0\\le j\\le3$。三数之和满足 $3a+6-j=847$。两边对 $3$ 取模得 $j\\equiv2\\pmod3$，故 $j=2$。由 $3a+4=847$ 得 $a=281$，所求为 $283$。",
+          "(c) 七项的平均数等于中间项 $d^2+3d$，又等于 $756/7=108$，所以 $(d-9)(d+12)=0$。两个根都符合。"
+        ],
+        "topics": [
+          {
+            "en": "Divisor sums",
+            "zh": "因数和"
+          },
+          {
+            "en": "Congruences",
+            "zh": "同余"
+          },
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q4": {
+    "summary": "(a) One painter needs $3$ hours to paint a room and another needs $4$. The first works alone for $2$ hours. At their constant individual rates, how many minutes does the second need to finish? (b) A value of $400$ rises by $A\\%$ and then falls by $A\\%$ of the new value, ending at $391$. Find $A>0$.",
+    "summaryZh": "(a) 两人单独粉刷一间房各需 $3$ 小时、$4$ 小时，工作速度恒定。第一人先独自工作 $2$ 小时，余下的工作由第二人完成，还需多少分钟？(b) 初值 $400$ 先增加 $A\\%$，再按增加后的值减少 $A\\%$，最终为 $391$。求 $A>0$。",
+    "answer": "(a) $80$ minutes. (b) $A=15$.",
+    "answerZh": "(a) $80$ 分钟；(b) $A=15$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Use a remaining fraction and successive multipliers",
+        "titleZh": "剩余工作量与连续变化的乘数",
+        "steps": [
+          "(a) The first painter completes $2/3$ of the room. The second needs $4(1/3)=4/3$ hours to paint the remainder, or $80$ minutes.",
+          "(b) Write $u=A/100$. Then $400(1+u)(1-u)=391$, so $u^2=9/400$. Positivity gives $u=3/20$ and hence $A=15$."
+        ],
+        "stepsZh": [
+          "(a) 第一人完成了 $2/3$ 的工作，余下 $1/3$ 由第二人完成需 $4(1/3)=4/3$ 小时，即 $80$ 分钟。",
+          "(b) 令 $u=A/100$，则 $400(1+u)(1-u)=391$，即 $u^2=9/400$。取正根得 $u=3/20$，故 $A=15$。"
+        ],
+        "topics": [
+          {
+            "en": "Work rates",
+            "zh": "工作效率"
+          },
+          {
+            "en": "Percentage change",
+            "zh": "百分比变化"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q5": {
+    "summary": "(a) Find the least positive integer $n$ for which $x^2+(2n-1)x+n^2-22$ has no real zero. (b) In triangle $PQR$ the sides $PQ=a,QR=b$ enclose a $60^\\circ$ angle and $PR=21$. In triangle $STU$, $ST=a,TU=b$, $\\angle TSU=30^\\circ$ and $\\sin\\angle TUS=4/5$. Determine $a,b$.",
+    "summaryZh": "(a) 求使 $x^2+(2n-1)x+n^2-22$ 没有实数零点的最小正整数 $n$。(b) 三角形 $PQR$ 中，$PQ=a,QR=b$ 的夹角为 $60^\\circ$，$PR=21$。三角形 $STU$ 中，$ST=a,TU=b$，$\\angle TSU=30^\\circ$，$\\sin\\angle TUS=4/5$。求 $a,b$。",
+    "answer": "(a) $23$. (b) $a=24,\\ b=15$.",
+    "answerZh": "(a) $23$；(b) $a=24,\\ b=15$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Test the discriminant and combine two triangle laws",
+        "titleZh": "判别式与正弦、余弦定理",
+        "steps": [
+          "(a) The discriminant simplifies to $(2n-1)^2-4(n^2-22)=89-4n$. It must be strictly negative, so $n>89/4$. The least positive integer meeting this condition is $23$.",
+          "(b) The sine rule in $STU$ gives $a:b=(4/5):(1/2)=8:5$. Write $a=8u,b=5u$, with $u>0$. In $PQR$ the cosine rule gives $21^2=a^2+b^2-2ab\\cos60^\\circ=(64+25-40)u^2=49u^2$. Thus $u=3$, giving $a=24,b=15$."
+        ],
+        "stepsZh": [
+          "(a) 判别式化为 $(2n-1)^2-4(n^2-22)=89-4n$。无实根要求严格小于零，故 $n>89/4$，最小符合的正整数为 $23$。",
+          "(b) 在 $STU$ 中用正弦定理得 $a:b=(4/5):(1/2)=8:5$。设 $a=8u,b=5u$，其中 $u>0$。在 $PQR$ 中用余弦定理得 $21^2=a^2+b^2-2ab\\cos60^\\circ=(64+25-40)u^2=49u^2$。所以 $u=3$，得 $a=24,b=15$。"
+        ],
+        "topics": [
+          {
+            "en": "Discriminants",
+            "zh": "判别式"
+          },
+          {
+            "en": "Sine rule",
+            "zh": "正弦定理"
+          },
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q6": {
+    "summary": "(a) A triangle of area $770$ square centimetres is cut by lines parallel to its base into eleven equal-height bands. Bands $1,3,5,7,9,11$, numbered from the vertex, are shaded. Find their combined area. (b) In a unit grid with $0\\le x,y\\le3$, join $(0,3)$ to $(3,2)$, $(0,2)$ to $(3,1)$, $(0,0)$ to $(1,3)$, and $(1,0)$ to $(2,3)$. The four intersections between the two families form a square. Find its area.",
+    "summaryZh": "(a) 面积为 $770$ 平方厘米的三角形，被平行于底边的直线分成十一条等高的带状区域。从顶点起给第 $1,3,5,7,9,11$ 条涂色，求涂色总面积。(b) 在 $0\\le x,y\\le3$ 的单位格点图上，连接 $(0,3)$ 与 $(3,2)$，$(0,2)$ 与 $(3,1)$，$(0,0)$ 与 $(1,3)$，以及 $(1,0)$ 与 $(2,3)$。这两组平行线段的四个交点构成正方形，求其面积。",
+    "answer": "(a) $420$ square centimetres. (b) $9/10$ square units.",
+    "answerZh": "(a) $420$ 平方厘米；(b) $9/10$ 平方单位。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Use square scaling and perpendicular distance",
+        "titleZh": "相似图形面积比与垂距",
+        "steps": [
+          "(a) The first $j$ bands together form a triangle similar to the whole, with area $770j^2/121$. Subtracting the area through band $j-1$ makes band $j$ proportional to $j^2-(j-1)^2=2j-1$. The six shaded bands therefore contribute $770(1+5+9+13+17+21)/121=420$.",
+          "(b) The downward-sloping lines have equations $x+3y=9$ and $x+3y=6$. Their normal vector $(1,3)$ has length $\\sqrt{10}$, so their perpendicular separation is $(9-6)/\\sqrt{10}$. The other pair has slope $3$ and is perpendicular to them. Thus the separation is a side of the square and its square is $9/10$."
+        ],
+        "stepsZh": [
+          "(a) 顶部前 $j$ 条合成的三角形与原三角形相似，面积为 $770j^2/121$。减去前 $j-1$ 条的面积可知，第 $j$ 条的面积与 $j^2-(j-1)^2=2j-1$ 成正比。六条涂色区域的面积之和为 $770(1+5+9+13+17+21)/121=420$。",
+          "(b) 两条向右下倾斜的直线方程为 $x+3y=9$ 和 $x+3y=6$，法向量 $(1,3)$ 的长度为 $\\sqrt{10}$，故两线间的垂距为 $(9-6)/\\sqrt{10}$。另一组直线斜率为 $3$，与它们垂直。因此该垂距即正方形边长，平方得面积 $9/10$。"
+        ],
+        "topics": [
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          },
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差求和"
+          },
+          {
+            "en": "Parallel-line distance",
+            "zh": "平行线间距"
+          }
+        ]
+      },
+      {
+        "title": "Part (b) · Project a unit segment onto one side",
+        "titleZh": "第 (b) 问 · 将单位线段投影到方形边上",
+        "steps": [
+          "Consider the top horizontal segment from $(1,3)$ to $(2,3)$. Its endpoints lie on the two steep construction lines of slope $3$. Project both endpoints perpendicularly onto the upper shallow line. Because this shallow line is perpendicular to the steep ones, its two projection points are consecutive corners of the square.",
+          "The unit direction vector of the shallow line is $(3,-1)/\\sqrt{10}$. Its dot product with the horizontal displacement $(1,0)$ gives side length $3/\\sqrt{10}$. Squaring gives the area $9/10$."
+        ],
+        "stepsZh": [
+          "取从 $(1,3)$ 到 $(2,3)$ 的水平单位线段，其两端分别在两条斜率为 $3$ 的构造线上。将两端垂直投影到靠上的缓斜线上。因缓斜线与两条陡斜线垂直，两个投影点恰为正方形的相邻顶点。",
+          "缓斜线的单位方向向量为 $(3,-1)/\\sqrt{10}$，与水平位移 $(1,0)$ 做点积，得正方形边长 $3/\\sqrt{10}$。平方得面积 $9/10$。"
+        ],
+        "topics": [
+          {
+            "en": "Orthogonal projection",
+            "zh": "正交投影"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q7": {
+    "summary": "(a) A bag contains three red and six blue marbles, drawn uniformly without replacement. Given that draw $1$ is red and draw $3$ is blue, find the probability that the last two draws are blue. (b) Count increasing quadruples of positive integers $a<b<c<d$ with $ac+ad+bc+bd=2023$ and $a+b+c+d=296$.",
+    "summaryZh": "(a) 三枚红球和六枚蓝球混在袋中，等可能地逐枚抽出且不放回。已知第一枚为红、第三枚为蓝，求最后两枚都是蓝球的概率。(b) 求满足 $a<b<c<d$、$ac+ad+bc+bd=2023$ 且 $a+b+c+d=296$ 的正整数四元组个数。",
+    "answer": "(a) $10/21$. (b) $417$.",
+    "answerZh": "(a) $10/21$；(b) $417$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Condition on the fixed positions and factor the cross terms",
+        "titleZh": "固定已知位置与分解交叉项",
+        "steps": [
+          "(a) After the two specified positions are fixed, the remaining seven positions have two reds and five blues in uniformly random order. Looking at the final two positions first, the chance of successive blues is $(5/7)(4/6)=10/21$.",
+          "(b) Let $u=a+b$ and $v=c+d$. Their sum and product are $296$ and $2023$, so they are the roots of $(X-7)(X-289)=X^2-296X+2023$. Since $u<v$, necessarily $u=7,v=289$. The pairs $(a,b)$ are $(1,6),(2,5),(3,4)$.",
+          "For any given $b$, we need $b<c<289-c$, so $c$ ranges from $b+1$ to $144$ and determines $d$ uniquely. Thus the count is $138+139+140=417$."
+        ],
+        "stepsZh": [
+          "(a) 固定已知的两个位置后，其余七个位置由两红五蓝等可能地排列。先看这七个位置中的末两位，均为蓝色的概率为 $(5/7)(4/6)=10/21$。",
+          "(b) 令 $u=a+b,v=c+d$，其和为 $296$，积为 $2023$，故二者为 $(X-7)(X-289)=X^2-296X+2023$ 的两个根。因 $u<v$，必有 $u=7,v=289$，于是 $(a,b)$ 可为 $(1,6),(2,5),(3,4)$。",
+          "固定 $b$ 后需满足 $b<c<289-c$，故 $c$ 从 $b+1$ 取到 $144$，每个 $c$ 对应唯一的 $d$。总数为 $138+139+140=417$。"
+        ],
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Sampling without replacement",
+            "zh": "不放回抽样"
+          },
+          {
+            "en": "Integer counting",
+            "zh": "整数计数"
+          }
+        ]
+      },
+      {
+        "title": "Part (a) · Choose positions for the remaining reds",
+        "titleZh": "第 (a) 问 · 选择余下红球的位置",
+        "steps": [
+          "The two remaining reds occupy a uniformly chosen pair of the seven unspecified positions. There are $\\binom72=21$ pairs. To leave the last two positions blue, the reds must both be in the other five positions, giving $\\binom52=10$ pairs. The probability is $10/21$."
+        ],
+        "stepsZh": [
+          "剩余两枚红球在七个未定位置中等可能地占据两个，共有 $\\binom72=21$ 种。要使最后两位均为蓝色，红球须从另外五个位置中选两位，有 $\\binom52=10$ 种，故概率为 $10/21$。"
+        ],
+        "topics": [
+          {
+            "en": "Conditional counting",
+            "zh": "条件计数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q8": {
+    "summary": "(a) A right triangle has hypotenuse $(n+1)(n+4)$ and one leg $n(n+1)$. For how many integers $1\\le n<100000$ does the other leg have integer length? (b) Determine all real $x$ satisfying $\\sqrt{(\\log_2x)(\\log_2(4x))+1}+\\sqrt{(\\log_2x)(\\log_2(x/64))+9}=4$.",
+    "summaryZh": "(a) 直角三角形斜边长 $(n+1)(n+4)$，一条直角边长 $n(n+1)$。有多少个整数 $1\\le n<100000$ 使另一条直角边也为整数？(b) 求满足 $\\sqrt{(\\log_2x)(\\log_2(4x))+1}+\\sqrt{(\\log_2x)(\\log_2(x/64))+9}=4$ 的所有实数 $x$。",
+    "answer": "(a) $222$. (b) $1/2\\le x\\le8$.",
+    "answerZh": "(a) $222$；(b) $1/2\\le x\\le8$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Recognise a square and interpret two absolute values",
+        "titleZh": "判定平方数与绝对值的距离意义",
+        "steps": [
+          "(a) Subtracting the squares of the given sides gives $(n+1)^2((n+4)^2-n^2)=4(n+1)^2(2n+4)$. The unknown side is an integer exactly when $2n+4$ is a perfect square: a positive integer has a rational square root only if that root is an integer.",
+          "Its square root must be even. Write $2n+4=(2j)^2$, giving $n=2j^2-2$. The bounds allow precisely $2\\le j\\le223$, as $223^2=49729$ and $224^2=50176$. This gives $222$ choices.",
+          "(b) The logarithms require $x>0$. Write $w=\\log_2x$. The radicands become $w(w+2)+1=(w+1)^2$ and $w(w-6)+9=(w-3)^2$. Thus $|w+1|+|w-3|=4$. These are the distances to $-1$ and $3$. Their sum is the distance between those endpoints precisely for $-1\\le w\\le3$. Raising $2$ to those powers gives the claimed interval."
+        ],
+        "stepsZh": [
+          "(a) 已知两边的平方差为 $(n+1)^2((n+4)^2-n^2)=4(n+1)^2(2n+4)$。因为正整数的平方根若为有理数就必为整数，未知边为整数恰好等价于 $2n+4$ 是完全平方数。",
+          "这个平方根一定是偶数。写成 $2n+4=(2j)^2$，得 $n=2j^2-2$。由于 $223^2=49729,\\ 224^2=50176$，取正的 $j$ 时范围恰为 $2\\le j\\le223$，共有 $222$ 个。",
+          "(b) 定义域要求 $x>0$。设 $w=\\log_2x$，则两个根式内分别为 $w(w+2)+1=(w+1)^2$ 和 $w(w-6)+9=(w-3)^2$。原式化为 $|w+1|+|w-3|=4$。左边是 $w$ 到 $-1$ 和 $3$ 的距离之和，恰在 $-1\\le w\\le3$ 时等于两端点距离。以 $2$ 为底取幂便得所求区间。"
+        ],
+        "topics": [
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          },
+          {
+            "en": "Perfect squares",
+            "zh": "完全平方数"
+          },
+          {
+            "en": "Absolute values",
+            "zh": "绝对值"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q9": {
+    "summary": "On a circle of $n\\ge3$ chairs labelled $1$ to $n$, a seating pattern is full if no two occupied chairs are adjacent and no further chair can be occupied while keeping that rule. Rotations can give different label sets. (a) List every full pattern for $n=8$. (b) If $n=6k+5$ and $k$ is a positive integer, how many different numbers of seated people are possible? (c) How many full patterns are there for $n=19$?",
+    "summaryZh": "$n\\ge3$ 把椅子围成一圈，按顺序编号 $1$ 至 $n$。若已占用的椅子互不相邻且无法在遵守这条规则的条件下再坐一人，则称此坐法已满。占用的编号集合不同就算不同坐法。(a) 列出 $n=8$ 时的所有满座坐法。(b) 若 $n=6k+5$ 且 $k$ 为正整数，可能的满座人数有几个不同值？(c) $n=19$ 时有多少种满座坐法？",
+    "answer": "(a) $\\{1,3,5,7\\},\\{2,4,6,8\\}$ and $\\{1,3,6\\},\\{2,4,7\\},\\{3,5,8\\},\\{1,4,6\\},\\{2,5,7\\},\\{3,6,8\\},\\{1,4,7\\},\\{2,5,8\\}$. (b) $k+1$. (c) $209$.",
+    "answerZh": "(a) $\\{1,3,5,7\\},\\{2,4,6,8\\}$ 以及 $\\{1,3,6\\},\\{2,4,7\\},\\{3,5,8\\},\\{1,4,6\\},\\{2,5,7\\},\\{3,6,8\\},\\{1,4,7\\},\\{2,5,8\\}$；(b) $k+1$；(c) $209$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Record the clockwise distances between occupied chairs",
+        "titleZh": "记录相邻两名就座者的顺时针间距",
+        "steps": [
+          "In a full pattern the clockwise step from one occupied chair to the next must be $2$ or $3$. A step of $1$ would make two people adjacent, and a step of $4$ or more would leave a chair available between them. Conversely any circular list of steps $2,3$ using a total of $n$ chairs works.",
+          "(a) For $8$ chairs we need either four steps of $2$, giving the two alternating sets, or steps $2,3,3$. In the latter case choosing the start of the unique $2$-step freely among the eight labels produces the eight triples listed.",
+          "(b) With $t$ occupied chairs one needs $2t\\le n\\le3t$. These inequalities suffice, because taking $n-2t$ of the $t$ steps to be $3$ gives the right total. Thus for $6k+5$ chairs the range is $2k+2\\le t\\le3k+2$, containing $k+1$ integers.",
+          "(c) For fixed $t$, mark one occupied chair as the start. There are $19$ choices for its label and $\\binom{t}{19-2t}$ ways to choose the longer steps. Erasing the mark divides the count by $t$, since each unmarked set has $t$ possible starts. For $t=7,8,9$ respectively the counts are $19\\binom75/7=57$, $19\\binom83/8=133$, and $19\\binom91/9=19$, totalling $209$."
+        ],
+        "stepsZh": [
+          "满座时，从一张有人椅到下一张有人椅，顺时针的编号步数只能为 $2$ 或 $3$。若是 $1$，两人相邻；若至少为 $4$，中间仍可坐人。反过来，任意总步数为 $n$、每段为 $2$ 或 $3$ 的循环都符合。",
+          "(a) $8$ 把椅子只能分成四段 $2$，或三段 $2,3,3$。前者为两种隔位就座的编号集合；后者的唯一一段 $2$ 可以从任一编号开始，故得答案所列八个三元集合。",
+          "(b) 若有 $t$ 人，则须 $2t\\le n\\le3t$。反之，只需让 $t$ 段中的 $n-2t$ 段取 $3$，其余取 $2$，便能恰好绕一圈。代入 $n=6k+5$ 得 $2k+2\\le t\\le3k+2$，共有 $k+1$ 个整数。",
+          "(c) 固定 $t$，并标记其中一名就座者为起点。起点编号有 $19$ 种，选择哪些段较长有 $\\binom{t}{19-2t}$ 种。除去标记时须除以 $t$，因为每种坐法有 $t$ 个可标起点。分别取 $t=7,8,9$，得 $19\\binom75/7=57,\\ 19\\binom83/8=133,\\ 19\\binom91/9=19$，合计 $209$。"
+        ],
+        "topics": [
+          {
+            "en": "Circular arrangements",
+            "zh": "圆排列"
+          },
+          {
+            "en": "Double counting",
+            "zh": "双计数"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2023-q10": {
+    "summary": "Let $\\lfloor x\\rfloor$ be the greatest integer at most $x$. (a) Find $\\sum_{i=1}^{60}\\lfloor i/3\\rfloor$. (b) Give a polynomial $p$ with $\\lfloor p(m)\\rfloor=\\sum_{i=1}^{m-1}\\lfloor i/3\\rfloor$ for all integers $m>4$. (c) Define $f(n)=\\sum_{k\\ge1}\\lfloor kn/(k^2+1)\\rfloor$ for positive integers $n$. Show that if $t$ is positive and odd and $f(t+1)-f(t)=2$, then $t$ is prime.",
+    "summaryZh": "记 $\\lfloor x\\rfloor$ 为不大于 $x$ 的最大整数。(a) 求 $\\sum_{i=1}^{60}\\lfloor i/3\\rfloor$。(b) 求一个多项式 $p$，使任意整数 $m>4$ 都满足 $\\lfloor p(m)\\rfloor=\\sum_{i=1}^{m-1}\\lfloor i/3\\rfloor$。(c) 对任意正整数 $n$ 定义 $f(n)=\\sum_{k\\ge1}\\lfloor kn/(k^2+1)\\rfloor$。若正奇数 $t$ 满足 $f(t+1)-f(t)=2$，证明 $t$ 是质数。",
+    "answer": "(a) $590$. (b) $p(x)=(x-1)(x-2)/6$. (c) $t$ is prime.",
+    "answerZh": "(a) $590$；(b) $p(x)=(x-1)(x-2)/6$；(c) $t$ 是质数。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Group equal floor values and count jumps",
+        "titleZh": "将取整值分组并数跳跃的项",
+        "steps": [
+          "(a) Each integer from $1$ to $19$ occurs three times among the floors. The endpoint contributes $20$, and the initial zeros contribute nothing. The sum is $3\\cdot19\\cdot20/2+20=590$.",
+          "(b) Write $m=3u+r$, $r=0,1,2$, and include the zero term at $i=0$. From $i=0$ through $m-1$ there are $u$ complete blocks of three with values $0,\\ldots,u-1$, followed by $r$ copies of $u$. The sum is $S=3u(u-1)/2+ru$.",
+          "Expanding $(m-1)(m-2)/6$ gives $S+(r-1)(r-2)/6$, which exceeds $S$ by $1/3$ for $r=0$ and equals $S$ for $r=1,2$. Its floor is always $S$.",
+          "(c) For $k\\ge n$ the $k$th summand of $f(n)$ is zero. Every summand is nondecreasing in $n$. Its value increases from $t$ to $t+1$ if the interval $(kt/(k^2+1), k(t+1)/(k^2+1)]$ contains a positive integer $j$. Multiplying through, the criterion is $t<j(k+1/k)\\le t+1$.",
+          "If $t=1$, the difference is $f(2)-f(1)=1$. Otherwise suppose the odd $t$ is composite. Write $t=ab$ with $1<b\\le a<t$. At $k=1$, choose $j=(t+1)/2$ to obtain $t+1$. At $k=a$, choose $j=b$, obtaining $t+b/a$. At $k=t$, take $j=1$, obtaining $t+1/t$. All three numbers are in $(t,t+1]$. Thus three distinct terms increase, so the difference is at least $3$. This excludes every nonprime odd $t$."
+        ],
+        "stepsZh": [
+          "(a) 取整值从 $1$ 到 $19$ 都各出现三次，末项为 $20$，开头的零不影响总和。因此和为 $3\\cdot19\\cdot20/2+20=590$。",
+          "(b) 设 $m=3u+r$，其中 $r=0,1,2$，并补入 $i=0$ 时的零项。从 $i=0$ 至 $m-1$，先有 $u$ 个完整三项组，每组取整值依次为 $0$ 至 $u-1$，最后剩 $r$ 项取值为 $u$。故和为 $S=3u(u-1)/2+ru$。",
+          "展开 $(m-1)(m-2)/6$ 得 $S+(r-1)(r-2)/6$。当 $r=0$ 时比 $S$ 大 $1/3$，而当 $r=1,2$ 时等于 $S$。向下取整均为 $S$。",
+          "(c) 当 $k\\ge n$ 时，$f(n)$ 的第 $k$ 项为零，每一项又都随 $n$ 单调不减。从 $t$ 到 $t+1$ 时，若区间 $(kt/(k^2+1), k(t+1)/(k^2+1)]$ 包含一个正整数 $j$，则第 $k$ 项至少增加一。化简得判据 $t<j(k+1/k)\\le t+1$。",
+          "若 $t=1$，则 $f(2)-f(1)=1$。现假设奇数 $t$ 为合数，写成 $t=ab$，其中 $1<b\\le a<t$。对 $k=1$ 取 $j=(t+1)/2$，得到 $t+1$；对 $k=a$ 取 $j=b$，得到 $t+b/a$；对 $k=t$ 取 $j=1$，得到 $t+1/t$。这三个值均在 $(t,t+1]$ 内，对应三个不同的 $k$，故总和至少增加 $3$。至此排除所有不为质数的正奇数。"
+        ],
+        "topics": [
+          {
+            "en": "Floor function",
+            "zh": "下取整函数"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          },
+          {
+            "en": "Contrapositive proof",
+            "zh": "逆否证明"
+          }
+        ]
+      }
+    ]
+  }
+}

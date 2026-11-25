@@ -1,0 +1,712 @@
+{
+  "tmua-2020-p1-q1": {
+    "summary": "Find the derivative of $(x^3-5x^2)/(2x\\sqrt{x})$ on its real domain.",
+    "summaryZh": "求 $(x^3-5x^2)/(2x\\sqrt{x})$ 在实数定义域内的导数。",
+    "answer": "C. $\\dfrac{3x-5}{4\\sqrt{x}}$",
+    "answerZh": "C．$\\dfrac{3x-5}{4\\sqrt{x}}$",
+    "methods": [
+      {
+        "title": "Simplify the powers first",
+        "titleZh": "先化简幂次",
+        "topics": [
+          {
+            "en": "Power rule",
+            "zh": "幂函数求导"
+          },
+          {
+            "en": "Indices",
+            "zh": "指数运算"
+          }
+        ],
+        "steps": [
+          "The denominator requires $x>0$. Dividing the two numerator terms by $2x^{3/2}$ gives $(x^{3/2}-5x^{1/2})/2$.",
+          "Differentiate termwise to get $(3x^{1/2}-5x^{-1/2})/4=(3x-5)/(4\\sqrt{x})$."
+        ],
+        "stepsZh": [
+          "分母要求 $x>0$。把分子两项分别除以 $2x^{3/2}$，原式为 $(x^{3/2}-5x^{1/2})/2$。",
+          "逐项求导得到 $(3x^{1/2}-5x^{-1/2})/4=(3x-5)/(4\\sqrt{x})$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=3"
+  },
+  "tmua-2020-p1-q2": {
+    "summary": "A cubic $2x^3+px^2+q$ is divisible by $2x+1$ and $x-2$. Determine $2p+q$.",
+    "summaryZh": "三次式 $2x^3+px^2+q$ 可被 $2x+1$ 和 $x-2$ 整除，求 $2p+q$。",
+    "answer": "C. $-\\dfrac{22}{3}$",
+    "answerZh": "C．$-\\dfrac{22}{3}$",
+    "methods": [
+      {
+        "title": "Substitute the known zeros",
+        "titleZh": "代入已知零点",
+        "topics": [
+          {
+            "en": "Factor theorem",
+            "zh": "因式定理"
+          },
+          {
+            "en": "Simultaneous equations",
+            "zh": "联立方程"
+          }
+        ],
+        "steps": [
+          "At $x=-1/2$ the cubic vanishes, giving $-1+p+4q=0$ after multiplication by four. At $x=2$ it gives $16+4p+q=0$.",
+          "Substituting $p=1-4q$ into the second equation gives $q=4/3$ and $p=-13/3$. Hence $2p+q=-22/3$."
+        ],
+        "stepsZh": [
+          "代入零点 $x=-1/2$ 并乘以四得 $-1+p+4q=0$；代入 $x=2$ 得 $16+4p+q=0$。",
+          "将 $p=1-4q$ 代入第二式，得 $q=4/3$、$p=-13/3$，故 $2p+q=-22/3$。"
+        ]
+      },
+      {
+        "title": "Compare coefficients of a factored cubic",
+        "titleZh": "比较因式分解后的系数",
+        "topics": [
+          {
+            "en": "Polynomial coefficients",
+            "zh": "多项式系数"
+          }
+        ],
+        "steps": [
+          "The leading coefficient fixes the form $(2x+1)(x-2)(x-r)$. The first two factors multiply to $2x^2-3x-2$.",
+          "The coefficient of $x$ in the cubic is $3r-2=0$, so $r=2/3$. Its quadratic coefficient is $p=-3-2r=-13/3$, and its constant is $q=2r=4/3$, giving $2p+q=-22/3$."
+        ],
+        "stepsZh": [
+          "由首项系数可写作 $(2x+1)(x-2)(x-r)$。前两个因子相乘为 $2x^2-3x-2$。",
+          "三次多项式的一次项系数为 $3r-2=0$，故 $r=2/3$。二次项系数 $p=-3-2r=-13/3$，常数项 $q=2r=4/3$，所以 $2p+q=-22/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=4"
+  },
+  "tmua-2020-p1-q3": {
+    "summary": "Solve the simultaneous inequalities $(x+4)(x+3)(1-x)>0$ and $(x+2)(x-2)<0$.",
+    "summaryZh": "求 $(x+4)(x+3)(1-x)>0$ 和 $(x+2)(x-2)<0$ 的公共解集。",
+    "answer": "B. $-2<x<1$",
+    "answerZh": "B．$-2<x<1$",
+    "methods": [
+      {
+        "title": "Restrict the interval before checking signs",
+        "titleZh": "先确定区间再判断符号",
+        "topics": [
+          {
+            "en": "Polynomial inequalities",
+            "zh": "多项式不等式"
+          },
+          {
+            "en": "Sign analysis",
+            "zh": "符号分析"
+          }
+        ],
+        "steps": [
+          "The quadratic product is negative exactly for $-2<x<2$. On this interval $x+4$ and $x+3$ are both positive.",
+          "The first inequality therefore reduces to $1-x>0$. Intersecting with the first interval gives $(-2,1)$."
+        ],
+        "stepsZh": [
+          "二次式为负当且仅当 $-2<x<2$。在此区间中，$x+4$ 与 $x+3$ 均为正。",
+          "第一个不等式于是化为 $1-x>0$，与先前范围取交集即得 $(-2,1)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=5"
+  },
+  "tmua-2020-p1-q4": {
+    "summary": "The first three terms of a geometric sequence coincide with terms $1,4,6$ of an arithmetic sequence. The geometric series sums to $12$. Find its initial term.",
+    "summaryZh": "一个等比数列的前三项依次等于某等差数列的第 $1,4,6$ 项。无穷等比级数之和为 $12$，求其首项。",
+    "answer": "D. $4$",
+    "answerZh": "D．$4$",
+    "methods": [
+      {
+        "title": "Compare successive gaps",
+        "titleZh": "比较相邻已知项的差",
+        "topics": [
+          {
+            "en": "Geometric series",
+            "zh": "等比级数"
+          },
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "With initial term $a$, ratio $r$ and arithmetic difference $d$, the two gaps are $a(r-1)=3d$ and $ar(r-1)=2d$. A nonzero convergent series rules out $a=0$ or $r=1$, so division gives $r=2/3$.",
+          "The sum satisfies $12=a/(1-2/3)$, giving $a=4$."
+        ],
+        "stepsZh": [
+          "设首项为 $a$、公比为 $r$、公差为 $d$。两个间距给出 $a(r-1)=3d$、$ar(r-1)=2d$。级数收敛且和非零，排除 $a=0$ 或 $r=1$，相除得 $r=2/3$。",
+          "由 $12=a/(1-2/3)$ 可得 $a=4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=6"
+  },
+  "tmua-2020-p1-q5": {
+    "summary": "The parabola $y=px^2+6x-q$ is tangent to the horizontal axis and has axis of symmetry $x=-1/4$. Find $p+8q$.",
+    "summaryZh": "抛物线 $y=px^2+6x-q$ 与横轴相切，对称轴为 $x=-1/4$。求 $p+8q$。",
+    "answer": "A. $6$",
+    "answerZh": "A．$6$",
+    "methods": [
+      {
+        "title": "Use the vertex and discriminant",
+        "titleZh": "利用顶点与判别式",
+        "topics": [
+          {
+            "en": "Parabolas",
+            "zh": "抛物线"
+          },
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          }
+        ],
+        "steps": [
+          "The vertex has horizontal coordinate $-6/(2p)=-1/4$, giving $p=12$.",
+          "Tangency requires $36+4pq=0$, hence $q=-3/4$. The requested sum is $12-6=6$."
+        ],
+        "stepsZh": [
+          "顶点横坐标为 $-6/(2p)=-1/4$，所以 $p=12$。",
+          "相切要求 $36+4pq=0$，故 $q=-3/4$。所求和为 $12-6=6$。"
+        ]
+      },
+      {
+        "title": "Use the repeated linear factor",
+        "titleZh": "利用重复的一次因子",
+        "topics": [
+          {
+            "en": "Repeated roots",
+            "zh": "重根"
+          }
+        ],
+        "steps": [
+          "The axis meets the parabola at its unique root, hence the expression is $p(x+1/4)^2$.",
+          "Compare the coefficient of $x$: $p/2=6$, giving $p=12$. Compare constants: $-q=p/16=3/4$. Therefore $p+8q=6$."
+        ],
+        "stepsZh": [
+          "抛物线的对称轴经过唯一的零点，因此函数表达式可写成 $p(x+1/4)^2$。",
+          "比较一次项系数得 $p/2=6$，故 $p=12$；比较常数项得 $-q=p/16=3/4$。于是 $p+8q=6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=7"
+  },
+  "tmua-2020-p1-q6": {
+    "summary": "What is the largest value of $1/(5^{2x}-4\\cdot5^x+7)$ as $x$ ranges over the reals?",
+    "summaryZh": "当 $x$ 遍历实数时，$1/(5^{2x}-4\\cdot5^x+7)$ 的最大值是多少？",
+    "answer": "C. $\\dfrac13$",
+    "answerZh": "C．$\\dfrac13$",
+    "methods": [
+      {
+        "title": "Minimise the positive denominator",
+        "titleZh": "求正分母的最小值",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Exponential functions",
+            "zh": "指数函数"
+          }
+        ],
+        "steps": [
+          "With $u=5^x$, the denominator is $u^2-4u+7=(u-2)^2+3\\ge3$.",
+          "The equality value $u=2$ occurs for $x=\\log_5 2$, so the maximum reciprocal is $1/3$."
+        ],
+        "stepsZh": [
+          "令 $u=5^x$，分母化为 $u^2-4u+7=(u-2)^2+3\\ge3$。",
+          "当 $x=\\log_5 2$ 时 $u=2$，可以取等，因此倒数的最大值为 $1/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=8"
+  },
+  "tmua-2020-p1-q7": {
+    "summary": "Suppose $2^{3x}=8^{y+3}$ and $4^{x+1}=16^{y+1}/8^{y+3}$. Find $x+y$.",
+    "summaryZh": "已知 $2^{3x}=8^{y+3}$ 且 $4^{x+1}=16^{y+1}/8^{y+3}$，求 $x+y$。",
+    "answer": "A. $-23$",
+    "answerZh": "A．$-23$",
+    "methods": [
+      {
+        "title": "Express all powers in base two",
+        "titleZh": "统一化为以二为底",
+        "topics": [
+          {
+            "en": "Exponent laws",
+            "zh": "指数运算"
+          },
+          {
+            "en": "Simultaneous equations",
+            "zh": "联立方程"
+          }
+        ],
+        "steps": [
+          "The first equation gives $3x=3(y+3)$, hence $x=y+3$. From the second we have $2(x+1)=4(y+1)-3(y+3)=y-5$.",
+          "Substitute $x=y+3$ to obtain $2y+8=y-5$. Thus $y=-13$, $x=-10$ and $x+y=-23$."
+        ],
+        "stepsZh": [
+          "第一式给出 $3x=3(y+3)$，故 $x=y+3$。第二式给出 $2(x+1)=4(y+1)-3(y+3)=y-5$。",
+          "代入 $x=y+3$ 得 $2y+8=y-5$。因此 $y=-13$、$x=-10$，两者之和为 $-23$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=9"
+  },
+  "tmua-2020-p1-q8": {
+    "summary": "For what real $p$ is the maximum of $(p-x)(x+2)$, over all real $x$, strictly less than $4$?",
+    "summaryZh": "要使 $(p-x)(x+2)$ 在实数轴上的最大值严格小于 $4$，实参数 $p$ 应取什么范围？",
+    "answer": "D. $-6<p<2$",
+    "answerZh": "D．$-6<p<2$",
+    "methods": [
+      {
+        "title": "Read off the maximum from vertex form",
+        "titleZh": "由顶点式读出最大值",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Inequalities",
+            "zh": "不等式"
+          }
+        ],
+        "steps": [
+          "Expanding and completing the square gives $(p-x)(x+2)=(p+2)^2/4-(x-(p-2)/2)^2$. The maximum is $(p+2)^2/4$.",
+          "Requiring this to be less than $4$ gives $|p+2|<4$, or $-6<p<2$."
+        ],
+        "stepsZh": [
+          "展开并配方得 $(p-x)(x+2)=(p+2)^2/4-(x-(p-2)/2)^2$，最大值为 $(p+2)^2/4$。",
+          "要求它小于 $4$，即 $|p+2|<4$，解得 $-6<p<2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=10"
+  },
+  "tmua-2020-p1-q9": {
+    "summary": "The positive roots of $x^2-14x+9$ are $\\alpha,\\beta$. Find the monic quadratic with roots $\\sqrt{\\alpha}$ and $\\sqrt{\\beta}$.",
+    "summaryZh": "$x^2-14x+9$ 的两个正根为 $\\alpha,\\beta$。求以 $\\sqrt{\\alpha},\\sqrt{\\beta}$ 为根的首一二次多项式。",
+    "answer": "C. $x^2-\\sqrt{20}\\,x+3$",
+    "answerZh": "C．$x^2-\\sqrt{20}\\,x+3$",
+    "methods": [
+      {
+        "title": "Recover the new root sum and product",
+        "titleZh": "求新根的和与积",
+        "topics": [
+          {
+            "en": "Vieta's formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Radicals",
+            "zh": "根式"
+          }
+        ],
+        "steps": [
+          "We know $\\alpha+\\beta=14$ and $\\alpha\\beta=9$. The product of the square roots is $3$.",
+          "Their sum is positive and its square is $14+2(3)=20$, so their sum is $\\sqrt{20}$. The required polynomial follows from its roots."
+        ],
+        "stepsZh": [
+          "由韦达定理有 $\\alpha+\\beta=14$、$\\alpha\\beta=9$，所以两平方根的积为 $3$。",
+          "两平方根之和为正，其平方为 $14+2(3)=20$，故和为 $\\sqrt{20}$。由新根的和与积即得所求多项式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=11"
+  },
+  "tmua-2020-p1-q10": {
+    "summary": "Translate $y=4x^2$ by $(3,-5)$, reflect in the horizontal axis, then stretch horizontally about the vertical axis by scale factor $2$. Give the resulting equation.",
+    "summaryZh": "将 $y=4x^2$ 按 $(3,-5)$ 平移，再关于横轴对称，最后以纵轴为基准沿水平方向伸长为原来的两倍。求最终方程。",
+    "answer": "A. $y=-x^2+12x-31$",
+    "answerZh": "A．$y=-x^2+12x-31$",
+    "methods": [
+      {
+        "title": "Transform the function in order",
+        "titleZh": "按次序变换函数表达式",
+        "topics": [
+          {
+            "en": "Graph transformations",
+            "zh": "函数图像变换"
+          },
+          {
+            "en": "Quadratics",
+            "zh": "二次函数"
+          }
+        ],
+        "steps": [
+          "Translation gives $y=4(x-3)^2-5$. Reflection negates the output, giving $y=-4(x-3)^2+5$.",
+          "The horizontal stretch replaces $x$ by $x/2$ in this last expression. Expand $-4(x/2-3)^2+5$ to get $-x^2+12x-31$."
+        ],
+        "stepsZh": [
+          "平移后为 $y=4(x-3)^2-5$。关于横轴对称使输出取相反数，变成 $y=-4(x-3)^2+5$。",
+          "水平伸长后，在上式中将 $x$ 替换为 $x/2$。展开 $-4(x/2-3)^2+5$ 即得 $-x^2+12x-31$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=12"
+  },
+  "tmua-2020-p1-q11": {
+    "summary": "An upward parabola crosses the horizontal axis at $2$ and $q>2$. Its area above the axis from $0$ to $2$ equals its area below the axis from $2$ to $q$. Find $q$.",
+    "summaryZh": "一条开口向上的抛物线与横轴交于 $2$ 和 $q>2$。它在 $[0,2]$ 上与横轴所围的上方面积，等于在 $[2,q]$ 上横轴下方的面积。求 $q$。",
+    "answer": "E. $6$",
+    "answerZh": "E．$6$",
+    "methods": [
+      {
+        "title": "Cancel signed areas",
+        "titleZh": "让有向面积相消",
+        "topics": [
+          {
+            "en": "Signed area",
+            "zh": "有向面积"
+          },
+          {
+            "en": "Definite integrals",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "Write the parabola as $a(x-2)(x-q)$ with $a>0$. The two areas have opposite integral signs, so their equality means $\\int_0^q(x-2)(x-q)\\,dx=0$.",
+          "Integration yields $q^3/3-(q+2)q^2/2+2q^2=q^2(1-q/6)=0$. Since $q>2$, $q=6$."
+        ],
+        "stepsZh": [
+          "抛物线可写为 $a(x-2)(x-q)$，其中 $a>0$。两部分积分的符号相反，面积相等意味着 $\\int_0^q(x-2)(x-q)\\,dx=0$。",
+          "积分得 $q^3/3-(q+2)q^2/2+2q^2=q^2(1-q/6)=0$。由 $q>2$ 得 $q=6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=13"
+  },
+  "tmua-2020-p1-q12": {
+    "summary": "How many real solutions does $3\\cos x=\\sqrt{x}$ have when angles are in radians?",
+    "summaryZh": "角度按弧度计，方程 $3\\cos x=\\sqrt{x}$ 有多少个不同实根？",
+    "answer": "D. $3$",
+    "answerZh": "D．$3$",
+    "methods": [
+      {
+        "title": "Count crossings on the positive cosine arcs",
+        "titleZh": "分段计算余弦非负区间上的交点",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          }
+        ],
+        "steps": [
+          "A root needs $0\\le x\\le9$ and $\\cos x\\ge0$. On $[0,\\pi/2]$, the left side decreases and the right side increases; they cross once. The only other candidate arc is $[3\\pi/2,5\\pi/2]$.",
+          "On $[3\\pi/2,11\\pi/6]$ the difference $3\\cos x-\\sqrt{x}$ increases because its derivative is at least $3/2-1/(2\\sqrt{x})>0$. It starts negative. On $[11\\pi/6,2\\pi]$, $3\\cos x\\ge3\\sqrt3/2>\\sqrt{2\\pi}$, so the difference is already positive. This gives one rising crossing. From $2\\pi$ to $5\\pi/2$, cosine decreases to zero and the square root increases, giving one final crossing."
+        ],
+        "stepsZh": [
+          "根须满足 $0\\le x\\le9$ 且 $\\cos x\\ge0$。在 $[0,\\pi/2]$ 上左边递减、右边递增，恰交一次。另一段需考察的区间是 $[3\\pi/2,5\\pi/2]$。",
+          "在 $[3\\pi/2,11\\pi/6]$ 上，差 $3\\cos x-\\sqrt{x}$ 的导数至少为 $3/2-1/(2\\sqrt{x})>0$，差从负值开始递增。在 $[11\\pi/6,2\\pi]$ 上则有 $3\\cos x\\ge3\\sqrt3/2>\\sqrt{2\\pi}$，差已为正，所以前半段恰交一次。从 $2\\pi$ 到 $5\\pi/2$，余弦减至零而平方根递增，最后再交一次。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=14"
+  },
+  "tmua-2020-p1-q13": {
+    "summary": "What is the coefficient of $x^2y^4$ in $(1+x+y^2)^7$?",
+    "summaryZh": "求 $(1+x+y^2)^7$ 中 $x^2y^4$ 的系数。",
+    "answer": "F. $210$",
+    "answerZh": "F．$210$",
+    "methods": [
+      {
+        "title": "Choose positions for each factor",
+        "titleZh": "为各因子选择位置",
+        "topics": [
+          {
+            "en": "Multinomial coefficients",
+            "zh": "多项式系数"
+          },
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          }
+        ],
+        "steps": [
+          "From seven copies of the bracket, choose two positions supplying $x$. There are $\\binom72=21$ ways.",
+          "Of the remaining five positions choose two to supply $y^2$, in $\\binom52=10$ ways. All other choices are $1$, so the coefficient is $21\\cdot10=210$."
+        ],
+        "stepsZh": [
+          "七个括号中选两个提供 $x$，有 $\\binom72=21$ 种选法。",
+          "余下五个括号中再选两个提供 $y^2$，有 $\\binom52=10$ 种，其他括号均选 $1$。系数为 $21\\cdot10=210$。"
+        ]
+      },
+      {
+        "title": "Expand in two binomial stages",
+        "titleZh": "分两次应用二项式定理",
+        "topics": [
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          }
+        ],
+        "steps": [
+          "Treat the expression as $(1+(x+y^2))^7$. The target term needs exactly four nonconstant picks: two $x$ factors and two $y^2$ factors. Its contribution therefore comes only from $\\binom74(x+y^2)^4$.",
+          "In that fourth power the desired coefficient is $\\binom42=6$, so the full coefficient is $35\\cdot6=210$."
+        ],
+        "stepsZh": [
+          "将多项式看作 $(1+(x+y^2))^7$。目标项由两个 $x$ 和两个 $y^2$ 组成，共用四个非常数项，因此只需计算 $\\binom74(x+y^2)^4$。",
+          "在该四次幂内，所需系数为 $\\binom42=6$，故总系数为 $35\\cdot6=210$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=15"
+  },
+  "tmua-2020-p1-q14": {
+    "summary": "The bounded regions between $y=mx$ and $y=x^3$ have combined area $6$. Determine $m$.",
+    "summaryZh": "直线 $y=mx$ 与曲线 $y=x^3$ 围成的各有界区域总面积为 $6$，求 $m$。",
+    "answer": "E. $2\\sqrt3$",
+    "answerZh": "E．$2\\sqrt3$",
+    "methods": [
+      {
+        "title": "Double the area of one lobe",
+        "titleZh": "利用中心对称计算两块面积",
+        "topics": [
+          {
+            "en": "Area between curves",
+            "zh": "曲线间面积"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          }
+        ],
+        "steps": [
+          "To enclose area, $m>0$ and the intersections have abscissas $-\\sqrt m,0,\\sqrt m$. The two enclosed regions are exchanged by a half-turn.",
+          "Their total area is $2\\int_0^{\\sqrt m}(mx-x^3)\\,dx=m^2/2$. Setting this equal to $6$ gives $m=\\sqrt{12}=2\\sqrt3$."
+        ],
+        "stepsZh": [
+          "要围成非零面积，须有 $m>0$，交点横坐标为 $-\\sqrt m,0,\\sqrt m$。两块区域关于原点中心对称。",
+          "总面积为 $2\\int_0^{\\sqrt m}(mx-x^3)\\,dx=m^2/2$。令其等于 $6$，解得 $m=\\sqrt{12}=2\\sqrt3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=16"
+  },
+  "tmua-2020-p1-q15": {
+    "summary": "Find the distance between the two real solutions of $(\\log_2x)^4+12(\\log_2(1/x))^2-2^6=0$.",
+    "summaryZh": "求方程 $(\\log_2x)^4+12(\\log_2(1/x))^2-2^6=0$ 的两个实根之差的绝对值。",
+    "answer": "C. $\\dfrac{15}{4}$",
+    "answerZh": "C．$\\dfrac{15}{4}$",
+    "methods": [
+      {
+        "title": "Solve a quadratic in the squared logarithm",
+        "titleZh": "把对数平方看作未知量",
+        "topics": [
+          {
+            "en": "Logarithmic equations",
+            "zh": "对数方程"
+          },
+          {
+            "en": "Biquadratic equations",
+            "zh": "双二次方程"
+          }
+        ],
+        "steps": [
+          "Set $u=(\\log_2x)^2\\ge0$. Since $\\log_2(1/x)=-\\log_2x$, the equation reduces to $u^2+12u-64=(u-4)(u+16)=0$.",
+          "Thus $u=4$ and $\\log_2x=\\pm2$. The two values are $4$ and $1/4$, whose difference is $15/4$."
+        ],
+        "stepsZh": [
+          "设 $u=(\\log_2x)^2\\ge0$。由 $\\log_2(1/x)=-\\log_2x$，原方程化为 $u^2+12u-64=(u-4)(u+16)=0$。",
+          "于是 $u=4$，$\\log_2x=\\pm2$。两根为 $4$ 与 $1/4$，差为 $15/4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=17"
+  },
+  "tmua-2020-p1-q16": {
+    "summary": "Two circles of radius $\\sqrt3$ are centred at $(-2,1)$ and $(4,1)$. A common tangent has positive slope. Find the tangent of its acute angle to the horizontal.",
+    "summaryZh": "两圆的半径均为 $\\sqrt3$，圆心分别为 $(-2,1)$ 与 $(4,1)$。一条公切线斜率为正，求它与水平方向所成锐角的正切值。",
+    "answer": "C. $\\dfrac{\\sqrt2}{2}$",
+    "answerZh": "C．$\\dfrac{\\sqrt2}{2}$",
+    "methods": [
+      {
+        "title": "Use the perpendicular distances from both centres",
+        "titleZh": "利用两圆心到切线的垂距",
+        "topics": [
+          {
+            "en": "Common tangents",
+            "zh": "公切线"
+          },
+          {
+            "en": "Right-triangle trigonometry",
+            "zh": "直角三角形三角比"
+          }
+        ],
+        "steps": [
+          "The nonhorizontal common tangent separates the centres, since equal signed distances would make the tangent parallel to their joining line. Its intersection with the centre line is therefore their midpoint, distance $3$ from each centre.",
+          "The perpendicular to the tangent from a centre has length $\\sqrt3$. In the resulting right triangle the other leg is $\\sqrt{3^2-3}=\\sqrt6$, so $\\tan\\theta=\\sqrt3/\\sqrt6=\\sqrt2/2$."
+        ],
+        "stepsZh": [
+          "非水平公切线将两个圆心分居两侧，否则圆心的有向距离相同，切线将平行于圆心连线。因此切线与圆心连线的交点为中点，到每个圆心距离为 $3$。",
+          "圆心到切线的垂线长为 $\\sqrt3$。所得直角三角形的另一直角边长 $\\sqrt{3^2-3}=\\sqrt6$，所以 $\\tan\\theta=\\sqrt3/\\sqrt6=\\sqrt2/2$。"
+        ]
+      },
+      {
+        "title": "Solve the two distance-to-line equations",
+        "titleZh": "联立圆心到直线的距离公式",
+        "topics": [
+          {
+            "en": "Distance to a line",
+            "zh": "点到直线的距离"
+          }
+        ],
+        "steps": [
+          "Write the tangent as $mx-y+b=0$ with $m>0$. At the centres the numerator of the signed distance is $-2m-1+b$ or $4m-1+b$. After division by $\\sqrt{1+m^2}$ these have equal magnitude $\\sqrt3$.",
+          "Their difference is positive, so the signed distances must be opposite and differ by $2\\sqrt3$. Thus $6m/\\sqrt{1+m^2}=2\\sqrt3$. Squaring yields $m^2=1/2$, so the positive slope is $\\sqrt2/2$."
+        ],
+        "stepsZh": [
+          "设切线为 $mx-y+b=0$，其中 $m>0$。将两个圆心代入，得到有向距离的分子 $-2m-1+b$、$4m-1+b$；各除以 $\\sqrt{1+m^2}$ 后绝对值皆为 $\\sqrt3$。",
+          "它们之差为正，所以两个有向距离符号相反，差为 $2\\sqrt3$。于是 $6m/\\sqrt{1+m^2}=2\\sqrt3$。平方得 $m^2=1/2$，由斜率为正得 $m=\\sqrt2/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=18"
+  },
+  "tmua-2020-p1-q17": {
+    "summary": "For a fixed intercept $c$, when does $y=mx+c$ meet $y=\\sqrt{x}$ in exactly two distinct points, including a possible intersection at the origin?",
+    "summaryZh": "给定纵截距 $c$，在包括原点交点的通常定义下，何时 $y=mx+c$ 与 $y=\\sqrt{x}$ 恰有两个不同交点？",
+    "answer": "A. For $c>0$, $0<m<1/(4c)$ (choice A). For $c=0$, all $m>0$. For $c<0$, none.",
+    "answerZh": "A．$c>0$ 时 $0<m<1/(4c)$（选项 A）；$c=0$ 时任意 $m>0$；$c<0$ 时无解。",
+    "methods": [
+      {
+        "title": "Impose nonnegativity on both roots",
+        "titleZh": "要求两个根都非负",
+        "topics": [
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          },
+          {
+            "en": "Radical equations",
+            "zh": "根式方程"
+          }
+        ],
+        "steps": [
+          "Write $t=\\sqrt{x}\\ge0$. The intersections correspond exactly to nonnegative solutions of $mt^2-t+c=0$. For $m=0$ there is at most one. Otherwise two distinct nonnegative roots need sum $1/m>0$, product $c/m\\ge0$ and discriminant $1-4mc>0$.",
+          "These conditions are also sufficient. For $c>0$ they give the keyed answer $0<m<1/(4c)$. The printed question specifies no sign for $c$: if $c=0$, the two roots are $0,1/m$ for every $m>0$. For $c<0$ there is no admissible slope."
+        ],
+        "stepsZh": [
+          "令 $t=\\sqrt{x}\\ge0$，交点与 $mt^2-t+c=0$ 的非负根一一对应。若 $m=0$，至多有一个根。否则，要有两个不同的非负根，其和 $1/m>0$、积 $c/m\\ge0$，且判别式 $1-4mc>0$。",
+          "这三个条件也充分。若 $c>0$，它们给出答案表中的 $0<m<1/(4c)$。原题未限制 $c$ 的符号：当 $c=0$ 时，任意 $m>0$ 都给出 $0,1/m$ 两根；当 $c<0$ 时，无合适斜率。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=19"
+  },
+  "tmua-2020-p1-q18": {
+    "summary": "Within $0^\\circ\\le x\\le180^\\circ$, how many solutions have $1-2\\cos^2x=|\\cos x|$, and what is their sum?",
+    "summaryZh": "在 $0^\\circ\\le x\\le180^\\circ$ 内，方程 $1-2\\cos^2x=|\\cos x|$ 有多少个解？所有解之和是多少？",
+    "answer": "A. Two solutions, sum $180^\\circ$",
+    "answerZh": "A．两个解，和为 $180^\\circ$",
+    "methods": [
+      {
+        "title": "Substitute the absolute cosine",
+        "titleZh": "以余弦的绝对值换元",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ],
+        "steps": [
+          "Take $u=|\\cos x|\\ge0$. Then $2u^2+u-1=(2u-1)(u+1)=0$, giving $u=1/2$.",
+          "Thus $\\cos x=1/2$ or $-1/2$, attained at $60^\\circ$ and $120^\\circ$ in the given interval. Their sum is $180^\\circ$."
+        ],
+        "stepsZh": [
+          "令 $u=|\\cos x|\\ge0$，有 $2u^2+u-1=(2u-1)(u+1)=0$，故 $u=1/2$。",
+          "于是 $\\cos x=1/2$ 或 $-1/2$，在给定区间内分别对应 $60^\\circ$、$120^\\circ$，两解之和是 $180^\\circ$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=20"
+  },
+  "tmua-2020-p1-q19": {
+    "summary": "Find the smallest positive integer $x$ with $x^2-52x-52>0$.",
+    "summaryZh": "求使 $x^2-52x-52>0$ 成立的最小正整数 $x$。",
+    "answer": "E. $53$",
+    "answerZh": "E．$53$",
+    "methods": [
+      {
+        "title": "Bracket the first possible integer",
+        "titleZh": "锁定第一个可能的整数",
+        "topics": [
+          {
+            "en": "Quadratic inequalities",
+            "zh": "二次不等式"
+          },
+          {
+            "en": "Integer bounds",
+            "zh": "整数界限"
+          }
+        ],
+        "steps": [
+          "Rewrite the expression as $x(x-52)-52$. For $1\\le x\\le52$ the product is nonpositive, so the whole expression is negative.",
+          "At $x=53$ the expression equals $53\\cdot1-52=1>0$, establishing minimality."
+        ],
+        "stepsZh": [
+          "改写为 $x(x-52)-52$。当 $1\\le x\\le52$ 时，乘积非正，所以整个式子为负。",
+          "当 $x=53$ 时，该式为 $53\\cdot1-52=1>0$，因此这是第一个可行的正整数。"
+        ]
+      },
+      {
+        "title": "Bound the roots by consecutive squares",
+        "titleZh": "用相邻完全平方数确定根的范围",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          }
+        ],
+        "steps": [
+          "The inequality becomes $(x-26)^2>728$. Because $26^2<728<27^2$, an integer satisfying it needs $|x-26|\\ge27$.",
+          "This gives $x\\le-1$ or $x\\ge53$, so the smallest positive choice is $53$."
+        ],
+        "stepsZh": [
+          "配方后不等式为 $(x-26)^2>728$。由 $26^2<728<27^2$，满足它的整数必须有 $|x-26|\\ge27$。",
+          "因此 $x\\le-1$ 或 $x\\ge53$，最小的正整数为 $53$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=21"
+  },
+  "tmua-2020-p1-q20": {
+    "summary": "For how many real parameters $a$ does $(x-a)(x^2-x+a)=0$ have exactly two distinct real roots?",
+    "summaryZh": "对于多少个不同的实参数 $a$，方程 $(x-a)(x^2-x+a)=0$ 恰有两个不同实根？",
+    "answer": "C. $2$",
+    "answerZh": "C．$2$",
+    "methods": [
+      {
+        "title": "Separate repeated and shared roots",
+        "titleZh": "分别考虑重根与公共根",
+        "topics": [
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          },
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式根"
+          }
+        ],
+        "steps": [
+          "The linear factor always yields $x=a$. If the quadratic has a double root then $1-4a=0$, so $a=1/4$. Its root $1/2$ is distinct from $a$, giving two roots altogether.",
+          "With two distinct quadratic roots, one must coincide with $a$. Substitution into the quadratic gives $a^2-a+a=a^2=0$, so $a=0$, yielding roots $0,1$. A quadratic without real roots leaves only the linear root. Thus precisely two parameter values work."
+        ],
+        "stepsZh": [
+          "一次因子总给出根 $x=a$。若二次式有重根，则 $1-4a=0$，即 $a=1/4$。其重根 $1/2$ 与 $a$ 不同，因此合计两个不同根。",
+          "若二次式有两个不同实根，则其中一个必须等于 $a$。代入二次式得 $a^2-a+a=a^2=0$，故 $a=0$，此时根为 $0,1$。若二次式无实根，则总共只有一次因子的根。因此恰有两个参数值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf#page=22"
+  }
+}

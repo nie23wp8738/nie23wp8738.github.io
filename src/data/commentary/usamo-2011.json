@@ -1,0 +1,66 @@
+{
+  "usamo-2011-q1": {
+    "summary": "For $a,b,c>0$ assume $a^2+b^2+c^2+(a+b+c)^2\\le4$. Show that the three terms $(1+ab)/(a+b)^2$, $(1+bc)/(b+c)^2$, and $(1+ca)/(c+a)^2$ have sum at least $3$.",
+    "summaryZh": "已知 $a,b,c$ 为正数，且 $a^2+b^2+c^2+(a+b+c)^2\\le4$。证明 $(1+ab)/(a+b)^2$、$(1+bc)/(b+c)^2$、$(1+ca)/(c+a)^2$ 三项之和至少为 $3$。",
+    "answer": "The lower bound is $3$, attained precisely at $a=b=c=1/\\sqrt3$.",
+    "answerZh": "下界为 $3$，恰在 $a=b=c=1/\\sqrt3$ 时取到。",
+    "methods": [
+      {
+        "title": "Use the three denominators as variables",
+        "titleZh": "以三个分母中的两数之和换元",
+        "topics": [
+          {
+            "en": "Substitution",
+            "zh": "换元"
+          },
+          {
+            "en": "Arithmetic–geometric mean inequality",
+            "zh": "算术几何平均不等式"
+          }
+        ],
+        "steps": [
+          "Put $x=a+b$, $y=b+c$, and $z=c+a$. Expanding gives $x^2+y^2+z^2=a^2+b^2+c^2+(a+b+c)^2\\le4$. Also $4ab=x^2-(y-z)^2$.",
+          "Consequently $4(1+ab)\\ge x^2+y^2+z^2+x^2-(y-z)^2=2x^2+2yz$. Divide by $4x^2$ and apply the same bound cyclically. The sum in the question is at least $\\tfrac32+\\tfrac12(yz/x^2+zx/y^2+xy/z^2)$.",
+          "The three positive ratios in parentheses have product $1$, so their sum is at least $3$. For equality they must all be equal, forcing $x=y=z$, hence $a=b=c$. Equality also requires $x^2+y^2+z^2=4$, giving $a=b=c=1/\\sqrt3$. Direct substitution attains $3$."
+        ],
+        "stepsZh": [
+          "令 $x=a+b,y=b+c,z=c+a$。展开得 $x^2+y^2+z^2=a^2+b^2+c^2+(a+b+c)^2\\le4$。另有 $4ab=x^2-(y-z)^2$。",
+          "因此 $4(1+ab)\\ge x^2+y^2+z^2+x^2-(y-z)^2=2x^2+2yz$。两边除以 $4x^2$，再循环应用同一估计，得题中三项之和至少为 $\\tfrac32+\\tfrac12(yz/x^2+zx/y^2+xy/z^2)$。",
+          "括号内三个正数的乘积为 $1$，故算术几何平均不等式给出其和至少为 $3$。取等须三者相等，因而 $x=y=z$，也就是 $a=b=c$。还须 $x^2+y^2+z^2=4$，所以 $a=b=c=1/\\sqrt3$。直接代入即可取到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_1"
+  },
+  "usamo-2011-q4": {
+    "summary": "For $n\\ge2$, divide $2^{2^n}$ by $2^n-1$ and take its least nonnegative remainder. Is this remainder always a power of four? Prove the assertion or exhibit a counterexample and verify it.",
+    "summaryZh": "对任意整数 $n\\ge2$，计算 $2^{2^n}$ 除以 $2^n-1$ 的最小非负余数。此余数是否总是 $4$ 的幂？证明该命题或给出反例并验证。",
+    "answer": "No. Taking $n=25$ gives the remainder $128=2^7$.",
+    "answerZh": "不总是。取 $n=25$，余数为 $128=2^7$。",
+    "methods": [
+      {
+        "title": "Reduce the exponent first",
+        "titleZh": "先化简指数",
+        "topics": [
+          {
+            "en": "Modular exponentiation",
+            "zh": "模幂运算"
+          },
+          {
+            "en": "Remainders",
+            "zh": "余数"
+          }
+        ],
+        "steps": [
+          "Set $M=2^n-1$. Since $2^n\\equiv1\\pmod M$, exponents differing by $n$ give the same residue for powers of two. In particular, if $r$ is the remainder of $2^n$ modulo $n$, then $2^{2^n}\\equiv2^r\\pmod M$. As $0\\le r<n$ and $n\\ge2$, we have $0<2^r\\le2^{n-1}<M$, so $2^r$ is the actual remainder.",
+          "For $n=25$ we have $2^{10}=1024\\equiv-1\\pmod{25}$. Thus $2^{25}=2^5(2^{10})^2\\equiv32\\equiv7\\pmod{25}$. The required remainder is $2^7=128$. Every integral power of four that is a positive integer has even exponent in its prime factorisation at $2$, whereas $128$ has exponent seven."
+        ],
+        "stepsZh": [
+          "设 $M=2^n-1$。因 $2^n\\equiv1\\pmod M$，若把 $2$ 的非负整数指数增加 $n$，所得幂模 $M$ 的余数保持不变。若 $r$ 为 $2^n$ 除以 $n$ 的余数，则 $2^{2^n}\\equiv2^r\\pmod M$。又因 $0\\le r<n$ 且 $n\\ge2$，有 $0<2^r\\le2^{n-1}<M$，故 $2^r$ 就是实际余数。",
+          "取 $n=25$，有 $2^{10}=1024\\equiv-1\\pmod{25}$，于是 $2^{25}=2^5(2^{10})^2\\equiv32\\equiv7\\pmod{25}$。所求余数等于 $2^7=128$。$4$ 的非负整数次幂分解素因数时，$2$ 的指数是偶数，而 $128$ 中 $2$ 的指数是七。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAMO_Problems/Problem_4"
+  }
+}

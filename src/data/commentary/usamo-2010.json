@@ -1,0 +1,102 @@
+{
+  "usamo-2010-q1": {
+    "summary": "Start with a diameter $AB$ and choose three more points on one semicircle, in arc order $A,X,Y,Z,B$. Project $Y$ perpendicularly onto the four lines $AX,BX,AZ,BZ$, calling the feet $P,Q,R,S$ in that order. If $O$ is the circle centre, show the smaller angle between $PQ$ and $RS$ equals $\\angle XOZ/2$.",
+    "summaryZh": "以 $AB$ 为直径作圆，在同一半圆上依弧序取五个不同的点 $A,X,Y,Z,B$。从 $Y$ 向直线 $AX,BX,AZ,BZ$ 分别作垂线，垂足依次为 $P,Q,R,S$。设圆心为 $O$，证明直线 $PQ$ 与 $RS$ 所成的锐角等于 $\\angle XOZ$ 的一半。",
+    "answer": "The angle is $\\angle XAZ=\\tfrac12\\angle XOZ$.",
+    "answerZh": "该角为 $\\angle XAZ=\\tfrac12\\angle XOZ$。",
+    "methods": [
+      {
+        "title": "Reflect directions in two rectangles",
+        "titleZh": "用两组正交坐标反射直线方向",
+        "topics": [
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          },
+          {
+            "en": "Inscribed angle theorem",
+            "zh": "圆周角定理"
+          },
+          {
+            "en": "Reflection",
+            "zh": "反射"
+          }
+        ],
+        "steps": [
+          "Measure line directions modulo $\\pi$. Since $AB$ is a diameter, $AX\\perp BX$. Use those lines as coordinate axes through $X$. If $Y=(u,v)$, its feet are $(u,0)$ and $(0,v)$, so a direction of $PQ$ is $(u,-v)$: its line is the reflection of $XY$ in $AX$. The same construction at $Z$ shows that $RS$ is the reflection of $ZY$ in $AZ$.",
+          "Write $\\theta(L)$ for the direction of line $L$. Reflection in a line of direction $h$ takes a direction $t$ to $2h-t$. Thus the directed angle from $PQ$ to $RS$ is $2(\\theta(AZ)-\\theta(AX))-(\\theta(ZY)-\\theta(XY))$ modulo $\\pi$.",
+          "Both parenthesised differences are the same directed inscribed angle subtending chord $XZ$, one measured at $A$ and the other at $Y$. Denote that common residue by $\\alpha$. The difference of reflected directions is $2\\alpha-\\alpha=\\alpha$.",
+          "The arc from $X$ through $Y$ to $Z$ is shorter than a semicircle, so the ordinary angle $\\angle XAZ$ is acute and equals half its central angle $\\angle XOZ$. This selects the smaller angle between the lines."
+        ],
+        "stepsZh": [
+          "把直线方向视为模 $\\pi$ 的角。因 $AB$ 为直径，$AX\\perp BX$。以 $X$ 为原点、这两直线为坐标轴，若 $Y=(u,v)$，两垂足就是 $(u,0),(0,v)$。所以 $PQ$ 可取方向向量 $(u,-v)$，即直线 $XY$ 关于 $AX$ 反射后的方向。同理，直线 $RS$ 的方向是 $ZY$ 关于 $AZ$ 的反射。",
+          "记 $\\theta(L)$ 为直线 $L$ 的方向角。沿方向角为 $h$ 的直线反射，会把方向角 $t$ 改为 $2h-t$。因此从 $PQ$ 到 $RS$ 的有向角模 $\\pi$ 等于 $2(\\theta(AZ)-\\theta(AX))-(\\theta(ZY)-\\theta(XY))$。",
+          "两个括号内都是弦 $XZ$ 所对的有向圆周角，分别以 $A,Y$ 为顶点，因此在模 $\\pi$ 意义下相等。设它们都为 $\\alpha$，所得方向差便为 $2\\alpha-\\alpha=\\alpha$。",
+          "从 $X$ 经 $Y$ 到 $Z$ 的弧短于半圆，故普通角 $\\angle XAZ$ 是锐角，且等于相应圆心角 $\\angle XOZ$ 的一半。因此它正是所求的两直线夹角。"
+        ]
+      },
+      {
+        "title": "Calculate both projection differences",
+        "titleZh": "计算两对投影点的复数差",
+        "topics": [
+          {
+            "en": "Complex coordinates",
+            "zh": "复数坐标"
+          },
+          {
+            "en": "Orthogonal projection",
+            "zh": "正交投影"
+          }
+        ],
+        "steps": [
+          "Use the unit circle in the complex plane and lower-case letters for the vertices. For two distinct points $u,v$ on it the chord line has equation $w+uv\\bar w=u+v$. Indeed its reflection map is $w\\mapsto u+v-uv\\bar w$, an orientation-reversing isometry fixing both endpoints. Hence the foot of $y$ is the midpoint of $y$ and this reflection, namely $(y+u+v-uv\\bar y)/2$.",
+          "Subtract the two foot formulas at $X$, obtaining $q-p=(b-a)(1-x\\bar y)/2$. At $Z$ the same calculation gives $s-r=(b-a)(1-z\\bar y)/2$. Since $|y|=1$, their ratio is $(s-r)/(q-p)=(y-z)/(y-x)$. Thus the angle between the two projection lines equals the smaller angle between lines $YX$ and $YZ$.",
+          "Angle $XYZ$ intercepts the arc $XZ$ that omits $Y$, of size $2\\pi-\\angle XOZ$. Its ordinary size is $\\pi-\\angle XOZ/2$. Its supplement is acute and gives the required angle."
+        ],
+        "stepsZh": [
+          "在复平面用单位圆表示原圆，各点的小写字母表示其复坐标。对圆上两点 $u,v$，过它们的弦所在直线方程为 $w+uv\\bar w=u+v$。事实上，$w\\mapsto u+v-uv\\bar w$ 是反向等距变换，固定两个端点，故是关于这条直线的反射。点 $y$ 的垂足是它与反射像的中点，坐标即 $(y+u+v-uv\\bar y)/2$。",
+          "将过 $X$ 的两条直线所对应的垂足公式相减，得 $q-p=(b-a)(1-x\\bar y)/2$。对过 $Z$ 的两条直线同理有 $s-r=(b-a)(1-z\\bar y)/2$。利用 $|y|=1$，相除得 $(s-r)/(q-p)=(y-z)/(y-x)$。因此两条垂足连线间的锐角等于直线 $YX,YZ$ 间的锐角。",
+          "$\\angle XYZ$ 截得不含 $Y$ 的弧 $XZ$，其弧度为 $2\\pi-\\angle XOZ$，故 $\\angle XYZ=\\pi-\\angle XOZ/2$。它的补角为锐角，即所求夹角。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_1"
+  },
+  "usamo-2010-q4": {
+    "summary": "Triangle $ABC$ is right-angled at $A$. The internal bisector at $B$ meets $AC$ at $D$, and the internal bisector at $C$ meets $AB$ at $E$. Let $I$ be the intersection of $BD$ and $CE$. Can $AB,AC,BI,ID,CI,IE$ all have integer lengths?",
+    "summaryZh": "在直角三角形 $ABC$ 中，$\\angle A=90^\\circ$。$B$ 的内角平分线交 $AC$ 于 $D$，$C$ 的内角平分线交 $AB$ 于 $E$，$BD$ 与 $CE$ 交于 $I$。$AB,AC,BI,ID,CI,IE$ 这六条线段的长度可以全是整数吗？",
+    "answer": "No. Even the four lengths $AB,AC,BI,CI$ cannot all be integers.",
+    "answerZh": "不可以。仅 $AB,AC,BI,CI$ 这四个长度便不能全为整数。",
+    "methods": [
+      {
+        "title": "Compare two formulas for the hypotenuse",
+        "titleZh": "比较斜边平方的两种表达式",
+        "topics": [
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          },
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Irrational numbers",
+            "zh": "无理数"
+          }
+        ],
+        "steps": [
+          "Write $u=BI$ and $v=CI$, both positive. In triangle $BIC$ the angles at $B$ and $C$ add up to half of $\\angle ABC+\\angle BCA$, namely $45^\\circ$. The angle opposite $BC$ is therefore $135^\\circ$.",
+          "The cosine rule in this smaller triangle and the Pythagorean theorem in the original triangle now describe the same length: $AB^2+AC^2=BC^2=u^2+v^2+uv\\sqrt{2}$.",
+          "If the four lengths $AB,AC,u,v$ were integers, rearranging would give $\\sqrt{2}=(AB^2+AC^2-u^2-v^2)/(uv)$ as a ratio of integers with a nonzero denominator. This contradicts the irrationality of $\\sqrt{2}$. The additional lengths $ID$ and $IE$ cannot change that contradiction."
+        ],
+        "stepsZh": [
+          "记 $u=BI,v=CI$，二者都大于零。在三角形 $BIC$ 中，$B,C$ 两角之和是 $\\angle ABC+\\angle BCA$ 的一半，等于 $45^\\circ$。因此，$BC$ 的对角是 $135^\\circ$。",
+          "在三角形 $BIC$ 中利用余弦定理，在三角形 $ABC$ 中利用勾股定理，可得 $AB^2+AC^2=BC^2=u^2+v^2+uv\\sqrt{2}$。",
+          "假设 $AB,AC,u,v$ 都是整数，移项可得 $\\sqrt{2}=(AB^2+AC^2-u^2-v^2)/(uv)$。右边是分母非零的整数之比，与 $\\sqrt{2}$ 为无理数矛盾。因此这四条线段的长度都不可能同时为整数，更不可能六条全为整数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_4"
+  }
+}

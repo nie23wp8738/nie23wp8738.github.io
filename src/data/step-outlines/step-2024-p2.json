@@ -1,0 +1,226 @@
+{
+  "step-2024-p2-q1": {
+    "summary": "Take positive integers $c,n,k$. Start at $c$, add $n+k$ successive integers, then separately add the next $n$. Prove that the two totals coincide exactly when $2n^2+k=2ck+k^2$. Classify all $(n,c)$ for $k=1$ and for $k=2$, and rule out $k=4$. Now fix $c=1$. Find two solutions $(n,k)$ and prove that any solution $(N,K)$ generates another, $(3N+2K+1,4N+3K+1)$. Give two further solutions.",
+    "summaryZh": "取正整数 $c,n,k$。从 $c$ 起先将连续 $n+k$ 个整数相加，再另算随后 $n$ 个整数之和。证明两和相等当且仅当 $2n^2+k=2ck+k^2$。分别求 $k=1$ 和 $k=2$ 时全部的 $(n,c)$，并排除 $k=4$。现取 $c=1$，给出两组 $(n,k)$；证明每组解 $(N,K)$ 都能生成解 $(3N+2K+1,4N+3K+1)$，并再给出两组解。",
+    "answer": "For $k=1$, every $n\\ge1$ works with $c=n^2$. For $k=2$, $n$ is odd and at least $3$, with $c=(n^2-1)/2$. At $c=1$ the pairs $(n,k)=(1,1),(6,8),(35,49),(204,288)$ all work.",
+    "answerZh": "当 $k=1$ 时，任意 $n\\ge1$ 均可，且 $c=n^2$。当 $k=2$ 时，$n$ 是不小于 $3$ 的奇数，$c=(n^2-1)/2$。取 $c=1$ 可得四组 $(n,k)$ 为 $(1,1),(6,8),(35,49),(204,288)$。",
+    "topics": [
+      {
+        "en": "Arithmetic series",
+        "zh": "等差数列求和"
+      },
+      {
+        "en": "Diophantine equations",
+        "zh": "丢番图方程"
+      }
+    ]
+  },
+  "step-2024-p2-q2": {
+    "summary": "Put $w_k=(-1)^k/8^{k+1}$ for $k\\ge0$. Expand $1/(8+x^3)$ for $|x|<2$ and establish $\\int_0^1 x^m/(8+x^3)\\,dx=\\sum_{k\\ge0}w_k/(3k+m+1)$ for integral $m\\ge0$. You may assume the required convergence. Prove $\\sum_{k\\ge0}w_k[(3k+3)^{-1}-2/(3k+2)+4/(3k+1)]=\\int_0^1 dx/(x+2)$ and evaluate. Finally express $\\sum_{k\\ge0}72w_k(2k+1)/[(3k+1)(3k+2)]$ as $\\pi\\sqrt a-\\ln b$ and determine the integers $a,b$.",
+    "summaryZh": "对 $k\\ge0$ 令 $w_k=(-1)^k/8^{k+1}$。将 $1/(8+x^3)$ 在 $|x|<2$ 上展开，证明对非负整数 $m$ 有 $\\int_0^1 x^m/(8+x^3)\\,dx=\\sum_{k\\ge0}w_k/(3k+m+1)$。可假设收敛。证明 $\\sum_{k\\ge0}w_k[(3k+3)^{-1}-2/(3k+2)+4/(3k+1)]=\\int_0^1 dx/(x+2)$ 并求其值。再把 $\\sum_{k\\ge0}72w_k(2k+1)/[(3k+1)(3k+2)]$ 写成 $\\pi\\sqrt a-\\ln b$，确定整数 $a,b$。",
+    "answer": "The expansion is $\\sum_{k\\ge0}w_kx^{3k}$. The two sums evaluate to $\\ln(3/2)$ and $\\pi\\sqrt3-\\ln3$, respectively.",
+    "answerZh": "展开式为 $\\sum_{k\\ge0}w_kx^{3k}$。两级数的和依次为 $\\ln(3/2)$ 和 $\\pi\\sqrt3-\\ln3$。",
+    "topics": [
+      {
+        "en": "Power series",
+        "zh": "幂级数"
+      },
+      {
+        "en": "Termwise integration",
+        "zh": "逐项积分"
+      },
+      {
+        "en": "Partial fractions",
+        "zh": "部分分式"
+      }
+    ]
+  },
+  "step-2024-p2-q3": {
+    "summary": "On the unit circle let $N=(-1,0)$ and $P=(\\cos\\theta,\\sin\\theta)$ with $-\\pi<\\theta<\\pi$. Encode $P$ by the height $q$ where $NP$ crosses the vertical axis. Prove $q=\\tan(\\theta/2)$. An output height encodes the second intersection with the circle of the line from $N$ through that height. For $q\\ne1$, prove $(1+q)/(1-q)=\\tan((\\theta+\\pi/2)/2)$ and identify the resulting motion of $P$. Let $R$ be the height map for rotation through $\\pi/3$ anticlockwise about the origin. Find $R(q)$ for $q\\ne\\sqrt3$. Describe the transformations on the circle encoded by $S(q)=(1-q)/(1+q)$ for $q\\ne-1$ and by $R^{-1}(S(R(q)))$ for $0<q<1$.",
+    "summaryZh": "在单位圆上取 $N=(-1,0)$ 和 $P=(\\cos\\theta,\\sin\\theta)$，$-\\pi<\\theta<\\pi$。用直线 $NP$ 与纵轴交点的纵坐标 $q$ 表示 $P$，证明 $q=\\tan(\\theta/2)$。给定新高度，从 $N$ 连接纵轴上该点，与圆的另一交点就是变换后的点。对 $q\\ne1$，证明 $(1+q)/(1-q)=\\tan((\\theta+\\pi/2)/2)$，并说明对应的几何变换。设 $R$ 是绕原点逆时针旋转 $\\pi/3$ 对应的高度变换，对 $q\\ne\\sqrt3$ 求 $R(q)$。再分别说明 $q\\ne-1$ 时 $S(q)=(1-q)/(1+q)$ 以及 $0<q<1$ 时 $R^{-1}(S(R(q)))$ 所表示的圆上变换。",
+    "answer": "The first transformation is a quarter-turn anticlockwise. $R(q)=(\\sqrt3 q+1)/(\\sqrt3-q)$. $S$ reflects in $y=x$ and $R^{-1}SR$ reflects in the line through the origin at angle $-\\pi/12$ to the positive horizontal axis.",
+    "answerZh": "第一种变换是绕原点逆时针转 $\\pi/2$。$R(q)=(\\sqrt3 q+1)/(\\sqrt3-q)$。$S$ 关于 $y=x$ 反射，$R^{-1}SR$ 关于一条过原点、与横轴正向成 $-\\pi/12$ 角的直线反射。",
+    "topics": [
+      {
+        "en": "Half-angle substitution",
+        "zh": "半角代换"
+      },
+      {
+        "en": "Rotations and reflections",
+        "zh": "旋转与反射"
+      }
+    ]
+  },
+  "step-2024-p2-q4": {
+    "summary": "Use the internal bisector of a nonstraight angle in space, meaning its in-plane direction making equal acute angles with both rays. Set $\\mathbf x=\\overrightarrow{OX},\\mathbf y=\\overrightarrow{OY}$ with $O,X,Y$ noncollinear. Prove $\\mathbf b=|\\mathbf x|\\mathbf y+|\\mathbf y|\\mathbf x$ points along the bisector and illustrate why every bisecting vector is a positive multiple. For $B=O+\\lambda\\mathbf b$ on $XY$, find $\\lambda$ and $XB:BY$. If $OB$ is perpendicular to $XY$, prove $OX=OY$. Finally take four points $O,P,Q,R$ with no three collinear. Choose internal bisecting vectors for $POQ,QOR,ROP$. Prove their three pairwise angles are all of the same type (acute, right or obtuse).",
+    "summaryZh": "空间中一个非平角的内角平分方向在其平面内，与两边夹成相等锐角。设 $O,X,Y$ 不共线，$\\mathbf x=\\overrightarrow{OX},\\mathbf y=\\overrightarrow{OY}$。证明 $\\mathbf b=|\\mathbf x|\\mathbf y+|\\mathbf y|\\mathbf x$ 指向内角平分线，并用图说明其他平分向量都是它的正倍数。设 $B=O+\\lambda\\mathbf b$ 位于 $XY$ 上，求 $\\lambda$ 和 $XB:BY$。若 $OB\\perp XY$，证明 $OX=OY$。再取四点 $O,P,Q,R$，任意三点不共线。分别给角 $POQ,QOR,ROP$ 选取内角平分向量，证明其两两所成的角同时为锐角、直角或钝角。",
+    "answer": "$\\lambda=1/(|\\mathbf x|+|\\mathbf y|)$ and $XB:BY=|\\mathbf x|:|\\mathbf y|$. For unit directions $p,q,r$ along the final three rays, every bisector dot product has the sign of $1+p\\cdot q+q\\cdot r+r\\cdot p$.",
+    "answerZh": "$\\lambda=1/(|\\mathbf x|+|\\mathbf y|)$，$XB:BY=|\\mathbf x|:|\\mathbf y|$。在末问中，以 $p,q,r$ 表示三条射线的单位方向，各平分向量点积的符号均与 $1+p\\cdot q+q\\cdot r+r\\cdot p$ 相同。",
+    "topics": [
+      {
+        "en": "Angle bisectors",
+        "zh": "角平分线"
+      },
+      {
+        "en": "Dot products",
+        "zh": "向量点积"
+      }
+    ]
+  },
+  "step-2024-p2-q5": {
+    "summary": "All polynomial inputs in the following range questions are integers. Prove $n^2+6n+11$ has the same range as $n^2+2$, and that its range is disjoint from that of $n^2-2n+5$. Find all values attained by both $n^2-2n-6$ and $n^2-4n+2$. Prove $p^2+pq+q^2\\ge0$ for real $p,q$, then determine which values the two cubics $n^3-3n^2+7n$ and $n^3+4n-6$ can both attain. Inputs for the two polynomial values need not coincide.",
+    "summaryZh": "以下各多项式的自变量均取整数。证明 $n^2+6n+11$ 的值域等于 $n^2+2$ 的值域，并与 $n^2-2n+5$ 的值域不相交。求 $n^2-2n-6$ 与 $n^2-4n+2$ 值域的全部公共元素。先证明对任意实数 $p,q$ 有 $p^2+pq+q^2\\ge0$，再求 $n^3-3n^2+7n$ 和 $n^3+4n-6$ 值域的交集。比较时两多项式允许取不同输入。",
+    "answer": "Completing squares gives $(n+3)^2+2$ and $(n-1)^2+4$ for the first comparison. The second pair of quadratics has the sole common value $2$. The cubics share exactly $-11$ and $10$.",
+    "answerZh": "配方后首组涉及 $(n+3)^2+2$ 与 $(n-1)^2+4$。第二组二次函数的唯一公共值为 $2$。两个三次函数的公共值恰为 $-11,10$。",
+    "topics": [
+      {
+        "en": "Integer-valued polynomials",
+        "zh": "整值多项式"
+      },
+      {
+        "en": "Completing the square",
+        "zh": "配方法"
+      },
+      {
+        "en": "Integer factorisation",
+        "zh": "整数因式分解"
+      }
+    ]
+  },
+  "step-2024-p2-q6": {
+    "summary": "Start with $T_0=1$ and $T_n=(2n-1)T_{n-1}/(2n)$ for $n\\ge1$. Prove by induction that $T_n=4^{-n}\\binom{2n}{n}$. Let $a_r,b_r$ be the coefficients of $x^r$ in $(1-x)^{-1/2},(1-x)^{-3/2}$ respectively, treating them as formal series. Derive the same recurrence for $a_r$ and conclude $a_r=T_r$. Use $b_r/a_r$ to express $b_r$ using a binomial coefficient. Multiply the series for $(1-x)^{-1/2}$ and $(1-x)^{-1}$ to prove $\\sum_{r=0}^n 4^{-r}\\binom{2r}{r}=(2n+1)4^{-n}\\binom{2n}{n}$.",
+    "summaryZh": "设 $T_0=1$，对 $n\\ge1$ 令 $T_n=(2n-1)T_{n-1}/(2n)$。归纳证明 $T_n=4^{-n}\\binom{2n}{n}$。设 $a_r,b_r$ 分别为形式幂级数 $(1-x)^{-1/2}$ 与 $(1-x)^{-3/2}$ 的 $x^r$ 系数。对 $a_r$ 导出同一递推式，从而说明 $a_r=T_r$。考察 $b_r/a_r$，写出含二项式系数的 $b_r$。将 $(1-x)^{-1/2}$ 与 $(1-x)^{-1}$ 的级数相乘，证明 $\\sum_{r=0}^n 4^{-r}\\binom{2r}{r}=(2n+1)4^{-n}\\binom{2n}{n}$。",
+    "answer": "$a_r=4^{-r}\\binom{2r}{r}$ and $b_r=(2r+1)a_r$. Comparing coefficients gives $b_n=\\sum_{r=0}^n a_r$.",
+    "answerZh": "$a_r=4^{-r}\\binom{2r}{r}$，$b_r=(2r+1)a_r$。比较系数即得 $b_n=\\sum_{r=0}^n a_r$。",
+    "topics": [
+      {
+        "en": "Binomial series",
+        "zh": "二项式级数"
+      },
+      {
+        "en": "Generating functions",
+        "zh": "生成函数"
+      },
+      {
+        "en": "Mathematical induction",
+        "zh": "数学归纳法"
+      }
+    ]
+  },
+  "step-2024-p2-q7": {
+    "summary": "Let $A=y^2+(x-1)^2-1$ and $B=y^2+(x+1)^2-1$. First sketch $C_1:AB=0$. For $C_2:AB=1/16$ intersect with $y=k$ to obtain $x^4+2(k^2-2)x^2+k^4-1/16=0$, then classify the number of intersections for every $k>0$. Compare the distances from the vertical axis of the highest points of $C_2$ and $C_1$. Show $A,B$ cannot simultaneously be negative, use this to locate $C_2$ relative to the two discs of $C_1$, and sketch both curves together.",
+    "summaryZh": "令 $A=y^2+(x-1)^2-1$、$B=y^2+(x+1)^2-1$。先画出 $C_1:AB=0$。将 $y=k$ 代入 $C_2:AB=1/16$，导出 $x^4+2(k^2-2)x^2+k^4-1/16=0$，并按每个 $k>0$ 分类求交点个数。比较 $C_2$ 与 $C_1$ 各自最高点至纵轴的距离。证明 $A,B$ 不可能同时为负，据此判断 $C_2$ 相对于 $C_1$ 两圆盘的位置，最后在同一坐标系画出两条曲线。",
+    "answer": "Set $h=\\sqrt{65}/8$. The counts on $(0,1/2)$, at $1/2$, on $(1/2,h)$, at $h$, and above $h$ are $2,3,4,2,0$. At the highest points of $C_2$, $|x|=\\sqrt{63}/8<1$, so they are closer to the axis. $C_2$ is outside both unit discs.",
+    "answerZh": "记 $h=\\sqrt{65}/8$。当 $k$ 依次位于 $(0,1/2)$、等于 $1/2$、位于 $(1/2,h)$、等于 $h$、大于 $h$ 时，交点数依次为 $2,3,4,2,0$。$C_2$ 最高点满足 $|x|=\\sqrt{63}/8<1$，更靠近纵轴。$C_2$ 在两个单位圆盘之外。",
+    "topics": [
+      {
+        "en": "Implicit curves",
+        "zh": "隐式曲线"
+      },
+      {
+        "en": "Discriminants",
+        "zh": "判别式"
+      },
+      {
+        "en": "Graph sketching",
+        "zh": "函数作图"
+      }
+    ]
+  },
+  "step-2024-p2-q8": {
+    "summary": "From $0<y_0<x_0$ iterate $x_{n+1}=(x_n+y_n)/2$, $y_{n+1}=\\sqrt{x_ny_n}$. Use $(\\sqrt{x_n}-\\sqrt{y_n})^2$ to prove $y_n<y_{n+1}<x_{n+1}<x_n$. Show $y_n$ converges to some $M$, the positive gap shrinks by a factor strictly less than $1/2$ at each step, and $x_n$ has the same limit. You may use convergence of bounded increasing sequences. For $p>q>0$ define $I(p,q)=\\int_0^\\infty[(p^2+x^2)(q^2+x^2)]^{-1/2}\\,dx$. With $a=(p+q)/2$ and $b=\\sqrt{pq}$, substitute $t=(x-pq/x)/2$ in $\\int_{-\\infty}^\\infty[(a^2+t^2)(b^2+t^2)]^{-1/2}\\,dt$ to show $I(p,q)=I(a,b)$. Evaluate $I(x_0,y_0)$ in terms of $M$.",
+    "summaryZh": "从 $0<y_0<x_0$ 出发，令 $x_{n+1}=(x_n+y_n)/2$、$y_{n+1}=\\sqrt{x_ny_n}$。利用 $(\\sqrt{x_n}-\\sqrt{y_n})^2$ 证明 $y_n<y_{n+1}<x_{n+1}<x_n$。说明 $y_n$ 收敛于某个 $M$，正差值 $x_n-y_n$ 每步都缩至原来的一半以下，且 $x_n$ 也趋于 $M$。可使用有上界的递增数列收敛定理。对 $p>q>0$ 定义 $I(p,q)=\\int_0^\\infty[(p^2+x^2)(q^2+x^2)]^{-1/2}\\,dx$。设 $a=(p+q)/2$、$b=\\sqrt{pq}$；在 $\\int_{-\\infty}^\\infty[(a^2+t^2)(b^2+t^2)]^{-1/2}\\,dt$ 中作代换 $t=(x-pq/x)/2$，证明 $I(p,q)=I(a,b)$，并用 $M$ 表示 $I(x_0,y_0)$。",
+    "answer": "$M$ is the common arithmetic–geometric mean of the initial values. The invariant integral lies between $\\pi/(2x_n)$ and $\\pi/(2y_n)$ at every step, so its value is $\\pi/(2M)$.",
+    "answerZh": "$M$ 为两初值的算术几何平均数。每一步该不变积分均介于 $\\pi/(2x_n)$ 与 $\\pi/(2y_n)$ 之间，故 $I(x_0,y_0)=\\pi/(2M)$。",
+    "topics": [
+      {
+        "en": "Arithmetic–geometric mean",
+        "zh": "算术几何平均数"
+      },
+      {
+        "en": "Sequence convergence",
+        "zh": "数列收敛"
+      },
+      {
+        "en": "Integral substitution",
+        "zh": "积分换元"
+      }
+    ]
+  },
+  "step-2024-p2-q9": {
+    "summary": "Model a trench in cross section by vertical walls at $x=d,2d$ descending from ground level $y=0$ to a horizontal base $y=-2d$, where $d>0$. A particle is launched from the origin towards the trench with acute elevation $\\alpha$ and speed $v$, $v^2=\\lambda dg$. Use projectile motion under uniform gravity. If it reaches the base before either wall, use its height at the near edge to prove $(\\tan\\alpha-\\lambda)^2<\\lambda^2-1$ and hence $\\lambda>1$. Establish also $(2\\tan\\alpha-\\lambda)^2>\\lambda^2+4(\\lambda-1)$ and $\\alpha>45^\\circ$. Conversely show that every $\\lambda>1$ admits a suitable launch angle.",
+    "summaryZh": "在竖直截面内，沟槽两壁位于 $x=d,2d$，从地面 $y=0$ 竖直延伸至沟底 $y=-2d$，其中 $d>0$。质点从原点以仰角 $\\alpha$（锐角）向沟槽抛出，初速 $v$ 满足 $v^2=\\lambda dg$，只受匀重力。若质点未触任一侧壁而先落到底面，利用近侧边缘处的高度证明 $(\\tan\\alpha-\\lambda)^2<\\lambda^2-1$，从而 $\\lambda>1$。再证明 $(2\\tan\\alpha-\\lambda)^2>\\lambda^2+4(\\lambda-1)$ 及 $\\alpha>45^\\circ$。反过来，证明对每个 $\\lambda>1$ 都可选取满足要求的发射角。",
+    "answer": "A suitable angle exists exactly for $\\lambda>1$. Its tangent may be chosen anywhere strictly between $(\\lambda+\\sqrt{\\lambda^2+4\\lambda-4})/2$ and $\\lambda+\\sqrt{\\lambda^2-1}$.",
+    "answerZh": "存在适合的发射角当且仅当 $\\lambda>1$。其正切可取严格介于 $(\\lambda+\\sqrt{\\lambda^2+4\\lambda-4})/2$ 和 $\\lambda+\\sqrt{\\lambda^2-1}$ 之间的任意值。",
+    "topics": [
+      {
+        "en": "Projectile motion",
+        "zh": "抛体运动"
+      },
+      {
+        "en": "Quadratic inequalities",
+        "zh": "二次不等式"
+      }
+    ]
+  },
+  "step-2024-p2-q10": {
+    "summary": "A wedge of mass $M$ slides on a smooth horizontal floor. Its ramp descends away from its vertical rear face at angle $\\alpha$ to the floor. A mass $m$ on the ramp has coefficient of friction $\\mu$ against it. Show static equilibrium without a push is impossible for $\\mu<\\tan\\alpha$. Now let $\\mu=\\tan\\lambda$ where $0<\\lambda<\\alpha<\\pi/4$, and push the rear face horizontally inwards with force $P$. Suppose $m$ stays on the same spot on the accelerating wedge. Find the magnitudes $F,N$ of friction and normal reaction, in particular $F=m|(M+m)g\\sin\\alpha-P\\cos\\alpha|/(M+m)$. Derive the full allowable interval for $P$ in terms of $\\alpha\\pm\\lambda$.",
+    "summaryZh": "质量 $M$ 的楔块可在光滑水平地面上移动；斜面从竖直后壁向前下倾，与水平面成 $\\alpha$ 角。质量 $m$ 的物块与斜面间的摩擦系数为 $\\mu$。证明 $\\mu<\\tan\\alpha$ 时，不加推力无法静止平衡。现取 $\\mu=\\tan\\lambda$，其中 $0<\\lambda<\\alpha<\\pi/4$，用水平力 $P$ 从后壁向楔内推。设物块在加速的楔块上保持相对静止，求摩擦力 $F$ 及支持力 $N$ 的大小，特别要证明 $F=m|(M+m)g\\sin\\alpha-P\\cos\\alpha|/(M+m)$。用 $\\alpha\\pm\\lambda$ 表示 $P$ 的完整允许区间。",
+    "answer": "Writing $W=(M+m)g$, the normal reaction is $N=m(W\\cos\\alpha+P\\sin\\alpha)/(M+m)$. The interval is $W\\tan(\\alpha-\\lambda)\\le P\\le W\\tan(\\alpha+\\lambda)$.",
+    "answerZh": "记 $W=(M+m)g$，则支持力 $N=m(W\\cos\\alpha+P\\sin\\alpha)/(M+m)$。允许的范围为 $W\\tan(\\alpha-\\lambda)\\le P\\le W\\tan(\\alpha+\\lambda)$。",
+    "topics": [
+      {
+        "en": "Friction",
+        "zh": "摩擦力"
+      },
+      {
+        "en": "Newton’s laws",
+        "zh": "牛顿运动定律"
+      },
+      {
+        "en": "Force resolution",
+        "zh": "力的分解"
+      }
+    ]
+  },
+  "step-2024-p2-q11": {
+    "summary": "Sketch $y=x^{1/x}$ for $x>0$, locating any turning point, and find $\\max_{n\\in\\mathbb Z_{>0}}n^{1/n}$. In a testing model, $N=rk$ people independently have an enzyme with probability $0<p<1$. Split them into $r$ groups of size $k>1$. One error-free pooled test per group detects the enzyme if any member has it. Only in positive groups do all $k$ people then get individual tests. Find the expected total. When $3$ divides $N$, determine the greatest $p$ for which some permitted $k$ makes the expectation at most $N$, and show it exceeds $1/4$. For small $pk$ derive the approximation $N(1/k+pk)$ and estimate the fraction of $N$ tests needed for $p=0.01,k=10$.",
+    "summaryZh": "画出 $x>0$ 上的 $y=x^{1/x}$，标明极值点，再求正整数 $n$ 中 $n^{1/n}$ 的最大值。现有 $N=rk$ 人，每人独立地以概率 $0<p<1$ 携带某酶。分为 $r$ 组，每组 $k>1$ 人；每组先做一次准确的混合检测，至少一人携带酶即呈阳性。只有阳性组的全部 $k$ 人需分别再测一次。求总检测次数的期望。若 $3$ 整除 $N$，求使某个可选 $k$ 的期望不超过 $N$ 的最大 $p$，并证明该值大于 $1/4$。当 $pk$ 很小时导出近似值 $N(1/k+pk)$，估算 $p=0.01,k=10$ 时所需次数约占 $N$ 的比例。",
+    "answer": "The continuous maximum is $(e,e^{1/e})$, and the integer maximum is $3^{1/3}$. The expected count is $N[1/k+1-(1-p)^k]$. The threshold $p=1-3^{-1/3}$ is achieved by $k=3$. For $p=0.01,k=10$ the exact expected fraction is $1.1-0.99^{10}\\approx0.196$.",
+    "answerZh": "连续图像的最高点为 $(e,e^{1/e})$，整数范围内最大值为 $3^{1/3}$。期望总数为 $N[1/k+1-(1-p)^k]$。$k=3$ 时达到阈值 $p=1-3^{-1/3}$。取 $p=0.01,k=10$，期望次数占比为 $1.1-0.99^{10}\\approx0.196$。",
+    "topics": [
+      {
+        "en": "Expected value",
+        "zh": "数学期望"
+      },
+      {
+        "en": "Independent events",
+        "zh": "独立事件"
+      },
+      {
+        "en": "Optimisation",
+        "zh": "最优化"
+      }
+    ]
+  },
+  "step-2024-p2-q12": {
+    "summary": "Let $k\\ge2$ players receive independent uniform integers from $1$ to $n$, $n\\ge3$. A first game awards a win only to a unique minimum. Find the probability that Ada draws $a$ and everyone else draws above $a$ for $1\\le a<n$. For $k=4$, derive the probability that anyone wins. In a second game a unique minimum and a unique maximum each win. Find the probability that Ada gets $a$, Bob gets $a+d+1$, and all remaining values lie strictly between, where $1\\le d\\le n-2$, $1\\le a\\le n-d-1$. For $k=4$ derive the probability of two winners, then find the least $n$ making two winners more probable than exactly one. You may use the standard sums of squares and cubes.",
+    "summaryZh": "$k\\ge2$ 名玩家各自独立地从 $1$ 到 $n$ 等概率抽取一个整数，$n\\ge3$。第一种游戏仅唯一最小值的持有者获胜。对 $1\\le a<n$，求 Ada 抽中 $a$ 且其余人全都抽中更大数的概率。对 $k=4$，求有人获胜的概率。第二种游戏中，唯一最小值和唯一最大值的持有者各自获胜。求 Ada 抽中 $a$、Bob 抽中 $a+d+1$，且其余人都落在两数严格之间的概率，其中 $1\\le d\\le n-2$、$1\\le a\\le n-d-1$。对 $k=4$ 求两人获胜的概率，再求使两人获胜比恰一人获胜更有可能的最小 $n$。可使用平方和与立方和公式。",
+    "answer": "The specified-player probabilities are $(n-a)^{k-1}/n^k$ and $d^{k-2}/n^k$. For four players the respective win-event probabilities are $(n-1)^2/n^2$ and $(n-2)(n-1)^2/n^3$. Two winners are more likely than one from $n=7$ onwards.",
+    "answerZh": "两项指定玩家事件的概率分别为 $(n-a)^{k-1}/n^k$ 和 $d^{k-2}/n^k$。四人时，第一种游戏有人胜出的概率为 $(n-1)^2/n^2$，第二种游戏两人同时胜出的概率为 $(n-2)(n-1)^2/n^3$。自 $n=7$ 起，两人获胜更有可能。",
+    "topics": [
+      {
+        "en": "Order statistics",
+        "zh": "顺序统计量"
+      },
+      {
+        "en": "Counting outcomes",
+        "zh": "结果计数"
+      },
+      {
+        "en": "Discrete probability",
+        "zh": "离散概率"
+      }
+    ]
+  }
+}

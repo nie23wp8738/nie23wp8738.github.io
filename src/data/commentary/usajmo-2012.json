@@ -1,0 +1,250 @@
+{
+  "usajmo-2012-q1": {
+    "summary": "In triangle $ABC$, take $P\\in AB$ and $Q\\in AC$ at equal distances from $A$. On segment $BC$ put distinct points $S,R$ in the order $B,S,R,C$. Suppose $\\angle BPS=\\angle PRS$ and $\\angle CQR=\\angle QSR$. Show that one circle contains $P,Q,R,S$.",
+    "summaryZh": "在三角形 $ABC$ 的边 $AB,AC$ 上分别取点 $P,Q$，使 $AP=AQ$。在边 $BC$ 上依 $B,S,R,C$ 的次序取两不同点 $S,R$。已知 $\\angle BPS=\\angle PRS$、$\\angle CQR=\\angle QSR$，证明 $P,Q,R,S$ 同圆。",
+    "answer": "The four points are concyclic.",
+    "answerZh": "四点在同一个圆上。",
+    "methods": [
+      {
+        "title": "Compare powers at three noncollinear points",
+        "titleZh": "比较三个不共线点的圆幂",
+        "topics": [
+          {
+            "en": "Tangent–chord theorem",
+            "zh": "切线弦定理"
+          },
+          {
+            "en": "Power of a point",
+            "zh": "点幂"
+          },
+          {
+            "en": "Radical axis",
+            "zh": "根轴"
+          }
+        ],
+        "steps": [
+          "If $P=Q=A$, one circle through $A,R,S$ suffices. Otherwise let $\\omega_P$ be the circle through $P,R,S$ and $\\omega_Q$ the circle through $Q,R,S$. The angle equality at $P$ identifies the angle of line $AB$ with chord $PS$ as the inscribed angle subtended by $PS$ at $R$. By the converse tangent–chord theorem $AB$ is tangent to $\\omega_P$ at $P$. The second angle equality similarly gives tangency of $AC$ to $\\omega_Q$ at $Q$.",
+          "At $A$ the powers with respect to the two circles are $AP^2$ and $AQ^2$, hence equal. At $R,S$ both powers are zero. For distinct circles the difference of their powers is an affine linear function of position: expanding $|T-O|^2-r^2$ for each circle cancels the quadratic term.",
+          "The difference therefore vanishes identically, since it vanishes at the three noncollinear points $A,R,S$. Its linear part forces the two centers to agree, and its constant part then forces the radii to agree. Thus $P,Q,R,S$ belong to the same circle."
+        ],
+        "stepsZh": [
+          "若 $P=Q=A$，过 $A,R,S$ 三点的圆已满足结论。否则，令 $\\omega_P$ 为 $P,R,S$ 的外接圆，$\\omega_Q$ 为 $Q,R,S$ 的外接圆。第一个角等式表明直线 $AB$ 与弦 $PS$ 的夹角等于在 $R$ 处弦 $PS$ 所对的圆周角；由切线弦定理的逆定理，$AB$ 在 $P$ 处与 $\\omega_P$ 相切。同理由第二个角等式，$AC$ 在 $Q$ 处与 $\\omega_Q$ 相切。",
+          "点 $A$ 对两圆的幂分别为 $AP^2,AQ^2$，两者相等。点 $R,S$ 对两圆的幂都为零。两个圆的点幂之差是关于坐标的仿射线性函数：分别展开幂的公式 $|T-O|^2-r^2$，相减时二次项抵消。",
+          "这个差在不共线的 $A,R,S$ 三点为零，故在整个平面上恒为零。一次项系数相等给出两圆圆心重合，再由常数项得半径相等。因此 $P,Q,R,S$ 同圆。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAJMO_Problems/Problem_1"
+  },
+  "usajmo-2012-q2": {
+    "summary": "For which integers $n\\ge3$ does the following hold? Every list of $n$ positive real numbers whose largest entry is at most $n$ times its smallest contains three entries that can be the side lengths of an acute triangle.",
+    "summaryZh": "求所有满足以下性质的整数 $n\\ge3$：若 $n$ 个正实数中最大值不超过最小值的 $n$ 倍，则总能从中选出三个数作为锐角三角形的三边。",
+    "answer": "Exactly the integers $n\\ge13$.",
+    "answerZh": "恰为所有 $n\\ge13$ 的整数。",
+    "methods": [
+      {
+        "title": "Identify the extremal sequence of squared lengths",
+        "titleZh": "求边长平方的临界数列",
+        "topics": [
+          {
+            "en": "Fibonacci sequence",
+            "zh": "斐波那契数列"
+          },
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Extremal principle",
+            "zh": "极值原理"
+          }
+        ],
+        "steps": [
+          "Scale by the smallest entry, sort, then square the numbers to obtain $1=u_1\\le u_2\\le\\cdots\\le u_n\\le n^2$. Three sorted lengths make an acute triangle exactly when the sum of the two smaller squares exceeds the largest square: this inequality also implies the triangle inequality. Among pairs before $u_k$, the largest sum is $u_{k-2}+u_{k-1}$. Thus no acute triangle exists exactly when $u_k\\ge u_{k-1}+u_{k-2}$ for all $k\\ge3$.",
+          "Let $F_1=F_2=1$ and $F_k=F_{k-1}+F_{k-2}$. In a list with no acute triple we have $u_k\\ge F_k$ by induction, hence $F_n\\le n^2$. Conversely, if $F_n\\le n^2$, the actual lengths $\\sqrt{F_1},\\ldots,\\sqrt{F_n}$ meet the ratio condition and, by the preceding test, have no acute triple.",
+          "From $F_3$ to $F_{14}$ the values are $2,3,5,8,13,21,34,55,89,144,233,377$. In particular $F_n\\le n^2$ for $3\\le n\\le12$ (equality at $12$), while $F_{13}>13^2$ and $F_{14}>14^2$. For $k\\ge13$ we have $k^2+(k+1)^2>(k+2)^2$, so the recurrence propagates this strict inequality to all larger indices. Therefore exactly $n\\ge13$ force an acute triangle."
+        ],
+        "stepsZh": [
+          "所有数同除以最小值，排序后分别平方，得到 $1=u_1\\le u_2\\le\\cdots\\le u_n\\le n^2$。依大小排列的三条边能构成锐角三角形，当且仅当较小两边的平方和严格大于最大边的平方；这一条件也蕴含三角不等式。对给定的 $u_k$，前方任意两项的最大和为 $u_{k-2}+u_{k-1}$。因此完全选不出锐角三角形，等价于每个 $k\\ge3$ 都有 $u_k\\ge u_{k-1}+u_{k-2}$。",
+          "令 $F_1=F_2=1$，$F_k=F_{k-1}+F_{k-2}$。在选不出锐角三角形的情形中，由归纳法 $u_k\\ge F_k$，故 $F_n\\le n^2$。反之，若 $F_n\\le n^2$，取实际边长 $\\sqrt{F_1},\\ldots,\\sqrt{F_n}$，它们满足最大值与最小值之比的限制，由上一步判据又确实选不出锐角三角形。",
+          "从 $F_3$ 到 $F_{14}$ 依次是 $2,3,5,8,13,21,34,55,89,144,233,377$。故 $3\\le n\\le12$ 时 $F_n\\le n^2$（在 $12$ 处取等号），而 $F_{13}>13^2,F_{14}>14^2$。因 $k\\ge13$ 时 $k^2+(k+1)^2>(k+2)^2$，递推式保证以后的每项也严格大于对应平方数。所以所求整数恰为 $n\\ge13$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAJMO_Problems/Problem_2"
+  },
+  "usajmo-2012-q3": {
+    "summary": "For positive real $a,b,c$, prove $\\sum_{\\rm cyc}(a^3+3b^3)/(5a+b)\\ge 2(a^2+b^2+c^2)/3$. The cyclic sum uses the pairs $(a,b),(b,c),(c,a)$.",
+    "summaryZh": "设 $a,b,c$ 为正实数，证明 $\\sum_{\\rm cyc}(a^3+3b^3)/(5a+b)\\ge 2(a^2+b^2+c^2)/3$，其中循环求和依次取 $(a,b),(b,c),(c,a)$。",
+    "answer": "The bound holds, with equality precisely when $a=b=c$.",
+    "answerZh": "不等式成立，等号当且仅当 $a=b=c$ 时取得。",
+    "methods": [
+      {
+        "title": "Estimate the two cubic terms separately",
+        "titleZh": "分别估计两个三次项",
+        "topics": [
+          {
+            "en": "Reciprocal inequalities",
+            "zh": "倒数不等式"
+          },
+          {
+            "en": "Cyclic sums",
+            "zh": "循环求和"
+          },
+          {
+            "en": "Sums of squares",
+            "zh": "平方和"
+          }
+        ],
+        "steps": [
+          "For $d,t>0$, the identity $1/d-(2t-d)/t^2=(d-t)^2/(dt^2)$ gives a lower bound on $1/d$. Set $d=5a+b$. First choose $t=6a$ and multiply by $a^3$, obtaining $a^3/d\\ge(7a^2-ab)/36$. Then choose $t=6b$ and multiply by $b^3$, obtaining $b^3/d\\ge(11b^2-5ab)/36$.",
+          "Add the first bound to three times the second. The result is $(a^3+3b^3)/(5a+b)\\ge(7a^2+33b^2-16ab)/36$. Set $S=a^2+b^2+c^2$, $T=ab+bc+ca$. Summing the three bounds cyclically gives at least $(40S-16T)/36$.",
+          "We have $S-T=((a-b)^2+(b-c)^2+(c-a)^2)/2\\ge0$. Thus $(40S-16T)/36\\ge24S/36=2S/3$. Equality requires $S=T$, hence $a=b=c$, which also gives equality in every reciprocal estimate."
+        ],
+        "stepsZh": [
+          "对 $d,t>0$，恒等式 $1/d-(2t-d)/t^2=(d-t)^2/(dt^2)$ 给出了 $1/d$ 的下界。取 $d=5a+b$。先取 $t=6a$，再乘以 $a^3$，得 $a^3/d\\ge(7a^2-ab)/36$。再取 $t=6b$ 并乘以 $b^3$，得 $b^3/d\\ge(11b^2-5ab)/36$。",
+          "将第一个下界与第二个下界的三倍相加，得 $(a^3+3b^3)/(5a+b)\\ge(7a^2+33b^2-16ab)/36$。记 $S=a^2+b^2+c^2,T=ab+bc+ca$，再把上式循环相加，得原式左边至少为 $(40S-16T)/36$。",
+          "因为 $S-T=((a-b)^2+(b-c)^2+(c-a)^2)/2\\ge0$，故 $(40S-16T)/36\\ge24S/36=2S/3$。等号要求 $S=T$，即 $a=b=c$，这时前面的倒数估计也全都取等。"
+        ]
+      },
+      {
+        "title": "Apply Cauchy to two cyclic sums",
+        "titleZh": "对两组循环和使用柯西不等式",
+        "topics": [
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          },
+          {
+            "en": "Cyclic sums",
+            "zh": "循环求和"
+          }
+        ],
+        "steps": [
+          "Write $S=a^2+b^2+c^2$ and $T=ab+bc+ca\\le S$, the latter inequality following by adding the pairwise inequalities $2ab\\le a^2+b^2$.",
+          "Apply $\\sum u_i^2/v_i\\ge(\\sum u_i)^2/\\sum v_i$ for positive denominators. Multiplying the numerator and denominator of $a^3/(5a+b)$ by $a$ gives $\\sum_{\\rm cyc}a^3/(5a+b)\\ge S^2/(5S+T)\\ge S/6$. Multiplying those of $b^3/(5a+b)$ by $b$ instead gives $\\sum_{\\rm cyc}b^3/(5a+b)\\ge S^2/(5T+S)\\ge S/6$.",
+          "The required expression is the first sum plus three times the second, so its lower bound is $4S/6$. If the three variables differ then $T<S$ and both final bounds are strict. Equal positive variables attain the bound."
+        ],
+        "stepsZh": [
+          "记 $S=a^2+b^2+c^2$ 和 $T=ab+bc+ca\\le S$，后一个不等式可由 $2ab\\le a^2+b^2$ 等三个不等式相加得到。",
+          "对正分母使用 $\\sum u_i^2/v_i\\ge(\\sum u_i)^2/\\sum v_i$。先把 $a^3/(5a+b)$ 的分子分母同乘 $a$，得到 $\\sum_{\\rm cyc}a^3/(5a+b)\\ge S^2/(5S+T)\\ge S/6$。同理，将 $b^3/(5a+b)$ 的分子分母同乘 $b$，得到 $\\sum_{\\rm cyc}b^3/(5a+b)\\ge S^2/(5T+S)\\ge S/6$。",
+          "原式是第一组和加上第二组和的三倍，因此下界为 $4S/6$。若三个变量不全相等，则 $T<S$，两个下界均为严格不等式。三个正数全相等时取等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAJMO_Problems/Problem_3"
+  },
+  "usajmo-2012-q4": {
+    "summary": "On a circle of circumference $1$, start at $P_1$ and repeatedly move counterclockwise through arc length $\\alpha$, where $0<\\alpha<1$ is irrational, marking $P_2,\\ldots,P_n$ with $n\\ge3$. Let $P_a,P_b$ be the two points immediately adjacent to $P_n$ in circular order among these marks. Prove $a+b\\le n$.",
+    "summaryZh": "周长为 $1$ 的圆上取起点 $P_1$，以后每次逆时针移动弧长 $\\alpha$，依次标出 $P_2,\\ldots,P_n$，其中 $0<\\alpha<1$ 为无理数，$n\\ge3$。在这 $n$ 个标记点的环绕顺序中，与 $P_n$ 紧邻的两点为 $P_a,P_b$。证明 $a+b\\le n$。",
+    "answer": "The neighbouring indices satisfy $a+b\\le n$.",
+    "answerZh": "相邻两点的指标之和满足 $a+b\\le n$。",
+    "methods": [
+      {
+        "title": "Add the nearest forward and backward returns",
+        "titleZh": "合并两个方向最近的回返点",
+        "topics": [
+          {
+            "en": "Fractional parts",
+            "zh": "小数部分"
+          },
+          {
+            "en": "Irrational rotations",
+            "zh": "无理旋转"
+          },
+          {
+            "en": "Extremal principle",
+            "zh": "极值原理"
+          }
+        ],
+        "steps": [
+          "Measure counterclockwise distance modulo $1$ and write $\\{t\\}=t-\\lfloor t\\rfloor$. For $1\\le j<n$ the counterclockwise distance from $P_{n-j}$ to $P_n$ is $\\{j\\alpha\\}$, and in the opposite direction it is $\\{-j\\alpha\\}$. Irrationality ensures no two marks coincide.",
+          "Label the two neighbours so that for $k=n-a$ and $l=n-b$, the numbers $x=\\{k\\alpha\\}$ and $y=\\{-l\\alpha\\}$ are respectively the smallest forward and backward distances in these two lists. Both are strictly between zero and one.",
+          "Suppose $k+l<n$. Modulo $1$ we have $(k+l)\\alpha\\equiv x-y$. Equality $x=y$ is impossible, as it would make $(k+l)\\alpha$ an integer. If $x>y$, the forward distance at index $k+l$ is $x-y$, strictly between $0$ and $x$. If $x<y$, the backward distance at that index is $y-x$, strictly between $0$ and $y$. Each contradicts the defining minimum.",
+          "Thus $k+l\\ge n$, i.e. $(n-a)+(n-b)\\ge n$. Rearranging gives the claimed bound."
+        ],
+        "stepsZh": [
+          "以逆时针方向为正，将弧长按模 $1$ 计算，记 $\\{t\\}=t-\\lfloor t\\rfloor$。对 $1\\le j<n$，从 $P_{n-j}$ 到 $P_n$ 的逆时针弧长为 $\\{j\\alpha\\}$，反方向弧长为 $\\{-j\\alpha\\}$。因 $\\alpha$ 无理，各标记点互不重合。",
+          "按方向命名这两邻点，使得对 $k=n-a,l=n-b$，$x=\\{k\\alpha\\}$ 是上列逆时针弧长的最小值，$y=\\{-l\\alpha\\}$ 是反方向弧长的最小值。二者都严格介于 $0$ 与 $1$ 之间。",
+          "假设 $k+l<n$。按模 $1$ 计算有 $(k+l)\\alpha\\equiv x-y$。若 $x=y$，则 $(k+l)\\alpha$ 为整数，矛盾。若 $x>y$，指标差 $k+l$ 给出的逆时针弧长为 $x-y$，严格介于 $0$ 与 $x$ 之间。若 $x<y$，指标差 $k+l$ 给出的反方向弧长为 $y-x$，严格介于 $0$ 与 $y$ 之间。两种情形均违背最小值的定义。",
+          "所以 $k+l\\ge n$，即 $(n-a)+(n-b)\\ge n$。移项即得 $a+b\\le n$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAJMO_Problems/Problem_4"
+  },
+  "usajmo-2012-q5": {
+    "summary": "Write $[x]_N$ for the least nonnegative residue of $x$ modulo $N=2012$. Choose distinct $a,b$ in $\\{1,\\ldots,2011\\}$. What is the smallest possible number of indices $1\\le k\\le2011$ for which $[ak]_N>[bk]_N$?",
+    "summaryZh": "记 $[x]_N$ 为整数 $x$ 模 $N=2012$ 的最小非负剩余。在 $1,\\ldots,2011$ 中选取不同的 $a,b$。当 $k$ 取 $1,\\ldots,2011$ 时，满足 $[ak]_N>[bk]_N$ 的 $k$ 最少有多少个？",
+    "answer": "The minimum is $502$, attained for example at $(a,b)=(4,1010)$.",
+    "answerZh": "最小值为 $502$，例如取 $(a,b)=(4,1010)$ 即可达到。",
+    "methods": [
+      {
+        "title": "Pair opposite invertible residues",
+        "titleZh": "将互为相反数的可逆剩余类配对",
+        "topics": [
+          {
+            "en": "Coprime residues",
+            "zh": "互素剩余类"
+          },
+          {
+            "en": "Involutions",
+            "zh": "对合配对"
+          },
+          {
+            "en": "Extremal constructions",
+            "zh": "极值构造"
+          }
+        ],
+        "steps": [
+          "Factor $2012=4\\cdot503$, with $503$ prime (trial division by the primes up to $22$ suffices). Among $1,\\ldots,2011$ there are $1006$ odd numbers. Removing $503$ and $1509$ leaves exactly $1004$ numbers coprime to $2012$.",
+          "If $k$ is coprime to $N$, multiplication by $k$ preserves distinctness and nonzeroness modulo $N$. Thus $[ak]_N$ and $[bk]_N$ are distinct positive residues. At $N-k$ they become $N-[ak]_N$ and $N-[bk]_N$, which reverses the comparison. These coprime indices form $502$ disjoint pairs since the only possible fixed index would be $1006$, which is even. Every pair contributes exactly one strict win, irrespective of $a,b$.",
+          "Choose $a=4$ and $b=1010$. For even $k$, $bk-ak=1006k$ is a multiple of $2012$, so the residues tie. The only remaining noncoprime indices are $k=503,1509$, for which $[4k]_N=0$, so neither is a win. All wins have therefore already been counted in the $502$ pairs."
+        ],
+        "stepsZh": [
+          "将 $2012$ 分解为 $4\\cdot503$，其中 $503$ 为素数（用不超过 $22$ 的素数试除即可验证）。在 $1,\\ldots,2011$ 中有 $1006$ 个奇数，去掉 $503$ 和 $1509$，余下的 $1004$ 个恰好是与 $2012$ 互素的数。",
+          "若 $k$ 与 $N$ 互素，乘以 $k$ 保持非零剩余类互不相同。因此 $[ak]_N,[bk]_N$ 是不同的正数。把 $k$ 换成 $N-k$，这两个剩余分别变成 $N-[ak]_N,N-[bk]_N$，大小关系恰好颠倒。可能的不动点只有偶数 $1006$，所以这些互素指标分成 $502$ 对。任意选取不同的 $a,b$，每对都恰好贡献一次严格大于。",
+          "取 $a=4,b=1010$。当 $k$ 为偶数时，$bk-ak=1006k$ 是 $2012$ 的倍数，两个剩余相等。其余不互素的指标只有 $k=503,1509$，此时 $[4k]_N=0$，也不会严格大于另一剩余。于是符合条件的指标恰有前述 $502$ 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAJMO_Problems/Problem_5"
+  },
+  "usajmo-2012-q6": {
+    "summary": "Take a triangle $ABC$, a point $P$, and a mirror line through $P$. Reflect the three lines $PA,PB,PC$ in this mirror. Wherever the intersections are uniquely defined, denote their intersections with $BC,CA,AB$, respectively, by $A^{\\prime},B^{\\prime},C^{\\prime}$. Show that the three resulting points lie on one line.",
+    "summaryZh": "给定三角形 $ABC$、平面内一点 $P$ 以及经过 $P$ 的一条对称轴。把直线 $PA,PB,PC$ 关于该轴反射，所得三条直线依次与 $BC,CA,AB$ 的所在直线交于 $A^{\\prime},B^{\\prime},C^{\\prime}$（各交点均有唯一定义）。证明这三个交点共线。",
+    "answer": "The three intersections of the reflected lines with the opposite sidelines are collinear.",
+    "answerZh": "三条反射直线在对应对边所在直线上截得的三个点共线。",
+    "methods": [
+      {
+        "title": "A symmetric equation for reflected directions",
+        "titleZh": "用对称的代数式描述反射方向",
+        "topics": [
+          {
+            "en": "Reflections",
+            "zh": "反射"
+          },
+          {
+            "en": "Vectors in the plane",
+            "zh": "平面向量"
+          },
+          {
+            "en": "Collinearity",
+            "zh": "共线性"
+          }
+        ],
+        "steps": [
+          "Use $P$ as origin and the mirror as horizontal axis. For vectors $U=(u,v)$ and $V=(s,t)$ set $H(U,V)=ut+vs$. This expression is symmetric in its two arguments and linear in each. For nonzero $U$, the equation $H(U,V)=0$ says exactly that $V$ lies on the line with direction $(u,-v)$, the reflected line of $PU$.",
+          "Use the point names for their position vectors and let $x=H(B,C)$, $y=H(C,A)$, $z=H(A,B)$. On line $BC$, the point with position vector $(yB-zC)/(y-z)$ has coefficients summing to one. It also satisfies $H(A,(yB-zC)/(y-z))=0$, since $H(A,B)=z$ and $H(A,C)=y$. Hence it is $A^{\\prime}$. Here $y\\ne z$: if they were equal, $H(A,\\cdot)$ would be constant along $BC$, giving either no intersection or a whole coincident line. The same argument applies cyclically.",
+          "We have $(y-z)A^{\\prime}=yB-zC$, $(z-x)B^{\\prime}=zC-xA$, and $(x-y)C^{\\prime}=xA-yB$. Adding gives zero. The three coefficients on the left also sum to zero, so $(y-z)(A^{\\prime}-C^{\\prime})+(z-x)(B^{\\prime}-C^{\\prime})=0$. Since the coefficients are nonzero, the two difference vectors are linearly dependent, which proves the required collinearity."
+        ],
+        "stepsZh": [
+          "以 $P$ 为原点，对称轴为横轴。对于向量 $U=(u,v),V=(s,t)$，令 $H(U,V)=ut+vs$。这个式子交换两个自变量后不变，且对每个自变量都是线性的。若 $U$ 非零，$H(U,V)=0$ 恰好表示 $V$ 在方向为 $(u,-v)$ 的直线上，也就是在 $PU$ 的反射直线上。",
+          "用点名表示位置向量，令 $x=H(B,C),y=H(C,A),z=H(A,B)$。向量 $(yB-zC)/(y-z)$ 中 $B,C$ 的系数和为一，所表示的点在 $BC$ 所在直线上。又因 $H(A,B)=z,H(A,C)=y$，故 $H(A,(yB-zC)/(y-z))=0$。这个点就是 $A^{\\prime}$。这里必有 $y\\ne z$，否则 $H(A,\\cdot)$ 在直线 $BC$ 上为常数，反射直线与它要么没有交点，要么完全重合。对另两边同理。",
+          "于是 $(y-z)A^{\\prime}=yB-zC$，$(z-x)B^{\\prime}=zC-xA$，$(x-y)C^{\\prime}=xA-yB$。三式相加，右边为零；左边的三个系数之和也为零。因此 $(y-z)(A^{\\prime}-C^{\\prime})+(z-x)(B^{\\prime}-C^{\\prime})=0$。两系数均非零，说明从 $C^{\\prime}$ 指向另两点的向量线性相关，因此三点共线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2012_USAJMO_Problems/Problem_6"
+  }
+}

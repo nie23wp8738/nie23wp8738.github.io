@@ -1,0 +1,218 @@
+{
+  "usajmo-2011-q1": {
+    "summary": "Determine the positive exponents $n$ for which the integer $2^n+12^n+2011^n$ is the square of an integer.",
+    "summaryZh": "求所有正整数指数 $n$，使整数 $2^n+12^n+2011^n$ 为完全平方数。",
+    "answer": "Only $n=1$, yielding $45^2$.",
+    "answerZh": "仅 $n=1$，对应的平方数为 $45^2$。",
+    "methods": [
+      {
+        "title": "Test quadratic residues for each parity",
+        "titleZh": "按指数奇偶性筛查平方剩余",
+        "topics": [
+          {
+            "en": "Quadratic residues",
+            "zh": "平方剩余"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "At $n=1$ the value is $2025=45^2$. For even $n$, reduce modulo $3$: the three bases are congruent to $-1,0,1$, so the sum is $1+0+1\\equiv2\\pmod3$. An integer square is $0$ or $1$ modulo $3$.",
+          "For odd $n\\ge3$, the terms with even bases vanish modulo $4$. The last term is $(-1)^n\\equiv3\\pmod4$ because $2011\\equiv-1\\pmod4$. Squares modulo $4$ again have only the residues $0$ and $1$. These two exclusions exhaust $n>1$."
+        ],
+        "stepsZh": [
+          "$n=1$ 时和为 $2025=45^2$。若 $n$ 为偶数，在模 $3$ 意义下三个底数分别为 $-1,0,1$，所以和为 $1+0+1\\equiv2\\pmod3$。而整数平方模 $3$ 只可能为 $0$ 或 $1$。",
+          "若 $n\\ge3$ 为奇数，前两个偶数幂模 $4$ 均为零。因 $2011\\equiv-1\\pmod4$，末项为 $(-1)^n\\equiv3\\pmod4$，而整数平方模 $4$ 只能为 $0$ 或 $1$。这便排除了所有 $n>1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAJMO_Problems/Problem_1"
+  },
+  "usajmo-2011-q2": {
+    "summary": "For $a,b,c>0$ assume $a^2+b^2+c^2+(a+b+c)^2\\le4$. Show that the three terms $(1+ab)/(a+b)^2$, $(1+bc)/(b+c)^2$, and $(1+ca)/(c+a)^2$ have sum at least $3$.",
+    "summaryZh": "已知 $a,b,c$ 为正数，且 $a^2+b^2+c^2+(a+b+c)^2\\le4$。证明 $(1+ab)/(a+b)^2$、$(1+bc)/(b+c)^2$、$(1+ca)/(c+a)^2$ 三项之和至少为 $3$。",
+    "answer": "The lower bound is $3$, attained precisely at $a=b=c=1/\\sqrt3$.",
+    "answerZh": "下界为 $3$，恰在 $a=b=c=1/\\sqrt3$ 时取到。",
+    "methods": [
+      {
+        "title": "Use the three denominators as variables",
+        "titleZh": "以三个分母中的两数之和换元",
+        "topics": [
+          {
+            "en": "Substitution",
+            "zh": "换元"
+          },
+          {
+            "en": "Arithmetic–geometric mean inequality",
+            "zh": "算术几何平均不等式"
+          }
+        ],
+        "steps": [
+          "Put $x=a+b$, $y=b+c$, and $z=c+a$. Expanding gives $x^2+y^2+z^2=a^2+b^2+c^2+(a+b+c)^2\\le4$. Also $4ab=x^2-(y-z)^2$.",
+          "Consequently $4(1+ab)\\ge x^2+y^2+z^2+x^2-(y-z)^2=2x^2+2yz$. Divide by $4x^2$ and apply the same bound cyclically. The sum in the question is at least $\\tfrac32+\\tfrac12(yz/x^2+zx/y^2+xy/z^2)$.",
+          "The three positive ratios in parentheses have product $1$, so their sum is at least $3$. For equality they must all be equal, forcing $x=y=z$, hence $a=b=c$. Equality also requires $x^2+y^2+z^2=4$, giving $a=b=c=1/\\sqrt3$. Direct substitution attains $3$."
+        ],
+        "stepsZh": [
+          "令 $x=a+b,y=b+c,z=c+a$。展开得 $x^2+y^2+z^2=a^2+b^2+c^2+(a+b+c)^2\\le4$。另有 $4ab=x^2-(y-z)^2$。",
+          "因此 $4(1+ab)\\ge x^2+y^2+z^2+x^2-(y-z)^2=2x^2+2yz$。两边除以 $4x^2$，再循环应用同一估计，得题中三项之和至少为 $\\tfrac32+\\tfrac12(yz/x^2+zx/y^2+xy/z^2)$。",
+          "括号内三个正数的乘积为 $1$，故算术几何平均不等式给出其和至少为 $3$。取等须三者相等，因而 $x=y=z$，也就是 $a=b=c$。还须 $x^2+y^2+z^2=4$，所以 $a=b=c=1/\\sqrt3$。直接代入即可取到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAJMO_Problems/Problem_2"
+  },
+  "usajmo-2011-q3": {
+    "summary": "Take three different real numbers $a_i$ and draw the line of slope $2a_i$ through each point $(a_i,a_i^2)$ on the parabola. Keep only choices for which the three lines bound an equilateral triangle. Which points can be the center of that triangle?",
+    "summaryZh": "在抛物线 $y=x^2$ 上取三个横坐标互不相同的点 $(a_i,a_i^2)$，过每个点作斜率为 $2a_i$ 的直线。若三条直线围成等边三角形，求这个三角形的中心的轨迹。",
+    "answer": "The locus is the entire line $y=-1/4$.",
+    "answerZh": "轨迹是整条直线 $y=-1/4$。",
+    "methods": [
+      {
+        "title": "Encode the three directions with the triple-angle formula",
+        "titleZh": "用三倍角公式表示三条边的方向",
+        "topics": [
+          {
+            "en": "Tangent addition formulas",
+            "zh": "正切和角公式"
+          },
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Centroid",
+            "zh": "重心"
+          },
+          {
+            "en": "Locus",
+            "zh": "轨迹"
+          }
+        ],
+        "steps": [
+          "Write $m_i=2a_i$. The line of slope $m_i$ is $y=m_i x-m_i^2/4$. Solving the equations of two different such lines gives the intersection $((m_i+m_j)/4,m_i m_j/4)$. The center of an equilateral triangle is its centroid. Averaging the three intersection points gives coordinates $X=(m_1+m_2+m_3)/6$ and $Y=(m_1m_2+m_2m_3+m_3m_1)/12$.",
+          "The three line directions modulo $\\pi$ are $\\theta,\\theta+\\pi/3,\\theta+2\\pi/3$. Their tangents are the three different slopes. None of the lines is vertical, so $3\\theta$ cannot equal $\\pi/2$ modulo $\\pi$: in that case one of the three line directions would be vertical. Set $t=\\tan(3\\theta)$. For each slope $m$ the triple-angle formula gives $t=(3m-m^3)/(1-3m^2)$. Thus the slopes are the three roots of $m^3-3tm^2-3m+t=0$.",
+          "By Vieta’s formulas their sum is $3t$ and the sum of the pairwise products is $-3$. The centroid is consequently $(t/2,-1/4)$.",
+          "Conversely, for any real $h$ put $\\theta=\\tfrac13\\arctan(2h)$. No direction among $\\theta,\\theta+\\pi/3,\\theta+2\\pi/3$ is vertical, since $3\\theta$ has finite tangent. For each of their three distinct slopes $m$ take the point $(m/2,m^2/4)$. The resulting lines cannot all pass through any one $(x,y)$, since their slopes would then solve the same quadratic $m^2-4xm+4y=0$. They therefore bound a triangle, and their directions make its three angles $60^\\circ$. The preceding computation puts its center at $(h,-1/4)$."
+        ],
+        "stepsZh": [
+          "记 $m_i=2a_i$，对应直线方程为 $y=m_i x-m_i^2/4$。两两联立可得交点 $((m_i+m_j)/4,m_i m_j/4)$。等边三角形的中心就是重心，将三个交点的坐标分别取平均，得到 $X=(m_1+m_2+m_3)/6$ 和 $Y=(m_1m_2+m_2m_3+m_3m_1)/12$。",
+          "把方向角按模 $\\pi$ 考虑，三条边的方向分别为 $\\theta,\\theta+\\pi/3,\\theta+2\\pi/3$。对应的三个正切值就是互不相同的斜率。因为没有竖直的边，$3\\theta$ 不可能模 $\\pi$ 与 $\\pi/2$ 同余，否则三条边中必有一条竖直。设 $t=\\tan(3\\theta)$。对每个斜率 $m$ 使用三倍角公式，得 $t=(3m-m^3)/(1-3m^2)$。因此三个斜率恰为方程 $m^3-3tm^2-3m+t=0$ 的三根。",
+          "根据韦达定理，三根之和为 $3t$，两两乘积之和为 $-3$。代入重心坐标可得 $(t/2,-1/4)$。",
+          "反过来，任给实数 $h$，令 $\\theta=\\tfrac13\\arctan(2h)$。因 $3\\theta$ 的正切有定义，$\\theta,\\theta+\\pi/3,\\theta+2\\pi/3$ 中没有竖直方向。对这三个方向的斜率 $m$，分别取抛物线上的点 $(m/2,m^2/4)$。若所作的三条直线都经过同一点 $(x,y)$，三个不同的斜率就都是二次方程 $m^2-4xm+4y=0$ 的根，矛盾。故三条直线围成三角形，且由方向角可知其三个内角均为 $60^\\circ$。上面的计算表明，重心恰为 $(h,-1/4)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAJMO_Problems/Problem_3"
+  },
+  "usajmo-2011-q4": {
+    "summary": "Begin with two one-letter words $W_0=a$ and $W_1=b$. For $n\\ge2$ concatenate $W_{n-2}$ and $W_{n-1}$, in that order, to form $W_n$. Prove that $W_1W_2\\cdots W_n$ reads identically from left to right and right to left for every $n\\ge1$.",
+    "summaryZh": "从单字母词 $W_0=a,W_1=b$ 出发，对 $n\\ge2$ 将 $W_{n-2}$ 和 $W_{n-1}$ 依次拼接成 $W_n$。证明对每个 $n\\ge1$，拼接词 $W_1W_2\\cdots W_n$ 从左右两个方向读都完全相同。",
+    "answer": "Each prefix product $W_1\\cdots W_n$ is a palindrome.",
+    "answerZh": "对所有 $n\\ge1$，拼接词 $W_1\\cdots W_n$ 都是回文。",
+    "methods": [
+      {
+        "title": "Identify the alternating two-letter prefixes",
+        "titleZh": "识别交替出现的双字母前缀",
+        "topics": [
+          {
+            "en": "Mathematical induction",
+            "zh": "数学归纳法"
+          },
+          {
+            "en": "Word concatenation",
+            "zh": "字符串拼接"
+          },
+          {
+            "en": "Palindromes",
+            "zh": "回文"
+          }
+        ],
+        "steps": [
+          "Let $S_n=W_1\\cdots W_n$, with $S_0$ empty. For $k\\ge2$, let $D_k$ be the two-letter word $ab$ for even $k$ and $ba$ for odd $k$. We claim $W_k=D_kS_{k-2}$. For $k=2,3$, this is $W_2=ab$ and $W_3=bab$.",
+          "For $k\\ge4$, substitute this claim at $k-2$ into the recursion. It gives $W_k=D_{k-2}S_{k-4}W_{k-1}=D_kS_{k-4}W_{k-3}W_{k-2}=D_kS_{k-2}$, proving the claim for both parities.",
+          "Now $S_0$ and $S_1=b$ are palindromes. For $n\\ge2$, split the same word in two ways. Its definition gives $S_n=S_{n-1}W_n=S_{n-1}D_nS_{n-2}$. Combining its last two blocks gives $S_n=S_{n-2}W_{n+1}=S_{n-2}D_{n+1}S_{n-1}$.",
+          "Suppose $S_{n-1},S_{n-2}$ are palindromes. Reversing the first factorisation reverses the block order and replaces $D_n$ by $D_{n+1}$. It therefore gives exactly the second factorisation. Induction proves $S_n$ is unchanged on reversal."
+        ],
+        "stepsZh": [
+          "令 $S_n=W_1\\cdots W_n$，其中 $S_0$ 为空词。对 $k\\ge2$，记 $D_k$ 为双字母词：偶数 $k$ 时取 $ab$，奇数 $k$ 时取 $ba$。先证 $W_k=D_kS_{k-2}$。在 $k=2,3$ 时，这就是 $W_2=ab,W_3=bab$。",
+          "当 $k\\ge4$，将下标 $k-2$ 的结论代入递推式，得到 $W_k=D_{k-2}S_{k-4}W_{k-1}=D_kS_{k-4}W_{k-3}W_{k-2}=D_kS_{k-2}$，从而奇偶两种下标均成立。",
+          "空词 $S_0$ 和单字母词 $S_1=b$ 都是回文。对 $n\\ge2$ 将同一词作两种分解：按定义 $S_n=S_{n-1}W_n=S_{n-1}D_nS_{n-2}$；若合并最后两块，又有 $S_n=S_{n-2}W_{n+1}=S_{n-2}D_{n+1}S_{n-1}$。",
+          "假设 $S_{n-1},S_{n-2}$ 都是回文，把第一种分解倒读会反转三块的顺序，将 $D_n$ 改成 $D_{n+1}$，两端较短的词本身保持原样。结果正好是第二种分解。由归纳法可知 $S_n$ 是回文。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAJMO_Problems/Problem_4"
+  },
+  "usajmo-2011-q5": {
+    "summary": "From a point $P$ outside a circle, the two tangents touch the circle at $B$ and $D$. A secant through $P$ cuts the circle at $A$ and $C$. The line through $D$ parallel to $AC$ cuts the circle again at $E$. Prove that the line $BE$ passes through the midpoint of $AC$.",
+    "summaryZh": "从圆外一点 $P$ 向圆作两条切线，切点分别为 $B,D$。过 $P$ 的一条割线交圆于 $A,C$。过 $D$ 作 $AC$ 的平行线，与圆的另一交点为 $E$。证明直线 $BE$ 经过线段 $AC$ 的中点。",
+    "answer": "If $M$ is the midpoint of the secant chord, then $M,B,E$ are collinear.",
+    "answerZh": "设 $M$ 是弦 $AC$ 的中点，则 $M,B,E$ 三点共线。",
+    "methods": [
+      {
+        "title": "Place the chord on a coordinate axis",
+        "titleZh": "以割线上的弦为坐标轴",
+        "topics": [
+          {
+            "en": "Circle equations",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Tangent and radius",
+            "zh": "切线与半径"
+          },
+          {
+            "en": "Reflection symmetry",
+            "zh": "反射对称"
+          }
+        ],
+        "steps": [
+          "Take the midpoint $M$ as origin, the secant as horizontal axis, and half of $AC$ as the length unit. Then the chord endpoints are $(\\pm1,0)$. The center has form $O=(0,k)$, the circle satisfies $x^2+y^2-2ky=1$, and $P=(p,0)$ with $|p|>1$.",
+          "At either contact $T=(x,y)$, perpendicularity of $OT$ and $PT$ gives $(x,y-k)\\cdot(p-x,-y)=0$. Using the circle equation to simplify it yields $px-ky=1$. Neither contact is on the horizontal axis, since that axis cuts the circle in two distinct points and cannot be tangent.",
+          "Put $u=x/y$, so $1/y=pu-k$. Dividing the circle equation by $y^2$ gives $u^2+1-2k(pu-k)=(pu-k)^2$, or $(p^2-1)u^2=1+k^2$. Thus the two contacts have the same nonzero absolute value of $x/y$. They must have opposite signs: for a given $u$ the equations $1/y=pu-k$ and $x=uy$ determine at most one contact.",
+          "The horizontal chord through $D$ has endpoints symmetric about the vertical axis through $O$. Thus if $D=(d,s)$, then $E=(-d,s)$. The ratio $x/y$ at $E$ is the negative of the ratio at $D$, so equals that at $B$. The equation $x=(x_B/y_B)y$ therefore defines a line through $M,B,E$."
+        ],
+        "stepsZh": [
+          "取 $AC$ 的中点 $M$ 为原点，取割线为横轴，半弦长为单位长度。弦的两个端点为 $(\\pm1,0)$。圆心形如 $O=(0,k)$，圆的方程为 $x^2+y^2-2ky=1$。设 $P=(p,0)$，因 $P$ 在圆外，有 $|p|>1$。",
+          "对于任一切点 $T=(x,y)$，由 $OT\\perp PT$ 得 $(x,y-k)\\cdot(p-x,-y)=0$，结合圆的方程化简得 $px-ky=1$。切点不在横轴上，因为横轴与圆有两个不同交点，不可能是切线。",
+          "令 $u=x/y$，于是 $1/y=pu-k$。圆的方程两边除以 $y^2$ 得 $u^2+1-2k(pu-k)=(pu-k)^2$，化简为 $(p^2-1)u^2=1+k^2$。因此两个切点的 $x/y$ 绝对值相同且非零。它们一定异号，因为给定 $u$ 后，$1/y=pu-k$ 和 $x=uy$ 至多确定一个切点。",
+          "过 $D$ 的水平弦关于经过圆心的纵轴对称。若 $D=(d,s)$，则 $E=(-d,s)$，所以 $E$ 的 $x/y$ 是 $D$ 的 $x/y$ 的相反数，正好等于 $B$ 的 $x/y$。因此 $B,E$ 均位于直线 $x=(x_B/y_B)y$ 上。该直线经过原点 $M$，从而平分 $AC$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAJMO_Problems/Problem_5"
+  },
+  "usajmo-2011-q6": {
+    "summary": "For $n\\ge2$, divide $2^{2^n}$ by $2^n-1$ and take its least nonnegative remainder. Is this remainder always a power of four? Prove the assertion or exhibit a counterexample and verify it.",
+    "summaryZh": "对任意整数 $n\\ge2$，计算 $2^{2^n}$ 除以 $2^n-1$ 的最小非负余数。此余数是否总是 $4$ 的幂？证明该命题或给出反例并验证。",
+    "answer": "No. Taking $n=25$ gives the remainder $128=2^7$.",
+    "answerZh": "不总是。取 $n=25$，余数为 $128=2^7$。",
+    "methods": [
+      {
+        "title": "Reduce the exponent first",
+        "titleZh": "先化简指数",
+        "topics": [
+          {
+            "en": "Modular exponentiation",
+            "zh": "模幂运算"
+          },
+          {
+            "en": "Remainders",
+            "zh": "余数"
+          }
+        ],
+        "steps": [
+          "Set $M=2^n-1$. Since $2^n\\equiv1\\pmod M$, exponents differing by $n$ give the same residue for powers of two. In particular, if $r$ is the remainder of $2^n$ modulo $n$, then $2^{2^n}\\equiv2^r\\pmod M$. As $0\\le r<n$ and $n\\ge2$, we have $0<2^r\\le2^{n-1}<M$, so $2^r$ is the actual remainder.",
+          "For $n=25$ we have $2^{10}=1024\\equiv-1\\pmod{25}$. Thus $2^{25}=2^5(2^{10})^2\\equiv32\\equiv7\\pmod{25}$. The required remainder is $2^7=128$. Every integral power of four that is a positive integer has even exponent in its prime factorisation at $2$, whereas $128$ has exponent seven."
+        ],
+        "stepsZh": [
+          "设 $M=2^n-1$。因 $2^n\\equiv1\\pmod M$，若把 $2$ 的非负整数指数增加 $n$，所得幂模 $M$ 的余数保持不变。若 $r$ 为 $2^n$ 除以 $n$ 的余数，则 $2^{2^n}\\equiv2^r\\pmod M$。又因 $0\\le r<n$ 且 $n\\ge2$，有 $0<2^r\\le2^{n-1}<M$，故 $2^r$ 就是实际余数。",
+          "取 $n=25$，有 $2^{10}=1024\\equiv-1\\pmod{25}$，于是 $2^{25}=2^5(2^{10})^2\\equiv32\\equiv7\\pmod{25}$。所求余数等于 $2^7=128$。$4$ 的非负整数次幂分解素因数时，$2$ 的指数是偶数，而 $128$ 中 $2$ 的指数是七。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2011_USAJMO_Problems/Problem_6"
+  }
+}

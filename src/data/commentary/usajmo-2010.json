@@ -1,0 +1,290 @@
+{
+  "usajmo-2010-q1": {
+    "summary": "For each $n\\ge1$, count the permutations $\\pi$ of $\\{1,\\dots,n\\}$ for which $j\\pi(j)$ is a square at every position $j$. What is the first $n$ for which this count is divisible by $2010$? Justify minimality.",
+    "summaryZh": "对于每个正整数 $n$，统计满足下列条件的排列 $\\pi$：它是 $\\{1,\\dots,n\\}$ 的一个排列，且每个位置 $j$ 都有 $j\\pi(j)$ 为完全平方数。求使排列数是 $2010$ 的倍数的最小 $n$，并证明其最小性。",
+    "answer": "$4489=67^2$.",
+    "answerZh": "最小值为 $4489=67^2$。",
+    "methods": [
+      {
+        "title": "Separate the squarefree parts",
+        "titleZh": "按无平方因子部分分类",
+        "topics": [
+          {
+            "en": "Prime factorisation",
+            "zh": "素因数分解"
+          },
+          {
+            "en": "Permutations",
+            "zh": "排列"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ],
+        "steps": [
+          "Write every positive integer $j$ uniquely as $d t^2$, where $d$ is squarefree. The primes with odd exponents in $j$ are precisely those dividing $d$. Thus $j\\pi(j)$ is a square exactly when $j$ and $\\pi(j)$ have the same $d$.",
+          "For any given $d$, its class has $\\lfloor\\sqrt{n/d}\\rfloor$ members, which may be permuted without restriction. Different classes do not affect one another. The total count is the product of the factorials of the class sizes.",
+          "The prime factorisation is $2010=2\\cdot3\\cdot5\\cdot67$. If $n<67^2$, even the largest class, $d=1$, has at most $66$ members, so none of these factorials is divisible by $67$. At $n=67^2$ the $d=1$ factor is $67!$, divisible by all four primes. This is the first possible value."
+        ],
+        "stepsZh": [
+          "每个正整数 $j$ 唯一写成 $d t^2$，其中 $d$ 不含平方因子。$j$ 中指数为奇数的素因数恰是整除 $d$ 的素数。因此 $j\\pi(j)$ 为平方数，当且仅当两数具有相同的 $d$。",
+          "固定 $d$ 的一类共有 $\\lfloor\\sqrt{n/d}\\rfloor$ 个数，类内可以任意排列，各个类的选择相互独立。所求总数就是各类元素个数的阶乘之积。",
+          "因 $2010=2\\cdot3\\cdot5\\cdot67$，必须出现素因数 $67$。当 $n<67^2$ 时，最大的类（$d=1$）至多有 $66$ 个数，所有阶乘都不含 $67$。当 $n=67^2$ 时，$d=1$ 这一类贡献 $67!$，包含上述四个不同素因数，故此时首次满足。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAJMO_Problems/Problem_1"
+  },
+  "usajmo-2010-q2": {
+    "summary": "Fix $n>1$. An increasing list of $n-1$ positive integers $x_1,\\ldots,x_{n-1}$ has $x_i+x_{n-i}=2n$ at every index. Whenever two entries (the same one may be used twice) have sum less than $2n$, their sum also occurs in the list. Determine all such lists.",
+    "summaryZh": "固定整数 $n>1$。严格递增的 $n-1$ 个正整数 $x_1,\\ldots,x_{n-1}$ 满足每个指标上都有 $x_i+x_{n-i}=2n$。若两个数列项（允许重复使用同一项）的和小于 $2n$，则这个和也是数列中的一项。求所有符合条件的数列。",
+    "answer": "The unique list has $x_i=2i$ for $1\\le i<n$.",
+    "answerZh": "唯一数列为 $x_i=2i$，其中 $1\\le i<n$。",
+    "methods": [
+      {
+        "title": "Translate all but the last term",
+        "titleZh": "把除末项外的各项整体平移",
+        "topics": [
+          {
+            "en": "Order and counting",
+            "zh": "排序与计数"
+          },
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Write $d=x_1$. For $1\\le i\\le n-2$, the values $d+x_i$ are greater than $d$ and smaller than $d+x_{n-1}=2n$, so they must all occur in the list. They are already in increasing order.",
+          "There are exactly $n-2$ entries after $d$, so $d+x_i=x_{i+1}$ whenever $1\\le i\\le n-2$. Consequently $x_i=id$, and the first and last terms give $nd=2n$. This also covers $n=2$, when the recurrence is empty.",
+          "Thus $d=2$. The proposed terms $2,4,\\ldots,2n-2$ are strictly increasing and pair to $2n$ under reversal. A sum below $2n$ of two such entries is another positive even number in this range, completing the converse."
+        ],
+        "stepsZh": [
+          "记 $d=x_1$。对 $1\\le i\\le n-2$，各数 $d+x_i$ 都大于 $d$，又小于 $d+x_{n-1}=2n$，所以都必须在原数列中出现。它们已按严格递增顺序排列。",
+          "原数列中大于 $d$ 的项恰有 $n-2$ 个，因此逐项对应有 $d+x_i=x_{i+1}$。于是 $x_i=id$，首末两项相加即得 $nd=2n$。当 $n=2$ 时递推式没有任何项，但首末配对式仍然给出同一结论。",
+          "因此 $d=2$。反过来，$2,4,\\ldots,2n-2$ 严格递增，首尾对应项的和为 $2n$。两个数列项之和若小于 $2n$，必是这个范围内的正偶数，因此确实在列中。"
+        ]
+      },
+      {
+        "title": "Use differences and the smallest member",
+        "titleZh": "用差的封闭性和最小元素",
+        "topics": [
+          {
+            "en": "Closure under subtraction",
+            "zh": "对正差封闭"
+          },
+          {
+            "en": "Division algorithm",
+            "zh": "带余除法"
+          }
+        ],
+        "steps": [
+          "Let $S$ be the set of entries together with $0$ and $2n$. The reversal condition makes it invariant under $v\\mapsto2n-v$. For $0<u<v<2n$ in $S$, the sum $u+(2n-v)$ is strictly below $2n$ and belongs to $S$. Reflecting it shows $v-u\\in S$. The same conclusion for endpoints follows from $0\\in S$ and reflection.",
+          "Take the smallest positive member $d$. Repeatedly subtracting $d$ from each member until its remainder lies in $[0,d)$ shows the remainder lies in $S$ and must be $0$. In particular $d$ divides $2n$. Repeated subtraction from $2n$ also produces every multiple of $d$ from $0$ to $2n$.",
+          "Hence $S$ has $2n/d+1$ members. Its defining list and the two endpoints give $n+1$ members, so $d=2$. Conversely the even numbers between the endpoints satisfy both conditions, giving the stated list."
+        ],
+        "stepsZh": [
+          "将所有数列项连同 $0,2n$ 组成集合 $S$。由首尾配对可知映射 $v\\mapsto2n-v$ 将 $S$ 映回自身。若 $0<u<v<2n$ 且二者都在 $S$ 中，则 $u+(2n-v)<2n$，这个和也在 $S$ 中。再取关于 $n$ 的对称数，得到 $v-u\\in S$。当 $u=0$ 或 $v=2n$ 时，同样结论由定义或对称性直接成立。",
+          "设 $d$ 为 $S$ 中最小正数。从每个元素反复减去 $d$，直至余数落入 $[0,d)$；由上述性质，余数仍在 $S$ 中，只能为零。特别地，$d$ 整除 $2n$。从 $2n$ 开始依次减 $d$，还说明区间内 $d$ 的每个倍数均属于 $S$。",
+          "因此 $S$ 的元素个数既为 $2n/d+1$，又等于 $n-1$ 个数列项加两个端点，即 $n+1$，故 $d=2$。反过来，端点之间的全部正偶数显然满足对称和加法条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAJMO_Problems/Problem_2"
+  },
+  "usajmo-2010-q3": {
+    "summary": "Start with a diameter $AB$ and choose three more points on one semicircle, in arc order $A,X,Y,Z,B$. Project $Y$ perpendicularly onto the four lines $AX,BX,AZ,BZ$, calling the feet $P,Q,R,S$ in that order. If $O$ is the circle centre, show the smaller angle between $PQ$ and $RS$ equals $\\angle XOZ/2$.",
+    "summaryZh": "以 $AB$ 为直径作圆，在同一半圆上依弧序取五个不同的点 $A,X,Y,Z,B$。从 $Y$ 向直线 $AX,BX,AZ,BZ$ 分别作垂线，垂足依次为 $P,Q,R,S$。设圆心为 $O$，证明直线 $PQ$ 与 $RS$ 所成的锐角等于 $\\angle XOZ$ 的一半。",
+    "answer": "The angle is $\\angle XAZ=\\tfrac12\\angle XOZ$.",
+    "answerZh": "该角为 $\\angle XAZ=\\tfrac12\\angle XOZ$。",
+    "methods": [
+      {
+        "title": "Reflect directions in two rectangles",
+        "titleZh": "用两组正交坐标反射直线方向",
+        "topics": [
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          },
+          {
+            "en": "Inscribed angle theorem",
+            "zh": "圆周角定理"
+          },
+          {
+            "en": "Reflection",
+            "zh": "反射"
+          }
+        ],
+        "steps": [
+          "Measure line directions modulo $\\pi$. Since $AB$ is a diameter, $AX\\perp BX$. Use those lines as coordinate axes through $X$. If $Y=(u,v)$, its feet are $(u,0)$ and $(0,v)$, so a direction of $PQ$ is $(u,-v)$: its line is the reflection of $XY$ in $AX$. The same construction at $Z$ shows that $RS$ is the reflection of $ZY$ in $AZ$.",
+          "Write $\\theta(L)$ for the direction of line $L$. Reflection in a line of direction $h$ takes a direction $t$ to $2h-t$. Thus the directed angle from $PQ$ to $RS$ is $2(\\theta(AZ)-\\theta(AX))-(\\theta(ZY)-\\theta(XY))$ modulo $\\pi$.",
+          "Both parenthesised differences are the same directed inscribed angle subtending chord $XZ$, one measured at $A$ and the other at $Y$. Denote that common residue by $\\alpha$. The difference of reflected directions is $2\\alpha-\\alpha=\\alpha$.",
+          "The arc from $X$ through $Y$ to $Z$ is shorter than a semicircle, so the ordinary angle $\\angle XAZ$ is acute and equals half its central angle $\\angle XOZ$. This selects the smaller angle between the lines."
+        ],
+        "stepsZh": [
+          "把直线方向视为模 $\\pi$ 的角。因 $AB$ 为直径，$AX\\perp BX$。以 $X$ 为原点、这两直线为坐标轴，若 $Y=(u,v)$，两垂足就是 $(u,0),(0,v)$。所以 $PQ$ 可取方向向量 $(u,-v)$，即直线 $XY$ 关于 $AX$ 反射后的方向。同理，直线 $RS$ 的方向是 $ZY$ 关于 $AZ$ 的反射。",
+          "记 $\\theta(L)$ 为直线 $L$ 的方向角。沿方向角为 $h$ 的直线反射，会把方向角 $t$ 改为 $2h-t$。因此从 $PQ$ 到 $RS$ 的有向角模 $\\pi$ 等于 $2(\\theta(AZ)-\\theta(AX))-(\\theta(ZY)-\\theta(XY))$。",
+          "两个括号内都是弦 $XZ$ 所对的有向圆周角，分别以 $A,Y$ 为顶点，因此在模 $\\pi$ 意义下相等。设它们都为 $\\alpha$，所得方向差便为 $2\\alpha-\\alpha=\\alpha$。",
+          "从 $X$ 经 $Y$ 到 $Z$ 的弧短于半圆，故普通角 $\\angle XAZ$ 是锐角，且等于相应圆心角 $\\angle XOZ$ 的一半。因此它正是所求的两直线夹角。"
+        ]
+      },
+      {
+        "title": "Calculate both projection differences",
+        "titleZh": "计算两对投影点的复数差",
+        "topics": [
+          {
+            "en": "Complex coordinates",
+            "zh": "复数坐标"
+          },
+          {
+            "en": "Orthogonal projection",
+            "zh": "正交投影"
+          }
+        ],
+        "steps": [
+          "Use the unit circle in the complex plane and lower-case letters for the vertices. For two distinct points $u,v$ on it the chord line has equation $w+uv\\bar w=u+v$. Indeed its reflection map is $w\\mapsto u+v-uv\\bar w$, an orientation-reversing isometry fixing both endpoints. Hence the foot of $y$ is the midpoint of $y$ and this reflection, namely $(y+u+v-uv\\bar y)/2$.",
+          "Subtract the two foot formulas at $X$, obtaining $q-p=(b-a)(1-x\\bar y)/2$. At $Z$ the same calculation gives $s-r=(b-a)(1-z\\bar y)/2$. Since $|y|=1$, their ratio is $(s-r)/(q-p)=(y-z)/(y-x)$. Thus the angle between the two projection lines equals the smaller angle between lines $YX$ and $YZ$.",
+          "Angle $XYZ$ intercepts the arc $XZ$ that omits $Y$, of size $2\\pi-\\angle XOZ$. Its ordinary size is $\\pi-\\angle XOZ/2$. Its supplement is acute and gives the required angle."
+        ],
+        "stepsZh": [
+          "在复平面用单位圆表示原圆，各点的小写字母表示其复坐标。对圆上两点 $u,v$，过它们的弦所在直线方程为 $w+uv\\bar w=u+v$。事实上，$w\\mapsto u+v-uv\\bar w$ 是反向等距变换，固定两个端点，故是关于这条直线的反射。点 $y$ 的垂足是它与反射像的中点，坐标即 $(y+u+v-uv\\bar y)/2$。",
+          "将过 $X$ 的两条直线所对应的垂足公式相减，得 $q-p=(b-a)(1-x\\bar y)/2$。对过 $Z$ 的两条直线同理有 $s-r=(b-a)(1-z\\bar y)/2$。利用 $|y|=1$，相除得 $(s-r)/(q-p)=(y-z)/(y-x)$。因此两条垂足连线间的锐角等于直线 $YX,YZ$ 间的锐角。",
+          "$\\angle XYZ$ 截得不含 $Y$ 的弧 $XZ$，其弧度为 $2\\pi-\\angle XOZ$，故 $\\angle XYZ=\\pi-\\angle XOZ/2$。它的补角为锐角，即所求夹角。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAJMO_Problems/Problem_3"
+  },
+  "usajmo-2010-q4": {
+    "summary": "For every integer $n\\ge 0$, construct three distinct lattice points on $y=x^2$ forming a triangle whose area is a perfect square. Its positive square root must be divisible by $2^n$ and by no higher power of $2$.",
+    "summaryZh": "给定任意整数 $n\\ge 0$，在抛物线 $y=x^2$ 上构造三个不同的整点，使所成三角形的面积为完全平方数，并且面积的正平方根恰好被 $2^n$ 整除而不能被 $2^{n+1}$ 整除。",
+    "answer": "Every $n$ occurs. For example, the square roots of the areas in the first three cases can be $1,6,36$ for $n=0,1,2$, respectively.",
+    "answerZh": "每个 $n$ 都可以实现。例如，当 $n=0,1,2$ 时，可以分别取面积的正平方根为 $1,6,36$。",
+    "methods": [
+      {
+        "title": "Three small triangles and an area scaling",
+        "titleZh": "三个起始三角形与面积伸缩",
+        "topics": [
+          {
+            "en": "Determinants",
+            "zh": "行列式"
+          },
+          {
+            "en": "Scaling area",
+            "zh": "面积伸缩"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ],
+        "steps": [
+          "Use the origin and the points $(a,a^2),(b,b^2)$, with integers $0<a<b$. Their area is half the determinant of the two position vectors, hence $T=ab(b-a)/2$.",
+          "Take $(a,b)=(1,2),(1,9),(6,24)$. The corresponding areas from this formula are $1,36,1296$, whose square roots $1,6,36$ contain respectively zero, one and two factors of $2$.",
+          "Write $n=3k+r$ with $0\\le r<3$. Start with the pair for $r$ and multiply both abscissas by $4^k$. The new vertices on the parabola are still distinct lattice points. Each of the three factors $a,b,b-a$ gains a factor $4^k$, so the area gains $(4^k)^3=(2^{3k})^2$. Its square root therefore contains precisely $r+3k=n$ factors of $2$. Dividing it by $2^n$ gives the required odd integer."
+        ],
+        "stepsZh": [
+          "取原点以及 $(a,a^2),(b,b^2)$，其中 $a,b$ 为满足 $0<a<b$ 的整数。用两个位置向量的行列式计算，三角形面积为 $T=ab(b-a)/2$。",
+          "取 $(a,b)=(1,2),(1,9),(6,24)$。代入得面积分别为 $1,36,1296$，其正平方根 $1,6,36$ 分别恰有零个、一个和两个因子 $2$。",
+          "把 $n$ 写成 $3k+r$，其中 $0\\le r<3$。选取对应于 $r$ 的那一对横坐标，再把二者都乘以 $4^k$。新取的抛物线上的三点仍是不同的整点。面积公式中的 $a,b,b-a$ 各扩大 $4^k$ 倍，因此面积扩大 $(4^k)^3=(2^{3k})^2$ 倍。面积平方根中因子 $2$ 的个数恰为 $r+3k=n$，除以 $2^n$ 所得的商就是所需奇数。"
+        ]
+      },
+      {
+        "title": "Raise the exponent one step at a time",
+        "titleZh": "逐次增加一个因子二",
+        "topics": [
+          {
+            "en": "Mathematical induction",
+            "zh": "数学归纳法"
+          },
+          {
+            "en": "Triangular numbers",
+            "zh": "三角数"
+          }
+        ],
+        "steps": [
+          "Keep the first two vertices at $(0,0)$ and $(1,1)$, and take the third at $(t,t^2)$ for an integer $t>1$. The line through the first two vertices is $y=x$, and their vector determinant with the third gives area $t(t-1)/2$. At $t=2$ the area is $1^2$.",
+          "Suppose $t(t-1)/2=s^2$ and define $t^{\\prime}=(2t-1)^2$. Then $t^{\\prime}-1=4t(t-1)=8s^2$. It follows that $t^{\\prime}(t^{\\prime}-1)/2=\\bigl(2(2t-1)s\\bigr)^2$.",
+          "The new square root equals the old one times $2(2t-1)$. Since $2t-1$ is odd, this introduces exactly one additional factor of $2$. At each step $t^{\\prime}>1$ is integral, so after $n$ steps the new triangle has the desired area."
+        ],
+        "stepsZh": [
+          "固定前两个顶点 $(0,0),(1,1)$，第三点取为 $(t,t^2)$，其中 $t>1$ 为整数。用两个位置向量的行列式可知，面积为 $t(t-1)/2$。从 $t=2$ 开始，面积为 $1^2$。",
+          "假设 $t(t-1)/2=s^2$，令 $t^{\\prime}=(2t-1)^2$。于是 $t^{\\prime}-1=4t(t-1)=8s^2$，从而 $t^{\\prime}(t^{\\prime}-1)/2=\\bigl(2(2t-1)s\\bigr)^2$。",
+          "新面积的正平方根等于旧平方根的 $2(2t-1)$ 倍。由于 $2t-1$ 是奇数，因子 $2$ 恰好增加一个。每次得到的 $t^{\\prime}$ 都是大于 $1$ 的整数，迭代 $n$ 次便得到满足条件的三角形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAJMO_Problems/Problem_4"
+  },
+  "usajmo-2010-q5": {
+    "summary": "Call two permutations of $1,\\ldots,2010$ intersecting if they have the same value in at least one position. Construct $1006$ permutations such that each further permutation intersects a member of the family.",
+    "summaryZh": "两个 $1,\\ldots,2010$ 的排列只要在某一相同位置取值相同，就称它们相交。构造 $1006$ 个排列，使每个其余的排列都与所构造的某个排列相交。",
+    "answer": "Cyclically rotate the first $1006$ values in all $1006$ ways and leave the other positions fixed.",
+    "answerZh": "将前 $1006$ 个数作全部 $1006$ 种循环移位，后面各个位置保持不动。",
+    "methods": [
+      {
+        "title": "Rotate a block larger than half",
+        "titleZh": "循环移动超过一半的位置",
+        "topics": [
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          },
+          {
+            "en": "Cyclic permutations",
+            "zh": "循环排列"
+          }
+        ],
+        "steps": [
+          "For each $r=0,1,\\ldots,1005$, define $\\pi_r(i)=1+((i-1+r)\\bmod 1006)$ for $1\\le i\\le1006$, and $\\pi_r(i)=i$ for $i>1006$. Each block rotation is a permutation. Their values at $i=1$ are distinct, so the family has the required size.",
+          "Take any permutation $\\sigma$. Only $1004$ of its possible values lie outside $\\{1,\\ldots,1006\\}$. Its first $1006$ positions cannot all receive these outside values because it never repeats a value. Thus some $i\\le1006$ has $j=\\sigma(i)\\le1006$.",
+          "At that fixed position $i$, the values $\\pi_r(i)$ run through $1,\\ldots,1006$ once. Choosing $r\\equiv j-i\\pmod{1006}$ gives $\\pi_r(i)=\\sigma(i)$, as required."
+        ],
+        "stepsZh": [
+          "对 $r=0,1,\\ldots,1005$，当 $1\\le i\\le1006$ 时规定 $\\pi_r(i)=1+((i-1+r)\\bmod 1006)$，其余位置取 $\\pi_r(i)=i$。每次块内循环移位都给出一个排列，而且 $i=1$ 处的值互不相同，故共有 $1006$ 个。",
+          "取任意排列 $\\sigma$。在 $\\{1,\\ldots,1006\\}$ 之外只有 $1004$ 个数，排列又不能重复使用一个数，故前 $1006$ 个位置不可能全部取这些外部值。于是存在 $i\\le1006$，使 $j=\\sigma(i)\\le1006$。",
+          "固定这个位置 $i$，所有 $\\pi_r(i)$ 恰好遍历 $1,\\ldots,1006$。取 $r\\equiv j-i\\pmod{1006}$，就有 $\\pi_r(i)=\\sigma(i)$，两排列在第 $i$ 位相交。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAJMO_Problems/Problem_5"
+  },
+  "usajmo-2010-q6": {
+    "summary": "Triangle $ABC$ is right-angled at $A$. The internal bisector at $B$ meets $AC$ at $D$, and the internal bisector at $C$ meets $AB$ at $E$. Let $I$ be the intersection of $BD$ and $CE$. Can $AB,AC,BI,ID,CI,IE$ all have integer lengths?",
+    "summaryZh": "在直角三角形 $ABC$ 中，$\\angle A=90^\\circ$。$B$ 的内角平分线交 $AC$ 于 $D$，$C$ 的内角平分线交 $AB$ 于 $E$，$BD$ 与 $CE$ 交于 $I$。$AB,AC,BI,ID,CI,IE$ 这六条线段的长度可以全是整数吗？",
+    "answer": "No. Even the four lengths $AB,AC,BI,CI$ cannot all be integers.",
+    "answerZh": "不可以。仅 $AB,AC,BI,CI$ 这四个长度便不能全为整数。",
+    "methods": [
+      {
+        "title": "Compare two formulas for the hypotenuse",
+        "titleZh": "比较斜边平方的两种表达式",
+        "topics": [
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          },
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Irrational numbers",
+            "zh": "无理数"
+          }
+        ],
+        "steps": [
+          "Write $u=BI$ and $v=CI$, both positive. In triangle $BIC$ the angles at $B$ and $C$ add up to half of $\\angle ABC+\\angle BCA$, namely $45^\\circ$. The angle opposite $BC$ is therefore $135^\\circ$.",
+          "The cosine rule in this smaller triangle and the Pythagorean theorem in the original triangle now describe the same length: $AB^2+AC^2=BC^2=u^2+v^2+uv\\sqrt{2}$.",
+          "If the four lengths $AB,AC,u,v$ were integers, rearranging would give $\\sqrt{2}=(AB^2+AC^2-u^2-v^2)/(uv)$ as a ratio of integers with a nonzero denominator. This contradicts the irrationality of $\\sqrt{2}$. The additional lengths $ID$ and $IE$ cannot change that contradiction."
+        ],
+        "stepsZh": [
+          "记 $u=BI,v=CI$，二者都大于零。在三角形 $BIC$ 中，$B,C$ 两角之和是 $\\angle ABC+\\angle BCA$ 的一半，等于 $45^\\circ$。因此，$BC$ 的对角是 $135^\\circ$。",
+          "在三角形 $BIC$ 中利用余弦定理，在三角形 $ABC$ 中利用勾股定理，可得 $AB^2+AC^2=BC^2=u^2+v^2+uv\\sqrt{2}$。",
+          "假设 $AB,AC,u,v$ 都是整数，移项可得 $\\sqrt{2}=(AB^2+AC^2-u^2-v^2)/(uv)$。右边是分母非零的整数之比，与 $\\sqrt{2}$ 为无理数矛盾。因此这四条线段的长度都不可能同时为整数，更不可能六条全为整数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAJMO_Problems/Problem_6"
+  }
+}

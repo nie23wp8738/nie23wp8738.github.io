@@ -1,0 +1,487 @@
+{
+  "aime-2023ii-q1": {
+    "summary": "Six apple-tree yields form an arithmetic progression totaling $990$. The largest yield is twice the smallest. Find the largest yield.",
+    "summaryZh": "六棵苹果树的产量构成等差数列，总产量为 $990$。最高产量是最低产量的两倍，求最高产量。",
+    "answer": "220",
+    "answerZh": "220",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/1",
+    "methods": [
+      {
+        "title": "Pair the first and last trees",
+        "titleZh": "首尾配对",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Write the smallest and largest yields as $x$ and $2x$. Pair the terms symmetrically. All three pairs sum to $3x$, so $9x=990$. The largest yield is $2x=220$."
+        ],
+        "stepsZh": [
+          "设最低和最高产量分别为 $x,2x$。将首尾各项配成三对，每对之和都是 $3x$，所以 $9x=990$，最高产量是 $2x=220$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q2": {
+    "summary": "What is the largest positive integer below $1000$ whose base-eight and base-ten representations are both palindromes?",
+    "summaryZh": "求小于 $1000$ 的最大正整数，使它的八进制和十进制写法都是回文数。",
+    "answer": "585",
+    "answerZh": "585",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/2",
+    "methods": [
+      {
+        "title": "List four-digit octal palindromes",
+        "titleZh": "列出四位八进制回文数",
+        "topics": [
+          {
+            "en": "Positional notation",
+            "zh": "位值制"
+          },
+          {
+            "en": "Palindromes",
+            "zh": "回文数"
+          }
+        ],
+        "steps": [
+          "The number $585=1111_8$ already qualifies. Any greater candidate below $1000$ has four octal digits starting with $1$, hence is $1bb1_8=513+72b$.",
+          "For $b=2,3,4,5,6$ the results are $657,729,801,873,945$, none palindromes in decimal. The next value exceeds the bound. Thus $585$ is largest."
+        ],
+        "stepsZh": [
+          "$585=1111_8$ 已满足条件。比它大而小于 $1000$ 的数必为首位是一的四位八进制数。若是回文，应为 $1bb1_8=513+72b$。",
+          "$b=2,3,4,5,6$ 对应 $657,729,801,873,945$，均非十进制回文；再增大就越界。因此最大是 $585$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q3": {
+    "summary": "In the isosceles right triangle $ABC$ with right angle at $A$, an interior point $P$ satisfies $\\angle PAB=\\angle PBC=\\angle PCA$ and $AP=10$. Find the area of $ABC$.",
+    "summaryZh": "等腰直角三角形 $ABC$ 的直角在 $A$，内部一点 $P$ 满足 $\\angle PAB=\\angle PBC=\\angle PCA$ 且 $AP=10$。求三角形面积。",
+    "answer": "250",
+    "answerZh": "250",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/3",
+    "methods": [
+      {
+        "title": "Solve for the common angle using slopes",
+        "titleZh": "用斜率求公共角",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Tangent subtraction",
+            "zh": "正切差角公式"
+          }
+        ],
+        "steps": [
+          "Place $A=(0,0), B=(L,0), C=(0,L)$ and let $P=(x,y)$. With $t$ the tangent of the common angle, the angles at $A$ and $C$ give $y=tx$ and $x=t(L-y)$. Thus $(x,y)=L(t,t^2)/(1+t^2)$.",
+          "The angle of $BP$ above $BA$ is $45^\\circ-\\angle PAB$, so $y/(L-x)=(1-t)/(1+t)$. Substituting gives $t^2(1+t)=(1-t)(1-t+t^2)$, equivalently $(2t-1)(t^2+1)=0$.",
+          "Now $t=1/2$, so $AP=Lt/\\sqrt{1+t^2}=L/\\sqrt5=10$. The area $L^2/2$ is $250$."
+        ],
+        "stepsZh": [
+          "设 $A=(0,0),B=(L,0),C=(0,L),P=(x,y)$。令 $t$ 为公共角的正切，由 $A,C$ 处的角分别得 $y=tx$、$x=t(L-y)$，故 $(x,y)=L(t,t^2)/(1+t^2)$。",
+          "射线 $BP$ 与 $BA$ 的夹角是 $45^\\circ-\\angle PAB$，因此 $y/(L-x)=(1-t)/(1+t)$。代入得 $t^2(1+t)=(1-t)(1-t+t^2)$，即 $(2t-1)(t^2+1)=0$。",
+          "所以 $t=1/2$，$AP=Lt/\\sqrt{1+t^2}=L/\\sqrt5=10$。面积 $L^2/2=250$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q4": {
+    "summary": "Real numbers $x,y,z$ satisfy $xy+4z=yz+4x=zx+4y=60$. Sum the squares of all distinct values that $x$ can take.",
+    "summaryZh": "实数 $x,y,z$ 满足 $xy+4z=yz+4x=zx+4y=60$。求 $x$ 所有不同可能取值的平方和。",
+    "answer": "273",
+    "answerZh": "273",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/4",
+    "methods": [
+      {
+        "title": "Subtract neighboring equations",
+        "titleZh": "将相邻方程相减",
+        "topics": [
+          {
+            "en": "Symmetric systems",
+            "zh": "对称方程组"
+          },
+          {
+            "en": "Factorization",
+            "zh": "因式分解"
+          }
+        ],
+        "steps": [
+          "Subtraction gives $(x-z)(y-4)=0$ and its cyclic variants. If all variables equal $u$, then $(u-6)(u+10)=0$.",
+          "If two variables differ, for instance $x\\ne z$, then $y=4$. Substituting gives $x+z=15$ and $xz=44$, so the triple is a permutation of $(4,4,11)$. Each permutation works. The distinct squares total $6^2+(-10)^2+4^2+11^2=273$."
+        ],
+        "stepsZh": [
+          "相减得 $(x-z)(y-4)=0$ 及其轮换式。若三数均为 $u$，则 $(u-6)(u+10)=0$。",
+          "若两数不同，不妨设 $x\\ne z$，则 $y=4$。代入得 $x+z=15$、$xz=44$，所以三元组是 $(4,4,11)$ 的排列，均满足原式。不同取值的平方和是 $6^2+(-10)^2+4^2+11^2=273$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q5": {
+    "summary": "Consider every positive fraction $r$ whose numerator plus denominator in lowest terms is the same as that of $55r$ in lowest terms. Reduce the sum of all such $r$ and add its numerator and denominator.",
+    "summaryZh": "对正有理数 $r$，若 $r$ 和 $55r$ 写成既约分数后分子与分母之和相同，则保留 $r$。求所有保留数之和的既约分数的分子与分母之和。",
+    "answer": "719",
+    "answerZh": "719",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/5",
+    "methods": [
+      {
+        "title": "Track the cancellation factor",
+        "titleZh": "追踪约分因子",
+        "topics": [
+          {
+            "en": "Greatest common divisor",
+            "zh": "最大公因数"
+          },
+          {
+            "en": "Rational numbers",
+            "zh": "有理数"
+          }
+        ],
+        "steps": [
+          "Write $r=x/y$ in lowest terms. The factor canceled from $55x/y$ is $d=\\gcd(55,y)$, so $d(x+y)=55x+y$. Since $x,y>0$, we have $1<d<55$ and $r=(d-1)/(55-d)$.",
+          "The divisors left are $5,11$, giving $r=2/25,5/22$. Their denominators have the required gcds. The sum is $169/550$, so the answer is $719$."
+        ],
+        "stepsZh": [
+          "写 $r=x/y$ 为既约分数，则 $55x/y$ 的约分因子为 $d=\\gcd(55,y)$。由题意 $d(x+y)=55x+y$。因 $x,y>0$，有 $1<d<55$，且 $r=(d-1)/(55-d)$。",
+          "可选约数只有 $5,11$，给出 $r=2/25,5/22$。验证分母对应的最大公因数均正确。和为 $169/550$，故答案为 $719$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q6": {
+    "summary": "Delete the upper-right unit square from a $2$ by $2$ square. Choose two independent uniform points in the remaining L-shaped region. For the probability that their midpoint also belongs to the region, find the sum of the reduced numerator and denominator.",
+    "summaryZh": "从 $2\\times2$ 正方形中去掉右上方的单位方格，得到 L 形区域。在其中独立均匀选两点。求两点中点仍在区域内的概率的既约分子与分母之和。",
+    "answer": "035",
+    "answerZh": "035",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/6",
+    "methods": [
+      {
+        "title": "Condition on the two occupied unit squares",
+        "titleZh": "按两点所在方格分类",
+        "topics": [
+          {
+            "en": "Geometric probability",
+            "zh": "几何概率"
+          },
+          {
+            "en": "Independence",
+            "zh": "独立性"
+          }
+        ],
+        "steps": [
+          "The midpoint can enter the missing corner only if the two points lie in the upper-left and lower-right squares, in either order. This has probability $2/9$.",
+          "In that case the sum of their horizontal coordinates equals $1+U+V$ for independent uniform $U,V$ on $[0,1]$. The midpoint is to the right of the centerline if $U+V>1$, with probability $1/2$ by symmetry. The vertical condition is independent with the same probability.",
+          "The required probability is $1-(2/9)(1/2)^2=17/18$, giving $35$."
+        ],
+        "stepsZh": [
+          "中点只有在两点分别落在左上格和右下格时才可能进缺角。两点可以交换次序，该事件概率为 $2/9$。",
+          "此时两点横坐标之和可写为 $1+U+V$，其中 $U,V$ 独立均匀分布在 $[0,1]$。中点在竖直中线右侧的条件是 $U+V>1$，由对称性概率为 $1/2$。纵坐标的对应事件与之独立且概率相同。",
+          "因此所求概率为 $1-(2/9)(1/2)^2=17/18$，故答案为 $35$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q7": {
+    "summary": "Color all vertices of a fixed regular $12$-gon red or blue. Count the assignments in which no rectangle has all four vertices the same color.",
+    "summaryZh": "给固定正十二边形的每个顶点染红或蓝。求没有四个同色顶点构成矩形的染色方案数。",
+    "answer": "928",
+    "answerZh": "928",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/7",
+    "methods": [
+      {
+        "title": "Classify opposite vertex pairs",
+        "titleZh": "按对径顶点的颜色分类",
+        "topics": [
+          {
+            "en": "Circle geometry",
+            "zh": "圆的几何"
+          },
+          {
+            "en": "Counting by cases",
+            "zh": "分类计数"
+          }
+        ],
+        "steps": [
+          "The diagonals of any inscribed rectangle are diameters, and conversely two diameters yield a rectangle. Among the six opposite pairs there may therefore be at most one red-red pair and at most one blue-blue pair.",
+          "If no pair is monochrome there are $2^6$ assignments. If exactly one is, choose its location and color, then orient the others in $6\\cdot2\\cdot2^5$ ways. If there is one of each monochrome pair, the count is $6\\cdot5\\cdot2^4$. The sum is $928$."
+        ],
+        "stepsZh": [
+          "圆内接矩形的两条对角线都是直径，反之任选两条直径也得到矩形。因此六对对径顶点中，至多一对全红、至多一对全蓝。",
+          "没有同色对时有 $2^6$ 种。恰有一对同色时选其位置和颜色，再给其余各对选朝向，共 $6\\cdot2\\cdot2^5$ 种。一对全红且一对全蓝时共有 $6\\cdot5\\cdot2^4$ 种。三数之和为 $928$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q8": {
+    "summary": "For $\\omega=e^{2\\pi i/7}$ evaluate $\\prod_{k=0}^{6}(1+\\omega^k+\\omega^{3k})$.",
+    "summaryZh": "设 $\\omega=e^{2\\pi i/7}$，求 $\\prod_{k=0}^{6}(1+\\omega^k+\\omega^{3k})$。",
+    "answer": "024",
+    "answerZh": "024",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/8",
+    "methods": [
+      {
+        "title": "Pair conjugates and count exponent differences",
+        "titleZh": "配对共轭项并统计指数的差",
+        "topics": [
+          {
+            "en": "Roots of unity",
+            "zh": "单位根"
+          },
+          {
+            "en": "Complex conjugates",
+            "zh": "复共轭"
+          }
+        ],
+        "steps": [
+          "For $k\\ne0$, pair the factors with exponents $k$ and $7-k$. Their product is $|1+\\omega^k+\\omega^{3k}|^2$. Expanding, the three equal-index terms give $3$. The six other exponent differences from $\\{0,1,3\\}$ are $\\pm1,\\pm2,\\pm3$, all six nonzero residues modulo $7$.",
+          "Multiplication by $k$ permutes those residues. The six powers of $\\omega$ sum to $-1$, so each conjugate pair has product $2$. Together with the $k=0$ factor the full product is $3\\cdot2^3=24$."
+        ],
+        "stepsZh": [
+          "将 $k$ 与 $7-k$ 对应的因子配对，其积为 $|1+\\omega^k+\\omega^{3k}|^2$。展开时三个同下标项贡献 $3$；从 $\\{0,1,3\\}$ 中取不同下标所得的六个差为 $\\pm1,\\pm2,\\pm3$，在模七下恰好遍历非零剩余类。",
+          "乘上非零的 $k$ 仍遍历这些剩余类。相应的六个单位根之和为 $-1$，故每对的积为 $2$。再乘以 $k=0$ 时的因子得 $3\\cdot2^3=24$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q9": {
+    "summary": "Two intersecting circles meet at $P,Q$. Their common tangent closer to $P$ touches the circles at $A,B$. The parallel through $P$ meets the respective circles again at $X,Y$, with $PX=10$, $PY=14$, $PQ=5$. If the area of $XABY$ is $m\\sqrt n$ with $n$ squarefree, find $m+n$.",
+    "summaryZh": "两圆交于 $P,Q$，较靠近 $P$ 的公切线依次切两圆于 $A,B$。过 $P$ 作其平行线，再次分别交两圆于 $X,Y$，且 $PX=10$、$PY=14$、$PQ=5$。若梯形 $XABY$ 面积为 $m\\sqrt n$，其中 $n$ 无平方因子，求 $m+n$。",
+    "answer": "033",
+    "answerZh": "033",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/9",
+    "methods": [
+      {
+        "title": "Use the intersection of the radical axis and tangent",
+        "titleZh": "用根轴与公切线的交点",
+        "topics": [
+          {
+            "en": "Power of a point",
+            "zh": "点幂"
+          },
+          {
+            "en": "Parallel chords",
+            "zh": "平行弦"
+          }
+        ],
+        "steps": [
+          "Let $M=PQ\\cap AB$. Tangent powers give $MA^2=MB^2=MP\\cdot MQ$, so $M$ bisects $AB$. Reflection in the line of centers switches the two common tangents and switches $P,Q$. Thus the chosen tangent is closer to $P$ than to $Q$; since both are on its circle side, $MQ=MP+5$.",
+          "The perpendicular projections of $A,B$ onto $XY$ bisect $PX,PY$. Relative to $P$ they are at signed positions of magnitudes $5,7$. If the signs agree, $MA=1$ while the horizontal displacement from $P$ to $M$ is $6$, contradicting $MP(MP+5)=1$. Thus the signs are opposite.",
+          "Then $XY=24$, $AB=12$, $MA=6$, and $MP(MP+5)=36$ gives $MP=4$. The horizontal displacement of $M$ from $P$ is now $1$, so the height is $\\sqrt{4^2-1}=\\sqrt{15}$. Area is $18\\sqrt{15}$, giving $33$."
+        ],
+        "stepsZh": [
+          "设 $M=PQ\\cap AB$。点幂给出 $MA^2=MB^2=MP\\cdot MQ$，故 $M$ 是 $AB$ 的中点。关于连心线反射交换两条公切线，同时交换 $P,Q$，所以所选公切线离 $P$ 比离 $Q$ 近。两点又位于切线同侧，因而 $MQ=MP+5$。",
+          "将 $A,B$ 垂直投影到 $XY$ 上，垂足分别平分弦 $PX,PY$，其相对于 $P$ 的有向坐标的绝对值为 $5,7$。若两坐标同号，则 $MA=1$，而 $M,P$ 的水平间距为 $6$，与 $MP(MP+5)=1$ 矛盾。故坐标异号。",
+          "此时 $XY=24$、$AB=12$、$MA=6$。由 $MP(MP+5)=36$ 得 $MP=4$。$M,P$ 的水平间距为 $1$，故梯形高为 $\\sqrt{4^2-1}=\\sqrt{15}$，面积为 $18\\sqrt{15}$，所求为 $33$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q10": {
+    "summary": "Let $N$ count placements of $1$ through $12$, once each, in a $2\\times6$ grid, with no edge-neighboring entries congruent modulo $3$. How many positive divisors does $N$ have?",
+    "summaryZh": "把 $1$ 到 $12$ 各填一次到 $2\\times6$ 的方格内，要求共边两格中的数模三不同余。设填法数为 $N$，求 $N$ 的正约数个数。",
+    "answer": "144",
+    "answerZh": "144",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/10",
+    "methods": [
+      {
+        "title": "Record the missing residue in each column",
+        "titleZh": "记录每列缺少的余数",
+        "topics": [
+          {
+            "en": "Multinomial coefficients",
+            "zh": "多项式系数"
+          },
+          {
+            "en": "Divisor counting",
+            "zh": "约数计数"
+          }
+        ],
+        "steps": [
+          "Each column uses two of the three residues. Each residue appears four times overall, so it must be missing in exactly two columns. There are $6!/(2!)^3=90$ possible ordered lists of missing residues.",
+          "Fix such a list and choose the top residue of the first column in two ways. In each subsequent column an overlapping residue must switch rows. This fixes the ordering uniquely whether the two consecutive residue pairs agree or share just one element.",
+          "There are $180$ residue grids. Permuting four numbers of each residue gives $N=180(4!)^3=2^{11}3^5 5$, which has $(11+1)(5+1)(1+1)=144$ divisors."
+        ],
+        "stepsZh": [
+          "每列出现三种余数中的两种。每种余数共出现四次，因此恰在两列中缺席。六列各自缺少哪种余数的排列数为 $6!/(2!)^3=90$。",
+          "固定该序列后，第一列的排法有两种。从第二列起，相邻两列共有的余数必须换行，因此每列排法唯一。相邻列使用同一对余数时两者均换行，共用一种时只需将共有的一种换行。",
+          "共有 $180$ 个余数方阵，再分别排列各类余数对应的四个数，得 $N=180(4!)^3=2^{11}3^5 5$，故约数个数为 $(11+1)(5+1)(1+1)=144$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q11": {
+    "summary": "Count the families consisting of $16$ distinct subsets of $\\{1,2,3,4,5\\}$ in which every two members intersect.",
+    "summaryZh": "从 $\\{1,2,3,4,5\\}$ 的子集中选出 $16$ 个不同的子集组成集合族，要求任意两个成员都有公共元素。求这样的集合族个数。",
+    "answer": "081",
+    "answerZh": "081",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/11",
+    "methods": [
+      {
+        "title": "Choose from complementary pairs",
+        "titleZh": "从互补对子中选取",
+        "topics": [
+          {
+            "en": "Intersecting families",
+            "zh": "相交集族"
+          },
+          {
+            "en": "Graph theory",
+            "zh": "图论"
+          }
+        ],
+        "steps": [
+          "The $32$ subsets split into $16$ complementary pairs, so exactly one from every pair must be selected. If singleton $\\{x\\}$ is included, all members must contain $x$, giving one family per $x$ and five total.",
+          "Otherwise the full set and every four-element set are included. For each two-element set, either choose it or its three-element complement. Three-element sets automatically intersect one another; a pair and a triple can be disjoint only when complementary. Thus the chosen pairs need only intersect each other.",
+          "View these pairs as graph edges. A family of at least two intersecting edges either shares one vertex or is a triangle: after choosing edges $ab,ac$, any edge missing $a$ must be $bc$, precluding all others. There are $1$ empty family, $5(2^4-1)-10=65$ nonempty star subfamilies (single edges counted twice before subtraction), and $10$ triangles. Adding the singleton cases gives $81$."
+        ],
+        "stepsZh": [
+          "$32$ 个子集分成 $16$ 对互补集合，每对必须恰选一个。若选了单点集 $\\{x\\}$，则所有成员都含 $x$，恰好决定一族，共五族。",
+          "否则全集和全部四元集都已选入。对每个二元集，选它或其三元补集。三元集之间必相交；二元集与三元集只有互补时才不相交。因此余下条件仅是所选二元集两两相交。",
+          "把二元集看成边。两两相交的边要么都有公共端点，要么恰为一个三角形：若已有 $ab,ac$，不含 $a$ 的边只能为 $bc$，此后三条之外不能再选。空边族有 $1$ 种，共端点的非空边族有 $5(2^4-1)-10=65$ 种（单边重复计算一次），三角形有 $10$ 个。加上单点集情形，共 $81$ 族。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q12": {
+    "summary": "Triangle $ABC$ has $AB=13$, $BC=14$, $CA=15$. Write $M$ for the midpoint of $BC$ and $P$ for the point where ray $AM$ meets the circumcircle again. On $AM$ a point $Q$ satisfies $\\angle PBQ=\\angle PCQ$. Express $AQ=m/\\sqrt n$ with relatively prime positive $m,n$ and find $m+n$.",
+    "summaryZh": "三角形 $ABC$ 的边长为 $AB=13,BC=14,CA=15$。$M$ 是 $BC$ 中点，射线 $AM$ 再次交外接圆于 $P$。线段 $AM$ 上的点 $Q$ 满足 $\\angle PBQ=\\angle PCQ$。将 $AQ$ 写为 $m/\\sqrt n$，其中 $m,n$ 为互质正整数，求 $m+n$。",
+    "answer": "247",
+    "answerZh": "247",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/12",
+    "methods": [
+      {
+        "title": "Use an equal-area argument and a ratio circle",
+        "titleZh": "用等面积与定比分点的轨迹",
+        "topics": [
+          {
+            "en": "Apollonius circle",
+            "zh": "阿波罗尼斯圆"
+          },
+          {
+            "en": "Inscribed angles",
+            "zh": "圆周角"
+          },
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "Triangles $ABM,ACM$ have equal area, so $AB\\sin BAM=AC\\sin MAC$. The chord ratio gives $PB/PC=\\sin BAP/\\sin PAC=15/13$. Also $B,C$ are equally distant from line $PQ=AM$. Thus $PBQ,PCQ$ have equal areas, and equality of their indicated angles yields $PB\\cdot BQ=PC\\cdot CQ$. Hence $BQ/CQ=13/15=AB/AC$.",
+          "Take $M$ as origin with $B=(-7,0)$ and $C=(7,0)$. On the ray $MA$ write a point as $(tu,tv)$ with $u^2+v^2=1$. The equation for its distances to $B,C$ to be in ratio $13/15$ is $225(t^2+14ut+49)=169(t^2-14ut+49)$. Its roots have product $49$, and one is $MA$.",
+          "$Q$ is distinct from $A$: at $A$ the two indicated angles would be supplementary inscribed angles, hence both right if equal. Then $AP$ would be a diameter, inconsistent with a median to the unequal sides $AB,AC$ passing through the circumcenter (the circumcenter is on the perpendicular bisector of $BC$ and differs from $M$). The median formula gives $MA^2=(2\\cdot13^2+2\\cdot15^2-14^2)/4=148$. Thus $MQ=49/\\sqrt{148}$ and $AQ=99/\\sqrt{148}$, giving $247$."
+        ],
+        "stepsZh": [
+          "三角形 $ABM,ACM$ 等面积，所以 $AB\\sin BAM=AC\\sin MAC$。弦长比给出 $PB/PC=\\sin BAP/\\sin PAC=15/13$。又因 $B,C$ 到直线 $PQ=AM$ 等距，三角形 $PBQ,PCQ$ 等面积。利用所给等角得 $PB\\cdot BQ=PC\\cdot CQ$，故 $BQ/CQ=13/15=AB/AC$。",
+          "取 $M$ 为原点，$B=(-7,0),C=(7,0)$。射线 $MA$ 上的点表示为 $(tu,tv)$，其中 $u^2+v^2=1$。到 $B,C$ 的距离比为 $13/15$ 等价于 $225(t^2+14ut+49)=169(t^2-14ut+49)$。二次方程两根之积为 $49$，一根是 $MA$。",
+          "$Q$ 不可能是 $A$，否则题中两角是互补的圆周角，若相等就都是直角，$AP$ 即为直径。但外心在 $BC$ 的垂直平分线上且异于 $M$，若又在 $AM$ 上就会推出 $AB=AC$。由中线长公式，$MA^2=(2\\cdot13^2+2\\cdot15^2-14^2)/4=148$。故 $MQ=49/\\sqrt{148}$，$AQ=99/\\sqrt{148}$，答案为 $247$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q13": {
+    "summary": "An acute angle $A$ satisfies $\\tan A=2\\cos A$. For how many integers $1\\le n\\le1000$ is $\\sec^n A+\\tan^n A$ an integer ending in $9$?",
+    "summaryZh": "锐角 $A$ 满足 $\\tan A=2\\cos A$。求 $1\\le n\\le1000$ 中使 $\\sec^n A+\\tan^n A$ 成为个位为 $9$ 的整数的 $n$ 的个数。",
+    "answer": "167",
+    "answerZh": "167",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/13",
+    "methods": [
+      {
+        "title": "First detect integrality, then iterate the last digit",
+        "titleZh": "先判定整性，再递推个位数",
+        "topics": [
+          {
+            "en": "Power sums",
+            "zh": "幂和"
+          },
+          {
+            "en": "Linear recurrences",
+            "zh": "线性递推"
+          },
+          {
+            "en": "Last digit",
+            "zh": "个位数字"
+          }
+        ],
+        "steps": [
+          "Put $s=\\sec A$ and $t=\\tan A$. Then $st=2$, $s^2-t^2=1$, $s^2+t^2=\\sqrt{17}$. For $w_j=s^{2j}+t^{2j}$ these identities give $w_0=2$, $w_1=\\sqrt{17}$ and $w_{j+2}=\\sqrt{17}w_{j+1}-4w_j$. Induction shows that even-index terms are integers and odd-index terms are positive integer multiples of $\\sqrt{17}$.",
+          "For odd $n$, $(s^n+t^n)^2=w_n+2^{n+1}$ is irrational. For even $n$ the first step shows the sum is integral exactly when $4\\mid n$.",
+          "Write $n=4k$. Now $x_k=s^{4k}+t^{4k}$ has $x_0=2,x_1=9$ and $x_{k+2}=9x_{k+1}-16x_k$. Modulo $10$ the values start $2,9,9,7,9,9$; the repeated pair forces period $9,9,7$ from $k=1$. Among $1\\le k\\le250$ all except the $83$ multiples of three work, giving $167$."
+        ],
+        "stepsZh": [
+          "记 $s=\\sec A,t=\\tan A$，得 $st=2$、$s^2-t^2=1$、$s^2+t^2=\\sqrt{17}$。令 $w_j=s^{2j}+t^{2j}$，则 $w_0=2$、$w_1=\\sqrt{17}$，且 $w_{j+2}=\\sqrt{17}w_{j+1}-4w_j$。归纳可知偶下标项为整数，奇下标项为 $\\sqrt{17}$ 的正整数倍。",
+          "当 $n$ 为奇数，$(s^n+t^n)^2=w_n+2^{n+1}$ 是无理数。当 $n$ 为偶数时，据上一步，原和为整数恰发生在 $4\\mid n$。",
+          "写 $n=4k$，则 $x_k=s^{4k}+t^{4k}$ 满足 $x_0=2,x_1=9$，且 $x_{k+2}=9x_{k+1}-16x_k$。模十前六项为 $2,9,9,7,9,9$，相邻两项重复说明从 $k=1$ 起循环为 $9,9,7$。$1\\le k\\le250$ 中除去 $83$ 个三的倍数，余 $167$ 个。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q14": {
+    "summary": "A cube rests on vertex $A$ at height zero. Parallel edges $AB,CD$ and face diagonals $AC,BD$ form a rectangle in a vertical plane. The heights of $B,C,D$ are $2,8,10$ metres. A level water surface is at height $7$ metres. Write the water volume in cubic metres as a reduced fraction and add its numerator and denominator.",
+    "summaryZh": "一个立方体的顶点 $A$ 位于水平面上，高度为零。平行棱 $AB,CD$ 和面对角线 $AC,BD$ 在竖直平面内组成矩形，$B,C,D$ 的高度分别为 $2,8,10$ 米。立方体内水平水面高 $7$ 米。求水体积（立方米）的既约分数的分子与分母之和。",
+    "answer": "751",
+    "answerZh": "751",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/14",
+    "methods": [
+      {
+        "title": "Cut away the dry corner above the waterline",
+        "titleZh": "截取水面以上的干燥角部",
+        "topics": [
+          {
+            "en": "Three-dimensional coordinates",
+            "zh": "空间坐标"
+          },
+          {
+            "en": "Tetrahedron volume",
+            "zh": "四面体体积"
+          }
+        ],
+        "steps": [
+          "Use the three edges from $A$ as axes. Let $AB$ be the first edge, and $AC$ the diagonal across the other two. The vertical direction lies in the plane spanned by $AB,AC$, so its last two components are equal. Vertical rises across the three full edges are therefore $2,4,4$. Their squared sum equals the squared edge length because the vertical direction is a unit vector. The cube has side $6$ and volume $216$.",
+          "In edge-length fractions $x,y,z\\in[0,1]$ measured from the highest corner $D$, the dry region is $2x+4y+4z\\le3$. Ignoring the upper bounds gives a tetrahedron with intercepts $3/2,3/4,3/4$. Only $x\\le1$ cuts it; the removed tip has intercepts $1/2,1/4,1/4$ after translation.",
+          "The dry fraction is $[(3/2)(3/4)^2-(1/2)(1/4)^2]/6=13/96$. The water volume is $216(1-13/96)=747/4$, giving $751$."
+        ],
+        "stepsZh": [
+          "以从 $A$ 出发的三条棱为坐标轴，第一轴沿 $AB$，$AC$ 是另外两轴所成的面对角线。竖直方向在 $AB,AC$ 张成的平面内，故其后两个分量相等。沿三条完整棱的高度增量分别为 $2,4,4$。因竖直单位向量的模为一，这三数的平方和等于棱长平方，故棱长为 $6$、总体积为 $216$。",
+          "从最高顶点 $D$ 起以棱长为单位量坐标 $x,y,z\\in[0,1]$，水面以上区域满足 $2x+4y+4z\\le3$。先不考虑坐标上界，得到截距 $3/2,3/4,3/4$ 的四面体。仅 $x\\le1$ 会截掉一角，其平移后的截距为 $1/2,1/4,1/4$。",
+          "干燥部分占比为 $[(3/2)(3/4)^2-(1/2)(1/4)^2]/6=13/96$。水的体积是 $216(1-13/96)=747/4$，所求为 $751$。"
+        ]
+      }
+    ]
+  },
+  "aime-2023ii-q15": {
+    "summary": "For $n\\ge1$, let $a_n$ be the smallest positive multiple of $23$ which is $1$ modulo $2^n$. Count the indices $1\\le n\\le1000$ for which $a_n=a_{n+1}$.",
+    "summaryZh": "对 $n\\ge1$，令 $a_n$ 为模 $2^n$ 余一的最小正的 $23$ 的倍数。求 $1\\le n\\le1000$ 中满足 $a_n=a_{n+1}$ 的下标个数。",
+    "answer": "363",
+    "answerZh": "363",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2023II/problem/15",
+    "methods": [
+      {
+        "title": "Halve the least residue in an eleven-step cycle",
+        "titleZh": "对最小剩余数反复折半",
+        "topics": [
+          {
+            "en": "Modular inverses",
+            "zh": "模逆元"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "Write $a_n=1+2^n t_n$, where $t_n$ is the unique representative in $1,\\ldots,22$ satisfying $2^n t_n\\equiv-1\\pmod{23}$. Minimality follows because other positive representatives are larger by multiples of $23$.",
+          "The congruences imply $2t_{n+1}\\equiv t_n\\pmod{23}$. Thus $t_{n+1}=t_n/2$ for even $t_n$, and $t_{n+1}=(t_n+23)/2$ for odd $t_n$. Equality $a_n=a_{n+1}$ holds exactly in the even case.",
+          "From $t_1=11$ the list is $11,17,20,10,5,14,7,15,19,21,22$, followed by $11$ again. Positions $3,4,6,11$ work in every block. There are $90$ complete blocks and ten extra positions, giving $90\\cdot4+3=363$."
+        ],
+        "stepsZh": [
+          "写 $a_n=1+2^n t_n$，其中 $t_n$ 是 $1,\\ldots,22$ 中满足 $2^n t_n\\equiv-1\\pmod{23}$ 的唯一数。其余正代表元都需加上 $23$ 的正倍数，因此这里取得最小值。",
+          "相邻同余式给出 $2t_{n+1}\\equiv t_n\\pmod{23}$。当 $t_n$ 偶时 $t_{n+1}=t_n/2$，奇时 $t_{n+1}=(t_n+23)/2$。恰在偶数情形下 $a_n=a_{n+1}$。",
+          "从 $t_1=11$ 起依次为 $11,17,20,10,5,14,7,15,19,21,22$，下一项又是 $11$。每一周期的第 $3,4,6,11$ 项符合。共有 $90$ 个整周期和十个额外位置，合计 $90\\cdot4+3=363$。"
+        ]
+      }
+    ]
+  }
+}

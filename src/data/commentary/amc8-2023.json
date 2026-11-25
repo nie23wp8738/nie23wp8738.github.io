@@ -1,0 +1,769 @@
+{
+  "amc8-2023-q1": {
+    "summary": "Evaluate $(8\\times 4+2)-(8+4\\times 2)$.",
+    "summaryZh": "计算 $(8\\times 4+2)-(8+4\\times 2)$。",
+    "answer": "D. $18$.",
+    "answerZh": "D．$18$。",
+    "methods": [
+      {
+        "title": "Evaluate each bracket",
+        "titleZh": "分别计算括号",
+        "topics": [
+          {
+            "en": "Order of operations",
+            "zh": "运算顺序"
+          }
+        ],
+        "steps": [
+          "Multiplication comes first in each bracket. The two values are $32+2=34$ and $8+8=16$.",
+          "Subtract to get $34-16=18$."
+        ],
+        "stepsZh": [
+          "两个括号内都先做乘法，分别得 $32+2=34$ 和 $8+8=16$。",
+          "两数相减为 $34-16=18$。"
+        ]
+      },
+      {
+        "title": "Collect the multiples of eight",
+        "titleZh": "合并 8 的倍数",
+        "topics": [
+          {
+            "en": "Distributive law",
+            "zh": "分配律"
+          }
+        ],
+        "steps": [
+          "Expanding gives $4\\times 8+2-8-8=(4-1-1)\\times 8+2=18$."
+        ],
+        "stepsZh": [
+          "展开并合并，得 $4\\times 8+2-8-8=(4-1-1)\\times 8+2=18$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/1"
+  },
+  "amc8-2023-q2": {
+    "summary": "Fold a square in half vertically, then in half horizontally. On the folded quarter, cut off the corner where both folds meet, joining the midpoints of the two folded edges by one straight cut. Describe the hole after the paper is opened flat.",
+    "summaryZh": "将正方形沿竖直、水平中线各对折一次。在折成的小正方形上，连结两条折痕边的中点，沿连线剪掉两条折痕相交的角。展开后，孔的形状及位置如何？",
+    "answer": "E. A central square hole with sides at $45^\\circ$ to the edges.",
+    "answerZh": "E．中心有一个正方形孔，边与原纸边成 $45^\\circ$。",
+    "methods": [
+      {
+        "title": "Reflect the cut across both folds",
+        "titleZh": "关于两条折痕作反射",
+        "topics": [
+          {
+            "en": "Reflection symmetry",
+            "zh": "轴对称"
+          }
+        ],
+        "steps": [
+          "The corner removed is an isosceles right triangle with its right angle at the centre of the original paper.",
+          "Unfolding gives four copies with a common right-angle vertex. Their outer vertices lie equally far from the centre on the four coordinate rays. Joining them forms a square with horizontal and vertical diagonals."
+        ],
+        "stepsZh": [
+          "剪下的角是等腰直角三角形，直角顶点正是原纸中心。",
+          "展开后共有四块对称的三角形。孔的四个顶点分别在水平、竖直四条射线上，与中心等距，所以孔为对角线水平、竖直的正方形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/2"
+  },
+  "amc8-2023-q3": {
+    "summary": "Use $W=T-0.7S$ for a wind-chill estimate, where $T$ is in degrees Fahrenheit and $S$ in mph. At $T=36$ and $S=18$, find the estimate to the nearest degree.",
+    "summaryZh": "用 $W=T-0.7S$ 估算风寒温度，其中 $T$ 为华氏温度，$S$ 为每小时英里的风速。若 $T=36$、$S=18$，求估算值，四舍五入到整数度。",
+    "answer": "B. $23$ degrees Fahrenheit.",
+    "answerZh": "B．华氏 $23$ 度。",
+    "methods": [
+      {
+        "title": "Substitute and round",
+        "titleZh": "代入后取整",
+        "topics": [
+          {
+            "en": "Evaluating a formula",
+            "zh": "公式求值"
+          }
+        ],
+        "steps": [
+          "The wind adjustment is $0.7\\times 18=12.6$ degrees.",
+          "The estimate is $36-12.6=23.4$, which rounds to $23$."
+        ],
+        "stepsZh": [
+          "风速修正量为 $0.7\\times 18=12.6$ 度。",
+          "估算温度为 $36-12.6=23.4$ 度，取整为 $23$ 度。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/3"
+  },
+  "amc8-2023-q4": {
+    "summary": "Number a $7\\times 7$ grid in a spiral from 1 at $(0,0)$. Starting to the right, move right, up, left, down cyclically, with successive run lengths $1,1,2,2,3,3,\\ldots$. How many of the entries at $(-3,1),(-2,0),(0,-2),(1,-3)$ are prime?",
+    "summaryZh": "在 $7\\times 7$ 方格中从中心 $(0,0)$ 的 1 开始螺旋填数。按右、上、左、下循环走，连续四个方向各段的步数依次为 $1,1,2,2,3,3,\\ldots$。求 $(-3,1),(-2,0),(0,-2),(1,-3)$ 四格中共有几个素数。",
+    "answer": "D. Three.",
+    "answerZh": "D．3 个。",
+    "methods": [
+      {
+        "title": "Read from the corner squares",
+        "titleZh": "从各圈拐角定位",
+        "topics": [
+          {
+            "en": "Spiral patterns",
+            "zh": "螺旋数表"
+          }
+        ],
+        "steps": [
+          "The bottom-right corners of the three completed rings are $9,25,49$, at $(1,-1),(2,-2),(3,-3)$. Count backwards along a bottom side, then up the left side as needed.",
+          "On the middle ring the two entries are $25-2=23$ and $25-4-2=19$. On the outer ring they are $49-2=47$ and $49-6-4=39$.",
+          "The first three values $23,19,47$ are prime (test prime divisors up to their square roots), whereas $39=3\\times 13$."
+        ],
+        "stepsZh": [
+          "三圈走完时，右下角依次是 $(1,-1),(2,-2),(3,-3)$，分别填 $9,25,49$。从右下角沿底边往左倒数，必要时再沿左边向上。",
+          "中圈两格为 $25-2=23$、$25-4-2=19$。外圈两格为 $49-2=47$、$49-6-4=39$。",
+          "只须试除到各数的平方根即可验证 $23,19,47$ 是素数，而 $39=3\\times 13$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/4",
+    "figure": {
+      "url": "/commentary-figures/amc8-2023-q4.svg",
+      "alt": "Spiral grid with its first seven entries and four shaded cells.",
+      "altZh": "螺旋方格中给出前七个数和四个着色格。"
+    }
+  },
+  "amc8-2023-q5": {
+    "summary": "A sample of 180 lake fish includes 30 trout. The lake has 250 trout, and the sample has the same trout proportion as the whole lake. Find the total fish population.",
+    "summaryZh": "从湖中抽取的 180 条鱼里有 30 条鳟鱼。全湖共有 250 条鳟鱼，且样本和全湖的鳟鱼比例相同。求全湖的鱼数。",
+    "answer": "B. $1{,}500$.",
+    "answerZh": "B．$1{,}500$ 条。",
+    "methods": [
+      {
+        "title": "Scale a ratio",
+        "titleZh": "按比例换算",
+        "topics": [
+          {
+            "en": "Proportions",
+            "zh": "比例"
+          }
+        ],
+        "steps": [
+          "In the sample there are $180/30=6$ fish of all kinds for each trout.",
+          "The same factor applies to the lake: $6\\times 250=1500$."
+        ],
+        "stepsZh": [
+          "样本中，每一条鳟鱼对应总数 $180/30=6$ 条鱼。",
+          "全湖也符合这一比例，因此鱼的总数为 $6\\times 250=1500$ 条。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/5"
+  },
+  "amc8-2023-q6": {
+    "summary": "Fill $a,b,c,d$ with the four digits $0,2,2,3$, each used once. Maximize $a^b c^d$.",
+    "summaryZh": "把 $0,2,2,3$ 各用一次填入 $a,b,c,d$，求 $a^b c^d$ 的最大值。",
+    "answer": "C. $9$.",
+    "answerZh": "C．$9$。",
+    "methods": [
+      {
+        "title": "Place the zero first",
+        "titleZh": "先安排数字零",
+        "topics": [
+          {
+            "en": "Exponents",
+            "zh": "指数"
+          }
+        ],
+        "steps": [
+          "If zero is a base its positive power is zero. Put it in an exponent instead so that one factor is 1.",
+          "If the base beneath zero is 3, the other factor is $2^2=4$. If the base is 2, the other factor is either $2^3=8$ or $3^2=9$. The largest product is $2^0\\times 3^2=9$."
+        ],
+        "stepsZh": [
+          "若 0 作底数，其指数必为正，整个积为 0。若 0 作指数，该因数等于 1。",
+          "0 的底数若是 3，另一因数只能为 $2^2=4$；若是 2，则另一因数可为 $2^3=8$ 或 $3^2=9$。最大积为 $2^0\\times 3^2=9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/6"
+  },
+  "amc8-2023-q7": {
+    "summary": "The sides of a rectangle with opposite vertices $(15,3)$ and $(16,5)$ are horizontal and vertical. Count the boundary points on the line through $(0,0),(3,1)$ or on the line through $(0,10),(2,9)$.",
+    "summaryZh": "一个矩形的边平行于坐标轴，两个对角顶点为 $(15,3)$、$(16,5)$。求矩形边界上落在下列至少一条直线上的点数：过 $(0,0),(3,1)$ 的直线，以及过 $(0,10),(2,9)$ 的直线。",
+    "answer": "B. One point, $(15,5)$.",
+    "answerZh": "B．1 个点，即 $(15,5)$。",
+    "methods": [
+      {
+        "title": "Compare the lines on the horizontal interval",
+        "titleZh": "在横坐标区间内比较高度",
+        "topics": [
+          {
+            "en": "Linear functions",
+            "zh": "一次函数"
+          }
+        ],
+        "steps": [
+          "The first line is $y=x/3$. For $15\\le x\\le 16$ it starts at $y=5$ and then rises above the rectangle.",
+          "The second line is $y=10-x/2$. Already at $x=15$ it is at $2.5<3$, and it continues down. Only the upper-left corner lies on either line."
+        ],
+        "stepsZh": [
+          "第一条直线为 $y=x/3$。在 $15\\le x\\le 16$ 内，它从 $y=5$ 起继续上升，离开矩形。",
+          "第二条直线为 $y=10-x/2$，在 $x=15$ 时已经低于矩形底边，之后继续下降。只有左上角满足条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/7"
+  },
+  "amc8-2023-q8": {
+    "summary": "Four players are paired into two matches each round for six rounds. Read the following win/loss strings by round (1 means win). Three records are 111011, 101010 and 010100. Recover the fourth.",
+    "summaryZh": "四名选手每轮两两对阵，共六轮。胜记 1、负记 0；前三名选手按轮次的记录分别是 111011、101010 和 010100。求第四名选手的记录。",
+    "answer": "A. 000101.",
+    "answerZh": "A．000101。",
+    "methods": [
+      {
+        "title": "Count wins column by column",
+        "titleZh": "逐列补足胜场",
+        "topics": [
+          {
+            "en": "Conservation of totals",
+            "zh": "总数守恒"
+          }
+        ],
+        "steps": [
+          "Two matches produce exactly two wins each round. The first three players have $2,2,2,1,2,1$ wins in the six columns.",
+          "Subtract each total from 2. The missing player wins only rounds four and six."
+        ],
+        "stepsZh": [
+          "每轮两场比赛，恰有两人获胜。前三人的六列胜场数依次为 $2,2,2,1,2,1$。",
+          "分别用 2 减去各列的数，第四人只在第 4 和第 6 轮获胜。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/8"
+  },
+  "amc8-2023-q9": {
+    "summary": "The graph shows a skier’s height above the base over time. For how many seconds altogether is the height between 4 and 7 metres?",
+    "summaryZh": "图中横轴是时间（秒），纵轴是滑雪者相对山脚的高度（米）。高度介于 4 米和 7 米之间的累计时间是多少？",
+    "answer": "B. $8$ seconds.",
+    "answerZh": "B．$8$ 秒。",
+    "methods": [
+      {
+        "title": "Split the time axis at the crossings",
+        "titleZh": "按高度交点划分时间段",
+        "topics": [
+          {
+            "en": "Reading graphs",
+            "zh": "函数图像读数"
+          }
+        ],
+        "steps": [
+          "Read the crossings with $y=7$ at $t=2,10,12$ and with $y=4$ at $t=4,6,14$.",
+          "The curve falls within the band on $[2,4]$, $[6,10]$ and $[12,14]$. Their lengths add to $2+4+2=8$ seconds."
+        ],
+        "stepsZh": [
+          "读出与 $y=7$ 的交点时刻为 $2,10,12$，与 $y=4$ 的交点时刻为 $4,6,14$。",
+          "曲线位于目标高度带内的时间段是 $[2,4]$、$[6,10]$、$[12,14]$。三个时段的总长度为 $2+4+2=8$ 秒。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/9",
+    "figure": {
+      "url": "/commentary-figures/amc8-2023-q9.svg",
+      "alt": "Height in metres against time in seconds, with gridlines at unit intervals.",
+      "altZh": "滑雪高度（米）与时间（秒）的图像，网格间隔均为一个单位。"
+    }
+  },
+  "amc8-2023-q10": {
+    "summary": "Someone eats one quarter of a whole pie. A second visitor eats one third of the remainder, then a third visitor eats one third of what is left. What fraction of the original pie survives?",
+    "summaryZh": "第一人吃掉整张馅饼的四分之一，此后第二人吃掉剩余量的三分之一，第三人又吃掉当时剩余量的三分之一。最后剩下原饼的几分之几？",
+    "answer": "D. $1/3$.",
+    "answerZh": "D．$1/3$。",
+    "methods": [
+      {
+        "title": "Multiply the retained fractions",
+        "titleZh": "连乘保留比例",
+        "topics": [
+          {
+            "en": "Fractions of a remainder",
+            "zh": "剩余量的分数"
+          }
+        ],
+        "steps": [
+          "The first visitor leaves $3/4$. Each later visitor leaves $2/3$ of what was available.",
+          "The final fraction is $(3/4)(2/3)(2/3)=1/3$."
+        ],
+        "stepsZh": [
+          "第一人留下原饼的 $3/4$，后两人每次都留下当时所剩的 $2/3$。",
+          "最后占原饼的 $(3/4)(2/3)(2/3)=1/3$。"
+        ]
+      },
+      {
+        "title": "Count equal pieces",
+        "titleZh": "按等份计数",
+        "topics": [
+          {
+            "en": "Unit fractions",
+            "zh": "单位分数"
+          }
+        ],
+        "steps": [
+          "Imagine cutting the pie into 12 equal pieces. After the three visits, the counts left are 9, then 6, then 4, so the fraction is $4/12=1/3$."
+        ],
+        "stepsZh": [
+          "把原饼等分为 12 份。三次取走后依次剩 9、6、4 份，所以最后占 $4/12=1/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/10"
+  },
+  "amc8-2023-q11": {
+    "summary": "A spacecraft covers 292,526,838 miles in roughly 6.5 months. Which speed in mph is the best estimate: 6,000, 12,000, 60,000, 120,000 or 600,000?",
+    "summaryZh": "飞船约用 6.5 个月飞行了 292,526,838 英里。平均时速最接近下列哪个数：6,000、12,000、60,000、120,000 或 600,000 英里/小时？",
+    "answer": "C. About $60{,}000$ mph.",
+    "answerZh": "C．约 $60{,}000$ 英里/小时。",
+    "methods": [
+      {
+        "title": "Convert the duration to hours",
+        "titleZh": "先把时间换为小时",
+        "topics": [
+          {
+            "en": "Rate estimation",
+            "zh": "速度估算"
+          }
+        ],
+        "steps": [
+          "Taking 30 days per month gives approximately $6.5\\times 30\\times 24=4680$ hours.",
+          "The quotient is about $292{,}500{,}000/4680=62{,}500$ mph. Of the five values, $60{,}000$ is closest."
+        ],
+        "stepsZh": [
+          "以每月 30 天估计，总时间约为 $6.5\\times 30\\times 24=4680$ 小时。",
+          "平均时速约为 $292{,}500{,}000/4680=62{,}500$ 英里/小时，最近的选项是 $60{,}000$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/11"
+  },
+  "amc8-2023-q12": {
+    "summary": "Inside a disk of radius 6, a shaded disk of radius 4 has two unshaded, non-overlapping round holes of radius 2. Three more shaded disks of radius 1 lie elsewhere inside the large disk and have disjoint interiors. What fraction of the large disk is shaded?",
+    "summaryZh": "半径为 6 的大圆内有一个半径为 4 的着色圆盘，其中挖去两个内部不重叠、半径均为 2 的圆孔。大圆内其余位置另有三个内部不重叠、半径为 1 的着色小圆。求着色面积占比。",
+    "answer": "B. $11/36$.",
+    "answerZh": "B．$11/36$。",
+    "methods": [
+      {
+        "title": "Add disks and subtract holes",
+        "titleZh": "圆盘面积加减",
+        "topics": [
+          {
+            "en": "Area of a circle",
+            "zh": "圆面积"
+          }
+        ],
+        "steps": [
+          "Using $\\pi $ as the area unit, the perforated disk contributes $4^2-2\\times 2^2=8$ units. The three small disks add $3\\times 1^2=3$.",
+          "The entire disk has 36 units, so the shaded fraction is $(8+3)/36=11/36$."
+        ],
+        "stepsZh": [
+          "以 $\\pi $ 为面积单位，带孔部分为 $4^2-2\\times 2^2=8$，三个小圆再加 $3\\times 1^2=3$。",
+          "大圆面积为 36 个单位，着色比例为 $(8+3)/36=11/36$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/12",
+    "figure": {
+      "url": "/commentary-figures/amc8-2023-q12.svg",
+      "alt": "A shaded disk with two round holes and three separate shaded disks inside the enclosing circle.",
+      "altZh": "大圆内有一个含两个圆孔的着色圆盘，另有三个较小的着色圆盘。"
+    }
+  },
+  "amc8-2023-q13": {
+    "summary": "Seven evenly spaced water stops divide a race route into eight equal intervals. Two evenly spaced repair stops divide the same route into thirds. The third water stop is 2 miles beyond the first repair stop. Find the route length.",
+    "summaryZh": "七个饮水站把赛道等分成八段，两个维修站把同一条赛道三等分。第三个饮水站在第一个维修站之后 2 英里处。求赛道全长。",
+    "answer": "D. $48$ miles.",
+    "answerZh": "D．$48$ 英里。",
+    "methods": [
+      {
+        "title": "Subtract the positions as fractions",
+        "titleZh": "位置用全程的分数表示",
+        "topics": [
+          {
+            "en": "Fraction difference",
+            "zh": "分数差"
+          }
+        ],
+        "steps": [
+          "At the two stops the distances from the start are $3L/8$ and $L/3$, where $L$ is the race length.",
+          "Their difference is $(9-8)L/24=L/24=2$, giving $L=48$."
+        ],
+        "stepsZh": [
+          "记赛道长为 $L$，两站距起点分别为 $3L/8$ 和 $L/3$。",
+          "两站间距为 $(9-8)L/24=L/24=2$，所以 $L=48$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/13"
+  },
+  "amc8-2023-q14": {
+    "summary": "A collection has twenty stamps of each denomination: 5, 10 and 25 cents. What is the largest number of stamps that can total exactly 710 cents?",
+    "summaryZh": "5 分、10 分、25 分三种邮票各有 20 枚。若邮资恰为 710 分，最多能用多少枚？",
+    "answer": "E. $55$ stamps.",
+    "answerZh": "E．$55$ 枚。",
+    "methods": [
+      {
+        "title": "Minimize the stamps left out",
+        "titleZh": "使弃用的枚数最少",
+        "topics": [
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          }
+        ],
+        "steps": [
+          "All 60 stamps total $20(5+10+25)=800$ cents. We must discard exactly 90 cents. At most three stamps give at most 75 cents.",
+          "Four quarters give 100 cents, whereas four stamps including a smaller one give at most $3\\times 25+10=85$. Five suffice: $25+25+25+10+5=90$. Hence $60-5=55$ remain."
+        ],
+        "stepsZh": [
+          "全部 60 枚共值 $20(5+10+25)=800$ 分，因此需弃用恰好 90 分。三枚及以下至多 75 分。",
+          "四枚若都是 25 分值 100 分；若含小面值，至多 $3\\times 25+10=85$ 分。五枚可取 $25+25+25+10+5=90$，所以最多使用 $60-5=55$ 枚。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/14"
+  },
+  "amc8-2023-q15": {
+    "summary": "A usual half-mile walk takes 10 minutes over ten equal blocks. After five minutes the next single block is replaced by a three-block detour. At what constant speed in mph must the walker now continue to finish on time?",
+    "summaryZh": "通常走十个等长街区到校，全程半英里，共用十分钟。走过五个街区后，下一段原本只用走一个街区，现在要绕行三个街区。余下行程需以多大时速才能准时到校？",
+    "answer": "B. $4.2$ mph.",
+    "answerZh": "B．$4.2$ 英里/小时。",
+    "methods": [
+      {
+        "title": "Divide remaining distance by remaining time",
+        "titleZh": "剩余路程除以剩余时间",
+        "topics": [
+          {
+            "en": "Unit conversion",
+            "zh": "单位换算"
+          }
+        ],
+        "steps": [
+          "Each block measures $0.5/10=0.05$ mile. Five blocks would usually remain, and the detour adds two, giving $7\\times 0.05=0.35$ mile.",
+          "Five minutes is $1/12$ hour. The required speed is $0.35\\times 12=4.2$ mph."
+        ],
+        "stepsZh": [
+          "每个街区长 $0.5/10=0.05$ 英里。通常还要走五个街区，绕路增添两个，故剩余 $7\\times 0.05=0.35$ 英里。",
+          "五分钟等于 $1/12$ 小时，所需时速为 $0.35\\times 12=4.2$ 英里/小时。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/15"
+  },
+  "amc8-2023-q16": {
+    "summary": "Fill a $20\\times 20$ array starting with $P$ in its bottom-left corner. A step one cell to the right or up advances the letter in the cycle $P,Q,R,P,\\ldots$. How often does each letter occur?",
+    "summaryZh": "在 $20\\times 20$ 的方格阵列左下角填 $P$。向右或向上每移动一格，都按 $P,Q,R,P,\\ldots$ 循环前进一个字母。三个字母各有多少个？",
+    "answer": "C. $P:133$, $Q:134$, $R:133$.",
+    "answerZh": "C．$P$ 有 133 个，$Q$ 有 134 个，$R$ 有 133 个。",
+    "methods": [
+      {
+        "title": "Peel away multiples of three",
+        "titleZh": "剥去三的倍数行列",
+        "topics": [
+          {
+            "en": "Periodic arrays",
+            "zh": "周期阵列"
+          }
+        ],
+        "steps": [
+          "In the bottom 18 rows, each column has six complete cycles, hence 120 of each letter overall. In the top two rows the first 18 columns add another 12 of each.",
+          "At the bottom-left of the remaining $2\\times 2$ square the two offsets from the original corner are both 18, so that cell is $P$. The other three cells are $Q,Q,R$. Adding gives $(133,134,133)$."
+        ],
+        "stepsZh": [
+          "下方 18 行中，每列恰有六个循环，三种字母各出现 120 次。最上面两行的前 18 列再各贡献 12 个。",
+          "剩余 $2\\times 2$ 方块的左下角离原点向右和向上各 18 格，故填 $P$。另三格依次为 $Q,Q,R$，所以总数为 $(133,134,133)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/16"
+  },
+  "amc8-2023-q17": {
+    "summary": "Fold the triangular net shown into a regular octahedron. The edge marked by a dot joins the top corner of face $Q$ to its lower-right corner. Which numbered face meets $Q$ across that edge?",
+    "summaryZh": "将图示展开图折成正八面体。圆点标出的边连接 $Q$ 面的顶角和右下角。折好后，哪一个编号的面沿此边与 $Q$ 相邻？",
+    "answer": "A. Face 1.",
+    "answerZh": "A．1 号面。",
+    "methods": [
+      {
+        "title": "Track the two opposite vertices",
+        "titleZh": "跟踪一对相对顶点",
+        "topics": [
+          {
+            "en": "Polyhedron nets",
+            "zh": "多面体展开图"
+          }
+        ],
+        "steps": [
+          "The corner where faces 2, 3, 4 and 5 meet becomes one pole. The other four faces, $1,6,7,Q$, meet around the opposite pole, which is the top corner of $Q$ in the net (already shared with 6 and 7).",
+          "Face 6 has faces 7 and $Q$ on its two pole edges. The four-face cycle at that pole must therefore be $7,6,Q,1$ in order around it. The other pole edge of $Q$, marked in the diagram, meets face 1."
+        ],
+        "stepsZh": [
+          "2、3、4、5 四个面共用的角在成形后是一个极点。剩下的 $1,6,7,Q$ 四个面环绕相对的极点，该点就是展开图中 $Q$ 的顶角，6 和 7 也接在这里。",
+          "6 号面在这个极点旁的两边分别连着 7 与 $Q$，所以四面环绕极点的顺序只能为 $7,6,Q,1$。$Q$ 的另一条极点边正是标点的边，与它相接的是 1 号面。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/17",
+    "figure": {
+      "url": "/commentary-figures/amc8-2023-q17.svg",
+      "alt": "Octahedron net with eight labelled faces; a dot marks the free sloping edge of Q.",
+      "altZh": "标有八个面的八面体展开图，Q 的右斜边上有一圆点。"
+    }
+  },
+  "amc8-2023-q18": {
+    "summary": "A jumper on an integer line can move $+5$ or $-3$ at each step. What is the minimum number of steps to travel from 0 to 2023?",
+    "summaryZh": "在整数数轴上，每次可右跳 5 或左跳 3 个单位。从 0 到 2023 最少需要跳几次？",
+    "answer": "D. $411$.",
+    "answerZh": "D．$411$ 次。",
+    "methods": [
+      {
+        "title": "Constrain the jump count modulo eight",
+        "titleZh": "用模八确定次数",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "For $n$ steps including $b$ backward steps, the displacement is $5n-8b$. Thus $n\\ge 405$ and $5n\\equiv 2023\\equiv 7\\pmod 8$, so $n\\equiv 3\\pmod 8$.",
+          "The first such integer at least 405 is 411. It is achievable with $b=(5\\times 411-2023)/8=4$, giving 407 forward and four backward steps."
+        ],
+        "stepsZh": [
+          "设共跳 $n$ 次，其中 $b$ 次向左，则位移为 $5n-8b$。由此 $n\\ge 405$ 且 $5n\\equiv 2023\\equiv 7\\pmod 8$，即 $n\\equiv 3\\pmod 8$。",
+          "不小于 405 的这类整数中最小的是 411。此时 $b=(5\\times 411-2023)/8=4$，右跳 407 次、左跳 4 次即可到达。"
+        ]
+      },
+      {
+        "title": "Minimize the backward moves",
+        "titleZh": "使向左次数最少",
+        "topics": [
+          {
+            "en": "Linear Diophantine equations",
+            "zh": "一次不定方程"
+          }
+        ],
+        "steps": [
+          "With $f$ forward and $b$ backward jumps, $5f=2023+3b$. Reducing modulo 5 gives $b\\equiv 4\\pmod5$.",
+          "The minimum $b=4$ gives $f=407$. Increasing $b$ by five also increases $f$ by three, so no longer choice improves on $407+4=411$."
+        ],
+        "stepsZh": [
+          "若向右 $f$ 次、向左 $b$ 次，则 $5f=2023+3b$。模 5 得 $b\\equiv 4\\pmod5$。",
+          "最小可取 $b=4$，对应 $f=407$。每再多向左 5 次，就要再多向右 3 次，所以最小总数为 $407+4=411$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/18"
+  },
+  "amc8-2023-q19": {
+    "summary": "Two equilateral triangles, one inside the other, have side lengths in the ratio $2:3$ (inner to outer). The region between them consists of three congruent trapezoids. Find the ratio of the area of one trapezoid to that of the inner triangle.",
+    "summaryZh": "内外两个等边三角形的边长比为 $2:3$，两者之间的区域恰好分为三个全等梯形。求一个梯形与内三角形的面积比。",
+    "answer": "C. $5:12$.",
+    "answerZh": "C．$5:12$。",
+    "methods": [
+      {
+        "title": "Compare areas in square units",
+        "titleZh": "利用面积的平方比",
+        "topics": [
+          {
+            "en": "Similar figures",
+            "zh": "相似图形"
+          }
+        ],
+        "steps": [
+          "By similarity, assign the inner and outer triangles areas 4 and 9. The three trapezoids together then have area $9-4=5$.",
+          "One trapezoid has $5/3$ units of area. The required ratio is $(5/3):4=5:12$."
+        ],
+        "stepsZh": [
+          "由相似性，可将内外三角形面积分别设为 4 和 9。三个梯形共占 $9-4=5$ 份。",
+          "每个梯形占 $5/3$ 份，故所求比为 $(5/3):4=5:12$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/19"
+  },
+  "amc8-2023-q20": {
+    "summary": "Insert two integers into the list $3,3,8,11,28$. Its range must double and it must retain the same median and the same unique mode. Maximize the sum of the inserted integers.",
+    "summaryZh": "在 $3,3,8,11,28$ 中加入两个整数，使极差变为原来的两倍，中位数和唯一众数保持不变。求两个新数之和的最大值。",
+    "answer": "D. $60$.",
+    "answerZh": "D．$60$。",
+    "methods": [
+      {
+        "title": "Bound both new entries",
+        "titleZh": "分别给两个新数定上界",
+        "topics": [
+          {
+            "en": "Median and mode",
+            "zh": "中位数与众数"
+          }
+        ],
+        "steps": [
+          "The median is 8, the unique mode is 3, and the required range is 50. Since 3 remains in the list, the maximum entry cannot exceed 53.",
+          "At least one new integer must be at most 8; otherwise only three entries would be at most 8, so the fourth entry could not be 8. If the smaller new value is 8, the other is at least 8 and the mode would no longer be uniquely 3. The smaller new value is therefore at most 7.",
+          "This bounds the sum by $7+53=60$. Both bounds are attained in $3,3,7,8,11,28,53$."
+        ],
+        "stepsZh": [
+          "原数列的中位数是 8，唯一众数是 3，新极差须为 50。因为仍含 3，最大值至多 53。",
+          "两个新数中至少一个不大于 8，否则全列仅有三项不超过 8，第四项不能是 8。若较小的新数等于 8，则 8 至少出现两次，3 便不是唯一众数，因此较小的新数至多为 7。",
+          "所求和至多为 $7+53=60$。取 $3,3,7,8,11,28,53$ 时达到上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/20"
+  },
+  "amc8-2023-q21": {
+    "summary": "Partition the digits 1 through 9 into three unordered sets of three distinct digits each. In how many such partitions do all three group sums agree?",
+    "summaryZh": "将 1 到 9 不重不漏地分成三组，每组三个数。组内及组间均不计顺序。使三组的和相等，共有多少种分法？",
+    "answer": "C. Two.",
+    "answerZh": "C．2 种。",
+    "methods": [
+      {
+        "title": "Start with the group containing 1",
+        "titleZh": "先定含 1 的组",
+        "topics": [
+          {
+            "en": "Exhaustive casework",
+            "zh": "穷举分类"
+          }
+        ],
+        "steps": [
+          "The total is 45, so each triple sums to 15. The partners of 1 must sum to 14 and therefore are either $5,9$ or $6,8$.",
+          "If the first group is $1,5,9$, the only available pair summing to 13 for the group of 2 is $6,7$, leaving $3,4,8$. If the first group is $1,6,8$, the only such pair is $4,9$, leaving $3,5,7$.",
+          "Both partitions work, and identifying the groups by 1 and 2 prevents counting reorderings."
+        ],
+        "stepsZh": [
+          "总和为 45，所以每组之和为 15。与 1 同组的另外两数和为 14，只能取 $5,9$ 或 $6,8$。",
+          "若第一组为 $1,5,9$，剩余数字中与 2 同组且和为 13 的一对只能是 $6,7$，余下 $3,4,8$。若第一组为 $1,6,8$，与 2 同组的另两数只能是 $4,9$，余下 $3,5,7$。",
+          "两种分组都满足条件。通过含 1 和含 2 的组分类，没有把排列顺序重复计算。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/21"
+  },
+  "amc8-2023-q22": {
+    "summary": "A positive integer sequence satisfies $u_{n+2}=u_nu_{n+1}$ and $u_6=4000$. Determine $u_1$.",
+    "summaryZh": "正整数数列满足 $u_{n+2}=u_nu_{n+1}$ 且 $u_6=4000$。求 $u_1$。",
+    "answer": "D. $5$.",
+    "answerZh": "D．$5$。",
+    "methods": [
+      {
+        "title": "Track prime exponents",
+        "titleZh": "跟踪素因子的指数",
+        "topics": [
+          {
+            "en": "Prime factorization",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "Write $u_1=a,u_2=b$. The next four terms are $ab,ab^2,a^2b^3,a^3b^5$. So $a^3b^5=4000=2^5\\times 5^3$.",
+          "For prime 2, the equation $3x+5y=5$ in nonnegative exponents forces $(x,y)=(0,1)$. For prime 5 the right-hand side is 3, forcing $(1,0)$. No other primes occur, so $a=5$, $b=2$."
+        ],
+        "stepsZh": [
+          "记 $u_1=a,u_2=b$，后四项依次为 $ab,ab^2,a^2b^3,a^3b^5$。于是 $a^3b^5=4000=2^5\\times 5^3$。",
+          "对于素数 2，其在 $a,b$ 中的非负指数满足 $3x+5y=5$，仅有 $(0,1)$。对于 5，右端为 3，仅有 $(1,0)$。无其他素因子，故 $a=5,b=2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/22"
+  },
+  "amc8-2023-q23": {
+    "summary": "In each cell of a $3\\times 3$ grid, choose one corner uniformly and independently. Shade the right triangle with that corner as right angle and the two adjacent whole cell edges as legs. What is the probability that at least one $2\\times 2$ block contains the shaded diamond joining the midpoints of its four sides?",
+    "summaryZh": "在 $3\\times 3$ 网格的每个小格独立等概率选择一个顶点，涂黑以该点为直角顶点、以小格的两条邻边为直角边的三角形。求至少一个 $2\\times 2$ 方块中出现以其四边中点为顶点的完整黑色菱形的概率。",
+    "answer": "C. $1/64$.",
+    "answerZh": "C．$1/64$。",
+    "methods": [
+      {
+        "title": "Use the central tile to distinguish events",
+        "titleZh": "用中央格区别四个事件",
+        "topics": [
+          {
+            "en": "Mutually exclusive events",
+            "zh": "互斥事件"
+          }
+        ],
+        "steps": [
+          "For a specified $2\\times 2$ block all four shaded right angles must meet at its centre. The four orientations are forced, giving probability $(1/4)^4$.",
+          "There are four possible blocks. Each requires a different shaded corner of the central cell of the $3\\times 3$ grid, so the four events are disjoint. The probability is $4(1/4)^4=1/64$."
+        ],
+        "stepsZh": [
+          "要在指定的 $2\\times 2$ 方块内形成菱形，四个小三角形的直角必须全都对准该方块的中心。四个朝向均被唯一确定，概率为 $(1/4)^4$。",
+          "四种方块分别要求整个网格中央格的四个不同顶点被涂为直角，故彼此互斥。总概率为 $4(1/4)^4=1/64$。"
+        ]
+      },
+      {
+        "title": "Condition on the central cell",
+        "titleZh": "先确定中央小格",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          }
+        ],
+        "steps": [
+          "Once the central cell is shaded, its chosen corner determines the only block that can form a diamond. Three other independent tiles must point at that same corner, with probability $(1/4)^3$."
+        ],
+        "stepsZh": [
+          "中央格的朝向一旦确定，唯一可能形成菱形的方块也随之确定。其余三个相关小格须独立地指向同一顶点，概率为 $(1/4)^3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/23"
+  },
+  "amc8-2023-q24": {
+    "summary": "Take two copies of the same isosceles triangle of height $h$, each with a line parallel to its base. In copy one, shade the bottom strip, leaving a top triangle of height 11. In copy two, shade the top triangle, leaving a bottom strip of height 5. The two shaded areas are equal. Find $h$.",
+    "summaryZh": "在两个相同的高为 $h$ 的等腰三角形中各作一条平行于底边的线。第一图涂黑下部梯形，留下高为 11 的顶部三角形；第二图涂黑顶部三角形，留下高为 5 的底部梯形。两个黑色区域面积相同，求 $h$。",
+    "answer": "A. $14.6$.",
+    "answerZh": "A．$14.6$。",
+    "methods": [
+      {
+        "title": "Compare the two unshaded regions",
+        "titleZh": "比较两个白色区域",
+        "topics": [
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          }
+        ],
+        "steps": [
+          "Equal shaded areas in equal copies imply equal unshaded areas. In units where the full area is $h^2$, the top triangle of height 11 has area $121$, by similarity.",
+          "The bottom strip of height 5 in the other copy has area $h^2-(h-5)^2=10h-25$. Thus $121=10h-25$, so $h=14.6$."
+        ],
+        "stepsZh": [
+          "两张图形总面积相同且黑色面积相同，故白色面积也相同。按相似性，把总面积看成 $h^2$ 份，则高为 11 的顶部三角形占 $121$ 份。",
+          "另一图中高为 5 的白色梯形占 $h^2-(h-5)^2=10h-25$ 份。故 $121=10h-25$，得 $h=14.6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/24"
+  },
+  "amc8-2023-q25": {
+    "summary": "An increasing arithmetic progression of 15 integers satisfies $1\\le a_1\\le 10$, $13\\le a_2\\le 20$, and $241\\le a_{15}\\le 250$. Find the sum of the decimal digits of $a_{14}$.",
+    "summaryZh": "一个递增的等差数列共有 15 个整数，满足 $1\\le a_1\\le 10$、$13\\le a_2\\le 20$、$241\\le a_{15}\\le 250$。求 $a_{14}$ 的十进制数位和。",
+    "answer": "A. $8$.",
+    "answerZh": "A．$8$。",
+    "methods": [
+      {
+        "title": "Bound the common difference first",
+        "titleZh": "先界定公差",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Let $d$ be the common difference. Since $a_{15}-a_1=14d$, we have $231\\le 14d\\le 249$. The only multiple of 14 in this interval is 238, so $d=17$.",
+          "Now $a_{15}=a_1+238\\ge 241$ gives $a_1\\ge 3$; $a_2=a_1+17\\le 20$ gives $a_1\\le 3$. Thus $a_1=3$, $a_{14}=3+13\\times 17=224$, and $2+2+4=8$."
+        ],
+        "stepsZh": [
+          "记公差为 $d$，则 $a_{15}-a_1=14d$，故 $231\\le 14d\\le 249$。区间内 14 的倍数只有 238，于是 $d=17$。",
+          "从 $a_{15}=a_1+238\\ge 241$ 得 $a_1\\ge 3$，从 $a_2=a_1+17\\le 20$ 得 $a_1\\le 3$。所以 $a_1=3$，$a_{14}=3+13\\times 17=224$，数位和为 $2+2+4=8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2023/problem/25"
+  }
+}
