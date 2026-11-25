@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">USAMO 2015 Problem 2 geometry</title>
+  <desc id="desc">A cyclic quadrilateral APBQ with the construction points X, S, T, M and the fixed circle center C.</desc>
+  <rect width="760" height="430" fill="#fff"/>
+  <g transform="translate(375 214) scale(1 -1)" fill="none" stroke="#1f2937" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="176"/>
+    <line x1="-176" y1="0" x2="176" y2="0" stroke="#94a3b8" stroke-dasharray="7 6"/>
+    <path d="M -176 0 L -79 157 L 176 0 L -79 -157 Z"/>
+    <line x1="-79" y1="157" x2="-79" y2="-157" stroke="#64748b"/>
+    <line x1="-176" y1="0" x2="135" y2="113" stroke="#2563eb"/>
+    <line x1="-79" y1="35" x2="-2" y2="-176" stroke="#b45309"/>
+    <line x1="135" y1="113" x2="-2" y2="-176" stroke="#64748b"/>
+    <circle cx="-88" cy="0" r="157" stroke="#0f766e" stroke-dasharray="8 7"/>
+    <path d="M -65 28 L -54 32 L -50 21" stroke="#b45309"/>
+    <g fill="#111827" stroke="none">
+      <circle cx="-176" cy="0" r="4.5"/><circle cx="176" cy="0" r="4.5"/>
+      <circle cx="-79" cy="157" r="4.5"/><circle cx="-79" cy="-157" r="4.5"/>
+      <circle cx="-79" cy="35" r="4.5"/><circle cx="135" cy="113" r="4.5"/>
+      <circle cx="-2" cy="-176" r="4.5"/><circle cx="67" cy="-32" r="4.5"/>
+      <circle cx="0" cy="0" r="4.5"/><circle cx="-88" cy="0" r="4.5"/>
+    </g>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#111827">
+    <text x="178" y="207">A</text><text x="560" y="207">B</text>
+    <text x="282" y="43">P</text><text x="280" y="394">Q</text>
+    <text x="281" y="171">X</text><text x="520" y="92">S</text>
+    <text x="360" y="408">T</text><text x="451" y="254">M</text>
+    <text x="384" y="205">O</text><text x="270" y="205" fill="#0f766e">C</text>
+    <text x="54" y="32" font-size="16" fill="#0f766e">fixed locus of M</text>
+  </g>
+</svg>

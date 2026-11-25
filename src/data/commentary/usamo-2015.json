@@ -1,0 +1,200 @@
+{
+  "usamo-2015-q1": {
+    "summary": "Determine all ordered pairs of integers $(x,y)$ satisfying $x^2+xy+y^2=\\left(\\frac{x+y}{3}+1\\right)^3$.",
+    "summaryZh": "求所有满足 $x^2+xy+y^2=\\left(\\frac{x+y}{3}+1\\right)^3$ 的整数有序对 $(x,y)$。",
+    "answer": "For any $n\\in\\mathbb Z$, $(x,y)=(n^3+3n^2-1,-n^3+3n+1)$ and the pair obtained by interchanging the two coordinates; these are all the solutions.",
+    "answerZh": "对任意 $n\\in\\mathbb Z$，$(x,y)=(n^3+3n^2-1,-n^3+3n+1)$，以及交换两个坐标后所得的有序对；除此之外没有其他解。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Use the sum and difference to expose a square",
+        "titleZh": "以和与差代换，化出完全平方结构",
+        "topics": [
+          { "en": "Diophantine equations", "zh": "丢番图方程" },
+          { "en": "Parity", "zh": "奇偶性" },
+          { "en": "Perfect-square factorization", "zh": "完全平方因式分解" }
+        ],
+        "steps": [
+          "Put $a=x+y$ and $b=x-y$. Then $a$ and $b$ are integers of the same parity, and the equation becomes $3a^2+b^2=4(a/3+1)^3$. The right side is rational, whereas the left side is integral, so $a/3$ must be an integer: if $3\\nmid a$, the denominator $27$ cannot cancel. Write $a=3c$.",
+          "Substitution and simplification give $b^2=(c-2)^2(4c+1)$. If $c=2$, this already fits the parametrization below. Otherwise $(b/(c-2))^2=4c+1$, so $4c+1=m^2$ for an odd integer $m$. Thus $c=(m^2-1)/4$ and $b=\\pm(c-2)m$.",
+          "Write the odd integer as $m=2n+1$. Since $x=(a+b)/2$ and $y=(a-b)/2$, one choice of sign simplifies to $x=n^3+3n^2-1$ and $y=-n^3+3n+1$; the other sign interchanges $x$ and $y$. All expressions are integral for every $n\\in\\mathbb Z$.",
+          "Conversely, the displayed formulas give $x+y=3n(n+1)$ and $x-y=(2n+1)(n^2+n-2)$. Substituting these into $3(x+y)^2+(x-y)^2=4((x+y)/3+1)^3$ verifies the original equation. Hence the list is both necessary and sufficient."
+        ],
+        "stepsZh": [
+          "令 $a=x+y$、$b=x-y$。则 $a,b$ 为同奇偶的整数，原式化为 $3a^2+b^2=4(a/3+1)^3$。左边是整数；若 $3\\nmid a$，右边分母中的 $27$ 无法消去，故必有 $3\\mid a$。记 $a=3c$。",
+          "代入并整理得 $b^2=(c-2)^2(4c+1)$。当 $c=2$ 时也包含在下述参数式中；否则 $(b/(c-2))^2=4c+1$，所以 $4c+1=m^2$，其中 $m$ 为奇整数。于是 $c=(m^2-1)/4$，且 $b=\\pm(c-2)m$。",
+          "把奇整数写成 $m=2n+1$。由 $x=(a+b)/2$、$y=(a-b)/2$，其中一个符号给出 $x=n^3+3n^2-1$、$y=-n^3+3n+1$；另一个符号恰好交换 $x,y$。任意 $n\\in\\mathbb Z$ 都给出整数。",
+          "反过来，参数式满足 $x+y=3n(n+1)$ 与 $x-y=(2n+1)(n^2+n-2)$。代入 $3(x+y)^2+(x-y)^2=4((x+y)/3+1)^3$ 即可验证原方程。因此所得列表既必要又充分。"
+        ]
+      }
+    ]
+  },
+  "usamo-2015-q2": {
+    "summary": "A cyclic quadrilateral $APBQ$ satisfies $\\angle APB=\\angle AQB=90^\\circ$ and $AP=AQ<BP$. A point $X$ varies on $PQ$. The line $AX$ meets the circumcircle again at $S$, and $T$ is the point on arc $AQB$ for which $XT\\perp AX$. If $M$ is the midpoint of $ST$, prove that $M$ lies on a fixed circle.",
+    "summaryZh": "圆内接四边形 $APBQ$ 满足 $\\angle APB=\\angle AQB=90^\\circ$ 且 $AP=AQ<BP$。点 $X$ 在线段 $PQ$ 上移动，直线 $AX$ 与外接圆再交于 $S$；点 $T$ 位于弧 $AQB$ 上并满足 $XT\\perp AX$。若 $M$ 为 $ST$ 的中点，证明 $M$ 位于一个定圆上。",
+    "answer": "Let $O$ and $R$ be the center and radius of the original circle. The fixed circle has center the midpoint of $AO$ and radius $\\sqrt{R^2/4+AQ^2/2}$.",
+    "answerZh": "设原圆的圆心为 $O$、半径为 $R$。所求定圆的圆心为 $AO$ 的中点，半径为 $\\sqrt{R^2/4+AQ^2/2}$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAMO_Problems/Problem_2",
+    "figure": {
+      "url": "/commentary-figures/usamo-2015-q2.svg",
+      "alt": "Cyclic quadrilateral APBQ with X on PQ, secant AXS, perpendicular XT, midpoint M of ST, and the fixed-locus center C at the midpoint of AO.",
+      "altZh": "圆内接四边形 APBQ；X 位于 PQ 上，A、X、S 共线且 XT 垂直于 AX，M 为 ST 中点，定轨迹圆心 C 为 AO 中点。",
+      "printHeightPt": 175
+    },
+    "methods": [
+      {
+        "title": "Track the nine-point center of triangle AST",
+        "titleZh": "追踪三角形 AST 的九点圆圆心",
+        "topics": [
+          { "en": "Nine-point circle", "zh": "九点圆" },
+          { "en": "Power of a point", "zh": "点幂" },
+          { "en": "Euler line vectors", "zh": "欧拉线向量关系" }
+        ],
+        "steps": [
+          "Let $O$ and $R$ be the center and radius of the given circle, and let $N$ be the nine-point center of triangle $AST$. Because $A,S,T$ all lie on the given circle, that triangle has circumcenter $O$ and circumradius $R$.",
+          "The point $X$ is the foot of the altitude from $T$ to $AS$, since $A,X,S$ are collinear and $XT\\perp AX$. If $Y$ is the midpoint of $AS$, then $X,Y$, and the midpoint $M$ of $ST$ all lie on the nine-point circle of triangle $AST$. Its center is $N$ and its radius is $R/2$.",
+          "Along line $AS$, the power of $A$ with respect to the nine-point circle is $AX\\cdot AY=\\tfrac12 AX\\cdot AS$. In the original circle, intersecting chords give $AX\\cdot XS=XP\\cdot XQ$. Also $AP=AQ$, so if $D$ is the midpoint of $PQ$, then $AD\\perp PQ$ and $AX^2+XP\\cdot XQ=AD^2+DX^2+(DP^2-DX^2)=AP^2=AQ^2$. Hence $AX\\cdot AS=AX^2+AX\\cdot XS=AQ^2$.",
+          "Therefore $AN^2-(R/2)^2=AX\\cdot AY=AQ^2/2$, so $AN=\\sqrt{R^2/4+AQ^2/2}$ is constant. Thus $N$ moves on a circle centered at $A$.",
+          "In vector form the centroid $G$ of triangle $AST$ satisfies $G=(A+S+T)/3$, while $M=(S+T)/2$, so $M=(3G-A)/2$. The Euler-line relation gives $G=(2N+O)/3$. Combining them yields $M=N+(O-A)/2$. This is a fixed translation: the circle traced by $N$ is translated to a circle of the same radius centered at $(A+O)/2$."
+        ],
+        "stepsZh": [
+          "设原圆圆心、半径分别为 $O,R$，并设 $N$ 为三角形 $AST$ 的九点圆圆心。由于 $A,S,T$ 都在原圆上，该三角形的外心就是 $O$，外接圆半径为 $R$。",
+          "$A,X,S$ 共线且 $XT\\perp AX$，所以 $X$ 是三角形 $AST$ 中从 $T$ 向 $AS$ 所作高的垂足。若 $Y$ 为 $AS$ 中点，则 $X,Y$ 以及 $ST$ 的中点 $M$ 都在三角形 $AST$ 的九点圆上；该圆圆心为 $N$、半径为 $R/2$。",
+          "沿直线 $AS$ 计算点 $A$ 对九点圆的幂，得 $AX\\cdot AY=\\tfrac12AX\\cdot AS$。在原圆中，由相交弦定理有 $AX\\cdot XS=XP\\cdot XQ$。又因 $AP=AQ$，若 $D$ 为 $PQ$ 中点，则 $AD\\perp PQ$，并且 $AX^2+XP\\cdot XQ=AD^2+DX^2+(DP^2-DX^2)=AP^2=AQ^2$。因此 $AX\\cdot AS=AX^2+AX\\cdot XS=AQ^2$。",
+          "于是 $AN^2-(R/2)^2=AX\\cdot AY=AQ^2/2$，故 $AN=\\sqrt{R^2/4+AQ^2/2}$ 为常数，点 $N$ 在以 $A$ 为圆心的定圆上移动。",
+          "用向量表示三角形 $AST$ 的重心 $G$，有 $G=(A+S+T)/3$，而 $M=(S+T)/2$，故 $M=(3G-A)/2$。欧拉线关系给出 $G=(2N+O)/3$。合并两式得 $M=N+(O-A)/2$。这是一个固定平移，因此 $N$ 的轨迹被平移成同半径、圆心为 $(A+O)/2$ 的定圆。"
+        ]
+      }
+    ]
+  },
+  "usamo-2015-q3": {
+    "summary": "Let $S=\\{1,2,\\ldots,n\\}$, where $n\\ge1$. Color each subset of $S$ red or blue. For $T\\subseteq S$, let $f(T)$ be the number of blue subsets of $T$. Count the colorings for which $f(T_1)f(T_2)=f(T_1\\cup T_2)f(T_1\\cap T_2)$ for every $T_1,T_2\\subseteq S$.",
+    "summaryZh": "设 $S=\\{1,2,\\ldots,n\\}$，其中 $n\\ge1$。将 $S$ 的每个子集染成红色或蓝色。对 $T\\subseteq S$，令 $f(T)$ 表示 $T$ 的蓝色子集个数。求满足对任意 $T_1,T_2\\subseteq S$ 都有 $f(T_1)f(T_2)=f(T_1\\cup T_2)f(T_1\\cap T_2)$ 的染色数。",
+    "answer": "$3^n+1$.",
+    "answerZh": "$3^n+1$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Classify the support as an interval in the subset lattice",
+        "titleZh": "把支集分类为子集格中的区间",
+        "topics": [
+          { "en": "Subset lattices", "zh": "子集格" },
+          { "en": "Induction", "zh": "归纳法" },
+          { "en": "Binomial theorem", "zh": "二项式定理" }
+        ],
+        "steps": [
+          "Call the support the family of $T$ for which $f(T)>0$. Apart from the all-red coloring, the support is nonempty. It is upward closed, and the given identity shows that it is closed under intersections and unions. If $X$ is the intersection of all its members, then $X$ itself belongs to the support and the support is exactly $[X,S]=\\{T:X\\subseteq T\\subseteq S\\}$.",
+          "First classify a coloring with full support, meaning $X=\\varnothing$. Then $\\varnothing$ is blue and $f(\\varnothing)=1$. Choose a set $B\\subseteq S$ by putting $i\\in B$ exactly when the singleton $\\{i\\}$ is blue. Thus $f(\\{i\\})$ equals $2$ for $i\\in B$ and $1$ otherwise.",
+          "Apply the identity to $T\\setminus\\{i\\}$ and $\\{i\\}$. Their intersection is empty, so induction gives $f(T)=f(T\\setminus\\{i\\})f(\\{i\\})=2^{|T\\cap B|}$. These values uniquely determine the color of every set, because the indicator that $T$ is blue equals $f(T)-\\sum_{U\\subsetneq T}\\mathbf1_{U\\text{ blue}}$. The unique realization is to color precisely the subsets of $B$ blue. Hence there are $2^n$ full-support colorings.",
+          "For general support $[X,S]$, every blue set contains $X$, and $X$ itself is blue. Removing $X$ turns the coloring into a full-support coloring on the ground set $S\\setminus X$. Equivalently, choose sets $X\\subseteq Y\\subseteq S$ and color blue exactly those $T$ with $X\\subseteq T\\subseteq Y$.",
+          "For a fixed $X$ there are $2^{n-|X|}$ choices of $Y$. Adding the all-red coloring, the total is $1+\\sum_{X\\subseteq S}2^{n-|X|}=1+\\sum_{k=0}^n\\binom nk2^{n-k}=1+3^n$."
+        ],
+        "stepsZh": [
+          "把满足 $f(T)>0$ 的集合 $T$ 所成的族称为支集。除全红染色外，支集非空；它显然向上封闭，而题给恒等式说明它对交、并也封闭。令 $X$ 为支集中所有集合的交，则 $X$ 本身也在支集中，且支集恰为 $[X,S]=\\{T:X\\subseteq T\\subseteq S\\}$。",
+          "先分类满支集情形，即 $X=\\varnothing$。此时空集为蓝色，$f(\\varnothing)=1$。定义 $B\\subseteq S$：当且仅当单点集 $\\{i\\}$ 为蓝色时令 $i\\in B$。于是 $i\\in B$ 时 $f(\\{i\\})=2$，否则为 $1$。",
+          "把恒等式用于 $T\\setminus\\{i\\}$ 与 $\\{i\\}$；二者交为空集，归纳可得 $f(T)=f(T\\setminus\\{i\\})f(\\{i\\})=2^{|T\\cap B|}$。这些数值唯一决定每个集合的颜色，因为 $T$ 为蓝色的示性函数等于 $f(T)-\\sum_{U\\subsetneq T}\\mathbf1_{U\\text{ 为蓝色}}$。唯一的实现方式是只把 $B$ 的全部子集染蓝，所以满支集染色共有 $2^n$ 种。",
+          "对一般支集 $[X,S]$，每个蓝色集合都包含 $X$，而 $X$ 本身为蓝色。删去固定部分 $X$ 后，就得到底集 $S\\setminus X$ 上的满支集染色。等价地，选择 $X\\subseteq Y\\subseteq S$，并且恰把满足 $X\\subseteq T\\subseteq Y$ 的集合 $T$ 染蓝。",
+          "固定 $X$ 后，$Y$ 有 $2^{n-|X|}$ 种选择。再加上全红染色，总数为 $1+\\sum_{X\\subseteq S}2^{n-|X|}=1+\\sum_{k=0}^n\\binom nk2^{n-k}=1+3^n$。"
+        ]
+      }
+    ]
+  },
+  "usamo-2015-q4": {
+    "summary": "Distribute $m\\ge1$ indistinguishable stones among the cells of an $n\\times n$ grid, with no limit per cell. A move chooses the four corners of a rectangle and transfers one stone from each end of one diagonal to the corresponding ends of the other diagonal. Two distributions are equivalent if moves connect them. Determine the number of equivalence classes.",
+    "summaryZh": "把 $m\\ge1$ 枚无区别的石子放入 $n\\times n$ 方格，每格数量不限。一次操作选取某个矩形的四个顶点格，把一条对角线两端各一枚石子分别移到另一条对角线两端。若两个摆放可通过若干次操作互相得到，则称它们等价。求等价类的数量。",
+    "answer": "$\\displaystyle \\binom{m+n-1}{n-1}^2$.",
+    "answerZh": "$\\displaystyle \\binom{m+n-1}{n-1}^2$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Use row and column sums as a complete signature",
+        "titleZh": "用行和与列和构成完全不变量",
+        "topics": [
+          { "en": "Invariants", "zh": "不变量" },
+          { "en": "Permutations by transpositions", "zh": "用换位生成排列" },
+          { "en": "Stars and bars", "zh": "隔板法" }
+        ],
+        "steps": [
+          "Record the $n$ row sums $(r_1,\\ldots,r_n)$ and the $n$ column sums $(c_1,\\ldots,c_n)$. A rectangle move removes and adds one stone in each of the same two rows and columns, so both ordered lists are invariant.",
+          "Regard the stones temporarily as labeled, and write their positions as pairs $(x_i,y_i)$, where $x_i$ is a row and $y_i$ a column. The row sums specify the multiset of all $x_i$, and the column sums specify the multiset of all $y_i$. Thus two configurations with the same signature differ only in how the $y$-coordinates are paired with the $x$-coordinates.",
+          "Any desired re-pairing is a permutation of the $y_i$, and every permutation is a product of transpositions. Swapping $y_i,y_j$ for two stones in distinct rows and distinct columns is exactly one allowed rectangle move. If their rows or columns agree, the swap does not change the unlabeled configuration. Therefore equal signatures imply equivalence, so the signature is complete.",
+          "Every pair of signatures is realizable: list $m$ row labels with row $i$ repeated $r_i$ times and $m$ column labels with column $j$ repeated $c_j$ times, then pair the two lists arbitrarily and place a stone at each resulting coordinate.",
+          "The row sums are weak compositions of $m$ into $n$ parts, of which there are $\\binom{m+n-1}{n-1}$; the column sums have the same number of choices and are independent. Squaring gives the stated answer."
+        ],
+        "stepsZh": [
+          "记录 $n$ 个行和 $(r_1,\\ldots,r_n)$ 与 $n$ 个列和 $(c_1,\\ldots,c_n)$。矩形操作在同样的两行、两列中各减一枚并各加一枚，因此这两个有序列表均保持不变。",
+          "暂时给石子编号，把第 $i$ 枚石子的位置写成 $(x_i,y_i)$，其中 $x_i$ 为行号、$y_i$ 为列号。行和确定全部 $x_i$ 所成的多重集，列和确定全部 $y_i$ 所成的多重集。因此，签名相同的两个摆放只在 $x$ 坐标与 $y$ 坐标的配对方式上不同。",
+          "任意目标配对都是 $y_i$ 的一个排列，而任意排列都可分解为若干换位。若两枚石子位于不同行、不同列，交换其 $y$ 坐标恰好对应一次允许的矩形操作；若同行或同列，交换后无标号摆放根本不变。因此相同签名必然等价，签名是完全不变量。",
+          "任意一对签名都能实现：把行号 $i$ 重复 $r_i$ 次列成长度 $m$ 的表，把列号 $j$ 重复 $c_j$ 次列成另一张表，任意逐项配对，并在每个所得坐标处放一枚石子。",
+          "行和是把 $m$ 写成 $n$ 个非负整数之和的弱组合，共有 $\\binom{m+n-1}{n-1}$ 种；列和选择数相同，且二者独立。相乘即得答案。"
+        ]
+      }
+    ]
+  },
+  "usamo-2015-q5": {
+    "summary": "Let $a,b,c,d,e$ be distinct positive integers such that $a^4+b^4=c^4+d^4=e^5$. Prove that $ac+bd$ is composite.",
+    "summaryZh": "设 $a,b,c,d,e$ 为两两不同的正整数，且 $a^4+b^4=c^4+d^4=e^5$。证明 $ac+bd$ 为合数。",
+    "answer": "$ac+bd$ is necessarily composite.",
+    "answerZh": "$ac+bd$ 必为合数。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Assume primality and force incompatible inequalities",
+        "titleZh": "反设为素数并导出互相矛盾的不等式",
+        "topics": [
+          { "en": "Modular arithmetic", "zh": "模运算" },
+          { "en": "Prime divisibility", "zh": "素数整除性" },
+          { "en": "Monotonicity of fourth powers", "zh": "四次幂的单调性" }
+        ],
+        "steps": [
+          "Suppose for contradiction that $p=ac+bd$ is prime. Modulo $p$ we have $ac\\equiv-bd$, so $a^4c^4\\equiv b^4d^4$. Replace $c^4$ by $e^5-d^4$ and $b^4$ by $e^5-a^4$; cancellation gives $e^5(a^4-d^4)\\equiv0\\pmod p$.",
+          "Also $e^5=a^4+b^4\\le a^5+b^5<(ac+bd)^5=p^5$, because $a,b,c,d$ are positive. Hence $e<p$, so $p\\nmid e$. Factoring the last congruence shows that $p$ divides one of $a-d$, $a+d$, or $a^2+d^2$. Consequently $p\\le a^2+d^2$.",
+          "The symmetric calculation beginning with $ac\\equiv-bd$ also yields $e^5(b^4-c^4)\\equiv0\\pmod p$, and hence $p\\le b^2+c^2$. Therefore $ac+bd\\le\\min(a^2+d^2,b^2+c^2)$.",
+          "After subtraction, both $a(a-c)+d(d-b)$ and $b(b-d)+c(c-a)$ would have to be nonnegative. But $a^4+b^4=c^4+d^4$ implies that $a-c$ and $d-b$ have the same nonzero sign: if $a>c$, then $d>b$, and if $a<c$, then $d<b$.",
+          "In the first case, $b(b-d)+c(c-a)<0$; in the second, $a(a-c)+d(d-b)<0$. Either conclusion contradicts the preceding pair of inequalities. Thus $ac+bd$ cannot be prime; being greater than $1$, it is composite."
+        ],
+        "stepsZh": [
+          "反设 $p=ac+bd$ 为素数。模 $p$ 有 $ac\\equiv-bd$，故 $a^4c^4\\equiv b^4d^4$。分别用 $e^5-d^4$ 与 $e^5-a^4$ 替换 $c^4,b^4$，消去相同项后得到 $e^5(a^4-d^4)\\equiv0\\pmod p$。",
+          "又因 $a,b,c,d$ 均为正整数，$e^5=a^4+b^4\\le a^5+b^5<(ac+bd)^5=p^5$，所以 $e<p$，从而 $p\\nmid e$。分解上一同余式可知，$p$ 整除 $a-d$、$a+d$、$a^2+d^2$ 三者之一，故 $p\\le a^2+d^2$。",
+          "从 $ac\\equiv-bd$ 对称地计算，还可得 $e^5(b^4-c^4)\\equiv0\\pmod p$，因此 $p\\le b^2+c^2$。所以 $ac+bd\\le\\min(a^2+d^2,b^2+c^2)$。",
+          "分别移项后，$a(a-c)+d(d-b)$ 与 $b(b-d)+c(c-a)$ 都应非负。但由 $a^4+b^4=c^4+d^4$，$a-c$ 与 $d-b$ 必为同号且非零：若 $a>c$，则 $d>b$；若 $a<c$，则 $d<b$。",
+          "第一种情形下 $b(b-d)+c(c-a)<0$；第二种情形下 $a(a-c)+d(d-b)<0$，都与前述不等式矛盾。因此 $ac+bd$ 不可能为素数；它又显然大于 $1$，故为合数。"
+        ]
+      }
+    ]
+  },
+  "usamo-2015-q6": {
+    "summary": "Let $0<\\lambda<1$ and let $A$ be a multiset of positive integers. Write $A_n$ for the submultiset of elements at most $n$. Assume $|A_n|\\le n\\lambda$ for every positive integer $n$. Prove that infinitely many $n$ satisfy $\\sum_{a\\in A_n}a\\le \\lambda n(n+1)/2$.",
+    "summaryZh": "设 $0<\\lambda<1$，且 $A$ 是正整数的多重集。记 $A_n$ 为其中所有不超过 $n$ 的元素组成的子多重集。若对每个正整数 $n$ 都有 $|A_n|\\le n\\lambda$，证明有无穷多个 $n$ 满足 $\\sum_{a\\in A_n}a\\le \\lambda n(n+1)/2$。",
+    "answer": "The asserted inequality holds for infinitely many positive integers $n$.",
+    "answerZh": "题述不等式对无穷多个正整数 $n$ 成立。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2015_USAMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Turn eventual failure into an impossible descent of deficits",
+        "titleZh": "把最终失效转化为缺额序列的不可能下降",
+        "topics": [
+          { "en": "Summation by parts", "zh": "分部求和" },
+          { "en": "Averaging", "zh": "平均值方法" },
+          { "en": "Infinite descent", "zh": "无限递降" }
+        ],
+        "steps": [
+          "Let $N_n=|A_n|$ and define the nonnegative deficit $x_n=n\\lambda-N_n$. Summation by parts gives $\\sum_{a\\in A_n}a=\\sum_{k=1}^n k(N_k-N_{k-1})=nN_n-\\sum_{k=1}^{n-1}N_k=\\lambda n(n+1)/2-nx_n+\\sum_{k=1}^{n-1}x_k$.",
+          "Assume the desired inequality holds only finitely often. Then for every sufficiently large $n$, the last display is greater than $\\lambda n(n+1)/2$, and therefore $x_n<(x_1+\\cdots+x_{n-1})/n$.",
+          "The integer multiplicity of $n+1$ in $A$ gives $x_{n+1}-x_n=\\lambda-(N_{n+1}-N_n)$. Hence $|x_{n+1}-x_n|\\ge\\varepsilon$, where $\\varepsilon=\\min(\\lambda,1-\\lambda)>0$.",
+          "We use a descent lemma. If all sufficiently late $x_n<C$, then consecutive terms, being nonnegative and at least $\\varepsilon$ apart, satisfy $x_n+x_{n+1}<2C-\\varepsilon$. Pairing the tail shows that its long-run average is at most $C-\\varepsilon/2$. Thus beyond some index, every prefix average is below $C-\\varepsilon/3$; the inequality from Step 2 then forces every later $x_n<C-\\varepsilon/3$.",
+          "There is an initial bound of the required kind. If the relation in Step 2 begins at $N_0$, set $C=(x_1+\\cdots+x_{N_0})/N_0$. Induction gives $x_n<C$ for all $n>N_0$: if all earlier tail terms are below $C$, their sum together with the fixed prefix is less than $(n-1)C$, and Step 2 gives $x_n<C$.",
+          "Apply the descent lemma repeatedly. For every positive integer $j$, all sufficiently late terms satisfy $x_n<C-j\\varepsilon/3$. Taking $j>3C/\\varepsilon$ makes the right side negative, contradicting $x_n\\ge0$. The assumption of only finitely many successful $n$ is impossible, proving the claim."
+        ],
+        "stepsZh": [
+          "记 $N_n=|A_n|$，并定义非负缺额 $x_n=n\\lambda-N_n$。分部求和得到 $\\sum_{a\\in A_n}a=\\sum_{k=1}^n k(N_k-N_{k-1})=nN_n-\\sum_{k=1}^{n-1}N_k=\\lambda n(n+1)/2-nx_n+\\sum_{k=1}^{n-1}x_k$。",
+          "反设所需不等式只成立有限次。则对所有充分大的 $n$，上式严格大于 $\\lambda n(n+1)/2$，从而 $x_n<(x_1+\\cdots+x_{n-1})/n$。",
+          "整数 $n+1$ 在多重集 $A$ 中的重数为整数，因此 $x_{n+1}-x_n=\\lambda-(N_{n+1}-N_n)$。于是 $|x_{n+1}-x_n|\\ge\\varepsilon$，其中 $\\varepsilon=\\min(\\lambda,1-\\lambda)>0$。",
+          "使用一个递降引理。若充分靠后的所有 $x_n<C$，则相邻两项非负、相差至少 $\\varepsilon$，所以 $x_n+x_{n+1}<2C-\\varepsilon$。把尾部两两配对，其长期平均至多为 $C-\\varepsilon/2$。因此从某项起，每个前缀平均都小于 $C-\\varepsilon/3$；再由第 2 步的不等式，所有更晚的 $x_n<C-\\varepsilon/3$。",
+          "先建立初始上界。若第 2 步的关系从 $N_0$ 起成立，令 $C=(x_1+\\cdots+x_{N_0})/N_0$。归纳可得所有 $n>N_0$ 都有 $x_n<C$：若此前尾部各项均小于 $C$，则连同固定前缀的总和小于 $(n-1)C$，第 2 步便给出 $x_n<C$。",
+          "反复应用递降引理。对每个正整数 $j$，充分靠后的项都满足 $x_n<C-j\\varepsilon/3$。取 $j>3C/\\varepsilon$，右端变为负数，与 $x_n\\ge0$ 矛盾。因此不等式不可能只成立有限次，命题得证。"
+        ]
+      }
+    ]
+  }
+}
