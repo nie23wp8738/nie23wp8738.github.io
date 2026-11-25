@@ -1,0 +1,254 @@
+{
+  "step-2023-p3-q1": {
+    "summary": "Write $U(t)=(2at,at^2)$ with $a>0$. Let $P=U(p)$ and $Q=U(q)$ be distinct points of $x^2=4ay$. Suppose $(p+q)^2=p^2q^2+6pq+5$. Prove that their chord touches the circle of radius $2a$ centred at $(0,3a)$. Fix any real $p$ with $p^2\\ne1$. Show that the relation has two distinct real solutions $q_1,q_2$, and express their sum and product in terms of $p$. Prove that $P$ can be a vertex of a triangle inscribed in the parabola whose three sides all touch that circle.",
+    "summaryZh": "设 $a>0$，记 $U(t)=(2at,at^2)$。抛物线 $x^2=4ay$ 上有两个不同的点 $P=U(p)$ 和 $Q=U(q)$。若 $(p+q)^2=p^2q^2+6pq+5$，证明弦所在直线与圆心为 $(0,3a)$、半径为 $2a$ 的圆相切。固定满足 $p^2\\ne1$ 的实数 $p$，证明此关系给出两个相异实根 $q_1,q_2$，用 $p$ 表示它们的和与积。证明能以 $P$ 为一个顶点作三角形，使三个顶点均在抛物线上，且三边所在直线均与该圆相切。",
+    "answer": "The chord has equation $(p+q)x-2y=2apq$. The sum is $4p/(1-p^2)$ and the product is $(p^2-5)/(1-p^2)$. The other vertices are $U(q_1)$ and $U(q_2)$.",
+    "answerZh": "弦所在直线为 $(p+q)x-2y=2apq$。两根之和为 $4p/(1-p^2)$，积为 $(p^2-5)/(1-p^2)$。其余两顶点取 $U(q_1),U(q_2)$。",
+    "topics": [
+      {
+        "en": "Parametric conics",
+        "zh": "参数方程与圆锥曲线"
+      },
+      {
+        "en": "Point-to-line distance",
+        "zh": "点到直线的距离"
+      },
+      {
+        "en": "Vieta’s formulas",
+        "zh": "韦达定理"
+      }
+    ]
+  },
+  "step-2023-p3-q2": {
+    "summary": "In the upper half-plane, take $0\\le\\theta\\le\\pi$, $k>1$, and radii $r_1=k(1+\\sin\\theta)$ and $r_2=k+\\cos\\theta$. Sketch both polar curves on one set of axes and show that their intersection angle $\\alpha$ satisfies $\\tan\\alpha=1/k$. For $0\\le\\theta\\le\\alpha$ the region $A$ runs from the pole to $r_1$. Show that its area is $k^2(3\\alpha-\\sin\\alpha\\cos\\alpha)/4+k^2(1-\\cos\\alpha)$. On $\\alpha\\le\\theta\\le\\pi$, define $B$ similarly using $r_2$ and calculate its area in terms of $k,\\alpha$. Write $R$ for the sum of these areas and $S,T$ for the entire upper-half-plane areas swept out to $r_1,r_2$ respectively. Prove $R/T\\to1$ and find $\\lim R/S$ as $k\\to\\infty$.",
+    "summaryZh": "取 $k>1$、$0\\le\\theta\\le\\pi$，给定两条极坐标曲线 $r_1=k(1+\\sin\\theta)$ 与 $r_2=k+\\cos\\theta$。在同一坐标系中作草图，并证明交点的极角 $\\alpha$ 满足 $\\tan\\alpha=1/k$。在 $0\\le\\theta\\le\\alpha$ 上，从极点扫至 $r_1$ 得区域 $A$，证明其面积为 $k^2(3\\alpha-\\sin\\alpha\\cos\\alpha)/4+k^2(1-\\cos\\alpha)$。在 $\\alpha\\le\\theta\\le\\pi$ 上，从极点扫至 $r_2$ 得区域 $B$，用 $k,\\alpha$ 表示其面积。记 $A,B$ 的面积和为 $R$，在整个上半平面扫至第一、第二条曲线的面积依次为 $S,T$。当 $k\\to\\infty$ 时，证明 $R/T\\to1$，并求 $R/S$ 的极限。",
+    "answer": "The intersection is at $\\alpha=\\arctan(1/k)$. The area of $B$ is $(k^2/2+1/4)(\\pi-\\alpha)-k\\sin\\alpha-\\sin(2\\alpha)/8$. The limits of $R/T$ and $R/S$ are $1$ and $2\\pi/(3\\pi+8)$.",
+    "answerZh": "交点的极角为 $\\alpha=\\arctan(1/k)$。区域 $B$ 的面积为 $(k^2/2+1/4)(\\pi-\\alpha)-k\\sin\\alpha-\\sin(2\\alpha)/8$。$R/T$ 与 $R/S$ 的极限依次为 $1$ 和 $2\\pi/(3\\pi+8)$。",
+    "topics": [
+      {
+        "en": "Polar coordinates",
+        "zh": "极坐标"
+      },
+      {
+        "en": "Polar area integrals",
+        "zh": "极坐标面积积分"
+      },
+      {
+        "en": "Limits of ratios",
+        "zh": "比值的极限"
+      }
+    ]
+  },
+  "step-2023-p3-q3": {
+    "summary": "For $a,b\\in\\mathbb C$, $b\\ne0$ and real $s>0$, show that $a+sbi$, $a-sbi$ and $a+b$ are vertices of an isosceles triangle. Conversely, use a labelled sketch to explain how to recover suitable $a,b,s$ from such a triangle. Suppose the three roots of $z^3+pz+q=0$ with complex coefficients are the vertices of an isosceles triangle. Show that some nonzero real $s$ gives $p^3/q^2=27(3s^2-1)^3/[4(9s^2+1)^2]$. Sketch $y=(3x-1)^3/(9x+1)^2$ on its full real domain and identify its stationary points. Deduce that $p^3/q^2$ is real and strictly greater than $-27/4$.",
+    "summaryZh": "设 $a,b$ 为复数，$b\\ne0$，$s>0$ 为实数。证明 $a+sbi$、$a-sbi$、$a+b$ 在复平面内构成等腰三角形。反过来，画出示意图，说明如何由这样的三角形确定一组 $a,b,s$。若复系数方程 $z^3+pz+q=0$ 的三个根构成等腰三角形，证明存在非零实数 $s$ 使 $p^3/q^2=27(3s^2-1)^3/[4(9s^2+1)^2]$。在整个实定义域上绘出 $y=(3x-1)^3/(9x+1)^2$ 的草图并标出驻点。由此推出 $p^3/q^2$ 为实数且严格大于 $-27/4$。",
+    "answer": "Take $a$ at the base midpoint, $b$ as the displacement from it to the apex, and $s$ as half the base divided by the altitude. The graph has a local maximum $(-1,-1)$ and a stationary inflection at $(1/3,0)$. Its asymptotes are $x=-1/9$ and $y=x/3-11/27$. On the relevant range $x=s^2>0$ its value exceeds $-1$.",
+    "answerZh": "取底边中点的复数为 $a$，中点指向顶点的复位移为 $b$，半底长与高之比为 $s$。函数在 $(-1,-1)$ 取局部最大值，$(1/3,0)$ 为水平拐点。渐近线为 $x=-1/9$ 与 $y=x/3-11/27$。在所需区间 $x=s^2>0$ 内，函数值严格大于 $-1$。",
+    "topics": [
+      {
+        "en": "Argand diagrams",
+        "zh": "复平面"
+      },
+      {
+        "en": "Vieta’s formulas",
+        "zh": "韦达定理"
+      },
+      {
+        "en": "Rational curve sketching",
+        "zh": "有理函数作图"
+      }
+    ]
+  },
+  "step-2023-p3-q4": {
+    "summary": "For an integer $n\\ge1$ define $P$ by $P(\\cos\\theta)=1+\\cos((2n+1)\\theta)$. Derive $\\cos((2n+1)\\theta)=\\sum_{r=0}^{n}\\binom{2n+1}{2r}(\\cos\\theta)^{2n+1-2r}(\\cos^2\\theta-1)^r$. By evaluating the binomial expansion of $(1+t)^{2n+1}$ at suitable $t$, prove that the coefficient of $x^{2n+1}$ in $P$ is $2^{2n}$. Show that the coefficient of $x^{2n-1}$ is $-(2n+1)2^{2n-2}$. You may assume $P(x)=(x+1)Q(x)^2$, where the coefficient of $x^n$ in $Q$ is positive. Determine that coefficient, and show that for $n\\ge2$ the coefficient of $x^{n-2}$ in $Q$ is $(1-n)2^{n-2}$.",
+    "summaryZh": "取正整数 $n$，用 $P(\\cos\\theta)=1+\\cos((2n+1)\\theta)$ 定义多项式 $P$。推导 $\\cos((2n+1)\\theta)=\\sum_{r=0}^{n}\\binom{2n+1}{2r}(\\cos\\theta)^{2n+1-2r}(\\cos^2\\theta-1)^r$。在 $(1+t)^{2n+1}$ 的二项展开中选取合适的 $t$，证明 $P$ 的 $x^{2n+1}$ 项系数为 $2^{2n}$。再证明 $x^{2n-1}$ 项系数为 $-(2n+1)2^{2n-2}$。已知 $P(x)=(x+1)Q(x)^2$，且 $Q$ 中 $x^n$ 项系数为正。求此系数，并证明 $n\\ge2$ 时 $Q$ 中 $x^{n-2}$ 项系数为 $(1-n)2^{n-2}$。",
+    "answer": "The requested coefficients of $P$ are $2^{2n}$ and $-(2n+1)2^{2n-2}$. The three highest coefficients of $Q$ are $2^n$, $-2^{n-1}$ and (for $n\\ge2$) $(1-n)2^{n-2}$.",
+    "answerZh": "$P$ 的两个指定系数依次为 $2^{2n}$、$-(2n+1)2^{2n-2}$。$Q$ 由最高次起的三个系数依次为 $2^n$、$-2^{n-1}$ 及（当 $n\\ge2$ 时）$(1-n)2^{n-2}$。",
+    "topics": [
+      {
+        "en": "De Moivre’s theorem",
+        "zh": "棣莫弗定理"
+      },
+      {
+        "en": "Binomial coefficients",
+        "zh": "二项式系数"
+      },
+      {
+        "en": "Coefficient comparison",
+        "zh": "系数比较"
+      }
+    ]
+  },
+  "step-2023-p3-q5": {
+    "summary": "First turn $1/x+2/y=2/7$ into $(2x-7)(y-7)=49$, then use the factors of $49$ to find every positive integer pair $(x,y)$. Next suppose primes $p,q$ and a positive integer $n$ satisfy $p^2+pq+q^2=n^2$. Prove $(p+q+n)(p+q-n)=pq$, explain why $p+q=n+1$, and determine the possible primes. Finally let $p,q$ be positive and let $n$ be the positive cube root of $p^3+q^3+3pq^2$. Show that $p+q-n$ is smaller than both $p$ and $q$. Prove that no pair of primes $p,q$ can make this expression under the cube root a perfect cube.",
+    "summaryZh": "先把 $1/x+2/y=2/7$ 化为 $(2x-7)(y-7)=49$，用 $49$ 的因数求出全部正整数对 $(x,y)$。再设素数 $p,q$ 与正整数 $n$ 满足 $p^2+pq+q^2=n^2$。证明 $(p+q+n)(p+q-n)=pq$，说明为何 $p+q=n+1$，并确定 $p,q$。最后设 $p,q>0$，$n$ 为 $p^3+q^3+3pq^2$ 的正立方根。证明 $p+q-n$ 同时小于 $p$ 和 $q$，再证明不存在使该被开方数为完全立方数的素数对 $(p,q)$。",
+    "answer": "The reciprocal equation gives $(4,56),(7,14),(28,8)$. The square condition gives $(p,q)=(3,5)$ or $(5,3)$ and $n=7$. The cube condition admits no prime pair.",
+    "answerZh": "分式方程给出 $(4,56),(7,14),(28,8)$。完全平方的情形为 $(p,q)=(3,5)$ 或 $(5,3)$，此时 $n=7$。完全立方的情形无素数解。",
+    "topics": [
+      {
+        "en": "Integer factorisation",
+        "zh": "整数因式分解"
+      },
+      {
+        "en": "Prime divisibility",
+        "zh": "素数整除性"
+      },
+      {
+        "en": "Diophantine equations",
+        "zh": "丢番图方程"
+      }
+    ]
+  },
+  "step-2023-p3-q6": {
+    "summary": "Use the Maclaurin series for the exponential to prove $\\cosh^2 x\\ge1+x^2$ for real $x$. Deduce that $f(x)=\\arctan x-\\tanh x$ is increasing and sketch its graph. Now set $g(x)=\\arctan x-(\\pi/2)\\tanh x$. First show that $g$ has at least two stationary points. By differentiating $H(x)=(1+x^2)\\sinh x-x\\cosh x$, show $H(x)\\ge0$ for $x\\ge0$. Prove that $\\cosh^2 x/(1+x^2)$ increases on the same half-line, deduce the exact number of stationary points of $g$, and sketch $g$ on the whole real line.",
+    "summaryZh": "用指数函数的麦克劳林级数证明对所有实数 $x$ 均有 $\\cosh^2 x\\ge1+x^2$。由此证明 $f(x)=\\arctan x-\\tanh x$ 递增，并作其图像草图。再令 $g(x)=\\arctan x-(\\pi/2)\\tanh x$。先证明 $g$ 至少有两个驻点。对 $H(x)=(1+x^2)\\sinh x-x\\cosh x$ 求导，证明 $x\\ge0$ 时 $H(x)\\ge0$。证明 $\\cosh^2 x/(1+x^2)$ 在同一半轴上递增，据此确定 $g$ 的驻点个数，并画出整个实轴上的草图。",
+    "answer": "Both functions are odd. The increasing graph of $f$ has a horizontal tangent at the origin and limits $\\pm(\\pi/2-1)$ at the two ends. The positive solution $\\alpha$ of $\\cosh^2\\alpha=(\\pi/2)(1+\\alpha^2)$ is unique. The graph of $g$ has a local maximum at $-\\alpha$, a local minimum at $\\alpha$, and tends to zero at both ends.",
+    "answerZh": "两函数均为奇函数。$f$ 单调递增，在原点有水平切线，在正、负无穷远处的极限分别为 $\\pi/2-1$ 与 $1-\\pi/2$。方程 $\\cosh^2\\alpha=(\\pi/2)(1+\\alpha^2)$ 有唯一正根。$g$ 仅在 $-\\alpha$ 处取局部最大值，在 $\\alpha$ 处取局部最小值，两端均趋于零。",
+    "topics": [
+      {
+        "en": "Maclaurin series",
+        "zh": "麦克劳林级数"
+      },
+      {
+        "en": "Hyperbolic functions",
+        "zh": "双曲函数"
+      },
+      {
+        "en": "Stationary points",
+        "zh": "驻点"
+      }
+    ]
+  },
+  "step-2023-p3-q7": {
+    "summary": "All integrals below have limits $0$ and $1$, and the functions are real and continuous on $[0,1]$. (i) Prove $\\int f(\\sqrt{x})\\,dx=2\\int xf(x)\\,dx$. (ii) Suppose $\\int g(x)^2\\,dx=\\int g(\\sqrt{x})\\,dx-1/3$. Show that $\\int(g(x)-x)^2\\,dx=0$, and explain why $g(x)=x$ throughout the interval. (iii) Let $h$ be differentiable with $h(0)=0$ and $\\int h'(x)^2\\,dx=2h(1)-2\\int h(x)\\,dx-1/3$. Determine $h$. (iv) For real $a\\ne0$, suppose $\\int e^{ax}k(x)^2\\,dx=2\\int k(x)\\,dx+e^{-a}/a-1/a^2-1/4$. Prove $a=2$ and determine $k$.",
+    "summaryZh": "本题所有积分的上下限均为 $0$ 和 $1$，所给实函数在 $[0,1]$ 上连续。(i) 证明 $\\int f(\\sqrt{x})\\,dx=2\\int xf(x)\\,dx$。(ii) 若 $\\int g(x)^2\\,dx=\\int g(\\sqrt{x})\\,dx-1/3$，证明 $\\int(g(x)-x)^2\\,dx=0$，并解释为什么整个区间上都有 $g(x)=x$。(iii) 设 $h$ 可导，$h(0)=0$ 且 $\\int h'(x)^2\\,dx=2h(1)-2\\int h(x)\\,dx-1/3$，求 $h$。(iv) 设非零实数 $a$ 满足 $\\int e^{ax}k(x)^2\\,dx=2\\int k(x)\\,dx+e^{-a}/a-1/a^2-1/4$，证明 $a=2$ 并求 $k$。",
+    "answer": "(i) Put $t=\\sqrt{x}$, so $dx=2t\\,dt$. (ii) The integral of the continuous nonnegative square is zero, so $g(x)=x$. (iii) Integration by parts gives $\\int_0^1(h'-x)^2dx=0$. On $[0,t]$, Cauchy–Schwarz gives $|h(t)-t^2/2|^2\\le t\\int_0^t(h'(x)-x)^2dx=0$, so $h(t)=t^2/2$. (iv) Completing the square gives $\\int_0^1e^{ax}(k(x)-e^{-ax})^2\\,dx=-(1/a-1/2)^2$. Thus $a=2$ and $k(x)=e^{-2x}$.",
+    "answerZh": "(i) 令 $t=\\sqrt{x}$，有 $dx=2t\\,dt$。(ii) 非负连续平方项的积分为零，故 $g(x)=x$。(iii) 分部积分得 $\\int_0^1(h'-x)^2dx=0$。在 $[0,t]$ 上应用柯西不等式，得 $|h(t)-t^2/2|^2\\le t\\int_0^t(h'(x)-x)^2dx=0$，故 $h(t)=t^2/2$。(iv) 配方得 $\\int_0^1e^{ax}(k(x)-e^{-ax})^2\\,dx=-(1/a-1/2)^2$，因此 $a=2$ 且 $k(x)=e^{-2x}$。",
+    "topics": [
+      {
+        "en": "Integration by substitution",
+        "zh": "换元积分"
+      },
+      {
+        "en": "Integration by parts",
+        "zh": "分部积分"
+      },
+      {
+        "en": "Completing the square",
+        "zh": "配方法"
+      },
+      {
+        "en": "Continuity and definite integrals",
+        "zh": "连续性与定积分"
+      }
+    ]
+  },
+  "step-2023-p3-q8": {
+    "summary": "At each join of two smooth pieces, require matching values and first derivatives. (i) Check that $f(x)=xe^{-x}$ satisfies $y''+2y'+y=0$ on the real line, with $y(0)=0$, $y'(0)=1$. Show $f'(x)\\ge0$ for $x\\le1$. (ii) Keeping these initial conditions, solve $y''+2|y'|+y=0$ in two pieces $g_1$ for $x\\le1$ and $g_2$ for $x\\ge1$, joined at $1$. (iii) Describe how their graphs are related. (iv) If $k$ solves $y''+py'+qy=0$ on $[r,s]$, with $p,q$ constant, prove that $k(c-x)$ solves $y''-py'+qy=0$ and specify its interval. (v) Now use $y''+2|y'|+2y=0$, again with $y(0)=0$, $y'(0)=1$. On $[-3\\pi/4,\\pi/4]$ a solution is $h(x)=e^{-x}\\sin x$, with $h'\\ge0$. Show $h'(\\pi/4)=0$. For a solution joined smoothly at every $(n+1/4)\\pi$, $n\\in\\mathbb Z$, find the pieces on (a) $[\\pi/4,5\\pi/4]$ and (b) $[5\\pi/4,9\\pi/4]$.",
+    "summaryZh": "两段光滑函数在接点处应有相同的函数值及一阶导数。(i) 验证 $f(x)=xe^{-x}$ 在实数轴上满足 $y''+2y'+y=0$ 及初始条件 $y(0)=0$、$y'(0)=1$，并证明 $x\\le1$ 时 $f'(x)\\ge0$。(ii) 在同一初始条件下，求 $y''+2|y'|+y=0$ 在 $x\\le1$ 上的解 $g_1$ 及 $x\\ge1$ 上的解 $g_2$，两段在 $1$ 处光滑相接。(iii) 说明两段图像的几何关系。(iv) 若 $k$ 在 $[r,s]$ 上满足 $y''+py'+qy=0$，其中 $p,q$ 是常数，证明 $k(c-x)$ 满足 $y''-py'+qy=0$，并写出相应区间。(v) 改考虑 $y''+2|y'|+2y=0$，仍有 $y(0)=0$、$y'(0)=1$。已知 $h(x)=e^{-x}\\sin x$ 是其在 $[-3\\pi/4,\\pi/4]$ 上的解且 $h'\\ge0$。证明 $h'(\\pi/4)=0$。若解在每个 $(n+1/4)\\pi$（$n\\in\\mathbb Z$）处光滑相接，求它在 (a) $[\\pi/4,5\\pi/4]$ 与 (b) $[5\\pi/4,9\\pi/4]$ 上的表达式。",
+    "answer": "(i) $f'=(1-x)e^{-x}$, $f''=(x-2)e^{-x}$. (ii) $g_1(x)=xe^{-x}$, $g_2(x)=(2-x)e^{x-2}$. (iii) The graphs reflect across $x=1$. (iv) The reflected interval is $[c-s,c-r]$. (v) $h'=e^{-x}(\\cos x-\\sin x)$ vanishes at $\\pi/4$. The two pieces are (a) $e^{x-\\pi/2}\\cos x$ and (b) $e^{2\\pi-x}\\sin x$.",
+    "answerZh": "(i) $f'=(1-x)e^{-x}$，$f''=(x-2)e^{-x}$。(ii) $g_1(x)=xe^{-x}$，$g_2(x)=(2-x)e^{x-2}$。(iii) 两图像关于 $x=1$ 对称。(iv) 对称后的区间为 $[c-s,c-r]$。(v) $h'=e^{-x}(\\cos x-\\sin x)$ 在 $\\pi/4$ 处为零。两段解依次为 (a) $e^{x-\\pi/2}\\cos x$ 和 (b) $e^{2\\pi-x}\\sin x$。",
+    "topics": [
+      {
+        "en": "Second-order differential equations",
+        "zh": "二阶微分方程"
+      },
+      {
+        "en": "Absolute values",
+        "zh": "绝对值"
+      },
+      {
+        "en": "Matching boundary values and derivatives",
+        "zh": "函数值与导数的衔接"
+      },
+      {
+        "en": "Reflections",
+        "zh": "反射变换"
+      }
+    ]
+  },
+  "step-2023-p3-q9": {
+    "summary": "On a smooth horizontal plane, particles $A$ (mass $m$) and $B$ (mass $M$) are joined by a light inextensible string of length $r$ that stays taut. In plane coordinates they start at $(0,0)$ and $(r,0)$ respectively. Initially $B$ is at rest and $A$ moves at speed $u$ in the positive $y$ direction. At time $t$ their positions are $(x,y)$ and $(X,Y)$. Let $\\theta$ be the clockwise angle from the positive $x$-axis to $\\overrightarrow{AB}$. (i) Use a diagram to explain $X=x+r\\cos\\theta$, $Y=y-r\\sin\\theta$. (ii) Obtain the first and second time derivatives of $X,Y$ in terms of the motion of $A$ and of $\\theta$. (iii) Taking the string tension as the sole in-plane force, prove $\\ddot x\\sin\\theta+\\ddot y\\cos\\theta=\\ddot X\\sin\\theta+\\ddot Y\\cos\\theta=0$, then deduce $\\theta=ut/r$. (iv) Prove $m\\ddot x+M\\ddot X=m\\ddot y+M\\ddot Y=0$ and find $my+MY$. (v) Show $y=(mut+Mr\\sin(ut/r))/(m+M)$. (vi) Prove that if $M>m$, $A$ eventually has a negative $y$-velocity component.",
+    "summaryZh": "在光滑水平面内，质量分别为 $m,M$ 的质点 $A,B$ 由长 $r$ 的轻质不可伸长绳相连，绳始终绷紧。平面直角坐标系中两点初始位置依次为 $(0,0),(r,0)$，$B$ 静止，$A$ 以速率 $u$ 沿 $y$ 轴正向运动。时刻 $t$ 两点位置分别为 $(x,y),(X,Y)$。以从 $x$ 轴正向顺时针转至 $\\overrightarrow{AB}$ 的角为 $\\theta$。(i) 作图解释 $X=x+r\\cos\\theta$、$Y=y-r\\sin\\theta$。(ii) 用 $A$ 的运动和 $\\theta$ 表示 $X,Y$ 对时间的一阶及二阶导数。(iii) 只考虑平面内的绳张力，证明 $\\ddot x\\sin\\theta+\\ddot y\\cos\\theta=\\ddot X\\sin\\theta+\\ddot Y\\cos\\theta=0$，进而推出 $\\theta=ut/r$。(iv) 证明 $m\\ddot x+M\\ddot X=m\\ddot y+M\\ddot Y=0$ 并求 $my+MY$。(v) 证明 $y=(mut+Mr\\sin(ut/r))/(m+M)$。(vi) 证明若 $M>m$，则在以后的某个时刻 $A$ 的速度沿 $y$ 轴的分量为负。",
+    "answer": "The string's horizontal and vertical projections are $r\\cos\\theta,-r\\sin\\theta$. Thus $\\dot X=\\dot x-r\\dot\\theta\\sin\\theta$, $\\dot Y=\\dot y-r\\dot\\theta\\cos\\theta$, $\\ddot X=\\ddot x-r\\ddot\\theta\\sin\\theta-r\\dot\\theta^2\\cos\\theta$, $\\ddot Y=\\ddot y-r\\ddot\\theta\\cos\\theta+r\\dot\\theta^2\\sin\\theta$. The normal acceleration equations give $\\ddot\\theta=0$, and $\\theta=ut/r$. Internal forces cancel, so $my+MY=mut$ and $y=(mut+Mr\\sin(ut/r))/(m+M)$. At $t=\\pi r/u$, $\\dot y=u(m-M)/(m+M)<0$ if $M>m$.",
+    "answerZh": "绳的水平、竖直坐标投影为 $r\\cos\\theta,-r\\sin\\theta$。因此 $\\dot X=\\dot x-r\\dot\\theta\\sin\\theta$，$\\dot Y=\\dot y-r\\dot\\theta\\cos\\theta$，$\\ddot X=\\ddot x-r\\ddot\\theta\\sin\\theta-r\\dot\\theta^2\\cos\\theta$，$\\ddot Y=\\ddot y-r\\ddot\\theta\\cos\\theta+r\\dot\\theta^2\\sin\\theta$。沿绳的垂线方向列加速度方程可得 $\\ddot\\theta=0$，进而 $\\theta=ut/r$。内力抵消，故 $my+MY=mut$，且 $y=(mut+Mr\\sin(ut/r))/(m+M)$。当 $M>m$ 时，取 $t=\\pi r/u$，即有 $\\dot y=u(m-M)/(m+M)<0$。",
+    "topics": [
+      {
+        "en": "Relative motion",
+        "zh": "相对运动"
+      },
+      {
+        "en": "Resolving forces",
+        "zh": "力的分解"
+      },
+      {
+        "en": "Conservation of momentum",
+        "zh": "动量守恒"
+      }
+    ]
+  },
+  "step-2023-p3-q10": {
+    "summary": "A thin uniform beam $AB$ of length $2h$ and mass $3m$ stands with $A$ on rough horizontal ground and $AB$ inclined at $2\\beta$ to the vertical. A light inextensible string from $B$ passes over a small frictionless pulley at $C$, vertically $2h$ above $A$. A mass $km$, with $k<3$, hangs freely from the other end. Let $\\mu$ be the coefficient of friction at $A$. (i) In equilibrium, express $k$ using $\\beta$, and prove $k^2\\le9\\mu^2/(\\mu^2+1)$. (ii) Attach an extra mass $m$ at distance $xh$ from $A$ along the beam, $0\\le x\\le2$, and set $k=2$. In equilibrium, prove that the friction magnitude $F$ and normal reaction $N$ at $A$ satisfy $F^2/N^2=(x^2+6x+5)/(4(x+2)^2)$. By considering $1/3-F^2/N^2$ or otherwise, find the least $\\mu$ permitting equilibrium for every $x$ in this range.",
+    "summaryZh": "细匀杆 $AB$ 长 $2h$、质量为 $3m$，$A$ 端接触粗糙水平地面，杆与竖直方向成 $2\\beta$ 角。一根轻质不可伸长绳从 $B$ 端绕过位于 $A$ 正上方 $2h$ 处 $C$ 点的光滑小滑轮，另一端自由悬挂质量 $km$，其中 $k<3$。$A$ 处摩擦系数为 $\\mu$。(i) 系统平衡时，用 $\\beta$ 表示 $k$，并证明 $k^2\\le9\\mu^2/(\\mu^2+1)$。(ii) 沿杆距 $A$ 为 $xh$ 处再固定一个质量为 $m$ 的质点，$0\\le x\\le2$，且 $k=2$。证明平衡时 $A$ 处摩擦力大小 $F$ 与支持力大小 $N$ 满足 $F^2/N^2=(x^2+6x+5)/(4(x+2)^2)$。考虑 $1/3-F^2/N^2$ 或使用其他方法，求能使每个上述位置都可达到平衡的最小 $\\mu$。",
+    "answer": "(i) $k=3\\sin\\beta$ and $F/N=\\tan\\beta\\le\\mu$, yielding the stated bound. (ii) The stated ratio satisfies $1/3-F^2/N^2=(x-1)^2/[12(x+2)^2]$. The greatest $F/N$ occurs at $x=1$, hence $\\mu_{\\min}=1/\\sqrt3$.",
+    "answerZh": "(i) $k=3\\sin\\beta$，且 $F/N=\\tan\\beta\\le\\mu$，得到题设上界。(ii) 题中比值满足 $1/3-F^2/N^2=(x-1)^2/[12(x+2)^2]$。$F/N$ 在 $x=1$ 时最大，故 $\\mu_{\\min}=1/\\sqrt3$。",
+    "topics": [
+      {
+        "en": "Moments about a point",
+        "zh": "对一点取力矩"
+      },
+      {
+        "en": "Limiting friction",
+        "zh": "极限摩擦力"
+      },
+      {
+        "en": "Static equilibrium",
+        "zh": "静力平衡"
+      }
+    ]
+  },
+  "step-2023-p3-q11": {
+    "summary": "First prove $\\sum_{k=1}^\\infty (k+1)x^k/k!=(x+1)e^x-1$. Fix a positive integer $n$. (i) Observe $Y\\sim\\mathrm{Poisson}(n)$. If $Y=0$, set $D=0$. If $Y=k\\ge1$, roll a fair die labelled $1,\\ldots,k$ and take its score as $D$. (a) Give $P(D=0)$. (b) Starting with the definition of expectation, show $E(D)=\\sum_{d=1}^{\\infty}d\\sum_{k=d}^{\\infty}w_k/k$ and then $E(D)=\\sum_{k=1}^{\\infty}(w_k/k)\\sum_{d=1}^k d$, where $w_k=e^{-n}n^k/k!$. (c) Deduce $E(D)=(n+1-e^{-n})/2$. (ii) A fair die instead selects an index $k$ from $1,\\ldots,n$. Given this outcome, draw once from the Poisson variable $X_k$ of mean $k$ and call the observed value $Z$. (a) Find $P(Z=0)$. (b) Show $E(Z)>E(D)$.",
+    "summaryZh": "先证明 $\\sum_{k=1}^\\infty (k+1)x^k/k!=(x+1)e^x-1$。固定正整数 $n$。(i) 观察 $Y\\sim\\mathrm{Poisson}(n)$。若 $Y=0$，令 $D=0$；若 $Y=k\\ge1$，则掷点数为 $1,\\ldots,k$ 的公平骰子一次，记所得点数为 $D$。(a) 写出 $P(D=0)$。(b) 从期望的定义出发，先证明 $E(D)=\\sum_{d=1}^{\\infty}d\\sum_{k=d}^{\\infty}w_k/k$，再证明 $E(D)=\\sum_{k=1}^{\\infty}(w_k/k)\\sum_{d=1}^k d$，其中 $w_k=e^{-n}n^k/k!$。(c) 推出 $E(D)=(n+1-e^{-n})/2$。(ii) 改用公平骰子从 $1,\\ldots,n$ 中选择下标 $k$。给定这一结果，从均值为 $k$ 的泊松变量 $X_k$ 抽取一个观测值，记为 $Z$。(a) 求 $P(Z=0)$。(b) 证明 $E(Z)>E(D)$。",
+    "answer": "The series splits into $xe^x+(e^x-1)$. (i) $P(D=0)=e^{-n}$. Both sums range over $1\\le d\\le k$ and give $E(D)=\\tfrac12(n+1-e^{-n})$. (ii) $P(Z=0)=(1-e^{-n})/[n(e-1)]$ and $E(Z)=(n+1)/2$. Their means differ by $E(Z)-E(D)=e^{-n}/2>0$.",
+    "answerZh": "将级数分成两部分得 $xe^x+(e^x-1)$。(i) $P(D=0)=e^{-n}$。两种求和次序对应同一区域 $1\\le d\\le k$，得到 $E(D)=\\tfrac12(n+1-e^{-n})$。(ii) $P(Z=0)=(1-e^{-n})/[n(e-1)]$，$E(Z)=(n+1)/2$，两期望之差为 $E(Z)-E(D)=e^{-n}/2>0$。",
+    "topics": [
+      {
+        "en": "Exponential series",
+        "zh": "指数级数"
+      },
+      {
+        "en": "Poisson distribution",
+        "zh": "泊松分布"
+      },
+      {
+        "en": "Conditional expectation",
+        "zh": "条件期望"
+      },
+      {
+        "en": "Reordering double sums",
+        "zh": "交换求和次序"
+      }
+    ]
+  },
+  "step-2023-p3-q12": {
+    "summary": "There are $n$ pairs of socks, each pair a different colour and the two socks of a pair alike. Draw $2k$ socks uniformly without replacement from the $2n$ individual socks, where $k$ is an integer and $0\\le2k\\le n$. (i) Find the probability that no colour occurs twice. (ii) Write $X_{n,k}$ for the number of complete pairs selected. For $0\\le r\\le k$, prove $P(X_{n,k}=r)=\\binom nr\\binom{n-r}{2(k-r)}2^{2(k-r)}/\\binom{2n}{2k}$. (iii) For $1\\le r\\le k$, prove $rP(X_{n,k}=r)=[k(2k-1)/(2n-1)]P(X_{n-1,k-1}=r-1)$, and deduce $E(X_{n,k})$.",
+    "summaryZh": "抽屉里有 $n$ 双袜子，每双各有一种独特颜色，同一双的两只外观相同。从这 $2n$ 只袜子里等概率、不放回地取出 $2k$ 只，$k$ 为整数且 $0\\le2k\\le n$。(i) 求没有一种颜色出现两次的概率。(ii) 以 $X_{n,k}$ 表示取到的完整袜双数。对 $0\\le r\\le k$ 证明 $P(X_{n,k}=r)=\\binom nr\\binom{n-r}{2(k-r)}2^{2(k-r)}/\\binom{2n}{2k}$。(iii) 对 $1\\le r\\le k$ 证明 $rP(X_{n,k}=r)=[k(2k-1)/(2n-1)]P(X_{n-1,k-1}=r-1)$，并推出 $E(X_{n,k})$。",
+    "answer": "(i) The probability is $2^{2k}\\binom n{2k}/\\binom{2n}{2k}$. (ii) Choose $r$ complete colours, then $2(k-r)$ single colours and one of two socks of each. (iii) Marking one of the $r$ complete pairs gives the stated recurrence. Summing over $r$ yields $E(X_{n,k})=k(2k-1)/(2n-1)$.",
+    "answerZh": "(i) 所求概率为 $2^{2k}\\binom n{2k}/\\binom{2n}{2k}$。(ii) 先选 $r$ 种取全的颜色，再选 $2(k-r)$ 种只取一只的颜色，每种有两种取法。(iii) 在 $r$ 个完整袜双里标记一双可得题设递推式。对 $r$ 求和即得 $E(X_{n,k})=k(2k-1)/(2n-1)$。",
+    "topics": [
+      {
+        "en": "Sampling without replacement",
+        "zh": "不放回抽样"
+      },
+      {
+        "en": "Combinations",
+        "zh": "组合数"
+      },
+      {
+        "en": "Expected value",
+        "zh": "数学期望"
+      }
+    ]
+  }
+}
