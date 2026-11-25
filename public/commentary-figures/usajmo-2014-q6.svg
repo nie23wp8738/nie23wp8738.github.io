@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423 403" role="img" aria-labelledby="title">
+  <title id="title">Triangle ABC with incircle contacts, side midpoints, intersections U and V, and arc midpoint X</title>
+  <rect width="423" height="403" fill="white"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="217.6" cy="202.4" r="180.6" stroke="#89969d" stroke-width="1.5"/>
+    <circle cx="129" cy="235" r="65.6" stroke="#557377" stroke-width="1.7"/>
+    <path d="M40 235 L234.6 22.7 L169.7 376.6 L40 235" stroke="#233843" stroke-width="2"/>
+    <path d="M80.6 67 L202.1 199.6 L80.6 332.2 L80.6 67" stroke="#567884" stroke-width="1.6"/>
+  </g>
+  <g fill="#23333b" font-family="Georgia,serif" font-size="16" font-style="italic">
+  <circle cx="40" cy="235" r="2.9" fill="#192e38"/><text x="26.0" y="239.0">A</text>
+  <circle cx="234.6" cy="22.7" r="2.9" fill="#192e38"/><text x="242.6" y="22.7">B</text>
+  <circle cx="169.7" cy="376.6" r="2.9" fill="#192e38"/><text x="176.7" y="382.6">C</text>
+  <circle cx="202.1" cy="199.6" r="2.9" fill="#192e38"/><text x="209.1" y="205.6">M</text>
+  <circle cx="104.9" cy="305.8" r="2.9" fill="#192e38"/><text x="113.9" y="318.8">N</text>
+  <circle cx="137.3" cy="128.8" r="2.9" fill="#192e38"/><text x="142.3" y="121.8">P</text>
+  <circle cx="129" cy="235" r="2.9" fill="#192e38"/><text x="135.0" y="251.0">I</text>
+  <circle cx="80.6" cy="279.3" r="2.9" fill="#192e38"/><text x="65.6" y="285.3">E</text>
+  <circle cx="80.6" cy="190.7" r="2.9" fill="#192e38"/><text x="65.6" y="185.7">F</text>
+  <circle cx="80.6" cy="332.2" r="2.9" fill="#192e38"/><text x="65.6" y="342.2">U</text>
+  <circle cx="80.6" cy="67" r="2.9" fill="#192e38"/><text x="65.6" y="61.0">V</text>
+  <circle cx="40" cy="169.9" r="2.9" fill="#192e38"/><text x="26.0" y="163.9">X</text>
+  </g>
+</svg>

@@ -1,0 +1,296 @@
+{
+  "usajmo-2014-q1": {
+    "summary": "For $x\\ge1$, write $F(x)=10x^2-5x+1$ and $G(x)=x^2-5x+10$. For any real $a,b,c\\ge1$, show that at least one of $F(a)/G(b)$, $F(b)/G(c)$, and $F(c)/G(a)$ is at most $abc$.",
+    "summaryZh": "对 $x\\ge1$，记 $F(x)=10x^2-5x+1$、$G(x)=x^2-5x+10$。证明对任意实数 $a,b,c\\ge1$，三个数 $F(a)/G(b)$、$F(b)/G(c)$、$F(c)/G(a)$ 中至少有一个不超过 $abc$。",
+    "answer": "The proposed bound holds, with equality for the minimum precisely when $a=b=c=1$.",
+    "answerZh": "所给上界成立；最小值恰等于 $abc$ 当且仅当 $a=b=c=1$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAJMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Pair like variables in the product",
+        "titleZh": "在乘积中把相同变量配对",
+        "topics": [
+          {
+            "en": "Cyclic inequalities",
+            "zh": "循环不等式"
+          },
+          {
+            "en": "Polynomial identities",
+            "zh": "多项式恒等式"
+          },
+          {
+            "en": "Geometric mean",
+            "zh": "几何平均数"
+          }
+        ],
+        "steps": [
+          "The three quotients are positive: $F(x)=5x(2x-1)+1>0$ for $x\\ge1$, and $G(x)=(x-5/2)^2+15/4>0$. If all three exceeded $abc$, their product would exceed $(abc)^3$. In that product the factors regroup as $[F(a)/G(a)][F(b)/G(b)][F(c)/G(c)]$.",
+          "We can therefore compare each same-variable quotient to $x^3$. Expanding the difference gives $x^3G(x)-F(x)=x^5-5x^4+10x^3-10x^2+5x-1=(x-1)^5$. This is nonnegative throughout the domain, and vanishes only at $x=1$.",
+          "Multiplication yields a product at most $a^3b^3c^3$, contradicting the possibility that all three quotients exceed $abc$. In fact the product is strictly smaller as soon as any of $a,b,c$ is greater than $1$, forcing one quotient to be strictly below $abc$. If all are $1$, each quotient equals $1$."
+        ],
+        "stepsZh": [
+          "三个分式均为正数：当 $x\\ge1$ 时，$F(x)=5x(2x-1)+1>0$，且 $G(x)=(x-5/2)^2+15/4>0$。若三个分式都大于 $abc$，则它们的积大于 $(abc)^3$。在乘积中重新配对分子与分母，得到 $[F(a)/G(a)][F(b)/G(b)][F(c)/G(c)]$。",
+          "因此只需逐一比较 $F(x)/G(x)$ 与 $x^3$。展开得 $x^3G(x)-F(x)=x^5-5x^4+10x^3-10x^2+5x-1=(x-1)^5$。在题设范围内它非负，且仅在 $x=1$ 时等于零。",
+          "将三式相乘，得到三个分式的积不超过 $a^3b^3c^3$，故不可能全部大于 $abc$。只要至少一个变量大于 $1$，乘积就严格小于 $(abc)^3$，其中至少一个分式严格小于 $abc$。当 $a=b=c=1$ 时，三个分式都等于 $1$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2014-q2": {
+    "summary": "An acute triangle $ABC$ has a $60^\\circ$ angle at $A$ and is not equilateral. Let $O$ be its circumcenter and $H$ its orthocenter. (a) Prove that the line through $O,H$ meets the side segments $AB$ and $AC$. Call its intersections $P$ on $AB$ and $Q$ on $AC$. (b) If $s$ is the area of $APQ$ and $t$ the area of the quadrilateral with boundary $B$–$P$–$Q$–$C$–$B$, find exactly which values $s/t$ can take.",
+    "summaryZh": "锐角三角形 $ABC$ 的顶角 $\\angle A=60^\\circ$，且三角形不是等边三角形。设 $O$ 为外心，$H$ 为垂心。(a) 证明直线 $OH$ 与两条边的线段 $AB,AC$ 均相交，交点分别记为 $P,Q$。(b) 设 $s$ 为三角形 $APQ$ 的面积，$t$ 为按 $B,P,Q,C$ 顺序连接而成的四边形面积，求 $s/t$ 的全部可能值。",
+    "answer": "(a) The two intersections lie strictly inside their respective sides, with $AP=AQ=(AB+AC)/3$. (b) The range is the open interval $(4/5,1)$.",
+    "answerZh": "(a) 两个交点均在相应边的内部，且 $AP=AQ=(AB+AC)/3$。(b) 取值范围为开区间 $(4/5,1)$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAJMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Put the angle bisector on a coordinate axis",
+        "titleZh": "以顶角平分线为坐标轴",
+        "topics": [
+          {
+            "en": "Circumcenter and orthocenter",
+            "zh": "外心与垂心"
+          },
+          {
+            "en": "Projections",
+            "zh": "正交投影"
+          },
+          {
+            "en": "Area ratios and ranges",
+            "zh": "面积比与取值范围"
+          }
+        ],
+        "steps": [
+          "Write $b=AC$ and $c=AB$. With $A$ at the origin, let the positive horizontal axis bisect angle $A$ and let $B$ be above it. Unit vectors along $AB,AC$ are $\\mathbf u=(\\sqrt3/2,1/2)$ and $\\mathbf v=(\\sqrt3/2,-1/2)$, so $B=c\\mathbf u$, $C=b\\mathbf v$, and $\\mathbf u\\cdot\\mathbf v=1/2$. The angles at $B,C$ are acute precisely when $c>b/2$ and $b>c/2$: for example $(A-B)\\cdot(C-B)=c(c-b/2)$, and interchanging $b,c$ gives the other condition.",
+          "Equal distances $OA=OB$ and $OA=OC$ give $O\\cdot\\mathbf u=c/2$ and $O\\cdot\\mathbf v=b/2$, treating point coordinates as vectors. The altitude from $C$ gives $H\\cdot\\mathbf u=C\\cdot\\mathbf u=b/2$, and that from $B$ gives $H\\cdot\\mathbf v=B\\cdot\\mathbf v=c/2$. The two dot products simply switch. Adding each pair gives the same horizontal coordinate $(b+c)/(2\\sqrt3)$ for $O,H$. Subtracting gives vertical coordinates $(c-b)/2$ and $(b-c)/2$. Since $b=c$ would make the triangle equilateral, the centers are distinct and $OH$ is the vertical line through them.",
+          "A point at distance $d$ along either side ray has horizontal coordinate $d\\sqrt3/2$. It is on $OH$ exactly when $d=(b+c)/3$. This distance is positive and less than each of $b,c$ by the two acute-angle inequalities. Thus $P,Q$ exist in the interiors of the segments, establishing (a).",
+          "Let $f=s/(s+t)$ be the fraction of the whole triangle cut off at $A$. Using the included angle $60^\\circ$ in both area formulas gives $f=AP\\cdot AQ/(bc)=(b+c)^2/(9bc)$. By swapping $B,C$ if needed we may set $r=b/c>1$, and acuteness is then $r<2$. Conversely every $1<r<2$ is possible by choosing $c=1$, $b=r$ and included angle $60^\\circ$.",
+          "Now $f=(r+2+1/r)/9$ is continuous and strictly increasing for $1<r<2$ because its derivative is $(1-1/r^2)/9>0$. Its limiting values at $1,2$ are $4/9,1/2$. The requested ratio is $s/t=f/(1-f)$, which increases continuously from $4/5$ to $1$. Neither endpoint is attained, and every intermediate value occurs."
+        ],
+        "stepsZh": [
+          "令 $b=AC,c=AB$。取 $A$ 为原点，横轴正向为 $\\angle A$ 的平分线，$B$ 在横轴上方。沿 $AB,AC$ 的单位向量分别为 $\\mathbf u=(\\sqrt3/2,1/2)$、$\\mathbf v=(\\sqrt3/2,-1/2)$，故 $B=c\\mathbf u$、$C=b\\mathbf v$，且 $\\mathbf u\\cdot\\mathbf v=1/2$。角 $B,C$ 均为锐角等价于 $c>b/2$ 且 $b>c/2$：例如 $(A-B)\\cdot(C-B)=c(c-b/2)$，交换 $b,c$ 得另一个条件。",
+          "将点的坐标看成向量。由 $OA=OB$、$OA=OC$ 展开得 $O\\cdot\\mathbf u=c/2$、$O\\cdot\\mathbf v=b/2$。从 $C$ 作的高垂直于 $\\mathbf u$，所以 $H\\cdot\\mathbf u=C\\cdot\\mathbf u=b/2$；从 $B$ 作的高给出 $H\\cdot\\mathbf v=B\\cdot\\mathbf v=c/2$。这两组点积恰好交换。分别将每组两式相加，得到 $O,H$ 的横坐标都是 $(b+c)/(2\\sqrt3)$；相减得到纵坐标分别为 $(c-b)/2$ 和 $(b-c)/2$。若 $b=c$ 则三角形为等边三角形，故 $O,H$ 不重合，直线 $OH$ 是过这两点的竖直线。",
+          "在两条边所在射线上，距 $A$ 为 $d$ 的点横坐标均为 $d\\sqrt3/2$。令它等于 $OH$ 的横坐标，得到 $d=(b+c)/3$。由上述锐角条件知此距离严格小于 $b,c$，且为正，故两交点 $P,Q$ 分别在边 $AB,AC$ 的内部，(a) 得证。",
+          "令 $f=s/(s+t)$ 表示小三角形占整个三角形的面积比。两者的夹角均为 $60^\\circ$，由面积公式得 $f=AP\\cdot AQ/(bc)=(b+c)^2/(9bc)$。必要时互换 $B,C$，可令 $r=b/c>1$，锐角条件即 $r<2$。反过来，对任意 $1<r<2$，取 $c=1$、$b=r$、夹角为 $60^\\circ$，就得到满足条件的三角形。",
+          "此时 $f=(r+2+1/r)/9$ 在 $1<r<2$ 上连续且严格递增，因为其导数为 $(1-1/r^2)/9>0$。当 $r$ 分别趋于 $1,2$ 时，$f$ 趋于 $4/9,1/2$。所求 $s/t=f/(1-f)$ 也连续严格递增，极限分别为 $4/5,1$。这两个端点都取不到，而中间的每个值均能取得。"
+        ]
+      },
+      {
+        "title": "Reflect the perpendicular bisectors into altitudes",
+        "titleZh": "将边的垂直平分线反射为高",
+        "topics": [
+          {
+            "en": "Angle-bisector reflection",
+            "zh": "关于角平分线的反射"
+          },
+          {
+            "en": "Orthogonal projection",
+            "zh": "正交投影"
+          },
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          }
+        ],
+        "steps": [
+          "Let $b=AC,c=AB$. Reflection in the internal bisector of angle $A$ exchanges its two sides. The perpendicular bisector of $AB$ reflects to the perpendicular to $AC$ at distance $c/2$ from $A$ along $AC$. This point is the foot from $B$, because $AB\\cos60^\\circ=c/2$. Thus that reflected line is the altitude from $B$. Likewise the perpendicular bisector of $AC$ reflects to the altitude from $C$. The reflection of their intersection $O$ is therefore $H$.",
+          "Let $M$ be the midpoint of $OH$. The projections of $O,H$ on the directed line $AB$ have distances $c/2,b/2$ from $A$: the first is the midpoint of $AB$, and the second is the projection of $C$. These distances differ, since $b\\ne c$; hence $O\\ne H$ and $OH$ is perpendicular to the angle bisector at $M$. Projection preserves midpoints, so the projection of $M$ has distance $(b+c)/4$ from $A$. Consequently $M$ belongs to the internal bisector ray and $AM\\cos30^\\circ=(b+c)/4$.",
+          "A perpendicular to the bisector at $M$ cuts both side rays at an equal distance $d$ from $A$. Since $d\\cos30^\\circ=AM$, we get $d=(b+c)/(4\\cos^2 30^\\circ)=(b+c)/3$. The triangle is acute precisely when $b<2c$ and $c<2b$, since the projections of $C$ on $AB$ and $B$ on $AC$ then fall within the sides. These inequalities give $d<\\min(b,c)$, proving (a).",
+          "For (b) set $u=|b-c|/(b+c)$. The above inequalities and $b\\ne c$ are equivalent to $0<u<1/3$, and any such value works by taking $b=1+u,c=1-u$. Using $4bc=(b+c)^2(1-u^2)$ and the common included angle, $s/(s+t)=d^2/(bc)=4/[9(1-u^2)]$. Thus $s/t=4/(5-9u^2)$ increases continuously from $4/5$ to $1$ as $u$ increases through its open interval. This gives exactly the requested range."
+        ],
+        "stepsZh": [
+          "记 $b=AC,c=AB$。关于 $\\angle A$ 的内角平分线反射会交换角的两边。$AB$ 的垂直平分线反射后垂直于 $AC$，其垂足在射线 $AC$ 上距 $A$ 为 $c/2$。因 $AB\\cos60^\\circ=c/2$，这恰好是从 $B$ 向 $AC$ 作垂线的垂足，故反射所得直线是从 $B$ 作的高。同理，$AC$ 的垂直平分线反射为从 $C$ 作的高。因此，两条垂直平分线的交点 $O$ 反射为两条高的交点 $H$。",
+          "取 $OH$ 的中点 $M$。在有向直线 $AB$ 上，$O,H$ 的投影距 $A$ 分别为 $c/2,b/2$：前者为 $AB$ 的中点，后者是 $C$ 的投影。因 $b\\ne c$，两距离不同，故 $O\\ne H$，直线 $OH$ 在 $M$ 处垂直于角平分线。投影保持中点，所以 $M$ 的投影到 $A$ 的距离是 $(b+c)/4$。这也说明 $M$ 在内角平分线的正向射线上，且 $AM\\cos30^\\circ=(b+c)/4$。",
+          "过 $M$ 作角平分线的垂线，它与两条边所在射线的交点到 $A$ 的距离相同，记为 $d$。由 $d\\cos30^\\circ=AM$ 可得 $d=(b+c)/(4\\cos^2 30^\\circ)=(b+c)/3$。三角形为锐角三角形等价于 $b<2c$ 且 $c<2b$，因为此时 $C$ 在 $AB$ 上的投影与 $B$ 在 $AC$ 上的投影都在对应边内部。这两式给出 $d<\\min(b,c)$，从而证明了 (a)。",
+          "对于 (b)，令 $u=|b-c|/(b+c)$。上述锐角条件加上 $b\\ne c$ 等价于 $0<u<1/3$；任取这个区间内的 $u$，取 $b=1+u,c=1-u$ 即可实现。由 $4bc=(b+c)^2(1-u^2)$ 及公共夹角得 $s/(s+t)=d^2/(bc)=4/[9(1-u^2)]$。所以 $s/t=4/(5-9u^2)$ 在上述开区间内连续递增，两端的极限分别为 $4/5$、$1$，故取值范围正是 $(4/5,1)$。"
+        ]
+      }
+    ],
+    "figure": {
+      "url": "/commentary-figures/usajmo-2014-q2.svg",
+      "alt": "An acute triangle ABC with a 60° angle at A. In this example P on AB, the orthocenter H, the circumcenter O and Q on AC lie in that order on one line. Triangle APQ is shaded.",
+      "altZh": "锐角三角形 ABC 的 A 角为 60°。此例中，一条直线依次经过 AB 上的 P、垂心 H、外心 O 和 AC 上的 Q。三角形 APQ 标有浅色底纹。",
+      "printHeightPt": 168
+    }
+  },
+  "usajmo-2014-q3": {
+    "summary": "Determine every map $f:\\mathbb Z\\to\\mathbb Z$ for which the identity $x f(2f(y)-x)+y^2 f(2x-f(y))=f(x)^2/x+f(yf(y))$ holds whenever $x$ is a nonzero integer and $y$ is any integer.",
+    "summaryZh": "设 $f:\\mathbb Z\\to\\mathbb Z$。对任意非零整数 $x$ 和任意整数 $y$，都有 $x f(2f(y)-x)+y^2 f(2x-f(y))=f(x)^2/x+f(yf(y))$。求所有这样的函数。",
+    "answer": "The two functions are $f(n)=0$ for all $n$ and $f(n)=n^2$ for all $n$.",
+    "answerZh": "恰有两个函数：对所有 $n$ 都有 $f(n)=0$，或对所有 $n$ 都有 $f(n)=n^2$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAJMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Use divisibility and force the choices at different inputs to agree",
+        "titleZh": "先用整除性确定取值，再证明各点的选择一致",
+        "topics": [
+          {
+            "en": "Functional equations on the integers",
+            "zh": "整数上的函数方程"
+          },
+          {
+            "en": "Prime divisibility",
+            "zh": "素数整除性"
+          },
+          {
+            "en": "Residue classes modulo four",
+            "zh": "模四剩余类"
+          }
+        ],
+        "steps": [
+          "Put $c=f(0)$ and take $y=0$. After multiplying by $x$ we get $x^2 f(2c-x)=f(x)^2+xc$. Setting $x=p$ for an arbitrary prime $p$ shows $p\\mid f(p)^2$, hence $p\\mid f(p)$. The same equality now shows $p^2\\mid pc$, so $p\\mid c$. This is possible for every prime only if $c=0$.",
+          "For $x\\ne0$ the preceding equality becomes $x^2 f(-x)=f(x)^2$. Set $u=f(x)/x^2$ and $v=f(-x)/x^2$. Applying the equality at both $x$ and $-x$ gives $v=u^2$ and $u=v^2$. Thus $u=u^4$, so $u=0$ or $1$, and $v=u$. The function is even and at each $x$ its value is either $0$ or $x^2$.",
+          "If it never vanishes away from zero, we already have the square function. Otherwise fix $t\\ne0$ with $f(t)=0$ and set $y=t$ in the given identity. The terms $xf(-x)$ and $f(x)^2/x$ cancel, and $f(0)=0$, so $t^2f(2x)=0$ for all $x\\ne0$. Therefore the function vanishes on every even integer.",
+          "Suppose an odd integer $y$ has $f(y)=y^2$. Substituting $x=2k$ for any $k\\ne0$ gives $y^2 f(4k-y^2)=f(y^3)$, since the other two terms are zero at even inputs. The right side is independent of $k$. If it were nonzero, then $f(4k-y^2)$ would have to equal $(4k-y^2)^2$ for every $k\\ne0$, which grows without bound as $k$ grows. Hence $f(y^3)=0$ and $f(4k-y^2)=0$ for all $k\\ne0$.",
+          "Since $y^2\\equiv1\\pmod4$, those inputs run through the class $3\\bmod 4$ with just $-y^2$ omitted. Evenness gives zero throughout the class $1\\bmod 4$ with just $y^2$ possibly omitted. Thus the nonzero value at $y$ requires $y=\\pm y^2$, forcing $y=\\pm1$. But then $y^3=y$ and we just proved $f(y^3)=0$, a contradiction. In the case where a nonzero input is a zero of $f$, the function is therefore identically zero.",
+          "Finally the zero function satisfies the identity. For the square function the left side expands to $x(2y^2-x)^2+y^2(2x-y^2)^2=x^3+y^6$, exactly the right side. Both proposed functions work."
+        ],
+        "stepsZh": [
+          "记 $c=f(0)$。令 $y=0$，两边乘以 $x$，得到 $x^2 f(2c-x)=f(x)^2+xc$。取任意素数 $p$，令 $x=p$，可知 $p\\mid f(p)^2$，故 $p\\mid f(p)$。再看同一等式，$p^2\\mid pc$，即 $p\\mid c$。所有素数都整除 $c$，所以 $c=0$。",
+          "对 $x\\ne0$，上式化为 $x^2f(-x)=f(x)^2$。记 $u=f(x)/x^2$，$v=f(-x)/x^2$，分别代入 $x$ 和 $-x$ 得 $v=u^2$，$u=v^2$。于是 $u=u^4$，实数解仅有 $0,1$，且 $v=u$。因此 $f$ 是偶函数，每个整数 $x$ 处的函数值只能是 $0$ 或 $x^2$。",
+          "若每个非零整数处函数值都非零，则 $f(x)=x^2$。否则取 $t\\ne0$ 使 $f(t)=0$，在原式中令 $y=t$。由上一步，$xf(-x)$ 与 $f(x)^2/x$ 抵消，又有 $f(0)=0$，故对任意 $x\\ne0$ 都有 $t^2f(2x)=0$。由此 $f$ 在所有偶数处均为零。",
+          "假设有奇数 $y$ 满足 $f(y)=y^2$。对任意 $k\\ne0$ 令 $x=2k$；原式中有两项的函数自变量为偶数，这两项为零，得到 $y^2 f(4k-y^2)=f(y^3)$。右端与 $k$ 无关。如果右端非零，左端的函数值就只能取 $(4k-y^2)^2$，而这个数随 $k$ 增大而无界，与等式矛盾。因此 $f(y^3)=0$，并且任意 $k\\ne0$ 都有 $f(4k-y^2)=0$。",
+          "因为 $y^2\\equiv1\\pmod4$，上述自变量遍历模 $4$ 余 $3$ 的整数，只漏掉 $-y^2$。利用偶性，模 $4$ 余 $1$ 的整数中也只有 $y^2$ 可能取非零函数值。因此 $f(y)\\ne0$ 要求 $y=\\pm y^2$，即 $y=\\pm1$。此时 $y^3=y$，却已知 $f(y^3)=0$，矛盾。可见只要有一个非零整数是零点，$f$ 就是零函数。",
+          "最后验算：零函数显然满足原式。对平方函数，左边展开为 $x(2y^2-x)^2+y^2(2x-y^2)^2=x^3+y^6$，也正是右边。两个函数都合题意。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2014-q4": {
+    "summary": "Fix an integer base $b\\ge2$. For each positive integer $n$, write $s_b(n)$ for the sum of its base-$b$ digits. Prove that infinitely many positive integers are missing from the list of values $n+s_b(n)$ as $n$ runs through all positive integers.",
+    "summaryZh": "固定整数进制 $b\\ge2$，用 $s_b(n)$ 表示正整数 $n$ 的 $b$ 进制表示中所有数位之和。证明有无穷多个正整数不能写成 $n+s_b(n)$，其中 $n$ 取正整数。",
+    "answer": "For each positive integer $M$, at least $M$ of the positive integers below $b^{2M}$ are missing.",
+    "answerZh": "对每个正整数 $M$，小于 $b^{2M}$ 的正整数中至少有 $M$ 个无法这样表示。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAJMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Count the inputs that cross a power of the base",
+        "titleZh": "在进制幂的左侧计算越过界限的输入个数",
+        "topics": [
+          {
+            "en": "Positional notation",
+            "zh": "位值制"
+          },
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          },
+          {
+            "en": "Digit sums",
+            "zh": "数位和"
+          }
+        ],
+        "steps": [
+          "Let $M$ be any positive integer and set $L=b^{2M}$. We count the possible inputs for the $L-1$ target numbers from $1$ through $L-1$. An input $n\\ge L$ cannot work because $s_b(n)\\ge1$.",
+          "Consider the last $M$ smaller inputs, $n=L-j$ with $1\\le j\\le M$. Since $M\\le b^M$, we may write $L-j=(b^M-1)b^M+(b^M-j)$, where the second summand fits in $M$ digits. The leading $M$ digits of $L-j$ are therefore all $b-1$. This guarantees $s_b(L-j)\\ge M(b-1)\\ge M\\ge j$.",
+          "It follows that $(L-j)+s_b(L-j)\\ge L$ for every one of these inputs. Only the $L-M-1$ positive inputs below $L-M$ are available to hit $L-1$ targets, and each input can hit at most one target. At least $M$ targets are missed. As $M$ can be arbitrarily large, the total number of missed integers is infinite.",
+          "For odd bases there is also a quick parity check. Each power of an odd $b$ is odd, so the base expansion gives $n\\equiv s_b(n)\\pmod2$. Every output is then even, and every positive odd integer is missed."
+        ],
+        "stepsZh": [
+          "任取正整数 $M$，令 $L=b^{2M}$。考虑从 $1$ 到 $L-1$ 的 $L-1$ 个目标数。由于正整数的数位和至少为 $1$，一切 $n\\ge L$ 都不能产生这些目标数。",
+          "再看界限左边最后 $M$ 个输入 $n=L-j$，其中 $1\\le j\\le M$。由于 $M\\le b^M$，分解式 $L-j=(b^M-1)b^M+(b^M-j)$ 中的第二项可以存放在最低 $M$ 位。因此高 $M$ 位都是 $b-1$，数位和满足 $s_b(L-j)\\ge M(b-1)\\ge M\\ge j$。",
+          "这样，每个上述输入都满足 $(L-j)+s_b(L-j)\\ge L$。能产生目标数的只剩小于 $L-M$ 的 $L-M-1$ 个正整数，而每个输入最多对应一个目标数。在 $L-1$ 个目标中，至少有 $M$ 个取不到。由于 $M$ 可以任意大，取不到的正整数有无穷多个。",
+          "在奇数进制下，还可用奇偶性立即说明结论。奇数 $b$ 的各次幂均为奇数，所以按位展开给出 $n\\equiv s_b(n)\\pmod2$。故所有输出都是偶数，每个正奇数都取不到。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2014-q5": {
+    "summary": "An infinite board of edge-sharing regular hexagons starts empty. Players $A$ and $B$ alternate, with $A$ first. On each turn $A$ places one counter in each of two empty cells sharing an edge. On each turn $B$ removes any one counter. For a positive integer $k$, $A$ wins the moment a straight row of $k$ successive cells is occupied. Find the least $k$ for which $B$ can prevent such a win forever, or prove that none exists.",
+    "summaryZh": "无限多的正六边形沿边拼成棋盘，开始时棋盘为空。$A$ 先行，双方轮流操作。$A$ 每次选两个共边的空格，各放一枚棋子；$B$ 每次任意拿走一枚棋子。给定正整数 $k$，只要出现沿直线连续占满的 $k$ 个格子，$A$ 就立即获胜。求使 $B$ 能一直阻止 $A$ 获胜的最小 $k$，或证明它不存在。",
+    "answer": "$6$.",
+    "answerZh": "$6$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAJMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Defend by coloring, attack in two staggered rows",
+        "titleZh": "三色防守与双排进攻",
+        "topics": [
+          {
+            "en": "Lattice coloring",
+            "zh": "格点染色"
+          },
+          {
+            "en": "Invariants",
+            "zh": "不变量"
+          },
+          {
+            "en": "Finite game strategies",
+            "zh": "有限步博弈策略"
+          },
+          {
+            "en": "Runs and gaps",
+            "zh": "连续段与空隙"
+          }
+        ],
+        "steps": [
+          "For the defense, label the cell centers by coordinates $(u,v)$ along two adjacent lattice directions $60^\\circ$ apart. A step along a row changes coordinates by one of $\\pm(1,0),\\pm(0,1),\\pm(1,-1)$. Mark cells with $u-v\\equiv0\\pmod 3$. Adjacent cells cannot both be marked, and along any straight row every third cell is marked.",
+          "After every move of $A$, $B$ removes the new counter on a marked cell if there is one, and otherwise removes any counter. Induction shows that all marked cells are empty after each move of $B$, and at most one is occupied even immediately after a move of $A$. Six successive cells contain two marked ones. Thus $B$ prevents a row of six.",
+          "For the attack, choose 14 consecutive cells in a horizontal row. In the row immediately below, take all 15 cells touching these 14. $A$ plays any adjacent empty pair inside this strip while possible. Each full round increases the number of counters in the strip by one: the two new ones lie inside, and every counter available for removal also lies inside. Thus, unless $A$ has already won, some turn of $A$ begins with no adjacent empty pair in the strip. All cells outside are still empty.",
+          "At that turn, four consecutive occupied cells in either row suffice: if an end already has an occupied neighbor along the row, five are present. Otherwise play on an empty extension cell together with a neighbor on the outer side of that row, beyond the strip. In the upper row, two consecutive occupied runs separated by one empty cell also suffice if their lengths sum to at least four. Fill their separating cell and its neighbor in the untouched row above.",
+          "Suppose neither finish is available. Each occupied run in the upper row then has length at most three. No two empty cells are adjacent. If there were at most three runs, they and their intervening or end gaps could cover at most $3\\cdot3+4=13$ cells. So there are at least four runs. The second and third runs are both interior and their lengths sum to at most three. At least one is a single counter with an empty cell immediately on each side.",
+          "Each of these two empty upper cells touches two cells of the lower row. Because lower cells sit between upper cells, these are four distinct consecutive lower cells. Each must be occupied, since otherwise there would be an adjacent empty pair. This provides the four-cell finish after all. Hence $A$ can force five in finitely many moves, and with that also every smaller target. The least target $B$ can prevent is six."
+        ],
+        "stepsZh": [
+          "先考虑防守。以两条夹角 $60^\\circ$ 的相邻格线方向为基底，用整数 $(u,v)$ 表示格心。沿一条格线走一步，坐标增量属于 $\\pm(1,0),\\pm(0,1),\\pm(1,-1)$。标记满足 $u-v\\equiv0\\pmod 3$ 的格子。两个共边格不可能同时有标记；沿每条直线格道，每三格恰有一格被标记。",
+          "$A$ 下完后，若在标记格上放了棋子，$B$ 就拿走它；否则任意取走一子。由归纳法，每次 $B$ 下完后所有标记格都空着，即使在 $A$ 刚下完时也至多占了一个标记格。连续六格含两个标记格，因此 $B$ 能阻止六连。",
+          "再考虑进攻。在一条水平格道取连续的 14 格，并在紧贴其下的一排取与之相邻的全部 15 格。只要这两排组成的区域内还有共边空格，$A$ 就任选这样的一对落子。每一轮双方都下完后，区域内的棋子恰好多一枚，因为所放两子与所取一子均在区域内。因此，若尚未获胜，有限轮后必会轮到 $A$ 而区域内没有共边空格，区域外则一直为空。",
+          "此时，只要任一排已有四连，$A$ 就能取胜：若一端沿该排的邻格有子，已构成五连；否则选一个空的延长格和它在区域外侧相邻的空格一起落子。另一个机会是上排相邻的两段棋子只隔一个空格，且两段长度之和至少为四。填上这个空格，再在它上方相邻的区域外空格放一子，即成五连。",
+          "假定这两种机会均未出现。上排的每一段连续棋子至多有三枚，相邻两格又不能同时为空。如果最多只有三段，算上段间及两端至多四个空格，总长度至多为 $3\\cdot3+4=13$，不足 14 格。故至少有四段。第二段和第三段都是内部的段，它们的长度之和至多为三；其中至少一段只有一枚棋子，其左右各有一个空格。",
+          "这两个上排空格各与下排两格共边。由于两排错开半格，所触及的是下排互不相同的四个连续格。每格都必须有子，否则会存在共边空格。这样下排就出现了前述四连，仍可取胜。$A$ 能在有限步内迫出五连，自然也能达到所有更小的目标。因此最小值为六。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2014-q6": {
+    "summary": "Triangle $ABC$ has incenter $I$, incircle $\\gamma$ and circumcircle $\\Gamma$. Mark the side midpoints $M$ on $BC$, $N$ on $CA$, and $P$ on $AB$. The incircle touches $CA$ at $E$ and $AB$ at $F$. The line $EF$ cuts the full lines $MN$ and $MP$ at $U$ and $V$, respectively. On $\\Gamma$, let $X$ bisect the arc from $B$ to $C$ that contains $A$. (a) Show that $I$ belongs to the ray starting at $C$ and passing through $V$. (b) Show that the midpoint of $UV$ belongs to line $XI$.",
+    "summaryZh": "三角形 $ABC$ 的内心为 $I$，内切圆为 $\\gamma$，外接圆为 $\\Gamma$。$M,N,P$ 依次是 $BC,CA,AB$ 的中点。内切圆分别与 $CA,AB$ 相切于 $E,F$。直线 $EF$ 分别与直线 $MN,MP$ 交于 $U,V$。在 $\\Gamma$ 上，取经过 $A$ 的那段 $BC$ 弧的中点 $X$。（a）证明 $I$ 位于从 $C$ 出发经过 $V$ 的射线上。（b）证明直线 $XI$ 经过 $UV$ 的中点。",
+    "answer": "$I$ lies between $C$ and $V$. If $T$ is the midpoint of $UV$ and $\\theta=\\angle BAC/2$, then $T=I+\\sin^2\\theta\\,(X-I)$ as position vectors, so $T$ lies on $XI$.",
+    "answerZh": "$I$ 在 $C,V$ 之间。记 $T$ 为 $UV$ 的中点，$\\theta=\\angle BAC/2$。位置向量满足 $T=I+\\sin^2\\theta\\,(X-I)$，故 $T$ 在直线 $XI$ 上。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2014_USAJMO_Problems/Problem_6",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2014-q6.svg",
+      "alt": "The triangle, its two circles, side midpoints and incircle contacts, with the lines defining U and V extended.",
+      "altZh": "图示三角形、内切圆与外接圆、边的中点与切点，并延长相关直线以标出 U、V。",
+      "printHeightPt": 188
+    },
+    "methods": [
+      {
+        "title": "Use the angle bisector as a coordinate axis",
+        "titleZh": "以角平分线为坐标轴",
+        "topics": [
+          {
+            "en": "Incenter and tangent lengths",
+            "zh": "内心与切线长"
+          },
+          {
+            "en": "Affine coordinates",
+            "zh": "仿射坐标"
+          },
+          {
+            "en": "Arc midpoints",
+            "zh": "弧中点"
+          },
+          {
+            "en": "Midpoint relations",
+            "zh": "中点关系"
+          }
+        ],
+        "steps": [
+          "Set $a=BC$, $b=CA$, $c=AB$, and $D=a+b+c$. Equal tangents drawn to the incircle from each vertex give $AE=AF=t=(b+c-a)/2$. Use $A$ as origin and the unit vectors along $AB,AC$ as an oblique basis. In this basis $B=(c,0)$, $C=(0,b)$, and $EF$ has equation $u+v=t$. The midlines $MN$ and $MP$ have equations $v=b/2$ and $u=c/2$, respectively. Hence $U=(t-b/2,b/2)$ and $V=(c/2,t-c/2)$.",
+          "The triangles $IBC,ICA,IAB$ have the same altitude (the inradius) to their respective sides, so their areas are in the ratio $a:b:c$. These are the barycentric weights of $I$, giving $I=(aA+bB+cC)/D=(bc/D,bc/D)$ in our basis. Since $V-C=(c/2,-(a+b)/2)$, we have $I-C=(2b/D)(V-C)$. The triangle inequality implies $0<2b/D<1$. This locates $I$ on segment $CV$ and proves (a).",
+          "For (b), keep the origin and take perpendicular axes with the positive horizontal axis along $AI$ and $B$ above it. Put $\\theta=\\angle BAC/2$, $h=\\cos\\theta$, $j=\\sin\\theta$. Our two unit basis vectors now have Cartesian components $(h,j)$ and $(h,-j)$, so oblique coordinates $(u,v)$ become $(h(u+v),j(u-v))$. Taking the average of $U$ and $V$ gives their midpoint $T=(ht,j(c-b)/2)$ in Cartesian coordinates. Right triangle $AFI$ gives $I=(t/h,0)$.",
+          "Let $Y$ be the midpoint of the other $BC$ arc. Equal arcs $BY$ and $YC$ give $\\angle BAY=\\angle YAC$, so $Y$ lies on $AI$. The two arc midpoints $X,Y$ are the ends of the diameter on the perpendicular bisector of $BC$. If $X\\ne A$, the right angle $XAY$ puts $X$ on the vertical axis; when $X=A$ it is on this axis too. Write $X=(0,z)$. Equating its squared distances to $B=(ch,cj)$ and $C=(bh,-bj)$ gives $c^2-2cjz=b^2+2bjz$, hence $z=(c-b)/(2j)$.",
+          "Compare coordinates: $h^2I+j^2X=(ht,j(c-b)/2)=T$. As $h^2+j^2=1$, this says $T=I+j^2(X-I)$, exactly the required collinearity. The computation never divides by $c-b$ and thus includes $AB=AC$, when $X=A$."
+        ],
+        "stepsZh": [
+          "设 $a=BC$，$b=CA$，$c=AB$，$D=a+b+c$。从每个顶点向内切圆引出的两段切线等长，因此 $AE=AF=t=(b+c-a)/2$。以 $A$ 为原点、沿 $AB,AC$ 的单位向量为斜坐标的两条基向量。此时 $B=(c,0)$，$C=(0,b)$，直线 $EF$ 的方程为 $u+v=t$。中位线所在的直线 $MN,MP$ 分别满足 $v=b/2$ 和 $u=c/2$，解得 $U=(t-b/2,b/2)$，$V=(c/2,t-c/2)$。",
+          "三角形 $IBC,ICA,IAB$ 对应于三条边的高都是内切圆半径，面积之比为 $a:b:c$，这就是 $I$ 关于三顶点的面积坐标。故 $I=(aA+bB+cC)/D$，在上述斜坐标中即 $(bc/D,bc/D)$。又 $V-C=(c/2,-(a+b)/2)$，因此 $I-C=(2b/D)(V-C)$。由三角形不等式可知 $0<2b/D<1$，所以 $I$ 在线段 $CV$ 内，第（a）问得证。",
+          "证明（b）时仍取原点 $A$，改用直角坐标，令横轴正向沿 $AI$，$B$ 在横轴上方。记 $\\theta=\\angle BAC/2$，$h=\\cos\\theta$，$j=\\sin\\theta$。原来的两条单位基向量变为 $(h,j),(h,-j)$，所以斜坐标 $(u,v)$ 对应的直角坐标为 $(h(u+v),j(u-v))$。把 $U,V$ 的坐标取平均，得到中点 $T$ 的直角坐标 $(ht,j(c-b)/2)$。又由直角三角形 $AFI$ 得 $I=(t/h,0)$。",
+          "设不含 $A$ 的另一段 $BC$ 弧的中点为 $Y$。弧 $BY,YC$ 相等，因此 $\\angle BAY=\\angle YAC$，$Y$ 在 $AI$ 上。$X,Y$ 均在 $BC$ 的垂直平分线上，是外接圆的一条直径的端点。若 $X\\ne A$，由直径所对圆周角为直角得 $AX\\perp AY$，所以 $X$ 在纵轴上；若 $X=A$ 也成立。写 $X=(0,z)$。它到 $B=(ch,cj)$ 和 $C=(bh,-bj)$ 的距离相等，展开平方得 $c^2-2cjz=b^2+2bjz$，于是 $z=(c-b)/(2j)$。",
+          "对照直角坐标可得 $h^2I+j^2X=(ht,j(c-b)/2)=T$。由于 $h^2+j^2=1$，上式即 $T=I+j^2(X-I)$，故 $T$ 位于直线 $XI$ 上。全程无须除以 $c-b$，所以也包括 $AB=AC$ 且 $X=A$ 的情形。"
+        ]
+      }
+    ]
+  }
+}
