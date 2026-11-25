@@ -1,17 +1,38 @@
-.worked-answer { margin: 2rem 0; }
+.worked-answer { margin: 1.4rem 0 2rem; }
 .worked-answer summary { cursor: pointer; overflow-wrap: anywhere; }
-.worked-answer .answer-panel { border-block: 1px solid var(--line); padding: 1rem 0; }
-.worked-answer .answer-panel > summary { font-size: 1.15rem; font-weight: 650; }
-.worked-answer .method-count, .worked-answer .method-number, .worked-answer .solution-credit { color: var(--muted); font: 500 .87rem/1.5 var(--sans); }
-.worked-answer .method-count { margin-inline-start: .5rem; }
-.answer-result { margin-block: 1.25rem; }
-.answer-result h2 { font: 650 1rem/1.5 var(--sans); margin: 0; }
-.worked-answer .method-panel { padding: .8rem 0; margin: 0; border-top: 1px solid var(--line); }
+.worked-answer summary::marker { color: var(--muted); font-size: .75em; }
+.worked-answer .answer-panel { border-block: 1px solid var(--line); padding: .9rem 0; }
+.worked-answer .answer-panel > summary {
+  color: var(--ink);
+  font: 550 var(--subhead-size)/1.5 var(--heading);
+}
+.worked-answer .method-count, .worked-answer .method-number, .worked-answer .solution-credit {
+  font: 500 .875rem/1.5 var(--sans);
+  color: var(--muted);
+}
+.worked-answer .method-count { margin-inline-start: .55rem; }
+.worked-answer .answer-result {
+  margin: 1rem 0 1.15rem;
+  border-inline-start: 2px solid var(--accent);
+  padding: .25rem 0 .25rem 1rem;
+}
+.worked-answer .answer-result h2 { margin: 0; font: 600 .9rem/1.5 var(--sans); color: var(--muted); }
+.worked-answer .answer-result p {
+  margin-block: .3rem 0;
+  font: 400 var(--reading-size)/1.65 var(--serif);
+}
+.worked-answer .method-panel { padding: .85rem 0; margin: 0; border-top: 1px solid var(--line); }
+.worked-answer .method-panel > summary { font: 550 var(--subhead-size)/1.5 var(--heading); }
 .worked-answer .method-number { margin-inline-end: .4rem; }
-.worked-answer .method-content { margin-block: 1rem; }
-.worked-answer .method-content > p { line-height: 1.7; overflow-x: auto; margin: .85rem 0; }
-.worked-answer .method-topics { display:flex; align-items:baseline; gap:.35rem 1rem; flex-wrap:wrap; font: .9rem/1.5 var(--sans); }
-.worked-answer .method-topics a { text-underline-offset:3px; }
-.worked-answer .reader-paragraph { overflow-x:auto; }
-.worked-answer .katex-display { overflow-x:auto; padding:.25rem 0; }
-.method-panel, .answer-panel { scroll-margin-top:12px; }
+.worked-answer .method-content { margin-block: .85rem; }
+.worked-answer .method-content > p {
+  font: 400 var(--reading-size)/1.75 var(--serif);
+  overflow-x: auto;
+  margin: .85rem 0;
+}
+.worked-answer .method-content > .solution-credit { font: 400 .875rem/1.65 var(--sans); }
+.worked-answer .method-topics { display: flex; align-items: baseline; gap: .25rem .85rem; flex-wrap: wrap; font: .875rem/1.55 var(--sans); }
+.worked-answer .method-topics a { color: var(--accent); text-underline-offset: .2em; }
+.worked-answer .reader-paragraph { overflow-x: auto; }
+.worked-answer .katex-display { overflow-x: auto; padding: .25rem 0; }
+.method-panel, .answer-panel { scroll-margin-top: 1rem; }

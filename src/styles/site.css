@@ -1,11 +1,76 @@
-.mast-in{display:grid;grid-template-columns:auto 1fr auto;gap:22px}.topnav{justify-content:end;gap:clamp(11px,1.7vw,28px)}
-.locale{color:var(--navy);border:1px solid #bbc4ca;border-radius:3px;padding:5px 10px;text-decoration:none;font-size:14px;line-height:1.4;white-space:nowrap;font-weight:600}.locale:hover{border-color:var(--accent);color:var(--accent)}
-.archive-hero .hero-text h1{font-size:clamp(39px,4.3vw,65px);line-height:1.08}.archive-hero .hero-text p{max-width:36em}.paper-family{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:28px}.paper-family .course-tile{min-height:130px}.paper-family .course-tile h3{margin-top:0}.paper-family .course-tile small{font-size:14px;color:var(--muted)}.paper-family .course-tile p{margin-top:4px}.topic-links a{background:white}.footer-in > div{flex-wrap:wrap}
-@media(max-width:850px){.mast-in{gap:13px}.topnav{gap:12px}.paper-family{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:740px){.mast-in{grid-template-columns:1fr auto;gap:0;min-height:0;align-items:center;padding-top:10px}.brand-small{display:inline}.locale{grid-column:2;grid-row:1;justify-self:end}.topnav{grid-row:2;grid-column:1/-1;justify-content:flex-start;gap:17px;overflow:auto}.topnav a{min-height:43px;white-space:nowrap;font-size:14px}.mast-in .brand{font-size:21px}.home-hero .hero-text h1{font-size:40px}}
-@media(max-width:450px){.topnav{justify-content:space-between;gap:6px}.topnav a{font-size:13px}.paper-family{gap:8px}.paper-family .course-tile{min-height:0}.section-link{font-size:14px}.home-hero .hero-text h1{font-size:37px}}
-.exam-group{margin-bottom:22px}.exam-group>h3{margin:0 0 10px;font:600 16px/1.4 var(--sans);color:var(--muted)}
-.exam-group .paper-family{margin:0;gap:11px;grid-template-columns:repeat(3,minmax(0,1fr))}
-.exam-group .course-tile{min-height:0;padding:14px 17px}.exam-group h4{margin:0 0 3px;font:650 22px/1.3 var(--serif)}
-.exam-full-name{font-size:14px;color:var(--muted);margin-bottom:4px}
-@media(max-width:680px){.exam-group .paper-family{grid-template-columns:repeat(2,minmax(0,1fr))}.exam-group .course-tile{padding:11px 12px}}
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-block: clamp(2.3rem, 4.6vw, 3.75rem);
+}
+.hero-text h1 {
+  margin-bottom: .7rem;
+  font-size: clamp(1.85rem, 1.5rem + 1.1vw, 2.375rem);
+  letter-spacing: -.018em;
+  text-wrap: balance;
+}
+.hero-text h1:lang(zh) { letter-spacing: .035em; }
+.hero-text p { max-width: 41ch; color: var(--muted); font: 400 var(--reading-size)/1.58 var(--serif); }
+.hero-text p:lang(zh) { line-height: 1.85; }
+.hero-text .btnrow { margin-block: 1.25rem .6rem; }
+.hero-text > .section-link { display: inline-block; padding-block: .15rem; }
+.feature-card { display: block; border: 1px solid #c5ceca; color: var(--navy); text-decoration: none; }
+.feature-card:hover .fig-title { text-decoration: underline; }
+.figure-face {
+  display: grid;
+  place-items: center;
+  min-height: 11.4rem;
+  background-color: #f0f3ee;
+  background-image: linear-gradient(#c8d1cc52 1px, transparent 1px), linear-gradient(90deg, #c8d1cc52 1px, transparent 1px);
+  background-size: 1.05rem 1.05rem;
+}
+.feature-card figcaption { border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem 1rem; padding: .6rem 1rem; }
+.fig-title { font: 550 1.05rem/1.45 var(--serif); }
+.fig-type { font-size: .8125rem; color: var(--muted); }
+.grid-drawing { position: relative; width: 10.625rem; height: 6rem; }
+.grid-line, .route-line { position: absolute; display: block; }
+.grid-line { background: #859792; }
+.grid-line.h { height: 1px; width: 100%; }
+.grid-line.v { width: 1px; height: 100%; }
+.route-line { background: var(--navy); z-index: 1; transform: translate(-1px, -1px); }
+.node, .route-marker, .blocked { position: absolute; border-radius: 50%; transform: translate(-50%, -50%); }
+.node { width: 4px; height: 4px; background: #6c827d; }
+.route-marker { z-index: 2; width: 9px; height: 9px; border: 2px solid var(--navy); background: var(--paper); }
+.route-label { position: absolute; font: italic .9375rem/1 var(--serif); white-space: nowrap; }
+.blocked { left: 40%; top: 50%; width: 15px; height: 15px; z-index: 2; display: grid; place-items: center; border: 1px solid var(--accent); color: var(--accent); background: #f4e7d6; font: 700 13px/1 var(--sans); }
+
+.home-section { border-top: 2px solid var(--navy); padding-block: 1.2rem 1.8rem; }
+.section-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
+.exam-group { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 3.8fr); gap: clamp(1.25rem, 3vw, 3rem); padding-block: 1.1rem; border-top: 1px solid var(--line); }
+.exam-group > h3 { max-width: 24ch; margin-top: .4rem; font-size: var(--subhead-size); }
+.paper-family { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .45rem 1rem; }
+.course-tile { display: block; padding: .4rem .75rem .65rem; border-inline-start: 1px solid var(--line); color: var(--navy); text-decoration: none; }
+.course-tile:hover { background: var(--surface); border-color: var(--accent); }
+.course-tile:hover h4 { text-decoration: underline; }
+.course-tile h4 { margin-bottom: .15rem; font-weight: 600; }
+.exam-full-name, .course-tile small, .course-tile p { color: var(--muted); font-size: .875rem; line-height: 1.45; }
+.exam-full-name { margin-bottom: .2rem; }
+.course-tile small, .course-tile p { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 50rem) {
+  .home-hero { gap: 1.5rem; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); }
+  .feature-card figcaption { gap: .05rem .5rem; }
+  .exam-group { grid-template-columns: 1fr; gap: .65rem; }
+  .exam-group > h3 { max-width: none; margin: 0; }
+}
+@media (max-width: 40rem) {
+  .home-hero { grid-template-columns: 1fr; padding-block: 1.8rem; gap: 1.3rem; }
+  .hero-text .btnrow { gap: .5rem; }
+  .hero-text .button { min-height: 2.75rem; padding-inline: .7rem; font-size: .875rem; }
+  .figure-face { min-height: 9rem; }
+  .grid-drawing { width: 8.75rem; height: 5.1rem; }
+  .paper-family { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+  .course-tile { padding: .3rem .6rem; }
+  .section-top { margin-bottom: .8rem; }
+  .home-section { padding-block: 1rem 1.2rem; }
+}
+@media (max-width: 23rem) {
+  .feature-card figcaption { flex-direction: column; }
+}

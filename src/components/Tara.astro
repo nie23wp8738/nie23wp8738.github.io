@@ -86,30 +86,45 @@ const pageURL = (page:number) => guide.url + '#page=' + page;
   </article>
 </Layout>
 <style>
-  .tara-bank { max-width: 1100px; }
-  .tara-bank .archive-hero { margin-bottom: 1.75rem; }
-  .tara-section { margin: 0 0 2.4rem; }
-  .tara-section h2 { margin: 0; font: 650 clamp(23px,2.6vw,32px)/1.3 var(--serif); }
-  .tara-section h3 { margin: 0 0 .3rem; font: 650 20px/1.4 var(--serif); }
-  .tara-section > p { margin: .45rem 0 .9rem; color: var(--muted); max-width: 78ch; }
-  .section-heading { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; }
-  .section-heading a,.reference,.answer-link { color:var(--accent); font-weight:600; }
-  .tara-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.9rem 1.3rem; }
-  .tara-module,.guide-module { min-width:0; border-top:1px solid var(--line); padding-top:.8rem; }
-  .module-format { margin:.12rem 0 .65rem; color:var(--muted); font-size:.88rem; }
-  .question-list,.guide-list,.legacy-papers { list-style:none; margin:0; padding:0; }
-  .tara-section a { text-underline-offset:3px; overflow-wrap:anywhere; }
-  .question-list li { margin:.55rem 0; }
-  .question-list a { color:var(--navy); font-weight:600; }
-  .guide-list li { margin:.5rem 0; }
-  .answer-link { display:inline-block; font-size:.83rem; margin-inline-start:.6rem; }
-  .pearson-tests { width:100%; max-width:54rem; border-collapse:collapse; margin:.7rem 0; }
-  .pearson-tests th,.pearson-tests td { padding:.45rem .55rem .45rem 0; text-align:start; border-bottom:1px solid var(--line); vertical-align:top; }
-  .pearson-tests thead th { color:var(--muted); font-weight:600; }
-  .reference { display:inline-block; font-size:.91rem; margin-top:.35rem; }
-  .legacy-papers li { display:flex; flex-wrap:wrap; gap:.3rem 1rem; }
-  @media(max-width:700px) {
-    .tara-grid { grid-template-columns:1fr; }
-    .pearson-tests { font-size:.9rem; }
+  .tara-bank { max-width: 66rem; }
+  .tara-section { margin: 0 0 clamp(2rem, 4vw, 3.25rem); }
+  .tara-section h2 { margin: 0; font: 550 var(--section-size)/1.35 var(--heading); }
+  .tara-section h3 { margin: 0 0 .3rem; font: 550 var(--subhead-size)/1.4 var(--heading); }
+  .tara-section > p { margin: .4rem 0 1rem; color: var(--muted); max-width: 72ch; }
+  .section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; }
+  .section-heading a, .reference, .answer-link { color: var(--accent); font-weight: 550; }
+  .section-heading a { font-size: .9375rem; }
+  .tara-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem clamp(1rem, 2.3vw, 2rem); }
+  .tara-module, .guide-module { min-width: 0; border-top: 1px solid var(--navy); padding-top: .8rem; }
+  .module-format { margin: .12rem 0 .55rem; color: var(--muted); font-size: .875rem; line-height: 1.55; }
+  .question-list, .guide-list, .legacy-papers { list-style: none; margin: 0; padding: 0; }
+  .tara-section a { text-underline-offset: .2em; overflow-wrap: anywhere; }
+  .question-list li, .guide-list li { border-bottom: 1px solid var(--line); }
+  .question-list a, .guide-list a:first-child {
+    display: inline-block;
+    padding-block: .45rem;
+    color: var(--ink);
+    font: 500 1.0625rem/1.45 var(--serif);
+    text-decoration: none;
+  }
+  .question-list a:hover, .guide-list a:first-child:hover { color: var(--accent); text-decoration: underline; }
+  .answer-link { display: inline-block; font-size: .875rem; margin-inline-start: .5rem; }
+  .pearson-tests {
+    width: 100%;
+    max-width: 53rem;
+    border-collapse: collapse;
+    border-top: 1px solid var(--navy);
+    margin: 1rem 0 .5rem;
+  }
+  .pearson-tests th, .pearson-tests td { padding: .55rem .65rem .55rem 0; text-align: start; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .pearson-tests thead th { color: var(--muted); font: 600 .875rem/1.5 var(--sans); }
+  .pearson-tests tbody th { font: 550 1.0625rem/1.5 var(--heading); }
+  .pearson-tests td a { color: var(--navy); }
+  .reference { display: inline-block; font-size: .9rem; margin-top: .35rem; }
+  .legacy-papers li { display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+  @media (max-width: 700px) {
+    .tara-grid { grid-template-columns: 1fr; gap: 1.35rem; }
+    .pearson-tests th, .pearson-tests td { padding-inline-end: .35rem; }
+    .pearson-tests { font-size: .9375rem; }
   }
 </style>

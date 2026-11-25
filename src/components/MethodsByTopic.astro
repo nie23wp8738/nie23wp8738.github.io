@@ -38,11 +38,23 @@ const options=[...topics].sort((a,b)=>a[1].localeCompare(b[1],zh?'zh-CN':'en'));
   </article>
 </Layout>
 <style>
-  .method-index {max-width:900px;}
-  .method-search label {display:grid;gap:.4rem;margin:1rem 0;width:min(100%,32rem);}
-  .method-search select {max-width:100%;font:inherit;padding:.55rem;}
-  .method-index li {margin:.75rem 0;line-height:1.5;}
-  .method-index li span {display:block;color:var(--muted);font-size:.9rem;}
+  .method-index { max-width: 48rem; }
+  .method-search label { display: grid; gap: .35rem; margin: 1.1rem 0; width: min(100%, 30rem); font: 600 .875rem/1.5 var(--sans); }
+  .method-search select {
+    max-width: 100%;
+    min-height: 2.75rem;
+    padding: .45rem .7rem;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    color: var(--ink);
+    background-color: var(--paper);
+    font: 400 1rem/1.5 var(--sans);
+  }
+  .method-index [role=status] { color: var(--muted); font-size: .9rem; }
+  .method-index ul { list-style: none; padding: 0; margin: .65rem 0 0; border-top: 1px solid var(--navy); }
+  .method-index li { margin: 0; padding: .65rem 0; border-bottom: 1px solid var(--line); }
+  .method-index li a { color: var(--navy); font: 550 var(--subhead-size)/1.4 var(--heading); text-underline-offset: .2em; }
+  .method-index li span { display: block; margin-top: .1rem; color: var(--muted); font-size: .875rem; }
 </style>
 <script>
   const select=document.querySelector<HTMLSelectElement>('[data-method-filter] select');

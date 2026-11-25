@@ -52,13 +52,24 @@ const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#wo
   </article>
 </Layout>
 <style>
-  .answer-options { margin: 1rem 0 1.5rem; }
-  .answer-options fieldset { border:0; padding:0; margin:0 0 .65rem; }
-  .answer-options legend { color:var(--muted); margin-bottom:.5rem; }
-  .answer-options label { display:flex; align-items:baseline; gap:.65rem; padding:.5rem .25rem; cursor:pointer; line-height:1.5; }
-  .answer-options input { accent-color:var(--accent); }
-  .answer-options button[hidden] { display:none; }
-  .choice-status { margin-inline-start:.75rem; }
+  .answer-options { margin: 0 0 1.45rem; }
+  .answer-options fieldset { min-width: 0; border: 0; padding: 0; margin: 0 0 .85rem; }
+  .answer-options legend { color: var(--muted); margin-bottom: .35rem; padding: 0; font: 600 .875rem/1.5 var(--sans); }
+  .answer-options label {
+    display: grid;
+    grid-template-columns: 1.1rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: .65rem;
+    padding: .55rem .45rem;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    font: 400 var(--reading-size)/1.5 var(--serif);
+  }
+  .answer-options label:hover, .answer-options label:has(:checked) { background: var(--surface); }
+  .answer-options input { accent-color: var(--navy); margin: 0; width: 1rem; height: 1rem; }
+  .answer-options b { font-weight: 600; }
+  .answer-options button[hidden] { display: none; }
+  .choice-status { margin-inline-start: .6rem; font: .9375rem/1.5 var(--sans); }
 </style>
 <script>
   document.querySelectorAll<HTMLFormElement>('[data-answer-options]').forEach(form=>{
