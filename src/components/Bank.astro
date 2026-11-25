@@ -29,7 +29,7 @@ const methods = [...new Map(localized.map(p => [p.methodKey,p.method])).entries(
         <label><span>{t('Exam','考试')}</span><select name="exam"><option value="">{t('All exams','全部考试')}</option></select></label>
         <label><span>{t('Topic','知识点')}</span><select name="topic"><option value="">{t('All topics','全部知识点')}</option>{topicEntries.map(topic => <option value={topic.key}>{zh ? topic.zh : topic.en}</option>)}</select></label>
         <label data-past-only><span>{t('Year','年份')}</span><select name="year"><option value="">{t('All years','全部年份')}</option></select></label>
-        <label data-past-only><span>{t('Reading options','阅读方式')}</span><select name="reading"><option value="">{t('All questions','全部题目')}</option><option value="full">{t('Full text on this site','站内全文')}</option></select></label>
+        <label data-past-only><span>{t('Reading options','阅读方式')}</span><select name="reading"><option value="">{t('All questions','全部题目')}</option><option value="full">{t('Full text on this site','站内全文')}</option><option value="solutions">{t('Worked solutions on this site','有站内解析')}</option></select></label>
         <label data-past-only><span>{t('Question number','题号')}</span><input inputmode="numeric" type="number" name="number" min="1" step="1" placeholder={t('Any','全部')}/></label>
         <label data-practice-only hidden><span>{t('Method','解题方法')}</span><select name="method"><option value="">{t('All methods','全部方法')}</option>{methods.map(([key,value])=><option value={key}>{value}</option>)}</select></label>
         <label data-practice-only hidden><span>{t('Level','难度')}</span><select name="level"><option value="">{t('All levels','全部难度')}</option><option value="basic">{t('Foundation','基础')}</option><option value="intermediate">{t('Intermediate','提高')}</option><option value="challenge">{t('Challenge','挑战')}</option></select></label>
@@ -57,7 +57,7 @@ const methods = [...new Map(localized.map(p => [p.methodKey,p.method])).entries(
       <label><input name="paper-layout" type="radio" value="spaced" checked /> {t('One per page','一题一页')}</label>
       <label><input name="paper-layout" type="radio" value="compact" /> {t('Compact','紧凑排版')}</label>
     </fieldset>
-    <p class="bank-reference" data-reference-note hidden>{t('Full-text questions print with their diagrams. Source-only entries include an original link. The source guide links to the published solutions when available.','站内全文题按完整题干与配图导出，题源索引条目附原题链接。题源索引 PDF 附已收录的解答链接。')}</p>
+    <p class="bank-reference" data-reference-note hidden>{t('The solutions PDF includes on-site methods and topic labels in English. Source-only entries link to published answers when available.','解析卷含英文解法及对应知识点。题源索引条目附已收录的单题或整卷解答链接。')}</p>
     <div class="bank-downloads">
       <button type="button" class="bank-download-main" data-pdf="questions" disabled>{t('Download worksheet PDF','下载题目卷 PDF')}</button>
       <button type="button" class="bank-download-alt" data-pdf="solutions" disabled>{t('Download solutions PDF','下载解析卷 PDF')}</button>

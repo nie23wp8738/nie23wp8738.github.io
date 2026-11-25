@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "title": "2024 NZMO Round 2 — Worked solutions",
+  "sourceSha256": "a143c3144ca7a4dc9edf0c36ec0dbd9d1c1cfe99b09b2644ed726702e3db1d70",
+  "generatorSha256": "12bf3171158cfdd67b2425f4393d10a1f1553c5d698314d1aa84886843e76864",
+  "figures": {},
+  "pdfs": {
+    "nzmo2-2024-q1.pdf": "dc7493f21570aeefe0b5a82b923dad43ab3cfe6e8094a942588639123a2a2ea7",
+    "nzmo2-2024-q2.pdf": "e07b74c7dc1b8bc4951fa0209a8f425434915542836ac1d48c4327a0e4e13af5",
+    "nzmo2-2024-q3.pdf": "f3b8c8a442f19307f03a41b79a73706aa2810a04ed7cf344dc5d697c2daf4ae6",
+    "nzmo2-2024-q4.pdf": "9d1df2c37a513f2a6ce7e2eb22b40c7b924d87b8a8574556dadd3cb02af06bd8",
+    "nzmo2-2024-q5.pdf": "f7dbbd70a596cca49f7893ed2c776c1317aac606e54f544f6673ef8cec7d4d93"
+  }
+}

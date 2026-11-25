@@ -5,6 +5,7 @@ A bilingual mathematics question bank at <https://nie23wp8738.github.io/>. The d
 - `/past-papers/` — find an exam paper by year and browse its individual questions.
 - `/esat/` — open official specimen and practice tests by module, or find separately labelled ENGAA and NSAA precursor papers.
 - `/topics/` — find questions across papers by subject area and specific concept.
+- `/topics/methods/` — find individual worked solutions by the concepts used in each method. A link ending in `#solutions` opens the answer; `#method-2` also opens the second proof.
 - `/problems/` — select and reorder questions and download a worksheet or solution/reference PDF.
 - `/about/` — education and teaching experience.
 
@@ -43,3 +44,5 @@ npm run build
 ```
 
 To use an existing Chromium executable, add `--chromium /path/to/chromium`. Commit the edited source, any diagrams, the generated question PDFs and the edition's `.build.json` manifest together. The build checks their digests so the printable worksheet matches the reader. If the typesetting script changes, regenerate every full-text edition.
+
+For a paper with in-site worked solutions, edit its matching file in `src/data/answers/`. It stores the answer, worked methods, topic labels and adaptation credits. Run `node scripts/typeset-solutions.mjs --edition nzmo2-2025` (optionally with `--chromium`) to regenerate its English solution downloads. Include the corresponding PDFs and manifest under `public/solution-pdf/`. The build checks that the solution sheets match the current question and solution text.

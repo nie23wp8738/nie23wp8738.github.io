@@ -1,0 +1,17 @@
+.worked-answer { margin: 2rem 0; }
+.worked-answer summary { cursor: pointer; overflow-wrap: anywhere; }
+.worked-answer .answer-panel { border-block: 1px solid var(--line); padding: 1rem 0; }
+.worked-answer .answer-panel > summary { font-size: 1.15rem; font-weight: 650; }
+.worked-answer .method-count, .worked-answer .method-number, .worked-answer .solution-credit { color: var(--muted); font: 500 .87rem/1.5 var(--sans); }
+.worked-answer .method-count { margin-inline-start: .5rem; }
+.answer-result { margin-block: 1.25rem; }
+.answer-result h2 { font: 650 1rem/1.5 var(--sans); margin: 0; }
+.worked-answer .method-panel { padding: .8rem 0; margin: 0; border-top: 1px solid var(--line); }
+.worked-answer .method-number { margin-inline-end: .4rem; }
+.worked-answer .method-content { margin-block: 1rem; }
+.worked-answer .method-content > p { line-height: 1.7; overflow-x: auto; margin: .85rem 0; }
+.worked-answer .method-topics { display:flex; align-items:baseline; gap:.35rem 1rem; flex-wrap:wrap; font: .9rem/1.5 var(--sans); }
+.worked-answer .method-topics a { text-underline-offset:3px; }
+.worked-answer .reader-paragraph { overflow-x:auto; }
+.worked-answer .katex-display { overflow-x:auto; padding:.25rem 0; }
+.method-panel, .answer-panel { scroll-margin-top:12px; }

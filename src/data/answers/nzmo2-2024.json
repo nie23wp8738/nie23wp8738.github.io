@@ -1,0 +1,310 @@
+{
+  "nzmo2-2024-q1": {
+    "answer": "The least guaranteed number of flips is $t=6$.",
+    "answerZh": "保证能达到要求的最少翻面次数为 $t=6$。",
+    "methods": [
+      {
+        "title": "Count heads on odd vertices",
+        "titleZh": "数奇数号顶点上的正面",
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Extremal arrangements",
+            "zh": "极端排列"
+          }
+        ],
+        "steps": [
+          "Number the vertices from $1$ to $14$ in cyclic order. Let $h$ be the number of heads on the seven odd vertices. Then there are $7-h$ heads on the seven even vertices.",
+          "There are exactly two alternating targets. To put all the heads on the odd vertices, turn the $7-h$ odd tails and the $7-h$ even heads. To put them all on the even vertices takes $2h$ flips. The optimum for this starting position is therefore $2\\min(h,7-h)$.",
+          "For integral $h$ from $0$ to $7$, the largest possible value is $6$, reached when $h=3$ or $4$. For example, put heads on vertices $1,2,3,4,5,6,7$. This position requires six flips and establishes sharpness."
+        ],
+        "stepsZh": [
+          "按圆周顺序把顶点编号为 $1$ 到 $14$。设七个奇数号顶点中有 $h$ 枚正面，则七个偶数号顶点中恰有 $7-h$ 枚正面。",
+          "正反交替的目标只有两种。若奇数号全部朝上，要翻动奇数号中的 $7-h$ 枚反面和偶数号中的 $7-h$ 枚正面；若偶数号全部朝上，则要翻动 $2h$ 枚。所以这个初始局面最少需要 $2\\min(h,7-h)$ 次。",
+          "整数 $h$ 从 $0$ 到 $7$ 时，上式的最大值为 $6$，在 $h=3$ 或 $4$ 时达到。例如将正面放在 $1,2,3,4,5,6,7$ 号顶点，这一局面确实需要翻六次。"
+        ],
+        "credit": "Ross Atkins"
+      },
+      {
+        "title": "Average the distances to the two targets",
+        "titleZh": "对两个目标的距离取平均",
+        "topics": [
+          {
+            "en": "Hamming distance",
+            "zh": "汉明距离"
+          },
+          {
+            "en": "Averaging",
+            "zh": "平均值原理"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "For a target, count the positions where its face differs from the starting face. This distance is the exact flip cost. The two alternating targets have opposite faces everywhere, so their distances from any start sum to $14$.",
+          "Every target and the start have seven heads. To reach a target, the number of head-to-tail changes equals the number of tail-to-head changes, so both distances are even. Their average is $7$; the smaller even distance is therefore at most $6$.",
+          "For seven consecutive heads followed by seven consecutive tails, one target agrees at eight vertices (four in each run), and the other at six. The smaller distance is exactly $14-8=6$."
+        ],
+        "stepsZh": [
+          "把初始局面与目标在多少个位置上不同称为它们的距离；每个不同位置恰好翻一次即可。两个交替目标在每个位置都相反，因此初始局面到它们的距离之和为 $14$。",
+          "初始局面和目标都有七枚正面，所以从正翻反与从反翻正的次数相等，两个距离都是偶数。它们的平均数是 $7$，较小的偶数至多是 $6$。",
+          "让七枚正面连续排列，其余七枚反面也连续。一个目标在两段中各有四个位置与初始局面相同，共八个；另一个只相同六个。较小距离恰为 $14-8=6$。"
+        ]
+      }
+    ]
+  },
+  "nzmo2-2024-q2": {
+    "answer": "Once a term lies in $[0,\\sqrt2]$, the sequence repeats after two steps.",
+    "answerZh": "某一项进入 $[0,\\sqrt2]$ 后，此后的数列每隔两步重复。",
+    "methods": [
+      {
+        "title": "Enter the reflection interval",
+        "titleZh": "进入反射区间",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Invariant intervals",
+            "zh": "不变区间"
+          },
+          {
+            "en": "Absolute value",
+            "zh": "绝对值"
+          }
+        ],
+        "steps": [
+          "Write $s=\\sqrt{2}$. Each time the current value is at least $s$, the next value is smaller by exactly $s$. Hence after $q=\\lfloor a_1/s\\rfloor$ such steps we reach $a_{q+1}=a_1-qs\\in[0,s)$.",
+          "On $[0,s]$ the update is $x\\mapsto s-x$, which maps this interval into itself. Applying it twice gives $s-(s-x)=x$. Consequently $a_{q+3}=a_{q+1}$, so $k=q+1$ works."
+        ],
+        "stepsZh": [
+          "记 $s=\\sqrt{2}$。只要当前项至少为 $s$，下一项就恰好减去 $s$。因此经过 $q=\\lfloor a_1/s\\rfloor$ 步后得到 $a_{q+1}=a_1-qs\\in[0,s)$。",
+          "当 $0\\le x\\le s$ 时，递推变成 $x\\mapsto s-x$，所得值仍在该区间。连续作用两次便得到 $s-(s-x)=x$，故 $a_{q+3}=a_{q+1}$，可取 $k=q+1$。"
+        ],
+        "credit": "Ross Atkins"
+      },
+      {
+        "title": "A finite orbit and its diameter",
+        "titleZh": "有限轨道与最大距离",
+        "topics": [
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          },
+          {
+            "en": "Distance-preserving maps",
+            "zh": "保距映射"
+          },
+          {
+            "en": "Periodic sequences",
+            "zh": "周期数列"
+          }
+        ],
+        "steps": [
+          "Let $s=\\sqrt2$, $M=\\max(a_1,s)$ and $f(x)=|x-s|$. All iterates lie in $[0,M]$. Each lies in one of the sets $a_1+s\\mathbb Z$ and $-a_1+s\\mathbb Z$, since subtracting $s$ preserves these sets and changing the sign interchanges them. Their intersection with a bounded interval contains only finitely many points.",
+          "Some value therefore recurs. From its first recurrence onwards the deterministic sequence follows a finite cycle. Write $C$ for its set of values and $p$ for its period. The reverse triangle inequality gives $|f(x)-f(y)|\\le |x-y|$. As $f^p$ returns each pair in $C$ to its start, none of the $p$ successive distance inequalities can be strict. Thus $f$ preserves all distances on $C$.",
+          "If $C$ is a singleton we are done. Otherwise let $u=\\min C$ and $v=\\max C$. Only the pair $u,v$ is distance $v-u$ apart, so $f$ either fixes or swaps the endpoints. Distance to $u$ now shows that throughout $C$, respectively, $f(x)=x$ or $f(x)=u+v-x$. In either case $f^2(x)=x$."
+        ],
+        "stepsZh": [
+          "设 $s=\\sqrt2$，$M=\\max(a_1,s)$，$f(x)=|x-s|$。所有迭代值都在 $[0,M]$ 中，且都属于 $a_1+s\\mathbb Z$ 或 $-a_1+s\\mathbb Z$：减去 $s$ 后仍在原集合，变号则交换这两个集合。它们在有界区间中都只有有限个元素。",
+          "因此必有某个值重复出现。递推规则确定，所以数列最终进入循环。设循环中的取值集合为 $C$，周期为 $p$。由反三角不等式，$|f(x)-f(y)|\\le |x-y|$。对 $C$ 中任意两点迭代 $p$ 次，它们同时回到初始位置，距离也恢复初值。因此中间每一步都保持距离。",
+          "若 $C$ 只有一个元素，结论显然。否则记 $u=\\min C$，$v=\\max C$。只有 $u,v$ 这对端点相距 $v-u$，故 $f$ 要么固定两个端点，要么交换它们。比较任意点到端点的距离，分别得到 $f(x)=x$ 或 $f(x)=u+v-x$。两种情形都有 $f^2(x)=x$。"
+        ]
+      }
+    ]
+  },
+  "nzmo2-2024-q3": {
+    "answer": "$AF\\perp CD$.",
+    "answerZh": "$AF\\perp CD$。",
+    "methods": [
+      {
+        "title": "Recognise a parallel tangent",
+        "titleZh": "寻找一条与弦平行的切线",
+        "topics": [
+          {
+            "en": "Tangent–chord theorem",
+            "zh": "弦切角定理"
+          },
+          {
+            "en": "Inscribed angles",
+            "zh": "圆周角"
+          },
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          }
+        ],
+        "steps": [
+          "Since $AB=AE=AF$, the points $B,E,F$ lie on the circle with centre $A$. Denote its tangent at $F$ by $\\ell$. It suffices to prove $CD\\parallel\\ell$, since $AF$ is a radius.",
+          "Use directed line angles modulo $180^\\circ$. On the original circle, the angles subtended by chord $CB$ at $D$ and $E$ agree. Hence $\\angle(DC,DB)=\\angle(EC,EB)=\\angle(EF,EB)$, where $C,F,E$ are collinear.",
+          "On the circle with centre $A$, the tangent–chord theorem gives $\\angle(\\ell,FB)=\\angle(EF,EB)$. As $D,F,B$ are collinear, $CD$ and $\\ell$ make the same directed angle with line $FB$. They are parallel, completing the proof."
+        ],
+        "stepsZh": [
+          "由 $AB=AE=AF$，点 $B,E,F$ 在以 $A$ 为圆心的圆上。设该圆在 $F$ 处的切线为 $\\ell$。半径 $AF$ 垂直于 $\\ell$，只需证明 $CD\\parallel\\ell$。",
+          "以下取模 $180^\\circ$ 的直线有向角。在原圆中，同弦 $CB$ 在 $D$ 和 $E$ 所对的圆周角相等。又因 $C,F,E$ 共线，故 $\\angle(DC,DB)=\\angle(EC,EB)=\\angle(EF,EB)$。",
+          "在以 $A$ 为圆心的圆中，由弦切角定理，$\\angle(\\ell,FB)=\\angle(EF,EB)$。由 $D,F,B$ 共线，直线 $CD$、$\\ell$ 与 $FB$ 所成的有向角相同，故两线平行，结论得证。"
+        ]
+      },
+      {
+        "title": "Combine chord power with a dot product",
+        "titleZh": "相交弦定理与向量点积",
+        "topics": [
+          {
+            "en": "Intersecting chords",
+            "zh": "相交弦定理"
+          },
+          {
+            "en": "Dot product",
+            "zh": "向量点积"
+          },
+          {
+            "en": "Perpendicular lines",
+            "zh": "直线垂直"
+          }
+        ],
+        "steps": [
+          "Take $F$ as vector origin. Write $a,b,c,d,e$ for the position vectors of $A,B,C,D,E$. From $|a-b|=|a|$ and $|a-e|=|a|$ we obtain $2a\\cdot b=|b|^2$ and $2a\\cdot e=|e|^2$.",
+          "The crossing chords give $FB\\,FD=FE\\,FC=P>0$. On each chord its two endpoints are on opposite sides of $F$. Therefore $d=-P b/|b|^2$ and $c=-P e/|e|^2$.",
+          "Taking dot products with $a$ gives $a\\cdot d=a\\cdot c=-P/2$. Thus $a\\cdot(d-c)=0$: the direction of $FA$ is perpendicular to the direction of $CD$."
+        ],
+        "stepsZh": [
+          "以 $F$ 为向量原点，用 $a,b,c,d,e$ 表示各对应点的位置向量。将 $|a-b|=|a|$ 和 $|a-e|=|a|$ 两边平方展开，得 $2a\\cdot b=|b|^2$、$2a\\cdot e=|e|^2$。",
+          "由相交弦定理，$FB\\,FD=FE\\,FC=P>0$。每一条弦的两端点在 $F$ 的两侧，因此 $d=-P b/|b|^2$、$c=-P e/|e|^2$。",
+          "分别与 $a$ 作点积，得 $a\\cdot d=a\\cdot c=-P/2$，即 $a\\cdot(d-c)=0$。向量 $FA$ 的方向与直线 $CD$ 的方向垂直。"
+        ]
+      }
+    ]
+  },
+  "nzmo2-2024-q4": {
+    "answer": "The admissible values are $n\\in \\{6,8,10,12,18,36,90,252,738\\}$.",
+    "answerZh": "所有可行值为 $n\\in \\{6,8,10,12,18,36,90,252,738\\}$。",
+    "methods": [
+      {
+        "title": "Test the prime divisors of the difference",
+        "titleZh": "检验系数差的素因子",
+        "topics": [
+          {
+            "en": "Prime divisibility",
+            "zh": "素数整除"
+          },
+          {
+            "en": "Modular inverses",
+            "zh": "模逆元"
+          },
+          {
+            "en": "Linear combinations",
+            "zh": "整式线性组合"
+          }
+        ],
+        "steps": [
+          "First exclude $n=9$: taking $x=1$ gives two copies of $10$. For $n\\ne9$, every common divisor of $9x+1$ and $nx+1$ divides $n(9x+1)-9(nx+1)=n-9$. It also cannot be a multiple of $3$, because $9x+1\\equiv1\\pmod3$. Thus every $n$ with $|n-9|=3^j$ for an integer $j\\ge0$ works.",
+          "Conversely, if $|n-9|$ has a prime factor $p\\ne3$, then $9$ has a multiplicative inverse modulo $p$. Choose a positive $x$ with $x\\equiv-9^{-1}\\pmod p$. Then $9x+1\\equiv0\\pmod p$, and since $n\\equiv9\\pmod p$, also $nx+1\\equiv0\\pmod p$. This $n$ fails.",
+          "The positive candidates below $2024$ are $9-1,9-3$ and $9+1,9+3,9+9,9+27,9+81,9+243,9+729$. The next plus choice exceeds the limit, and $9-9=0$."
+        ],
+        "stepsZh": [
+          "先排除 $n=9$，此时取 $x=1$，两个数同为 $10$。对于 $n\\ne9$，任一公因数都整除 $n(9x+1)-9(nx+1)=n-9$。又因 $9x+1\\equiv1\\pmod3$，公因数不可能有素因子 $3$。所以当 $|n-9|=3^j$（$j\\ge0$ 为整数）时，公因数只能为 $1$。",
+          "反过来，若 $|n-9|$ 有素因子 $p\\ne3$，则 $9$ 在模 $p$ 意义下有乘法逆元。选正整数 $x\\equiv-9^{-1}\\pmod p$，便有 $9x+1\\equiv0\\pmod p$。再由 $n\\equiv9\\pmod p$ 得 $nx+1\\equiv0\\pmod p$，题设不成立。",
+          "在范围内的正值来自 $9-1,9-3$ 和 $9+1,9+3,9+9,9+27,9+81,9+243,9+729$。再加下一个三的幂已超出上界，而 $9-9=0$。"
+        ],
+        "credit": "Ross Atkins"
+      },
+      {
+        "title": "Construct the largest possible gcd",
+        "titleZh": "直接构造可达到的最大公因数",
+        "topics": [
+          {
+            "en": "Euclidean algorithm",
+            "zh": "欧几里得算法"
+          },
+          {
+            "en": "Euler’s theorem",
+            "zh": "欧拉定理"
+          },
+          {
+            "en": "Extremal construction",
+            "zh": "极值构造"
+          }
+        ],
+        "steps": [
+          "Exclude $n=9$ as $x=1$ already fails. Write $|n-9|=3^j m$ with $3\\nmid m$. Since $\\gcd(9x+1,x)=1$ and $3\\nmid(9x+1)$, the Euclidean algorithm gives $\\gcd(9x+1,nx+1)=\\gcd(9x+1,(n-9)x)=\\gcd(9x+1,m)$. Every possible gcd thus divides $m$.",
+          "If $m>1$, Euler’s theorem modulo $9$ gives $m^6\\equiv1\\pmod9$, because $\\varphi(9)=6$. The choice $x=(m^6-1)/9$ is a positive integer with $9x+1=m^6$. It realizes the largest possible gcd, namely $m$. When $m=1$, the gcd identity already gives $1$ for every $x$.",
+          "Thus the condition is precisely $m=1$, or $n=9\\pm3^j$. Taking $0<n<2024$ gives the nine values in the answer."
+        ],
+        "stepsZh": [
+          "当 $n=9$ 时取 $x=1$ 即可排除。设 $|n-9|=3^j m$，其中 $3\\nmid m$。因为 $\\gcd(9x+1,x)=1$，且 $3\\nmid(9x+1)$，辗转相除可得 $\\gcd(9x+1,nx+1)=\\gcd(9x+1,(n-9)x)=\\gcd(9x+1,m)$。故所有可能的最大公因数都是 $m$ 的约数。",
+          "若 $m>1$，由模 $9$ 的欧拉定理和 $\\varphi(9)=6$，有 $m^6\\equiv1\\pmod9$。取正整数 $x=(m^6-1)/9$，则 $9x+1=m^6$，公因数的最大可能值 $m$ 确可达到。若 $m=1$，前面的恒等式直接给出任意 $x$ 对应的最大公因数都是 $1$。",
+          "故条件恰为 $m=1$，即 $n=9\\pm3^j$。再按 $0<n<2024$ 筛选，得到答案中的九个数。"
+        ]
+      }
+    ]
+  },
+  "nzmo2-2024-q5": {
+    "answer": "$L=3$. Every admissible quadruple gives a sum strictly below $3$, and consecutive large integers make it arbitrarily close to $3$.",
+    "answerZh": "$L=3$。每组可行整数给出的和都严格小于 $3$，但取足够大的连续整数可令该和任意接近 $3$。",
+    "methods": [
+      {
+        "title": "Split according to the first gap",
+        "titleZh": "按第一个间隔分类",
+        "topics": [
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          },
+          {
+            "en": "Integer gaps",
+            "zh": "整数间隔"
+          },
+          {
+            "en": "Least upper bound",
+            "zh": "最小上界"
+          }
+        ],
+        "steps": [
+          "Write $S=1/a+a/b+b/c+c/d$. If $b\\ge a+2$, then $S<1/a+a/(a+2)+2\\le3$. Here $b/c,c/d<1$, and the last inequality follows from $1/a\\le2/(a+2)$ for $a\\ge2$.",
+          "If $b=a+1$, then $c\\ge a+2$ and $c/d<1$. Hence $S<1/a+a/(a+1)+(a+1)/(a+2)+1$. The difference between this upper expression and $3$ equals $(2-a^2)/(a(a+1)(a+2))<0$. Both cases give $S<3$.",
+          "For $(a,b,c,d)=(N,N+1,N+2,N+3)$ with $N\\ge2$, the first term tends to zero and each of the other three terms tends to one as $N\\to\\infty$. Thus $S\\to3$, ruling out every smaller upper bound."
+        ],
+        "stepsZh": [
+          "记 $S=1/a+a/b+b/c+c/d$。若 $b\\ge a+2$，则 $S<1/a+a/(a+2)+2\\le3$。这里用到了 $b/c,c/d<1$，以及 $a\\ge2$ 时 $1/a\\le2/(a+2)$。",
+          "若 $b=a+1$，则 $c\\ge a+2$，且 $c/d<1$。于是 $S<1/a+a/(a+1)+(a+1)/(a+2)+1$。右边减去 $3$ 得 $(2-a^2)/(a(a+1)(a+2))<0$。两种情况下均有 $S<3$。",
+          "取 $(a,b,c,d)=(N,N+1,N+2,N+3)$，其中 $N\\ge2$。当 $N\\to\\infty$ 时第一项趋于零，其余三项各趋于一。因此 $S\\to3$，任何比 $3$ 小的数都不能作为统一上界。"
+        ],
+        "credit": "Ross Atkins"
+      },
+      {
+        "title": "Collapse two neighboring ratios",
+        "titleZh": "合并两个相邻比值",
+        "topics": [
+          {
+            "en": "Factorization",
+            "zh": "因式分解"
+          },
+          {
+            "en": "Telescoping products",
+            "zh": "连乘约分"
+          },
+          {
+            "en": "Limits and sharpness",
+            "zh": "极限与最优性"
+          }
+        ],
+        "steps": [
+          "Write $S$ for the sum in the question. For $0<u,v<1$, expanding $(1-u)(1-v)>0$ gives $u+v<1+uv$. Set $u=a/b$ and $v=b/c$. Their product is $a/c$, so $a/b+b/c<1+a/c$.",
+          "Since $c/d<1$ and the integers satisfy $c\\ge a+2$, we get $S<2+1/a+a/c\\le2+1/a+a/(a+2)$. The last expression is $3+(2-a)/(a(a+2))\\le3$. This proves a strict bound without splitting into cases.",
+          "For large consecutive integers $(N,N+1,N+2,N+3)$, the sum approaches $0+1+1+1=3$. Hence $3$ is the least upper bound even though it is never attained."
+        ],
+        "stepsZh": [
+          "记题中的和为 $S$。当 $0<u,v<1$ 时，将 $(1-u)(1-v)>0$ 展开可得 $u+v<1+uv$。取 $u=a/b$、$v=b/c$，两者相乘可约分为 $a/c$，故 $a/b+b/c<1+a/c$。",
+          "又因 $c/d<1$，并且整数条件保证 $c\\ge a+2$，有 $S<2+1/a+a/c\\le2+1/a+a/(a+2)$。最后一式等于 $3+(2-a)/(a(a+2))\\le3$，统一给出严格上界。",
+          "对于连续整数 $(N,N+1,N+2,N+3)$，令 $N$ 增大，原式趋于 $0+1+1+1=3$。所以尽管上界 $3$ 无法取到，它仍是最小上界。"
+        ]
+      }
+    ]
+  }
+}

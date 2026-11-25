@@ -2,6 +2,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fileDigest } from './inline-digest.mjs';
+import { printableSolutions, sourceDigest } from './solution-edition.mjs';
 
 const site = fileURLToPath(new URL('../', import.meta.url));
 const data = path.join(site, 'src/data');
@@ -76,6 +77,35 @@ async function verify() {
   const outputs = (await readdir(output)).filter(name => name.endsWith('.pdf') || name.endsWith('.build.json'));
   checkKeys(outputs, expectedOutputs, 'Published question PDFs and manifests');
   console.log(`Verified ${total} question PDFs across ${editions.length} editions.`);
+
+  const solutionsDir = path.join(data, 'answers');
+  const solvedEditions = (await readdir(solutionsDir)).filter(name => name.endsWith('.json'));
+  const solvedOutputs = new Set();
+  const solutionOutput = path.join(publicDir, 'solution-pdf');
+  for (const name of solvedEditions) {
+    const id = path.basename(name, '.json');
+    const paper = papers.get(id);
+    if (!paper) throw new Error('Unknown solution edition: ' + name);
+    const edition = await readJSON(path.join(editionDir, name));
+    const {title, source} = printableSolutions(edition, paper, await readJSON(path.join(solutionsDir, name)));
+    const manifestName = id + '.build.json';
+    const manifest = await readJSON(path.join(solutionOutput, manifestName));
+    if (manifest.version !== 1 || manifest.generatorSha256 !== generatorSha256 || manifest.title !== title ||
+        manifest.sourceSha256 !== sourceDigest(source)) throw new Error('Stale solution PDF manifest: ' + name);
+    const filenames = new Set(source.questions.map(q => q.id + '.pdf'));
+    checkKeys(Object.keys(manifest.pdfs), filenames, manifestName + ' solution PDF list');
+    for (const [figure, hash] of Object.entries(manifest.figures)) {
+      await checkHash(path.join(publicDir, 'inline-figures', figure), hash);
+    }
+    for (const filename of filenames) {
+      await checkHash(path.join(solutionOutput, filename), manifest.pdfs[filename]);
+      solvedOutputs.add(filename);
+    }
+    solvedOutputs.add(manifestName);
+  }
+  const included = (await readdir(solutionOutput)).filter(name => name.endsWith('.pdf') || name.endsWith('.build.json'));
+  checkKeys(included, solvedOutputs, 'Published solution PDFs and manifests');
+  console.log(`Verified ${solvedOutputs.size - solvedEditions.length} worked-solution PDFs.`);
 }
 
 await verify();

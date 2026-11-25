@@ -15,9 +15,42 @@
     "solutions": [
       {
         "title": "Compress the gaps",
-        "text": "Suppose the left end is lit. Positions 2 and 10 must be dark. Choose three non-adjacent positions from 3 through 9. If their indices within these seven positions are a < b < c, then a, b-1, c-2 form an ordinary three-element subset of 1 through 5. This reversible transformation gives 10 choices. The right end gives another 10."
+        "text": "Suppose the left end is lit. Positions 2 and 10 must be dark. Choose three non-adjacent positions from 3 through 9. If their indices within these seven positions are a < b < c, then a, b-1, c-2 form an ordinary three-element subset of 1 through 5. This reversible transformation gives 10 choices. The right end gives another 10.",
+        "titleZh": "压缩相邻灯之间的空位",
+        "textZh": "假设左端点亮，则第 2 盏和右端第 10 盏必须熄灭。剩下三盏从第 3 至第 9 盏中选，且两两不相邻。把这七个位置重新编号为 1 至 7，所选下标记为 a < b < c。减去必须留出的空位后，a、b−1、c−2 恰为 1 至 5 中三个严格递增的数。反向加回即可还原，所以有 10 种选法。右端点亮的情形相同，共 20 种。",
+        "topics": [
+          {
+            "en": "Gap compression",
+            "zh": "间隔压缩"
+          },
+          {
+            "en": "Bijections",
+            "zh": "双射"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ]
+      },
+      {
+        "title": "Build a recurrence from the last lamp",
+        "text": "Fix the lit end. There are seven eligible positions for the other three lit lamps. Let F(n,k) count ways to light k nonadjacent lamps in n positions. If the last lamp is dark there are F(n-1,k) ways; if it is lit its neighbour must be dark, giving F(n-2,k-1). This gives F(7,3)=F(6,3)+F(5,2). For three lights in six slots the four possibilities are 135, 136, 146 and 246. For two in five slots, 10 pairs minus 4 adjacent pairs gives 6. Thus each end gives 4+6=10, and the two ends give 20.",
+        "titleZh": "按最后一盏灯建立递推",
+        "textZh": "固定点亮的端点后，还要在七个允许的位置中点亮三盏。令 F(n,k) 表示在 n 个位置中点亮 k 盏且不相邻的选法数。如果最后一盏熄灭，得到 F(n−1,k)；如果点亮，倒数第二盏必须熄灭，得到 F(n−2,k−1)。所以 F(7,3)=F(6,3)+F(5,2)。六个位置选三盏共有 135、136、146、246 四种下标组合；五个位置选两盏共有 10 对，去掉 4 对相邻的，剩 6 种。因此每个端点有 4+6=10 种，两个端点共 20 种。",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "20"
   },
   {
     "id": "count-ink-packets",
@@ -35,13 +68,38 @@
     "solutions": [
       {
         "title": "Subtract overflows",
-        "text": "After giving each team two, the three extra amounts sum to five and may each be at most three. Stars and bars gives 21 unrestricted triples. If a specified team receives at least four extras, remove four and distribute the remaining one in 3 ways. Two teams cannot both exceed the limit. The answer is 21 - 3(3) = 12."
+        "text": "After giving each team two, the three extra amounts sum to five and may each be at most three. Stars and bars gives 21 unrestricted triples. If a specified team receives at least four extras, remove four and distribute the remaining one in 3 ways. Two teams cannot both exceed the limit. The answer is 21 - 3(3) = 12.",
+        "titleZh": "先分保底数量，再减去超额情形",
+        "textZh": "先给每队两个墨盒，剩下五个，三队额外所得均不能超过三个。不考虑上限，隔板法给出 21 种。指定一队额外得到至少四个时，预留四个后仅剩一个，可给任一队，有 3 种。两队不可能同时超额。三队分别扣除，得到 21−3×3=12。",
+        "topics": [
+          {
+            "en": "Stars and bars",
+            "zh": "隔板法"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ]
       },
       {
         "title": "List the sorted triples",
-        "text": "In decreasing order, the only possible amounts are (5,4,2), (5,3,3), and (4,4,3). These can be assigned to the named teams in 6, 3, and 3 ways, respectively."
+        "text": "In decreasing order, the only possible amounts are (5,4,2), (5,3,3), and (4,4,3). These can be assigned to the named teams in 6, 3, and 3 ways, respectively.",
+        "titleZh": "列出排序后的分配",
+        "textZh": "先把三个数量由大到小排列。最大数为 5 时，另外两个之和是 6，只能是 4 和 2，或 3 和 3。最大数为 4 时，只能是 4、4、3。将三组数量分给有名称的队伍，分别有 6、3、3 种排列，共 12 种。",
+        "topics": [
+          {
+            "en": "Integer partitions",
+            "zh": "整数分拆"
+          },
+          {
+            "en": "Permutations with repetition",
+            "zh": "含重复元素的排列"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "12"
   },
   {
     "id": "count-detour",
@@ -59,9 +117,42 @@
     "solutions": [
       {
         "title": "Split the forbidden routes",
-        "text": "There are 126 routes because the four north steps can occupy any four of nine positions. Reaching (2,2) takes two east and two north steps, in 6 orders. From there, three east and two north steps have 10 orders. Exactly 6 times 10 routes use the intersection, leaving 126 - 60 = 66."
+        "text": "There are 126 routes because the four north steps can occupy any four of nine positions. Reaching (2,2) takes two east and two north steps, in 6 orders. From there, three east and two north steps have 10 orders. Exactly 6 times 10 routes use the intersection, leaving 126 - 60 = 66.",
+        "titleZh": "从所有路线中扣除经过封闭点的路线",
+        "textZh": "全程共九步，其中四步向北，可以任选四个位置放置北向步，共 126 条路线。到达 (2,2) 需向东、向北各两步，共 6 种；从 (2,2) 到终点还需向东三步、向北两步，共 10 种。经过封闭点的有 6×10=60 条，因此符合要求的有 126−60=66 条。",
+        "topics": [
+          {
+            "en": "Lattice paths",
+            "zh": "格点路径"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          },
+          {
+            "en": "Multiplication principle",
+            "zh": "乘法原理"
+          }
+        ]
+      },
+      {
+        "title": "Fill a table of reachable routes",
+        "text": "Write at each intersection the number of safe routes reaching it. Put 1 at the start, 0 at (2,2), and add the counts from the left and below at every other point (outside the grid the count is 0). From bottom to top the rows are (1,1,1,1,1,1), (1,2,3,4,5,6), (1,3,0,4,9,15), (1,4,4,8,17,32), and (1,5,9,17,34,66). The top-right entry is 66.",
+        "titleZh": "逐点填写安全路线数",
+        "textZh": "在每个格点填写到达它的安全路线数。起点填 1，封闭点 (2,2) 填 0；其余点填左边与下方两数之和，越界按 0 计。从底行向上，各行依次为 (1,1,1,1,1,1)、(1,2,3,4,5,6)、(1,3,0,4,9,15)、(1,4,4,8,17,32)、(1,5,9,17,34,66)。右上角的 66 就是答案。",
+        "topics": [
+          {
+            "en": "Dynamic programming",
+            "zh": "动态规划"
+          },
+          {
+            "en": "Lattice paths",
+            "zh": "格点路径"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "66"
   },
   {
     "id": "count-residue-draw",
@@ -79,9 +170,42 @@
     "solutions": [
       {
         "title": "Count residue patterns",
-        "text": "Each residue class has four cards. Taking one card from every class gives 4^3 = 64 selections. Taking all three from one class gives 3 times 4 = 12 selections. A pattern with exactly two equal residues cannot sum to zero modulo 3. The total is 76."
+        "text": "Each residue class has four cards. Taking one card from every class gives 4^3 = 64 selections. Taking all three from one class gives 3 times 4 = 12 selections. A pattern with exactly two equal residues cannot sum to zero modulo 3. The total is 76.",
+        "titleZh": "按模 3 的余数类型计数",
+        "textZh": "每个余数类有四张卡。三张卡各取不同余数，和一定是 3 的倍数，共 4³=64 种。如果三个余数相同，也满足条件，三个余数类各有 4 种选法，共 12 种。如果恰有两个余数相同，和被 3 整除将迫使第三个余数也相同。总计 64+12=76 种。",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余运算"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ]
+      },
+      {
+        "title": "Count ordered draws and remove coincidences",
+        "text": "Allow repeats and order the draws. The first two cards can be any of 12 each, and four labels then give the required third residue: 576 ordered triples. For any specified pair of positions to agree, choose its common label in 12 ways and the remaining label in 4 ways, giving 48. Two coincidence conditions force all three labels to agree; all 12 such triples work. Inclusion-exclusion therefore leaves 576 - 3(48) + 3(12) - 12 = 456 distinct-label triples. Each unordered selection has six orders, giving 456/6 = 76.",
+        "titleZh": "先按有序抽取计数，再排除重复",
+        "textZh": "暂时允许重复并区分顺序。前两张标签各有 12 种选法，第三张被限定在一个余数类，有 4 种，共 576 个有序三元组。若指定两个位置相同，相同的标签可选 12 种，剩下的位置可选 4 种，共 48 种。任意两种相等条件同时成立，就迫使三个标签都相同，这样有 12 种，且都符合整除条件。容斥得互异标签三元组数 576−3×48+3×12−12=456。每个无序组合对应六种排列，故为 456÷6=76。",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Ordered counting",
+            "zh": "有序计数"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余运算"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "76"
   },
   {
     "id": "count-letter-blocks",
@@ -99,9 +223,38 @@
     "solutions": [
       {
         "title": "Join equal neighbors",
-        "text": "The letters L,L,E,E,V have 5!/(2!2!) = 30 arrangements. Joining LL into a block gives 4!/2! = 12 arrangements; joining EE also gives 12. With both pairs joined, the two blocks and V have 3! = 6 orders. Thus the required number is 30 - 12 - 12 + 6 = 12."
+        "text": "The letters L,L,E,E,V have 5!/(2!2!) = 30 arrangements. Joining LL into a block gives 4!/2! = 12 arrangements; joining EE also gives 12. With both pairs joined, the two blocks and V have 3! = 6 orders. Thus the required number is 30 - 12 - 12 + 6 = 12.",
+        "titleZh": "将相邻同字母捆绑",
+        "textZh": "不加限制时共有 5!/(2!2!)=30 种排列。将 LL 捆成一块有 4!/2!=12 种，将 EE 捆成一块也有 12 种。两对都相邻时，LL、EE、V 三块可以任意排列，有 6 种。因此符合要求的排列数为 30−12−12+6=12。",
+        "topics": [
+          {
+            "en": "Block counting",
+            "zh": "捆绑法"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ]
+      },
+      {
+        "title": "Insert the single V",
+        "text": "Remove V first. The base words LELE and ELEL alternate, so V may be inserted in any of their five gaps, including the ends. In LEEL and ELLE there is one adjacent equal pair, and V must split it. LLEE and EELL each have two such pairs; one V cannot repair both. Insertion is reversible, so the total is 2(5)+2(1)=12.",
+        "titleZh": "先排列 L、E，再插入 V",
+        "textZh": "先删除 V。LELE、ELEL 都已交替排列，V 在两端及内部共五个空位均可插入。LEEL、ELLE 各有一对相邻同字母，V 只能插在这一对的中间。LLEE、EELL 各有两对相邻同字母，一个 V 无法同时隔开。删除 V 可还原每种情形，总数为 2×5+2×1=12。",
+        "topics": [
+          {
+            "en": "Insertion method",
+            "zh": "插空法"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "12"
   },
   {
     "id": "count-signal-times",
@@ -119,13 +272,38 @@
     "solutions": [
       {
         "title": "Count individual and shared flashes",
-        "text": "There are 22 multiples of 8 and 15 multiples of 12. The common flashes occur at multiples of 24, of which there are 7. Each common time was counted twice and must be removed twice. The required count is 22 + 15 - 14 = 23."
+        "text": "There are 22 multiples of 8 and 15 multiples of 12. The common flashes occur at multiples of 24, of which there are 7. Each common time was counted twice and must be removed twice. The required count is 22 + 15 - 14 = 23.",
+        "titleZh": "统计各灯闪烁并扣除重合时刻",
+        "textZh": "8 的正倍数有 22 个，12 的正倍数有 15 个。同时闪烁发生在二者最小公倍数 24 的倍数处，共 7 次。每个重合时刻被计入两次，而题目要求它贡献 0，故须减两次：22+15−2×7=23。",
+        "topics": [
+          {
+            "en": "Least common multiple",
+            "zh": "最小公倍数"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ]
       },
       {
         "title": "Count full cycles",
-        "text": "In each interval of 24 successive seconds starting just after a multiple of 24, the single flashes occur at offsets 8, 12, and 16. Seven full cycles contribute 21. In the remaining 12 seconds, offsets 8 and 12 contribute two more."
+        "text": "In each interval of 24 successive seconds starting just after a multiple of 24, the single flashes occur at offsets 8, 12, and 16. Seven full cycles contribute 21. In the remaining 12 seconds, offsets 8 and 12 contribute two more.",
+        "titleZh": "按完整周期计数",
+        "textZh": "每个 24 秒周期内，从周期起点向后计时，只有第 8、12、16 秒恰有一盏灯闪烁。180 秒含 7 个完整周期，贡献 21 次，剩余 12 秒内还会出现第 8、12 秒两次，共 23 次。",
+        "topics": [
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          },
+          {
+            "en": "Quotient and remainder",
+            "zh": "整除与余数"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "23"
   },
   {
     "id": "count-octagon",
@@ -143,9 +321,38 @@
     "solutions": [
       {
         "title": "Choose by opposite pairs",
-        "text": "First choose which of the four pairs is fully marked. The two remaining marked vertices must come from two different pairs among the three unused pairs. There are 3 ways to choose these pairs, and 2 choices of vertex in each. The total is 4 times 3 times 2 times 2 = 48."
+        "text": "First choose which of the four pairs is fully marked. The two remaining marked vertices must come from two different pairs among the three unused pairs. There are 3 ways to choose these pairs, and 2 choices of vertex in each. The total is 4 times 3 times 2 times 2 = 48.",
+        "titleZh": "先选完整的对顶点对",
+        "textZh": "四对对顶点中，先选一对全部标记，有 4 种。剩下两个标记必须来自另外三对中的不同两对，有 3 种选法；每一对又可任选其中一个顶点。总数为 4×3×2×2=48。",
+        "topics": [
+          {
+            "en": "Multiplication principle",
+            "zh": "乘法原理"
+          },
+          {
+            "en": "Opposite vertex pairs",
+            "zh": "对顶点配对"
+          }
+        ]
+      },
+      {
+        "title": "Subtract zero-pair and two-pair markings",
+        "text": "There are 70 ways to mark four of eight vertices. A marking with no opposite pair must choose one vertex from each of the four pairs, giving 16 ways. A marking with two opposite pairs is determined by those two pairs among the four, giving 6 ways. The remaining 70-16-6=48 markings have exactly one opposite pair.",
+        "titleZh": "扣除零对和两对对顶点",
+        "textZh": "八个顶点选四个共有 70 种。如果没有完整对顶点对，就要从每一对中各选一个，共 16 种。如果有两对完整对顶点，只需从四对中挑两对，共 6 种。四个标记最多组成两对，故恰有一对的情形有 70−16−6=48 种。",
+        "topics": [
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "48"
   },
   {
     "id": "count-painted-tiles",
@@ -163,9 +370,38 @@
     "solutions": [
       {
         "title": "Condition on the number of blue tiles",
-        "text": "With one blue tile there are four red tiles, so the six tiles have 6!/4! = 30 orders. With two blue tiles there are two red tiles, giving 5!/(2!2!) = 30 orders. With three blue tiles there are no red tiles, and the green tile can occupy any of four positions. The sum is 30 + 30 + 4 = 64."
+        "text": "With one blue tile there are four red tiles, so the six tiles have 6!/4! = 30 orders. With two blue tiles there are two red tiles, giving 5!/(2!2!) = 30 orders. With three blue tiles there are no red tiles, and the green tile can occupy any of four positions. The sum is 30 + 30 + 4 = 64.",
+        "titleZh": "按蓝砖的数量分类",
+        "textZh": "若用一块蓝砖，还需四块红砖，加上绿砖共有六块，排列数为 6!/4!=30。若用两块蓝砖，还需两块红砖，排列数为 5!/(2!2!)=30。若用三块蓝砖，无红砖，绿砖有四个可能位置。共 30+30+4=64 种。",
+        "topics": [
+          {
+            "en": "Multinomial coefficients",
+            "zh": "多项式系数"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ]
+      },
+      {
+        "title": "Split the strip at the green tile",
+        "text": "Let f(k) count red-blue tilings of length k. The last tile gives f(k)=f(k-1)+f(k-2), with f(0)=f(1)=1. Thus for k from 0 to 6 the counts are 1,1,2,3,5,8,13. If the green tile has length k to its left, the two remaining strips have f(k)f(6-k) tilings. Summing over k gives 13+8+10+9+10+8+13=71. Exactly seven tilings use no blue tile, one for each green position. Subtract them to obtain 64.",
+        "titleZh": "沿绿砖把长条分成两段",
+        "textZh": "令 f(k) 为用红、蓝砖铺满长度 k 的方法数。按末砖分类有 f(k)=f(k−1)+f(k−2)，且 f(0)=f(1)=1。于是 k 从 0 到 6 的取值依次为 1、1、2、3、5、8、13。绿砖左边长度为 k 时，右边长度为 6−k，两边独立，有 f(k)f(6−k) 种。对 k 求和为 13+8+10+9+10+8+13=71。其中无蓝砖的情况每个绿砖位置恰有一种，共 7 种，故答案为 64。",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Convolution",
+            "zh": "卷积计数"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "64"
   },
   {
     "id": "count-return-walks",
@@ -182,9 +418,42 @@
     "solutions": [
       {
         "title": "Split into excursions",
-        "text": "A positive excursion of length 2 can only be UD; one of length 4 can only be UUDD. In length 6, remove the initial U and the final D and lower the remaining path by one. The middle four steps then give either UUDD or UDUD, so there are two excursions of length 6. The two excursion lengths can be (2,6), (4,4), or (6,2). They give 1(2) + 1(1) + 2(1) = 5 walks."
+        "text": "A positive excursion of length 2 can only be UD; one of length 4 can only be UUDD. In length 6, remove the initial U and the final D and lower the remaining path by one. The middle four steps then give either UUDD or UDUD, so there are two excursions of length 6. The two excursion lengths can be (2,6), (4,4), or (6,2). They give 1(2) + 1(1) + 2(1) = 5 walks.",
+        "titleZh": "在唯一一次中途归零处分割",
+        "textZh": "路径分成两段，每段只在起点和终点取零。用 U、D 表示上、下步。长度 2 的段只有 UD，长度 4 的段只有 UUDD。长度 6 时，去掉第一步 U 和最后一步 D，把中间路径下移一格，得到四步非负闭路 UUDD 或 UDUD。两段长度分别可为 (2,6)、(4,4)、(6,2)，共 1×2+1×1+2×1=5 条。",
+        "topics": [
+          {
+            "en": "Path decomposition",
+            "zh": "路径分解"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ]
+      },
+      {
+        "title": "Bijection to a six-step Dyck path",
+        "text": "Write the two positive excursions as U P D and U Q D, where P and Q, measured relative to their starting heights, are nonnegative closed walks. Map the pair to U P D Q. It is a six-step nonnegative closed walk, and cutting it at its first return recovers P and Q. Of the 20 unrestricted six-step closed walks, the bad ones go below zero. Reflecting the steps through the first visit to -1 gives a bijection with six-step walks ending at 2 (reverse at the first visit to 1). There are 15 such walks, since they have two down-steps. Thus the answer is 20-15=5.",
+        "titleZh": "对应到六步非负闭路",
+        "textZh": "把两个正游程写为 U P D 和 U Q D；相对于各自起点的高度，P、Q 都是不低于零的闭路。将它们对应到 U P D Q，得到一条六步非负闭路。反过来，在这条新路径第一次回到零的位置切开，就能恢复 P 和 Q。所有六步闭路有 20 条。对曾到达 −1 的坏路径，把开头直到第一次到达 −1 的每一步反向，得到终点为 2 的六步路径；在新路径首次到达 1 时反向即可恢复。终点为 2 的路径有两步向下，共 15 条，故答案为 20−15=5。",
+        "topics": [
+          {
+            "en": "Bijections",
+            "zh": "双射"
+          },
+          {
+            "en": "Reflection principle",
+            "zh": "反射原理"
+          },
+          {
+            "en": "Dyck paths",
+            "zh": "戴克路径"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "5"
   },
   {
     "id": "count-marked-rectangles",
@@ -202,9 +471,38 @@
     "solutions": [
       {
         "title": "Choose row and column ranges",
-        "text": "For the upper mark, the top row must be 1, the bottom row has 3 choices, the left column has 2 choices, and the right column has 3. This gives 18 rectangles. Rotation by 180 degrees gives 18 for the lower mark. A rectangle containing both must use all three rows, with 2 choices for its left column and 2 for its right. Remove each of these 4 rectangles twice, giving 18 + 18 - 8 = 28."
+        "text": "For the upper mark, the top row must be 1, the bottom row has 3 choices, the left column has 2 choices, and the right column has 3. This gives 18 rectangles. Rotation by 180 degrees gives 18 for the lower mark. A rectangle containing both must use all three rows, with 2 choices for its left column and 2 for its right. Remove each of these 4 rectangles twice, giving 18 + 18 - 8 = 28.",
+        "titleZh": "用行列边界计数",
+        "textZh": "含上方标记的矩形必须从第 1 行开始，下边界有 3 种选择。左、右边界分别有 2 种、3 种，所以共有 18 个矩形。旋转 180° 可知含下方标记的也有 18 个。含两个标记的必须覆盖全部三行，左右边界各有 2 种选择，共 4 个。要求恰含一个标记，这 4 个各扣两次，得到 18+18−8=28。",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Rotational symmetry",
+            "zh": "旋转对称"
+          }
+        ]
+      },
+      {
+        "title": "Classify by the rows covered",
+        "text": "If the row interval contains row 1 but not row 3, it is either row 1 alone or rows 1-2. In either case six column intervals contain column 2 (two left endpoints, three right endpoints), giving 12 rectangles. By symmetry another 12 cover row 3 but not row 1. With all three rows present, the columns must end at 2 and start at 1 or 2, or start at 3 and end at 3 or 4. These four rectangles give a total of 12+12+4=28.",
+        "titleZh": "按矩形覆盖的行分类",
+        "textZh": "若矩形含第 1 行而不含第 3 行，行区间是第 1 行或第 1 至 2 行。每种行区间下，含第 2 列的列区间有 2×3=6 种，两种行区间共给出 12 个矩形。对称地，含第 3 行而不含第 1 行也有 12 个。若三行全含，列区间必须止于第 2 列（起于第 1 或 2 列），或始于第 3 列（止于第 3 或 4 列），另有 4 个。合计 12+12+4=28。",
+        "topics": [
+          {
+            "en": "Disjoint cases",
+            "zh": "互斥分类"
+          },
+          {
+            "en": "Interval counting",
+            "zh": "区间计数"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "28"
   },
   {
     "id": "count-parity-gaps",
@@ -221,9 +519,38 @@
     "solutions": [
       {
         "title": "Remove mandatory gaps",
-        "text": "The transformation (a,b,c) to (a,b-1,c-2) bijects gap-respecting choices with ordinary increasing triples from 1 through 6. Their sum is smaller by 3, so it must be odd. There are three odd and three even numbers available. An odd sum requires either three odds (1 choice) or one odd and two evens (3 times 3 choices), for a total of 10."
+        "text": "The transformation (a,b,c) to (a,b-1,c-2) bijects gap-respecting choices with ordinary increasing triples from 1 through 6. Their sum is smaller by 3, so it must be odd. There are three odd and three even numbers available. An odd sum requires either three odds (1 choice) or one odd and two evens (3 times 3 choices), for a total of 10.",
+        "titleZh": "去掉强制间隔",
+        "textZh": "将递增三元组 (a,b,c) 变为 (a,b−1,c−2)，就把满足间隔条件的选法一一对应到从 1 至 6 中任选的递增三元组。新和比原和小 3，故须为奇数。在三个奇数和三个偶数中，要么三数全奇（1 种），要么一个奇数和两个偶数（3×3 种），共 10 种。",
+        "topics": [
+          {
+            "en": "Gap compression",
+            "zh": "间隔压缩"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ]
+      },
+      {
+        "title": "Pair each choice with its reflection",
+        "text": "First count all triples a<b<c with gaps of at least two. For a given middle b there are (b-2)(7-b) choices for its neighbours; for b=3,4,5,6 the counts are 4,6,6,4, totalling 20. Reflect each chosen number x to 9-x. The gaps are preserved, and a sum S becomes 27-S, which has the opposite parity. Reflection is its own inverse, so exactly half of the 20 triples have even sum: 10.",
+        "titleZh": "用反射把奇偶两类配对",
+        "textZh": "先计数任意相邻两数至少差 2 的递增三元组 a<b<c。固定中间数 b，则左右两个数各有 b−2 和 7−b 种选择。b=3、4、5、6 时，分别有 4、6、6、4 种，共 20 种。把每个数 x 映为 9−x，间隔条件仍满足，原和 S 变成 27−S，奇偶性恰好反转。反射两次即回到原组合，因此奇和与偶和各占一半，偶和有 10 种。",
+        "topics": [
+          {
+            "en": "Involutions",
+            "zh": "对合映射"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "10"
   },
   {
     "id": "count-coin-runs",
@@ -241,9 +568,42 @@
     "solutions": [
       {
         "title": "Fix the middle run",
-        "text": "The 20 sequences with three heads are equally likely. If the sequence starts with H and has three runs, all three tails form the middle run. The three heads split into two nonempty runs in two ways, of lengths (1,2) or (2,1). Interchanging H and T gives two more sequences. The conditional probability is 4/20 = 1/5."
+        "text": "The 20 sequences with three heads are equally likely. If the sequence starts with H and has three runs, all three tails form the middle run. The three heads split into two nonempty runs in two ways, of lengths (1,2) or (2,1). Interchanging H and T gives two more sequences. The conditional probability is 4/20 = 1/5.",
+        "titleZh": "固定中间游程",
+        "textZh": "已知有三个正面，20 个等可能的投掷序列对应任选三个正面位置。设序列以正面开头且有三个游程，则三个反面必须连成中间一段。三个正面在首尾两段之间只有 (1,2)、(2,1) 两种分法。交换正反面又有两种，故概率是 4/20=1/5。",
+        "topics": [
+          {
+            "en": "Runs",
+            "zh": "游程"
+          },
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Integer compositions",
+            "zh": "正整数拆分"
+          }
+        ]
+      },
+      {
+        "title": "Condition on the two ends",
+        "text": "Exactly three runs requires the first and last tosses to agree. Of the 20 equiprobable sequences, 4 have both ends H (choose the remaining H among four interior positions) and 4 have both ends T. With identical ends, there is just one interior toss of the same kind as the ends. If it is next to an end, there are three runs; if it occupies either of the two central positions there are five. Thus the desired probability is (8/20)(2/4)=1/5.",
+        "titleZh": "先对首尾投掷条件化",
+        "textZh": "恰有三个游程，首尾必须相同。在 20 个等可能的序列中，首尾均为正面时，余下一个正面可放在四个内部位置之一，故有 4 个；首尾均为反面也有 4 个。首尾相同时，内部仅有一枚结果与首尾相同。它若紧邻任一端，就有三个游程；若在中间两个位置之一，就有五个游程。故所求概率为 (8/20)×(2/4)=1/5。",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Multiplication rule for probability",
+            "zh": "概率乘法公式"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "1/5"
   },
   {
     "id": "alg-quadratic-parameter",
@@ -261,9 +621,38 @@
     "solutions": [
       {
         "title": "Use sum and product",
-        "text": "The discriminant equals (t-1)^2 + 8, which is always positive. For two real roots to be positive, their product must be positive and their sum positive. Their product is t-2, so t > 2 is necessary. For t > 2 their sum t+1 is also positive, and the positive product forces the two roots to have the same sign. Hence both are positive."
+        "text": "The discriminant equals (t-1)^2 + 8, which is always positive. For two real roots to be positive, their product must be positive and their sum positive. Their product is t-2, so t > 2 is necessary. For t > 2 their sum t+1 is also positive, and the positive product forces the two roots to have the same sign. Hence both are positive.",
+        "titleZh": "利用两根之和与积",
+        "textZh": "判别式为 (t−1)²+8，恒正，所以总有两个不同的实根。两根都为正，必有积 t−2>0，即 t>2。反过来，若 t>2，两根之积为正，故同号；又根之和 t+1>0，两根只能均为正。",
+        "topics": [
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Discriminant",
+            "zh": "判别式"
+          }
+        ]
+      },
+      {
+        "title": "Locate the roots using a fixed test point",
+        "text": "Let f(x)=x^2-(t+1)x+t-2. Regardless of t, f(1)=-2 and f tends to positive infinity at both ends of the real line. Hence its two distinct roots lie one on either side of 1. The larger root is already positive. The smaller root lies in (0,1) exactly when f(0)>0: f is negative between its roots and positive outside. Since f(0)=t-2, the answer is t>2. At t=2 the smaller root is zero.",
+        "titleZh": "借助固定测试点定位零点",
+        "textZh": "记 f(x)=x²−(t+1)x+t−2。对任意 t，都有 f(1)=−2，且当 x 趋向正、负无穷时，f(x) 均趋向正无穷。因此两个不同零点分居 1 的两侧，较大者已为正。抛物线在两根之间为负、两根之外为正，所以较小根位于 (0,1) 当且仅当 f(0)>0。由于 f(0)=t−2，得到 t>2；在 t=2 时，较小根恰为 0。",
+        "topics": [
+          {
+            "en": "Sign of a quadratic",
+            "zh": "二次函数的符号"
+          },
+          {
+            "en": "Intermediate value theorem",
+            "zh": "介值定理"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "t > 2。"
   },
   {
     "id": "proof-fourth-power",
@@ -281,9 +670,38 @@
     "solutions": [
       {
         "title": "Complete a square",
-        "text": "Write n^4 + 4 = (n^2 + 2)^2 - (2n)^2. Factoring gives (n^2 - 2n + 2)(n^2 + 2n + 2). The smaller factor is (n-1)^2 + 1, at least 2 when n >= 2. The larger is even greater. The number is therefore a product of two integers greater than 1."
+        "text": "Write n^4 + 4 = (n^2 + 2)^2 - (2n)^2. Factoring gives (n^2 - 2n + 2)(n^2 + 2n + 2). The smaller factor is (n-1)^2 + 1, at least 2 when n >= 2. The larger is even greater. The number is therefore a product of two integers greater than 1.",
+        "titleZh": "配方后用平方差公式",
+        "textZh": "写成 n⁴+4=(n²+2)²−(2n)²，利用平方差公式得 (n²−2n+2)(n²+2n+2)。较小因子等于 (n−1)²+1，n≥2 时至少为 2；较大因子更大，所以原数是两个大于 1 的整数的积。",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方"
+          },
+          {
+            "en": "Sophie Germain identity",
+            "zh": "索菲·热尔曼恒等式"
+          }
+        ]
+      },
+      {
+        "title": "Find a proper divisor by modular arithmetic",
+        "text": "For even n the number is divisible by 4 and exceeds 4. For odd n>=3, take d=(n-1)^2+1. Modulo d we have (n-1)^2=-1 and hence n^2=(n-1)^2+2(n-1)+1=2(n-1). Squaring gives n^4=4(n-1)^2=-4 modulo d. Thus d divides n^4+4. Since 1<d<n^2<n^4+4, it is a proper divisor, proving compositeness.",
+        "titleZh": "用同余寻找真因子",
+        "textZh": "若 n 为偶数，n⁴+4 可被 4 整除且大于 4。若 n 为奇数，则 n≥3。取 d=(n−1)²+1，模 d 有 (n−1)²≡−1，从而 n²=(n−1)²+2(n−1)+1≡2(n−1)。平方得 n⁴≡4(n−1)²≡−4，所以 d 整除 n⁴+4。又 1<d<n²<n⁴+4，因此 d 是一个非平凡真因子。",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余运算"
+          },
+          {
+            "en": "Proper divisors",
+            "zh": "真因子"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "n⁴+4=(n²−2n+2)(n²+2n+2)，两个因子均大于 1，故为合数。"
   },
   {
     "id": "proof-two-fractions",
@@ -300,13 +718,38 @@
     "solutions": [
       {
         "title": "Use Cauchy-Schwarz",
-        "text": "For positive a,b, Cauchy-Schwarz gives u^2/a + v^2/b >= (u+v)^2/(a+b). Use u=x, v=y, a=1+y, b=1+x. The bound is 1/3. Equality requires x/(1+y) = y/(1+x), or (x-y)(1+x+y)=0. Hence x=y=1/2, which gives equality."
+        "text": "For positive a,b, Cauchy-Schwarz gives u^2/a + v^2/b >= (u+v)^2/(a+b). Use u=x, v=y, a=1+y, b=1+x. The bound is 1/3. Equality requires x/(1+y) = y/(1+x), or (x-y)(1+x+y)=0. Hence x=y=1/2, which gives equality.",
+        "titleZh": "应用分式形式的柯西不等式",
+        "textZh": "对于正数 a、b，有 u²/a+v²/b≥(u+v)²/(a+b)。取 u=x、v=y、a=1+y、b=1+x，因 x+y=1，得到下界 1/3。等号要求 x/(1+y)=y/(1+x)，即 (x−y)(1+x+y)=0。因此 x=y=1/2，此时可验证等号成立。",
+        "topics": [
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          },
+          {
+            "en": "Equality conditions",
+            "zh": "等号条件"
+          }
+        ]
       },
       {
         "title": "Compute the exact excess",
-        "text": "Bring the two fractions and 1/3 to denominator 3(1+x)(1+y). Using x+y=1, the numerator reduces to 4 - 16xy = 4(x-y)^2. The denominator is positive, so the excess is nonnegative and vanishes precisely when x=y."
+        "text": "Bring the two fractions and 1/3 to denominator 3(1+x)(1+y). Using x+y=1, the numerator reduces to 4 - 16xy = 4(x-y)^2. The denominator is positive, so the excess is nonnegative and vanishes precisely when x=y.",
+        "titleZh": "计算与下界的差",
+        "textZh": "将两个分式之和减去 1/3，通分到 3(1+x)(1+y)。利用 x+y=1，分子化为 4−16xy=4(x−y)²。分母为正，差非负，且当且仅当 x=y 时为零。结合 x+y=1 即得唯一等号点 (1/2,1/2)。",
+        "topics": [
+          {
+            "en": "Common denominators",
+            "zh": "通分"
+          },
+          {
+            "en": "Nonnegative squares",
+            "zh": "平方非负性"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "最小值是 1/3，当且仅当 x=y=1/2 时取到。"
   },
   {
     "id": "logic-finite-mean",
@@ -324,13 +767,42 @@
     "solutions": [
       {
         "title": "Sum the strict inequalities",
-        "text": "If the negation held, take such a list of length n with mean m. Summing the strict inequalities for its n entries would give a total strictly less than nm. By the definition of the mean, the total equals nm. This contradiction proves the claim."
+        "text": "If the negation held, take such a list of length n with mean m. Summing the strict inequalities for its n entries would give a total strictly less than nm. By the definition of the mean, the total equals nm. This contradiction proves the claim.",
+        "titleZh": "把各项严格不等式相加",
+        "textZh": "原命题的否定是：存在一个非空有限实数列，其中每一项都严格小于其平均数。设这样的数列共有 n 项，平均数为 m。把每一项均小于 m 的不等式相加，得到总和严格小于 nm。但依平均数定义，总和等于 nm，产生矛盾。",
+        "topics": [
+          {
+            "en": "Negation of quantifiers",
+            "zh": "量词的否定"
+          },
+          {
+            "en": "Proof by contradiction",
+            "zh": "反证法"
+          }
+        ]
       },
       {
         "title": "Compare with the maximum",
-        "text": "A nonempty finite list has a maximum M. Every entry is at most M, so its mean is at most M. The entry equal to M therefore meets the stated requirement."
+        "text": "A nonempty finite list has a maximum M. Every entry is at most M, so its mean is at most M. The entry equal to M therefore meets the stated requirement.",
+        "titleZh": "把平均数与最大项比较",
+        "textZh": "非空有限实数列一定有最大项 M，每一项都不超过 M，因此平均数也不超过 M。取值为 M 的那一项就满足原命题要求。于是“存在某个数列，其每项均小于平均数”不可能成立。",
+        "topics": [
+          {
+            "en": "Extremal elements",
+            "zh": "极值元素"
+          },
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Direct proof",
+            "zh": "直接证明"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "否定命题是：存在一个非空有限实数列，其中每一项均严格小于其平均数。原命题为真。"
   },
   {
     "id": "nt-fixed-remainder",
@@ -348,9 +820,38 @@
     "solutions": [
       {
         "title": "Reduce to a divisor list",
-        "text": "The identity n^2 + 4n + 19 = (n+5)(n-1) + 24 shows that divisibility is equivalent to n+5 dividing 24. Since n is positive, n+5 is at least 6. The positive divisors of 24 at least 6 are 6, 8, 12, and 24. Subtracting 5 yields exactly the four values listed."
+        "text": "The identity n^2 + 4n + 19 = (n+5)(n-1) + 24 shows that divisibility is equivalent to n+5 dividing 24. Since n is positive, n+5 is at least 6. The positive divisors of 24 at least 6 are 6, 8, 12, and 24. Subtracting 5 yields exactly the four values listed.",
+        "titleZh": "把问题化为枚举约数",
+        "textZh": "恒等式 n²+4n+19=(n+5)(n−1)+24 说明，要求等价于 n+5 整除 24。因 n 为正整数，n+5≥6。24 的正约数中满足此条件的是 6、8、12、24，分别减去 5 得 n=1、3、7、19。",
+        "topics": [
+          {
+            "en": "Division with remainder",
+            "zh": "带余除法"
+          },
+          {
+            "en": "Divisor enumeration",
+            "zh": "约数枚举"
+          }
+        ]
+      },
+      {
+        "title": "Bound the quotient and solve four linear equations",
+        "text": "If the quotient is the integer q, let k=q-n. Expanding gives (k+1)n=19-5k. For n>=1 the numerator exceeds (n-1)(n+5) by 24, and it is at most (n+3)(n+5), since the latter minus the numerator is 4(n-1). Thus -1<k<=3. Substituting k=0,1,2,3 into the linear equation yields n=19,7,3,1 respectively. Each satisfies the equation with integer q=n+k and so satisfies the original divisibility.",
+        "titleZh": "先界定商，再解四个一次方程",
+        "textZh": "假设商为整数 q，设 k=q−n，展开原等式得到 (k+1)n=19−5k。分子比 (n−1)(n+5) 大 24，又不超过 (n+3)(n+5)，因为后者减分子是 4(n−1)≥0。因此 −1<k≤3。将 k=0、1、2、3 逐一代入一次方程，得到 n=19、7、3、1。每组都满足该等式且 q=n+k 为整数，故都满足原整除条件。",
+        "topics": [
+          {
+            "en": "Bounding an integer quotient",
+            "zh": "整数商的估界"
+          },
+          {
+            "en": "Diophantine equations",
+            "zh": "丢番图方程"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "n 的全部取值为 1、3、7、19。"
   },
   {
     "id": "alg-absolute-roots",
@@ -368,8 +869,41 @@
     "solutions": [
       {
         "title": "Count roots by parameter range",
-        "text": "A negative k is impossible. For k=0 the two branches coincide at x^2=4, giving two roots. For 0<k<4, the branches yield two distinct positive values of x^2, so four roots. For k=4 they give x^2=8 or 0, so three roots. For k>4 the second branch is negative and only the first contributes its two roots."
+        "text": "A negative k is impossible. For k=0 the two branches coincide at x^2=4, giving two roots. For 0<k<4, the branches yield two distinct positive values of x^2, so four roots. For k=4 they give x^2=8 or 0, so three roots. For k>4 the second branch is negative and only the first contributes its two roots.",
+        "titleZh": "随参数分类计数实根",
+        "textZh": "k<0 时无解。k=0 时两个分支都给出 x²=4，有两个根。0<k<4 时，x²=4+k 和 x²=4−k 是不同的正数，合计四根。k=4 时，x² 为 8 或 0，共三根。k>4 时只有 x²=4+k 可行，共两根。因此所求为 k=0 或 k>4。",
+        "topics": [
+          {
+            "en": "Absolute-value equations",
+            "zh": "绝对值方程"
+          },
+          {
+            "en": "Parameter cases",
+            "zh": "参数分类讨论"
+          }
+        ]
+      },
+      {
+        "title": "Intersect a horizontal line with the graph",
+        "text": "The graph of y=|x^2-4| is symmetric about the y-axis. On [0,2] it decreases strictly from 4 to 0, then increases strictly from 0 to infinity for x>=2. A positive point of intersection on the right gives a pair of roots; an intersection on the symmetry axis contributes only the single root x=0. The line at height 0 touches at x=2 on the right, and each line above height 4 meets only the increasing branch on the right. These give exactly two roots by reflection. Heights strictly between 0 and 4 give four roots, height 4 gives three, and negative heights give none.",
+        "titleZh": "观察水平线与图像的交点",
+        "textZh": "函数 y=|x²−4| 的图像关于 y 轴对称。在 [0,2] 上，函数从 4 严格递减到 0；在 [2,+∞) 上，从 0 严格递增到无穷。每个正交点的横坐标均有一个相反数作伴，而 x=0 至多贡献一个解。高度为 0 时，右半边仅在 x=2 处接触；高度大于 4 时，右半边仅与递增支相交。这两种情形经反射恰得两根。0 与 4 之间的高度给出四根，高度 4 给出三根，负高度无根。",
+        "topics": [
+          {
+            "en": "Graph intersections",
+            "zh": "图像交点"
+          },
+          {
+            "en": "Even functions",
+            "zh": "偶函数"
+          },
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          }
+        ]
       }
-    ]
+    ],
+    "answerZh": "k=0 或 k>4。"
   }
 ]

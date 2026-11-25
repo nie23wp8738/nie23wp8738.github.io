@@ -79,8 +79,12 @@ function safeURL(value) {
   } catch { return ''; }
 }
 
+function assetFor(problem, solutions) {
+  return solutions ? problem.inline?.solutionPdf : problem.inline?.pdf;
+}
+
 function sheetKind(problems, solutions) {
-  const refs = problems.filter(p => p.kind === 'past' && (solutions || !p.inline?.pdf)).length;
+  const refs = problems.filter(p => p.kind === 'past' && !assetFor(p, solutions)).length;
   if (refs === 0) return solutions ? 'Solutions' : 'Question paper';
   if (refs === problems.length) return solutions ? 'Source guide' : 'Question references';
   return solutions ? 'Solutions and sources' : 'Questions and references';
@@ -153,7 +157,9 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
 
   function richSourceLinks(problem) {
     let x = margin;
-    for (const [label, target] of [['Original paper', problem.sourceURL], ['Licence', problem.inline.licenseUrl]]) {
+    const sources = [['Original paper', problem.sourceURL], ['Licence', problem.inline.licenseUrl]];
+    if (solutions && problem.solutionURL) sources.push(['Published solutions', problem.solutionURL]);
+    for (const [label, target] of sources) {
       const url = safeURL(target);
       if (!url) continue;
       const right = x + textWidth(label, 'label', 9);
@@ -207,7 +213,9 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
       y -= 4;
       section('Answer', problem.answer);
       for (const [methodIndex, method] of problem.solutions.entries()) {
-        section('Method ' + (methodIndex + 1) + ' - ' + method.title, method.text);
+        const topics = (method.topics || []).map(topic => plainLabel(topic.en)).filter(Boolean);
+        const body = topics.length ? 'Topics: ' + topics.join(', ') + '\n' + method.text : method.text;
+        section('Method ' + (methodIndex + 1) + ' - ' + method.title, body);
       }
     }
     y -= solutions ? 15 : 32;
@@ -266,8 +274,9 @@ async function buildRichWorksheet(problems, options, description) {
   const assets = new Map();
   const strips = new Map();
   for (const problem of problems) {
-    if (problem.kind !== 'past' || !problem.inline?.pdf) continue;
-    const url = new URL(problem.inline.pdf, location.origin);
+    const asset = assetFor(problem, options.solutions);
+    if (problem.kind !== 'past' || !asset) continue;
+    const url = new URL(asset, location.origin);
     if (url.origin !== location.origin) throw new Error('Invalid question PDF location.');
     if (!assets.has(url.href)) {
       const response = await fetch(url);
@@ -323,7 +332,7 @@ export async function downloadWorksheet(problems, { solutions = false, layout = 
   const kind = sheetKind(problems, solutions);
   const description = title + ' - ' + kind;
   const options = {solutions, layout, title};
-  const hasInline = !solutions && problems.some(p => p.kind === 'past' && p.inline?.pdf);
+  const hasInline = problems.some(p => p.kind === 'past' && assetFor(p, solutions));
   const blob = hasInline ? await buildRichWorksheet(problems, options, description)
     : serializePages(renderPages(problems, options), description);
   const url = URL.createObjectURL(blob);

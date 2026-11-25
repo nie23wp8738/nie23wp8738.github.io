@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import practice from '../data/problems.json';
+import { getPastPapers,localPractice } from '../lib/catalog.js';
+import { getWorkedAnswer,originalAnswer,methodTopicKey } from '../lib/answers.js';
+const {lang='en'} = Astro.props;
+const zh=lang==='zh', root=zh?'/zh':'';
+const t=(en,cn)=>zh?cn:en;
+const topics=new Map();
+const rows=[];
+function addMethods(answer, question, path) {
+  answer.methods.forEach((method,i)=>{
+    const keys = method.topics.map(topic=>{
+      const key=methodTopicKey(topic.en);
+      if (!topics.has(key)) topics.set(key,t(topic.en,topic.zh));
+      return key;
+    });
+    rows.push({keys,title:t(method.title,method.titleZh),question,href:root+path+'#method-'+(i+1)});
+  });
+}
+for (const paper of getPastPapers()) for (const question of paper.questions) {
+  if (!question.inline?.solutionPdf) continue;
+  const id=paper.id+'-q'+question.n;
+  addMethods(getWorkedAnswer(id),paper.label+t(' · Question ',' · 第 ')+question.n+t('',' 题'),'/questions/'+id+'/');
+}
+for (const p of practice) addMethods(originalAnswer(p),localPractice(p,lang).title,'/problems/'+p.id+'/');
+const options=[...topics].sort((a,b)=>a[1].localeCompare(b[1],zh?'zh-CN':'en'));
+---
+<Layout lang={lang} current="topics" title={t('Solution methods by topic','按知识点找解法')}>
+  <article class="shell question method-index">
+    <nav class="breadcrumb" aria-label={t('Breadcrumb','当前位置')}><a href={root+'/topics/'}>{t('Topics','知识点')}</a></nav>
+    <h1>{t('Solution methods by topic','按知识点找解法')}</h1>
+    <form class="method-search" data-method-filter><label>{t('Topic used in the solution','解法用到的知识点')}
+      <select name="topic"><option value="">{t('All topics','全部知识点')}</option>{options.map(([key,name])=><option value={key}>{name}</option>)}</select>
+    </label></form>
+    <p role="status" aria-live="polite" data-method-count></p>
+    <ul data-method-list>{rows.map(row=><li data-keys={JSON.stringify(row.keys)}><a href={row.href}>{row.title}</a><span>{row.question}</span></li>)}</ul>
+  </article>
+</Layout>
+<style>
+  .method-index {max-width:900px;}
+  .method-search label {display:grid;gap:.4rem;margin:1rem 0;width:min(100%,32rem);}
+  .method-search select {max-width:100%;font:inherit;padding:.55rem;}
+  .method-index li {margin:.75rem 0;line-height:1.5;}
+  .method-index li span {display:block;color:var(--muted);font-size:.9rem;}
+</style>
+<script>
+  const select=document.querySelector<HTMLSelectElement>('[data-method-filter] select');
+  const status=document.querySelector('[data-method-count]');
+  if(select && status){
+    const rows=[...document.querySelectorAll<HTMLElement>('[data-method-list] li')].map(node=>({node,keys:JSON.parse(node.dataset.keys!)}));
+    const zh=document.documentElement.lang.startsWith('zh');
+    function show(value:string) {
+      select!.value=value;
+      let count=0;
+      for(const {node,keys} of rows){node.hidden=!!select!.value&&!keys.includes(select!.value); if(!node.hidden)count++;}
+      status!.textContent=zh?count+' 种解法':count+(count===1?' method':' methods');
+    }
+    const readURL=()=>show(new URLSearchParams(location.search).get('topic')||'');
+    select.addEventListener('change',()=>{
+      const url=new URL(location.href);
+      if(select.value)url.searchParams.set('topic',select.value);else url.searchParams.delete('topic');
+      history.replaceState(null,'',url);
+      window.dispatchEvent(new Event('bank:urlchange'));
+      show(select.value);
+    });
+    window.addEventListener('popstate',readURL);
+    readURL();
+  }
+</script>

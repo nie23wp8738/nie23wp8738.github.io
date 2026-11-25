@@ -1,3 +1,5 @@
+import {sourceAnswer} from './answer-links.js';
+
 const root = document.querySelector('[data-archive]');
 if (root) runArchive(root);
 
@@ -143,7 +145,17 @@ async function runArchive(root) {
       main.append(meta);
     }
     const links = node('div', 'arch-links');
-    links.append(q.inline ? link(t('Read full question','站内阅读全文'),readUrl) : link(t('Open source', '查看原题'), readUrl));
+    const answer = sourceAnswer(p,q);
+    if (q.inline || answer?.url !== readUrl) {
+      links.append(q.inline ? link(t('Read full question','站内阅读全文'),readUrl) : link(t('Open source','查看原题'),readUrl));
+    }
+    if (q.inline?.solutionPdf) {
+      links.append(link(t('Answer & methods','站内答案与解法'), readUrl + '#solutions'));
+    } else if (answer) {
+      const label = answer.scope === 'paper' ? t('Paper solutions','整卷解答') :
+        answer.url === readUrl ? t('Question & solution at source','原站题目与解法') : t('Solution at source','原站单题解答');
+      links.append(link(label,answer.url));
+    }
     if (!inPaper) links.append(link(t('View paper', '查看整卷'), paperLink(p, q.n)));
     links.append(link(q.inline ? t('Add question','加入题目') : t('Add reference', '加入题号'), worksheetLink([id])), pickControl(id, title));
     row.append(main, links);
@@ -158,6 +170,7 @@ async function runArchive(root) {
     main.append(h, node('div','arch-meta',t('Original practice', '原创练习') + ' · ' + item.exam.join(' / ')));
     const links = node('div','arch-links');
     links.append(link(t('Open question','查看题目'),questionsLink(item.id)),
+      link(t('Answer & methods','站内答案与解法'),questionsLink(item.id) + '#solutions'),
       link(t('Add question','加入题目'),worksheetLink([item.id])),pickControl(item.id,item.title));
     row.append(main,links);
     return row;

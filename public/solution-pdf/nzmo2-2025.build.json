@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "title": "2025 NZMO Round 2 — Worked solutions",
+  "sourceSha256": "964b512bc467579c796a60991c330eb8e59fe9a5cda13b6cc5c318abcd0589f5",
+  "generatorSha256": "12bf3171158cfdd67b2425f4393d10a1f1553c5d698314d1aa84886843e76864",
+  "figures": {},
+  "pdfs": {
+    "nzmo2-2025-q1.pdf": "4510cff34f712d2e2daed2c4a645ed2c1d43e10de0821e8699da19ccce43170b",
+    "nzmo2-2025-q2.pdf": "e4b8fddf15defc029797e0df32b99646910300159c66097915a755557db8125c",
+    "nzmo2-2025-q3.pdf": "2381bf6cd7bb32b36dfa3624114e845d207928cc9f35c0bf7a9963418378b61e",
+    "nzmo2-2025-q4.pdf": "e7571823c91b4f2c725df21b121a9ed3fbd1c7615d4e6e3f4e5d07ce48aaec89",
+    "nzmo2-2025-q5.pdf": "2be3796995d45630138cdc50288b515ff9c951a4f84fe6fa0e70d78142846c20"
+  }
+}

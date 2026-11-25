@@ -1,4 +1,5 @@
 import { getInlineRecord } from './inline-editions.js';
+import { getWorkedAnswer } from './answers.js';
 
 // Keep the question browser's index light. Full text lives on static reader pages.
 const archives = import.meta.glob('../data/past-*.json', { eager: true, import: 'default' });
@@ -34,7 +35,8 @@ const paperIndex = Object.values(archives).flat().map(paper => ({
     const record = getInlineRecord(id);
     return {
       ...question,
-      ...(record ? {inline: {pdf: '/inline-pdf/' + id + '.pdf', licenseUrl: record.edition.licenseURL}} : {}),
+      ...(record ? {inline: {pdf: '/inline-pdf/' + id + '.pdf', licenseUrl: record.edition.licenseURL,
+        ...(getWorkedAnswer(id) ? {solutionPdf:'/solution-pdf/' + id + '.pdf'} : {})}} : {}),
       ...(question.tags ? {tags: [...new Set(question.tags.map(tag => topics.has(tag) ? tag : canonicalTag(tag)))]} : {})
     };
   })

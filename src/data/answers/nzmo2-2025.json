@@ -1,0 +1,345 @@
+{
+  "nzmo2-2025-q1": {
+    "answer": "Exactly the pairs $(m,n)$ for which $4\\mid m$ or $4\\mid n$.",
+    "answerZh": "所有满足 $4\\mid m$ 或 $4\\mid n$ 的正整数对 $(m,n)$。",
+    "methods": [
+      {
+        "title": "Pair within four parity classes",
+        "titleZh": "按行列奇偶分成四类",
+        "steps": [
+          "Number the rows and columns starting at $1$. A displacement of length $2$ satisfies $u^2+v^2=4$ with integer $u,v$. Its only possibilities are $(\\pm2,0)$ and $(0,\\pm2)$. Thus a pair must have the same row parity and the same column parity.",
+          "The numbers of odd and even row indices are $\\lceil m/2\\rceil$ and $\\lfloor m/2\\rfloor$. Both counts are even exactly when $4\\mid m$: for $m=4k,4k+1,4k+2,4k+3$, the pairs of counts are $(2k,2k)$, $(2k+1,2k)$, $(2k+1,2k+1)$ and $(2k+2,2k+1)$. The same observation applies to the columns.",
+          "If neither dimension is divisible by $4$, choose a row parity with an odd count and a column parity with an odd count. The corresponding class has odd size. Its centres can only be paired within that class, which is impossible.",
+          "Conversely, if $4\\mid m$, split each column into blocks of four consecutive centres. In each block pair the first with the third and the second with the fourth. This uses every centre exactly once. If $4\\mid n$, apply the construction along rows."
+        ],
+        "stepsZh": [
+          "行、列均从 $1$ 开始编号。相距 $2$ 的两个中心，其整数坐标差满足 $u^2+v^2=4$，因此只能是 $(\\pm2,0)$ 或 $(0,\\pm2)$。一对中心的行号奇偶性相同，列号奇偶性也相同。",
+          "奇数行和偶数行分别有 $\\lceil m/2\\rceil$ 行和 $\\lfloor m/2\\rfloor$ 行。当 $m=4k,4k+1,4k+2,4k+3$ 时，这两个数依次为 $(2k,2k)$、$(2k+1,2k)$、$(2k+1,2k+1)$、$(2k+2,2k+1)$。可见两数同时为偶数恰好等价于 $4\\mid m$。列数也有同样的规律。",
+          "若两个边长都不能被 $4$ 整除，就能选到一种行号奇偶性和一种列号奇偶性，其对应的行数和列数均为奇数。这一类中心的个数是两个奇数的乘积，也是奇数；而它们又只能在本类内配对，因此必有剩余。",
+          "反过来，若 $4\\mid m$，将每一列从上往下每四个中心分为一组，每组把第一个与第三个、第二个与第四个配对，即可用尽所有中心。若 $4\\mid n$，将同样的构造沿行进行。"
+        ],
+        "topics": [
+          {
+            "en": "Parity colouring",
+            "zh": "奇偶染色"
+          },
+          {
+            "en": "Counting by residue classes",
+            "zh": "按剩余类计数"
+          },
+          {
+            "en": "Constructive pairing",
+            "zh": "构造配对"
+          }
+        ],
+        "credit": "Tony Wang"
+      },
+      {
+        "title": "Give each centre a fourth-root weight",
+        "titleZh": "用四次单位根赋权",
+        "steps": [
+          "Index the rows by $r=0,\\ldots,m-1$ and the columns by $c=0,\\ldots,n-1$. Give centre $(r,c)$ the weight $i^{r+c}$, where $i^2=-1$. A legal move changes one coordinate by $\\pm2$ and leaves the other fixed, so it negates the weight.",
+          "If a complete pairing exists, weights cancel pair by pair. The sum of all weights therefore vanishes. It also factors as $$0=\\sum_{r=0}^{m-1}\\sum_{c=0}^{n-1} i^{r+c}=\\frac{1-i^m}{1-i}\\,\\frac{1-i^n}{1-i}.$$ A geometric sum vanishes precisely when its length is divisible by $4$. Thus $4\\mid m$ or $4\\mid n$.",
+          "This necessary condition is sufficient. Along whichever dimension has length divisible by $4$, divide every line of centres into blocks of four and pair positions $(1,3)$ and $(2,4)$ within each block."
+        ],
+        "stepsZh": [
+          "行、列分别从 $0$ 编到 $m-1$ 和 $n-1$。给中心 $(r,c)$ 赋权 $i^{r+c}$，其中 $i^2=-1$。相距 $2$ 的两点必沿某一坐标方向相差 $\\pm2$，故它们的权值互为相反数。",
+          "若能完成配对，总权值必在每一对中相消。换一种顺序计算总权值，得到 $$0=\\sum_{r=0}^{m-1}\\sum_{c=0}^{n-1} i^{r+c}=\\frac{1-i^m}{1-i}\\,\\frac{1-i^n}{1-i}.$$ 因为 $i$ 的幂以 $4$ 为周期，每个等比数列的和等于零当且仅当其项数是 $4$ 的倍数，所以 $4\\mid m$ 或 $4\\mid n$。",
+          "这个必要条件也是充分的。沿着长度为 $4$ 的倍数的方向，把每条线上的中心按连续四个分组，在每组内将位置 $(1,3)$ 和 $(2,4)$ 分别配成一对。"
+        ],
+        "topics": [
+          {
+            "en": "Roots of unity",
+            "zh": "单位根"
+          },
+          {
+            "en": "Geometric series",
+            "zh": "等比数列求和"
+          },
+          {
+            "en": "Invariants",
+            "zh": "不变量"
+          }
+        ]
+      }
+    ]
+  },
+  "nzmo2-2025-q2": {
+    "answer": "Exactly the integers $n\\ge4$.",
+    "answerZh": "当且仅当整数 $n\\ge4$ 时存在。",
+    "methods": [
+      {
+        "title": "Combine the terms of the same sign",
+        "titleZh": "合并同号项",
+        "steps": [
+          "For $n\\le3$, append zeros to get three terms with the same sum and fourth-power sum. After changing all signs and reordering if necessary, any such zero-sum triple has the form $u,v,-(u+v)$ with $u,v\\ge0$ and $u+v<2$.",
+          "By the binomial expansion, $u^4+v^4\\le(u+v)^4$. Consequently the sum of the three fourth powers is at most $2(u+v)^4<32$. The strict endpoint condition is essential here.",
+          "For $n=4$, take $t=\\sqrt[4]{8}$ and use $(t,t,-t,-t)$. We have $t<2$, the terms sum to zero, and their fourth powers sum to $4t^4=32$. Appending any number of zeros covers every $n\\ge4$."
+        ],
+        "stepsZh": [
+          "若 $n\\le3$，补零至三项，和与四次幂和均不变。必要时将所有项同时变号并交换顺序，三个数可写成 $u,v,-(u+v)$，其中 $u,v\\ge0$ 且 $u+v<2$。",
+          "展开 $(u+v)^4$，交叉项都非负，故 $u^4+v^4\\le(u+v)^4$。三项的四次幂和至多为 $2(u+v)^4<32$。最后一步的严格不等号来自题设 $|x_i|<2$。",
+          "当 $n=4$ 时取 $t=\\sqrt[4]{8}$，令四项为 $(t,t,-t,-t)$。此时 $t<2$，各项和为零，四次幂和为 $4t^4=32$。末尾继续补零即可得到所有 $n\\ge4$ 的例子。"
+        ],
+        "topics": [
+          {
+            "en": "Sign analysis",
+            "zh": "符号分析"
+          },
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          },
+          {
+            "en": "Construction by extending a sequence",
+            "zh": "数列的构造与延拓"
+          }
+        ],
+        "credit": "Eric Liang"
+      },
+      {
+        "title": "Maximise a convex function on a hexagon",
+        "titleZh": "在六边形上求凸函数的最大值",
+        "steps": [
+          "As before, pad to three terms when $n\\le3$. First consider the closed region $P$ defined by $x+y+z=0$ and $|x|,|y|,|z|\\le2$. This plane section of the cube is a hexagon: at a vertex at least two coordinates are endpoints (otherwise two interior coordinates can be varied by opposite small increments). The two endpoints must be $2$ and $-2$, so the vertices are exactly the six permutations of $(2,0,-2)$.",
+          "The function $F=x^4+y^4+z^4$ is convex. Each point of $P$ is a convex combination of its vertices, so $F\\le32$ throughout $P$, because $F=32$ at every vertex.",
+          "The problem uses an open interval. If the triple is nonzero, put $M=\\max(|x|,|y|,|z|)<2$ and multiply it by $2/M$. The new triple lies in $P$, so $F(x,y,z)\\le 32(M/2)^4<32$. The zero triple also fails. For $n\\ge4$, use $(\\sqrt3,-\\sqrt3,\\sqrt3,-\\sqrt3)$ and append zeros. Its fourth-power sum is $36$."
+        ],
+        "stepsZh": [
+          "若 $n\\le3$，先补零至三项。把条件放宽为 $x+y+z=0$ 且 $|x|,|y|,|z|\\le2$，得到立方体的平面截面 $P$。其顶点至少有两个坐标达到端点，否则可把两个内部坐标分别加上、减去同一个微小量，该点便位于一段线段内部。这两个端点只能是 $2$ 和 $-2$，所以截面为六边形，六个顶点恰为 $(2,0,-2)$ 的所有排列。",
+          "函数 $F=x^4+y^4+z^4$ 是凸函数。六边形内每一点均为其顶点的凸组合，因此该点的 $F$ 不超过顶点处的最大值。六个顶点的函数值均为 $32$。",
+          "题目中各项绝对值严格小于 $2$。对非零三元组，令 $M=\\max(|x|,|y|,|z|)<2$，将三项同时乘以 $2/M$，所得点仍在 $P$ 上。因此 $F(x,y,z)\\le32(M/2)^4<32$。全零时也不合要求。对于任意 $n\\ge4$，取 $(\\sqrt3,-\\sqrt3,\\sqrt3,-\\sqrt3)$ 再补零，四次幂和即为 $36$。"
+        ],
+        "topics": [
+          {
+            "en": "Convexity",
+            "zh": "凸性"
+          },
+          {
+            "en": "Extrema on a polygon",
+            "zh": "多边形上的极值"
+          },
+          {
+            "en": "Scaling",
+            "zh": "伸缩变换"
+          }
+        ]
+      }
+    ]
+  },
+  "nzmo2-2025-q3": {
+    "answer": "The points $B,H,D,F$ lie on one circle.",
+    "answerZh": "四点 $B,H,D,F$ 共圆。",
+    "methods": [
+      {
+        "title": "Reflect a point, then use power of a point",
+        "titleZh": "反射构造与点的幂",
+        "steps": [
+          "First show that $EC=ED$. Reflect $C$ in the line through $E$ parallel to $AB$, and call the image $D'$. Since $CD'\\perp AB$, the point $D'$ lies on the altitude $CH$.",
+          "Use directed angles modulo $180^\\circ$. Reflection gives $\\angle D' EC\\equiv 2\\angle BAC$. The circle $OECD$ gives $\\angle DEC\\equiv\\angle DOC$, while $B,O,D$ are collinear and the circumcentre gives $\\angle DOC\\equiv\\angle BOC\\equiv 2\\angle BAC$. Thus $ED'$ and $ED$ are the same line. Their intersection with $CH$ is $D$, so $D'=D$ and $EC=ED$.",
+          "Write $\\theta=\\angle ACH$ and $\\gamma=\\angle ACB$. In the isosceles triangle $ECD$, projecting $CE$ onto the base $CD$ gives $CD=2CE\\cos\\theta$. Applying the same argument in $ECF$ gives $CF=2CE\\cos\\gamma$.",
+          "Because $BH\\perp AC$, the projections of $B$ and $H$ onto $AC$ coincide, so $CB\\cos\\gamma=CH\\cos\\theta$. Multiplying by $2CE$ gives $CB\\cdot CF=CH\\cdot CD$. The pairs $B,F$ and $H,D$ lie on two lines through $C$. By the converse of the secant product theorem, $B,H,D,F$ are concyclic."
+        ],
+        "stepsZh": [
+          "先证 $EC=ED$。过 $E$ 作 $AB$ 的平行线，将 $C$ 关于这条直线反射到 $D'$。因为 $CD'\\perp AB$，所以 $D'$ 在高线 $CH$ 上。",
+          "以下有向角均按模 $180^\\circ$ 计算。由反射得 $\\angle D' EC\\equiv2\\angle BAC$。由 $O,E,C,D$ 共圆得 $\\angle DEC\\equiv\\angle DOC$；又因 $B,O,D$ 共线及圆心角定理，$\\angle DOC\\equiv\\angle BOC\\equiv2\\angle BAC$。故 $ED'$ 与 $ED$ 是同一直线，它与 $CH$ 的交点为 $D$，于是 $D'=D$，即 $EC=ED$。",
+          "记 $\\theta=\\angle ACH$，$\\gamma=\\angle ACB$。在等腰三角形 $ECD$ 中，将 $CE$ 投影到底边 $CD$ 上得到底边的一半，故 $CD=2CE\\cos\\theta$。同理，由 $EC=EF$ 得 $CF=2CE\\cos\\gamma$。",
+          "由于 $BH\\perp AC$，$B$ 与 $H$ 在 $AC$ 上的投影重合，所以 $CB\\cos\\gamma=CH\\cos\\theta$。两边同乘 $2CE$，得到 $CB\\cdot CF=CH\\cdot CD$。点 $B,F$ 与点 $H,D$ 分别在过 $C$ 的两条直线上，由割线定理的逆定理知 $B,H,D,F$ 共圆。"
+        ],
+        "topics": [
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          },
+          {
+            "en": "Reflection",
+            "zh": "轴对称"
+          },
+          {
+            "en": "Orthogonal projection",
+            "zh": "正射影"
+          },
+          {
+            "en": "Power of a point",
+            "zh": "点的幂"
+          }
+        ],
+        "credit": "Nico McKinlay and George Zhu"
+      },
+      {
+        "title": "Put the altitude on the horizontal axis",
+        "titleZh": "以高线为横轴的坐标法",
+        "steps": [
+          "Take $C=(0,0)$ and use $CH$ as the positive horizontal axis. Scale the perpendicular distance from $C$ to $AB$ to $1$. With a choice of vertical orientation, $A=(1,u)$ and $B=(1,-v)$ with $u>v>0$: the foot of the altitude is inside $AB$, and $AC>BC$. Since $BH\\perp AC$, we have $H=(h,0)$ with $h=1-uv>0$.",
+          "The perpendicular bisectors of $AB$ and $AC$ give $O=((1+uv)/2,(u-v)/2)$. Intersect $BO$ with the horizontal axis to get $D=(d,0)$, where $d=u(1+v^2)/(u+v)$. In particular $d-h=v(u^2+2uv-1)/(u+v)<0$, since $AB<BC$ gives $(u+v)^2<1+v^2$. Thus $0<d<h<1$, so $H$ and $D$ are distinct.",
+          "A circle through $C$ and $D$ has equation $x^2+y^2-dx+ky=0$. Substituting $O$, and using $|CO|^2=(1+u^2)(1+v^2)/4$, gives $k=d(1-u^2)/(2u)$. On $AC$ put $y=ux$. The equation becomes $(1+u^2)x(x-d/2)=0$, so $E=(d/2,ud/2)$.",
+          "Write $F=t(1,-v)$ on $BC$. The equation $|F-E|^2=|E|^2$ becomes $t^2(1+v^2)=td(1-uv)$. Since $F\\ne C$, this gives $t(1+v^2)=dh$. Here $0<t<1$ since $0<d,h<1$, so $F$ is distinct from $B$.",
+          "It follows that $CF\\cdot CB=t(1+v^2)=dh=CD\\cdot CH$. The converse of the secant product theorem now gives the required circle."
+        ],
+        "stepsZh": [
+          "取 $C=(0,0)$，以射线 $CH$ 为横轴正向，并令 $C$ 到 $AB$ 的距离为 $1$。选定纵轴正向后可设 $A=(1,u)$，$B=(1,-v)$，其中 $u>v>0$：锐角三角形的高足在 $AB$ 内，且 $AC>BC$。由 $BH\\perp AC$ 得 $H=(h,0)$，其中 $h=1-uv>0$。",
+          "由 $AB$ 与 $AC$ 的垂直平分线得 $O=((1+uv)/2,(u-v)/2)$。再求直线 $BO$ 与横轴的交点，得到 $D=(d,0)$，其中 $d=u(1+v^2)/(u+v)$。 由 $AB<BC$ 得 $(u+v)^2<1+v^2$，故 $d-h=v(u^2+2uv-1)/(u+v)<0$。于是 $0<d<h<1$，两点 $H,D$ 确实不同。",
+          "过 $C,D$ 的圆可写成 $x^2+y^2-dx+ky=0$。代入 $O$，利用 $|CO|^2=(1+u^2)(1+v^2)/4$，算得 $k=d(1-u^2)/(2u)$。在直线 $AC$ 上代入 $y=ux$，得到 $(1+u^2)x(x-d/2)=0$，故 $E=(d/2,ud/2)$。",
+          "因为 $F$ 在 $BC$ 上，可设 $F=t(1,-v)$。条件 $|F-E|^2=|E|^2$ 化为 $t^2(1+v^2)=td(1-uv)$。由 $F\\ne C$ 知 $t\\ne0$，所以 $t(1+v^2)=dh$。 由 $0<d,h<1$ 得 $0<t<1$，故 $F$ 也不同于 $B$。",
+          "从而 $CF\\cdot CB=t(1+v^2)=dh=CD\\cdot CH$。由割线定理的逆定理得 $B,H,D,F$ 共圆。"
+        ],
+        "topics": [
+          {
+            "en": "Cartesian coordinates",
+            "zh": "直角坐标"
+          },
+          {
+            "en": "Perpendicular bisectors",
+            "zh": "垂直平分线"
+          },
+          {
+            "en": "Equation of a circle",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Power of a point",
+            "zh": "点的幂"
+          }
+        ]
+      }
+    ]
+  },
+  "nzmo2-2025-q4": {
+    "answer": "For a nonempty ordering, $n=2$ is the only modulus. If an empty ordering is admitted, $n=1$ also works vacuously.",
+    "answerZh": "按题目的非空排列理解，唯一的模数是 $n=2$。若另行允许空排列，则 $n=1$ 也自动满足条件。",
+    "methods": [
+      {
+        "title": "Restrict to multiples of one divisor",
+        "titleZh": "只考察一个约数的倍数",
+        "steps": [
+          "Write $r_i=r_n(ia_i)$. For any divisor $d$ of $n$, if $d\\mid i$ then $d\\mid r_i$. The two lists $(i)$ and $(r_i)$ contain the same numbers, hence the same number of multiples of $d$. Therefore $d\\mid r_i$ holds exactly at the indices divisible by $d$. The same counting argument with $(a_i)$ shows $d\\mid i\\iff d\\mid a_i\\iff d\\mid r_i$.",
+          "Fix any prime $p\\mid n$ and put $d=n/p$. At the $p-1$ indices $i=dj$, write $a_{dj}=db_j$ and $r_{dj}=dc_j$. Both $(b_j)$ and $(c_j)$ are permutations of $1,\\ldots,p-1$. Dividing the congruence modulo $dp$ by $d$ gives $c_j\\equiv d j b_j\\pmod p$. If $p\\mid d$ then every $c_j$ is zero modulo $p$, which is impossible. Thus $p^2\\nmid n$.",
+          "Let $P=(p-1)!$. Multiplication over all $j$ gives $P\\equiv d^{p-1}P^2\\equiv P^2\\pmod p$, by Fermat’s little theorem. As $P$ is invertible, $P\\equiv1$. If $p$ is odd, pair nonzero residues with their inverses: only $1$ and $-1$ are self-inverse, so $P\\equiv-1$, a contradiction.",
+          "Every prime divisor of $n$ is therefore $2$, and $2^2$ cannot divide $n$. For $n\\ge2$ this forces $n=2$, and $a_1=1$ works. At $n=1$ both lists are empty if that convention is used."
+        ],
+        "stepsZh": [
+          "记 $r_i=r_n(ia_i)$。对 $n$ 的任一正约数 $d$，若 $d\\mid i$，则 $d\\mid r_i$。由于 $(i)$ 与 $(r_i)$ 所含数字相同，其所含 $d$ 的倍数个数也相同，故 $d\\mid r_i$ 恰好出现在 $d\\mid i$ 的下标处。同样考察 $(a_i)$，可得 $d\\mid i\\iff d\\mid a_i\\iff d\\mid r_i$。",
+          "任取素因子 $p\\mid n$，令 $d=n/p$。在 $p-1$ 个下标 $i=dj$ 处，记 $a_{dj}=db_j$，$r_{dj}=dc_j$。则 $(b_j)$ 与 $(c_j)$ 都是 $1,\\ldots,p-1$ 的排列。将模 $dp$ 的同余式约去 $d$，得 $c_j\\equiv d j b_j\\pmod p$。若 $p\\mid d$，所有 $c_j$ 都模 $p$ 为零，矛盾，所以 $p^2\\nmid n$。",
+          "记 $P=(p-1)!$。将所有同余式相乘，再用费马小定理，得 $P\\equiv d^{p-1}P^2\\equiv P^2\\pmod p$。因 $P$ 可逆，故 $P\\equiv1$。若 $p$ 为奇素数，将各非零剩余类与其逆元配对，只有 $1$ 和 $-1$ 自身为逆元，故 $P\\equiv-1$，矛盾。",
+          "因此 $n$ 的每个素因子都只能是 $2$，且 $4\\nmid n$。在 $n\\ge2$ 时只剩 $n=2$，取 $a_1=1$ 即可。若允许空排列，$n=1$ 时两个序列均为空。"
+        ],
+        "topics": [
+          {
+            "en": "Counting multiples",
+            "zh": "倍数计数"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余运算"
+          },
+          {
+            "en": "Fermat’s little theorem",
+            "zh": "费马小定理"
+          },
+          {
+            "en": "Inverse pairing",
+            "zh": "逆元配对"
+          }
+        ]
+      },
+      {
+        "title": "Exclude odd moduli, then halve an even modulus",
+        "titleZh": "先排除奇模数，再将偶模数减半",
+        "steps": [
+          "For each prime $p\\mid n$, exactly $n/p-1$ indices are multiples of $p$. All their products have remainders divisible by $p$, exhausting the available multiples of $p$. Since $(a_i)$ also has exactly that many multiples of $p$, we have $p\\mid a_i$ and $p\\mid r_n(ia_i)$ exactly when $p\\mid i$.",
+          "Suppose $n>1$ is odd and choose $p\\mid n$. Among the indices not divisible by $p$, each nonzero residue modulo $p$ occurs $n/p$ times; the corresponding $a_i$ and product remainders have this same distribution. The product of each of the three lists is therefore $((p-1)!)^{n/p}\\equiv-1\\pmod p$ by Wilson’s theorem, since $n/p$ is odd. But termwise the third list is the product of the first two modulo $p$, and $(-1)^2=1$. This rules out every odd $n>1$.",
+          "If $4\\mid n$, then at even indices $a_i$ is even, so the product and its remainder are divisible by $4$. At odd indices the remainder is odd. The target remainder $2$ cannot appear.",
+          "The remaining even moduli have the form $n=2m$ with $m$ odd. For $m>1$ the even-indexed terms give $a_{2j}=2b_j$, $r_n(2j a_{2j})=2c_j$, where both $(b_j)$ and $(c_j)$ permute $1,\\ldots,m-1$. Thus $c_j\\equiv2j b_j\\pmod m$. Since $2$ is invertible modulo $m$, the residues $j b_j$ again run through all nonzero residues modulo $m$. This would solve the already excluded odd case $m>1$. Hence $m=1$, and $n=2$ indeed works."
+        ],
+        "stepsZh": [
+          "对任意素因子 $p\\mid n$，恰有 $n/p-1$ 个下标是 $p$ 的倍数。这些下标对应的乘积余数均是 $p$ 的倍数，已经占满全部此类余数。排列 $(a_i)$ 中也恰有这么多个 $p$ 的倍数，故 $p\\mid a_i$、$p\\mid r_n(ia_i)$ 都等价于 $p\\mid i$。",
+          "先设 $n>1$ 为奇数，取素因子 $p\\mid n$。在 $p\\nmid i$ 的下标中，模 $p$ 的每个非零剩余类都出现 $n/p$ 次。对应的 $a_i$ 与乘积余数也有相同的分布。由威尔逊定理及 $n/p$ 为奇数，这三列中每一列的总乘积均为 $((p-1)!)^{n/p}\\equiv-1\\pmod p$。但第三列逐项等于前两列相乘后模 $p$ 的结果，其总乘积应为 $(-1)^2=1$，矛盾。",
+          "若 $4\\mid n$，则在偶数下标，$a_i$ 也是偶数，乘积与余数均被 $4$ 整除；在奇数下标，余数为奇数。因此目标余数 $2$ 无法出现。",
+          "余下的偶模数形如 $n=2m$，其中 $m$ 为奇数。若 $m>1$，则偶数下标可写为 $a_{2j}=2b_j$，$r_n(2j a_{2j})=2c_j$，这里 $(b_j)$、$(c_j)$ 都是 $1,\\ldots,m-1$ 的排列。因此 $c_j\\equiv 2j b_j\\pmod m$。因 $2$ 在模 $m$ 下可逆，$j b_j$ 的余数也遍历 $1,\\ldots,m-1$，这就给出了已被排除的奇模数 $m>1$ 的解。故 $m=1$，且 $n=2$ 确实可行。"
+        ],
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Wilson’s theorem",
+            "zh": "威尔逊定理"
+          },
+          {
+            "en": "Reduction of the modulus",
+            "zh": "模数约化"
+          },
+          {
+            "en": "Residue classes",
+            "zh": "剩余类"
+          }
+        ],
+        "credit": "James Xu"
+      }
+    ]
+  },
+  "nzmo2-2025-q5": {
+    "answer": "The minimum is $3039$, attained precisely when $a=b=c=1$.",
+    "answerZh": "最小值为 $3039$，当且仅当 $a=b=c=1$ 时取到。",
+    "methods": [
+      {
+        "title": "Two Cauchy bounds after taking reciprocals",
+        "titleZh": "倒数代换后两次使用柯西不等式",
+        "steps": [
+          "Set $x=1/a$, $y=1/b$, $z=1/c$ and $s=x+y+z$. Since $abc=1$, we have $xyz=1$, $a(b+c)=y+z=s-x$ and $s\\ge3$ by AM–GM. With $K=2025$, the expression becomes $E=\\sum_{\\rm cyc}(1+Kx^2)/(s-x)$.",
+          "The three denominators sum to $2s$. Cauchy–Schwarz in quotient form gives $$\\sum_{\\rm cyc}\\frac{1}{s-x}\\ge\\frac{9}{2s},\\qquad \\sum_{\\rm cyc}\\frac{x^2}{s-x}\\ge\\frac{s^2}{2s}=\\frac{s}{2}.$$",
+          "Therefore $E\\ge(9/s+Ks)/2$. Subtracting $3(K+1)/2$ from this bound gives $(s-3)(K-3/s)/2\\ge0$. Since $K>1$, equality forces $s=3$. Together with $xyz=1$ this gives $x=y=z=1$. Substitution indeed gives $3(2026)/2=3039$."
+        ],
+        "stepsZh": [
+          "令 $x=1/a$、$y=1/b$、$z=1/c$，并记 $s=x+y+z$。由 $abc=1$ 得 $xyz=1$，且 $a(b+c)=y+z=s-x$。算术–几何平均不等式给出 $s\\ge3$。取 $K=2025$，原式变为 $E=\\sum_{\\rm cyc}(1+Kx^2)/(s-x)$。",
+          "三个分母之和为 $2s$。分别对分子为 $1$ 和 $x^2$ 的部分应用分式形式的柯西–施瓦茨不等式，得 $$\\sum_{\\rm cyc}\\frac{1}{s-x}\\ge\\frac{9}{2s},\\qquad \\sum_{\\rm cyc}\\frac{x^2}{s-x}\\ge\\frac{s^2}{2s}=\\frac{s}{2}.$$",
+          "于是 $E\\ge(9/s+Ks)/2$。将此下界减去 $3(K+1)/2$，恰得 $(s-3)(K-3/s)/2\\ge0$。由于 $K>1$，等号要求 $s=3$。再由 $xyz=1$ 可知 $x=y=z=1$。代回得到 $3(2026)/2=3039$，下界可以达到。"
+        ],
+        "topics": [
+          {
+            "en": "Reciprocal substitution",
+            "zh": "倒数代换"
+          },
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西–施瓦茨不等式"
+          },
+          {
+            "en": "AM–GM inequality",
+            "zh": "算术–几何平均不等式"
+          }
+        ]
+      },
+      {
+        "title": "Certify the minimum by sums of squares",
+        "titleZh": "用平方和证明下界",
+        "steps": [
+          "Again put $x=1/a$, $y=1/b$, $z=1/c$, $s=x+y+z\\ge3$ and $K=2025$. The expression is $E=\\sum_{\\rm cyc}(1+Kx^2)/(s-x)$. To expose nonnegative terms, write $1+Kx^2=(x-1)^2+2x+(K-1)x^2$.",
+          "Let $N=\\sum_{\\rm cyc}x/(s-x)$. The pairwise differences give the identity $$2N-3=\\sum_{\\rm cyc}(x-y)\\left(\\frac1{s-x}-\\frac1{s-y}\\right)=\\sum_{\\rm cyc}\\frac{(x-y)^2}{(s-x)(s-y)}.$$ Indeed, collecting the terms with denominator $s-x$ in the middle sum gives $(3x-s)/(s-x)=2x/(s-x)-1$. Hence $N\\ge3/2$.",
+          "Also $\\sum_{\\rm cyc}x^2/(s-x)=s(N-1)$, since $x^2/(s-x)=sx/(s-x)-x$. Substituting this into the split numerator gives $$E=\\sum_{\\rm cyc}\\frac{(x-1)^2}{s-x}+2N+(K-1)s(N-1).$$ The square terms are nonnegative, $N\\ge3/2$, $N-1\\ge1/2$ and $s\\ge3$. Thus $E\\ge3+3(K-1)/2=3039$. Equality requires every $(x-1)^2$ to vanish, and $a=b=c=1$ attains the bound."
+        ],
+        "stepsZh": [
+          "仍令 $x=1/a$、$y=1/b$、$z=1/c$，记 $s=x+y+z\\ge3$、$K=2025$，原式为 $E=\\sum_{\\rm cyc}(1+Kx^2)/(s-x)$。为了得到非负项，拆分分子为 $1+Kx^2=(x-1)^2+2x+(K-1)x^2$。",
+          "令 $N=\\sum_{\\rm cyc}x/(s-x)$。将三对差相乘并相加，得到恒等式 $$2N-3=\\sum_{\\rm cyc}(x-y)\\left(\\frac1{s-x}-\\frac1{s-y}\\right)=\\sum_{\\rm cyc}\\frac{(x-y)^2}{(s-x)(s-y)}.$$ 验证第一个等号时，将分母为 $s-x$ 的项合并，所得分子是 $3x-s$，故该部分为 $2x/(s-x)-1$。平方和非负，所以 $N\\ge3/2$。",
+          "由 $x^2/(s-x)=sx/(s-x)-x$ 可得 $\\sum_{\\rm cyc}x^2/(s-x)=s(N-1)$。代入分子拆分式即有 $$E=\\sum_{\\rm cyc}\\frac{(x-1)^2}{s-x}+2N+(K-1)s(N-1).$$ 第一项非负，且 $N\\ge3/2$、$N-1\\ge1/2$、$s\\ge3$，所以 $E\\ge3+3(K-1)/2=3039$。等号要求每个 $(x-1)^2$ 都为零。取 $a=b=c=1$ 的确达到最小值。"
+        ],
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方"
+          },
+          {
+            "en": "Nesbitt’s inequality",
+            "zh": "内斯比特不等式"
+          },
+          {
+            "en": "Pairwise difference identities",
+            "zh": "两两作差恒等式"
+          }
+        ],
+        "credit": "Eric Liang (numerator split)"
+      }
+    ]
+  }
+}

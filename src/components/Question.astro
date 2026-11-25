@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { localPractice } from '../lib/catalog.js';
 import practice from '../data/problems.json';
+import WorkedAnswer from './WorkedAnswer.astro';
+import { originalAnswer } from '../lib/answers.js';
 
 interface Props {
   lang: 'en' | 'zh';
@@ -34,12 +36,6 @@ const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#wo
       <summary>{zh ? '提示（英文）' : 'Hint'}</summary>
       <p lang="en">{p.hint}</p>
     </details>
-    <details>
-      <summary>{zh ? '答案与解析（英文）' : 'Answer and solutions'}</summary>
-      <p><strong>{zh ? '答案' : 'Answer'}</strong> <span lang="en">{p.answer}</span></p>
-      {p.solutions.map((solution: {title: string; text: string}) => (
-        <section lang="en"><h3>{solution.title}</h3><p>{solution.text}</p></section>
-      ))}
-    </details>
+    <WorkedAnswer answer={originalAnswer(problem)} lang={lang} id={p.id} original={true} />
   </article>
 </Layout>

@@ -1,3 +1,5 @@
+import { sourceAnswer } from './answer-links.js';
+
 function startBank(root) {
   const zh = root.dataset.lang === 'zh';
   const t = (en, cn) => zh ? cn : en;
@@ -61,9 +63,10 @@ function startBank(root) {
         const topicKeys = [...new Set([q.topic,...(q.topics || []),...tags].filter(key => key && topicNames.has(key)))];
         const topic = topicKeys.map(key => topicNames.get(key)).join(zh ? '、' : ' · ');
         const path = q.inline ? '/questions/' + id + '/' : '/past-papers/?paper=' + encodeURIComponent(paper.id) + '#q-' + q.n;
+        const answerSource = sourceAnswer(paper,q);
         const record = {
           id, kind:'past', paperId:paper.id, paperTitle, n:q.n, year:String(paper.year), exam:[paper.exam], inline:q.inline,
-          source:paper.source, sourceURL:safeWebURL(q.url) || safeWebURL(paper.url), solutionURL:safeWebURL(q.solutionsUrl) || safeWebURL(paper.solutionsUrl),
+          source:paper.source, sourceURL:safeWebURL(q.url) || safeWebURL(paper.url), solutionURL:safeWebURL(answerSource?.url), solutionScope:answerSource?.scope,
           title:paperTitle + t(' · Question ',' · 第 ') + q.n + (zh ? ' 题' : ''), topicKeys, topic, concepts,
           href:prefix + path, permalink:'https://nie23wp8738.github.io' + path,
           search:compact([paper.id,paper.exam,examAliases[paper.exam] || '',label,paper.year,'Q'+q.n,'#'+q.n,'question '+q.n,'problem '+q.n,'第'+q.n+'题',topic,...topicKeys,...tags,...concepts].join(' ')),
@@ -155,6 +158,12 @@ function startBank(root) {
     if (isPast) {
       foot.append(q.inline ? link(t('Read full question','站内阅读全文'),q.href,'bank-card-source') : link(t('Open original question','打开原题'),q.sourceURL,'bank-card-source'));
     } else foot.append(el('span',q.method));
+    if (!isPast || q.inline?.solutionPdf) {
+      foot.append(link(t('Answer & methods','答案与解法'),q.href+'#solutions','bank-card-source'));
+    } else if (q.solutionURL) {
+      const title=q.solutionScope==='paper' ? t('Source paper solutions','原卷解答') : t('Solution at source','原站单题解答');
+      foot.append(link(title,q.solutionURL,'bank-card-source'));
+    }
     foot.append(addButton(q));
     article.append(foot); return article;
   }
@@ -165,7 +174,7 @@ function startBank(root) {
     const filtered = (isPast ? past : originals).filter(q =>
       (!values.exam || q.exam.includes(values.exam)) && (!values.topic || q.topicKeys.includes(values.topic))
       && (!values.year || q.year === values.year) && (!values.number || String(q.n) === values.number)
-      && (values.reading !== 'full' || q.inline)
+      && (values.reading !== 'full' || q.inline) && (values.reading !== 'solutions' || q.inline?.solutionPdf)
       && (!values.method || q.methodKey === values.method) && (!values.level || q.levelKey === values.level)
       && tokens.every(word=>q.search.includes(word)));
     maxPages = Math.max(1,Math.ceil(filtered.length / pageSize));
@@ -196,7 +205,7 @@ function startBank(root) {
     });
     const known = new Set(selected);
     list.querySelectorAll('[data-add]').forEach(b=>styleAddButton(b,known.has(b.dataset.add)));
-    const refs = rows.filter(q=>q.kind==='past').length;
+    const refs = rows.filter(q=>q.kind==='past' && !q.inline?.solutionPdf).length;
     get('sheet-count').textContent = countLabel(rows.length);
     get('mobile-count').textContent = rows.length;
     get('empty').hidden = rows.length>0; get('sheet-actions').hidden=rows.length===0;
