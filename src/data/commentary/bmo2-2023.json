@@ -160,13 +160,13 @@
           }
         ],
         "steps": [
-          "Choose $D$ on $BC$ so that $DB=DA$. Since $\\angle ABD=B$, the base angle $\\angle BAD$ also equals $B$. Hence $\\angle DAC=2B$. The exterior-angle relation at $D$ gives $\\angle CDA=2B$, so $\\triangle ACD$ is isosceles and $DC=AC=b$. Therefore $DB=a-b$ and $DA=a-b$.",
+          "The sine rule gives $a/c=\\sin 3B/\\sin 4B$. Since $2\\cos B\\sin 3B=\\sin 4B+\\sin 2B>\\sin 4B$, we have $a>c/(2\\cos B)$. Hence the perpendicular bisector of $AB$ meets the segment $BC$ at a point $D$, so $DB=DA$. Since $\\angle ABD=B$, the base angle $\\angle BAD$ also equals $B$. Hence $\\angle DAC=2B$. The exterior-angle relation at $D$ gives $\\angle CDA=2B$, so $\\triangle ACD$ is isosceles and $DC=AC=b$. Therefore $DB=a-b$ and $DA=a-b$.",
           "In the isosceles triangle $ABD$, the base has length $c=2(a-b)\\cos B$. The cosine rule in $ABC$ gives $2c\\cos B=(a^2+c^2-b^2)/a$. Eliminating $\\cos B$ yields $(a-b)(a^2+c^2-b^2)=ac^2$.",
           "Expanding and rearranging the last identity gives $a^3=b(a^2+ab-b^2+c^2)$. Let $p$ be any prime divisor of $b$. Then $p\\mid a^3$, so $p\\mid a$. Primitivity of the three side lengths implies $p\\nmid c$.",
           "The factor in parentheses is congruent to $c^2$ modulo $p$, and is therefore not divisible by $p$. Taking the exponent of $p$ on both sides gives $3v_p(a)=v_p(b)$. Thus the exponent of every prime in $b$ is a multiple of $3$, so $b$ is a perfect cube."
         ],
         "stepsZh": [
-          "在 $BC$ 上取点 $D$，使 $DB=DA$。因 $\\angle ABD=B$，等腰三角形的另一底角 $\\angle BAD$ 也等于 $B$，从而 $\\angle DAC=2B$。由点 $D$ 处的外角关系得 $\\angle CDA=2B$，所以 $\\triangle ACD$ 也是等腰三角形，且 $DC=AC=b$。因此 $DB=a-b$、$DA=a-b$。",
+          "由正弦定理，$a/c=\\sin 3B/\\sin 4B$。又因 $2\\cos B\\sin 3B=\\sin 4B+\\sin 2B>\\sin 4B$，可知 $a>c/(2\\cos B)$。因此线段 $AB$ 的垂直平分线与线段 $BC$ 交于点 $D$，并且 $DB=DA$。因 $\\angle ABD=B$，等腰三角形的另一底角 $\\angle BAD$ 也等于 $B$，从而 $\\angle DAC=2B$。由点 $D$ 处的外角关系得 $\\angle CDA=2B$，所以 $\\triangle ACD$ 也是等腰三角形，且 $DC=AC=b$。因此 $DB=a-b$、$DA=a-b$。",
           "在等腰三角形 $ABD$ 中，底边长度满足 $c=2(a-b)\\cos B$。对三角形 $ABC$ 使用余弦定理，得 $2c\\cos B=(a^2+c^2-b^2)/a$。消去 $\\cos B$ 后得到 $(a-b)(a^2+c^2-b^2)=ac^2$。",
           "展开并整理该恒等式，得到 $a^3=b(a^2+ab-b^2+c^2)$。任取素数 $p\\mid b$，则 $p\\mid a^3$，故 $p\\mid a$。由于三条边的最大公因数为 $1$，必有 $p\\nmid c$。",
           "括号内的因子模 $p$ 同余于 $c^2$，所以不被 $p$ 整除。比较等式两端素因子 $p$ 的指数，得 $3v_p(a)=v_p(b)$。因此 $b$ 的每个素因子指数都是 $3$ 的倍数，故 $b$ 是完全立方数。"
