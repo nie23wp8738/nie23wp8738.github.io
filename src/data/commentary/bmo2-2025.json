@@ -1,0 +1,154 @@
+{
+  "bmo2-2025-q1": {
+    "summary": "Write $T_k=k(k+1)/2$ for the $k$th triangular number. Given any positive integer $n$, prove that some finite set $S$ of positive indices satisfies $\\sum_{k\\in S}1/T_k=1/n$. Each index may be used only once.",
+    "summaryZh": "记第 $k$ 个三角数为 $T_k=k(k+1)/2$。给定任意正整数 $n$，证明可以选取有限个互不相同的正整数下标组成集合 $S$，使 $\\sum_{k\\in S}1/T_k=1/n$。",
+    "answer": "Use the $n$ consecutive triangular numbers with indices $n,n+1,\\ldots,2n-1$.",
+    "answerZh": "取下标从 $n$ 到 $2n-1$ 的连续 $n$ 个三角数即可。",
+    "methods": [
+      {
+        "title": "Choose the endpoints of a telescoping sum",
+        "titleZh": "由裂项求和确定首尾下标",
+        "topics": [
+          {
+            "en": "Triangular numbers",
+            "zh": "三角数"
+          },
+          {
+            "en": "Telescoping sums",
+            "zh": "裂项求和"
+          }
+        ],
+        "steps": [
+          "The two factors of $T_k$ give $1/T_k=2(1/k-1/(k+1))$. Summing from $k=n$ to $m$ leaves $2(1/n-1/(m+1))$.",
+          "To leave exactly $1/n$, choose $m+1=2n$. The resulting $n$ terms have different denominators because $T_{k+1}-T_k=k+1>0$. This construction also covers $n=1$."
+        ],
+        "stepsZh": [
+          "由三角数的两个因子，得 $1/T_k=2(1/k-1/(k+1))$。从 $k=n$ 加到 $m$，中间各项相消，余下 $2(1/n-1/(m+1))$。",
+          "令 $m+1=2n$，差式就等于 $1/n$。所得 $n$ 项的分母互异，因为 $T_{k+1}-T_k=k+1>0$。当 $n=1$ 时这个构造也成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2"
+  },
+  "bmo2-2025-q2": {
+    "summary": "In an acute triangle $ABC$ with $AB<AC$, let $I$ be the incentre. The perpendicular bisector of $BC$ cuts the lines $BI$ and $CI$ at $P$ and $Q$, respectively. Besides $I$, the circumcircles of $BIQ$ and $CIP$ have a common point $X$. Set $D=AX\\cap BC$, using the full lines. Prove that $A,P,Q,D$ are concyclic.",
+    "summaryZh": "在锐角三角形 $ABC$ 中，$AB<AC$，内心为 $I$。边 $BC$ 的垂直平分线分别交直线 $BI,CI$ 于 $P,Q$。三角形 $BIQ$ 与 $CIP$ 的外接圆除 $I$ 外的另一个交点记为 $X$。设直线 $AX$ 与 $BC$ 交于 $D$，证明 $A,P,Q,D$ 四点共圆。",
+    "answer": "The point $X$ is the midpoint of the arc $BC$ opposite $A$ on the circumcircle of $ABC$. From this point, $XP\\cdot XQ=XA\\cdot XD$.",
+    "answerZh": "$X$ 是三角形 $ABC$ 的外接圆上不含 $A$ 的弧 $BC$ 的中点。从该点看，有 $XP\\cdot XQ=XA\\cdot XD$。",
+    "methods": [
+      {
+        "title": "Identify the arc midpoint, then compare two pairs of similar triangles",
+        "titleZh": "先辨认弧中点，再用两组相似三角形",
+        "topics": [
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          },
+          {
+            "en": "Arc midpoints",
+            "zh": "弧中点"
+          },
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          },
+          {
+            "en": "Power of a point",
+            "zh": "点幂定理"
+          }
+        ],
+        "steps": [
+          "Let $M$ be the midpoint of the arc $BC$ away from $A$. Then $AM$ bisects angle $A$, and $M,P,Q$ lie on the perpendicular bisector of $BC$. Write $\\alpha=A/2$, $\\beta=B/2$, $\\gamma=C/2$ for the half-angles, so $\\alpha+\\beta+\\gamma=90^\\circ$. Orient $BC$ horizontally from left to right and place $A$ above it. The line directions of $BM,BI,CM,CI$ are $-\\alpha,\\beta,\\alpha,-\\gamma$, respectively, modulo $180^\\circ$. The two directions involving $M$ follow from the equal arcs $BM$ and $MC$.",
+          "Using directed angles modulo $180^\\circ$, we have $\\angle MB I=\\alpha+\\beta=90^\\circ-\\gamma=\\angle MQI$. Similarly $\\angle MCI=-\\alpha-\\gamma=\\beta-90^\\circ=\\angle MPI$. The first equality puts $M$ on the circle $BIQ$, and the second puts it on $CIP$. As $M$ lies below $BC$ and $I$ above it, $M=X$. Thus $M,D,I,A$ are on the internal angle bisector of $A$, with $D$ between $M$ and $A$.",
+          "The rays $MP,MQ$ coincide because $P,Q$ are above $BC$. Since $QB=QC$ and $QC$ follows the angle bisector at $C$, the ordinary angle $MQB$ is $90^\\circ-\\gamma$. Also $\\angle MBP=\\alpha+\\beta=90^\\circ-\\gamma$. Therefore $\\triangle MBP\\sim\\triangle MQB$ by two angles, giving $MP\\cdot MQ=MB^2$.",
+          "The ordinary angles $MBD$ and $MAB$ both equal $\\alpha$, and the rays $MD,MA$ coincide. Hence $\\triangle MBD\\sim\\triangle MAB$ and $MD\\cdot MA=MB^2$. The products on the two secants through $M$ agree. By the converse of the secant form of the power-of-a-point theorem, $A,D,P,Q$ are concyclic."
+        ],
+        "stepsZh": [
+          "取三角形 $ABC$ 的外接圆上不含 $A$ 的弧 $BC$ 的中点 $M$。于是 $AM$ 平分角 $A$，且 $M,P,Q$ 都在 $BC$ 的垂直平分线上。记三个半角为 $\\alpha=A/2,\\beta=B/2,\\gamma=C/2$，故 $\\alpha+\\beta+\\gamma=90^\\circ$。令 $BC$ 从左向右水平，$A$ 在其上方。以此为基准，直线 $BM,BI,CM,CI$ 的方向角依次为 $-\\alpha,\\beta,\\alpha,-\\gamma$（模 $180^\\circ$）。其中 $BM,CM$ 的方向角由弧 $BM,MC$ 相等得到。",
+          "按模 $180^\\circ$ 的有向角计算，$\\angle MBI=\\alpha+\\beta=90^\\circ-\\gamma=\\angle MQI$，同理 $\\angle MCI=-\\alpha-\\gamma=\\beta-90^\\circ=\\angle MPI$。前式说明 $M$ 在圆 $BIQ$ 上，后式说明 $M$ 在圆 $CIP$ 上。$M$ 在 $BC$ 下方而 $I$ 在上方，所以另一个交点 $X$ 就是 $M$。因此 $M,D,I,A$ 位于角 $A$ 的内角平分线上，$D$ 在 $M,A$ 之间。",
+          "$P,Q$ 都在 $BC$ 上方，故射线 $MP,MQ$ 重合。由 $QB=QC$ 且 $CQ$ 是角 $C$ 的平分线，得普通角 $\\angle MQB=90^\\circ-\\gamma$。又 $\\angle MBP=\\alpha+\\beta=90^\\circ-\\gamma$，故 $\\triangle MBP\\sim\\triangle MQB$，从而 $MP\\cdot MQ=MB^2$。",
+          "普通角 $\\angle MBD$ 和 $\\angle MAB$ 均为 $\\alpha$，且射线 $MD,MA$ 重合。因此 $\\triangle MBD\\sim\\triangle MAB$，有 $MD\\cdot MA=MB^2$。结合上一步得到 $MP\\cdot MQ=MD\\cdot MA$，由割线定理的逆定理即知 $A,D,P,Q$ 共圆。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2"
+  },
+  "bmo2-2025-q3": {
+    "summary": "Start with an $n\\times n$ array of alternating black and white squares, with opposite colours across every shared edge. A move interchanges any two entire rows or any two entire columns. For each colouring obtainable by such moves, consider the minimum number of further moves that restore the initial colouring in its original positions. Find the maximum of these minima as a function of $n$.",
+    "summaryZh": "一个 $n\\times n$ 方格棋盘按黑白相间着色，任意两格若共边则颜色不同。每次可交换任意两整行或任意两整列。对每个经若干次交换可以得到的局面，考虑恢复各位置原来颜色所需的最少交换次数。求这个最少次数的最大可能值。",
+    "answer": "The maximum is $n-1$ for odd $n$, and $n/2$ for even $n$.",
+    "answerZh": "$n$ 为奇数时最大值为 $n-1$，$n$ 为偶数时为 $n/2$。",
+    "methods": [
+      {
+        "title": "Track the original parity of each row and column",
+        "titleZh": "跟踪每行、每列原下标的奇偶性",
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          },
+          {
+            "en": "Invariants",
+            "zh": "不变量"
+          },
+          {
+            "en": "Extremal constructions",
+            "zh": "极值构造"
+          }
+        ],
+        "steps": [
+          "Label each row and each column by the parity of its original index. A square has its original colour exactly when its row and column labels are either both correct or both incorrect at their present positions. Thus a restored board requires every label to be correct, or every label to be reversed. Indeed, fixing just one column forces the status of every row, and a single row then forces the status of every column.",
+          "Write $k=\\lfloor n/2\\rfloor$. Let $r$ be the number of even-labelled rows in odd positions, and define $c$ in the same way for columns. There are also $r$ odd-labelled rows in even positions. One swap fixes at most one such misplaced pair, and pairing them fixes every row in exactly $r$ swaps. The columns require exactly $c$ more, so restoring all labels costs $r+c$, where $0\\le r,c\\le k$.",
+          "If $n=2k+1$, the numbers of even and odd labels differ. Reversal everywhere is impossible, so the required minimum is $r+c\\le 2k$. Swap each even row with a different odd row and likewise for columns to realise $r=c=k$. This gives $2k=n-1$, also covering $n=1$.",
+          "If $n=2k$, complete reversal is possible. To reach that target the corresponding costs are $k-r$ and $k-c$, so the optimum is $\\min(r+c,2k-r-c)\\le k$. Reverse the labels of all rows using $k$ disjoint odd-even swaps and leave the columns alone. Then $r=k,c=0$, and both restoration choices cost $k=n/2$."
+        ],
+        "stepsZh": [
+          "每行、每列都带上原下标的奇偶标签。某一格要恢复原色，其所在的行、列标签必须同时与当前位置奇偶性相符，或同时相反。固定一列可知所有行的标签状态必须一致，再固定一行可知所有列也必须取同一状态。因此，整个棋盘恢复原色，恰有标签全部归位或全部反向两种可能。",
+          "记 $k=\\lfloor n/2\\rfloor$。若有 $r$ 行带偶标签却占据奇数位置，则也恰有 $r$ 行带奇标签却占据偶数位置。一次交换最多纠正一对这样的错位，逐对互换则恰用 $r$ 次。对列作同样计数，记为 $c$。使标签全部归位恰需 $r+c$ 次，且 $0\\le r,c\\le k$。",
+          "若 $n=2k+1$，奇、偶标签的数量不同，因此无法让它们全部反向。最少次数便是 $r+c\\le 2k$。让每个偶数行分别与一个不同的奇数行交换，再对列同样操作，就有 $r=c=k$，达到 $2k=n-1$。$n=1$ 也符合此式。",
+          "若 $n=2k$，可以选择使标签全部反向。达到该目标所需的行交换与列交换分别为 $k-r,k-c$，故最少次数是 $\\min(r+c,2k-r-c)\\le k$。将行按奇偶配对进行 $k$ 次交换，使全部行标签反向，列标签保持原位，此时 $r=k,c=0$，两种恢复方式都恰需 $k=n/2$ 次。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2"
+  },
+  "bmo2-2025-q4": {
+    "summary": "Count the infinite sequences $(u_1,u_2,\\ldots)$ of positive integers with $u_1=1$ and $u_{n-1}u_{n+1}=(u_n^2+u_n+1)^{2025}$ for each $n\\ge2$.",
+    "summaryZh": "求满足下列条件的正整数无穷数列 $(u_1,u_2,\\ldots)$ 有多少个。首项 $u_1=1$，且对每个 $n\\ge2$ 均有 $u_{n-1}u_{n+1}=(u_n^2+u_n+1)^{2025}$。",
+    "answer": "There are $2026$ sequences, one for each choice $u_2=3^j$ with $0\\le j\\le2025$.",
+    "answerZh": "共有 $2026$ 个数列，分别对应 $u_2=3^j$，其中 $0\\le j\\le2025$。",
+    "methods": [
+      {
+        "title": "Propagate divisibility with a reciprocal polynomial",
+        "titleZh": "利用自倒数多项式传递整除性",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余运算"
+          },
+          {
+            "en": "Reciprocal polynomials",
+            "zh": "自倒数多项式"
+          },
+          {
+            "en": "Induction",
+            "zh": "数学归纳法"
+          }
+        ],
+        "steps": [
+          "Put $F(t)=(t^2+t+1)^{2025}$ and $d=u_2$. Then $u_3=F(d)\\equiv1\\pmod d$. For $u_4=F(u_3)/d$ to be an integer we must have $d\\mid F(1)=3^{2025}$. Each such $d$ would determine at most one sequence by the recurrence.",
+          "To show sufficiency, consider consecutive positive integers $a,b$ of the sequence with $a\\mid F(b)$ and $b\\mid F(a)$. They are coprime, since a prime dividing both would divide $F(b)$ despite $F(b)\\equiv1$ modulo that prime. Set $c=F(b)/a$. We have $c\\mid F(b)$, and $ac=F(b)\\equiv1\\pmod b$.",
+          "Multiply $F(c)$ by $a^{4050}$ to obtain $(a^2c^2+a^2c+a^2)^{2025}$. Since $ac\\equiv1\\pmod b$, this is congruent to $(1+a+a^2)^{2025}=F(a)\\equiv0\\pmod b$. Coprimality lets us cancel the factor $a^{4050}$, proving $b\\mid F(c)$. Thus the pair $b,c$ has the same two divisibility properties, and $c$ is a positive integer.",
+          "For $(a,b)=(1,d)$ the properties hold as soon as $d\\mid3^{2025}$. Induction gives positive integers at every subsequent index. The possible $d$ are the $2026$ distinct powers $3^0,\\ldots,3^{2025}$, and different second terms give different sequences."
+        ],
+        "stepsZh": [
+          "记 $F(t)=(t^2+t+1)^{2025}$，令 $d=u_2$。由 $u_3=F(d)\\equiv1\\pmod d$，要使 $u_4=F(u_3)/d$ 为整数，必须有 $d\\mid F(1)=3^{2025}$。每个合适的 $d$ 由递推式至多确定一个数列。",
+          "为证充分性，设数列的相邻两项 $a,b$ 满足 $a\\mid F(b)$ 且 $b\\mid F(a)$。若有素数同时整除 $a,b$，它必整除 $F(b)$，但 $F(b)$ 对该素数的余数是 $1$，矛盾。故 $a,b$ 互素。令 $c=F(b)/a$，则 $c$ 为正整数，$c\\mid F(b)$，且 $ac=F(b)\\equiv1\\pmod b$。",
+          "把 $F(c)$ 乘以 $a^{4050}$ 得 $(a^2c^2+a^2c+a^2)^{2025}$。利用 $ac\\equiv1\\pmod b$，该式模 $b$ 同余于 $(1+a+a^2)^{2025}=F(a)\\equiv0\\pmod b$。由于 $a,b$ 互素，可以约去 $a^{4050}$，得 $b\\mid F(c)$。于是下一对相邻项 $b,c$ 同样满足原先的两项整除性质。",
+          "从 $(a,b)=(1,d)$ 出发，只要 $d\\mid3^{2025}$，两项性质就都成立。归纳可知以后的每一项都是正整数。正因子 $d$ 可取 $3^0,\\ldots,3^{2025}$，恰有 $2026$ 种，且第二项不同所得数列必不相同。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2"
+  }
+}

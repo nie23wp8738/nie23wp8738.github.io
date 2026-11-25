@@ -161,7 +161,9 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
 
   function richSourceLinks(problem) {
     let x = margin;
-    const sources = [['Question on this site', problem.permalink], ['Original source', problem.sourceURL], ['Licence', problem.inline?.licenseUrl || credits[problem.published?.collection]?.licenseUrl]];
+    const sources = [['Question on this site', problem.permalink], ['Licence', problem.inline?.licenseUrl || credits[problem.published?.collection]?.licenseUrl]];
+    // Some source pages display the solution alongside the question.
+    if (solutions) sources.push(['Original source', problem.sourceURL]);
     if (solutions && problem.solutionURL) sources.push(['Published solutions', problem.solutionURL]);
     for (const [label, target] of sources) {
       const url = safeURL(target);
