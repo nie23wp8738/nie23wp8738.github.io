@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import lessons from '../../data/lessons.json';
+import '../../styles/courses.css';
+export function getStaticPaths() {
+  return lessons.map(lesson => ({ params: { slug: lesson.slug }, props: { lesson } }));
+}
+const { lesson } = Astro.props;
+const practice = '/problems/?exam=' + encodeURIComponent(lesson.exam);
+---
+<Layout title={lesson.title} current="courses">
+ <div class="course-shell">
+  <nav class="course-crumb" aria-label="当前位置"><a href="/courses/">课程与讲义</a><span aria-hidden="true">/</span>{lesson.track}</nav>
+  <header class="course-hero lesson-hero">
+    <div class="course-field">{lesson.track}</div>
+    <h1>{lesson.title}</h1>
+    <p>{lesson.summary}</p>
+  </header>
+  <div class="lesson-columns">
+    <article class="lesson-sections" aria-label="专题内容">
+      {lesson.sections.map(section => (
+        <section class="lesson-part">
+          <h2>{section.heading}</h2>
+          <p>{section.idea}</p>
+          <div class="lesson-example">
+            <h3>例题</h3><p>{section.example}</p>
+            <div class="lesson-equation">{section.formula}</div>
+            <p>{section.work}</p>
+          </div>
+        </section>
+      ))}
+      <section class="lesson-part">
+        <h2>自测练习</h2>
+        <ol class="lesson-drills">{lesson.practice.map(task => <li>{task.prompt}</li>)}</ol>
+        <a class="course-textlink" href={practice}>进入 {lesson.exam} 题库</a>
+      </section>
+    </article>
+    <aside class="lesson-aside" aria-label="专题资源">
+      <h2>专题资源</h2>
+      <p class="course-aside-label">学习基础</p><p>{lesson.background}</p>
+      <p class="course-aside-label">英文讲义</p><p>含三个例题、两道独立练习及答案提示。</p>
+      <a class="course-btn" download href={'/handouts/' + lesson.slug + '.pdf'}>下载讲义 PDF</a>
+      <a class="course-textlink" href={practice}>筛选 {lesson.exam} 练习</a>
+    </aside>
+  </div>
+ </div>
+</Layout>

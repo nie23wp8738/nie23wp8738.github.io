@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import problems from '../../data/problems.json';
+export function getStaticPaths() {
+  return problems.map(p => ({params:{id:p.id},props:{p}}));
+}
+const {p} = Astro.props;
+---
+<Layout title={p.title} current="problems">
+  <article class="shell question">
+    <nav class="breadcrumb" aria-label="当前位置"><a href="/problems/">分类题库</a> / {p.topic}</nav>
+    <div class="question-meta">{p.exam.join(' / ')} · {p.level} · 原创练习</div><h1>{p.title}</h1>
+    <p lang="en" class="statement">{p.statement}</p>
+    <div class="btnrow"><a class="button" href={'/problems/?add='+p.id+'#worksheet'}>加入我的试卷</a><a class="button light" href={'/problems/?topic='+encodeURIComponent(p.topic)}>同专题练习</a></div>
+    <details><summary>提示</summary><p lang="en">{p.hint}</p></details>
+    <details><summary>答案与解析</summary><p lang="en"><strong>Answer.</strong> {p.answer}</p>{p.solutions.map(s=><section lang="en"><h3>{s.title}</h3><p>{s.text}</p></section>)}</details>
+    <div class="question-block"><h2>配套讲义</h2><div class="topic-links">
+      {p.topic === '组合计数' && <a href="/courses/counting-with-constraints/">AMC 10 / AIME · 有限制的计数</a>}
+      {p.exam.includes('STEP') && <a href="/courses/building-a-proof/">STEP · 组织一个证明</a>}
+      {p.exam.includes('TMUA') && <a href="/courses/logic-and-quantifiers/">TMUA · 命题与量词</a>}
+    </div></div>
+  </article>
+</Layout>

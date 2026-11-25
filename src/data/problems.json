@@ -1,0 +1,375 @@
+[
+  {
+    "id": "count-spaced-lamps",
+    "title": "走廊两端的灯",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "间隔法",
+    "level": "提高",
+    "statement": "Ten lamps stand in a row. Four are switched on. No two lit lamps are adjacent, and exactly one end lamp is lit. How many lighting patterns are possible?",
+    "hint": "Choose which end is lit. Which seven positions are still available?",
+    "answer": "20",
+    "solutions": [
+      {
+        "title": "Compress the gaps",
+        "text": "Suppose the left end is lit. Positions 2 and 10 must be dark. Choose three non-adjacent positions from 3 through 9. If their indices within these seven positions are a < b < c, then a, b-1, c-2 form an ordinary three-element subset of 1 through 5. This reversible transformation gives 10 choices. The right end gives another 10."
+      }
+    ]
+  },
+  {
+    "id": "count-ink-packets",
+    "title": "三组分配与上限",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "隔板法与容斥",
+    "level": "提高",
+    "statement": "Eleven identical ink cartridges are distributed among three named teams. Each team receives at least two and at most five. How many distributions are possible?",
+    "hint": "First give each team two cartridges. How many unrestricted distributions of the remaining five exceed a team limit?",
+    "answer": "12",
+    "solutions": [
+      {
+        "title": "Subtract overflows",
+        "text": "After giving each team two, the three extra amounts sum to five and may each be at most three. Stars and bars gives 21 unrestricted triples. If a specified team receives at least four extras, remove four and distribute the remaining one in 3 ways. Two teams cannot both exceed the limit. The answer is 21 - 3(3) = 12."
+      },
+      {
+        "title": "List the sorted triples",
+        "text": "In decreasing order, the only possible amounts are (5,4,2), (5,3,3), and (4,4,3). These can be assigned to the named teams in 6, 3, and 3 ways, respectively."
+      }
+    ]
+  },
+  {
+    "id": "count-detour",
+    "title": "绕开封闭路口",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "补集计数",
+    "level": "基础",
+    "statement": "A robot travels from (0,0) to (5,4), taking unit steps east or north. The intersection (2,2) is closed. How many routes avoid it?",
+    "hint": "Count all routes, then count the ones forced through (2,2) by splitting each route there.",
+    "answer": "66",
+    "solutions": [
+      {
+        "title": "Split the forbidden routes",
+        "text": "There are 126 routes because the four north steps can occupy any four of nine positions. Reaching (2,2) takes two east and two north steps, in 6 orders. From there, three east and two north steps have 10 orders. Exactly 6 times 10 routes use the intersection, leaving 126 - 60 = 66."
+      }
+    ]
+  },
+  {
+    "id": "count-residue-draw",
+    "title": "三张卡片的余数",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "按余数分类",
+    "level": "提高",
+    "statement": "Twelve cards are labeled 1 through 12. How many unordered selections of three distinct cards have a sum divisible by 3?",
+    "hint": "The three residues modulo 3 must be all equal or all different.",
+    "answer": "76",
+    "solutions": [
+      {
+        "title": "Count residue patterns",
+        "text": "Each residue class has four cards. Taking one card from every class gives 4^3 = 64 selections. Taking all three from one class gives 3 times 4 = 12 selections. A pattern with exactly two equal residues cannot sum to zero modulo 3. The total is 76."
+      }
+    ]
+  },
+  {
+    "id": "count-letter-blocks",
+    "title": "重复字母的排列",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "捆绑法与容斥",
+    "level": "提高",
+    "statement": "How many distinct arrangements of the letters of LEVEL contain neither two adjacent Ls nor two adjacent Es?",
+    "hint": "Count arrangements with LL and arrangements with EE. Some arrangements appear in both counts.",
+    "answer": "12",
+    "solutions": [
+      {
+        "title": "Join equal neighbors",
+        "text": "The letters L,L,E,E,V have 5!/(2!2!) = 30 arrangements. Joining LL into a block gives 4!/2! = 12 arrangements; joining EE also gives 12. With both pairs joined, the two blocks and V have 3! = 6 orders. Thus the required number is 30 - 12 - 12 + 6 = 12."
+      }
+    ]
+  },
+  {
+    "id": "count-signal-times",
+    "title": "只响一次的时刻",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "容斥原理",
+    "level": "基础",
+    "statement": "At each positive multiple of 8 seconds a green light flashes. At each positive multiple of 12 seconds a blue light flashes. Among seconds 1 through 180 inclusive, at how many seconds does exactly one light flash?",
+    "hint": "At a common multiple, both lights flash and the time should contribute zero.",
+    "answer": "23",
+    "solutions": [
+      {
+        "title": "Count individual and shared flashes",
+        "text": "There are 22 multiples of 8 and 15 multiples of 12. The common flashes occur at multiples of 24, of which there are 7. Each common time was counted twice and must be removed twice. The required count is 22 + 15 - 14 = 23."
+      },
+      {
+        "title": "Count full cycles",
+        "text": "In each interval of 24 successive seconds starting just after a multiple of 24, the single flashes occur at offsets 8, 12, and 16. Seven full cycles contribute 21. In the remaining 12 seconds, offsets 8 and 12 contribute two more."
+      }
+    ]
+  },
+  {
+    "id": "count-octagon",
+    "title": "八边形中的对顶点",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "分步计数",
+    "level": "提高",
+    "statement": "Four vertices of a regular octagon are marked. How many choices contain exactly one pair of diametrically opposite vertices? Rotations of a marking count separately when they mark different vertices.",
+    "hint": "Group the eight labeled positions into their four opposite pairs.",
+    "answer": "48",
+    "solutions": [
+      {
+        "title": "Choose by opposite pairs",
+        "text": "First choose which of the four pairs is fully marked. The two remaining marked vertices must come from two different pairs among the three unused pairs. There are 3 ways to choose these pairs, and 2 choices of vertex in each. The total is 4 times 3 times 2 times 2 = 48."
+      }
+    ]
+  },
+  {
+    "id": "count-painted-tiles",
+    "title": "三种长度的彩砖",
+    "exam": [
+      "AMC 10",
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "分类排列",
+    "level": "提高",
+    "statement": "A strip of length 9 is tiled from left to right with red tiles of length 1, blue tiles of length 2, and green tiles of length 3. Exactly one green tile and at least one blue tile are used. How many different tilings are possible?",
+    "hint": "After the green tile is accounted for, the red and blue tiles have total length 6.",
+    "answer": "64",
+    "solutions": [
+      {
+        "title": "Condition on the number of blue tiles",
+        "text": "With one blue tile there are four red tiles, so the six tiles have 6!/4! = 30 orders. With two blue tiles there are two red tiles, giving 5!/(2!2!) = 30 orders. With three blue tiles there are no red tiles, and the green tile can occupy any of four positions. The sum is 30 + 30 + 4 = 64."
+      }
+    ]
+  },
+  {
+    "id": "count-return-walks",
+    "title": "恰好一次中途归零",
+    "exam": [
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "路径分解",
+    "level": "挑战",
+    "statement": "A walk on the number line starts at 0 and consists of eight steps, each either +1 or -1. It never goes below 0 and finishes at 0. At exactly one of times 1 through 7 it is at 0. How many walks satisfy these conditions?",
+    "hint": "Cut at the unique interior return. Each piece stays strictly positive until its last step.",
+    "answer": "5",
+    "solutions": [
+      {
+        "title": "Split into excursions",
+        "text": "A positive excursion of length 2 can only be UD; one of length 4 can only be UUDD. In length 6, remove the initial U and the final D and lower the remaining path by one. The middle four steps then give either UUDD or UDUD, so there are two excursions of length 6. The two excursion lengths can be (2,6), (4,4), or (6,2). They give 1(2) + 1(1) + 2(1) = 5 walks."
+      }
+    ]
+  },
+  {
+    "id": "count-marked-rectangles",
+    "title": "网格里的两枚标记",
+    "exam": [
+      "AIME",
+      "AMC 10"
+    ],
+    "topic": "组合计数",
+    "method": "容斥原理",
+    "level": "提高",
+    "statement": "A board has 3 rows and 4 columns of unit cells. The cells in row 1, column 2 and row 3, column 3 are marked. How many rectangles formed by whole cells with sides along grid lines contain exactly one marked cell?",
+    "hint": "Choose the top, bottom, left, and right boundaries. Count rectangles containing both marks separately.",
+    "answer": "28",
+    "solutions": [
+      {
+        "title": "Choose row and column ranges",
+        "text": "For the upper mark, the top row must be 1, the bottom row has 3 choices, the left column has 2 choices, and the right column has 3. This gives 18 rectangles. Rotation by 180 degrees gives 18 for the lower mark. A rectangle containing both must use all three rows, with 2 choices for its left column and 2 for its right. Remove each of these 4 rectangles twice, giving 18 + 18 - 8 = 28."
+      }
+    ]
+  },
+  {
+    "id": "count-parity-gaps",
+    "title": "间隔选择与奇偶性",
+    "exam": [
+      "AIME"
+    ],
+    "topic": "组合计数",
+    "method": "间隔法与奇偶性",
+    "level": "挑战",
+    "statement": "Three distinct integers are chosen from 1 through 8. No two chosen integers are consecutive. How many choices have an even sum?",
+    "hint": "Write the chosen integers as a < b < c and examine a, b-1, c-2.",
+    "answer": "10",
+    "solutions": [
+      {
+        "title": "Remove mandatory gaps",
+        "text": "The transformation (a,b,c) to (a,b-1,c-2) bijects gap-respecting choices with ordinary increasing triples from 1 through 6. Their sum is smaller by 3, so it must be odd. There are three odd and three even numbers available. An odd sum requires either three odds (1 choice) or one odd and two evens (3 times 3 choices), for a total of 10."
+      }
+    ]
+  },
+  {
+    "id": "count-coin-runs",
+    "title": "正反面连续段",
+    "exam": [
+      "AMC 10",
+      "TMUA"
+    ],
+    "topic": "组合计数",
+    "method": "条件概率",
+    "level": "提高",
+    "statement": "A fair coin is tossed six times. Given that exactly three tosses show heads, what is the probability of exactly three runs? A run is a maximal consecutive group of identical outcomes.",
+    "hint": "A three-run sequence must begin and end with the same outcome.",
+    "answer": "1/5",
+    "solutions": [
+      {
+        "title": "Fix the middle run",
+        "text": "The 20 sequences with three heads are equally likely. If the sequence starts with H and has three runs, all three tails form the middle run. The three heads split into two nonempty runs in two ways, of lengths (1,2) or (2,1). Interchanging H and T gives two more sequences. The conditional probability is 4/20 = 1/5."
+      }
+    ]
+  },
+  {
+    "id": "alg-quadratic-parameter",
+    "title": "正根的参数范围",
+    "exam": [
+      "TMUA",
+      "STEP"
+    ],
+    "topic": "代数",
+    "method": "韦达定理",
+    "level": "提高",
+    "statement": "Find all real t for which x^2 - (t+1)x + t - 2 = 0 has two distinct positive real roots.",
+    "hint": "Use the discriminant to check reality and distinctness before testing the sum and product.",
+    "answer": "t > 2",
+    "solutions": [
+      {
+        "title": "Use sum and product",
+        "text": "The discriminant equals (t-1)^2 + 8, which is always positive. For two real roots to be positive, their product must be positive and their sum positive. Their product is t-2, so t > 2 is necessary. For t > 2 their sum t+1 is also positive, and the positive product forces the two roots to have the same sign. Hence both are positive."
+      }
+    ]
+  },
+  {
+    "id": "proof-fourth-power",
+    "title": "四次式的因式分解",
+    "exam": [
+      "STEP",
+      "AIME"
+    ],
+    "topic": "数论",
+    "method": "配方与因式分解",
+    "level": "提高",
+    "statement": "Prove that n^4 + 4 is composite for every integer n greater than or equal to 2.",
+    "hint": "Add and subtract 4n^2 to form a difference of squares.",
+    "answer": "It equals (n^2 - 2n + 2)(n^2 + 2n + 2), with both factors greater than 1.",
+    "solutions": [
+      {
+        "title": "Complete a square",
+        "text": "Write n^4 + 4 = (n^2 + 2)^2 - (2n)^2. Factoring gives (n^2 - 2n + 2)(n^2 + 2n + 2). The smaller factor is (n-1)^2 + 1, at least 2 when n >= 2. The larger is even greater. The number is therefore a product of two integers greater than 1."
+      }
+    ]
+  },
+  {
+    "id": "proof-two-fractions",
+    "title": "两个分式的最小值",
+    "exam": [
+      "STEP"
+    ],
+    "topic": "代数",
+    "method": "柯西不等式",
+    "level": "挑战",
+    "statement": "Let x and y be positive real numbers with x + y = 1. Prove that x^2/(1+y) + y^2/(1+x) >= 1/3, and find all cases of equality.",
+    "hint": "The denominators add to 3. Compare the sum of fractions with (x+y)^2/3.",
+    "answer": "The minimum is 1/3, attained only at x = y = 1/2.",
+    "solutions": [
+      {
+        "title": "Use Cauchy-Schwarz",
+        "text": "For positive a,b, Cauchy-Schwarz gives u^2/a + v^2/b >= (u+v)^2/(a+b). Use u=x, v=y, a=1+y, b=1+x. The bound is 1/3. Equality requires x/(1+y) = y/(1+x), or (x-y)(1+x+y)=0. Hence x=y=1/2, which gives equality."
+      },
+      {
+        "title": "Compute the exact excess",
+        "text": "Bring the two fractions and 1/3 to denominator 3(1+x)(1+y). Using x+y=1, the numerator reduces to 4 - 16xy = 4(x-y)^2. The denominator is positive, so the excess is nonnegative and vanishes precisely when x=y."
+      }
+    ]
+  },
+  {
+    "id": "logic-finite-mean",
+    "title": "平均数命题的否定",
+    "exam": [
+      "TMUA",
+      "STEP"
+    ],
+    "topic": "逻辑与证明",
+    "method": "量词与反证法",
+    "level": "基础",
+    "statement": "Consider this claim: every nonempty finite list of real numbers has an entry at least as large as the mean of that list. Write the exact negation of the claim, then prove the original claim.",
+    "hint": "Negating \"every list has some entry\" changes both quantifiers.",
+    "answer": "The negation says that some nonempty finite list has every entry strictly smaller than its mean. The original claim is true.",
+    "solutions": [
+      {
+        "title": "Sum the strict inequalities",
+        "text": "If the negation held, take such a list of length n with mean m. Summing the strict inequalities for its n entries would give a total strictly less than nm. By the definition of the mean, the total equals nm. This contradiction proves the claim."
+      },
+      {
+        "title": "Compare with the maximum",
+        "text": "A nonempty finite list has a maximum M. Every entry is at most M, so its mean is at most M. The entry equal to M therefore meets the stated requirement."
+      }
+    ]
+  },
+  {
+    "id": "nt-fixed-remainder",
+    "title": "从整除条件锁定余数",
+    "exam": [
+      "AIME",
+      "TMUA"
+    ],
+    "topic": "数论",
+    "method": "带余除法",
+    "level": "提高",
+    "statement": "Find all positive integers n such that n+5 divides n^2 + 4n + 19.",
+    "hint": "Write the numerator as a multiple of n+5 plus a constant.",
+    "answer": "n is 1, 3, 7, or 19.",
+    "solutions": [
+      {
+        "title": "Reduce to a divisor list",
+        "text": "The identity n^2 + 4n + 19 = (n+5)(n-1) + 24 shows that divisibility is equivalent to n+5 dividing 24. Since n is positive, n+5 is at least 6. The positive divisors of 24 at least 6 are 6, 8, 12, and 24. Subtracting 5 yields exactly the four values listed."
+      }
+    ]
+  },
+  {
+    "id": "alg-absolute-roots",
+    "title": "绝对值方程的解数",
+    "exam": [
+      "TMUA",
+      "STEP"
+    ],
+    "topic": "代数",
+    "method": "分类讨论",
+    "level": "提高",
+    "statement": "For which real values of k does |x^2 - 4| = k have exactly two distinct real solutions x?",
+    "hint": "Consider k < 0 first. For k >= 0, use x^2 = 4+k and x^2 = 4-k, paying attention to duplicate roots.",
+    "answer": "k = 0 or k > 4.",
+    "solutions": [
+      {
+        "title": "Count roots by parameter range",
+        "text": "A negative k is impossible. For k=0 the two branches coincide at x^2=4, giving two roots. For 0<k<4, the branches yield two distinct positive values of x^2, so four roots. For k=4 they give x^2=8 or 0, so three roots. For k>4 the second branch is negative and only the first contributes its two roots."
+      }
+    ]
+  }
+]
