@@ -40,7 +40,8 @@
     "figure": {
       "url": "/commentary-figures/usajmo-2013-q3.svg",
       "alt": "The three circumcircles intersect the cevian AP at X, Y and Z. P divides BC, Q lies on CA and R on AB.",
-      "altZh": "三圆与线段 AP 的第二交点分别为 X、Y、Z。P 在 BC 上，Q 在 CA 上，R 在 AB 上。"
+      "altZh": "三圆与线段 AP 的第二交点分别为 X、Y、Z。P 在 BC 上，Q 在 CA 上，R 在 AB 上。",
+      "printHeightPt": 280
     }
   },
   "usamo-2013-q2": {
@@ -215,7 +216,8 @@
     "figure": {
       "url": "/commentary-figures/usamo-2013-q6.svg",
       "alt": "An arbitrary interior point P on BC, the circles through ABP and ACP, and their external tangent intersections X and Y on the common chord line AP.",
-      "altZh": "边 BC 上任取内点 P，图中画出过 ABP、ACP 的两个圆以及两条公外切线与公共弦所在直线 AP 的交点 X、Y。"
+      "altZh": "边 BC 上任取内点 P，图中画出过 ABP、ACP 的两个圆以及两条公外切线与公共弦所在直线 AP 的交点 X、Y。",
+      "printHeightPt": 220
     },
     "methods": [
       {

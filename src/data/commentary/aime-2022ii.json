@@ -278,7 +278,8 @@
     "figure": {
       "url": "/commentary-figures/aime-2022ii-q9.svg",
       "alt": "Smaller example: the six joining segments between three upper points and two lower points form eight bounded regions with the supporting lines.",
-      "altZh": "小例：上方三点、下方两点之间的六条连接线段与两条平行线围出八个有界区域。"
+      "altZh": "小例：上方三点、下方两点之间的六条连接线段与两条平行线围出八个有界区域。",
+      "printHeightPt": 140
     }
   },
   "aime-2022ii-q10": {
@@ -519,7 +520,8 @@
     "figure": {
       "url": "/commentary-figures/aime-2022ii-q15.svg",
       "alt": "Two externally tangent circles, a third circle through their centers, and cyclic hexagon A, B, O1, C, D, O2 with the segment joining the centers.",
-      "altZh": "两圆外切，第三个圆通过它们的圆心；六边形顶点依次为 A、B、O1、C、D、O2，虚线连接两圆心。"
+      "altZh": "两圆外切，第三个圆通过它们的圆心；六边形顶点依次为 A、B、O1、C、D、O2，虚线连接两圆心。",
+      "printHeightPt": 180
     }
   }
 }

@@ -163,7 +163,8 @@
     "figure": {
       "url": "/commentary-figures/bmo1-2025-q4.svg",
       "alt": "P lies on median AM. Segments BP and CP are drawn. Matching marks show AB = CP and BM = MC.",
-      "altZh": "P 在中线 AM 上。连接 BP 与 CP，相同刻痕分别表示 AB=CP、BM=MC。"
+      "altZh": "P 在中线 AM 上。连接 BP 与 CP，相同刻痕分别表示 AB=CP、BM=MC。",
+      "printHeightPt": 140
     }
   },
   "bmo1-2025-q5": {

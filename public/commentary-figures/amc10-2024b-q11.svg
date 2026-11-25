@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 156">
+  <title>A right triangle in an eight-by-four rectangle</title>
+  <path d="M30 130V34H222V130Z" fill="white" stroke="#294654" stroke-width="1.8"/>
+  <path d="M30 130L78 34L222 106Z" fill="#e0eaf0" stroke="#345a6e" stroke-width="1.6"/>
+  <path d="M74.8695 40.261L81.1305 43.3915L84.261 37.1305" fill="none" stroke="#294654" stroke-width="1.15"/>
+  <g fill="#294654"><circle cx="78" cy="34" r="2.5"/><circle cx="222" cy="106" r="2.5"/></g>
+  <g style="font:italic 14px Georgia,serif" fill="#253c47" text-anchor="middle">
+    <text x="23" y="146">W</text><text x="24" y="28">X</text><text x="227" y="28">Y</text>
+    <text x="228" y="146">Z</text><text x="78" y="25">M</text><text x="234" y="110">A</text>
+  </g>
+</svg>

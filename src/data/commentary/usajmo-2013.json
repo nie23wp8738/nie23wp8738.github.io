@@ -110,7 +110,8 @@
     "figure": {
       "url": "/commentary-figures/usajmo-2013-q3.svg",
       "alt": "The three circumcircles intersect the cevian AP at X, Y and Z. P divides BC, Q lies on CA and R on AB.",
-      "altZh": "三圆与线段 AP 的第二交点分别为 X、Y、Z。P 在 BC 上，Q 在 CA 上，R 在 AB 上。"
+      "altZh": "三圆与线段 AP 的第二交点分别为 X、Y、Z。P 在 BC 上，Q 在 CA 上，R 在 AB 上。",
+      "printHeightPt": 280
     }
   },
   "usajmo-2013-q4": {
@@ -243,7 +244,8 @@
     "figure": {
       "url": "/commentary-figures/usajmo-2013-q5.svg",
       "alt": "The semicircle has diameter XY. AY meets XB at P and XC at Q; Z is directly below P on the diameter.",
-      "altZh": "半圆直径为 XY，AY 与 XB 交于 P、与 XC 交于 Q；P 在直径上的垂足为 Z。"
+      "altZh": "半圆直径为 XY，AY 与 XB 交于 P、与 XC 交于 Q；P 在直径上的垂足为 Z。",
+      "printHeightPt": 170
     }
   },
   "usajmo-2013-q6": {

@@ -1,7 +1,34 @@
 {
+  "amc12-2024b-q1": {
+    "summary": "In a queue, one person is number 1013 when counted from the left and number 1010 when counted from the right. How many people are in the queue?  (A) $2021$ (B) $2022$ (C) $2023$ (D) $2024$ (E) $2025$",
+    "summaryZh": "从队伍左边数第 1013 人，恰好是从右边数第 1010 人。共有多少人？  (A) $2021$ (B) $2022$ (C) $2023$ (D) $2024$ (E) $2025$",
+    "answer": "B. $2022$.",
+    "answerZh": "B．$2022$ 人。",
+    "methods": [
+      {
+        "title": "Count people on either side",
+        "titleZh": "分别计算两侧人数",
+        "topics": [
+          {
+            "en": "Inclusive counting",
+            "zh": "包含端点的计数"
+          }
+        ],
+        "steps": [
+          "There are $1013-1=1012$ people strictly to the left and $1010-1=1009$ strictly to the right.",
+          "Include the person counted from both ends exactly once: $1012+1+1009=2022$."
+        ],
+        "stepsZh": [
+          "此人左侧有 $1013-1=1012$ 人，右侧有 $1010-1=1009$ 人。",
+          "再把本人计入一次，得到 $1012+1+1009=2022$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/1"
+  },
   "amc12-2024b-q2": {
-    "summary": "Evaluate $10! - 7! \\cdot 6!$.",
-    "summaryZh": "求 $10! - 7! \\cdot 6!$ 的值。",
+    "summary": "Evaluate $10! - 7! \\cdot 6!$.\n\n(A) $-120$   (B) $0$   (C) $120$   (D) $600$   (E) $720$.",
+    "summaryZh": "求 $10! - 7! \\cdot 6!$ 的值。\n\n(A) $-120$   (B) $0$   (C) $120$   (D) $600$   (E) $720$。",
     "answer": "B. $0$.",
     "answerZh": "B。$0$。",
     "methods": [
@@ -23,5 +50,924 @@
       }
     ],
     "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/2"
+  },
+  "amc12-2024b-q3": {
+    "summary": "How many integers $x$ lie in the range $\\lvert2x\\rvert\\le7\\pi$?  (A) $16$ (B) $17$ (C) $19$ (D) $20$ (E) $21$",
+    "summaryZh": "满足 $\\lvert2x\\rvert\\le7\\pi$ 的整数 $x$ 有几个？  (A) $16$ (B) $17$ (C) $19$ (D) $20$ (E) $21$",
+    "answer": "E. $21$.",
+    "answerZh": "E．$21$ 个。",
+    "methods": [
+      {
+        "title": "Locate the endpoints strictly between integers",
+        "titleZh": "确定端点落在哪两个整数之间",
+        "topics": [
+          {
+            "en": "Absolute-value inequalities",
+            "zh": "含绝对值的不等式"
+          }
+        ],
+        "steps": [
+          "The inequality is $\\lvert x\\rvert\\le7\\pi/2$. The strict bounds $3<\\pi<22/7$ imply $10<7\\pi/2<11$; in particular 11 is just outside the range.",
+          "The integers are $-10,-9,\\ldots,9,10$, numbering $10+1+10=21$."
+        ],
+        "stepsZh": [
+          "不等式化为 $\\lvert x\\rvert\\le7\\pi/2$。由严格界 $3<\\pi<22/7$ 得 $10<7\\pi/2<11$，所以不能把 11 计入。",
+          "整数从 $-10$ 到 10，合计 $10+1+10=21$ 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/3"
+  },
+  "amc12-2024b-q4": {
+    "summary": "Place balls numbered consecutively from 1 into bins A through E. Use one bin per round, cycling through A, B, C, D, E. Round one receives one ball, round two receives two, and round $k$ receives the next $k$ balls. Which bin receives ball 2024?  (A) $A$ (B) $B$ (C) $C$ (D) $D$ (E) $E$",
+    "summaryZh": "将从 1 起连续编号的球依次装箱。每轮只往一个箱中装，箱子按 A、B、C、D、E 循环。第 $k$ 轮装入接下来的 $k$ 个球。编号 2024 的球在哪个箱中？  (A) $A$ (B) $B$ (C) $C$ (D) $D$ (E) $E$",
+    "answer": "D. Bin D.",
+    "answerZh": "D．D 箱。",
+    "methods": [
+      {
+        "title": "Locate the ball between triangular totals",
+        "titleZh": "用三角数定位轮次",
+        "topics": [
+          {
+            "en": "Triangular numbers",
+            "zh": "三角数"
+          }
+        ],
+        "steps": [
+          "After $k$ rounds, $k(k+1)/2$ balls have been placed. After 63 rounds the total is $63\\cdot64/2=2016$; after 64 it is $2080$. Ball 2024 therefore belongs to round 64.",
+          "Every five rounds the bins repeat. Since $64=5\\cdot12+4$, the bin for round 64 is the fourth bin, D."
+        ],
+        "stepsZh": [
+          "前 $k$ 轮共装 $k(k+1)/2$ 个球。前 63 轮有 $63\\cdot64/2=2016$ 个，前 64 轮有 $2080$ 个，故第 2024 号球属于第 64 轮。",
+          "每五轮一循环，$64=5\\cdot12+4$，所以是循环中的第四箱 D。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/4"
+  },
+  "amc12-2024b-q5": {
+    "summary": "Start with the sum of the positive odd integers from 1 through 99. Change some addition signs to subtraction. What is the smallest number of sign changes that can make the result negative?  (A) $14$ (B) $15$ (C) $16$ (D) $17$ (E) $18$",
+    "summaryZh": "从 1 至 99 的所有正奇数依次相加，将一部分加号改为减号。要使结果为负，最少须改几个符号？  (A) $14$ (B) $15$ (C) $16$ (D) $17$ (E) $18$",
+    "answer": "B. $15$.",
+    "answerZh": "B．$15$ 个。",
+    "methods": [
+      {
+        "title": "Change the largest terms first",
+        "titleZh": "优先改变最大的项",
+        "topics": [
+          {
+            "en": "Extremal sums",
+            "zh": "极值求和"
+          }
+        ],
+        "steps": [
+          "The first 50 odd integers sum to $50^2=2500$. Changing a sign at a term $v$ reduces the sum by $2v$. For a fixed number $k$ of changes, taking the largest $k$ terms produces the smallest possible result.",
+          "Those $k$ terms have total $2500-(50-k)^2$. Their sum must exceed 1250, or equivalently $(50-k)^2<1250$. Since $35^2=1225<1250<1296=36^2$, the smallest workable $k$ is $50-35=15$."
+        ],
+        "stepsZh": [
+          "前 50 个正奇数之和为 $50^2=2500$。把 $+v$ 改为 $-v$，会使总和少 $2v$。在改动数 $k$ 固定时，应选最大的 $k$ 项以使结果尽量小。",
+          "最大 $k$ 项之和是 $2500-(50-k)^2$。它须大于 1250，即 $(50-k)^2<1250$。因 $35^2=1225<1250<1296=36^2$，最小可行的 $k$ 为 $50-35=15$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/5"
+  },
+  "amc12-2024b-q6": {
+    "summary": "An amount of money is $5\\cdot10^{13}$ dollars. How many digits are needed to write that integer in base five? You may use $\\log_{10}5\\approx0.7$.  (A) $18$  (B) $20$  (C) $22$  (D) $24$  (E) $26$",
+    "summaryZh": "某笔金额为 $5\\cdot10^{13}$ 美元。用五进制写出这个整数，一共需要多少位？可使用近似值 $\\log_{10}5\\approx0.7$。  (A) $18$  (B) $20$  (C) $22$  (D) $24$  (E) $26$",
+    "answer": "B. $20$.",
+    "answerZh": "B。$20$。",
+    "methods": [
+      {
+        "title": "Compare integer powers without logarithms",
+        "titleZh": "直接比较整数幂",
+        "topics": [
+          {
+            "en": "Base representation",
+            "zh": "进位制"
+          },
+          {
+            "en": "Powers and inequalities",
+            "zh": "幂与不等式"
+          }
+        ],
+        "steps": [
+          "Let $N=5\\cdot10^{13}=2^{13}5^{14}$. Compare $2^{13}=8192$ with $5^5=3125$ and $5^6=15625$.",
+          "Multiplication by $5^{14}$ gives $5^{19}<N<5^{20}$. The leading base-five digit is in position $5^{19}$, and the last is in position $5^0$, for $20$ digits."
+        ],
+        "stepsZh": [
+          "记 $N=5\\cdot10^{13}=2^{13}5^{14}$。比较可得 $5^5=3125<2^{13}=8192<5^6=15625$。",
+          "同乘 $5^{14}$ 得 $5^{19}<N<5^{20}$。最高位的位权为 $5^{19}$，个位的位权是 $5^0$，共 $20$ 位。"
+        ]
+      },
+      {
+        "title": "Count places with logarithms",
+        "titleZh": "用对数确定位数",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Place value",
+            "zh": "数位"
+          }
+        ],
+        "steps": [
+          "The number of base-five digits in a positive integer $N$ is $\\lfloor\\log_5N\\rfloor+1$. For the given amount, $\\log_5 N=1+13/\\log_{10}5$.",
+          "The supplied approximation yields $1+13/0.7\\approx19.57$, placing the leading digit at exponent $19$. Including exponent zero gives $20$ places."
+        ],
+        "stepsZh": [
+          "正整数 $N$ 的五进制位数为 $\\lfloor\\log_5N\\rfloor+1$。本题中 $\\log_5N=1+13/\\log_{10}5$。",
+          "按题给近似值计算约得 $1+13/0.7\\approx19.57$，最高位的指数为 $19$。计入指数为零的个位，共有 $20$ 位。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/6"
+  },
+  "amc12-2024b-q7": {
+    "summary": "Rectangle $WXYZ$ has adjacent side lengths $WX=4$ and $WZ=8$. Points $M$ on $XY$ and $A$ on $YZ$ satisfy $\\angle WMA=90^\\circ$ and $[WXM]=[WAZ]$. Find $[WMA]$.  (A) $13$ (B) $14$ (C) $15$ (D) $16$ (E) $17$",
+    "summaryZh": "长方形 $WXYZ$ 中，$WX=4$、$WZ=8$。点 $M$ 在 $XY$ 上、点 $A$ 在 $YZ$ 上，且 $\\angle WMA=90^\\circ$。已知三角形 $WXM$ 与 $WAZ$ 面积相同，求三角形 $WMA$ 的面积。  (A) $13$ (B) $14$ (C) $15$ (D) $16$ (E) $17$",
+    "answer": "C. $15$.",
+    "answerZh": "C．$15$。",
+    "methods": [
+      {
+        "title": "Solve from equal areas and perpendicularity",
+        "titleZh": "结合等面积与垂直条件",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "Use $W=(0,0),X=(0,4),Y=(8,4),Z=(8,0)$. Write $M=(m,4),A=(8,a)$. Equal areas give $4m/2=8a/2$, so $m=2a$.",
+          "Perpendicularity of $MW=(-m,-4)$ and $MA=(8-m,a-4)$ gives $m^2-8m-4a+16=0$. Substituting $a=m/2$ yields $(m-2)(m-8)=0$. At $m=8$ both $M$ and $A$ coincide with $Y$, so no right angle exists. Thus $m=2,a=1$.",
+          "The absolute determinant of $WM=(2,4)$ and $WA=(8,1)$ is $\\lvert2-32\\rvert=30$. Halving gives area 15."
+        ],
+        "stepsZh": [
+          "取 $W=(0,0),X=(0,4),Y=(8,4),Z=(8,0)$。设 $M=(m,4),A=(8,a)$。由等面积得 $4m/2=8a/2$，故 $m=2a$。",
+          "向量 $MW=(-m,-4)$ 与 $MA=(8-m,a-4)$ 垂直，给出 $m^2-8m-4a+16=0$。代入 $a=m/2$，得 $(m-2)(m-8)=0$。若 $m=8$，$M,A$ 都是 $Y$，无法形成直角。故 $m=2,a=1$。",
+          "由 $WM=(2,4)$ 与 $WA=(8,1)$ 的行列式绝对值为 $\\lvert2-32\\rvert=30$，除以二得面积 15。"
+        ]
+      },
+      {
+        "title": "Compare the corner right triangles",
+        "titleZh": "比较顶角处的直角三角形",
+        "topics": [
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          }
+        ],
+        "steps": [
+          "Triangles $WXM$ and $MYA$ are similar. Their acute angles at $W$ and $M$ are equal because the respective pairs of sides are perpendicular ($WX\\perp MY$, $WM\\perp MA$). Set $XM=m$ and $ZA=a$. Equal area of $WXM$ and $WAZ$ gives $m=2a$.",
+          "From similarity, $XM/WX=YA/MY$, so $m/4=(4-a)/(8-m)$. As $a=m/2$ and $m<8$, the right side is $1/2$, giving $m=2$ and $a=1$.",
+          "Subtract the three corner triangles from the rectangle: $32-(4\\cdot2+8\\cdot1+6\\cdot3)/2=15$."
+        ],
+        "stepsZh": [
+          "三角形 $WXM$ 与 $MYA$ 相似。分别位于 $W,M$ 的锐角相等，因为对应边两两垂直（$WX\\perp MY$、$WM\\perp MA$）。设 $XM=m,ZA=a$，由三角形 $WXM,WAZ$ 等面积得 $m=2a$。",
+          "由相似，有 $XM/WX=YA/MY$，即 $m/4=(4-a)/(8-m)$。因 $a=m/2$ 且 $m<8$，右侧恰为 $1/2$，故 $m=2,a=1$。",
+          "用矩形面积扣除三个角上的三角形，得 $32-(4\\cdot2+8\\cdot1+6\\cdot3)/2=15$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/7",
+    "figure": {
+      "url": "/commentary-figures/amc10-2024b-q11.svg",
+      "alt": "Rectangle WXYZ, with a right angle at M between WM and MA. M lies on XY, and A on YZ.",
+      "altZh": "长方形 WXYZ 中，M 在 XY 上，A 在 YZ 上，WM 与 MA 在 M 处成直角。",
+      "printHeightPt": 138
+    }
+  },
+  "amc12-2024b-q8": {
+    "summary": "Find the positive real number $x$ for which $\\dfrac{(\\log_2 x)(\\log_3 x)}{\\log_2 x+\\log_3 x}=2$.  (A) $25$  (B) $32$  (C) $36$  (D) $42$  (E) $48$",
+    "summaryZh": "求满足 $\\dfrac{(\\log_2 x)(\\log_3 x)}{\\log_2 x+\\log_3 x}=2$ 的正实数 $x$。  (A) $25$  (B) $32$  (C) $36$  (D) $42$  (E) $48$",
+    "answer": "C. $36$.",
+    "answerZh": "C。$36$。",
+    "methods": [
+      {
+        "title": "Take the reciprocal",
+        "titleZh": "对等式两边取倒数",
+        "topics": [
+          {
+            "en": "Change of base",
+            "zh": "对数换底"
+          },
+          {
+            "en": "Logarithm laws",
+            "zh": "对数运算"
+          }
+        ],
+        "steps": [
+          "The equation excludes $x=1$, since both logarithms would be zero. Taking reciprocals gives $1/\\log_2 x+1/\\log_3 x=1/2$.",
+          "By change of base, the left side is $\\log_x2+\\log_x3=\\log_x6$. Hence $\\sqrt{x}=6$ and $x=36$. Reversing the steps is valid because $36>1$."
+        ],
+        "stepsZh": [
+          "当 $x=1$ 时分母为零，所以此值不在定义域。对等式两边取倒数，得 $1/\\log_2 x+1/\\log_3 x=1/2$。",
+          "根据换底公式，左边等于 $\\log_x2+\\log_x3=\\log_x6$。因此 $\\sqrt{x}=6$，即 $x=36$。由于 $36>1$，各步可逆，所得值符合原式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/8"
+  },
+  "amc12-2024b-q9": {
+    "summary": "A point is uniformly sampled from the diamond $|x|+|y|\\le8$. The target is defined by $(x^2+y^2-25)^2\\le49$. If the hit probability is $(m/n)\\pi$ with $m/n$ in lowest terms, find $m+n$.\n\n(A) $39$   (B) $71$   (C) $73$   (D) $75$   (E) $135$",
+    "summaryZh": "在菱形 $|x|+|y|\\le8$ 内均匀选一点。目标区域由 $(x^2+y^2-25)^2\\le49$ 定义。若命中概率为 $(m/n)\\pi$，其中 $m/n$ 为既约分数，求 $m+n$。\n\n(A) $39$   (B) $71$   (C) $73$   (D) $75$   (E) $135$",
+    "answer": "B. $71$.",
+    "answerZh": "B。$71$。",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/9",
+    "methods": [
+      {
+        "title": "Compare the annulus with the diamond’s incircle",
+        "titleZh": "比较圆环与菱形的内切圆",
+        "topics": [
+          {
+            "en": "Geometric probability",
+            "zh": "几何概率"
+          },
+          {
+            "en": "Area of an annulus",
+            "zh": "圆环面积"
+          }
+        ],
+        "steps": [
+          "Writing $r^2=x^2+y^2$, the target condition becomes $18\\le r^2\\le32$. The origin is $8/\\sqrt2=\\sqrt{32}$ from each side of the diamond, so even the outer circle fits inside it.",
+          "The target area is $(32-18)\\pi=14\\pi$ and the diamond has area $16^2/2=128$. The probability is $7\\pi/64$, so $m+n=71$."
+        ],
+        "stepsZh": [
+          "写 $r^2=x^2+y^2$，目标条件即 $18\\le r^2\\le32$。原点到菱形各边的距离都是 $8/\\sqrt2=\\sqrt{32}$，故整个圆环都在菱形内。",
+          "圆环面积为 $(32-18)\\pi=14\\pi$，菱形面积为 $16^2/2=128$，命中概率为 $7\\pi/64$，所以 $m+n=71$。"
+        ]
+      }
+    ]
+  },
+  "amc12-2024b-q10": {
+    "summary": "Add three real numbers $x\\le y\\le z$ to the list $1,2.2,3.2,5.2,6.2,7$. The resulting nine entries have range $7$ and both their arithmetic mean and their median are positive integers. How many triples $(x,y,z)$ can be added?\n\n(A) $1$   (B) $2$   (C) $3$   (D) $4$   (E) Infinitely many triples",
+    "summaryZh": "在 $1,2.2,3.2,5.2,6.2,7$ 中新增三个实数 $x\\le y\\le z$。所得九个数极差为 $7$，算术平均数和中位数都是正整数。求可选有序三元组 $(x,y,z)$ 的个数。\n\n(A) $1$   (B) $2$   (C) $3$   (D) $4$   (E) 无穷多组",
+    "answer": "C. $3$.",
+    "answerZh": "C。$3$。",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/10",
+    "methods": [
+      {
+        "title": "Separate the three possible locations of the extremes",
+        "titleZh": "按最大值与最小值的位置分类",
+        "topics": [
+          {
+            "en": "Median and range",
+            "zh": "中位数与极差"
+          },
+          {
+            "en": "Finite casework",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "The fixed entries sum to $24.8$. The overall endpoints must be $0,7$ or $1,8$ or $t,t+7$ with $0<t<1$. In the first case $x=0$. The integer mean forces $y+z=2.2$ or $11.2$. The smaller sum puts $y,z$ at or below $2.2$ and makes the median $2.2$. For the larger sum $4.2\\le y\\le5.6$, $z\\ge5.6$, so the median is $\\min(y,5.2)$. It is integral precisely at $y=5$, giving $(0,5,6.2)$.",
+          "In the second case $z=8$ and $x+y=3.2$ or $12.2$. With the smaller sum $x,y\\le2.2$ and the median is $3.2$. For the larger sum $4.2\\le x\\le6.1$ and $y\\ge6.1$. The median is $\\max(5.2,x)$, integral only for $x=6$. This gives $(6,6.2,8)$.",
+          "In the third case $x=t,z=t+7$. The sum lies strictly between $31.8$ and $41.8$, so the integer mean must be four. Hence $y=4.2-2t$ lies between $2.2$ and $4.2$. The median is $\\max(3.2,y)$, integral only at $y=4$. This yields $(0.1,4,7.1)$; all three triples work."
+        ],
+        "stepsZh": [
+          "已知六数之和为 $24.8$。整组数的两端只可能是 $0,7$、$1,8$，或 $t,t+7$（$0<t<1$）。第一种有 $x=0$，由均值为整数得 $y+z=2.2$ 或 $11.2$。若取较小和，则 $y,z$ 均不超过 $2.2$，中位数为 $2.2$。若取较大和，则 $4.2\\le y\\le5.6$ 且 $z\\ge5.6$，中位数为 $\\min(y,5.2)$，只有 $y=5$ 时才是整数。得到 $(0,5,6.2)$。",
+          "第二种有 $z=8$、$x+y=3.2$ 或 $12.2$。若取较小和，则 $x,y\\le2.2$，中位数为 $3.2$。若取较大和，则 $4.2\\le x\\le6.1$、$y\\ge6.1$，中位数为 $\\max(5.2,x)$，仅 $x=6$ 合适。得到 $(6,6.2,8)$。",
+          "第三种有 $x=t,z=t+7$。总和严格介于 $31.8$ 与 $41.8$ 之间，故整数均值只能为四。于是 $y=4.2-2t$ 介于 $2.2$ 与 $4.2$ 之间。中位数为 $\\max(3.2,y)$，仅当 $y=4$ 时为整数，得 $(0.1,4,7.1)$。三组三元组均符合要求。"
+        ]
+      }
+    ]
+  },
+  "amc12-2024b-q11": {
+    "summary": "For each integer $n$ from $1$ to $90$, take the square of the sine of $n$ degrees. Express the arithmetic mean of these $90$ values as a fraction.  (A) $\\dfrac{11}{45}$  (B) $\\dfrac{22}{45}$  (C) $\\dfrac{89}{180}$  (D) $\\dfrac{1}{2}$  (E) $\\dfrac{91}{180}$",
+    "summaryZh": "对于从 $1$ 到 $90$ 的每个整数 $n$，取角 $n^\\circ$ 的正弦的平方。将这 $90$ 个数的算术平均数写成分数。  (A) $\\dfrac{11}{45}$  (B) $\\dfrac{22}{45}$  (C) $\\dfrac{89}{180}$  (D) $\\dfrac{1}{2}$  (E) $\\dfrac{91}{180}$",
+    "answer": "E. $\\dfrac{91}{180}$.",
+    "answerZh": "E。$\\dfrac{91}{180}$。",
+    "methods": [
+      {
+        "title": "Pair complementary angles",
+        "titleZh": "将余角配对",
+        "topics": [
+          {
+            "en": "Complementary angles",
+            "zh": "余角"
+          },
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          }
+        ],
+        "steps": [
+          "Include $0^\\circ$ in the sum. Its squared sine is zero, so the sum does not change. Write this extended sum as $S$ and also in reverse order.",
+          "At position $n$, the two orders give $\\sin^2(n^\\circ)+\\sin^2((90-n)^\\circ)=\\sin^2(n^\\circ)+\\cos^2(n^\\circ)=1$. There are $91$ positions, so $2S=91$.",
+          "The original mean still has denominator $90$, not $91$, since the inserted zero was only for pairing. Thus the mean is $(91/2)/90=91/180$."
+        ],
+        "stepsZh": [
+          "把 $0^\\circ$ 也纳入求和。它的正弦平方为零，不改变总和。把扩展后的总和记为 $S$，再将各项逆序写一次。",
+          "第 $n$ 个角与其余角相配，得到 $\\sin^2(n^\\circ)+\\sin^2((90-n)^\\circ)=\\sin^2(n^\\circ)+\\cos^2(n^\\circ)=1$。一共有 $91$ 个位置，因此 $2S=91$。",
+          "题目要算的仍是原来 $90$ 个数的平均数，补零只为配对。因此平均数是 $(91/2)/90=91/180$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/11"
+  },
+  "amc12-2024b-q12": {
+    "summary": "A complex number $z$ satisfies $|z|=2$, $\\operatorname{Re}z>1$ and $\\operatorname{Im}z>0$. In the complex plane the points $0,z,z^2,z^3$ form a quadrilateral of area $15$. Determine $\\operatorname{Im}z$.  (A) $\\dfrac{3}{4}$  (B) $1$  (C) $\\dfrac{4}{3}$  (D) $\\dfrac{3}{2}$  (E) $\\dfrac{5}{3}$",
+    "summaryZh": "复数 $z$ 满足 $|z|=2$、$\\operatorname{Re}z>1$、$\\operatorname{Im}z>0$。在复平面上，$0,z,z^2,z^3$ 构成的四边形面积为 $15$。求 $\\operatorname{Im}z$。  (A) $\\dfrac{3}{4}$  (B) $1$  (C) $\\dfrac{4}{3}$  (D) $\\dfrac{3}{2}$  (E) $\\dfrac{5}{3}$",
+    "answer": "D. $\\dfrac{3}{2}$.",
+    "answerZh": "D。$\\dfrac{3}{2}$。",
+    "methods": [
+      {
+        "title": "Scale triangles by complex multiplication",
+        "titleZh": "由复数乘法确定三角形面积比",
+        "topics": [
+          {
+            "en": "Complex multiplication",
+            "zh": "复数乘法"
+          },
+          {
+            "en": "Area scaling",
+            "zh": "面积缩放"
+          }
+        ],
+        "steps": [
+          "Put $y=\\operatorname{Im}z$ and $\\theta=\\arg z$. Since $\\cos\\theta=\\operatorname{Re}z/2>1/2$ and $y>0$, we have $0<\\theta<60^\\circ$. The rays towards $z,z^2,z^3$ occur in that order in the upper half-plane, so the segment from $0$ to $z^2$ divides the quadrilateral into two triangles.",
+          "The triangle with vertices $0,1,z$ has unit base and height $y$, hence area $y/2$. Multiplying every vertex by $z$ rotates the plane and doubles all lengths. Its image, with vertices $0,z,z^2$, has area $4(y/2)=2y$.",
+          "Multiplication by $z$ once more gives the second triangle, with vertices $0,z^2,z^3$, whose area is $4(2y)=8y$. Hence $10y=15$ and $y=3/2$."
+        ],
+        "stepsZh": [
+          "令 $y=\\operatorname{Im}z$、$\\theta=\\arg z$。因 $\\cos\\theta=\\operatorname{Re}z/2>1/2$ 且 $y>0$，有 $0<\\theta<60^\\circ$。指向 $z,z^2,z^3$ 的射线按此顺序位于上半平面，故连接 $0$ 与 $z^2$ 可将四边形分成两个三角形。",
+          "以 $0,1,z$ 为顶点的三角形底长为 $1$、高为 $y$，面积为 $y/2$。将各顶点乘以 $z$，相当于将平面旋转并把所有长度放大到两倍。所得三角形的顶点为 $0,z,z^2$，面积为 $4(y/2)=2y$。",
+          "再乘一次 $z$，得到第二个三角形 $0,z^2,z^3$，面积为 $4(2y)=8y$。于是 $10y=15$，解得 $y=3/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/12",
+    "figure": {
+      "url": "/commentary-figures/amc12-2024b-q12.svg",
+      "alt": "Complex-plane quadrilateral with vertices in cyclic order 0, z, z squared, z cubed. A dashed diagonal from 0 to z squared divides it into two triangles.",
+      "altZh": "复平面中，四边形的顶点依次是原点、z、z 的平方、z 的立方。从原点连至 z 的平方的虚线把它分成两个三角形。",
+      "printHeightPt": 170
+    }
+  },
+  "amc12-2024b-q13": {
+    "summary": "For real $x,y$, define $h=x^2+y^2-6x-8y$ and $k=x^2+y^2-10x+4y$. Find the smallest attainable value of $h+k$.  (A) $-54$  (B) $-46$  (C) $-34$  (D) $-16$  (E) $16$",
+    "summaryZh": "对于实数 $x,y$，定义 $h=x^2+y^2-6x-8y$、$k=x^2+y^2-10x+4y$。求 $h+k$ 能达到的最小值。  (A) $-54$  (B) $-46$  (C) $-34$  (D) $-16$  (E) $16$",
+    "answer": "C. $-34$.",
+    "answerZh": "C。$-34$。",
+    "methods": [
+      {
+        "title": "Complete two independent squares",
+        "titleZh": "分别对两个变量配方",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Quadratic extrema",
+            "zh": "二次函数最值"
+          }
+        ],
+        "steps": [
+          "Adding the definitions gives $h+k=2x^2+2y^2-16x-4y$. Grouping by variable produces $h+k=2(x-4)^2+2(y-1)^2-34$.",
+          "Both squares are nonnegative and vanish together at $(x,y)=(4,1)$. That point gives $h=-15$ and $k=-19$, so the lower bound $-34$ is achieved."
+        ],
+        "stepsZh": [
+          "将定义式相加得 $h+k=2x^2+2y^2-16x-4y$。按变量配方，得 $h+k=2(x-4)^2+2(y-1)^2-34$。",
+          "两个平方项非负，且在 $(x,y)=(4,1)$ 同时为零。此时 $h=-15$、$k=-19$，确实达到了下界 $-34$。"
+        ]
+      },
+      {
+        "title": "Minimise a sum of squared distances",
+        "titleZh": "用距离的平方和求最小值",
+        "topics": [
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          },
+          {
+            "en": "Quadratic mean inequality",
+            "zh": "平方平均不等式"
+          }
+        ],
+        "steps": [
+          "Let $P=(x,y)$, $A=(3,4)$ and $B=(5,-2)$. The equations read $h=PA^2-25$ and $k=PB^2-29$. The triangle inequality gives $PA+PB\\ge AB$, with $AB^2=2^2+6^2=40$.",
+          "Since $PA^2+PB^2\\ge(PA+PB)^2/2$, this sum is at least $20$. Both inequalities are equalities at the midpoint of $AB$. Subtracting $25+29$ gives the minimum $20-54=-34$."
+        ],
+        "stepsZh": [
+          "令 $P=(x,y)$、$A=(3,4)$、$B=(5,-2)$。原式等价于 $h=PA^2-25$、$k=PB^2-29$。由三角不等式，$PA+PB\\ge AB$，其中 $AB^2=2^2+6^2=40$。",
+          "又有 $PA^2+PB^2\\ge(PA+PB)^2/2$，因此距离平方和至少为 $20$。当 $P$ 为 $AB$ 的中点时，两处均取等号。减去 $25+29$ 得最小值 $20-54=-34$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/13"
+  },
+  "amc12-2024b-q14": {
+    "summary": "As the integer $a$ varies, how many residue classes modulo $125$ can $a^{100}$ occupy?\n\n(A) $1$   (B) $2$   (C) $5$   (D) $25$   (E) $125$",
+    "summaryZh": "当 $a$ 遍历所有整数时，$a^{100}$ 除以 $125$ 的余数共有几种？\n\n(A) $1$   (B) $2$   (C) $5$   (D) $25$   (E) $125$",
+    "answer": "B. $2$.",
+    "answerZh": "B。$2$。",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/14",
+    "methods": [
+      {
+        "title": "Separate units from multiples of five",
+        "titleZh": "区分模五的倍数与单位",
+        "topics": [
+          {
+            "en": "Euler’s theorem",
+            "zh": "欧拉定理"
+          },
+          {
+            "en": "Modular exponentiation",
+            "zh": "模幂"
+          }
+        ],
+        "steps": [
+          "When $5\\mid a$, the power is divisible by $125=5^3$. Otherwise $a$ is a unit modulo $125$ and $\\varphi(125)=125-25=100$, so Euler’s theorem gives $a^{100}\\equiv1\\pmod{125}$.",
+          "Both residues occur, for example with $a=5$ and $a=1$. There are two."
+        ],
+        "stepsZh": [
+          "若 $5\\mid a$，则其百次方被 $125=5^3$ 整除。其余情况下 $a$ 与 $125$ 互质。由 $\\varphi(125)=125-25=100$ 和欧拉定理，$a^{100}\\equiv1\\pmod{125}$。",
+          "取 $a=5$ 和 $a=1$ 即可分别实现这两个余数，故共有两种。"
+        ]
+      },
+      {
+        "title": "Lift Fermat’s congruence twice",
+        "titleZh": "将费马同余式提升两次",
+        "topics": [
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          }
+        ],
+        "steps": [
+          "For $5\\nmid a$, Fermat’s little theorem gives $a^4=1+5t$. The binomial expansion shows that $(1+5t)^5$ is $1$ modulo $25$. Writing it as $1+25u$ and raising to the fifth power again gives $1$ modulo $125$. Thus $a^{100}\\equiv1$.",
+          "For a multiple of five the residue is zero. Both possibilities occur."
+        ],
+        "stepsZh": [
+          "若 $5\\nmid a$，费马小定理给出 $a^4=1+5t$。二项式展开可知 $(1+5t)^5$ 模 $25$ 余一。将其写作 $1+25u$ 并再取五次方，可知模 $125$ 仍余一，所以 $a^{100}\\equiv1$。",
+          "若 $a$ 是五的倍数，余数为零。二者均能取到。"
+        ]
+      }
+    ]
+  },
+  "amc12-2024b-q15": {
+    "summary": "Apply a base-two logarithm to each coordinate of the three points $(1,2),(3,4),(7,8)$. What is the area of the triangle with the three resulting points as vertices? $(A)\\ \\log_2 \\dfrac{\\sqrt3}{7}$   $(B)\\ \\log_2 \\dfrac{3}{\\sqrt7}$   $(C)\\ \\log_2 \\dfrac{7}{\\sqrt3}$   $(D)\\ \\log_2 \\dfrac{11}{\\sqrt7}$   $(E)\\ \\log_2 \\dfrac{11}{\\sqrt3}$",
+    "summaryZh": "将 $(1,2),(3,4),(7,8)$ 这三个点的每个坐标都替换成它的以 2 为底的对数。以所得三点为顶点的三角形面积是多少？ $(A)\\ \\log_2 \\dfrac{\\sqrt3}{7}$   $(B)\\ \\log_2 \\dfrac{3}{\\sqrt7}$   $(C)\\ \\log_2 \\dfrac{7}{\\sqrt3}$   $(D)\\ \\log_2 \\dfrac{11}{\\sqrt7}$   $(E)\\ \\log_2 \\dfrac{11}{\\sqrt3}$",
+    "answer": "B. $\\log_2(3/\\sqrt7)$.",
+    "answerZh": "B. $\\log_2(3/\\sqrt7)$。",
+    "methods": [
+      {
+        "title": "Slice through the middle height",
+        "titleZh": "过中间高度作水平截线",
+        "topics": [
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Midpoints",
+            "zh": "中点"
+          }
+        ],
+        "steps": [
+          "The transformed points are $A=(0,1)$, $B=(\\log_2 3,2)$ and $C=(\\log_2 7,3)$. The midpoint $M$ of $AC$ is $(\\tfrac12\\log_2 7,2)$, on the same horizontal as $B$.",
+          "Triangles $ABM$ and $CBM$ share base $BM$, and each has height one. Their combined area equals $BM$. Since $3>\\sqrt7$, this length is $\\log_2 3-\\tfrac12\\log_2 7=\\log_2(3/\\sqrt7)$."
+        ],
+        "stepsZh": [
+          "变换后的顶点为 $A=(0,1)$、$B=(\\log_2 3,2)$、$C=(\\log_2 7,3)$。$AC$ 的中点 $M=(\\tfrac12\\log_2 7,2)$ 与 $B$ 等高。",
+          "$ABM$ 与 $CBM$ 共用水平底边 $BM$，高都为 1，因此两者的总面积恰等于 $BM$。因 $3>\\sqrt7$，故此长度为 $\\log_2 3-\\tfrac12\\log_2 7=\\log_2(3/\\sqrt7)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/15"
+  },
+  "amc12-2024b-q16": {
+    "summary": "Split $16$ distinct people into four unlabeled groups of four. In each group appoint two different members as chair and secretary. If the total number of assignments is $3^r M$ with $3\\nmid M$, find $r$.\n\n(A) $5$   (B) $6$   (C) $7$   (D) $8$   (E) $9$",
+    "summaryZh": "将 $16$ 个人分成四个不编号的四人委员会，再在每个委员会中选两名不同成员分别任主席和秘书。若所有分配方法数为 $3^rM$，且 $3\\nmid M$，求 $r$。\n\n(A) $5$   (B) $6$   (C) $7$   (D) $8$   (E) $9$",
+    "answer": "A. $5$.",
+    "answerZh": "A。$5$。",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/16",
+    "methods": [
+      {
+        "title": "Cancel symmetries in a permutation of all members",
+        "titleZh": "从全排列中除去重复",
+        "topics": [
+          {
+            "en": "Multinomial counting",
+            "zh": "多项式计数"
+          },
+          {
+            "en": "Prime exponent in a factorial",
+            "zh": "阶乘中的素因子指数"
+          }
+        ],
+        "steps": [
+          "Arrange all sixteen people in a row and split the row into four consecutive groups. In each group use the first slot for the chair and the second for the secretary. Only the last two members are interchangeable, and the four whole groups can be permuted. Hence the assignment count is $16!/[4!(2!)^4]$.",
+          "The exponent of three in $16!$ is $\\lfloor16/3\\rfloor+\\lfloor16/9\\rfloor=6$. The denominator removes one factor of three from $4!$, giving $r=5$."
+        ],
+        "stepsZh": [
+          "将十六人排成一列，依次按四人分组。每组第一位任主席、第二位任秘书，余下两位可互换；四个完整委员会也可任意交换次序。因此分配数为 $16!/[4!(2!)^4]$。",
+          "$16!$ 中三的指数为 $\\lfloor16/3\\rfloor+\\lfloor16/9\\rfloor=6$。分母的 $4!$ 恰消去一个三，故 $r=5$。"
+        ]
+      }
+    ]
+  },
+  "amc12-2024b-q17": {
+    "summary": "Choose two different integers from $-10,-9,\\ldots,10$ in a uniformly random order; call the first $a$ and the second $b$. What is the probability that $x^3+ax^2+bx+6$ has three different integer zeros? $(A)\\ \\dfrac{1}{240}$   $(B)\\ \\dfrac{1}{221}$   $(C)\\ \\dfrac{1}{105}$   $(D)\\ \\dfrac{1}{84}$   $(E)\\ \\dfrac{1}{63}$",
+    "summaryZh": "从 $-10,-9,\\ldots,10$ 中不放回地随机依次抽取两个整数，先取的记为 $a$、后取的记为 $b$。多项式 $x^3+ax^2+bx+6$ 有三个不同整数根的概率是多少？ $(A)\\ \\dfrac{1}{240}$   $(B)\\ \\dfrac{1}{221}$   $(C)\\ \\dfrac{1}{105}$   $(D)\\ \\dfrac{1}{84}$   $(E)\\ \\dfrac{1}{63}$",
+    "answer": "C. $1/105$.",
+    "answerZh": "C. $1/105$。",
+    "methods": [
+      {
+        "title": "List the possible unordered root sets",
+        "titleZh": "按根的绝对值分类",
+        "topics": [
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Counting outcomes",
+            "zh": "计数概率"
+          }
+        ],
+        "steps": [
+          "There are $21\\cdot20=420$ equally likely coefficient pairs. If $u,v,w$ are the roots, then $uvw=-6$, $a=-(u+v+w)$ and $b=uv+vw+wu$. Their absolute values, in order of size, can only be $1,1,6$ or $1,2,3$.",
+          "With absolute values $1,1,6$, distinctness forces $1,-1$, so the third root is $6$ and $(a,b)=(-6,-1)$. With absolute values $1,2,3$, either one root is negative or all three are. Putting the minus sign respectively on $1,2,3$ gives $(-4,1),(-2,-5),(0,-7)$. Taking all negative gives $(6,11)$, outside the available range.",
+          "The four remaining coefficient pairs are distinct, each uses distinct entries, and their constructed root sets verify sufficiency. The probability is $4/420=1/105$."
+        ],
+        "stepsZh": [
+          "等可能的有序系数对共 $21\\cdot20=420$ 个。若根为 $u,v,w$，韦达定理给出 $uvw=-6$、$a=-(u+v+w)$、$b=uv+vw+wu$。所以根的绝对值从小到大只能为 $1,1,6$ 或 $1,2,3$。",
+          "第一种情形因根互异，两个绝对值为 1 的根必须为 $1,-1$，第三根于是为 $6$，得 $(a,b)=(-6,-1)$。第二种情形要么恰一个根取负，要么三个都取负。依次让 $1,2,3$ 中的一个取负，所得系数对是 $(-4,1),(-2,-5),(0,-7)$；全取负得 $(6,11)$，超出范围。",
+          "保留的四对各不相同，每对的两个系数也都不同，且已构造出符合条件的根。因此概率为 $4/420=1/105$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/17"
+  },
+  "amc12-2024b-q18": {
+    "summary": "Let $F_1=F_2=1$ and $F_j=F_{j-1}+F_{j-2}$ for $j\\ge3$. Evaluate $\\sum_{k=1}^{10} F_{2k}/F_k$.\n\n(A) $318$   (B) $319$   (C) $320$   (D) $321$   (E) $322$",
+    "summaryZh": "数列满足 $F_1=F_2=1$，且 $j\\ge3$ 时 $F_j=F_{j-1}+F_{j-2}$。求 $\\sum_{k=1}^{10} F_{2k}/F_k$。\n\n(A) $318$   (B) $319$   (C) $320$   (D) $321$   (E) $322$",
+    "answer": "B. $319$.",
+    "answerZh": "B。$319$。",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/18",
+    "methods": [
+      {
+        "title": "Use the Fibonacci addition formula",
+        "titleZh": "使用斐波那契加法公式",
+        "topics": [
+          {
+            "en": "Fibonacci recurrence",
+            "zh": "斐波那契递推"
+          },
+          {
+            "en": "Telescoping sums",
+            "zh": "裂项求和"
+          }
+        ],
+        "steps": [
+          "Extend the sequence with $F_0=0$. The identity $F_{k+j}=F_{k-1}F_j+F_kF_{j+1}$ holds because the two sides agree for $j=0,1$ and follow the same recurrence in $j$. Taking $j=k$ gives $F_{2k}/F_k=F_{k-1}+F_{k+1}$.",
+          "Summing $F_j=F_{j+2}-F_{j+1}$ yields $\\sum_{j=1}^m F_j=F_{m+2}-1$. The two sums over indices $0$ through $9$ and $2$ through $11$ are $F_{11}-1=88$ and $F_{13}-2=231$. Their sum is $319$."
+        ],
+        "stepsZh": [
+          "补定义 $F_0=0$。公式 $F_{k+j}=F_{k-1}F_j+F_kF_{j+1}$ 在 $j=0,1$ 时成立，两侧关于 $j$ 又满足同一递推，故对所有 $j$ 成立。取 $j=k$ 即得 $F_{2k}/F_k=F_{k-1}+F_{k+1}$。",
+          "对 $F_j=F_{j+2}-F_{j+1}$ 求和可知 $\\sum_{j=1}^mF_j=F_{m+2}-1$。因此下标 $0$ 至 $9$ 的和为 $F_{11}-1=88$，下标 $2$ 至 $11$ 的和为 $F_{13}-2=231$，总和为 $319$。"
+        ]
+      },
+      {
+        "title": "Generate the ten ratios directly",
+        "titleZh": "直接递推出十个比值",
+        "topics": [
+          {
+            "en": "Recurrence evaluation",
+            "zh": "递推计算"
+          }
+        ],
+        "steps": [
+          "The recurrence gives the even-indexed numerators $1,3,8,21,55,144,377,987,2584,6765$. The denominators are $1,1,2,3,5,8,13,21,34,55$.",
+          "Their respective ratios are $1,3,4,7,11,18,29,47,76,123$, and their sum is $319$."
+        ],
+        "stepsZh": [
+          "由递推式算得十个偶数下标的分子依次为 $1,3,8,21,55,144,377,987,2584,6765$，分母依次为 $1,1,2,3,5,8,13,21,34,55$。",
+          "逐项相除得 $1,3,4,7,11,18,29,47,76,123$，其和为 $319$。"
+        ]
+      }
+    ]
+  },
+  "amc12-2024b-q19": {
+    "summary": "Rotate an equilateral triangle $ABC$ of side 14 about its centre so that $A,B,C$ move to $D,E,F$, respectively. The rotation angle is $0<\\theta<60^\\circ$. Around the outside the six vertices form the hexagon $ADBECF$, of area $91\\sqrt3$. Determine $\\tan\\theta$. $(A)\\ \\dfrac{3}{4}$   $(B)\\ \\dfrac{5\\sqrt3}{11}$   $(C)\\ \\dfrac{4}{5}$   $(D)\\ \\dfrac{11}{13}$   $(E)\\ \\dfrac{7\\sqrt3}{13}$",
+    "summaryZh": "将边长为 14 的等边三角形 $ABC$ 绕中心旋转，使 $A,B,C$ 分别移到 $D,E,F$，旋转角 $0<\\theta<60^\\circ$。六个顶点按外圈顺序组成六边形 $ADBECF$，面积为 $91\\sqrt3$。求 $\\tan\\theta$。 $(A)\\ \\dfrac{3}{4}$   $(B)\\ \\dfrac{5\\sqrt3}{11}$   $(C)\\ \\dfrac{4}{5}$   $(D)\\ \\dfrac{11}{13}$   $(E)\\ \\dfrac{7\\sqrt3}{13}$",
+    "answer": "B. $5\\sqrt3/11$.",
+    "answerZh": "B. $5\\sqrt3/11$。",
+    "methods": [
+      {
+        "title": "Add the six triangles at the centre",
+        "titleZh": "相加六个以圆心为顶点的三角形面积",
+        "topics": [
+          {
+            "en": "Area using sine",
+            "zh": "正弦面积公式"
+          },
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          }
+        ],
+        "steps": [
+          "The common circumradius of the two triangles is $R=14/\\sqrt3$. The angles subtended at the centre by the hexagon sides alternate between $\\theta$ and $120^\\circ-\\theta$. All are below $180^\\circ$, so six centre-to-side triangles cover the hexagon exactly.",
+          "Their area sum is $\\tfrac32 R^2[\\sin\\theta+\\sin(120^\\circ-\\theta)]=98\\sqrt3\\cos(60^\\circ-\\theta)$. Comparing with the given area yields $\\cos(60^\\circ-\\theta)=13/14$. The angle is acute, so its sine is $3\\sqrt3/14$.",
+          "Write $d=60^\\circ-\\theta$. The subtraction formula gives $\\tan\\theta=(\\sqrt3-\\tan d)/(1+\\sqrt3\\tan d)$; inserting $\\tan d=3\\sqrt3/13$ gives $5\\sqrt3/11$."
+        ],
+        "stepsZh": [
+          "两个等边三角形的共同外接圆半径是 $R=14/\\sqrt3$。六边形各边所对圆心角交替为 $\\theta$、$120^\\circ-\\theta$，都小于 $180^\\circ$。用圆心连接各顶点，恰将六边形分成六个三角形。",
+          "面积和为 $\\tfrac32R^2[\\sin\\theta+\\sin(120^\\circ-\\theta)]=98\\sqrt3\\cos(60^\\circ-\\theta)$。与已知面积比较，得 $\\cos(60^\\circ-\\theta)=13/14$。该角为锐角，正弦为 $3\\sqrt3/14$。",
+          "令 $d=60^\\circ-\\theta$，差角公式给出 $\\tan\\theta=(\\sqrt3-\\tan d)/(1+\\sqrt3\\tan d)$，代入 $\\tan d=3\\sqrt3/13$ 即得 $5\\sqrt3/11$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/19",
+    "figure": {
+      "url": "/commentary-figures/amc12-2024b-q19.svg",
+      "alt": "Two rotated equilateral triangles with common centre O and outer vertices in the order A, D, B, E, C, F.",
+      "altZh": "两等边三角形共用中心 O，外圈顶点依次为 A、D、B、E、C、F。",
+      "printHeightPt": 160
+    }
+  },
+  "amc12-2024b-q20": {
+    "summary": "In a nondegenerate triangle with $AB=40$ and $AC=42$, let $x$ be its median length from $A$ and $f(x)$ its area. The possible median lengths have open interval $(p,q)$ as their range. The largest area is $r$, reached at median length $s$. Find $p+q+r+s$. $(A)\\ 909$   $(B)\\ 910$   $(C)\\ 911$   $(D)\\ 912$   $(E)\\ 913$",
+    "summaryZh": "在非退化三角形中 $AB=40$、$AC=42$。设从 $A$ 引出的中线长为 $x$，三角形面积为 $f(x)$。所有可能的 $x$ 组成开区间 $(p,q)$；面积最大值 $r$ 在 $x=s$ 时取得。求 $p+q+r+s$。 $(A)\\ 909$   $(B)\\ 910$   $(C)\\ 911$   $(D)\\ 912$   $(E)\\ 913$",
+    "answer": "C. $911$.",
+    "answerZh": "C. $911$。",
+    "methods": [
+      {
+        "title": "Vary the included angle",
+        "titleZh": "以夹角作为变量",
+        "topics": [
+          {
+            "en": "Medians",
+            "zh": "中线"
+          },
+          {
+            "en": "Area optimisation",
+            "zh": "面积最值"
+          },
+          {
+            "en": "Vector addition",
+            "zh": "向量加法"
+          }
+        ],
+        "steps": [
+          "Write $t=\\angle BAC$, $0<t<\\pi$. The median vector is half the sum of $\\overrightarrow{AB}$ and $\\overrightarrow{AC}$, so $4x^2=40^2+42^2+2\\cdot40\\cdot42\\cos t$.",
+          "As $\\cos t$ ranges from $-1$ to $1$ with endpoints excluded, $x$ ranges from $(42-40)/2=1$ to $(42+40)/2=41$, again excluding endpoints. Every intermediate value occurs.",
+          "The area $840\\sin t$ peaks at $r=840$ when $t=\\pi/2$. There $s=\\sqrt{40^2+42^2}/2=29$. The requested sum is $1+41+840+29=911$."
+        ],
+        "stepsZh": [
+          "令 $t=\\angle BAC$，有 $0<t<\\pi$。中线向量等于 $\\overrightarrow{AB}$ 与 $\\overrightarrow{AC}$ 之和的一半，因此 $4x^2=40^2+42^2+2\\cdot40\\cdot42\\cos t$。",
+          "$\\cos t$ 取遍开区间 $(-1,1)$，故 $x$ 取遍从 $(42-40)/2=1$ 至 $(42+40)/2=41$ 的所有中间值，且不含端点。",
+          "面积 $840\\sin t$ 在 $t=\\pi/2$ 时达到 $r=840$。此时 $s=\\sqrt{40^2+42^2}/2=29$。所求为 $1+41+840+29=911$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/20"
+  },
+  "amc12-2024b-q21": {
+    "summary": "The smaller acute angles of three primitive integer right triangles add to $90^\\circ$. Two triangles have side lengths $(3,4,5)$ and $(5,12,13)$. What is the perimeter of the third? Here primitive means the three side lengths have greatest common divisor 1. $(A)\\ 40$   $(B)\\ 126$   $(C)\\ 154$   $(D)\\ 176$   $(E)\\ 208$",
+    "summaryZh": "三个本原整边直角三角形各自的较小锐角之和为 $90^\\circ$。其中两个三角形的边长分别为 $(3,4,5)$ 和 $(5,12,13)$。求第三个的周长。本原指三边长的最大公因数为 1。 $(A)\\ 40$   $(B)\\ 126$   $(C)\\ 154$   $(D)\\ 176$   $(E)\\ 208$",
+    "answer": "C. $154$.",
+    "answerZh": "C. $154$。",
+    "methods": [
+      {
+        "title": "Combine two Pythagorean directions",
+        "titleZh": "合成两个勾股三角形的方向",
+        "topics": [
+          {
+            "en": "Angle addition",
+            "zh": "角的加法"
+          },
+          {
+            "en": "Primitive Pythagorean triples",
+            "zh": "本原勾股数"
+          }
+        ],
+        "steps": [
+          "Let the known smaller angles be $u,v$. They are the arguments of $4+3i$ and $12+5i$. Their product is $(4+3i)(12+5i)=33+56i$, so $\\tan(u+v)=56/33$.",
+          "For the unknown smaller angle $w=90^\\circ-(u+v)$, this gives $\\tan w=33/56$. The legs therefore have ratio $33:56$. Since these are coprime and $33^2+56^2=65^2$, the primitive sides are $33,56,65$.",
+          "Their sum is $154$."
+        ],
+        "stepsZh": [
+          "设两个已知小锐角为 $u,v$。它们分别是 $4+3i$ 和 $12+5i$ 的辐角。两复数的积为 $33+56i$，因此 $\\tan(u+v)=56/33$。",
+          "第三个小锐角为 $w=90^\\circ-(u+v)$，故 $\\tan w=33/56$。两直角边长之比为 $33:56$。这两数互素，且 $33^2+56^2=65^2$，故本原边长为 $33,56,65$。",
+          "三边之和为 $154$。"
+        ]
+      },
+      {
+        "title": "Use tangent addition",
+        "titleZh": "利用正切和角公式",
+        "topics": [
+          {
+            "en": "Tangent addition",
+            "zh": "正切和角"
+          },
+          {
+            "en": "Pythagorean triples",
+            "zh": "勾股数"
+          }
+        ],
+        "steps": [
+          "With $u,v$ the two given smaller angles, $\\tan u=3/4$ and $\\tan v=5/12$. Thus $\\tan(u+v)=(3/4+5/12)/(1-15/48)=56/33$.",
+          "The third angle is complementary to their sum. Its tangent is $33/56$, so the primitive legs are $33$ and $56$ and the hypotenuse is $\\sqrt{33^2+56^2}=65$. The perimeter is $154$."
+        ],
+        "stepsZh": [
+          "设 $u,v$ 为已知的两个小锐角，有 $\\tan u=3/4$、$\\tan v=5/12$，故 $\\tan(u+v)=(3/4+5/12)/(1-15/48)=56/33$。",
+          "第三个角与 $u+v$ 互余，故其正切为 $33/56$。两直角边取互素整数 $33,56$，斜边为 $\\sqrt{33^2+56^2}=65$，周长为 $154$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/21"
+  },
+  "amc12-2024b-q22": {
+    "summary": "What is the smallest perimeter of a triangle whose three side lengths are positive integers and whose angle at $B$ is twice its angle at $A$? $(A)\\ 13$   $(B)\\ 14$   $(C)\\ 15$   $(D)\\ 16$   $(E)\\ 17$",
+    "summaryZh": "若三角形的三边长均为正整数，且角 $B$ 等于角 $A$ 的两倍，那么它的周长最小为多少？ $(A)\\ 13$   $(B)\\ 14$   $(C)\\ 15$   $(D)\\ 16$   $(E)\\ 17$",
+    "answer": "C. $15$.",
+    "answerZh": "C. $15$。",
+    "methods": [
+      {
+        "title": "Write the side ratio in lowest terms",
+        "titleZh": "将边长之比约成最简分数",
+        "topics": [
+          {
+            "en": "Law of sines",
+            "zh": "正弦定理"
+          },
+          {
+            "en": "Coprime integers",
+            "zh": "互素整数"
+          },
+          {
+            "en": "Extremal problems",
+            "zh": "极值问题"
+          }
+        ],
+        "steps": [
+          "Write $a,b,c$ for the sides opposite $A,B,C$. The sine rule gives $b/a=\\sin(2A)/\\sin A=2\\cos A$. Since $B>A$ and $A>0$, we have $1<b/a<2$. Also $C=\\pi-3A$, so $c/a=\\sin(3A)/\\sin A=4\\cos^2 A-1=(b/a)^2-1$.",
+          "Take $b/a=t/u$ in lowest terms. Then $u<t<2u$, and $a+c=at^2/u^2$ is integral. As $t^2,u^2$ are coprime, $u^2$ divides $a$. Therefore the perimeter $a+b+c=a(t/u+t^2/u^2)$ is at least $t(t+u)$. There is no integer strictly between 1 and 2, so $u\\ge2$, $t\\ge3$, and the perimeter is at least 15.",
+          "Choose $(a,b,c)=(4,6,5)$. These form a triangle. By the cosine rule $\\cos A=3/4$ and $\\cos B=1/8=2\\cos^2 A-1=\\cos(2A)$. Both $B$ and $2A$ lie between 0 and $\\pi$, hence $B=2A$. Thus 15 is attained."
+        ],
+        "stepsZh": [
+          "设 $a,b,c$ 分别对角 $A,B,C$。正弦定理给出 $b/a=\\sin(2A)/\\sin A=2\\cos A$。由 $B>A$、$A>0$ 知 $1<b/a<2$。又 $C=\\pi-3A$，故 $c/a=\\sin(3A)/\\sin A=4\\cos^2 A-1=(b/a)^2-1$。",
+          "将 $b/a=t/u$ 约为最简分数，则 $u<t<2u$，并且 $a+c=at^2/u^2$ 为整数。因 $t^2,u^2$ 互素，有 $u^2\\mid a$。周长 $a+b+c=a(t/u+t^2/u^2)$ 因而至少为 $t(t+u)$。1 和 2 之间没有整数，所以 $u\\ge2,t\\ge3$，周长至少为 15。",
+          "取 $(a,b,c)=(4,6,5)$，三边满足三角形不等式。余弦定理给出 $\\cos A=3/4$ 及 $\\cos B=1/8=2\\cos^2A-1=\\cos(2A)$。$B$ 和 $2A$ 均位于 $(0,\\pi)$，故 $B=2A$。因此周长 15 可以达到。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/22"
+  },
+  "amc12-2024b-q23": {
+    "summary": "A right pyramid has its apex $V$ vertically above the centre of a regular octagon $ABCDEFGH$ of side 1. The edges $VA$ and $VD$ form a right angle. Determine the square of the pyramid’s height. $(A)\\ 1$   $(B)\\ \\dfrac{1 + \\sqrt2}{2}$   $(C)\\ \\sqrt2$   $(D)\\ \\dfrac{3}{2}$   $(E)\\ \\dfrac{2 + \\sqrt2}{3}$",
+    "summaryZh": "正棱锥的顶点 $V$ 在正八边形底面 $ABCDEFGH$ 的中心正上方，底边长为 1。侧棱 $VA$ 与 $VD$ 成直角。求棱锥高的平方。 $(A)\\ 1$   $(B)\\ \\dfrac{1 + \\sqrt2}{2}$   $(C)\\ \\sqrt2$   $(D)\\ \\dfrac{3}{2}$   $(E)\\ \\dfrac{2 + \\sqrt2}{3}$",
+    "answer": "B. $(1+\\sqrt2)/2$.",
+    "answerZh": "B. $(1+\\sqrt2)/2$。",
+    "methods": [
+      {
+        "title": "Resolve the perpendicular edges into horizontal and vertical parts",
+        "titleZh": "把垂直的两棱分解为水平与竖直分量",
+        "topics": [
+          {
+            "en": "Vector dot products",
+            "zh": "向量点积"
+          },
+          {
+            "en": "Regular octagons",
+            "zh": "正八边形"
+          },
+          {
+            "en": "Spatial geometry",
+            "zh": "立体几何"
+          }
+        ],
+        "steps": [
+          "Let $O$ be the base centre, $R=OA$ and $h=VO$. The horizontal projections of $\\overrightarrow{VA}$ and $\\overrightarrow{VD}$ are $\\overrightarrow{OA}$ and $\\overrightarrow{OD}$. Their angle is $3\\cdot45^\\circ=135^\\circ$, while both vertical components are $-h$.",
+          "The perpendicularity gives $0=R^2\\cos135^\\circ+h^2$, hence $h^2=R^2/\\sqrt2$. The chord $AB=1$ subtends $45^\\circ$, giving $1=2R^2(1-\\cos45^\\circ)=R^2(2-\\sqrt2)$.",
+          "Substituting, $h^2=1/[\\sqrt2(2-\\sqrt2)]=(1+\\sqrt2)/2$."
+        ],
+        "stepsZh": [
+          "设底面中心为 $O$，$R=OA$、$h=VO$。$\\overrightarrow{VA}$ 与 $\\overrightarrow{VD}$ 的水平投影分别为 $\\overrightarrow{OA}$、$\\overrightarrow{OD}$，夹角为 $3\\cdot45^\\circ=135^\\circ$；竖直分量都为 $-h$。",
+          "由两棱垂直，$0=R^2\\cos135^\\circ+h^2$，故 $h^2=R^2/\\sqrt2$。弦 $AB=1$ 所对圆心角为 $45^\\circ$，于是 $1=2R^2(1-\\cos45^\\circ)=R^2(2-\\sqrt2)$。",
+          "代入得 $h^2=1/[\\sqrt2(2-\\sqrt2)]=(1+\\sqrt2)/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/23",
+    "figure": {
+      "url": "/commentary-figures/amc12-2024b-q23.svg",
+      "alt": "A right pyramid with regular octagonal base, apex V above O, and the edges VA and VD highlighted.",
+      "altZh": "正八棱锥的顶点 V 位于底面中心 O 正上方，图中突出显示侧棱 VA 与 VD。",
+      "printHeightPt": 150
+    }
+  },
+  "amc12-2024b-q24": {
+    "summary": "Count the positive integer triples $a\\le b\\le c\\le9$ that can be the three altitudes of a nondegenerate triangle with integer inradius. Here $a,b,c$ are the altitudes from vertices $A,B,C$ to the lines of the opposite sides, respectively. $(A)\\ 2$   $(B)\\ 3$   $(C)\\ 4$   $(D)\\ 5$   $(E)\\ 6$",
+    "summaryZh": "有多少个正整数三元组 $a\\le b\\le c\\le9$ 可依次作为某个非退化三角形从 $A,B,C$ 至相应对边所在直线的三条高，且该三角形的内切圆半径是整数？ $(A)\\ 2$   $(B)\\ 3$   $(C)\\ 4$   $(D)\\ 5$   $(E)\\ 6$",
+    "answer": "B. $3$.",
+    "answerZh": "B. $3$。",
+    "methods": [
+      {
+        "title": "Constrain the least altitude using the inradius",
+        "titleZh": "用内切圆半径限制最短的高",
+        "topics": [
+          {
+            "en": "Triangle area and inradius",
+            "zh": "三角形面积与内切圆"
+          },
+          {
+            "en": "Reciprocal equations",
+            "zh": "倒数方程"
+          },
+          {
+            "en": "Integer case analysis",
+            "zh": "整数分类讨论"
+          }
+        ],
+        "steps": [
+          "If the triangle has area $K$, its sides are $2K/a,2K/b,2K/c$. The area equals the inradius $r$ times the semiperimeter, so $1/r=1/a+1/b+1/c$. This sum is at least $3/9=1/3$, whence $r\\in\\{1,2,3\\}$.",
+          "The longest side corresponds to the smallest altitude $a$. The strict triangle inequality therefore says $1/a<1/b+1/c$. Combining this with $1/r\\le3/a$ shows $2r<a\\le3r$. Equality $a=3r$ forces $a=b=c$.",
+          "For $r=1$, the bounds force $a=3$, hence $(3,3,3)$. For $r=3$, the sum of reciprocals has its minimum value $1/3$, attained only at $(9,9,9)$. For $r=2$ the possibilities are $a=6$, yielding $(6,6,6)$, or $a=5$. The latter requires $1/b+1/c=3/10$; since $b\\le c$, we need $5\\le b\\le6$. The choices $b=5,6$ give $c=10,15/2$, respectively, neither permitted.",
+          "An equilateral triangle of altitude $3r$ has inradius $r$, so each of the three equal triples is realised. The sorting convention counts each once."
+        ],
+        "stepsZh": [
+          "设面积为 $K$，三边长分别为 $2K/a,2K/b,2K/c$。面积等于内切圆半径 $r$ 乘半周长，故 $1/r=1/a+1/b+1/c$。右边至少为 $3/9=1/3$，从而 $r\\in\\{1,2,3\\}$。",
+          "最长边对应最小的高 $a$，严格三角形不等式给出 $1/a<1/b+1/c$。与 $1/r\\le3/a$ 合并可得 $2r<a\\le3r$。若 $a=3r$，则必须有 $a=b=c$。",
+          "$r=1$ 时只能取 $a=3$，得 $(3,3,3)$。$r=3$ 时倒数和恰等于最小值 $1/3$，只可能是 $(9,9,9)$。$r=2$ 时可取 $a=6$，得 $(6,6,6)$；若取 $a=5$，则 $1/b+1/c=3/10$。因 $b\\le c$，得 $5\\le b\\le6$。分别取 $b=5,6$，得 $c=10,15/2$，均不合要求。",
+          "高为 $3r$ 的等边三角形内切圆半径为 $r$，所以这三个等高三元组都能实现。因已按大小排序，每组只计一次。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/24"
+  },
+  "amc12-2024b-q25": {
+    "summary": "Each of six balls independently gets a colour (red or blue) and a pattern (striped or dotted), each of these twelve choices made by a fair coin. Once the decorations are fixed, one ball is chosen uniformly. For what fraction $m/n$ of decorations, in lowest terms, are the selected ball’s redness and stripedness independent events? Give the numerator $m$. $(A)\\ 243$   $(B)\\ 245$   $(C)\\ 247$   $(D)\\ 249$   $(E)\\ 251$",
+    "summaryZh": "用公平硬币独立决定六个球各自的颜色（红或蓝）及图案（条纹或圆点），共作十二次选择。装饰完成后，从六个球中等概率取一个。使“取到红球”与“取到条纹球”相互独立的装饰概率写为最简分数 $m/n$，求分子 $m$。 $(A)\\ 243$   $(B)\\ 245$   $(C)\\ 247$   $(D)\\ 249$   $(E)\\ 251$",
+    "answer": "A. $243$.",
+    "answerZh": "A. $243$。",
+    "methods": [
+      {
+        "title": "Count the two margins and their intersection",
+        "titleZh": "用两种属性的数量和交集计数",
+        "topics": [
+          {
+            "en": "Independence",
+            "zh": "事件独立"
+          },
+          {
+            "en": "Contingency tables",
+            "zh": "列联表"
+          },
+          {
+            "en": "Multinomial counting",
+            "zh": "多项式系数计数"
+          }
+        ],
+        "steps": [
+          "Label the balls temporarily by the order in which they are painted. The $4^6=4096$ decoration assignments are equally likely. Write $R$ for the number red, $S$ for the number striped and $K$ for the number both. Conditional on the paint, independence means $K/6=(R/6)(S/6)$, or $6K=RS$.",
+          "If one attribute is constant, independence is automatic. There are $2\\cdot64$ assignments with constant colour and $2\\cdot64$ with constant pattern. Their intersection has $2\\cdot2=4$ assignments, leaving $252$ in the union.",
+          "Otherwise $1\\le R,S\\le5$. For $6$ to divide $RS$, one margin must be $3$ and the other $2$ or $4$. This makes four ordered margin pairs. In each case $K=RS/6$ and the counts of the four types, namely $K,R-K,S-K,6-R-S+K$, are $1,1,2,2$ in some order. Each margin pair contributes $6!/(2!2!)=180$ assignments.",
+          "The probability is $(252+4\\cdot180)/4096=972/4096=243/1024$. The denominator is a power of two and 243 is odd, so the requested numerator is 243."
+        ],
+        "stepsZh": [
+          "按装饰顺序暂给六个球编号，$4^6=4096$ 种装饰结果等可能。令 $R,S,K$ 分别为红球数、条纹球数及红色条纹球数。装饰固定后，独立条件为 $K/6=(R/6)(S/6)$，即 $6K=RS$。",
+          "若一种属性在六个球中固定不变，独立性自动成立。颜色全同有 $2\\cdot64$ 种，图案全同也有 $2\\cdot64$ 种。两类交集有 $2\\cdot2=4$ 种，所以并集共 252 种。",
+          "否则 $1\\le R,S\\le5$。为使 $6\\mid RS$，两数中一个必须是 3，另一个必须是 2 或 4，共四个有序对。此时 $K=RS/6$，四种球的个数 $K,R-K,S-K,6-R-S+K$ 恰为 $1,1,2,2$ 的某个排列。每个有序对给出 $6!/(2!2!)=180$ 种装饰。",
+          "所求概率为 $(252+4\\cdot180)/4096=972/4096=243/1024$。分母为二的幂，而 243 为奇数，故最简分数的分子为 243。"
+        ]
+      },
+      {
+        "title": "Condition on the set of red balls",
+        "titleZh": "先固定红球的集合",
+        "topics": [
+          {
+            "en": "Conditional counting",
+            "zh": "条件计数"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "Fix the red-ball set of size $r$. For $0<r<6$, independence means the striped fraction among the $r$ red balls equals that among the $6-r$ blue balls. The denominator of this fraction in lowest terms divides both group sizes. Fractions 0 and 1 always work.",
+          "For $r=0,6$, every one of the $64$ stripe assignments works. For $r=1,5$ only the two constant patterns work. For $r=2,4$ the extra common fraction $1/2$ contributes $\\binom21\\binom42=12$ assignments, giving 14. For $r=3$ the extra fractions $1/3,2/3$ contribute $2\\binom31^2=18$ assignments, giving 20.",
+          "The numbers of red sets in these four groups of sizes are $2,12,30,20$. Thus the favourable total is $2\\cdot64+12\\cdot2+30\\cdot14+20\\cdot20=972$, giving $972/4^6=243/1024$."
+        ],
+        "stepsZh": [
+          "先固定红球集合，其大小记为 $r$。若 $0<r<6$，独立性等价于 $r$ 个红球中的条纹比例和 $6-r$ 个蓝球中的条纹比例相同。把此比例约成最简分数，其分母须同时整除两个组的大小。比例 0 和 1 总是可行。",
+          "$r=0,6$ 时，全部 64 种条纹分配都可行。$r=1,5$ 时仅有两种全同图案。$r=2,4$ 时还可取比例 $1/2$，多出 $\\binom21\\binom42=12$ 种，共 14 种。$r=3$ 时还能取 $1/3$ 或 $2/3$，多出 $2\\binom31^2=18$ 种，共 20 种。",
+          "以上四类的红球集合个数依次为 $2,12,30,20$。合格结果总数为 $2\\cdot64+12\\cdot2+30\\cdot14+20\\cdot20=972$，故概率为 $972/4^6=243/1024$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024B/problem/25"
   }
 }

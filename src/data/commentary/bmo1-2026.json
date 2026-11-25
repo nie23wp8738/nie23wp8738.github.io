@@ -133,7 +133,8 @@
     "figure": {
       "url": "/commentary-figures/bmo1-2026-q4.svg",
       "alt": "Two circles through the midpoint M, tangent to the two sides at B and C and meeting again at D.",
-      "altZh": "两圆均经过底边中点 M，分别在 B、C 与两腰相切，并交于 D。"
+      "altZh": "两圆均经过底边中点 M，分别在 B、C 与两腰相切，并交于 D。",
+      "printHeightPt": 170
     }
   },
   "bmo1-2026-q5": {
@@ -205,7 +206,8 @@
         "figure": {
           "url": "/commentary-figures/bmo1-2026-q6-method-1.svg",
           "alt": "Occupied pads after each move of the nine-to-one reduction.",
-          "altZh": "从九只减为一只的六步中，实心圆表示每步结束后有蛙的位置。"
+          "altZh": "从九只减为一只的六步中，实心圆表示每步结束后有蛙的位置。",
+          "printHeightPt": 140
         }
       }
     ],

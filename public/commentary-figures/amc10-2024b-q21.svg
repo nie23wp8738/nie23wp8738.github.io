@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="236" height="128" viewBox="0 0 236 128" role="img">
+  <title>Cross sections of the two given pipes</title>
+  <path d="M10 117h215" stroke="#243747" fill="none" stroke-width="1.7"/>
+  <circle cx="97" cy="67" r="50" stroke="#243747" stroke-width="1.7" fill="#edf2f2"/>
+  <circle cx="147" cy="104.5" r="12.5" stroke="#243747" stroke-width="1.7" fill="#edf2f2"/>
+  <path d="M97 67v50 M147 104.5V117" fill="none" stroke="#526e78" stroke-dasharray="3 3" stroke-width="1"/>
+  <text x="87.00" y="94.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">1</text>
+  <text x="169.00" y="107.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">1/4</text>
+</svg>

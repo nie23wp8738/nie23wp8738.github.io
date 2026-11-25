@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="316" height="201" viewBox="0 0 316 201" role="img">
+  <title>Two arrangements of rectangular bricks</title>
+  <polygon points="48.00,18.00 135.00,26.70 107.07,43.80 20.07,35.10" fill="#eef2f2" stroke="#304854" stroke-width="1.4" stroke-linejoin="round"/>
+  <polygon points="20.07,35.10 107.07,43.80 107.07,175.80 20.07,167.10" fill="#f7f8f8" stroke="#304854" stroke-width="1.4" stroke-linejoin="round"/>
+  <polygon points="135.00,26.70 107.07,43.80 107.07,175.80 135.00,158.70" fill="#e5ecec" stroke="#304854" stroke-width="1.4" stroke-linejoin="round"/>
+  <polyline points="77.00,20.90 49.07,38.00" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="49.07,38.00 49.07,170.00" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="106.00,23.80 78.07,40.90" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="78.07,40.90 78.07,172.90" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="38.69,23.70 125.69,32.40" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="125.69,32.40 125.69,164.40" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="29.38,29.40 116.38,38.10" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="116.38,38.10 116.38,170.10" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="20.07,123.10 107.07,131.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="107.07,131.80 135.00,114.70" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="20.07,79.10 107.07,87.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="107.07,87.80 135.00,70.70" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polygon points="212.00,17.00 300.00,25.80 271.58,43.20 183.58,34.40" fill="#eef2f2" stroke="#304854" stroke-width="1.4" stroke-linejoin="round"/>
+  <polygon points="183.58,34.40 271.58,43.20 271.58,176.20 183.58,167.40" fill="#f7f8f8" stroke="#304854" stroke-width="1.4" stroke-linejoin="round"/>
+  <polygon points="300.00,25.80 271.58,43.20 271.58,176.20 300.00,158.80" fill="#e5ecec" stroke="#304854" stroke-width="1.4" stroke-linejoin="round"/>
+  <polyline points="256.00,21.40 227.58,38.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="227.58,38.80 227.58,171.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="197.79,25.70 285.79,34.50" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="285.79,34.50 285.79,167.50" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="183.58,148.40 271.58,157.20" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="271.58,157.20 300.00,139.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="183.58,129.40 271.58,138.20" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="271.58,138.20 300.00,120.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="183.58,110.40 271.58,119.20" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="271.58,119.20 300.00,101.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="183.58,91.40 271.58,100.20" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="271.58,100.20 300.00,82.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="183.58,72.40 271.58,81.20" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="271.58,81.20 300.00,63.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="183.58,53.40 271.58,62.20" stroke="#526e78" stroke-width="1" fill="none"/>
+  <polyline points="271.58,62.20 300.00,44.80" stroke="#526e78" stroke-width="1" fill="none"/>
+  <text x="79.00" y="193.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">3 × 3 × 3</text>
+  <text x="246.00" y="193.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">2 × 2 × 7</text>
+</svg>

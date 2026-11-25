@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 248" role="img" aria-labelledby="title desc">
+<title id="title">A quadrilateral formed by powers of z</title><desc id="desc">A diagonal from the origin to z squared divides the polygon into the two triangles with third vertices z and z cubed.</desc>
+<rect width="440" height="248" fill="white"/>
+<g fill="none" stroke="#a3a5a7" stroke-width="1"><path d="M 24,218 H 422 m -6,-3 l 6,3 -6,3 M 320,238 V 15 m -3,6 l 3,-6 3,6"/></g>
+<g font-family="serif" fill="#555" font-size="13"><text x="407" y="235">Re</text><text x="328" y="22">Im</text></g>
+<polygon points="320.00,218.00 370.27,161.00 301.00,67.19 68.65,47.00" stroke="#243b4a" fill="#edf2f3" fill-opacity=".75" stroke-width="2"/>
+<path d="M 320.00,218.00 L 301.00,67.19" stroke="#805835" stroke-dasharray="5 4" stroke-width="1.5"/>
+<g fill="#172a35" font-family="serif" font-size="17">
+<circle cx="320.00" cy="218.00" r="2.6"/><text x="306.00" y="234.00">0</text>
+<circle cx="370.27" cy="161.00" r="2.6"/><text x="378.27" y="164.00">z</text>
+<circle cx="301.00" cy="67.19" r="2.6"/><text x="290.00" y="56.19">z²</text>
+<circle cx="68.65" cy="47.00" r="2.6"/><text x="54.65" y="37.00">z³</text>
+</g></svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 160">
+  <title>A midpoint and intersecting lines in a parallelogram</title>
+  <path d="M36 134L189 134L237 28L84 28Z" fill="white" stroke="#294654" stroke-width="1.8"/>
+  <path d="M237 28L84 28L60 81L103 98.667Z" fill="#e0eaf0" stroke="none"/>
+  <path d="M36 134L237 28M60 81L189 134" fill="none" stroke="#345a6e" stroke-width="1.6"/>
+  <path d="M36 134L189 134L237 28L84 28Z" fill="none" stroke="#294654" stroke-width="1.8"/>
+  <g fill="#294654"><circle cx="60" cy="81" r="2.7"/><circle cx="103" cy="98.667" r="2.7"/></g>
+  <g style="font:italic 14px Georgia,serif" fill="#253c47" text-anchor="middle">
+    <text x="27" y="150">A</text><text x="195" y="150">B</text><text x="245" y="24">C</text>
+    <text x="80" y="21">D</text><text x="49" y="83">E</text><text x="105" y="116">F</text>
+  </g>
+</svg>

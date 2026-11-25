@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="140" viewBox="0 0 330 140" role="img">
+  <title>Slope and possible counts of lattice points</title>
+  <path d="M8,9h314v122H8z M91,9v122 M149,9v122 M207,9v122 M265,9v122 M8,39h314 M8,70h314 M8,101h314" fill="none" stroke="#526e78" stroke-width="1"/>
+  <text x="50.00" y="30.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">m</text>
+  <text x="120.00" y="30.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">0</text>
+  <text x="178.00" y="30.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">1</text>
+  <text x="236.00" y="30.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">2</text>
+  <text x="294.00" y="30.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">&gt;2</text>
+  <text x="50.00" y="60.00" text-anchor="middle" font-family="serif" font-size="13" fill="#243747">m = 0</text>
+  <text x="120.00" y="60.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="178.00" y="60.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="236.00" y="60.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="294.00" y="60.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="50.00" y="91.00" text-anchor="middle" font-family="serif" font-size="13" fill="#243747">m ∈ ℚ, m ≠ 0</text>
+  <text x="120.00" y="91.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="178.00" y="91.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="236.00" y="91.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="294.00" y="91.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="50.00" y="122.00" text-anchor="middle" font-family="serif" font-size="13" fill="#243747">m ∉ ℚ</text>
+  <text x="120.00" y="122.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="178.00" y="122.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="236.00" y="122.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+  <text x="294.00" y="122.00" text-anchor="middle" font-family="serif" font-size="16" fill="#243747">?</text>
+</svg>
