@@ -1,0 +1,192 @@
+{
+  "usajmo-2016-q1": {
+    "summary": "An isosceles triangle $ABC$ with $AB=AC$ is inscribed in a circle $\\omega$. A point $P$ varies on the arc $BC$ not containing $A$. Let $I_B$ and $I_C$ be the incentres of triangles $ABP$ and $ACP$, respectively. Prove that the circumcircle of $PI_BI_C$ always passes through one fixed point.",
+    "summaryZh": "等腰三角形 $ABC$ 满足 $AB=AC$，并内接于圆 $\\omega$。点 $P$ 在不含 $A$ 的弧 $BC$ 上变化。分别记三角形 $ABP$ 与 $ACP$ 的内心为 $I_B,I_C$。证明：三角形 $PI_BI_C$ 的外接圆恒过一个定点。",
+    "answer": "The fixed point is the midpoint $M$ of the arc $BC$ not containing $A$.",
+    "answerZh": "定点是不含 $A$ 的弧 $BC$ 的中点 $M$。",
+    "methods": [
+      {
+        "title": "Use arc midpoints and the two incentres",
+        "titleZh": "利用弧中点与两个内心",
+        "topics": [
+          {"en": "Incentres", "zh": "内心"},
+          {"en": "Cyclic quadrilaterals", "zh": "四点共圆"},
+          {"en": "Arc midpoints", "zh": "弧中点"}
+        ],
+        "steps": [
+          "Let $M$ be the midpoint of the arc $BC$ not containing $A$. Let $M_B$ be the second intersection of $PI_B$ with $\\omega$, and define $M_C$ similarly from $PI_C$. In triangle $ABP$, the point $M_B$ is the midpoint of the arc $AB$ not containing $P$; hence the standard incenter lemma gives $M_BI_B=M_BB$. Similarly, $M_CI_C=M_CC$.",
+          "Because $AB=AC$, the corresponding arcs on the two sides of the symmetry axis $AM$ are equal. Consequently $M_BB=M_CC$ and $MM_B=MM_C$. Moreover, $P,I_B,M_B$ are collinear and $P,I_C,M_C$ are collinear, so both angles $\\angle I_BM_BM$ and $\\angle I_CM_CM$ subtend the same chord $PM$ of $\\omega$. Thus triangles $I_BM_BM$ and $I_CM_CM$ are congruent by SAS, giving $MI_B=MI_C$.",
+          "The points $A$ and $M$ are antipodal on $\\omega$, so $PM\\perp PA$. Also $\\angle APB=\\angle APC$ because arcs $AB$ and $AC$ are equal; after bisecting these angles, the ray $PA$ bisects $\\angle I_BPI_C$. We now use the following elementary lemma: if two rays from $P$ are symmetric about a line through $P$, a point $M$ lies on the perpendicular through $P$, and $MI_B=MI_C$, then $P,I_B,M,I_C$ are cyclic.",
+          "For completeness, put $P=(0,0)$, take the symmetry line as the $x$-axis and write $M=(0,m)$, $I_B=r(\\cos\\theta,\\sin\\theta)$, $I_C=s(\\cos\\theta,-\\sin\\theta)$. The equality $MI_B=MI_C$ gives $r-s=2m\\sin\\theta$. The circle through $P,I_B,I_C$ has equation $x^2+y^2+ux+vy=0$; subtracting the two equations for $I_B,I_C$ yields $v=-m$, so $M$ also satisfies the circle equation. Hence the circumcircle of $PI_BI_C$ always passes through the fixed point $M$."
+        ],
+        "stepsZh": [
+          "设 $M$ 为不含 $A$ 的弧 $BC$ 的中点。令 $M_B$ 为直线 $PI_B$ 与 $\\omega$ 的另一交点，类似定义 $M_C$。在三角形 $ABP$ 中，$M_B$ 是不含 $P$ 的弧 $AB$ 的中点，由内心的弧中点性质可得 $M_BI_B=M_BB$；同理 $M_CI_C=M_CC$。",
+          "由 $AB=AC$，圆上关于对称轴 $AM$ 的对应弧相等，从而 $M_BB=M_CC$ 且 $MM_B=MM_C$。又因为 $P,I_B,M_B$ 共线，$P,I_C,M_C$ 共线，所以 $\\angle I_BM_BM$ 与 $\\angle I_CM_CM$ 都是弦 $PM$ 所对的圆周角。由边角边可知 $\\triangle I_BM_BM\\cong\\triangle I_CM_CM$，故 $MI_B=MI_C$。",
+          "$A,M$ 是 $\\omega$ 上的一对对径点，因此 $PM\\perp PA$。又因弧 $AB$ 与弧 $AC$ 相等，有 $\\angle APB=\\angle APC$；分别作角平分线后，射线 $PA$ 平分 $\\angle I_BPI_C$。使用如下初等引理：从 $P$ 引出的两条射线关于一条直线对称，$M$ 位于过 $P$ 的垂线上，且 $MI_B=MI_C$，则 $P,I_B,M,I_C$ 四点共圆。",
+          "为验证该引理，取 $P=(0,0)$，以对称轴为 $x$ 轴，写成 $M=(0,m)$、$I_B=r(\\cos\\theta,\\sin\\theta)$、$I_C=s(\\cos\\theta,-\\sin\\theta)$。由 $MI_B=MI_C$ 得 $r-s=2m\\sin\\theta$。过 $P,I_B,I_C$ 的圆可写成 $x^2+y^2+ux+vy=0$；把 $I_B,I_C$ 代入并相减得到 $v=-m$，于是 $M$ 也满足圆方程。因此 $PI_BI_C$ 的外接圆恒过定点 $M$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAJMO_Problems/Problem_1"
+  },
+  "usajmo-2016-q2": {
+    "summary": "Prove that there is a positive integer $n<10^6$ for which the decimal representation of $5^n$ contains six consecutive zeros.",
+    "summaryZh": "证明：存在正整数 $n<10^6$，使得 $5^n$ 的十进制表示中含有连续六个零。",
+    "answer": "One valid choice is $n=20+2^{19}=524308$; the last twenty digits of $5^n$ are $00000095367431640625$.",
+    "answerZh": "可取 $n=20+2^{19}=524308$；此时 $5^n$ 的末二十位为 $00000095367431640625$。",
+    "methods": [
+      {
+        "title": "Force the last twenty digits with congruences",
+        "titleZh": "用同余控制末二十位",
+        "topics": [
+          {"en": "Euler's theorem", "zh": "欧拉定理"},
+          {"en": "Chinese remainder theorem", "zh": "中国剩余定理"},
+          {"en": "Decimal digits", "zh": "十进制数位"}
+        ],
+        "steps": [
+          "Choose $n=20+2^{19}=524308<10^6$. Both $5^n$ and $5^{20}$ are divisible by $5^{20}$, so $5^n\\equiv5^{20}\\pmod{5^{20}}$.",
+          "Since $\\varphi(2^{20})=2^{19}$ and $5$ is coprime to $2^{20}$, Euler's theorem gives $5^{2^{19}}\\equiv1\\pmod{2^{20}}$. Therefore $5^n=5^{20}5^{2^{19}}\\equiv5^{20}\\pmod{2^{20}}$.",
+          "The moduli $2^{20}$ and $5^{20}$ are coprime, so the two congruences combine to $5^n\\equiv5^{20}\\pmod{10^{20}}$. Hence the final twenty decimal digits of $5^n$ are the twenty-digit, zero-padded form of $5^{20}$.",
+          "Now $5^{20}=95367431640625$ has only fourteen digits. Padding it to twenty digits gives $00000095367431640625$, which contains six consecutive zeros."
+        ],
+        "stepsZh": [
+          "取 $n=20+2^{19}=524308<10^6$。$5^n$ 与 $5^{20}$ 都能被 $5^{20}$ 整除，所以 $5^n\\equiv5^{20}\\pmod{5^{20}}$。",
+          "因为 $\\varphi(2^{20})=2^{19}$ 且 $5$ 与 $2^{20}$ 互素，欧拉定理给出 $5^{2^{19}}\\equiv1\\pmod{2^{20}}$。因此 $5^n=5^{20}5^{2^{19}}\\equiv5^{20}\\pmod{2^{20}}$。",
+          "$2^{20}$ 与 $5^{20}$ 互素，由中国剩余定理得到 $5^n\\equiv5^{20}\\pmod{10^{20}}$。所以 $5^n$ 的末二十位就是把 $5^{20}$ 在左侧补零得到的二十位数。",
+          "$5^{20}=95367431640625$ 只有十四位，补成二十位即 $00000095367431640625$，其中恰好出现连续六个零。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAJMO_Problems/Problem_2"
+  },
+  "usajmo-2016-q3": {
+    "summary": "Let $X_1,X_2,\\ldots,X_{100}$ be mutually distinct nonempty subsets of a set $S$. For every $i=1,\\ldots,99$, consecutive sets satisfy $X_i\\cap X_{i+1}=\\varnothing$ and $X_i\\cup X_{i+1}\\ne S$. Determine the smallest possible value of $|S|$.",
+    "summaryZh": "设 $X_1,X_2,\\ldots,X_{100}$ 是集合 $S$ 的两两不同的非空子集。对每个 $i=1,\\ldots,99$，相邻两项满足 $X_i\\cap X_{i+1}=\\varnothing$ 且 $X_i\\cup X_{i+1}\\ne S$。求 $|S|$ 的最小可能值。",
+    "answer": "The minimum is $|S|=8$.",
+    "answerZh": "最小值为 $|S|=8$。",
+    "methods": [
+      {
+        "title": "Exclude seven elements and construct a chain on eight",
+        "titleZh": "排除七元集合并构造八元集合",
+        "topics": [
+          {"en": "Extremal set theory", "zh": "极值集合论"},
+          {"en": "Inductive construction", "zh": "归纳构造"},
+          {"en": "Counting subsets", "zh": "子集计数"}
+        ],
+        "steps": [
+          "At least seven elements are needed for $100$ distinct subsets. Suppose $|S|=7$. If $|X_i|\\ge4$, either neighbour is disjoint from $X_i$ and omits an element outside $X_i$, so it has size at most $2$.",
+          "There are only $\\binom71+\\binom72=28$ nonempty subsets of size at most $2$. Sets of size at least $4$ must be separated by such small sets, so at most $29$ large sets can appear. There are only $\\binom73=35$ three-element sets. Thus the sequence has length at most $28+29+35=92<100$, a contradiction. Therefore $|S|\\ge8$.",
+          "It remains to build a sufficiently long sequence. For $S_4=\\{1,2,3,4\\}$, the following nine sets work (digits denote the contained elements): $34,1,23,4,12,3,14,2,13$.",
+          "Suppose a valid chain on $S_n=\\{1,\\ldots,n\\}$ has length $2^{n-1}+1$. Delete its last set to obtain an even-length chain $C$. Join two copies of $C$ with the empty set, then add $n+1$ to every odd-positioned set. The middle term becomes $\\{n+1\\}$.",
+          "Adjacent sets remain disjoint, and their union still misses an old element. The two copies are distinct because the alternating $n+1$ pattern reverses after the middle term. The new length is $2^n+1$; for $n=8$ it is $129$. Taking the first $100$ sets proves the minimum is $8$."
+        ],
+        "stepsZh": [
+          "要有 $100$ 个不同子集，至少需要七个元素。反设 $|S|=7$。若 $|X_i|\\ge4$，相邻集合既与 $X_i$ 不交，又须漏掉 $X_i$ 外的一个元素，故大小至多为 $2$。",
+          "大小不超过 $2$ 的非空子集只有 $\\binom71+\\binom72=28$ 个。大小至少为 $4$ 的集合之间必须由这种小集合隔开，所以大集合最多有 $29$ 个；三元子集只有 $\\binom73=35$ 个。序列长度至多为 $28+29+35=92<100$，矛盾。因此 $|S|\\ge8$。",
+          "下面构造足够长的序列。在 $S_4=\\{1,2,3,4\\}$ 上，以下九个集合满足条件（数字表示集合中的元素）：$34,1,23,4,12,3,14,2,13$。",
+          "设 $S_n=\\{1,\\ldots,n\\}$ 上已有长度 $2^{n-1}+1$ 的合法链。删去末项得偶数长度的链 $C$。用空集连接两个 $C$，再在每个奇数位置加入 $n+1$；中间项便成为 $\\{n+1\\}$。",
+          "相邻集合仍不交，且仍漏掉一个旧元素；中间项后奇偶性反转，故两个副本不会重复。新链长度为 $2^n+1$。当 $n=8$ 时有 $129$ 项，取前 $100$ 项即可。因此最小值为 $8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAJMO_Problems/Problem_3"
+  },
+  "usajmo-2016-q4": {
+    "summary": "Find, with proof, the least integer $N$ such that after any $2016$ elements are removed from $\\{1,2,\\ldots,N\\}$, the remaining set still contains $2016$ distinct numbers whose sum is $N$.",
+    "summaryZh": "求最小整数 $N$，使得从 $\\{1,2,\\ldots,N\\}$ 中任意删去 $2016$ 个元素后，余下元素中仍能找到 $2016$ 个互不相同的数，其和等于 $N$。",
+    "answer": "$N=6097392$.",
+    "answerZh": "$N=6097392$。",
+    "methods": [
+      {
+        "title": "A sharp lower bound and complementary pairs",
+        "titleZh": "精确下界与互补配对",
+        "topics": [
+          {"en": "Extremal arguments", "zh": "极值论证"},
+          {"en": "Pairing", "zh": "配对法"},
+          {"en": "Arithmetic series", "zh": "等差数列"}
+        ],
+        "steps": [
+          "Delete $1,2,\\ldots,2016$. Any remaining $2016$ distinct positive integers have sum at least $2017+2018+\\cdots+4032$. Therefore every admissible $N$ must satisfy $N\\ge2017+\\cdots+4032$.",
+          "This lower bound equals $1008(2017+4032)=1008\\cdot6049=6097392$. Set $N$ equal to this value.",
+          "Consider the $3024$ disjoint pairs $(1,6048),(2,6047),\\ldots,(3024,3025)$, each with sum $6049$. Deleting one element can destroy at most one pair, so deleting $2016$ elements leaves at least $3024-2016=1008$ intact pairs.",
+          "The $1008$ intact pairs contain $2016$ distinct remaining numbers, and their sum is $1008\\cdot6049=N$. Thus this $N$ works and is minimal."
+        ],
+        "stepsZh": [
+          "先删去 $1,2,\\ldots,2016$。余下集合中任意 $2016$ 个不同正整数的和至少为 $2017+2018+\\cdots+4032$，所以所有满足条件的 $N$ 都必须不小于该值。",
+          "该下界等于 $1008(2017+4032)=1008\\cdot6049=6097392$。下面令 $N$ 等于这个数。",
+          "考虑 $3024$ 对互不相交的数 $(1,6048),(2,6047),\\ldots,(3024,3025)$，每对之和均为 $6049$。删去一个元素至多破坏一对，因此删去 $2016$ 个元素后，至少还有 $3024-2016=1008$ 对完整保留。",
+          "这 $1008$ 对恰含 $2016$ 个不同的未删元素，其总和为 $1008\\cdot6049=N$。所以该 $N$ 确实可行，并且由下界知它最小。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAJMO_Problems/Problem_4"
+  },
+  "usajmo-2016-q5": {
+    "summary": "Let $ABC$ be an acute triangle with circumcentre $O$. Let $H$ be the foot of the perpendicular from $A$ to $BC$, and let $P,Q$ be the feet of the perpendiculars from $H$ to $AB,AC$, respectively. Given $AH^2=2AO^2$, prove that $O,P,Q$ are collinear.",
+    "summaryZh": "设 $ABC$ 为锐角三角形，$O$ 为其外心。$H$ 是 $A$ 到 $BC$ 的垂足，$P,Q$ 分别是 $H$ 到 $AB,AC$ 的垂足。已知 $AH^2=2AO^2$，证明 $O,P,Q$ 三点共线。",
+    "answer": "The line $PQ$ passes through the circumcentre $O$.",
+    "answerZh": "直线 $PQ$ 经过外心 $O$。",
+    "methods": [
+      {
+        "title": "Cyclic quadrilaterals and power of a point",
+        "titleZh": "四点共圆与点幂",
+        "topics": [
+          {"en": "Power of a point", "zh": "点幂"},
+          {"en": "Cyclic quadrilaterals", "zh": "四点共圆"},
+          {"en": "Circumcentres", "zh": "外心"}
+        ],
+        "steps": [
+          "The right triangles $AHP$ and $ABH$ give $AP=AH\\sin B$ and $AH=AB\\sin B$, so $AP\\cdot AB=AH^2$. Similarly, $AQ\\cdot AC=AH^2$. Hence $AP\\cdot AB=AQ\\cdot AC$, and the converse of the intersecting-chords theorem shows that $B,P,Q,C$ are cyclic.",
+          "Because $P$ lies on $AB$ and $Q$ lies on $AC$, cyclicity gives $\\angle BPQ=\\angle BCQ=\\angle BCA$. By the tangent-chord theorem, the tangent to the circumcircle of $ABC$ at $A$ makes the same angle with $AB$; hence $PQ$ is parallel to that tangent and therefore $PQ\\perp AO$.",
+          "Let $D$ be the point diametrically opposite $A$ on the circumcircle, and let $K=AD\\cap PQ$. Since $AD$ is the line $AO$ and $PQ\\perp AO$, we have $\\angle QKD=90^\\circ$. Also $Q$ lies on $AC$ and $AD$ is a diameter, so $\\angle QCD=\\angle ACD=90^\\circ$. Thus $K,Q,C,D$ are cyclic.",
+          "Taking power from $A$ to this circle gives $AK\\cdot AD=AQ\\cdot AC=AH^2$. Now $AD=2AO$ and the hypothesis says $AH^2=2AO^2$, so $AK=AH^2/AD=AO$. Both $K$ and $O$ lie on the ray $AD$, hence $K=O$. Since $K$ lies on $PQ$, the points $O,P,Q$ are collinear."
+        ],
+        "stepsZh": [
+          "由直角三角形 $AHP$ 与 $ABH$ 可得 $AP=AH\\sin B$、$AH=AB\\sin B$，所以 $AP\\cdot AB=AH^2$。同理 $AQ\\cdot AC=AH^2$。于是 $AP\\cdot AB=AQ\\cdot AC$，由相交弦定理的逆命题可知 $B,P,Q,C$ 四点共圆。",
+          "因为 $P$ 在 $AB$ 上、$Q$ 在 $AC$ 上，共圆给出 $\\angle BPQ=\\angle BCQ=\\angle BCA$。由切弦定理，$ABC$ 外接圆在 $A$ 点的切线与 $AB$ 的夹角也等于 $\\angle BCA$，故 $PQ$ 平行于该切线，从而 $PQ\\perp AO$。",
+          "设 $D$ 为外接圆上与 $A$ 对径的点，令 $K=AD\\cap PQ$。由于 $AD$ 与 $AO$ 共线且 $PQ\\perp AO$，有 $\\angle QKD=90^\\circ$。又因 $Q$ 在 $AC$ 上且 $AD$ 为直径，$\\angle QCD=\\angle ACD=90^\\circ$。所以 $K,Q,C,D$ 四点共圆。",
+          "从点 $A$ 对该圆使用点幂，得到 $AK\\cdot AD=AQ\\cdot AC=AH^2$。又 $AD=2AO$，题设给出 $AH^2=2AO^2$，故 $AK=AH^2/AD=AO$。$K,O$ 都位于射线 $AD$ 上，因此 $K=O$。而 $K$ 在 $PQ$ 上，故 $O,P,Q$ 共线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAJMO_Problems/Problem_5"
+  },
+  "usajmo-2016-q6": {
+    "summary": "Find all functions $f:\\mathbb R\\to\\mathbb R$ such that for every real $x,y$, $(f(x)+xy)f(x-3y)+(f(y)+xy)f(3x-y)=f(x+y)^2$.",
+    "summaryZh": "求所有函数 $f:\\mathbb R\\to\\mathbb R$，使得对任意实数 $x,y$，都有 $(f(x)+xy)f(x-3y)+(f(y)+xy)f(3x-y)=f(x+y)^2$。",
+    "answer": "The only solutions are $f(x)\\equiv0$ and $f(x)=x^2$.",
+    "answerZh": "所有解为 $f(x)\\equiv0$ 与 $f(x)=x^2$。",
+    "methods": [
+      {
+        "title": "Reduce every value to zero or a square",
+        "titleZh": "把每个函数值限制为零或平方",
+        "topics": [
+          {"en": "Functional equations", "zh": "函数方程"},
+          {"en": "Scaling arguments", "zh": "伸缩论证"},
+          {"en": "Nonnegativity", "zh": "非负性"}
+        ],
+        "steps": [
+          "Write the equation as $P(x,y)$. From $P(0,0)$ we get $f(0)=0$. From $P(0,y)$ and $P(0,-y)$, we obtain $f(y)f(-y)=f(y)^2=f(-y)^2$; if either value is zero then both are zero, and otherwise division gives equality. Hence $f$ is even.",
+          "Set $y=-x$. Evenness and $f(0)=0$ yield $2(f(x)-x^2)f(4x)=0$. Thus for every $x$, either $f(x)=x^2$ or $f(4x)=0$. Call this fact (1).",
+          "Next put $(x,y)=(3t,t)$. The equation becomes $(f(t)+3t^2)f(8t)=f(4t)^2$. If $f(4t)\\ne0$, then $f(8t)\\ne0$. After relabelling, this says $f(z)\\ne0\\Rightarrow f(2z)\\ne0$, or contrapositively $f(2z)=0\\Rightarrow f(z)=0$.",
+          "If $f(4t)\\ne0$, fact (1) gives $f(t)=t^2\\ne0$, and the preceding implication gives $f(2t)\\ne0$. Its contrapositive is $f(2t)=0\\Rightarrow f(4t)=0$. Combining the two directions gives $f(z)=0$ if and only if $f(2z)=0$.",
+          "In fact (1), the alternative $f(4x)=0$ is now equivalent to $f(x)=0$. Therefore, for every real $x$, either $f(x)=x^2$ or $f(x)=0$. In particular $f(x)\\ge0$ everywhere.",
+          "Assume $f(a)=0$ for some $a\\ne0$. By evenness take $a>0$. Repeatedly using the zero-scaling equivalence gives $f(2^na)=0$. For an arbitrary $b>0$, choose $c=2^na>b$ and set $x=(3c+b)/4$, $y=(c-b)/4$. Then $x,y>0$, $x-3y=b$, and $x+y=c$.",
+          "Substitution gives $0=f(c)^2=(f(x)+xy)f(b)+(f(y)+xy)f(3x-y)$. Every factor is nonnegative and $xy>0$, so the first coefficient is positive and therefore $f(b)=0$. Evenness then gives $f\\equiv0$ on all reals.",
+          "If no nonzero zero exists, the dichotomy forces $f(x)=x^2$ for all $x\\ne0$, and also at $0$. Direct substitution verifies that both $f\\equiv0$ and $f(x)=x^2$ satisfy the original equation."
+        ],
+        "stepsZh": [
+          "把原方程记为 $P(x,y)$。由 $P(0,0)$ 得 $f(0)=0$。分别使用 $P(0,y)$ 与 $P(0,-y)$，得到 $f(y)f(-y)=f(y)^2=f(-y)^2$；若其中一个为零，则两者都为零，否则相除即可得到二者相等。因此 $f$ 为偶函数。",
+          "令 $y=-x$。利用偶性和 $f(0)=0$，得到 $2(f(x)-x^2)f(4x)=0$。所以对每个 $x$，要么 $f(x)=x^2$，要么 $f(4x)=0$。记为结论 (1)。",
+          "再取 $(x,y)=(3t,t)$，原方程化为 $(f(t)+3t^2)f(8t)=f(4t)^2$。若 $f(4t)\\ne0$，则 $f(8t)\\ne0$。换元后即 $f(z)\\ne0\\Rightarrow f(2z)\\ne0$，其逆否命题为 $f(2z)=0\\Rightarrow f(z)=0$。",
+          "若 $f(4t)\\ne0$，由 (1) 得 $f(t)=t^2\\ne0$，再由上一蕴含得 $f(2t)\\ne0$。取逆否命题得到 $f(2t)=0\\Rightarrow f(4t)=0$。合并两个方向可知 $f(z)=0$ 当且仅当 $f(2z)=0$。",
+          "在结论 (1) 中，$f(4x)=0$ 现与 $f(x)=0$ 等价。因此对每个实数 $x$，都有 $f(x)=x^2$ 或 $f(x)=0$。特别地，$f$ 处处非负。",
+          "若存在 $a\\ne0$ 使 $f(a)=0$，由偶性可设 $a>0$。反复使用零点伸缩等价关系，得到 $f(2^na)=0$。任取 $b>0$，选择 $c=2^na>b$，并令 $x=(3c+b)/4$、$y=(c-b)/4$。于是 $x,y>0$、$x-3y=b$ 且 $x+y=c$。",
+          "代回方程得到 $0=f(c)^2=(f(x)+xy)f(b)+(f(y)+xy)f(3x-y)$。所有因子均非负且 $xy>0$，第一项的系数严格为正，所以 $f(b)=0$。再由偶性可得 $f\\equiv0$。",
+          "若不存在非零零点，上述二分结论迫使所有 $x\\ne0$ 都满足 $f(x)=x^2$，在 $x=0$ 处也成立。直接代入可验证 $f\\equiv0$ 与 $f(x)=x^2$ 均满足原方程。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAJMO_Problems/Problem_6"
+  }
+}
