@@ -1,0 +1,27 @@
+{
+  "amc12-1970-q18": {
+    "summary": "Evaluate $\\sqrt{3+2\\sqrt2}-\\sqrt{3-2\\sqrt2}$.",
+    "summaryZh": "求 $\\sqrt{3+2\\sqrt2}-\\sqrt{3-2\\sqrt2}$ 的值。",
+    "answer": "A. $2$.",
+    "answerZh": "A。$2$。",
+    "methods": [
+      {
+        "title": "Identify positive square roots",
+        "titleZh": "判断完全平方与正负",
+        "steps": [
+          "The radicands are $(\\sqrt2+1)^2$ and $(\\sqrt2-1)^2$. Both quantities before squaring are positive. Taking the principal roots and subtracting yields $(\\sqrt2+1)-(\\sqrt2-1)=2$."
+        ],
+        "stepsZh": [
+          "根号内分别为 $(\\sqrt2+1)^2$ 和 $(\\sqrt2-1)^2$。因 $\\sqrt2>1$，两个括号内的数都为正，开方后相减得 $(\\sqrt2+1)-(\\sqrt2-1)=2$。"
+        ],
+        "topics": [
+          {
+            "en": "Conjugate radicals",
+            "zh": "共轭根式"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1970/problem/18"
+  }
+}

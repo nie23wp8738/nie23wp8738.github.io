@@ -1,0 +1,213 @@
+{
+  "usamo-1972-q1": {
+    "summary": "For positive integers $a,b,c$, write $G=\\gcd(a,b,c)$ and $L=\\operatorname{lcm}(a,b,c)$. Prove that $G^2\\prod_{\\rm cyc}\\operatorname{lcm}(a,b)=L^2\\prod_{\\rm cyc}\\gcd(a,b)$, where the products run over the pairs $(a,b),(b,c),(c,a)$.",
+    "summaryZh": "给定正整数 $a,b,c$，令 $G=\\gcd(a,b,c),L=\\operatorname{lcm}(a,b,c)$。分别对 $(a,b),(b,c),(c,a)$ 三对取积，证明 $G^2\\prod_{\\rm cyc}\\operatorname{lcm}(a,b)=L^2\\prod_{\\rm cyc}\\gcd(a,b)$。",
+    "answer": "Each prime has the same exponent in the two products.",
+    "answerZh": "每个素数在等式两边的指数都相同。",
+    "methods": [
+      {
+        "title": "Order three exponents",
+        "titleZh": "排列三个素因数指数",
+        "topics": [
+          {
+            "en": "Prime factorisation",
+            "zh": "素因数分解"
+          },
+          {
+            "en": "GCD and LCM",
+            "zh": "最大公因数与最小公倍数"
+          }
+        ],
+        "steps": [
+          "Fix a prime $p$ and sort its exponents in $a,b,c$ as $u\\le v\\le w$. The three pairwise maximum exponents are $v,w,w$ and the three pairwise minima are $u,u,v$.",
+          "The exponent on the left is $2u+v+2w$. On the right it is $2w+2u+v$. This holds for every $p$, so unique factorisation gives equality."
+        ],
+        "stepsZh": [
+          "固定素数 $p$，把它在 $a,b,c$ 中的指数从小到大记为 $u\\le v\\le w$。三对数中，较大指数依次构成 $v,w,w$，较小指数构成 $u,u,v$。",
+          "左边中 $p$ 的指数为 $2u+v+2w$，右边为 $2w+2u+v$。每个素数的指数都相等，由素因数分解的唯一性即得结论。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1972_USAMO_Problems/Problem_1"
+  },
+  "usamo-1972-q2": {
+    "summary": "In a tetrahedron of positive volume the edges come in three equal opposite pairs. Prove that all twelve face angles are acute.",
+    "summaryZh": "一个体积为正的四面体有三组对棱，每一组中的两条棱等长。证明各个面的十二个内角全是锐角。",
+    "answer": "Every face is an acute triangle.",
+    "answerZh": "每一个面都是锐角三角形。",
+    "methods": [
+      {
+        "title": "Compare a median with half a side",
+        "titleZh": "比较中线与半边长",
+        "topics": [
+          {
+            "en": "Median of a triangle",
+            "zh": "三角形中线"
+          },
+          {
+            "en": "Scalar product",
+            "zh": "数量积"
+          }
+        ],
+        "steps": [
+          "To test $\\angle BAC$, take the midpoint $M$ of $BC$. Triangles $ABC$ and $DCB$ match by SSS, with $A$ corresponding to $D$, so $AM=DM$. The path $AMD$ bends because a nondegenerate tetrahedron cannot have $A,M,D$ collinear. Thus $2AM>AD=BC=2BM$.",
+          "The vectors $\\overrightarrow{AB}=\\overrightarrow{AM}+\\overrightarrow{MB}$ and $\\overrightarrow{AC}=\\overrightarrow{AM}-\\overrightarrow{MB}$ have dot product $AM^2-BM^2>0$. Hence $\\angle BAC$ is acute. We may give the same labels to any chosen face angle."
+        ],
+        "stepsZh": [
+          "先考察 $\\angle BAC$。取 $BC$ 的中点 $M$，由三边对应相等，三角形 $ABC$ 与 $DCB$ 全等，因而 $AM=DM$。若 $A,M,D$ 共线，四个顶点将共面，故三角不等式严格成立，给出 $2AM>AD=BC=2BM$。",
+          "向量 $\\overrightarrow{AB}=\\overrightarrow{AM}+\\overrightarrow{MB}$ 与 $\\overrightarrow{AC}=\\overrightarrow{AM}-\\overrightarrow{MB}$ 的内积为 $AM^2-BM^2>0$，所以 $\\angle BAC$ 为锐角。对任意面角重新命名顶点，即可同理证明。"
+        ]
+      },
+      {
+        "title": "Three perpendicular directions",
+        "titleZh": "找出三个相互垂直的方向",
+        "topics": [
+          {
+            "en": "Vectors in space",
+            "zh": "空间向量"
+          },
+          {
+            "en": "Converse of Pythagorean inequality",
+            "zh": "勾股不等式的逆用"
+          }
+        ],
+        "steps": [
+          "Use the centroid as origin and the same letters for the position vectors. Put $u=(A+B)/2$, $v=(A+C)/2$, $w=(A+D)/2$. Since $A+B+C+D=0$, the four vertices have vectors $u+v+w$, $u-v-w$, $-u+v-w$, $-u-v+w$.",
+          "The equality $AB=CD$ says $|v+w|=|v-w|$, giving $v\\cdot w=0$. The other two opposite-edge equalities give $u\\cdot w=u\\cdot v=0$. All three vectors are nonzero since otherwise the tetrahedron lies in a plane.",
+          "Put $U=|u|^2,V=|v|^2,W=|w|^2$. In every face the squared side lengths are $4(U+V),4(V+W),4(W+U)$. The sum of any two exceeds the third by $8U,8V$, or $8W$. By the cosine rule all angles are acute."
+        ],
+        "stepsZh": [
+          "以重心为原点，用顶点字母表示位置向量。令 $u=(A+B)/2,v=(A+C)/2,w=(A+D)/2$。因 $A+B+C+D=0$，四个顶点依次为 $u+v+w,u-v-w,-u+v-w,-u-v+w$。",
+          "条件 $AB=CD$ 给出 $|v+w|=|v-w|$，从而 $v\\cdot w=0$。另两组对棱同理给出 $u\\cdot w=u\\cdot v=0$。三个向量均非零，否则四个顶点共面。",
+          "记 $U=|u|^2,V=|v|^2,W=|w|^2$。各面三边的平方为 $4(U+V),4(V+W),4(W+U)$。任两项的和减去第三项总是 $8U,8V,8W$ 中的一个正数。根据余弦定理，三个角全是锐角。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1972_USAMO_Problems/Problem_2"
+  },
+  "usamo-1972-q3": {
+    "summary": "Draw independently $n>1$ times, each draw uniform on the digits from $1$ to $9$. With what probability is the product a multiple of ten?",
+    "summaryZh": "从 $1$ 到 $9$ 的数字中等可能地独立抽取 $n>1$ 次。所得数字的乘积是十的倍数的概率是多少？",
+    "answer": "$1-(8/9)^n-(5/9)^n+(4/9)^n$.",
+    "answerZh": "$1-(8/9)^n-(5/9)^n+(4/9)^n$。",
+    "methods": [
+      {
+        "title": "Count the two ways divisibility can fail",
+        "titleZh": "容斥计算两种不满足条件的情形",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Independent trials",
+            "zh": "独立重复试验"
+          }
+        ],
+        "steps": [
+          "A factor of five must come from the digit $5$. A factor of two must come from one of $2,4,6,8$. Denote the absence of a five by $F$ and the absence of an even digit by $E$.",
+          "There are eight choices per draw on $F$, five on $E$, and four on $F\\cap E$ (namely $1,3,7,9$). Thus the desired probability is $1-\\Pr(F)-\\Pr(E)+\\Pr(F\\cap E)=1-(8/9)^n-(5/9)^n+(4/9)^n$."
+        ],
+        "stepsZh": [
+          "乘积的因子 $5$ 只能来自数字 $5$；因子 $2$ 则一定来自 $2,4,6,8$ 中的一个。设 $F$ 表示从未抽到 $5$，$E$ 表示从未抽到偶数。",
+          "在 $F$ 中每次有八种选择，在 $E$ 中有五种，在 $F\\cap E$ 中有四种，即 $1,3,7,9$。应用容斥原理，所求概率为 $1-\\Pr(F)-\\Pr(E)+\\Pr(F\\cap E)=1-(8/9)^n-(5/9)^n+(4/9)^n$。"
+        ]
+      },
+      {
+        "title": "Condition on the positions of the fives",
+        "titleZh": "按数字五出现的位置分类",
+        "topics": [
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          },
+          {
+            "en": "Counting sequences",
+            "zh": "序列计数"
+          }
+        ],
+        "steps": [
+          "If exactly $j\\ge1$ entries are fives, choose their positions in $\\binom nj$ ways. To fill the other positions choose from the eight other digits, discarding the $4^{n-j}$ fillings using only odd digits. This gives $\\binom nj(8^{n-j}-4^{n-j})$ valid sequences.",
+          "Summing from $j=1$ to $n$ gives $(9^n-8^n)-(5^n-4^n)$ by the binomial theorem. Divide by the total count $9^n$."
+        ],
+        "stepsZh": [
+          "设恰有 $j\\ge1$ 个位置取到 $5$，选择这些位置有 $\\binom nj$ 种方式。其他位置可从八种数字中选，但须去掉只使用四种奇数的 $4^{n-j}$ 种填法。相应的合格序列数为 $\\binom nj(8^{n-j}-4^{n-j})$。",
+          "对 $j=1,\\ldots,n$ 求和，利用二项式定理得 $(9^n-8^n)-(5^n-4^n)$，再除以序列总数 $9^n$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1972_USAMO_Problems/Problem_3"
+  },
+  "usamo-1972-q4": {
+    "summary": "Construct a rational function $F(x)=(ax^2+bx+c)/(dx^2+ex+f)$ with integer coefficients that moves every nonnegative rational $x$ strictly closer to $\\sqrt[3]{2}$, in absolute distance.",
+    "summaryZh": "构造整数系数的有理函数 $F(x)=(ax^2+bx+c)/(dx^2+ex+f)$，使任意非负有理数 $x$ 代入后，$F(x)$ 到 $\\sqrt[3]{2}$ 的距离严格小于 $x$ 到它的距离。",
+    "answer": "One choice is $F(x)=(4x^2+4x+2)/(x^2+4x+4)$.",
+    "answerZh": "一个可行选择是 $F(x)=(4x^2+4x+2)/(x^2+4x+4)$。",
+    "methods": [
+      {
+        "title": "Correct a guess using the cubic residual",
+        "titleZh": "用三次方程的残差修正估计",
+        "topics": [
+          {
+            "en": "Difference of cubes",
+            "zh": "立方差公式"
+          },
+          {
+            "en": "Rational approximation",
+            "zh": "有理逼近"
+          }
+        ],
+        "steps": [
+          "Let $k=\\sqrt[3]2$. The correction $F(x)=x-(x^3-2)/(x+2)^2$ has the advertised form after cancellation of the cubic term, with positive denominator on $x\\ge0$.",
+          "The difference of cubes gives $F(x)-k=(x-k)(1-(x^2+kx+k^2)/(x+2)^2)$. The quotient inside the parentheses is positive and less than one: the difference of its denominator and numerator is $(4-k)x+4-k^2>0$ because $0<k<2$.",
+          "For a rational $x$ we have $x\\ne k$: if $p^3=2q^3$ for positive integers $p,q$, the exponents of $2$ disagree modulo three. Thus multiplying $|x-k|$ by the strictly intermediate factor makes the error smaller, also at $x=0$."
+        ],
+        "stepsZh": [
+          "令 $k=\\sqrt[3]2$。考虑修正 $F(x)=x-(x^3-2)/(x+2)^2$。通分后三次项相消，得到答案中的函数，且 $x\\ge0$ 时分母为正。",
+          "立方差分解给出 $F(x)-k=(x-k)(1-(x^2+kx+k^2)/(x+2)^2)$。括号中的分式严格介于零与一之间，因为分子为正，且分母减分子为 $(4-k)x+4-k^2>0$，这里用到 $0<k<2$。",
+          "有理数 $x$ 不会等于 $k$：若正整数满足 $p^3=2q^3$，两边素因数 $2$ 的指数模三分别为零与一，矛盾。因此把 $|x-k|$ 乘以严格介于零与一之间的因子会使误差严格减小，$x=0$ 时也成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1972_USAMO_Problems/Problem_4"
+  },
+  "usamo-1972-q5": {
+    "summary": "Each triple of consecutive vertices of a convex pentagon spans a triangle of area $1$. Prove the area of the whole pentagon is determined, find it, and show that infinitely many distinct congruence classes have this property.",
+    "summaryZh": "凸五边形的每三个连续顶点所成的三角形面积均为 $1$。证明五边形的面积由此确定，求出此面积，并证明满足条件的五边形有无穷多种互不全等的情形。",
+    "answer": "The area is $(5+\\sqrt5)/2$. Area-preserving stretches give infinitely many incongruent examples.",
+    "answerZh": "面积为 $(5+\\sqrt5)/2$。通过保持面积的伸缩变换可得到无穷多个互不全等的例子。",
+    "methods": [
+      {
+        "title": "Use coordinates adapted to two adjacent sides",
+        "titleZh": "用两条邻边建立仿射坐标",
+        "topics": [
+          {
+            "en": "Oriented area",
+            "zh": "有向面积"
+          },
+          {
+            "en": "Affine transformations",
+            "zh": "仿射变换"
+          },
+          {
+            "en": "Golden ratio",
+            "zh": "黄金分割比"
+          }
+        ],
+        "steps": [
+          "Label the vertices $A,B,C,D,E$ in positive order. Use $A$ as origin and $AB,AE$ as coordinate vectors, so $A=(0,0),B=(1,0),E=(0,1)$. Their coordinate parallelogram has actual area $2$, because $[ABE]=1$. Hence the actual oriented area of a triangle is the determinant of its two coordinate difference vectors.",
+          "From $[ABC]=[DEA]=1$ get $C=(u,1)$ and $D=(1,v)$. Convexity puts $u,v>0$ since $C$ lies to the right of $AE$ and $D$ above $AB$ in these coordinates. The equations $[BCD]=[CDE]=1$ now become $(u-1)v=1$ and $u(v-1)=1$. Subtraction gives $u=v$, then $u^2-u-1=0$, so $u=(1+\\sqrt5)/2$.",
+          "Cut along $AC$ and $AD$. The three triangle areas are $1$, $\\det(C,D)=u^2-1$, and $1$. Their sum is $u^2+1=(5+\\sqrt5)/2$.",
+          "For existence, use the listed coordinate points with basis $(1,0),(0,2)$ in the physical plane. The rays from $A$ to $B,C,D,E$ occur in that order (their coordinate slopes are $0,1/u,u,\\infty$), so the polygon is simple. Every consecutive turn has strictly positive determinant by the five area calculations, proving convexity. Applying $(x,y)\\mapsto(tx,y/t)$ for $t>0$ preserves all areas and convexity. The image of $AB$ has length $t$, so this family has unbounded diameter. A finite set of congruence classes would have bounded diameter."
+        ],
+        "stepsZh": [
+          "将顶点按逆时针次序记为 $A,B,C,D,E$。以 $A$ 为原点，以 $AB,AE$ 为基向量，则 $A=(0,0),B=(1,0),E=(0,1)$。因 $[ABE]=1$，这组基向量张成的平行四边形实际面积为 $2$。因此，用坐标差构成的行列式恰好给出三角形实际的有向面积。",
+          "由 $[ABC]=[DEA]=1$ 得 $C=(u,1),D=(1,v)$。凸性保证 $C$ 在直线 $AE$ 右侧、$D$ 在 $AB$ 上方，故 $u,v>0$。条件 $[BCD]=[CDE]=1$ 化为 $(u-1)v=1$ 和 $u(v-1)=1$。两式相减得 $u=v$，于是 $u^2-u-1=0$，取正根 $u=(1+\\sqrt5)/2$。",
+          "连接 $AC,AD$，得到三个三角形，其面积分别为 $1,\\det(C,D)=u^2-1,1$。五边形面积为 $u^2+1=(5+\\sqrt5)/2$。",
+          "验证存在性时，可在实际平面内取基向量 $(1,0),(0,2)$，按上述坐标作五点。在基坐标中，从 $A$ 到 $B,C,D,E$ 的射线斜率依次是 $0,1/u,u,\\infty$，故按此顺序连接不自交。前述五组面积计算给出的有向行列式全为正，所以每次转向都是左转，五边形为凸。施以变换 $(x,y)\\mapsto(tx,y/t)$，其中 $t>0$，凸性和面积均保持。边 $AB$ 的像长为 $t$，故这一族五边形的直径无上界，而有限多个全等类的直径必有上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1972_USAMO_Problems/Problem_5"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "step-2016-p1-q2": {
+    "summary": "Let $S=\\sqrt{1+x^2}$ and $L=\\ln(x+S)$. For arbitrary real $a,b,c,d,e$, differentiate $(ax^2+bx+c)L+(dx+e)S$ and collect terms. Use the result to obtain antiderivatives of $L$, $S$ and $xL$.",
+    "summaryZh": "记 $S=\\sqrt{1+x^2}$、$L=\\ln(x+S)$。设 $a,b,c,d,e$ 为任意实常数，求 $(ax^2+bx+c)L+(dx+e)S$ 的导数并合并同类项。进一步求 $L$、$S$、$xL$ 的原函数。",
+    "answer": "The three primitives, each up to a constant, are $xL-S$, $(xS+L)/2$, and $[(2x^2+1)L-xS]/4$.",
+    "answerZh": "三个原函数依次为 $xL-S$、$(xS+L)/2$、$[(2x^2+1)L-xS]/4$，各式都可加任意常数。",
+    "methods": [
+      {
+        "title": "Collect coefficients over one square root",
+        "titleZh": "把代数项通分，再比较系数",
+        "topics": [
+          {
+            "en": "Reverse differentiation",
+            "zh": "逆向求导"
+          },
+          {
+            "en": "Integration by parts",
+            "zh": "分部积分"
+          }
+        ],
+        "steps": [
+          "Since $S>|x|$, the logarithm is defined on the real line. From $S\\prime=x/S$ we get $L\\prime=(1+x/S)/(x+S)=1/S$. The product rule therefore gives $(2ax+b)L+[(a+2d)x^2+(b+e)x+c+d]/S$.",
+          "For the integrand $L$, set $b=1,e=-1$ and all other coefficients zero. For $S=(1+x^2)/S$, choose $d=c=1/2$ and the others zero. These give the first two primitives.",
+          "For $xL$, set $a=1/2$, $b=e=0$, $d=-1/4$ and $c=1/4$. The polynomial over $S$ vanishes identically, leaving $xL$. The resulting primitive is the third displayed expression."
+        ],
+        "stepsZh": [
+          "$S>|x|$，所以对数在实数轴上均有定义。由 $S\\prime=x/S$，得 $L\\prime=(1+x/S)/(x+S)=1/S$。应用乘积法则，导数为 $(2ax+b)L+[(a+2d)x^2+(b+e)x+c+d]/S$。",
+          "要让导数为 $L$，取 $b=1,e=-1$，其余为零。要让导数为 $S=(1+x^2)/S$，取 $d=c=1/2$，其余为零。这样得到前两个原函数。",
+          "要得到 $xL$，取 $a=1/2$、$b=e=0$、$d=-1/4$、$c=1/4$，则除以 $S$ 的多项式恒为零。代回原式，便得到第三个原函数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/16/16-S1.pdf#page=1"
+  },
+  "step-2016-p1-q3": {
+    "summary": "On the closed interval $[-\\pi,\\pi]$, give four separate graphs for $\\lfloor x\\rfloor$, $\\sin(\\lfloor x\\rfloor)$, $\\lfloor\\sin x\\rfloor$ and $\\lfloor2\\sin x\\rfloor$. Specify the value at every jump or isolated peak; $\\lfloor t\\rfloor$ is the greatest integer at most $t$.",
+    "summaryZh": "在闭区间 $[-\\pi,\\pi]$ 上，分别画出 $\\lfloor x\\rfloor$、$\\sin(\\lfloor x\\rfloor)$、$\\lfloor\\sin x\\rfloor$ 和 $\\lfloor2\\sin x\\rfloor$ 的图像。注明每个跳跃点和孤立峰值处的取值；$\\lfloor t\\rfloor$ 表示不大于 $t$ 的最大整数。",
+    "answer": "The first two graphs are constant between consecutive integers. For the latter two, the only positive isolated maxima are $1$ and $2$ respectively, both at $x=\\pi/2$. All pieces and endpoint values are listed below.",
+    "answerZh": "前两图在相邻整数间为常数。后两图在 $x=\\pi/2$ 分别有孤立最高点 $1$ 与 $2$。下面列出所有分段及端点值。",
+    "methods": [
+      {
+        "title": "Find the integer thresholds of the inner function",
+        "titleZh": "寻找内层函数经过整数的所有位置",
+        "topics": [
+          {
+            "en": "Floor function",
+            "zh": "向下取整"
+          },
+          {
+            "en": "Trigonometric graphs",
+            "zh": "三角函数图像"
+          }
+        ],
+        "steps": [
+          "For each integer $j=-4,\\ldots,3$, take $I_j=[j,j+1)\\cap[-\\pi,\\pi]$. The first graph has height $j$ on $I_j$ and the second has height $\\sin j$ there. The integer endpoint lies on the step to its right; the two domain endpoints are included.",
+          "For the third graph, $\\sin x<0$ on $(-\\pi,0)$, so the height there is $-1$. At $\\pi/2$ it is $1$. The height is $0$ everywhere else, including $-\\pi,0,\\pi$.",
+          "For the fourth graph, solve $2\\sin x=-1,0,1,2$. The height is $-2$ on $(-5\\pi/6,-\\pi/6)$; it is $-1$ on $(-\\pi,-5\\pi/6]\\cup[-\\pi/6,0)$.",
+          "The height is $0$ on $\\{-\\pi\\}\\cup[0,\\pi/6)\\cup(5\\pi/6,\\pi]$. It is $1$ on $[\\pi/6,\\pi/2)\\cup(\\pi/2,5\\pi/6]$ and $2$ only at $\\pi/2$. At a threshold the integer is taken exactly, which accounts for the open and closed endpoints."
+        ],
+        "stepsZh": [
+          "对 $j=-4,\\ldots,3$，取 $I_j=[j,j+1)\\cap[-\\pi,\\pi]$。第一图在 $I_j$ 上高度为 $j$，第二图高度为 $\\sin j$。整数点属于右侧一段，定义域的两个端点都保留。",
+          "第三图中，$(-\\pi,0)$ 上正弦为负，故取整后为 $-1$。$\\pi/2$ 处为 $1$；其余位置均为 $0$，包括 $-\\pi,0,\\pi$。",
+          "第四图需解 $2\\sin x=-1,0,1,2$。高度 $-2$ 的区间为 $(-5\\pi/6,-\\pi/6)$；高度 $-1$ 的区间为 $(-\\pi,-5\\pi/6]\\cup[-\\pi/6,0)$。",
+          "高度 $0$ 对应 $\\{-\\pi\\}\\cup[0,\\pi/6)\\cup(5\\pi/6,\\pi]$；高度 $1$ 对应 $[\\pi/6,\\pi/2)\\cup(\\pi/2,5\\pi/6]$；仅在 $\\pi/2$ 取 $2$。达到整数阈值时直接取该整数，这决定了端点空心或实心。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/16/16-S1.pdf#page=2"
+  }
+}

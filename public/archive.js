@@ -159,7 +159,7 @@ async function runArchive(root) {
     if (answer) links.append(link(answer, readUrl + '#solutions'));
     else main.append(node('div','arch-meta',t('Index only · Answer pending','题目索引 · 暂无站内答案')));
     if (!inPaper) links.append(link(t('View paper', '查看整卷'), paperLink(p, q.n)));
-    links.append(link(q.inline || q.hasCommentary ? t('Add question','加入题目') : t('Add reference', '加入题号'), worksheetLink([id])), pickControl(id, title));
+    links.append(link(q.inline || q.hasCommentary || q.outlinePdf || q.published?.collection === 'euclid' ? t('Add question','加入题目') : t('Add reference', '加入题号'), worksheetLink([id])), pickControl(id, title));
     row.append(main, links);
     return row;
   }
@@ -248,12 +248,14 @@ async function runArchive(root) {
       h.append(navLink(paperTitle(p),{paper:p.id,page:''},'paper'));
       const qs = (p.questions || []).length;
       const worked = p.questions.filter(q => matchesReading(q,'solutions')).length;
-      const keyed = p.questions.filter(q => matchesReading(q,'answers')).length - worked;
+      const solutionOnly = p.questions.filter(q => matchesReading(q,'allsolutions')).length - worked;
+      const keyed = p.questions.filter(q => matchesReading(q,'answers')).length - worked - solutionOnly;
       const meta = [
         qs ? qty(qs,'question','questions','道题') : t('Whole paper','整卷'),
         worked ? qty(worked,'worked solution','worked solutions','道有站内解析') : '',
+        solutionOnly ? qty(solutionOnly,'on-site solution without a question','on-site solutions without a question','道有站内解法，题干待补') : '',
         keyed ? qty(keyed,'answer key only','answer keys only','道有站内答案') : '',
-        qs && !worked && !keyed ? t('Index only','仅题目索引') : ''
+        qs && !worked && !solutionOnly && !keyed ? t('Index only','仅题目索引') : ''
       ].filter(Boolean).join(' · ');
       main.append(h,node('div','arch-meta',meta));
       const actions = node('div','arch-links');

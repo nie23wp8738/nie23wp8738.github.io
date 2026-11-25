@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312 254">
+  <title>An equiangular hexagon inscribed in an equilateral triangle</title>
+  <path d="M36 230L156 22.154L276 230Z" fill="white" stroke="#62727a" stroke-width="2"/>
+  <polygon points="136,56.795 176,56.795 236,160.718 196,230 116,230 76,160.718"
+    fill="#d9e5ec" stroke="#233b49" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#1f3947" text-anchor="middle" style="font:italic 17px Georgia,serif">
+    <text x="156" y="78">1</text><text x="193" y="117">3</text><text x="202" y="195">2</text>
+    <text x="156" y="219">2</text><text x="111" y="195">2</text><text x="119" y="117">3</text>
+  </g>
+</svg>

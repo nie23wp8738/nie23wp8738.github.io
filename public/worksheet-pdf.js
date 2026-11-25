@@ -1,3 +1,4 @@
+import {credits, publishedAsset, loadPdfPages} from './published-pdf.js';
 // A4 worksheet export using PDF's built-in Latin fonts. All sheet content is English.
 const width = 595.28;
 const height = 841.89;
@@ -81,7 +82,9 @@ function safeURL(value) {
 
 function assetFor(problem, solutions) {
   const assets = problem.inline || problem.commentary;
-  return solutions ? assets?.solutionPdf : assets?.pdf;
+  const path = solutions ? assets?.solutionPdf : (assets?.pdf || problem.outlinePdf);
+  if (path) return {path};
+  return publishedAsset(problem.id,problem.published,solutions?'solution':'question','en');
 }
 
 function sheetKind(problems, solutions) {
@@ -158,7 +161,7 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
 
   function richSourceLinks(problem) {
     let x = margin;
-    const sources = [['Question on this site', problem.permalink], ['Original source', problem.sourceURL], ['Licence', problem.inline?.licenseUrl]];
+    const sources = [['Question on this site', problem.permalink], ['Original source', problem.sourceURL], ['Licence', problem.inline?.licenseUrl || credits[problem.published?.collection]?.licenseUrl]];
     if (solutions && problem.solutionURL) sources.push(['Published solutions', problem.solutionURL]);
     for (const [label, target] of sources) {
       const url = safeURL(target);
@@ -188,6 +191,10 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
     }
     y -= 23;
     if (strips) {
+      if (problem.published && !problem.hasCommentary && (solutions || !problem.outlinePdf)) {
+        const credit = credits[problem.published.collection];
+        paragraph(plainLabel(credit.name+' | '+credit.license+' | '+problem.paperTitle+', Question '+problem.n), 'label', 9, 13);
+      }
       richSourceLinks(problem);
       for (const strip of strips) {
         if (y - strip.height < bottom) newPage(true);
@@ -286,23 +293,13 @@ async function buildRichWorksheet(problems, options, description) {
   for (const problem of problems) {
     const asset = assetFor(problem, options.solutions);
     if (problem.kind !== 'past' || !asset) continue;
-    const url = new URL(asset, location.origin);
-    if (url.origin !== location.origin) throw new Error('Invalid question PDF location.');
-    if (!assets.has(url.href)) {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('Question PDF unavailable.');
-      const document = await PDFDocument.load(await response.arrayBuffer());
-      const parts = document.getPages().map(page => {
-        const size = page.getSize();
-        const scale = Math.min(1, bodyWidth / size.width);
-        const height = size.height * scale;
-        if (!(height > 0 && height < 575)) throw new Error('Invalid question PDF height.');
-        return {page, width:size.width * scale, height};
-      });
-      if (!parts.length) throw new Error('Empty question PDF.');
-      assets.set(url.href, parts);
-    }
-    strips.set(problem.id, assets.get(url.href));
+    const {pages:sourcePages} = await loadPdfPages(asset,assets,PDFDocument);
+    const parts = sourcePages.map(page => {
+      const size = page.getSize();
+      const scale = Math.min(1,bodyWidth/size.width,550/size.height);
+      return {page,width:size.width*scale,height:size.height*scale};
+    });
+    strips.set(problem.id,parts);
   }
   const pages = renderPages(problems, options, strips);
   const base = serializePages(pages, description);

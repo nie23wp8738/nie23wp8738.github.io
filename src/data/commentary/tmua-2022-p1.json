@@ -1,0 +1,610 @@
+{
+  "tmua-2022-p1-q1": {
+    "summary": "Count the angles in $[0,2\\pi]$ for which $2\\cos^4\\theta-5\\cos^2\\theta+3=0$.",
+    "summaryZh": "求 $2\\cos^4\\theta-5\\cos^2\\theta+3=0$ 在 $[0,2\\pi]$ 内的解数。",
+    "answer": "C. $3$",
+    "answerZh": "C．$3$",
+    "methods": [
+      {
+        "title": "Factor in the squared cosine",
+        "titleZh": "对余弦平方进行因式分解",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          }
+        ],
+        "steps": [
+          "Set $t=\\cos^2\\theta$. The polynomial is $(2t-3)(t-1)$; $t=3/2$ is outside the allowable interval $[0,1]$.",
+          "For $t=1$ the angles are $0,\\pi,2\\pi$. The two endpoints are distinct members of the requested interval."
+        ],
+        "stepsZh": [
+          "令 $t=\\cos^2\\theta$，则多项式为 $(2t-3)(t-1)$。因 $0\\le t\\le1$，排除 $t=3/2$。",
+          "余下 $t=1$ 给出 $0,\\pi,2\\pi$。区间的两个端点是两个不同的解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=3"
+  },
+  "tmua-2022-p1-q2": {
+    "summary": "When does $x^2-2px+y^2-6y-p^2+8p+9=0$ define a circle of positive radius?",
+    "summaryZh": "使 $x^2-2px+y^2-6y-p^2+8p+9=0$ 表示半径为正的圆，参数 $p$ 应取何值？",
+    "answer": "D. $p<0$ or $p>4$",
+    "answerZh": "D．$p<0$ 或 $p>4$",
+    "methods": [
+      {
+        "title": "Read the squared radius",
+        "titleZh": "读出半径平方",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Circles",
+            "zh": "圆"
+          }
+        ],
+        "steps": [
+          "Completing both squares gives $(x-p)^2+(y-3)^2=2p^2-8p$.",
+          "A genuine circle requires $2p(p-4)>0$, which holds outside the two roots. At $p=0,4$ only one point remains."
+        ],
+        "stepsZh": [
+          "分别配方得 $(x-p)^2+(y-3)^2=2p^2-8p$。",
+          "要得到半径为正的圆，须有 $2p(p-4)>0$，故取两根外侧。若 $p=0,4$，轨迹只含一点。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=4"
+  },
+  "tmua-2022-p1-q3": {
+    "summary": "A function has constant second derivative $a$, values $f(0)=1,f(1)=2$, and integral $\\int_0^1f(x)\\,dx=1$. Determine $a$.",
+    "summaryZh": "函数的二阶导数恒为 $a$，且 $f(0)=1,f(1)=2,\\int_0^1 f(x)\\,dx=1$。求 $a$。",
+    "answer": "F. $6$",
+    "answerZh": "F．$6$",
+    "methods": [
+      {
+        "title": "Fit the endpoint values first",
+        "titleZh": "先拟合端点值",
+        "topics": [
+          {
+            "en": "Polynomial reconstruction",
+            "zh": "多项式重构"
+          },
+          {
+            "en": "Definite integration",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "A function with these endpoint values and constant second derivative is $f(x)=1+x+(a/2)x(x-1)$: the final term vanishes at both ends and contributes second derivative $a$.",
+          "Its integral is $3/2+(a/2)(1/3-1/2)=3/2-a/12$. Equating this with $1$ gives $a=6$."
+        ],
+        "stepsZh": [
+          "满足端点条件且二阶导数恒为 $a$ 的函数为 $f(x)=1+x+(a/2)x(x-1)$；最后一项在两端均为零，二阶导数为 $a$。",
+          "其积分为 $3/2+(a/2)(1/3-1/2)=3/2-a/12$。令其为 1 得 $a=6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=5"
+  },
+  "tmua-2022-p1-q4": {
+    "summary": "Two similar sectors have radii $r$ and $r+3$. The shorter arc has length $6$, and the larger area exceeds the smaller by $21$. Find the difference in perimeters.",
+    "summaryZh": "相似的两个扇形半径为 $r,r+3$。小扇形弧长为 $6$，两者的面积差为 $21$。求周长之差。",
+    "answer": "C. $8$",
+    "answerZh": "C．$8$",
+    "methods": [
+      {
+        "title": "Fix the common angle",
+        "titleZh": "利用共同圆心角",
+        "topics": [
+          {
+            "en": "Sectors",
+            "zh": "扇形"
+          },
+          {
+            "en": "Radians",
+            "zh": "弧度制"
+          }
+        ],
+        "steps": [
+          "The common angle is $6/r$ radians. The area difference is $(3/r)((r+3)^2-r^2)=18+27/r$. Equating this to $21$ gives $r=9$.",
+          "With angle $2/3$, perimeter equals radius times $(2+2/3)$. A radius increase of $3$ therefore adds $8$ to the perimeter."
+        ],
+        "stepsZh": [
+          "共同圆心角为 $6/r$ 弧度，面积差为 $(3/r)((r+3)^2-r^2)=18+27/r$。由面积差为 21，得 $r=9$。",
+          "此时角为 $2/3$，周长等于半径乘以 $2+2/3$。半径增加 3，周长增加 8。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=6"
+  },
+  "tmua-2022-p1-q5": {
+    "summary": "Successive terms follow $x_{n+1}=(x_n+p)/(x_n+q)$. The initial three are $3,5,7$. Determine the fourth term.",
+    "summaryZh": "数列满足 $x_{n+1}=(x_n+p)/(x_n+q)$，开头三项为 $3,5,7$。求第四项。",
+    "answer": "H. $13$",
+    "answerZh": "H．$13$",
+    "methods": [
+      {
+        "title": "Fit the fractional recurrence",
+        "titleZh": "确定分式递推的参数",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          },
+          {
+            "en": "Linear systems",
+            "zh": "线性方程组"
+          }
+        ],
+        "steps": [
+          "The first two transitions give $3+p=15+5q$ and $5+p=35+7q$. Subtracting gives $2=20+2q$, so $q=-9$, $p=-33$.",
+          "At the next step the denominator is $7-9=-2$ and the numerator is $7-33=-26$, giving $13$."
+        ],
+        "stepsZh": [
+          "前两次递推给出 $3+p=15+5q$ 及 $5+p=35+7q$。两式相减得 $2=20+2q$，于是 $q=-9,p=-33$。",
+          "下一步分母为 $7-9=-2$，分子为 $7-33=-26$，故第四项为 $13$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=7"
+  },
+  "tmua-2022-p1-q6": {
+    "summary": "The integral of $x$ from $\\log_2 5$ to $\\log_2 20$ equals $\\log_2 M$. Determine $M$.",
+    "summaryZh": "$x$ 从 $\\log_2 5$ 到 $\\log_2 20$ 的定积分为 $\\log_2 M$，求 $M$。",
+    "answer": "F. $100$",
+    "answerZh": "F．$100$",
+    "methods": [
+      {
+        "title": "Factor the difference of endpoint squares",
+        "titleZh": "利用端点平方差",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Definite integration",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "Write the bounds as $L,U$. The integral is $(U^2-L^2)/2=(U-L)(U+L)/2$.",
+          "Logarithm rules give $U-L=\\log_2 4=2$ and $U+L=\\log_2 100$. Thus $M=100$."
+        ],
+        "stepsZh": [
+          "记下、上限为 $L,U$。积分为 $(U^2-L^2)/2=(U-L)(U+L)/2$。",
+          "对数运算得到 $U-L=\\log_2 4=2$、$U+L=\\log_2 100$，故 $M=100$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=8"
+  },
+  "tmua-2022-p1-q7": {
+    "summary": "Find the bounded area between the horizontal axis and $y=x^2-4|x|-12$.",
+    "summaryZh": "求横轴与曲线 $y=x^2-4|x|-12$ 围成的有限区域面积。",
+    "answer": "E. $144$",
+    "answerZh": "E．$144$",
+    "methods": [
+      {
+        "title": "Halve the even region",
+        "titleZh": "利用关于纵轴的对称性",
+        "topics": [
+          {
+            "en": "Symmetry of functions",
+            "zh": "函数对称性"
+          },
+          {
+            "en": "Area by integration",
+            "zh": "积分求面积"
+          }
+        ],
+        "steps": [
+          "On $x\\ge0$, $y=(x-6)(x+2)$ is nonpositive up to $x=6$ and positive afterwards. The curve is even.",
+          "Doubling the area on the positive half-axis gives $2\\int_0^6(12+4x-x^2)\\,dx=2(72+72-72)=144$."
+        ],
+        "stepsZh": [
+          "在非负半轴上 $y=(x-6)(x+2)$，其在 $[0,6]$ 内不为正，之后为正。整条曲线关于纵轴对称。",
+          "将正半轴面积加倍得 $2\\int_0^6(12+4x-x^2)\\,dx=2(72+72-72)=144$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=9"
+  },
+  "tmua-2022-p1-q8": {
+    "summary": "A geometric progression has positive integer first term and integer ratio $r>1$. If $S_n$ is its first-$n$ sum, find the smallest possible value of $(S_{30}-S_{20})/S_{10}$.",
+    "summaryZh": "一等比数列的首项为正整数，公比为大于 1 的整数 $r$。记前 $n$ 项和为 $S_n$，求 $(S_{30}-S_{20})/S_{10}$ 的最小值。",
+    "answer": "B. $2^{20}$",
+    "answerZh": "B．$2^{20}$",
+    "methods": [
+      {
+        "title": "Shift a block of ten terms",
+        "titleZh": "平移十项的一组",
+        "topics": [
+          {
+            "en": "Geometric progressions",
+            "zh": "等比数列"
+          }
+        ],
+        "steps": [
+          "The numerator sums terms 21 to 30. Each is $r^{20}$ times the corresponding term numbered 1 to 10.",
+          "The ratio of these block sums is $r^{20}$, increasing for positive $r$. The least permitted integer ratio is $2$."
+        ],
+        "stepsZh": [
+          "分子是第 21 至 30 项之和，各项分别等于第 1 至 10 项的 $r^{20}$ 倍。",
+          "所以两组和之比为 $r^{20}$，当 $r>0$ 时随 $r$ 递增。取允许的最小整数公比 $2$ 时得到最小值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=10"
+  },
+  "tmua-2022-p1-q9": {
+    "summary": "Real functions obey $f(x)-g(x)=2\\sin x$ and $f(x)g(x)=\\cos^2x$ for every real $x$. What is the lowest attainable value of $f(x)$ across such pairs?",
+    "summaryZh": "实函数满足对一切 $x$ 都有 $f(x)-g(x)=2\\sin x$ 及 $f(x)g(x)=\\cos^2x$。在所有这样的函数对和自变量中，$f(x)$ 能达到的最小值是多少？",
+    "answer": "E. $-2$",
+    "answerZh": "E．$-2$",
+    "methods": [
+      {
+        "title": "Complete a square in the unknown function value",
+        "titleZh": "对未知函数值配方",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "二次方程"
+          }
+        ],
+        "steps": [
+          "Substitute $g=f-2\\sin x$ into the product and complete the square. This gives $(f-\\sin x)^2=\\sin^2x+\\cos^2x=1$, so $f=\\sin x\\pm1$ pointwise.",
+          "Both branches are realisable, for example take $f=\\sin x-1$, $g=-1-\\sin x$. Then $f=-2$ when $\\sin x=-1$, and neither branch can go lower."
+        ],
+        "stepsZh": [
+          "由 $g=f-2\\sin x$ 代入乘积条件，配方得 $(f-\\sin x)^2=\\sin^2x+\\cos^2x=1$。所以每点处 $f=\\sin x\\pm1$。",
+          "例如取 $f=\\sin x-1,g=-1-\\sin x$ 即可达到较低分支。当 $\\sin x=-1$ 时有 $f=-2$，任一分支都不可能更小。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=11"
+  },
+  "tmua-2022-p1-q10": {
+    "summary": "Which cubic expressions can be obtained by translating $y=x^3$? (I) $x^3-3x^2+9x-27$, (II) $x^3-9x^2+27x-3$, (III) $27x^3-9x^2+x-3$.",
+    "summaryZh": "哪些三次函数图像可由 $y=x^3$ 平移得到？（I）$x^3-3x^2+9x-27$；（II）$x^3-9x^2+27x-3$；（III）$27x^3-9x^2+x-3$。",
+    "answer": "C. II only",
+    "answerZh": "C．只有 II",
+    "methods": [
+      {
+        "title": "Match the coefficients of a translated cube",
+        "titleZh": "比较平移后的三次式系数",
+        "topics": [
+          {
+            "en": "Graph transformations",
+            "zh": "图像变换"
+          },
+          {
+            "en": "Binomial expansion",
+            "zh": "二项式展开"
+          }
+        ],
+        "steps": [
+          "Translation gives $(x-h)^3+k$, with coefficients $1,-3h,3h^2$ on the three highest powers. In (I), $h=1$ would give linear coefficient $3$, not $9$; (III) already has the wrong leading coefficient.",
+          "Expression (II) equals $(x-3)^3+24$, so it is obtained by translating right by three and up by 24."
+        ],
+        "stepsZh": [
+          "平移后必形如 $(x-h)^3+k$，前三个幂次的系数依次为 $1,-3h,3h^2$。（I）要求 $h=1$，一次项系数应为 3，却为 9；（III）的最高次项系数不为 1。",
+          "（II）等于 $(x-3)^3+24$，对应向右平移 3、向上平移 24。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=12"
+  },
+  "tmua-2022-p1-q11": {
+    "summary": "Evaluate $\\sum_{n=1}^{100}\\log_{10}(3^{1-n})$.",
+    "summaryZh": "求和 $\\sum_{n=1}^{100}\\log_{10}(3^{1-n})$。",
+    "answer": "A. $-4950\\log_{10}3$",
+    "answerZh": "A．$-4950\\log_{10}3$",
+    "methods": [
+      {
+        "title": "Sum the exponents first",
+        "titleZh": "先求指数的和",
+        "topics": [
+          {
+            "en": "Logarithm laws",
+            "zh": "对数法则"
+          },
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差求和"
+          }
+        ],
+        "steps": [
+          "The power rule makes every summand $(1-n)\\log_{10}3$. Its multipliers are $0,-1,\\ldots,-99$.",
+          "Their sum is $-99\\cdot100/2=-4950$. Multiplying by the common logarithm gives the stated result."
+        ],
+        "stepsZh": [
+          "由对数的幂法则，每项为 $(1-n)\\log_{10}3$，乘数依次是 $0,-1,\\ldots,-99$。",
+          "乘数总和为 $-99\\cdot100/2=-4950$，再乘公共因子 $\\log_{10}3$ 即可。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=13"
+  },
+  "tmua-2022-p1-q12": {
+    "summary": "Among the curves $y=2(x-k/2)^2+k^2/2+4k+3$ indexed by real $k$, the global lowest point is $(a,b)$. Find $a+b$.",
+    "summaryZh": "曲线族 $y=2(x-k/2)^2+k^2/2+4k+3$ 中 $k$ 可取任意实数。所有曲线上的最低点为 $(a,b)$，求 $a+b$。",
+    "answer": "D. $-7$",
+    "answerZh": "D．$-7$",
+    "methods": [
+      {
+        "title": "Minimise over the coordinate and then the parameter",
+        "titleZh": "先对横坐标再对参数求最小值",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Optimisation",
+            "zh": "最优化"
+          }
+        ],
+        "steps": [
+          "For each $k$ the vertex has $x=k/2$ and height $k^2/2+4k+3=(k+4)^2/2-5$.",
+          "The smallest vertex height is $-5$, at $k=-4$. Its horizontal coordinate is $-2$, so $a+b=-7$."
+        ],
+        "stepsZh": [
+          "固定 $k$ 时，顶点横坐标为 $k/2$，高度为 $k^2/2+4k+3=(k+4)^2/2-5$。",
+          "当 $k=-4$ 时最低高度为 $-5$，横坐标为 $-2$，所以 $a+b=-7$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=14"
+  },
+  "tmua-2022-p1-q13": {
+    "summary": "For nonzero real $a,b$ satisfying $(a^3+2/b^3)(2/a^3-b^3)=\\sqrt2$, minimise $ab$.",
+    "summaryZh": "非零实数 $a,b$ 满足 $(a^3+2/b^3)(2/a^3-b^3)=\\sqrt2$。求 $ab$ 的最小值。",
+    "answer": "A. $-\\sqrt2$",
+    "answerZh": "A．$-\\sqrt2$",
+    "methods": [
+      {
+        "title": "Collapse to the cube of the product",
+        "titleZh": "换元为乘积的立方",
+        "topics": [
+          {
+            "en": "Algebraic substitution",
+            "zh": "代数换元"
+          },
+          {
+            "en": "Radicals",
+            "zh": "根式"
+          }
+        ],
+        "steps": [
+          "Write $t=(ab)^3$. Expanding cancels the constant terms and leaves $4/t-t=\\sqrt2$. The resulting quadratic $t^2+\\sqrt2t-4=0$ has roots $\\sqrt2,-2\\sqrt2$.",
+          "The smaller cube root is $-\\sqrt2$. Both nonzero products are attainable since one can set $b=1$ and choose the required $a$."
+        ],
+        "stepsZh": [
+          "令 $t=(ab)^3$。展开后常数项相消，得 $4/t-t=\\sqrt2$，即 $t^2+\\sqrt2t-4=0$，两根为 $\\sqrt2,-2\\sqrt2$。",
+          "开立方后较小者为 $-\\sqrt2$。两种乘积均可取到，例如令 $b=1$，再取相应的 $a$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=15"
+  },
+  "tmua-2022-p1-q14": {
+    "summary": "A radius-$6$ circle has centre $O$ and chord $PQ$ subtending a non-reflex angle at least $90^\\circ$. Triangle $POQ$ has area $9\\sqrt3$. Maximise the area of $PRQ$ with $R$ on the circle.",
+    "summaryZh": "半径为 $6$ 的圆中，弦 $PQ$ 对应的不超过平角的圆心角至少 $90^\\circ$，且三角形 $POQ$ 面积为 $9\\sqrt3$。动点 $R$ 在圆周上，求三角形 $PRQ$ 的最大面积。",
+    "answer": "D. $27\\sqrt3$",
+    "answerZh": "D．$27\\sqrt3$",
+    "methods": [
+      {
+        "title": "Maximise height above a fixed chord",
+        "titleZh": "固定弦长并最大化高",
+        "topics": [
+          {
+            "en": "Circle chords",
+            "zh": "圆的弦"
+          },
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "From $18\\sin\\angle POQ=9\\sqrt3$, the angle is $120^\\circ$. The chord has length $12\\sin60^\\circ=6\\sqrt3$ and is $6\\cos60^\\circ=3$ from the centre.",
+          "The farthest point of the circumference from the chord line is on its perpendicular bisector, on the centre's side, giving height $3+6=9$. The maximum area is $(6\\sqrt3)(9)/2=27\\sqrt3$."
+        ],
+        "stepsZh": [
+          "由 $18\\sin\\angle POQ=9\\sqrt3$ 及角度范围得圆心角 $120^\\circ$。弦长 $12\\sin60^\\circ=6\\sqrt3$，圆心到弦的距离为 $6\\cos60^\\circ=3$。",
+          "在弦的垂直平分线上，取与圆心同侧且距弦最远的圆周点，高可达 $3+6=9$，最大面积为 $(6\\sqrt3)(9)/2=27\\sqrt3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=16"
+  },
+  "tmua-2022-p1-q15": {
+    "summary": "Find the maximum area of an axis-aligned rectangle lying between $y=8-2x^2$ and $y=x^2-2$ in their bounded region.",
+    "summaryZh": "在两曲线 $y=8-2x^2$ 与 $y=x^2-2$ 围成的区域内放置边平行于坐标轴的矩形。求最大面积。",
+    "answer": "H. $40\\sqrt{10}/9$",
+    "answerZh": "H．$40\\sqrt{10}/9$",
+    "methods": [
+      {
+        "title": "First centre the rectangle, then optimise its width",
+        "titleZh": "先对称放置再优化宽度",
+        "topics": [
+          {
+            "en": "Differentiation",
+            "zh": "求导"
+          },
+          {
+            "en": "Optimisation",
+            "zh": "最优化"
+          }
+        ],
+        "steps": [
+          "For a fixed width $2t$, the largest absolute value of an endpoint is at least $t$. The outermost endpoint limits both top and bottom, so the greatest height for this width is attained by centring the rectangle and equals $10-3t^2$.",
+          "Maximise $A=20t-6t^3$ on $0\\le t\\le\\sqrt{10/3}$. Its derivative $20-18t^2$ changes from positive to negative at $t=\\sqrt{10}/3$. Substitution gives $40\\sqrt{10}/9$."
+        ],
+        "stepsZh": [
+          "若宽为 $2t$，左右端点的横坐标绝对值中较大者至少为 $t$。该端点同时限制上下边，故将矩形关于纵轴对称放置时可得到同宽下最大高度 $10-3t^2$。",
+          "在 $0\\le t\\le\\sqrt{10/3}$ 上最大化 $A=20t-6t^3$。导数 $20-18t^2$ 在 $t=\\sqrt{10}/3$ 由正变负，代回得 $40\\sqrt{10}/9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=17"
+  },
+  "tmua-2022-p1-q16": {
+    "summary": "The roots of $7x^4-6x^2+1=0$ are $\\pm\\cos\\theta,\\pm\\cos\\beta$. Give a quartic with roots $\\pm\\sin\\theta,\\pm\\sin\\beta$.",
+    "summaryZh": "$7x^4-6x^2+1=0$ 的根为 $\\pm\\cos\\theta,\\pm\\cos\\beta$。求以 $\\pm\\sin\\theta,\\pm\\sin\\beta$ 为根的四次方程。",
+    "answer": "B. $7x^4-8x^2+2=0$",
+    "answerZh": "B．$7x^4-8x^2+2=0$",
+    "methods": [
+      {
+        "title": "Substitute complementary squared values",
+        "titleZh": "代入互补的三角函数平方",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Polynomial substitution",
+            "zh": "多项式换元"
+          }
+        ],
+        "steps": [
+          "If $x$ is one of the desired sine values or its negative, then the associated squared cosine is $1-x^2$. It must satisfy $7(1-x^2)^2-6(1-x^2)+1=0$.",
+          "Expanding gives $7x^4-8x^2+2=0$. The substitution merely exchanges the two distinct squared cosine values with their complements, recovering the desired roots with both signs."
+        ],
+        "stepsZh": [
+          "若 $x$ 为所求的正负正弦值之一，则对应的余弦平方为 $1-x^2$，满足 $7(1-x^2)^2-6(1-x^2)+1=0$。",
+          "展开后得 $7x^4-8x^2+2=0$。此换元把两个不同的余弦平方一一对应到其补数，再分别取正负平方根，恰给出所求根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=18"
+  },
+  "tmua-2022-p1-q17": {
+    "summary": "In a triangle a $30^\\circ$ angle has opposite side $a=x-1$ and one adjacent side $b=-x^2+6x-5$. Find all $x$ admitting two noncongruent triangles.",
+    "summaryZh": "三角形的一个角为 $30^\\circ$，其对边长 $a=x-1$，一条邻边长 $b=-x^2+6x-5$。哪些 $x$ 可对应两个不全等三角形？",
+    "answer": "D. $3<x<4$",
+    "answerZh": "D．$3<x<4$",
+    "methods": [
+      {
+        "title": "Test the ambiguous sine-rule case",
+        "titleZh": "判断正弦定理的两解情形",
+        "topics": [
+          {
+            "en": "Ambiguous case of the sine rule",
+            "zh": "正弦定理的两解情形"
+          }
+        ],
+        "steps": [
+          "For a given acute angle and adjacent side $b$, the opposite length produces two triangles exactly when $b\\sin30^\\circ<a<b$: the circle of radius $a$ meets the remaining ray twice strictly in front of its endpoint.",
+          "Positivity requires $x>1$ and $b=(x-1)(5-x)>0$. Divide by $x-1$ to obtain $(5-x)/2<1<5-x$, hence $3<x<4$. Both conditions on positivity follow on that interval."
+        ],
+        "stepsZh": [
+          "已知锐角及一条邻边 $b$ 时，只有 $b\\sin30^\\circ<a<b$ 才有两个三角形；此时以 $a$ 为半径的圆在另一边所在射线上有两个不同的正向交点。",
+          "边长为正要求 $x>1$ 且 $b=(x-1)(5-x)>0$。除以 $x-1$ 得 $(5-x)/2<1<5-x$，即 $3<x<4$。该区间内两边确实为正。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=19"
+  },
+  "tmua-2022-p1-q18": {
+    "summary": "With $p>0$ and $0<q<r$, consider $x^2(x-1)^2(x-2)=-p(x-q)^2(x-r)^2$. Which of the three intervals $(0,1),(1,2),(2,\\infty)$ should contain $q$ and $r$ to guarantee the maximum possible number of distinct real roots for every $p$?",
+    "summaryZh": "设 $p>0,0<q<r$。为使 $x^2(x-1)^2(x-2)=-p(x-q)^2(x-r)^2$ 对每个 $p$ 都有次数所允许的最多个不同实根，应分别将 $q,r$ 放在哪两个区间？候选区间为 $(0,1),(1,2),(2,\\infty)$。",
+    "answer": "B. $0<q<1<r<2$",
+    "answerZh": "B．$0<q<1<r<2$",
+    "methods": [
+      {
+        "title": "Alternate the signs at prescribed points",
+        "titleZh": "利用特殊点的符号交错",
+        "topics": [
+          {
+            "en": "Intermediate value theorem",
+            "zh": "介值定理"
+          },
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式实根"
+          }
+        ],
+        "steps": [
+          "Move the right side to the left and call the quintic $H$. It is negative sufficiently far to the left. Choose $0<q<1<r<2$. At $0,1,2$ the first summand vanishes and the second is positive.",
+          "At $q,r$ the second summand vanishes, while the first is negative because $x<2$ and $x$ is neither $0$ nor $1$. The ordered signs at $-\\infty,0,q,1,r,2$ are $-,+,-,+,-,+$, forcing five distinct roots. A quintic cannot have more."
+        ],
+        "stepsZh": [
+          "将右边移到左边，记所得五次式为 $H$。当 $x$ 足够小时 $H(x)<0$。取 $0<q<1<r<2$。在 $0,1,2$ 处第一项为零，第二项为正。",
+          "在 $q,r$ 处第二项为零，而第一项为负，因为 $x<2$ 且 $x$ 不为 0 或 1。在 $-\\infty,0,q,1,r,2$ 六处的符号交替为负、正、负、正、负、正，故有五个不同实根，已达五次式的上限。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=20"
+  },
+  "tmua-2022-p1-q19": {
+    "summary": "A circle of radius $4$ has centre chosen uniformly in $[-2,2]\\times[-3,3]$. Find the chance that its circumference meets the circle of radius $5$ centred at the origin.",
+    "summaryZh": "半径为 $4$ 的圆心在矩形 $[-2,2]\\times[-3,3]$ 内均匀选取。求该圆周与以原点为圆心、半径为 $5$ 的圆周相交的概率。",
+    "answer": "F. $(24-\\pi)/24$",
+    "answerZh": "F．$(24-\\pi)/24$",
+    "methods": [
+      {
+        "title": "Translate intersection into a distance restriction",
+        "titleZh": "将相交条件化成圆心距范围",
+        "topics": [
+          {
+            "en": "Geometric probability",
+            "zh": "几何概率"
+          },
+          {
+            "en": "Circle intersections",
+            "zh": "两圆相交"
+          }
+        ],
+        "steps": [
+          "The centre distance $d$ must satisfy $|5-4|\\le d\\le5+4$. The rectangle has $d\\le\\sqrt{13}<9$, so the only excluded centres are those with $d<1$.",
+          "The unit disk lies entirely inside the rectangle of area $24$. The favourable area is $24-\\pi$; the boundary has zero probability."
+        ],
+        "stepsZh": [
+          "圆心距 $d$ 必须满足 $|5-4|\\le d\\le5+4$。矩形内 $d\\le\\sqrt{13}<9$，故只需排除 $d<1$ 的圆心。",
+          "单位圆盘完全位于面积为 24 的矩形内，所求概率为 $(24-\\pi)/24$，边界不影响概率。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=21"
+  },
+  "tmua-2022-p1-q20": {
+    "summary": "For real $a$, let $n$ count intersections of $y=|x^2-a^2|$ and $y=a^2|x-1|$. Find the smallest positive integer that cannot be $n$.",
+    "summaryZh": "对实数 $a$，记 $y=|x^2-a^2|$ 与 $y=a^2|x-1|$ 的交点数为 $n$。求 $n$ 不可能取到的最小正整数。",
+    "answer": "B. $2$",
+    "answerZh": "B．$2$",
+    "methods": [
+      {
+        "title": "Split an absolute-value equality into two quadratics",
+        "titleZh": "将绝对值等式拆成两个二次方程",
+        "topics": [
+          {
+            "en": "Absolute values",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Counting distinct roots",
+            "zh": "不同实根计数"
+          }
+        ],
+        "steps": [
+          "Write $t=a^2\\ge0$. For $t=0$ there is one intersection. If $t>0$, the equality says $x^2-t=\\pm t(x-1)$. The plus sign gives $x=0,t$; the minus sign gives $x^2+tx-2t=0$, which has two distinct nonzero roots of opposite signs.",
+          "Only $x=t$ could be shared by the two quadratics. Substitution yields $2t^2-2t=0$, so with $t>0$ overlap occurs exactly at $t=1$. The possible counts are therefore $1,3,4$, missing $2$."
+        ],
+        "stepsZh": [
+          "令 $t=a^2\\ge0$。若 $t=0$ 则只有一个交点。若 $t>0$，等式化为 $x^2-t=\\pm t(x-1)$。正号给出 $x=0,t$；负号给出 $x^2+tx-2t=0$，有两个不同的异号非零根。",
+          "两组根只有 $x=t$ 可能重合，代入得 $2t^2-2t=0$，在正数范围仅当 $t=1$ 成立。因此交点数可能为 $1,3,4$，最小缺项为 2。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf#page=22"
+  }
+}

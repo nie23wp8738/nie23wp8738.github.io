@@ -1,0 +1,748 @@
+{
+  "amc8-2026-q1": {
+    "summary": "Add the integers from 1 through 12, taking each multiple of 3 with a minus sign instead of a plus sign.",
+    "summaryZh": "把 1 到 12 的整数依次相加，但将所有 3 的倍数取为负数。求结果。",
+    "answer": "A. $18$.",
+    "answerZh": "A．$18$。",
+    "methods": [
+      {
+        "title": "Group in threes",
+        "titleZh": "每三项一组",
+        "topics": [
+          {
+            "en": "Regrouping",
+            "zh": "分组求和"
+          }
+        ],
+        "steps": [
+          "The four groups evaluate to $1+2-3=0$, $4+5-6=3$, $7+8-9=6$, and $10+11-12=9$.",
+          "Their total is $0+3+6+9=18$."
+        ],
+        "stepsZh": [
+          "四组分别为 $1+2-3=0$、$4+5-6=3$、$7+8-9=6$、$10+11-12=9$。",
+          "相加得 $18$。"
+        ]
+      },
+      {
+        "title": "Change four signs",
+        "titleZh": "由全正的和改符号",
+        "topics": [
+          {
+            "en": "Arithmetic series",
+            "zh": "等差数列求和"
+          }
+        ],
+        "steps": [
+          "The unsigned sum is $12\\cdot13/2=78$. Replacing $+k$ by $-k$ subtracts $2k$.",
+          "Subtract $2(3+6+9+12)=60$ to obtain 18."
+        ],
+        "stepsZh": [
+          "先全部取正，和为 $12\\cdot13/2=78$。把 $+k$ 改为 $-k$ 相当于减去 $2k$。",
+          "因此再减去 $2(3+6+9+12)=60$，结果为 18。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/1"
+  },
+  "amc8-2026-q2": {
+    "summary": "Fill a five-row, seven-column array in concentric layers. The outermost layer contains ones, the next layer twos, and the central three cells threes. Find the sum of the array.",
+    "summaryZh": "在一个五行七列的方格阵列中，最外圈填 1，向内一圈填 2，正中三格填 3。求全部数字之和。",
+    "answer": "C. $53$.",
+    "answerZh": "C．$53$。",
+    "methods": [
+      {
+        "title": "Add one layer at a time",
+        "titleZh": "逐层叠加",
+        "topics": [
+          {
+            "en": "Array counting",
+            "zh": "阵列计数"
+          }
+        ],
+        "steps": [
+          "Give every one of the $5\\cdot7=35$ cells one unit. Add a second unit in the $3\\times5$ interior, then a third in its central $1\\times3$ strip.",
+          "The sum is $35+15+3=53$."
+        ],
+        "stepsZh": [
+          "先给全部 $5\\cdot7=35$ 格各加 1，再给内层 $3\\times5$ 格各加 1，最后给正中的 $1\\times3$ 格各加 1。",
+          "总和为 $35+15+3=53$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/2"
+  },
+  "amc8-2026-q3": {
+    "summary": "Use a 24-cm wire as the entire boundary of a single shape. Which can be formed: a regular hexagon of side 5 cm, a square of area 36 square cm, or a right triangle with legs 6 and 8 cm?",
+    "summaryZh": "把一根长 24 厘米的金属丝全部用作一个图形的周界。边长 5 厘米的正六边形，面积为 36 平方厘米的正方形，两直角边为 6、8 厘米的直角三角形，哪些可以做成？",
+    "answer": "D. The square and the right triangle.",
+    "answerZh": "D．正方形和直角三角形。",
+    "methods": [
+      {
+        "title": "Compare the three perimeters",
+        "titleZh": "逐个比较周长",
+        "topics": [
+          {
+            "en": "Perimeter and Pythagoras",
+            "zh": "周长与勾股定理"
+          }
+        ],
+        "steps": [
+          "The hexagon requires $6(5)=30$ cm. The square has side $\\sqrt{36}=6$, so its perimeter is $4(6)=24$ cm.",
+          "The right triangle has hypotenuse $\\sqrt{6^2+8^2}=10$ cm and perimeter $6+8+10=24$ cm. Exactly the last two use the wire."
+        ],
+        "stepsZh": [
+          "正六边形周长为 $6(5)=30$。正方形边长 $\\sqrt{36}=6$，周长 $4(6)=24$。",
+          "直角三角形斜边为 $\\sqrt{6^2+8^2}=10$，周长 $6+8+10=24$。所以后两种均可。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/3"
+  },
+  "amc8-2026-q4": {
+    "summary": "A balance falls by 20 percent and then rises by 50 percent of its new value. Express the final balance as a percentage of the starting amount.",
+    "summaryZh": "一笔存款先减少百分之二十，再按剩余金额增加百分之五十。最终金额是最初的百分之几？",
+    "answer": "E. $120\\%$.",
+    "answerZh": "E．$120\\%$。",
+    "methods": [
+      {
+        "title": "Normalize the initial amount",
+        "titleZh": "令初始额为一百",
+        "topics": [
+          {
+            "en": "Successive percentages",
+            "zh": "连续百分比变化"
+          }
+        ],
+        "steps": [
+          "Start with 100. After the reduction 80 remain. The increase is half of 80, or 40.",
+          "The final 120 is 120 percent of the starting 100."
+        ],
+        "stepsZh": [
+          "以 100 为初始额，减少后为 80。再增加 80 的一半，即 40。",
+          "最后为 120，相当于初始额的百分之一百二十。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/4"
+  },
+  "amc8-2026-q5": {
+    "summary": "A 100-mile journey lasts three hours including one break. The moving average is 40 miles per hour. Find the break length in minutes.",
+    "summaryZh": "全程 100 英里的行程连同一次休息共用三小时，行驶时的平均速度是每小时 40 英里。休息了多少分钟？",
+    "answer": "B. $30$ minutes.",
+    "answerZh": "B．$30$ 分钟。",
+    "methods": [
+      {
+        "title": "Subtract moving time",
+        "titleZh": "扣除行驶时间",
+        "topics": [
+          {
+            "en": "Distance, speed and time",
+            "zh": "路程速度时间"
+          }
+        ],
+        "steps": [
+          "The time spent in motion is $100/40=2.5$ hours. The remainder of the elapsed three hours is the break.",
+          "Thus the break is $(3-2.5)60=30$ minutes."
+        ],
+        "stepsZh": [
+          "车实际开了 $100/40=2.5$ 小时。总用时与行驶时间之差就是休息时间。",
+          "换算得 $(3-2.5)60=30$ 分钟。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/5"
+  },
+  "amc8-2026-q6": {
+    "summary": "Inside a 10-by-8 rectangle take all points at distance at most 1 from its boundary. What fraction of the entire rectangle is this band?",
+    "summaryZh": "在一个长 10、宽 8 的长方形内，取所有距边界不超过 1 的点。此带状区域占总面积的几分之几？",
+    "answer": "E. $2/5$.",
+    "answerZh": "E．$2/5$。",
+    "methods": [
+      {
+        "title": "Remove the inaccessible centre",
+        "titleZh": "减去中央区域",
+        "topics": [
+          {
+            "en": "Complementary area",
+            "zh": "补集面积"
+          }
+        ],
+        "steps": [
+          "The centre more than 1 unit from every edge is an $8\\times6$ rectangle: remove one unit at both ends of each dimension.",
+          "Consequently the band covers $(80-48)/80=32/80=2/5$."
+        ],
+        "stepsZh": [
+          "距所有边都超过 1 的中央区域是 $8\\times6$ 的长方形，因为长和宽两端都各减 1。",
+          "所求比例为 $(80-48)/80=2/5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/6"
+  },
+  "amc8-2026-q7": {
+    "summary": "Over two rides an electric bike uses one half and three tenths of a full charge. Their total distance is 40 miles. Assuming a fixed energy cost per mile, find its range per full charge.",
+    "summaryZh": "电动自行车两次骑行分别消耗满电电量的二分之一和十分之三，合计行驶 40 英里。若每英里耗电相同，一次满电能走多远？",
+    "answer": "C. $50$ miles.",
+    "answerZh": "C．$50$ 英里。",
+    "methods": [
+      {
+        "title": "Find distance per charge",
+        "titleZh": "求单位电量行程",
+        "topics": [
+          {
+            "en": "Direct proportion",
+            "zh": "正比例"
+          }
+        ],
+        "steps": [
+          "The fraction of a charge spent is $1/2+3/10=4/5$.",
+          "To scale 40 miles up from $4/5$ of a charge to a whole charge, multiply by $5/4$. This yields 50 miles."
+        ],
+        "stepsZh": [
+          "合计耗电 $1/2+3/10=4/5$。",
+          "将 $4/5$ 份电量对应的 40 英里放大至整份，乘以 $5/4$，得 50 英里。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/7"
+  },
+  "amc8-2026-q8": {
+    "summary": "Exactly 74 percent of a survey group selected one answer. Find the smallest possible number surveyed.",
+    "summaryZh": "一份调查中恰有百分之七十四的人选择同一答案。参与人数最少是多少？",
+    "answer": "D. $50$.",
+    "answerZh": "D．$50$。",
+    "methods": [
+      {
+        "title": "Reduce the fraction",
+        "titleZh": "约成最简分数",
+        "topics": [
+          {
+            "en": "Coprime denominators",
+            "zh": "互素与分母"
+          }
+        ],
+        "steps": [
+          "Write $74/100=37/50$ in lowest terms. If $n$ people respond, the count $37n/50$ must be a whole number. Since 37 and 50 are coprime, 50 divides $n$.",
+          "Taking $n=50$ gives exactly 37 such responses, proving attainability."
+        ],
+        "stepsZh": [
+          "最简分数为 $74/100=37/50$。总人数 $n$ 应使 $37n/50$ 为整数，而 37 与 50 互素，故 $50$ 整除 $n$。",
+          "取 50 人时恰有 37 人选择该项，可以实现。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/8"
+  },
+  "amc8-2026-q9": {
+    "summary": "Simplify $\\sqrt{16\\sqrt{81}}/\\sqrt{81\\sqrt{16}}$.",
+    "summaryZh": "化简 $\\sqrt{16\\sqrt{81}}/\\sqrt{81\\sqrt{16}}$。",
+    "answer": "B. $2/3$.",
+    "answerZh": "B．$2/3$。",
+    "methods": [
+      {
+        "title": "Evaluate from inside out",
+        "titleZh": "从内层根号算起",
+        "topics": [
+          {
+            "en": "Nested radicals",
+            "zh": "嵌套根式"
+          }
+        ],
+        "steps": [
+          "The inner square roots are 9 and 4, respectively. The numerator is $\\sqrt{16\\cdot9}=12$, and the denominator is $\\sqrt{81\\cdot4}=18$.",
+          "The quotient is $12/18=2/3$."
+        ],
+        "stepsZh": [
+          "分子、分母内部的平方根依次为 9 和 4。因此分子是 $\\sqrt{16\\cdot9}=12$，分母是 $\\sqrt{81\\cdot4}=18$。",
+          "相除约分得 $2/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/9"
+  },
+  "amc8-2026-q10": {
+    "summary": "Write five runners’ initials as L, M, N, O and P. N finishes 11 minutes after P. O finishes 3 minutes after P and 2 minutes before M. L finishes 6 minutes after O. Who finishes fourth?",
+    "summaryZh": "五名选手用 L、M、N、O、P 表示。N 比 P 晚 11 分钟，O 比 P 晚 3 分钟、比 M 早 2 分钟，L 比 O 晚 6 分钟。谁是第四名？",
+    "answer": "A. L (Luke).",
+    "answerZh": "A．L（Luke）。",
+    "methods": [
+      {
+        "title": "Set a time origin",
+        "titleZh": "取基准时刻",
+        "topics": [
+          {
+            "en": "Relative ordering",
+            "zh": "相对顺序"
+          }
+        ],
+        "steps": [
+          "Measure time from P’s finish. The finishing times are $P=0$, $O=3$, $M=5$, $L=9$ and $N=11$.",
+          "In increasing order the fourth entry is L."
+        ],
+        "stepsZh": [
+          "以 P 冲线为零时刻，则 $P=0$、$O=3$、$M=5$、$L=9$、$N=11$。",
+          "从早到晚排列，第四名为 L。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/10"
+  },
+  "amc8-2026-q11": {
+    "summary": "A curve is assembled from five quarter-circle arcs of radii 1, 1, 2, 3 and 5. Determine the total arc length.",
+    "summaryZh": "一条曲线由半径分别为 1、1、2、3、5 的五条四分之一圆弧首尾连接而成。求总弧长。",
+    "answer": "B. $6\\pi$.",
+    "answerZh": "B．$6\\pi$。",
+    "methods": [
+      {
+        "title": "Sum the radii first",
+        "titleZh": "先求半径之和",
+        "topics": [
+          {
+            "en": "Arc length",
+            "zh": "弧长"
+          }
+        ],
+        "steps": [
+          "A quarter circle of radius $r$ contributes $(2\\pi r)/4=\\pi r/2$.",
+          "Thus all five contribute $(1+1+2+3+5)\\pi/2=6\\pi$."
+        ],
+        "stepsZh": [
+          "半径为 $r$ 的四分之一圆弧长为 $2\\pi r/4=\\pi r/2$。",
+          "总长为 $(1+1+2+3+5)\\pi/2=6\\pi$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/11"
+  },
+  "amc8-2026-q12": {
+    "summary": "Arrange the digits 1 through 6 around a circle, each once. Starting from the top and reading clockwise, adjacent-pair sums are 6, 4, 5, 8, 10 and 9. Find the top digit.",
+    "summaryZh": "将 1 至 6 各用一次填入六个环形位置。从最上方出发，顺时针方向各相邻对的和依次为 6、4、5、8、10、9。求最上方的数字。",
+    "answer": "D. $5$.",
+    "answerZh": "D．$5$。",
+    "methods": [
+      {
+        "title": "Propagate one variable",
+        "titleZh": "由一个未知数逐项递推",
+        "topics": [
+          {
+            "en": "Linear constraints",
+            "zh": "线性约束"
+          }
+        ],
+        "steps": [
+          "With top digit $x$, subtract successively from the pair sums to get the list $x,6-x,x-2,7-x,x+1,9-x$. The requirements $9-x\\le6$ and $x+1\\le6$ give $3\\le x\\le5$.",
+          "At $x=3$ the first two digits coincide. At $x=4$ the second and third coincide. At $x=5$ the list is $5,1,3,2,6,4$, containing every digit exactly once."
+        ],
+        "stepsZh": [
+          "设顶数为 $x$，逐次用每对和减去前一个数，得 $x,6-x,x-2,7-x,x+1,9-x$。由 $9-x\\le6$ 和 $x+1\\le6$ 得 $3\\le x\\le5$。",
+          "取 3 时前两项相同；取 4 时第二、三项相同；取 5 时为 $5,1,3,2,6,4$，六个数字恰各出现一次。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/12",
+    "figure": {
+      "url": "/commentary-figures/amc8-2026-q12.svg",
+      "alt": "The six neighbour sums are 6, 4, 5, 8, 10, 9, clockwise from the top.",
+      "altZh": "从顶点出发，顺时针的六个相邻对之和为 6、4、5、8、10、9。"
+    }
+  },
+  "amc8-2026-q13": {
+    "summary": "Each brick in the diagram is a unit square. Find the area of the tilted square whose four corners are marked.",
+    "summaryZh": "图中每一块砖都是单位正方形。求四个圆点围成的倾斜正方形的面积。",
+    "answer": "A. $10$ square units.",
+    "answerZh": "A．$10$ 平方单位。",
+    "methods": [
+      {
+        "title": "Use the squared side",
+        "titleZh": "直接计算边长平方",
+        "topics": [
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          }
+        ],
+        "steps": [
+          "A side is the hypotenuse of a right triangle with legs 3 and 1. Therefore its square is $3^2+1^2=10$.",
+          "The area of the square equals exactly this squared length."
+        ],
+        "stepsZh": [
+          "一条边是两直角边为 3、1 的直角三角形的斜边，边长平方为 $3^2+1^2=10$。",
+          "正方形面积正好等于这个边长平方。"
+        ]
+      },
+      {
+        "title": "Subtract four corner triangles",
+        "titleZh": "扣除四角小三角形",
+        "topics": [
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          }
+        ],
+        "steps": [
+          "The tilted square has perpendicular edge vectors $(3,1)$ and $(-1,3)$. Its axis-aligned bounding square has side 4.",
+          "Subtract its four corner triangles, each with area $3/2$, from 16. The remaining area is $16-6=10$."
+        ],
+        "stepsZh": [
+          "可取相邻边向量 $(3,1)$ 与 $(-1,3)$。它的水平竖直外接正方形边长为 4。",
+          "从面积 16 中扣去四个面积为 $3/2$ 的角部三角形，余下 $16-6=10$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/13",
+    "figure": {
+      "url": "/commentary-figures/amc8-2026-q13.svg",
+      "alt": "Unit-square brickwork, with corners of a tilted square marked at the wall joints.",
+      "altZh": "每块砖为单位正方形；四个标记点在砖缝交点处，组成一个倾斜正方形。"
+    }
+  },
+  "amc8-2026-q14": {
+    "summary": "For three successive terms of an arithmetic progression the first two sum to 40 and the last two to 60. Compute the sum of all three.",
+    "summaryZh": "等差数列连续三项的前两项和为 40、后两项和为 60。求三项和。",
+    "answer": "B. $75$.",
+    "answerZh": "B．$75$。",
+    "methods": [
+      {
+        "title": "Centre the progression",
+        "titleZh": "以中间项表示",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Write the three terms as $b-d,b,b+d$. Adding the given equations produces $4b=100$, so $b=25$.",
+          "Their sum is $3b=75$."
+        ],
+        "stepsZh": [
+          "设三项为 $b-d,b,b+d$。把两条已知等式相加得 $4b=100$，故 $b=25$。",
+          "三项之和为 $3b=75$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/14"
+  },
+  "amc8-2026-q15": {
+    "summary": "Each identical cube has exactly two shaded faces meeting along an edge. Assemble cubes with full faces glued together so that every shaded face is hidden inside a join. What is the minimum number of cubes?",
+    "summaryZh": "每个相同的正方体有且仅有两个相邻的着色面。把若干正方体整面相粘，使所有着色面都隐藏在接合处。最少需要几个正方体？",
+    "answer": "A. $4$ cubes.",
+    "answerZh": "A．$4$ 个。",
+    "methods": [
+      {
+        "title": "Count the required neighbours",
+        "titleZh": "分析每块的相邻数",
+        "topics": [
+          {
+            "en": "Spatial adjacency",
+            "zh": "空间邻接"
+          }
+        ],
+        "steps": [
+          "Each cube needs at least two neighbours to cover its two shaded faces. With at most three cubes this would require three pairwise face-adjacent cubes. Such a triangle cannot occur: colour cubic lattice cells by the parity of their coordinate sum, so every face step switches colour.",
+          "Arrange four cubes in a flat $2\\times2$ block. Each cube has two neighbours on adjacent faces; rotate its two shaded faces against those neighbours. Four is achievable and minimal."
+        ],
+        "stepsZh": [
+          "每块都至少需要两个邻居来遮盖两个着色面。至多三块时，要满足此条件便需要三块两两以面相邻。但将立方网格按坐标和的奇偶染色，每次跨面都变色，不可能有三角形。",
+          "把四块铺成单层 $2\\times2$ 的方阵，每块的两个邻居恰贴在相邻两面。将着色面转向邻居即可，故四块是最小值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/15"
+  },
+  "amc8-2026-q16": {
+    "summary": "Consider the four-digit positive integers in which every digit is even. What proportion are multiples of 4?",
+    "summaryZh": "所有数位都是偶数的四位正整数中，4 的倍数占多少？",
+    "answer": "D. $3/5$.",
+    "answerZh": "D．$3/5$。",
+    "methods": [
+      {
+        "title": "Test the final digit",
+        "titleZh": "只考察个位",
+        "topics": [
+          {
+            "en": "Divisibility by four",
+            "zh": "被四整除的判定"
+          }
+        ],
+        "steps": [
+          "For even tens digit $t$, the contribution $10t$ is divisible by 4. The higher place values are also multiples of 4. Divisibility therefore depends only on the units digit.",
+          "Among $0,2,4,6,8$ the three endings $0,4,8$ work. Each ending has the same number of allowed prefixes, giving $3/5$."
+        ],
+        "stepsZh": [
+          "十位 $t$ 为偶数时，$10t$ 是 4 的倍数，而百位与千位的贡献也都是 4 的倍数。因此只须考察个位。",
+          "五种偶数个位中，0、4、8 满足条件。每个个位可配同样多的前三位，所求比例为 $3/5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/16"
+  },
+  "amc8-2026-q17": {
+    "summary": "Four people originally sit in order $A,B,C,D$. Rearrange them so that no old pair of neighbours remains adjacent in either order. Count the new orders, distinguishing left from right.",
+    "summaryZh": "四人原先从左到右为 $A,B,C,D$。重新排列，要求任何一对原先相邻的人都不再相邻，左右倒序视为不同。共有几种？",
+    "answer": "A. $2$.",
+    "answerZh": "A．$2$。",
+    "methods": [
+      {
+        "title": "Draw allowed neighbours",
+        "titleZh": "画出允许的相邻关系",
+        "topics": [
+          {
+            "en": "Hamiltonian paths",
+            "zh": "哈密顿路径"
+          }
+        ],
+        "steps": [
+          "Removing $AB,BC,CD$ from the six unordered pairs leaves only $AC,AD,BD$. A four-seat row needs exactly three adjacency edges.",
+          "These edges form the single chain $C-A-D-B$. It and its reverse give the only two orders."
+        ],
+        "stepsZh": [
+          "从六对人中去掉 $AB,BC,CD$，只剩 $AC,AD,BD$ 三对可以相邻，而四个座位正需要三条相邻边。",
+          "这三条边组成唯一的一条链 $C-A-D-B$，正读与倒读共两种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/17"
+  },
+  "amc8-2026-q18": {
+    "summary": "Count the increasing sequences of at least two consecutive positive odd numbers whose sum is 60.",
+    "summaryZh": "将 60 写为至少两个从小到大连续正奇数之和，有几种方式？",
+    "answer": "B. $2$.",
+    "answerZh": "B．$2$。",
+    "methods": [
+      {
+        "title": "Determine the length first",
+        "titleZh": "先确定项数",
+        "topics": [
+          {
+            "en": "Consecutive odd integers",
+            "zh": "连续奇数和"
+          }
+        ],
+        "steps": [
+          "For $k$ terms starting at odd $a$, the sum is $k(a+k-1)$. Since the sum is even, $k$ must be even. The least sum for length $k$ is $k^2$, so $k$ is 2, 4 or 6.",
+          "Solving $a=60/k-k+1$ gives 29, 12 and 5. The middle start is even; the other two give the valid sequences beginning with 29 and 5."
+        ],
+        "stepsZh": [
+          "设有 $k$ 项，首项为奇数 $a$，总和等于 $k(a+k-1)$。奇数的和为偶数，项数必须是偶数；又有最小和 $k^2\\le60$，所以只需试 2、4、6 项。",
+          "由 $a=60/k-k+1$ 分别得 29、12、5。12 不是奇数，剩余两种都成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/18"
+  },
+  "amc8-2026-q19": {
+    "summary": "A walker and a dog depart from the same point. The walker moves towards a fixed tree at constant speed. The dog runs straight to the tree and back to the walker, five times as fast throughout. At reunion, what fraction of the original distance has the walker covered?",
+    "summaryZh": "一人与一只狗同时从同一点向树前进。人匀速直走，狗以人速的五倍先到树旁，再沿原路迎向人。相遇时，人已走完原距离的几分之几？",
+    "answer": "D. $1/3$.",
+    "answerZh": "D．$1/3$。",
+    "methods": [
+      {
+        "title": "Compare total distances",
+        "titleZh": "比较全程距离",
+        "topics": [
+          {
+            "en": "Relative motion",
+            "zh": "相对运动"
+          }
+        ],
+        "steps": [
+          "Normalize the tree’s distance to 1 and write $x$ for the walker’s distance. The dog runs distance $1+(1-x)=2-x$ in the same time the person travels $x$.",
+          "The speed ratio gives $2-x=5x$, hence $x=1/3$."
+        ],
+        "stepsZh": [
+          "把起点到树的距离设为 1，人走了 $x$。相同时间内，狗的路程为 $1+(1-x)=2-x$。",
+          "由速比得 $2-x=5x$，解得 $x=1/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/19"
+  },
+  "amc8-2026-q20": {
+    "summary": "Form an ordered stack of total height 8 mm from coins of thickness 1 mm and 3 mm. Count the distinct type sequences.",
+    "summaryZh": "用厚 1 毫米与 3 毫米的两种硬币叠成总高 8 毫米的柱体。按上下顺序区分，币种序列有多少个？",
+    "answer": "D. $13$.",
+    "answerZh": "D．$13$。",
+    "methods": [
+      {
+        "title": "Choose positions of thick coins",
+        "titleZh": "选择厚币的位置",
+        "topics": [
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "There may be zero, one or two 3-mm coins. With none there is one stack. With one there are five thin coins and six positions for the thick one.",
+          "With two thick coins there are two thin coins, so choose two of four positions. The total is $1+6+\\binom42=13$."
+        ],
+        "stepsZh": [
+          "厚币可有 0、1 或 2 枚。全薄币仅一种；一枚厚币搭配五枚薄币，厚币有六个位置。",
+          "两枚厚币搭配两枚薄币，从四个位置中选两个放厚币。合计 $1+6+\\binom42=13$。"
+        ]
+      },
+      {
+        "title": "Remove the top coin",
+        "titleZh": "取下最上一枚",
+        "topics": [
+          {
+            "en": "Recurrences",
+            "zh": "递推"
+          }
+        ],
+        "steps": [
+          "Let $f(n)$ count stacks of height $n$, with $f(0)=1$ and negative arguments worth 0. The top coin gives $f(n)=f(n-1)+f(n-3)$.",
+          "For $n=1$ through 8 the counts are $1,1,2,3,4,6,9,13$."
+        ],
+        "stepsZh": [
+          "令 $f(n)$ 表示高度 $n$ 的叠法，取 $f(0)=1$，负下标为 0。按顶端币种分类，得 $f(n)=f(n-1)+f(n-3)$。",
+          "从 1 到 8 依次算出 $1,1,2,3,4,6,9,13$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/20"
+  },
+  "amc8-2026-q21": {
+    "summary": "A walk on a five-point star starts at an outer vertex. Every outer vertex has two inner neighbours, and every inner vertex has two inner and two outer neighbours. Neighbours are chosen uniformly at each step. Find the probability of being at an outer vertex after three steps.",
+    "summaryZh": "在五角星网络上从外顶点开始游走。每个外顶点连着两个内顶点，每个内顶点连着两个内顶点和两个外顶点。每步等概率选一邻点。三步以后位于外顶点的概率是多少？",
+    "answer": "B. $1/4$.",
+    "answerZh": "B．$1/4$。",
+    "methods": [
+      {
+        "title": "Track only the type of vertex",
+        "titleZh": "只跟踪内外类型",
+        "topics": [
+          {
+            "en": "Transition probabilities",
+            "zh": "转移概率"
+          }
+        ],
+        "steps": [
+          "The first move always goes inward. To finish outside on the third move, the second move must stay inside, since an outer vertex cannot move directly to another outer vertex.",
+          "From an inner vertex, both staying inside and moving outside have probability $2/4$. Thus the required pattern has probability $(1/2)(1/2)=1/4$."
+        ],
+        "stepsZh": [
+          "第一步必到内点。要使第三步到达外点，第二步必须停留在内点，因为外点之间没有直接相连的边。",
+          "在内点，下一步向内和向外的概率各为 $2/4$。故指定过程的概率为 $(1/2)(1/2)=1/4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/21"
+  },
+  "amc8-2026-q22": {
+    "summary": "Partition the integers 1 through 25 into five sets of five. Compute each set’s median and then the median of these five medians. What is its smallest attainable value?",
+    "summaryZh": "把 1 到 25 分成五组，每组五数。取每组中位数，再取这五个中位数的中位数。这个结果最小能是多少？",
+    "answer": "A. $9$.",
+    "answerZh": "A．$9$。",
+    "methods": [
+      {
+        "title": "Prove a rank bound and attain it",
+        "titleZh": "用排名下界并构造取等",
+        "topics": [
+          {
+            "en": "Order statistics",
+            "zh": "顺序统计量"
+          }
+        ],
+        "steps": [
+          "If the overall median is $M$, at least three groups have median at most $M$. Each such group contains at least three integers at most $M$, so at least nine distinct integers are at most $M$. Hence $M\\ge9$.",
+          "Use the groups $(1,2,3,10,11)$, $(4,5,6,12,13)$, $(7,8,9,14,15)$, $(16,17,18,19,20)$ and $(21,22,23,24,25)$. Their medians are $3,6,9,18,23$, giving $M=9$."
+        ],
+        "stepsZh": [
+          "若最终中位数是 $M$，至少三组的中位数不超过 $M$。每组各含至少三个不超过 $M$ 的整数，所以这样的不同整数至少有九个，得 $M\\ge9$。",
+          "取五组为 $(1,2,3,10,11)$、$(4,5,6,12,13)$、$(7,8,9,14,15)$、$(16,17,18,19,20)$、$(21,22,23,24,25)$。中位数依次为 $3,6,9,18,23$，故下界可达。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/22"
+  },
+  "amc8-2026-q23": {
+    "summary": "Five tangent circular coins, each of diameter 4 cm, are tightly packed in two staggered rows: three below, and two above each nestled between adjacent lower coins. What length of stretched band follows the outside?",
+    "summaryZh": "五枚直径均为 4 厘米的圆形硬币紧密交错排成两行：下行三枚，上行两枚分别嵌在下方相邻两币之间。沿最外缘用皮筋绕紧一周，长度是多少？",
+    "answer": "C. $20+4\\pi$ cm.",
+    "answerZh": "C．$20+4\\pi$ 厘米。",
+    "methods": [
+      {
+        "title": "Add the tangents and arcs",
+        "titleZh": "分别求切线段与圆弧之和",
+        "topics": [
+          {
+            "en": "Convex hull perimeter",
+            "zh": "凸包周长"
+          }
+        ],
+        "steps": [
+          "The four extreme centres form a trapezoid. Its edges have lengths $8,4,4,4$ because neighbouring centres are one diameter apart. Each straight portion of the band has the length of its parallel trapezoid edge, totalling 20.",
+          "As the band turns once around this convex shape, its arcs turn through a combined $360^\\circ$. At radius 2 their combined length is $4\\pi$. Add the two parts."
+        ],
+        "stepsZh": [
+          "四个最外侧圆心构成梯形。相邻相切的圆心距等于直径，故四边长为 $8,4,4,4$。皮筋各直线段与相应梯形边平行且等长，共 20。",
+          "沿凸形外缘绕一圈，弧段的转角之和为 $360^\\circ$。半径均为 2，弧长合计 $4\\pi$，再加直线段即得。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/23"
+  },
+  "amc8-2026-q24": {
+    "summary": "Find the exponent of 7 in $1!\\,2!\\,3!\\cdots51!$.",
+    "summaryZh": "求 $1!\\,2!\\,3!\\cdots51!$ 的质因数分解中 7 的指数。",
+    "answer": "E. $171$.",
+    "answerZh": "E．$171$。",
+    "methods": [
+      {
+        "title": "Count repetitions of each multiple",
+        "titleZh": "计算各倍数重复的次数",
+        "topics": [
+          {
+            "en": "Prime valuations",
+            "zh": "素因数指数"
+          }
+        ],
+        "steps": [
+          "A particular integer $j$ contributes to every factorial from $j!$ through $51!$, so it occurs $52-j$ times. The multiples of 7 contribute $45+38+31+24+17+10+3=168$ factors of 7 before extra powers are considered.",
+          "Only $49$ is also a multiple of $7^2$. It appears in $49!,50!,51!$ and contributes one extra factor in each, making $168+3=171$."
+        ],
+        "stepsZh": [
+          "整数 $j$ 出现在从 $j!$ 到 $51!$ 的每一项中，故出现 $52-j$ 次。先从每个 7 的倍数中取出一个因子 7，合计 $45+38+31+24+17+10+3=168$ 个。",
+          "只有 49 还能再提供一个 7。它出现在 $49!,50!,51!$ 中，故再加 3，结果为 171。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/24"
+  },
+  "amc8-2026-q25": {
+    "summary": "An equiangular hexagon sits inside an equilateral triangle, with all six vertices on its boundary. An example cuts off the three triangle corners with hexagon edges of lengths 1, 2 and 2; on one triangle side the hexagon edge between the cuts of lengths 1 and 2 is 3. In this same triangle count all such hexagons having six positive integer sides, identifying rotations and reflections.",
+    "summaryZh": "一个等角六边形内接于等边三角形，六个顶点均在三角形边上。一例的三个切角边长为 1、2、2，其中一条三角形边上位于边长 1 与 2 的切角之间的六边形边长为 3。固定同一个等边三角形，所有六边均为正整数的此类六边形，按旋转和反射视为相同，共有几种？",
+    "answer": "E. $8$.",
+    "answerZh": "E．$8$。",
+    "methods": [
+      {
+        "title": "Parametrize by the three corner cuts",
+        "titleZh": "用三个切角边长参数化",
+        "topics": [
+          {
+            "en": "Integer geometry",
+            "zh": "整数几何"
+          }
+        ],
+        "steps": [
+          "A $120^\\circ$ interior angle cannot fit at a triangle corner. A straight side of the triangle cannot contain three hexagon vertices. Thus two vertices lie on each side; the three discarded corners are equilateral triangles since their angles are $60^\\circ$. The example determines the triangle side as $1+3+2=6$.",
+          "Let the corner cuts have side lengths $x\\le y\\le z$. The three remaining hexagon sides are $6-x-y,6-y-z,6-z-x$. Positivity is equivalent to $y+z\\le5$. If $y=1$, then $x=1$ and $z=1,2,3,4$; if $y=2$, then $x=1,2$ and $z=2,3$. Larger $y$ cannot occur. This gives eight triples.",
+          "All triples are realizable by cutting the corners. To verify that they count distinct hexagons, put $s=x+y+z$. The perimeter is $18-s$. For triples of equal $s$, the alternate side-length triples of a hexagon are $\\{x,y,z\\}$ and $\\{x+6-s,y+6-s,z+6-s\\}$. A rotation or reflection can only preserve these sets or interchange them. Interchange between different triples of the same sum would require $s=6$, in which case the two sets already coincide."
+        ],
+        "stepsZh": [
+          "六边形内角为 $120^\\circ$，不可能位于三角形顶角；三角形的同一条直边也不可能有三个六边形顶点。故每边恰有两点，切去的三个角均为各角 $60^\\circ$ 的等边三角形。由示例可知大三角形边长为 $1+3+2=6$。",
+          "设三个切角边长排序后为 $x\\le y\\le z$。其余三边为 $6-x-y,6-y-z,6-z-x$，全正等价于 $y+z\\le5$。若 $y=1$，则 $x=1$ 且 $z$ 可为 1、2、3、4；若 $y=2$，则 $x$ 可为 1、2，$z$ 可为 2、3。不能有 $y\\ge3$，故共八组。",
+          "各组均能直接切出。再验证不重复：记 $s=x+y+z$，六边形周长为 $18-s$。在 $s$ 相同时，交替的两组三边长分别为 $\\{x,y,z\\}$ 和 $\\{x+6-s,y+6-s,z+6-s\\}$，旋转或反射至多互换这两组。若互换后仍对应相同的和，必有 $s=6$，此时两组本就完全相同。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2026/problem/25",
+    "figure": {
+      "url": "/commentary-figures/amc8-2026-q25.svg",
+      "alt": "A hexagon inside an equilateral triangle with sides labeled consecutively 1, 3, 2, 2, 2, 3.",
+      "altZh": "等边三角形内接等角六边形，六边依次标为 1、3、2、2、2、3。"
+    }
+  }
+}

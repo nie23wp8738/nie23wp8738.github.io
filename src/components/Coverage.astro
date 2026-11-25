@@ -1,0 +1,29 @@
+---
+import {getPastPapers} from '../lib/catalog.js';
+import {coverageOf,coverageStates} from '../lib/coverage.js';
+const {lang='en'} = Astro.props;
+const zh=lang==='zh';
+const {total,exams}=coverageOf(getPastPapers());
+const headings = zh ? ['题意及双语解法','官方英文题解俱全','仅有详解，题干待补','仅有答案','仅有索引'] :
+  ['Question & bilingual solution','Question & official English solution','Solution only','Answer key only','Source only'];
+const rows=Object.entries(exams).sort(([a],[b])=>a.localeCompare(b,'en',{numeric:true}));
+const num=n=>n.toLocaleString('en-US');
+---
+<details id="coverage" class="arch-sources coverage">
+  <summary>{zh?'逐科收录进度':'Coverage by exam'} · {num(total.total)} {zh?'道历年真题':'past questions'}</summary>
+  <div class="coverage-table"><table>
+    <thead><tr><th scope="col">{zh?'考试':'Exam'}</th>{headings.map(h=><th scope="col">{h}</th>)}<th scope="col">{zh?'合计':'Total'}</th></tr></thead>
+    <tbody>{rows.map(([name,line])=><tr><th scope="row">{name}</th>{coverageStates.map(k=><td>{num(line[k])}</td>)}<td>{num(line.total)}</td></tr>)}</tbody>
+    <tfoot><tr><th scope="row">{zh?'合计':'Total'}</th>{coverageStates.map(k=><td>{num(total[k])}</td>)}<td>{num(total.total)}</td></tr></tfoot>
+  </table></div>
+</details>
+<script>
+  function showCoverage(){ if(location.hash==='#coverage'){ const node=document.getElementById('coverage'); if(node instanceof HTMLDetailsElement)node.open=true; } }
+  showCoverage(); window.addEventListener('hashchange',showCoverage);
+</script>
+<style>
+  .coverage-table {overflow-x:auto;margin-top:.8rem;}
+  table {width:100%;min-width:39rem;border-collapse:collapse;font-size:.875rem;font-variant-numeric:tabular-nums;}
+  th,td {padding:.4rem .65rem;text-align:right;border-bottom:1px solid var(--line);}
+  th:first-child {text-align:left;} thead,tfoot {color:var(--ink);}
+</style>

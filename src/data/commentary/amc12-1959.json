@@ -1,0 +1,27 @@
+{
+  "amc12-1959-q5": {
+    "summary": "Evaluate $(256)^{0.16}\\cdot(256)^{0.09}$.",
+    "summaryZh": "求 $(256)^{0.16}\\cdot(256)^{0.09}$ 的值。",
+    "answer": "A. $4$.",
+    "answerZh": "A。$4$。",
+    "methods": [
+      {
+        "title": "Add exponents of the common base",
+        "titleZh": "同底数幂相乘",
+        "steps": [
+          "The exponents add to $0.16+0.09=1/4$. The positive fourth root of $256$ is $4$, since $4^4=256$."
+        ],
+        "stepsZh": [
+          "同底数幂相乘，指数相加得 $0.16+0.09=1/4$。由 $4^4=256$，可知 $256$ 的正四次方根是 $4$。"
+        ],
+        "topics": [
+          {
+            "en": "Exponent laws",
+            "zh": "指数运算"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1959/problem/5"
+  }
+}

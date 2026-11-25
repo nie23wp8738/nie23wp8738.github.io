@@ -1,0 +1,481 @@
+{
+  "aime-2025ii-q1": {
+    "summary": "On a number line in the order $A,B,C,D,E,F$, the distances $AC,BD,CE,DF,AF$ are $26,22,31,33,73$. A point $G$ off the line is $40$ from $C$ and $30$ from $D$. Determine the area with vertices $B,G,E$.",
+    "summaryZh": "数轴上依次为 $A,B,C,D,E,F$；距离 $AC,BD,CE,DF,AF$ 依次为 $26,22,31,33,73$。线外点 $G$ 到 $C,D$ 的距离分别为 $40,30$。求三角形 $BGE$ 的面积。",
+    "answer": "468",
+    "answerZh": "468",
+    "methods": [
+      {
+        "title": "Compare two triangles with the same altitude",
+        "titleZh": "用等高三角形的面积比",
+        "topics": [
+          {
+            "en": "Heron’s formula",
+            "zh": "海伦公式"
+          },
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          }
+        ],
+        "steps": [
+          "Assign $A=0$ and $F=73$. Then $C=26$, $D=40$, $B=18$, and $E=57$. Hence $CD=14$ and $BE=39$.",
+          "Triangle $CDG$ has semiperimeter $(14+30+40)/2=42$. Its area is $\\sqrt{42\\cdot28\\cdot12\\cdot2}=168$. Both bases lie on the same line and share the altitude from $G$, so $[BGE]=168(39/14)=468$."
+        ],
+        "stepsZh": [
+          "取 $A=0,F=73$，得到 $C=26,D=40,B=18,E=57$。故 $CD=14,BE=39$。",
+          "三角形 $CDG$ 的半周长为 $42$。海伦公式给出面积 $\\sqrt{42\\cdot28\\cdot12\\cdot2}=168$。两底所在直线相同，从 $G$ 引出的高相同，所以 $[BGE]=168(39/14)=468$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/1"
+  },
+  "aime-2025ii-q2": {
+    "summary": "Sum the positive integers $n$ satisfying $3(n+3)(n^2+9)\\equiv0\\pmod{n+2}$.",
+    "summaryZh": "求所有满足 $3(n+3)(n^2+9)\\equiv0\\pmod{n+2}$ 的正整数 $n$ 之和。",
+    "answer": "049",
+    "answerZh": "049",
+    "methods": [
+      {
+        "title": "Evaluate a polynomial modulo its linear divisor",
+        "titleZh": "模一次式代值",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Divisors",
+            "zh": "因数"
+          }
+        ],
+        "steps": [
+          "Write $d=n+2$. Modulo $d$ we may replace $n$ by $-2$, leaving the constant $3(1)(4+9)=39$. Thus $d\\mid39$ is both necessary and sufficient.",
+          "The divisors of $39$ at least $3$ are $3,13,39$. The corresponding $n$ are $1,11,37$, whose sum is $49$."
+        ],
+        "stepsZh": [
+          "设 $d=n+2$。模 $d$ 可用 $-2$ 代替 $n$，原乘积化为 $3(1)(4+9)=39$。故条件等价于 $d\\mid39$。",
+          "不小于 $3$ 的正因数为 $3,13,39$，相应 $n=1,11,37$，和为 $49$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/2"
+  },
+  "aime-2025ii-q3": {
+    "summary": "Colour each unit edge of a $2\\times2$ array of square cells red or blue. Each cell must have exactly two red edges. Count the colourings, keeping the array fixed.",
+    "summaryZh": "把 $2\\times2$ 方格的每条单位边涂红或蓝，每个小方格恰有两条红边。固定方格方向，求合法涂法数。",
+    "answer": "082",
+    "answerZh": "082",
+    "methods": [
+      {
+        "title": "Classify the colours around the central vertex",
+        "titleZh": "按中心四条边的颜色变化分类",
+        "topics": [
+          {
+            "en": "Counting by cases",
+            "zh": "分类计数"
+          },
+          {
+            "en": "Cyclic arrangements",
+            "zh": "环状排列"
+          }
+        ],
+        "steps": [
+          "Fix the colours of the four edges meeting the centre in cyclic order. In a cell, matching colours on its two central edges force both outer edges. Opposite colours allow two orders on the outer edges. Thus a central pattern with $j$ changes of colour admits $2^j$ completions.",
+          "The number of changes must be even. Choose the initial colour and which $j$ of the four boundaries change it. The total is $2\\binom40+2\\binom42\\,2^2+2\\binom44\\,2^4=2+48+32=82$."
+        ],
+        "stepsZh": [
+          "沿圆周顺序读中心点发出的四条边。若某格的两条中心边同色，外侧两边只能都取另一种颜色；若中心边异色，外侧两边的颜色有两种顺序。因此中心颜色变化 $j$ 次时有 $2^j$ 种补法。",
+          "绕回起点要求 $j$ 为偶数。任选起始颜色和变化位置，共 $2\\binom40+2\\binom42\\,2^2+2\\binom44\\,2^4=82$ 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/3"
+  },
+  "aime-2025ii-q4": {
+    "summary": "Reduce $\\displaystyle\\prod_{k=4}^{63}\\frac{\\log_k(5^{k^2-1})}{\\log_{k+1}(5^{k^2-4})}$ to lowest terms and add its numerator and denominator.",
+    "summaryZh": "将 $\\displaystyle\\prod_{k=4}^{63}\\frac{\\log_k(5^{k^2-1})}{\\log_{k+1}(5^{k^2-4})}$ 化为最简分数，求分子与分母之和。",
+    "answer": "106",
+    "answerZh": "106",
+    "methods": [
+      {
+        "title": "Separate and telescope three products",
+        "titleZh": "分成三个可相消的连乘积",
+        "topics": [
+          {
+            "en": "Change of base",
+            "zh": "对数换底"
+          },
+          {
+            "en": "Telescoping products",
+            "zh": "连乘消去"
+          }
+        ],
+        "steps": [
+          "Change of base turns a factor into $\\frac{\\log(k+1)}{\\log k}\\cdot\\frac{k-1}{k-2}\\cdot\\frac{k+1}{k+2}$.",
+          "The three products give $\\log64/\\log4=3$, $62/2=31$, and $5/65=1/13$. The reduced result is $93/13$, so the answer is $106$."
+        ],
+        "stepsZh": [
+          "用换底公式并分解平方差，每项化为 $\\frac{\\log(k+1)}{\\log k}\\cdot\\frac{k-1}{k-2}\\cdot\\frac{k+1}{k+2}$。",
+          "三部分分别相消为 $\\log64/\\log4=3$、$62/2=31$、$5/65=1/13$。最简结果为 $93/13$，故答案为 $106$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/4"
+  },
+  "aime-2025ii-q5": {
+    "summary": "In triangle $ABC$ the angles at $A,B,C$ are $84^\\circ,60^\\circ,36^\\circ$. The midpoints opposite them are $D,E,F$. The midpoint circle meets $BD,AE,AF$ a second time at $G,H,J$, respectively. Around the circle the order is $G,D,E,H,J,F$. Find the degree measure of $\\widehat{DE}+2\\widehat{HJ}+3\\widehat{FG}$, using consecutive arcs.",
+    "summaryZh": "三角形 $ABC$ 的三个内角依次为 $84^\\circ,60^\\circ,36^\\circ$，对边中点分别是 $D,E,F$。三中点的外接圆与线段 $BD,AE,AF$ 的另一交点分别为 $G,H,J$。圆周顺序为 $G,D,E,H,J,F$。求相邻小弧 $\\widehat{DE}+2\\widehat{HJ}+3\\widehat{FG}$ 的度数。",
+    "answer": "336",
+    "answerZh": "336",
+    "methods": [
+      {
+        "title": "Read arcs from the directions of midpoint chords",
+        "titleZh": "用中位线方向读取圆弧",
+        "topics": [
+          {
+            "en": "Inscribed angles",
+            "zh": "圆周角"
+          },
+          {
+            "en": "Midpoint theorem",
+            "zh": "三角形中位线"
+          }
+        ],
+        "steps": [
+          "The chord $DF$ is parallel to $AC$ and $EF$ to $BC$. Hence $\\angle DFE=36^\\circ$ and $\\angle GDF=36^\\circ$, giving arcs $DE$ and $FG$ of $72^\\circ$ each.",
+          "Since $DE\\parallel AB$ and $EH$ points toward $A$, $\\angle DEH=180^\\circ-84^\\circ=96^\\circ$. The arc from $D$ to $H$ avoiding $E$ measures $192^\\circ$. Therefore $\\widehat{EH}=360^\\circ-192^\\circ-72^\\circ=96^\\circ$.",
+          "At $F$, $FE$ points parallel to $BC$ and $FJ$ towards $A$ along $BA$. Thus $\\angle EFJ=60^\\circ$, giving $\\widehat{EH}+\\widehat{HJ}=120^\\circ$. The requested number is $72+2(24)+3(72)=336$."
+        ],
+        "stepsZh": [
+          "由 $DF\\parallel AC,EF\\parallel BC$，得 $\\angle DFE=\\angle GDF=36^\\circ$。两角所对的弧 $DE,FG$ 均为 $72^\\circ$。",
+          "$DE\\parallel AB$ 且射线 $EH$ 朝向 $A$，故 $\\angle DEH=180^\\circ-84^\\circ=96^\\circ$。从 $D$ 到 $H$ 不经 $E$ 的弧为 $192^\\circ$，因此 $\\widehat{EH}=360^\\circ-192^\\circ-72^\\circ=96^\\circ$。",
+          "$FE$ 沿 $BC$ 方向，$FJ$ 沿 $BA$ 方向，所以 $\\angle EFJ=60^\\circ$。由此 $\\widehat{EH}+\\widehat{HJ}=120^\\circ$，所求为 $72+2(24)+3(72)=336$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/5"
+  },
+  "aime-2025ii-q6": {
+    "summary": "A radius-$6$ circle centered at $A$ touches a radius-$15$ circle internally at $B$. Let $BC$ be the larger diameter through $B$ and let $D$ be on the larger circle with $AD\\perp BC$. Rectangle $EFGH$ is inscribed in the smaller circle with $EF\\perp BC$, side $GH$ nearer $C$ than $EF$, and $FG$ nearer $D$ than $EH$. Triangles $DGF$ and $CHG$ have equal area. Express the rectangle area in lowest terms and sum its numerator and denominator.",
+    "summaryZh": "以 $A$ 为圆心、半径 $6$ 的圆在 $B$ 处与半径 $15$ 的圆内切。$BC$ 是大圆直径，$D$ 在大圆上且 $AD\\perp BC$。小圆的内接矩形 $EFGH$ 满足 $EF\\perp BC$，$GH$ 比 $EF$ 靠近 $C$，$FG$ 比 $EH$ 靠近 $D$。三角形 $DGF$ 与 $CHG$ 等面积。求矩形面积最简分数的分子、分母之和。",
+    "answer": "293",
+    "answerZh": "293",
+    "methods": [
+      {
+        "title": "Compare the gaps from the rectangle to the two points",
+        "titleZh": "比较两条边到对应顶点的距离",
+        "topics": [
+          {
+            "en": "Circle coordinates",
+            "zh": "圆的坐标"
+          },
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "Place $A$ at the origin, $B=(0,-6)$ and $C=(0,24)$. The large centre is $(0,9)$, so on the horizontal through $A$ we can take $D=(\\sqrt{15^2-9^2},0)=(12,0)$.",
+          "Let the rectangle half-width and half-height be $s,t$. Its centre is $A$ because its diagonals are diameters. Then $FG$ has length $2t$ on $x=s$ and $HG$ length $2s$ on $y=t$. The area equality is $t(12-s)=s(24-t)$, whence $t=2s$.",
+          "The half-diagonal is $6$, so $5s^2=36$ and the area $4st=8s^2=288/5$. This gives $293$."
+        ],
+        "stepsZh": [
+          "取 $A$ 为原点，$B=(0,-6),C=(0,24)$。大圆圆心是 $(0,9)$，不妨取水平线上的 $D=(\\sqrt{15^2-9^2},0)=(12,0)$。",
+          "矩形两条对角线是直径，故矩形中心是 $A$。设半宽、半高为 $s,t$；边 $FG$ 位于 $x=s$、长 $2t$，边 $HG$ 位于 $y=t$、长 $2s$。等面积给出 $t(12-s)=s(24-t)$，于是 $t=2s$。",
+          "半对角线长 $6$，故 $5s^2=36$。面积 $4st=8s^2=288/5$，所求为 $293$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/6"
+  },
+  "aime-2025ii-q7": {
+    "summary": "Choose uniformly from all subsets of the positive divisors of $2025$. Find the probability of obtaining a nonempty subset whose LCM is $2025$, and add the numerator and denominator after reduction.",
+    "summaryZh": "从 $2025$ 的正因数集合的所有子集中等可能选择一个。求选到非空子集且其中各数的最小公倍数为 $2025$ 的概率，并求最简概率的分子分母和。",
+    "answer": "237",
+    "answerZh": "237",
+    "methods": [
+      {
+        "title": "Exclude subsets missing a maximal exponent",
+        "titleZh": "排除缺少最高指数的子集",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Prime exponents",
+            "zh": "质因数指数"
+          }
+        ],
+        "steps": [
+          "Write $2025=3^4 5^2$. In the $5\\times3$ array of exponent pairs, the subset must meet both the last row and the last column. Meeting both automatically excludes the empty set.",
+          "Of $2^{15}$ subsets, $2^{12}$ miss the last row and $2^{10}$ miss the last column. The intersection has $2^8$ subsets. Thus the probability is $(2^{15}-2^{12}-2^{10}+2^8)/2^{15}=109/128$, giving $237$."
+        ],
+        "stepsZh": [
+          "$2025=3^4 5^2$。把因数按指数对放成 $5\\times3$ 方阵，所选集合必须同时命中末行、末列，这也保证集合非空。",
+          "共有 $2^{15}$ 个子集；不取末行有 $2^{12}$ 个，不取末列有 $2^{10}$ 个，两者皆不取有 $2^8$ 个。容斥得概率 $(2^{15}-2^{12}-2^{10}+2^8)/2^{15}=109/128$，答案为 $237$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/7"
+  },
+  "aime-2025ii-q8": {
+    "summary": "For amounts of $1$ to $1000$ cents, construct change with unlimited coins of values $25,10,1$ by repeatedly taking the largest that fits. For how many amounts does this minimise the number of coins?",
+    "summaryZh": "用面值 $25,10,1$ 分的硬币给 $1$ 至 $1000$ 分的金额配零钱，每次取不超过剩余额的最大面值。共有多少个金额能这样取得最少硬币数？",
+    "answer": "610",
+    "answerZh": "610",
+    "methods": [
+      {
+        "title": "Only one fewer quarter can improve the count",
+        "titleZh": "只须检查少用一枚二十五分硬币",
+        "topics": [
+          {
+            "en": "Greedy algorithms",
+            "zh": "贪心算法"
+          },
+          {
+            "en": "Remainder classes",
+            "zh": "余数分类"
+          }
+        ],
+        "steps": [
+          "Write $N=25q+r$ with $0\\le r<25$. For a fixed quarter count, using as many dimes as possible minimises coin count. Removing two quarters adds $50$ cents to the remainder, hence requires five more dimes with the same pennies, increasing the total by three. Each parity class of quarter counts is therefore best represented by its largest member.",
+          "When $q\\ge1$, compare $q$ quarters with $q-1$. If $r$ ends in $0$ through $4$, adding $25$ to the remainder adds two dimes and five pennies. If it ends in $5$ through $9$, it adds three dimes but removes five pennies, improving the total. Failures occur for $r=5,\\ldots,9$ or $15,\\ldots,19$.",
+          "For $q=1,\\ldots,39$ each complete block has ten failures. The initial block has no quarter to remove and $1000$ has $r=0$. There are $1000-390=610$ successes."
+        ],
+        "stepsZh": [
+          "写成 $N=25q+r$，$0\\le r<25$。给定二十五分硬币数时，尽量多用十分硬币最优。每少用两枚二十五分硬币，余款增加 $50$ 分，便多用五枚十分硬币，一分硬币数不变，总数反而多三枚。所以只须比较各奇偶类中二十五分硬币最多的方案。",
+          "$q\\ge1$ 时，将 $q$ 枚与 $q-1$ 枚比较。若 $r$ 的个位为 $0$ 至 $4$，余款增加 $25$ 后多两枚十分和五枚一分；若个位为 $5$ 至 $9$，则多三枚十分却少五枚一分，总数变少。因此恰在 $r=5,\\ldots,9$ 或 $15,\\ldots,19$ 时贪心失败。",
+          "$q=1,\\ldots,39$ 的每个完整段有十个失败值；起始段无法再减二十五分硬币，$1000$ 的余数为零。成功数为 $1000-390=610$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/8"
+  },
+  "aime-2025ii-q9": {
+    "summary": "Let $n$ count the zeros of $\\sin(7\\pi\\sin(5x))$ in $0<x<2\\pi$. At $t$ of these zeros the curve has horizontal tangent. Determine $n+t$.",
+    "summaryZh": "在 $0<x<2\\pi$ 上，设 $\\sin(7\\pi\\sin(5x))$ 有 $n$ 个零点，其中 $t$ 个的切线水平。求 $n+t$。",
+    "answer": "149",
+    "answerZh": "149",
+    "methods": [
+      {
+        "title": "Count level crossings over five periods",
+        "titleZh": "在五个周期内数水平截线的交点",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Tangency",
+            "zh": "相切"
+          }
+        ],
+        "steps": [
+          "The permissible levels of $\\sin(5x)$ are $j/7$ with $-7\\le j\\le7$. Each of the twelve nonzero interior levels is crossed twice per period, contributing $120$. Level zero contributes nine points since both endpoints of the domain are excluded.",
+          "Each extreme level is reached once per period, adding ten. Hence $n=139$. At a zero the outer cosine factor in the derivative is $\\cos(j\\pi)\\ne0$, so the tangent is horizontal precisely where $\\cos(5x)=0$, the ten extreme points. Thus $n+t=149$."
+        ],
+        "stepsZh": [
+          "$\\sin(5x)$ 可取的水平值为 $j/7$，$-7\\le j\\le7$。十二个非零、非端点水平值在每个周期各出现两次，共 $120$ 个解。水平值零在开区间内有九个解。",
+          "两个极值每周期各出现一次，又有十个解，故 $n=139$。在零点处导数的外层因子 $\\cos(j\\pi)$ 非零，只有 $\\cos(5x)=0$ 的十个极值点有水平切线。所以 $n+t=149$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/9"
+  },
+  "aime-2025ii-q10": {
+    "summary": "Select eight seats in a fixed row of sixteen, with no three consecutive selected. Find the last three digits of the number of seat sets.",
+    "summaryZh": "从一排十六个座位中选八个，要求不存在三个连续选中的座位。求选择方法数的末三位。",
+    "answer": "907",
+    "answerZh": "907",
+    "methods": [
+      {
+        "title": "Place short runs into the gaps of the vacant seats",
+        "titleZh": "在空位之间的间隙放短段",
+        "topics": [
+          {
+            "en": "Binary strings",
+            "zh": "二进制串"
+          },
+          {
+            "en": "Gap method",
+            "zh": "空隙法"
+          }
+        ],
+        "steps": [
+          "Eight empty chairs create nine gaps, including the two ends. If $r$ occupied runs are present, choose $r$ of these gaps. Each run has length one or two, and exactly $8-r$ runs have length two.",
+          "The possible run counts are $4$ through $8$. Summing $\\binom9r\\binom{r}{8-r}$ gives $126+1260+1260+252+9=2907$. The remainder is $907$."
+        ],
+        "stepsZh": [
+          "八个空座位产生九个间隙（含两端）。若有 $r$ 段连续占用区，则从九个间隙中选 $r$ 个。每段长一或二，其中恰有 $8-r$ 段长二。",
+          "$4\\le r\\le8$。求和 $\\sum_r\\binom9r\\binom{r}{8-r}=126+1260+1260+252+9=2907$，末三位为 $907$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/10"
+  },
+  "aime-2025ii-q11": {
+    "summary": "Pair all vertices of a fixed regular $24$-gon using twelve equally long chords. How many distinct sets of chords can occur? Crossing chords are allowed.",
+    "summaryZh": "在一个固定的正二十四边形上用十二条等长弦将所有顶点两两配对，允许弦相交。共有多少个不同的弦集合？",
+    "answer": "113",
+    "answerZh": "113",
+    "methods": [
+      {
+        "title": "Decompose the fixed-length graph into cycles",
+        "titleZh": "把等长弦图分成若干循环",
+        "topics": [
+          {
+            "en": "Perfect matchings",
+            "zh": "完美匹配"
+          },
+          {
+            "en": "Greatest common divisor",
+            "zh": "最大公因数"
+          }
+        ],
+        "steps": [
+          "Number the vertices modulo $24$. A chord length is specified by a step $d=1,\\ldots,12$. For $d<12$, stepping repeatedly by $d$ partitions the graph into $g=\\gcd(24,d)$ cycles of length $24/g$. A cycle has two perfect matchings if even and none if odd. The choices on distinct cycles are independent.",
+          "Steps $1,5,7,11$ contribute $4\\cdot2$; $2,10$ contribute $2\\cdot4$; $3,9$ give $2\\cdot8$; $4$ gives $16$; $6$ gives $64$. Step $8$ gives triangles and contributes nothing. All diameters ($d=12$) form one more matching. The total is $8+8+16+16+64+1=113$."
+        ],
+        "stepsZh": [
+          "按模 $24$ 编号，一种弦长对应步长 $d=1,\\ldots,12$。对 $d<12$，反复前进 $d$ 个顶点，图分成 $g=\\gcd(24,d)$ 个长 $24/g$ 的圈。偶圈有两种交替匹配方式，奇圈没有，且不同圈独立。",
+          "步长 $1,5,7,11$ 贡献 $4\\cdot2$，$2,10$ 贡献 $2\\cdot4$，$3,9$ 贡献 $2\\cdot8$，$4$ 贡献 $16$，$6$ 贡献 $64$。步长 $8$ 产生三角形而无解，步长 $12$ 则所有直径组成唯一配对。总数为 $113$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/11"
+  },
+  "aime-2025ii-q12": {
+    "summary": "A simple nonconvex $11$-gon $A_1\\ldots A_{11}$ has perimeter $20$. For $i=2,\\ldots,10$, triangle $A_1A_iA_{i+1}$ has area $1$ and the angle at $A_1$ has cosine $12/13$. Write $A_1A_2+A_1A_{11}=(m\\sqrt n-p)/q$ in reduced form with squarefree $n$. Find $m+n+p+q$.",
+    "summaryZh": "简单非凸十一边形 $A_1\\ldots A_{11}$ 周长为 $20$。对 $i=2,\\ldots,10$，三角形 $A_1A_iA_{i+1}$ 面积都是 $1$，其顶点 $A_1$ 处的角余弦为 $12/13$。将 $A_1A_2+A_1A_{11}$ 写成最简的 $(m\\sqrt n-p)/q$，$n$ 无平方因子。求 $m+n+p+q$。",
+    "answer": "019",
+    "answerZh": "019",
+    "methods": [
+      {
+        "title": "Use alternating radial lengths",
+        "titleZh": "利用从同一点出发的交替边长",
+        "topics": [
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Area with included angle",
+            "zh": "夹角面积公式"
+          }
+        ],
+        "steps": [
+          "The common positive sine is $5/13$. The area formula gives $A_1A_i\\cdot A_1A_{i+1}=26/5$ each time. The radial lengths therefore alternate between $u,v$ with $uv=26/5$, and the desired quantity is $s=u+v$.",
+          "Every edge between successive radii has length $c$ with $c^2=u^2+v^2-2uv(12/13)=s^2-20$. The perimeter gives $s+9c=20$. Thus $(20-s)^2=81(s^2-20)$, or $4s^2+2s-101=0$.",
+          "The positive root is $(9\\sqrt5-1)/4$, so the requested sum is $9+5+1+4=19$."
+        ],
+        "stepsZh": [
+          "夹角的正弦为 $5/13$。由面积公式知相邻两条径长之积均为 $26/5$，所以各径长交替为 $u,v$，其中 $uv=26/5$。首尾各取其一，故所求长度和是 $s=u+v$。",
+          "相邻径端点之间的边长均为 $c$，其平方 $c^2=u^2+v^2-2uv(12/13)=s^2-20$。由周长得 $s+9c=20$，即 $(20-s)^2=81(s^2-20)$，整理为 $4s^2+2s-101=0$。",
+          "取正根得 $(9\\sqrt5-1)/4$，所求为 $19$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/12"
+  },
+  "aime-2025ii-q13": {
+    "summary": "Start with $x_1=25/11$ and iterate $x_{i+1}=(x_i+1/x_i-1)/3$. Write $x_{2025}=m/n$ in lowest terms. Find $(m+n)\\bmod 1000$.",
+    "summaryZh": "令 $x_1=25/11$，并迭代 $x_{i+1}=(x_i+1/x_i-1)/3$。把 $x_{2025}$ 写为最简分数 $m/n$，求 $m+n$ 除以 $1000$ 的余数。",
+    "answer": "248",
+    "answerZh": "248",
+    "methods": [
+      {
+        "title": "Track the sum after exact reduction",
+        "titleZh": "跟踪准确约分后的分子分母和",
+        "topics": [
+          {
+            "en": "Rational recurrences",
+            "zh": "有理数递推"
+          },
+          {
+            "en": "Chinese remainder theorem",
+            "zh": "中国剩余定理"
+          }
+        ],
+        "steps": [
+          "For $x=a/b$ in lowest terms the raw next fraction is $(a^2-ab+b^2)/(3ab)$. Its numerator is coprime to $ab$: a prime dividing $a$ or $b$ cannot divide it. If $3\\mid a+b$ and $3\\nmid ab$, the numerator is divisible by $3$, and the exact common factor is $3$.",
+          "The reduced denominator is $ab$ and the reduced sum is $S_{i+1}=(a+b)^2/3$. The new sum remains divisible by $3$, and neither reduced entry is divisible by $3$. Since $S_1=36$, induction yields $S_{2025}=3\\cdot12^{2^{2024}}$.",
+          "This is $0\\pmod8$. Modulo $125$ the exponent can be reduced modulo $100$. Since $2^{20}\\equiv76\\pmod{100}$ and $76\\cdot16\\equiv16\\pmod{100}$, $2^{2024}\\equiv16\\pmod{100}$. Repeated squaring gives $12^2,12^4,12^8,12^{16}\\equiv19,111,71,41\\pmod{125}$. The sum is $123\\pmod{125}$; its unique representative modulo $1000$ divisible by $8$ is $248$."
+        ],
+        "stepsZh": [
+          "若 $x=a/b$ 已最简，则下一项未经约分是 $(a^2-ab+b^2)/(3ab)$。分子与 $ab$ 互素，因为整除 $a$ 或 $b$ 的素数不能整除分子。当 $3\\mid a+b$ 且 $3\\nmid ab$ 时分子被 $3$ 整除，公因数恰为 $3$。",
+          "约分后分母是 $ab$，分子分母和 $S_{i+1}=(a+b)^2/3$。新和仍被三整除，而新分子和分母均不被三整除。由 $S_1=36$ 归纳得 $S_{2025}=3\\cdot12^{2^{2024}}$。",
+          "此数模 $8$ 为零。模 $125$ 时指数可模 $100$ 简化。利用 $2^{20}\\equiv76\\pmod{100}$ 且 $76\\cdot16\\equiv16\\pmod{100}$，得 $2^{2024}\\equiv16\\pmod{100}$。连续平方得 $12^2,12^4,12^8,12^{16}\\equiv19,111,71,41\\pmod{125}$。所求和模 $125$ 为 $123$，同时被 $8$ 整除，故模 $1000$ 为 $248$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/13"
+  },
+  "aime-2025ii-q14": {
+    "summary": "In right triangle $ABC$, $\\angle A=90^\\circ$ and $BC=38$. Interior points $K,L$ satisfy $AK=BK=AL=CL=KL=14$. Write the area of $BKLC$ as $n\\sqrt3$ and find $n$.",
+    "summaryZh": "直角三角形 $ABC$ 的直角在 $A$，斜边 $BC=38$。内部点 $K,L$ 满足 $AK=BK=AL=CL=KL=14$。若四边形 $BKLC$ 的面积为 $n\\sqrt3$，求 $n$。",
+    "answer": "104",
+    "answerZh": "104",
+    "methods": [
+      {
+        "title": "Subtract the three triangles at the right angle",
+        "titleZh": "从大三角形中减去直角顶点处的三个三角形",
+        "topics": [
+          {
+            "en": "Trigonometric area",
+            "zh": "三角面积公式"
+          },
+          {
+            "en": "Equilateral triangles",
+            "zh": "等边三角形"
+          }
+        ],
+        "steps": [
+          "Measure directions from $AB$ towards $AC$. Let the directions of $AK,AL$ be $a,b$ degrees. Since $AKL$ is equilateral, $|a-b|=60$. Equal distances to $A,B$ and to $A,C$ give $AB=28\\cos a$, $AC=28\\sin b$. If $b=a-60$, both legs are less than $14$, inconsistent with $BC=38$. Thus $b=a+60$ and $AC=28\\cos(30^\\circ-a)$.",
+          "Put $T=\\cos(2a-30^\\circ)$. The Pythagorean theorem and the sum of two cosine squares give $38^2=28^2(1+T\\cos30^\\circ)$, hence $98T=55\\sqrt3$. Product-to-sum gives $[ABC]=392\\cos a\\cos(30^\\circ-a)=196(T+\\cos30^\\circ)$.",
+          "Triangles $ABK$ and $ALC$ have area sum $98(\\sin2a+\\sin(60^\\circ-2a))=98T$. Equilateral $AKL$ has area $49\\sqrt3$. Subtracting all three leaves $98T+49\\sqrt3=104\\sqrt3$, so $n=104$."
+        ],
+        "stepsZh": [
+          "从 $AB$ 朝 $AC$ 量角，设 $AK,AL$ 的方向角为 $a,b$（单位为度）。三角形 $AKL$ 等边，故 $|a-b|=60$。由 $AK=BK$ 和 $AL=CL$ 得 $AB=28\\cos a,AC=28\\sin b$。若 $b=a-60$，两直角边都小于 $14$，不可能有长 $38$ 的斜边。因此 $b=a+60$，且 $AC=28\\cos(30^\\circ-a)$。",
+          "设 $T=\\cos(2a-30^\\circ)$。勾股定理结合余弦平方和公式给出 $38^2=28^2(1+T\\cos30^\\circ)$，所以 $98T=55\\sqrt3$。积化和差得 $[ABC]=392\\cos a\\cos(30^\\circ-a)=196(T+\\cos30^\\circ)$。",
+          "$ABK$ 与 $ALC$ 面积之和为 $98(\\sin2a+\\sin(60^\\circ-2a))=98T$，等边三角形 $AKL$ 面积为 $49\\sqrt3$。三块去掉后余下 $98T+49\\sqrt3=104\\sqrt3$，故 $n=104$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/14"
+  },
+  "aime-2025ii-q15": {
+    "summary": "For positive $x$, consider $(x-18)(x-72)(x-98)(x-k)/x$. Sum the positive parameters $k$ for which the minimum is achieved at two distinct positive arguments.",
+    "summaryZh": "在 $x>0$ 上考虑函数 $(x-18)(x-72)(x-98)(x-k)/x$。求使最小值恰在两个不同正数处取得的所有正参数 $k$ 之和。",
+    "answer": "240",
+    "answerZh": "240",
+    "methods": [
+      {
+        "title": "Enforce two double roots at the minimum",
+        "titleZh": "用两个二重根刻画共同最小值",
+        "topics": [
+          {
+            "en": "Polynomial coefficients",
+            "zh": "多项式系数"
+          },
+          {
+            "en": "Double roots",
+            "zh": "二重根"
+          }
+        ],
+        "steps": [
+          "Write $x=2y$, $k=2s^2$, with $s>0$. Up to a positive constant, the function is $P(y)/y$ where $P(y)=(y-9)(y-36)(y-49)(y-s^2)$. If its minimum is $M$ at distinct positive $u,v$, the nonnegative polynomial $P(y)-My$ must equal $(y-u)^2(y-v)^2$: both interior zeros have even multiplicity.",
+          "The cubic and constant coefficients give $u+v=(94+s^2)/2$ and $uv=126s$. Comparing quadratic coefficients gives $(u+v)^2+2uv=2529+94s^2$. Substitution and factorisation give $(s-2)(s-4)(s-10)(s+16)=0$.",
+          "For $s=2,4,10$ the pairs $(u+v,uv)$ are $(49,252),(55,504),(97,1260)$. Each pair has positive sum and product and positive discriminant, so defines distinct positive $u,v$. The cubic, quadratic and constant coefficients already agree; choosing $M$ to match the linear coefficient produces the required square. Division by $y>0$ proves these zeros are exactly the minimisers. Hence $\\sum k=2(2^2+4^2+10^2)=240$."
+        ],
+        "stepsZh": [
+          "令 $x=2y,k=2s^2$，其中 $s>0$。忽略正的常数倍，函数成为 $P(y)/y$，其中 $P(y)=(y-9)(y-36)(y-49)(y-s^2)$。若最小值 $M$ 在两个不同正数 $u,v$ 处取得，非负多项式 $P(y)-My$ 的两个内部零点均为偶重根，故它等于 $(y-u)^2(y-v)^2$。",
+          "由三次项与常数项得 $u+v=(94+s^2)/2,uv=126s$。比较二次项得 $(u+v)^2+2uv=2529+94s^2$。代入并因式分解为 $(s-2)(s-4)(s-10)(s+16)=0$。",
+          "取 $s=2,4,10$ 时，$(u+v,uv)$ 依次为 $(49,252),(55,504),(97,1260)$。和与积均正且判别式均正，故都存在两个不同正根。三次项、二次项、常数项已经吻合，可选取 $M$ 使一次项也相等。除以 $y>0$ 即证两根恰为最小值点。故参数和为 $2(2^2+4^2+10^2)=240$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2025II/problem/15"
+  }
+}

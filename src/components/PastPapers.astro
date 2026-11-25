@@ -1,4 +1,5 @@
 ---
+import Coverage from './Coverage.astro';
 import { getPastPapers, topicEntries, tagLabel } from '../lib/catalog.js';
 import euclidPractice from '../data/practice-euclid.json';
 import '../styles/archive.css';
@@ -20,10 +21,11 @@ const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh 
       <a class="arch-inline" href={prefix + '/topics/'}>{zh ? '按知识点查看真题' : 'Find questions by topic'}</a>
     </nav>
   </header>
+  <Coverage lang={lang} />
   <div class="archive-search" role="search" aria-label={zh ? '筛选试卷' : 'Filter papers'}>
     <label>{zh ? '考试' : 'Exam'}<select data-exam><option value="">{zh ? '所有考试' : 'All exams'}</option>{exams.map(exam => <option value={exam}>{zh && exam==='Euclid'?'Euclid · 欧几里得':exam}</option>)}<option value="ESAT">{zh?'ESAT · 官方练习':'ESAT · Official practice'}</option><option value="TARA">{zh?'TARA · 样题与练习':'TARA · Samples and practice'}</option></select></label>
     <label>{zh ? '年份' : 'Year'}<select data-year><option value="">{zh ? '所有年份' : 'All years'}</option>{years.map(year => <option value={year}>{year}</option>)}</select></label>
-    <label>{zh ? '阅读方式' : 'Reading options'}<select data-reading><option value="">{zh ? '全部' : 'All papers'}</option><option value="solutions">{zh ? '有站内解析' : 'Worked solutions on this site'}</option><option value="answers">{zh ? '有站内答案（含解析题）' : 'On-site answers, including worked solutions'}</option><option value="full">{zh ? '站内全文' : 'Full text on this site'}</option></select></label>
+    <label>{zh ? '阅读方式' : 'Reading options'}<select data-reading><option value="">{zh ? '全部' : 'All papers'}</option><option value="solutions">{zh ? '有站内解析' : 'Worked solutions on this site'}</option><option value="allsolutions">{zh ? '全部站内解法（含待补题干）' : 'Worked solutions, including solution-only records'}</option><option value="answers">{zh ? '有站内答案（含解析题）' : 'On-site answers, including worked solutions'}</option><option value="full">{zh ? '站内全文' : 'Full text on this site'}</option></select></label>
   </div>
   {euclidPractice.map(test=><aside class="practice-strip" data-euclid-practice hidden>
     <strong>{zh?test.titleZh:test.title}</strong>

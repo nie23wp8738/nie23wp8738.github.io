@@ -25,6 +25,17 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - name: Restore verified source books and question extracts
+        uses: actions/cache@v4
+        with:
+          path: |
+            public/step-solutions
+            public/euclid-papers
+            public/euclid-parts
+            .astro/euclid-stamps
+          key: reading-assets-${{ runner.os }}-${{ hashFiles('src/data/*published*.json', 'scripts/fetch-*.mjs') }}
+      - name: Install the PDF crop tool
+        run: command -v pdftocairo || (sudo apt-get update && sudo apt-get install -y poppler-utils)
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

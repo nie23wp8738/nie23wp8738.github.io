@@ -1,0 +1,27 @@
+{
+  "amc10-2006b-q1": {
+    "summary": "Evaluate $(-1)^1 + (-1)^2 + \\cdots + (-1)^{2006}$.",
+    "summaryZh": "求 $(-1)^1 + (-1)^2 + \\cdots + (-1)^{2006}$ 的值。",
+    "answer": "C. $0$.",
+    "answerZh": "C。$0$。",
+    "methods": [
+      {
+        "title": "Pair successive powers",
+        "titleZh": "相邻两项配对",
+        "steps": [
+          "The powers of $-1$ alternate between $-1$ and $1$. Each pair of consecutive terms starting at an odd exponent has sum zero. There are $2006/2=1003$ such pairs and no term left over."
+        ],
+        "stepsZh": [
+          "$-1$ 的奇次幂为 $-1$，偶次幂为 $1$。从第一项开始，每相邻两项恰好抵消。共有 $2006/2=1003$ 对，没有剩余项。"
+        ],
+        "topics": [
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2006B/problem/1"
+  }
+}

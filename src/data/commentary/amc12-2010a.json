@@ -1,0 +1,27 @@
+{
+  "amc12-2010a-q1": {
+    "summary": "Evaluate $(20-(2010-201))+(2010-(201-20))$.",
+    "summaryZh": "求 $(20-(2010-201))+(2010-(201-20))$ 的值。",
+    "answer": "C. $40$.",
+    "answerZh": "C。$40$。",
+    "methods": [
+      {
+        "title": "Collect cancelling terms",
+        "titleZh": "展开括号后抵消",
+        "steps": [
+          "After distributing both minus signs the six terms are $20-2010+201+2010-201+20$. The terms involving $2010$ and $201$ cancel in pairs, leaving $20+20=40$."
+        ],
+        "stepsZh": [
+          "分别去括号，得到 $20-2010+201+2010-201+20$。两项 $2010$ 及两项 $201$ 各自抵消，剩下 $20+20=40$。"
+        ],
+        "topics": [
+          {
+            "en": "Signed arithmetic",
+            "zh": "有符号数运算"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2010A/problem/1"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "bmo1-2027-q1": {
+    "summary": "Colour each number from 1 to 26 red or blue, using red at least twice. Count the colourings in which the difference between the largest and smallest red numbers equals the number of red numbers.",
+    "summaryZh": "将 1 至 26 的每个整数涂成红或蓝，至少有两个红数。当红数中的最大数与最小数之差恰等于红数的个数时，共有多少种涂法？",
+    "answer": "$2600$.",
+    "answerZh": "$2600$ 种。",
+    "methods": [
+      {
+        "title": "Choose the two endpoints and the gap",
+        "titleZh": "选择两端与中间缺口",
+        "topics": [
+          {
+            "en": "Bijections",
+            "zh": "双射计数"
+          }
+        ],
+        "steps": [
+          "If the extreme red numbers are $L<R$, their interval contains $R-L+1$ integers. Exactly $R-L$ are red. Thus precisely one interior integer $H$ is blue, and all numbers outside the interval are blue.",
+          "Conversely, any three chosen integers $L<H<R$ determine one colouring by making the entire interval red except for $H$. At least two numbers are red. The count is $\\binom{26}{3}=2600$."
+        ],
+        "stepsZh": [
+          "设最小、最大红数分别为 $L,R$。区间里有 $R-L+1$ 个整数，其中恰有 $R-L$ 个红数，所以内部恰有一个蓝数 $H$，区间外全为蓝色。",
+          "反过来，任选三个整数 $L<H<R$，将区间内除 $H$ 外的数全部涂红，其余涂蓝，就得到一种合题意的涂法。两端均为红数，因此总数为 $\\binom{26}{3}=2600$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2"
+  },
+  "bmo1-2027-q2": {
+    "summary": "A list contains $n$ nonzero real numbers. You may ask for the product at any $m$ distinct positions, where $1\\le m<n$, and make as many queries as you wish. For which pairs $(m,n)$ do the replies always determine the ordered list?",
+    "summaryZh": "一个数列含 $n$ 个非零实数。每次可查询任意 $m$ 个不同位置上各数的乘积，其中 $1\\le m<n$，查询次数不限。哪些 $(m,n)$ 能保证恢复每个位置上的数？",
+    "answer": "Exactly the pairs with odd $m$ and $n>m$.",
+    "answerZh": "恰为 $m$ 为奇数且 $n>m$ 的各对。",
+    "methods": [
+      {
+        "title": "Recover coordinate ratios",
+        "titleZh": "先恢复各位置的比值",
+        "topics": [
+          {
+            "en": "Ratios of products",
+            "zh": "乘积的比"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "If $m$ is even, simultaneously negating every entry keeps every queried product unchanged and gives a different list.",
+          "Suppose $m$ is odd. For two distinct positions $i,j$, select $m-1$ other positions, which is possible since $n\\ge m+1$. Ask for their product together with $i$, then with $j$. Dividing the replies gives $a_i/a_j$; when $m=1$ the shared set is empty.",
+          "Thus all $r_i=a_i/a_1$ are known, including $r_1=1$. Query any $m$ positions. Divide the reply by the product of their $r_i$ to get $a_1^m$. An odd power has a unique real root, which recovers $a_1$ and then every $a_i$."
+        ],
+        "stepsZh": [
+          "若 $m$ 为偶数，把每个数都变为相反数后，每次查询的乘积不变，但得到的数列不同。",
+          "若 $m$ 为奇数，对两个不同位置 $i,j$，先从它们以外选 $m-1$ 个位置。由 $n\\ge m+1$ 知可以选出。将这些位置分别与 $i$ 和 $j$ 合并查询，两个结果相除便得 $a_i/a_j$。当 $m=1$ 时，公共位置集合为空。",
+          "由此可知所有 $r_i=a_i/a_1$，其中 $r_1=1$。任取 $m$ 个位置，将查得的乘积除以相应 $r_i$ 的乘积，得到 $a_1^m$。奇次方在实数范围内有唯一的逆，所以可先得 $a_1$，再恢复每一项。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2"
+  },
+  "bmo1-2027-q3": {
+    "summary": "Two disjoint circles inside $\\Omega$ touch it at $A,B$ respectively. They lie on the same side of a common tangent line, which touches them at $D,C$ respectively. The centre of $\\Omega$ is inside $ABCD$. Prove that $A,B,C,D$ lie on one circle.",
+    "summaryZh": "位于大圆 $\\Omega$ 内的两个互不相交的小圆分别与大圆内切于 $A,B$。一条公切线分别切它们于 $D,C$，且两小圆位于该线同侧。大圆圆心在 $ABCD$ 内。证明四点 $A,B,C,D$ 共圆。",
+    "answer": "The four points are concyclic.",
+    "answerZh": "四点共圆。",
+    "methods": [
+      {
+        "title": "Use parallel diameters and a secant product",
+        "titleZh": "利用平行直径与割线乘积",
+        "topics": [
+          {
+            "en": "Homothety",
+            "zh": "位似"
+          },
+          {
+            "en": "Power of a point",
+            "zh": "圆幂"
+          }
+        ],
+        "steps": [
+          "Place the common tangent horizontally with the small circles above it. Let $T$ and $U$ be the bottom and top endpoints of the vertical diameter of $\\Omega$. The homothety centred at $A$ that shrinks $\\Omega$ to the first small circle sends its lowest point $T$ to the lowest point $D$. Hence $T,D,A$ are collinear, with $D$ between $T$ and $A$. Similarly $T,C,B$ are collinear.",
+          "Let $h$ be the distance from $T$ to the common tangent. If the ray $TA$ makes angle $\\theta$ with the upward vertical, then $TD\\cos\\theta=h$. A chord from $T$ in that direction has length $TA=TU\\cos\\theta$ by the right-angle theorem on the diameter (also valid for the diameter itself). Thus $TD\\cdot TA=h\\cdot TU$.",
+          "The same calculation gives $TC\\cdot TB=h\\cdot TU$. The circle through $D,C,A$ meets the ray $TC$ again at the unique point satisfying this product, namely $B$. Thus it contains all four points."
+        ],
+        "stepsZh": [
+          "令公切线水平，两小圆位于它上方。取大圆竖直直径的下端点 $T$ 和上端点 $U$。以 $A$ 为中心将大圆缩到第一个小圆的位似，把大圆最低点 $T$ 映到小圆最低点 $D$，故 $T,D,A$ 共线，$D$ 在二者之间。同理 $T,C,B$ 共线。",
+          "设 $T$ 到公切线的距离为 $h$，射线 $TA$ 与竖直向上的夹角为 $\\theta$，则 $TD\\cos\\theta=h$。由直径所对的圆周角为直角可得弦长 $TA=TU\\cos\\theta$，若该弦本身是直径也成立。因此 $TD\\cdot TA=h\\cdot TU$。",
+          "同理 $TC\\cdot TB=h\\cdot TU$。过 $D,C,A$ 的圆与射线 $TC$ 的另一交点由割线乘积唯一确定，必为 $B$，四点共圆。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2",
+    "figure": {
+      "url": "/commentary-figures/bmo1-2027-q3.svg",
+      "alt": "Two circles touch an enclosing circle at A and B and one tangent at D and C. The centre O of the enclosing circle is inside ABCD.",
+      "altZh": "两小圆在 A、B 处与大圆相切，并在 D、C 处与同一直线相切。大圆圆心 O 在四边形 ABCD 中。"
+    }
+  },
+  "bmo1-2027-q4": {
+    "summary": "Three real sequences $a,b,c$ each satisfy $x_{n+2}=x_{n+1}+x_n$. At each index record the order of the three entries from smallest to largest, ignoring indices with a tie. What is the maximum number of different orders for a single choice of the three sequences?",
+    "summaryZh": "三个实数列 $a,b,c$ 各自满足 $x_{n+2}=x_{n+1}+x_n$。对每个下标，记录三项从小到大的排列；若有相等则跳过。选定这三个数列后，最多能出现多少个不同的排列？",
+    "answer": "$4$.",
+    "answerZh": "$4$ 种。",
+    "methods": [
+      {
+        "title": "Order three lines on one interval",
+        "titleZh": "比较区间上三条直线的高低",
+        "topics": [
+          {
+            "en": "Linear recurrences",
+            "zh": "线性递推"
+          },
+          {
+            "en": "Intersections of lines",
+            "zh": "直线交点"
+          }
+        ],
+        "steps": [
+          "At every index the entry of any one sequence has the form $u x_1+v x_2$, with the same nonnegative coefficients $u,v$ for all three sequences. The coefficient pairs start at $(1,0),(0,1)$ and follow the given addition rule, so $u+v>0$.",
+          "Dividing by $u+v$ preserves order. With $t=v/(u+v)$, the normalized entry is $(1-t)x_1+t x_2$. Thus we only compare three linear functions of $t$ on $[0,1]$. Each distinct pair can cross at most once, giving at most three crossing values and at most four distinct strict orders. Identical functions never produce a strict order of all three.",
+          "Choose the first two terms of $a,b,c$ as $(0,0),(-20,30),(-59,41)$ respectively. Their first four columns, listed as $(a_n,b_n,c_n)$, are $(0,-20,-59),(0,30,41),(0,10,-18),(0,40,23)$. The corresponding orders are $cba,abc,cab,acb$, all different."
+        ],
+        "stepsZh": [
+          "对任何一个数列，每项均可写为 $u x_1+v x_2$，三个数列在同一下标的系数 $u,v$ 相同。系数对从 $(1,0),(0,1)$ 出发，按相同法则相加，所以 $u,v$ 非负且 $u+v>0$。",
+          "除以 $u+v$ 不影响次序。令 $t=v/(u+v)$，归一化后的数为 $(1-t)x_1+t x_2$，即只需比较三条一次函数在 $[0,1]$ 上的高低。每对不同的直线至多相交一次，至多三个交点参数将区间分成至多四段，因此至多有四种严格次序。若两函数重合，则无法出现三项严格次序。",
+          "取 $a,b,c$ 的前两项分别为 $(0,0),(-20,30),(-59,41)$。前四个下标的三元组 $(a_n,b_n,c_n)$ 依次为 $(0,-20,-59),(0,30,41),(0,10,-18),(0,40,23)$；从小到大的次序为 $cba,abc,cab,acb$，恰有四种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2"
+  },
+  "bmo1-2027-q5": {
+    "summary": "From floor $n\\ge2$ you may descend by any positive proper divisor of $n$. Let $t(n)$ be the fewest moves from $n$ to floor 1. Find the floors $n\\ge2$ such that $t(n)\\le t(m)$ for every $m>n$.",
+    "summaryZh": "从第 $n\\ge2$ 层可向下走若干层，层数必须是 $n$ 的一个正真因数。记 $t(n)$ 为从第 $n$ 层到第 1 层的最少步数。求一切满足对每个 $m>n$ 都有 $t(n)\\le t(m)$ 的 $n\\ge2$。",
+    "answer": "Exactly $n=2^a+2^b$ with integers $a\\ge b\\ge0$, including the powers of two.",
+    "answerZh": "恰为 $n=2^a+2^b$，其中 $a\\ge b\\ge0$ 是整数，包括所有不小于 2 的二次幂。",
+    "methods": [
+      {
+        "title": "Classify near-maximal reverse paths",
+        "titleZh": "分类逆向路径中接近极限的增长",
+        "topics": [
+          {
+            "en": "Divisors",
+            "zh": "因数"
+          },
+          {
+            "en": "Extremal bounds",
+            "zh": "极值界"
+          }
+        ],
+        "steps": [
+          "Reverse a move: from $x$ one may reach $x+d$ for any positive divisor $d$ of $x$, since $d\\mid x$ exactly when $d\\mid x+d$. Growth is at most doubling. Put $k=\\lceil\\log_2 n\\rceil$. Thus $t(n)\\ge k$, while $t(2^k)=k$. Consequently $n$ qualifies precisely when $t(n)=k$: all larger floors require at least $k$ moves, and otherwise $2^k>n$ beats it.",
+          "Consider a path from 1 reaching $n>2^{k-1}$ in $k$ moves. Each non-doubling move has multiplier $1+1/h\\le3/2$, where $h=x/d\\ge2$. Three such moves give at most $2^k(3/4)^3<2^{k-1}$, so there can be at most two.",
+          "With no such move the result is a power of two. With exactly one, before that move $x$ is a power of two, its chosen divisor is also a power of two, and later doublings preserve the form of a sum of two powers of two.",
+          "With two non-doublings, the first multiplier is $1+2^{-j}$ for an integer $j\\ge1$ because its input is a power of two. To exceed $2^{k-1}$ the product of the two exceptional multipliers must exceed 2. If $j\\ge2$ it is at most $(5/4)(3/2)<2$. Hence the first multiplier is $3/2$, and the second, $1+1/h$, must exceed $4/3$, forcing $h=2$. The result is $2^{k-2}(3/2)^2=9\\cdot2^{k-4}=2^{k-1}+2^{k-4}$, with $k\\ge4$ since it is an integer.",
+          "Conversely, reach $2^a$ by $a$ doublings, then add its divisor $2^b$. This hits $2^a+2^b$ in $a+1=\\lceil\\log_2(2^a+2^b)\\rceil$ moves, meeting the bound."
+        ],
+        "stepsZh": [
+          "逆向观察：从 $x$ 可到 $x+d$，其中 $d$ 是 $x$ 的任一正因数，因为 $d\\mid x$ 等价于 $d\\mid x+d$。每步至多翻倍。记 $k=\\lceil\\log_2 n\\rceil$，则 $t(n)\\ge k$，而 $t(2^k)=k$。所以目标条件等价于 $t(n)=k$：所有更高楼层都至少需 $k$ 步；若不取等，$2^k>n$ 就是反例。",
+          "考虑从 1 出发以 $k$ 步到达 $n>2^{k-1}$ 的路径。不翻倍的一步，其倍率为 $1+1/h\\le3/2$，其中 $h=x/d\\ge2$。若至少有三步不翻倍，最多达到 $2^k(3/4)^3<2^{k-1}$，故不翻倍的步数至多为二。",
+          "全程翻倍得到二次幂。若仅一步不翻倍，该步之前的数是二次幂，其因数也是二次幂；相加后再翻倍，结果仍可写成两个二次幂之和。",
+          "若有两步不翻倍，第一次的倍率形如 $1+2^{-j}$，其中 $j\\ge1$。为超过 $2^{k-1}$，这两步的倍率之积必须大于 2。若 $j\\ge2$，该积至多为 $(5/4)(3/2)<2$。故首个倍率为 $3/2$，第二个倍率 $1+1/h$ 必须大于 $4/3$，只可能 $h=2$。于是最终值为 $2^{k-2}(3/2)^2=9\\cdot2^{k-4}=2^{k-1}+2^{k-4}$，因其为整数而有 $k\\ge4$。",
+          "反过来，从 1 翻倍 $a$ 次到 $2^a$，再加其因数 $2^b$，只用 $a+1=\\lceil\\log_2(2^a+2^b)\\rceil$ 步。故所列楼层均满足条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=3"
+  },
+  "bmo1-2027-q6": {
+    "summary": "Start with four distinct points in the plane. A move reflects one point across a line through two of the other three; if the two coincide, any line through their common position is allowed. Prove that finitely many moves can put one point at perpendicular distance less than $1/2026$ from a line through two others.",
+    "summaryZh": "平面上初始有四个不同点。每步可将一点关于其余三点中两点所定的直线作反射；若这两点重合，可取经过该点的任一直线。证明经有限步可使一点到另外两点所定直线的垂直距离小于 $1/2026$。",
+    "answer": "This is possible for every starting configuration and every positive distance threshold.",
+    "answerZh": "任意初始构形均能做到，且可把阈值换成任意正数。",
+    "methods": [
+      {
+        "title": "Generate a translation from three mirrors",
+        "titleZh": "用三条镜线合成平移",
+        "topics": [
+          {
+            "en": "Compositions of reflections",
+            "zh": "反射的复合"
+          },
+          {
+            "en": "Point-to-line distance",
+            "zh": "点到直线的距离"
+          }
+        ],
+        "steps": [
+          "If three points are collinear, the distance is already zero. Otherwise keep three noncollinear points $A,B,C$ fixed and move only $D$, using the three sides of $ABC$ as mirrors. Every composition and inverse of these reflections can be performed in finitely many moves.",
+          "Reflecting first in $AB$ and then in $AC$ gives a nonidentity rotation $R$ about $A$. Write $S$ for reflection in $BC$. The conjugate $SRS$ is a rotation of opposite angle about $A^{\\prime}=S(A)\\ne A$. Composing $R$ and $SRS$ gives a translation: their linear rotation parts cancel. It is nonzero, since an identity composition would make these two rotations inverses with the same centre. Denote the translation vector by $v$.",
+          "At least one side of $ABC$ is not perpendicular to $v$; call that side $XY$, and let $F$ reflect in its line. Conjugating the translation by $F$ gives another available translation, with vector the mirror image of $v$ in a parallel line through the origin. Adding both translations gives twice the projection of $v$ onto $XY$, a nonzero vector parallel to $XY$.",
+          "Apply this last translation repeatedly to $D$. Its distance $h$ from $XY$ is constant, while $XD$ becomes arbitrarily large. Computing the area of triangle $XYD$ using two bases gives $\\operatorname{dist}(Y,XD)=XY\\,h/XD$. After finitely many repetitions this is below $1/2026$, as required."
+        ],
+        "stepsZh": [
+          "若已有三点共线，距离已为零。否则固定不共线的 $A,B,C$，只移动 $D$，用三角形 $ABC$ 的各边作镜线。这些反射的任意有限复合及其逆变换均可由题设操作实现。",
+          "先关于 $AB$、再关于 $AC$ 反射，得到一个绕 $A$ 的非恒等旋转 $R$。令 $S$ 为关于 $BC$ 的反射，则 $SRS$ 是绕 $A^{\\prime}=S(A)\\ne A$ 的反向同角旋转。把 $R$ 与 $SRS$ 复合，两者的旋转线性部分抵消，故得到平移。它不是恒等变换，否则两旋转互逆，旋转中心应相同。记其平移向量为 $v$。",
+          "三角形中至少有一边不与 $v$ 垂直，记该边为 $XY$，令 $F$ 表示关于其所在直线的反射。在原平移前后各作一次 $F$，得到另一个平移，向量是 $v$ 关于过原点且平行于 $XY$ 的直线的镜像。将两平移相加，所得向量为 $v$ 在 $XY$ 上投影的两倍，非零且与 $XY$ 平行。",
+          "将这一平移反复作用于 $D$，其到 $XY$ 的距离 $h$ 不变，而 $XD$ 的长度可任意大。用两个不同的底计算三角形 $XYD$ 的面积，得 $\\operatorname{dist}(Y,XD)=XY\\,h/XD$。经过有限次平移后便小于 $1/2026$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=3"
+  }
+}

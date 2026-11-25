@@ -1,0 +1,27 @@
+{
+  "amc8-1985-q2": {
+    "summary": "Evaluate $90 + 91 + 92 + \\cdots + 98 + 99$.",
+    "summaryZh": "求 $90 + 91 + 92 + \\cdots + 98 + 99$ 的值。",
+    "answer": "B. $945$.",
+    "answerZh": "B。$945$。",
+    "methods": [
+      {
+        "title": "Pair the endpoints",
+        "titleZh": "首尾配对",
+        "steps": [
+          "There are ten terms. Pairing the smallest with the largest gives five pairs, each of sum $90+99=189$. The total is $5\\cdot189=945$."
+        ],
+        "stepsZh": [
+          "共有十项。首尾依次配对得到五对，每对的和都是 $90+99=189$，所以总和为 $5\\cdot189=945$。"
+        ],
+        "topics": [
+          {
+            "en": "Arithmetic series",
+            "zh": "等差数列求和"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1985/problem/2"
+  }
+}

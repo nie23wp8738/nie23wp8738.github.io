@@ -1,0 +1,27 @@
+{
+  "amc12-1950-q25": {
+    "summary": "Evaluate $\\log_5\\dfrac{(125)(625)}{25}$.",
+    "summaryZh": "求 $\\log_5\\dfrac{(125)(625)}{25}$ 的值。",
+    "answer": "D. $5$.",
+    "answerZh": "D。$5$。",
+    "methods": [
+      {
+        "title": "Express the argument as a power",
+        "titleZh": "统一写成同底数幂",
+        "steps": [
+          "The factors $125$, $625$ and $25$ are respectively $5^3$, $5^4$ and $5^2$. The quotient inside the logarithm is $5^{3+4-2}=5^5$, whose base-five logarithm is $5$."
+        ],
+        "stepsZh": [
+          "$125,625,25$ 分别等于 $5^3,5^4,5^2$。真数化为 $5^{3+4-2}=5^5$，取以 $5$ 为底的对数即得 $5$。"
+        ],
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1950/problem/25"
+  }
+}

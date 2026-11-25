@@ -1,0 +1,27 @@
+{
+  "amc12-1958-q5": {
+    "summary": "Evaluate $2+\\sqrt2+\\dfrac1{2+\\sqrt2}+\\dfrac1{\\sqrt2-2}$.",
+    "summaryZh": "求 $2+\\sqrt2+\\dfrac1{2+\\sqrt2}+\\dfrac1{\\sqrt2-2}$ 的值。",
+    "answer": "A. $2$.",
+    "answerZh": "A。$2$。",
+    "methods": [
+      {
+        "title": "Combine the reciprocal terms",
+        "titleZh": "合并两个倒数",
+        "steps": [
+          "Write $r=\\sqrt{2}$. The two fractions have sum $[(r-2)+(r+2)]/[(r+2)(r-2)]=2r/(r^2-4)=-r$. Adding $2+r$ leaves $2$."
+        ],
+        "stepsZh": [
+          "设 $r=\\sqrt{2}$。两分式通分后得到 $[(r-2)+(r+2)]/[(r+2)(r-2)]=2r/(r^2-4)=-r$。再加上 $2+r$，结果为 $2$。"
+        ],
+        "topics": [
+          {
+            "en": "Conjugate radicals",
+            "zh": "共轭根式"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1958/problem/5"
+  }
+}

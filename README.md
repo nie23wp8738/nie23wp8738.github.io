@@ -54,3 +54,11 @@ For a paper with in-site worked solutions, edit its matching file in `src/data/a
 The verified answer key for each objective paper lives in `src/data/answer-keys.json`. Entries use the catalogue paper ID and printed question number. Keep AIME entries as strings to preserve leading zeroes. Source URLs and scoring notes stay with the key.
 
 A worked commentary in `src/data/commentary/<paper-id>.json` includes an independently written question outline in each language, an answer, and one or more bilingual methods with topic labels. It has a static, localised reader under `/questions/<question-id>/`. Building the site typesets each outline and its solution for worksheet downloads. A generic question record requests only its own paper from `/question-data/`.
+
+### Published question collections
+
+`/coverage.json` counts each historical question once from its actual text, solution and language availability. The same figures appear in “Coverage by exam” on the archive page. Use the existing question ID for any added outline.
+
+The site distributes Waterloo-owned Euclid materials under CC BY-NC 4.0 for free, noncommercial use. Individual question and solution extracts retain attribution, original source and licence. The verified source files and crop coordinates are in `src/data/euclid-published.json`. STEP solutions by Keith McNulty are distributed under CC0. The English and Chinese books, revision and precise question ranges are in `src/data/step-published-solutions.json`. The CC0 dedication covers McNulty’s contribution. Cambridge’s exam text is separate. Independently authored STEP question briefs, final results and method topics can be paired with those worked solutions in `src/data/step-outlines/<paper-id>.json`.
+
+For local builds install Poppler (`pdftocairo`), curl and Chromium. The build verifies the locally cached source books or downloads their pinned versions and creates printable question extracts.

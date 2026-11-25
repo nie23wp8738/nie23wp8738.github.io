@@ -1,0 +1,481 @@
+{
+  "aime-2024i-q1": {
+    "summary": "A 9 km trip includes a fixed stop. At speed $s$ km/h it takes 240 minutes including the stop; at $s+2$ it takes 144 minutes. Find the total minutes at $s+0.5$.",
+    "summaryZh": "一段长 9 公里的路程包括一次固定时长的停留。速度为 $s$ 公里/小时时总计 240 分钟，速度为 $s+2$ 时总计 144 分钟。求速度为 $s+0.5$ 时的总分钟数。",
+    "answer": "204",
+    "answerZh": "204",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/1",
+    "methods": [
+      {
+        "title": "Subtract elapsed times",
+        "titleZh": "消去停留时间",
+        "topics": [
+          {
+            "en": "Rates",
+            "zh": "行程问题"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "二次方程"
+          }
+        ],
+        "steps": [
+          "The stop cancels on subtraction: $9/s-9/(s+2)=96/60=8/5$. Thus $s(s+2)=45/4$. Completing the square gives $(s+1)^2=49/4$, so the positive speed is $s=5/2$.",
+          "At that speed walking takes $216$ minutes, leaving $24$ for the stop. At $3$ km/h the walk takes $180$ minutes, giving $204$ minutes in all."
+        ],
+        "stepsZh": [
+          "两次总时间相减消去停留，得 $9/s-9/(s+2)=8/5$，因此 $s(s+2)=45/4$。配方为 $(s+1)^2=49/4$，取正值得 $s=5/2$。",
+          "以原速度步行需 $216$ 分钟，所以停留 $24$ 分钟。以 $3$ 公里/小时步行需 $180$ 分钟，总共 $204$ 分钟。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q2": {
+    "summary": "For $x,y>1$ both $\\log_x(y^x)$ and $\\log_y(x^{4y})$ equal $10$. Determine $xy$.",
+    "summaryZh": "已知 $x,y>1$，且 $\\log_x(y^x)$ 与 $\\log_y(x^{4y})$ 均为 $10$。求 $xy$。",
+    "answer": "025",
+    "answerZh": "025",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/2",
+    "methods": [
+      {
+        "title": "Multiply reciprocal logarithms",
+        "titleZh": "乘法消去互逆对数",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          }
+        ],
+        "steps": [
+          "The equations become $x\\log_x y=10$ and $4y\\log_y x=10$. Multiply them. Since $\\log_x y\\log_y x=1$, the result is $4xy=100$, giving $xy=25$."
+        ],
+        "stepsZh": [
+          "由对数幂法则得 $x\\log_x y=10$ 和 $4y\\log_y x=10$。两式相乘，用 $\\log_x y\\log_y x=1$ 得 $4xy=100$，故 $xy=25$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q3": {
+    "summary": "Players alternate removing either one or four tokens from one pile. The last move wins. For how many starting sizes $1\\le n\\le2024$ can the second player force a win?",
+    "summaryZh": "两人轮流从同一堆取走一枚或四枚筹码，取到最后一枚者获胜。在 $1\\le n\\le2024$ 的初始数量中，有多少种使后手可以必胜？",
+    "answer": "809",
+    "answerZh": "809",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/3",
+    "methods": [
+      {
+        "title": "Determine losing residues",
+        "titleZh": "确定必败余数",
+        "topics": [
+          {
+            "en": "Game theory",
+            "zh": "博弈论"
+          },
+          {
+            "en": "Induction",
+            "zh": "数学归纳法"
+          }
+        ],
+        "steps": [
+          "With zero tokens the player to move loses. Claim the losing residues modulo $5$ are $0,2$. A move from either such residue leads to $1,3$ or $4$. From $1$ or $3$ remove one to reach $0$ or $2$; from $4$ remove four to reach $0$. These moves are legal even for the first block. Induction proves the claim.",
+          "The first $2020$ positive sizes contain $404$ full blocks, contributing $808$ losses. Of the last four sizes only $2022$ qualifies, giving $809$."
+        ],
+        "stepsZh": [
+          "轮到行棋但没有筹码可取时为败。模 $5$ 余 $0,2$ 的局面无论怎样取都到余 $1,3,4$；从余 $1,3$ 可取一枚回到余 $0,2$，从余 $4$ 可取四枚回到余 $0$。初始小数时这些回招也都合法，故归纳得到恰好余 $0,2$ 必败。",
+          "前 $2020$ 个正整数有 $404$ 个完整周期，得 $808$ 个必败数。末四个中仅 $2022$ 符合，因此共 $809$ 个。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q4": {
+    "summary": "Fix four marked numbers among ten. Four numbers are sampled uniformly without replacement. Given that at least two marked numbers appear, express the chance all four appear in lowest terms and add its numerator and denominator.",
+    "summaryZh": "十个号码中预先标记四个，现等可能地抽出四个不同号码。已知至少抽到两个标记号码，求四个全中的条件概率，并计算其最简分数的分子分母和。",
+    "answer": "116",
+    "answerZh": "116",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/4",
+    "methods": [
+      {
+        "title": "Count the eligible four-sets",
+        "titleZh": "数出符合条件的四元集合",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          }
+        ],
+        "steps": [
+          "For exactly $j$ matches choose $j$ of the four marked entries and $4-j$ of the six others. For $j=2,3,4$ the counts are $6\\cdot15=90$, $4\\cdot6=24$, and $1$.",
+          "The desired conditional probability is $1/(90+24+1)=1/115$, so the sum is $116$."
+        ],
+        "stepsZh": [
+          "恰中 $j$ 个的方法数为 $\\binom4j\\binom6{4-j}$。当 $j=2,3,4$ 时依次为 $90,24,1$。",
+          "故条件概率为 $1/(90+24+1)=1/115$，分子分母和为 $116$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q5": {
+    "summary": "Two rectangles $ABCD$ and $EFGH$ have respective side pairs $(AB,BC)=(107,16)$ and $(EF,FG)=(184,17)$. Along their shared baseline the order is $D,E,C,F$. The rectangles extend to opposite sides, and $A,D,H,G$ are concyclic. Find $CE$.",
+    "summaryZh": "矩形 $ABCD$ 的 $AB=107,BC=16$，矩形 $EFGH$ 的 $EF=184,FG=17$。两矩形位于共同基线两侧，基线上四点依次为 $D,E,C,F$。若 $A,D,H,G$ 共圆，求 $CE$。",
+    "answer": "104",
+    "answerZh": "104",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/5",
+    "methods": [
+      {
+        "title": "Intersect perpendicular bisectors of two chords",
+        "titleZh": "求两条弦的中垂线交点",
+        "topics": [
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "共圆条件"
+          },
+          {
+            "en": "Coordinates",
+            "zh": "坐标法"
+          }
+        ],
+        "steps": [
+          "Set $D=(0,0),C=(107,0),A=(0,-16),E=(e,0)$. Then $H=(e,17)$ and $G=(e+184,17)$. From chords $AD$ and $HG$ the centre is $(e+92,-8)$.",
+          "Equate squared distances to $D$ and $H$: $(e+92)^2+8^2=92^2+25^2$. Thus $(e+92)^2=9025=95^2$. Since $e>0$, $e=3$ and $CE=107-3=104$."
+        ],
+        "stepsZh": [
+          "取 $D=(0,0),C=(107,0),A=(0,-16),E=(e,0)$，则 $H=(e,17),G=(e+184,17)$。两条弦 $AD,HG$ 的中垂线交于圆心 $(e+92,-8)$。",
+          "圆心到 $D,H$ 的距离平方相等，故 $(e+92)^2+8^2=92^2+25^2$。于是 $e+92=95$，得到 $CE=107-3=104$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q6": {
+    "summary": "Count the shortest lattice paths from $(0,0)$ to $(8,8)$ that turn exactly four times.",
+    "summaryZh": "求从 $(0,0)$ 到 $(8,8)$ 的最短格点路径中恰好转向四次的条数。",
+    "answer": "294",
+    "answerZh": "294",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/6",
+    "methods": [
+      {
+        "title": "Split the steps into five runs",
+        "titleZh": "把步子分成五段",
+        "topics": [
+          {
+            "en": "Compositions",
+            "zh": "正整数拆分"
+          },
+          {
+            "en": "Lattice paths",
+            "zh": "格点路径"
+          }
+        ],
+        "steps": [
+          "A shortest path has eight right steps and eight up steps. Four turns give five nonempty runs. If it begins right there are three right runs and two up runs.",
+          "Choose two separators among the seven internal gaps in the right steps and one among those in the up steps. Starting up gives the same count, hence $2\\binom72\\binom71=294$."
+        ],
+        "stepsZh": [
+          "最短路径向右和向上各走八步。四次转向产生五段；若第一段向右，则向右分三段，向上分两段。",
+          "在八个右步的七个内部空隙选两个隔开，八个上步的七个空隙选一个。起步向上时数目相同，共 $2\\binom72\\binom71=294$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q7": {
+    "summary": "For complex $z$ of modulus $4$, maximise the real part of $(75+117i)z+(96+144i)/z$.",
+    "summaryZh": "复数 $z$ 满足 $|z|=4$，求 $(75+117i)z+(96+144i)/z$ 实部的最大值。",
+    "answer": "540",
+    "answerZh": "540",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/7",
+    "methods": [
+      {
+        "title": "Maximise a dot product on the unit circle",
+        "titleZh": "在单位圆上最大化点积",
+        "topics": [
+          {
+            "en": "Complex numbers",
+            "zh": "复数"
+          },
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          }
+        ],
+        "steps": [
+          "Set $z=4(c+is)$ with $c^2+s^2=1$. Then $1/z=(c-is)/4$. The real part simplifies to $300c-468s+24c+36s=324c-432s$.",
+          "Its maximum is $\\sqrt{324^2+432^2}=540$, achieved at $(c,s)=(3/5,-4/5)$."
+        ],
+        "stepsZh": [
+          "设 $z=4(c+is)$，其中 $c^2+s^2=1$。倒数为 $(c-is)/4$，实部整理为 $324c-432s$。",
+          "由点积上界得最大值 $\\sqrt{324^2+432^2}=540$，在 $(c,s)=(3/5,-4/5)$ 时取到。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q8": {
+    "summary": "Along the base $BC$ of one triangle, eight equal circles of radius $34$ can form a touching chain: each touches the base, the leftmost touches $AB$ and the rightmost touches $AC$. Another such chain has $2024$ circles of radius $1$. Find the sum of numerator and denominator of the reduced inradius.",
+    "summaryZh": "同一三角形的底边 $BC$ 上可放置一列八个相邻相切的半径 $34$ 的圆，各圆切底边，两端圆分别切 $AB,AC$。也可按同样方式放置 $2024$ 个半径为 $1$ 的圆。求内切圆半径最简分数的分子分母和。",
+    "answer": "197",
+    "answerZh": "197",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/8",
+    "methods": [
+      {
+        "title": "Express base length using corner offsets",
+        "titleZh": "用两端切点距离表示底长",
+        "topics": [
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          },
+          {
+            "en": "Tangent circles",
+            "zh": "相切圆"
+          }
+        ],
+        "steps": [
+          "For a radius $r$ circle tangent to a corner of angle $B$, its base contact is $r\\cot(B/2)$ from that corner. Let $T=\\cot(B/2)+\\cot(C/2)$. With $n$ circles the base length is $r(T+2(n-1))$.",
+          "Equating the chains gives $34(T+14)=T+4046$, so $T=1190/11$. A single circle tangent to both sides is the incircle; its radius is $(T+4046)/T=192/5$. Thus $192+5=197$."
+        ],
+        "stepsZh": [
+          "半径 $r$ 的圆切夹角 $B$ 的两边时，底边上的切点离顶点 $r\\cot(B/2)$。令 $T=\\cot(B/2)+\\cot(C/2)$。由中间相邻圆心距 $2r$ 得底长 $r(T+2(n-1))$。",
+          "两种排列给出 $34(T+14)=T+4046$，所以 $T=1190/11$。只放一个同时切两侧的圆时就是内切圆，其半径 $(T+4046)/T=192/5$，故答案为 $197$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q9": {
+    "summary": "A rhombus has all vertices on $x^2/20-y^2/24=1$, with its diagonals crossing at the origin. Determine the greatest strict lower bound for the square of a diagonal $BD$.",
+    "summaryZh": "菱形四个顶点在双曲线 $x^2/20-y^2/24=1$ 上，对角线交于原点。求对角线长平方 $BD^2$ 的最大严格下界。",
+    "answer": "480",
+    "answerZh": "480",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/9",
+    "methods": [
+      {
+        "title": "Vary a diagonal’s slope while its perpendicular remains feasible",
+        "titleZh": "改变斜率并保证垂直对角线可行",
+        "topics": [
+          {
+            "en": "Hyperbolas",
+            "zh": "双曲线"
+          },
+          {
+            "en": "Infima",
+            "zh": "下确界"
+          }
+        ],
+        "steps": [
+          "Write the slope of $BD$ as $m$. A line $y=mx$ meets the hyperbola precisely when $m^2<6/5$. The perpendicular diagonal must meet it as well, forcing $1/m^2<6/5$. Neither a vertical line nor a horizontal line paired with it is feasible.",
+          "As the endpoints are opposites, $BD^2=4(1+m^2)/(1/20-m^2/24)$. This strictly increases on $5/6<m^2<6/5$. Every slope in this interval is attainable: the two pairs of opposite intersection points define a parallelogram with perpendicular diagonals.",
+          "At the excluded left endpoint the expression tends to $480$. Thus $480$ is strictly less than every attainable squared length, and no larger bound works."
+        ],
+        "stepsZh": [
+          "设 $BD$ 的斜率为 $m$。直线 $y=mx$ 能与双曲线相交当且仅当 $m^2<6/5$。垂直对角线也须相交，因此 $1/m^2<6/5$；竖直线及与之配对的水平线不能构成解。",
+          "两个交点关于原点对称，故 $BD^2=4(1+m^2)/(1/20-m^2/24)$。在 $5/6<m^2<6/5$ 上随 $m^2$ 严格递增。每个可行斜率给出两组相反交点，组成对角线互相垂直的平行四边形，即菱形。",
+          "当 $m^2$ 趋于左端点 $5/6$ 时，表达式趋于 $480$ 而不取到，故所求为 $480$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q10": {
+    "summary": "Triangle $ABC$ has $AB=5, AC=10, BC=9$. The tangents at $B,C$ to its circumcircle meet at $D$, and $AD$ meets the circle again at $P$. Reduce $AP$ to a fraction and add its numerator and denominator.",
+    "summaryZh": "三角形 $ABC$ 中 $AB=5,AC=10,BC=9$。外接圆在 $B,C$ 处的切线交于 $D$，直线 $AD$ 再交圆于 $P$。将 $AP$ 写成最简分数，求其分子分母和。",
+    "answer": "113",
+    "answerZh": "113",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/10",
+    "methods": [
+      {
+        "title": "Use a chord ratio and Ptolemy’s theorem",
+        "titleZh": "先求弦长比再用托勒密定理",
+        "topics": [
+          {
+            "en": "Tangent–chord theorem",
+            "zh": "弦切角定理"
+          },
+          {
+            "en": "Ptolemy’s theorem",
+            "zh": "托勒密定理"
+          }
+        ],
+        "steps": [
+          "In triangles $ABD,ACD$, the sine rule and $BD=CD$ give $\\sin BAD/\\sin CAD=\\sin ABD/\\sin ACD$. By the tangent–chord theorem the latter ratio is $\\sin ACB/\\sin ABC=AB/AC=1/2$. As $A$ is acute, $D$ lies on the far side of $BC$ from $A$ and the internal ray gives $P$ on arc $BC$ away from $A$. The chord ratio $BP/CP$ is the same sine ratio.",
+          "Write $BP=t,CP=2t$. The cosine rule at $A$ gives $\\cos A=(25+100-81)/100=11/25$ and $\\cos BPC=-11/25$. Hence $81=(5+44/25)t^2$, or $t=45/13$.",
+          "Ptolemy for $ABPC$ gives $9AP=5(2t)+10t=20t$. Therefore $AP=100/13$ and the sum is $113$."
+        ],
+        "stepsZh": [
+          "分别在 $ABD,ACD$ 中用正弦定理，再用 $BD=CD$，得 $\\sin BAD/\\sin CAD=\\sin ABD/\\sin ACD$。由弦切角定理，右式为 $\\sin ACB/\\sin ABC=AB/AC=1/2$。$A$ 为锐角，故切线交点 $D$ 在 $BC$ 异于 $A$ 的一侧，点 $P$ 落在不含 $A$ 的弧 $BC$ 上。弦比 $BP/CP$ 等于上述正弦比。",
+          "令 $BP=t,CP=2t$。余弦定理给出 $\\cos A=11/25$，而 $\\cos BPC=-11/25$，所以 $81=(5+44/25)t^2$，得到 $t=45/13$。",
+          "在圆内接四边形 $ABPC$ 中用托勒密定理，得 $9AP=5(2t)+10t=20t$。于是 $AP=100/13$，答案为 $113$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q11": {
+    "summary": "Colour the eight vertices of a fixed regular octagon independently blue or red, equally likely. What is the probability that a rotation sends every blue vertex to a position initially red? Give the sum of reduced numerator and denominator.",
+    "summaryZh": "正八边形的每个顶点独立等概率染蓝或红。求存在一种旋转使所有蓝点都落到原先红点位置的概率，并求最简分数分子分母和。",
+    "answer": "371",
+    "answerZh": "371",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/11",
+    "methods": [
+      {
+        "title": "Classify four-blue patterns by the rotation step",
+        "titleZh": "按旋转步长分类四蓝点图案",
+        "topics": [
+          {
+            "en": "Cyclic shifts",
+            "zh": "循环移位"
+          },
+          {
+            "en": "Probability",
+            "zh": "概率"
+          }
+        ],
+        "steps": [
+          "For a blue set of size $k$, the forbidden shifts are differences of two blue indices modulo eight, at most $1+k(k-1)$ values. For $k\\le3$ this is less than eight, so a good shift exists (also for $k=0$). Over four blue vertices is impossible by counting red targets.",
+          "For $k=4$ a good shift must interchange the two colours. An odd shift generates the whole octagon and forces the two alternating patterns. A shift of $2$ or $6$ generates two four-cycles, with $2^2=4$ alternating choices. A shift of $4$ independently makes each antipodal pair opposite, giving $2^4=16$. The three types are disjoint: odd-step alternation makes step two unchanged, and step-two alternation makes step four unchanged; odd-step patterns also have equal antipodes.",
+          "The good patterns count is $1+8+28+56+(2+4+16)=115$. The probability $115/256$ is reduced, giving $371$."
+        ],
+        "stepsZh": [
+          "设有 $k$ 个蓝点。使某个蓝点撞上原蓝点的旋转步长是两个蓝点编号之差（模八），至多 $1+k(k-1)$ 种。$k\\le3$ 时少于八种，故可找到好旋转；无蓝点时也符合。蓝点超过四个时红点目标不足。",
+          "$k=4$ 时好旋转必须把两色完全对换。奇数步长遍历全圈，只有两种交替图案。步长 $2$ 或 $6$ 产生两个四元圈，各自取交替色，共四种。步长 $4$ 只须每对对顶点异色，有十六种。三类互斥：奇步交替使第二步及第四步不变，二步交替使第四步不变。",
+          "合法图案数 $1+8+28+56+(2+4+16)=115$，概率 $115/256$，所求为 $371$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q12": {
+    "summary": "Define $T(w)=4\\bigl||w-1/2|-1/4\\bigr|$ for $0\\le w\\le1$. Count the real solutions of $y=T(|\\sin 2\\pi x|)$ and $x=T(|\\cos 3\\pi y|)$.",
+    "summaryZh": "令 $T(w)=4\\bigl||w-1/2|-1/4\\bigr|$，其中 $0\\le w\\le1$。求方程组 $y=T(|\\sin 2\\pi x|),\\ x=T(|\\cos 3\\pi y|)$ 的实数解个数。",
+    "answer": "385",
+    "answerZh": "385",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/12",
+    "methods": [
+      {
+        "title": "Count branch pairs and check the shared corner",
+        "titleZh": "数单调分支对并单独检查公共端点",
+        "topics": [
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          },
+          {
+            "en": "Derivatives",
+            "zh": "导数"
+          },
+          {
+            "en": "Trigonometric functions",
+            "zh": "三角函数"
+          }
+        ],
+        "steps": [
+          "Write the right sides as $F(x),G(y)$. Their values lie in $[0,1]$. The fold $T$ takes the values $1,0,1,0,1$ at successive quarter points, with constant slope magnitude four between them. The sine absolute value traverses its range four times and the cosine absolute value six times. Consequently $F$ has $16$ full monotone branches, $G$ has $24$. Only $(1,1)$ can be a boundary intersection because $F(0)=F(1)=G(0)=G(1)=1$.",
+          "Fix one branch of each. Parameterise by $x$ within the part of the first branch for which $F(x)$ belongs to the second branch’s domain. The composite $G(F(x))$ runs monotonically from $0$ to $1$ or back. Except for the pair ending at $(1,1)$, its difference from $x$ has strictly opposite signs at the two ends. A decreasing composite crosses exactly once. For an increasing composite we show it crosses upwards at every fixed point, so it also crosses just once.",
+          "At an interior crossing put $u=1-x$, $v=1-y$. If $h=T(w)$ then $w\\le(3+h)/4$, hence $1-w^2\\ge(1-h)/4$. Differentiation on open branches gives $|F^{\\prime}(x)|\\ge4\\pi\\sqrt v$ and $|G^{\\prime}(y)|\\ge6\\pi\\sqrt u$. Their global Lipschitz bounds $8\\pi,12\\pi$ also give $v\\le8\\pi u$ and $u\\le12\\pi v$.",
+          "Outside the final $F$ branch, $u\\ge\\arcsin(1/4)/(2\\pi)>1/(8\\pi)$, so $24\\pi^2\\sqrt{uv}>3\\pi/\\sqrt{12\\pi}>1$. Outside the final $G$ branch, $v\\ge\\arccos(3/4)/(3\\pi)>1/(6\\pi)$, giving $24\\pi^2\\sqrt{uv}>4\\pi/\\sqrt{8\\pi}>1$. Thus every non-final increasing pair has $(G\\circ F)^{\\prime}>1$ at its crossings; two upward crossings without an intervening non-upward one are impossible.",
+          "In the final pair write $u=U(v)=\\arcsin(v/4)/(2\\pi)$ from the sine, and $u=W(v)=4(1-\\cos(3\\pi v))$ from the cosine. Here $0\\le v\\le b=\\arccos(3/4)/(3\\pi)$. The difference $W-U$ starts at zero with negative derivative. It is strictly convex since $W^{\\prime\\prime}\\ge27\\pi^2$ while $U^{\\prime\\prime}=(v/4)/(32\\pi(1-v^2/16)^{3/2})<1$. At $b$, $W=1>U$. There is exactly one more crossing; its $u=U(v)$ belongs to the final $F$ branch. Total: $16\\cdot24-1+2=385$."
+        ],
+        "stepsZh": [
+          "记两右端为 $F(x),G(y)$，取值都在 $[0,1]$ 内。折线 $T$ 在五个四等分点依次取 $1,0,1,0,1$，各段斜率绝对值为四。正弦绝对值遍历值域四次，余弦绝对值六次，所以 $F,G$ 分别有 $16,24$ 个遍历全部值域的单调分支。四个端点值都为一，故边界交点只有 $(1,1)$。",
+          "各选一个分支，限制 $x$ 使 $F(x)$ 落在选中的 $G$ 分支定义域内。复合函数 $G(F(x))$ 从零单调到一或反向。除同时含 $(1,1)$ 的最后一对外，其与 $x$ 之差在区间两端严格异号，递减时恰有一个交点。对于递增分支，只须证明每次和直线相交时均向上穿过。",
+          "交点处置 $u=1-x,v=1-y$。若 $h=T(w)$ 则 $w\\le(3+h)/4$，故 $1-w^2\\ge(1-h)/4$。在开分支内求导可得 $|F^{\\prime}(x)|\\ge4\\pi\\sqrt v,\\ |G^{\\prime}(y)|\\ge6\\pi\\sqrt u$。两函数的全局利普希茨常数分别不超过 $8\\pi,12\\pi$，于是 $v\\le8\\pi u,\\ u\\le12\\pi v$。",
+          "不在 $F$ 的末分支时 $u\\ge\\arcsin(1/4)/(2\\pi)>1/(8\\pi)$，所以 $24\\pi^2\\sqrt{uv}>3\\pi/\\sqrt{12\\pi}>1$。不在 $G$ 的末分支时 $v\\ge\\arccos(3/4)/(3\\pi)>1/(6\\pi)$，所以 $24\\pi^2\\sqrt{uv}>4\\pi/\\sqrt{8\\pi}>1$。故这些递增分支在交点处的复合导数均大于一，必向上穿过；两次向上穿过之间必有非向上穿过的零点，因而每对仅贡献一次。",
+          "末分支对可写为 $u=U(v)=\\arcsin(v/4)/(2\\pi)$ 及 $u=W(v)=4(1-\\cos(3\\pi v))$，其中 $0\\le v\\le b=\\arccos(3/4)/(3\\pi)$。$W-U$ 从零出发，初始导数为负；因 $W^{\\prime\\prime}\\ge27\\pi^2$ 而 $U^{\\prime\\prime}=(v/4)/(32\\pi(1-v^2/16)^{3/2})<1$，差函数严格凸。在 $b$ 处有 $W=1>U$，故除端点外另有一个交点，其 $u=U(v)$ 确实位于 $F$ 末支。总数为 $16\\cdot24-1+2=385$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q13": {
+    "summary": "Let $p$ be the smallest prime for which some fourth power is $-1$ modulo $p^2$. Find the least positive fourth root of $-1$ modulo that $p^2$.",
+    "summaryZh": "令 $p$ 是使 $-1$ 在模 $p^2$ 下有四次方根的最小素数。求模该 $p^2$ 的最小正四次方根。",
+    "answer": "110",
+    "answerZh": "110",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/13",
+    "methods": [
+      {
+        "title": "Lift the four roots modulo seventeen",
+        "titleZh": "提升模十七的四个根",
+        "topics": [
+          {
+            "en": "Multiplicative order",
+            "zh": "乘法阶"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "Modulo four, fourth powers are zero or one. For odd $p$, a root modulo $p^2$ has order eight modulo $p$, so $8\\mid p-1$. The first possible prime is $17$. All four roots modulo $17$ are $\\pm2,\\pm8$ (verify by squaring; a quartic has at most four).",
+          "For $m=r+17t$, expansion gives $(r^4+1)/17+4r^3t\\equiv0\\pmod{17}$. For $r=2$ this becomes $1-2t=0$, giving $t=9$ and $m=155$. For $r=8$ it becomes $3+8t=0$, giving $t=6$ and $m=110$.",
+          "These lifts are unique modulo $289$, and the other two are their negatives, represented by $134,179$. Existence verifies $p=17$ and the least positive root is $110$."
+        ],
+        "stepsZh": [
+          "四次幂模四只可能为零或一。对奇素数 $p$，若模 $p^2$ 有根，则模 $p$ 该根的阶恰为八，因此 $8\\mid p-1$。第一个候选素数是 $17$。检验可得模 $17$ 的四个根为 $\\pm2,\\pm8$，因四次多项式至多有四根，已找全。",
+          "令 $m=r+17t$，展开后条件是 $(r^4+1)/17+4r^3t\\equiv0\\pmod{17}$。当 $r=2$ 时得 $1-2t=0$，故 $t=9,m=155$；当 $r=8$ 时得 $3+8t=0$，故 $t=6,m=110$。",
+          "这两个提升模 $289$ 唯一，其相反数给出另两个正代表元 $134,179$。故 $p=17$ 确实可行，最小正根为 $110$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q14": {
+    "summary": "A tetrahedron has opposite edge pairs of lengths $\\sqrt{41},\\sqrt{80},\\sqrt{89}$. Its four face planes are equidistant from an interior point. Express their common distance as $m\\sqrt n/p$ in reduced squarefree form and find $m+n+p$.",
+    "summaryZh": "四面体的三组对棱分别等长，长度为 $\\sqrt{41},\\sqrt{80},\\sqrt{89}$。某内点到四个面的距离相等，将距离写成最简形式 $m\\sqrt n/p$，其中 $n$ 无平方因子。求 $m+n+p$。",
+    "answer": "104",
+    "answerZh": "104",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/14",
+    "methods": [
+      {
+        "title": "Use an alternating-sign coordinate model",
+        "titleZh": "用交错符号建立对称坐标",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "空间坐标"
+          },
+          {
+            "en": "Point-to-plane distance",
+            "zh": "点面距离"
+          }
+        ],
+        "steps": [
+          "Take vertices $(x,y,z),(x,-y,-z),(-x,y,-z),(-x,-y,z)$. Requiring $4(y^2+z^2)=41$, $4(x^2+z^2)=80$, $4(x^2+y^2)=89$ gives $x=4,y=5/2,z=2$. Thus this model has the six specified lengths and is congruent to the stated tetrahedron.",
+          "The origin is the centroid, and sign changes show its distances to the faces are equal. The face opposite $(x,y,z)$ has equation $X/x+Y/y+Z/z=-1$. The distance is $1/\\sqrt{1/16+4/25+1/4}=20\\sqrt{21}/63$. The equidistant interior distance is unique (summing the four pyramid volumes gives $3V/S$), hence the answer is $20+21+63=104$."
+        ],
+        "stepsZh": [
+          "取四顶点为 $(x,y,z),(x,-y,-z),(-x,y,-z),(-x,-y,z)$。令 $4(y^2+z^2)=41,4(x^2+z^2)=80,4(x^2+y^2)=89$，解得 $x=4,y=5/2,z=2$。此模型的六条棱长符合题设，因此与原四面体全等。",
+          "原点是重心，且由符号对称性知其到四面的距离相同。$(x,y,z)$ 的对面方程是 $X/x+Y/y+Z/z=-1$。于是距离为 $1/\\sqrt{1/16+4/25+1/4}=20\\sqrt{21}/63$。任一等距内点的距离都由分割四棱锥体积得到 $3V/S$，故答案为 $104$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024i-q15": {
+    "summary": "Every box in a family has volume $23$ and surface area $54$. Take the smallest radius $r$ of a sphere in which any one member can fit. Write $r^2=p/q$ in lowest terms and give $p+q$.",
+    "summaryZh": "一族长方体的体积均为 $23$、表面积均为 $54$。若任取其中一个都能放入半径为 $r$ 的球，求最小 $r$ 的平方的最简分数分子分母和。",
+    "answer": "721",
+    "answerZh": "721",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024I/problem/15",
+    "methods": [
+      {
+        "title": "Maximise the space diagonal under two constraints",
+        "titleZh": "在两个约束下最大化体对角线",
+        "topics": [
+          {
+            "en": "Constrained extrema",
+            "zh": "条件极值"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          }
+        ],
+        "steps": [
+          "For sides $a,b,c$ the squared radius needed is $(a^2+b^2+c^2)/4$, attained at the box centre. Since $ab+bc+ca=27$ is fixed, maximise $a+b+c$. Each side is at least $23/27$ and bounded above by $27^2/(4\\cdot23)$, since $a(b+c)\\ge2\\sqrt{23a}$. Thus a maximum exists with all sides positive.",
+          "At an extremum with all sides distinct, multiplier equations take the form $1=\\lambda(b+c)+\\mu bc$ and its cyclic variants. The two constraint gradients are independent there: proportionality would give $1/b+1/c$ constant under cyclic changes. Subtracting multiplier equations would give $\\lambda+\\mu a=\\lambda+\\mu b=\\lambda+\\mu c=0$, impossible. Hence two sides equal $t$.",
+          "The third is $23/t^2$, giving $t^3-27t+46=(t-2)(t^2+2t-23)=0$. At $t=2$ the diagonal squared is $8+(23/4)^2=657/16$. The other positive root lies between $3.8$ and $4$, where the third side is below $1.6$ and the diagonal squared is below $2(4^2)+1.6^2<657/16$. Hence $r^2=657/64$ and the answer is $721$."
+        ],
+        "stepsZh": [
+          "边长为 $a,b,c$ 时，最小包围球的半径是体对角线之半，球心取长方体中心即可。$ab+bc+ca=27$ 固定，只需最大化 $a+b+c$。每条边至少为 $23/27$，且由 $27\\ge a(b+c)\\ge2\\sqrt{23a}$ 知各边有上界，故极大值能在正数范围取到。",
+          "若三边互异，两约束的梯度线性无关，否则循环比值 $1/b+1/c$ 应相等。极值点的乘子方程为 $1=\\lambda(b+c)+\\mu bc$ 及其循环形式。两两相减得 $\\lambda+\\mu a=\\lambda+\\mu b=\\lambda+\\mu c=0$，与原方程矛盾。故有两条边等于 $t$。",
+          "第三边为 $23/t^2$，从而 $t^3-27t+46=(t-2)(t^2+2t-23)=0$。取 $t=2$ 时对角线平方为 $657/16$。另一正根介于 $3.8$ 与 $4$ 之间，第三边小于 $1.6$，对角线平方小于 $32+1.6^2<657/16$。故 $r^2=657/64$，答案是 $721$。"
+        ]
+      }
+    ]
+  }
+}

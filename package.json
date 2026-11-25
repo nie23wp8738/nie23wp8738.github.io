@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/verify-answer-keys.mjs && node scripts/verify-inline-pdfs.mjs && node scripts/typeset-commentary.mjs",
+    "prebuild": "node scripts/verify-answer-keys.mjs && node scripts/verify-inline-pdfs.mjs && npm run prepare:resources && node scripts/typeset-commentary.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "predev": "node scripts/typeset-commentary.mjs"
+    "predev": "npm run prepare:resources && node scripts/typeset-commentary.mjs",
+    "prepare:resources": "node scripts/fetch-step-solutions.mjs && node scripts/fetch-euclid-papers.mjs"
   },
   "dependencies": {
     "astro": "7.4.13",

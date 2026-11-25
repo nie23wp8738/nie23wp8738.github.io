@@ -1,5 +1,6 @@
 import { getInlineRecord } from './inline-editions.js';
 import { getWorkedAnswer } from './answers.js';
+import {publishedRecord,getPublishedOutline} from './published.js';
 import answerKeys from '../data/answer-keys.json';
 
 // Keep the question browser's index light. Full text lives on static reader pages.
@@ -37,9 +38,14 @@ const paperIndex = Object.values(archives).flat().map(paper => ({
     const id = paper.id + '-q' + question.n;
     const record = getInlineRecord(id);
     const answer = getWorkedAnswer(id);
+    const published = publishedRecord(id);
+    const outline = getPublishedOutline(id);
+    if (outline && (!published || answer)) throw new Error('Missing or conflicting published solution for '+id);
     const keyAnswer = answerKeys[paper.id]?.answers[question.n];
     return {
       ...question,
+      ...(published ? {published} : {}),
+      ...(outline ? {outlinePdf:'/commentary-pdf/questions/'+id+'.pdf'} : {}),
       ...(keyAnswer ? {keyAnswer} : {}),
       ...(answerKeys[paper.id]?.values?.[question.n] ? {keyValue:answerKeys[paper.id].values[question.n]} : {}),
       ...(answerKeys[paper.id]?.notes?.[question.n] ? {keyNote:answerKeys[paper.id].notes[question.n]} : {}),
@@ -57,7 +63,7 @@ const paperIndex = Object.values(archives).flat().map(paper => ({
 export function getPastPapers() { return paperIndex; }
 
 export function getReadingPaths() {
-  return paperIndex.flatMap(paper => paper.questions.filter(q => q.inline || q.hasCommentary).map(q => {
+  return paperIndex.flatMap(paper => paper.questions.filter(q => q.inline || q.hasCommentary || q.outlinePdf).map(q => {
     const id = paper.id + '-q' + q.n;
     return {params:{id}, props:{record:getInlineRecord(id), paperId:paper.id, number:q.n}};
   }));

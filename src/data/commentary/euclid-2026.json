@@ -1,0 +1,344 @@
+{
+  "euclid-2026-q1": {
+    "summary": "(a) Solve $2t/3+3t/2=26$. (b) Solve $(x+3)/4=(x+6)/8$. (c) Find $y>0$ such that $\\sqrt{3^2+4^2+12^2}=\\sqrt{3^2+4^2}+\\sqrt{y^2}$.",
+    "summaryZh": "(a) 解 $2t/3+3t/2=26$。(b) 解 $(x+3)/4=(x+6)/8$。(c) 求满足 $\\sqrt{3^2+4^2+12^2}=\\sqrt{3^2+4^2}+\\sqrt{y^2}$ 的正数 $y$。",
+    "answer": "(a) $12$. (b) $0$. (c) $8$.",
+    "answerZh": "(a) $12$；(b) $0$；(c) $8$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=2",
+    "methods": [
+      {
+        "title": "Clear denominators and evaluate the radicals",
+        "titleZh": "消去分母，化简根式",
+        "steps": [
+          "(a) The coefficient of $t$ is $(4+9)/6=13/6$, so $t=26\\cdot6/13=12$.",
+          "(b) Multiply by $8$ to get $2x+6=x+6$. Subtract the same $x+6$ from both sides to get $x=0$.",
+          "(c) The radicals on the left and at the beginning of the right are $\\sqrt{169}=13$ and $\\sqrt{25}=5$. Since $y>0$, $\\sqrt{y^2}=y$. Thus $y=13-5=8$."
+        ],
+        "stepsZh": [
+          "(a) 合并 $t$ 的系数得 $(4+9)/6=13/6$，故 $t=26\\cdot6/13=12$。",
+          "(b) 两边乘 $8$ 得 $2x+6=x+6$，再同时减 $x+6$ 得 $x=0$。",
+          "(c) 前两个根式分别为 $\\sqrt{169}=13$ 和 $\\sqrt{25}=5$。由 $y>0$ 得 $\\sqrt{y^2}=y$，所以 $y=8$。"
+        ],
+        "topics": [
+          {
+            "en": "Linear equations",
+            "zh": "一次方程"
+          },
+          {
+            "en": "Square roots",
+            "zh": "平方根"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q2": {
+    "summary": "(a) Find the next integer after $2026$ with digit sum $10$. (b) Count three-digit positive integers with digit product $9$. (c) Determine $(x,y)$ given $x+3x+4y=48$ and $(x+y)/2=3x$.",
+    "summaryZh": "(a) 求大于 $2026$ 且数位和为 $10$ 的最小整数。(b) 有多少个三位正整数的数位积为 $9$？(c) 若 $x+3x+4y=48$ 且 $(x+y)/2=3x$，求 $(x,y)$。",
+    "answer": "(a) $2035$. (b) $6$. (c) $(2,10)$.",
+    "answerZh": "(a) $2035$；(b) $6$；(c) $(2,10)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=2",
+    "methods": [
+      {
+        "title": "Choose the digits or eliminate a variable",
+        "titleZh": "按数位计数与消元",
+        "steps": [
+          "(a) In the interval $2027$–$2029$ the last digit would have to be $6$ to achieve the required sum. With prefix $203$ the necessary last digit is $5$. Every number from $2030$ to $2034$ has too small a digit sum.",
+          "(b) No digit can be zero. The only unordered triples are $(1,1,9)$ and $(1,3,3)$. In each case choose one of three positions for the unique digit, giving six numbers.",
+          "(c) Dividing the first equation by four gives $x+y=12$. The second gives $x+y=6x$, so $x=2$ and $y=10$."
+        ],
+        "stepsZh": [
+          "(a) 若前三位为 $202$，数位和为 $10$ 时个位只能是 $6$。下一个前缀为 $203$，个位需取 $5$；$2030$ 至 $2034$ 的数位和都太小。",
+          "(b) 数位不含零。忽略顺序，分解只有 $(1,1,9)$ 和 $(1,3,3)$。两种情况下，出现一次的数字各有三种位置，共六个。",
+          "(c) 第一式除以 $4$ 得 $x+y=12$，第二式得 $x+y=6x$，所以 $x=2,y=10$。"
+        ],
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "十进位值"
+          },
+          {
+            "en": "Systems of equations",
+            "zh": "方程组"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q3": {
+    "summary": "(a) Find the least $n>0$ making $(3\\cdot4\\cdot5\\cdot6\\cdot7\\cdot8\\cdot9)/n$ an integer cube. (b) Solve $3^{a+b}=27$, $a-b=-5$. (c) The parabola $y=-x^2+7x+c$ passes through $(10,0)$. Find the area formed by its two horizontal-axis intercepts and its vertical-axis intercept.",
+    "summaryZh": "(a) 求使 $(3\\cdot4\\cdot5\\cdot6\\cdot7\\cdot8\\cdot9)/n$ 为整数立方的最小正整数 $n$。(b) 解 $3^{a+b}=27$ 和 $a-b=-5$。(c) 抛物线 $y=-x^2+7x+c$ 经过 $(10,0)$，求它与两坐标轴的三个交点围成的三角形面积。",
+    "answer": "(a) $105$. (b) $(-1,4)$. (c) $195$.",
+    "answerZh": "(a) $105$；(b) $(-1,4)$；(c) $195$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=2",
+    "methods": [
+      {
+        "title": "Prime powers and roots",
+        "titleZh": "质因数指数与方程的根",
+        "steps": [
+          "(a) The numerator is $2^6 3^4 5\\cdot7$. For its quotient to be an integer cube every exponent must be a multiple of three. The largest cube divisor is $2^6 3^3$; the smallest possible denominator is therefore $3\\cdot5\\cdot7=105$.",
+          "(b) As $27=3^3$, the system reduces to $a+b=3$, $a-b=-5$. Adding yields $2a=-2$, then $b=4$.",
+          "(c) Substitution gives $c=30$. The sum of the two roots is $7$, so the other horizontal intercept has coordinate $-3$. The base has length $13$ and the height is $30$, giving $13\\cdot30/2=195$."
+        ],
+        "stepsZh": [
+          "(a) 分子分解成 $2^6 3^4 5\\cdot7$。整数立方中每个质因数的指数都是 $3$ 的倍数，所以最大的立方因数为 $2^6 3^3$。相应的分母最小，等于 $3\\cdot5\\cdot7=105$。",
+          "(b) 由 $27=3^3$ 得 $a+b=3$。与 $a-b=-5$ 相加得 $2a=-2$，回代得 $b=4$。",
+          "(c) 代入点坐标得 $c=30$。两根之和为 $7$，故另一个横截距为 $-3$，底长 $13$。纵截距给出高 $30$，所以面积为 $13\\cdot30/2=195$。"
+        ],
+        "topics": [
+          {
+            "en": "Prime factorisation",
+            "zh": "质因数分解"
+          },
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q4": {
+    "summary": "(a) Over $31$ days a temperature has mean $-20^\\circ$C; over the first $21$ days its mean is $-15^\\circ$C. Find the mean on the remaining days. (b) A $10$ km outward run consists of a level stretch followed by a climb and takes $54$ minutes. Speeds on level, uphill and downhill terrain are $12,10,15$ km/h. Find the time to reverse the route.",
+    "summaryZh": "(a) $31$ 天的平均气温为 $-20^\\circ$C，前 $21$ 天均温为 $-15^\\circ$C，求后 $10$ 天的均温。(b) 去程 $10$ 千米，先平路、后上坡，共用 $54$ 分钟。平路、上坡、下坡速度分别为每小时 $12,10,15$ 千米。原路返回需几分钟？",
+    "answer": "(a) $-30.5^\\circ$C. (b) $46$ minutes.",
+    "answerZh": "(a) $-30.5^\\circ$C；(b) $46$ 分钟。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=3",
+    "methods": [
+      {
+        "title": "Recover totals before averaging",
+        "titleZh": "先求总量再取平均",
+        "steps": [
+          "(a) Subtract the subtotal $21(-15)$ from $31(-20)$. The remaining readings sum to $-305$, giving a mean of $-30.5$.",
+          "(b) Let the level distance be $d$ km. In hours, $d/12+(10-d)/10=54/60$. Multiplication by $60$ gives $5d+6(10-d)=54$, so $d=6$. Returning takes $60(6/12+4/15)=46$ minutes."
+        ],
+        "stepsZh": [
+          "(a) 从总和 $31(-20)$ 中减去前段总和 $21(-15)$ 得 $-305$；再除以 $10$ 得 $-30.5$。",
+          "(b) 设平路长为 $d$ 千米。按小时列式 $d/12+(10-d)/10=54/60$，故 $5d+6(10-d)=54$、$d=6$。回程需 $60(6/12+4/15)=46$ 分钟。"
+        ],
+        "topics": [
+          {
+            "en": "Weighted averages",
+            "zh": "加权平均数"
+          },
+          {
+            "en": "Speed and time",
+            "zh": "速度与时间"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q5": {
+    "summary": "(a) Roll two independent fair six-faced dice. One shows the integers $1$ through $6$; the other has only labels $1$ and $2$. A prime total occurs with probability $23/36$. Count the faces labelled $1$ on the second die. (b) An axis-aligned square has its upper edge on $y=0$ and both lower corners on $y=x^2-4$. Write its area as $r-\\sqrt{t}$ with positive integers $r,t$.",
+    "summaryZh": "(a) 同时掷两枚独立的均匀六面骰。第一枚标 $1$ 至 $6$，第二枚每面标 $1$ 或 $2$。点数和为质数的概率为 $23/36$。第二枚骰子有几面标 $1$？(b) 正方形各边平行于坐标轴，上边在 $y=0$ 上，下面两顶点落在 $y=x^2-4$ 上。将面积写成 $r-\\sqrt t$，其中 $r,t$ 为正整数。",
+    "answer": "(a) $5$ faces. (b) $24-\\sqrt{320}$.",
+    "answerZh": "(a) $5$ 面；(b) $24-\\sqrt{320}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=3",
+    "methods": [
+      {
+        "title": "Count outcomes and use the parabola’s symmetry",
+        "titleZh": "计数与抛物线对称性",
+        "steps": [
+          "(a) A second-die $1$ pairs with $1,2,4,6$ to give a prime. A $2$ pairs with $1,3,5$. If the first label occurs $m$ times, there are $4m+3(6-m)=18+m$ favourable ordered face-pairs out of $36$. Hence $m=5$.",
+          "(b) Write the lower corners as $(\\pm u,u^2-4)$ with $u>0$. Equal width and height give $2u=4-u^2$, whose positive root is $\\sqrt5-1$. The area is $4(\\sqrt5-1)^2=24-8\\sqrt5=24-\\sqrt{320}$."
+        ],
+        "stepsZh": [
+          "(a) 第二枚朝上为 $1$ 时，第一枚取 $1,2,4,6$ 可成质数和；为 $2$ 时，第一枚取 $1,3,5$。设标 $1$ 的有 $m$ 面，则 $36$ 个等可能有序面组合中有 $4m+3(6-m)=18+m$ 个有利组合，故 $m=5$。",
+          "(b) 等高的下面两顶点分别为 $(\\pm u,u^2-4)$，其中 $u>0$。由宽等于高得 $2u=4-u^2$，正根为 $\\sqrt5-1$。面积为 $4(\\sqrt5-1)^2=24-8\\sqrt5=24-\\sqrt{320}$。"
+        ],
+        "topics": [
+          {
+            "en": "Conditional counting",
+            "zh": "分类计数"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q6": {
+    "summary": "(a) Starting from a length of $10$ m, increase it by $n\\%$, then increase the result by $2n\\%$. The overall increase is $3.14n\\%$. Find $n>0$. (b) For a convex quadrilateral $ABCD$, $AB=AD=4$, $\\angle ABC=45^\\circ$ and $\\angle CDA=135^\\circ$. Find $BC-CD$.",
+    "summaryZh": "(a) 从 $10$ 米出发先增加 $n\\%$，再在此基础上增加 $2n\\%$，总增幅为 $3.14n\\%$。求正数 $n$。(b) 凸四边形 $ABCD$ 中 $AB=AD=4$，$\\angle ABC=45^\\circ$，$\\angle CDA=135^\\circ$，求 $BC-CD$。",
+    "answer": "(a) $7$. (b) $4\\sqrt2$.",
+    "answerZh": "(a) $7$；(b) $4\\sqrt2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=3",
+    "methods": [
+      {
+        "title": "Multipliers and a shared diagonal",
+        "titleZh": "增长倍数与公共对角线",
+        "steps": [
+          "(a) Put $u=n/100$. The net multiplication factor is $(1+u)(1+2u)=1+3.14u$. After cancelling $1+3u$ we have $2u^2=0.14u$. Positivity gives $u=0.07$ and $n=7$.",
+          "(b) Let $b=BC$ and $d=CD$. Apply the cosine rule to the common side $AC$ in the two triangles. This gives $16+b^2-4\\sqrt2 b=16+d^2+4\\sqrt2 d$. Therefore $(b-d)(b+d)=4\\sqrt2(b+d)$. As $b+d>0$, the required difference is $4\\sqrt2$."
+        ],
+        "stepsZh": [
+          "(a) 令 $u=n/100$，两次增长对应 $(1+u)(1+2u)=1+3.14u$。整理得 $2u^2=0.14u$，因 $u>0$，所以 $u=0.07$、$n=7$。",
+          "(b) 设 $b=BC,d=CD$。在两个三角形中对公共边 $AC$ 使用余弦定理，得 $16+b^2-4\\sqrt2 b=16+d^2+4\\sqrt2 d$，即 $(b-d)(b+d)=4\\sqrt2(b+d)$。约去正数 $b+d$ 得所求差值。"
+        ],
+        "topics": [
+          {
+            "en": "Compound percentages",
+            "zh": "复合百分比"
+          },
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q7": {
+    "summary": "(a) Flowers are classified by colour (yellow/white) and species (rose/carnation). Half the yellow flowers are roses, one quarter of the roses are yellow, and white carnations make up one quarter of all flowers. Find the fraction that are yellow roses. (b) For $0<x\\le1$, $f(x)=0$; for $x>1$, $f(x)=1+f(\\log_2x)$. Count the positive integers with $f(n)=4$.",
+    "summaryZh": "(a) 花按黄、白两色及玫瑰、康乃馨两类划分。黄花的一半是玫瑰，玫瑰的四分之一为黄色，白康乃馨占全部花的四分之一。黄玫瑰占全部的几分之几？(b) $0<x\\le1$ 时 $f(x)=0$；$x>1$ 时 $f(x)=1+f(\\log_2x)$。有多少个正整数 $n$ 满足 $f(n)=4$？",
+    "answer": "(a) $3/20$. (b) $65520$.",
+    "answerZh": "(a) $3/20$；(b) $65520$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=4",
+    "methods": [
+      {
+        "title": "Class proportions and inverse thresholds",
+        "titleZh": "分类比例与递推区间",
+        "steps": [
+          "(a) Normalize the total to $1$ and let yellow roses occupy $u$. Yellow carnations also occupy $u$, and white roses occupy $3u$. The only remaining category is white carnations, of share $1/4$. Thus $5u+1/4=1$, or $u=3/20$.",
+          "(b) Each further application of the recursion takes the interval for the previous value and exponentiates its endpoints with base $2$. Starting with $f=1$ on $(1,2]$, the succeeding intervals are $(2,4]$, $(4,16]$, then $(16,65536]$. The number of integers in the last interval is $65536-16$."
+        ],
+        "stepsZh": [
+          "(a) 将总数归一为 $1$，设黄玫瑰占 $u$。黄康乃馨同样占 $u$，白玫瑰占 $3u$，白康乃馨占 $1/4$。于是 $5u+1/4=1$，解得 $u=3/20$。",
+          "(b) 因 $2^x$ 递增，对上一层区间的端点取以 $2$ 为底的指数就得到下一层。$f=1$ 的区间是 $(1,2]$，随后依次为 $(2,4]$、$(4,16]$、$(16,65536]$。最后一个区间有 $65536-16$ 个整数。"
+        ],
+        "topics": [
+          {
+            "en": "Ratios",
+            "zh": "比例"
+          },
+          {
+            "en": "Iterated logarithms",
+            "zh": "迭代对数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q8": {
+    "summary": "(a) A circle of radius $2$ has diameters $AB$ and $UV$. An external point $C$ lies on the tangent at $A$, and $B,U,C$ lie on a line in that order with $BU=2UC$. Find the area of $CUV$. (b) For which positive integers $k$ are there exactly $100$ non-congruent obtuse triangles with integral sides, perimeter $3k$ and a side of length $k$?",
+    "summaryZh": "(a) 半径为 $2$ 的圆中，$AB$ 与 $UV$ 都是直径。外点 $C$ 在 $A$ 点切线上，且 $B,U,C$ 依次共线，$BU=2UC$。求三角形 $CUV$ 的面积。(b) 周长为 $3k$、一边长为 $k$ 的非全等钝角整边三角形恰好有 $100$ 个。求所有可能的正整数 $k$。",
+    "answer": "(a) $4\\sqrt2/3$. (b) $399,401,402,404$.",
+    "answerZh": "(a) $4\\sqrt2/3$；(b) $399,401,402,404$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=4",
+    "methods": [
+      {
+        "title": "Use coordinates and count an open interval",
+        "titleZh": "建立坐标与计算开区间内整数",
+        "steps": [
+          "(a) Choose $B=(0,0)$, $A=(0,4)$ and $C=(c,4)$ with $c>0$. The ratio gives $U=(2c/3,8/3)$. Substitution in the circle $x^2+(y-2)^2=4$ gives $c^2=8$. The antipode of $U$ is $V=(-2c/3,4/3)$.",
+          "The two vectors from $U$ to $C,V$ are $(c/3,4/3)$ and $(-4c/3,-4/3)$. Half their absolute determinant is $2c/3=4\\sqrt2/3$.",
+          "(b) Sort the other two sides as $k-d,k+d$ with integral $d\\ge0$. The triangle inequality gives $d<k/2$. Obtuseness gives $(k+d)^2>k^2+(k-d)^2$, or $d>k/4$. Thus each integer in $(k/4,k/2)$ gives exactly one shape.",
+          "For $k=4m,4m+1,4m+2,4m+3$ the counts are respectively $m-1,m,m,m+1$. Equating each to $100$ gives $404,401,402,399$."
+        ],
+        "stepsZh": [
+          "(a) 设 $B=(0,0),A=(0,4),C=(c,4)$，其中 $c>0$。由分点比得 $U=(2c/3,8/3)$，代入圆方程 $x^2+(y-2)^2=4$ 得 $c^2=8$。$U$ 的对径点为 $V=(-2c/3,4/3)$。",
+          "从 $U$ 指向 $C,V$ 的向量分别为 $(c/3,4/3)$ 和 $(-4c/3,-4/3)$。其行列式绝对值的一半为 $2c/3=4\\sqrt2/3$。",
+          "(b) 将另两边从小到大写成 $k-d,k+d$，其中 $d$ 为非负整数。由三角形不等式得 $d<k/2$。由钝角条件 $(k+d)^2>k^2+(k-d)^2$ 得 $d>k/4$。开区间 $(k/4,k/2)$ 中每个整数对应唯一一种形状。",
+          "按 $k=4m,4m+1,4m+2,4m+3$ 分类，整数个数分别为 $m-1,m,m,m+1$。令它们分别等于 $100$，所得 $k$ 为 $404,401,402,399$。"
+        ],
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Obtuse triangles",
+            "zh": "钝角三角形"
+          },
+          {
+            "en": "Integer intervals",
+            "zh": "整数区间"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q9": {
+    "summary": "(a) An isosceles triangle of area $40$ and perimeter $32$ has base $b$ opposite the vertex between its equal sides. Give an integer-coefficient cubic vanishing at $b$. (b) Prove that prescribing positive area $A$ and perimeter $P$ leaves at most two non-congruent isosceles triangles. (c) Exhibit integer $A,P$ allowing two such triangles, all side lengths positive integers below $300$, with just one of the two bases divisible by $7$.",
+    "summaryZh": "(a) 等腰三角形的面积为 $40$，周长为 $32$，底边长为 $b$。给出以 $b$ 为根的整系数三次多项式。(b) 证明给定正面积 $A$ 与周长 $P$ 时，至多有两个互不全等的等腰三角形。(c) 给出正整数 $A,P$，使有两个这样的三角形，边长均为小于 $300$ 的正整数，且恰有一个三角形的底边长是 $7$ 的倍数。",
+    "answer": "(a) $b^3-16b^2+400=0$. (b) At most two. (c) $A=21840$, $P=676$.",
+    "answerZh": "(a) $b^3-16b^2+400=0$；(b) 至多两个；(c) 可取 $A=21840,P=676$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=4",
+    "methods": [
+      {
+        "title": "Express area as a function of the base",
+        "titleZh": "将面积写成底边的函数",
+        "steps": [
+          "The equal sides have length $(P-b)/2$. The altitude to the base has square $((P-b)^2-b^2)/4$. Consequently $16A^2=b^2(P^2-2Pb)$ with $0<b<P/2$. Substituting $P=32,A=40$ gives (a) $b^3-16b^2+400=0$.",
+          "(b) The derivative of $b^2(P^2-2Pb)$ is $2Pb(P-3b)$. The function increases until $P/3$ and decreases thereafter. A horizontal line therefore gives at most two bases. For each such base, the equal sides are fixed by the perimeter.",
+          "(c) Use triples with legs and hypotenuse $(105,208,233)$ and $(120,182,218)$. The checks $105^2+208^2=233^2$ and $120^2+182^2=218^2$ give isosceles triangles with bases $210,240$ and equal sides $233,218$ respectively. Their areas are $105\\cdot208=120\\cdot182=21840$ and their perimeters are both $676$. Only $210$ is divisible by seven."
+        ],
+        "stepsZh": [
+          "两腰长为 $(P-b)/2$，底边上的高的平方为 $((P-b)^2-b^2)/4$。因此 $16A^2=b^2(P^2-2Pb)$，且 $0<b<P/2$。在 (a) 中代入 $P=32,A=40$，整理得 $b^3-16b^2+400=0$。",
+          "(b) 函数 $b^2(P^2-2Pb)$ 的导数为 $2Pb(P-3b)$，在 $P/3$ 前递增、其后递减。固定面积对应的水平线至多确定两个底边长，而每个底边长与周长唯一确定两腰。",
+          "(c) $105^2+208^2=233^2$ 和 $120^2+182^2=218^2$，所以可分别以 $210,240$ 为底、$233,218$ 为腰构成两个等腰三角形。面积均为 $105\\cdot208=120\\cdot182=21840$，周长均为 $676$。只有 $210$ 是 $7$ 的倍数。"
+        ],
+        "topics": [
+          {
+            "en": "Isosceles triangles",
+            "zh": "等腰三角形"
+          },
+          {
+            "en": "Polynomial monotonicity",
+            "zh": "多项式单调性"
+          },
+          {
+            "en": "Pythagorean triples",
+            "zh": "勾股数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2026-q10": {
+    "summary": "Call position $j$ of a permutation a peak when it lies strictly between its neighbours in position and its entry exceeds both neighbouring entries. Count permutations with exactly one peak, at the specified position: (a) $n=5$, position $3$; (b) general $n\\ge5$, position $2$; (c) general $n\\ge5$, position $3$. Give closed forms.",
+    "summaryZh": "排列的两个端点不计。若某位置的数大于两侧相邻数，则称该位置为峰。求只有一个峰且峰在指定位置的排列个数，以闭式表示：(a) $n=5$ 时峰在第 $3$ 位；(b) $n\\ge5$ 时峰在第 $2$ 位；(c) $n\\ge5$ 时峰在第 $3$ 位。",
+    "answer": "(a) $40$. (b) $(n-2)2^{n-2}$. (c) $n(n-3)2^{n-3}$.",
+    "answerZh": "(a) $40$；(b) $(n-2)2^{n-2}$；(c) $n(n-3)2^{n-3}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=5",
+    "methods": [
+      {
+        "title": "Cut into two peak-free blocks",
+        "titleZh": "切成两段无峰序列",
+        "steps": [
+          "On a fixed set of $m$ entries a peak-free permutation first decreases to its minimum and then increases. Choose which of the other $m-1$ entries go to the left; their order and that of the right-hand entries are forced. Thus there are $2^{m-1}$ such permutations.",
+          "Write $S_j$ for the number with a unique peak at $j$, putting $S_1=0$. Split after the first $j-1$ entries, requiring both blocks to be peak-free. Choosing the first block’s entries and ordering both gives $\\binom{n}{j-1}2^{j-2}2^{n-j}=\\binom{n}{j-1}2^{n-2}$ permutations.",
+          "In any such permutation the only possible global peaks are $j-1$ and $j$; consecutive positions cannot both be peaks. Conversely every permutation with either one of these peaks alone, or no peaks anywhere, satisfies the block conditions. Subtracting the $2^{n-1}$ peak-free permutations gives $S_{j-1}+S_j=(\\binom{n}{j-1}-2)2^{n-2}$.",
+          "For $j=2$ this gives $S_2=(n-2)2^{n-2}$. For $j=3$ it gives $S_3=(\\binom{n}{2}-n)2^{n-2}=n(n-3)2^{n-3}$. Setting $n=5$ yields $40$."
+        ],
+        "stepsZh": [
+          "给定 $m$ 个不同元素。无峰排列先降至最小值，再上升。其余 $m-1$ 个元素可分别选择放在最小值的左侧或右侧，选定后各侧排列顺序唯一，故共有 $2^{m-1}$ 种。",
+          "设 $S_j$ 为唯一峰在第 $j$ 位的排列数，并设 $S_1=0$。从第 $j-1$ 位后切开，两段分别要求无峰。先选左段元素，再排列两段，共 $\\binom{n}{j-1}2^{j-2}2^{n-j}=\\binom{n}{j-1}2^{n-2}$ 种。",
+          "两段内部无峰，所以原排列只可能在 $j-1,j$ 处出现峰，而且相邻两位不能同时为峰。反过来，只有这两处之一为峰或完全无峰的排列都满足分段条件。减去完全无峰的 $2^{n-1}$ 种，得 $S_{j-1}+S_j=(\\binom{n}{j-1}-2)2^{n-2}$。",
+          "取 $j=2$ 得 $S_2=(n-2)2^{n-2}$。取 $j=3$ 得 $S_3=(\\binom{n}{2}-n)2^{n-2}=n(n-3)2^{n-3}$。取 $n=5$ 得 $40$。"
+        ],
+        "topics": [
+          {
+            "en": "Permutations",
+            "zh": "排列"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ]
+      }
+    ]
+  }
+}

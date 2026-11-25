@@ -1,0 +1,372 @@
+{
+  "euclid-2025-q1": {
+    "summary": "(a) Solve $4(x-2)=2(x-4)$. (b) Given $2x=9$, evaluate $2^{6x-23}$. (c) Find the intersection of $y=3x+7$ and $y=7x+3$.",
+    "summaryZh": "(a) 解方程 $4(x-2)=2(x-4)$。(b) 已知 $2x=9$，求 $2^{6x-23}$。(c) 求直线 $y=3x+7$ 和 $y=7x+3$ 的交点。",
+    "answer": "(a) $0$. (b) $16$. (c) $(1,10)$.",
+    "answerZh": "(a) $0$；(b) $16$；(c) $(1,10)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Simplify the linear expressions",
+        "titleZh": "化简一次式",
+        "steps": [
+          "(a) Expanding gives $4x-8=2x-8$. Cancelling the constants leaves $2x=0$, so $x=0$.",
+          "(b) The exponent is $3(2x)-23=27-23=4$, so the power is $2^4=16$.",
+          "(c) At the intersection the two expressions for $y$ agree, so $3x+7=7x+3$ and $x=1$. Either line then gives $y=10$."
+        ],
+        "stepsZh": [
+          "(a) 展开得 $4x-8=2x-8$。消去常数项得 $2x=0$，所以 $x=0$。",
+          "(b) 指数为 $3(2x)-23=27-23=4$，幂的值是 $2^4=16$。",
+          "(c) 交点的纵坐标相同，所以 $3x+7=7x+3$，解得 $x=1$。代入任一直线得 $y=10$。"
+        ],
+        "topics": [
+          {
+            "en": "Linear equations",
+            "zh": "一次方程"
+          },
+          {
+            "en": "Exponents",
+            "zh": "指数"
+          },
+          {
+            "en": "Intersections",
+            "zh": "直线交点"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q2": {
+    "summary": "(a) Find the positive integer $k$ with $3<\\sqrt{k^2+4}<4$. (b) Add the first $20$ positive odd integers. (c) In hexagon $ABCDEF$, the angles at $A,C,E$ are right angles and $BDF$ is equilateral. Find the perimeter given $AB=16$, $BC=8$, $DE=5$, $FA=13$.",
+    "summaryZh": "(a) 求满足 $3<\\sqrt{k^2+4}<4$ 的正整数 $k$。(b) 求前 $20$ 个正奇数之和。(c) 六边形 $ABCDEF$ 在 $A,C,E$ 处的角均为直角，且 $BDF$ 为等边三角形。已知 $AB=16,BC=8,DE=5,FA=13$，求周长。",
+    "answer": "(a) $3$. (b) $400$. (c) $81$.",
+    "answerZh": "(a) $3$；(b) $400$；(c) $81$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Square bounds, an odd-number sum and equal hypotenuses",
+        "titleZh": "平方数的界、奇数求和与相等的斜边",
+        "steps": [
+          "(a) All quantities are positive. Squaring and subtracting $4$ gives $5<k^2<12$, whose only square is $9$. Hence $k=3$.",
+          "(b) The $j$th odd number equals $j^2-(j-1)^2$. Summing from $j=1$ to $20$ cancels the intermediate squares and leaves $20^2=400$.",
+          "(c) The common squared side length of $BDF$ is $BF^2=16^2+13^2=425$. The two missing outer sides are $CD=\\sqrt{425-8^2}=19$ and $EF=\\sqrt{425-5^2}=20$. Adding the six sides gives $81$."
+        ],
+        "stepsZh": [
+          "(a) 三项均为正，平方后减 $4$ 得 $5<k^2<12$。范围内只有平方数 $9$，故 $k=3$。",
+          "(b) 第 $j$ 个奇数等于 $j^2-(j-1)^2$。从 $j=1$ 加到 $20$，中间平方项相消，只剩 $20^2=400$。",
+          "(c) 等边三角形的边长平方为 $BF^2=16^2+13^2=425$。两个未知外边长为 $CD=\\sqrt{425-8^2}=19$ 和 $EF=\\sqrt{425-5^2}=20$，六边之和为 $81$。"
+        ],
+        "topics": [
+          {
+            "en": "Square numbers",
+            "zh": "平方数"
+          },
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差数列求和"
+          },
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q3": {
+    "summary": "(a) Find $q$ if $p+q+r=18$, $p+q=5$, $q+r=9$. (b) Find a parabola with the same axis intercepts as $6x+y=24$ and only one horizontal-axis intercept. (c) The three reciprocals $1/(2w),1/(3y),1/(4z)$ are equal and sum to $1/24$. Find $w+y+z$.",
+    "summaryZh": "(a) 若 $p+q+r=18,p+q=5,q+r=9$，求 $q$。(b) 求一条与 $6x+y=24$ 在两坐标轴上截距相同且只与横轴交于一点的抛物线。(c) 三个数 $1/(2w),1/(3y),1/(4z)$ 相等，和为 $1/24$，求 $w+y+z$。",
+    "answer": "(a) $-4$. (b) $y=\\frac32(x-4)^2$. (c) $78$.",
+    "answerZh": "(a) $-4$；(b) $y=\\frac32(x-4)^2$；(c) $78$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Use the given equalities directly",
+        "titleZh": "从等量关系求解",
+        "steps": [
+          "(a) Adding the two partial sums counts $q$ twice and everything else once. Therefore $q=5+9-18=-4$.",
+          "(b) The line meets the axes at $(4,0)$ and $(0,24)$. Choosing a quadratic graph tangent to the horizontal axis at $x=4$ gives $y=a(x-4)^2$. The other intercept requires $16a=24$, hence $a=3/2$.",
+          "(c) Each reciprocal is one third of $1/24$, namely $1/72$. Its denominator is therefore $72$ in all three cases. Thus $(w,y,z)=(36,24,18)$, whose entries sum to $78$."
+        ],
+        "stepsZh": [
+          "(a) 两个部分和相加时，只有 $q$ 被重复计数，故 $q=5+9-18=-4$。",
+          "(b) 直线的两个截点为 $(4,0)$ 和 $(0,24)$。取一条在 $x=4$ 处与横轴相切的二次函数图像，写成 $y=a(x-4)^2$；纵截距给出 $16a=24$，故 $a=3/2$。",
+          "(c) 每个倒数都是 $1/24$ 的三分之一，即 $1/72$。三个分母均为 $72$，所以 $(w,y,z)=(36,24,18)$，和为 $78$。"
+        ],
+        "topics": [
+          {
+            "en": "Linear systems",
+            "zh": "线性方程组"
+          },
+          {
+            "en": "Double roots",
+            "zh": "二重根"
+          },
+          {
+            "en": "Reciprocals",
+            "zh": "倒数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q4": {
+    "summary": "(a) Two wheels of radii $15$ and $9$ cm roll together without slipping. Round the shortest positive distance for both to complete a whole number of revolutions to the nearest centimetre. (b) In rectangle $ABCD$, $AB=24$, $AD=18$. Point $E$ on $BC$ satisfies $EC=6$. Find $CF$ where $F=DE\\cap AC$.",
+    "summaryZh": "(a) 半径为 $15$ 和 $9$ 厘米的两轮一起无滑动滚动。求两轮同时转过整圈的最短正距离，四舍五入至整厘米。(b) 矩形 $ABCD$ 中 $AB=24,AD=18$，点 $E$ 在 $BC$ 上，$EC=6$。设 $F=DE\\cap AC$，求 $CF$。",
+    "answer": "(a) $283$ cm. (b) $15/2$.",
+    "answerZh": "(a) $283$ 厘米；(b) $15/2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Match periods and compare similar triangles",
+        "titleZh": "共同周期与相似三角形",
+        "steps": [
+          "(a) A complete turn covers $30\\pi$ or $18\\pi$ cm. After cancelling the common $\\pi$, the earliest meeting of the two distance sequences is $\\operatorname{lcm}(30,18)=90$. Thus $d=90\\pi\\approx282.74$ cm, which rounds to $283$ cm.",
+          "(b) Since $AD\\parallel CE$, triangles $ADF$ and $CEF$ have equal corresponding angles. Their vertical sides give $AF:CF=AD:CE=3:1$. The diagonal has length $\\sqrt{24^2+18^2}=30$, so $CF=30/4=15/2$."
+        ],
+        "stepsZh": [
+          "(a) 两轮转一圈分别行进 $30\\pi$ 和 $18\\pi$ 厘米。约去共同因子 $\\pi$，首个共同距离由 $\\operatorname{lcm}(30,18)=90$ 决定。故 $d=90\\pi\\approx282.74$ 厘米，取整为 $283$ 厘米。",
+          "(b) 因为 $AD\\parallel CE$，三角形 $ADF$ 和 $CEF$ 的对应角相等。由对应边得 $AF:CF=AD:CE=3:1$。对角线长为 $\\sqrt{24^2+18^2}=30$，所以 $CF=30/4=15/2$。"
+        ],
+        "topics": [
+          {
+            "en": "Least common multiple",
+            "zh": "最小公倍数"
+          },
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q5": {
+    "summary": "(a) How many ordered triples of distinct integers from $1$ to $40$ inclusive include both $20$ and $30$ and have their least element in the middle? (b) Find all $\\cos\\theta$ for which $2-2\\cos\\theta,\\ 1+\\sin\\theta,\\ 2+2\\cos\\theta$ form a geometric progression with nonzero ratio.",
+    "summaryZh": "(a) 从 $1$ 至 $40$ 取三个不同整数排成一列，要求包含 $20,30$，且最小数在中间。有多少种排法？(b) 若 $2-2\\cos\\theta,\\ 1+\\sin\\theta,\\ 2+2\\cos\\theta$ 依次构成公比非零的等比数列，求 $\\cos\\theta$ 的所有可能值。",
+    "answer": "(a) $76$. (b) $0,\\ \\pm2\\sqrt2/3$.",
+    "answerZh": "(a) $76$；(b) $0,\\ \\pm2\\sqrt2/3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Order the remaining entries and test the middle-term identity",
+        "titleZh": "确定首尾顺序与检验等比中项",
+        "steps": [
+          "(a) The third chosen value can be any of the other $38$ integers. Each choice fixes the middle entry, the least of the three, and leaves two orders for the outside entries. The count is $38\\cdot2$.",
+          "(b) Put $s=\\sin\\theta$ and $c=\\cos\\theta$. The square of the middle term equals the product of the endpoints, so $(1+s)^2=4(1-c^2)=4s^2$. Factoring gives $(1-s)(1+3s)=0$.",
+          "If $s=1$, then $c=0$ gives three equal nonzero terms. If $s=-1/3$, then $c=\\pm2\\sqrt2/3$. Both signs occur on the unit circle and all three terms are positive, so the middle-term identity guarantees a valid nonzero ratio."
+        ],
+        "stepsZh": [
+          "(a) 第三个被选中的数有 $38$ 种选择。选定后最小数占中间位置，其余两数可互换，共 $38\\cdot2$ 种。",
+          "(b) 记 $s=\\sin\\theta,c=\\cos\\theta$。等比中项的平方等于首尾乘积，故 $(1+s)^2=4(1-c^2)=4s^2$，化为 $(1-s)(1+3s)=0$。",
+          "若 $s=1$，则 $c=0$，三个数相等且非零。若 $s=-1/3$，则 $c=\\pm2\\sqrt2/3$。单位圆上两种符号都能实现，且三项均为正，故中项恒等式保证等比关系成立。"
+        ],
+        "topics": [
+          {
+            "en": "Permutations",
+            "zh": "排列"
+          },
+          {
+            "en": "Geometric sequences",
+            "zh": "等比数列"
+          },
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q6": {
+    "summary": "(a) Count the isosceles triangles, including equilateral ones, with vertices among those of a regular $12$-gon. (b) In convex $ABCD$ the angles at $B,D$ are right angles and the consecutive sides $AB,BC,CD,DA$ have lengths $56,33,39,52$. Find the distance from $B$ to $AD$.",
+    "summaryZh": "(a) 在正十二边形的顶点中选三个组成等腰三角形，含等边三角形，问有多少种选法？(b) 凸四边形 $ABCD$ 在 $B,D$ 处为直角，连续四边 $AB,BC,CD,DA$ 的长度依次为 $56,33,39,52$。求点 $B$ 到 $AD$ 的距离。",
+    "answer": "(a) $52$. (b) $672/13$.",
+    "answerZh": "(a) $52$；(b) $672/13$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Count by apex and resolve an angle sum",
+        "titleZh": "按顶角顶点计数与两角和",
+        "steps": [
+          "(a) Choose the apex in $12$ ways. The base vertices are obtained by moving equally far clockwise and anticlockwise from it, with step size $1,2,3,4$ or $5$. This gives $60$ labelled choices. Steps of size $4$ give four equilateral triangles, each counted three times. Subtract their two extra counts apiece to get $60-8=52$.",
+          "(b) The shared hypotenuse is $AC=\\sqrt{39^2+52^2}=65$. Set $u=\\angle BAC$ and $v=\\angle CAD$. The two right triangles give $(\\sin u,\\cos u)=(33/65,56/65)$ and $(\\sin v,\\cos v)=(3/5,4/5)$.",
+          "The required height is $56\\sin(u+v)$. Substitution gives $\\sin(u+v)=(33\\cdot4+56\\cdot3)/(65\\cdot5)=12/13$, hence the height is $672/13$."
+        ],
+        "stepsZh": [
+          "(a) 顶角顶点有 $12$ 种选择。其余两点从该点分别顺、逆时针各走相同步数，步数可为 $1,2,3,4,5$，得 $60$ 次计数。步数为 $4$ 时得到四个等边三角形，每个被计三次，应各减去两次，得 $60-8=52$。",
+          "(b) 两个直角三角形共用斜边 $AC=\\sqrt{39^2+52^2}=65$。记 $u=\\angle BAC,v=\\angle CAD$，则 $(\\sin u,\\cos u)=(33/65,56/65)$，$(\\sin v,\\cos v)=(3/5,4/5)$。",
+          "所求高为 $56\\sin(u+v)$。代入 $\\sin(u+v)=(33\\cdot4+56\\cdot3)/(65\\cdot5)=12/13$，故高为 $672/13$。"
+        ],
+        "topics": [
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          {
+            "en": "Overcounting",
+            "zh": "重复计数"
+          },
+          {
+            "en": "Angle addition",
+            "zh": "两角和公式"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q7": {
+    "summary": "(a) On inputs $1$ through $5$, $f$ has outputs $(5,3,4,1,2)$ and $g$ has outputs $(3,1,4,5,2)$, respectively. Find $a$ if $f^{-1}(g^{-1}(a))=3$. (b) Solve $x^2-8xy+16y^2=0$ and $(\\log_{10}x)^2+2\\log_{10}x\\log_{10}y+(\\log_{10}y)^2=4$ over the reals.",
+    "summaryZh": "(a) 对输入 $1$ 至 $5$，函数 $f,g$ 的输出依次为 $(5,3,4,1,2)$ 和 $(3,1,4,5,2)$。若 $f^{-1}(g^{-1}(a))=3$，求 $a$。(b) 求方程组 $x^2-8xy+16y^2=0,\\ (\\log_{10}x)^2+2\\log_{10}x\\log_{10}y+(\\log_{10}y)^2=4$ 的实数解。",
+    "answer": "(a) $5$. (b) $(20,5)$ and $(1/5,1/20)$.",
+    "answerZh": "(a) $5$；(b) $(20,5)$ 和 $(1/5,1/20)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Undo the inverses and combine the logarithms",
+        "titleZh": "消去反函数并合并对数",
+        "steps": [
+          "(a) Applying $f$ gives $g^{-1}(a)=f(3)=4$. Applying $g$ gives $a=g(4)=5$.",
+          "(b) Both variables must be positive. Factor the first expression as $(x-4y)^2$ to get $x=4y$. The left side of the second equation factors as $(\\log_{10}x+\\log_{10}y)^2$, giving $\\log_{10}(xy)=2$ or $-2$, so $4y^2=100$ or $1/100$. Positivity fixes $y=5$ or $1/20$, yielding the two stated pairs. Both meet the original conditions."
+        ],
+        "stepsZh": [
+          "(a) 两边作用 $f$ 得 $g^{-1}(a)=f(3)=4$。再作用 $g$ 得 $a=g(4)=5$。",
+          "(b) 对数要求 $x,y>0$。第一式左边为 $(x-4y)^2$，故 $x=4y$。第二式左边为 $(\\log_{10}x+\\log_{10}y)^2$，故 $\\log_{10}(xy)=2$ 或 $-2$，故 $4y^2=100$ 或 $1/100$。取正根得 $y=5$ 或 $1/20$，相应的两组解均满足原方程。"
+        ],
+        "topics": [
+          {
+            "en": "Inverse functions",
+            "zh": "反函数"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Perfect squares",
+            "zh": "完全平方式"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q8": {
+    "summary": "(a) Three students $A,B,C$ pass or fail independently. The probability that $A$ passes and $B$ fails is $3/20$, that $B$ passes and $C$ fails is $1/4$, and that $A,C$ both pass is $2/5$. Find the probability that at least one student fails. (b) Count pairs of four-digit palindromes $m>n$ such that $35$ divides $m-n$.",
+    "summaryZh": "(a) 三名学生 $A,B,C$ 的考试结果彼此独立。$A$ 通过且 $B$ 未通过的概率为 $3/20$，$B$ 通过且 $C$ 未通过的概率为 $1/4$，$A,C$ 均通过的概率为 $2/5$。求至少一人未通过的概率。(b) 四位回文数 $m>n$ 满足 $35\\mid m-n$ 的数对共有多少？",
+    "answer": "(a) $7/10$. (b) $91$.",
+    "answerZh": "(a) $7/10$；(b) $91$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Eliminate a probability and separate the divisibility tests",
+        "titleZh": "消去概率变量并分别处理整除条件",
+        "steps": [
+          "(a) Let $x,y,z$ be the three individual pass probabilities. Independence gives $x(1-y)=3/20$, $y(1-z)=1/4$ and $xz=2/5$. The probability of at least one failure is $1-xyz=1-2y/5$. The first two equations yield $x=3/[20(1-y)]$ and $z=(4y-1)/(4y)$, with $0<y<1$. Substitution into the third equation gives $3(4y-1)=32y(1-y)$.",
+          "This factors as $(8y+1)(4y-3)=0$. A probability cannot be negative, hence $y=3/4$ and $1-2y/5=7/10$.",
+          "(b) A four-digit palindrome is $1001a+110b$ with $1\\le a\\le9$ and $0\\le b\\le9$. For a second palindrome with digits $c,d$, the difference is a multiple of $35$ exactly when $a\\equiv c\\pmod5$ and $b\\equiv d\\pmod7$. This follows by reducing the difference separately modulo $5$ and $7$.",
+          "If $a>c$, $a-c=5$ and there are four outside-digit choices. The inner digits can agree in ten ways or differ by $7$ in either direction in six ways, giving $4(10+6)=64$. If $a=c$, there are nine choices and $b-d=7$ gives three choices. The total is $64+27=91$."
+        ],
+        "stepsZh": [
+          "(a) 记三名学生通过的概率分别为 $x,y,z$。由独立性，$x(1-y)=3/20,\\ y(1-z)=1/4,\\ xz=2/5$。所求概率是 $1-xyz=1-2y/5$。前两式给出 $x=3/[20(1-y)]$ 和 $z=(4y-1)/(4y)$，且 $0<y<1$。代入第三式得 $3(4y-1)=32y(1-y)$。",
+          "整理分解为 $(8y+1)(4y-3)=0$。概率不能为负，故 $y=3/4$，所求为 $1-2y/5=7/10$。",
+          "(b) 四位回文数可写成 $1001a+110b$，其中 $1\\le a\\le9,\\ 0\\le b\\le9$。另一回文数的两位数字记为 $c,d$。两数之差分别对 $5,7$ 取模可知，$35$ 整除该差恰好等价于 $a\\equiv c\\pmod5$ 且 $b\\equiv d\\pmod7$。",
+          "若 $a>c$，则 $a-c=5$，外层数字有四种配对。内层数字相等有十种，差为 $7$ 或 $-7$ 共六种，得 $4(10+6)=64$ 对。若 $a=c$，外层有九种，而 $b-d=7$ 有三种。共 $64+27=91$ 对。"
+        ],
+        "topics": [
+          {
+            "en": "Independent events",
+            "zh": "独立事件"
+          },
+          {
+            "en": "Congruences",
+            "zh": "同余"
+          },
+          {
+            "en": "Digit counting",
+            "zh": "数位计数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q9": {
+    "summary": "Write $p(x)=qx^3-rx^2-sx+t$ for increasing positive integers $q,r,s,t$ in arithmetic progression. (a) Prove $p(1)=0$. (b) Find the three roots if they are rational and the coefficients $q,r,s,t$ have mean $19$. (c) For each integer $n>3$, exhibit two such progressions of difference $2n$ giving three rational roots.",
+    "summaryZh": "设正整数 $q,r,s,t$ 依次构成递增等差数列，令 $p(x)=qx^3-rx^2-sx+t$。(a) 证明 $p(1)=0$。(b) 若 $q,r,s,t$ 的平均数为 $19$ 且三个根均有理，求这三个根。(c) 对每个整数 $n>3$，构造至少两个公差为 $2n$ 且使三根均有理的数列。",
+    "answer": "(a) $p(1)=0$. (b) $1,2,-7/5$. (c) Take $(m-3n,m-n,m+n,m+3n)$ with $m=2n^2+1$ or $m=n^2+2$.",
+    "answerZh": "(a) $p(1)=0$；(b) $1,2,-7/5$；(c) 可取 $(m-3n,m-n,m+n,m+3n)$，其中 $m=2n^2+1$ 或 $m=n^2+2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Reduce the cubic to a difference of squares",
+        "titleZh": "将三次多项式的根化为平方差问题",
+        "steps": [
+          "(a) The first and last terms have the same sum as the middle pair, so $q+t=r+s$ and $p(1)=0$. For a progression with mean $m$ and difference $2h$, write its terms as $m-3h,m-h,m+h,m+3h$. Division gives $p(x)=(x-1)((m-3h)x^2-2hx-(m+3h))$.",
+          "(b) Since $m=19$ and the two middle terms are integers, $h$ is an integer. Positivity of the first term gives $1\\le h\\le6$. The quadratic discriminant is $4(m^2-8h^2)$. For these six $h$, the numbers $m^2-8h^2$ are $353,329,289,233,161,73$, of which only $289=17^2$ is a square. With $h=3$, the quadratic is $10x^2-6x-28=2(x-2)(5x+7)$.",
+          "(c) Set $h=n$. To make $m^2-8n^2=k^2$ take $(m-k,m+k)=(2,4n^2)$ or $(4,2n^2)$. Both pairs have product $8n^2$ and yield $m=2n^2+1$ or $m=n^2+2$. These means are distinct and exceed $3n$ when $n>3$, so both progressions have positive integer terms.",
+          "Each $k$ is nonzero, giving two distinct rational quadratic roots. Substituting $1$ into the quadratic gives $-8n$, so neither duplicates the already known root $1$."
+        ],
+        "stepsZh": [
+          "(a) 首项与末项之和等于两中间项之和，故 $q+t=r+s$，即 $p(1)=0$。设平均数为 $m$、公差为 $2h$，则四项为 $m-3h,m-h,m+h,m+3h$。因式分解得 $p(x)=(x-1)((m-3h)x^2-2hx-(m+3h))$。",
+          "(b) 因为 $m=19$ 且两中间项均为整数，$h$ 也是整数。首项为正给出 $1\\le h\\le6$。二次因子的判别式为 $4(m^2-8h^2)$。六个候选值对应的 $m^2-8h^2$ 为 $353,329,289,233,161,73$，只有 $289=17^2$ 为平方数。取 $h=3$ 时二次因子化为 $10x^2-6x-28=2(x-2)(5x+7)$。",
+          "(c) 取 $h=n$。为了使 $m^2-8n^2=k^2$，可取 $(m-k,m+k)=(2,4n^2)$ 或 $(4,2n^2)$。两组乘积均为 $8n^2$，所得 $m$ 分别为 $2n^2+1$ 和 $n^2+2$。当 $n>3$ 时它们互异且均大于 $3n$，故两组数列均由正整数组成。",
+          "两组 $k$ 均非零，故二次因子各有两个不同的有理根。把 $1$ 代入二次因子得 $-8n$，因此它们与已知的根 $1$ 也不重复。"
+        ],
+        "topics": [
+          {
+            "en": "Factor theorem",
+            "zh": "因式定理"
+          },
+          {
+            "en": "Quadratic discriminant",
+            "zh": "二次判别式"
+          },
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2025-q10": {
+    "summary": "A triangular array of initially heads-up coins has row lengths $1$ through $n$. A move flips the three coins surrounding one elementary triangular face. Between rows $r$ and $r+1$, number these faces from the left as $T(r,1),\\ldots,T(r,2r-1)$. (a) Win in four moves for $n=3$. (b) Can you win for $n=4$? (c) Characterise all $n$ for which every coin can be left showing tails.",
+    "summaryZh": "初始全为正面的硬币排成三角形，各行长度为 $1$ 至 $n$。一步操作翻转围成一个最小三角形的三枚硬币。第 $r$ 行与下一行之间的小三角形从左到右编号为 $T(r,1),\\ldots,T(r,2r-1)$。(a) $n=3$ 时用四步翻至全反面。(b) $n=4$ 时能否成功？(c) 求所有能成功的 $n$。",
+    "answer": "(a) $T(1,1),T(2,1),T(2,3),T(2,2)$. (b) No. (c) $n\\equiv0,2\\pmod3$.",
+    "answerZh": "(a) $T(1,1),T(2,1),T(2,3),T(2,2)$；(b) 不能；(c) $n\\equiv0,2\\pmod3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Three colours and a two-move transfer",
+        "titleZh": "三色染色与两步转移",
+        "steps": [
+          "(a) Use each of the four small faces once, in the stated order. Each corner coin is flipped once and each of the three side-middle coins is flipped three times. All six coins finish tails up.",
+          "(b) Colour coin $j$ from the left in row $r$ by $r+j-2$ modulo $3$. Each move $T(r,j)$ acts on one coin of each colour: the adjacent pair in one row and the third coin in the next row have three consecutive residues. Thus after any sequence of moves the numbers of tails on the three colours have the same parity. For four rows the numbers of coins are $4,3,3$, with different parities, so a win is impossible.",
+          "(c) To prove sufficiency, start from the all-tails position and try to clear every tail. Flipping two faces that share an edge toggles only their two opposite vertices, which have the same colour. Any two coins of a fixed colour can be toggled together this way along a chain: choose faces containing them, walk through edge-adjacent faces, and at each crossing transfer the colour's representative from the old face to the new one. If the representative stays on the shared edge, use no move. Intermediate changes cancel.",
+          "When the three counts of tails have the same parity and $n\\ge2$, pair off tails of each colour using these transfers. If one of each colour remains, transfer those three tails to the three vertices of a chosen face and flip it. Reversing this process reaches all tails from all heads.",
+          "Rows $3u+1,3u+2,3u+3$ start with colours $0,1,2$, respectively. The first two rows of a block have $2u+1$ coins of each colour together. The third row adds $u+1$ of each. A block stopped after its first row instead has one extra coin of colour $0$. Thus the total counts agree for $n\\equiv0,2\\pmod3$ and differ by one for $n\\equiv1\\pmod3$, including $n=1$. The parity criterion gives the result."
+        ],
+        "stepsZh": [
+          "(a) 按答案所列次序将四个小三角形各翻一次。三个角上的硬币各翻一次，三边中点的硬币各翻三次，所以六枚硬币都朝反面。",
+          "(b) 第 $r$ 行从左数第 $j$ 枚硬币的颜色取为 $r+j-2$ 除以 $3$ 的余数。对每个操作 $T(r,j)$，同行相邻的两枚硬币与另一行的第三枚硬币具有三个连续的余数，所以它恰好翻转每种颜色各一枚。每走一步，三种颜色的反面数各增一或减一，三者的奇偶性始终相同。四行时三色硬币数为 $4,3,3$，奇偶性不同，不能全反面。",
+          "(c) 为证充分性，从全反面出发，尝试把反面清空。连续翻两个共边的小三角形，只会改变两枚相对顶点的硬币，它们颜色相同。任意两枚同色硬币都可用这种方式同时翻转：分别选取含它们的小三角形，沿共边小三角形组成的路径前进。每过一条边，将该颜色的代表点从旧三角形转到新三角形；若代表点就在公共边上，则无需操作。沿途的中间点会被抵消。",
+          "当三色反面数奇偶性相同且 $n\\ge2$ 时，用上述操作在每种颜色内将反面成对消去。若最后每色还剩一枚，则把它们分别转至同一小三角形的三个顶点，再将该三角形翻一次即可。逆向执行就能由全正面得到全反面。",
+          "第 $3u+1,3u+2,3u+3$ 行的首色依次为 $0,1,2$。一组中的前两行合起来每色均有 $2u+1$ 枚，第三行又为每色增加 $u+1$ 枚。若一组只取第一行，则颜色 $0$ 比另外两色各多一枚。因此 $n\\equiv0,2\\pmod3$ 时三色总数相等，$n\\equiv1\\pmod3$ 时相差一枚，$n=1$ 亦如此；由奇偶判据得结论。"
+        ],
+        "topics": [
+          {
+            "en": "Parity invariants",
+            "zh": "奇偶不变量"
+          },
+          {
+            "en": "Graph colouring",
+            "zh": "图的染色"
+          },
+          {
+            "en": "Constructive proof",
+            "zh": "构造证明"
+          }
+        ]
+      }
+    ]
+  }
+}

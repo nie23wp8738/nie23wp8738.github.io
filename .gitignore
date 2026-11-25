@@ -4,3 +4,6 @@ dist/
 .DS_Store
 __pycache__/
 public/commentary-pdf/
+public/step-solutions/
+public/euclid-papers/
+public/euclid-parts/

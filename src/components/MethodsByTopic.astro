@@ -5,25 +5,32 @@ import guide from '../data/tara-guide.json';
 import guideNotes from '../data/tara-guide-notes.json';
 import { getPastPapers,localPractice } from '../lib/catalog.js';
 import { getWorkedAnswer,originalAnswer,methodTopicKey } from '../lib/answers.js';
+import { getPublishedOutline } from '../lib/published.js';
 const {lang='en'} = Astro.props;
 const zh=lang==='zh', root=zh?'/zh':'';
 const t=(en,cn)=>zh?cn:en;
 const topics=new Map();
 const rows=[];
+function addMethod(methodTopics, title, question, path) {
+  const keys = methodTopics.map(topic=>{
+    const key=methodTopicKey(topic.en);
+    if (!topics.has(key)) topics.set(key,t(topic.en,topic.zh));
+    return key;
+  });
+  rows.push({keys,title,question,href:root+path});
+}
 function addMethods(answer, question, path) {
   answer.methods.forEach((method,i)=>{
-    const keys = method.topics.map(topic=>{
-      const key=methodTopicKey(topic.en);
-      if (!topics.has(key)) topics.set(key,t(topic.en,topic.zh));
-      return key;
-    });
-    rows.push({keys,title:t(method.title,method.titleZh),question,href:root+path+'#method-'+(i+1)});
+    addMethod(method.topics,t(method.title,method.titleZh),question,path+'#method-'+(i+1));
   });
 }
 for (const paper of getPastPapers()) for (const question of paper.questions) {
-  if (!question.hasWorkedSolution) continue;
+  if (!question.hasWorkedSolution && !question.outlinePdf) continue;
   const id=paper.id+'-q'+question.n;
-  addMethods(getWorkedAnswer(id),paper.label+t(' · Question ',' · 第 ')+question.n+t('',' 题'),'/questions/'+id+'/');
+  const title=(['STEP','TMUA'].includes(paper.exam) ? paper.year+' '+paper.exam+' · ' : '')+paper.label+t(' · Question ',' · 第 ')+question.n+t('',' 题');
+  const path='/questions/'+id+'/';
+  if (question.hasWorkedSolution) addMethods(getWorkedAnswer(id),title,path);
+  else addMethod(getPublishedOutline(id).topics,t('Worked solution','详细解法'),title,path+'#solutions');
 }
 for (const q of guide.questions) addMethods(guideNotes[q.id],t(q.label,q.labelZh),'/tara/guide/'+q.id+'/');
 for (const p of practice) addMethods(originalAnswer(p),localPractice(p,lang).title,'/problems/'+p.id+'/');

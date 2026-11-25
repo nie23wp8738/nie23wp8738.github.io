@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import WorkedAnswer from './WorkedAnswer.astro';
 import TypesetText from './TypesetText.astro';
 import {getPastPapers, topicLabel, tagLabel} from '../lib/catalog.js';
-import {getWorkedAnswer} from '../lib/answers.js';
+import {getWorkedAnswer,methodTopicKey} from '../lib/answers.js';
+import {getPublishedOutline} from '../lib/published.js';
 import '../styles/reader.css';
 const {paperId, number, lang} = Astro.props;
 const zh = lang === 'zh', root = zh ? '/zh' : '';
@@ -11,10 +12,12 @@ const t = (en, cn) => zh ? cn : en;
 const paper = getPastPapers().find(p => p.id === paperId);
 const index = paper.questions.findIndex(q => q.n === number);
 const question = paper.questions[index], id = paperId + '-q' + number;
-const notes = getWorkedAnswer(id);
-const title = paper.label + t(' · Question ', ' · 第 ') + number + t('', ' 题');
+const nativeAnswer = getWorkedAnswer(id);
+const notes = nativeAnswer || getPublishedOutline(id);
+const paperTitle = ['STEP','TMUA'].includes(paper.exam) ? paper.year+' '+paper.exam+' · '+paper.label : paper.label;
+const title = paperTitle + t(' · Question ', ' · 第 ') + number + t('', ' 题');
 const paperURL = root + '/past-papers/?paper=' + paperId + '#q-' + number;
-const nearby = row => root + (row.inline || row.hasCommentary ? '/questions/' + paperId + '-q' + row.n + '/' : '/questions/entry/?id=' + paperId + '-q' + row.n);
+const nearby = row => root + (row.inline || row.hasCommentary || row.outlinePdf ? '/questions/' + paperId + '-q' + row.n + '/' : '/questions/entry/?id=' + paperId + '-q' + row.n);
 ---
 <Layout title={title} current="past" lang={lang}>
   <article class="shell question past-reader">
@@ -26,15 +29,18 @@ const nearby = row => root + (row.inline || row.hasCommentary ? '/questions/' + 
       <TypesetText id={id} text={t(notes.summary,notes.summaryZh)} />
       {notes.figure && <figure><img src={notes.figure.url} alt={t(notes.figure.alt,notes.figure.altZh)} /></figure>}
     </section>
-    <WorkedAnswer id={id} answer={notes} lang={lang} />
+    {nativeAnswer ? <WorkedAnswer id={id} answer={notes} lang={lang} /> : <details class="answer-result"><summary>{t('Show final result','查看答案要点')}</summary><TypesetText id={id} text={t(notes.answer,notes.answerZh)} /></details>}
+    {!nativeAnswer && <div class="method-topics"><strong>{t('Topics used','解法知识点')}</strong>{notes.topics.map(topic=><a href={root+'/topics/methods/?'+new URLSearchParams({topic:methodTopicKey(topic.en)})}>{t(topic.en,topic.zh)}</a>)}</div>}
     <div class="btnrow"><a class="button" href={root+'/problems/?add='+id+'#worksheet'}>{t('Add to worksheet','加入我的试卷')}</a><a class="button light" href={paperURL}>{t('Browse this paper','查看同卷题目')}</a></div>
+    {question.published && <section class="published-reading" data-published-note={JSON.stringify(question.published)} data-with-outline={!nativeAnswer ? "true" : undefined} data-title={title} data-id={id} data-lang={lang}></section>}
     <details class="reader-source"><summary>{t('Source and attribution','出处与署名')}</summary>
-      <p>{t('The outline and worked methods on this page were prepared for DR.WANG Mathematics.','本页题意概述和分步解法为 DR.WANG 数学题库编写。')}</p>
-      <a href={notes.sourceUrl} target="_blank" rel="noopener noreferrer">{t('Original question (external)','原题出处（外部网站）')}</a>
+      <p>{nativeAnswer ? t('The outline and worked methods on this page were prepared for DR.WANG Mathematics.','本页题意概述和分步解法为 DR.WANG 数学题库编写。') : t('The outline was prepared for DR.WANG Mathematics. The published solutions are credited above.','本页题意为 DR.WANG 数学题库编写，详解作者及授权见上方。')}</p>
+      <a href={notes.sourceUrl || question.url || paper.url} target="_blank" rel="noopener noreferrer">{t('Original question (external)','原题出处（外部网站）')}</a>
     </details>
     <nav class="reader-pagination" aria-label={t('Questions in this paper','本卷题目')}>
       {index>0 && <a href={nearby(paper.questions[index-1])} rel="prev">{t('Previous question','上一题')}</a>}
       {index+1<paper.questions.length && <a href={nearby(paper.questions[index+1])} rel="next">{t('Next question','下一题')}</a>}
     </nav>
   </article>
+  {question.published && <script type="module" src="/published-reader.js" is:inline></script>}
 </Layout>

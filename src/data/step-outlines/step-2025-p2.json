@@ -1,0 +1,238 @@
+{
+  "step-2025-p2-q1": {
+    "summary": "Let $f(x)=\\min(x^2,2x)$, where $\\min$ selects the smaller value. Sketch $f$ and find all intersections of $2f(x)$ with $5x-3$. Next determine the full solution set of $f(x)+\\min(x^3,4x)=mx$ separately for $m=2$ and $m=6$. Finally sketch $g(x)=2\\min(x^2,x^3)-5x$. Explain why $(1,-3)$ is a local maximum and give the coordinates and types of the other three turning points.",
+    "summaryZh": "设 $f(x)=\\min(x^2,2x)$，其中 $\\min$ 表示取较小值。画出 $f$ 的图像，并解方程 $2f(x)=5x-3$。再分别求 $m=2$ 和 $m=6$ 时 $f(x)+\\min(x^3,4x)=mx$ 的完整解集。最后作 $g(x)=2\\min(x^2,x^3)-5x$ 的图像，证明 $(1,-3)$ 是局部极大值点，并写出另外三个极值点的坐标和类型。",
+    "answer": "$f=x^2$ on $[0,2]$ and $f=2x$ elsewhere. The first equation gives $1,3/2,3$. The next gives $\\{0,1\\}$ for $m=2$, and $[-2,0]\\cup[2,\\infty)$ for $m=6$. Write $h=\\sqrt{5/6}$. Besides $(1,-3)$, there is a maximum at $(-h,10h/3)$ and minima at $(h,-10h/3)$ and $(5/4,-25/8)$.",
+    "answerZh": "在 $[0,2]$ 上 $f=x^2$，其余处 $f=2x$。第一个方程的解为 $1,3/2,3$。第二个方程在 $m=2$ 时解为 $\\{0,1\\}$，在 $m=6$ 时解为 $[-2,0]\\cup[2,\\infty)$。记 $h=\\sqrt{5/6}$。除 $(1,-3)$ 外还有极大值点 $(-h,10h/3)$ 和两个极小值点 $(h,-10h/3)$、$(5/4,-25/8)$。",
+    "topics": [
+      {
+        "en": "Piecewise functions",
+        "zh": "分段函数"
+      },
+      {
+        "en": "Local extrema",
+        "zh": "局部极值"
+      },
+      {
+        "en": "Graph sketching",
+        "zh": "函数作图"
+      }
+    ]
+  },
+  "step-2025-p2-q2": {
+    "summary": "For $a,b\\in\\mathbb R$, study $z^2+|z+b|=a$ in the complex plane. Prove that every solution lies on a coordinate axis. Rule out the imaginary axis when $(a,b)=(7/2,5/2)$ and the real axis when $(a,b)=(5/2,7/2)$. With $a=1/2$ and $1/2<b<3/4$, prove that each axis contains a solution. Then find all $z$ satisfying $z^3+|z+2|^2=4$.",
+    "summaryZh": "设 $a,b$ 为实数，在复平面上考察 $z^2+|z+b|=a$。证明其解必在某条坐标轴上。当 $(a,b)=(7/2,5/2)$ 时排除虚轴上的解，当 $(a,b)=(5/2,7/2)$ 时排除实轴上的解。在 $a=1/2$、$1/2<b<3/4$ 时证明实轴和虚轴上都存在解。最后求出 $z^3+|z+2|^2=4$ 的所有复数解。",
+    "answer": "The imaginary part of the first equation gives $\\Re(z)\\Im(z)=0$. In the interval for $b$, examples are $(-1+\\sqrt{3-4b})/2$ and $i(b^2-1/4)^{1/4}$. The cubic equation has the five roots $0$, $1\\pm i\\sqrt3$ and $(-1\\pm i\\sqrt3)/2$.",
+    "answerZh": "第一个方程的虚部给出 $\\Re(z)\\Im(z)=0$。在所给的 $b$ 区间内，$(-1+\\sqrt{3-4b})/2$ 和 $i(b^2-1/4)^{1/4}$ 分别是实轴和虚轴上的解。三次方程的五个解是 $0$、$1\\pm i\\sqrt3$ 和 $(-1\\pm i\\sqrt3)/2$。",
+    "topics": [
+      {
+        "en": "Complex modulus",
+        "zh": "复数的模"
+      },
+      {
+        "en": "Real and imaginary parts",
+        "zh": "实部与虚部"
+      },
+      {
+        "en": "Quadratic equations",
+        "zh": "二次方程"
+      }
+    ]
+  },
+  "step-2025-p2-q3": {
+    "summary": "Draw $f(x)=\\ln(x)/x$ for $x>0$ and use its shape to prove $3^\\pi>\\pi^3$ and $(9/4)^{\\sqrt5}>(\\sqrt5)^{9/4}$. Compare $x^{x+2}$ with $(x+2)^x$ throughout $1<x<2$. Rewrite $9^{\\sqrt2}>(\\sqrt2)^9$ as the equivalent comparison $3^{2\\sqrt2}>(2\\sqrt2)^3$, then decide its truth using $e^2<8$. Finally decide which is larger, $8^{\\sqrt[3]3}$ or $(\\sqrt[3]3)^8$. Justify each comparison.",
+    "summaryZh": "画出 $x>0$ 时 $f(x)=\\ln(x)/x$ 的图像，据此证明 $3^\\pi>\\pi^3$ 和 $(9/4)^{\\sqrt5}>(\\sqrt5)^{9/4}$。比较整个区间 $1<x<2$ 上的 $x^{x+2}$ 与 $(x+2)^x$。说明 $9^{\\sqrt2}>(\\sqrt2)^9$ 等价于 $3^{2\\sqrt2}>(2\\sqrt2)^3$，并利用 $e^2<8$ 判断其真假。最后比较 $8^{\\sqrt[3]3}$ 与 $(\\sqrt[3]3)^8$。各问均须说明理由。",
+    "answer": "$f$ peaks at $(e,1/e)$ and $f(2)=f(4)$. The remaining larger powers are $(x+2)^x$, $(\\sqrt2)^9$ and $8^{\\sqrt[3]3}$, respectively.",
+    "answerZh": "$f$ 在 $(e,1/e)$ 达到最大值，且 $f(2)=f(4)$。后三组中，较大的依次为 $(x+2)^x$、$(\\sqrt2)^9$ 和 $8^{\\sqrt[3]3}$。",
+    "topics": [
+      {
+        "en": "Logarithms",
+        "zh": "对数"
+      },
+      {
+        "en": "Monotonicity",
+        "zh": "单调性"
+      },
+      {
+        "en": "Exponential inequalities",
+        "zh": "指数不等式"
+      }
+    ]
+  },
+  "step-2025-p2-q4": {
+    "summary": "Write $\\lfloor x\\rfloor$ for the greatest integer at most $x$. Prove the translation rule $\\lfloor x+j\\rfloor=\\lfloor x\\rfloor+j$ for every integer $j$. For a positive integer $n$, set $F_n(x)=\\sum_{j=0}^{n-1}\\lfloor x+j/n\\rfloor-\\lfloor nx\\rfloor$. Prove that $1/n$ is a period, evaluate $F_n$ on $[0,1/n)$, and determine it on all of $\\mathbb R$. Deduce $\\lfloor x/2\\rfloor+\\lfloor(x+1)/2\\rfloor=\\lfloor x\\rfloor$. Simplify $\\sum_{k=0}^\\infty\\lfloor(x+2^k)/2^{k+1}\\rfloor$ for every real $x$.",
+    "summaryZh": "用 $\\lfloor x\\rfloor$ 表示不大于 $x$ 的最大整数。证明对任意整数 $j$ 有 $\\lfloor x+j\\rfloor=\\lfloor x\\rfloor+j$。对正整数 $n$ 定义 $F_n(x)=\\sum_{j=0}^{n-1}\\lfloor x+j/n\\rfloor-\\lfloor nx\\rfloor$。证明 $1/n$ 是其周期，求它在 $[0,1/n)$ 上的值，再推广至整个实轴。由此导出 $\\lfloor x/2\\rfloor+\\lfloor(x+1)/2\\rfloor=\\lfloor x\\rfloor$，并化简所有实数 $x$ 对应的 $\\sum_{k=0}^\\infty\\lfloor(x+2^k)/2^{k+1}\\rfloor$。",
+    "answer": "$F_n(x)=0$ everywhere. The infinite sum is $\\lfloor x\\rfloor$ for $x\\ge0$ and $\\lfloor x\\rfloor+1$ for $x<0$.",
+    "answerZh": "$F_n$ 恒为零。无穷和在 $x\\ge0$ 时为 $\\lfloor x\\rfloor$，在 $x<0$ 时为 $\\lfloor x\\rfloor+1$。",
+    "topics": [
+      {
+        "en": "Floor function",
+        "zh": "向下取整函数"
+      },
+      {
+        "en": "Periodicity",
+        "zh": "周期性"
+      },
+      {
+        "en": "Telescoping sums",
+        "zh": "裂项求和"
+      }
+    ]
+  },
+  "step-2025-p2-q5": {
+    "summary": "All integrals below run from $0$ to $\\infty$ and may be assumed to converge. Set $I(p)=\\int_0^\\infty(1+x^p)^{-1/2}\\,dx$ and $J(r,s,p)=\\int_0^\\infty(x^r-1)[x^s(1+x^p)]^{-1/2}\\,dx$. Prove $J(1/2,1,3)=0$ using $x=1/u$, and $I(3)=2I(6)$ using $x=1/u^2$. For fixed $p,s$, find an exponent $r$ by matching the integral with its reciprocal substitution so that $J(r,s,p)=0$. Given any $k>0$, construct $p,q$ satisfying $I(p)=kI(q)$.",
+    "summaryZh": "记 $I(p)=\\int_0^\\infty(1+x^p)^{-1/2}\\,dx$，$J(r,s,p)=\\int_0^\\infty(x^r-1)[x^s(1+x^p)]^{-1/2}\\,dx$，可假设所讨论的积分收敛。用 $x=1/u$ 证明 $J(1/2,1,3)=0$，再用 $x=1/u^2$ 证明 $I(3)=2I(6)$。固定 $p,s$，通过比较倒数代换前后的积分求出一个使 $J(r,s,p)=0$ 的指数 $r$。对任意给定的 $k>0$，构造满足 $I(p)=kI(q)$ 的 $p,q$。",
+    "answer": "The reciprocal substitution gives $r=s+p/2-2$. One choice for the last part is $p=2+2/k$ and $q=2+2k$.",
+    "answerZh": "倒数代换给出 $r=s+p/2-2$。最后一问可取 $p=2+2/k$ 和 $q=2+2k$。",
+    "topics": [
+      {
+        "en": "Integration by substitution",
+        "zh": "积分换元"
+      },
+      {
+        "en": "Improper integrals",
+        "zh": "反常积分"
+      }
+    ]
+  },
+  "step-2025-p2-q6": {
+    "summary": "Let $C(a,r)$ have equation $x^2+(y-a)^2=r^2$ and let $P$ be $x^2=2ky$ with $k>0$. If $C$ is tangent to $P$ at two distinct points, derive $r^2=k(2a-k)$. Prove the converse when $a>k$. If both $y=c+x$ and $y=c-x$ touch $C$, find $r^2$ and their points of contact. Now suppose two circles $C(a_1,r_1),C(a_2,r_2)$ with distinct centres and radii each meet both tangency requirements. Prove $a_1+a_2=2c+4k$ and $a_1^2+a_2^2=2c^2+16kc+12k^2$. The four contacts with the lines lie on $C(d,p)$. Find $d,p^2$, and prove that $C(d,p)$ also touches $P$ twice.",
+    "summaryZh": "设圆 $C(a,r)$ 为 $x^2+(y-a)^2=r^2$，抛物线 $P$ 为 $x^2=2ky$，其中 $k>0$。若圆和抛物线有两个不同的切点，导出 $r^2=k(2a-k)$，并在 $a>k$ 时证明其逆命题。若 $y=c+x$ 与 $y=c-x$ 均与 $C$ 相切，求 $r^2$ 及两切点坐标。现有圆心和半径分别不同的两个圆 $C(a_1,r_1),C(a_2,r_2)$，两圆均同时满足上述两种相切条件。证明 $a_1+a_2=2c+4k$ 及 $a_1^2+a_2^2=2c^2+16kc+12k^2$。四个直线切点同在圆 $C(d,p)$ 上，求 $d,p^2$，并证明这个圆也与 $P$ 相切于两点。",
+    "answer": "The line contacts are $(\\pm(a-c)/2,(a+c)/2)$ and $r^2=(a-c)^2/2$. For their common circle, $d=c+2k$ and $p^2=k(2c+3k)=k(2d-k)$.",
+    "answerZh": "直线切点为 $(\\pm(a-c)/2,(a+c)/2)$，且 $r^2=(a-c)^2/2$。四个切点所在圆满足 $d=c+2k$、$p^2=k(2c+3k)=k(2d-k)$。",
+    "topics": [
+      {
+        "en": "Tangency",
+        "zh": "相切条件"
+      },
+      {
+        "en": "Coordinate geometry",
+        "zh": "解析几何"
+      },
+      {
+        "en": "Vieta’s formulas",
+        "zh": "韦达定理"
+      }
+    ]
+  },
+  "step-2025-p2-q7": {
+    "summary": "A particle moves on a line with $x(0)=a>0$ and $x''(t)=2x(t)x'(t)$. Solve the initial-value problem and describe the forward motion for each of the three initial speeds with sign: (i) $x'(0)=a^2$, (ii) $x'(0)=a^2+p^2$ with $p>0$, (iii) $x'(0)=a^2-q^2$ with $q>0$. In the last case distinguish every possible order of $a$ and $q$. Include limiting positions or finite escape times as appropriate.",
+    "summaryZh": "一质点沿直线运动，$x(0)=a>0$，并满足 $x''(t)=2x(t)x'(t)$。对三种初速度分别求 $x(t)$ 并描述从 $t=0$ 开始的运动：(i) $x'(0)=a^2$；(ii) $x'(0)=a^2+p^2$，$p>0$；(iii) $x'(0)=a^2-q^2$，$q>0$。第三种须分清 $a$ 与 $q$ 的各种大小关系，并说明极限位置或逃逸至无穷远的时刻。",
+    "answer": "(i) $x=a/(1-at)$, with escape time $1/a$. (ii) $x=p\\tan(pt+\\arctan(a/p))$, with escape time $(\\pi/2-\\arctan(a/p))/p$. (iii) Put $K=(a-q)/(a+q)$. Then $x=q(1+Ke^{2qt})/(1-Ke^{2qt})$. If $a>q$ the particle escapes to the right at $\\ln(1/K)/(2q)$, if $a=q$ it is stationary, and if $a<q$ it decreases to $-q$ as $t\\to\\infty$.",
+    "answerZh": "(i) $x=a/(1-at)$，在 $t=1/a$ 时向右逃逸。(ii) $x=p\\tan(pt+\\arctan(a/p))$，逃逸时刻为 $(\\pi/2-\\arctan(a/p))/p$。(iii) 记 $K=(a-q)/(a+q)$，则 $x=q(1+Ke^{2qt})/(1-Ke^{2qt})$。若 $a>q$，在 $t=\\ln(1/K)/(2q)$ 时向右逃逸；若 $a=q$，保持静止；若 $a<q$，随 $t\\to\\infty$ 单调下降并趋近 $-q$。",
+    "topics": [
+      {
+        "en": "Separable differential equations",
+        "zh": "可分离变量微分方程"
+      },
+      {
+        "en": "Equilibrium solutions",
+        "zh": "平衡解"
+      },
+      {
+        "en": "Particle motion",
+        "zh": "质点运动"
+      }
+    ]
+  },
+  "step-2025-p2-q8": {
+    "summary": "Call a partition balanced if the two parts have equal sums and equal sums of squares. Split $\\{1,\\ldots,8\\}$ into two balanced groups of four. For lists $(a_j),(b_j)$ of the same finite length, suppose their sums and square sums agree. Prove for all real $c$ that $\\sum_j[a_j^3+(c+b_j)^3]=\\sum_j[b_j^3+(c+a_j)^3]$. Then partition $\\{1,\\ldots,16\\}$ into two groups of eight with matching sums of powers $1,2,3$. Finally, you are given the balanced partition $\\{1,3,4,5,9,11\\}$ and $\\{2,6,7,8,10\\}$ of $\\{1,\\ldots,11\\}$. For any positive integer $n$, split the twelve squares $n^2,(n+1)^2,\\ldots,(n+11)^2$ into two groups of equal sum. Justify your constructions.",
+    "summaryZh": "若一个集合的两个互补子集的元素和与平方和分别相等，称此划分为平衡划分。先把 $\\{1,\\ldots,8\\}$ 平衡地分为两组，每组四个数。设等长有限数列 $(a_j),(b_j)$ 的元素和与平方和分别相等，证明对所有实数 $c$ 有 $\\sum_j[a_j^3+(c+b_j)^3]=\\sum_j[b_j^3+(c+a_j)^3]$。再将 $\\{1,\\ldots,16\\}$ 分成各含八个数的两组，使一次、二次及三次幂之和逐一相等。已知 $\\{1,3,4,5,9,11\\}$ 和 $\\{2,6,7,8,10\\}$ 给出了 $\\{1,\\ldots,11\\}$ 的平衡划分，试对任意正整数 $n$ 把 $n^2,(n+1)^2,\\ldots,(n+11)^2$ 分成两组，使组内平方数之和相等。说明构造理由。",
+    "answer": "One first group is $\\{1,4,6,7\\}$, with its complement as the second. For sixteen numbers choose $\\{1,4,6,7,10,11,13,16\\}$ and its complement. For the squares choose offsets $\\{1,3,4,5,9,11\\}$ and $\\{0,2,6,7,8,10\\}$; each group sums to $6n^2+66n+253$.",
+    "answerZh": "八个数可选 $\\{1,4,6,7\\}$ 与其补集；十六个数可选 $\\{1,4,6,7,10,11,13,16\\}$ 与其补集。最后对 $(n+j)^2$，把偏移量 $j$ 分为 $\\{1,3,4,5,9,11\\}$ 与 $\\{0,2,6,7,8,10\\}$，两组平方数之和均为 $6n^2+66n+253$。",
+    "topics": [
+      {
+        "en": "Set partitions",
+        "zh": "集合划分"
+      },
+      {
+        "en": "Binomial expansion",
+        "zh": "二项式展开"
+      },
+      {
+        "en": "Sums of powers",
+        "zh": "幂和"
+      }
+    ]
+  },
+  "step-2025-p2-q9": {
+    "summary": "Two identical small spheres hang on separate light inextensible strings of length $r$. Their supports are level and $r\\sqrt2$ apart. Launch them horizontally toward one another from the lowest points, each at speed $u$, so they collide with coefficient of restitution $e$. Write $v$ for the speed just before impact and $g$ for gravity. Find the horizontal and vertical components just afterwards and prove $v^2=u^2-gr(2-\\sqrt2)$. Measuring $t$ from impact, derive $(r-evt)^2+(-r+vt-gt^2/\\sqrt2)^2=2r^2$ when the strings first become taut again. Set $z=vt/r$, $c=\\sqrt2 v^2/(rg)$ and $w=z/c$. Show that $t>0$ satisfies $w^3-2w^2+(2/c+1+e^2)w-2(1+e)/c=0$. If this cubic has a nonzero triple root, determine $e,v^2$, explain why no energy is lost as the strings tighten, and find the squared speed $U^2$ when the spheres next pass through the lowest points.",
+    "summaryZh": "两相同小球各由长 $r$ 的轻质不可伸长细绳悬挂。两悬点等高、相距 $r\\sqrt2$。两球同时从最低点以水平速率 $u$ 相向出发并碰撞，恢复系数为 $e$。设碰前速率为 $v$，重力加速度为 $g$。求碰后瞬间速度的水平和竖直分量，证明 $v^2=u^2-gr(2-\\sqrt2)$。令 $t$ 从碰撞时算起，导出细绳首次重新绷紧时满足 $(r-evt)^2+(-r+vt-gt^2/\\sqrt2)^2=2r^2$。令 $z=vt/r$、$c=\\sqrt2 v^2/(rg)$、$w=z/c$，证明正时间解满足 $w^3-2w^2+(2/c+1+e^2)w-2(1+e)/c=0$。若三次方程有一个非零三重根，求 $e,v^2$，说明绳绷紧时为何没有能量损失，并求球再次经过最低点时速率的平方 $U^2$。",
+    "answer": "The particles separate horizontally at individual speed $ev/\\sqrt2$ and both rise at $v/\\sqrt2$. The triple root gives $w=2/3$, $e=1/3$ and $v^2=9rg/\\sqrt2$. At tightening the radial speed vanishes, and $U^2=(2+3\\sqrt2/2)rg$.",
+    "answerZh": "碰后两球各以 $ev/\\sqrt2$ 的水平速率背向运动，并以 $v/\\sqrt2$ 的竖直速度上升。三重根给出 $w=2/3$、$e=1/3$、$v^2=9rg/\\sqrt2$。绳绷紧时径向速度为零；回到最低点时 $U^2=(2+3\\sqrt2/2)rg$。",
+    "topics": [
+      {
+        "en": "Restitution",
+        "zh": "恢复系数"
+      },
+      {
+        "en": "Projectile motion",
+        "zh": "抛体运动"
+      },
+      {
+        "en": "Conservation of energy",
+        "zh": "能量守恒"
+      }
+    ]
+  },
+  "step-2025-p2-q10": {
+    "summary": "In a vertical plane let $A,M,B$ be collinear on rough horizontal ground, with $AM=MB=a$. A uniform rod $MP$ of length $a$ and mass $m$ leans towards $B$ with $\\angle PMB=2\\theta$, $0<\\theta<45^\\circ$. Taut elastic strings $PA,PB$ have the same natural length $\\ell$ and modulus $\\lambda$. In equilibrium prove $\\angle APB=90^\\circ$. Express the strings’ combined force as one force parallel to $MP$ and one along the angle bisector at $P$, giving both magnitudes. Use equilibrium to derive $\\cos\\theta+\\sin\\theta=2\\lambda/(mg)$ and the resulting strict bounds on $\\lambda$. If the normal reaction and friction at $M$ have magnitudes $N,F$, respectively, prove $N-F\\tan(2\\theta)=mg/2$.",
+    "summaryZh": "在同一竖直平面内，粗糙水平地面上的 $A,M,B$ 依次共线，$AM=MB=a$。长 $a$、质量 $m$ 的均匀杆 $MP$ 向 $B$ 倾斜，$\\angle PMB=2\\theta$，$0<\\theta<45^\\circ$。绷紧的弹性绳 $PA,PB$ 原长均为 $\\ell$，弹性模量均为 $\\lambda$。系统平衡时证明 $\\angle APB=90^\\circ$。把两绳的合力表示成一个平行于 $MP$ 的力和一个沿 $P$ 处角平分线的力，求各自的大小。从平衡条件导出 $\\cos\\theta+\\sin\\theta=2\\lambda/(mg)$，并给出 $\\lambda$ 的严格上下界。设 $M$ 处支持力和摩擦力大小分别为 $N,F$，证明 $N-F\\tan(2\\theta)=mg/2$。",
+    "answer": "The rod-parallel force is $2a\\lambda/\\ell$ towards $M$. The bisector force has magnitude $\\sqrt2\\lambda$ and points away from $AB$. The bounds are $mg/2<\\lambda<mg/\\sqrt2$. Moments about $P$ give $N-F\\tan(2\\theta)=mg/2$.",
+    "answerZh": "平行于杆的力大小为 $2a\\lambda/\\ell$，指向 $M$；沿角平分线的力大小为 $\\sqrt2\\lambda$，指向远离 $AB$ 的方向。弹性模量满足 $mg/2<\\lambda<mg/\\sqrt2$。对 $P$ 取力矩可得 $N-F\\tan(2\\theta)=mg/2$。",
+    "topics": [
+      {
+        "en": "Elastic strings",
+        "zh": "弹性绳"
+      },
+      {
+        "en": "Equilibrium and moments",
+        "zh": "平衡与力矩"
+      },
+      {
+        "en": "Force resolution",
+        "zh": "力的分解"
+      }
+    ]
+  },
+  "step-2025-p2-q11": {
+    "summary": "Start by deriving $\\sum_{r=1}^{\\infty}rx^{r-1}=(1-x)^{-2}$ for $|x|<1$. In each of two games, roll a fair die numbered $1$ through $2k$ repeatedly until its top number first appears ($k$ is a positive integer). A winner receives £1 per roll, including the last; other players receive zero. Ali wins exactly when all the rolls are even. Find his win probability and expected payout. Simplify $\\sum_{j=0}^n(j+1)\\binom nj x^j$ for a positive integer $n$. Zen’s winning condition is that the entire rolled sequence is strictly increasing. Find her expected payout. Use $(1+1/n)^n\\to e$ to explain why her advantage in expected payout for large $k$ is a little over 35%.",
+    "summaryZh": "先证明 $|x|<1$ 时 $\\sum_{r=1}^{\\infty}rx^{r-1}=(1-x)^{-2}$。两种游戏都使用点数为 $1$ 到 $2k$ 的公平骰子（$k$ 为正整数），反复掷骰，直至首次掷出最大点数。获胜时每次掷骰计一英镑，最后一次也计入；失败则收入为零。Ali 的获胜条件是全部点数都是偶数，求其胜率和期望收入。对正整数 $n$ 化简 $\\sum_{j=0}^n(j+1)\\binom nj x^j$。Zen 的获胜条件是点数序列严格递增，求其期望收入。用 $(1+1/n)^n\\to e$ 说明当 $k$ 很大时，她的期望收入比 Ali 高出略多于 35%。",
+    "answer": "Ali wins with probability $1/(k+1)$ and expects $2k/(k+1)^2$ pounds. The polynomial is $(1+x)^{n-1}[1+(n+1)x]$. Zen expects $(1+1/(2k))^{2k-2}/k$ pounds. The limiting ratio is $e/2$, an increase of approximately $35.9\\%$.",
+    "answerZh": "Ali 的胜率为 $1/(k+1)$，期望收入为 $2k/(k+1)^2$ 英镑。多项式化简为 $(1+x)^{n-1}[1+(n+1)x]$。Zen 的期望收入为 $(1+1/(2k))^{2k-2}/k$ 英镑。两者之比趋于 $e/2$，增幅约为 $35.9\\%$。",
+    "topics": [
+      {
+        "en": "Geometric series",
+        "zh": "几何级数"
+      },
+      {
+        "en": "Binomial theorem",
+        "zh": "二项式定理"
+      },
+      {
+        "en": "Expected value",
+        "zh": "数学期望"
+      }
+    ]
+  },
+  "step-2025-p2-q12": {
+    "summary": "Let $X$ have a Poisson distribution with mean $\\lambda>0$, and put $p_r=P(X=r)$ and $d_r=p_r-p_{r-1}$ for $r\\ge1$. Assume neither $\\lambda$ nor $T=\\lambda+1/2+\\sqrt{\\lambda+1/4}$ is an integer. Use $d_r$ to show there is a unique mode $m$ with $\\lambda-1<m<\\lambda$. Prove the smallest $d_r$ occurs at the integer $k$ satisfying $k<T<k+1$. Determine when $d_1$ is the strict maximum among the differences. Sketch the eight discrete probabilities $p_0,\\ldots,p_7$ for $\\lambda=3.36$.",
+    "summaryZh": "设 $X$ 服从均值为 $\\lambda>0$ 的泊松分布，记 $p_r=P(X=r)$，对 $r\\ge1$ 记 $d_r=p_r-p_{r-1}$。假设 $\\lambda$ 和 $T=\\lambda+1/2+\\sqrt{\\lambda+1/4}$ 均不是整数。用 $d_r$ 证明唯一众数 $m$ 满足 $\\lambda-1<m<\\lambda$。证明最小的一阶差分为 $d_k$，其中 $k<T<k+1$。求 $d_1$ 成为严格最大差分的条件。当 $\\lambda=3.36$ 时，画出 $p_0,\\ldots,p_7$ 这八个离散概率点。",
+    "answer": "$m=\\lfloor\\lambda\\rfloor$ and $k=\\lfloor T\\rfloor$. The strict maximum is $d_1$ precisely for $1<\\lambda<2+\\sqrt2$; at the upper endpoint $d_1=d_2$. For $\\lambda=3.36$ the probabilities are approximately $0.035,0.117,0.196,0.220,0.184,0.124,0.069,0.033$. In particular, $p_4$ rounds to $0.184$ to three decimal places.",
+    "answerZh": "$m=\\lfloor\\lambda\\rfloor$，$k=\\lfloor T\\rfloor$。$d_1$ 严格最大当且仅当 $1<\\lambda<2+\\sqrt2$，在上端点有 $d_1=d_2$。当 $\\lambda=3.36$ 时，八个概率依次约为 $0.035,0.117,0.196,0.220,0.184,0.124,0.069,0.033$。其中 $p_4$ 保留三位小数为 $0.184$。",
+    "topics": [
+      {
+        "en": "Poisson distribution",
+        "zh": "泊松分布"
+      },
+      {
+        "en": "Finite differences",
+        "zh": "有限差分"
+      },
+      {
+        "en": "Discrete mode",
+        "zh": "离散分布众数"
+      }
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "imo-1960-q1": {
+    "summary": "For a three-digit decimal integer $N$, its digit-square sum is denoted by $S$. Find all $N$ satisfying $N=11S$.",
+    "summaryZh": "设 $S$ 为一个十进制三位数 $N$ 的三个数字的平方和。求所有满足 $N=11S$ 的三位数。",
+    "answer": "$550$ and $803$.",
+    "answerZh": "$550$ 和 $803$。",
+    "methods": [
+      {
+        "title": "Use the divisibility-by-eleven digit relation",
+        "titleZh": "利用十一的整除判别",
+        "topics": [
+          {
+            "en": "Digit arithmetic",
+            "zh": "数位运算"
+          },
+          {
+            "en": "Quadratic discriminant",
+            "zh": "二次方程判别式"
+          }
+        ],
+        "steps": [
+          "Let the digits be $a,b,c$, in that order. Since $11\\mid N$, $a-b+c$ is $0$ or $11$. If $b=a+c$, then $N/11=10a+c$. The square-sum equation becomes $2c^2+(2a-1)c+2a^2-10a=0$. Its discriminant is $-12a^2+76a+1$, whose values for $a=1,\\ldots,9$ are $65,105,121,113,81,25,-55,-159,-287$.",
+          "Only $a=3,5,6$ give squares. Substitution gives no nonnegative integral $c$ except $a=5,c=0$, hence $b=5$. If $b=a+c-11$, the equation becomes $2c^2+(2a-23)c+2a^2-32a+131=0$. Its discriminants in order are $-367,-239,-135,-55,1,33,41,25,-15$. Only $a=5,8$ need testing. For $a=5$ the sole digit root $c=3$ makes $b$ negative. For $a=8$ the digit root $c=3$ gives $b=0$. Finally $550=11(25+25)$ and $803=11(64+9)$."
+        ],
+        "stepsZh": [
+          "按从高到低记三个数字为 $a,b,c$。由于 $11\\mid N$，故 $a-b+c$ 只能是 $0$ 或 $11$。当 $b=a+c$ 时，$N/11=10a+c$，平方和条件化为 $2c^2+(2a-1)c+2a^2-10a=0$。其判别式为 $-12a^2+76a+1$，对 $a=1,\\ldots,9$ 依次为 $65,105,121,113,81,25,-55,-159,-287$。",
+          "仅 $a=3,5,6$ 给出平方数。逐一代回，唯一的非负整数根来自 $a=5,c=0$，从而 $b=5$。当 $b=a+c-11$ 时，方程为 $2c^2+(2a-23)c+2a^2-32a+131=0$，判别式依次为 $-367,-239,-135,-55,1,33,41,25,-15$。只需验算 $a=5,8$。当 $a=5$ 时唯一的数字根 $c=3$ 会令 $b$ 为负数；当 $a=8$ 时，数字根 $c=3$ 给出 $b=0$。最后直接检验 $550=11(25+25)$，$803=11(64+9)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1"
+  },
+  "imo-1960-q2": {
+    "summary": "Find the real solution set of $\\left(2x/(1-\\sqrt{1+2x})\\right)^2<2x+9$.",
+    "summaryZh": "求不等式 $\\left(2x/(1-\\sqrt{1+2x})\\right)^2<2x+9$ 的实数解集。",
+    "answer": "$[-1/2,0)\\cup(0,45/8)$.",
+    "answerZh": "$[-1/2,0)\\cup(0,45/8)$。",
+    "methods": [
+      {
+        "title": "Factor in the square-root variable",
+        "titleZh": "以根式为新变量并约分",
+        "topics": [
+          {
+            "en": "Substitution",
+            "zh": "换元"
+          },
+          {
+            "en": "Domain of a rational expression",
+            "zh": "分式的定义域"
+          }
+        ],
+        "steps": [
+          "Set $u=\\sqrt{1+2x}$. Its allowed values are $u\\ge0$, $u\\ne1$ because the original denominator cannot vanish. The substitution $2x=u^2-1$ gives $2x/(1-u)=-(u+1)$.",
+          "The inequality is $(u+1)^2<u^2+8$, equivalent to $u<7/2$. Since $x=(u^2-1)/2$ increases on $u\\ge0$, this gives $-1/2\\le x<45/8$, excluding $0$. The endpoint $-1/2$ is allowed by the original denominator."
+        ],
+        "stepsZh": [
+          "令 $u=\\sqrt{1+2x}$，则 $u\\ge0$，并且因原式分母不能为零而有 $u\\ne1$。代入 $2x=u^2-1$ 后，$2x/(1-u)=-(u+1)$。",
+          "原不等式化为 $(u+1)^2<u^2+8$，即 $u<7/2$。因 $x=(u^2-1)/2$ 在 $u\\ge0$ 上递增，得 $-1/2\\le x<45/8$，其中须除去 $0$。左端点 $-1/2$ 使原分母非零，可以取到。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1"
+  },
+  "imo-1960-q3": {
+    "summary": "The hypotenuse of a right triangle has length $a$, and the altitude from its right-angle vertex $A$ has length $h$. Divide the hypotenuse into an odd number $n\\ge3$ of equal intervals. Find the tangent of the angle $\\alpha$ at $A$ subtended by the middle interval.",
+    "summaryZh": "直角三角形的斜边长为 $a$，直角顶点 $A$ 到斜边的高为 $h$。将斜边分为奇数个等长区间，区间数为 $n\\ge3$。最中间一段对 $A$ 所张的角记为 $\\alpha$，求 $\\tan\\alpha$。",
+    "answer": "$\\tan\\alpha=4nh/((n^2-1)a)$.",
+    "answerZh": "$\\tan\\alpha=4nh/((n^2-1)a)$。",
+    "methods": [
+      {
+        "title": "Take the dot product and area of the two rays",
+        "titleZh": "用两条边的点积和面积求正切",
+        "topics": [
+          {
+            "en": "Dot product",
+            "zh": "向量点积"
+          },
+          {
+            "en": "Area of a triangle",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "Use the midpoint of the hypotenuse as origin, with the hypotenuse horizontal. Write $A=(u,h)$ and $s=a/(2n)$. The middle endpoints are $(-s,0)$ and $(s,0)$. The circumradius is $a/2$, so $u^2+h^2=a^2/4$.",
+          "The dot product of the two vectors from $A$ is $u^2+h^2-s^2=a^2/4-s^2>0$, while the absolute determinant is $2sh$ (base times altitude). Dividing the second by the first yields the tangent of the acute angle, namely $4nh/((n^2-1)a)$. If one formally takes $n=1$, the angle is right and its tangent is undefined."
+        ],
+        "stepsZh": [
+          "以斜边中点为原点，斜边为横轴，设 $A=(u,h)$，且 $s=a/(2n)$。中间一段的端点为 $(-s,0),(s,0)$。外接圆半径等于 $a/2$，故 $u^2+h^2=a^2/4$。",
+          "从 $A$ 指向两端点的向量点积为 $u^2+h^2-s^2=a^2/4-s^2>0$，行列式绝对值为底乘高 $2sh$。后者除以前者即得锐角的正切 $4nh/((n^2-1)a)$。若形式上令 $n=1$，则该角为直角，不存在正切值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1"
+  },
+  "imo-1960-q4": {
+    "summary": "Given positive lengths $h_a,h_b,m_a$, construct all triangles $ABC$ in which the altitudes from $A,B$ have lengths $h_a,h_b$, and the median from $A$ has length $m_a$.",
+    "summaryZh": "给定三个正长度 $h_a,h_b,m_a$。尺规作出所有三角形 $ABC$，使顶点 $A,B$ 所引的高分别长 $h_a,h_b$，而顶点 $A$ 所引中线长 $m_a$。",
+    "answer": "Construct $A$ from the median and first altitude, then intersect the base line with the locus $AC/MC=2h_a/h_b$ to find $C$; reflect across $M$ to obtain $B$.",
+    "answerZh": "先由中线和第一条高作出 $A$，再用比值轨迹 $AC/MC=2h_a/h_b$ 与底边所在直线相交确定 $C$，将 $C$ 关于 $M$ 中心对称即可得 $B$。",
+    "methods": [
+      {
+        "title": "Construct an Apollonius locus",
+        "titleZh": "构造阿波罗尼斯圆",
+        "topics": [
+          {
+            "en": "Geometric constructions",
+            "zh": "尺规作图"
+          },
+          {
+            "en": "Apollonius circle",
+            "zh": "阿波罗尼斯圆"
+          },
+          {
+            "en": "Area of a triangle",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "Choose a base line $l$ and mark $M$ on it. Intersect the circle with centre $M$ and radius $m_a$ with a parallel at distance $h_a$ from $l$; either intersection can be $A$. If there is no intersection there is no triangle. For a prospective $C\\in l$, reflect $C$ in $M$ to make $B$. The triangle then has doubled area $2MC\\,h_a=AC\\,h_b$, requiring $AC/MC=k=2h_a/h_b$.",
+          "For $k=1$ use the perpendicular bisector of $AM$. For $k\\ne1$, divide $AM$ internally and externally in ratio $k$ (distance to $A$ divided by distance to $M$). The circle on these division points as diameter is the locus $XA/XM=k$: indeed the internal and external angle bisectors of $\\angle AXM$ are perpendicular, and the converse follows from the Apollonius circle equation. Intersect this locus with $l$ to obtain every $C$, then construct $B$ as above. Since $A\\notin l$, $M$ never belongs to the locus and the triangles are nondegenerate. The area identity proves that each candidate has the specified $h_b$; when the loci do not meet, no solution exists."
+        ],
+        "stepsZh": [
+          "任取底边所在直线 $l$ 和其上一点 $M$。以 $M$ 为圆心、$m_a$ 为半径作圆，并作距 $l$ 为 $h_a$ 的平行线；其交点均可作为 $A$。若无交点，则无解。若 $C\\in l$，将其关于 $M$ 中心对称得到 $B$，则三角形面积的两倍应为 $2MC\\,h_a=AC\\,h_b$，故须有 $AC/MC=k=2h_a/h_b$。",
+          "当 $k=1$ 时，取 $AM$ 的垂直平分线。当 $k\\ne1$ 时，分别内分和外分 $AM$，使分点至 $A,M$ 的距离之比都为 $k$。由阿波罗尼斯圆定理，以这两分点为直径端点的圆就是满足 $XA/XM=k$ 的点 $X$ 的轨迹，亦可由内、外角平分线互相垂直得到。轨迹与 $l$ 的每个交点都给出一个 $C$，再如上构造 $B$。因 $A\\notin l$，$M$ 不会是交点，故三角形非退化。面积等式保证第二条高确为 $h_b$。若轨迹与 $l$ 不相交，则没有解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1"
+  },
+  "imo-1960-q5": {
+    "summary": "In a cube of edge $s$, let $X$ run along one diagonal of the top face and $Y$ independently along the perpendicular-direction diagonal of the bottom face (the diagonals have perpendicular horizontal projections). Describe the entire loci of (i) the midpoint of $XY$ and (ii) the point $Z$ on $XY$ with $ZY=2XZ$.",
+    "summaryZh": "正方体棱长为 $s$。点 $X$ 沿上底面的一条对角线移动，点 $Y$ 独立地沿下底面另一方向的对角线移动，两条对角线的水平投影互相垂直。求 $XY$ 中点的轨迹，并求线段上满足 $ZY=2XZ$ 的点 $Z$ 的轨迹。",
+    "answer": "Including the interior and boundary: a horizontal square of side $s/\\sqrt2$ halfway up; a horizontal rectangle of sides $2s\\sqrt2/3$ and $s\\sqrt2/3$ at height $2s/3$ above the bottom. Both are centred on the central vertical axis.",
+    "answerZh": "轨迹均含内部及边界：第一问为高度 $s/2$、边长 $s/\\sqrt2$ 的水平正方形；第二问为高度 $2s/3$、边长 $2s\\sqrt2/3,s\\sqrt2/3$ 的水平矩形，二者中心均在正方体的竖直中轴上。",
+    "methods": [
+      {
+        "title": "Parametrise the two diagonal directions independently",
+        "titleZh": "独立参数化两个对角线方向",
+        "topics": [
+          {
+            "en": "Affine combinations",
+            "zh": "仿射组合"
+          },
+          {
+            "en": "Loci in space",
+            "zh": "空间轨迹"
+          }
+        ],
+        "steps": [
+          "Use horizontal unit axes parallel to the top and bottom diagonals, with origin at the bottom face centre. Write $X=(u,0,s)$ and $Y=(0,v,0)$. Each parameter independently ranges from $-d/2$ to $d/2$ for $d=s\\sqrt2$.",
+          "The midpoint has coordinates $(u/2,v/2,s/2)$; its two horizontal coordinates thus fill independent intervals of length $d/2$. Likewise $Z=(2X+Y)/3=(2u/3,v/3,2s/3)$, whose horizontal intervals have lengths $2d/3,d/3$. Independence gives every point of each rectangle, including its four corners."
+        ],
+        "stepsZh": [
+          "原点取下底面中心，两条水平单位轴分别平行于上、下底面的给定对角线。于是 $X=(u,0,s),Y=(0,v,0)$。令 $d=s\\sqrt2$，则 $u,v$ 可彼此独立地遍历 $[-d/2,d/2]$。",
+          "中点坐标是 $(u/2,v/2,s/2)$，两个水平坐标各遍历长为 $d/2$ 的区间。第二问中 $Z=(2X+Y)/3=(2u/3,v/3,2s/3)$，对应区间长度为 $2d/3,d/3$。两参数独立，因而矩形内部、四边及顶点全都能取到。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1"
+  },
+  "imo-1960-q6": {
+    "summary": "A sphere is inscribed in a right circular cone. Circumscribe a right circular cylinder about the same sphere using the cone’s base plane as its lower base. For cone and cylinder volumes $V_1,V_2$, prove they cannot be equal, minimise $V_1/V_2$, and construct the cone’s axial vertex angle in the equality case.",
+    "summaryZh": "球内切于直圆锥。再作该球的外切直圆柱，并令圆柱下底与圆锥底面共面。记圆锥、圆柱体积为 $V_1,V_2$。证明两体积不相等，求 $V_1/V_2$ 最小值，并作出取最小值时的圆锥轴截面顶角。",
+    "answer": "The minimum is $4/3$, attained when the sine of half the vertex angle equals $1/3$. In particular $V_1>V_2$.",
+    "answerZh": "最小体积比为 $4/3$，此时半顶角的正弦为 $1/3$。因此恒有 $V_1>V_2$。",
+    "methods": [
+      {
+        "title": "A perfect square in the half-angle parameter",
+        "titleZh": "用半角参数配方",
+        "topics": [
+          {
+            "en": "Surface of revolution",
+            "zh": "旋转体"
+          },
+          {
+            "en": "Incircle radius",
+            "zh": "内切圆半径"
+          },
+          {
+            "en": "Completing the square",
+            "zh": "配方"
+          }
+        ],
+        "steps": [
+          "Let the cone have base radius $R$, height $H$, slant length $l$, and sphere radius $r$. Equating the area of its axial triangle with inradius times semiperimeter gives $r=RH/(R+l)$. The cylinder has radius $r$ and height $2r$. With $t=R/l$ (the sine of the half-angle), $r=Ht/(1+t)$ and $R=Ht/\\sqrt{1-t^2}$.",
+          "It follows that $V_1/V_2=R^2H/(6r^3)=(1+t)^2/(6t(1-t))$. Subtracting $4/3$ yields $(1-3t)^2/(6t(1-t))\\ge0$ for $0<t<1$. The bound exceeds $1$ and equality in the bound is equivalent to $t=1/3$.",
+          "Construct a right triangle with a prescribed leg of length $1$ and hypotenuse $3$ using a diameter circle. The angle opposite that leg has sine $1/3$; doubling it gives the requested axial vertex angle."
+        ],
+        "stepsZh": [
+          "设圆锥底半径、高、母线长分别为 $R,H,l$，球半径为 $r$。轴截面三角形的面积等于内切圆半径乘半周长，故 $r=RH/(R+l)$。圆柱半径为 $r$，高为 $2r$。令半顶角的正弦 $t=R/l$，则 $r=Ht/(1+t)$，且 $R=Ht/\\sqrt{1-t^2}$。",
+          "由体积公式，$V_1/V_2=R^2H/(6r^3)=(1+t)^2/(6t(1-t))$。减去 $4/3$ 得 $(1-3t)^2/(6t(1-t))\\ge0$，其中 $0<t<1$。下界大于 $1$，且取到下界当且仅当 $t=1/3$。",
+          "以长 $3$ 的线段为直径作圆，作出一条直角边长为 $1$ 的直角三角形。该边所对锐角的正弦是 $1/3$，将它作成两倍即为所求轴截面顶角。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1"
+  },
+  "imo-1960-q7": {
+    "summary": "An isosceles trapezoid has parallel bases of lengths $a,c>0$ separated by $h>0$. Find and construct all points of its symmetry axis from which each leg is seen at a right angle. Determine the distances to the bases and classify the number of solutions.",
+    "summaryZh": "等腰梯形的两底长为 $a,c>0$，高为 $h>0$。求并作出对称轴上使两条腰所张角均为直角的所有点，给出点到两底的距离及解的个数。",
+    "answer": "If $h^2>ac$ there are two points, with distances from the lower base $(h\\pm\\sqrt{h^2-ac})/2$. For $h^2=ac$ there is one point at height $h/2$; for $h^2<ac$ there are none. Distances to the upper base are the complementary heights.",
+    "answerZh": "当 $h^2>ac$ 时有两点，到下底距离为 $(h\\pm\\sqrt{h^2-ac})/2$。当 $h^2=ac$ 时仅有高为 $h/2$ 的一点；当 $h^2<ac$ 时无解。到上底的距离等于 $h$ 减去相应的下底距离。",
+    "methods": [
+      {
+        "title": "Intersect a diameter circle with the axis",
+        "titleZh": "直径圆与对称轴相交",
+        "topics": [
+          {
+            "en": "Thales’ theorem",
+            "zh": "直径所对的圆周角"
+          },
+          {
+            "en": "Dot product",
+            "zh": "向量点积"
+          }
+        ],
+        "steps": [
+          "Draw the circle having either leg as diameter and intersect it with the symmetry axis. Reflection swaps the two legs and fixes every point on the axis, so this construction tests both right angles at once.",
+          "Take lower and upper right endpoints $(a/2,0)$ and $(c/2,h)$; a point of the axis is $(0,y)$. The vectors to those endpoints are perpendicular precisely when $ac/4+(-y)(h-y)=0$, that is $y^2-hy+ac/4=0$. Its roots and discriminant give the stated cases. Every real root satisfies $0<y<h$ since $a,c>0$, so $y$ and $h-y$ are indeed the ordinary distances to the two bases."
+        ],
+        "stepsZh": [
+          "以任一条腰为直径作圆，与对称轴求交。关于此轴的反射互换两腰并固定轴上的点，因而这一作图同时检验了两个直角。",
+          "取右侧下、上端点为 $(a/2,0),(c/2,h)$，轴上点为 $(0,y)$。指向两端点的向量互相垂直，当且仅当 $ac/4+(-y)(h-y)=0$，即 $y^2-hy+ac/4=0$。求根并讨论判别式便得各种情况。因 $a,c>0$，一切实根均满足 $0<y<h$，故到两底的实际距离分别为 $y,h-y$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=2"
+  }
+}

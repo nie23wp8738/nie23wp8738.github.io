@@ -1,0 +1,27 @@
+{
+  "amc12-1964-q1": {
+    "summary": "Evaluate $\\left[\\log_{10}\\left(5\\log_{10}100\\right)\\right]^2$.",
+    "summaryZh": "求 $\\left[\\log_{10}\\left(5\\log_{10}100\\right)\\right]^2$ 的值。",
+    "answer": "E. $1$.",
+    "answerZh": "E。$1$。",
+    "methods": [
+      {
+        "title": "Evaluate from the innermost logarithm",
+        "titleZh": "从内向外计算",
+        "steps": [
+          "The inner logarithm is $\\log_{10}100=2$. Multiplication by five gives ten, so the outer logarithm is $\\log_{10}10=1$. Its square is one."
+        ],
+        "stepsZh": [
+          "先算内层 $\\log_{10}100=2$。乘以 $5$ 得 $10$，外层对数为 $\\log_{10}10=1$，最后平方仍为 $1$。"
+        ],
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1964/problem/1"
+  }
+}

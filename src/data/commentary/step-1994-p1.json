@@ -1,0 +1,196 @@
+{
+  "step-1994-p1-q1": {
+    "summary": "A rectangular floor of dimensions $2q$ by $2p$, where $q>p>0$, is covered by a hipped roof. Each of the four roof planes rises inwards from one edge at the same angle $\\theta$ to the floor, where $0<\\theta<\\pi/2$. Find the ridge length, the enclosed attic volume and the area of all four roof faces; explain why the first answer is independent of pitch.",
+    "summaryZh": "长、宽为 $2q,2p$（$q>p>0$）的矩形地面上盖有四坡屋顶。四个斜平面分别从地面的四条边以相同倾角 $\\theta$ 向内升高，$0<\\theta<\\pi/2$。求屋脊长度、阁楼容积和四块屋面总面积，并说明屋脊长为何与坡度无关。",
+    "answer": "Ridge $2(q-p)$; volume $\\frac23p^2(3q-p)\\tan\\theta$; roof area $4pq\\sec\\theta$.",
+    "answerZh": "屋脊长 $2(q-p)$，容积为 $\\frac23p^2(3q-p)\\tan\\theta$，屋面总面积是 $4pq\\sec\\theta$。",
+    "methods": [
+      {
+        "title": "Integrate horizontal sections",
+        "titleZh": "用水平截面积积分",
+        "topics": [
+          {
+            "en": "Cross-sections",
+            "zh": "截面"
+          },
+          {
+            "en": "Volumes by integration",
+            "zh": "积分求体积"
+          },
+          {
+            "en": "Orthogonal projection",
+            "zh": "正射影"
+          }
+        ],
+        "steps": [
+          "At height $z$ the four roof planes have advanced a horizontal distance $t=z\\cot\\theta$ from their respective edges. The section is consequently a rectangle with sides $2(p-t)$ and $2(q-t)$. The shorter side first vanishes at $t=p$, giving height $p\\tan\\theta$ and a remaining segment of length $2(q-p)$. Pitch changes height but not this inset distance.",
+          "Since $dz=\\tan\\theta\\,dt$, the volume is $4\\tan\\theta\\int_0^p(p-t)(q-t)\\,dt=\\frac23p^2(3q-p)\\tan\\theta$. Each roof face projects onto the floor with area factor $\\cos\\theta$. The four projections tile the whole floor, so the surface area is $4pq/\\cos\\theta$."
+        ],
+        "stepsZh": [
+          "在高度 $z$ 处，每个斜平面都从相应的地面边水平内缩 $t=z\\cot\\theta$，故截面长、宽为 $2(q-t),2(p-t)$。当 $t=p$ 时短边首次缩为零，此时高度为 $p\\tan\\theta$，余下的线段长 $2(q-p)$。倾角影响高度，却不改变所需内缩距离。",
+          "由 $dz=\\tan\\theta\\,dt$，体积为 $4\\tan\\theta\\int_0^p(p-t)(q-t)\\,dt=\\frac23p^2(3q-p)\\tan\\theta$。每块屋面投影到地面时，面积乘以 $\\cos\\theta$；四个投影刚好铺满矩形，故总面积为 $4pq/\\cos\\theta$。"
+        ]
+      },
+      {
+        "title": "Split into a prism and two half-pyramids",
+        "titleZh": "分割为棱柱和两个半棱锥",
+        "topics": [
+          {
+            "en": "Volume decomposition",
+            "zh": "体积分割"
+          },
+          {
+            "en": "Surface area",
+            "zh": "表面积"
+          }
+        ],
+        "steps": [
+          "The midpoint of each short end is horizontally $p$ from a long side at the centreline. A roof point lies on the ridge once it is at least $p$ from either end; hence the ridge runs between the positions $p$ and $2q-p$ along the centreline. Its height is $H=p\\tan\\theta$.",
+          "The portion between the ridge endpoints is a prism of length $2(q-p)$ with triangular section of base $2p$ and height $H$. The two end portions, joined at their straight cut faces, form a square pyramid of base side $2p$ and the same height. Adding gives $2(q-p)pH+4p^2H/3$. Each sloping face has area equal to its floor projection times $\\sec\\theta$, giving the stated area."
+        ],
+        "stepsZh": [
+          "在地面纵向中线上，每一点离长边的距离都是 $p$。当它离两端也都至少有 $p$ 时，其正上方就是屋脊，故屋脊沿纵向从位置 $p$ 延伸到 $2q-p$，高度为 $H=p\\tan\\theta$。",
+          "两脊端之间是长 $2(q-p)$ 的三棱柱，截面三角形底为 $2p$、高为 $H$。两端余下的部分沿竖直切面拼合，恰为底边长 $2p$、高为 $H$ 的正四棱锥。因此总体积为 $2(q-p)pH+4p^2H/3$。每块屋面面积等于地面投影面积乘以 $\\sec\\theta$，相加即得所求总面积。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/node/398"
+  },
+  "step-1994-p1-q3": {
+    "summary": "For a nonnegative integer $n$, determine $S_n=\\sum_{k=0}^n(-1)^k\\binom nk^2$. Give the expression separately for odd and even $n$.",
+    "summaryZh": "对非负整数 $n$，求交错和 $S_n=\\sum_{k=0}^n(-1)^k\\binom nk^2$，分别说明 $n$ 为奇数和偶数时的结果。",
+    "answer": "$S_n=0$ for odd $n$, and $S_{2m}=(-1)^m\\binom{2m}{m}$.",
+    "answerZh": "$n$ 为奇数时 $S_n=0$；$n=2m$ 时 $S_{2m}=(-1)^m\\binom{2m}{m}$。",
+    "methods": [
+      {
+        "title": "Identify one coefficient in two expansions",
+        "titleZh": "比较同一项的系数",
+        "topics": [
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          },
+          {
+            "en": "Coefficient extraction",
+            "zh": "系数提取"
+          }
+        ],
+        "steps": [
+          "The coefficient of $x^n$ in $(1-x)^n(1+x)^n$ is $\\sum_{k=0}^n(-1)^k\\binom nk\\binom n{n-k}=S_n$. But the product is $(1-x^2)^n$, which has no terms of odd degree. In degree $n=2m$, choose the $-x^2$ term from $m$ factors to obtain $(-1)^m\\binom{2m}{m}$."
+        ],
+        "stepsZh": [
+          "在 $(1-x)^n(1+x)^n$ 中，$x^n$ 的系数是 $\\sum_{k=0}^n(-1)^k\\binom nk\\binom n{n-k}=S_n$。另一方面，原乘积等于 $(1-x^2)^n$，不含奇次项。若 $n=2m$，要取到 $x^{2m}$ 须从 $m$ 个因子中取 $-x^2$，所以系数为 $(-1)^m\\binom{2m}{m}$。"
+        ]
+      },
+      {
+        "title": "Cancel marked subsets in pairs",
+        "titleZh": "将带符号的子集配对抵消",
+        "topics": [
+          {
+            "en": "Combinatorial involution",
+            "zh": "组合对合"
+          },
+          {
+            "en": "Signed counting",
+            "zh": "带符号计数"
+          }
+        ],
+        "steps": [
+          "Create $n$ labelled pairs, each with one red and one blue object. Choose $n$ of the $2n$ objects and assign the choice the sign $(-1)^k$ if $k$ red objects were chosen. The sum of the signs is $S_n$.",
+          "Whenever some pair contributes exactly one object, find the first such pair and interchange the chosen colour in it. This reverses the sign and is its own inverse, so all such choices cancel. In a surviving choice every pair contributes either two or zero. This is impossible if $n$ is odd; if $n=2m$, exactly $m$ complete pairs are chosen, each surviving choice has $m$ red objects, and their signed count is $(-1)^m\\binom{2m}{m}$."
+        ],
+        "stepsZh": [
+          "构造 $n$ 对带编号的物品，每对各有一红一蓝。任选 $n$ 件，若其中有 $k$ 件红色物品，就赋予符号 $(-1)^k$。所有符号的和正是 $S_n$。",
+          "若某一对恰有一个成员被选，找出编号最小的这种物品对，改选它的另一种颜色。该操作使符号反转，且重复两次回到原状，因此这类选择全部抵消。剩下的选择中，每对只能全选或全不选。奇数 $n$ 时不可能有这种选择；当 $n=2m$ 时，要全选 $m$ 对，每种选择恰有 $m$ 件红色物品，故带符号总数为 $(-1)^m\\binom{2m}{m}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/node/400"
+  },
+  "step-1994-p1-q7": {
+    "summary": "Split the positive integers in order into blocks of lengths $1,3,5,7,\\ldots$. The first four block sums are $0^3+1^3$, $1^3+2^3$, $2^3+3^3$, $3^3+4^3$. Find and prove the rule for every block, then deduce the sum of the first $N$ positive cubes.",
+    "summaryZh": "将正整数依次分成长为 $1,3,5,7,\\ldots$ 的若干组。前四组的和分别等于 $0^3+1^3,1^3+2^3,2^3+3^3,3^3+4^3$。猜想并证明第 $k$ 组的求和规律，再推出前 $N$ 个正整数的立方和。",
+    "answer": "The $k$th block sums to $(k-1)^3+k^3$; consequently $\\sum_{k=1}^N k^3=[N(N+1)/2]^2$.",
+    "answerZh": "第 $k$ 组的和为 $(k-1)^3+k^3$，从而 $\\sum_{k=1}^N k^3=[N(N+1)/2]^2$。",
+    "methods": [
+      {
+        "title": "Add arithmetic blocks twice",
+        "titleZh": "从两种角度汇总各组",
+        "topics": [
+          {
+            "en": "Arithmetic series",
+            "zh": "等差数列求和"
+          },
+          {
+            "en": "Double counting",
+            "zh": "重复计数"
+          }
+        ],
+        "steps": [
+          "The first $k$ odd block lengths sum to $k^2$ since $j^2-(j-1)^2=2j-1$. Thus block $k$ consists of the integers from $(k-1)^2+1$ through $k^2$. Its $2k-1$ terms have average $k^2-k+1$, giving sum $(2k-1)(k^2-k+1)=(k-1)^3+k^3$.",
+          "The first $N$ blocks together sum to $N^2(N^2+1)/2$. Their cube expressions count every positive cube below $N^3$ twice and count $N^3$ once. If $C_N=\\sum_{k=1}^N k^3$, this yields $2C_N-N^3=N^2(N^2+1)/2$. Solving gives $C_N=N^2(N+1)^2/4$."
+        ],
+        "stepsZh": [
+          "因 $j^2-(j-1)^2=2j-1$，前 $k$ 个奇数的和是 $k^2$。因此第 $k$ 组从 $(k-1)^2+1$ 排到 $k^2$，共 $2k-1$ 项，平均数为 $k^2-k+1$，组和为 $(2k-1)(k^2-k+1)=(k-1)^3+k^3$。",
+          "前 $N$ 组之和又是 $N^2(N^2+1)/2$。把各组和写成立方和，每个小于 $N^3$ 的正立方计两次，$N^3$ 仅计一次。若 $C_N=\\sum_{k=1}^N k^3$，则 $2C_N-N^3=N^2(N^2+1)/2$，解得 $C_N=N^2(N+1)^2/4$。"
+        ]
+      },
+      {
+        "title": "Use differences of triangular numbers",
+        "titleZh": "用三角数作差",
+        "topics": [
+          {
+            "en": "Telescoping sums",
+            "zh": "裂项求和"
+          },
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          }
+        ],
+        "steps": [
+          "Let $T_j=j(j+1)/2$. Since the $k$th block begins just after $(k-1)^2$ and ends at $k^2$, its sum is $T_{k^2}-T_{(k-1)^2}=(2k-1)(k^2-k+1)=(k-1)^3+k^3$.",
+          "For the second claim, $T_j-T_{j-1}=j$ and $T_j+T_{j-1}=j^2$. Multiplying shows $T_j^2-T_{j-1}^2=j^3$. Summing from $1$ through $N$ cancels every intermediate square, leaving $T_N^2$."
+        ],
+        "stepsZh": [
+          "记 $T_j=j(j+1)/2$。第 $k$ 组在 $(k-1)^2$ 之后开始，到 $k^2$ 为止，故组和为 $T_{k^2}-T_{(k-1)^2}=(2k-1)(k^2-k+1)=(k-1)^3+k^3$。",
+          "对立方和，注意 $T_j-T_{j-1}=j$ 且 $T_j+T_{j-1}=j^2$。相乘得到 $T_j^2-T_{j-1}^2=j^3$。从 $1$ 加到 $N$ 后，中间的平方项均抵消，剩下 $T_N^2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/node/404"
+  },
+  "step-1994-p1-q12": {
+    "summary": "An applicant randomly ranks three different colleges from a list of $28$; exactly two, $A$ and $B$, have a particular designation. Compute (i) the chance of a designated first choice, (ii) the chance of listing $A$, (iii) the chance of listing at least one of $A,B$, and the following conditional chances: (iv) listing $B$ given $A$ is first; (v) listing $B$ given $A$ appears; (vi) listing both given the first choice is designated; (vii) listing both given at least one designated college appears anywhere.",
+    "summaryZh": "从 $28$ 所学院中等可能地选出不同的三所并排序，其中仅 $A,B$ 两所有指定属性。求以下概率：（i）第一志愿有该属性；（ii）选中 $A$；（iii）至少选中 $A,B$ 之一。再求条件概率：（iv）已知首选 $A$，还选到 $B$；（v）已知选中 $A$，还选到 $B$；（vi）已知首选有指定属性，两所都被选中；（vii）已知任一位置上至少选中这两所之一，两所都被选中。",
+    "answer": "In order: $1/14$, $3/28$, $13/63$, $2/27$, $2/27$, $2/27$, $1/26$.",
+    "answerZh": "依次为 $1/14,3/28,13/63,2/27,2/27,2/27,1/26$。",
+    "methods": [
+      {
+        "title": "Condition on a specified choice or on an event",
+        "titleZh": "区分指定学院与至少一个事件",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Sampling without replacement",
+            "zh": "无放回抽样"
+          }
+        ],
+        "steps": [
+          "For (i) there are $2$ designated options out of $28$, giving $1/14$. In (ii), by symmetry each college appears with probability $3/28$. For (iii), subtract the chance of choosing only ordinary colleges: $1-\\binom{26}{3}/\\binom{28}{3}=13/63$.",
+          "For (iv) the two open positions contain a uniformly chosen pair from the remaining $27$; the chance of including $B$ is $2/27$. In (v), disregard the order. Among three-element sets already containing $A$, the other two colleges still form a uniform pair from $27$, giving $2/27$. For (vi), condition further on which designated college is first. Both cases reduce to (iv), hence again $2/27$.",
+          "For (vii), the conditioning event includes all three-element sets with one or two designated colleges. There are $2\\binom{26}{2}+26=676$ such sets, and just $26$ with both. Their ratio is $1/26$. This condition does not specify the name or the position of any chosen college."
+        ],
+        "stepsZh": [
+          "（i）首选有 $28$ 种，其中有指定属性的有 $2$ 种，故概率为 $1/14$。（ii）按对称性，每所学院出现在三个位置之一的概率为 $3/28$。（iii）减去三所均为普通学院的概率，得到 $1-\\binom{26}{3}/\\binom{28}{3}=13/63$。",
+          "（iv）余下两个位置从另外 $27$ 所中等可能地选两所，含 $B$ 的概率为 $2/27$。（v）忽略顺序，在已经含有 $A$ 的三元子集中，另外两所仍是从 $27$ 所中等可能地选出的二元子集，故仍为 $2/27$。（vi）再按第一志愿究竟是 $A$ 还是 $B$ 分类，两类都化为（iv），所以还是 $2/27$。",
+          "（vii）给定的仅是三元子集中至少有一所指定学院。含恰好一所或两所指定学院的集合共有 $2\\binom{26}{2}+26=676$ 个，含两所的有 $26$ 个，故概率为 $1/26$。此条件既没有指明学院名称，也没有指明其志愿顺序。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/node/409"
+  }
+}

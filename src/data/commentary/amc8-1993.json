@@ -1,0 +1,27 @@
+{
+  "amc8-1993-q7": {
+    "summary": "Evaluate $3^3 + 3^3 + 3^3$.",
+    "summaryZh": "求 $3^3 + 3^3 + 3^3$ 的值。",
+    "answer": "A. $81$.",
+    "answerZh": "A。$81$。",
+    "methods": [
+      {
+        "title": "Factor the common power",
+        "titleZh": "提出相同的幂",
+        "steps": [
+          "Each summand is $3^3=27$. With three equal summands the result is $3\\cdot3^3=3^4=81$."
+        ],
+        "stepsZh": [
+          "三个加数都等于 $3^3=27$，所以总和是 $3\\cdot3^3=3^4=81$。"
+        ],
+        "topics": [
+          {
+            "en": "Exponent laws",
+            "zh": "指数运算"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1993/problem/7"
+  }
+}

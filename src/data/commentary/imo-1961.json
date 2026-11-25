@@ -1,0 +1,210 @@
+{
+  "imo-1961-q1": {
+    "summary": "For real parameters $a,b$, solve $x+y+z=a$, $x^2+y^2+z^2=b^2$, $xy=z^2$ over the reals. Characterise the parameters for which the three entries are positive and pairwise different.",
+    "summaryZh": "给定实参数 $a,b$，求实数方程组 $x+y+z=a$、$x^2+y^2+z^2=b^2$、$xy=z^2$ 的所有解，并确定使三个分量均为正且两两不同的参数条件。",
+    "answer": "If $a\\ne0$, put $z=(a^2-b^2)/(2a)$ and $D=(a-3z)(a+z)$. For $D\\ge0$ take $x,y=(a-z\\pm\\sqrt D)/2$ in either order; for $D<0$ there is no real solution. If $a=0$, only $b=0$ works, giving the zero triple. Distinct positive entries require and suffice that $a>0$ and $a^2/3<b^2<a^2$.",
+    "answerZh": "若 $a\\ne0$，令 $z=(a^2-b^2)/(2a)$，$D=(a-3z)(a+z)$。当 $D\\ge0$，$x,y$ 为 $(a-z\\pm\\sqrt D)/2$，可交换；当 $D<0$ 时无实解。若 $a=0$，仅 $b=0$ 时有零三元组。三个分量互异且均为正的充要条件是 $a>0$ 且 $a^2/3<b^2<a^2$。",
+    "methods": [
+      {
+        "title": "Recover a pair from its sum and product",
+        "titleZh": "由和与积还原两个根",
+        "topics": [
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Discriminants",
+            "zh": "判别式"
+          }
+        ],
+        "steps": [
+          "Because $xy=z^2$, the sum of squares is $(a-z)^2-2z^2+z^2=a^2-2az$. This determines $z$ when $a\\ne0$. The equation with roots $x,y$ is $u^2-(a-z)u+z^2=0$; its discriminant is $D$. Reversing these identities proves sufficiency. If $a=0$ then $b^2=0$ forces all three variables to vanish.",
+          "For positive unequal $x,y$, $z=\\sqrt{xy}$ lies strictly between them, and $a-z=x+y>2z$, so $0<z<a/3$. Conversely, if $a>0$ and $0<z<a/3$, the quadratic has positive product, positive sum and positive discriminant, so it gives distinct positive roots bracketing $z$. Substituting its formula yields precisely $a^2/3<b^2<a^2$."
+        ],
+        "stepsZh": [
+          "由 $xy=z^2$，平方和可写成 $(a-z)^2-2z^2+z^2=a^2-2az$。当 $a\\ne0$ 时，由此确定 $z$。以 $x,y$ 为根的二次方程为 $u^2-(a-z)u+z^2=0$，其判别式就是 $D$。倒推这些恒等式说明所得根足以构成解。当 $a=0$ 时必有 $b^2=0$，从而平方和为零，三个数都为零。",
+          "若 $x,y$ 为不同的正数，则正几何平均数 $z=\\sqrt{xy}$ 严格介于二者之间，且 $a-z=x+y>2z$，所以 $0<z<a/3$。反过来，若 $a>0$、$0<z<a/3$，则二次方程两根之积、和及判别式都为正，故两根互异且为正，$z$ 又在两根之间。代入 $z$ 的表达式即得 $a^2/3<b^2<a^2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1"
+  },
+  "imo-1961-q2": {
+    "summary": "A triangle has side lengths $a,b,c$ and area $T$. Prove $a^2+b^2+c^2\\ge4\\sqrt3\\,T$ and determine exactly when equality occurs.",
+    "summaryZh": "设三角形三边长为 $a,b,c$、面积为 $T$。证明 $a^2+b^2+c^2\\ge4\\sqrt3\\,T$，并给出等号条件。",
+    "answer": "The inequality always holds, with equality exactly for equilateral triangles.",
+    "answerZh": "不等式恒成立，等号当且仅当三角形为等边三角形。",
+    "methods": [
+      {
+        "title": "Measure displacement from the equilateral vertex",
+        "titleZh": "度量顶点偏离等边位置的距离",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Completing the square",
+            "zh": "配方"
+          }
+        ],
+        "steps": [
+          "Place the endpoints of side $a$ at $(-a/2,0)$ and $(a/2,0)$, and the third vertex at $(u,h)$ with $h>0$. Squaring the two distances and adding gives $b^2+c^2=2u^2+2h^2+a^2/2$, while $T=ah/2$.",
+          "Subtracting the claimed right-hand side gives exactly $2u^2+2(h-\\sqrt3 a/2)^2$. It vanishes only at $u=0$, $h=\\sqrt3 a/2$, which is precisely the equilateral vertex over this base."
+        ],
+        "stepsZh": [
+          "将边 $a$ 的两个端点置于 $(-a/2,0)$、$(a/2,0)$，第三个顶点记为 $(u,h)$，其中 $h>0$。两腰长度平方相加得 $b^2+c^2=2u^2+2h^2+a^2/2$，面积为 $T=ah/2$。",
+          "两边相减后恰好是 $2u^2+2(h-\\sqrt3 a/2)^2$。它为零当且仅当 $u=0,h=\\sqrt3 a/2$，即第三顶点位于给定底边上的等边三角形顶点。"
+        ]
+      },
+      {
+        "title": "Apply the cosine rule at one angle",
+        "titleZh": "在一个角处使用余弦定理",
+        "topics": [
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Trigonometric inequalities",
+            "zh": "三角不等式"
+          }
+        ],
+        "steps": [
+          "Let $C$ lie between sides $a,b$. After inserting $c^2=a^2+b^2-2ab\\cos C$ and $2T=ab\\sin C$, the inequality reduces to $a/b+b/a\\ge\\cos C+\\sqrt3\\sin C$. The left side is at least $2$, and the right side equals $2\\cos(C-\\pi/3)\\le2$. Equality requires $a=b$ and $C=\\pi/3$, which together give an equilateral triangle."
+        ],
+        "stepsZh": [
+          "记 $a,b$ 的夹角为 $C$。代入 $c^2=a^2+b^2-2ab\\cos C$ 和 $2T=ab\\sin C$，原式等价于 $a/b+b/a\\ge\\cos C+\\sqrt3\\sin C$。左边至少为 $2$，右边是 $2\\cos(C-\\pi/3)\\le2$。等号要求 $a=b$ 且 $C=\\pi/3$，即等边三角形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1"
+  },
+  "imo-1961-q3": {
+    "summary": "For each positive integer exponent $n$, find every real angle $x$ satisfying $(\\cos x)^n-(\\sin x)^n=1$.",
+    "summaryZh": "对每个正整数 $n$，求方程 $(\\cos x)^n-(\\sin x)^n=1$ 的所有实数解。",
+    "answer": "For even $n$, $x\\in\\pi\\mathbb Z$. For odd $n$, $x\\equiv0$ or $-\\pi/2\\pmod{2\\pi}$.",
+    "answerZh": "若 $n$ 为偶数，则 $x\\in\\pi\\mathbb Z$；若 $n$ 为奇数，则 $x\\equiv0$ 或 $-\\pi/2\\pmod{2\\pi}$。",
+    "methods": [
+      {
+        "title": "Compare powers with the unit-circle identity",
+        "titleZh": "比较高次幂与单位圆恒等式",
+        "topics": [
+          {
+            "en": "Power inequalities",
+            "zh": "幂的不等式"
+          },
+          {
+            "en": "Unit circle",
+            "zh": "单位圆"
+          }
+        ],
+        "steps": [
+          "If $n$ is even, $\\cos^n x\\le1$ and $\\sin^n x\\ge0$, so equality requires $\\sin x=0$; every such angle works. For $n=1$, squaring $\\cos x-\\sin x=1$ shows $\\cos x\\sin x=0$; checking signs leaves $(\\cos x,\\sin x)=(1,0),(0,-1)$.",
+          "For odd $n\\ge3$, if both coordinates are nonzero then both absolute values are strictly between $0$ and $1$. Hence $\\cos^n x-\\sin^n x\\le|\\cos x|^n+|\\sin x|^n<\\cos^2x+\\sin^2x=1$. The remaining axis points give the same two sign possibilities as for $n=1$."
+        ],
+        "stepsZh": [
+          "若 $n$ 为偶数，则 $\\cos^n x\\le1$ 且 $\\sin^n x\\ge0$，要使差为 $1$ 必须有 $\\sin x=0$，而这些角确实均满足。若 $n=1$，将 $\\cos x-\\sin x=1$ 平方得 $\\cos x\\sin x=0$；检验符号，留下 $(\\cos x,\\sin x)=(1,0),(0,-1)$。",
+          "若奇数 $n\\ge3$，当两个坐标均非零时，其绝对值都严格介于 $0$ 与 $1$ 之间，故 $\\cos^n x-\\sin^n x\\le|\\cos x|^n+|\\sin x|^n<\\cos^2x+\\sin^2x=1$。只需检验坐标轴上的四点，得到与 $n=1$ 时相同的两个解类。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1"
+  },
+  "imo-1961-q4": {
+    "summary": "An interior point $P$ is joined to each vertex $V_i$ of a triangle. Extend $V_iP$ to meet the opposite side at $Q_i$. Prove the smallest of the three ratios $V_iP/PQ_i$ is at most $2$, while the largest is at least $2$.",
+    "summaryZh": "三角形内有一点 $P$。将三条直线 $V_iP$ 从各顶点 $V_i$ 延长，分别与对边交于 $Q_i$。证明三个比值 $V_iP/PQ_i$ 中的最小值不超过 $2$，最大值不小于 $2$。",
+    "answer": "The number $2$ lies between the least and greatest ratios. All three equal $2$ exactly at the centroid.",
+    "answerZh": "$2$ 介于三个比值的最小值与最大值之间；仅当 $P$ 是重心时三者全等于 $2$。",
+    "methods": [
+      {
+        "title": "Read the ratios as reciprocal area fractions",
+        "titleZh": "用子三角形面积占比表示线段比",
+        "topics": [
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          },
+          {
+            "en": "Averaging",
+            "zh": "平均值原理"
+          }
+        ],
+        "steps": [
+          "Let $t_i$ be the area of the triangle with apex $P$ on side opposite $V_i$, divided by the total triangle area. The three positive numbers have sum $1$. Since heights above that side vary linearly along $V_iQ_i$, the shared-base area ratio is $t_i=PQ_i/V_iQ_i$. Thus $V_iP/PQ_i=(1-t_i)/t_i$.",
+          "At least one $t_i$ is at least $1/3$ and one at most $1/3$. The decreasing function $1/t-1$ takes value $2$ at $1/3$, proving both assertions. If all $t_i=1/3$, the barycentric coordinates are equal and $P$ is the centroid; the centroid indeed divides each median two to one."
+        ],
+        "stepsZh": [
+          "令 $t_i$ 为以 $P$ 为顶点、以 $V_i$ 对边为底的子三角形面积占总面积的比例。三个正数之和为 $1$。在 $V_iQ_i$ 上，到该边的高沿直线成比例变化，因此同底三角形的面积比为 $t_i=PQ_i/V_iQ_i$，从而 $V_iP/PQ_i=(1-t_i)/t_i$。",
+          "三个 $t_i$ 中至少一个不小于 $1/3$，至少一个不大于 $1/3$。函数 $1/t-1$ 递减且在 $1/3$ 处等于 $2$，两条结论同时成立。若三个面积比均为 $1/3$，则重心坐标相等，$P$ 是重心；重心确实按二比一分中线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1"
+  },
+  "imo-1961-q5": {
+    "summary": "Given $AC=b$, $AB=c$ and acute angle $\\angle AMB=\\omega$, with $M$ the midpoint of $BC$, construct the triangle. Prove the exact existence condition and describe equality at its lower boundary.",
+    "summaryZh": "已知 $AC=b$、$AB=c$，且 $BC$ 的中点 $M$ 满足锐角 $\\angle AMB=\\omega$。用尺规作三角形，证明其存在的充要条件，并说明下界取等时的形状。",
+    "answer": "A triangle exists exactly when $b\\tan(\\omega/2)\\le c<b$. At the lower endpoint $AM=BM=CM$ and the triangle is right-angled at $A$.",
+    "answerZh": "存在的充要条件为 $b\\tan(\\omega/2)\\le c<b$。取下界时 $AM=BM=CM$，三角形在 $A$ 处为直角。",
+    "methods": [
+      {
+        "title": "Construct the sum and difference of two rays",
+        "titleZh": "构造两条射线上线段的和与差",
+        "topics": [
+          {
+            "en": "Law of cosines",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Geometric constructions",
+            "zh": "尺规作图"
+          }
+        ],
+        "steps": [
+          "Let $u=MA$ and $v=MB=MC$, positive unknown lengths. The cosine rule gives $b^2=u^2+v^2+2uv\\cos\\omega$ and $c^2=u^2+v^2-2uv\\cos\\omega$. Thus $c<b$, and $(u\\pm v)^2=(b^2+c^2)/2\\pm(b^2-c^2)/(2\\cos\\omega)$.",
+          "The expression for $(u-v)^2$ is nonnegative exactly when $c^2(1+\\cos\\omega)\\ge b^2(1-\\cos\\omega)$, that is $c\\ge b\\tan(\\omega/2)$. Conversely, under these bounds take $S$ and $D$ as the nonnegative square roots of the expressions for $(u+v)^2$ and $(u-v)^2$. These lengths are constructible using standard products, quotients and geometric means with any chosen unit. Because $S>D$, the lengths $(S+D)/2,(S-D)/2$ are both positive.",
+          "On two rays meeting at angle $\\omega$, mark $MA=u$, $MB=v$ using these lengths in either order. Reflect $B$ in $M$ to get $C$. The cosine rule verifies the given sides. At the lower endpoint $D=0$ gives $MA=MB=MC$; $BC$ is then a diameter through the circumcentre and $\\angle BAC=90^\\circ$."
+        ],
+        "stepsZh": [
+          "记 $u=MA,v=MB=MC$，二者均为正。余弦定理给出 $b^2=u^2+v^2+2uv\\cos\\omega$ 及 $c^2=u^2+v^2-2uv\\cos\\omega$。因此 $c<b$，且 $(u\\pm v)^2=(b^2+c^2)/2\\pm(b^2-c^2)/(2\\cos\\omega)$。",
+          "其中 $(u-v)^2$ 非负等价于 $c^2(1+\\cos\\omega)\\ge b^2(1-\\cos\\omega)$，亦即 $c\\ge b\\tan(\\omega/2)$。反过来，在所给区间内，取 $(u+v)^2,(u-v)^2$ 表达式的非负平方根 $S,D$。选任意单位长后，利用相似三角形和几何平均数可作出所需乘积、商及平方根。因 $S>D$，所以 $(S+D)/2,(S-D)/2$ 均为正。",
+          "作夹角为 $\\omega$ 的两射线，在其上分别截取 $MA=u,MB=v$，上述两长度可以交换分配。关于 $M$ 对称作 $B$ 的像 $C$，再用余弦定理检验即知两边合题。若下界取等，有 $D=0$，故 $MA=MB=MC$；此时 $BC$ 为直径，从而 $\\angle BAC=90^\\circ$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1"
+  },
+  "imo-1961-q6": {
+    "summary": "Noncollinear points $A,B,C$ all lie on one side of a plane $E$ and their own plane is not parallel to $E$. Independently choose $A^{\\prime},B^{\\prime},C^{\\prime}$ on $E$. Join each point to its primed partner and form the triangle of the three midpoints, discarding collinear midpoint triples. What is the locus of its centroid?",
+    "summaryZh": "不共线的 $A,B,C$ 位于平面 $E$ 同侧，且三点所在平面不平行于 $E$。在 $E$ 上任取 $A^{\\prime},B^{\\prime},C^{\\prime}$，分别与 $A,B,C$ 对应相连。取三线段的中点构成三角形，舍去中点共线的情形。求该三角形重心的轨迹。",
+    "answer": "The entire plane parallel to $E$ at half the signed distance from the centroid of $ABC$ to $E$.",
+    "answerZh": "轨迹是平行于 $E$ 的整个平面，其有向高度等于三角形 $ABC$ 重心有向高度的一半。",
+    "methods": [
+      {
+        "title": "Interchange centroid and midpoint",
+        "titleZh": "交换取重心与取中点的顺序",
+        "topics": [
+          {
+            "en": "Affine geometry",
+            "zh": "仿射几何"
+          },
+          {
+            "en": "Geometric loci",
+            "zh": "轨迹"
+          }
+        ],
+        "steps": [
+          "In vector coordinates the sought centroid is $(A+B+C+A^{\\prime}+B^{\\prime}+C^{\\prime})/6$. Thus it is the midpoint of the centroid $H=(A+B+C)/3$ and the average of the three primed points, which belongs to $E$. All resulting points lie in the specified parallel plane.",
+          "Conversely, for any point $G$ of that plane, $K=2G-H$ lies on $E$. Set all three primed points equal to $K$. The three midpoints are the images of $A,B,C$ under a homothety of ratio $1/2$ about $K$, so they are noncollinear and their centroid is $G$. If distinct primed points are desired, perturb two by opposite small in-plane vectors and keep the third fixed; the centroid is unchanged, and noncollinearity persists for sufficiently small perturbations."
+        ],
+        "stepsZh": [
+          "用向量表示，所求重心是 $(A+B+C+A^{\\prime}+B^{\\prime}+C^{\\prime})/6$。它就是 $ABC$ 的重心 $H=(A+B+C)/3$ 与三个动点的平均点的中点，而后者在 $E$ 上。因此轨迹都落在所述平行平面上。",
+          "反过来，取该平面上任一点 $G$，则 $K=2G-H$ 在 $E$ 上。令三个动点都等于 $K$，三个中点即 $A,B,C$ 以 $K$ 为中心、比例为 $1/2$ 的位似像，故不共线且重心恰为 $G$。若要求三个动点互异，可在平面内将其中两个分别沿相反方向微移同样距离，保持第三个不动；重心不变，而当移动足够小时，中点仍不共线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=2"
+  }
+}

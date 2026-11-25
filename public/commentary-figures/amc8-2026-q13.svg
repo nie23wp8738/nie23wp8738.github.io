@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <title>Square on a staggered unit-brick wall</title>
+  <defs>
+    <pattern id="wall" width="40" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 0H40M0 40H40M20 0V40M0 40V80M40 40V80" fill="none" stroke="#82919a" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+  <rect x="10" y="10" width="280" height="220" fill="#fff"/>
+  <rect x="10" y="10" width="280" height="220" fill="url(#wall)"/>
+  <polygon points="60,80 180,40 220,160 100,200" fill="#86a9bd" fill-opacity=".63" stroke="#253f50" stroke-width="2.3"/>
+  <g fill="#253f50"><circle cx="60" cy="80" r="3.4"/><circle cx="180" cy="40" r="3.4"/><circle cx="220" cy="160" r="3.4"/><circle cx="100" cy="200" r="3.4"/></g>
+</svg>

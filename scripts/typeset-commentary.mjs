@@ -22,12 +22,17 @@ for (const file of catalogues) {
 }
 const scratch = await fs.mkdtemp(path.join(os.tmpdir(),'question-notes-'));
 try {
-  for (const filename of await fs.readdir(commentary)) {
+  const outlineDir = path.join(site,'src/data/step-outlines');
+  const entries = [
+    ...(await fs.readdir(commentary)).map(filename=>({filename,dir:commentary,kinds:['questions','solutions']})),
+    ...(await fs.readdir(outlineDir)).map(filename=>({filename,dir:outlineDir,kinds:['questions']}))
+  ];
+  for (const {filename,dir,kinds} of entries) {
     if (!filename.endsWith('.json')) continue;
     const paperId = path.basename(filename,'.json');
     const paper = papers.get(paperId);
     if (!paper) throw new Error('Unknown commentary paper ' + paperId);
-    const json = await fs.readFile(path.join(commentary,filename),'utf8');
+    const json = await fs.readFile(path.join(dir,filename),'utf8');
     const notes = Object.entries(JSON.parse(json));
     const signature = createHash('sha256').update(json).update(paper.label);
     for (const code of tools) signature.update(code);
@@ -36,11 +41,11 @@ try {
       if (note.figure.url !== '/commentary-figures/'+id+'.svg' || !note.figure.alt || !note.figure.altZh) throw new Error('Invalid figure '+id);
       signature.update(await fs.readFile(path.join(figures,id+'.svg')));
     }
-    const stamp = path.join(output,paperId+'.sha256');
+    const stamp = path.join(output,paperId+(kinds.length===1?'.outlines':'')+'.sha256');
     const digest = signature.digest('hex');
     if (await fs.readFile(stamp,'utf8').catch(()=>null) === digest &&
-       notes.every(([id])=>['questions','solutions'].every(kind=>existsSync(path.join(output,kind,id+'.pdf'))))) continue;
-    for (const kind of ['questions','solutions']) {
+       notes.every(([id])=>kinds.every(kind=>existsSync(path.join(output,kind,id+'.pdf'))))) continue;
+    for (const kind of kinds) {
       const rows = notes.map(([id, note]) => {
         const n = Number(id.slice(paperId.length+2));
         if (id !== paperId+'-q'+n || !paper.questions.some(q=>q.n === n) || !note.summary || !note.summaryZh) {

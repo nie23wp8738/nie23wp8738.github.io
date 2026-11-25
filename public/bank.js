@@ -65,7 +65,7 @@ function startBank(root) {
         const path = questionPath(id, q);
         const answerSource = sourceAnswer(paper,q);
         const record = {
-          id, kind:'past', paperId:paper.id, paperTitle, n:q.n, year:String(paper.year), exam:[paper.exam], inline:q.inline,
+          id, kind:'past', paperId:paper.id, paperTitle, n:q.n, year:String(paper.year), exam:[paper.exam], inline:q.inline, outlinePdf:q.outlinePdf, published:q.published,
           hasCommentary:q.hasCommentary, commentary:q.commentary, hasWorkedSolution:hasWorkedSolution(q), keyNote:q.keyNote, keyAnswer:q.keyAnswer, keyValue:q.keyValue,
           source:paper.source, sourceURL:safeWebURL(q.url) || safeWebURL(paper.url), solutionURL:safeWebURL(answerSource?.url), solutionScope:answerSource?.scope,
           title:paperTitle + t(' · Question ',' · 第 ') + q.n + (zh ? ' 题' : ''), topicKeys, topic, concepts,

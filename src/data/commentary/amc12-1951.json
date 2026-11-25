@@ -1,0 +1,27 @@
+{
+  "amc12-1951-q34": {
+    "summary": "Evaluate $10^{\\log_{10}7}$.",
+    "summaryZh": "求 $10^{\\log_{10}7}$ 的值。",
+    "answer": "A. $7$.",
+    "answerZh": "A。$7$。",
+    "methods": [
+      {
+        "title": "Use the definition of a logarithm",
+        "titleZh": "使用对数定义",
+        "steps": [
+          "Let $y=\\log_{10}7$. By definition $y$ is the unique real exponent for which $10^y=7$. Substituting this exponent in the outer power gives $7$."
+        ],
+        "stepsZh": [
+          "令 $y=\\log_{10}7$。按定义，$y$ 是使 $10^y=7$ 成立的实数。把这个指数代回外层的幂就得到 $7$。"
+        ],
+        "topics": [
+          {
+            "en": "Inverse functions",
+            "zh": "反函数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1951/problem/34"
+  }
+}

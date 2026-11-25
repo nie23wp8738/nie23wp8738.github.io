@@ -1,0 +1,242 @@
+{
+  "imo-1959-q1": {
+    "summary": "For each positive integer $n$, determine the greatest common divisor of $21n+4$ and $14n+3$.",
+    "summaryZh": "对任意正整数 $n$，求 $21n+4$ 与 $14n+3$ 的最大公因数。",
+    "answer": "$1$ for every $n$; the corresponding fraction is in lowest terms.",
+    "answerZh": "恒为 $1$，故相应分数恒为最简分数。",
+    "methods": [
+      {
+        "title": "Eliminate the parameter",
+        "titleZh": "用线性组合消去参数",
+        "topics": [
+          {
+            "en": "Bézout identity",
+            "zh": "贝祖等式"
+          }
+        ],
+        "steps": [
+          "Write $u=21n+4$ and $v=14n+3$. A common divisor divides $3v-2u=(42n+9)-(42n+8)=1$. Therefore the positive gcd is exactly $1$."
+        ],
+        "stepsZh": [
+          "记 $u=21n+4,v=14n+3$。二者的任一公因数必整除 $3v-2u=(42n+9)-(42n+8)=1$，因此最大公因数只能是 $1$。"
+        ]
+      },
+      {
+        "title": "Consecutive remainders",
+        "titleZh": "比较相邻余数",
+        "topics": [
+          {
+            "en": "Euclidean algorithm",
+            "zh": "辗转相除法"
+          }
+        ],
+        "steps": [
+          "Subtract the denominator from the numerator to obtain $7n+1$. Dividing $14n+3$ by $7n+1$ leaves remainder $1$, the final nonzero remainder in the Euclidean algorithm."
+        ],
+        "stepsZh": [
+          "分子减去分母得 $7n+1$。用它除 $14n+3$ 商为 $2$、余数为 $1$。辗转相除法的最后一个非零余数就是 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1"
+  },
+  "imo-1959-q2": {
+    "summary": "Set $F(x)=\\sqrt{x+\\sqrt{2x-1}}+\\sqrt{x-\\sqrt{2x-1}}$, using real principal roots. Find the real preimages of $\\sqrt2$, $1$, and $2$.",
+    "summaryZh": "设 $F(x)=\\sqrt{x+\\sqrt{2x-1}}+\\sqrt{x-\\sqrt{2x-1}}$，各根号均取算术平方根。分别求使 $F(x)$ 等于 $\\sqrt2,1,2$ 的所有实数 $x$。",
+    "answer": "Respectively $[1/2,1]$, the empty set, and $\\{3/2\\}$.",
+    "answerZh": "依次是 $[1/2,1]$、空集和 $\\{3/2\\}$。",
+    "methods": [
+      {
+        "title": "Square the whole sum",
+        "titleZh": "整体平方",
+        "topics": [
+          {
+            "en": "Radical equations",
+            "zh": "根式方程"
+          },
+          {
+            "en": "Absolute value",
+            "zh": "绝对值"
+          }
+        ],
+        "steps": [
+          "The inner root requires $x\\ge1/2$. For all such $x$, the inequality $x^2-(2x-1)=(x-1)^2\\ge0$ and $x>0$ guarantee that the other two radicands are nonnegative.",
+          "The cross term gives $F(x)^2=2x+2\\sqrt{(x-1)^2}=2x+2|x-1|$. It equals $2$ on $[1/2,1]$ and $4x-2$ for $x>1$. Since $F$ is nonnegative this loses no sign information. Its minimum is $\\sqrt2$; $4x-2=4$ gives $x=3/2$."
+        ],
+        "stepsZh": [
+          "内层根号要求 $x\\ge1/2$。在这段范围内，$x>0$ 且 $x^2-(2x-1)=(x-1)^2\\ge0$，所以两个外层根号也都有意义。",
+          "整体平方得 $F(x)^2=2x+2\\sqrt{(x-1)^2}=2x+2|x-1|$。它在 $[1/2,1]$ 上恒为 $2$，在 $x>1$ 时等于 $4x-2$。由于 $F$ 非负，平方不会引入符号歧义。最小值为 $\\sqrt2$，故取不到 $1$；解 $4x-2=4$ 得 $x=3/2$。"
+        ]
+      },
+      {
+        "title": "Recognise two perfect squares",
+        "titleZh": "识别两个完全平方",
+        "topics": [
+          {
+            "en": "Substitution",
+            "zh": "换元"
+          },
+          {
+            "en": "Absolute value",
+            "zh": "绝对值"
+          }
+        ],
+        "steps": [
+          "Put $u=\\sqrt{2x-1}\\ge0$. Then $x\\pm u=(u\\pm1)^2/2$, so $F=(u+1+|u-1|)/\\sqrt2=\\sqrt2\\max(1,u)$. The three requested values correspond to $0\\le u\\le1$, no $u$, and $u=\\sqrt2$. Convert back using $x=(u^2+1)/2$."
+        ],
+        "stepsZh": [
+          "令 $u=\\sqrt{2x-1}\\ge0$。因 $x\\pm u=(u\\pm1)^2/2$，有 $F=(u+1+|u-1|)/\\sqrt2=\\sqrt2\\max(1,u)$。三个目标依次对应 $0\\le u\\le1$、无解和 $u=\\sqrt2$。再由 $x=(u^2+1)/2$ 还原即可。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1"
+  },
+  "imo-1959-q3": {
+    "summary": "Let $a\\ne0$. Starting with $a\\cos^2 x+b\\cos x+c=0$, eliminate $\\cos x$ to find the quadratic for its double-angle values $t=\\cos 2x$. Explain whether this preserves all and only the original angles, and compare the polynomials for $(a,b,c)=(4,2,-1)$.",
+    "summaryZh": "设 $a\\ne0$。从 $a\\cos^2 x+b\\cos x+c=0$ 消去 $\\cos x$，写出倍角值 $t=\\cos 2x$ 满足的二次方程。说明变换前后角的解集是否完全相同，并比较 $(a,b,c)=(4,2,-1)$ 时的两个多项式。",
+    "answer": "$[a(t+1)+2c]^2-2b^2(t+1)=0$. In the stated example this reduces to $4t^2+2t-1=0$. The original angle is always a solution of the transformed equation; the converse may fail.",
+    "answerZh": "$[a(t+1)+2c]^2-2b^2(t+1)=0$。给定系数下化简为 $4t^2+2t-1=0$。每个原方程的解角都满足倍角方程，反之一般不成立。",
+    "methods": [
+      {
+        "title": "Eliminate the sign with the double-angle identity",
+        "titleZh": "利用倍角公式消元",
+        "topics": [
+          {
+            "en": "Double-angle identities",
+            "zh": "倍角公式"
+          },
+          {
+            "en": "Elimination",
+            "zh": "消元"
+          }
+        ],
+        "steps": [
+          "Set $u=\\cos x$. Since $2u^2=t+1$, the original equation implies $2bu=-a(t+1)-2c$. Squaring and replacing $u^2$ gives the stated quadratic. Its algebraic roots, with multiplicity, are $2u_1^2-1$ and $2u_2^2-1$ for the roots $u_i$ of $au^2+bu+c$. Only $u_i\\in[-1,1]$ represent real angles.",
+          "Squaring discards the sign of $u$. In fact any condition in $\\cos 2x$ takes the same value at $x$ and $x+\\pi$, while the linear term in $\\cos x$ may change sign. Thus exact equivalence of angle sets cannot be required in general. At the given coefficients the quadratic is $16t^2+8t-4=0$. The two original cosine roots $(-1\\pm\\sqrt5)/4$ are interchanged by $u\\mapsto2u^2-1$, explaining why the same polynomial reappears."
+        ],
+        "stepsZh": [
+          "令 $u=\\cos x$。由 $2u^2=t+1$，原式推出 $2bu=-a(t+1)-2c$。平方后代入 $u^2$ 即得到所求二次式。若原多项式的根为 $u_1,u_2$，则新多项式的两个代数根（按重数计）是 $2u_1^2-1,2u_2^2-1$。只有 $u_i\\in[-1,1]$ 才对应实角。",
+          "平方舍去了 $u$ 的符号。任何只含 $\\cos 2x$ 的条件在 $x$ 与 $x+\\pi$ 处取值相同，而原式中的一次项会变号，所以不能一般地断言角的解集完全一致。代入给定系数，新式为 $16t^2+8t-4=0$。原余弦的两个根 $(-1\\pm\\sqrt5)/4$ 在映射 $u\\mapsto2u^2-1$ 下恰好互换，故化简后的多项式相同。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1"
+  },
+  "imo-1959-q4": {
+    "summary": "A segment of length $c>0$ is to be the hypotenuse. Construct all possible right-angle vertices for which the median to the segment has length equal to the geometric mean of the legs.",
+    "summaryZh": "已给定一条长为 $c>0$ 的斜边。用尺规作出所有可能的直角顶点，使斜边中线长等于两条直角边长的几何平均数。",
+    "answer": "Intersect the circle on the given diameter with the two parallels at distance $c/4$ from that diameter. All four intersections work.",
+    "answerZh": "以斜边为直径作圆，再作与斜边相距 $c/4$ 的两条平行线。它们与圆的四个交点均合题意。",
+    "methods": [
+      {
+        "title": "Convert the product into an altitude",
+        "titleZh": "用面积把乘积转为高",
+        "topics": [
+          {
+            "en": "Thales’ theorem",
+            "zh": "直径所对的圆周角"
+          },
+          {
+            "en": "Area of a triangle",
+            "zh": "三角形面积"
+          }
+        ],
+        "steps": [
+          "By Thales’ theorem the right-angle vertex lies on the circle of radius $c/2$ centred at the midpoint of the given segment. Its median therefore has length $c/2$. For leg lengths $u,v$ and altitude $h$ to the diameter, comparing the two triangle areas gives $uv=ch$.",
+          "The median condition is $uv=c^2/4$, equivalent to $h=c/4$. Bisect the radius to obtain that distance and draw the two parallels. Each meets the circle twice since $0<c/4<c/2$, and every intersection has both the correct right angle and the required altitude."
+        ],
+        "stepsZh": [
+          "由直径所对的圆周角定理，直角顶点必须在以斜边中点为圆心、半径为 $c/2$ 的圆上，所以中线长为 $c/2$。设两直角边为 $u,v$，斜边上的高为 $h$，由面积两种算法得 $uv=ch$。",
+          "所求条件即 $uv=c^2/4$，等价于 $h=c/4$。将半径平分即可取得所需距离，再作两条平行线。因 $0<c/4<c/2$，每条平行线各交圆于两点。每个交点都同时满足直角和高的要求。"
+        ]
+      },
+      {
+        "title": "Construct a fifteen-degree angle",
+        "titleZh": "构造十五度角",
+        "topics": [
+          {
+            "en": "Double-angle identities",
+            "zh": "倍角公式"
+          },
+          {
+            "en": "Geometric constructions",
+            "zh": "尺规作图"
+          }
+        ],
+        "steps": [
+          "If one acute angle is $u$, the two legs are $c\\cos u$ and $c\\sin u$. Their product must be $c^2/4$, so $\\sin 2u=1/2$. Hence $u=15^\\circ$ or $75^\\circ$. Construct $15^\\circ$ by bisecting $30^\\circ$, and complete the right triangle on either side, placing the smaller angle at either endpoint."
+        ],
+        "stepsZh": [
+          "设一个锐角为 $u$，则两直角边分别为 $c\\cos u,c\\sin u$。二者之积须为 $c^2/4$，故 $\\sin 2u=1/2$，即 $u=15^\\circ$ 或 $75^\\circ$。把 $30^\\circ$ 平分得到 $15^\\circ$，可任选斜边端点作此角，并在斜边任一侧补成直角三角形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1"
+  },
+  "imo-1959-q5": {
+    "summary": "Choose $M$ strictly between $A$ and $B$. On one side of $AB$ erect squares $AMCD$ and $MBEF$, with vertices listed cyclically and respective centres $P,Q$. Identify their second circumcircle intersection $N$ as an intersection of two lines, find a point common to all lines $MN$, and describe the midpoint locus of $PQ$.",
+    "summaryZh": "在 $AB$ 内取点 $M$，并在同一侧顺次作正方形 $AMCD,MBEF$，中心分别为 $P,Q$。证明两外接圆的另一交点 $N$ 就是 $AF$ 与 $BC$ 的交点；求所有 $MN$ 的公共点和 $PQ$ 中点的轨迹。",
+    "answer": "$N=AF\\cap BC$. With $A=(0,0),B=(L,0)$ and the squares above the axis, the fixed point is $(L/2,-L/2)$; the midpoint locus is the open horizontal segment from $(L/4,L/4)$ to $(3L/4,L/4)$.",
+    "answerZh": "$N=AF\\cap BC$。取 $A=(0,0),B=(L,0)$，正方形在横轴上方，则定点为 $(L/2,-L/2)$；中点轨迹为从 $(L/4,L/4)$ 至 $(3L/4,L/4)$ 的开线段。",
+    "methods": [
+      {
+        "title": "Use perpendicular lines and the common chord",
+        "titleZh": "利用垂直直线与两圆公共弦",
+        "topics": [
+          {
+            "en": "Radical axis",
+            "zh": "根轴"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "Write $M=(u,0)$ with $0<u<L$. Then $C=(u,u)$ and $F=(u,L-u)$. Direction vectors of $AF$ and $BC$ are $(u,L-u)$ and $(u-L,u)$, whose dot product vanishes. Their intersection lies on both the circle of diameter $AC$ and the circle of diameter $BF$ by the right-angle criterion; it is distinct from $M$. If $C=F$, the intersection is that common diameter endpoint itself, with the same conclusion.",
+          "The centres are $P=(u/2,u/2)$ and $Q=((L+u)/2,(L-u)/2)$. The common chord is perpendicular to $PQ$ and passes through $M$, so its equation is $L(x-u)+(L-2u)y=0$. Substitution verifies $(L/2,-L/2)$ independently of $u$.",
+          "The midpoint of $PQ$ is $((L+2u)/4,L/4)$. As $u$ ranges over $(0,L)$ its first coordinate runs through the whole stated open interval exactly once."
+        ],
+        "stepsZh": [
+          "设 $M=(u,0)$，其中 $0<u<L$，则 $C=(u,u),F=(u,L-u)$。$AF,BC$ 的方向向量分别是 $(u,L-u)$ 和 $(u-L,u)$，点积为零。由直角判定，它们的交点同时在以 $AC,BF$ 为直径的圆上，且异于 $M$。若 $C=F$，交点就是这个公共直径端点，结论也成立。",
+          "圆心分别是 $P=(u/2,u/2), Q=((L+u)/2,(L-u)/2)$。公共弦过 $M$ 且垂直于 $PQ$，所以方程为 $L(x-u)+(L-2u)y=0$。直接代入可验证 $(L/2,-L/2)$ 与 $u$ 无关。",
+          "$PQ$ 的中点为 $((L+2u)/4,L/4)$。当 $u$ 在 $(0,L)$ 上变化，横坐标恰好遍历所述开区间。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1"
+  },
+  "imo-1959-q6": {
+    "summary": "Two planes meet along $p$. Given $A$ in the first and $C$ in the second, both off $p$, construct all convex isosceles trapezoids $ABCD$ having an incircle, with $AB\\parallel CD$, $B$ in the first plane and $D$ in the second. Include the existence conditions.",
+    "summaryZh": "两平面交于直线 $p$，$A,C$ 分别在两平面内且均不在 $p$ 上。作所有能内切圆的凸等腰梯形 $ABCD$，要求 $AB\\parallel CD$ 且 $B,D$ 分别位于 $A,C$ 所在的平面。说明存在条件。",
+    "answer": "Draw the parallels to $p$ through $A,C$. Let their separation be $h$, and let $d$ be the length of the projection of $AC$ onto $p$. There are two solutions for $d>h$, a square for $d=h$ if squares are admitted, and none for $d<h$.",
+    "answerZh": "过 $A,C$ 分别作 $p$ 的平行线，记两线距离为 $h$，$AC$ 在 $p$ 上的投影长为 $d$。$d>h$ 时有两解；$d=h$ 时得到一个正方形（若允许）；$d<h$ 时无解。",
+    "methods": [
+      {
+        "title": "Construct the common axis from the half-bases",
+        "titleZh": "由两底的一半构造对称轴",
+        "topics": [
+          {
+            "en": "Spatial geometry",
+            "zh": "空间几何"
+          },
+          {
+            "en": "Tangential quadrilaterals",
+            "zh": "外切四边形"
+          }
+        ],
+        "steps": [
+          "The base directions belong to both given planes, so the bases must lie on the two stated parallels. Work in the plane containing these parallels. Choose their common direction as horizontal, with the projections of $A,C$ at $0,d$. In a convex isosceles trapezoid the axis is at $x=s$ between them. Its half-base lengths are $s$ and $d-s$, and the horizontal offset of a leg is $d-2s$.",
+          "Equal tangent lengths from each vertex imply that the sum of the bases equals the sum of the legs. Thus a leg has length $d$ and $h^2+(d-2s)^2=d^2$. Construct $w=\\sqrt{d^2-h^2}$ by a right triangle on hypotenuse $d$ and leg $h$ when $d\\ge h$. Place the axis at each $s=(d\\pm w)/2$, and reflect $A,C$ in it to obtain $B,D$.",
+          "For sufficiency, the point midway between the bases on the axis is at distance $h/2$ from each base. Its distance from each leg is also $h/2$: the triangle it forms with the endpoints of a leg has doubled area $dh/2$, and the leg has length $d$. Thus the circle of radius $h/2$ lies in the trapezoid and touches all sides. Since $h>0$, both half-bases are positive. Equality $d=h$ gives one square; if a trapezoid is required to have exactly one parallel pair, omit this case."
+        ],
+        "stepsZh": [
+          "两条底边的共同方向同时属于两个给定平面，所以必平行于交线 $p$。转到这两条平行线共同确定的平面，把它们的方向作为水平轴，令 $A,C$ 的水平位置为 $0,d$。凸等腰梯形的对称轴位于两者之间，设为 $x=s$。两个半底长为 $s,d-s$，一腰的水平投影绝对值为 $|d-2s|$。",
+          "由同一点引圆的两条切线等长，得两底之和等于两腰之和，故一腰长为 $d$，从而 $h^2+(d-2s)^2=d^2$。当 $d\\ge h$ 时，用斜边 $d$、直角边 $h$ 作直角三角形，得到另一边 $w=\\sqrt{d^2-h^2}$。分别取 $s=(d\\pm w)/2$ 作对称轴，反射 $A,C$ 即得 $B,D$。",
+          "反过来，令 $O$ 为对称轴上到两底都为 $h/2$ 的点。$O$ 与任一腰两端组成的三角形面积的两倍为 $dh/2$；除以腰长 $d$，知 $O$ 到腰也是 $h/2$。故以 $O$ 为圆心、$h/2$ 为半径的圆内切于梯形。因 $h>0$，两个半底均为正。$d=h$ 只给出正方形；若规定梯形只有一组对边平行，则应舍去此解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=2"
+  }
+}

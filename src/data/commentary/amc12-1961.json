@@ -1,0 +1,52 @@
+{
+  "amc12-1961-q1": {
+    "summary": "Evaluate $\\left(-\\dfrac{1}{125}\\right)^{-\\frac{2}{3}}$.",
+    "summaryZh": "求 $\\left(-\\dfrac{1}{125}\\right)^{-\\frac{2}{3}}$ 的值。",
+    "answer": "C. $25$.",
+    "answerZh": "C。$25$。",
+    "methods": [
+      {
+        "title": "Take the real cube root first",
+        "titleZh": "先开实数立方根",
+        "steps": [
+          "The real cube root of $-1/125$ is $-1/5$. Raising this to the power $-2$ gives the reciprocal of $(-1/5)^2$, namely $25$."
+        ],
+        "stepsZh": [
+          "$-1/125$ 的实数立方根为 $-1/5$。再取 $-2$ 次幂，就是求 $(-1/5)^2$ 的倒数，得到 $25$。"
+        ],
+        "topics": [
+          {
+            "en": "Rational exponents",
+            "zh": "有理指数幂"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1961/problem/1"
+  },
+  "amc12-1961-q6": {
+    "summary": "Evaluate $\\log 8\\div\\log\\dfrac18$.",
+    "summaryZh": "求 $\\log 8\\div\\log\\dfrac18$ 的值。",
+    "answer": "E. $-1$.",
+    "answerZh": "E。$-1$。",
+    "methods": [
+      {
+        "title": "Use the reciprocal identity",
+        "titleZh": "使用倒数的对数",
+        "steps": [
+          "Because $1/8=8^{-1}$, its logarithm is $-\\log 8$. As $8\\ne 1$, the denominator is nonzero and $(\\log 8)/(-\\log 8)=-1$."
+        ],
+        "stepsZh": [
+          "由 $1/8=8^{-1}$ 得 $\\log(1/8)=-\\log 8$。因为 $8\\ne1$，分母非零，所以商为 $-1$。"
+        ],
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/1961/problem/6"
+  }
+}

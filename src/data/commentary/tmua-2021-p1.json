@@ -1,0 +1,622 @@
+{
+  "tmua-2021-p1-q1": {
+    "summary": "Two equal-radius circles centred at $(-2,1)$ and $(3,-2)$ intersect twice. Find the line through their common points.",
+    "summaryZh": "两个等半径的圆分别以 $(-2,1)$ 和 $(3,-2)$ 为圆心，相交于两点。求这两个交点所在直线的方程。",
+    "answer": "F. $5x-3y=4$",
+    "answerZh": "F．$5x-3y=4$",
+    "methods": [
+      {
+        "title": "Use the perpendicular bisector",
+        "titleZh": "利用垂直平分线",
+        "topics": [
+          {
+            "en": "Circle geometry",
+            "zh": "圆几何"
+          },
+          {
+            "en": "Linear equations",
+            "zh": "直线方程"
+          }
+        ],
+        "steps": [
+          "Both common points are equidistant from the centres, so their line is the perpendicular bisector of the segment joining the centres. Its midpoint is $(1/2,-1/2)$.",
+          "The vector $(5,-3)$ along that segment is normal to the line. Thus $5(x-1/2)-3(y+1/2)=0$, giving $5x-3y=4$."
+        ],
+        "stepsZh": [
+          "两交点到两圆心的距离相等，故其连线是圆心连线的垂直平分线，经过中点 $(1/2,-1/2)$。",
+          "圆心连线的方向向量 $(5,-3)$ 是所求直线的法向量。因此 $5(x-1/2)-3(y+1/2)=0$，即 $5x-3y=4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=3"
+  },
+  "tmua-2021-p1-q2": {
+    "summary": "Integrate $x^3-6x+3$ between its two turning points, from the smaller to the larger input.",
+    "summaryZh": "求 $x^3-6x+3$ 在两个转折点横坐标之间的定积分，积分方向从左到右。",
+    "answer": "F. $6\\sqrt2$",
+    "answerZh": "F．$6\\sqrt2$",
+    "methods": [
+      {
+        "title": "Use symmetry between critical points",
+        "titleZh": "利用临界点之间的对称性",
+        "topics": [
+          {
+            "en": "Definite integrals",
+            "zh": "定积分"
+          },
+          {
+            "en": "Odd functions",
+            "zh": "奇函数"
+          }
+        ],
+        "steps": [
+          "The derivative $3x^2-6$ vanishes at $x=\\pm\\sqrt2$, changing sign at each.",
+          "On these symmetric bounds the odd part $x^3-6x$ integrates to zero. The constant $3$ contributes $3(2\\sqrt2)=6\\sqrt2$."
+        ],
+        "stepsZh": [
+          "导数 $3x^2-6$ 在 $x=\\pm\\sqrt2$ 为零且变号。",
+          "在这个对称区间积分，奇函数部分 $x^3-6x$ 贡献为零。常数 $3$ 的积分是 $3(2\\sqrt2)=6\\sqrt2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=4"
+  },
+  "tmua-2021-p1-q3": {
+    "summary": "An arithmetic and a convergent geometric progression both begin at $1/2$. Their second terms add to $1/2$ and their third terms to $1/8$. Find the sum of the infinite geometric progression.",
+    "summaryZh": "一个等差数列和一个收敛的等比数列都以 $1/2$ 为首项。两者的第二项之和为 $1/2$，第三项之和为 $1/8$。求无穷等比级数的和。",
+    "answer": "G. $1$",
+    "answerZh": "G．$1$",
+    "methods": [
+      {
+        "title": "Eliminate the common difference",
+        "titleZh": "消去公差",
+        "topics": [
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Geometric series",
+            "zh": "等比级数"
+          }
+        ],
+        "steps": [
+          "Let $d$ be the common difference and $r$ the common ratio. From the second terms, $1/2+d+r/2=1/2$, giving $d=-r/2$.",
+          "The third terms give $1/2-r+r^2/2=1/8$, or $(2r-1)(2r-3)=0$. Convergence selects $r=1/2$, and the sum is $(1/2)/(1-1/2)=1$."
+        ],
+        "stepsZh": [
+          "设公差为 $d$、公比为 $r$。由第二项之和得 $1/2+d+r/2=1/2$，故 $d=-r/2$。",
+          "由第三项得 $1/2-r+r^2/2=1/8$，即 $(2r-1)(2r-3)=0$。收敛性给出 $r=1/2$，级数之和为 $(1/2)/(1-1/2)=1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=5"
+  },
+  "tmua-2021-p1-q4": {
+    "summary": "Find the least possible value of $2^{2x}-2^{x+3}+4$ for real $x$.",
+    "summaryZh": "当 $x$ 遍历实数时，求 $2^{2x}-2^{x+3}+4$ 的最小值。",
+    "answer": "B. $-12$",
+    "answerZh": "B．$-12$",
+    "methods": [
+      {
+        "title": "Substitute the exponential",
+        "titleZh": "对指数式换元",
+        "topics": [
+          {
+            "en": "Exponential functions",
+            "zh": "指数函数"
+          },
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          }
+        ],
+        "steps": [
+          "Let $u=2^x>0$. The expression becomes $u^2-8u+4=(u-4)^2-12$.",
+          "Equality is possible since $u=4$ at $x=2$, so the lower bound $-12$ is attained."
+        ],
+        "stepsZh": [
+          "令 $u=2^x>0$，原式变成 $u^2-8u+4=(u-4)^2-12$。",
+          "取 $x=2$ 即有 $u=4$，故下界 $-12$ 可以达到。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=6"
+  },
+  "tmua-2021-p1-q5": {
+    "summary": "For positive integers $m,n$, set $f(mn)=f(m)f(n)$ when $3\\mid mn$, and $f(mn)=mn$ otherwise. Given $f(9)+f(16)=f(24)$, find $f(3)$.",
+    "summaryZh": "对于正整数 $m,n$，若 $3\\mid mn$，则 $f(mn)=f(m)f(n)$；否则 $f(mn)=mn$。已知 $f(9)+f(16)=f(24)$，求 $f(3)$。",
+    "answer": "F. $4$",
+    "answerZh": "F．$4$",
+    "methods": [
+      {
+        "title": "Factor the multiples of three",
+        "titleZh": "分解三的倍数",
+        "topics": [
+          {
+            "en": "Functional equations",
+            "zh": "函数方程"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ],
+        "steps": [
+          "Write $t=f(3)$. The rule gives $f(9)=t^2$ and $f(16)=16$. Since $f(8)=8$, we also have $f(24)=8t$.",
+          "Substitution yields $t^2+16=8t$, so $(t-4)^2=0$."
+        ],
+        "stepsZh": [
+          "写作 $t=f(3)$。按规则，$f(9)=t^2$、$f(16)=16$，又有 $f(8)=8$，所以 $f(24)=8t$。",
+          "代入得 $t^2+16=8t$，因此 $(t-4)^2=0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=7"
+  },
+  "tmua-2021-p1-q6": {
+    "summary": "What is the maximum minus the minimum of $f(x)=(\\cos x+3)/(7+5\\cos x-\\sin^2x)$?",
+    "summaryZh": "设 $f(x)=(\\cos x+3)/(7+5\\cos x-\\sin^2x)$，求函数最大值与最小值的差。",
+    "answer": "D. $\\dfrac23$",
+    "answerZh": "D．$\\dfrac23$",
+    "methods": [
+      {
+        "title": "Reduce to one trigonometric variable",
+        "titleZh": "化为单个三角变量",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Function ranges",
+            "zh": "函数值域"
+          }
+        ],
+        "steps": [
+          "Put $c=\\cos x$. Since $\\sin^2x=1-c^2$, the denominator is $c^2+5c+6=(c+2)(c+3)$. On $[-1,1]$ cancellation is valid.",
+          "The reduced function $1/(c+2)$ decreases from $1$ to $1/3$. The difference is $2/3$."
+        ],
+        "stepsZh": [
+          "令 $c=\\cos x$，利用 $\\sin^2x=1-c^2$ 可将分母写为 $c^2+5c+6=(c+2)(c+3)$。在 $[-1,1]$ 上可以约分。",
+          "约分后 $1/(c+2)$ 从 $1$ 减至 $1/3$，两者之差为 $2/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=8"
+  },
+  "tmua-2021-p1-q7": {
+    "summary": "Suppose $f(0)=0$ and $xf(x)>0$ for $x\\ne0$. On $[-2,2]$ the integral of $f$ equals $4$ and that of $|f|$ equals $8$. Evaluate $\\int_{-2}^0 f(|x|)\\,dx$.",
+    "summaryZh": "设 $f(0)=0$，且当 $x\\ne0$ 时 $xf(x)>0$。在 $[-2,2]$ 上，$f$ 的积分为 $4$，$|f|$ 的积分为 $8$。求 $\\int_{-2}^0 f(|x|)\\,dx$。",
+    "answer": "G. $6$",
+    "answerZh": "G．$6$",
+    "methods": [
+      {
+        "title": "Separate the positive and negative areas",
+        "titleZh": "分离正负面积",
+        "topics": [
+          {
+            "en": "Absolute value",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Definite integrals",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "Write $A=\\int_0^2f(x)\\,dx$ and $B=-\\int_{-2}^0f(x)\\,dx$. The sign hypothesis makes both positive. We have $A-B=4$ and $A+B=8$, so $A=6$.",
+          "For negative $x$, substitute $u=-x=|x|$. The requested integral becomes $\\int_0^2f(u)\\,du=A$."
+        ],
+        "stepsZh": [
+          "记 $A=\\int_0^2f(x)\\,dx$、$B=-\\int_{-2}^0f(x)\\,dx$。由符号条件两者均为正，且 $A-B=4$、$A+B=8$，故 $A=6$。",
+          "当 $x$ 为负时，令 $u=-x=|x|$，所求积分就等于 $\\int_0^2f(u)\\,du=A$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=9"
+  },
+  "tmua-2021-p1-q8": {
+    "summary": "Each of the lines $y=2x+3$ and $y=4x-2$ meets $y=x^2+bx+c$ just once. Determine $b-c$.",
+    "summaryZh": "直线 $y=2x+3$ 和 $y=4x-2$ 各与 $y=x^2+bx+c$ 只有一个公共点。求 $b-c$。",
+    "answer": "A. $-9$",
+    "answerZh": "A．$-9$",
+    "methods": [
+      {
+        "title": "Force both discriminants to vanish",
+        "titleZh": "令两个判别式都为零",
+        "topics": [
+          {
+            "en": "Tangency",
+            "zh": "相切"
+          },
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          }
+        ],
+        "steps": [
+          "Equating the parabola to each line and requiring a double root gives $(b-2)^2=4(c-3)$ and $(b-4)^2=4(c+2)$.",
+          "Subtract the first equation from the second to obtain $-4b+12=20$, hence $b=-2$. The first equation then gives $c=7$, so $b-c=-9$."
+        ],
+        "stepsZh": [
+          "分别联立抛物线和两条直线，并令每个方程有重根，得 $(b-2)^2=4(c-3)$、$(b-4)^2=4(c+2)$。",
+          "第二式减去第一式得 $-4b+12=20$，即 $b=-2$。代回第一式得 $c=7$，所以 $b-c=-9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=10"
+  },
+  "tmua-2021-p1-q9": {
+    "summary": "Find the area bounded by $|x|+|y|=1$ in the coordinate plane.",
+    "summaryZh": "求坐标平面上 $|x|+|y|=1$ 所围图形的面积。",
+    "answer": "C. $2$",
+    "answerZh": "C．$2$",
+    "methods": [
+      {
+        "title": "Divide into quadrants",
+        "titleZh": "按象限分割",
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Area",
+            "zh": "面积"
+          }
+        ],
+        "steps": [
+          "In the first quadrant the curve is the segment joining $(1,0)$ to $(0,1)$. Along with the axes it encloses a right triangle of area $1/2$.",
+          "Absolute values give identical regions in the other quadrants, so the total area is $4(1/2)=2$."
+        ],
+        "stepsZh": [
+          "在第一象限中，曲线是连接 $(1,0)$ 与 $(0,1)$ 的线段。它与坐标轴围成面积为 $1/2$ 的直角三角形。",
+          "由绝对值的对称性，其他三个象限中的面积相同，总面积为 $4(1/2)=2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=11"
+  },
+  "tmua-2021-p1-q10": {
+    "summary": "Apply the trapezium rule with three equal strips to $\\int_{1/2}^{2}2\\log_{10}x\\,dx$.",
+    "summaryZh": "用三等分的梯形法估算 $\\int_{1/2}^{2}2\\log_{10}x\\,dx$。",
+    "answer": "B. $\\log_{10}(3/2)$",
+    "answerZh": "B．$\\log_{10}(3/2)$",
+    "methods": [
+      {
+        "title": "Combine weighted logarithms",
+        "titleZh": "合并带权对数",
+        "topics": [
+          {
+            "en": "Trapezium rule",
+            "zh": "梯形法"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          }
+        ],
+        "steps": [
+          "The nodes are $1/2,1,3/2,2$, separated by $h=1/2$. Multiply the weighted sum of the function values (weights $1,2,2,1$) by $h/2=1/4$.",
+          "The endpoint logarithms cancel since their arguments multiply to one, and the value at $1$ vanishes. The remaining term is $(1/4)\\cdot2\\cdot2\\log_{10}(3/2)=\\log_{10}(3/2)$."
+        ],
+        "stepsZh": [
+          "分点为 $1/2,1,3/2,2$，间距 $h=1/2$。函数值的权重依次为 $1,2,2,1$，加权求和后乘 $h/2=1/4$。",
+          "两端对数的真数乘积等于 $1$，所以它们相消，分点 $1$ 处函数值也为零。剩下 $(1/4)\\cdot2\\cdot2\\log_{10}(3/2)=\\log_{10}(3/2)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=12"
+  },
+  "tmua-2021-p1-q11": {
+    "summary": "Over what fraction of $0<x<1$ is $f(x)=x^{1/7}(x^2-x+1)$ decreasing?",
+    "summaryZh": "在 $0<x<1$ 内，函数 $f(x)=x^{1/7}(x^2-x+1)$ 的递减部分占整个区间长度的几分之几？",
+    "answer": "A. $\\dfrac{2}{15}$",
+    "answerZh": "A．$\\dfrac{2}{15}$",
+    "methods": [
+      {
+        "title": "Find the sign changes of the derivative",
+        "titleZh": "确定导数的变号点",
+        "topics": [
+          {
+            "en": "Differentiation",
+            "zh": "求导"
+          },
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          }
+        ],
+        "steps": [
+          "Multiplying $f'(x)$ by the positive factor $7x^{6/7}$ gives $x^2-x+1+7x(2x-1)=15x^2-8x+1$.",
+          "This factors as $(5x-1)(3x-1)$, negative between $1/5$ and $1/3$. The whole interval has length one, so the requested fraction is $1/3-1/5=2/15$."
+        ],
+        "stepsZh": [
+          "将 $f'(x)$ 乘以正因子 $7x^{6/7}$，得到 $x^2-x+1+7x(2x-1)=15x^2-8x+1$。",
+          "分解为 $(5x-1)(3x-1)$，在 $1/5$ 与 $1/3$ 之间为负。全区间长为一，故所求比例为 $1/3-1/5=2/15$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=13"
+  },
+  "tmua-2021-p1-q12": {
+    "summary": "For real $p$, the least value of $x^4-p^2x^2$ is $-9$. What is the least value of $x^2-px+6$?",
+    "summaryZh": "对于实数 $p$，已知 $x^4-p^2x^2$ 的最小值为 $-9$。求 $x^2-px+6$ 的最小值。",
+    "answer": "E. $\\dfrac92$",
+    "answerZh": "E．$\\dfrac92$",
+    "methods": [
+      {
+        "title": "Complete a square twice",
+        "titleZh": "连续两次配方",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Polynomial extrema",
+            "zh": "多项式最值"
+          }
+        ],
+        "steps": [
+          "The quartic equals $(x^2-p^2/2)^2-p^4/4$. The square can vanish, so $p^4/4=9$ and $p^2=6$.",
+          "The second expression is $(x-p/2)^2+6-p^2/4$. Its minimum is $6-6/4=9/2$."
+        ],
+        "stepsZh": [
+          "四次式等于 $(x^2-p^2/2)^2-p^4/4$。平方项可取零，故 $p^4/4=9$，从而 $p^2=6$。",
+          "第二个式子为 $(x-p/2)^2+6-p^2/4$，其最小值是 $6-6/4=9/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=14"
+  },
+  "tmua-2021-p1-q13": {
+    "summary": "An integrable function satisfies $\\int_n^{n+1} f(x)\\,dx=n+1$ at each integer $n$. Find $\\sum_{r=1}^8\\int_0^r f(x)\\,dx$.",
+    "summaryZh": "一个可积函数对每个整数 $n$ 都满足 $\\int_n^{n+1} f(x)\\,dx=n+1$。求 $\\sum_{r=1}^8\\int_0^r f(x)\\,dx$。",
+    "answer": "C. $120$",
+    "answerZh": "C．$120$",
+    "methods": [
+      {
+        "title": "Sum successive unit intervals",
+        "titleZh": "累加单位区间的积分",
+        "topics": [
+          {
+            "en": "Additivity of integrals",
+            "zh": "积分的可加性"
+          },
+          {
+            "en": "Finite sums",
+            "zh": "有限求和"
+          }
+        ],
+        "steps": [
+          "Add the unit intervals from zero to $r$. The result is $1+2+\\cdots+r=r(r+1)/2$.",
+          "For $r=1$ through $8$, the resulting numbers are $1,3,6,10,15,21,28,36$. They add to $120$."
+        ],
+        "stepsZh": [
+          "把从零到 $r$ 的所有单位区间积分相加，得 $1+2+\\cdots+r=r(r+1)/2$。",
+          "从 $r=1$ 到 $8$ 依次得到 $1,3,6,10,15,21,28,36$，合计 $120$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=15"
+  },
+  "tmua-2021-p1-q14": {
+    "summary": "How many real $x$ solve $(x+1)(3-x)=2(1-\\cos(\\pi x))$?",
+    "summaryZh": "方程 $(x+1)(3-x)=2(1-\\cos(\\pi x))$ 有多少个不同实根？",
+    "answer": "B. $3$",
+    "answerZh": "B．$3$",
+    "methods": [
+      {
+        "title": "Exploit symmetry and concavity",
+        "titleZh": "利用对称性与凹性",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Concavity",
+            "zh": "凹性"
+          }
+        ],
+        "steps": [
+          "Put $t=x-1$. The equation becomes $t^2=4\\sin^2(\\pi t/2)$, so $|t|\\le2$. It is even in $t$ and $t=0$ is a root. For $0\\le t\\le2$, it reduces to $t=2\\sin(\\pi t/2)$.",
+          "On $0<t\\le1$, concavity puts the sine graph above or on its chord, so $\\sin(\\pi t/2)\\ge t$ and no positive root occurs there. On $[1,2]$, the right side decreases from $2$ to $0$ while $t$ increases, producing exactly one root. Reflecting gives one negative root as well."
+        ],
+        "stepsZh": [
+          "令 $t=x-1$，方程变为 $t^2=4\\sin^2(\\pi t/2)$，故 $|t|\\le2$。方程对 $t$ 为偶，且 $t=0$ 是根。在 $0\\le t\\le2$ 上等价于 $t=2\\sin(\\pi t/2)$。",
+          "当 $0<t\\le1$，由凹性，正弦图像不低于弦，故 $\\sin(\\pi t/2)\\ge t$，此处无正根。在 $[1,2]$ 上右边从 $2$ 减到 $0$，左边递增，所以恰有一个根。反射又给出一个负根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=16"
+  },
+  "tmua-2021-p1-q15": {
+    "summary": "A triangular wave $f$ is linear between consecutive integers and takes value $0$ at even integers and $1$ at odd integers. For $g(x)=\\sum_{r=1}^{10} f(2^{r-1}x)$, evaluate $\\int_0^1g(x)\\,dx$.",
+    "summaryZh": "三角波 $f$ 在相邻整数之间为直线段，在偶整数处取 $0$，在奇整数处取 $1$。设 $g(x)=\\sum_{r=1}^{10} f(2^{r-1}x)$，求 $\\int_0^1g(x)\\,dx$。",
+    "answer": "C. $5$",
+    "answerZh": "C．$5$",
+    "methods": [
+      {
+        "title": "Use the same mean on each unit interval",
+        "titleZh": "利用各单位区间的相同均值",
+        "topics": [
+          {
+            "en": "Periodic functions",
+            "zh": "周期函数"
+          },
+          {
+            "en": "Change of variables",
+            "zh": "积分换元"
+          }
+        ],
+        "steps": [
+          "On each unit interval the area under $f$ is $1/2$, since it bounds a right triangle of unit base and unit height. Thus $\\int_0^N f(u)\\,du=N/2$ for each positive integer $N$.",
+          "Substitute $u=Nx$, with $N=2^{r-1}$. Each summand contributes $(1/N)(N/2)=1/2$. The ten contributions total $5$."
+        ],
+        "stepsZh": [
+          "在每个单位区间，函数图像下方为底和高均等于一的直角三角形，面积为 $1/2$。所以对正整数 $N$ 有 $\\int_0^N f(u)\\,du=N/2$。",
+          "取 $N=2^{r-1}$ 并令 $u=Nx$，每项的积分是 $(1/N)(N/2)=1/2$，十项之和为 $5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=17"
+  },
+  "tmua-2021-p1-q16": {
+    "summary": "In $(a+bx)^n$, the coefficients of $x^2$ and $x^3$ are $105$ and $210$, and the $x^3$ term is fourth when ordered from highest power down. Find $(a/b)^2$.",
+    "summaryZh": "在 $(a+bx)^n$ 中，$x^2$ 和 $x^3$ 的系数分别是 $105$ 和 $210$。按降幂排列时 $x^3$ 项是第四项。求 $(a/b)^2$。",
+    "answer": "B. $\\dfrac49$",
+    "answerZh": "B．$\\dfrac49$",
+    "methods": [
+      {
+        "title": "Take a ratio of consecutive coefficients",
+        "titleZh": "用相邻系数作比",
+        "topics": [
+          {
+            "en": "Binomial theorem",
+            "zh": "二项式定理"
+          },
+          {
+            "en": "Ratios",
+            "zh": "比值"
+          }
+        ],
+        "steps": [
+          "Fourth in descending order means $n-3=3$, so $n=6$. The coefficients in question are $15a^4b^2$ and $20a^3b^3$.",
+          "Their ratio (cubic to quadratic) is $4b/(3a)=210/105=2$. Hence $a/b=2/3$ and the required square is $4/9$."
+        ],
+        "stepsZh": [
+          "降幂第四项的次数为 $n-3=3$，所以 $n=6$。两项的系数依次是 $15a^4b^2$ 和 $20a^3b^3$。",
+          "三次项系数除以二次项系数，得 $4b/(3a)=210/105=2$。于是 $a/b=2/3$，平方为 $4/9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=18"
+  },
+  "tmua-2021-p1-q17": {
+    "summary": "Describe the locus $\\sin(x^2+y^2)=1/2$ restricted to $x^2+y^2\\le8\\pi$, specifying the number and radii of its components.",
+    "summaryZh": "在 $x^2+y^2\\le8\\pi$ 范围内，描述轨迹 $\\sin(x^2+y^2)=1/2$，并给出各部分的数量和半径。",
+    "answer": "A. Eight concentric circles",
+    "answerZh": "A．八个同心圆",
+    "methods": [
+      {
+        "title": "Solve for the squared radius",
+        "titleZh": "对半径平方解方程",
+        "topics": [
+          {
+            "en": "Polar coordinates",
+            "zh": "极坐标"
+          },
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          }
+        ],
+        "steps": [
+          "Set $s=x^2+y^2$. In each period, the solutions to $\\sin s=1/2$ occur at $s=2k\\pi+\\pi/6$ and $s=2k\\pi+5\\pi/6$.",
+          "Four whole periods fit inside $[0,8\\pi]$, so use $k=0,1,2,3$ in both formulas. Each resulting $s$ produces the circle of radius $\\sqrt{s}$ centred at the origin. The radius gaps shrink within either family toward the outside."
+        ],
+        "stepsZh": [
+          "令 $s=x^2+y^2$。在每个周期内，$\\sin s=1/2$ 的解为 $s=2k\\pi+\\pi/6$ 或 $s=2k\\pi+5\\pi/6$。",
+          "区间 $[0,8\\pi]$ 恰含四个周期，两式都取 $k=0,1,2,3$。每个 $s$ 对应一个以原点为圆心、半径为 $\\sqrt{s}$ 的圆，同一族圆的相邻半径之差向外递减。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=19"
+  },
+  "tmua-2021-p1-q18": {
+    "summary": "Rotate the curve $x=y^2-6y+11$ clockwise by a right angle about $(-2,3)$. Find its new Cartesian equation.",
+    "summaryZh": "将曲线 $x=y^2-6y+11$ 绕 $(-2,3)$ 顺时针旋转直角，求所得曲线的直角坐标方程。",
+    "answer": "B. $y=-x^2-4x-5$",
+    "answerZh": "B．$y=-x^2-4x-5$",
+    "methods": [
+      {
+        "title": "Rotate coordinates about the given centre",
+        "titleZh": "绕指定中心旋转坐标",
+        "topics": [
+          {
+            "en": "Rotations",
+            "zh": "旋转"
+          },
+          {
+            "en": "Parabolas",
+            "zh": "抛物线"
+          }
+        ],
+        "steps": [
+          "If $(u,v)$ is an original point, its displacement from the pivot $(u+2,v-3)$ becomes $(v-3,-u-2)$. The new coordinates are $x=v-5$ and $y=1-u$.",
+          "The old equation reads $u=(v-3)^2+2$. Substituting $v=x+5$ gives $y=-(x+2)^2-1=-x^2-4x-5$."
+        ],
+        "stepsZh": [
+          "设原来的点为 $(u,v)$，它相对旋转中心的向量 $(u+2,v-3)$ 旋转后为 $(v-3,-u-2)$。新坐标为 $x=v-5$、$y=1-u$。",
+          "原方程是 $u=(v-3)^2+2$。代入 $v=x+5$ 得 $y=-(x+2)^2-1=-x^2-4x-5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=20"
+  },
+  "tmua-2021-p1-q19": {
+    "summary": "In degrees, for which $x$ are there exactly three solutions of $\\sin^2(60^\\circ\\cdot4^{\\cos\\theta})=3/4$ in $0^\\circ\\le\\theta\\le x^\\circ$?",
+    "summaryZh": "角度按度计算。要使 $\\sin^2(60^\\circ\\cdot4^{\\cos\\theta})=3/4$ 在 $0^\\circ\\le\\theta\\le x^\\circ$ 中恰有三个解，$x$ 应在什么范围？",
+    "answer": "B. $90\\le x<270$",
+    "answerZh": "B．$90\\le x<270$",
+    "methods": [
+      {
+        "title": "Order the first solutions",
+        "titleZh": "按顺序找出前几个解",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Exponential functions",
+            "zh": "指数函数"
+          }
+        ],
+        "steps": [
+          "The inner angle ranges from $15^\\circ$ to $240^\\circ$. Within that range its sine squared is $3/4$ at $60^\\circ,120^\\circ,240^\\circ$, requiring $\\cos\\theta=0,1/2,1$, respectively.",
+          "From zero upwards, the first four solutions are $0^\\circ,60^\\circ,90^\\circ,270^\\circ$. Include the third and exclude the fourth."
+        ],
+        "stepsZh": [
+          "内层角的范围是 $15^\\circ$ 至 $240^\\circ$。在此范围，正弦平方等于 $3/4$ 的角为 $60^\\circ,120^\\circ,240^\\circ$，分别要求 $\\cos\\theta=0,1/2,1$。",
+          "从零开始排列，前四个解依次为 $0^\\circ,60^\\circ,90^\\circ,270^\\circ$。上端点须包含第三个解而不包含第四个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=21"
+  },
+  "tmua-2021-p1-q20": {
+    "summary": "Find the length of the locus $2\\log_{10}(x-y)=\\log_{10}(2-2x)+\\log_{10}(y+5)$ in the real plane.",
+    "summaryZh": "求实平面内轨迹 $2\\log_{10}(x-y)=\\log_{10}(2-2x)+\\log_{10}(y+5)$ 的长度。",
+    "answer": "D. $3\\pi$",
+    "answerZh": "D．$3\\pi$",
+    "methods": [
+      {
+        "title": "Identify the admissible circular arc",
+        "titleZh": "确定满足定义域的圆弧",
+        "topics": [
+          {
+            "en": "Logarithmic domains",
+            "zh": "对数定义域"
+          },
+          {
+            "en": "Arc length",
+            "zh": "弧长"
+          }
+        ],
+        "steps": [
+          "Positivity requires $x>y$, $x<1$, $y>-5$. Exponentiating gives $(x-y)^2=(2-2x)(y+5)$, which simplifies to $(x+5)^2+(y-1)^2=36$.",
+          "The line $y=x$ cuts this circle at $(1,1)$ and $(-5,-5)$. The side $x>y$ selects the quarter arc from its rightmost point to its lowest point. Interior points satisfy the other two bounds. The length is $6(\\pi/2)=3\\pi$."
+        ],
+        "stepsZh": [
+          "对数真数为正要求 $x>y$、$x<1$、$y>-5$。去掉对数得 $(x-y)^2=(2-2x)(y+5)$，化简为 $(x+5)^2+(y-1)^2=36$。",
+          "直线 $y=x$ 与圆交于 $(1,1)$ 和 $(-5,-5)$。满足 $x>y$ 的一侧是连接圆最右点与最低点的四分之一圆弧。弧内部也满足另外两个条件。长度为 $6(\\pi/2)=3\\pi$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf#page=22"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "amc10-2024a-q1": {
+    "summary": "Evaluate $9901 \\cdot 101 - 99 \\cdot 10101$.",
+    "summaryZh": "求 $9901 \\cdot 101 - 99 \\cdot 10101$ 的值。",
+    "answer": "A. $2$.",
+    "answerZh": "A。$2$。",
+    "methods": [
+      {
+        "title": "Expand around 100",
+        "titleZh": "围绕 100 展开",
+        "steps": [
+          "Write $9901=99\\cdot100+1$ and $10101=100\\cdot101+1$. In the difference the common term $99\\cdot100\\cdot101$ cancels, leaving $101-99=2$."
+        ],
+        "stepsZh": [
+          "把 $9901$ 写成 $99\\cdot100+1$，把 $10101$ 写成 $100\\cdot101+1$。代入后两个乘积中的 $99\\cdot100\\cdot101$ 抵消，剩下 $101-99=2$。"
+        ],
+        "topics": [
+          {
+            "en": "Distributive law",
+            "zh": "分配律"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/1"
+  }
+}

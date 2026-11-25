@@ -1,0 +1,614 @@
+{
+  "tmua-2023-p1-q1": {
+    "summary": "A linear function $g(x)=ax+b$ satisfies $\\int_0^1g(x)\\,dx=\\int_0^1xg(x)\\,dx=1$. Determine $g(1)$.",
+    "summaryZh": "一次函数 $g(x)=ax+b$ 满足 $\\int_0^1g(x)\\,dx=\\int_0^1xg(x)\\,dx=1$，求 $g(1)$。",
+    "answer": "F. $4$",
+    "answerZh": "F．$4$",
+    "methods": [
+      {
+        "title": "Solve the two moment equations",
+        "titleZh": "联立两个积分条件",
+        "topics": [
+          {
+            "en": "Definite integration",
+            "zh": "定积分"
+          },
+          {
+            "en": "Linear systems",
+            "zh": "线性方程组"
+          }
+        ],
+        "steps": [
+          "Integrating the two polynomials gives $a/2+b=1$ and $a/3+b/2=1$.",
+          "Double the second equation and subtract the first. Thus $a/6=1$, so $a=6$ and $b=-2$. At $x=1$ the value is $4$."
+        ],
+        "stepsZh": [
+          "分别积分得 $a/2+b=1$ 和 $a/3+b/2=1$。",
+          "第二式乘以 2 再减第一式，得 $a/6=1$，故 $a=6,b=-2$，从而 $g(1)=4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=3"
+  },
+  "tmua-2023-p1-q2": {
+    "summary": "For which slopes $m$ does the line $y=mx-3$ avoid the parabola $y=x^2+5x+6$ entirely?",
+    "summaryZh": "直线 $y=mx-3$ 与抛物线 $y=x^2+5x+6$ 没有公共点时，斜率 $m$ 的取值范围是什么？",
+    "answer": "A. $-1<m<11$",
+    "answerZh": "A．$-1<m<11$",
+    "methods": [
+      {
+        "title": "Test for real intersections",
+        "titleZh": "用判别式判断交点",
+        "topics": [
+          {
+            "en": "Quadratic discriminant",
+            "zh": "二次方程判别式"
+          }
+        ],
+        "steps": [
+          "An intersection would solve $x^2+(5-m)x+9=0$. Its discriminant must therefore be strictly negative.",
+          "The inequality $(5-m)^2<36$ is equivalent to $|m-5|<6$, giving the stated open interval. At each endpoint the line is tangent."
+        ],
+        "stepsZh": [
+          "交点的横坐标满足 $x^2+(5-m)x+9=0$；无交点要求判别式严格小于零。",
+          "于是 $(5-m)^2<36$，即 $|m-5|<6$，得到所求开区间。两个端点都对应相切。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=4"
+  },
+  "tmua-2023-p1-q3": {
+    "summary": "Suppose the integral of $f$ over $[n,n+1]$ is $n+1$ for every nonnegative integer $n$. Compute $\\sum_{j\\in\\{0,1,2,4,5\\}}\\int_j^3 f(x)\\,dx$.",
+    "summaryZh": "对任意非负整数 $n$，$f$ 在 $[n,n+1]$ 上的积分是 $n+1$。求 $\\sum_{j\\in\\{0,1,2,4,5\\}}\\int_j^3 f(x)\\,dx$。",
+    "answer": "C. $1$",
+    "answerZh": "C．$1$",
+    "methods": [
+      {
+        "title": "Split at consecutive integers",
+        "titleZh": "按整数端点拆分",
+        "topics": [
+          {
+            "en": "Additivity of integrals",
+            "zh": "定积分的可加性"
+          }
+        ],
+        "steps": [
+          "For starts $0,1,2$ the forward integrals are $1+2+3=6$, $2+3=5$ and $3$.",
+          "Starts $4,5$ reverse the orientation, giving $-4$ and $-(4+5)=-9$. Adding gives $6+5+3-4-9=1$."
+        ],
+        "stepsZh": [
+          "从 $0,1,2$ 积到 $3$ 分别得到 $1+2+3=6$、$2+3=5$、$3$。",
+          "从 $4,5$ 积到 $3$ 要改变符号，分别得到 $-4,-9$。合计 $6+5+3-4-9=1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=5"
+  },
+  "tmua-2023-p1-q4": {
+    "summary": "Sum $\\sum_{n=0}^{\\infty}2^{-n}\\sin(n\\pi+\\pi/3)$.",
+    "summaryZh": "求级数 $\\sum_{n=0}^{\\infty}2^{-n}\\sin(n\\pi+\\pi/3)$ 的和。",
+    "answer": "C. $\\sqrt{3}/3$",
+    "answerZh": "C．$\\sqrt{3}/3$",
+    "methods": [
+      {
+        "title": "Recognise an alternating geometric series",
+        "titleZh": "识别交错等比级数",
+        "topics": [
+          {
+            "en": "Trigonometric periodicity",
+            "zh": "三角函数周期性"
+          },
+          {
+            "en": "Geometric series",
+            "zh": "等比级数"
+          }
+        ],
+        "steps": [
+          "Shifting the sine angle by $\\pi$ reverses its sign. The $n$th term is $(\\sqrt3/2)(-1/2)^n$.",
+          "Since the common ratio has magnitude below one, the sum is $(\\sqrt3/2)/(1+1/2)=\\sqrt3/3$."
+        ],
+        "stepsZh": [
+          "正弦函数的自变量每增加 $\\pi$，函数值变号，因此第 $n$ 项为 $(\\sqrt3/2)(-1/2)^n$。",
+          "公比绝对值小于 1，求和得 $(\\sqrt3/2)/(1+1/2)=\\sqrt3/3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=6"
+  },
+  "tmua-2023-p1-q5": {
+    "summary": "An axis-aligned square has corners $(0,0)$ and $(10,10)$ at opposite ends of a diagonal. An inscribed rectangle has vertices $(0,x),(10-x,10),(10,10-x),(x,0)$. Find the larger $x$ for which its area is $20$.",
+    "summaryZh": "边长为 $10$ 的正方形内有一矩形，四个顶点的坐标依次为 $(0,x),(10-x,10),(10,10-x),(x,0)$。矩形面积为 $20$ 时，求较大的 $x$。",
+    "answer": "F. $5+\\sqrt{15}$",
+    "answerZh": "F．$5+\\sqrt{15}$",
+    "methods": [
+      {
+        "title": "Use the tilted rectangle's side lengths",
+        "titleZh": "求倾斜矩形的边长",
+        "topics": [
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ],
+        "steps": [
+          "The side joining $(0,x)$ and $(x,0)$ has length $\\sqrt2x$. The adjacent side joining $(0,x)$ to $(10-x,10)$ has length $\\sqrt2(10-x)$.",
+          "Their product yields $2x(10-x)=20$, hence $(x-5)^2=15$. Both roots lie in $(0,10)$ and the larger is $5+\\sqrt{15}$."
+        ],
+        "stepsZh": [
+          "由 $(0,x)$ 到 $(x,0)$ 的一边长为 $\\sqrt2x$；由 $(0,x)$ 到 $(10-x,10)$ 的相邻边长为 $\\sqrt2(10-x)$。",
+          "面积条件化为 $2x(10-x)=20$，即 $(x-5)^2=15$。两根均在 $(0,10)$ 内，较大者是 $5+\\sqrt{15}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=7"
+  },
+  "tmua-2023-p1-q6": {
+    "summary": "Count the coefficients divisible by $12$ among all powers of $x$ in $(2+3x)^{12}$.",
+    "summaryZh": "在 $(2+3x)^{12}$ 的展开式中，能被 $12$ 整除的系数一共有几个？",
+    "answer": "E. $11$",
+    "answerZh": "E．$11$",
+    "methods": [
+      {
+        "title": "Inspect the end coefficients separately",
+        "titleZh": "单独考查端点系数",
+        "topics": [
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          }
+        ],
+        "steps": [
+          "The coefficient of $x^j$ is $\\binom{12}{j}2^{12-j}3^j$. For $1\\le j\\le10$ the explicit powers already supply a factor $4\\cdot3$.",
+          "The $j=11$ coefficient has the extra factor $\\binom{12}{11}=12$, so it qualifies too. At $j=0$ the coefficient lacks a factor $3$; at $j=12$ it is odd. Exactly $11$ qualify."
+        ],
+        "stepsZh": [
+          "$x^j$ 的系数为 $\\binom{12}{j}2^{12-j}3^j$。当 $1\\le j\\le10$ 时，两项幂已经提供了因子 $4\\cdot3$。",
+          "当 $j=11$ 时，组合数 $\\binom{12}{11}=12$ 也保证整除。$j=0$ 时无因子 3，$j=12$ 时为奇数，故合格系数恰有 11 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=8"
+  },
+  "tmua-2023-p1-q7": {
+    "summary": "Find the largest $x$ for which $(2^x+4):(2^{2x-2}-2^{x+2}+16)=4:1$.",
+    "summaryZh": "求满足 $(2^x+4):(2^{2x-2}-2^{x+2}+16)=4:1$ 的最大 $x$。",
+    "answer": "F. $\\log_2 12$",
+    "answerZh": "F．$\\log_2 12$",
+    "methods": [
+      {
+        "title": "Reduce to a quadratic in a power",
+        "titleZh": "指数换元",
+        "topics": [
+          {
+            "en": "Exponential substitutions",
+            "zh": "指数换元"
+          },
+          {
+            "en": "Factorisation",
+            "zh": "因式分解"
+          }
+        ],
+        "steps": [
+          "Set $t=2^x>0$. Cross-multiplication gives $t+4=4(t^2/4-4t+16)$, or $(t-5)(t-12)=0$.",
+          "Each root gives a nonzero denominator, since it equals $(t+4)/4$. As $2^x$ increases with $x$, take $t=12$, giving $x=\\log_2 12$."
+        ],
+        "stepsZh": [
+          "令 $t=2^x>0$。交叉相乘，得到 $t+4=4(t^2/4-4t+16)$，整理为 $(t-5)(t-12)=0$。",
+          "两根对应的分母均等于 $(t+4)/4$，不为零。$2^x$ 单调递增，故取 $t=12$ 得 $x=\\log_2 12$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=9"
+  },
+  "tmua-2023-p1-q8": {
+    "summary": "Fix $a>0$. Triangles $XYZ$ satisfy $XY=\\sqrt3a$, $YZ=a$ and $\\angle YXZ=30^\\circ$. Find the larger possible area divided by the smaller.",
+    "summaryZh": "设 $a>0$，三角形 $XYZ$ 满足 $XY=\\sqrt3a$，$YZ=a$，$\\angle YXZ=30^\\circ$。求两种可能面积中较大者与较小者的比值。",
+    "answer": "B. $2$",
+    "answerZh": "B．$2$",
+    "methods": [
+      {
+        "title": "Intersect a fixed ray with a circle",
+        "titleZh": "用射线与圆定位第三点",
+        "topics": [
+          {
+            "en": "Right triangles",
+            "zh": "直角三角形"
+          },
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          }
+        ],
+        "steps": [
+          "Take $XZ$ as a horizontal ray. The perpendicular foot of $Y$ is $\\sqrt3a\\cos30^\\circ=3a/2$ from $X$; the height above the ray is $\\sqrt3a/2$.",
+          "Since $YZ=a$, $Z$ lies horizontally $\\sqrt{a^2-3a^2/4}=a/2$ on either side of the foot. The base lengths are $a$ and $2a$. Their heights coincide, so their areas are in ratio $2:1$."
+        ],
+        "stepsZh": [
+          "取射线 $XZ$ 为水平轴。$Y$ 的垂足距 $X$ 为 $\\sqrt3a\\cos30^\\circ=3a/2$，而高为 $\\sqrt3a/2$。",
+          "由 $YZ=a$，点 $Z$ 在垂足左右各 $\\sqrt{a^2-3a^2/4}=a/2$ 处，故两种底长为 $a,2a$。同高三角形的面积比为 $2:1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=10"
+  },
+  "tmua-2023-p1-q9": {
+    "summary": "Count the distinct angles $\\theta\\in[0^\\circ,180^\\circ]$ that solve $(1+3\\cos(3\\theta))^2=4$.",
+    "summaryZh": "在 $0^\\circ\\le\\theta\\le180^\\circ$ 内，方程 $(1+3\\cos(3\\theta))^2=4$ 有多少个不同的解？",
+    "answer": "E. $5$",
+    "answerZh": "E．$5$",
+    "methods": [
+      {
+        "title": "Count on three half-turns",
+        "titleZh": "按三个半周期计数",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "Writing $u=3\\theta$ gives $0^\\circ\\le u\\le540^\\circ$. The two cases are $\\cos u=1/3$ and $\\cos u=-1$.",
+          "Each of the three successive $180^\\circ$ intervals contains one interior crossing of $1/3$ by cosine. The value $-1$ occurs only at $180^\\circ$ and $540^\\circ$. The total is $3+2=5$."
+        ],
+        "stepsZh": [
+          "令 $u=3\\theta$，则 $0^\\circ\\le u\\le540^\\circ$。开平方分出 $\\cos u=1/3$ 和 $\\cos u=-1$。",
+          "三个连续的 $180^\\circ$ 区间内余弦分别单调，各有一个内点满足第一式；第二式只在 $180^\\circ,540^\\circ$ 成立，共 $3+2=5$ 解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=11"
+  },
+  "tmua-2023-p1-q10": {
+    "summary": "On $[-2,2]$, approximate $\\int_{-2}^2\\sqrt{4-x^2}\\,dx$ by four equal-width trapezoids. Find the absolute error.",
+    "summaryZh": "在 $[-2,2]$ 上用四个等宽梯形估计 $\\int_{-2}^2\\sqrt{4-x^2}\\,dx$，求绝对误差。",
+    "answer": "B. $2(\\pi-1-\\sqrt3)$",
+    "answerZh": "B．$2(\\pi-1-\\sqrt3)$",
+    "methods": [
+      {
+        "title": "Compare a semicircle and its inscribed polygon",
+        "titleZh": "比较半圆与内接折线下面积",
+        "topics": [
+          {
+            "en": "Trapezium rule",
+            "zh": "梯形公式"
+          },
+          {
+            "en": "Circle area",
+            "zh": "圆面积"
+          }
+        ],
+        "steps": [
+          "The graph bounds an upper semicircle of radius $2$, of area $2\\pi$. At the five integer nodes the heights are $0,\\sqrt3,2,\\sqrt3,0$.",
+          "With spacing $1$ the trapezium sum is $2+2\\sqrt3$. Its chords lie below the circular arc, so subtracting it from $2\\pi$ gives $2(\\pi-1-\\sqrt3)$."
+        ],
+        "stepsZh": [
+          "曲线围出的图形是半径为 $2$ 的上半圆，面积为 $2\\pi$。五个整数分点处的高度依次为 $0,\\sqrt3,2,\\sqrt3,0$。",
+          "步长为 $1$，梯形和为 $2+2\\sqrt3$。弦在圆弧下方，故误差为 $2\\pi-(2+2\\sqrt3)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=12"
+  },
+  "tmua-2023-p1-q11": {
+    "summary": "Let $f(t)=t^2-6t$ and $k,c>0$. The graphs of $f(kx)$ and $f(x-c)$ have the same vertex. Express $k$ using $c$.",
+    "summaryZh": "设 $f(t)=t^2-6t$ 且 $k,c>0$。$f(kx)$ 与 $f(x-c)$ 的图像顶点相同，用 $c$ 表示 $k$。",
+    "answer": "B. $3/(c+3)$",
+    "answerZh": "B．$3/(c+3)$",
+    "methods": [
+      {
+        "title": "Locate each vertex through its input",
+        "titleZh": "由内层自变量定位顶点",
+        "topics": [
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          },
+          {
+            "en": "Transformations of graphs",
+            "zh": "函数图像变换"
+          }
+        ],
+        "steps": [
+          "The form $f(t)=(t-3)^2-9$ shows that the minimum occurs exactly when the input is $3$.",
+          "The corresponding abscissas are $3/k$ and $c+3$. Equating them gives $k=3/(c+3)$; the two minimum heights are already equal."
+        ],
+        "stepsZh": [
+          "由 $f(t)=(t-3)^2-9$，只有内层自变量为 $3$ 时取得最小值。",
+          "两个最低点的横坐标分别为 $3/k$ 和 $c+3$。令二者相等，即 $k=3/(c+3)$，纵坐标自动相同。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=13"
+  },
+  "tmua-2023-p1-q12": {
+    "summary": "On $[0,2\\pi]$ count the solutions of $2^{\\tan^2x}=4^{\\sin^2x}$.",
+    "summaryZh": "求 $2^{\\tan^2x}=4^{\\sin^2x}$ 在 $[0,2\\pi]$ 内的解的个数。",
+    "answer": "F. $7$",
+    "answerZh": "F．$7$",
+    "methods": [
+      {
+        "title": "Keep the sine-zero branch",
+        "titleZh": "保留正弦为零的一支",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Domain restrictions",
+            "zh": "定义域限制"
+          }
+        ],
+        "steps": [
+          "Where tangent exists, equality of exponents gives $\\tan^2x=2\\sin^2x$, hence $\\sin^2x(1-2\\cos^2x)=0$.",
+          "The first factor contributes $0,\\pi,2\\pi$. The second contributes the four odd multiples of $\\pi/4$ in the interval. The two sets are disjoint and all seven angles have defined tangent."
+        ],
+        "stepsZh": [
+          "在正切有定义的点上，比较同底指数得 $\\tan^2x=2\\sin^2x$，即 $\\sin^2x(1-2\\cos^2x)=0$。",
+          "第一因子给出 $0,\\pi,2\\pi$；第二因子给出区间内四个奇数倍 $\\pi/4$。两组不重合，七个角的正切均有定义。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=14"
+  },
+  "tmua-2023-p1-q13": {
+    "summary": "Two circles of radius $4$ have centres $(2,1)$ and $(4,-5)$. What is the greatest distance between one point on each circle?",
+    "summaryZh": "两个圆的半径都为 $4$，圆心分别为 $(2,1),(4,-5)$。两圆上各取一点，这两点距离的最大值是多少？",
+    "answer": "F. $8+2\\sqrt{10}$",
+    "answerZh": "F．$8+2\\sqrt{10}$",
+    "methods": [
+      {
+        "title": "Use the line of centres",
+        "titleZh": "利用连心线",
+        "topics": [
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "The centres are separated by $\\sqrt{2^2+(-6)^2}=2\\sqrt{10}$. The triangle inequality bounds any requested distance by $4+2\\sqrt{10}+4$.",
+          "Choose both points on the line of centres, on the outer side of their respective centres. The three lengths then add exactly, so the upper bound is attained."
+        ],
+        "stepsZh": [
+          "两圆心距离为 $\\sqrt{2^2+(-6)^2}=2\\sqrt{10}$。用两条半径和圆心连线连接所取两点，三角不等式给出上界 $4+2\\sqrt{10}+4$。",
+          "沿连心线在两圆心的外侧分别取点时，三段在同一直线上按顺序相接，故达到上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=15"
+  },
+  "tmua-2023-p1-q14": {
+    "summary": "With $m>0$, find the interval for $n$ such that $(2/3)x^3+2mx^2+n$ has three different real zeros.",
+    "summaryZh": "当 $m>0$ 时，求使 $(2/3)x^3+2mx^2+n$ 有三个不同实根的 $n$ 的范围。",
+    "answer": "A. $-8m^3/3<n<0$",
+    "answerZh": "A．$-8m^3/3<n<0$",
+    "methods": [
+      {
+        "title": "Test the signs at the stationary points",
+        "titleZh": "比较极值处的符号",
+        "topics": [
+          {
+            "en": "Cubic functions",
+            "zh": "三次函数"
+          },
+          {
+            "en": "Stationary points",
+            "zh": "驻点"
+          }
+        ],
+        "steps": [
+          "The derivative $2x(x+2m)$ changes from positive to negative at $-2m$ and from negative to positive at $0$. The local maximum is $n+8m^3/3$ and the local minimum is $n$.",
+          "The cubic goes from negative infinity to positive infinity. It crosses zero on each of its three monotone branches exactly when the maximum is positive and the minimum negative. Equality would give a repeated zero."
+        ],
+        "stepsZh": [
+          "导数 $2x(x+2m)$ 在 $-2m$ 处由正变负，在 $0$ 处由负变正，故极大值为 $n+8m^3/3$，极小值为 $n$。",
+          "三次函数由负无穷走向正无穷，要使三个单调区间各有一根，充要条件是极大值为正、极小值为负。端点等号会产生重根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=16"
+  },
+  "tmua-2023-p1-q15": {
+    "summary": "As $x$ ranges over the reals, the range of $a^{\\cos x}$ has width $3$, where $a>0$. Determine the sum of the possible bases $a$.",
+    "summaryZh": "对所有实数 $x$，$a^{\\cos x}$ 的最大值与最小值相差 $3$，且 $a>0$。求所有可能的 $a$ 之和。",
+    "answer": "F. $\\sqrt{13}$",
+    "answerZh": "F．$\\sqrt{13}$",
+    "methods": [
+      {
+        "title": "Exploit reciprocal endpoints",
+        "titleZh": "利用互为倒数的端点",
+        "topics": [
+          {
+            "en": "Ranges of functions",
+            "zh": "函数值域"
+          },
+          {
+            "en": "Reciprocals",
+            "zh": "倒数"
+          }
+        ],
+        "steps": [
+          "The extreme values are $a$ and $1/a$ since cosine attains $-1$ and $1$. Thus $|a-1/a|=3$ and $(a+1/a)^2=9+4=13$.",
+          "For $a>1$ the equation $a-1/a=3$ has a unique positive solution, and the base below one is its reciprocal. Their sum is positive, hence $\\sqrt{13}$."
+        ],
+        "stepsZh": [
+          "因余弦可取 $-1$ 和 $1$，两端值为 $a,1/a$。所以 $|a-1/a|=3$，进而 $(a+1/a)^2=9+4=13$。",
+          "当 $a>1$ 时，方程 $a-1/a=3$ 仅有一个正根，另一个小于 1 的底数正是其倒数。两者之和为正，故为 $\\sqrt{13}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=17"
+  },
+  "tmua-2023-p1-q16": {
+    "summary": "Determine the sum of all $k$ for which $(2,3),(9,-1),(5,k)$ form a right triangle.",
+    "summaryZh": "求能使 $(2,3),(9,-1),(5,k)$ 成为直角三角形的全部 $k$ 值之和。",
+    "answer": "E. $9/4$",
+    "answerZh": "E．$9/4$",
+    "methods": [
+      {
+        "title": "Allow each vertex to be the right angle",
+        "titleZh": "穷举直角顶点",
+        "topics": [
+          {
+            "en": "Dot product",
+            "zh": "向量数量积"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "Call the three points $A,B,C$ in the order given. A right angle at $A$ requires $(7,-4)\\cdot(3,k-3)=0$, giving $k=33/4$. At $B$ the condition $(-7,4)\\cdot(-4,k+1)=0$ gives $k=-8$.",
+          "At $C$, the condition $(-3,3-k)\\cdot(4,-1-k)=0$ reduces to $(k-5)(k+3)=0$. The four distinct possibilities sum to $33/4-8+5-3=9/4$."
+        ],
+        "stepsZh": [
+          "依次记三点为 $A,B,C$。若直角在 $A$，则 $(7,-4)\\cdot(3,k-3)=0$，得 $k=33/4$；若在 $B$，则 $(-7,4)\\cdot(-4,k+1)=0$，得 $k=-8$。",
+          "若在 $C$，则 $(-3,3-k)\\cdot(4,-1-k)=0$，化为 $(k-5)(k+3)=0$。四个不同值之和为 $33/4-8+5-3=9/4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=18"
+  },
+  "tmua-2023-p1-q17": {
+    "summary": "For $n=1,\\ldots,100$ let $C_n$ satisfy $x^2+y^2=2n(x+y)$. For $j=1,\\ldots,50$, shade the part inside $C_{2j}$ but outside $C_{2j-1}$. Find the area covered.",
+    "summaryZh": "令 $C_n$ 的方程为 $x^2+y^2=2n(x+y)$，其中 $1\\le n\\le100$。对 $1\\le j\\le50$，涂黑 $C_{2j}$ 内部且位于 $C_{2j-1}$ 外部的部分。求总涂色面积。",
+    "answer": "E. $10100\\pi$",
+    "answerZh": "E．$10100\\pi$",
+    "methods": [
+      {
+        "title": "Sum the differences of nested disks",
+        "titleZh": "对嵌套圆盘的面积作差",
+        "topics": [
+          {
+            "en": "Circle geometry",
+            "zh": "圆的几何性质"
+          },
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差求和"
+          }
+        ],
+        "steps": [
+          "Completing squares puts the centre at $(n,n)$ and radius at $\\sqrt2n$. Successive centres are $\\sqrt2$ apart, equal to the radius increase, so the disks are nested.",
+          "The shaded areas do not overlap except on their boundaries. Their sum is $2\\pi\\sum_{j=1}^{50}((2j)^2-(2j-1)^2)=2\\pi\\sum_{j=1}^{50}(4j-1)=10100\\pi$."
+        ],
+        "stepsZh": [
+          "配方得圆心 $(n,n)$，半径 $\\sqrt2n$。相邻圆心距离 $\\sqrt2$ 正好等于半径增量，因此圆盘逐层嵌套。",
+          "各涂色区域的内部互不相交，总面积为 $2\\pi\\sum_{j=1}^{50}((2j)^2-(2j-1)^2)=2\\pi\\sum_{j=1}^{50}(4j-1)=10100\\pi$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=19"
+  },
+  "tmua-2023-p1-q18": {
+    "summary": "Choose an integer $k$ uniformly from $-5$ through $5$. What is the probability that the infinite series $4\\sum_{n=0}^{\\infty}(2k/7)^n$ converges to a value exceeding $3$?",
+    "summaryZh": "从 $-5$ 到 $5$ 的整数中等概率选取 $k$。级数 $4\\sum_{n=0}^{\\infty}(2k/7)^n$ 收敛且其和大于 $3$ 的概率是多少？",
+    "answer": "E. $5/11$",
+    "answerZh": "E．$5/11$",
+    "methods": [
+      {
+        "title": "Intersect convergence and size conditions",
+        "titleZh": "同时施加收敛条件和大小条件",
+        "topics": [
+          {
+            "en": "Geometric series",
+            "zh": "等比级数"
+          },
+          {
+            "en": "Discrete probability",
+            "zh": "离散概率"
+          }
+        ],
+        "steps": [
+          "Convergence requires $|2k/7|<1$, leaving $k=-3,-2,-1,0,1,2,3$. The sum is $28/(7-2k)$ with a positive denominator.",
+          "To exceed $3$ requires $28>21-6k$, or $k>-7/6$. Five choices remain, $-1,0,1,2,3$, out of the original eleven."
+        ],
+        "stepsZh": [
+          "收敛要求 $|2k/7|<1$，仅余 $-3$ 到 $3$ 的整数。和为 $28/(7-2k)$，且分母为正。",
+          "由 $28>21-6k$ 得 $k>-7/6$。符合条件者为 $-1,0,1,2,3$，在原有 11 个等可能取值中占 5 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=20"
+  },
+  "tmua-2023-p1-q19": {
+    "summary": "Find an antiderivative of $|-6x|$ on the entire real line that vanishes at $x=0$.",
+    "summaryZh": "求 $|-6x|$ 在整个实轴上的一个原函数，使其在 $0$ 处取值为零。",
+    "answer": "D. $3x|x|$",
+    "answerZh": "D．$3x|x|$",
+    "methods": [
+      {
+        "title": "Integrate on the two half-lines",
+        "titleZh": "按正负半轴积分",
+        "topics": [
+          {
+            "en": "Absolute value",
+            "zh": "绝对值"
+          },
+          {
+            "en": "Antiderivatives",
+            "zh": "原函数"
+          }
+        ],
+        "steps": [
+          "For $x\\ge0$ the integrand is $6x$ and for $x<0$ it is $-6x$. The two primitives through the origin are $3x^2$ and $-3x^2$, respectively.",
+          "These are the branches of $3x|x|$. At $0$ its difference quotient is $3|h|$, tending to zero, as required by the integrand."
+        ],
+        "stepsZh": [
+          "当 $x\\ge0$ 时被积函数为 $6x$，当 $x<0$ 时为 $-6x$；两支过原点的原函数分别为 $3x^2,-3x^2$。",
+          "合写为 $3x|x|$。在原点处差商为 $3|h|$，极限为零，也等于该处的被积函数值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=21"
+  },
+  "tmua-2023-p1-q20": {
+    "summary": "A continuous function $f$ has range $[-2,2]$. Find the largest value minus the smallest value of $f(x)^2-f(x)$.",
+    "summaryZh": "连续函数 $f$ 的值域为 $[-2,2]$，求 $f(x)^2-f(x)$ 的最大值与最小值之差。",
+    "answer": "F. $25/4$",
+    "answerZh": "F．$25/4$",
+    "methods": [
+      {
+        "title": "Optimise over the range of the inner function",
+        "titleZh": "在内层函数的值域上求极值",
+        "topics": [
+          {
+            "en": "Quadratic optimisation",
+            "zh": "二次函数最值"
+          },
+          {
+            "en": "Composite functions",
+            "zh": "复合函数"
+          }
+        ],
+        "steps": [
+          "Write $t=f(x)$. The outer function is $t^2-t=(t-1/2)^2-1/4$, so its lowest attainable value is $-1/4$ at $t=1/2$.",
+          "The endpoint further from $1/2$ is $t=-2$, giving maximum $6$. The width is $6-(-1/4)=25/4$."
+        ],
+        "stepsZh": [
+          "令 $t=f(x)$。外层函数 $t^2-t=(t-1/2)^2-1/4$ 在可取的 $t=1/2$ 处最小，为 $-1/4$。",
+          "在两个端点中，$-2$ 离 $1/2$ 更远，因此取得最大值 $6$。二者相差 $25/4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf#page=22"
+  }
+}

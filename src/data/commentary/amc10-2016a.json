@@ -1,0 +1,27 @@
+{
+  "amc10-2016a-q1": {
+    "summary": "Evaluate $\\dfrac{11!-10!}{9!}$.",
+    "summaryZh": "求 $\\dfrac{11!-10!}{9!}$ 的值。",
+    "answer": "B. $100$.",
+    "answerZh": "B。$100$。",
+    "methods": [
+      {
+        "title": "Factor before dividing",
+        "titleZh": "先提取阶乘",
+        "steps": [
+          "$11!-10!=10!(11-1)=10\\cdot10!$. Since $10!/9!=10$, division by $9!$ gives $10\\cdot10=100$."
+        ],
+        "stepsZh": [
+          "$11!-10!=10!(11-1)=10\\cdot10!$。再利用 $10!/9!=10$，原式等于 $10\\cdot10=100$。"
+        ],
+        "topics": [
+          {
+            "en": "Factorials",
+            "zh": "阶乘"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/1"
+  }
+}

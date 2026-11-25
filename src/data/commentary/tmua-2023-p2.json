@@ -1,0 +1,618 @@
+{
+  "tmua-2023-p2-q1": {
+    "summary": "Find the real $x$ such that $1/(\\sqrt x-6)-1/(\\sqrt x+6)=3/11$.",
+    "summaryZh": "求满足 $1/(\\sqrt x-6)-1/(\\sqrt x+6)=3/11$ 的实数 $x$。",
+    "answer": "H. $80$",
+    "answerZh": "H．$80$",
+    "methods": [
+      {
+        "title": "Use conjugate denominators",
+        "titleZh": "利用共轭分母",
+        "topics": [
+          {
+            "en": "Algebraic fractions",
+            "zh": "代数分式"
+          }
+        ],
+        "steps": [
+          "The domain is $x\\ge0$, $x\\ne36$. The numerator after subtraction is $12$ and the product of the denominators is $x-36$.",
+          "Therefore $12/(x-36)=3/11$, which gives $x-36=44$ and $x=80$. This satisfies the domain restrictions."
+        ],
+        "stepsZh": [
+          "定义域为 $x\\ge0$ 且 $x\\ne36$。通分后分子为 $12$，分母为 $x-36$。",
+          "因此 $12/(x-36)=3/11$，解得 $x-36=44$，所以 $x=80$，符合定义域。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=3"
+  },
+  "tmua-2023-p2-q2": {
+    "summary": "For $x$ from $9$ to $16$, integrate the difference $(x^{-1/2}+x^{1/2})^2-(x^{-1/2}-x^{1/2})^2$.",
+    "summaryZh": "求 $(x^{-1/2}+x^{1/2})^2-(x^{-1/2}-x^{1/2})^2$ 在 $[9,16]$ 上的定积分。",
+    "answer": "F. $28$",
+    "answerZh": "F．$28$",
+    "methods": [
+      {
+        "title": "Cancel before integrating",
+        "titleZh": "先化简后积分",
+        "topics": [
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          },
+          {
+            "en": "Definite integration",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "For any $u,v$, $(u+v)^2-(u-v)^2=4uv$. In this case $uv=x^{-1/2}x^{1/2}=1$.",
+          "The integrand is constant, so the result is $4(16-9)=28$."
+        ],
+        "stepsZh": [
+          "恒等式 $(u+v)^2-(u-v)^2=4uv$ 中取 $u=x^{-1/2},v=x^{1/2}$，此时 $uv=1$。",
+          "被积函数恒为 4，积分等于 $4(16-9)=28$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=4"
+  },
+  "tmua-2023-p2-q3": {
+    "summary": "Among $(x,y)=(1,16),(2,8),(3,4)$, identify every pair for which $\\sqrt{x^y}$ and $x^{\\sqrt y}$ differ.",
+    "summaryZh": "在 $(1,16),(2,8),(3,4)$ 三组 $(x,y)$ 中，找出能使 $\\sqrt{x^y}$ 与 $x^{\\sqrt y}$ 不相等的所有数对。",
+    "answer": "C. $(2,8)$ only",
+    "answerZh": "C．只有 $(2,8)$",
+    "methods": [
+      {
+        "title": "Identify when exponents must agree",
+        "titleZh": "判断何时必须比较指数",
+        "topics": [
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          },
+          {
+            "en": "Exponential functions",
+            "zh": "指数函数"
+          }
+        ],
+        "steps": [
+          "At base $x=1$ both expressions equal one. For positive $x\\ne1$, equality is equivalent to $y/2=\\sqrt y$. Since $y>0$, this reduces to $y=4$.",
+          "Thus the third pair satisfies the equation, while $(2,8)$ fails it because $4\\ne\\sqrt8$."
+        ],
+        "stepsZh": [
+          "当底数 $x=1$ 时，两边均为 1。对于 $x>0$ 且 $x\\ne1$，两边相等当且仅当 $y/2=\\sqrt y$。由 $y>0$ 得 $y=4$。",
+          "因此第三组成立，而 $(2,8)$ 不成立，因为 $4\\ne\\sqrt8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=5"
+  },
+  "tmua-2023-p2-q4": {
+    "summary": "An argument for a maximum run of two consecutive odd primes lists three consecutive odd numbers, observes that one is divisible by $3$, then calls that number composite. Find the first mistake and the actual maximum.",
+    "summaryZh": "某论证声称连续奇数中最多连续出现两个素数：任意三个连续奇数中必有一个能被 $3$ 整除，于是该数必为合数。指出首个错误，并求真正的最大个数。",
+    "answer": "G. The multiple of $3$ may be prime; the maximum is $3$.",
+    "answerZh": "G．$3$ 的倍数可能是素数；最大个数为 $3$。",
+    "methods": [
+      {
+        "title": "Check the exceptional multiple",
+        "titleZh": "检查整除结论的例外",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "The divisibility claim is valid because a step of $2$ cycles through all three residues modulo $3$. The invalid inference is that every positive multiple of $3$ is composite: $3$ itself is prime.",
+          "The run $3,5,7$ attains three. Any run of four would have two overlapping triples; to avoid a composite multiple of three, both triples must contain $3$. The only candidate positive runs starting at $1$ or $3$ contain $1$ or $9$, and a later run cannot contain $3$."
+        ],
+        "stepsZh": [
+          "公差为 2 时，三个数遍历模 3 的全部余数，整除判断正确。错误在于由“是 3 的倍数”推出“是合数”，遗漏了素数 3 本身。",
+          "$3,5,7$ 可连续取三个。四个连续正奇数若从 1 或 3 开始，必含 1 或 9；若从 5 或更大者开始，则前三个数中有一个大于 3 的 3 的倍数。故不存在长度为 4 的全素数串。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=6"
+  },
+  "tmua-2023-p2-q5": {
+    "summary": "For real $k$, is being an integer multiple of $\\pi$ necessary, sufficient, or both for $\\int_0^k\\sin(2x)\\,dx=0$?",
+    "summaryZh": "对实数 $k$，判断“$k$ 是 $\\pi$ 的整数倍”对于“$\\int_0^k\\sin(2x)\\,dx=0$”是必要条件、充分条件还是充要条件。",
+    "answer": "A. Necessary and sufficient",
+    "answerZh": "A．充要条件",
+    "methods": [
+      {
+        "title": "Evaluate the integral exactly",
+        "titleZh": "化为余弦方程",
+        "topics": [
+          {
+            "en": "Necessary and sufficient conditions",
+            "zh": "充要条件"
+          },
+          {
+            "en": "Trigonometric integrals",
+            "zh": "三角函数积分"
+          }
+        ],
+        "steps": [
+          "The integral equals $(1-\\cos(2k))/2$, including when $k$ is negative.",
+          "It vanishes precisely when $2k=2j\\pi$ for an integer $j$, equivalently $k=j\\pi$. This proves both directions."
+        ],
+        "stepsZh": [
+          "积分为 $(1-\\cos(2k))/2$，$k$ 为负时同样成立。",
+          "该式为零当且仅当 $2k=2j\\pi$，其中 $j$ 为整数，即 $k=j\\pi$。两个方向均成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=7"
+  },
+  "tmua-2023-p2-q6": {
+    "summary": "For $a>1$, which equations must have as many real roots as $a^x=x$? Consider (I) $\\log_a x=x$, (II) $a^{2x}=x^2$, (III) $a^{2x}=2x$.",
+    "summaryZh": "设 $a>1$。以下方程中哪些必与 $a^x=x$ 有相同的实根个数？（I）$\\log_a x=x$；（II）$a^{2x}=x^2$；（III）$a^{2x}=2x$。",
+    "answer": "F. I and III",
+    "answerZh": "F．I、III",
+    "methods": [
+      {
+        "title": "Separate reversible substitutions from squaring",
+        "titleZh": "区分等价变形与平方",
+        "topics": [
+          {
+            "en": "Equivalence",
+            "zh": "等价关系"
+          },
+          {
+            "en": "Extraneous roots",
+            "zh": "增根"
+          }
+        ],
+        "steps": [
+          "Every root of $a^x=x$ is positive, and taking base-$a$ logarithms gives (I) reversibly. The substitution $u=2x$ gives a bijection between the roots in (III) and the original roots.",
+          "Equation (II) is equivalent to $a^x=|x|$. Its positive roots are unchanged, but it adds a negative root: $a^x+x$ is strictly increasing, is negative at $-1$ and positive at $0$."
+        ],
+        "stepsZh": [
+          "原方程的解必为正数，取以 $a$ 为底的对数即得（I），且过程可逆。令 $u=2x$，则（III）与原方程的解一一对应。",
+          "（II）等价于 $a^x=|x|$。除了原有的正根，还增加了负根：$a^x+x$ 严格递增，在 $-1$ 处为负、在 0 处为正。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=8"
+  },
+  "tmua-2023-p2-q7": {
+    "summary": "For $abc\\ne0$, a line has equation $ax+by=c$. Does having $a$ and $c$ of opposite signs give a necessary condition, a sufficient one, or both for positive slope and positive vertical intercept?",
+    "summaryZh": "当 $abc\\ne0$ 时，直线 $ax+by=c$ 的斜率和纵截距都为正。判断“$a,c$ 异号”是这一结论的必要条件、充分条件还是充要条件。",
+    "answer": "E. Necessary but not sufficient",
+    "answerZh": "E．必要不充分条件",
+    "methods": [
+      {
+        "title": "Trace the signs of the two quotients",
+        "titleZh": "比较两个商的符号",
+        "topics": [
+          {
+            "en": "Linear functions",
+            "zh": "一次函数"
+          },
+          {
+            "en": "Necessary conditions",
+            "zh": "必要条件"
+          }
+        ],
+        "steps": [
+          "The slope is $-a/b$ and the intercept is $c/b$. Positivity requires that $a$ and $b$ have opposite signs and that $b$ and $c$ have the same sign. Hence $a,c$ must have opposite signs.",
+          "For $(a,b,c)=(1,1,-1)$ they have opposite signs, yet the slope and intercept are both negative. Thus the condition cannot suffice."
+        ],
+        "stepsZh": [
+          "斜率为 $-a/b$，纵截距为 $c/b$。二者均为正要求 $a,b$ 异号且 $b,c$ 同号，因此 $a,c$ 必须异号。",
+          "取 $(a,b,c)=(1,1,-1)$，则 $a,c$ 异号，但斜率和截距均为负，故条件不充分。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=9"
+  },
+  "tmua-2023-p2-q8": {
+    "summary": "In a non-right triangle, count straight cuts producing two nondegenerate triangles, at least one of which has a right angle. Which counts from $1,2,3$ can occur?",
+    "summaryZh": "在非直角三角形中，画直线将其分成两个非退化三角形，且至少一个是直角三角形。在 $1,2,3$ 中，哪些数可能是这种直线的总数？",
+    "answer": "D. $3$ only",
+    "answerZh": "D．只有 $3$",
+    "methods": [
+      {
+        "title": "Classify the possible right-angle locations",
+        "titleZh": "按直角出现的位置分类",
+        "topics": [
+          {
+            "en": "Altitudes",
+            "zh": "高线"
+          },
+          {
+            "en": "Geometric case analysis",
+            "zh": "几何分类讨论"
+          }
+        ],
+        "steps": [
+          "Such a cut must run from a vertex to an interior point of the opposite side. A right angle at that point gives an interior altitude. An acute triangle has three of these and no vertex angle large enough to split off a right angle.",
+          "In an obtuse triangle just the altitude from the obtuse vertex meets the opposite side internally. At that same vertex two additional interior rays are perpendicular to one or the other incident side. Each cuts off a right angle there. They are distinct from the altitude, since perpendicularity to two different sides is impossible. Both kinds of triangle thus give exactly three cuts."
+        ],
+        "stepsZh": [
+          "切线须从某个顶点连到对边内部。若直角在交点处，切线必为三角形内部的高线。锐角三角形有三条这样的高，原顶点的角均不够大，不能再切出直角。",
+          "钝角三角形只有从钝角顶点作的高落在对边内部。该顶点内部还可分别作两条垂直于两邻边之一的射线，使直角落在原顶点。这两条射线不同于高线，因为一条直线不能同时垂直于两条相交边。两种三角形的总数均为三。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=10"
+  },
+  "tmua-2023-p2-q9": {
+    "summary": "For a pentagon, let $P$ mean that $108^\\circ$ is one of its angles and $Q$ mean that the five angles form an arithmetic progression. Which hold universally: $P\\Rightarrow Q$, its contrapositive, or its converse?",
+    "summaryZh": "对五边形，设 $P$ 表示“有一个内角为 $108^\\circ$”，$Q$ 表示“五个内角成等差数列”。判断 $P\\Rightarrow Q$、其逆否命题、其逆命题中哪些恒真。",
+    "answer": "D. Only the converse",
+    "answerZh": "D．只有逆命题",
+    "methods": [
+      {
+        "title": "Use the mean of five terms",
+        "titleZh": "利用五项数列的平均数",
+        "topics": [
+          {
+            "en": "Converse and contrapositive",
+            "zh": "逆命题与逆否命题"
+          },
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "The five interior angles sum to $540^\\circ$. If they form an arithmetic progression, the middle term is their mean, $108^\\circ$, proving $Q\\Rightarrow P$.",
+          "Conversely one may take angles $90^\\circ,100^\\circ,108^\\circ,110^\\circ,132^\\circ$: they sum to $540^\\circ$ and are valid convex pentagon angles, yet are not equally spaced. For instance they can be realised by successive tangents to a circle with turns equal to their positive exterior angles. This refutes both the original implication and its equivalent contrapositive."
+        ],
+        "stepsZh": [
+          "内角和为 $540^\\circ$。若五个角成等差数列，中项必等于平均值 $108^\\circ$，故 $Q\\Rightarrow P$ 成立。",
+          "反之，可取内角 $90^\\circ,100^\\circ,108^\\circ,110^\\circ,132^\\circ$，总和正确却非等差。可按各正外角的大小依次转动切线方向，作出外切于圆的相应凸五边形。这一反例同时否定原命题及其等价的逆否命题。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=11"
+  },
+  "tmua-2023-p2-q10": {
+    "summary": "A solution of $x^4-2x^2-3<0$ rewrites it as $(x^2-1)^2<4$, then $-2<x^2-1<2$, then keeps only the upper inequality. Was that last simplification logically valid? Give the final solution set.",
+    "summaryZh": "解 $x^4-2x^2-3<0$ 时先化为 $(x^2-1)^2<4$，再得 $-2<x^2-1<2$，随后去掉左侧不等式。判断此步骤是否等价，并给出解集。",
+    "answer": "A. Valid; $-\\sqrt3<x<\\sqrt3$.",
+    "answerZh": "A．等价；$-\\sqrt3<x<\\sqrt3$。",
+    "methods": [
+      {
+        "title": "Check the discarded bound",
+        "titleZh": "核实被舍去的不等式",
+        "topics": [
+          {
+            "en": "Equivalent inequalities",
+            "zh": "同解不等式"
+          },
+          {
+            "en": "Completing the square",
+            "zh": "配方法"
+          }
+        ],
+        "steps": [
+          "Adding four to the original left-hand side gives $(x^2-1)^2$. Taking the two-sided bound on $x^2-1$ is valid.",
+          "Every real $x$ satisfies $x^2-1\\ge-1>-2$. Thus discarding the lower bound loses no information. The upper bound is $x^2<3$, or $|x|<\\sqrt3$."
+        ],
+        "stepsZh": [
+          "原不等式左边加 4 得 $(x^2-1)^2$，转化为关于 $x^2-1$ 的双边不等式正确。",
+          "对实数 $x$ 恒有 $x^2-1\\ge-1>-2$，故可去掉下界而保持等价。上界化为 $x^2<3$，即 $|x|<\\sqrt3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=12"
+  },
+  "tmua-2023-p2-q11": {
+    "summary": "For positive integer $k$, abbreviate “$2^k+1$ is prime” by $P$ and “$k$ is a power of two” by $Q$. Which restate $P\\Rightarrow Q$? (I) $Q$ implies $P$; (II) failure of $P$ occurs only if $Q$ fails; (III) $P$ suffices for $Q$.",
+    "summaryZh": "对正整数 $k$，以 $P$ 表示“$2^k+1$ 是素数”，以 $Q$ 表示“$k$ 是 2 的幂”。哪些说法在逻辑上等价于 $P\\Rightarrow Q$？（I）$Q$ 推出 $P$；（II）只有 $Q$ 不成立时 $P$ 才可能不成立；（III）$P$ 是 $Q$ 的充分条件。",
+    "answer": "G. III only",
+    "answerZh": "G．只有 III",
+    "methods": [
+      {
+        "title": "Translate each implication",
+        "titleZh": "翻译逻辑箭头",
+        "topics": [
+          {
+            "en": "Implication",
+            "zh": "蕴涵"
+          },
+          {
+            "en": "Sufficient conditions",
+            "zh": "充分条件"
+          }
+        ],
+        "steps": [
+          "(I) is the converse $Q\\Rightarrow P$. (II) translates to $\\neg P\\Rightarrow\\neg Q$, whose contrapositive is again the converse. Neither has the logic of the given implication.",
+          "(III) says directly that whenever $P$ holds, $Q$ must hold, exactly the given direction."
+        ],
+        "stepsZh": [
+          "（I）是逆命题 $Q\\Rightarrow P$。（II）为 $\\neg P\\Rightarrow\\neg Q$，其逆否命题同样是 $Q\\Rightarrow P$。二者的逻辑方向都不同于原命题。",
+          "（III）直接说明 $P$ 成立即可推出 $Q$，正是原命题。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=13"
+  },
+  "tmua-2023-p2-q12": {
+    "summary": "Let $n$ count the roots of $\\sin x\\cos^2x=p^2\\sin x$ on $[0,2\\pi]$. Which implications hold: (I) $n=3\\Rightarrow p>1$; (II) $n=7\\Rightarrow-1<p<1$?",
+    "summaryZh": "令 $n$ 为 $\\sin x\\cos^2x=p^2\\sin x$ 在 $[0,2\\pi]$ 上的解的个数。判断（I）$n=3\\Rightarrow p>1$；（II）$n=7\\Rightarrow-1<p<1$。",
+    "answer": "C. II only",
+    "answerZh": "C．只有 II",
+    "methods": [
+      {
+        "title": "Count permanent and additional roots",
+        "titleZh": "分清恒有的根与新增的根",
+        "topics": [
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          },
+          {
+            "en": "Necessary conditions",
+            "zh": "必要条件"
+          }
+        ],
+        "steps": [
+          "The factorisation $\\sin x(\\cos^2x-p^2)=0$ always gives $0,\\pi,2\\pi$. If $|p|>1$ the second factor gives nothing; e.g. $p=-2$ refutes (I). For $|p|=1$ it repeats existing roots.",
+          "If $p=0$, it adds only $\\pi/2,3\\pi/2$; when $0<|p|<1$, it adds four distinct angles. Thus seven solutions require $-1<p<1$, as asserted in (II)."
+        ],
+        "stepsZh": [
+          "分解为 $\\sin x(\\cos^2x-p^2)=0$，恒有 $0,\\pi,2\\pi$ 三根。若 $|p|>1$ 则无新增根，取 $p=-2$ 即反驳（I）；若 $|p|=1$ 则第二因子只重复已有根。",
+          "若 $p=0$，仅新增 $\\pi/2,3\\pi/2$；若 $0<|p|<1$，则新增四个不同的角。因此七个解必要求 $-1<p<1$，（II）成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=14"
+  },
+  "tmua-2023-p2-q13": {
+    "summary": "For real $x$ consider five sets: $[0,\\infty)$, $\\{1\\}$, $\\{0,1\\}$, $\\mathbb R$ (equivalently $x\\ge0$ or $x\\le1$), and $[0,1]$. Which one is a subset of precisely three of the other four?",
+    "summaryZh": "考虑五个实数集合 $[0,\\infty)$、$\\{1\\}$、$\\{0,1\\}$、$\\mathbb R$（即 $x\\ge0$ 或 $x\\le1$）以及 $[0,1]$。哪个集合恰好包含于其余四个中的三个？",
+    "answer": "C. $\\{0,1\\}$",
+    "answerZh": "C．$\\{0,1\\}$",
+    "methods": [
+      {
+        "title": "Order the conditions by inclusion",
+        "titleZh": "按集合包含关系排序",
+        "topics": [
+          {
+            "en": "Set inclusion",
+            "zh": "集合包含"
+          },
+          {
+            "en": "Sufficient conditions",
+            "zh": "充分条件"
+          }
+        ],
+        "steps": [
+          "They form the strict chain $\\{1\\}\\subsetneq\\{0,1\\}\\subsetneq[0,1]\\subsetneq[0,\\infty)\\subsetneq\\mathbb R$.",
+          "In a chain of five distinct sets, the second smallest one has exactly three larger sets. Thus the required condition is $x=0$ or $x=1$."
+        ],
+        "stepsZh": [
+          "它们构成严格包含链 $\\{1\\}\\subsetneq\\{0,1\\}\\subsetneq[0,1]\\subsetneq[0,\\infty)\\subsetneq\\mathbb R$。",
+          "链中第二小的集合恰有三个更大的集合，所以所求条件为 $x=0$ 或 $x=1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=15"
+  },
+  "tmua-2023-p2-q14": {
+    "summary": "The lines have coefficient triples $(a,b,c),(b,c,a),(c,a,b)$ in the form $ux+vy+w=0$, with $abc\\ne0$. If two are perpendicular, which direction must the third have?",
+    "summaryZh": "三条直线 $ux+vy+w=0$ 的系数三元组依次为 $(a,b,c),(b,c,a),(c,a,b)$，且 $abc\\ne0$。若其中两条垂直，第三条的方向必满足什么性质？",
+    "answer": "F. Parallel to $y=x$",
+    "answerZh": "F．平行于 $y=x$",
+    "methods": [
+      {
+        "title": "Use the dot product of normal vectors",
+        "titleZh": "利用法向量的点积",
+        "topics": [
+          {
+            "en": "Perpendicular lines",
+            "zh": "垂直直线"
+          },
+          {
+            "en": "Cyclic symmetry",
+            "zh": "循环对称"
+          }
+        ],
+        "steps": [
+          "By cyclically renaming $a,b,c$, take the first two lines as perpendicular. Their normals $(a,b),(b,c)$ then satisfy $ab+bc=b(a+c)=0$.",
+          "Since $b\\ne0$, $c=-a$. The third line $cx+ay+b=0$ has slope $-c/a=1$, and its nonzero constant term makes it distinct from $y=x$."
+        ],
+        "stepsZh": [
+          "通过循环重命名 $a,b,c$，可设前两条直线垂直。它们的法向量 $(a,b),(b,c)$ 满足 $ab+bc=b(a+c)=0$。",
+          "由 $b\\ne0$ 得 $c=-a$。第三条直线 $cx+ay+b=0$ 的斜率为 $-c/a=1$，又因常数项非零，故与 $y=x$ 是不同的平行线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=16"
+  },
+  "tmua-2023-p2-q15": {
+    "summary": "Convert the recurring binary fraction whose repeating block is $0011$ immediately after the point into a rational number.",
+    "summaryZh": "将二进制小数点后循环节为 $0011$ 的纯循环小数化成分数。",
+    "answer": "B. $1/5$",
+    "answerZh": "B．$1/5$",
+    "methods": [
+      {
+        "title": "Shift one full binary block",
+        "titleZh": "移动一个完整循环节",
+        "topics": [
+          {
+            "en": "Number bases",
+            "zh": "进位制"
+          },
+          {
+            "en": "Recurring fractions",
+            "zh": "循环小数"
+          }
+        ],
+        "steps": [
+          "Let the value be $v$. Multiplication by $2^4=16$ shifts the point across one block. The integer part produced is $0011_2=3$, and the fractional part is again $v$.",
+          "Hence $16v=3+v$, so $v=3/15=1/5$."
+        ],
+        "stepsZh": [
+          "设其值为 $v$。乘以 $2^4=16$ 相当于将小数点向后移动一个循环节，新整数部分是 $0011_2=3$，小数部分仍为 $v$。",
+          "因此 $16v=3+v$，解得 $v=3/15=1/5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=17"
+  },
+  "tmua-2023-p2-q16": {
+    "summary": "A Fibonacci-type sequence starts at $u_1=a,u_2=b$, where $a,b$ are positive integers of gcd $7$. Which assertions are guaranteed? (I) $7\\mid u_{2023}$; (II) if $a\\nmid b$, then $a\\nmid u_n$ for every $n>1$; (III) $\\gcd(a,u_5)=7$. Use $u_{n+2}=u_{n+1}+u_n$.",
+    "summaryZh": "有数列 $u_1=a,u_2=b,u_{n+2}=u_{n+1}+u_n$，其中 $a,b$ 为最大公因数为 7 的正整数。判断恒成立者：（I）$7\\mid u_{2023}$；（II）若 $a\\nmid b$，则对任何 $n>1$ 均有 $a\\nmid u_n$；（III）$\\gcd(a,u_5)=7$。",
+    "answer": "B. I only",
+    "answerZh": "B．只有 I",
+    "methods": [
+      {
+        "title": "Preserve divisibility and test a small pair",
+        "titleZh": "用整除不变量及反例",
+        "topics": [
+          {
+            "en": "Induction",
+            "zh": "数学归纳法"
+          },
+          {
+            "en": "Greatest common divisor",
+            "zh": "最大公因数"
+          }
+        ],
+        "steps": [
+          "Both starting terms are divisible by $7$; sums preserve this property, so induction gives (I).",
+          "Take $a=21,b=7$, which has the required gcd. The next terms are $28,35,63$. Here $21\\nmid7$ but $21\\mid63$, and $\\gcd(21,63)=21$. The same example disproves (II) and (III)."
+        ],
+        "stepsZh": [
+          "首两项都能被 7 整除，相加仍保持此性质，归纳即证（I）。",
+          "取 $a=21,b=7$，所需最大公因数确为 7。后三项为 $28,35,63$。虽有 $21\\nmid7$，但 $21\\mid63$ 且 $\\gcd(21,63)=21$，故（II）、（III）均被反例否定。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=18"
+  },
+  "tmua-2023-p2-q17": {
+    "summary": "Evaluate $\\int_0^{99}2^{\\lceil x\\rceil}\\,dx$, where the ceiling is the smallest integer greater than or equal to its argument.",
+    "summaryZh": "设 $\\lceil x\\rceil$ 表示不小于 $x$ 的最小整数，求 $\\int_0^{99}2^{\\lceil x\\rceil}\\,dx$。",
+    "answer": "F. $2^{100}-2$",
+    "answerZh": "F．$2^{100}-2$",
+    "methods": [
+      {
+        "title": "Integrate a step function",
+        "titleZh": "对阶梯函数分段积分",
+        "topics": [
+          {
+            "en": "Ceiling function",
+            "zh": "向上取整"
+          },
+          {
+            "en": "Finite geometric sums",
+            "zh": "有限等比和"
+          }
+        ],
+        "steps": [
+          "On $(j-1,j]$ the integrand is the constant $2^j$. The isolated value at zero contributes no area.",
+          "Adding the areas of 99 unit-width rectangles gives $2^1+\\cdots+2^{99}=2^{100}-2$."
+        ],
+        "stepsZh": [
+          "当 $j-1<x\\le j$ 时，被积函数恒等于 $2^j$，而零点处的孤立函数值不影响积分。",
+          "把 99 个宽为 1 的矩形面积相加，得 $2^1+\\cdots+2^{99}=2^{100}-2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=19"
+  },
+  "tmua-2023-p2-q18": {
+    "summary": "For real parameters $b,c$, give necessary and sufficient conditions for $x^4+bx^2+c=0$ to have four distinct real roots.",
+    "summaryZh": "设 $b,c$ 为实数，求 $x^4+bx^2+c=0$ 有四个互异实根的充要条件。",
+    "answer": "D. $c>0$ and $b<-2\\sqrt c$",
+    "answerZh": "D．$c>0$ 且 $b<-2\\sqrt c$",
+    "methods": [
+      {
+        "title": "Require two distinct positive squared roots",
+        "titleZh": "要求平方变量有两个不同正根",
+        "topics": [
+          {
+            "en": "Vieta's formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Biquadratics",
+            "zh": "双二次方程"
+          }
+        ],
+        "steps": [
+          "Set $t=x^2$. Four distinct real $x$ arise precisely from two distinct positive roots of $t^2+bt+c$. Their product $c$ must be positive and their sum $-b$ positive.",
+          "The remaining condition is a positive discriminant, $b^2>4c$. Combined with $b<0$ it gives $b<-2\\sqrt c$. Conversely these inequalities give two positive distinct $t$ and hence four $x$."
+        ],
+        "stepsZh": [
+          "令 $t=x^2$，四个不同实根恰对应 $t^2+bt+c=0$ 有两个不同正根。根积 $c$ 要为正，根和 $-b$ 也要为正。",
+          "还须判别式 $b^2-4c>0$。结合 $b<0$ 得 $b<-2\\sqrt c$。反之，这些不等式保证 $t$ 有两不同正根，分别开平方即得四个不同的 $x$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=20"
+  },
+  "tmua-2023-p2-q19": {
+    "summary": "For nonconstant real polynomials $f$, compare the counts of distinct real zeros of $f$ and $xf'(x)$. Can the first count be smaller, equal or larger?",
+    "summaryZh": "对于非常数实系数多项式 $f$，比较 $f$ 与 $xf'(x)$ 的不同实零点个数。前者小于、等于、大于后者，这三种关系哪些可能？",
+    "answer": "H. All three relations",
+    "answerZh": "H．三种都可能",
+    "methods": [
+      {
+        "title": "Construct polynomials for the three cases",
+        "titleZh": "为三种情形各构造一个多项式",
+        "topics": [
+          {
+            "en": "Existence proofs",
+            "zh": "存在性证明"
+          },
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式零点"
+          }
+        ],
+        "steps": [
+          "Take $f=x^2+1$: it has zero real roots, but $xf'=2x^2$ has one. Take $f=x$: now both $f$ and $xf'=x$ have exactly one.",
+          "Finally take $f=x^2-1$: it has two real roots, while $xf'=2x^2$ has one. These examples realise every relation."
+        ],
+        "stepsZh": [
+          "取 $f=x^2+1$，其无实根，而 $xf'=2x^2$ 有一个实根；再取 $f=x$，它与 $xf'=x$ 均恰有一个实根。",
+          "最后取 $f=x^2-1$，它有两个实根，而 $xf'=2x^2$ 只有一个。三个例子分别实现三种关系。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=21"
+  },
+  "tmua-2023-p2-q20": {
+    "summary": "For a real polynomial $f$ and $p<q$, put $I=\\int_p^q(f(x)^2-f(|x|)^2)\\,dx$. Decide which implications always hold: (1) $I=0$ implies $p>0$; (2) if $f'<0$ everywhere, then $I<0$ whenever $p<q<0$; (3) $I>0$ implies $p<0$.",
+    "summaryZh": "给定实系数多项式 $f$ 及 $p<q$，记 $I=\\int_p^q(f(x)^2-f(|x|)^2)\\,dx$。判断恒成立者：（1）$I=0$ 推出 $p>0$；（2）若处处 $f'<0$，则每当 $p<q<0$ 都有 $I<0$；（3）$I>0$ 推出 $p<0$。",
+    "answer": "D. Statement 3 only",
+    "answerZh": "D．只有命题 3",
+    "methods": [
+      {
+        "title": "Use the zero integrand and a linear counterexample",
+        "titleZh": "利用恒零区间与一次函数反例",
+        "topics": [
+          {
+            "en": "Contrapositive",
+            "zh": "逆否命题"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "For $p\\ge0$, all $x$ in the interval satisfy $|x|=x$, so $I=0$. By contraposition a positive $I$ requires $p<0$, establishing (3). Also $p=0,q=1$ shows (1) fails.",
+          "For (2), take $f(x)=-x$. Its derivative is $-1$, yet both squares in the integrand are $x^2$ on the negative half-line as well. The integral remains zero."
+        ],
+        "stepsZh": [
+          "当 $p\\ge0$ 时，区间上的 $|x|=x$，从而 $I=0$。取逆否可知正积分必要求 $p<0$，（3）成立。令 $p=0,q=1$ 即知（1）不成立。",
+          "对（2）取 $f(x)=-x$。其导数恒为 $-1$，但即使在负半轴，两个平方项也同为 $x^2$，积分仍为零。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf#page=22"
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "aime-2024ii-q1": {
+    "summary": "Each of $900$ residents owns an item of type $D$. The numbers owning types $A,B,C$ are $195,367,562$ respectively. Exactly $437$ residents own two of the four types and $234$ own three. How many own all four?",
+    "summaryZh": "$900$ 人每人都有物品 $D$。拥有物品 $A,B,C$ 的人数分别为 $195,367,562$。恰有两类物品者 $437$ 人，恰有三类者 $234$ 人。求四类都有的人数。",
+    "answer": "073",
+    "answerZh": "073",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/1",
+    "methods": [
+      {
+        "title": "Count incidences among the optional items",
+        "titleZh": "对三类可选物品计数",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          }
+        ],
+        "steps": [
+          "Count incidences with types $A,B,C$: their total is $195+367+562=1124$. A person with two total types contributes one, a person with three contributes two, and a person with all four contributes three.",
+          "Writing $x$ for the last group gives $437+2(234)+3x=1124$. Hence $x=73$."
+        ],
+        "stepsZh": [
+          "只计 $A,B,C$ 三类物品的拥有次数，合计 $1124$。总计有两类物品者贡献一次，有三类者贡献两次，四类皆有者贡献三次。",
+          "设所求人数为 $x$，则 $437+2(234)+3x=1124$，解得 $x=73$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q2": {
+    "summary": "A multiset of positive integers sums to $30$ and has unique mode $9$. Its median is an integer absent from the multiset. Find the sum of squared entries.",
+    "summaryZh": "一组正整数之和为 $30$，唯一众数是 $9$，中位数为一个未出现的整数。求各项平方和。",
+    "answer": "236",
+    "answerZh": "236",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/2",
+    "methods": [
+      {
+        "title": "Use the mode multiplicity to restrict the middle pair",
+        "titleZh": "以众数出现次数约束中间两项",
+        "topics": [
+          {
+            "en": "Order statistics",
+            "zh": "顺序统计量"
+          },
+          {
+            "en": "Finite casework",
+            "zh": "有限分类"
+          }
+        ],
+        "steps": [
+          "The list size is even. There must be two or three nines. With three, the remaining sum is three. To put the central pair outside a block of three nines requires at least three other entries, all of which would then be ones, contradicting unique mode. Thus there are two nines and the remaining entries are distinct with sum twelve.",
+          "There are two or four remaining entries, since five distinct positive numbers already sum to at least fifteen. The four-entry possibilities are $(1,2,3,6)$ and $(1,2,4,5)$; in both full lists the median is $4.5$. For two entries the possibilities are $(1,11),(2,10),(4,8),(5,7)$ (the pair containing nine would create a third nine). Their medians are respectively $9,9,8.5,8$.",
+          "Only the list $5,7,9,9$ qualifies. The square sum is $25+49+162=236$."
+        ],
+        "stepsZh": [
+          "因为中位数没有出现在数据中，项数必为偶数。九只可能出现两或三次。若出现三次，其他项和为三；要使中间两项不同时为九，至少还需三项，于是只能是三个一，与唯一众数矛盾。因此有两个九，其他项互异且和为十二。",
+          "其他项数只可能为二或四，因为五个互异正数的和至少十五。四项只可能是 $(1,2,3,6)$ 或 $(1,2,4,5)$，完整列表的中位数都是 $4.5$。两项时可能为 $(1,11),(2,10),(4,8),(5,7)$，不含会产生第三个九的数对。对应中位数为 $9,9,8.5,8$。",
+          "只有 $5,7,9,9$ 符合，所以平方和为 $236$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q3": {
+    "summary": "Fill a $2\\times3$ rectangle with decimal digits, allowing leading zeroes. The two three-digit row readings add to $999$; the three two-digit column readings add to $99$. Count the fillings.",
+    "summaryZh": "在 $2\\times3$ 方格中填数字，允许首位为零。两行从左到右读出的数相加得 $999$，三列从上到下读出的数相加得 $99$。求填法数。",
+    "answer": "045",
+    "answerZh": "045",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/3",
+    "methods": [
+      {
+        "title": "Reduce the six digits to the top-row sum",
+        "titleZh": "化归到上排三数之和",
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "位值"
+          },
+          {
+            "en": "Stars and bars",
+            "zh": "隔板法"
+          }
+        ],
+        "steps": [
+          "The units digits of the two rows must sum to nine: the next possible sum ending in nine is nineteen, too large. There is no carry. The same argument at the tens and hundreds columns gives column digit sums of nine throughout.",
+          "If the top digits sum to $s$, the bottom sum is $27-s$. Summing the column readings yields $10s+27-s=99$, so $s=8$. All ordered nonnegative triples summing to eight give legal digits, and the lower digits are forced. Stars and bars gives $\\binom{10}{2}=45$."
+        ],
+        "stepsZh": [
+          "两行个位数字之和只能是九，因为下一种以九结尾的和十九超过上界十八。没有进位，同理十位和百位两列的数字和也各为九。",
+          "设上排数字和为 $s$，下排和为 $27-s$。三列读数之和为 $10s+27-s=99$，解得 $s=8$。和为八的有序非负三元组自动满足数字上界，下排也随之确定。隔板法给出 $\\binom{10}{2}=45$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q4": {
+    "summary": "Positive $x,y,z$ satisfy $\\log_2(x/(yz))=1/2$, $\\log_2(y/(xz))=1/3$ and $\\log_2(z/(xy))=1/4$. Write $|\\log_2(x^4y^3z^2)|$ as a reduced fraction and add its numerator and denominator.",
+    "summaryZh": "正数 $x,y,z$ 满足 $\\log_2(x/(yz))=1/2$、$\\log_2(y/(xz))=1/3$、$\\log_2(z/(xy))=1/4$。把 $|\\log_2(x^4y^3z^2)|$ 化为最简分数，求分子分母和。",
+    "answer": "033",
+    "answerZh": "033",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/4",
+    "methods": [
+      {
+        "title": "Add equations in pairs",
+        "titleZh": "两两相加消元",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Linear systems",
+            "zh": "线性方程组"
+          }
+        ],
+        "steps": [
+          "Let $X,Y,Z$ denote the base-two logarithms. Adding the last two equations gives $-2X=1/3+1/4$, hence $X=-7/24$. The other pairs give $Y=-3/8$ and $Z=-5/12$.",
+          "Then $4X+3Y+2Z=-7/6-9/8-5/6=-25/8$. Its absolute value yields $25+8=33$."
+        ],
+        "stepsZh": [
+          "设 $X,Y,Z$ 分别为三个数的以二为底的对数。把后两式相加得到 $-2X=1/3+1/4$，即 $X=-7/24$。同理 $Y=-3/8,Z=-5/12$。",
+          "因此 $4X+3Y+2Z=-7/6-9/8-5/6=-25/8$。取绝对值后所求为 $33$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q5": {
+    "summary": "In a convex equilateral hexagon, opposite sides are parallel. The lines of three alternating sides enclose a triangle of side lengths $200,240,300$. What is the common hexagon side length?",
+    "summaryZh": "一个凸等边六边形的三组对边分别平行。三条交替边的所在直线围成边长为 $200,240,300$ 的三角形。求六边形边长。",
+    "answer": "080",
+    "answerZh": "080",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/5",
+    "methods": [
+      {
+        "title": "Compare the three truncated corner triangles",
+        "titleZh": "比较被截去的三个相似角三角形",
+        "topics": [
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          },
+          {
+            "en": "Parallel lines",
+            "zh": "平行线"
+          }
+        ],
+        "steps": [
+          "Let the outer triangle have side lengths $a,b,c$ and let the hexagon side be $s$. Each of the three other hexagon sides cuts off a corner by a line parallel to the opposite triangle side, leaving a similar corner triangle. Their linear scale factors are $s/a,s/b,s/c$.",
+          "Along the outer side of length $a$, the retained central piece has length $s$ and the end pieces have lengths $a(s/b)$ and $a(s/c)$. Divide their sum by $a$: $1=s(1/a+1/b+1/c)$. The reciprocals of $200,240,300$ sum to $1/80$, hence $s=80$."
+        ],
+        "stepsZh": [
+          "记外三角形三边为 $a,b,c$，六边形边长为 $s$。另三条六边形边分别平行于外三角形对应边，截去三个与大三角形相似的角三角形，相似比分别是 $s/a,s/b,s/c$。",
+          "沿长为 $a$ 的外边，中段长 $s$，两端段分别长 $as/b,as/c$。长度相加再除以 $a$，得 $1=s(1/a+1/b+1/c)$。代入三边倒数和 $1/80$，故 $s=80$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q6": {
+    "summary": "For a set $A$ of positive integers there are exactly $2024$ finite nonempty subsets of the positive integers whose maximum belongs to $A$. Determine the sum of elements of $A$.",
+    "summaryZh": "给定一个正整数集合 $A$。恰好有 $2024$ 个非空有限正整数集，其最大元属于 $A$。求 $A$ 的元素和。",
+    "answer": "055",
+    "answerZh": "055",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/6",
+    "methods": [
+      {
+        "title": "Read the possible maxima from binary digits",
+        "titleZh": "由二进制位读出最大元",
+        "topics": [
+          {
+            "en": "Binary expansion",
+            "zh": "二进制展开"
+          },
+          {
+            "en": "Subset counting",
+            "zh": "子集计数"
+          }
+        ],
+        "steps": [
+          "Exactly $2^{k-1}$ finite sets have maximum $k$: include $k$ and freely choose among $1,\\ldots,k-1$. Different maxima give disjoint classes.",
+          "The binary expansion is $2024=1024+512+256+128+64+32+8$. Hence the maxima are $11,10,9,8,7,6,4$, with sum $55$."
+        ],
+        "stepsZh": [
+          "最大元为 $k$ 时要选择 $k$，其余只须从 $1,\\ldots,k-1$ 中任选，所以有 $2^{k-1}$ 个集合。不同最大元的计数互不重叠。",
+          "二进制展开 $2024=1024+512+256+128+64+32+8$，所以最大元依次为 $11,10,9,8,7,6,4$，和为 $55$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q7": {
+    "summary": "Find the largest four-digit number $N$ for which replacing any single digit by $1$ gives a multiple of seven. Write $N=1000Q+R$ with $0\\le R<1000$ and find $Q+R$.",
+    "summaryZh": "求最大的四位数 $N$，要求把任一位数字改成 $1$ 后都能被七整除。令 $N=1000Q+R$，$0\\le R<1000$，求 $Q+R$。",
+    "answer": "699",
+    "answerZh": "699",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/7",
+    "methods": [
+      {
+        "title": "Recover the residue shared by the four digit changes",
+        "titleZh": "求四个数位改变量的公共余数",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Place value",
+            "zh": "位值"
+          }
+        ],
+        "steps": [
+          "Let $d_j$ be the digit at $10^j$ and let $r=N\\bmod7$. All four replacements work iff $(d_j-1)10^j\\equiv r\\pmod7$ for every $j$. Since $N=1111+\\sum(d_j-1)10^j$, we get $r\\equiv5+4r$, hence $r=3$.",
+          "The powers $10^j$ for $j=0,1,2,3$ are congruent to $1,3,2,6$. The corresponding digits are congruent to $4,2,6,5$. Taking the greatest decimal digit in each class produces $5694$. These congruences also imply $N\\equiv3$, validating all replacements. Thus $Q+R=5+694=699$."
+        ],
+        "stepsZh": [
+          "令 $d_j$ 表示 $10^j$ 位的数字，$r$ 为 $N$ 模七的余数。每次替换可行当且仅当 $(d_j-1)10^j\\equiv r\\pmod7$。把四式相加并用 $N=1111+\\sum(d_j-1)10^j$，得 $r\\equiv5+4r$，故 $r=3$。",
+          "从个位到千位的位权模七为 $1,3,2,6$，所以数字依次模七余 $4,2,6,5$。各位取该余数类最大的数字得到 $5694$。它本身模七确为三，四种替换均满足条件。于是 $Q+R=699$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q8": {
+    "summary": "A torus has generating-circle radius $3$ and major radius $6$. A sphere of radius $11$ is coaxial with it. Internal and external tangencies between the surfaces yield contact circles of radii $r_i,r_o$. Express $r_i-r_o$ in lowest terms and add its numerator and denominator.",
+    "summaryZh": "环面的母圆半径为 $3$，母圆圆心到旋转轴的距离为 $6$。一个半径 $11$ 的球与环面共轴。两曲面内切、外切时，切触圆半径分别为 $r_i,r_o$。求 $r_i-r_o$ 的最简分数分子分母和。",
+    "answer": "127",
+    "answerZh": "127",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/8",
+    "methods": [
+      {
+        "title": "Project the meridian line of centres",
+        "titleZh": "投影轴截面中的连心线",
+        "topics": [
+          {
+            "en": "Surfaces of revolution",
+            "zh": "旋转曲面"
+          },
+          {
+            "en": "Circle tangency",
+            "zh": "圆的相切"
+          }
+        ],
+        "steps": [
+          "In a plane through the axis, take the sphere centre $O$ and the generator centre $C$ on the positive radial side. The radial component of $OC$ is always $6$. The tangency point lies on the ray from $O$ through $C$ at distance $11$ from $O$.",
+          "For internal contact $OC=11-3=8$, so its radial coordinate is $11\\cdot6/8=33/4$. For external contact $OC=11+3=14$, giving $33/7$. Their difference is $99/28$, with sum $127$."
+        ],
+        "stepsZh": [
+          "用过轴平面截取球面和环面。设 $O$ 为球心，$C$ 为径向正侧母圆圆心，则 $OC$ 的径向分量恒为 $6$。切点位于从 $O$ 经 $C$ 的射线上，离 $O$ 的距离为 $11$。",
+          "内切时 $OC=11-3=8$，切点的径向坐标为 $11\\cdot6/8=33/4$；外切时 $OC=11+3=14$，相应为 $33/7$。二者之差为 $99/28$，所求为 $127$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q9": {
+    "summary": "On a $5\\times5$ board place at most one black or white chip per cell; there are $25$ of each colour available. Every occupied row and column is monochromatic. Count the placements to which no legal chip can be added.",
+    "summaryZh": "在 $5\\times5$ 棋盘上放黑白棋子，各色有 $25$ 枚，每格至多一枚。同一行或同一列已有的棋子必须同色。求无法再合法放入棋子的布局数。",
+    "answer": "902",
+    "answerZh": "902",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/9",
+    "methods": [
+      {
+        "title": "Assign colours to entire rows and columns",
+        "titleZh": "给整行与整列标色",
+        "topics": [
+          {
+            "en": "Maximal configurations",
+            "zh": "极大构型"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          }
+        ],
+        "steps": [
+          "No maximal board can have an empty row: choose any column with a chip and add one of its colour there (the empty board is not maximal either). The same holds for columns. The chip supply suffices whenever a cell remains empty.",
+          "Thus each row and column has a determined colour. Their intersection must be filled exactly when the colours agree. If only one colour appears the whole board is full, giving two cases. Otherwise assign both colours to the five rows in $2^5-2$ ways and independently to the columns in $2^5-2$ ways. Every such assignment is realised and maximal. Total $2+30^2=902$."
+        ],
+        "stepsZh": [
+          "极大布局不能有空行：取已有棋子的任一列，在它与空行的交叉格加入同色棋子即可；全空布局也非极大。同理没有空列。当有空格时，棋子总数小于二十五，两色供应均足够。",
+          "每行、每列因而都有确定颜色。同色行列的交格必须填满，异色处不能填。只有一种颜色时全盘同色有两种。两色都有时，行标色方案有 $2^5-2$ 种，列标色独立地也有 $2^5-2$ 种。每种均会得到极大布局。共 $2+30^2=902$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q10": {
+    "summary": "Triangle $ABC$ has inradius $6$, circumradius $13$, incenter $I$ and circumcenter $O$, with $AI\\perp OI$. Find $AB\\cdot AC$.",
+    "summaryZh": "三角形 $ABC$ 的内切圆半径为 $6$，外接圆半径为 $13$，内心 $I$、外心 $O$ 满足 $AI\\perp OI$。求 $AB\\cdot AC$。",
+    "answer": "468",
+    "answerZh": "468",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/10",
+    "methods": [
+      {
+        "title": "Recover the half-angle from the two centres",
+        "titleZh": "由两圆心距离恢复半角",
+        "topics": [
+          {
+            "en": "Euler’s incenter formula",
+            "zh": "欧拉内外心距公式"
+          },
+          {
+            "en": "Half-angle identities",
+            "zh": "半角公式"
+          }
+        ],
+        "steps": [
+          "Euler’s identity gives $OI^2=R(R-2r)=13$. Then $AI^2=AO^2-OI^2=156$, so $\\sin(A/2)=6/\\sqrt{156}=\\sqrt{3/13}$ and $\\cos(A/2)=\\sqrt{10/13}$.",
+          "Write $a=BC,b=CA,c=AB$ and $s$ for the semiperimeter. Then $\\sin A=2\\sqrt{30}/13$, $a=2R\\sin A=4\\sqrt{30}$, and the tangent length $s-a=r\\cot(A/2)=2\\sqrt{30}$. Therefore $s=6\\sqrt{30}$. Equate the area forms $bc\\sin A/2=rs$ to find $bc=468$."
+        ],
+        "stepsZh": [
+          "由欧拉公式 $OI^2=R(R-2r)=13$。直角三角形 $AIO$ 给出 $AI^2=156$，所以 $\\sin(A/2)=6/\\sqrt{156}=\\sqrt{3/13}$，$\\cos(A/2)=\\sqrt{10/13}$。",
+          "记对边为 $a,b,c$，半周长为 $s$。于是 $\\sin A=2\\sqrt{30}/13$，$a=2R\\sin A=4\\sqrt{30}$；从 $A$ 出发的切线段长 $s-a=r\\cot(A/2)=2\\sqrt{30}$。得到 $s=6\\sqrt{30}$。令面积 $bc\\sin A/2=rs$，解得 $bc=468$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q11": {
+    "summary": "Count ordered nonnegative integer triples with $a+b+c=300$ and $a^2b+a^2c+b^2a+b^2c+c^2a+c^2b=6000000$.",
+    "summaryZh": "求满足 $a+b+c=300$ 且 $a^2b+a^2c+b^2a+b^2c+c^2a+c^2b=6000000$ 的有序非负整数三元组数。",
+    "answer": "601",
+    "answerZh": "601",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/11",
+    "methods": [
+      {
+        "title": "Factor after centring at the mean",
+        "titleZh": "以均值为中心因式分解",
+        "topics": [
+          {
+            "en": "Symmetric polynomials",
+            "zh": "对称多项式"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "The six-term sum equals $300(ab+bc+ca)-3abc$. The given equality rearranges to $abc-100(ab+bc+ca)+2000000=0$. As $a+b+c=300$, the left side is $(a-100)(b-100)(c-100)$.",
+          "At least one coordinate must be $100$, and any triple with that property and the required sum works. For a specified coordinate equal to $100$ there are $201$ ordered possibilities for the other two, whose sum is $200$. The three lists overlap only at $(100,100,100)$; count it once instead of three times. This gives $3(201)-2=601$."
+        ],
+        "stepsZh": [
+          "六项之和等于 $300(ab+bc+ca)-3abc$。整理题设得 $abc-100(ab+bc+ca)+2000000=0$。由 $a+b+c=300$，左端就是 $(a-100)(b-100)(c-100)$。",
+          "所以至少一项为 $100$，反过来和为 $300$ 且有一项为 $100$ 就足够。指定一项后，另外两项和为 $200$，有 $201$ 个有序非负解。唯一重叠的是三个数全为 $100$，它多算两次。故共 $3(201)-2=601$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q12": {
+    "summary": "Consider all unit segments joining the nonnegative coordinate axes, one end on each. On the segment from $(1/2,0)$ to $(0,\\sqrt3/2)$ there is a unique interior point $C$ covered by no other such segment. Reduce $OC^2$ to lowest terms and add numerator and denominator, with $O$ the origin.",
+    "summaryZh": "考虑两端分别位于两条非负坐标轴上的所有单位线段。线段 $(1/2,0)$ 至 $(0,\\sqrt3/2)$ 上有唯一内点 $C$ 不被其他这类线段经过。$O$ 为原点，求 $OC^2$ 的最简分数分子分母和。",
+    "answer": "023",
+    "answerZh": "023",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/12",
+    "methods": [
+      {
+        "title": "Locate the minimum of the intercept equation",
+        "titleZh": "由截距方程的最小值确定唯一覆盖点",
+        "topics": [
+          {
+            "en": "Parametric lines",
+            "zh": "参数直线"
+          },
+          {
+            "en": "Convexity",
+            "zh": "凸性"
+          }
+        ],
+        "steps": [
+          "Parameterise positive intercepts as $(\\cos t,\\sin t)$, $0<t<\\pi/2$. An interior first-quadrant point $(x,y)$ lies on that segment exactly when $h(t)=x\\sec t+y\\csc t=1$. The two summands are strictly convex and diverge at opposite endpoints. Thus a point on the specified segment belongs only to it precisely when $h$ is minimised at $t=\\pi/3$.",
+          "At a minimum, $x\\sin t/\\cos^2t=y\\cos t/\\sin^2t$, so $x:y=\\cos^3t:\\sin^3t$. Substituting into $h(t)=1$ gives $(x,y)=(\\cos^3t,\\sin^3t)$. At $t=\\pi/3$ this is $(1/8,3\\sqrt3/8)$, with $OC^2=28/64=7/16$. The answer is $23$."
+        ],
+        "stepsZh": [
+          "正截距写成 $(\\cos t,\\sin t)$，其中 $0<t<\\pi/2$。点 $(x,y)$ 位于这条线段上等价于 $h(t)=x\\sec t+y\\csc t=1$。两项严格凸，且在不同端点发散，故指定线段上的点仅属于这一条线段，当且仅当 $h$ 在对应的 $t=\\pi/3$ 达到最小值。",
+          "令导数为零，得 $x\\sin t/\\cos^2t=y\\cos t/\\sin^2t$，故 $x:y=\\cos^3t:\\sin^3t$。代回 $h=1$ 得 $(x,y)=(\\cos^3t,\\sin^3t)$。故 $C=(1/8,3\\sqrt3/8)$，$OC^2=7/16$，答案为 $23$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q13": {
+    "summary": "For a nontrivial $13$th root of unity $w$, compute $\\prod_{k=0}^{12}(2-2w^k+w^{2k})$ modulo $1000$.",
+    "summaryZh": "设 $w$ 是不等于一的十三次单位根。求 $\\prod_{k=0}^{12}(2-2w^k+w^{2k})$ 模 $1000$ 的余数。",
+    "answer": "321",
+    "answerZh": "321",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/13",
+    "methods": [
+      {
+        "title": "Evaluate the cyclotomic product at two conjugates",
+        "titleZh": "在一对共轭点计算单位根连乘",
+        "topics": [
+          {
+            "en": "Roots of unity",
+            "zh": "单位根"
+          },
+          {
+            "en": "Complex factorisation",
+            "zh": "复数因式分解"
+          }
+        ],
+        "steps": [
+          "The factors arise from $z^2-2z+2=(z-(1+i))(z-(1-i))$. All thirteenth roots appear, since $13$ is prime. From $t^{13}-1=\\prod_{k=0}^{12}(t-w^k)$, the desired product is $((1+i)^{13}-1)((1-i)^{13}-1)$.",
+          "Expand to get $2^{13}+1-2\\operatorname{Re}((1+i)^{13})$. Since $(1+i)^4=-4$, $(1+i)^{13}=(-4)^3(1+i)$ has real part $-64$. The product is $8321$, with remainder $321$."
+        ],
+        "stepsZh": [
+          "$z^2-2z+2=(z-(1+i))(z-(1-i))$。因 $13$ 是素数，$w^k$ 遍历全部十三次单位根。由 $t^{13}-1=\\prod_{k=0}^{12}(t-w^k)$，原连乘为 $((1+i)^{13}-1)((1-i)^{13}-1)$。",
+          "展开得 $2^{13}+1-2\\operatorname{Re}((1+i)^{13})$。由 $(1+i)^4=-4$ 知 $(1+i)^{13}=(-4)^3(1+i)$ 的实部为 $-64$。乘积为 $8321$，余数为 $321$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q14": {
+    "summary": "In base $b\\ge2$, count a two-digit positive integer $n$ as a match if its digit sum equals $\\sqrt n$. Find the first base with more than ten matches.",
+    "summaryZh": "在 $b\\ge2$ 进制中，若一个两位正整数的数字和等于其平方根，就计入集合。求该集合含有超过十个数的最小进制。",
+    "answer": "211",
+    "answerZh": "211",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/14",
+    "methods": [
+      {
+        "title": "Count idempotent residues modulo the base minus one",
+        "titleZh": "数模进制减一的幂等剩余类",
+        "topics": [
+          {
+            "en": "Chinese remainder theorem",
+            "zh": "中国剩余定理"
+          },
+          {
+            "en": "Place value",
+            "zh": "位值"
+          }
+        ],
+        "steps": [
+          "Let the digits be $x,y$ with sum $s$. Since $n=s^2<b^2$, necessarily $1\\le s\\le b-1$. Also $s^2=bx+y=(b-1)x+s$, so $b-1$ must divide $s(s-1)$. The case $s=1$ has zero leading digit and is excluded.",
+          "Conversely, every $2\\le s\\le b-1$ meeting the divisibility condition gives the integer $x=s(s-1)/(b-1)$ with $1\\le x\\le s-1$ and the legal units digit $y=s-x$. Distinct $s$ yield distinct squares.",
+          "Each prime power in $b-1$ must divide one of the coprime neighbours $s,s-1$. The Chinese remainder theorem gives $2^r$ classes if there are $r$ distinct primes; $s=1,\\ldots,b-1$ covers them once. After excluding one, $2^r-1>10$ first requires $r=4$. The smallest possible $b-1$ is $2\\cdot3\\cdot5\\cdot7=210$, yielding $211$."
+        ],
+        "stepsZh": [
+          "设两位数字为 $x,y$，和为 $s$。由 $n=s^2<b^2$ 得 $1\\le s\\le b-1$。又 $s^2=bx+y=(b-1)x+s$，故 $b-1\\mid s(s-1)$。其中 $s=1$ 会使首位为零，须剔除。",
+          "反过来，符合整除条件的 $2\\le s\\le b-1$ 都给出整数 $x=s(s-1)/(b-1)$，并且 $1\\le x\\le s-1$，个位 $y=s-x$ 也合法。不同 $s$ 对应不同平方数。",
+          "$s,s-1$ 互素，$b-1$ 的每个素数幂因子须分别整除其中一个。若有 $r$ 个不同素因子，中国剩余定理给出 $2^r$ 个余数类；$1,\\ldots,b-1$ 各取一次。排除 $s=1$ 后，要 $2^r-1>10$ 就至少要四个不同素因子。最小 $b-1=2\\cdot3\\cdot5\\cdot7=210$，故 $b=211$。"
+        ]
+      }
+    ]
+  },
+  "aime-2024ii-q15": {
+    "summary": "Count rectangles inside a fixed regular dodecagon whose four sides lie on sides or diagonals of that dodecagon. Rectangle corners may be intersections of diagonals.",
+    "summaryZh": "在一个固定的正十二边形内，有多少个矩形，其每条边都位于该十二边形的一条边或一条对角线上？矩形顶点可以是对角线交点。",
+    "answer": "315",
+    "answerZh": "315",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2024II/problem/15",
+    "methods": [
+      {
+        "title": "Group rectangles by chord direction and maximal offsets",
+        "titleZh": "按弦的方向与最大离轴距离计数",
+        "topics": [
+          {
+            "en": "Regular polygons",
+            "zh": "正多边形"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Counting by cases",
+            "zh": "分类计数"
+          }
+        ],
+        "steps": [
+          "Use circumradius one. The directions of chords are spaced by $15^\\circ$: a chord’s normal direction bisects its endpoint angles modulo $180^\\circ$. Pairing perpendicular directions gives six orientation pairs, three with axes through vertices and three rotated by $15^\\circ$. In each pair pick two vertical and two horizontal chord lines. A corner on such a line lies on the actual chord precisely when it lies in the unit disk, since the chord spans the disk between its endpoints. Thus the choice works iff $X^2+Y^2\\le1$, where $X,Y$ are the greatest absolute coordinates of the chosen lines.",
+          "For axes through vertices the usable offsets on either axis are $0,\\pm1/2,\\pm\\sqrt3/2$; the levels $\\pm1$ contain only one vertex. Of ten pairs of offsets, three have maximum $1/2$, seven maximum $\\sqrt3/2$. Only a large maximum on both axes fails, leaving $10^2-7^2=51$.",
+          "For the tilted axes the offsets are $\\pm\\cos75^\\circ,\\pm\\cos45^\\circ,\\pm\\cos15^\\circ$. In increasing order of maximum there are $1,5,9$ pairs on each axis (successive differences of $\\binom22,\\binom42,\\binom62$). The smallest maximum fits with any maximum; if neither is smallest, both must be middle. This gives $(15+15-1)+5^2=54$. The six orientations total $3(51+54)=315$."
+        ],
+        "stepsZh": [
+          "令外接圆半径为一。弦的法线平分两端的圆心角（方向按 $180^\\circ$ 计），故弦的方向每隔 $15^\\circ$ 一种。两两垂直配成六组：三组坐标轴过顶点，三组相对转过 $15^\\circ$。每组各选两条竖直和水平弦线。弦连接直线与单位圆的两个交点，所以角点在实际弦上等价于在单位圆盘内。设所选直线的最大横、纵坐标绝对值为 $X,Y$，条件就是 $X^2+Y^2\\le1$。",
+          "坐标轴过顶点时，两轴上的可用坐标值均为 $0,\\pm1/2,\\pm\\sqrt3/2$；$\\pm1$ 处仅有一个顶点，不能成弦。十对取值中有三对的最大绝对值为 $1/2$，七对为 $\\sqrt3/2$。仅两轴均取大值时不合格，故有 $10^2-7^2=51$ 个矩形。",
+          "坐标轴倾斜时，取值为 $\\pm\\cos75^\\circ,\\pm\\cos45^\\circ,\\pm\\cos15^\\circ$。最大绝对值从小到大分别有 $1,5,9$ 对，是 $\\binom22,\\binom42,\\binom62$ 的逐级差。最小档可与任何档配合；若两轴均非最小，则必须都为中档。共 $15+15-1+5^2=54$ 个。六组总数为 $3(51+54)=315$。"
+        ]
+      }
+    ]
+  }
+}

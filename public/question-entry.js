@@ -1,3 +1,4 @@
+import {mountPublishedReader} from './published-reader.js';
 const root = document.querySelector('[data-entry]');
 const zh = root.dataset.lang === 'zh';
 const prefix = zh ? '/zh' : '';
@@ -35,7 +36,11 @@ async function loadEntry() {
   field('add').href = prefix + '/problems/?add=' + id + '#worksheet';
   field('related').href = paperURL;
   field('answer-panel').hidden = !q.answer;
-  field('pending').hidden = !!q.answer;
+  field('pending').hidden = !!q.answer || !!q.published;
+  if (q.published) {
+    field('answer-panel').removeAttribute('id');
+    mountPublishedReader(field('publisher'),{id,record:q.published,lang:zh?'zh':'en',title,primary:true});
+  }
   if (q.answer) field('answer').textContent = q.value ? q.answer + ' · ' + q.value : q.answer;
   if (q.note) {
     field('key-note').textContent = zh ? q.note.zh : q.note.en;
@@ -61,6 +66,7 @@ async function loadEntry() {
   }
   field('status').hidden = true;
   field('record').hidden = false;
+  if(q.published && location.hash==='#solutions') requestAnimationFrame(()=>document.querySelector('#solutions')?.scrollIntoView({block:'nearest'}));
   const openAnswer = () => {
     if (location.hash === '#solutions' && q.answer) { field('answer-panel').open = true; field('answer-panel').scrollIntoView({block:'nearest'}); }
   };

@@ -1,0 +1,27 @@
+{
+  "amc10-2014b-q2": {
+    "summary": "Evaluate $\\dfrac{2^3 + 2^3}{2^{-3} + 2^{-3}}$.",
+    "summaryZh": "求 $\\dfrac{2^3 + 2^3}{2^{-3} + 2^{-3}}$ 的值。",
+    "answer": "E. $64$.",
+    "answerZh": "E。$64$。",
+    "methods": [
+      {
+        "title": "Cancel the common factor",
+        "titleZh": "约去公因数",
+        "steps": [
+          "Each of the numerator and denominator has two equal terms. Cancelling the factor $2$ leaves $2^3/2^{-3}$. Subtraction of exponents gives $2^{3-(-3)}=2^6=64$."
+        ],
+        "stepsZh": [
+          "分子、分母各由两项相同的数相加。约去共同因子 $2$ 得 $2^3/2^{-3}$。同底数幂相除，得 $2^{3-(-3)}=2^6=64$。"
+        ],
+        "topics": [
+          {
+            "en": "Exponent laws",
+            "zh": "指数运算"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2014B/problem/2"
+  }
+}

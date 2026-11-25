@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="42 35 215 200">
+  <title>Two internally tangent circles and a common tangent</title>
+  <circle cx="150" cy="135" r="90" fill="white" stroke="#324c59" stroke-width="1.5"/>
+  <path d="M62.195 115.244L235.838 107.947L205 150H90Z" fill="#dde8ed" stroke="#577584" stroke-width="1.2"/>
+  <g fill="none" stroke="#486575" stroke-width="1.6">
+    <circle cx="90" cy="121.5" r="28.5"/><circle cx="205" cy="117.667" r="32.333"/>
+    <path d="M49 150H251"/>
+  </g>
+  <g fill="#213c4b">
+    <circle cx="62.195" cy="115.244" r="2.5"/><circle cx="235.838" cy="107.947" r="2.5"/>
+    <circle cx="205" cy="150" r="2.5"/><circle cx="90" cy="150" r="2.5"/><circle cx="150" cy="135" r="2"/>
+  </g>
+  <g fill="#213c4b" style="font:italic 13px Georgia,serif">
+    <text x="49" y="110">A</text><text x="240" y="104">B</text><text x="208" y="165">C</text>
+    <text x="81" y="165">D</text><text x="154" y="133">O</text>
+  </g>
+</svg>

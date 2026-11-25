@@ -1,0 +1,790 @@
+{
+  "amc8-2025-q1": {
+    "summary": "In the accompanying square lattice, what percentage of the large square is shaded? The central square is filled and the eight triangular points extend into the surrounding cells.",
+    "summaryZh": "如图，正方形网格中央的正方形与外围八个三角形均已着色。求着色部分占大正方形面积的百分比。",
+    "answer": "B. $50\\%$.",
+    "answerZh": "B．$50\\%$。",
+    "methods": [
+      {
+        "title": "Count whole and half cells",
+        "titleZh": "数整格与半格",
+        "topics": [
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          }
+        ],
+        "steps": [
+          "Use one cell as the area unit. The middle block contains four entire shaded cells. Each of the eight points fills half of an adjacent unit cell.",
+          "The shaded area is $4+8/2=8$ within a square of area $16$. The percentage is $100(8/16)=50$."
+        ],
+        "stepsZh": [
+          "以一小格为面积单位。中央有四个整格，八个尖角各占相邻小格的一半。",
+          "着色面积为 $4+8/2=8$，总面积为 $16$，故百分比为 $100(8/16)=50$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/1",
+    "figure": {
+      "url": "/commentary-figures/amc8-2025-q1.svg",
+      "alt": "A four-by-four grid with a shaded central two-by-two square and eight half-cell points.",
+      "altZh": "四乘四方格中央的二乘二正方形及外围八个半格尖角着色。"
+    }
+  },
+  "amc8-2025-q2": {
+    "summary": "An additive numeral uses a stroke for 1, an arch for 10, a coil for 100 and a pointing finger for 10,000. Read a group with three strokes, two arches, four coils and one finger.",
+    "summaryZh": "一种加法记数法用短线、拱形、绳圈和手指依次表示 1、10、100 和 10000。图案中有三条短线、两个拱形、四个绳圈和一个手指，求它表示的数。",
+    "answer": "B. $10{,}423$.",
+    "answerZh": "B．$10{,}423$。",
+    "methods": [
+      {
+        "title": "Collect place values",
+        "titleZh": "按位值合计",
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "十进制位值"
+          }
+        ],
+        "steps": [
+          "Read the symbols from largest value to smallest. There is one ten-thousand and no thousand, followed by four hundreds, two tens and three ones.",
+          "Their sum is $10000+400+20+3=10423$."
+        ],
+        "stepsZh": [
+          "从最高位数起，一个万、零个千，接着是四个百、两个十和三个一。",
+          "总数为 $10000+400+20+3=10423$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/2"
+  },
+  "amc8-2025-q3": {
+    "summary": "A deck gives four players 15 cards apiece. If the same deck is now shared equally among six players, what does each receive?",
+    "summaryZh": "四人平分一副牌，每人 15 张。现在六人平分同一副牌，每人得到多少张？",
+    "answer": "C. $10$ cards.",
+    "answerZh": "C．$10$ 张。",
+    "methods": [
+      {
+        "title": "Conserve the total",
+        "titleZh": "保持总数不变",
+        "topics": [
+          {
+            "en": "Equal sharing",
+            "zh": "等分"
+          }
+        ],
+        "steps": [
+          "The deck contains $4\\cdot15=60$ cards.",
+          "Divide the same 60 cards into six equal hands: $60/6=10$."
+        ],
+        "stepsZh": [
+          "牌的总数为 $4\\cdot15=60$。",
+          "六人平分，得到 $60/6=10$ 张。"
+        ]
+      },
+      {
+        "title": "Scale the hand size",
+        "titleZh": "按人数反比缩放",
+        "topics": [
+          {
+            "en": "Inverse proportion",
+            "zh": "反比例"
+          }
+        ],
+        "steps": [
+          "The new number of players is $6/4=3/2$ times the old number. Each hand must therefore be $2/3$ as large.",
+          "Compute $15(2/3)=10$."
+        ],
+        "stepsZh": [
+          "人数变为原来的 $6/4=3/2$，每人所得变为原来的 $2/3$。",
+          "所以每人得到 $15(2/3)=10$ 张。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/3"
+  },
+  "amc8-2025-q4": {
+    "summary": "A sequence starts at 100 and drops by 7 at each step. Find its tenth term.",
+    "summaryZh": "数列的第一项为 100，以后每一项比前一项少 7。求第十项。",
+    "answer": "B. $37$.",
+    "answerZh": "B．$37$。",
+    "methods": [
+      {
+        "title": "Count the jumps",
+        "titleZh": "数相邻项的间隔",
+        "topics": [
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "There are nine gaps from term 1 to term 10, so the total decrease is $9\\cdot7=63$.",
+          "The tenth term is $100-63=37$."
+        ],
+        "stepsZh": [
+          "从第一项到第十项共有九个间隔，总共减少 $9\\cdot7=63$。",
+          "第十项为 $100-63=37$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/4"
+  },
+  "amc8-2025-q5": {
+    "summary": "On a rectangular street lattice, the four stops have coordinates $F=(6,5)$, $A=(7,3)$, $B=(0,0)$ and $C=(2,4)$. Roads follow unit horizontal or vertical segments. Find the minimum length for the tour $F,A,B,C,F$ in that order.",
+    "summaryZh": "在直角街道网格内，四站的位置为 $F=(6,5)$、$A=(7,3)$、$B=(0,0)$、$C=(2,4)$。每一步沿水平或竖直方向走一格。依次经过 $F,A,B,C,F$ 至少走多少格？",
+    "answer": "C. $24$ blocks.",
+    "answerZh": "C．$24$ 格。",
+    "methods": [
+      {
+        "title": "Add the coordinate gaps",
+        "titleZh": "合计横纵坐标差",
+        "topics": [
+          {
+            "en": "Manhattan distance",
+            "zh": "曼哈顿距离"
+          }
+        ],
+        "steps": [
+          "Between any two stops, every required horizontal and vertical displacement must be made. Moving monotonically in both coordinates attains this bound.",
+          "For the four legs the minima are $1+2=3$, $7+3=10$, $2+4=6$ and $4+1=5$. Add to obtain $24$."
+        ],
+        "stepsZh": [
+          "两站之间必须走完横、纵两个方向的位移；两个方向都不折返时取到最短路。",
+          "四段分别为 $1+2=3$、$7+3=10$、$2+4=6$、$4+1=5$，合计 $24$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/5"
+  },
+  "amc8-2025-q6": {
+    "summary": "Remove one integer from $15,16,17,18,19$ so that the remaining sum is divisible by 4. Which integer must go?",
+    "summaryZh": "从 $15,16,17,18,19$ 中删去一个数，使剩下的和是 4 的倍数。应删哪个数？",
+    "answer": "C. $17$.",
+    "answerZh": "C．$17$。",
+    "methods": [
+      {
+        "title": "Compare residues",
+        "titleZh": "比较余数",
+        "topics": [
+          {
+            "en": "Modular arithmetic",
+            "zh": "同余"
+          }
+        ],
+        "steps": [
+          "The original total is $5\\cdot17=85$, which leaves remainder 1 modulo 4.",
+          "The removed number must have the same remainder; only $17$ does. The remaining sum is $68$."
+        ],
+        "stepsZh": [
+          "五数原来的和为 $5\\cdot17=85$，除以 4 余 1。",
+          "要删去的数也须余 1，只有 $17$ 符合，删去后总和为 $68$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/6"
+  },
+  "amc8-2025-q7": {
+    "summary": "Cumulative exam counts at cutoffs 80, 85, 90 and 95 are 50, 27, 13 and 5 respectively. How many scores satisfy $80\\le s<90$?",
+    "summaryZh": "达到 80、85、90、95 分的人数依次为 50、27、13、5。求满足 $80\\le s<90$ 的人数。",
+    "answer": "D. $37$ students.",
+    "answerZh": "D．$37$ 人。",
+    "methods": [
+      {
+        "title": "Subtract nested groups",
+        "titleZh": "相减得到区间人数",
+        "topics": [
+          {
+            "en": "Cumulative counts",
+            "zh": "累计计数"
+          }
+        ],
+        "steps": [
+          "Everyone scoring at least 90 is included in the 50 who scored at least 80. Removing these 13 leaves exactly the required interval.",
+          "Therefore $50-13=37$."
+        ],
+        "stepsZh": [
+          "至少 90 分的 13 人均属于至少 80 分的 50 人。从后者中去掉前者，恰好留下目标区间。",
+          "人数为 $50-13=37$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/7"
+  },
+  "amc8-2025-q8": {
+    "summary": "All six faces of a cube are opened into a single net with total area $18\\text{ cm}^2$. Find the cube’s volume.",
+    "summaryZh": "把正方体的六个面展开，展开图面积为 $18\\text{ cm}^2$。求原正方体体积。",
+    "answer": "A. $3\\sqrt3\\text{ cm}^3$.",
+    "answerZh": "A．$3\\sqrt3\\text{ cm}^3$。",
+    "methods": [
+      {
+        "title": "Reconstruct the edge",
+        "titleZh": "由单面面积还原棱长",
+        "topics": [
+          {
+            "en": "Surface area and volume",
+            "zh": "表面积与体积"
+          }
+        ],
+        "steps": [
+          "Each square face has area $18/6=3$, so the edge is $\\sqrt3$ cm.",
+          "Volume is base area times height: $3\\sqrt3$ cubic centimetres."
+        ],
+        "stepsZh": [
+          "每个面的面积是 $18/6=3$，棱长为 $\\sqrt3$ 厘米。",
+          "底面积乘以高，体积为 $3\\sqrt3$ 立方厘米。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/8"
+  },
+  "amc8-2025-q9": {
+    "summary": "Pair opposite labels on an ordinary 12-hour clock, average the two members of each pair, and then average the six results. Find this last average.",
+    "summaryZh": "把十二小时制钟面上正对的数字配成六对，先求各对的平均数，再求六个平均数的平均数。结果是多少？",
+    "answer": "B. $6.5$.",
+    "answerZh": "B．$6.5$。",
+    "methods": [
+      {
+        "title": "Use equal weights",
+        "titleZh": "利用等权平均",
+        "topics": [
+          {
+            "en": "Mean of groups",
+            "zh": "分组平均数"
+          }
+        ],
+        "steps": [
+          "Each original label contributes $1/2$ to its pair average and then $1/6$ of that to the final average. Thus each has weight $1/12$.",
+          "The average of $1$ through $12$ is $(1+12)/2=6.5$."
+        ],
+        "stepsZh": [
+          "每个数字在本对平均数中的权为 $1/2$，再平均六对后权为 $1/12$。",
+          "故所求就是 $1$ 至 $12$ 的平均数，即 $(1+12)/2=6.5$。"
+        ]
+      },
+      {
+        "title": "List the pair means",
+        "titleZh": "列出六对的平均数",
+        "topics": [
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "The pairs are $(1,7)$ through $(6,12)$, with arithmetic means $4,5,6,7,8,9$.",
+          "Average the endpoints: $(4+9)/2=6.5$."
+        ],
+        "stepsZh": [
+          "从 $(1,7)$ 到 $(6,12)$ 的六对依次给出平均数 $4,5,6,7,8,9$。",
+          "首尾平均为 $(4+9)/2=6.5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/9"
+  },
+  "amc8-2025-q10": {
+    "summary": "Rotate a rectangle measuring 5 inches by 3 inches through a right angle about the midpoint of a length-5 edge. What is the area of the union of its old and new positions?",
+    "summaryZh": "把一个长 5 英寸、宽 3 英寸的长方形绕一条长为 5 的边的中点旋转直角。原图形与旋转后的图形并集面积是多少？",
+    "answer": "D. $23.75$ square inches.",
+    "answerZh": "D．$23.75$ 平方英寸。",
+    "methods": [
+      {
+        "title": "Find the overlap in coordinates",
+        "titleZh": "用坐标确定重叠",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "Put the pivot at the origin and let the original rectangle be $[-2.5,2.5]\\times[0,3]$. Its clockwise rotation is $[0,3]\\times[-2.5,2.5]$.",
+          "Their intersection is $[0,2.5]\\times[0,2.5]$. Each rectangle has area 15, so the union has area $30-2.5^2=23.75$."
+        ],
+        "stepsZh": [
+          "以旋转中心为原点，设原长方形为 $[-2.5,2.5]\\times[0,3]$。顺时针旋转后为 $[0,3]\\times[-2.5,2.5]$。",
+          "两者交集是 $[0,2.5]\\times[0,2.5]$。每个长方形面积均为 15，故并集面积为 $30-2.5^2=23.75$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/10"
+  },
+  "amc8-2025-q11": {
+    "summary": "Cover a three-row, four-column board with three tetrominoes, permitting rotations and reflections. One is a zigzag S. Which listed pair can fill the rest: I+L, I+T, L+L, L+S or O+T? Here I is straight, O is square, T is a row of three with a square on its middle, and L adds a square at the end of a row of three.",
+    "summaryZh": "用三个四连块铺满三行四列的棋盘，可以旋转或翻面。已知其中一个是折线形 S。其余两块的候选组合是 I+L、I+T、L+L、L+S、O+T，哪组可行？I 是长条，O 是正方形，T 和 L 分别是在三连格中间或一端旁添一格。",
+    "answer": "C. Two L tiles.",
+    "answerZh": "C．两块 L 形块。",
+    "methods": [
+      {
+        "title": "Construct a tiling",
+        "titleZh": "直接构造铺法",
+        "topics": [
+          {
+            "en": "Polyomino tilings",
+            "zh": "多连块铺砌"
+          }
+        ],
+        "steps": [
+          "Write the three rows from top to bottom as LLLJ, LSSJ, SSJJ. Equal letters label the cells of one tile.",
+          "The four S cells form the prescribed zigzag. L and J are mirror images of the same L shape. This realizes the listed pair L+L."
+        ],
+        "stepsZh": [
+          "从上到下三行分别写作 LLLJ、LSSJ、SSJJ；相同字母属于同一块。",
+          "四个 S 构成所需折线形。L 和 J 正是同一种 L 形块的镜像，因此可行的选项是 L+L。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/11"
+  },
+  "amc8-2025-q12": {
+    "summary": "A centred stack of six rows of one-centimetre squares has successive widths 2, 4, 6, 6, 4 and 2. Determine the maximum area of a closed disk contained in the stack.",
+    "summaryZh": "六行边长为一厘米的方格以同一竖直中线对齐，从上到下的宽度为 2、4、6、6、4、2。在这个区域内放置一个圆，求最大面积。",
+    "answer": "C. $5\\pi$ square centimetres.",
+    "answerZh": "C．$5\\pi$ 平方厘米。",
+    "methods": [
+      {
+        "title": "Bound the radius by an inward corner",
+        "titleZh": "用凹角限制半径",
+        "topics": [
+          {
+            "en": "Largest inscribed circle",
+            "zh": "最大内切圆"
+          }
+        ],
+        "steps": [
+          "Take the middle of the stack as origin. The central disk of radius $\\sqrt5$ fits: the nearest stepped corners have coordinates given by the sign changes of $(1,2)$ and $(2,1)$, while the extreme straight sides are 3 units away.",
+          "Suppose the radius exceeded $\\sqrt5>2$. Since the stack lies in $[-3,3]^2$, the centre would have both coordinates of absolute value less than 1. Reflect it into the first quadrant. Its distance to the boundary corner $(1,2)$ is at most $\\sqrt{1^2+2^2}=\\sqrt5$; the disk would include exterior points near that corner. Hence the greatest area is $5\\pi$."
+        ],
+        "stepsZh": [
+          "以图形中心为原点。以原点为圆心、半径 $\\sqrt5$ 的圆恰好能放下：最近的凹角是 $(1,2)$、$(2,1)$ 及其对称点，最外侧直边距原点 3。",
+          "若半径大于 $\\sqrt5>2$，由于区域包含在 $[-3,3]^2$ 中，圆心两坐标绝对值均小于 1。利用对称性取圆心在第一象限，则它到边界凹角 $(1,2)$ 的距离不超过 $\\sqrt{1^2+2^2}=\\sqrt5$，圆会覆盖该角附近的外部点。因此最大面积为 $5\\pi$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/12"
+  },
+  "amc8-2025-q13": {
+    "summary": "For the 25 integers $2,4,\\ldots,50$, find the frequency vector of the residues modulo 7, ordered from residue 0 to residue 6.",
+    "summaryZh": "把 $2,4,\\ldots,50$ 这 25 个数分别模 7，按余数 0 到 6 的次序列出频数。",
+    "answer": "A. $(3,4,4,3,4,3,4)$.",
+    "answerZh": "A．$(3,4,4,3,4,3,4)$。",
+    "methods": [
+      {
+        "title": "Complete three cycles",
+        "titleZh": "按七项分组",
+        "topics": [
+          {
+            "en": "Residue cycles",
+            "zh": "余数周期"
+          }
+        ],
+        "steps": [
+          "For seven successive even numbers the residues run through $2,4,6,1,3,5,0$. The first 21 terms contain three of every residue.",
+          "The last four repeat $2,4,6,1$. Thus residues 1, 2, 4 and 6 occur four times each; the other three occur three times."
+        ],
+        "stepsZh": [
+          "连续七个偶数的余数依次是 $2,4,6,1,3,5,0$。前 21 项含有各余数三次。",
+          "最后四项再出现 $2,4,6,1$。因此余数 1、2、4、6 各有四次，其余各三次。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/13"
+  },
+  "amc8-2025-q14": {
+    "summary": "Append a real number $N$ to the data $2,6,7,7,28$. In the resulting six values the arithmetic mean equals twice the median. Determine $N$.",
+    "summaryZh": "在 $2,6,7,7,28$ 中加入实数 $N$，所得六个数的平均数是中位数的两倍。求 $N$。",
+    "answer": "E. $34$.",
+    "answerZh": "E．$34$。",
+    "methods": [
+      {
+        "title": "Rule out small insertions",
+        "titleZh": "排除偏小的插入值",
+        "topics": [
+          {
+            "en": "Order statistics",
+            "zh": "顺序统计量"
+          }
+        ],
+        "steps": [
+          "Even if $N$ is very small, the third and fourth values are at least 6 and 7. Therefore the median is at least $6.5$, and the mean is at least 13.",
+          "The fixed five entries sum to 50. Thus $50+N\\ge78$, giving $N\\ge28$. The two middle entries are then both 7; the sum required by mean 14 is 84. Consequently $N=84-50=34$, which indeed gives median 7."
+        ],
+        "stepsZh": [
+          "无论 $N$ 多小，第三、四个数至少为 6 和 7，故中位数至少 $6.5$，平均数至少 13。",
+          "原五个数之和为 50，故 $50+N\\ge78$，即 $N\\ge28$。此时两个中间数均为 7，平均数应为 14，总和应为 84。于是 $N=34$，代入确实满足条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/14"
+  },
+  "amc8-2025-q15": {
+    "summary": "Of 36 cells in a $6\\times6$ grid, 13 are silver and 23 are gold. A vertical fold pairs the cells. Add the smallest and largest possible numbers of pairs with gold on both sides.",
+    "summaryZh": "六乘六方格中有 13 个银格、23 个金格。沿竖直中线对折后格子两两相对。求“金对金”格对数的最小值与最大值之和。",
+    "answer": "C. $16$.",
+    "answerZh": "C．$16$。",
+    "methods": [
+      {
+        "title": "Count pairs touched by silver",
+        "titleZh": "统计含银格的对数",
+        "topics": [
+          {
+            "en": "Extremal counting",
+            "zh": "极值计数"
+          }
+        ],
+        "steps": [
+          "There are 18 pairs. Spreading the 13 silver cells over different pairs leaves $18-13=5$ gold pairs.",
+          "Packing the silver into six double-silver pairs and one mixed pair uses the fewest pairs, $\\lceil13/2\\rceil=7$. This leaves 11 gold pairs. Both arrangements are attainable, so the sum is $5+11=16$."
+        ],
+        "stepsZh": [
+          "共有 18 对。让 13 个银格分属 13 对，就只剩 $18-13=5$ 对金格。",
+          "让六对全银、另有一对金银混合，则银格仅占 $\\lceil13/2\\rceil=7$ 对，此时全金有 11 对。两种排法都可实现，所以两极值之和为 $5+11=16$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/15"
+  },
+  "amc8-2025-q16": {
+    "summary": "Select five integers in $[1,10]$ and five in $[11,20]$, all distinct. No chosen pair may differ by 10. Compute the sum of the ten chosen integers.",
+    "summaryZh": "分别从 1 至 10 和 11 至 20 各选五个不同整数，任意两个所选数的差都不为 10。求所选十数之和。",
+    "answer": "C. $105$.",
+    "answerZh": "C．$105$。",
+    "methods": [
+      {
+        "title": "Pair by residue modulo ten",
+        "titleZh": "按模十分组",
+        "topics": [
+          {
+            "en": "Pigeonhole principle",
+            "zh": "抽屉原理"
+          }
+        ],
+        "steps": [
+          "Make the ten pairs $\\{i,i+10\\}$ for $1\\le i\\le10$. At most one member of each pair is chosen. Since ten numbers are chosen, every pair contributes one.",
+          "Start with the ten smaller members, of sum 55. The five choices in the upper half replace a smaller member by a number 10 larger. The sum is $55+5\\cdot10=105$."
+        ],
+        "stepsZh": [
+          "将整数分成十对 $\\{i,i+10\\}$，其中 $1\\le i\\le10$。每对至多选一个，而共选十个，故每对恰选一个。",
+          "若全选较小者，总和为 55。现在有五对改选较大者，总和增加 $5\\cdot10$，结果是 $105$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/16"
+  },
+  "amc8-2025-q17": {
+    "summary": "Three towns $A,B,C$ have 100, 120 and 160 resident workers. Of the residents of $A$, one quarter work in $B$ and one fifth in $C$. One third of $B$ residents and one eighth of $C$ residents work in $A$. Everyone works in one town. How many work in $A$?",
+    "summaryZh": "三个城镇 $A,B,C$ 的劳动人口依次为 100、120、160。$A$ 镇居民中四分之一在 $B$ 工作、五分之一在 $C$ 工作；$B$ 的三分之一居民和 $C$ 的八分之一居民在 $A$ 工作。每人只在一镇工作，求在 $A$ 工作的总人数。",
+    "answer": "D. $115$ workers.",
+    "answerZh": "D．$115$ 人。",
+    "methods": [
+      {
+        "title": "Count the inflow",
+        "titleZh": "按居住地统计",
+        "topics": [
+          {
+            "en": "Weighted counts",
+            "zh": "加权计数"
+          }
+        ],
+        "steps": [
+          "The residents who both live and work in $A$ number $100-25-20=55$.",
+          "To those add arrivals from $B$ and $C$, namely $120/3=40$ and $160/8=20$. The total is 115."
+        ],
+        "stepsZh": [
+          "住在 $A$ 且留在当地工作的有 $100-25-20=55$ 人。",
+          "另有 $120/3=40$ 人来自 $B$、$160/8=20$ 人来自 $C$，合计 115 人。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/17"
+  },
+  "amc8-2025-q18": {
+    "summary": "In each of two circles inscribe a square. In the unit circle, shade all the area outside its square. In the other circle, shade one quarter of that corresponding area. Equal shaded areas are obtained. What is the second radius?",
+    "summaryZh": "两个圆内各有一个内接正方形。半径为 1 的圆，把正方形外、圆内的区域全部着色；另一个圆只把对应区域的四分之一着色。若着色面积相等，第二个圆的半径是多少？",
+    "answer": "B. $2$.",
+    "answerZh": "B．$2$。",
+    "methods": [
+      {
+        "title": "Use area scaling",
+        "titleZh": "利用面积缩放",
+        "topics": [
+          {
+            "en": "Similarity",
+            "zh": "相似"
+          }
+        ],
+        "steps": [
+          "A dilation from radius 1 to radius $R$ multiplies the whole gap area by $R^2$. The shaded fraction in the second picture is then $R^2/4$ times the first shaded area.",
+          "Equality gives $R^2=4$. A radius is positive, so $R=2$."
+        ],
+        "stepsZh": [
+          "从半径 1 放大到 $R$ 后，圆与正方形之间的总面积变为原来的 $R^2$ 倍。第二幅图只涂四分之一，故两着色面积之比为 $R^2/4$。",
+          "面积相等给出 $R^2=4$，取正根 $R=2$。"
+        ]
+      },
+      {
+        "title": "Subtract square from disk",
+        "titleZh": "从圆中减去正方形",
+        "topics": [
+          {
+            "en": "Circle and square areas",
+            "zh": "圆与正方形面积"
+          }
+        ],
+        "steps": [
+          "For radius $r$ the square diagonal is $2r$, so its area is $(2r)^2/2=2r^2$. The gap is $(\\pi-2)r^2$.",
+          "Set $(\\pi-2)R^2/4=\\pi-2$ and cancel the positive factor to obtain $R=2$."
+        ],
+        "stepsZh": [
+          "半径为 $r$ 时，内接正方形的对角线是 $2r$，面积为 $(2r)^2/2=2r^2$，余下区域面积为 $(\\pi-2)r^2$。",
+          "列式 $(\\pi-2)R^2/4=\\pi-2$，约去正因子得 $R=2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/18"
+  },
+  "amc8-2025-q19": {
+    "summary": "A road from $A$ to $B$ comprises three successive 5-mile zones with speed limits 25, 40 and 20 mph. Two drivers start at opposite ends simultaneously and follow each local limit. How far from $A$ do they meet?",
+    "summaryZh": "从 $A$ 到 $B$ 依次有三段各 5 英里的道路，限速分别为每小时 25、40、20 英里。两车同时从两端出发，在各段均按限速行驶。相遇处距 $A$ 多少英里？",
+    "answer": "D. $8.5$ miles.",
+    "answerZh": "D．$8.5$ 英里。",
+    "methods": [
+      {
+        "title": "Compare positions after fifteen minutes",
+        "titleZh": "比较十五分钟时的位置",
+        "topics": [
+          {
+            "en": "Relative speed",
+            "zh": "相对速度"
+          }
+        ],
+        "steps": [
+          "The driver from $A$ reaches the middle zone after 12 minutes. By minute 15 it has covered another $40(3/60)=2$ miles and is at mile 7. The other driver has just reached mile 10.",
+          "The remaining gap of 3 miles closes symmetrically because both now travel at 40 mph. The meeting point is $(7+10)/2=8.5$ miles from $A$."
+        ],
+        "stepsZh": [
+          "从 $A$ 出发的车在 12 分钟后进入中段，到第 15 分钟又走了 $40(3/60)=2$ 英里，位于里程 7；另一辆车恰到里程 10。",
+          "此后三英里的间距由两车以同样速度缩短，相遇点为中点 $(7+10)/2=8.5$。"
+        ]
+      },
+      {
+        "title": "Balance elapsed times",
+        "titleZh": "令两车用时相等",
+        "topics": [
+          {
+            "en": "Piecewise travel time",
+            "zh": "分段行程"
+          }
+        ],
+        "steps": [
+          "Let the meeting point be $x$ miles from $A$ in the middle zone. The times from the two ends in hours satisfy $5/25+(x-5)/40=5/20+(10-x)/40$.",
+          "Multiplying by 40 gives $8+x-5=10+10-x$, hence $x=8.5$, which lies between 5 and 10 as required."
+        ],
+        "stepsZh": [
+          "设两车在中段距 $A$ 为 $x$ 处相遇，以小时计有 $5/25+(x-5)/40=5/20+(10-x)/40$。",
+          "同乘 40 得 $8+x-5=10+10-x$，解出 $x=8.5$，确在中段。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/19"
+  },
+  "amc8-2025-q20": {
+    "summary": "Three people eat in cyclic order. On every turn the eater takes exactly half of what remains. Over infinitely many turns, what fraction of the initial amount goes to the first person?",
+    "summaryZh": "三人按固定次序轮流取食，每一次取走剩余量的一半。无限重复下去，第一人一共得到最初总量的几分之几？",
+    "answer": "A. $4/7$.",
+    "answerZh": "A．$4/7$。",
+    "methods": [
+      {
+        "title": "Restart after one round",
+        "titleZh": "一轮之后重新开始",
+        "topics": [
+          {
+            "en": "Self-similarity",
+            "zh": "自相似"
+          }
+        ],
+        "steps": [
+          "Let $f$ be the first person’s share of a unit supply. They take $1/2$ immediately. After all three turns, $1/8$ remains and exactly the same process restarts.",
+          "Hence $f=1/2+f/8$. Rearranging yields $7f/8=1/2$, so $f=4/7$."
+        ],
+        "stepsZh": [
+          "令第一人最终所得比例为 $f$。第一次得到 $1/2$，一轮结束后总量剩 $1/8$，此后过程按原样重启。",
+          "因此 $f=1/2+f/8$，移项得 $7f/8=1/2$，所以 $f=4/7$。"
+        ]
+      },
+      {
+        "title": "Compare shares within every round",
+        "titleZh": "比较每轮三人的份额比",
+        "topics": [
+          {
+            "en": "Ratios",
+            "zh": "比例"
+          }
+        ],
+        "steps": [
+          "No matter how much a round starts with, its three pieces have ratio $4:2:1$. Adding the amounts across all rounds preserves this ratio.",
+          "The uneaten part tends to zero. Of the total seven parts, the first person receives four."
+        ],
+        "stepsZh": [
+          "一轮从多少开始都无关紧要，三人依次所得之比总是 $4:2:1$。各轮逐人相加，比例仍然不变。",
+          "余量趋于零，故第一人占总量七份中的四份。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/20"
+  },
+  "amc8-2025-q21": {
+    "summary": "Give the vertices $A$ through $G$ distinct labels 1 through 7. Adjacent labels must differ by at least two. The undirected edges are $AB,AC,AF,AG,BC,BF,CF,CD,CE,DE,EF,FG$. Find the sum of the labels on $C,E,F$.",
+    "summaryZh": "给 $A$ 至 $G$ 七个顶点分配互不相同的数字 1 至 7。有边相连的两个点数字相差至少 2。无向边为 $AB,AC,AF,AG,BC,BF,CF,CD,CE,DE,EF,FG$。求 $C,E,F$ 三点数字之和。",
+    "answer": "A. $12$.",
+    "answerZh": "A．$12$。",
+    "methods": [
+      {
+        "title": "Trace the consecutive labels",
+        "titleZh": "按连续数字追踪顶点",
+        "topics": [
+          {
+            "en": "Complement graphs",
+            "zh": "补图"
+          }
+        ],
+        "steps": [
+          "List the vertices in order of their labels $1,2,\\ldots,7$. Consecutive vertices must be non-neighbours in the given graph. Vertex $C$ can only be next to $G$ in this list, and $F$ only next to $D$. Thus the list has endpoints $C,F$. Reverse it if needed so it starts $C,G$ and ends $D,F$.",
+          "Vertex $A$ can only be next to $E$ and $D$, so the tail is $E,A,D,F$. The remaining vertex is $B$ and the order $C,G,B,E,A,D,F$ works. The requested labels are 1, 4 and 7; reversal interchanges 1 and 7, leaving sum 12."
+        ],
+        "stepsZh": [
+          "按所标数字 $1,2,\\ldots,7$ 的次序列出顶点，表中相邻两点必须在原图中不相连。$C$ 只可挨着 $G$，$F$ 只可挨着 $D$，故 $C,F$ 在两端。必要时倒序，使开头为 $C,G$，结尾为 $D,F$。",
+          "$A$ 在中间且只可挨着 $E,D$，故末四项为 $E,A,D,F$。剩余位置填 $B$，验证次序 $C,G,B,E,A,D,F$ 可行。所求三个标号为 1、4、7；倒序仅交换 1 与 7 的位置，和仍为 12。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/21"
+  },
+  "amc8-2025-q22": {
+    "summary": "On 35 consecutive hooks, hang at least one coat and leave at least one hook empty. The empty runs at the two ends and between successive coats must all have equal length. How many counts of coats are possible?",
+    "summaryZh": "一排有 35 个挂钩，至少挂一件外套，且至少留一个空钩。两端和每两件相邻外套之间的连续空钩数都相同。外套件数有多少种可能？",
+    "answer": "D. $7$.",
+    "answerZh": "D．$7$。",
+    "methods": [
+      {
+        "title": "Turn the gaps into a factorization",
+        "titleZh": "将间隔条件化为因数分解",
+        "topics": [
+          {
+            "en": "Divisor counting",
+            "zh": "因数计数"
+          }
+        ],
+        "steps": [
+          "With $c$ coats, there are $c+1$ runs, each of $e$ empty hooks. Thus $35=c+(c+1)e$, or $(c+1)(e+1)=36$. Both factors must exceed 1.",
+          "The possible values of $c+1$ are the divisors of 36 excluding 1 and 36: $2,3,4,6,9,12,18$. Each gives an integer $e\\ge1$ and a different coat count."
+        ],
+        "stepsZh": [
+          "若挂 $c$ 件，每段空钩数为 $e$，则空段共 $c+1$ 段，满足 $35=c+(c+1)e$，即 $(c+1)(e+1)=36$；两因数都大于 1。",
+          "故 $c+1$ 可取 36 除 1 和 36 以外的因数，即 $2,3,4,6,9,12,18$。每种都对应一个正整数 $e$ 及不同件数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/22"
+  },
+  "amc8-2025-q23": {
+    "summary": "Count the four-digit integers ending in 99 which are both one below a perfect square and a product of exactly two primes, counted with multiplicity.",
+    "summaryZh": "统计末两位是 99 的四位数，其中加 1 后是完全平方数，并且本身恰为两个素数的乘积（可重复）。",
+    "answer": "B. $1$.",
+    "answerZh": "B．$1$。",
+    "methods": [
+      {
+        "title": "Test the factors adjacent to the square root",
+        "titleZh": "检查平方根两侧的因数",
+        "topics": [
+          {
+            "en": "Difference of squares",
+            "zh": "平方差分解"
+          }
+        ],
+        "steps": [
+          "If $n+1$ is a square ending in 00, its square root is $10k$. The four-digit restriction gives $4\\le k\\le10$. Factor $n=(10k-1)(10k+1)$: both factors exceed 1, so each must be prime.",
+          "For $k=4,5,7,8,9,10$ one factor is respectively $39,49,69,81,91,99$, all composite. For $k=6$ both 59 and 61 are prime (test 2, 3, 5, 7). Only $3599$ works."
+        ],
+        "stepsZh": [
+          "因 $n+1$ 为以 00 结尾的平方数，其平方根可写为 $10k$。由四位数条件得 $4\\le k\\le10$。分解 $n=(10k-1)(10k+1)$，两个因数均大于 1，所以都必须是素数。",
+          "当 $k=4,5,7,8,9,10$ 时分别出现合数 $39,49,69,81,91,99$。当 $k=6$ 时，59、61 都是素数（检验 2、3、5、7 即可），唯一符合的是 $3599$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/23"
+  },
+  "amc8-2025-q24": {
+    "summary": "An isosceles trapezoid has both angles at its longer base equal to $60^\\circ$. All four sides are positive integers with sum 30. Count it once up to congruence. How many are there?",
+    "summaryZh": "一个等腰梯形的长底两端内角均为 $60^\\circ$，四边长均为正整数，周长是 30。按全等分类，共多少种？",
+    "answer": "E. $4$.",
+    "answerZh": "E．$4$。",
+    "methods": [
+      {
+        "title": "Project the legs onto the base",
+        "titleZh": "将腰投影到底边",
+        "topics": [
+          {
+            "en": "Integer side lengths",
+            "zh": "整数边长"
+          }
+        ],
+        "steps": [
+          "Let the leg be $s$ and the short base $b$. Each horizontal projection of a leg is $s\\cos60^\\circ=s/2$, so the long base is $b+s$. The perimeter equation becomes $2b+3s=30$.",
+          "It follows that $s$ is even with $0<s<10$. The four values $2,4,6,8$ give $b=12,9,6,3$. Each determines a genuine trapezoid of height $s\\sin60^\\circ$; different leg lengths produce noncongruent figures."
+        ],
+        "stepsZh": [
+          "设腰长为 $s$、短底为 $b$。每条腰的水平投影是 $s\\cos60^\\circ=s/2$，故长底为 $b+s$，周长方程为 $2b+3s=30$。",
+          "于是 $s$ 为正偶数且小于 10，四个选择 $2,4,6,8$ 分别给出短底 $12,9,6,3$。每组均能作出高为 $s\\sin60^\\circ$ 的梯形，腰长不同则不全等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/24"
+  },
+  "amc8-2025-q25": {
+    "summary": "Rotate a square array of $5\\times5$ unit cells so that opposite corners are bottom and top. For every bottom-to-top path using only upward grid edges, take the area between it and the right boundary. Sum these areas over all paths.",
+    "summaryZh": "将 $5\\times5$ 的单位方格正方形转成菱形姿态，以一对相对的角为底点和顶点。考虑所有沿网格边向上走的底点至顶点路径。将每条路径与右边界之间的面积相加，求总和。",
+    "answer": "B. $3150$ square units.",
+    "answerZh": "B．$3150$ 平方单位。",
+    "methods": [
+      {
+        "title": "Pair each path with its reflection",
+        "titleZh": "将路径与镜像配对",
+        "topics": [
+          {
+            "en": "Symmetry and lattice paths",
+            "zh": "对称与格点路径"
+          }
+        ],
+        "steps": [
+          "There must be five rising steps of each of the two directions. Therefore there are $\\binom{10}{5}=252$ paths.",
+          "Reflecting about the vertical diagonal exchanges left and right. Thus the sum of all right-side areas equals the sum of all left-side areas. Adding both totals counts the whole area 25 for each path, so the required sum is $252\\cdot25/2=3150$."
+        ],
+        "stepsZh": [
+          "两种上行方向各要走五步，故路径总数为 $\\binom{10}{5}=252$。",
+          "以竖直对角线反射，路径的左右区域互换，故所有右侧面积之和等于所有左侧面积之和。两者相加，每条路径贡献整个正方形的面积 25，所求为 $252\\cdot25/2=3150$。"
+        ]
+      },
+      {
+        "title": "Count ordered step pairs",
+        "titleZh": "数有先后次序的步对",
+        "topics": [
+          {
+            "en": "Inversion counting",
+            "zh": "逆序对计数"
+          }
+        ],
+        "steps": [
+          "Rotate back to an axis-aligned grid. Area below a path from $(0,0)$ to $(5,5)$ is the sum, over its five horizontal steps, of the number of vertical steps preceding each one. This is one of the two side areas.",
+          "Any word with five steps of each type contains 25 unlike pairs. Reversing the word changes which step comes first in every unlike pair; over all words, exactly half the $252\\cdot25$ pairs have the vertical step first. The complementary side has the same total, $3150$."
+        ],
+        "stepsZh": [
+          "把图形转回水平放置。由 $(0,0)$ 到 $(5,5)$ 的路径下方面积，等于对五次向右步分别统计其前面的向上步数再相加，正是一侧的面积。",
+          "每个步序都有 25 对一横一纵的步。将步序倒过来，每一对的先后均被颠倒。因此在全部 $252\\cdot25$ 对中，恰有一半是纵步在前，两侧面积总和分别都是 $3150$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2025/problem/25"
+  }
+}

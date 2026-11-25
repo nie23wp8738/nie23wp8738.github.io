@@ -1,0 +1,171 @@
+{
+  "step-2006-p2-q2": {
+    "summary": "Use the exponential series to enclose $e$ strictly between $8/3$ and $67/24$, proving $n!>2^n$ for $n\\ge4$ along the way. For $F(x)=3e^{2x}+14\\ln(4/3-x)$, locate a local minimum in $(1/2,1)$ and describe its graph over the entire domain.",
+    "summaryZh": "利用指数函数的幂级数证明 $8/3<e<67/24$，其中要证明 $n\\ge4$ 时 $n!>2^n$。对 $F(x)=3e^{2x}+14\\ln(4/3-x)$，证明 $(1/2,1)$ 内存在极小点，并画出定义域内的曲线。",
+    "answer": "$8/3<e<67/24$. There is a minimum in $(1/2,5/6)$, then a maximum in $(1,4/3)$.",
+    "answerZh": "$8/3<e<67/24$。先在 $(1/2,5/6)$ 内达到局部极小，后在 $(1,4/3)$ 内达到局部极大。",
+    "methods": [
+      {
+        "title": "Bound the tail and track the derivative",
+        "titleZh": "先估计级数余项，再判断导数符号",
+        "topics": [
+          {
+            "en": "Exponential series",
+            "zh": "指数函数的幂级数"
+          },
+          {
+            "en": "First derivative test",
+            "zh": "一阶导数判别法"
+          }
+        ],
+        "steps": [
+          "The terms through $1/3!$ sum to $8/3$, and all later terms are positive. The inequality $4!>2^4$ starts an induction: multiplying by $n+1>2$ preserves it. Thus the remaining series is less than $\\sum_{n=4}^{\\infty}2^{-n}=1/8$, giving the upper bound.",
+          "For $x<4/3$, $F\\prime(x)$ has the sign of $h(x)-14$, where $h(x)=6(4/3-x)e^{2x}$. Since $h\\prime(x)=6e^{2x}(5/3-2x)$, $h$ increases up to $5/6$ and then decreases. It tends to zero at both ends of the domain.",
+          "Now $h(1/2)=5e<14$ and $h(1)=2e^2>14$ by the bounds just proved. Thus $F$ decreases, increases, then decreases, with turning points in the stated intervals. It tends to $+\\infty$ on the left and $-\\infty$ as $x\\to(4/3)^-$.",
+          "At a stationary point put $t=4/3-x>0$: $F=7/t+14\\ln t$. The last expression has minimum $14(1-\\ln 2)>0$ at $t=1/2$, so both turning points lie above the axis. The curve crosses the horizontal axis once, on its final descent."
+        ],
+        "stepsZh": [
+          "截至 $1/3!$ 的部分和为 $8/3$，其后各项为正。因 $4!>2^4$，且从 $n$ 到 $n+1$ 左边乘 $n+1>2$、右边乘 2，归纳得所需不等式。余项小于 $\\sum_{n=4}^{\\infty}2^{-n}=1/8$，从而得上界。",
+          "在 $x<4/3$ 上，$F\\prime(x)$ 与 $h(x)-14$ 同号，其中 $h(x)=6(4/3-x)e^{2x}$。由 $h\\prime(x)=6e^{2x}(5/3-2x)$，$h$ 在 $5/6$ 左侧递增、右侧递减；定义域两端的极限均为零。",
+          "利用前面的界，$h(1/2)=5e<14$，$h(1)=2e^2>14$。因此 $F$ 的单调性依次为减、增、减，两个转折点分属答案中的区间。左端 $F\\to+\\infty$，右端 $x\\to(4/3)^-$ 时 $F\\to-\\infty$。",
+          "在驻点处令 $t=4/3-x$，则 $F=7/t+14\\ln t$。这个式子在 $t=1/2$ 取得最小值 $14(1-\\ln2)>0$，故两个转折点都在横轴上方，只有最后的下降段穿过横轴。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=1"
+  },
+  "step-2006-p2-q6": {
+    "summary": "Use vector geometry to prove $(ax+by+cz)^2\\le(a^2+b^2+c^2)(x^2+y^2+z^2)$ and characterize equality for all real entries. Deduce the sharp bound for $(x+2y+2z)^2$ in terms of $x^2+y^2+z^2$. Find every triple with $p^2+4q^2+9r^2=729$ and $8p+8q+3r=243$.",
+    "summaryZh": "从向量点积证明 $(ax+by+cz)^2\\le(a^2+b^2+c^2)(x^2+y^2+z^2)$，并完整讨论等号条件。求 $(x+2y+2z)^2$ 关于 $x^2+y^2+z^2$ 的最优上界，再解方程组 $p^2+4q^2+9r^2=729$、$8p+8q+3r=243$。",
+    "answer": "Equality means linear dependence. The sharp multiplier is $9$ and $(p,q,r)=(24,6,1)$.",
+    "answerZh": "等号成立当且仅当两向量线性相关。最优常数为 $9$，且 $(p,q,r)=(24,6,1)$。",
+    "methods": [
+      {
+        "title": "Identify the equality case in the scalar product",
+        "titleZh": "寻找点积何时达到上界",
+        "topics": [
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          },
+          {
+            "en": "Dot product",
+            "zh": "向量点积"
+          }
+        ],
+        "steps": [
+          "For nonzero vectors $u=(a,b,c)$ and $v=(x,y,z)$, square $u\\cdot v=\\|u\\|\\|v\\|\\cos\\theta$ and use $\\cos^2\\theta\\le1$. Equality requires parallel or opposite directions. If either vector is zero, equality holds as well. These cases are exactly linear dependence.",
+          "Taking $u=(1,2,2)$ gives $(x+2y+2z)^2\\le9(x^2+y^2+z^2)$, with equality when $v$ is a multiple of $u$. Hence $9$ is attained.",
+          "For the last system choose $u=(8,4,1)$, $v=(p,2q,3r)$. Their norms are $9,27$ and their scalar product is $243=9\\cdot27$. They must point in the same direction, so $v=3u$. Reading the coordinates gives the stated triple."
+        ],
+        "stepsZh": [
+          "两向量 $u=(a,b,c)$、$v=(x,y,z)$ 都非零时，将 $u\\cdot v=\\|u\\|\\|v\\|\\cos\\theta$ 平方，再用 $\\cos^2\\theta\\le1$。等号要求两者同向或反向。若某个向量是零向量，等号也成立。合并即线性相关。",
+          "取 $u=(1,2,2)$，得到 $(x+2y+2z)^2\\le9(x^2+y^2+z^2)$。令 $v$ 为 $u$ 的非零倍数就取等，所以常数 $9$ 已经最优。",
+          "再取 $u=(8,4,1)$、$v=(p,2q,3r)$。模分别为 $9,27$，点积恰等于 $243=9\\cdot27$，故两者同向，于是 $v=3u$。比较各分量便得唯一解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=3"
+  },
+  "step-2006-p2-q11": {
+    "summary": "A unit mass is fired from ground level with speed $u$ at elevation $\\theta$ towards north. Its accelerations are $-f$ northwards and $-g$ upwards, with $f,g>0$. Find its signed northerly range and the limiting elevation beyond which horizontal velocity reverses before landing. Compare the range at $45^\\circ$ with the maximum northerly range, and describe the $45^\\circ$ trajectory when $f=g$.",
+    "summaryZh": "一质点从地面以速率 $u$ 向北斜抛，仰角为 $\\theta$。取向北、向上为正，加速度分别为 $-f,-g$，其中 $f,g>0$。求带方向的向北射程、落地前水平速度反向的临界仰角、$45^\\circ$ 时射程与最大向北射程之比，并描述 $f=g$ 时 $45^\\circ$ 斜抛的运动。",
+    "answer": "$R=(u^2/g^2)(g\\sin2\\theta+f\\cos2\\theta-f)$, $\\alpha=\\arctan(g/(2f))$, and $R(45^\\circ)/R_{\\max}=(g-f)/(\\sqrt{g^2+f^2}-f)$.",
+    "answerZh": "$R=(u^2/g^2)(g\\sin2\\theta+f\\cos2\\theta-f)$，$\\alpha=\\arctan(g/(2f))$，$R(45^\\circ)/R_{\\max}=(g-f)/(\\sqrt{g^2+f^2}-f)$。",
+    "methods": [
+      {
+        "title": "Use the flight time before maximising the range",
+        "titleZh": "由飞行时间求射程，再求三角函数最值",
+        "topics": [
+          {
+            "en": "Projectile motion",
+            "zh": "抛体运动"
+          },
+          {
+            "en": "Trigonometric optimisation",
+            "zh": "三角函数最值"
+          }
+        ],
+        "steps": [
+          "At time $t$, $x=ut\\cos\\theta-ft^2/2$ and $y=ut\\sin\\theta-gt^2/2$. Setting $y=0$ gives the landing time $T=2u\\sin\\theta/g$. Substituting into $x$ yields the displayed formula. A negative signed range denotes landing south of the start; the ordinary distance is $|R|$.",
+          "The northward velocity changes sign at $t=u\\cos\\theta/f$. This is strictly before $T$ exactly when $\\tan\\theta>g/(2f)$. Equality is the limiting case in which the reversal would occur at landing.",
+          "The maximum of $g\\sin2\\theta+f\\cos2\\theta$ is $\\sqrt{g^2+f^2}$, attained at $\\tan2\\theta=g/f$ in the first quadrant. At $45^\\circ$ the expression is $g$, giving the ratio. For the ratio of unsigned distances use $|g-f|$ in its numerator.",
+          "When $f=g$ at $45^\\circ$, $x(t)=y(t)=ut/\\sqrt2-gt^2/2$. The particle goes up a straight line of slope one, stops momentarily at $t=u/(\\sqrt2 g)$, and retraces the line to its starting point."
+        ],
+        "stepsZh": [
+          "位移分量为 $x=ut\\cos\\theta-ft^2/2$、$y=ut\\sin\\theta-gt^2/2$。取 $y=0$ 的正根 $T=2u\\sin\\theta/g$，代入 $x$ 并用二倍角公式即得射程。若 $R<0$，落点在起点以南，几何距离为 $|R|$。",
+          "水平速度在 $t=u\\cos\\theta/f$ 变号。该时刻小于 $T$ 等价于 $\\tan\\theta>g/(2f)$。等号表示恰在落地时水平速度变为零。",
+          "$g\\sin2\\theta+f\\cos2\\theta$ 的最大值为 $\\sqrt{g^2+f^2}$，取等时 $2\\theta$ 在第一象限且 $\\tan2\\theta=g/f$。仰角 $45^\\circ$ 时该式为 $g$，故得答案中的比值。若比较无方向的距离，则分子取 $|g-f|$。",
+          "$f=g$ 且仰角为 $45^\\circ$ 时，两坐标始终相等，均为 $ut/\\sqrt2-gt^2/2$。质点沿倾角为 $45^\\circ$ 的直线上升，在 $t=u/(\\sqrt2g)$ 时瞬间静止，再原路返回地面起点。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=6"
+  },
+  "step-2006-p2-q12": {
+    "summary": "Three bowlers each make $30$ attempts. Their respective per-attempt wicket probabilities are $1/36,1/25,1/41$. In an independent binomial model, exactly one wicket fell: how likely was it taken by the first bowler? Find the mean total, select an approximation using mean about three, and estimate the chance of at least five wickets using $e^3\\approx20$.",
+    "summaryZh": "三位投手各投球 $30$ 次，每次取得一个三柱门的概率依次为 $1/36,1/25,1/41$。设每球独立，已知全场恰有一次成功，求它来自第一位的概率。计算总成功数均值，再以接近 3 的均值作近似，用 $e^3\\approx20$ 估算至少成功五次的概率。",
+    "answer": "$3/10$; the exact mean is $3401/1230\\approx2.765$. With a Poisson mean of three the tail is about $0.18$, roughly one fifth.",
+    "answerZh": "$3/10$；总均值为 $3401/1230\\approx2.765$。取均值为 3 的泊松近似，尾概率约为 $0.18$，即接近五分之一。",
+    "methods": [
+      {
+        "title": "Cancel the common all-failure probability",
+        "titleZh": "约去所有投球都失败的共同因子",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          },
+          {
+            "en": "Poisson approximation",
+            "zh": "泊松近似"
+          }
+        ],
+        "steps": [
+          "Let $B$ denote the probability that all 90 attempts fail. If precisely one succeeds and is by bowler $i$, its probability is $30B\\,p_i/(1-p_i)$. Thus conditioning on one wicket leaves the weights $1/35,1/24,1/40$. Their ratio is $24:35:21$, giving $24/80=3/10$.",
+          "By linearity of expectation the mean is $30(1/36+1/25+1/41)=3401/1230$. There are many independent trials and every success probability is small, so an approximate Poisson model is reasonable. Following the suggested rounding, set its parameter to $3$.",
+          "The complementary probability through four successes is $e^{-3}(1+3+9/2+27/6+81/24)=131e^{-3}/8$. Substituting $e^3\\approx20$ gives a tail of $1-131/160=29/160\\approx0.181$."
+        ],
+        "stepsZh": [
+          "令 $B$ 为 90 球全部失败的概率。仅第 $i$ 位投手有一次成功的概率为 $30B\\,p_i/(1-p_i)$。以总成功数等于 1 为条件，三位投手的权重为 $1/35,1/24,1/40$，即 $24:35:21$。第一位的概率便是 $24/80=3/10$。",
+          "由期望的线性性，均值为 $30(1/36+1/25+1/41)=3401/1230$。试验次数多、相互独立且单次成功率小，可用泊松近似。依题意把均值取整为 $3$。",
+          "至多成功四次的概率为 $e^{-3}(1+3+9/2+27/6+81/24)=131e^{-3}/8$。代入 $e^3\\approx20$，取补集得 $1-131/160=29/160\\approx0.181$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=7"
+  },
+  "step-2006-p2-q13": {
+    "summary": "There are $n\\ge2$ different sizes of ice cream, arriving once each in randomly shuffled order. Discard the first and take the first subsequent one larger than it. If none is larger, take the final offer. Rank $1$ means largest. Find the full rank distribution when $n=4$, then a formula for the probability of acquiring rank $1$ for general $n$.",
+    "summaryZh": "有 $n\\ge2$ 种大小互不相同的冰淇淋，以随机顺序每种出现一次。跳过第一份，以后遇到第一份比它大的就选；若始终没有，则选最后一份。最大者名次为 1。求 $n=4$ 时所选名次的完整分布，并对一般 $n$ 给出选中最大者的概率。",
+    "answer": "For ranks $1,2,3,4$ the probabilities are $(11,7,4,2)/24$. For general $n$ the probability of rank one is $n^{-1}\\sum_{j=1}^{n-1}1/j$.",
+    "answerZh": "名次 $1,2,3,4$ 的概率依次为 $(11,7,4,2)/24$。一般情况下选中最大者的概率为 $n^{-1}\\sum_{j=1}^{n-1}1/j$。",
+    "methods": [
+      {
+        "title": "Condition on the rank of the initial offer",
+        "titleZh": "按第一份的名次分类",
+        "topics": [
+          {
+            "en": "Conditioning on rank",
+            "zh": "按名次作条件划分"
+          },
+          {
+            "en": "Random permutations",
+            "zh": "随机排列"
+          }
+        ],
+        "steps": [
+          "Each first rank $r$ has probability $1/n$. For $r>1$, the first of the $r-1$ better offers is uniformly distributed over ranks $1,\\ldots,r-1$ by symmetry. For $r=1$, the compulsory last offer is uniform over $2,\\ldots,n$.",
+          "When $n=4$, rank 1 has probability $(1+1/2+1/3)/4=11/24$. Rank 2 has probability $(1/3+1/2+1/3)/4=7/24$, where the first term is the fallback. Rank 3 has probability $(1/3+1/3)/4=4/24$, and rank 4 can occur only by fallback, with probability $1/12$.",
+          "For arbitrary $n$, the case $r=1$ cannot yield the top rank. Summing its conditional probabilities $1/(r-1)$ for $r=2,\\ldots,n$ gives the harmonic-sum formula."
+        ],
+        "stepsZh": [
+          "第一份名次为 $r$ 的概率均为 $1/n$。若 $r>1$，比它大的 $r-1$ 份中谁最先出现是等可能的，故实际选择在名次 $1,\\ldots,r-1$ 中均匀分布。若 $r=1$，则最后一份在名次 $2,\\ldots,n$ 中均匀分布。",
+          "$n=4$ 时，选中第一名的概率为 $(1+1/2+1/3)/4=11/24$。第二名对应 $(1/3+1/2+1/3)/4=7/24$，第一项来自被迫选末份。第三名对应 $(1/3+1/3)/4=4/24$；第四名只能在被迫选末份时出现，概率为 $1/12$。",
+          "一般地，$r=1$ 时选不到第一名；其余情况的条件概率为 $1/(r-1)$。对 $r=2,\\ldots,n$ 加权求和，便得答案中的调和和式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=7"
+  }
+}

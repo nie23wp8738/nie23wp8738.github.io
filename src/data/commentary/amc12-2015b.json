@@ -1,0 +1,27 @@
+{
+  "amc12-2015b-q8": {
+    "summary": "Evaluate $\\left(625^{\\log_5 2015}\\right)^{\\frac14}$.",
+    "summaryZh": "求 $\\left(625^{\\log_5 2015}\\right)^{\\frac14}$ 的值。",
+    "answer": "D. $2015$.",
+    "answerZh": "D。$2015$。",
+    "methods": [
+      {
+        "title": "Match the exponential and logarithmic bases",
+        "titleZh": "匹配幂与对数的底数",
+        "steps": [
+          "Put $L=\\log_5 2015$. Since $625=5^4$ and all bases are positive, $(625^L)^{1/4}=5^L$. By the definition of $L$, this is $2015$."
+        ],
+        "stepsZh": [
+          "令 $L=\\log_5 2015$。由于 $625=5^4$ 且底数为正，$(625^L)^{1/4}=5^L$。由 $L$ 的定义，该值等于 $2015$。"
+        ],
+        "topics": [
+          {
+            "en": "Inverse functions",
+            "zh": "反函数"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2015B/problem/8"
+  }
+}
