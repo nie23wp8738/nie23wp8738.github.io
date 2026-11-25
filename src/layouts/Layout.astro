@@ -5,7 +5,10 @@ const {title, current='', lang='en', description} = Astro.props;
 const zh = lang === 'zh';
 const root = zh ? '/zh' : '';
 const barePath = Astro.url.pathname.replace(/^\/zh(?=\/|$)/,'') || '/';
-const alternate = (zh ? '' : '/zh') + barePath;
+const missing = !current && (barePath === '/404/' || barePath === '/404' || barePath === '/404.html');
+const enPath = missing ? '/404.html' : barePath;
+const zhPath = missing ? '/zh/404/' : '/zh' + barePath;
+const alternate = zh ? enPath : zhPath;
 const nav = [
   ['home','Home','首页','/'], ['past','Past papers','历年真题','/past-papers/'],
   ['topics','By topic','知识点汇编','/topics/'], ['problems','Build a worksheet','选题组卷','/problems/'],
@@ -21,8 +24,8 @@ const meta = description || (zh ? '历年数学真题、知识点汇编与自选
     <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#192c45" /><meta name="description" content={meta} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" hreflang="en" href={new URL(barePath,Astro.site)} />
-    <link rel="alternate" hreflang="zh-CN" href={new URL('/zh'+barePath,Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath,Astro.site)} />
+    <link rel="alternate" hreflang="zh-CN" href={new URL(zhPath,Astro.site)} />
     <title>{pageTitle}</title>
   </head>
   <body>
