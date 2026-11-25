@@ -1,0 +1,130 @@
+{
+  "bmo2-2022-q1": {
+    "summary": "For a positive integer $k$, call an integer $n$ a $k$-number when $n$ is the product of two positive integers differing by $k$, and is also $k$ less than a square. Determine every $k$ for which infinitely many $k$-numbers exist.",
+    "summaryZh": "设 $k$ 为正整数。若整数 $n$ 既能写成两个相差 $k$ 的正整数之积，又比某个完全平方数小 $k$，则称 $n$ 为 $k$-数。求所有使 $k$-数有无穷多个的 $k$。",
+    "answer": "$k=4$ only.",
+    "answerZh": "只有 $k=4$。",
+    "methods": [
+      {
+        "title": "Convert the two representations into a fixed difference of squares",
+        "titleZh": "把两种表示转化为固定整数的平方差分解",
+        "topics": [
+          {"en": "Diophantine equations", "zh": "丢番图方程"},
+          {"en": "Difference of squares", "zh": "平方差"},
+          {"en": "Factorisation", "zh": "因数分解"}
+        ],
+        "steps": [
+          "The two conditions mean that for positive integers $m,r$ we have $n=m^2-k=r(r+k)$. Multiplying and completing a square gives $(2r+k)^2-(2m)^2=k^2-4k$.",
+          "If $k\\ne4$, the right side is a fixed nonzero integer. Each solution gives a factorisation $[(2r+k)-2m][(2r+k)+2m]=k^2-4k$. A nonzero integer has only finitely many integer factor pairs, so only finitely many values of $r,m$, and hence of $n$, can occur.",
+          "For $k=4$, choose any positive integer $r$ and put $m=r+2$. Then $r(r+4)=(r+2)^2-4$, so $n=r(r+4)$ is a $4$-number. These values are strictly increasing with $r$, giving infinitely many examples."
+        ],
+        "stepsZh": [
+          "两项条件等价于存在正整数 $m,r$，使 $n=m^2-k=r(r+k)$。乘以 $4$ 并配方，得到 $(2r+k)^2-(2m)^2=k^2-4k$。",
+          "若 $k\\ne4$，右端是固定的非零整数。每个解都给出因数分解 $[(2r+k)-2m][(2r+k)+2m]=k^2-4k$。非零整数只有有限对整数因子，所以 $r,m$ 以及 $n$ 都只能有有限种可能。",
+          "当 $k=4$ 时，任取正整数 $r$ 并令 $m=r+2$，则 $r(r+4)=(r+2)^2-4$。所以 $n=r(r+4)$ 是 $4$-数，而且随 $r$ 严格增大，从而得到无穷多个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=1"
+  },
+  "bmo2-2022-q2": {
+    "summary": "Find all functions $f:\\mathbb Z_{>0}\\to\\mathbb Z_{>0}$ satisfying $2y f(f(x^2)+x)=f(x+1)f(2xy)$ for all positive integers $x,y$.",
+    "summaryZh": "求所有函数 $f:\\mathbb Z_{>0}\\to\\mathbb Z_{>0}$，使对任意正整数 $x,y$ 都有 $2y f(f(x^2)+x)=f(x+1)f(2xy)$。",
+    "answer": "The unique solution is $f(n)=n$ for every positive integer $n$.",
+    "answerZh": "唯一解是恒等函数 $f(n)=n$。",
+    "methods": [
+      {
+        "title": "Determine the even and odd inputs successively",
+        "titleZh": "依次确定偶数与奇数输入处的函数值",
+        "topics": [
+          {"en": "Functional equations", "zh": "函数方程"},
+          {"en": "Parity", "zh": "奇偶性"},
+          {"en": "Substitution", "zh": "代入法"}
+        ],
+        "steps": [
+          "Set $x=1$. Then $2y f(f(1)+1)=f(2)f(2y)$, so $f(2y)=ky$ for all $y$, where $k=2f(f(1)+1)/f(2)$. Taking $y=1$ shows $k=f(2)$, hence $k$ is a positive integer.",
+          "Set $x=2z$ and $y=1$. Since $f(4z^2)=2kz^2$, the left inner argument is $2z(kz+1)$, so the equation becomes $2kz(kz+1)=2kz f(2z+1)$. Thus $f(2z+1)=kz+1$ for every $z\\ge1$.",
+          "Now set $x=2z+1$ and $y=1$. Using the formulas already obtained for $f(x^2)$, $f(2z+2)$ and $f(4z+2)$ gives $2(z+1)(kz+1)=k(z+1)(2z+1)$. Cancelling $z+1$ yields $k=2$.",
+          "Therefore $f(n)=n$ for every $n\\ge2$. The definition of $k$ now gives $2=2f(f(1)+1)/2$, so $f(f(1)+1)=2$. Since $f(1)+1\\ge2$ and $f(t)=t$ there, $f(1)+1=2$ and $f(1)=1$. Direct substitution confirms that the identity function works."
+        ],
+        "stepsZh": [
+          "令 $x=1$，得到 $2y f(f(1)+1)=f(2)f(2y)$，故对所有 $y$ 有 $f(2y)=ky$，其中 $k=2f(f(1)+1)/f(2)$。再取 $y=1$，可知 $k=f(2)$，所以 $k$ 是正整数。",
+          "令 $x=2z,y=1$。由于 $f(4z^2)=2kz^2$，左边函数的自变量为 $2z(kz+1)$，方程化为 $2kz(kz+1)=2kz f(2z+1)$。因此对每个 $z\\ge1$，$f(2z+1)=kz+1$。",
+          "再令 $x=2z+1,y=1$。代入已经得到的 $f(x^2)$、$f(2z+2)$ 和 $f(4z+2)$，得到 $2(z+1)(kz+1)=k(z+1)(2z+1)$。约去 $z+1$ 后得 $k=2$。",
+          "于是对每个 $n\\ge2$，都有 $f(n)=n$。再由 $k$ 的定义，$2=2f(f(1)+1)/2$，即 $f(f(1)+1)=2$。因 $f(1)+1\\ge2$ 且在该范围 $f(t)=t$，故 $f(1)+1=2$，从而 $f(1)=1$。直接代入可验证恒等函数满足原式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=1"
+  },
+  "bmo2-2022-q3": {
+    "summary": "The cards from $n$ identical decks are placed in boxes. Each deck has one card of every label $1,\\ldots,50$, and each box holds at most $2022$ cards. A pile of boxes is regular if it contains equally many cards of every label. Prove that for all sufficiently large $n$, the boxes can be divided into two nonempty regular piles.",
+    "summaryZh": "$n$ 副相同的牌被放入若干盒子；每副牌各有一张标号 $1,\\ldots,50$ 的牌，每盒至多装 $2022$ 张。若一堆盒子中每种标号的牌数相同，就称它是正则的。证明当 $n$ 充分大时，可以把所有盒子分成两个非空正则堆。",
+    "answer": "Such an absolute threshold $N$ exists.",
+    "answerZh": "满足条件的绝对阈值 $N$ 确实存在。",
+    "methods": [
+      {
+        "title": "Repeatedly merge piles to eliminate one label imbalance at a time",
+        "titleZh": "反复合并盒堆，逐个消去各标号的不平衡量",
+        "topics": [
+          {"en": "Finite descent", "zh": "有限递降"},
+          {"en": "Pigeonhole-style merging", "zh": "抽屉式合并"},
+          {"en": "Invariant sums", "zh": "和不变量"}
+        ],
+        "steps": [
+          "For a pile let $a_i$ be its number of cards labelled $i$, and attach the imbalance vector $(d_2,\\ldots,d_{50})$ with $d_i=a_i-a_1$. A pile is regular exactly when this vector is zero. Over all boxes, each coordinate sums to zero because the full collection contains $n$ cards of every label.",
+          "Start with every nonempty box as a pile. Initially $|d_i|\\le2022$. Fix a coordinate, say $d_j$, whose current absolute values are bounded by $M$. Repeatedly deal with the largest nonzero magnitude: pair piles having opposite extreme values; then combine any remaining extreme positive pile with a negative pile, or symmetrically. The zero total guarantees enough opposite-sign piles. Each new pile uses at most two old piles, and the largest $|d_j|$ decreases by at least one.",
+          "After at most $M$ such rounds, every surviving pile has $d_j=0$. At least a fraction $2^{-M}$ of the piles survives, while every other coordinate is now bounded by $M2^M$. Moreover, coordinates already made zero stay zero under merging.",
+          "Apply this finite procedure successively to $d_2,d_3,\\ldots,d_{50}$. Define $M_2=2022$ and, conservatively, $M_{j+1}=M_j2^{M_j}$. The total survival fraction is a fixed positive number depending only on these 49 bounds. Therefore, if the initial number of nonempty boxes is sufficiently large, at least two zero-vector piles remain.",
+          "There are at least $\\lceil50n/2022\\rceil$ nonempty boxes, so their number tends to infinity with $n$. Choose $N$ large enough that the preceding process leaves at least two regular piles. Their union is all boxes; separating one final regular pile from the union of the others gives the required two nonempty regular piles."
+        ],
+        "stepsZh": [
+          "对任意一堆盒子，设其中标号 $i$ 的牌有 $a_i$ 张，并定义不平衡向量 $(d_2,\\ldots,d_{50})$，其中 $d_i=a_i-a_1$。一堆为正则当且仅当此向量为零。对所有盒子求和时，每个坐标的和都是零，因为整批牌中每个标号都恰有 $n$ 张。",
+          "起初把每个非空盒子视为一堆，此时 $|d_i|\\le2022$。固定一个坐标 $d_j$，设当前绝对值均不超过 $M$。不断处理最大的非零绝对值：先把取相反极值的两堆配对；若还剩同号极值堆，就分别与一个异号堆合并。总和为零保证异号堆足够。每个新堆至多合并两个旧堆，而最大的 $|d_j|$ 至少下降一。",
+          "至多经过 $M$ 轮，所有保留下来的堆都满足 $d_j=0$。堆数至少保留原来的 $2^{-M}$，其他坐标的绝对值至多增至 $M2^M$。已经变成零的坐标在继续合并时仍保持为零。",
+          "依次对 $d_2,d_3,\\ldots,d_{50}$ 执行这一有限过程。可保守地定义 $M_2=2022$、$M_{j+1}=M_j2^{M_j}$。最终保留比例虽极小，但只依赖这 $49$ 个固定界，与 $n$ 无关。因此初始非空盒子足够多时，最后至少留下两个零向量盒堆。",
+          "非空盒子至少有 $\\lceil50n/2022\\rceil$ 个，所以其数量随 $n$ 趋于无穷。选取足够大的 $N$，保证上述过程留下至少两个正则堆。所有盒子始终被这些堆分割；取其中一堆与其余各堆的并，便得到所需的两个非空正则堆。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=1"
+  },
+  "bmo2-2022-q4": {
+    "summary": "Let $ABC$ be acute with circumcircle $\\Gamma$. Through $B,C$ draw the lines $l_B,l_C$ perpendicular to $BC$. A point $T$ lies on the minor arc $BC$; the tangent at $T$ meets $l_B,l_C$ at $P_B,P_C$. The lines through $P_B,P_C$ perpendicular to $AC,AB$ meet at $Q$. Given $Q\\in BC$, prove that $A,Q,T$ are collinear.",
+    "summaryZh": "设锐角三角形 $ABC$ 的外接圆为 $\\Gamma$。过 $B,C$ 分别作垂直于 $BC$ 的直线 $l_B,l_C$。点 $T$ 位于小弧 $BC$ 上，$T$ 处切线分别交 $l_B,l_C$ 于 $P_B,P_C$。过 $P_B,P_C$ 分别作垂直于 $AC,AB$ 的直线，交于 $Q$。已知 $Q\\in BC$，证明 $A,Q,T$ 共线。",
+    "answer": "$AT$ passes through $Q$.",
+    "answerZh": "$AT$ 经过点 $Q$。",
+    "figure": {
+      "url": "/commentary-figures/bmo2-2022-q4.svg",
+      "alt": "A symmetric representative of the configuration: triangle ABC in its circumcircle, T on the minor arc BC, the tangent through PB and PC, and Q on both BC and AT.",
+      "altZh": "题设构型的一个对称示意图：三角形 ABC 及其外接圆、位于小弧 BC 上的 T、经过 PB 与 PC 的切线，以及同时位于 BC 和 AT 上的 Q。",
+      "printHeightPt": 180
+    },
+    "methods": [
+      {
+        "title": "Construct the second intersection of $AQ$ with the circumcircle",
+        "titleZh": "构造 $AQ$ 与外接圆的第二交点",
+        "topics": [
+          {"en": "Cyclic quadrilaterals", "zh": "圆内接四边形"},
+          {"en": "Tangent uniqueness", "zh": "切线唯一性"},
+          {"en": "Directed angles", "zh": "有向角"}
+        ],
+        "steps": [
+          "The point $Q$ determines $P_B$: it is the intersection of $l_B$ with the line through $Q$ perpendicular to $AC$. Similarly it determines $P_C$. Let $T'$ be the second intersection of $AQ$ with $\\Gamma$.",
+          "Let $U$ be the foot from $P_B$ to $AC$. Then $P_B,Q,U$ are collinear. Since $BP_B\\perp BC$ and $UP_B\\perp UC$, the quadrilateral $P_BBUC$ is cyclic. Hence, using directed angles, $\\angle QP_BB=\\angle UP_BB=\\angle UCB=\\angle ACB$.",
+          "Because $A,B,T',C$ are cyclic, $\\angle AT'B=\\angle ACB$. As $A,T',Q$ are collinear, the last two equalities imply that $P_B,B,Q,T'$ are cyclic. Therefore $\\angle AT'P_B=\\angle QBP_B=90^\\circ$.",
+          "The identical argument with $B$ and $C$ interchanged gives $\\angle P_CT'A=90^\\circ$. Thus both $P_B$ and $P_C$ lie on the unique line through $T'$ perpendicular to $AT'$, so $P_B,T',P_C$ are collinear.",
+          "But $P_BP_C$ is the tangent to $\\Gamma$ at the original point $T$. A tangent has only one intersection with the circle, counted without multiplicity, so the point $T'\\in P_BP_C\\cap\\Gamma$ must be $T$. Since $T'$ was constructed on $AQ$, the points $A,Q,T$ are collinear."
+        ],
+        "stepsZh": [
+          "点 $Q$ 可以唯一确定 $P_B$：它是 $l_B$ 与过 $Q$ 且垂直于 $AC$ 的直线之交点。类似地，$Q$ 也唯一确定 $P_C$。令 $T'$ 为直线 $AQ$ 与 $\\Gamma$ 的第二个交点。",
+          "设 $U$ 为 $P_B$ 到 $AC$ 的垂足，则 $P_B,Q,U$ 共线。因 $BP_B\\perp BC$ 且 $UP_B\\perp UC$，四边形 $P_BBUC$ 共圆。因此用有向角可得 $\\angle QP_BB=\\angle UP_BB=\\angle UCB=\\angle ACB$。",
+          "又因 $A,B,T',C$ 共圆，$\\angle AT'B=\\angle ACB$。结合 $A,T',Q$ 共线，前述角等式说明 $P_B,B,Q,T'$ 共圆。因此 $\\angle AT'P_B=\\angle QBP_B=90^\\circ$。",
+          "交换 $B,C$ 作完全相同的论证，得到 $\\angle P_CT'A=90^\\circ$。所以 $P_B,P_C$ 都位于过 $T'$ 且垂直于 $AT'$ 的唯一一条直线上，即 $P_B,T',P_C$ 共线。",
+          "而 $P_BP_C$ 正是原点 $T$ 处的圆 $\\Gamma$ 的切线。一条切线与圆只有一个交点，所以 $T'\\in P_BP_C\\cap\\Gamma$ 必有 $T'=T$。由于 $T'$ 是在 $AQ$ 上构造的，故 $A,Q,T$ 共线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=1"
+  }
+}
