@@ -3,6 +3,7 @@
   "AM-GM Inequality": "算术-几何平均不等式",
   "Bayes’ Theorem": "贝叶斯定理",
   "Brahmagupta’s Formula": "婆罗摩笈多公式",
+  "British Flag Theorem": "英国国旗定理",
   "Burnside’s Lemma": "伯恩赛德引理",
   "Catalan Number": "卡塔兰数",
   "Cauchy-Schwarz Inequality": "柯西-施瓦茨不等式",
@@ -19,6 +20,7 @@
   "Legendre’s Formula": "勒让德公式",
   "Newton’s Sums": "牛顿恒等式",
   "Pascal’s Triangle": "杨辉三角",
+  "Pick’s Theorem": "皮克定理",
   "Ptolemy’s Theorem": "托勒密定理",
   "Pythagorean Theorem": "勾股定理",
   "Pythagorean Triple": "勾股数",
@@ -42,6 +44,7 @@
   "area decomposition": "面积分割",
   "area ratio": "面积比",
   "arithmetic sequence": "等差数列",
+  "arithmetico-geometric series": "差比数列",
   "arrangements with restrictions": "有限制的排列",
   "basic counting": "基本计数",
   "basic probability": "基本概率",
@@ -138,6 +141,7 @@
   "logical deduction": "逻辑推理",
   "magic square": "幻方",
   "mass points": "质点法",
+  "matrix": "矩阵",
   "mean": "平均数",
   "median (data)": "中位数（数据）",
   "median (geometry)": "中线（几何）",
@@ -248,5 +252,6 @@
   "volume": "体积",
   "weighted mean": "加权平均数",
   "whole number operations": "整数运算",
-  "work backwards": "逆推法"
+  "work backwards": "逆推法",
+  "zero product property": "零积性质"
 }

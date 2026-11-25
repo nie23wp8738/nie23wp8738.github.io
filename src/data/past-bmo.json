@@ -1,0 +1,4949 @@
+[
+  {
+    "id": "bmo-1973",
+    "exam": "BMO",
+    "year": 1973,
+    "label": "BMO · 1973",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Areas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Solids of revolution",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Equilateral triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=2",
+        "topic": "probability",
+        "tags": [
+          "Conditional probability",
+          "Probability calculations"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=3",
+        "topic": "statistics",
+        "tags": [
+          "Life tables"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Matrices and determinants"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Matrices and determinants",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Algorithms"
+        ]
+      },
+      {
+        "n": 11,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1973.pdf#page=4",
+        "topic": "mechanics",
+        "tags": [
+          "Rigid body mechanics",
+          "Trigonometric functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1974",
+    "exam": "BMO",
+    "year": 1974,
+    "label": "BMO · 1974",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=1",
+        "topic": "calculus",
+        "tags": [
+          "Areas between curves"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Partitions",
+          "Subsets"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polyhedra"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Matrices and determinants"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=1",
+        "topic": "probability",
+        "tags": [
+          "Probability calculations",
+          "Factorials"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial roots"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility",
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=3",
+        "topic": "mechanics",
+        "tags": [
+          "Rigid body mechanics",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1974.pdf#page=3",
+        "topic": "mechanics",
+        "tags": [
+          "Gravitational fields",
+          "Volumes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1975",
+    "exam": "BMO",
+    "year": 1975,
+    "label": "BMO · 1975-03-24",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Floor functions"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility",
+          "Partitions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Pigeonhole principle"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Binomial coefficients",
+          "Functions",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Sums of squares"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1975.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Cones and cylinders"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1976",
+    "exam": "BMO",
+    "year": 1976,
+    "label": "BMO · 1976-03-24",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Areas"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Subsets"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Binomial coefficients",
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1976.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Circles",
+          "Trigonometric functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1977",
+    "exam": "BMO",
+    "year": 1977,
+    "label": "BMO · 1977-03-17",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial roots"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Spheres"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1977.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Polynomials"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1978",
+    "exam": "BMO",
+    "year": 1978,
+    "label": "BMO · 1978-03-21",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Polyhedra"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Spheres"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1978.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Polynomials",
+          "Trigonometric functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1979",
+    "exam": "BMO",
+    "year": 1979,
+    "label": "BMO · 1979-03-14",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Parity"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Integer partitions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1979.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Digits and place value",
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1980",
+    "exam": "BMO",
+    "year": 1980,
+    "label": "BMO · 1980-03-13",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1980.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1980.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1980.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Polynomials"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1980.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Areas"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1980.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1980.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Graph theory"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1981",
+    "exam": "BMO",
+    "year": 1981,
+    "label": "BMO · 1981-03-19",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Orthocentres",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polyhedra",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1981.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Polynomial interpolation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1982",
+    "exam": "BMO",
+    "year": 1982,
+    "label": "BMO · 1982-03-18",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "Areas"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Harmonic sums"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Cones and cylinders"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1982.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1983",
+    "exam": "BMO",
+    "year": 1983,
+    "label": "BMO · 1983-03-10",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Perpendicular lines",
+          "Centroids"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Sequences",
+          "Fibonacci sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Cones and cylinders"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1983.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Radical equations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1984",
+    "exam": "BMO",
+    "year": 1984,
+    "label": "BMO · 1984-03-13",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Modular arithmetic",
+          "Binomial coefficients"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Floor functions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Areas"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1984.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Inscribed and circumscribed figures",
+          "Quadrilaterals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1985",
+    "exam": "BMO",
+    "year": 1985,
+    "label": "BMO · 1985-03-05",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Circles",
+          "Areas"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Binomial coefficients"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Cones and cylinders"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1985.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1986",
+    "exam": "BMO",
+    "year": 1986,
+    "label": "BMO · 1986-03-04",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Greatest common divisor"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Permutations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1986.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polyhedra",
+          "Areas"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1987",
+    "exam": "BMO",
+    "year": 1987,
+    "label": "BMO · 1987-03-20",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=1",
+        "topic": "calculus",
+        "tags": [
+          "Limits",
+          "Binomial coefficients"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Polynomials"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1987.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1988",
+    "exam": "BMO",
+    "year": 1987,
+    "label": "BMO · 1987-11-20",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Radical equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Rational numbers"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Orthocentres",
+          "Angle bisectors",
+          "Perpendicular lines"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1988.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1989",
+    "exam": "BMO",
+    "year": 1988,
+    "label": "BMO · 1988-12-13",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial identities"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Centroids",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Areas"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1989.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1990",
+    "exam": "BMO",
+    "year": 1990,
+    "label": "BMO · 1990-01-17",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf#page=1",
+        "topic": "probability",
+        "tags": [
+          "Probability calculations",
+          "Combinatorial games",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Orthocentres",
+          "Perpendicular lines",
+          "Centroids"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1990.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Rational numbers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo-1991",
+    "exam": "BMO",
+    "year": 1991,
+    "label": "BMO · 1991-01-16",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Divisibility",
+          "Polynomials"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Inscribed and circumscribed figures",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Permutations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo-1991.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Right triangles"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1992",
+    "exam": "BMO",
+    "year": 1992,
+    "label": "BMO1 · 1991/92 · 1992-01-15",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1992.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1992.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1992.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Inscribed and circumscribed figures",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1992.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1992.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1992.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1993",
+    "exam": "BMO",
+    "year": 1993,
+    "label": "BMO1 · 1992/93 · 1993-01-13",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1993.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1993.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1993.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Divisibility",
+          "Symmetry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1993.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1993.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1993.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1994",
+    "exam": "BMO",
+    "year": 1994,
+    "label": "BMO1 · 1993/94 · 1994-01-19",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1994.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1994.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1994.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1994.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1994.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Tangency",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1994.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1995",
+    "exam": "BMO",
+    "year": 1995,
+    "label": "BMO1 · 1994/95 · 1995-01-18",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1995.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1995.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1995.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "Areas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1995.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1995.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Angle bisectors",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1995.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Permutations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1996",
+    "exam": "BMO",
+    "year": 1996,
+    "label": "BMO1 · 1995/96 · 1996-01-17",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1996.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1996.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1996.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1996.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1996.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Floor functions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1996.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1997",
+    "exam": "BMO",
+    "year": 1997,
+    "label": "BMO1 · 1996/97 · 1997-01-15",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1997.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1997.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1997.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1997.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Integer partitions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1997.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "Areas"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1997.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1998",
+    "exam": "BMO",
+    "year": 1998,
+    "label": "BMO1 · 1997/98 · 1998-01-14",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1998.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1998.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Latin squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1998.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1998.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Isosceles triangles",
+          "Parallelograms"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1998.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1998.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-1999",
+    "exam": "BMO",
+    "year": 1999,
+    "label": "BMO1 · 1998/99 · 1999-01-13",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-1999.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1999.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Sums of squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1999.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1999.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1999.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-1999.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2000",
+    "exam": "BMO",
+    "year": 2000,
+    "label": "BMO1 · 1999/00 · 2000-01-12",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2000.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2000.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2000.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2000.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2000.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2000.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set partitions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2001",
+    "exam": "BMO",
+    "year": 2001,
+    "label": "BMO1 · 2000/01 · 2001-01-17",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2001.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2001.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2001.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2001.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Tilings"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2001.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2001.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2002",
+    "exam": "BMO",
+    "year": 2001,
+    "label": "BMO1 · 2001/02 · 2001-12-05",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2002.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2002.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2002.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Inscribed and circumscribed figures",
+          "Quadrilaterals",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2002.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Floor functions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2002.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Non-crossing matchings"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2002.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2003",
+    "exam": "BMO",
+    "year": 2002,
+    "label": "BMO1 · 2002/03 · 2002-12-11",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2003.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2003.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2003.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2003.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2003.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Grid problems",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2003.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Factorials"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2004",
+    "exam": "BMO",
+    "year": 2003,
+    "label": "BMO1 · 2003/04 · 2003-12-03",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2004.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2004.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2004.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Isosceles triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2004.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial games"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2004.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Subsets"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2004.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2005",
+    "exam": "BMO",
+    "year": 2004,
+    "label": "BMO1 · 2004/05 · 2004-12-01",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2005.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2005.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2005.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2005.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Colourings"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2005.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2005.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Rational numbers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2006",
+    "exam": "BMO",
+    "year": 2005,
+    "label": "BMO1 · 2005/06 · 2005-11-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2006/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set partitions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concyclic points",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Paths on grids"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Parallelograms",
+          "Quadrilaterals",
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2006.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Parity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2007",
+    "exam": "BMO",
+    "year": 2006,
+    "label": "BMO1 · 2006/07 · 2006-12-01",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2007/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "Areas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2007.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2008",
+    "exam": "BMO",
+    "year": 2007,
+    "label": "BMO1 · 2007/08 · 2007-11-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2008/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial identities"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Subsets"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2008.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2009",
+    "exam": "BMO",
+    "year": 2008,
+    "label": "BMO1 · 2008/09 · 2008-12-04",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2009/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Parallelograms",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2009.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Trigonometric functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2010",
+    "exam": "BMO",
+    "year": 2009,
+    "label": "BMO1 · 2009/10 · 2009-12-03",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2010/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Perpendicular lines",
+          "Circles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2010.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2011",
+    "exam": "BMO",
+    "year": 2010,
+    "label": "BMO1 · 2010/11 · 2010-12-02",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2011/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Areas",
+          "Volumes"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2011.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2012",
+    "exam": "BMO",
+    "year": 2011,
+    "label": "BMO1 · 2011/12 · 2011-12-02",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2012/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Permutations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Consecutive integers"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2012.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2013",
+    "exam": "BMO",
+    "year": 2012,
+    "label": "BMO1 · 2012/13 · 2012-11-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2013/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Grid problems",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Extremal problems",
+          "Areas"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2013.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Triangle geometry",
+          "Circles"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2014",
+    "exam": "BMO",
+    "year": 2013,
+    "label": "BMO1 · 2013/14 · 2013-11-29",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2014/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial identities"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Restricted arrangements"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Equilateral triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2014.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2015",
+    "exam": "BMO",
+    "year": 2014,
+    "label": "BMO1 · 2014/15 · 2014-11-28",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2015/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Powers and exponents"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Restricted arrangements"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Concyclic points",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2015.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2016",
+    "exam": "BMO",
+    "year": 2015,
+    "label": "BMO1 · 2015/16 · 2015-11-27",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2016/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Periodic patterns"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concyclic points",
+          "Tangency",
+          "Isosceles triangles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Extremal problems",
+          "Sequences",
+          "Fibonacci sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial games",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2016.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Powers and exponents"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2017",
+    "exam": "BMO",
+    "year": 2016,
+    "label": "BMO1 · 2016/17 · 2016-12-02",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2017/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Piecewise functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares",
+          "Combinatorial games"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2017.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2018",
+    "exam": "BMO",
+    "year": 2017,
+    "label": "BMO1 · 2017/18 · 2017-12-01",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2018/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Grid problems",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2018.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2019",
+    "exam": "BMO",
+    "year": 2018,
+    "label": "BMO1 · 2018/19 · 2018-11-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2019/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Divisibility",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Cyclic arrangements"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Areas",
+          "Volumes"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2019.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2020",
+    "exam": "BMO",
+    "year": 2019,
+    "label": "BMO1 · 2019/20 · 2019-11-29",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2020/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2020.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2021",
+    "exam": "BMO",
+    "year": 2020,
+    "label": "BMO1 · 2020/21 · 2020-11-26",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2021/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Areas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Sequences",
+          "Symmetry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2021.pdf#page=3",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial games"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2022",
+    "exam": "BMO",
+    "year": 2021,
+    "label": "BMO1 · 2021/22 · 2021-12-02",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2022/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Arithmetic progressions"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Combinatorial games",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Binary representations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Equilateral triangles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2022.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Recurrence relations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2023",
+    "exam": "BMO",
+    "year": 2022,
+    "label": "BMO1 · 2022/23 · 2022-11-16",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2023/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares",
+          "Extremal problems",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Isosceles triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial games",
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2023.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Circles",
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2024",
+    "exam": "BMO",
+    "year": 2023,
+    "label": "BMO1 · 2023/24 · 2023-11-15",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2024/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Permutations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Colourings"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Polygons and diagonals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2025",
+    "exam": "BMO",
+    "year": 2024,
+    "label": "BMO1 · 2024/25 · 2024-11-20",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2025/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Permutations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial games"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2025.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Colourings"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2026",
+    "exam": "BMO",
+    "year": 2025,
+    "label": "BMO1 · 2025/26 · 2025-11-19",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2026/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Permutations",
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=3",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo1-2027",
+    "exam": "BMO",
+    "year": 2026,
+    "label": "BMO1 · 2026/27 · 2026-11-18",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo1-2027/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Colourings"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Products and signs"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Cyclic quadrilaterals",
+          "Tangent circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "Fibonacci sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Divisors",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://bmos.ukmt.org.uk/home/bmo1-2027.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Reflections",
+          "Distances in the plane"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1992",
+    "exam": "BMO",
+    "year": 1992,
+    "label": "BMO2 · 1991/92 · 1992-02-13",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1992.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1992.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1992.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1992.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1992.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Graph theory"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1993",
+    "exam": "BMO",
+    "year": 1993,
+    "label": "BMO2 · 1992/93 · 1993-02-11",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1993.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1993.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Inscribed and circumscribed figures",
+          "Triangle geometry",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1993.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Modular arithmetic"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1993.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Trigonometric functions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1993.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Digits and place value"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1994",
+    "exam": "BMO",
+    "year": 1994,
+    "label": "BMO2 · 1993/94 · 1994-02-24",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1994.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1994.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1994.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer-sided triangles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1994.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1994.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Modular arithmetic",
+          "Perfect squares"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1995",
+    "exam": "BMO",
+    "year": 1995,
+    "label": "BMO2 · 1994/95 · 1995-02-16",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1995.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1995.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1995.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1995.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1995.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1996",
+    "exam": "BMO",
+    "year": 1996,
+    "label": "BMO2 · 1995/96 · 1996-02-15",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1996.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1996.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1996.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1996.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1996.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1997",
+    "exam": "BMO",
+    "year": 1997,
+    "label": "BMO2 · 1996/97 · 1997-02-27",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1997.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1997.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1997.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Equilateral triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1997.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Divisibility",
+          "Polynomials"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1997.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Arithmetic progressions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1998",
+    "exam": "BMO",
+    "year": 1998,
+    "label": "BMO2 · 1997/98 · 1998-02-26",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1998.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1998.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Pigeonhole principle"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1998.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1998.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares",
+          "Greatest common divisor"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1998.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-1999",
+    "exam": "BMO",
+    "year": 1999,
+    "label": "BMO2 · 1998/99 · 1999-02-25",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-1999.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1999.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Subsets"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1999.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Inscribed and circumscribed figures",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1999.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-1999.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2000",
+    "exam": "BMO",
+    "year": 2000,
+    "label": "BMO2 · 1999/00 · 2000-02-23",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2000.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2000.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2000.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2000.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Radical equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2000.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2001",
+    "exam": "BMO",
+    "year": 2001,
+    "label": "BMO2 · 2000/01 · 2001-02-27",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2001.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2001.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2001.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2001.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2001.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2002",
+    "exam": "BMO",
+    "year": 2002,
+    "label": "BMO2 · 2001/02 · 2002-02-26",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2002.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2002.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2002.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Cyclic arrangements"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2002.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2002.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2003",
+    "exam": "BMO",
+    "year": 2003,
+    "label": "BMO2 · 2002/03 · 2003-02-25",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2003.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2003.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2003.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2003.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Permutations",
+          "Functions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2003.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2004",
+    "exam": "BMO",
+    "year": 2004,
+    "label": "BMO2 · 2003/04 · 2004-02-24",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2004.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2004.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Equilateral triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2004.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2004.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial identities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2004.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Decimal expansions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2005",
+    "exam": "BMO",
+    "year": 2005,
+    "label": "BMO2 · 2004/05 · 2005-02-01",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2005.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2005.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2005.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Angle bisectors",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2005.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2005.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Subsets"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2006",
+    "exam": "BMO",
+    "year": 2006,
+    "label": "BMO2 · 2005/06 · 2006-01-31",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2006.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2006.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2006.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2006.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2006.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2007",
+    "exam": "BMO",
+    "year": 2007,
+    "label": "BMO2 · 2006/07 · 2007-01-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2007.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2007.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2007.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2007.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Orthocentres",
+          "Perpendicular lines"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2007.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Graph theory"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2008",
+    "exam": "BMO",
+    "year": 2008,
+    "label": "BMO2 · 2007/08 · 2008-01-31",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2008.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2008.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2008.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Incircles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2008.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2008.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2009",
+    "exam": "BMO",
+    "year": 2009,
+    "label": "BMO2 · 2008/09 · 2009-01-29",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2009.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2009.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2009.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Orthocentres",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2009.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2009.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Binary representations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2010",
+    "exam": "BMO",
+    "year": 2010,
+    "label": "BMO2 · 2009/10 · 2010-01-28",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2010.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2010.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Graph theory"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2010.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Centroids",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2010.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2010.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2011",
+    "exam": "BMO",
+    "year": 2011,
+    "label": "BMO2 · 2010/11 · 2011-01-27",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2011.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2011.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2011.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2011.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2011.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Parallelograms",
+          "Subsets",
+          "Extremal problems"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2012",
+    "exam": "BMO",
+    "year": 2012,
+    "label": "BMO2 · 2011/12 · 2012-01-26",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2012.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2012.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concyclic points",
+          "Quadrilaterals",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2012.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2012.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Subsets"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2012.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisors"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2013",
+    "exam": "BMO",
+    "year": 2013,
+    "label": "BMO2 · 2012/13 · 2013-01-31",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2013.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2013.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2013.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Parallelograms",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2013.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2013.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Inscribed and circumscribed figures"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2014",
+    "exam": "BMO",
+    "year": 2014,
+    "label": "BMO2 · 2013/14 · 2014-01-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2014.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2014.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2014.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Areas",
+          "Volumes"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2014.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2014.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2015",
+    "exam": "BMO",
+    "year": 2015,
+    "label": "BMO2 · 2014/15 · 2015-01-29",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2015.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2015.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2015.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Parity"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2015.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Incircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2015.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2016",
+    "exam": "BMO",
+    "year": 2016,
+    "label": "BMO2 · 2015/16 · 2016-01-28",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2016.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2016.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2016.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2016.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concyclic points",
+          "Perpendicular lines",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2016.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2017",
+    "exam": "BMO",
+    "year": 2017,
+    "label": "BMO2 · 2016/17 · 2017-01-26",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2017.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2017.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Isosceles triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2017.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2017.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concyclic points",
+          "Angle bisectors",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2017.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Digits and place value"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2018",
+    "exam": "BMO",
+    "year": 2018,
+    "label": "BMO2 · 2017/18 · 2018-01-25",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2018.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2018.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Tangency",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2018.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Cyclic arrangements"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2018.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2018.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Functions",
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2019",
+    "exam": "BMO",
+    "year": 2019,
+    "label": "BMO2 · 2018/19 · 2019-01-24",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2019.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2019.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Isosceles triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2019.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2019.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Divisibility",
+          "Subsets"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2019.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2020",
+    "exam": "BMO",
+    "year": 2020,
+    "label": "BMO2 · 2019/20 · 2020-01-30",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2021",
+    "exam": "BMO",
+    "year": 2021,
+    "label": "BMO2 · 2020/21 · 2021-01-28",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/home/bmo2-2021-solutions.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Divisors"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Tilings"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Incircles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2022",
+    "exam": "BMO",
+    "year": 2022,
+    "label": "BMO2 · 2021/22 · 2022-01-27",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/home/bmo2-2022-solutions.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Set partitions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2022.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Tangency",
+          "Perpendicular lines"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2023",
+    "exam": "BMO",
+    "year": 2023,
+    "label": "BMO2 · 2022/23 · 2023-01-25",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Incircles",
+          "Triangle geometry",
+          "Circles"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2023.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Greatest common divisor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2024",
+    "exam": "BMO",
+    "year": 2024,
+    "label": "BMO2 · 2023/24 · 2024-01-24",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo2-2024/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Digits and place value",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circumcircles",
+          "Tangency",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2024.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Reachability"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2025",
+    "exam": "BMO",
+    "year": 2025,
+    "label": "BMO2 · 2024/25 · 2025-01-22",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo2-2025/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Triangular numbers"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Incircles",
+          "Perpendicular lines",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Colourings",
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2025.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bmo2-2026",
+    "exam": "BMO",
+    "year": 2026,
+    "label": "BMO2 · 2025/26 · 2026-01-21",
+    "source": "British Mathematical Olympiad Subtrust (UKMT)",
+    "url": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf",
+    "solutionsUrl": "https://bmos.ukmt.org.uk/solutions/bmo2-2026/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Prime numbers",
+          "Greatest common divisor",
+          "Extremal problems"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Perpendicular lines",
+          "Triangle geometry",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Grid problems"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://bmos.ukmt.org.uk/home/bmo2-2026.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  }
+]

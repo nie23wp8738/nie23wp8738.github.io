@@ -4,3 +4,8 @@
 @media(max-width:850px){.mast-in{gap:13px}.topnav{gap:12px}.paper-family{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:740px){.mast-in{grid-template-columns:1fr auto;gap:0;min-height:0;align-items:center;padding-top:10px}.brand-small{display:inline}.locale{grid-column:2;grid-row:1;justify-self:end}.topnav{grid-row:2;grid-column:1/-1;justify-content:flex-start;gap:17px;overflow:auto}.topnav a{min-height:43px;white-space:nowrap;font-size:14px}.mast-in .brand{font-size:21px}.home-hero .hero-text h1{font-size:40px}}
 @media(max-width:450px){.topnav{justify-content:space-between;gap:6px}.topnav a{font-size:13px}.paper-family{gap:8px}.paper-family .course-tile{min-height:0}.section-link{font-size:14px}.home-hero .hero-text h1{font-size:37px}}
+.exam-group{margin-bottom:22px}.exam-group>h3{margin:0 0 10px;font:600 16px/1.4 var(--sans);color:var(--muted)}
+.exam-group .paper-family{margin:0;gap:11px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.exam-group .course-tile{min-height:0;padding:14px 17px}.exam-group h4{margin:0 0 3px;font:650 22px/1.3 var(--serif)}
+.exam-full-name{font-size:14px;color:var(--muted);margin-bottom:4px}
+@media(max-width:680px){.exam-group .paper-family{grid-template-columns:repeat(2,minmax(0,1fr))}.exam-group .course-tile{padding:11px 12px}}

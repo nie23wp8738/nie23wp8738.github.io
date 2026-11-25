@@ -1,0 +1,122 @@
+[
+  {
+    "id": "esat-mathematics-1-specimen",
+    "exam": "ESAT",
+    "module": "Mathematics 1",
+    "title": "Mathematics 1 specimen test",
+    "titleZh": "数学 1 官方样题",
+    "kind": "specimen",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-mathematics1.html",
+    "description": "Review an explanation for each question in the Pearson test player.",
+    "descriptionZh": "在培生考试系统中练习，逐题查看答案说明。"
+  },
+  {
+    "id": "esat-mathematics-1-practice",
+    "exam": "ESAT",
+    "module": "Mathematics 1",
+    "title": "Mathematics 1 practice test",
+    "titleZh": "数学 1 官方练习测试",
+    "kind": "practice",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-mathematics1-2.html",
+    "description": "Practise under timed conditions and review which answers were correct.",
+    "descriptionZh": "适合限时练习，完成后可查看各题作答正误。"
+  },
+  {
+    "id": "esat-mathematics-2-specimen",
+    "exam": "ESAT",
+    "module": "Mathematics 2",
+    "title": "Mathematics 2 specimen test",
+    "titleZh": "数学 2 官方样题",
+    "kind": "specimen",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-mathematics2.html",
+    "description": "Review an explanation for each question in the Pearson test player.",
+    "descriptionZh": "在培生考试系统中练习，逐题查看答案说明。"
+  },
+  {
+    "id": "esat-mathematics-2-practice",
+    "exam": "ESAT",
+    "module": "Mathematics 2",
+    "title": "Mathematics 2 practice test",
+    "titleZh": "数学 2 官方练习测试",
+    "kind": "practice",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-mathematics2-2.html",
+    "description": "Practise under timed conditions and review which answers were correct.",
+    "descriptionZh": "适合限时练习，完成后可查看各题作答正误。"
+  },
+  {
+    "id": "esat-physics-specimen",
+    "exam": "ESAT",
+    "module": "Physics",
+    "title": "Physics specimen test",
+    "titleZh": "物理 官方样题",
+    "kind": "specimen",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-physics.html",
+    "description": "Review an explanation for each question in the Pearson test player.",
+    "descriptionZh": "在培生考试系统中练习，逐题查看答案说明。"
+  },
+  {
+    "id": "esat-physics-practice",
+    "exam": "ESAT",
+    "module": "Physics",
+    "title": "Physics practice test",
+    "titleZh": "物理 官方练习测试",
+    "kind": "practice",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-physics2.html",
+    "description": "Practise under timed conditions and review which answers were correct.",
+    "descriptionZh": "适合限时练习，完成后可查看各题作答正误。"
+  },
+  {
+    "id": "esat-chemistry-specimen",
+    "exam": "ESAT",
+    "module": "Chemistry",
+    "title": "Chemistry specimen test",
+    "titleZh": "化学 官方样题",
+    "kind": "specimen",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-chemistry.html",
+    "description": "Review an explanation for each question in the Pearson test player.",
+    "descriptionZh": "在培生考试系统中练习，逐题查看答案说明。"
+  },
+  {
+    "id": "esat-chemistry-practice",
+    "exam": "ESAT",
+    "module": "Chemistry",
+    "title": "Chemistry practice test",
+    "titleZh": "化学 官方练习测试",
+    "kind": "practice",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-chemistry2.html",
+    "description": "Practise under timed conditions and review which answers were correct.",
+    "descriptionZh": "适合限时练习，完成后可查看各题作答正误。"
+  },
+  {
+    "id": "esat-biology-specimen",
+    "exam": "ESAT",
+    "module": "Biology",
+    "title": "Biology specimen test",
+    "titleZh": "生物 官方样题",
+    "kind": "specimen",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-biology.html",
+    "description": "Review an explanation for each question in the Pearson test player.",
+    "descriptionZh": "在培生考试系统中练习，逐题查看答案说明。"
+  },
+  {
+    "id": "esat-biology-practice",
+    "exam": "ESAT",
+    "module": "Biology",
+    "title": "Biology practice test",
+    "titleZh": "生物 官方练习测试",
+    "kind": "practice",
+    "source": "UAT-UK / Pearson VUE",
+    "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/esat-biology2.html",
+    "description": "Practise under timed conditions and review which answers were correct.",
+    "descriptionZh": "适合限时练习，完成后可查看各题作答正误。"
+  }
+]

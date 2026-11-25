@@ -19,6 +19,10 @@ async function runArchive(root) {
   const prefix = zh ? '/zh' : '';
   const isTopics = root.dataset.archive === 'topics';
   const t = (en, cn) => zh ? cn : en;
+  if (new URLSearchParams(location.search).get('exam') === 'ESAT') {
+    location.replace(prefix + '/esat/');
+    return;
+  }
   const labels = JSON.parse(root.querySelector('[data-topics]').textContent);
   const tags = JSON.parse(root.querySelector('[data-tags]')?.textContent || '{}');
   const originals = JSON.parse(root.querySelector('[data-originals]')?.textContent || '[]');
@@ -70,7 +74,8 @@ async function runArchive(root) {
   function readControls(params) {
     for (const [key, control] of Object.entries(controls)) {
       if (!control || key === 'tag') continue;
-      const val = params.get(key) || '';
+      const raw = params.get(key) || '';
+      const val = key === 'exam' && raw.toUpperCase() === 'USJMO' ? 'USAJMO' : raw;
       control.value = val;
       if (control.selectedIndex < 0) control.value = '';
     }
@@ -185,6 +190,9 @@ async function runArchive(root) {
 
   function renderPapers(params) {
     const active = papers.find(p => p.id === params.get('paper'));
+    const euclidPractice = root.querySelector('[data-euclid-practice]');
+    if (euclidPractice) euclidPractice.hidden = !!active || controls.exam.value !== 'Euclid'
+      || (controls.year.value !== '' && controls.year.value !== '2020');
     if (active) {
       const qs = active.questions || [];
       const top = addResultsHeader(paperTitle(active),active.source);
@@ -285,6 +293,7 @@ async function runArchive(root) {
     const entry = Object.entries(controls).find(([,field]) => field === event.target);
     if (!entry) return;
     const [key,field] = entry;
+    if (key === 'exam' && field.value === 'ESAT') { location.assign(prefix + '/esat/'); return; }
     const changes = {page:'',paper:'',[key]:field.value};
     if (key === 'exam' || key === 'year') changes.tag = '';
     history.pushState(null,'',urlWith(changes)); render();

@@ -1,0 +1,2964 @@
+[
+  {
+    "id": "euclid-2026",
+    "exam": "Euclid",
+    "year": 2026,
+    "label": "2026 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026EuclidSoln%28E%29.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "Radicals"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "algebra",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=3",
+        "topic": "statistics",
+        "tags": [
+          "Arithmetic mean",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=3",
+        "topic": "arithmetic",
+        "tags": [
+          "Percentages",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Piecewise functions",
+          "arithmetic",
+          "Ratios and proportions"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Triangle inequality"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "algebra",
+          "Polynomial roots"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2026/2026Euclid%28E%29FINAL.pdf#page=5",
+        "topic": "counting",
+        "tags": [
+          "Permutations",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2025",
+    "exam": "Euclid",
+    "year": 2025,
+    "label": "2025 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "geometry",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Composite functions",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "number-theory",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=4",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial roots",
+          "sequences",
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.pdf#page=5",
+        "topic": "logic",
+        "tags": [
+          "Combinatorial games",
+          "number-theory",
+          "Parity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2024",
+    "exam": "Euclid",
+    "year": 2024,
+    "label": "2024 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "geometry",
+          "Pythagorean theorem"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "statistics",
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Maxima and minima",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=4",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "counting",
+          "Finite sets and subsets"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=4",
+        "topic": "arithmetic",
+        "tags": [
+          "Rates of change in word problems",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=4",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=5",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "number-theory",
+          "Parity"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "Areas of plane figures"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2023",
+    "exam": "Euclid",
+    "year": 2023,
+    "label": "2023 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=2",
+        "topic": "statistics",
+        "tags": [
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "sequences",
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=3",
+        "topic": "arithmetic",
+        "tags": [
+          "Rates of change in word problems",
+          "Percentages"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "number-theory",
+          "Integer solutions"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Pythagorean theorem",
+          "functions",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Permutations",
+          "Counting by cases"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023EuclidContest.pdf#page=5",
+        "topic": "functions",
+        "tags": [
+          "Floor functions",
+          "sequences",
+          "Sequences and sums"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2022",
+    "exam": "Euclid",
+    "year": 2022,
+    "label": "2022 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Radicals"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "algebra",
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=3",
+        "topic": "arithmetic",
+        "tags": [
+          "Ratios and proportions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "Pythagorean theorem"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "geometry",
+          "Solid geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Functional equations",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=5",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=5",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "geometry",
+          "Circle geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2021",
+    "exam": "Euclid",
+    "year": 2021,
+    "label": "2021 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "Linear equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Modelling with equations",
+          "number-theory",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Exponents and powers",
+          "number-theory",
+          "Consecutive integers"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Geometric transformations",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=4",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "functions",
+          "Composite functions"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "number-theory",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=5",
+        "topic": "number-theory",
+        "tags": [
+          "Integer solutions"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2021/2021EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "counting",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2019",
+    "exam": "Euclid",
+    "year": 2019,
+    "label": "2019 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=2",
+        "topic": "arithmetic",
+        "tags": [
+          "Ratios and proportions",
+          "algebra",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Exponents and powers",
+          "statistics",
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Integer solutions",
+          "algebra",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Regular polygons",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Composite functions",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=5",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "Integer solutions"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2019/2019EuclidContest.pdf#page=5",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "counting",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2018",
+    "exam": "Euclid",
+    "year": 2018,
+    "label": "2018 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "Modelling with equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "number-theory",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "algebra",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "sequences",
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Regular polygons",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "geometry",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Tilings"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=5",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "problem-solving",
+          "Number patterns"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2017",
+    "exam": "Euclid",
+    "year": 2017,
+    "label": "2017 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Integer solutions",
+          "arithmetic",
+          "Ratios and proportions"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Algebraic identities",
+          "number-theory",
+          "Factors and divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Solid geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "number-theory",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=4",
+        "topic": "arithmetic",
+        "tags": [
+          "Rates of change in word problems",
+          "algebra",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Solid geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=5",
+        "topic": "counting",
+        "tags": [
+          "Permutations",
+          "statistics",
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=5",
+        "topic": "counting",
+        "tags": [
+          "Finite sets and subsets",
+          "number-theory",
+          "Remainders"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2016",
+    "exam": "Euclid",
+    "year": 2016,
+    "label": "2016 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Algebraic identities",
+          "statistics",
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "Modelling with equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "number-theory",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Piecewise functions",
+          "arithmetic",
+          "Percentages"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=4",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "functions",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "geometry",
+          "Pythagorean theorem"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=5",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "number-theory",
+          "Factors and divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2015",
+    "exam": "Euclid",
+    "year": 2015,
+    "label": "2015 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "functions",
+          "Composite functions"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=2",
+        "topic": "statistics",
+        "tags": [
+          "Arithmetic mean",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial roots",
+          "functions",
+          "Graphing functions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Angle chasing",
+          "number-theory",
+          "Consecutive integers"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=4",
+        "topic": "problem-solving",
+        "tags": [
+          "Number patterns",
+          "algebra",
+          "Inequalities"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=4",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "geometry",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=5",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=5",
+        "topic": "counting",
+        "tags": [
+          "Finite sets and subsets",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2014",
+    "exam": "Euclid",
+    "year": 2014,
+    "label": "2014 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "geometry",
+          "Angle chasing"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "algebra",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Maxima and minima",
+          "arithmetic",
+          "Percentages"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "sequences",
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Similar triangles",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=4",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=5",
+        "topic": "logic",
+        "tags": [
+          "Combinatorial games"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2013",
+    "exam": "Euclid",
+    "year": 2013,
+    "label": "2013 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=2",
+        "topic": "statistics",
+        "tags": [
+          "Arithmetic mean",
+          "algebra",
+          "Modelling with equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=2",
+        "topic": "arithmetic",
+        "tags": [
+          "Ratios and proportions",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "algebra",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Inverse functions",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=4",
+        "topic": "number-theory",
+        "tags": [
+          "Integer solutions",
+          "functions",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Squares",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=4",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "counting",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2012",
+    "exam": "Euclid",
+    "year": 2012,
+    "label": "2012 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=2",
+        "topic": "statistics",
+        "tags": [
+          "Arithmetic mean",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=2",
+        "topic": "arithmetic",
+        "tags": [
+          "Percentages",
+          "algebra",
+          "Modelling with equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "number-theory",
+          "Perfect squares"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "algebra",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "geometry",
+          "Angle chasing"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "geometry",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=4",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "counting",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2011",
+    "exam": "Euclid",
+    "year": 2011,
+    "label": "2011 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Linear equations",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Angle chasing"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Functional equations",
+          "algebra",
+          "Maxima and minima"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "geometry",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "geometry",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "functions",
+          "Logarithmic equations"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=4",
+        "topic": "problem-solving",
+        "tags": [
+          "Number patterns",
+          "number-theory",
+          "Factors and divisibility"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Floor functions",
+          "sequences",
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2011/2011EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "number-theory",
+          "Integer solutions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2010",
+    "exam": "Euclid",
+    "year": 2010,
+    "label": "2010 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Exponents and powers",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Algebraic identities",
+          "number-theory",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=3",
+        "topic": "arithmetic",
+        "tags": [
+          "Rates of change in word problems",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "Modelling with equations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "functions",
+          "Composite functions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=4",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2010/2010EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "geometry",
+          "Triangle inequality"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2009",
+    "exam": "Euclid",
+    "year": 2009,
+    "label": "2009 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Polynomial roots"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Angle chasing",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "algebra",
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "arithmetic",
+          "Rates of change in word problems"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=4",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "algebra",
+          "Maxima and minima"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2009/2009EuclidContest.pdf#page=5",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "counting",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2008",
+    "exam": "Euclid",
+    "year": 2008,
+    "label": "2008 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "problem-solving",
+          "Number patterns"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=4",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "functions",
+          "Functional equations"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "statistics",
+          "Arithmetic mean"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=5",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2008/2008EuclidContest.pdf#page=5",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "number-theory",
+          "Factors and divisibility",
+          "counting",
+          "Counting by cases"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2007",
+    "exam": "Euclid",
+    "year": 2007,
+    "label": "2007 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=2",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "algebra",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Solid geometry",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "geometry",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "geometry",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=5",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2007/2007EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Triangle geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2006",
+    "exam": "Euclid",
+    "year": 2006,
+    "label": "2006 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=2",
+        "topic": "statistics",
+        "tags": [
+          "Arithmetic mean",
+          "number-theory",
+          "Digits and place value"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=4",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2006/2006EuclidContest.pdf#page=4",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "geometry",
+          "Circle geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2005",
+    "exam": "Euclid",
+    "year": 2005,
+    "label": "2005 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Exponents and powers",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Cyclic quadrilaterals",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=4",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=5",
+        "topic": "functions",
+        "tags": [
+          "Piecewise functions",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "algebra",
+          "Maxima and minima"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2005/2005EuclidContest.pdf#page=5",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2004",
+    "exam": "Euclid",
+    "year": 2004,
+    "label": "2004 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "functions",
+          "Graphing functions"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=3",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "algebra",
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "functions",
+          "Composite functions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Exponents and powers",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=4",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "arithmetic",
+          "Ratios and proportions"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=4",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=4",
+        "topic": "algebra",
+        "tags": [
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=5",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "number-theory",
+          "Integer solutions"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2004/2004EuclidContest.pdf#page=5",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "number-theory",
+          "Parity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2003",
+    "exam": "Euclid",
+    "year": 2003,
+    "label": "2003 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "algebra",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=2",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Functional equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=3",
+        "topic": "counting",
+        "tags": [
+          "Counting by cases",
+          "number-theory",
+          "Factors and divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=3",
+        "topic": "number-theory",
+        "tags": [
+          "Digits and place value",
+          "Prime numbers"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Regular polygons",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Cyclic quadrilaterals",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2003/2003EuclidContest.pdf#page=5",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2002",
+    "exam": "Euclid",
+    "year": 2002,
+    "label": "2002 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=2",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "sequences",
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Inverse functions",
+          "geometry",
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Regular polygons",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=4",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=4",
+        "topic": "logic",
+        "tags": [
+          "Logical deduction",
+          "sequences",
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Solid geometry",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2002/2002EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Pythagorean theorem",
+          "number-theory",
+          "Factors and divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2001",
+    "exam": "Euclid",
+    "year": 2001,
+    "label": "2001 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Similar triangles",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=3",
+        "topic": "algebra",
+        "tags": [
+          "Inequalities",
+          "Modelling with equations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=3",
+        "topic": "logic",
+        "tags": [
+          "Logical deduction",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Exponents and powers"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Graphing functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Pythagorean theorem",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2001/2001EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Angle chasing",
+          "Squares"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-2000",
+    "exam": "Euclid",
+    "year": 2000,
+    "label": "2000 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "algebra",
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Areas of plane figures",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=3",
+        "topic": "probability",
+        "tags": [
+          "Probability of events",
+          "algebra",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=4",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Floor functions",
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Solid geometry",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=5",
+        "topic": "counting",
+        "tags": [
+          "Permutations"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2000/2000EuclidContest.pdf#page=5",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Squares"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-1999",
+    "exam": "Euclid",
+    "year": 1999,
+    "label": "1999 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "geometry",
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=2",
+        "topic": "arithmetic",
+        "tags": [
+          "Percentages",
+          "counting",
+          "Tilings"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "trigonometry",
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=3",
+        "topic": "trigonometry",
+        "tags": [
+          "Trigonometric ratios and identities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Logarithmic equations",
+          "geometry",
+          "Similar triangles"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Periodic functions",
+          "Graphing functions"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=4",
+        "topic": "functions",
+        "tags": [
+          "Parabolas"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=4",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "number-theory",
+          "Factors and divisibility"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1999/1999EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Cyclic quadrilaterals",
+          "number-theory",
+          "Prime numbers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "euclid-1998",
+    "exam": "Euclid",
+    "year": 1998,
+    "label": "1998 Euclid",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidSolution.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Quadratic equations",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "Parabolas",
+          "geometry",
+          "Areas of plane figures"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=2",
+        "topic": "arithmetic",
+        "tags": [
+          "Percentages",
+          "geometry",
+          "Coordinate geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences and sums",
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=3",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=3",
+        "topic": "functions",
+        "tags": [
+          "Periodic functions",
+          "algebra",
+          "Systems of equations"
+        ]
+      },
+      {
+        "n": 8,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Coordinate geometry",
+          "algebra",
+          "Quadratic equations"
+        ]
+      },
+      {
+        "n": 9,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=4",
+        "topic": "number-theory",
+        "tags": [
+          "Factors and divisibility",
+          "algebra",
+          "Algebraic identities"
+        ]
+      },
+      {
+        "n": 10,
+        "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/1998/1998EuclidContest.pdf#page=4",
+        "topic": "geometry",
+        "tags": [
+          "Pythagorean theorem",
+          "algebra",
+          "Quadratic equations"
+        ]
+      }
+    ]
+  }
+]

@@ -2,6 +2,13 @@ function startBank(root) {
   const zh = root.dataset.lang === 'zh';
   const t = (en, cn) => zh ? cn : en;
   const prefix = zh ? '/zh' : '';
+  const examAliases = {
+    USAJMO: 'USJMO USA Junior Mathematical Olympiad 美国青少年数学奥林匹克',
+    USAMO: 'USA Mathematical Olympiad 美国数学奥林匹克',
+    Euclid: 'Waterloo Euclid 欧几里得 滑铁卢',
+    BMO: 'British Mathematical Olympiad 英国数学奥林匹克',
+    IMO: 'International Mathematical Olympiad 国际数学奥林匹克',
+  };
   const countLabel = n => t(n + (n === 1 ? ' question' : ' questions'), n + ' 道题');
   const compact = s => String(s || '').normalize('NFKC').toLocaleLowerCase().trim();
   const get = name => root.querySelector('[data-' + name + ']');
@@ -58,7 +65,7 @@ function startBank(root) {
           source:paper.source, sourceURL:safeWebURL(q.url) || safeWebURL(paper.url), solutionURL:safeWebURL(q.solutionsUrl) || safeWebURL(paper.solutionsUrl),
           title:paperTitle + t(' · Question ',' · 第 ') + q.n + (zh ? ' 题' : ''), topicKeys, topic, concepts,
           href:prefix + path, permalink:'https://nie23wp8738.github.io' + path,
-          search:compact([paper.id,paper.exam,label,paper.year,'Q'+q.n,'#'+q.n,'question '+q.n,'problem '+q.n,'第'+q.n+'题',topic,...topicKeys,...tags,...concepts].join(' ')),
+          search:compact([paper.id,paper.exam,examAliases[paper.exam] || '',label,paper.year,'Q'+q.n,'#'+q.n,'question '+q.n,'problem '+q.n,'第'+q.n+'题',topic,...topicKeys,...tags,...concepts].join(' ')),
         };
         byId.set(id, record); questions.push(record);
       }
@@ -108,7 +115,7 @@ function startBank(root) {
     refreshMode();
     for (const key of filters.slice(1)) {
       const field = control(key), value = params.get(key) || '';
-      field.value = value;
+      field.value = key==='exam' && value.toUpperCase()==='USJMO' ? 'USAJMO' : value;
       // Old shared topic and level URLs used localized labels.
       if (value && !field.value && field.options) {
         const matching = [...field.options].find(o=>o.text === value);

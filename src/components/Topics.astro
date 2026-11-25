@@ -21,6 +21,7 @@ const topics = topicEntries.filter(t => counts.get(t.key) || practice.some(p => 
   <header class="archive-hero">
     <h1>{zh ? '按知识点找题' : 'Questions by topic'}</h1>
     <p>{zh ? '选择知识点，再按考试或年份细选。可以勾选多道题，按自己的顺序组卷。' : 'Choose a topic, narrow it by exam or year, and select questions for your worksheet.'}</p>
+    <a class="arch-inline" href={prefix+'/esat/'}>{zh?'ESAT 请使用官方分科练习':'ESAT practice by module'}</a>
   </header>
   <nav class="arch-topic-grid" aria-label={zh ? '知识点' : 'Mathematical topics'}>
     <a href="?topic=all" data-topic="all"><strong>{zh ? '所有知识点' : 'All topics'}</strong><small>{zh ? '跨知识点筛选' : 'Filter across the collection'}</small></a>

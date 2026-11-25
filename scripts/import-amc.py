@@ -1,9 +1,10 @@
-"""Rebuild AMC 10/AIME question references from the public LIVE by Po-Shen Loh archive.
+"""Rebuild AMC and AIME question references from the public LIVE by Po-Shen Loh archive.
 
 Indexes edition names, individual source links, and the publisher's concept tags.
 No question text, solutions, diagrams, hints, or answer keys are copied.
 Requires Python 3 and lxml. Run from any directory.
 """
+import argparse
 import json
 import re
 import time
@@ -18,6 +19,7 @@ from lxml import html
 BASE = "https://live.poshenloh.com"
 OUTPUT = Path(__file__).resolve().parents[1] / "src/data/past-amc.json"
 SOURCE = "LIVE by Po-Shen Loh"
+CONTEST_NAMES = {"amc10": "AMC 10", "aime": "AIME", "amc8": "AMC 8", "amc12": "AMC 12"}
 FAMILIES = {
     "arithmetic": "arithmetic", "algebra": "algebra", "number theory": "number-theory",
     "geometry": "geometry", "combinatorics": "counting", "logic": "logic",
@@ -64,7 +66,10 @@ def editions(contest):
     for path, label in anchors.items():
         if not re.fullmatch(r"/past-contests/" + contest + r"/\d{4}[A-Za-z]*", path):
             continue
-        assert label.endswith(" Problems") and path + "/solutions" in anchors
+        if path + "/solutions" not in anchors:
+            # The index also advertises a future, unreleased edition.
+            continue
+        assert label.endswith(" Problems")
         yield contest, path, label.removesuffix(" Problems"), path + "/solutions"
 
 
@@ -96,24 +101,58 @@ def read_paper(entry, concept_map):
             item["tags"] = list(dict.fromkeys(tags + secondary))
         questions.append(item)
     questions.sort(key=lambda q: q["n"])
-    expected = 25 if contest == "amc10" else 15
+    year = int(edition[:4])
+    if contest == "amc12" and year < 2000:
+        expected = len(p["baseQuestions"])
+        assert expected in {30, 35, 40, 50}, path
+        label = (f"{year} MAA Mathematical Contest (AMC 12 series)" if year < 1959
+                 else f"{year} AHSME (AMC 12 series)")
+    else:
+        expected = 15 if contest == "aime" else 25
+        if contest == "amc8" and year < 1999:
+            label = f"{year} AJHSME (AMC 8 series)"
     assert [q["n"] for q in questions] == list(range(1, expected + 1)), path
-    return {"id": contest + "-" + edition.lower(), "exam": "AMC 10" if contest == "amc10" else "AIME",
+    return {"id": contest + "-" + edition.lower(), "exam": CONTEST_NAMES[contest],
             "year": int(edition[:4]), "label": label, "source": SOURCE, "url": urljoin(BASE, path),
             "solutionsUrl": urljoin(BASE, solutions), "questions": questions}
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("contests", nargs="*", metavar="CONTEST", help="Refresh selected series: " + ", ".join(CONTEST_NAMES))
+    args = parser.parse_args()
+    requested = args.contests or list(CONTEST_NAMES)
+    if set(requested) - CONTEST_NAMES.keys():
+        parser.error("Unsupported series")
     topics, translations = concept_families()
-    entries = [entry for contest in ("amc10", "aime") for entry in editions(contest)]
+    entries = []
+    for contest in requested:
+        series = list(editions(contest))
+        if not series:
+            raise ValueError(f"No released editions found for {contest}; check the source before updating.")
+        entries.extend(series)
     with ThreadPoolExecutor(max_workers=7) as pool:
         papers = list(pool.map(lambda e: read_paper(e, topics), entries))
     assert len({p["id"] for p in papers}) == len(papers)
-    translated = {tag: translations[tag] for tag in sorted({tag for paper in papers for q in paper["questions"]
-                                                         for tag in q.get("tags", []) if tag in translations})}
-    OUTPUT.with_name("amc-concepts.json").write_text(json.dumps(translated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    output = json.dumps(papers, ensure_ascii=False, separators=(",", ":"))
-    OUTPUT.write_text(output + "\n", encoding="utf-8")
+    # AMC 10/AIME share the original stable file. The two larger historical series have
+    # separate files so an individual refresh does not rewrite unrelated catalogues.
+    groups = ((OUTPUT, {"AMC 10", "AIME"}),
+              (OUTPUT.with_name("past-amc8.json"), {"AMC 8"}),
+              (OUTPUT.with_name("past-amc12.json"), {"AMC 12"}))
+    refreshed = {CONTEST_NAMES[c] for c in requested}
+    fine_tags = set()
+    for target, exams in groups:
+        current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else []
+        if refreshed & exams:
+            current = [paper for paper in current if paper["exam"] not in refreshed]
+            current.extend(paper for paper in papers if paper["exam"] in exams)
+            encoded = json.dumps(current, ensure_ascii=False, separators=(",", ":"))
+            target.write_text(encoded + "\n", encoding="utf-8")
+        fine_tags.update(tag for paper in current for question in paper["questions"]
+                         for tag in question.get("tags", []) if tag in translations)
+    translated = {tag: translations[tag] for tag in sorted(fine_tags)}
+    OUTPUT.with_name("amc-concepts.json").write_text(
+        json.dumps(translated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f'Indexed {len(papers)} papers and {sum(len(p["questions"]) for p in papers)} problem references.')
 
 

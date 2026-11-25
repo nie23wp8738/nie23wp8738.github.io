@@ -1,0 +1,4145 @@
+[
+  {
+    "id": "imo-2026",
+    "exam": "IMO",
+    "year": 2026,
+    "label": "2026 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2026/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2026-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "greatest common divisor",
+          "least common multiple"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2026/2026_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "greatest common divisor",
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2025",
+    "exam": "IMO",
+    "year": 2025,
+    "label": "2025 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2025/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2025-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2025/2025_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2025/2025_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "Orthocentres",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2025/2025_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2025/2025_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2025/2025_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2025/2025_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "tiling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2024",
+    "exam": "IMO",
+    "year": 2024,
+    "label": "2024 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2024/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2024-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2024/2024_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "floor and ceiling functions"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2024/2024_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "greatest common divisor"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2024/2024_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2024/2024_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "circumcircle, circumcenter, and circumradius",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2024/2024_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2024/2024_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2023",
+    "exam": "IMO",
+    "year": 2023,
+    "label": "2023 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2023/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2023-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2023/2023_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2023/2023_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "Angle bisectors",
+          "tangent line"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2023/2023_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "polynomial",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2023/2023_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2023/2023_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2023/2023_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "equilateral triangle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2022",
+    "exam": "IMO",
+    "year": 2022,
+    "label": "2022 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2022/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2022-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2022/2022_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Invariants and iterative processes"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2022/2022_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2022/2022_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "prime"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2022/2022_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2022/2022_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2022/2022_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Board configurations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2021",
+    "exam": "IMO",
+    "year": 2021,
+    "label": "2021 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2021/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2021-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2021/2021_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "pigeonhole principle",
+          "perfect square"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2021/2021_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2021/2021_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2021/2021_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2021/2021_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2021/2021_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "subsets"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2020",
+    "exam": "IMO",
+    "year": 2020,
+    "label": "2020 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2020/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2020-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2020/2020_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2020/2020_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2020/2020_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2020/2020_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2020/2020_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "Arithmetic and geometric means",
+          "Geometric mean"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2020/2020_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2019",
+    "exam": "IMO",
+    "year": 2019,
+    "label": "2019 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2019/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2019-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2019/2019_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2019/2019_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "cyclic quadrilateral",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2019/2019_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2019/2019_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2019/2019_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "double counting"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2019/2019_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2018",
+    "exam": "IMO",
+    "year": 2018,
+    "label": "2018 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2018/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2018-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2018/2018_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2018/2018_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2018/2018_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Board configurations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2018/2018_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2018/2018_eng.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2018/2018_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2017",
+    "exam": "IMO",
+    "year": 2017,
+    "label": "2017 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2017/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2017-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2017/2017_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2017/2017_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2017/2017_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2017/2017_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "tangent line",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2017/2017_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2017/2017_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality",
+          "greatest common divisor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2016",
+    "exam": "IMO",
+    "year": 2016,
+    "label": "2016 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2016/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2016-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2016/2016_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2016/2016_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2016/2016_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "lattice point"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2016/2016_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2016/2016_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2016/2016_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2015",
+    "exam": "IMO",
+    "year": 2015,
+    "label": "2015 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2015/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2015-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2015/2015_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2015/2015_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2015/2015_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "Orthocentres",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2015/2015_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2015/2015_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2015/2015_eng.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2014",
+    "exam": "IMO",
+    "year": 2014,
+    "label": "2014 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2014/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2014-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2014/2014_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2014/2014_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Board configurations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2014/2014_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2014/2014_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2014/2014_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2014/2014_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2013",
+    "exam": "IMO",
+    "year": 2013,
+    "label": "2013 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2013/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2013-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2013/2013_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2013/2013_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2013/2013_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2013/2013_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "Orthocentres"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2013/2013_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2013/2013_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations",
+          "greatest common divisor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2012",
+    "exam": "IMO",
+    "year": 2012,
+    "label": "2012 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2012/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2012-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2012/2012_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2012/2012_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2012/2012_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2012/2012_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2012/2012_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2012/2012_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2011",
+    "exam": "IMO",
+    "year": 2011,
+    "label": "2011 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2011/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2011-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2011/2011_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2011/2011_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2011/2011_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2011/2011_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2011/2011_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2011/2011_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "tangent line"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2010",
+    "exam": "IMO",
+    "year": 2010,
+    "label": "2010 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2010/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2010-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2010/2010_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2010/2010_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "circumcircle, circumcenter, and circumradius",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2010/2010_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "perfect square"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2010/2010_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2010/2010_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Invariants and iterative processes"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2010/2010_eng.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2009",
+    "exam": "IMO",
+    "year": 2009,
+    "label": "2009 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2009/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2009-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2009/2009_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2009/2009_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2009/2009_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Arithmetic progressions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2009/2009_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "incircle, incenter, and inradius",
+          "Angle bisectors"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2009/2009_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2009/2009_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2008",
+    "exam": "IMO",
+    "year": 2008,
+    "label": "2008 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2008/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2008-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2008/2008_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Orthocentres",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2008/2008_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2008/2008_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "prime",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2008/2008_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2008/2008_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Invariants and iterative processes"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2008/2008_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2007",
+    "exam": "IMO",
+    "year": 2007,
+    "label": "2007 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2007/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2007-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2007/2007_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2007/2007_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "Angle bisectors",
+          "cyclic quadrilateral"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2007/2007_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2007/2007_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "Angle bisectors",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2007/2007_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2007/2007_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2006",
+    "exam": "IMO",
+    "year": 2006,
+    "label": "2006 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2006/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2006-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2006/2006_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities",
+          "incircle, incenter, and inradius"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2006/2006_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon dissections"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2006/2006_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2006/2006_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2006/2006_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2006/2006_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2005",
+    "exam": "IMO",
+    "year": 2005,
+    "label": "2005 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2005/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2005-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2005/2005_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines",
+          "equilateral triangle"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2005/2005_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2005/2005_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2005/2005_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2005/2005_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2005/2005_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "double counting"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2004",
+    "exam": "IMO",
+    "year": 2004,
+    "label": "2004 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2004/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2004-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2004/2004_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2004/2004_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2004/2004_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "tiling"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2004/2004_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2004/2004_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "cyclic quadrilateral"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2004/2004_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "digits"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2003",
+    "exam": "IMO",
+    "year": 2003,
+    "label": "2003 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2003/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2003-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2003/2003_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "subsets"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2003/2003_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2003/2003_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon geometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2003/2003_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "Angle bisectors"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2003/2003_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality",
+          "Arithmetic progressions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2003/2003_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "prime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2002",
+    "exam": "IMO",
+    "year": 2002,
+    "label": "2002 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2002/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2002-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2002/2002_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring",
+          "subsets"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2002/2002_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "parallel lines",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2002/2002_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2002/2002_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2002/2002_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2002/2002_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2001",
+    "exam": "IMO",
+    "year": 2001,
+    "label": "2001 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2001/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2001-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2001/2001_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2001/2001_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2001/2001_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "double counting"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2001/2001_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2001/2001_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2001/2001_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "prime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-2000",
+    "exam": "IMO",
+    "year": 2000,
+    "label": "2000 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/2000/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-2000-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/2000/2000_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/2000/2000_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/2000/2000_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Invariants and iterative processes"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/2000/2000_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/2000/2000_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "prime",
+          "divisibility"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/2000/2000_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1999",
+    "exam": "IMO",
+    "year": 1999,
+    "label": "1999 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1999/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-1999-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1999/1999_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "symmetry",
+          "Angle bisectors"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1999/1999_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1999/1999_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Board configurations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1999/1999_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "prime",
+          "divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1999/1999_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1999/1999_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1998",
+    "exam": "IMO",
+    "year": 1998,
+    "label": "1998 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1998/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-1998-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1998/1998_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals",
+          "cyclic quadrilateral"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1998/1998_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "double counting"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1998/1998_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1998/1998_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1998/1998_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1998/1998_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1997",
+    "exam": "IMO",
+    "year": 1997,
+    "label": "1997 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1997/",
+    "solutionsUrl": "https://web.evanchen.cc/exams/IMO-1997-notes.pdf",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1997/1997_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1997/1997_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1997/1997_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1997/1997_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial matrices",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1997/1997_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1997/1997_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1996",
+    "exam": "IMO",
+    "year": 1996,
+    "label": "1996 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1996/",
+    "solutionsUrl": "https://eulersolve.org/imo/1996/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1996/1996_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Board configurations",
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1996/1996_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines",
+          "incircle, incenter, and inradius"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1996/1996_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1996/1996_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "perfect square"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1996/1996_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1996/1996_eng.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1995",
+    "exam": "IMO",
+    "year": 1995,
+    "label": "1995 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1995/",
+    "solutionsUrl": "https://eulersolve.org/imo/1995/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1995/1995_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1995/1995_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1995/1995_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1995/1995_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1995/1995_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1995/1995_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "subsets",
+          "divisibility",
+          "prime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1994",
+    "exam": "IMO",
+    "year": 1994,
+    "label": "1994 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1994/",
+    "solutionsUrl": "https://eulersolve.org/imo/1994/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1994/1994_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "subsets"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1994/1994_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1994/1994_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Binary representation"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1994/1994_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1994/1994_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1994/1994_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1993",
+    "exam": "IMO",
+    "year": 1993,
+    "label": "1993 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1993/",
+    "solutionsUrl": "https://eulersolve.org/imo/1993/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1993/1993_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1993/1993_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "tangent line"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1993/1993_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1993/1993_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1993/1993_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1993/1993_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Invariants and iterative processes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1992",
+    "exam": "IMO",
+    "year": 1992,
+    "label": "1992 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1992/",
+    "solutionsUrl": "https://eulersolve.org/imo/1992/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1992/1992_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1992/1992_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1992/1992_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1992/1992_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric loci",
+          "incircle, incenter, and inradius",
+          "tangent line",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1992/1992_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1992/1992_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "perfect square",
+          "Infinitude"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1991",
+    "exam": "IMO",
+    "year": 1991,
+    "label": "1991 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1991/",
+    "solutionsUrl": "https://eulersolve.org/imo/1991/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1991/1991_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "incircle, incenter, and inradius"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1991/1991_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality",
+          "prime"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1991/1991_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality",
+          "subsets"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1991/1991_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "graph theory",
+          "greatest common divisor"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1991/1991_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1991/1991_eng.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1990",
+    "exam": "IMO",
+    "year": 1990,
+    "label": "1990 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1990/",
+    "solutionsUrl": "https://eulersolve.org/imo/1990/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1990/1990_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "tangent line"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1990/1990_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1990/1990_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1990/1990_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1990/1990_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1990/1990_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Polygon geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1989",
+    "exam": "IMO",
+    "year": 1989,
+    "label": "1989 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1989/",
+    "solutionsUrl": "https://eulersolve.org/imo/1989/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities",
+          "circumcircle, circumcenter, and circumradius",
+          "Angle bisectors"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "prime"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1988",
+    "exam": "IMO",
+    "year": 1988,
+    "label": "1988 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1988/",
+    "solutionsUrl": "https://eulersolve.org/imo/1988/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric loci",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "subsets"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation",
+          "divisibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1987",
+    "exam": "IMO",
+    "year": 1987,
+    "label": "1987 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1987/",
+    "solutionsUrl": "https://eulersolve.org/imo/1987/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius",
+          "Angle bisectors"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "pigeonhole principle"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf#page=2",
+        "topic": "number-theory",
+        "tags": [
+          "prime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1986",
+    "exam": "IMO",
+    "year": 1986,
+    "label": "1986 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1986/",
+    "solutionsUrl": "https://eulersolve.org/imo/1986/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "perfect square"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Invariants and iterative processes"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Geometric loci"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf#page=2",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1985",
+    "exam": "IMO",
+    "year": 1985,
+    "label": "1985 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1985/",
+    "solutionsUrl": "https://eulersolve.org/imo/1985/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "cyclic quadrilateral"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring",
+          "Common factors and coprimality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "pigeonhole principle",
+          "prime",
+          "subsets"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1984",
+    "exam": "IMO",
+    "year": 1984,
+    "label": "1984 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1984/",
+    "solutionsUrl": "https://eulersolve.org/imo/1984/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1983",
+    "exam": "IMO",
+    "year": 1983,
+    "label": "1983 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1983/",
+    "solutionsUrl": "https://eulersolve.org/imo/1983/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Arithmetic progressions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1982",
+    "exam": "IMO",
+    "year": 1982,
+    "label": "1982 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1982/",
+    "solutionsUrl": "https://eulersolve.org/imo/1982/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Concurrent lines",
+          "incircle, incenter, and inradius",
+          "Angle bisectors",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Diophantine Equation"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1981",
+    "exam": "IMO",
+    "year": 1981,
+    "label": "1981 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1981/",
+    "solutionsUrl": "https://eulersolve.org/imo/1981/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric optimization"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "subsets"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer optimization"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility",
+          "least common multiple"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1979",
+    "exam": "IMO",
+    "year": 1979,
+    "label": "1979 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1979/",
+    "solutionsUrl": "https://eulersolve.org/imo/1979/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial coloring"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric optimization"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1978",
+    "exam": "IMO",
+    "year": 1978,
+    "label": "1978 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1978/",
+    "solutionsUrl": "https://eulersolve.org/imo/1978/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "digits"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "circumcircle, circumcenter, and circumradius",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "pigeonhole principle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1977",
+    "exam": "IMO",
+    "year": 1977,
+    "label": "1977 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1977/",
+    "solutionsUrl": "https://eulersolve.org/imo/1977/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon geometry",
+          "equilateral triangle",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer factorization"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "modular arithmetic"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1976",
+    "exam": "IMO",
+    "year": 1976,
+    "label": "1976 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1976/",
+    "solutionsUrl": "https://eulersolve.org/imo/1976/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Quadrilaterals"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Packing problems",
+          "parallel lines",
+          "cube geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Integer optimization"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1975",
+    "exam": "IMO",
+    "year": 1975,
+    "label": "1975 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1975/",
+    "solutionsUrl": "https://eulersolve.org/imo/1975/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality",
+          "permutations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "digits",
+          "Digit sums"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1974",
+    "exam": "IMO",
+    "year": 1974,
+    "label": "1974 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1974/",
+    "solutionsUrl": "https://eulersolve.org/imo/1974/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "combinatorial game"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry",
+          "Geometric mean"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "tiling"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "polynomial"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1973",
+    "exam": "IMO",
+    "year": 1973,
+    "label": "1973 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1973/",
+    "solutionsUrl": "https://eulersolve.org/imo/1973/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+        "topic": "vectors",
+        "tags": [
+          "vector"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Real roots of equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric optimization",
+          "equilateral triangle"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1972",
+    "exam": "IMO",
+    "year": 1972,
+    "label": "1972 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1972/",
+    "solutionsUrl": "https://eulersolve.org/imo/1972/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "pigeonhole principle"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon dissections"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Factorial divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1971",
+    "exam": "IMO",
+    "year": 1971,
+    "label": "1971 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1971/",
+    "solutionsUrl": "https://eulersolve.org/imo/1971/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Combinatorial matrices"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1970",
+    "exam": "IMO",
+    "year": 1970,
+    "label": "1970 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1970/",
+    "solutionsUrl": "https://eulersolve.org/imo/1970/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "digits"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "Set and integer partitions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1969",
+    "exam": "IMO",
+    "year": 1969,
+    "label": "1969 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1969/",
+    "solutionsUrl": "https://eulersolve.org/imo/1969/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "prime",
+          "Infinitude"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1968",
+    "exam": "IMO",
+    "year": 1968,
+    "label": "1968 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1968/",
+    "solutionsUrl": "https://eulersolve.org/imo/1968/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Triangle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "digits"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf#page=1",
+        "topic": "functions",
+        "tags": [
+          "functional equation",
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf#page=2",
+        "topic": "algebra",
+        "tags": [
+          "floor and ceiling functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1967",
+    "exam": "IMO",
+    "year": 1967,
+    "label": "1967 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1967/",
+    "solutionsUrl": "https://eulersolve.org/imo/1967/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric constructions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1",
+        "topic": "sequences",
+        "tags": [
+          "Sequences"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=2",
+        "topic": "sequences",
+        "tags": [
+          "Recurrence relations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1966",
+    "exam": "IMO",
+    "year": 1966,
+    "label": "1966 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1966/",
+    "solutionsUrl": "https://eulersolve.org/imo/1966/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "subsets"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1965",
+    "exam": "IMO",
+    "year": 1965,
+    "label": "1965 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1965/",
+    "solutionsUrl": "https://eulersolve.org/imo/1965/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric loci"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1964",
+    "exam": "IMO",
+    "year": 1964,
+    "label": "1964 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1964/",
+    "solutionsUrl": "https://eulersolve.org/imo/1964/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "parallel lines"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1",
+        "topic": "counting",
+        "tags": [
+          "graph theory"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Combinatorial geometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra",
+          "parallel lines"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1963",
+    "exam": "IMO",
+    "year": 1963,
+    "label": "1963 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1963/",
+    "solutionsUrl": "https://eulersolve.org/imo/1963/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "Real roots of equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Polygon geometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf#page=2",
+        "topic": "counting",
+        "tags": [
+          "permutations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1962",
+    "exam": "IMO",
+    "year": 1962,
+    "label": "1962 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1962/",
+    "solutionsUrl": "https://eulersolve.org/imo/1962/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "digits"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "cube geometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric constructions"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Circle geometry",
+          "incircle, incenter, and inradius",
+          "circumcircle, circumcenter, and circumradius"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "Tetrahedra"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1961",
+    "exam": "IMO",
+    "year": 1961,
+    "label": "1961 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1961/",
+    "solutionsUrl": "https://eulersolve.org/imo/1961/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "system of equations"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric inequalities"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric constructions",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "parallel lines",
+          "midpoint"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1960",
+    "exam": "IMO",
+    "year": 1960,
+    "label": "1960 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1960/",
+    "solutionsUrl": "https://eulersolve.org/imo/1960/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "digits",
+          "divisibility"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "inequality"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric constructions"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "cube geometry",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry"
+        ]
+      },
+      {
+        "n": 7,
+        "url": "https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "Geometric loci"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "imo-1959",
+    "exam": "IMO",
+    "year": 1959,
+    "label": "1959 IMO",
+    "source": "International Mathematical Olympiad",
+    "url": "https://www.imo-official.org/problems/1959/",
+    "solutionsUrl": "https://eulersolve.org/imo/1959/",
+    "questions": [
+      {
+        "n": 1,
+        "url": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1",
+        "topic": "number-theory",
+        "tags": [
+          "Common factors and coprimality"
+        ]
+      },
+      {
+        "n": 2,
+        "url": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1",
+        "topic": "algebra",
+        "tags": [
+          "radical"
+        ]
+      },
+      {
+        "n": 3,
+        "url": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1",
+        "topic": "trigonometry",
+        "tags": [
+          "trigonometry"
+        ]
+      },
+      {
+        "n": 4,
+        "url": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric constructions",
+          "Geometric mean"
+        ]
+      },
+      {
+        "n": 5,
+        "url": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=1",
+        "topic": "geometry",
+        "tags": [
+          "Geometric loci",
+          "midpoint"
+        ]
+      },
+      {
+        "n": 6,
+        "url": "https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf#page=2",
+        "topic": "geometry",
+        "tags": [
+          "3D geometry",
+          "parallel lines"
+        ]
+      }
+    ]
+  }
+]

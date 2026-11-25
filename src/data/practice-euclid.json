@@ -1,0 +1,15 @@
+[
+  {
+    "id": "euclid-2020-practice",
+    "exam": "Euclid",
+    "module": "Mathematics",
+    "title": "2020 Euclid practice paper",
+    "titleZh": "2020 年欧几里得练习卷",
+    "kind": "practice",
+    "source": "University of Waterloo CEMC",
+    "url": "https://cemc.uwaterloo.ca/sites/default/files/documents/2020/2020EuclidContest.pdf",
+    "solutionsUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2020EuclidSolution.pdf",
+    "description": "The 2020 contest was cancelled due to the COVID-19 pandemic. CEMC released the questions and solutions for practice.",
+    "descriptionZh": "由于新冠疫情，2020 年竞赛取消。滑铁卢大学 CEMC 公布了该年试题与解答，可供练习。"
+  }
+]

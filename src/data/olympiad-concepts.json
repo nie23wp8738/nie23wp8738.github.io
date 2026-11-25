@@ -1,0 +1,22 @@
+{
+  "collinearity": "点共线",
+  "coloring": "染色",
+  "compass and straightedge constructions": "尺规作图",
+  "concurrence": "直线共点",
+  "convex polygons": "凸多边形",
+  "extremal combinatorics": "极值组合",
+  "factorization": "因式分解",
+  "geometric transformations": "几何变换",
+  "grid": "网格",
+  "harmonic sums": "调和和",
+  "integer partitions": "整数分拆",
+  "intervals": "区间",
+  "lattice points": "格点",
+  "multisets": "多重集",
+  "orthocenter": "垂心",
+  "perfect powers": "完全幂",
+  "power sums": "幂和",
+  "radical equations": "根式方程",
+  "tangency": "相切",
+  "trigonometric functions": "三角函数"
+}

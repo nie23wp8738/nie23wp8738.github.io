@@ -2,16 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import GridFigure from './GridFigure.astro';
 import {getPastPapers,topicLabel} from '../lib/catalog.js';
+import {examGroups,examNames} from '../lib/exams.js';
+import esat from '../data/practice-esat.json';
 const {lang='en'} = Astro.props;
 const zh = lang === 'zh';
 const root = zh ? '/zh' : '';
 const papers = getPastPapers();
-const exams = ['AMC 10','AIME','STEP','TMUA'].map(exam => {
-  const items = papers.filter(p=>p.exam === exam);
-  const years = items.map(p=>p.year);
-  return {exam, papers:items.length, count:items.reduce((sum,p)=>sum+(p.questions?.length||0),0),
-    range:years.length?Math.min(...years)+'–'+Math.max(...years):''};
-}).filter(exam=>exam.papers);
+const counts = new Map();
+for (const {exam,year,questions} of papers) {
+  const row = counts.get(exam) || {editions:0,questions:0,from:year,to:year};
+  row.editions++; row.questions += questions.length;
+  row.from = Math.min(row.from,year); row.to = Math.max(row.to,year);
+  counts.set(exam,row);
+}
+const groups = examGroups.map(group=>({...group, exams: group.exams.filter(exam=>counts.has(exam) || exam === 'ESAT')}));
 const featuredTopics = ['algebra','geometry','counting','number-theory','logic','calculus','probability','mechanics'];
 ---
 <Layout lang={lang} current="home" title={zh?'首页':'Home'}>
@@ -30,9 +34,19 @@ const featuredTopics = ['algebra','geometry','counting','number-theory','logic',
       </a>
     </section>
     <section class="home-section"><div class="section-top"><h2>{zh?'按考试找题':'Browse by exam'}</h2><a class="section-link" href={root+'/past-papers/'}>{zh?'全部试卷':'All papers'}</a></div>
-      <div class="paper-family">{exams.map(({exam,papers,count,range})=><a class="course-tile" href={root+'/past-papers/?exam='+encodeURIComponent(exam)}>
-        <h3>{exam}</h3><small>{range}</small><p>{zh?papers+' 份试卷 · '+count.toLocaleString('en-US')+' 道题':papers+' papers · '+count.toLocaleString('en-US')+' questions'}</p>
-      </a>)}</div>
+      {groups.map(group=><div class="exam-group"><h3>{zh?group.zh:group.en}</h3><div class="paper-family">
+        {group.exams.map(exam=>{
+          const stats=counts.get(exam);
+          const practice=exam==='ESAT';
+          return <a class="course-tile" href={root+(practice?'/esat/':'/past-papers/?exam='+encodeURIComponent(exam))}>
+            <h4>{exam}</h4>
+            {examNames[exam] && <div class="exam-full-name">{examNames[exam][zh?1:0]}</div>}
+            {practice ? <p>{zh?esat.length+' 套官方样题和练习':'Official samples & practice · '+esat.length+' tests'}</p> : <>
+              <small>{stats.from}–{stats.to}</small>
+              <p>{zh?stats.editions+' 份试卷 · '+stats.questions.toLocaleString('en-US')+' 道题':stats.editions+' papers · '+stats.questions.toLocaleString('en-US')+' questions'}</p></>}
+          </a>;
+        })}
+      </div></div>)}
     </section>
     <section class="home-section"><div class="section-top"><h2>{zh?'按知识点找题':'Browse by topic'}</h2><a class="section-link" href={root+'/topics/'}>{zh?'全部专题':'All topics'}</a></div>
       <div class="topic-links">{featuredTopics.map(t=><a href={root+'/topics/?topic='+t}>{topicLabel(t,lang)}</a>)}</div>
