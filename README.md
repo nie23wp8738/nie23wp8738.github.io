@@ -1,14 +1,24 @@
-# DR.WANG 数学教学与习题库
+# DR.WANG Mathematics
 
-网站地址 <https://nie23wp8738.github.io/>。本站提供课程讲义、分类练习与浏览器组卷。关于老师页面收录学历和教学经历。
+A bilingual mathematics question bank at <https://nie23wp8738.github.io/>. The default interface is English. Chinese pages live under `/zh/`; both languages share the same worksheet selections.
 
-## 本地预览
+- `/past-papers/` — find an exam paper by year and browse its individual questions.
+- `/topics/` — find questions across papers by subject area and specific concept.
+- `/problems/` — select and reorder questions and download a worksheet or solution/reference PDF.
+- `/about/` — education and teaching experience.
 
-使用 Node.js 24，在项目目录运行 `npm ci` 和 `npm run dev`。运行 `npm run build` 生成 `dist/`。主分支由 GitHub Actions 自动构建并发布到 Pages。
+## Development
 
-## 更新题目和讲义
+Use Node.js 24. Run `npm ci` and `npm run dev` for development or `npm run build` to generate `dist/`. Pushes to the main branch are built and published by the GitHub Pages workflow.
 
-- 在 `src/data/problems.json` 维护原创或获准公开的练习。每个条目使用唯一、稳定的英文 `id`；该值同时决定题目链接和学生本地选题记录。
-- 中文题名、课程标签、主题、方法和难度用于检索。英文题干、答案和解析同时用于网页和 PDF。组卷 PDF 目前使用内置西文字体，题干与解析请使用 ASCII 英文及数学记号（如 `x^2`），并在发布前测试 PDF。
-- 在 `src/data/lessons.json` 维护课程。英文学生讲义位于 `public/handouts/`。讲义重新生成入口为 `scripts/build-handouts.py`。
-- 在 `src/pages/about.astro` 更新教师学历与教学经历。
+## Question sources
+
+Historical records in `src/data/past-*.json` store the paper, year, source URL and question links and topics. Original statements stay at the linked source. Worksheets include clickable source references for past questions and full text for original practice. Within each file, keep existing paper IDs and question numbers stable because students can bookmark them or save them to worksheets.
+
+| Exam | Source |
+| --- | --- |
+| AMC 10 and AIME | [LIVE by Po-Shen Loh](https://live.poshenloh.com/past-contests), which publishes the questions with MAA permission |
+| STEP | [Cambridge STEP Support Programme](https://step.maths.org/questions) and [OCR](https://www.ocr.org.uk/students/step-mathematics/preparing-for-step/) |
+| TMUA | [UAT-UK historical preparation papers](https://esat-tmua.ac.uk/tmua-preparation-materials/) |
+
+Bilingual concept labels are in `src/data/*-concepts.json`. Maintain the original practice questions in `src/data/problems.json` and the original question translations and topic mapping in `src/lib/catalog.js`. Original worksheet text uses English with printable ASCII mathematical notation.

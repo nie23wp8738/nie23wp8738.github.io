@@ -1,0 +1,9 @@
+---
+import Question from '../../../components/Question.astro';
+import problems from '../../../data/problems.json';
+export function getStaticPaths() {
+  return problems.map(problem => ({params: {id: problem.id}, props: {problem}}));
+}
+const { problem } = Astro.props;
+---
+<Question lang="zh" problem={problem} />

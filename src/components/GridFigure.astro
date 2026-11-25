@@ -1,0 +1,15 @@
+---
+const {zh}=Astro.props;
+const segment = (x:number,y:number,dx:number,dy:number) => 'left:'+x*20+'%;top:'+(100-y*25)+'%;width:'+(dx?dx*20+'%':'3px')+';height:'+(dy?dy*25+'%':'3px');
+const lines = [[0,0,2,0],[2,1,0,1],[2,1,1,0],[3,3,0,2],[3,3,2,0],[5,4,0,1]];
+---
+<div class="figure-face" role="img" aria-label={zh ? "从 (0,0) 到 (5,4) 的路径，绕开 (2,2)" : "A lattice path from (0,0) to (5,4) avoiding (2,2)"}>
+            <div class="grid-drawing" aria-hidden="true">
+              {Array.from({length:6},(_,i)=><i class="grid-line v" style={'left:'+i*20+'%'} />)}
+              {Array.from({length:5},(_,i)=><i class="grid-line h" style={'top:'+i*25+'%'} />)}
+              {Array.from({length:30},(_,i)=><i class="node" style={'left:'+(i%6)*20+'%;top:'+Math.floor(i/6)*25+'%'} />)}
+              {lines.map(([x,y,dx,dy])=><i class="route-line" style={segment(x,y,dx,dy)} />)}
+              <i class="route-marker" style="left:0;top:100%"></i><i class="route-marker" style="left:100%;top:0"></i><span class="blocked">×</span>
+              <span class="route-label" style="right:100%;top:100%;margin-right:4px">(0, 0)</span><span class="route-label" style="left:100%;bottom:100%;margin-left:4px">(5, 4)</span>
+            </div>
+          </div>

@@ -1,0 +1,49 @@
+---
+import { getPastPapers, localPractice, topicEntries, tagLabel } from '../lib/catalog.js';
+import problems from '../data/problems.json';
+import '../styles/archive.css';
+const { lang = 'en' } = Astro.props;
+const zh = lang === 'zh';
+const prefix = zh ? '/zh' : '';
+const papers = getPastPapers();
+const practice = problems.map(p => localPractice(p, lang)).map(p => ({id:p.id,title:p.title,exam:p.exam,topic:p.topicKey}));
+const counts = new Map(topicEntries.map(t => [t.key, 0]));
+for (const p of papers) for (const q of p.questions ?? []) {
+  for (const k of new Set([q.topic, ...(q.tags ?? [])])) if (counts.has(k)) counts.set(k, counts.get(k) + 1);
+}
+const tagLabels = Object.fromEntries([...new Set(papers.flatMap(p => (p.questions ?? []).flatMap(q => q.tags ?? [])))].map(tag => [tag,tagLabel(tag,lang)]));
+const exams = [...new Set([...papers.map(p => p.exam), ...practice.flatMap(p => p.exam)])].sort((a, b) => a.localeCompare(b));
+const years = [...new Set(papers.map(p => p.year))].sort((a, b) => b - a);
+const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh ? topic.zh : topic.en]));
+const topics = topicEntries.filter(t => counts.get(t.key) || practice.some(p => p.topic === t.key));
+---
+<section class="archive-shell shell" data-archive="topics" data-lang={lang}>
+  <header class="archive-hero">
+    <h1>{zh ? '按知识点找题' : 'Questions by topic'}</h1>
+    <p>{zh ? '选择知识点，再按考试或年份细选。可以勾选多道题，按自己的顺序组卷。' : 'Choose a topic, narrow it by exam or year, and select questions for your worksheet.'}</p>
+  </header>
+  <nav class="arch-topic-grid" aria-label={zh ? '知识点' : 'Mathematical topics'}>
+    <a href="?topic=all" data-topic="all"><strong>{zh ? '所有知识点' : 'All topics'}</strong><small>{zh ? '跨知识点筛选' : 'Filter across the collection'}</small></a>
+    {topics.map(t => <a href={'?topic=' + encodeURIComponent(t.key)} data-topic={t.key}>
+      <strong>{zh ? t.zh : t.en}</strong>
+      <small>{[
+        counts.get(t.key) ? (zh ? counts.get(t.key) + ' 道真题' : counts.get(t.key) + (counts.get(t.key) === 1 ? ' past question' : ' past questions')) : '',
+        practice.some(p => p.topic === t.key) ? (zh ? practice.filter(p => p.topic === t.key).length + ' 道原创题' : practice.filter(p => p.topic === t.key).length + ' original') : ''
+      ].filter(Boolean).join(' · ')}</small>
+    </a>)}
+  </nav>
+  <div class="arch-topic-target" id="questions" tabindex="-1">
+    <div data-filterbar hidden class="archive-search" role="search" aria-label={zh ? '筛选专题题目' : 'Filter this topic'}>
+      <label>{zh ? '考试' : 'Exam'}<select data-exam><option value="">{zh ? '所有考试' : 'All exams'}</option>{exams.map(exam => <option value={exam}>{exam}</option>)}</select></label>
+      <label>{zh ? '年份' : 'Year'}<select data-year><option value="">{zh ? '所有年份' : 'All years'}</option>{years.map(year => <option value={year}>{year}</option>)}</select></label>
+      <label>{zh ? '细分知识点' : 'Subtopic'}<select data-tag><option value="">{zh ? '所有细分知识点' : 'All subtopics'}</option></select></label>
+      <label>{zh ? '题目来源' : 'Question source'}<select data-kind><option value="">{zh ? '全部' : 'All sources'}</option><option value="past">{zh ? '历年真题' : 'Past questions'}</option><option value="original">{zh ? '原创练习' : 'Original practice'}</option></select></label>
+    </div>
+    <section class="arch-results" data-results aria-live="polite"></section>
+  </div>
+  <noscript><p>{zh ? '要筛选单题，请启用 JavaScript，或在历年真题页直接查阅原卷。' : 'Enable JavaScript to filter individual questions, or browse the source papers.'} <a class="arch-inline" href={prefix + '/past-papers/'}>{zh ? '历年真题' : 'Past papers'}</a></p></noscript>
+  <script type="application/json" data-tags set:html={JSON.stringify(tagLabels).replace(/</g, '\\u003c')} />
+  <script type="application/json" data-originals set:html={JSON.stringify(practice).replace(/</g, '\\u003c')} />
+  <script type="application/json" data-topics set:html={JSON.stringify(topicLabels).replace(/</g, '\\u003c')} />
+</section>
+<script type="module" src="/archive.js" is:inline></script>

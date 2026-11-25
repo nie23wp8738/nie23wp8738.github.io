@@ -1,83 +1,70 @@
 ---
 import problems from '../data/problems.json';
+import { localPractice, topicEntries, tagTranslations } from '../lib/catalog.js';
 import '../styles/bank.css';
-
-const unique = (values: string[]) => [...new Set(values)];
-const filters = [
-  { name: 'exam', label: '考试', options: unique(problems.flatMap(p => p.exam)) },
-  { name: 'topic', label: '知识点', options: unique(problems.map(p => p.topic)) },
-  { name: 'method', label: '解题方法', options: unique(problems.map(p => p.method)) },
-  { name: 'level', label: '难度', options: ['基础', '提高', '挑战'].filter(v => problems.some(p => p.level === v)) },
-];
+const lang = Astro.props.lang === 'zh' ? 'zh' : 'en';
+const zh = lang === 'zh';
+const prefix = zh ? '/zh' : '';
+const t = (en:string,cn:string) => zh ? cn : en;
+const localized = problems.map(p => ({...localPractice(p,lang),methodKey:p.method}));
+const methods = [...new Map(localized.map(p => [p.methodKey,p.method])).entries()];
 ---
-<div class="bank" data-bank>
+<div class="bank" data-bank data-lang={lang}>
   <div id="bank-browser" class="bank-browser">
     <div class="bank-topline">
-      <h2>查找习题</h2>
-      <a class="bank-jump" href="#worksheet">我的试卷（<span data-mobile-count>0</span>）</a>
+      <h2>{t('Find questions','查找题目')}</h2>
+      <a class="bank-jump" href="#worksheet">{t('My worksheet','我的试卷')} (<span data-mobile-count>0</span>)</a>
     </div>
     <form class="bank-filters" data-filters role="search">
+      <fieldset class="bank-types">
+        <legend class="bank-sr">{t('Question collection','题目来源')}</legend>
+        <label><input type="radio" name="kind" value="past" checked /><span>{t('Past exam questions','历年真题')}</span></label>
+        <label><input type="radio" name="kind" value="practice" /><span>{t('Original practice','原创练习')}</span></label>
+      </fieldset>
       <label class="bank-search">
-        <span>搜索</span>
-        <input name="q" type="search" placeholder="输入题名、关键词或英文题干" autocomplete="off" />
+        <span>{t('Search','搜索')}</span>
+        <input name="q" type="search" placeholder={t('Exam, year, paper or question number','考试、年份、试卷或题号')} autocomplete="off" />
       </label>
       <div class="bank-filter-grid">
-        {filters.map(filter => (
-          <label><span>{filter.label}</span>
-            <select name={filter.name}>
-              <option value="">全部</option>
-              {filter.options.map(value => <option value={value}>{value}</option>)}
-            </select>
-          </label>
-        ))}
+        <label><span>{t('Exam','考试')}</span><select name="exam"><option value="">{t('All exams','全部考试')}</option></select></label>
+        <label><span>{t('Topic','知识点')}</span><select name="topic"><option value="">{t('All topics','全部知识点')}</option>{topicEntries.map(topic => <option value={topic.key}>{zh ? topic.zh : topic.en}</option>)}</select></label>
+        <label data-past-only><span>{t('Year','年份')}</span><select name="year"><option value="">{t('All years','全部年份')}</option></select></label>
+        <label data-past-only><span>{t('Question number','题号')}</span><input inputmode="numeric" type="number" name="number" min="1" step="1" placeholder={t('Any','全部')}/></label>
+        <label data-practice-only hidden><span>{t('Method','解题方法')}</span><select name="method"><option value="">{t('All methods','全部方法')}</option>{methods.map(([key,value])=><option value={key}>{value}</option>)}</select></label>
+        <label data-practice-only hidden><span>{t('Level','难度')}</span><select name="level"><option value="">{t('All levels','全部难度')}</option><option value="basic">{t('Foundation','基础')}</option><option value="intermediate">{t('Intermediate','提高')}</option><option value="challenge">{t('Challenge','挑战')}</option></select></label>
       </div>
     </form>
     <div class="bank-result-bar">
-      <span data-results aria-live="polite">共 {problems.length} 道题</span>
-      <button type="button" class="bank-text-button" data-reset hidden>清除筛选</button>
+      <span data-results role="status">{t('Loading questions…','正在载入题目…')}</span>
+      <button type="button" class="bank-text-button" data-reset hidden>{t('Reset filters','清除筛选')}</button>
     </div>
-    <div class="bank-list">
-      {problems.map(problem => (
-        <article class="bank-card" data-problem={problem.id}>
-          <div class="bank-card-meta">
-            <span>{problem.exam.join(' / ')}</span>
-            <span>{problem.topic}</span>
-            <span>{problem.level}</span>
-          </div>
-          <h3><a href={'/problems/' + problem.id + '/'}>{problem.title}</a></h3>
-          <p lang="en">{problem.statement}</p>
-          <div class="bank-card-foot">
-            <span>{problem.method}</span>
-            <button type="button" data-add={problem.id} aria-pressed="false">加入试卷</button>
-          </div>
-        </article>
-      ))}
-    </div>
-    <p class="bank-no-results" data-none hidden>没有找到符合条件的题目。可以减少筛选条件，或换一个关键词。</p>
-    <noscript><p>题目详情可以直接浏览。要使用筛选和组卷功能，请启用浏览器的 JavaScript。</p></noscript>
+    <div class="bank-list" data-list></div>
+    <p class="bank-no-results" data-none hidden>{t('No matching questions. Try another topic or clear a filter.','没有匹配的题目，请调整筛选条件。')}</p>
+    <p class="bank-no-results" data-source-error hidden>{t('The paper index could not be loaded.','未能载入真题索引。')} <button type="button" class="bank-text-button" data-retry>{t('Try again','重试')}</button></p>
+    <nav class="bank-pager" data-pager hidden aria-label={t('Question results pages','题目结果分页')}>
+      <button type="button" data-prev>{t('Previous','上一页')}</button><span data-page></span><button type="button" data-next>{t('Next','下一页')}</button>
+    </nav>
+    <noscript><p>{t('Enable JavaScript to search and build worksheets. You can also browse the source papers.','启用 JavaScript 即可筛题和组卷，也可以直接浏览原卷。')} <a href={prefix+'/past-papers/'}>{t('Past papers','历年试卷')}</a></p></noscript>
   </div>
   <aside class="bank-sheet" id="worksheet" aria-labelledby="worksheet-heading">
-    <div class="bank-sheet-heading">
-      <h2 id="worksheet-heading">我的试卷</h2>
-      <span data-sheet-count>0 道题</span>
-    </div>
-    <p class="bank-empty" data-empty>点击题目旁的「加入试卷」，在这里调整顺序并下载。</p>
-    <ol class="bank-selected" data-selected aria-label="试卷题目顺序"></ol>
-    <div class="bank-sheet-actions" data-sheet-actions hidden>
-      <button type="button" class="bank-text-button" data-clear>清空试卷</button>
-    </div>
+    <div class="bank-sheet-heading"><h2 id="worksheet-heading">{t('My worksheet','我的试卷')}</h2><span data-sheet-count></span></div>
+    <p class="bank-empty" data-empty>{t('Add a question to choose its position and download your worksheet.','加入题目后，在这里调整题序并下载试卷。')}</p>
+    <ol class="bank-selected" data-selected aria-label={t('Selected questions in order','试卷题目顺序')}></ol>
+    <div class="bank-sheet-actions" data-sheet-actions hidden><button type="button" class="bank-text-button" data-clear>{t('Clear worksheet','清空试卷')}</button></div>
     <fieldset class="bank-layout">
-      <legend>试卷排版</legend>
-      <label><input name="paper-layout" type="radio" value="spaced" checked /> 一题一页</label>
-      <label><input name="paper-layout" type="radio" value="compact" /> 紧凑排版</label>
+      <legend>{t('Page layout','试卷排版')}</legend>
+      <label><input name="paper-layout" type="radio" value="spaced" checked /> {t('One per page','一题一页')}</label>
+      <label><input name="paper-layout" type="radio" value="compact" /> {t('Compact','紧凑排版')}</label>
     </fieldset>
+    <p class="bank-reference" data-reference-note hidden>{t('Past questions appear as numbered references with links to the source. Original practice includes full questions and worked solutions.','历年真题在 PDF 中以卷名、题号和原题链接呈现；原创练习包含完整题干和解析。')}</p>
     <div class="bank-downloads">
-      <button type="button" class="bank-download-main" data-pdf="questions" disabled>下载题目卷 PDF</button>
-      <button type="button" class="bank-download-alt" data-pdf="solutions" disabled>下载解析卷 PDF</button>
+      <button type="button" class="bank-download-main" data-pdf="questions" disabled>{t('Download worksheet PDF','下载题目卷 PDF')}</button>
+      <button type="button" class="bank-download-alt" data-pdf="solutions" disabled>{t('Download solutions PDF','下载解析卷 PDF')}</button>
     </div>
     <p class="bank-live" role="status" aria-live="polite" data-status></p>
-    <a class="bank-jump bank-back" href="#bank-browser">返回题目列表</a>
+    <a class="bank-jump bank-back" href="#bank-browser">{t('Back to questions','返回题目列表')}</a>
   </aside>
-  <script type="application/json" data-problem-data set:html={JSON.stringify(problems).replace(/</g, '\\u003c')} />
+  <script type="application/json" data-tag-translations set:html={JSON.stringify(zh ? tagTranslations : {}).replace(/</g,'\\u003c')} />
+  <script type="application/json" data-practice-data set:html={JSON.stringify(localized).replace(/</g,'\\u003c')} />
 </div>
 <script type="module" src="/bank.js" is:inline></script>

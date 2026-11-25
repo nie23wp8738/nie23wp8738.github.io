@@ -67,16 +67,37 @@ function drawRule(ops, y, gray) {
   ops.push(`${gray} G 0.6 w ${margin} ${y} m ${width - margin} ${y} l S`);
 }
 
+function plainLabel(value) {
+  return String(value).normalize('NFKD').replace(/[–—]/g, '-').replace(/[’‘]/g, "'")
+    .replace(/[^ -~]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function safeURL(value) {
+  try {
+    const url = new URL(value);
+    return ['https:', 'http:'].includes(url.protocol) ? url.href : '';
+  } catch { return ''; }
+}
+
+function sheetKind(problems, solutions) {
+  const refs = problems.filter(p => p.kind === 'past').length;
+  if (refs === 0) return solutions ? 'Solutions' : 'Question paper';
+  if (refs === problems.length) return solutions ? 'Source guide' : 'Question references';
+  return solutions ? 'Solutions and sources' : 'Questions and references';
+}
+
 function renderPages(problems, { solutions, layout, title }) {
   const pages = [];
   let ops;
+  let links;
   let y;
   let currentProblem = 0;
-  const kind = solutions ? 'Solutions' : 'Question paper';
+  const kind = sheetKind(problems, solutions);
 
   function newPage(continuing = false) {
     ops = [];
-    pages.push(ops);
+    links = [];
+    pages.push({ops, links});
     drawText(ops, 'DR.WANG', margin, height - 51, 11, 'label');
     const headerKind = kind.toUpperCase();
     drawText(ops, headerKind, width - margin - textWidth(headerKind, 'label', 9),
@@ -108,6 +129,17 @@ function renderPages(problems, { solutions, layout, title }) {
     }
   }
 
+  function sourceLink(label, target) {
+    const url = safeURL(target);
+    if (!url) return;
+    if (y - 17 < bottom) newPage(true);
+    drawText(ops, label, margin, y, 10, 'label', .23);
+    const right = margin + textWidth(label, 'label', 10);
+    ops.push(`0.33 G 0.5 w ${margin} ${y-2} m ${right.toFixed(2)} ${y-2} l S`);
+    links.push({ url, rect:[margin, y-3, right, y+10] });
+    y -= 21;
+  }
+
   function section(label, value) {
     const labelLines = wrap(label, 'label', 10, bodyWidth);
     if (y - labelLines.length * 15 - 18 < bottom) newPage(true);
@@ -132,6 +164,18 @@ function renderPages(problems, { solutions, layout, title }) {
       }
     }
     y -= 23;
+    if (problem.kind === 'past') {
+      const edition = plainLabel(problem.paperTitle) || plainLabel(problem.exam.join(' ') + ' ' + problem.year);
+      paragraph(edition + ', Question ' + problem.n);
+      sourceLink('Open original question', problem.sourceURL);
+      if (solutions && problem.solutionURL) sourceLink('Open published solutions', problem.solutionURL);
+      if (solutions && !problem.solutionURL) {
+        paragraph('For solutions, consult the source if available.', 'body', 11, 16);
+      }
+      paragraph('Reference: ' + problem.permalink, 'body', 9, 14);
+      y -= solutions ? 12 : 27;
+      return;
+    }
     paragraph(problem.statement);
     if (solutions) {
       y -= 4;
@@ -143,7 +187,7 @@ function renderPages(problems, { solutions, layout, title }) {
     y -= solutions ? 15 : 32;
   });
 
-  pages.forEach((page, index) => {
+  pages.forEach(({ops:page}, index) => {
     drawRule(page, 48, 0.72);
     drawText(page, 'DR.WANG Mathematics', margin, 32, 9, 'body', 0.34);
     const number = 'Page ' + (index + 1) + ' of ' + pages.length;
@@ -161,14 +205,18 @@ function serializePages(pages, description) {
     `<< /Title (${escapePdf(description)}) /Author (DR.WANG) >>`
   ];
   const pageRefs = [];
-  for (const operators of pages) {
+  for (const {ops:operators,links} of pages) {
     const pageId = objects.length + 1;
     pageRefs.push(pageId + ' 0 R');
+    const annotations = links.length ? '/Annots [' + links.map((_, i) => (pageId + 2 + i) + ' 0 R').join(' ') + ']' : '';
     objects.push(
-      `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Resources << /Font << /body 3 0 R /label 4 0 R >> >> /Contents ${pageId + 1} 0 R >>`
+      `<< /Type /Page ${annotations} /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Resources << /Font << /body 3 0 R /label 4 0 R >> >> /Contents ${pageId + 1} 0 R >>`
     );
     const stream = operators.join('\n') + '\n';
     objects.push(`<< /Length ${stream.length} >>\nstream\n${stream}endstream`);
+    for (const {url,rect} of links) {
+      objects.push(`<< /Type /Annot /Subtype /Link /Rect [${rect.map(x=>x.toFixed(2)).join(' ')}] /Border [0 0 0] /A << /S /URI /URI (${escapePdf(url)}) >> >>`);
+    }
   }
   objects[1] = `<< /Type /Pages /Kids [${pageRefs.join(' ')}] /Count ${pages.length} >>`;
 
@@ -193,6 +241,12 @@ export function downloadWorksheet(problems, { solutions = false, layout = 'space
   // Avoid an unsupported browser-provided title corrupting the PDF byte offsets.
   title = String(title).replace(/[^ -~]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 100) || 'Mathematics Practice';
   for (const problem of problems) {
+    if (problem.kind === 'past') {
+      if (!Number.isInteger(problem.n) || !safeURL(problem.sourceURL) || !safeURL(problem.permalink)) {
+        throw new Error('Invalid past-paper reference.');
+      }
+      continue;
+    }
     const fields = [problem.statement];
     if (solutions) {
       fields.push(problem.answer, ...problem.solutions.flatMap(method => [method.title, method.text]));
@@ -202,13 +256,14 @@ export function downloadWorksheet(problems, { solutions = false, layout = 'space
     }
   }
 
-  const description = title + (solutions ? ' - Solutions' : ' - Question paper');
+  const kind = sheetKind(problems, solutions);
+  const description = title + ' - ' + kind;
   const pages = renderPages(problems, { solutions, layout, title });
   const blob = serializePages(pages, description);
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'DR-WANG-' + (solutions ? 'Solutions' : 'Questions') + '.pdf';
+  link.download = 'DR-WANG-' + (kind === 'Question paper' ? 'Questions' : kind.replaceAll(' ', '-')) + '.pdf';
   document.body.append(link);
   link.click();
   link.remove();

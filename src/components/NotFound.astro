@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+const {lang} = Astro.props;
+const zh=lang==='zh'; const base=zh?'/zh':'';
+---
+<Layout lang={lang} title={zh?'页面未找到':'Page not found'}><div class="shell inner-head"><h1>{zh?'页面未找到':'Page not found'}</h1><p>{zh?'试试按考试或知识点查找题目。':'Find questions by exam or by topic.'}</p><div class="btnrow"><a class="button" href={base+'/past-papers/'}>{zh?'浏览历年真题':'Browse past papers'}</a><a class="button light" href={base+'/topics/'}>{zh?'知识点汇编':'Browse by topic'}</a></div></div></Layout>

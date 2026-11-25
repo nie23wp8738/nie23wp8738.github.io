@@ -1,24 +1,4 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Profile from '../components/Profile.astro';
 ---
-<Layout title="关于老师" current="about">
-  <article class="shell profile">
-    <h1 class="profile-title">王鹏飞 <span lang="en">Pengfei Wang</span></h1><p class="profile-deck">数学竞赛、英国大学入学考试与高中数学教师。</p>
-    <section class="profile-block"><h2>教育背景</h2>
-      <dl class="timeline">
-        <div><dt>2023 年入学</dt><dd>新加坡南洋理工大学 · 国立教育学院，博士研究生（已通过博士口试）</dd></div>
-        <div><dt>2022–2023</dt><dd>新加坡南洋理工大学 · 国立教育学院，硕士</dd></div>
-        <div><dt>2017–2020</dt><dd>上海大学，核技术及应用硕士</dd></div>
-        <div><dt>2012–2015</dt><dd>上海大学，生物工程本科</dd></div>
-      </dl>
-    </section>
-    <section class="profile-block"><h2>教学经历</h2>
-      <dl class="timeline">
-        <div><dt>数学竞赛</dt><dd>2015–2017 年从事数学竞赛教学。历年教授的竞赛课程包括 AMC、AIME、BMO 和中国高中数学联赛。</dd></div>
-        <div><dt>英国大学入学考试</dt><dd>教授 STEP、TMUA 和 ESAT 数学，涵盖证明写作、逻辑推理与限时解题。</dd></div>
-        <div><dt>高中与大学数学</dt><dd>教授上海高中数学及英国 A-Level 数学。2021–2022 年曾在上海商业会计学校兼职教授高等数学。</dd></div>
-      </dl>
-    </section>
-    <a class="textlink" href="/courses/">查看课程与讲义</a>
-  </article>
-</Layout>
+<Profile lang="en" />

@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { localPractice } from '../lib/catalog.js';
+import practice from '../data/problems.json';
+
+interface Props {
+  lang: 'en' | 'zh';
+  problem: typeof practice[number];
+}
+const { lang, problem } = Astro.props;
+const zh = lang === 'zh';
+const p = localPractice(problem, lang);
+const root = zh ? '/zh' : '';
+const topicHref = root + '/topics/?topic=' + encodeURIComponent(p.topicKey);
+const worksheetHref = root + '/problems/?add=' + encodeURIComponent(p.id) + '#worksheet';
+---
+<Layout title={p.title} current="problems" lang={lang}>
+  <article class="shell question">
+    <nav class="breadcrumb" aria-label={zh ? '当前位置' : 'Breadcrumb'}>
+      <a href={root + '/problems/?kind=practice'}>{zh ? '练习题库' : 'Practice bank'}</a>
+      <span aria-hidden="true"> / </span>
+      <a href={topicHref}>{p.topic}</a>
+    </nav>
+    <div class="question-meta">
+      {p.exam.join(' / ')} · {p.level} · {zh ? '原创练习（英文）' : 'Original practice'}
+    </div>
+    <h1>{p.title}</h1>
+    <p lang="en" class="statement">{p.statement}</p>
+    <div class="btnrow">
+      <a class="button" href={worksheetHref}>{zh ? '加入我的试卷' : 'Add to worksheet'}</a>
+      <a class="button light" href={topicHref}>{zh ? '同知识点练习' : 'More questions on this topic'}</a>
+    </div>
+    <details>
+      <summary>{zh ? '提示（英文）' : 'Hint'}</summary>
+      <p lang="en">{p.hint}</p>
+    </details>
+    <details>
+      <summary>{zh ? '答案与解析（英文）' : 'Answer and solutions'}</summary>
+      <p><strong>{zh ? '答案' : 'Answer'}</strong> <span lang="en">{p.answer}</span></p>
+      {p.solutions.map((solution: {title: string; text: string}) => (
+        <section lang="en"><h3>{solution.title}</h3><p>{solution.text}</p></section>
+      ))}
+    </details>
+  </article>
+</Layout>

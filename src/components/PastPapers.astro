@@ -1,0 +1,39 @@
+---
+import { getPastPapers, topicEntries, tagLabel } from '../lib/catalog.js';
+import '../styles/archive.css';
+const { lang = 'en' } = Astro.props;
+const zh = lang === 'zh';
+const papers = getPastPapers();
+const exams = [...new Set(papers.map(p => p.exam))].sort((a, b) => a.localeCompare(b));
+const years = [...new Set(papers.map(p => p.year))].sort((a, b) => b - a);
+const prefix = zh ? '/zh' : '';
+const tagLabels = Object.fromEntries([...new Set(papers.flatMap(p => (p.questions ?? []).flatMap(q => q.tags ?? [])))].map(tag => [tag,tagLabel(tag,lang)]));
+const topicLabels = Object.fromEntries(topicEntries.map(topic => [topic.key, zh ? topic.zh : topic.en]));
+---
+<section class="archive-shell shell" data-archive="papers" data-lang={lang}>
+  <header class="archive-hero">
+    <h1>{zh ? '历年真题' : 'Past papers'}</h1>
+    <p>{zh ? '按考试和年份查找原卷，或打开单题，在原题来源阅读题目。' : 'Browse papers by exam and year, or open an individual question at its source.'}</p>
+    <a class="arch-inline" href={prefix + '/topics/'}>{zh ? '按知识点查看真题' : 'Find questions by topic'}</a>
+  </header>
+  <div class="archive-search" role="search" aria-label={zh ? '筛选试卷' : 'Filter papers'}>
+    <label>{zh ? '考试' : 'Exam'}<select data-exam><option value="">{zh ? '所有考试' : 'All exams'}</option>{exams.map(exam => <option value={exam}>{exam}</option>)}</select></label>
+    <label>{zh ? '年份' : 'Year'}<select data-year><option value="">{zh ? '所有年份' : 'All years'}</option>{years.map(year => <option value={year}>{year}</option>)}</select></label>
+  </div>
+  <section class="arch-results" data-results aria-live="polite" aria-busy="true">
+    <p class="arch-muted" data-loading>{zh ? '正在加载试卷…' : 'Loading papers…'}</p>
+  </section>
+  <details class="arch-sources"><summary>{zh ? '题源与收录范围' : 'Sources and archive coverage'}</summary>
+    <ul>
+      <li>AMC 10 / AIME · <a href="https://live.poshenloh.com/past-contests/">LIVE by Po-Shen Loh</a> {zh ? '（经 MAA 授权发布）' : '(published with permission from the MAA)'}</li>
+      <li>STEP · <a href="https://step.maths.org/questions">{zh ? '剑桥大学真题库' : 'Cambridge STEP question database'}</a> · <a href="https://www.ocr.org.uk/students/step-mathematics/preparing-for-step/">{zh ? 'OCR 历年原卷' : 'OCR past papers'}</a></li>
+      <li>TMUA · <a href="https://esat-tmua.ac.uk/tmua-preparation-materials/">{zh ? 'UAT-UK 正式公开的 2016–2023 年历年卷' : 'UAT-UK’s released 2016–2023 past papers'}</a></li>
+    </ul>
+  </details>
+  <noscript><h2>{zh ? '试卷链接' : 'Paper links'}</h2>
+    <ul>{papers.map(p => <li><a href={p.url}>{p.exam} · {p.year} · {p.label}</a></li>)}</ul>
+  </noscript>
+  <script type="application/json" data-tags set:html={JSON.stringify(tagLabels).replace(/</g, '\\u003c')} />
+  <script type="application/json" data-topics set:html={JSON.stringify(topicLabels).replace(/</g, '\\u003c')} />
+</section>
+<script type="module" src="/archive.js" is:inline></script>

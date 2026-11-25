@@ -1,0 +1,23 @@
+.archive-shell{padding-block:38px 12px;min-height:55vh}
+.archive-hero{padding-bottom:24px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.archive-hero h1{font:650 clamp(36px,4.1vw,56px)/1.16 var(--serif);letter-spacing:-.025em;margin:0 0 11px}
+.archive-hero p{max-width:65ch;color:var(--muted);line-height:1.7;margin:0}
+.arch-inline,.arch-page-heading a,.arch-row a,.arch-paging a,.arch-bulk a,.arch-results .arch-minor{color:var(--accent);font-weight:600;text-underline-offset:3px}
+.archive-hero .arch-inline{display:inline-block;margin-top:10px}
+.archive-search{display:flex;gap:14px;flex-wrap:wrap;margin-block:0 24px;align-items:flex-end}
+.archive-search label{display:grid;gap:4px;font-size:14px;font-weight:650;min-width:145px;color:var(--ink)}
+.archive-search select{appearance:none;border:1px solid #a9b5bf;border-radius:3px;padding:9px 36px 9px 11px;width:100%;max-width:300px;font-size:16px;color:var(--ink);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='m1 1 4 4 4-4' stroke='%23516174' stroke-width='1.6' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center}
+.arch-results{margin-block:0 21px}.arch-results h2{font:650 clamp(24px,2.6vw,35px)/1.3 var(--serif);margin:0 0 7px}.arch-muted,.arch-meta,.arch-count{color:var(--muted)}
+.arch-count{font-size:15px}.arch-note{font-size:15px;max-width:76ch;line-height:1.6;color:var(--muted);margin:6px 0}
+.arch-links{display:flex;flex-wrap:wrap;gap:8px 17px;align-items:center}
+.arch-page-heading{margin:0 0 17px}.arch-page-heading .arch-links{margin:8px 0 12px}
+.arch-row{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding:13px 5px;scroll-margin-top:15px}.arch-row:last-of-type{border-bottom:1px solid var(--line)}
+.arch-row:target{background:#f3f1e7;box-shadow:inset 3px 0 #a56532;padding-left:12px}
+.arch-row-main{min-width:0}.arch-row h3{font:650 20px/1.4 var(--serif);margin:0}.arch-row h3 a{color:var(--ink);text-decoration:none;font-weight:inherit}.arch-row h3 a:hover{text-decoration:underline}
+.arch-row a,.arch-results button{overflow-wrap:anywhere}.arch-row .arch-links{font-size:14px;justify-content:flex-end}.arch-meta{font-size:14px;line-height:1.5}.arch-row code{font:inherit}
+.arch-paging{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:13px;flex-wrap:wrap}.arch-paging a,.arch-bulk a,.arch-results button{font:600 14px/1.5 var(--sans);padding:8px 12px;border:1px solid #adbac3;border-radius:3px;background:white;color:var(--ink);text-decoration:none}.arch-paging a:hover,.arch-bulk a:hover,.arch-results button:hover{border-color:var(--navy);background:#f1f5f5}
+.arch-bulk{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;border:1px solid #bbc7ce;background:#f4f7f8;padding:10px 13px;margin-top:12px}.arch-bulk a{background:var(--navy);color:#fff;border-color:var(--navy)}.arch-bulk a:hover{background:#304963;color:white}.arch-pick{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:var(--muted);font-size:14px}.arch-pick input{accent-color:var(--navy);width:17px;height:17px}
+.arch-topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:8px;margin-bottom:24px}.arch-topic-grid a{display:flex;flex-direction:column;align-items:flex-start;gap:3px;border:1px solid var(--line);padding:10px 12px;text-decoration:none}.arch-topic-grid a:hover,.arch-topic-grid a[aria-current]{border-color:var(--navy);background:#f1f5f5}.arch-topic-grid a[aria-current]{box-shadow:inset 3px 0 var(--navy)}.arch-topic-grid strong{font:650 17px/1.3 var(--serif)}.arch-topic-grid small,.arch-bulk small{font-size:13px;color:var(--muted)}.arch-topic-target{scroll-margin-top:15px}.archive-shell [hidden]{display:none!important}
+@media(max-width:650px){.archive-shell{padding-top:25px}.archive-hero{margin-bottom:16px;padding-bottom:16px}.archive-search{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.archive-search label{min-width:0}.archive-search select{max-width:none}.arch-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.arch-topic-grid a{padding:8px}.arch-row{align-items:flex-start;flex-direction:column;gap:7px}.arch-row .arch-links{justify-content:flex-start;gap:6px 14px}.arch-bulk{gap:5px 10px}.arch-paging{font-size:14px}}
+
+.arch-sources{margin-top:30px;border-top:1px solid var(--line);padding-block:15px;color:var(--muted)}.arch-sources summary{cursor:pointer;font-weight:600}.arch-sources a{color:var(--navy);text-underline-offset:3px}

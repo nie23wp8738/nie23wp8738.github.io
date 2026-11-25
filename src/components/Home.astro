@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridFigure from './GridFigure.astro';
+import {getPastPapers,topicLabel} from '../lib/catalog.js';
+const {lang='en'} = Astro.props;
+const zh = lang === 'zh';
+const root = zh ? '/zh' : '';
+const papers = getPastPapers();
+const exams = ['AMC 10','AIME','STEP','TMUA'].map(exam => {
+  const items = papers.filter(p=>p.exam === exam);
+  const years = items.map(p=>p.year);
+  return {exam, papers:items.length, count:items.reduce((sum,p)=>sum+(p.questions?.length||0),0),
+    range:years.length?Math.min(...years)+'–'+Math.max(...years):''};
+}).filter(exam=>exam.papers);
+const featuredTopics = ['algebra','geometry','counting','number-theory','logic','calculus','probability','mechanics'];
+---
+<Layout lang={lang} current="home" title={zh?'首页':'Home'}>
+  <div class="shell">
+    <section class="home-hero archive-hero">
+      <div class="hero-text">
+        <h1>{zh?'数学真题库':'Mathematics'}<br class="hero-break" />{zh?'':'Question Bank'}</h1>
+        <p>{zh?'按考试和年份查阅历年真题，或按知识点跨试卷选题，组成自己的练习卷。':'Explore past mathematics questions by exam and year, or choose a topic and build your own worksheet.'}</p>
+        <div class="btnrow">
+          <a class="button" href={root+'/past-papers/'}>{zh?'浏览历年真题':'Browse past papers'}</a>
+          <a class="button light" href={root+'/topics/'}>{zh?'按知识点查题':'Browse by topic'}</a>
+        </div>
+      </div>
+      <a class="feature-card" href={root+'/problems/count-detour/'}>
+        <figure><GridFigure zh={zh} /><figcaption><span class="fig-title">{zh?'绕开封闭路口':'Around a closed intersection'}</span><span class="fig-type">{zh?'原创练习 · 组合计数':'Original practice · Counting'}</span></figcaption></figure>
+      </a>
+    </section>
+    <section class="home-section"><div class="section-top"><h2>{zh?'按考试找题':'Browse by exam'}</h2><a class="section-link" href={root+'/past-papers/'}>{zh?'全部试卷':'All papers'}</a></div>
+      <div class="paper-family">{exams.map(({exam,papers,count,range})=><a class="course-tile" href={root+'/past-papers/?exam='+encodeURIComponent(exam)}>
+        <h3>{exam}</h3><small>{range}</small><p>{zh?papers+' 份试卷 · '+count.toLocaleString('en-US')+' 道题':papers+' papers · '+count.toLocaleString('en-US')+' questions'}</p>
+      </a>)}</div>
+    </section>
+    <section class="home-section"><div class="section-top"><h2>{zh?'按知识点找题':'Browse by topic'}</h2><a class="section-link" href={root+'/topics/'}>{zh?'全部专题':'All topics'}</a></div>
+      <div class="topic-links">{featuredTopics.map(t=><a href={root+'/topics/?topic='+t}>{topicLabel(t,lang)}</a>)}</div>
+    </section>
+  </div>
+</Layout>

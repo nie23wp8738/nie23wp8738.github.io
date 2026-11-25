@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Props {
+  lang: 'en' | 'zh';
+}
+const { lang } = Astro.props;
+const zh = lang === 'zh';
+const education = zh ? [
+  ['2023 年入学', '新加坡南洋理工大学国立教育学院，博士研究生，已通过博士口试。'],
+  ['2022–2023', '新加坡南洋理工大学国立教育学院，硕士。'],
+  ['2017–2020', '上海大学，核技术及应用硕士。'],
+  ['2012–2015', '上海大学，生物工程本科。']
+] : [
+  ['From 2023', 'Doctoral studies at the National Institute of Education, Nanyang Technological University, Singapore. Passed the doctoral oral examination.'],
+  ['2022–2023', 'Master’s degree, National Institute of Education, Nanyang Technological University, Singapore.'],
+  ['2017–2020', 'Master’s degree in Nuclear Technology and Applications, Shanghai University.'],
+  ['2012–2015', 'Bachelor’s degree in Bioengineering, Shanghai University.']
+];
+const teaching = zh ? [
+  ['数学竞赛', '2015–2017 年从事数学竞赛教学。历年教授的竞赛课程包括 AMC、AIME、BMO 和中国高中数学联赛。'],
+  ['英国大学入学考试', '教授 STEP、TMUA 和 ESAT 数学，涵盖证明写作、逻辑推理与限时解题。'],
+  ['高中与大学数学', '教授上海高中数学及英国 A-Level 数学。2021–2022 年曾在上海商业会计学校兼职教授高等数学。']
+] : [
+  ['Math competitions', 'Taught competition mathematics from 2015 to 2017. Contest teaching experience includes the AMC, AIME, BMO and China’s High School Mathematics League.'],
+  ['UK admissions tests', 'Teaches mathematics for STEP, TMUA and ESAT, including proof writing, logical reasoning and timed problem solving.'],
+  ['School and college mathematics', 'Teaches the Shanghai high school mathematics curriculum and UK A-level Mathematics. Taught higher mathematics part-time at Shanghai Commercial Accounting School in 2021–2022.']
+];
+const groups = [
+  {title: zh ? '教育背景' : 'Education', items: education},
+  {title: zh ? '教学经历' : 'Teaching experience', items: teaching}
+];
+---
+<Layout title={zh ? '关于老师' : 'About the teacher'} current="about" lang={lang}>
+  <article class="shell profile">
+    <h1 class="profile-title">{zh ? '王鹏飞' : 'Pengfei Wang'}</h1>
+    <p class="profile-deck">{zh ? '数学竞赛、英国大学入学考试与高中数学教师。' : 'Mathematics teacher specialising in competitions, UK university admissions tests and secondary school mathematics.'}</p>
+    {groups.map(group => (
+      <section class="profile-block">
+        <h2>{group.title}</h2>
+        <dl class="timeline">
+          {group.items.map(([label, detail]) => <div><dt>{label}</dt><dd>{detail}</dd></div>)}
+        </dl>
+      </section>
+    ))}
+  </article>
+</Layout>

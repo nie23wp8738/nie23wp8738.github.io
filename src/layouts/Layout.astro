@@ -1,27 +1,47 @@
 ---
 import '../styles/global.css';
-const { title, current = '', description = 'DR.WANG 的数学课程、专题讲义与分类习题。' } = Astro.props;
+import '../styles/site.css';
+const {title, current='', lang='en', description} = Astro.props;
+const zh = lang === 'zh';
+const root = zh ? '/zh' : '';
+const barePath = Astro.url.pathname.replace(/^\/zh(?=\/|$)/,'') || '/';
+const alternate = (zh ? '' : '/zh') + barePath;
 const nav = [
-  {id:'home',name:'首页',url:'/'}, {id:'courses',name:'课程讲义',url:'/courses/'},
-  {id:'problems',name:'分类题库',url:'/problems/'}, {id:'about',name:'关于老师',url:'/about/'}
+  ['home','Home','首页','/'], ['past','Past papers','历年真题','/past-papers/'],
+  ['topics','By topic','知识点汇编','/topics/'], ['problems','Build a worksheet','选题组卷','/problems/'],
+  ['about','About','关于老师','/about/']
 ];
+const brand = zh ? 'DR.WANG 数学题库' : 'DR.WANG Mathematics';
+const pageTitle = current === 'home' ? brand : title + ' · ' + brand;
+const meta = description || (zh ? '历年数学真题、知识点汇编与自选练习卷。' : 'Past mathematics papers, questions by topic, and printable worksheets.');
 ---
 <!doctype html>
-<html lang="zh-CN">
+<html lang={zh ? 'zh-CN' : 'en'}>
   <head>
     <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#192c45" />
-    <meta name="description" content={description} />
+    <meta name="theme-color" content="#192c45" /><meta name="description" content={meta} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>{title === '首页' ? 'DR.WANG 数学教室' : title + ' · DR.WANG 数学教室'}</title>
+    <link rel="alternate" hreflang="en" href={new URL(barePath,Astro.site)} />
+    <link rel="alternate" hreflang="zh-CN" href={new URL('/zh'+barePath,Astro.site)} />
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <a class="skip" href="#main-content">跳至正文</a>
+    <a class="skip" href="#main-content">{zh ? '跳至正文' : 'Skip to content'}</a>
     <header class="mast"><div class="shell mast-in">
-      <a class="brand" href="/" aria-label="DR.WANG 数学教室首页"><span class="brand-mark" aria-hidden="true">W</span><span>DR.WANG <span class="brand-small">数学教室</span></span></a>
-      <nav class="topnav" aria-label="主导航">{nav.map(n => <a href={n.url} aria-current={n.id === current ? 'page' : undefined}>{n.name}</a>)}</nav>
+      <a class="brand" href={root+'/'} aria-label={brand}><span class="brand-mark" aria-hidden="true">W</span><span>DR.WANG <span class="brand-small">{zh ? '数学题库' : 'Mathematics'}</span></span></a>
+      <nav class="topnav" aria-label={zh ? '主导航' : 'Main navigation'}>{nav.map(([id,en,cn,url])=><a href={root+url} aria-current={id===current?'page':undefined}>{zh?cn:en}</a>)}</nav>
+      <a href={alternate} class="locale" data-lang-switch data-path={alternate} hreflang={zh?'en':'zh-CN'} lang={zh?'en':'zh-CN'} aria-label={zh?'Switch to English':'切换到中文'}>{zh?'English':'中文'}</a>
     </div></header>
     <main id="main-content"><slot /></main>
-    <footer class="footer"><div class="shell footer-in"><a href="/" class="foot-brand">DR.WANG 数学教室</a><div><a href="/courses/">课程讲义</a><a href="/problems/">分类题库</a><a href="/about/">关于老师</a></div></div></footer>
+    <footer class="footer"><div class="shell footer-in"><a href={root+'/'} class="foot-brand">{brand}</a><div><a href={root+'/past-papers/'}>{zh?'历年真题':'Past papers'}</a><a href={root+'/topics/'}>{zh?'知识点汇编':'By topic'}</a><a href={root+'/about/'}>{zh?'关于老师':'About'}</a></div></div></footer>
+    <script is:inline>
+      (() => {
+        const link = document.querySelector('[data-lang-switch]');
+        const sync = () => { link.href = link.dataset.path + location.search + location.hash; };
+        sync();
+        for (const type of ['focus','pointerdown','click','contextmenu','auxclick']) link.addEventListener(type,sync);
+        for (const type of ['hashchange','popstate','pageshow','bank:urlchange']) window.addEventListener(type,sync);
+      })();
+    </script>
   </body>
 </html>
