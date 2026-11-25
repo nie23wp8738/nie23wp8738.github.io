@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 324 198" width="324" height="198">
+  <rect width="324" height="198" fill="white"/>
+  <g stroke="#344855" stroke-width="1.7"><path d="M19 12h125v125H19z" fill="#dbe4ec"/><path d="M144 82h55v55h-55z" fill="#e6edf2"/><path d="M199 82h100v100H199z" fill="#dbe4ec"/><path d="M144 12h155v70H144z M19 137h180v45H19z" fill="none"/></g>
+  <text x="80" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >S₁</text>
+  <text x="171.5" y="116" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >S₂</text>
+  <text x="249" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >S₃</text>
+  <text x="110" y="166" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >R₁</text>
+  <text x="221" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >R₂</text>
+</svg>

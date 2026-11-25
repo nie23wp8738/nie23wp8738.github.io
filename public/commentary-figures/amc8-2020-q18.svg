@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 146" width="270" height="146">
+  <rect width="270" height="146" fill="white"/>
+  <path d="M27 108 A105 105 0 0 1 237 108 Z" fill="none" stroke="#344855" stroke-width="1.8"/>
+  <rect x="82.59" y="15.35" width="98.82" height="92.65" fill="#dce5eb" stroke="#344855" stroke-width="1.7"/>
+  <path d="M27 108 H237" fill="none" stroke="#344855" stroke-width="1.8"/>
+  <text x="23" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >F</text>
+  <text x="81" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >D</text>
+  <text x="184" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >A</text>
+  <text x="240" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >E</text>
+  <text x="75" y="18" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >C</text>
+  <text x="190" y="18" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >B</text>
+  <text x="53" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >9</text>
+  <text x="132" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >16</text>
+  <text x="209" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >9</text>
+</svg>

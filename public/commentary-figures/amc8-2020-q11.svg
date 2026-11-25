@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310" height="130" viewBox="0 0 310 130" role="img">
+  <title>Departure and arrival positions read from the journey plots</title>
+  <rect width="310" height="130" fill="#fff"/>
+  <g font-family="serif" fill="#233a46" font-size="13">
+  <line x1="63" y1="89" x2="290" y2="89" stroke="#243843" stroke-width="1.2"/>
+  <line x1="63" y1="89" x2="63" y2="26" stroke="#243843" stroke-width="1.2"/>
+  <line x1="133" y1="89" x2="133" y2="93" stroke="#243843" stroke-width="1"/>
+  <text x="133" y="106" text-anchor="middle">10</text>
+  <line x1="203" y1="89" x2="203" y2="93" stroke="#243843" stroke-width="1"/>
+  <text x="203" y="106" text-anchor="middle">20</text>
+  <line x1="273" y1="89" x2="273" y2="93" stroke="#243843" stroke-width="1"/>
+  <text x="273" y="106" text-anchor="middle">30</text>
+  <text x="53" y="99" text-anchor="middle">0</text>
+  <text x="54" y="40" text-anchor="middle">6</text>
+  <text x="27" y="21" text-anchor="middle">miles</text>
+  <text x="241" y="124" text-anchor="middle">minutes</text>
+  <path d="M63 36 H273 M133 36 V89 M273 36 V89" fill="none" stroke="#80929b" stroke-width="1" stroke-dasharray="3 3"/>
+  <g fill="#233a46"><circle cx="63" cy="89" r="3"/><circle cx="133" cy="36" r="3"/><circle cx="273" cy="36" r="3"/></g>
+  <text x="133" y="24" text-anchor="middle">Naomi</text>
+  <text x="273" y="24" text-anchor="middle">Maya</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456 220" width="456" height="220">
+  <rect width="456" height="220" fill="white"/>
+  <path d="M 51 189 H 438" stroke="#a7adb4" stroke-width=".8"/>
+  <text x="28" y="194" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >0</text>
+  <path d="M 51 151 H 438" stroke="#a7adb4" stroke-width=".8"/>
+  <text x="28" y="156" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >2000</text>
+  <path d="M 51 113 H 438" stroke="#a7adb4" stroke-width=".8"/>
+  <text x="28" y="118" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >4000</text>
+  <path d="M 51 75 H 438" stroke="#a7adb4" stroke-width=".8"/>
+  <text x="28" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >6000</text>
+  <path d="M 51 37 H 438" stroke="#a7adb4" stroke-width=".8"/>
+  <text x="28" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >8000</text>
+  <rect x="55" y="22.75" width="14" height="166.25" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="74" y="116.80" width="14" height="72.20" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="93" y="94.00" width="14" height="95.00" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="112" y="133.90" width="14" height="55.10" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="131" y="67.40" width="14" height="121.60" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="150" y="46.50" width="14" height="142.50" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="169" y="111.10" width="14" height="77.90" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="188" y="162.40" width="14" height="26.60" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="207" y="139.60" width="14" height="49.40" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="226" y="161.07" width="14" height="27.93" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="245" y="139.60" width="14" height="49.40" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="264" y="54.10" width="14" height="134.90" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="283" y="111.67" width="14" height="77.33" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="302" y="46.50" width="14" height="142.50" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="321" y="56.00" width="14" height="133.00" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="340" y="35.10" width="14" height="153.90" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="359" y="152.90" width="14" height="36.10" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="378" y="158.60" width="14" height="30.40" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="397" y="77.85" width="14" height="111.15" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <rect x="416" y="79.75" width="14" height="109.25" fill="#aeb9c6" stroke="#526779" stroke-width=".8"/>
+  <path d="M51 13 V189 H438" fill="none" stroke="#263540" stroke-width="1.4"/>
+  <path d="M51 98.38h5 M59 98.38h5 M67 98.38h5 M75 98.38h5 M83 98.38h5 M91 98.38h5 M99 98.38h5 M107 98.38h5 M115 98.38h5 M123 98.38h5 M131 98.38h5 M139 98.38h5 M147 98.38h5 M155 98.38h5 M163 98.38h5 M171 98.38h5 M179 98.38h5 M187 98.38h5 M195 98.38h5 M203 98.38h5 M211 98.38h5 M219 98.38h5 M227 98.38h5 M235 98.38h5 M243 98.38h5 M251 98.38h5 M259 98.38h5 M267 98.38h5 M275 98.38h5 M283 98.38h5 M291 98.38h5 M299 98.38h5 M307 98.38h5 M315 98.38h5 M323 98.38h5 M331 98.38h5 M339 98.38h5 M347 98.38h5 M355 98.38h5 M363 98.38h5 M371 98.38h5 M379 98.38h5 M387 98.38h5 M395 98.38h5 M403 98.38h5 M411 98.38h5 M419 98.38h5 M427 98.38h5 M435 98.38h3" fill="none" stroke="#18202c" stroke-width="2"/>
+  <text x="62" y="209" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >1</text>
+  <text x="138" y="209" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >5</text>
+  <text x="233" y="209" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >10</text>
+  <text x="328" y="209" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >15</text>
+  <text x="423" y="209" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >20</text>
+</svg>

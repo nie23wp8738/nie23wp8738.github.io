@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282 195" width="282" height="195">
+  <rect width="282" height="195" fill="white"/>
+  <g fill="none" stroke="#344855" stroke-width="1.8"><path d="M42 22 H247 L43 166 Z M143 22 L145 94 M143 22 L42.5 94"/></g>
+  <circle cx="42" cy="22" r="3.5" fill="#18202c"/>
+  <circle cx="143" cy="22" r="3.5" fill="#18202c"/>
+  <circle cx="247" cy="22" r="3.5" fill="#18202c"/>
+  <circle cx="145" cy="94" r="3.5" fill="#18202c"/>
+  <circle cx="43" cy="166" r="3.5" fill="#18202c"/>
+  <circle cx="42.5" cy="94" r="3.5" fill="#18202c"/>
+  <text x="35" y="15" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >A</text>
+  <text x="143" y="15" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >B</text>
+  <text x="257" y="20" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >C</text>
+  <text x="158" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >D</text>
+  <text x="45" y="185" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >E</text>
+  <text x="29" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#18202c" >F</text>
+</svg>

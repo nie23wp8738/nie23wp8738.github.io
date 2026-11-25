@@ -1,0 +1,935 @@
+{
+  "amc8-2020-q1": {
+    "summary": "Measure all ingredients in cups. A batch of lemonade uses three cups of lemon juice, twice that volume of sugar, and four times the sugar volume in water. How many cups of water go into the batch? Options: A $6$, B $8$, C $12$, D $18$, E $24$.",
+    "summaryZh": "各原料均以杯计量。一份柠檬饮料用 $3$ 杯柠檬汁，糖的体积是柠檬汁的两倍，水的体积是糖的四倍。需要多少杯水？ 选项为 A $6$，B $8$，C $12$，D $18$，E $24$。",
+    "answer": "E. $24$ cups.",
+    "answerZh": "E．$24$ 杯。",
+    "methods": [
+      {
+        "title": "Follow the two ratios",
+        "titleZh": "按顺序使用两个倍数",
+        "topics": [
+          {
+            "en": "Ratio and proportion",
+            "zh": "比与比例"
+          }
+        ],
+        "steps": [
+          "The sugar occupies $2\\cdot3=6$ cups. The water-to-sugar ratio is $4:1$, so the water occupies $4\\cdot6=24$ cups."
+        ],
+        "stepsZh": [
+          "糖的体积是 $2\\cdot3=6$ 杯。水与糖的体积比为 $4:1$，所以水有 $4\\cdot6=24$ 杯。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/1"
+  },
+  "amc8-2020-q2": {
+    "summary": "Four workers earn $15$, $20$, $25$ and $40$ dollars individually. They pool the money and each keeps the same share. How many dollars does the highest earner transfer to the others in total? Options: A $5$, B $10$, C $15$, D $20$, E $25$.",
+    "summaryZh": "四人各自赚了 $15$、$20$、$25$、$40$ 美元，决定将收入平均分配。原本收入最高的人总共要分给其他人多少美元？ 选项为 A $5$，B $10$，C $15$，D $20$，E $25$。",
+    "answer": "C. $15$ dollars.",
+    "answerZh": "C．$15$ 美元。",
+    "methods": [
+      {
+        "title": "Compare the largest contribution with one share",
+        "titleZh": "比较最高收入与平均数",
+        "topics": [
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Equal sharing",
+            "zh": "平均分配"
+          }
+        ],
+        "steps": [
+          "Their combined income is $15+20+25+40=100$ dollars. Each person's final share is $100/4=25$ dollars.",
+          "The worker starting with $40$ therefore gives away $40-25=15$ dollars. This covers the two shortfalls of $10$ and $5$ dollars."
+        ],
+        "stepsZh": [
+          "四人的总收入是 $15+20+25+40=100$ 美元，平均分后每人有 $100/4=25$ 美元。",
+          "原本有 $40$ 美元的人需分出 $40-25=15$ 美元，恰好填补另外两人分别少的 $10$ 和 $5$ 美元。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/2"
+  },
+  "amc8-2020-q3": {
+    "summary": "An entire rectangular plot, $6$ feet by $8$ feet, is planted at a density of $4$ strawberry plants per square foot. With a mean yield of $10$ berries per plant, how many berries are expected? Options: A $560$, B $960$, C $1120$, D $1920$, E $3840$.",
+    "summaryZh": "一块长 $8$ 英尺、宽 $6$ 英尺的长方形地全部种上草莓，每平方英尺种 $4$ 株。若平均每株可收获 $10$ 颗，预计总共收获多少颗草莓？ 选项为 A $560$，B $960$，C $1120$，D $1920$，E $3840$。",
+    "answer": "D. $1920$ berries.",
+    "answerZh": "D．$1920$ 颗。",
+    "methods": [
+      {
+        "title": "Apply the planting and yield rates",
+        "titleZh": "先算株数，再算产量",
+        "topics": [
+          {
+            "en": "Area of a rectangle",
+            "zh": "长方形面积"
+          },
+          {
+            "en": "Unit rates",
+            "zh": "单位量"
+          }
+        ],
+        "steps": [
+          "The area is $6\\cdot8=48$ square feet. Multiplying by $4$ plants per square foot gives $192$ plants.",
+          "Each contributes $10$ berries on average, giving $192\\cdot10=1920$ berries across the plot."
+        ],
+        "stepsZh": [
+          "土地面积为 $6\\cdot8=48$ 平方英尺，每平方英尺种 $4$ 株，共 $48\\cdot4=192$ 株。",
+          "每株平均收获 $10$ 颗，所以总产量预计为 $192\\cdot10=1920$ 颗。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/3"
+  },
+  "amc8-2020-q4": {
+    "summary": "Start with one dot at the centre of a regular hexagon. At each stage add the next complete hexagonal ring of equally spaced dots on the triangular lattice. The first three stages have zero, one and two rings around the centre. How many dots are in the fourth stage? Options: A $35$, B $37$, C $39$, D $43$, E $49$.",
+    "summaryZh": "在正六边形中心先放一个点。每次沿三角点阵在外层添上完整的一圈六边形点，点距始终相同。前三幅图分别有零圈、一圈、两圈外点。求第四幅图的点数。 选项为 A $35$，B $37$，C $39$，D $43$，E $49$。",
+    "answer": "B. $37$ dots.",
+    "answerZh": "B．$37$ 个点。",
+    "methods": [
+      {
+        "title": "Count each ring without doubling its corners",
+        "titleZh": "逐圈计数，避免重复计算顶点",
+        "topics": [
+          {
+            "en": "Hexagonal lattice",
+            "zh": "六边形点阵"
+          },
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "On ring $r$, each side has $r$ unit intervals. Count the dots on a side from its starting vertex up to but excluding its ending vertex. This assigns each dot once, so the ring contains $6r$ dots.",
+          "The fourth figure consists of the centre and rings $1,2,3$, hence $1+6(1+2+3)=37$ dots."
+        ],
+        "stepsZh": [
+          "第 $r$ 圈的每条边含 $r$ 个单位间隔。沿边从起点数起而不数终点，这样每个点恰数一次，每条边贡献 $r$ 个点，一圈共有 $6r$ 个点。",
+          "第四幅图含中心点以及第 $1,2,3$ 圈，共 $1+6(1+2+3)=37$ 个点。"
+        ]
+      },
+      {
+        "title": "Count rows across the hexagon",
+        "titleZh": "沿平行行计数",
+        "topics": [
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          {
+            "en": "Counting by rows",
+            "zh": "分行计数"
+          }
+        ],
+        "steps": [
+          "With three rings, the two outermost horizontal rows each have four dots. Moving inward grows each row by one until the middle row of seven dots.",
+          "The row counts are $4,5,6,7,6,5,4$. Their sum is $2(4+5+6)+7=37$."
+        ],
+        "stepsZh": [
+          "添至第三圈时，最上行与最下行各有四个点。每向中央靠近一行，点数就增加一个，中间一行有七个点。",
+          "各行点数依次为 $4,5,6,7,6,5,4$，总数为 $2(4+5+6)+7=37$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/4",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q4.svg",
+      "alt": "Three stages of the triangular lattice pattern, showing the central dot and up to two surrounding hexagonal rings.",
+      "altZh": "三角点阵的前三个阶段，中心点外依次有零圈、一圈、两圈六边形点。",
+      "printHeightPt": 120
+    }
+  },
+  "amc8-2020-q5": {
+    "summary": "A jug contains juice equal to three quarters of its capacity. All of it is shared equally among five cups. The juice in one cup is what percentage of the capacity of the full jug? Options: A $5\\%$, B $10\\%$, C $15\\%$, D $20\\%$, E $25\\%$.",
+    "summaryZh": "壶中果汁占壶总容量的四分之三。把这些果汁全部平均倒入五个杯子，每杯分得的量占壶总容量的百分之几？ 选项为 A $5\\%$，B $10\\%$，C $15\\%$，D $20\\%$，E $25\\%$。",
+    "answer": "C. $15\\%$.",
+    "answerZh": "C．$15\\%$。",
+    "methods": [
+      {
+        "title": "Use the full jug as one unit",
+        "titleZh": "把壶的总容量看作单位一",
+        "topics": [
+          {
+            "en": "Fractions of a whole",
+            "zh": "整体的分数"
+          },
+          {
+            "en": "Percentages",
+            "zh": "百分数"
+          }
+        ],
+        "steps": [
+          "One cup gets $\\frac15\\cdot\\frac34=\\frac3{20}$ of the full capacity.",
+          "Since $\\frac3{20}=\\frac{15}{100}$, the requested percentage is $15\\%$."
+        ],
+        "stepsZh": [
+          "每杯得到现有果汁的五分之一，即全壶容量的 $\\frac15\\cdot\\frac34=\\frac3{20}$。",
+          "由 $\\frac3{20}=\\frac{15}{100}$，所求为 $15\\%$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/5"
+  },
+  "amc8-2020-q6": {
+    "summary": "Five single-seat train cars are numbered from front to back. Aaron, Darren, Karen, Maren and Sharon occupy one car each. Maren is last. Aaron is immediately behind Sharon and is behind Darren. Karen and Darren have at least one rider between them. Who occupies car $3$? Options: A Aaron, B Darren, C Karen, D Maren, E Sharon.",
+    "summaryZh": "五节单座车厢从前向后编号，Aaron、Darren、Karen、Maren、Sharon 每人占一节。Maren 在末节，Aaron 紧跟在 Sharon 后面，Darren 在 Aaron 前面。Karen 与 Darren 中间至少隔一人。第 $3$ 节是谁？ 选项为 A Aaron，B Darren，C Karen，D Maren，E Sharon。",
+    "answer": "A. Aaron.",
+    "answerZh": "A．Aaron。",
+    "methods": [
+      {
+        "title": "Place the ordered pair first",
+        "titleZh": "先给相邻且有先后的两人定位",
+        "topics": [
+          {
+            "en": "Ordering constraints",
+            "zh": "顺序约束"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "Maren occupies car $5$. Sharon and Aaron must form an adjacent pair among the first four. They cannot take cars $1,2$, since Darren must be ahead of Aaron and car $1$ would already be taken.",
+          "If the pair takes cars $3,4$, Darren and Karen must take $1,2$ and would be adjacent. Thus the pair takes $2,3$, with Aaron in $3$. The remaining order from front to back is Darren, Sharon, Aaron, Karen, Maren, which satisfies all the conditions."
+        ],
+        "stepsZh": [
+          "Maren 占第 $5$ 节，Sharon 和 Aaron 须按此前后顺序占前四节中相邻的两节。两人不能占第 $1,2$ 节，否则 Aaron 前面唯一一节已被 Sharon 占据，无法安排 Darren。",
+          "若两人占第 $3,4$ 节，Darren、Karen 就只能占第 $1,2$ 节，两人相邻，也不符合条件。因此两人占第 $2,3$ 节，Aaron 在第 $3$ 节。由前至后排列为 Darren、Sharon、Aaron、Karen、Maren，满足全部条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/6"
+  },
+  "amc8-2020-q7": {
+    "summary": "Count the integers strictly between $2020$ and $2400$ whose four digits increase strictly from left to right. Options: A $9$, B $10$, C $15$, D $21$, E $28$.",
+    "summaryZh": "在 $2020$ 与 $2400$ 之间，四个数位上的数字从左到右严格递增的整数有多少个？ 选项为 A $9$，B $10$，C $15$，D $21$，E $28$。",
+    "answer": "C. $15$.",
+    "answerZh": "C．$15$ 个。",
+    "methods": [
+      {
+        "title": "Choose the final pair of digits",
+        "titleZh": "选取最后两个数位的数字",
+        "topics": [
+          {
+            "en": "Combinations",
+            "zh": "组合数"
+          },
+          {
+            "en": "Place value",
+            "zh": "十进制位值"
+          }
+        ],
+        "steps": [
+          "The thousands digit must be $2$. The hundreds digit is greater than $2$ and cannot exceed $3$ under the upper bound, so the prefix is $23$.",
+          "Any two of $4,5,6,7,8,9$ can follow in their unique increasing order. Each resulting number lies in the interval, so the count is $\\binom62=6\\cdot5/2=15$."
+        ],
+        "stepsZh": [
+          "千位只能是 $2$。百位必须大于 $2$，又因这个数小于 $2400$ 而不能超过 $3$，故前两位为 $23$。",
+          "从 $4,5,6,7,8,9$ 中选出任意两个数字，按从小到大的顺序填在末两位即可。所得各数均在范围内，共 $\\binom62=6\\cdot5/2=15$ 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/7"
+  },
+  "amc8-2020-q8": {
+    "summary": "A collection of $2020$ coins uses only one-cent and five-cent denominations, with both present. Among all such collections, how far apart are the maximum and minimum total values, in cents? Options: A $8062$, B $8068$, C $8072$, D $8076$, E $8082$.",
+    "summaryZh": "共有 $2020$ 枚硬币，每枚是 $1$ 美分或 $5$ 美分，两种面值各至少一枚。总面值的最大可能值和最小可能值相差多少美分？ 选项为 A $8062$，B $8068$，C $8072$，D $8076$，E $8082$。",
+    "answer": "C. $8072$ cents.",
+    "answerZh": "C．$8072$ 美分。",
+    "methods": [
+      {
+        "title": "Hold the two compulsory coins fixed",
+        "titleZh": "固定两枚必有的硬币",
+        "topics": [
+          {
+            "en": "Extremal values",
+            "zh": "最大值与最小值"
+          },
+          {
+            "en": "Exchange argument",
+            "zh": "交换法"
+          }
+        ],
+        "steps": [
+          "Reserve one coin of each denomination. Each of the remaining $2018$ positions can hold either coin, and changing a one-cent coin into a five-cent coin raises the value by $4$ cents.",
+          "For the minimum fill all those positions with one-cent coins. For the maximum change every one to a five-cent coin. The difference is $2018\\cdot4=8072$ cents."
+        ],
+        "stepsZh": [
+          "先保留两种硬币各一枚，剩余 $2018$ 个位置都可任选面值。每把一枚 $1$ 美分换成 $5$ 美分，总额就增加 $4$ 美分。",
+          "其余全放 $1$ 美分时总额最小，全部换成 $5$ 美分时总额最大。两者相差 $2018\\cdot4=8072$ 美分。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/8"
+  },
+  "amc8-2020-q9": {
+    "summary": "A cube of cake of side $4$ inches is iced on its top and four vertical faces. Its base is bare. Parallel cuts divide it into $4$ layers, each a $4\\times4$ array of unit cubes. How many cubes have exactly two iced faces? Options: A $12$, B $16$, C $18$, D $20$, E $24$.",
+    "summaryZh": "棱长 $4$ 英寸的立方体蛋糕，顶面和四个侧面涂有糖霜，底面不涂。沿平行于各面的方向切成 $4$ 层，每层是 $4\\times4$ 个单位小立方体。恰有两个面带糖霜的小块有多少个？ 选项为 A $12$，B $16$，C $18$，D $20$，E $24$。",
+    "answer": "D. $20$ cubes.",
+    "answerZh": "D．$20$ 块。",
+    "methods": [
+      {
+        "title": "Classify cubes by height",
+        "titleZh": "按所在高度分层",
+        "topics": [
+          {
+            "en": "Cube faces and edges",
+            "zh": "立方体的面与棱"
+          },
+          {
+            "en": "Counting by layers",
+            "zh": "分层计数"
+          }
+        ],
+        "steps": [
+          "In the top layer, every small cube has an iced upper face, so it must touch exactly one vertical face as well. Each edge of this layer has two noncorner cubes, giving $4\\cdot2=8$.",
+          "In each of the other three layers, icing can occur only on the vertical faces. Exactly the four corner cubes touch two of them. The total is $8+3\\cdot4=20$."
+        ],
+        "stepsZh": [
+          "顶层每块的上面都有糖霜，因此还要恰好接触一个侧面。这些小块位于顶层四条边上但不在角上，每边两块，共 $4\\cdot2=8$ 块。",
+          "其余三层只可能从侧面沾到糖霜。每层恰有四个角上的小块同时接触两个侧面，所以共有 $8+3\\cdot4=20$ 块。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/9",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q9.svg",
+      "alt": "A cube divided into four unit segments in each direction; icing covers the top and the four side faces.",
+      "altZh": "立方体的三个方向都四等分；顶面和四个侧面有糖霜。",
+      "printHeightPt": 130
+    }
+  },
+  "amc8-2020-q10": {
+    "summary": "Arrange four distinct marbles labelled $A,B,S,T$ along a shelf, one per position. Count the arrangements in which $S$ and $T$ occupy nonconsecutive positions. Options: A $6$, B $8$, C $12$, D $18$, E $24$.",
+    "summaryZh": "把四颗互不相同的弹珠 $A,B,S,T$ 在架上排成一列，每个位置一颗。要求 $S$ 与 $T$ 不相邻，共有多少种排列？ 选项为 A $6$，B $8$，C $12$，D $18$，E $24$。",
+    "answer": "C. $12$ arrangements.",
+    "answerZh": "C．$12$ 种。",
+    "methods": [
+      {
+        "title": "Subtract arrangements containing the forbidden pair",
+        "titleZh": "扣除相邻的排列",
+        "topics": [
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          },
+          {
+            "en": "Block permutations",
+            "zh": "捆绑法"
+          }
+        ],
+        "steps": [
+          "Without restrictions there are $4!=24$ rows. When $S$ and $T$ are adjacent, merge them into one block.",
+          "The block and the remaining two marbles give $3!$ orders, and the block can be $ST$ or $TS$. Subtracting gives $24-2\\cdot3!=12$."
+        ],
+        "stepsZh": [
+          "无条件限制时共有 $4!=24$ 种。对 $S,T$ 相邻的情形，把这两颗弹珠看作一块。",
+          "此块连同另两颗弹珠有 $3!$ 种排法，块内又可为 $ST$ 或 $TS$。故所求为 $24-2\\cdot3!=12$ 种。"
+        ]
+      },
+      {
+        "title": "Insert the two marbles into separate gaps",
+        "titleZh": "在不同空隙插入指定弹珠",
+        "topics": [
+          {
+            "en": "Gap method",
+            "zh": "插空法"
+          },
+          {
+            "en": "Product rule",
+            "zh": "乘法原理"
+          }
+        ],
+        "steps": [
+          "Order $A$ and $B$ first, in either of two ways. They determine three gaps: before, between and after.",
+          "Put $S$ in any of the three gaps and $T$ in either remaining gap. This gives $2\\cdot3\\cdot2=12$ rows, each counted once."
+        ],
+        "stepsZh": [
+          "先排 $A,B$，有两种顺序。它们前面、中间、后面一共形成三个空隙。",
+          "从三个空隙中任选一个放 $S$，再从另外两个空隙中选一个放 $T$。每种合法排列恰好对应一种选法，共 $2\\cdot3\\cdot2=12$ 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/10"
+  },
+  "amc8-2020-q11": {
+    "summary": "Maya cycles and Naomi takes a bus on a $6$-mile trip. Their distance-versus-time plots start together at $(0,0)$. The first arrival at $6$ miles is at minute $30$ for Maya and minute $10$ for Naomi. By how many miles per hour does the faster overall average speed exceed the slower one? Use the full elapsed time, including stops. Options: A $6$, B $12$, C $18$, D $20$, E $24$.",
+    "summaryZh": "Maya 骑车、Naomi 乘公交走完同一段 $6$ 英里路程。两人的路程—时间图都从 $(0,0)$ 出发。Maya 在第 $30$ 分钟首次到达 $6$ 英里处，Naomi 在第 $10$ 分钟到达。用包含停车时间的全程耗时计算，两人的平均速率相差多少英里/小时？ 选项为 A $6$，B $12$，C $18$，D $20$，E $24$。",
+    "answer": "E. $24$ miles per hour.",
+    "answerZh": "E．$24$ 英里/小时。",
+    "methods": [
+      {
+        "title": "Read the endpoints and convert the time unit",
+        "titleZh": "读出起终点并统一时间单位",
+        "topics": [
+          {
+            "en": "Distance-time graphs",
+            "zh": "路程—时间图"
+          },
+          {
+            "en": "Average speed",
+            "zh": "平均速率"
+          },
+          {
+            "en": "Unit conversion",
+            "zh": "单位换算"
+          }
+        ],
+        "steps": [
+          "Maya's $30$ minutes equal $1/2$ hour and Naomi's $10$ minutes equal $1/6$ hour. Both cover the full $6$ miles.",
+          "Their average speeds are $6/(1/2)=12$ and $6/(1/6)=36$ miles per hour respectively. Subtracting gives $36-12=24$ miles per hour."
+        ],
+        "stepsZh": [
+          "Maya 共用 $30$ 分钟，即 $1/2$ 小时；Naomi 共用 $10$ 分钟，即 $1/6$ 小时。两者总路程均为 $6$ 英里。",
+          "各自的平均速率为 $6/(1/2)=12$ 和 $6/(1/6)=36$ 英里/小时，故相差 $36-12=24$ 英里/小时。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/11",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q11.svg",
+      "alt": "Start and arrival points only. Both travel six miles; Naomi arrives at ten minutes and Maya at thirty.",
+      "altZh": "仅画出起点和到达时的点。两人均走过六英里，Naomi 用十分钟，Maya 用三十分钟。",
+      "printHeightPt": 130
+    }
+  },
+  "amc8-2020-q12": {
+    "summary": "For a positive integer $k$, write $k!=1\\cdot2\\cdots k$. Determine the positive integer $N$ from $5!\\,9!=12\\,N!$. Options: A $10$, B $11$, C $12$, D $13$, E $14$.",
+    "summaryZh": "正整数 $k$ 的阶乘记作 $k!=1\\cdot2\\cdots k$。若 $5!\\,9!=12\\,N!$，正整数 $N$ 是多少？ 选项为 A $10$，B $11$，C $12$，D $13$，E $14$。",
+    "answer": "A. $N=10$.",
+    "answerZh": "A．$N=10$。",
+    "methods": [
+      {
+        "title": "Match consecutive factorials",
+        "titleZh": "利用相邻阶乘的关系",
+        "topics": [
+          {
+            "en": "Factorials",
+            "zh": "阶乘"
+          }
+        ],
+        "steps": [
+          "Divide by $12$ and simplify the smaller factorial: $N!=(5!/12)\\,9!=(120/12)\\,9!=10\\cdot9!$.",
+          "The last expression is $10!$. Factorials increase strictly over positive integer indices, so $N=10$."
+        ],
+        "stepsZh": [
+          "两边除以 $12$，先化简较小的阶乘，得到 $N!=(5!/12)\\,9!=(120/12)\\,9!=10\\cdot9!$。",
+          "由阶乘定义，$10\\cdot9!=10!$。阶乘在正整数下标上严格递增，故 $N=10$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/12"
+  },
+  "amc8-2020-q13": {
+    "summary": "A drawer initially holds $6$ green, $18$ purple and $12$ orange socks. Only purple socks are added. Afterward a single sock drawn uniformly is purple with probability $60\\%$. How many socks were added? Choices: A $6$, B $9$, C $12$, D $18$, E $24$.",
+    "summaryZh": "抽屉里原有绿袜 $6$ 只、紫袜 $18$ 只、橙袜 $12$ 只。只添加紫袜后，等概率抽取一只袜子，抽中紫袜的概率为 $60\\%$。共添加了多少只袜子？选项为 A $6$，B $9$，C $12$，D $18$，E $24$。",
+    "answer": "B. $9$ socks.",
+    "answerZh": "B．$9$ 只。",
+    "methods": [
+      {
+        "title": "Use the unchanged number of other socks",
+        "titleZh": "利用非紫色袜子的数量不变",
+        "topics": [
+          {
+            "en": "Probability as a proportion",
+            "zh": "概率与比例"
+          },
+          {
+            "en": "Percentages",
+            "zh": "百分数"
+          }
+        ],
+        "steps": [
+          "There are $6+12=18$ non-purple socks both before and after the addition. Their final share is $1-0.60=0.40$.",
+          "The final total is therefore $18/0.40=45$. The original total was $6+18+12=36$, so $45-36=9$ socks were added."
+        ],
+        "stepsZh": [
+          "添加前后，非紫色袜子的数量都为 $6+12=18$。最后它们所占的比例为 $1-0.60=0.40$。",
+          "最后共有 $18/0.40=45$ 只袜子，原来共有 $6+18+12=36$ 只，故增加了 $45-36=9$ 只。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/13"
+  },
+  "amc8-2020-q14": {
+    "summary": "The chart represents the populations of $20$ cities. Its dashed horizontal line marks the mean, and adjacent labelled horizontal grid lines differ by $2{,}000$ people. Which proposed total population is closest? Choices: A $65{,}000$, B $75{,}000$, C $85{,}000$, D $95{,}000$, E $105{,}000$.",
+    "summaryZh": "柱状图表示 $20$ 座城市的人口，水平虚线标出平均人口，相邻两条带数字标注的水平网格线相差 $2{,}000$ 人。哪个选项最接近这 $20$ 座城市的总人口？选项为 A $65{,}000$，B $75{,}000$，C $85{,}000$，D $95{,}000$，E $105{,}000$。",
+    "answer": "D. Approximately $95{,}000$ people.",
+    "answerZh": "D．约 $95{,}000$ 人。",
+    "methods": [
+      {
+        "title": "Estimate the mean from the marked line",
+        "titleZh": "从虚线位置估计平均数",
+        "topics": [
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Reading charts",
+            "zh": "图表读数"
+          }
+        ],
+        "steps": [
+          "The mean line lies above $4{,}500$ and below $5{,}000$ on the population scale. Multiplying those bounds by the $20$ cities puts the total strictly between $90{,}000$ and $100{,}000$.",
+          "The endpoints of this interval are the midpoints between $95{,}000$ and its adjacent choices. Any total strictly inside the interval is therefore closest to $95{,}000$."
+        ],
+        "stepsZh": [
+          "按纵轴刻度，虚线高于 $4{,}500$ 而低于 $5{,}000$。将上下界分别乘以城市数 $20$，总人口严格介于 $90{,}000$ 与 $100{,}000$ 之间。",
+          "这两个端点分别是 $95{,}000$ 与相邻两个选项的中点。所以区间内任何可能的总人口都最接近 $95{,}000$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/14",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q14.svg",
+      "alt": "Twenty population bars with an average line between 4,500 and 5,000.",
+      "altZh": "二十根人口柱，平均值虚线的高度介于 4,500 与 5,000 之间。",
+      "printHeightPt": 124
+    }
+  },
+  "amc8-2020-q15": {
+    "summary": "Let $x\\ne0$. If $15\\%$ of $x$ and $20\\%$ of $y$ have the same value, what percentage of $x$ equals $y$? Give the numerical percentage. Choices: A $5$, B $35$, C $75$, D $133\\tfrac13$, E $300$.",
+    "summaryZh": "设 $x\\ne0$。若 $x$ 的 $15\\%$ 与 $y$ 的 $20\\%$ 相等，则 $y$ 是 $x$ 的百分之几？求百分号前的数。选项为 A $5$，B $35$，C $75$，D $133\\tfrac13$，E $300$。",
+    "answer": "C. $75$.",
+    "answerZh": "C．$75$。",
+    "methods": [
+      {
+        "title": "Turn the percentage comparison into a ratio",
+        "titleZh": "将百分数关系化为比值",
+        "topics": [
+          {
+            "en": "Ratios",
+            "zh": "比值"
+          },
+          {
+            "en": "Percentages",
+            "zh": "百分数"
+          }
+        ],
+        "steps": [
+          "The given equality becomes $15x=20y$ after multiplication by $100$. Since $x\\ne0$, divide by $20x$ to get $y/x=15/20=3/4$.",
+          "The requested percentage is $100(y/x)=100(3/4)=75$."
+        ],
+        "stepsZh": [
+          "题设等式两端同乘 $100$ 可得 $15x=20y$。由于 $x\\ne0$，再同除以 $20x$，得 $y/x=15/20=3/4$。",
+          "所求百分数的数值为 $100(y/x)=100(3/4)=75$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/15"
+  },
+  "amc8-2020-q16": {
+    "summary": "Assign the digits $1$ through $6$ bijectively to $A,B,C,D,E,F$. The five lines contain the following groups of labelled points: $ABC$, $AFE$, $BD$, $BF$ and $CDE$. Add the digits on each line separately. The five resulting sums add to $47$. Which digit is at $B$? Choices: A $1$, B $2$, C $3$, D $4$, E $5$.",
+    "summaryZh": "在 $A,B,C,D,E,F$ 六点上分别填入 $1$ 至 $6$，每个数字恰用一次。五条直线上的标记点组分别为 $ABC$、$AFE$、$BD$、$BF$ 和 $CDE$。先逐条直线将数字相加，再把这五个和相加，结果为 $47$。点 $B$ 上的数字是多少？选项为 A $1$，B $2$，C $3$，D $4$，E $5$。",
+    "answer": "E. $5$.",
+    "answerZh": "E．$5$。",
+    "methods": [
+      {
+        "title": "Count the multiplicity of each digit",
+        "titleZh": "数每个数字被累加的次数",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          },
+          {
+            "en": "Incidence counting",
+            "zh": "点线关联计数"
+          }
+        ],
+        "steps": [
+          "The digit at $B$ occurs on $ABC$, $BD$ and $BF$. Every other digit appears on exactly two of the listed lines.",
+          "Thus the combined sum counts every digit twice and then counts $B$ once more. It equals $2(1+2+3+4+5+6)+B=42+B$. Comparing with $47$ gives $B=5$."
+        ],
+        "stepsZh": [
+          "点 $B$ 位于 $ABC$、$BD$、$BF$ 三条直线上；检查其余各点，可见每点恰出现在两条直线上。",
+          "因此总和相当于把六个数字各算两次，再把 $B$ 多算一次，即 $2(1+2+3+4+5+6)+B=42+B$。由 $42+B=47$ 得 $B=5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/16",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q16.svg",
+      "alt": "Incidence diagram with lines ABC, AFE, BD, BF and CDE.",
+      "altZh": "点线关联图，五条线依次经过 ABC、AFE、BD、BF、CDE。",
+      "printHeightPt": 135
+    }
+  },
+  "amc8-2020-q17": {
+    "summary": "Among the positive divisors $d$ of $2020$, count those for which $d$ itself has at least four positive divisors. Choices: A $6$, B $7$, C $8$, D $9$, E $10$.",
+    "summaryZh": "在 $2020$ 的所有正因数 $d$ 中，有多少个数 $d$ 本身至少有四个正因数？选项为 A $6$，B $7$，C $8$，D $9$，E $10$。",
+    "answer": "B. $7$.",
+    "answerZh": "B．$7$ 个。",
+    "methods": [
+      {
+        "title": "Remove the divisors with one, two or three factors",
+        "titleZh": "从总数中扣除正因数个数不超过三的情形",
+        "topics": [
+          {
+            "en": "Prime factorisation",
+            "zh": "素因数分解"
+          },
+          {
+            "en": "Divisor counting",
+            "zh": "因数个数"
+          }
+        ],
+        "steps": [
+          "Since $2020=2^2\\cdot5\\cdot101$, its positive divisors number $(2+1)(1+1)(1+1)=12$.",
+          "An integer with at most three positive divisors must be $1$, a prime or a prime square: two distinct prime factors already supply four divisors, and $p^k$ has $k+1$. Here the excluded list is $1,2,5,101,4$. There are $12-5=7$ remaining divisors."
+        ],
+        "stepsZh": [
+          "将 $2020$ 分解为 $2^2\\cdot5\\cdot101$，故共有 $(2+1)(1+1)(1+1)=12$ 个正因数。",
+          "正因数个数不超过三的数只能是 $1$、素数或素数的平方：两个不同的素因子已能产生四个因数，而 $p^k$ 有 $k+1$ 个正因数。本题应扣除 $1,2,5,101,4$，剩下 $12-5=7$ 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/17"
+  },
+  "amc8-2020-q18": {
+    "summary": "On the diameter of a semicircle the points occur in the order $F,D,A,E$, with $FD=AE=9$ and $DA=16$. The rectangle $ABCD$ has base $DA$ on the diameter. Its upper vertices $C$ and $B$ lie on the arc directly above $D$ and $A$, respectively. Find the area of the rectangle. Choices: A $240$, B $248$, C $256$, D $264$, E $272$.",
+    "summaryZh": "在半圆的直径上，点从左到右依次为 $F,D,A,E$，其中 $FD=AE=9$、$DA=16$。矩形 $ABCD$ 的底边是 $DA$，上方两顶点 $C,B$ 分别在 $D,A$ 的正上方且落在半圆弧上。求矩形面积。选项为 A $240$，B $248$，C $256$，D $264$，E $272$。",
+    "answer": "A. $240$ square units.",
+    "answerZh": "A．$240$ 平方单位。",
+    "methods": [
+      {
+        "title": "Use a radius as the hypotenuse",
+        "titleZh": "以半径为斜边构造直角三角形",
+        "topics": [
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          },
+          {
+            "en": "Inscribed rectangles",
+            "zh": "内接矩形"
+          }
+        ],
+        "steps": [
+          "The diameter is $9+16+9=34$. Its midpoint $O$ is also the midpoint of $DA$, so $OA=8$ and $OB=17$.",
+          "Triangle $OAB$ is right-angled at $A$. Thus $AB^2=17^2-8^2=225$ and $AB=15$. Multiplying height by base gives $15\\cdot16=240$."
+        ],
+        "stepsZh": [
+          "直径长为 $9+16+9=34$。直径中点 $O$ 同时也是 $DA$ 的中点，故 $OA=8$、$OB=17$。",
+          "三角形 $OAB$ 在 $A$ 处为直角。因此 $AB^2=17^2-8^2=225$，即 $AB=15$。矩形面积为 $15\\cdot16=240$。"
+        ]
+      },
+      {
+        "title": "Use the altitude of a right triangle",
+        "titleZh": "用直角三角形的斜边高",
+        "topics": [
+          {
+            "en": "Thales' theorem",
+            "zh": "直径所对的圆周角"
+          },
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          }
+        ],
+        "steps": [
+          "Join $BF$ and $BE$. Because $FE$ is a diameter, $\\angle FBE=90^\\circ$ and $BA$ is the altitude to its hypotenuse.",
+          "The two smaller right triangles are similar. Their corresponding legs give $FA/BA=BA/AE$, so $BA^2=(9+16)\\cdot9=225$. Hence $BA=15$ and the required area is $16\\cdot15=240$."
+        ],
+        "stepsZh": [
+          "连接 $BF$、$BE$。因 $FE$ 为直径，$\\angle FBE=90^\\circ$，而 $BA$ 是斜边上的高。",
+          "高所分出的两个小直角三角形相似，故 $FA/BA=BA/AE$，于是 $BA^2=(9+16)\\cdot9=225$。得 $BA=15$，所求面积为 $16\\cdot15=240$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/18",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q18.svg",
+      "alt": "A rectangle on a diameter split into lengths 9, 16 and 9, with its top corners on the arc.",
+      "altZh": "矩形立在直径上，直径的三段长为 9、16、9，上方两顶点落在弧上。",
+      "printHeightPt": 135
+    }
+  },
+  "amc8-2020-q19": {
+    "summary": "Count the five-digit multiples of $15$ whose digits alternate between two different digits throughout. Thus their pattern is $ababa$ with $a\\ne b$. Choices: A $3$, B $4$, C $5$, D $6$, E $8$.",
+    "summaryZh": "一个五位数的十进制数字只由两个不同的数字交替组成，即形如 $ababa$ 且 $a\\ne b$。其中有多少个数是 $15$ 的倍数？选项为 A $3$，B $4$，C $5$，D $6$，E $8$。",
+    "answer": "B. $4$.",
+    "answerZh": "B．$4$ 个。",
+    "methods": [
+      {
+        "title": "Impose divisibility by five and by three",
+        "titleZh": "依次使用被五和被三整除的判据",
+        "topics": [
+          {
+            "en": "Divisibility tests",
+            "zh": "整除判别法"
+          },
+          {
+            "en": "Digit patterns",
+            "zh": "数字排列规律"
+          }
+        ],
+        "steps": [
+          "The units digit is also the leading digit $a$. A multiple of $5$ ends in $0$ or $5$, but a five-digit number cannot begin with $0$, so $a=5$.",
+          "The digit sum becomes $15+2b$. It is divisible by $3$ exactly for $b=0,3,6,9$. Each of these four digits differs from $5$ and produces one multiple of $15$."
+        ],
+        "stepsZh": [
+          "个位和首位都是 $a$。能被 $5$ 整除的数末位是 $0$ 或 $5$，而五位数的首位不能是 $0$，所以 $a=5$。",
+          "各位数字之和变为 $15+2b$。它能被 $3$ 整除，当且仅当 $b$ 为 $0,3,6,9$ 之一。这四个数字都与 $5$ 不同，各产生一个 $15$ 的倍数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/19"
+  },
+  "amc8-2020-q20": {
+    "summary": "Five trees in order have positive integer heights measured in metres. In each neighbouring pair one height is twice the other. The second tree measures $11$ m. The other four heights have been erased, as has the integer part of the mean, but its decimal part is $.2$. What is the mean in metres? Choices: A $22.2$, B $24.2$, C $33.2$, D $35.2$, E $37.2$.",
+    "summaryZh": "五棵树依次排列，树高均为整数米。每对相邻树中，一棵的高度恰是另一棵的两倍。第二棵高 $11$ 米，其余四个树高记录以及平均数的整数部分都已模糊，已知平均数的小数部分为 $0.2$。求平均高度（米）。选项为 A $22.2$，B $24.2$，C $33.2$，D $35.2$，E $37.2$。",
+    "answer": "B. $24.2$ metres.",
+    "answerZh": "B．$24.2$ 米。",
+    "methods": [
+      {
+        "title": "Extend the height record in both directions",
+        "titleZh": "从已知的第二棵树向两侧推算",
+        "topics": [
+          {
+            "en": "Integer constraints",
+            "zh": "整数约束"
+          },
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "The neighbours of the $11$-metre tree must each be $22$ m, since half of $11$ is not an integer. The heights begin $22,11,22$.",
+          "If the fourth tree is $11$, the fifth is $22$, and the mean is $88/5=17.6$. If the fourth is $44$, the fifth is $22$ or $88$, giving means $(22+11+22+44+22)/5=24.2$ and $(22+11+22+44+88)/5=37.4$. Only $24.2$ has the recorded decimal part."
+        ],
+        "stepsZh": [
+          "与 $11$ 米高的树相邻的两棵都只能高 $22$ 米，因为 $11$ 的一半不是整数。故前三个树高依次为 $22,11,22$。",
+          "若第四棵高 $11$ 米，则第五棵高 $22$ 米，平均数为 $88/5=17.6$。若第四棵高 $44$ 米，第五棵可高 $22$ 或 $88$ 米，对应平均数分别为 $(22+11+22+44+22)/5=24.2$ 与 $(22+11+22+44+88)/5=37.4$。只有 $24.2$ 的小数部分符合记录。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/20"
+  },
+  "amc8-2020-q21": {
+    "summary": "Number the columns of an $8$-by-$8$ checkerboard from $1$ to $8$, left to right. Start at the light square $P$ in column $6$ of the bottom row and finish at the light square $Q$ in column $7$ of the top row. At each step move one row up and one column left or right, staying on the board. How many paths of seven steps connect $P$ to $Q$? Choices: A $28$, B $30$, C $32$, D $33$, E $35$.",
+    "summaryZh": "一个 $8\\times8$ 的黑白棋盘从左到右编号为第 $1$ 至第 $8$ 列。起点 $P$ 是最下行第 $6$ 列的白格，终点 $Q$ 是最上行第 $7$ 列的白格。每步向上一行，同时向左或向右一列，且始终留在棋盘内。由 $P$ 到 $Q$ 有多少条七步路径？选项为 A $28$，B $30$，C $32$，D $33$，E $35$。",
+    "answer": "A. $28$ paths.",
+    "answerZh": "A．$28$ 条。",
+    "methods": [
+      {
+        "title": "Add path counts from the preceding row",
+        "titleZh": "逐行递推路径条数",
+        "topics": [
+          {
+            "en": "Lattice paths",
+            "zh": "格点路径"
+          },
+          {
+            "en": "Recurrence relations",
+            "zh": "递推关系"
+          }
+        ],
+        "steps": [
+          "Give the start count $1$. For every square one row higher, add the counts from its two possible predecessors diagonally below. Off-board predecessors contribute zero. Record only positive counts, ordered left to right in each row.",
+          "After $1,2,3,4,5,6$ moves the lists are respectively $(1,1)$, $(1,2,1)$, $(1,3,3)$, $(1,4,6,3)$, $(1,5,10,9)$ and $(6,15,19,9)$. The last list belongs to columns $2,4,6,8$. The predecessors of column $7$ are columns $6$ and $8$, so its count is $19+9=28$."
+        ],
+        "stepsZh": [
+          "起点记作 $1$。每向上一行，一个格的路径数等于其左下方和右下方两个前驱格的路径数之和；若前驱格在界外，就作零。各行只记录正数，从左到右排列。",
+          "走 $1,2,3,4,5,6$ 步后各行依次得到 $(1,1)$、$(1,2,1)$、$(1,3,3)$、$(1,4,6,3)$、$(1,5,10,9)$、$(6,15,19,9)$。最后一行对应第 $2,4,6,8$ 列。终点第 $7$ 列可由第 $6$ 列或第 $8$ 列到达，因此共有 $19+9=28$ 条。"
+        ]
+      },
+      {
+        "title": "Reflect paths that leave the board",
+        "titleZh": "反射越出右边界的路径",
+        "topics": [
+          {
+            "en": "Reflection principle",
+            "zh": "反射原理"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "On unrestricted columns the horizontal displacement must be $+1$, so choose three left moves among seven, giving $\\binom73=35$ paths. Three left moves from column $6$ cannot reach the left edge of the board.",
+          "A path that exits must visit column $9$. From its first visit to $9$, interchange left and right for the remaining moves: the original endpoint $7$ reflects to $11$. Conversely every unrestricted path from $6$ to $11$ visits $9$ and can be reflected back at its first visit. Such a path has six right moves and one left move, giving seven forbidden paths. The answer is $35-7=28$."
+        ],
+        "stepsZh": [
+          "先允许向左右无限延伸。横向总位移须为 $+1$，故七步中要选三步向左，共 $\\binom73=35$ 条。从第 $6$ 列出发，三步向左不足以越出左边界。",
+          "越界路径一定到过第 $9$ 列。从首次到达第 $9$ 列起，将随后每一步的左右方向互换，原终点第 $7$ 列就反射到第 $11$ 列。反过来，从第 $6$ 到第 $11$ 列的路径必经过第 $9$ 列，首次到达后作相同反射即可还原。此类路径有六步向右、一步向左，共七条。因此合法路径数为 $35-7=28$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/21",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q21.svg",
+      "alt": "Checkerboard with P in bottom column 6 and Q in top column 7.",
+      "altZh": "棋盘下边第 6 列为 P，上边第 7 列为 Q。",
+      "printHeightPt": 145
+    }
+  },
+  "amc8-2020-q22": {
+    "summary": "For a positive integer $n$, a machine outputs $n/2$ for even $n$ and $3n+1$ for odd $n$. Feed each output back in as the next input. Find the sum of all positive starting integers that give $1$ after exactly six applications (the sequence may have visited $1$ earlier). Choices: A $73$, B $74$, C $75$, D $82$, E $83$.",
+    "summaryZh": "一台机器以正整数 $n$ 为输入。若 $n$ 为偶数则输出 $n/2$，若为奇数则输出 $3n+1$。每次把输出作为下一次输入。求所有符合以下条件的正整数起始值之和：恰好运行六次时输出 $1$（允许更早到过 $1$）。选项为 A $73$，B $74$，C $75$，D $82$，E $83$。",
+    "answer": "E. $83$.",
+    "answerZh": "E．$83$。",
+    "methods": [
+      {
+        "title": "Build the complete predecessor sets",
+        "titleZh": "逐层列出所有前驱值",
+        "topics": [
+          {
+            "en": "Working backwards",
+            "zh": "倒推法"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "A target $t$ always has the even predecessor $2t$. It also has predecessor $(t-1)/3$ exactly when this is a positive odd integer. These are the only two rules to invert.",
+          "Starting from $\\{1\\}$, the successive predecessor sets are $\\{2\\}$, $\\{4\\}$, $\\{1,8\\}$, $\\{2,16\\}$, $\\{4,5,32\\}$ and $\\{1,8,10,64\\}$. For instance $16$ has predecessors $32$ and $5$, while $5$ has only $10$.",
+          "Thus the six-step starting values sum to $1+8+10+64=83$."
+        ],
+        "stepsZh": [
+          "给定目标值 $t$，偶数前驱总是 $2t$。若 $(t-1)/3$ 是正奇数，则它也是一个前驱。机器只有两条规则，所以倒推时没有别的候选。",
+          "从 $\\{1\\}$ 开始，依次向前倒推得到 $\\{2\\}$、$\\{4\\}$、$\\{1,8\\}$、$\\{2,16\\}$、$\\{4,5,32\\}$、$\\{1,8,10,64\\}$。例如，$16$ 有 $32$ 和 $5$ 两个前驱，而 $5$ 的前驱只有 $10$。",
+          "六次运行所对应的起始值之和为 $1+8+10+64=83$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/22"
+  },
+  "amc8-2020-q23": {
+    "summary": "Distribute five distinct prizes among three named students. Every prize goes to exactly one student and every student must win at least once. How many assignments are possible? Choices: A $120$, B $150$, C $180$, D $210$, E $240$.",
+    "summaryZh": "将五份彼此不同的奖品分给三名学生，每份只给一人，每名学生至少获得一份。共有多少种分配方式？选项为 A $120$，B $150$，C $180$，D $210$，E $240$。",
+    "answer": "B. $150$ assignments.",
+    "answerZh": "B．$150$ 种。",
+    "methods": [
+      {
+        "title": "Count unrestricted assignments and correct omissions",
+        "titleZh": "先算所有分配，再用容斥扣除空手者",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Surjections",
+            "zh": "满射计数"
+          }
+        ],
+        "steps": [
+          "With no restriction, each of the five prizes has three possible recipients, giving $3^5$ assignments. For any specified student to receive nothing, each prize must go to one of the other two, giving $2^5$ assignments.",
+          "Subtract $3\\cdot2^5$ for the three possible omissions. If all prizes went to just one student, this subtraction counted the two omissions twice, so add back the three such assignments once. The total is $3^5-3\\cdot2^5+3=150$."
+        ],
+        "stepsZh": [
+          "先不要求每人获奖。五份奖品各有三个去向，所以共有 $3^5$ 种分法。若指定一人空手，其余两人可以任意分配这五份奖品，共 $2^5$ 种。",
+          "扣除三种“指定一人空手”的情形，共减去 $3\\cdot2^5$。若五份奖品全归一人，另外两人都空手，这样的分法被减了两次，故要补回三种。答案为 $3^5-3\\cdot2^5+3=150$。"
+        ]
+      },
+      {
+        "title": "Classify the numbers of prizes received",
+        "titleZh": "按三人的获奖数量分类",
+        "topics": [
+          {
+            "en": "Case analysis",
+            "zh": "分类讨论"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "The positive prize counts can only be $3,1,1$ or $2,2,1$. For $3,1,1$, choose the triple winner in $3$ ways, their three prizes in $\\binom53$ ways, and allocate the remaining two prizes to the others in $2$ ways. This gives $60$.",
+          "For $2,2,1$, choose the single winner and their prize in $3\\cdot5$ ways. Of the other students, take the first in a fixed name order and choose two of the remaining four prizes for that student; the last student gets the other two. This yields $3\\cdot5\\binom42=90$. Adding gives $60+90=150$."
+        ],
+        "stepsZh": [
+          "三个人的获奖数均为正，只有 $3,1,1$ 与 $2,2,1$ 两种类型。对 $3,1,1$，先选获三份奖品的人，有 $3$ 种，再从五份中选三份给他，有 $\\binom53$ 种；剩余两份分给另两人有 $2$ 种。共 $60$ 种。",
+          "对 $2,2,1$，选只得一份的人及其奖品有 $3\\cdot5$ 种。按固定姓名顺序，给另两人中的第一人从剩余四份中选两份，最后一人得其余两份，故有 $3\\cdot5\\binom42=90$ 种。合计 $60+90=150$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/23"
+  },
+  "amc8-2020-q24": {
+    "summary": "A square contains an $n$-by-$n$ array of identical square tiles, each of side $s$ inches. A single strip of width $d$ inches separates each pair of adjacent rows or columns, and the outside margin on each of the four sides also has width $d$. For $n=24$ the $576$ tiles occupy $64\\%$ of the whole square. Find $d/s$. Choices: A $\\tfrac6{25}$, B $\\tfrac14$, C $\\tfrac9{25}$, D $\\tfrac7{16}$, E $\\tfrac9{16}$.",
+    "summaryZh": "一个正方形内按 $n$ 行 $n$ 列铺正方形砖，每块边长 $s$ 英寸。相邻两行或两列之间各留一条宽 $d$ 英寸的缝，最外圈四边的留白宽度也为 $d$。当 $n=24$ 时，$576$ 块砖共占大正方形面积的 $64\\%$。求 $d/s$。选项为 A $\\tfrac6{25}$，B $\\tfrac14$，C $\\tfrac9{25}$，D $\\tfrac7{16}$，E $\\tfrac9{16}$。",
+    "answer": "A. $6/25$.",
+    "answerZh": "A．$6/25$。",
+    "methods": [
+      {
+        "title": "Convert an area fraction to a length fraction",
+        "titleZh": "从面积占比推出边长占比",
+        "topics": [
+          {
+            "en": "Area ratios",
+            "zh": "面积比"
+          },
+          {
+            "en": "Square grids",
+            "zh": "正方形网格"
+          }
+        ],
+        "steps": [
+          "Across one side there are $24$ tiles, $23$ interior gaps and two outside margins. The large square has side $24s+25d$; the combined tile area is $(24s)^2$.",
+          "Taking the positive square root of the area equation gives $24s/(24s+25d)=\\sqrt{0.64}=4/5$. Thus $120s=96s+100d$, or $d/s=24/100=6/25$."
+        ],
+        "stepsZh": [
+          "沿一条边可数出 $24$ 块砖、$23$ 道内部缝隙及两端的外边距，大正方形边长为 $24s+25d$。砖的总面积为 $(24s)^2$。",
+          "面积占比开正平方根，得 $24s/(24s+25d)=\\sqrt{0.64}=4/5$。交叉相乘得 $120s=96s+100d$，故 $d/s=24/100=6/25$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/24"
+  },
+  "amc8-2020-q25": {
+    "summary": "Three squares $S_1,S_2,S_3$ and two rectangles $R_1,R_2$ tile a rectangle of width $3322$ and height $2020$. All edges are horizontal or vertical. $S_1$ occupies the upper left corner, $S_3$ the lower right. The middle square $S_2$ has its full left side against the lower part of the right side of $S_1$ and its full right side against the upper part of the left side of $S_3$. Its bottom edge aligns with the bottom of $S_1$ and its top edge with the top of $S_3$. $R_1$ and $R_2$ fill the remaining lower left and upper right regions. Find the side of $S_2$. Choices: A $651$, B $655$, C $656$, D $662$, E $666$.",
+    "summaryZh": "三个正方形 $S_1,S_2,S_3$ 与两个矩形 $R_1,R_2$ 恰好拼成一个宽 $3322$、高 $2020$ 的大矩形，所有边均水平或竖直。$S_1$ 位于左上角，$S_3$ 位于右下角。中央正方形 $S_2$ 的整条左边贴着 $S_1$ 右边的下段，其整条右边贴着 $S_3$ 左边的上段；$S_2$ 的底边与 $S_1$ 底边齐平，顶边与 $S_3$ 顶边齐平。$R_1,R_2$ 填满余下的左下、右上区域。求 $S_2$ 的边长。选项为 A $651$，B $655$，C $656$，D $662$，E $666$。",
+    "answer": "A. $651$ units.",
+    "answerZh": "A．$651$ 个单位。",
+    "methods": [
+      {
+        "title": "Compare the horizontal and vertical spans",
+        "titleZh": "比较水平方向与竖直方向的跨度",
+        "topics": [
+          {
+            "en": "Length equations",
+            "zh": "线段长度方程"
+          },
+          {
+            "en": "Square dissections",
+            "zh": "正方形拼分"
+          }
+        ],
+        "steps": [
+          "Let the three square sides be $u,v,w$ from left to right. The three squares span consecutive horizontal intervals, so $u+v+w=3322$.",
+          "Vertically, $S_1$ reaches $u$ units down from the top, and $S_3$ reaches $w$ units up from the bottom. These intervals overlap by exactly the height $v$ of $S_2$. Hence $u+w-v=2020$. Subtraction gives $2v=3322-2020=1302$, so $v=651$."
+        ],
+        "stepsZh": [
+          "从左到右设三个正方形边长为 $u,v,w$。它们占据的水平区间首尾相接，故 $u+v+w=3322$。",
+          "竖直方向上，$S_1$ 从顶部向下延伸 $u$，$S_3$ 从底部向上延伸 $w$，两段重叠的长度恰是 $S_2$ 的高度 $v$。因此 $u+w-v=2020$。两式相减得 $2v=3322-2020=1302$，故 $v=651$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2020/problem/25",
+    "figure": {
+      "url": "/commentary-figures/amc8-2020-q25.svg",
+      "alt": "The middle square bridges the upper-left and lower-right squares, with the other two corners occupied by rectangles.",
+      "altZh": "中央正方形连接左上方与右下方的正方形，其余两个角由矩形填满。",
+      "printHeightPt": 145
+    }
+  }
+}
