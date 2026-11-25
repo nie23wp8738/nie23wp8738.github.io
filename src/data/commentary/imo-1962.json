@@ -1,0 +1,265 @@
+{
+  "imo-1962-q1": {
+    "summary": "Find the least positive integer ending in 6 such that transferring that final digit to the front multiplies the number by four.",
+    "summaryZh": "求这样的最小正整数：末位数字是 6，将这个 6 移到最前端，所得数恰为原数的四倍。",
+    "answer": "$153846$.",
+    "answerZh": "$153846$。",
+    "methods": [
+      {
+        "title": "Use the length of the prefix",
+        "titleZh": "用前缀位数列同余式",
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "十进制位值"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "The one-digit candidate 6 fails. Write a longer number as $10a+6$, with a $k$-digit positive prefix $a$. After the rotation, $6\\cdot10^k+a=4(10a+6)$, or $13a=2(10^k-4)$.",
+          "Thus $10^k\\equiv4\\pmod{13}$. The successive powers beginning with $10^1$ have residues $10,9,12,3,4$, so the earliest possible $k$ is five.",
+          "For $k=5$ the equation gives $a=15384$, which really has five digits. The number $153846$ rotates to $615384=4\\cdot153846$. All larger possible $k$ give more digits."
+        ],
+        "stepsZh": [
+          "一位数 6 不满足条件。设原数为 $10a+6$，其中正整数 $a$ 有 $k$ 位。移位后满足 $6\\cdot10^k+a=4(10a+6)$，整理得 $13a=2(10^k-4)$。",
+          "于是 $10^k\\equiv4\\pmod{13}$。从 $10^1$ 开始，各次幂的余数依次为 $10,9,12,3,4$，故最小可能的 $k$ 为 5。",
+          "代入得 $a=15384$，确为五位数。$153846$ 移位后得到 $615384=4\\cdot153846$。更大的 $k$ 只能产生更多位数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1"
+  },
+  "imo-1962-q2": {
+    "summary": "Find the real solution set of $\\sqrt{3-x}-\\sqrt{x+1}>1/2$.",
+    "summaryZh": "求使 $\\sqrt{3-x}-\\sqrt{x+1}>1/2$ 成立的全体实数 $x$。",
+    "answer": "$[-1,\\,1-\\sqrt{31}/8)$.",
+    "answerZh": "$[-1,\\,1-\\sqrt{31}/8)$。",
+    "methods": [
+      {
+        "title": "Find the unique crossing",
+        "titleZh": "先求唯一分界点",
+        "topics": [
+          {
+            "en": "Monotonicity",
+            "zh": "单调性"
+          },
+          {
+            "en": "Radical inequalities",
+            "zh": "根式不等式"
+          }
+        ],
+        "steps": [
+          "The domain is $[-1,3]$. There the first radical is strictly decreasing and the second is strictly increasing. Their difference falls continuously from 2 to $-2$.",
+          "Set $u=\\sqrt{3-x}$ and $v=\\sqrt{x+1}$ at the crossing $u-v=1/2$. Since $u^2+v^2=4$, we obtain $(u+v)^2=8-(u-v)^2=31/4$. Thus $v=(\\sqrt{31}-1)/4$ and $x=v^2-1=1-\\sqrt{31}/8$.",
+          "Both radicals at the crossing are nonnegative. All domain values to its left, including $-1$, give a difference strictly above $1/2$."
+        ],
+        "stepsZh": [
+          "定义域为 $[-1,3]$。在此区间内，第一个根式严格递减，第二个严格递增，因此两者之差连续地从 2 严格减小到 $-2$。",
+          "在差恰等于 $1/2$ 时记 $u=\\sqrt{3-x},v=\\sqrt{x+1}$。有 $u^2+v^2=4$，故 $(u+v)^2=8-(u-v)^2=31/4$。由此 $v=(\\sqrt{31}-1)/4$，得到 $x=v^2-1=1-\\sqrt{31}/8$。",
+          "分界点处两个根式均非负。定义域内分界点左侧的值满足严格不等式，且包含左端点 $-1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1"
+  },
+  "imo-1962-q3": {
+    "summary": "On a cube, upper vertices $A,B,C,D$ lie directly above $A',B',C',D'$. Point $X$ repeatedly walks around $A,B,C,D,A$, while $Y$ repeatedly walks around $B',C',C,B,B'$. Start them together at $A$ and $B'$ with equal constant speeds. Find and draw the path traced by the midpoint of $XY$.",
+    "summaryZh": "在立方体中，上底面 $A,B,C,D$ 的对应下方顶点为 $A',B',C',D'$。动点 $X$ 依次沿 $A,B,C,D,A$ 循环行进，$Y$ 沿 $B',C',C,B,B'$ 循环行进。两点分别从 $A,B'$ 同时出发且匀速、速率相等。求线段 $XY$ 中点的轨迹并作图。",
+    "answer": "The four sides of a rhombus. In traversal order its vertices are the midpoint of $AB'$, the midpoint of $BC'$, the vertex $C$, and the midpoint of $DB$.",
+    "answerZh": "轨迹为菱形的四条边，依次经过 $AB'$ 的中点、$BC'$ 的中点、顶点 $C$、$DB$ 的中点。",
+    "methods": [
+      {
+        "title": "Connect simultaneous midpoints",
+        "titleZh": "依次连接同步到达的中点",
+        "topics": [
+          {
+            "en": "Affine interpolation",
+            "zh": "仿射插值"
+          },
+          {
+            "en": "Three-dimensional coordinates",
+            "zh": "空间直角坐标"
+          }
+        ],
+        "steps": [
+          "Use a unit cube with $A=(0,0,1)$, $B=(1,0,1)$, $C=(1,1,1)$ and $D=(0,1,1)$. Primed vertices have the same first two coordinates and height zero. The moving points reach successive corners at the same instants.",
+          "Averaging their positions gives the midpoint sequence $U=(1/2,0,1/2)$, $V=(1,1/2,1/2)$, $C=(1,1,1)$, $W=(1/2,1/2,1)$ and back to $U$. On each leg both positions depend affinely on the same time parameter, so the midpoint traces the entire segment between successive positions.",
+          "The four successive displacements are $e=(1/2,1/2,0)$, $f=(0,1/2,1/2)$, $-e$, $-f$. The vectors $e,f$ have the same length and are not parallel, hence the path is exactly the boundary of the rhombus $UVCW$ shown."
+        ],
+        "stepsZh": [
+          "取单位立方体，设 $A=(0,0,1)$、$B=(1,0,1)$、$C=(1,1,1)$、$D=(0,1,1)$。带撇的顶点前两坐标不变，高度为零。两点每走完一条棱都会同时到达下一个顶点。",
+          "将同时刻的坐标取平均，中点依次为 $U=(1/2,0,1/2)$、$V=(1,1/2,1/2)$、$C=(1,1,1)$、$W=(1/2,1/2,1)$，最后回到 $U$。在每一段时间内，两点均随同一时间参数作线性运动，所以中点恰好走完整条对应线段。",
+          "四段位移依次为 $e=(1/2,1/2,0)$、$f=(0,1/2,1/2)$、$-e$、$-f$。向量 $e,f$ 等长且不共线，故轨迹正是图中菱形 $UVCW$ 的边界。"
+        ],
+        "figure": {
+          "url": "/commentary-figures/imo-1962-q3-method-1.svg",
+          "alt": "The midpoint rhombus UVCW in its original cube.",
+          "altZh": "中点轨迹为立方体内菱形 UVCW 的四条边。"
+        }
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+    "figure": {
+      "url": "/commentary-figures/imo-1962-q3.svg",
+      "alt": "Cube with corresponding upper and lower vertices labelled.",
+      "altZh": "对应的上、下底面顶点已标注的立方体。"
+    }
+  },
+  "imo-1962-q4": {
+    "summary": "Determine every real $x$ for which $\\cos^2 x+\\cos^2(2x)+\\cos^2(3x)=1$.",
+    "summaryZh": "求满足 $\\cos^2 x+\\cos^2(2x)+\\cos^2(3x)=1$ 的全部实数 $x$。",
+    "answer": "$x=\\pi/4+k\\pi/2$ or $x=\\pi/6+k\\pi/3$, $k\\in\\mathbb Z$.",
+    "answerZh": "$x=\\pi/4+k\\pi/2$ 或 $x=\\pi/6+k\\pi/3$，其中 $k\\in\\mathbb Z$。",
+    "methods": [
+      {
+        "title": "Factor a trigonometric sum",
+        "titleZh": "把三角函数和式因式分解",
+        "topics": [
+          {
+            "en": "Power reduction",
+            "zh": "降幂公式"
+          },
+          {
+            "en": "Sum-to-product identities",
+            "zh": "和差化积"
+          }
+        ],
+        "steps": [
+          "Double-angle identities change the equation into $1+\\cos(2x)+\\cos(4x)+\\cos(6x)=0$. Group $1+\\cos(4x)=2\\cos^2(2x)$ and $\\cos(2x)+\\cos(6x)=2\\cos(4x)\\cos(2x)$.",
+          "The result is $2\\cos(2x)(\\cos(2x)+\\cos(4x))=4\\cos(2x)\\cos(3x)\\cos x=0$.",
+          "The zeros of $\\cos x$ are already zeros of $\\cos(3x)$. Hence only $\\cos(2x)=0$ and $\\cos(3x)=0$ need be listed. They give the two families in the answer. Every transformation was an identity."
+        ],
+        "stepsZh": [
+          "降幂后得 $1+\\cos(2x)+\\cos(4x)+\\cos(6x)=0$。分组有 $1+\\cos(4x)=2\\cos^2(2x)$，又有 $\\cos(2x)+\\cos(6x)=2\\cos(4x)\\cos(2x)$。",
+          "于是左端等于 $2\\cos(2x)(\\cos(2x)+\\cos(4x))=4\\cos(2x)\\cos(3x)\\cos x$。",
+          "凡 $\\cos x=0$ 都有 $\\cos(3x)=0$。所以只需列出 $\\cos(2x)=0$ 与 $\\cos(3x)=0$ 所给的两族解。以上均为恒等变形，无需舍根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1"
+  },
+  "imo-1962-q5": {
+    "summary": "Three different points $A,B,C$ are marked on a circle $K$. Complete them, in that order, to a convex quadrilateral $ABCD$ on $K$ that has an incircle. Use only a straightedge and compass.",
+    "summaryZh": "圆 $K$ 上给定三个不同的点 $A,B,C$。仅用直尺和圆规作第四点 $D$，使 $A,B,C,D$ 依次组成既有外接圆 $K$ 又有内切圆的凸四边形。",
+    "answer": "Put $a=AB$, $b=BC$, $\\tau=\\tan(\\angle ABC/2)$ and $y=2ab/(a+b+\\sqrt{(a-b)^2+4ab\\tau^2})$. In the angle at $B$, draw the circle touching $BA,BC$ at distance $y$ from $B$. Its other tangents from $A$ and $C$ meet at $D$.",
+    "answerZh": "令 $a=AB,\\ b=BC,\\ \\tau=\\tan(\\angle ABC/2)$，取 $y=2ab/(a+b+\\sqrt{(a-b)^2+4ab\\tau^2})$。在角 $B$ 内作圆，使其在 $BA,BC$ 上的切点距 $B$ 均为 $y$。从 $A,C$ 向该圆所作的另两条切线交于所求点 $D$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Construct the incircle before the fourth vertex",
+        "titleZh": "先作内切圆，再确定第四顶点",
+        "steps": [
+          "Let $\\beta=\\angle ABC$. If the incircle touches $BA,BC$ at distance $y$ from $B$, its radius must be $r=y\\tan(\\beta/2)$. The lengths of the tangents from $A$ and $C$ will be $a-y$ and $b-y$. Denote half the intended angles at $A,C$ by $\\alpha,\\gamma$. The right triangles at the contact points give $\\tan\\alpha=r/(a-y)$ and $\\tan\\gamma=r/(b-y)$.",
+          "Cyclicity requires $\\alpha+\\gamma=90^\\circ$. Since the half-angles are acute, this is equivalent to $(a-y)(b-y)=\\tau^2y^2$. Solving in terms of $1/y$ gives the positive interior solution $y=2ab/(a+b+\\sqrt{(a-b)^2+4ab\\tau^2})$. Its denominator exceeds $a+b+|a-b|$, so $0<y<\\min(a,b)$. Direct substitution, or the quadratic equation for $1/y$, verifies the equality.",
+          "To carry out the construction, bisect $\\beta$ and obtain $\\tau$ as the opposite leg of a right triangle with adjacent leg one. Products and quotients of lengths are constructed by similar triangles, and square roots by a mean proportional in a semicircle, so the displayed $y$ requires only ruler and compass. Mark $E$ on $BA$ with $BE=y$. The perpendicular to $BA$ at $E$ meets the bisector at the centre $I$. Draw the circle with radius $IE$. Reflection across $BI$ gives its contact on $BC$.",
+          "From each of $A,C$ construct the other tangent to this circle. For $A$, the circle with diameter $AI$ meets the circle centred at $I$ at $E$ and at a second contact point. Join $A$ to that second point, and repeat at $C$. Intersect these two new tangents to obtain $D$.",
+          "To see why the intersection closes the quadrilateral on the correct side, follow the supporting tangents around the circle. Their exterior turns at $A,B,C$ are $180^\\circ-2\\alpha$, $180^\\circ-\\beta$, $180^\\circ-2\\gamma$. They are positive, and since $\\alpha+\\gamma=90^\\circ$ the remaining turn is $\\beta$, also strictly between $0^\\circ$ and $180^\\circ$. Thus the four contact points are distinct and successive tangents bound a convex quadrilateral containing the disk (at each corner the angle between successive outward normals is less than a straight angle). Its opposite angles at $A,C$ total $180^\\circ$. It is therefore cyclic, and its circumcircle is the given circle through $A,B,C$."
+        ],
+        "stepsZh": [
+          "记 $\\beta=\\angle ABC$。设内切圆在 $BA,BC$ 上的切点距 $B$ 均为 $y$，则半径为 $r=y\\tan(\\beta/2)$，从 $A,C$ 引出的切线段长分别为 $a-y,b-y$。设待作四边形在 $A,C$ 处的半角为 $\\alpha,\\gamma$。由切点处的直角三角形，$\\tan\\alpha=r/(a-y)$，$\\tan\\gamma=r/(b-y)$。",
+          "四点共圆要求 $\\alpha+\\gamma=90^\\circ$。两个半角都是锐角，故等价于 $(a-y)(b-y)=\\tau^2y^2$。将它视为关于 $1/y$ 的二次方程，取 $y=2ab/(a+b+\\sqrt{(a-b)^2+4ab\\tau^2})$。分母大于 $a+b+|a-b|$，所以 $0<y<\\min(a,b)$。代回二次方程即可验证所取的解。",
+          "作 $\\beta$ 的角平分线。以单位线段为邻直角边作半角的直角三角形，对边便给出 $\\tau$。长度的乘除可用相似三角形作出，平方根可用半圆内的比例中项作出，因而可尺规作出上述 $y$。在 $BA$ 上取 $BE=y$，过 $E$ 作 $BA$ 的垂线与角平分线交于 $I$。以 $I$ 为圆心、$IE$ 为半径作圆，关于 $BI$ 对称可知它也与 $BC$ 相切。",
+          "分别从 $A,C$ 作此圆的另一条切线。具体地，以 $AI$ 为直径的圆与圆 $I$ 除 $E$ 外还交于另一切点，将其与 $A$ 相连；对 $C$ 作同样构造。两条新切线的交点即 $D$。",
+          "为验证新切线在正确的一侧相交，沿圆周依次考察这些切线。在 $A,B,C$ 处的外转角分别为 $180^\\circ-2\\alpha,\\ 180^\\circ-\\beta,\\ 180^\\circ-2\\gamma$。由于 $\\alpha+\\gamma=90^\\circ$，余下的转角为 $\\beta$，各转角均在 $0^\\circ$ 与 $180^\\circ$ 之间。于是四个切点依次相异，每两条相邻切线的外法线夹角都小于平角，故它们围成一个包含圆盘的凸四边形。其 $A,C$ 两个对角之和为 $180^\\circ$，所以四点共圆，该外接圆正是过 $A,B,C$ 的圆 $K$。"
+        ],
+        "topics": [
+          {
+            "en": "Straightedge and compass",
+            "zh": "尺规作图"
+          },
+          {
+            "en": "Tangent lengths",
+            "zh": "切线长"
+          },
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "圆内接四边形"
+          }
+        ]
+      }
+    ]
+  },
+  "imo-1962-q6": {
+    "summary": "An isosceles triangle has circumradius $R$ and inradius $r$. Prove that the distance $d$ between the circumcentre and incentre satisfies $d=\\sqrt{R(R-2r)}$.",
+    "summaryZh": "等腰三角形的外接圆半径和内切圆半径分别为 $R,r$。证明两圆心之间的距离为 $d=\\sqrt{R(R-2r)}$。",
+    "answer": "$d^2=R^2-2Rr$, so $d=\\sqrt{R(R-2r)}$.",
+    "answerZh": "$d^2=R^2-2Rr$，故 $d=\\sqrt{R(R-2r)}$。",
+    "methods": [
+      {
+        "title": "Measure both centres along the axis of symmetry",
+        "titleZh": "沿对称轴度量两个圆心",
+        "topics": [
+          {
+            "en": "Extended sine rule",
+            "zh": "扩展正弦定理"
+          },
+          {
+            "en": "Angle bisectors",
+            "zh": "角平分线"
+          }
+        ],
+        "steps": [
+          "Let $A$ be the apex and $\\theta$ half its angle. Write $O,I$ for the circumcentre and incentre and $t=AI$. The perpendicular distance from $I$ to an equal side is $r=t\\sin\\theta$. Thus the altitude from $A$ is $h=t+r=t(1+\\sin\\theta)$.",
+          "Each base angle is $\\pi/2-\\theta$. The sine rule gives an equal side length $2R\\cos\\theta$, so $h=2R\\cos^2\\theta$. Combining the formulas yields $t=2R(1-\\sin\\theta)$, and therefore $t(2R-t)=2Rt\\sin\\theta=2Rr$.",
+          "Both centres lie on the symmetry axis, and $O$ is a distance $R$ from $A$ along the ray towards the base. Hence $d^2=(t-R)^2=R^2-t(2R-t)=R^2-2Rr$. Taking the nonnegative root completes the proof."
+        ],
+        "stepsZh": [
+          "设顶点为 $A$、顶角的一半为 $\\theta$，外心、内心分别为 $O,I$，记 $t=AI$。从 $I$ 到腰的垂直距离为 $r=t\\sin\\theta$。因此底边上的高为 $h=t+r=t(1+\\sin\\theta)$。",
+          "底角等于 $\\pi/2-\\theta$。由正弦定理，腰长为 $2R\\cos\\theta$，所以 $h=2R\\cos^2\\theta$。合并两式得 $t=2R(1-\\sin\\theta)$，从而 $t(2R-t)=2Rt\\sin\\theta=2Rr$。",
+          "两圆心均在对称轴上，且 $O$ 位于由 $A$ 指向底边的射线上，$AO=R$。故 $d^2=(t-R)^2=R^2-t(2R-t)=R^2-2Rr$，取非负平方根即得所证。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=1"
+  },
+  "imo-1962-q7": {
+    "summary": "A nondegenerate tetrahedron has six edge lines, each extending indefinitely in both directions. Prove that five distinct spheres tangent to all six lines exist if and only if all six edges have the same length.",
+    "summaryZh": "将非退化四面体的每条棱向两端延长成直线。证明：存在五个不同的球，每个球都与这六条直线相切，当且仅当四面体的六条棱等长。",
+    "answer": "There is at most one sphere with all contacts on the edges, and at most one for each choice of a vertex whose three incident contacts are on extensions. All five occur precisely for a regular tetrahedron.",
+    "answerZh": "六个切点全在棱上的球至多一个；对于每个指定顶点，恰有该顶点三条棱在延长线上相切的球也至多一个。五种情况全部出现当且仅当四面体是正四面体。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf#page=2",
+    "methods": [
+      {
+        "title": "Classify the contacts by triangular faces and recover a sphere from four powers",
+        "titleZh": "用各面上的切点分类，再由四个顶点的幂确定球",
+        "steps": [
+          "For a sphere of centre $O$ and radius $R$, all three tangent segments from a vertex $V$ have the same length $w_V=\\sqrt{OV^2-R^2}$. This is positive: if $V$ were on the sphere, its three noncoplanar incident lines would lie in the tangent plane there. A contact between endpoints gives edge length $w_U+w_V$; a contact outside the segment gives $|w_U-w_V|$.",
+          "Intersect the sphere with a face plane. The intersection contains the three contact points on the side lines and is a circle, since those three lines do not share a point. The circle is tangent to the three side lines, hence is the incircle or one of the three excircles (its centre lies on the internal or external angle bisectors). The incircle gives no outside contacts. The excircle opposite $V$ touches the opposite side internally and the two incident sides beyond their other endpoints. In particular $w_V>w_U$ for each of those endpoints $U$.",
+          "Colour an edge red if its contact is outside. Each triangular face has either zero or two red edges. Fix one vertex, mark it $0$, and mark any other vertex $1$ if its edge to the first is red, $0$ otherwise. The even count on a face then shows that an edge is red exactly when its marks differ. A split into two pairs is impossible: if $U,U^{\\prime}$ have mark $0$ and $V,V^{\\prime}$ mark $1$, face $UU^{\\prime}V$ forces $w_V>w_U$, whereas face $VV^{\\prime}U$ forces $w_U>w_V$. Thus either there are no red edges, or precisely the three at one exceptional vertex are red.",
+          "For each of these five patterns the four $w$ values are forced. Choose the face opposite the exceptional vertex (any face for the all-internal pattern). Its incircle fixes the three tangent lengths there. On an edge to the remaining vertex $V$, subtract the known endpoint length from the edge length in the all-internal case, or add it in the exceptional case, to obtain $w_V$. The latter sign holds because contact is beyond the other endpoint.",
+          "Four specified $w$ values determine at most one sphere. In the equations $|O-V_i|^2-R^2=w_i^2$ subtract the equation for $V_0$ from each of the other three. This gives three linear equations for $O$, with independent normal vectors $V_i-V_0$ because the tetrahedron has nonzero volume. They have a unique solution, after which $R^2$ is fixed. Hence five distinct spheres force all five patterns to occur.",
+          "Let $x_U$ be the vertex tangent lengths of the all-internal sphere, so $UV=x_U+x_V$. In the sphere exceptional at $V$, the three lengths on its opposite face are the same $x_U$ because the incircle of that face is the same. Its length at $V$ must therefore equal $VU+x_U=x_V+2x_U$ for each other vertex $U$. Thus the three $x_U$ opposite $V$ are equal. Repeating with a different exceptional vertex shows all four are equal, so all six edges are equal.",
+          "Conversely suppose the common edge length is $a$. Use five assignments of lengths: set all four $w_i=a/2$, or choose one vertex to have $w_i=3a/2$ and give the other three $a/2$. For every edge $UV$ in every assignment, its length $a$ is either $w_U+w_V$ or $|w_U-w_V|$. Solve the three linear difference equations above for $O$. Then $K=|O-U|^2-w_U^2$ is independent of the vertex $U$.",
+          "Let $H$ be the perpendicular projection of $O$ onto line $UV$. Its signed distance from $U$ in the direction of $V$ is $(a^2+w_U^2-w_V^2)/(2a)$ by subtracting the two squared distances to the endpoints. Its absolute value is $w_U$ in either edge-length case. Consequently $OH^2=|O-U|^2-w_U^2=K$ for every edge line. We have $K>0$, since $K=0$ would put $O$ on all six lines. The sphere of centre $O$ and radius $\\sqrt K$ is therefore tangent to all of them. The five assignments give distinct spheres, as each sphere recovers its own $w_i$ from the vertex powers."
+        ],
+        "stepsZh": [
+          "设某球的球心为 $O$、半径为 $R$。从每个顶点 $V$ 向球引出的三条切线段等长，长度记为 $w_V=\\sqrt{OV^2-R^2}$。它严格为正：若 $V$ 在球面上，则其三条不共面的棱线都在 $V$ 处的切平面内，矛盾。切点在棱的内部时，棱长为 $w_U+w_V$；切点在延长线上时，棱长为 $|w_U-w_V|$。",
+          "用一个面所在的平面截球。截面含有三条边线各自的切点，而三条边线不共点，故截得一个圆。此圆与三条边线相切，因而是该三角形的内切圆或三个旁切圆之一（圆心须在内角或外角平分线上）。内切圆没有外部切点；顶点 $V$ 对应的旁切圆与对边相切于边内，与 $V$ 相邻的两边相切于另外两个端点之外。因此对这两个端点 $U$ 均有 $w_V>w_U$。",
+          "将切点在延长线上的棱染红。每个三角形面有零条或两条红棱。任选一个顶点标 $0$，其余顶点与它连红棱则标 $1$，否则标 $0$。由每个面的红棱数为偶数可知，一条棱为红色当且仅当两端标记不同。不可能两两分组：若 $U,U^{\\prime}$ 标 $0$ 且 $V,V^{\\prime}$ 标 $1$，则面 $UU^{\\prime}V$ 要求 $w_V>w_U$，面 $VV^{\\prime}U$ 又要求 $w_U>w_V$。因此要么无红棱，要么只有某一特殊顶点的三条棱为红色。",
+          "上述五类中的每一类都唯一确定四个切线长。取特殊顶点的对面（无红棱时任选一面），其内切圆确定该面三个顶点的切线长。对于剩下的顶点 $V$，无红棱时用棱长减去另一端的已知切线长；特殊顶点的情况则用棱长加上另一端切线长，因为切点在另一端之外。这样便得到 $w_V$。",
+          "给定四个 $w_i$，至多有一个球。对方程 $|O-V_i|^2-R^2=w_i^2$，将后三式各减去对应于 $V_0$ 的一式，得到关于 $O$ 的三个线性方程。四面体体积非零，故法向量 $V_i-V_0$ 线性无关，唯一确定 $O$，从而也确定 $R^2$。既然有五个不同的球，每一种切点类型就都必须出现。",
+          "设无红棱的球在各顶点的切线长为 $x_U$，则 $UV=x_U+x_V$。对于以 $V$ 为特殊顶点的球，对面仍是同一个三角形的内切圆，故对面各顶点的切线长仍为 $x_U$。该球在 $V$ 处的切线长应等于 $VU+x_U=x_V+2x_U$，不依赖于另一个顶点 $U$。因此对面三个 $x_U$ 相等。再选另一个特殊顶点作同样论证，得四个数均相等，所以六棱等长。",
+          "反过来，设所有棱长均为 $a$。考虑五组赋值：四个 $w_i$ 全取 $a/2$，或任取一个顶点令其为 $3a/2$、余下均为 $a/2$。每组赋值中的每条棱 $UV$ 均满足 $a=w_U+w_V$ 或 $a=|w_U-w_V|$。解上面三个作差所得的线性方程求出 $O$，于是 $K=|O-U|^2-w_U^2$ 与顶点 $U$ 的选取无关。",
+          "将 $O$ 正投影到直线 $UV$，垂足记为 $H$。将到两端点的距离平方相减，可知从 $U$ 朝 $V$ 计的有向长度为 $(a^2+w_U^2-w_V^2)/(2a)$。无论棱长是和还是差，其绝对值都为 $w_U$。所以对每条棱线都有 $OH^2=|O-U|^2-w_U^2=K$。若 $K=0$，则 $O$ 必同时位于六条棱线上，这是不可能的，故 $K>0$。取球心 $O$、半径 $\\sqrt K$ 即得所求切球。五组赋值对应五个不同的球，因为每个球在顶点处的幂可唯一还原其 $w_i$。"
+        ],
+        "topics": [
+          {
+            "en": "Power of a point",
+            "zh": "点的幂"
+          },
+          {
+            "en": "Incircle and excircles",
+            "zh": "内切圆与旁切圆"
+          },
+          {
+            "en": "Spatial geometry",
+            "zh": "立体几何"
+          }
+        ]
+      }
+    ]
+  }
+}

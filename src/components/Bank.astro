@@ -1,5 +1,6 @@
 ---
 import problems from '../lib/practice.js';
+import {guideWorksheetItems} from '../lib/tara-guide-worksheet.js';
 import { localPractice, topicEntries, tagTranslations } from '../lib/catalog.js';
 import '../styles/bank.css';
 const lang = Astro.props.lang === 'zh' ? 'zh' : 'en';
@@ -19,6 +20,7 @@ const methods = [...new Map(localized.map(p => [p.methodKey,p.method])).entries(
       <fieldset class="bank-types">
         <legend class="bank-sr">{t('Question collection','题目来源')}</legend>
         <label><input type="radio" name="kind" value="past" checked /><span>{t('Past exam questions','历年真题')}</span></label>
+        <label><input type="radio" name="kind" value="guide" /><span>{t('TARA guide examples','TARA 指南例题')}</span></label>
         <label><input type="radio" name="kind" value="practice" /><span>{t('Original practice','原创练习')}</span></label>
       </fieldset>
       <label class="bank-search">
@@ -66,6 +68,7 @@ const methods = [...new Map(localized.map(p => [p.methodKey,p.method])).entries(
     <a class="bank-jump bank-back" href="#bank-browser">{t('Back to questions','返回题目列表')}</a>
   </aside>
   <script type="application/json" data-tag-translations set:html={JSON.stringify(zh ? tagTranslations : {}).replace(/</g,'\\u003c')} />
+  <script type="application/json" data-guide-data set:html={JSON.stringify(guideWorksheetItems(lang)).replace(/</g,'\\u003c')} />
   <script type="application/json" data-practice-data set:html={JSON.stringify(localized).replace(/</g,'\\u003c')} />
 </div>
 <script type="module" src="/bank.js" is:inline></script>

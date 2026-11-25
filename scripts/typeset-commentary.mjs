@@ -21,6 +21,14 @@ for (const file of catalogues) {
   for (const row of rows) papers.set(row.id,row);
 }
 const scratch = await fs.mkdtemp(path.join(os.tmpdir(),'question-notes-'));
+function figureKey(figure, solution = false) {
+  if (!figure) return undefined;
+  const match = /^\/commentary-figures\/([a-z0-9-]+-q[1-9]\d*(?:-method-[1-9]\d*)?)\.svg$/.exec(figure.url);
+  if (!match || match[1].includes('-method-') !== solution || !figure.alt || !figure.altZh) {
+    throw new Error('Invalid '+(solution ? 'solution' : 'question')+' figure: '+figure.url);
+  }
+  return match[1];
+}
 try {
   const outlineDir = path.join(site,'src/data/step-outlines');
   const entries = [
@@ -37,9 +45,11 @@ try {
     const signature = createHash('sha256').update(json).update(paper.label);
     for (const code of tools) signature.update(code);
     const figures = path.join(site,'public/commentary-figures');
-    for (const [id,note] of notes) if (note.figure) {
-      if (note.figure.url !== '/commentary-figures/'+id+'.svg' || !note.figure.alt || !note.figure.altZh) throw new Error('Invalid figure '+id);
-      signature.update(await fs.readFile(path.join(figures,id+'.svg')));
+    for (const [,note] of notes) {
+      const images=[figureKey(note.figure),...(note.methods || []).map(method=>figureKey(method.figure,true))];
+      for (const name of images) if (name) {
+        signature.update(await fs.readFile(path.join(figures,name+'.svg')));
+      }
     }
     const stamp = path.join(output,paperId+(kinds.length===1?'.outlines':'')+'.sha256');
     const digest = signature.digest('hex');
@@ -57,9 +67,10 @@ try {
           for (const [i, method] of note.methods.entries()) {
             parts.push({label:'Method '+(i+1),text:[method.title,'Topics: '+method.topics.map(t=>t.en).join(', '),method.steps[0]].join('\n\n')});
             for (const step of method.steps.slice(1)) parts.push({text:step});
+            if (method.figure) parts.push({figure:figureKey(method.figure,true)});
           }
         }
-        return {id, intro:note.summary, introFigure:note.figure ? id : undefined, parts};
+        return {id, intro:note.summary, introFigure:figureKey(note.figure), parts};
       });
       const input = path.join(scratch,kind+'.json');
       await fs.writeFile(input,JSON.stringify(rows));

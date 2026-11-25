@@ -1,7 +1,7 @@
 {
   "tara-guide-ct-1": {
-    "outline": "A scientific society holds shares in fossil-fuel businesses while publishing research on environmental harm. A critic mentions other institutions that changed their investments. What is the critic ultimately asking this society to do?",
-    "outlineZh": "一个科学学会一面持有化石燃料企业的股份，一面发表有关环境损害的研究。评论者还提到已有其他机构改变了投资安排。他最终希望这个学会采取哪项行动？",
+    "outline": "A scientific society publishes research on climate harm while holding shares in fossil-fuel companies. A critic calls this inconsistent, urges the society to sell its holdings, and cites two arts institutions that have already done so. Which claim is the critic's main conclusion?",
+    "outlineZh": "一个科学学会发表有关气候危害的研究，同时持有化石燃料企业股份。评论者批评这种做法前后矛盾，主张学会出售持股，并举出两家已经这样做的艺术机构。哪项是评论者的主要结论？",
     "answer": "D. Divest the society’s fossil-fuel holdings.",
     "answerZh": "D。出售学会持有的化石燃料投资。",
     "methods": [
@@ -120,8 +120,8 @@
     ]
   },
   "tara-guide-ct-4": {
-    "outline": "The argument predicts that a person’s decision to take a symptom reliever could affect other people’s exposure to flu. Which additional fact, taken as true for this reasoning exercise, would support that particular prediction?",
-    "outlineZh": "论证提出，患流感者使用缓解症状的药物，可能影响他人的接触风险。在本题设定中，哪条新增信息最能支持这个特定推断？",
+    "outline": "An argument suggests that using a symptom reliever during flu could increase transmission. It links a reduction in fever to a possible increase in the length or infectiousness of an illness. Which additional finding, if true, would strengthen its prediction about transmission?",
+    "outlineZh": "一段论证认为，在流感期间用药缓解症状可能增加传播，并提出退烧后病程或传染性可能上升。假设下列各项属实，哪项会加强有关传播的预测？",
     "answer": "B. Earlier return to the workplace while still infectious would support the prediction.",
     "answerZh": "B。若患者仍具传染性时更可能因症状缓解而返岗，这会支持题中的推断。",
     "methods": [

@@ -23,5 +23,785 @@
       }
     ],
     "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/1"
+  },
+  "amc10-2024a-q2": {
+    "summary": "A trail with length $L$ miles and ascent $G$ feet has predicted time $aL+bG$ minutes. Both $(L,G)=(1.5,800)$ and $(1.2,1100)$ give 69 minutes. Predict the time for $(4.2,4000)$.",
+    "summaryZh": "步道长 $L$ 英里，累计爬升 $G$ 英尺，预计用时为 $aL+bG$ 分钟。两条步道的数据 $(1.5,800)$、$(1.2,1100)$ 都给出 69 分钟。求 $(4.2,4000)$ 的预计用时。",
+    "answer": "B. $246$ minutes.",
+    "answerZh": "B．$246$ 分钟。",
+    "methods": [
+      {
+        "title": "Identify equivalent effort",
+        "titleZh": "计算等效路程",
+        "topics": [
+          {
+            "en": "Linear models",
+            "zh": "线性模型"
+          }
+        ],
+        "steps": [
+          "Comparing the two known routes shows that $0.3a=300b$, so $a=1000b$. The rule becomes $b(1000L+G)$.",
+          "The first example gives $2300b=69$, or $b=0.03$. The requested time is $0.03(4200+4000)=246$."
+        ],
+        "stepsZh": [
+          "比较两条已知路线得 $0.3a=300b$，所以 $a=1000b$，模型化为 $b(1000L+G)$。",
+          "用第一组数据得 $2300b=69$，即 $b=0.03$。目标用时为 $0.03(4200+4000)=246$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/2"
+  },
+  "amc10-2024a-q3": {
+    "summary": "Find the smallest prime that is a sum of five different primes. Give its digit sum.",
+    "summaryZh": "找出能写成五个互异质数之和的最小质数，再求它的数位和。",
+    "answer": "B. $7$.",
+    "answerZh": "B．$7$。",
+    "methods": [
+      {
+        "title": "Use parity before searching",
+        "titleZh": "先用奇偶性缩小范围",
+        "topics": [
+          {
+            "en": "Parity and primes",
+            "zh": "奇偶性与质数"
+          }
+        ],
+        "steps": [
+          "Including 2 and four odd primes produces an even number greater than 2. Thus all five summands must be odd. The smallest possible sum is $3+5+7+11+13=39$, composite.",
+          "Every other choice increases the sum by at least 4: among larger sets, the least is $3,5,7,11,17$. Its sum 43 is prime. Its digit sum is $4+3=7$."
+        ],
+        "stepsZh": [
+          "若含 2，其余四个均为奇质数，总和是大于 2 的偶数。故五个加数都须是奇质数。最小组合为 $3+5+7+11+13=39$，是合数。",
+          "其他组合中最小的一组为 $3,5,7,11,17$，把最大项至少增加 4。所得 43 是质数，数位和为 $4+3=7$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/3"
+  },
+  "amc10-2024a-q4": {
+    "summary": "What is the fewest two-digit positive integers whose sum is 2024? Repetitions are allowed.",
+    "summaryZh": "若干个两位正整数相加得 2024，允许重复。最少需要几项？",
+    "answer": "B. $21$.",
+    "answerZh": "B．$21$ 项。",
+    "methods": [
+      {
+        "title": "Match a bound with an example",
+        "titleZh": "找下界并构造",
+        "topics": [
+          {
+            "en": "Extremal counting",
+            "zh": "极值计数"
+          }
+        ],
+        "steps": [
+          "Each term is at most 99, and $20\\cdot99=1980<2024$. Thus 20 terms cannot suffice.",
+          "Take twenty copies of 99 and one 44. Their total is $1980+44=2024$, so 21 suffice."
+        ],
+        "stepsZh": [
+          "每项至多 99，而 $20\\cdot99=1980<2024$，所以至少要 21 项。",
+          "取二十个 99 和一个 44，和为 $1980+44=2024$，达到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/4"
+  },
+  "amc10-2024a-q5": {
+    "summary": "Find the smallest positive $n$ for which $2024$ divides $n!$.",
+    "summaryZh": "求使 $2024$ 整除 $n!$ 的最小正整数 $n$。",
+    "answer": "D. $23$.",
+    "answerZh": "D．$23$。",
+    "methods": [
+      {
+        "title": "Factor the target",
+        "titleZh": "分解所需因数",
+        "topics": [
+          {
+            "en": "Prime factorization",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "$2024=8\\cdot253=2^3\\cdot11\\cdot23$. The prime 23 cannot divide a factorial smaller than $23!$.",
+          "At $n=23$ the factors $8,11,23$ all occur and are pairwise coprime. Their product divides the factorial."
+        ],
+        "stepsZh": [
+          "$2024=8\\cdot253=2^3\\cdot11\\cdot23$。若 $n<23$，则 $n!$ 不含质因数 23。",
+          "当 $n=23$ 时，互素的三个因数 $8,11,23$ 均已出现，它们的乘积整除 $23!$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/5"
+  },
+  "amc10-2024a-q6": {
+    "summary": "Six different letters start in alphabetical order. How many adjacent swaps are needed, at minimum, to reverse their order?",
+    "summaryZh": "六个不同字母起初按字母表顺序排成一行。每次交换相邻两项，要将次序完全反转最少需要几次？",
+    "answer": "D. $15$.",
+    "answerZh": "D．$15$ 次。",
+    "methods": [
+      {
+        "title": "Count inverted pairs",
+        "titleZh": "数逆序对",
+        "topics": [
+          {
+            "en": "Inversions",
+            "zh": "逆序对"
+          }
+        ],
+        "steps": [
+          "All $\\binom62=15$ pairs must reverse their relative order. One adjacent swap reverses exactly one pair, giving a lower bound of 15.",
+          "Move the last letter to the front in five swaps, then move the new last letter into second place in four swaps, and continue. This uses $5+4+3+2+1=15$."
+        ],
+        "stepsZh": [
+          "六个字母有 $\\binom62=15$ 对，每对的先后都要翻转。一次相邻交换恰能翻转一对，故至少要 15 次。",
+          "把最后一个字母依次向前移动五格，再把新的末项移到第二位用四步，继续操作，共 $5+4+3+2+1=15$ 次。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/6"
+  },
+  "amc10-2024a-q7": {
+    "summary": "Three integers have product 60. Find the smallest strictly positive value their sum can take.",
+    "summaryZh": "三个整数的积为 60，它们的和若为正整数，最小能是多少？",
+    "answer": "B. $3$.",
+    "answerZh": "B．$3$。",
+    "methods": [
+      {
+        "title": "List only candidate sign patterns",
+        "titleZh": "只枚举可能取小值的符号组合",
+        "topics": [
+          {
+            "en": "Integer factorization",
+            "zh": "整数因数分解"
+          }
+        ],
+        "steps": [
+          "Three positives have sum at least 3. Otherwise write the numbers $-p,-q,r$ with $1\\le p\\le q$ and $r>p+q$. Since $pqr=60$, one has $p\\le3$.",
+          "For $p=1$, possible $q\\le r$ are $1,2,3,4,5,6$, yielding sums $58,27,16,10,6,3$. For $p=2$, try $q=2,3,5$, giving $11,5,-1$. For $p=3$, only $q=4$ is possible, giving $-2$.",
+          "The positive minimum 3 occurs for $(-1,-6,10)$."
+        ],
+        "stepsZh": [
+          "三个数全正时和至少为 3。其余情形记为 $-p,-q,r$，其中 $1\\le p\\le q$，为使和为正还须 $r>p+q$。由 $pqr=60$ 得 $p\\le3$。",
+          "当 $p=1$，可取 $q=1,2,3,4,5,6$，依次得和 $58,27,16,10,6,3$。当 $p=2$，试 $q=2,3,5$，得 $11,5,-1$。当 $p=3$，只能 $q=4$，得 $-2$。",
+          "所以最小正和为 3，由 $(-1,-6,10)$ 达到。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/7"
+  },
+  "amc10-2024a-q8": {
+    "summary": "Three workers begin at 1 PM and pack 4, 3 and 3 boxes respectively every three minutes. A fourth worker later joins and packs five boxes every four minutes. The total at 2:45 PM is 450. When did the fourth worker start?",
+    "summaryZh": "三人从下午一点开始装盒，每三分钟分别装 4、3、3 盒。第四人稍后加入，每四分钟装 5 盒。下午 2:45 时总量为 450 盒。第四人几点开始？",
+    "answer": "A. 1:25 PM.",
+    "answerZh": "A．下午 1:25。",
+    "methods": [
+      {
+        "title": "Separate the original team’s work",
+        "titleZh": "扣除前三人的产量",
+        "topics": [
+          {
+            "en": "Work rates",
+            "zh": "工作效率"
+          }
+        ],
+        "steps": [
+          "The initial three work for 105 minutes, making $(105/3)(4+3+3)=350$ boxes. The remaining 100 are the fourth worker’s contribution.",
+          "At $5/4$ boxes per minute that takes $100\\cdot4/5=80$ minutes. Subtracting 80 minutes from 2:45 PM gives 1:25 PM."
+        ],
+        "stepsZh": [
+          "最初三人工作 105 分钟，合计装 $(105/3)(4+3+3)=350$ 盒，剩余 100 盒由第四人完成。",
+          "第四人的速度为每分钟 $5/4$ 盒，需 $100\\cdot4/5=80$ 分钟。从下午 2:45 回推 80 分钟即下午 1:25。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/8"
+  },
+  "amc10-2024a-q9": {
+    "summary": "From six juniors and six seniors, form three unlabelled teams, each with two students from each year. How many partitions are possible?",
+    "summaryZh": "六名低年级学生与六名高年级学生组成三支不编号的队伍，每队各含两个年级的两名学生。共有多少种分队方式？",
+    "answer": "B. $1350$.",
+    "answerZh": "B．$1350$ 种。",
+    "methods": [
+      {
+        "title": "Pair each year group first",
+        "titleZh": "先在各年级内配对",
+        "topics": [
+          {
+            "en": "Perfect matchings",
+            "zh": "完全匹配"
+          }
+        ],
+        "steps": [
+          "The youngest junior can partner with any of five others; the first remaining junior has three choices, and the last two pair automatically. Thus there are $5\\cdot3=15$ pairings. The seniors also have 15.",
+          "Match the three junior pairs bijectively to the three senior pairs in $3!=6$ ways. The total is $15^2\\cdot6=1350$."
+        ],
+        "stepsZh": [
+          "固定一名低年级生，其搭档有五种选法；再固定余下的一名，有三个搭档可选；最后两人自动配对，故共有 $5\\cdot3=15$ 种。高年级同理。",
+          "三对低年级生与三对高年级生之间有 $3!=6$ 种一一配对。分队总数为 $15^2\\cdot6=1350$。"
+        ]
+      },
+      {
+        "title": "Temporarily label the teams",
+        "titleZh": "暂时给各队编号",
+        "topics": [
+          {
+            "en": "Multinomial coefficients",
+            "zh": "多项式系数"
+          }
+        ],
+        "steps": [
+          "For labelled teams, distribute the six juniors in pairs in $\\binom62\\binom42=90$ ways. The seniors can be distributed independently in 90 ways.",
+          "Forgetting the labels identifies exactly $3!$ labelled outcomes for each partition, giving $90^2/6=1350$."
+        ],
+        "stepsZh": [
+          "先给三队编号。把六名低年级生两两分到三队，有 $\\binom62\\binom42=90$ 种。高年级生独立分配，同样有 90 种。",
+          "去掉队伍编号时每种分队恰被重复计算 $3!$ 次，所以共有 $90^2/6=1350$ 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/9"
+  },
+  "amc10-2024a-q10": {
+    "summary": "Start at 100. In each move divide the current value by 3 if divisible by 3, and otherwise add 10. What is the value after 100 moves?",
+    "summaryZh": "从 100 出发，每次若当前数是 3 的倍数就除以 3，否则加 10。第 100 步后是什么数？",
+    "answer": "C. $30$.",
+    "answerZh": "C．$30$。",
+    "methods": [
+      {
+        "title": "Find the eventual cycle",
+        "titleZh": "确定最终循环",
+        "topics": [
+          {
+            "en": "Periodic sequences",
+            "zh": "周期数列"
+          }
+        ],
+        "steps": [
+          "At move numbers 0 through 8 the values are $100,110,120,40,50,60,20,30,10$. From 10 the next moves are $20,30,10$, a cycle of length 3.",
+          "Since $100-8=92$ leaves remainder 2 on division by 3, take two moves from 10 and obtain 30."
+        ],
+        "stepsZh": [
+          "从第 0 步至第 8 步，依次为 $100,110,120,40,50,60,20,30,10$。从 10 再走为 $20,30,10$，形成三步循环。",
+          "因 $100-8=92$ 除以 3 余 2，从 10 再走两步便得 30。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/10"
+  },
+  "amc10-2024a-q11": {
+    "summary": "How many integer pairs $(m,n)$ satisfy $m=\\sqrt{n^2-49}$?",
+    "summaryZh": "满足 $m=\\sqrt{n^2-49}$ 的整数有序对 $(m,n)$ 有几个？",
+    "answer": "D. $4$.",
+    "answerZh": "D．$4$ 个。",
+    "methods": [
+      {
+        "title": "Factor with a nonnegative root",
+        "titleZh": "用非负平方根进行因式分解",
+        "topics": [
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          }
+        ],
+        "steps": [
+          "Let $u=\\lvert n\\rvert$. We require $m\\ge0$ and $(u-m)(u+m)=49$. Both factors are positive odd integers in increasing order (equality allowed).",
+          "The pairs $(1,49),(7,7)$ produce $(u,m)=(25,24),(7,0)$. Each positive $u$ allows both signs of $n$, yielding four ordered pairs."
+        ],
+        "stepsZh": [
+          "令 $u=\\lvert n\\rvert$。需有 $m\\ge0$ 且 $(u-m)(u+m)=49$。这两个因数均为正奇数，前者不超过后者。",
+          "因数对 $(1,49),(7,7)$ 分别给出 $(u,m)=(25,24),(7,0)$。每个正 $u$ 都对应 $n$ 的两种符号，故共四对。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/11"
+  },
+  "amc10-2024a-q12": {
+    "summary": "A player scores 1700 on the first day. The next five daily changes, in order, are +80, −90, −10, +60 and −40. What is the mean of the six daily scores?",
+    "summaryZh": "玩家第一天得 1700 分，随后五天相对于前一天的变化依次是 +80、−90、−10、+60、−40。求这六天得分的平均数。",
+    "answer": "E. $1715$ points.",
+    "answerZh": "E．$1715$ 分。",
+    "methods": [
+      {
+        "title": "Average the deviations",
+        "titleZh": "取相对初值的平均偏差",
+        "topics": [
+          {
+            "en": "Cumulative changes",
+            "zh": "累计变化"
+          },
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          }
+        ],
+        "steps": [
+          "Accumulate the changes relative to 1700. The six deviations are $0,80,-10,-20,40,0$.",
+          "Their sum is 90, so the average score is $1700+90/6=1715$."
+        ],
+        "stepsZh": [
+          "逐日累加变化量，得到相对 1700 的六个偏差 $0,80,-10,-20,40,0$。",
+          "偏差合计 90，故平均分为 $1700+90/6=1715$。"
+        ]
+      },
+      {
+        "title": "Weight a change by the days it affects",
+        "titleZh": "按每次变化影响的天数加权",
+        "topics": [
+          {
+            "en": "Weighted sums",
+            "zh": "加权求和"
+          }
+        ],
+        "steps": [
+          "Adding 80 on day two affects five scores; subtracting 90 on day three affects four. The five changes contribute a combined $5(80)-4(90)-3(10)+2(60)-40=90$ to the six-day total above baseline.",
+          "The mean therefore exceeds 1700 by $90/6=15$, giving 1715."
+        ],
+        "stepsZh": [
+          "第二天增加的 80 会影响五天的分数，第三天减少的 90 会影响四天。五次变化给六日总分带来的净增量为 $5(80)-4(90)-3(10)+2(60)-40=90$。",
+          "平均分比基准 1700 高 $90/6=15$，即 1715。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/12",
+    "figure": {
+      "url": "/commentary-figures/amc10-2024a-q12.svg",
+      "alt": "Score changes in time order: +80, −90, −10, +60, −40.",
+      "altZh": "依时间排列的得分变化：+80、−90、−10、+60、−40。"
+    }
+  },
+  "amc10-2024a-q13": {
+    "summary": "Consider translation right by 2, counterclockwise quarter-turn about the origin, reflection across the horizontal axis, and dilation by 2 about the origin. How many unordered pairs of these four maps give the same transformation in either order?",
+    "summaryZh": "有四个平面变换：向右平移 2，绕原点逆时针转直角，关于水平坐标轴反射，以及以原点为中心放大两倍。无论按哪种次序执行都产生同一变换的无序对有几组？",
+    "answer": "C. $3$.",
+    "answerZh": "C．$3$ 组。",
+    "methods": [
+      {
+        "title": "Compare the maps pairwise",
+        "titleZh": "逐对检查变换",
+        "topics": [
+          {
+            "en": "Composition of transformations",
+            "zh": "变换复合"
+          }
+        ],
+        "steps": [
+          "Call the maps $T,R,F,D$ in the stated order. The scalar map $D$ commutes with both linear maps $R,F$. Also $T$ commutes with $F$ since reflection preserves horizontal displacement.",
+          "At the origin, reversing $T,R$ changes the image from $(0,2)$ to $(2,0)$; reversing $T,D$ changes it from $(4,0)$ to $(2,0)$. Finally $R,F$ in opposite orders send $(1,0)$ to opposite vertical unit vectors. This leaves exactly three commuting pairs."
+        ],
+        "stepsZh": [
+          "按题目次序记为 $T,R,F,D$。数乘变换 $D$ 与线性变换 $R,F$ 均可交换。水平平移 $T$ 与反射 $F$ 也可交换，因为这次反射保持水平位移。",
+          "在原点交换 $T,R$ 的次序，结果分别为 $(0,2)$ 和 $(2,0)$；交换 $T,D$，结果为 $(4,0)$ 和 $(2,0)$。最后，$R,F$ 的两种次序将 $(1,0)$ 送往相反的竖直单位向量。于是恰有三组。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/13"
+  },
+  "amc10-2024a-q14": {
+    "summary": "An equilateral triangle of altitude 24 stands on a line. A radius-12 circle touches the line and one sloping side externally. The gap between line, triangle and circle has area $a\\sqrt b-c\\pi$, where $b$ is squarefree. Find $a+b+c$.",
+    "summaryZh": "高为 24 的等边三角形以一边落在直线上。半径为 12 的圆与这条直线相切，并从外侧与三角形一条斜边相切。三者围成的空隙面积写成 $a\\sqrt b-c\\pi$，其中 $b$ 无平方因数。求 $a+b+c$。",
+    "answer": "D. $75$.",
+    "answerZh": "D．$75$。",
+    "methods": [
+      {
+        "title": "Split the tangent wedge into triangles and a sector",
+        "titleZh": "将切线夹角区域分成直角三角形与扇形",
+        "topics": [
+          {
+            "en": "Circle tangents",
+            "zh": "圆的切线"
+          },
+          {
+            "en": "Sector area",
+            "zh": "扇形面积"
+          }
+        ],
+        "steps": [
+          "The angle of the exterior wedge at the triangle’s base vertex $V$ is $120^\\circ$. The circle’s centre $O$ lies on its bisector. With $P$ a tangency point, triangle $VPO$ is right and has angle $60^\\circ$ at $V$. Hence $VP=12/\\tan60^\\circ=4\\sqrt3$.",
+          "The two such tangent triangles together have area $2\\cdot\\tfrac12(12)(4\\sqrt3)=48\\sqrt3$. The angle between the two radii at the tangencies is $60^\\circ$, so remove the sector of area $\\pi\\cdot12^2/6=24\\pi$. The requested sum is $48+3+24=75$."
+        ],
+        "stepsZh": [
+          "三角形底角顶点 $V$ 外侧的夹角是 $120^\\circ$，圆心 $O$ 在它的角平分线上。设 $P$ 为切点，在直角三角形 $VPO$ 中，$V$ 角为 $60^\\circ$，所以 $VP=12/\\tan60^\\circ=4\\sqrt3$。",
+          "两个这样的切线三角形总面积为 $2\\cdot\\tfrac12(12)(4\\sqrt3)=48\\sqrt3$。连接两切点的半径形成 $60^\\circ$ 角，需减去面积为 $\\pi\\cdot12^2/6=24\\pi$ 的扇形。因此所求为 $48+3+24=75$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/14"
+  },
+  "amc10-2024a-q15": {
+    "summary": "Take the largest integer $M$ for which $M+1213$ and $M+3773$ are both squares of integers. What digit ends $M$?",
+    "summaryZh": "整数 $M$ 满足 $M+1213$、$M+3773$ 均为完全平方数。求最大的这样的 $M$ 的个位数字。",
+    "answer": "E. $8$.",
+    "answerZh": "E．$8$。",
+    "methods": [
+      {
+        "title": "Maximize a difference of paired factors",
+        "titleZh": "利用因数对取最大根",
+        "topics": [
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          },
+          {
+            "en": "Units digits",
+            "zh": "个位数字"
+          }
+        ],
+        "steps": [
+          "Write $M+1213=a^2$ and $M+3773=b^2$ with $0\\le a<b$. Then $(b-a)(b+a)=2560$. The two factors have the same parity and their product is even, so both are even.",
+          "For a fixed product, $2a=(b+a)-(b-a)$ is largest when the smaller factor is as small as possible. The pair $(2,1280)$ is valid and gives $a=639$. Thus the units digit of $M$ is that of $9^2-3=78$, namely 8."
+        ],
+        "stepsZh": [
+          "设 $M+1213=a^2$、$M+3773=b^2$，其中 $0\\le a<b$。相减得 $(b-a)(b+a)=2560$。两个因数同奇偶，乘积为偶数，故二者均偶。",
+          "乘积一定时，小因数越小，差 $2a=(b+a)-(b-a)$ 越大。取可行的最小小因数 2，另一个为 1280，得 $a=639$。所以 $M$ 的个位与 $9^2-3=78$ 相同，为 8。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/15"
+  },
+  "amc10-2024a-q16": {
+    "summary": "Each piece in the pictured dissection is similar to the outer rectangle. The numbers are the areas of the pieces. Find the outer side $AB$.",
+    "summaryZh": "图中每个小长方形都与外框相似。各数字表示相应小长方形的面积，求外框边长 $AB$。",
+    "answer": "D. $10\\sqrt[4]{8}$.",
+    "answerZh": "D．$10\\sqrt[4]{8}$。",
+    "methods": [
+      {
+        "title": "Compare the pieces along the left edge",
+        "titleZh": "比较左边界两段的相似比",
+        "topics": [
+          {
+            "en": "Similarity and area ratios",
+            "zh": "相似与面积比"
+          }
+        ],
+        "steps": [
+          "Adding the eleven areas gives 200. Write $w=AB$ and let $h$ be the outer height. The area-32 rectangle has the outer orientation: its vertical edge is $h\\sqrt{32/200}=2h/5$. The area-36 rectangle is turned: its vertical edge corresponds to $w$ and has length $w\\sqrt{36/200}=3\\sqrt2\\,w/10$.",
+          "These pieces fill the entire left edge, so $h=2h/5+3\\sqrt2\\,w/10$, giving $w=\\sqrt2\\,h$. As $wh=200$, we have $w^2=200\\sqrt2$ and $w=10\\sqrt[4]{8}$."
+        ],
+        "stepsZh": [
+          "十一个小矩形的面积合计 200。记 $w=AB$，外框高为 $h$。面积 32 的矩形与外框同向，其竖边长 $h\\sqrt{32/200}=2h/5$。面积 36 的矩形转过了直角，竖边对应外框长边 $w$，长度为 $w\\sqrt{36/200}=3\\sqrt2\\,w/10$。",
+          "这两段恰拼成整条左边，故 $h=2h/5+3\\sqrt2\\,w/10$，即 $w=\\sqrt2\\,h$。由 $wh=200$ 得 $w^2=200\\sqrt2$，故 $w=10\\sqrt[4]{8}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/16",
+    "figure": {
+      "url": "/commentary-figures/amc10-2024a-q16.svg",
+      "alt": "Dissection areas total 200. Along the left side a vertical area-36 rectangle sits above a horizontal area-32 rectangle. AB is the full bottom edge.",
+      "altZh": "各矩形面积之和为 200，左侧面积 36 的竖向矩形在面积 32 的横向矩形上方。AB 是整个底边。"
+    }
+  },
+  "amc10-2024a-q17": {
+    "summary": "Team A wins its home game with probability $2/3$ and each away game with probability $p$, independently. A best-of-three series starts at home and then switches to the opponent’s field. If A wins the series with probability $1/2$ and $p=(m-\\sqrt n)/2$, find $m+n$.",
+    "summaryZh": "A 队在主场取胜的概率为 $2/3$，在客场每场取胜的概率为 $p$，各场相互独立。三局两胜制中首场在主场，之后在客场。若 A 赢系列赛的概率为 $1/2$，并写成 $p=(m-\\sqrt n)/2$，求 $m+n$。",
+    "answer": "E. $14$.",
+    "answerZh": "E．$14$。",
+    "methods": [
+      {
+        "title": "Condition on the opening game",
+        "titleZh": "按首场胜负分类",
+        "topics": [
+          {
+            "en": "Conditional probability",
+            "zh": "条件概率"
+          }
+        ],
+        "steps": [
+          "After a home win A needs at least one win in the next two potential games, probability $1-(1-p)^2$. After a home loss both away games must be won, probability $p^2$.",
+          "Thus $\\tfrac23[1-(1-p)^2]+\\tfrac13 p^2=\\tfrac12$, or $2p^2-8p+3=0$. The only root in $[0,1]$ is $(4-\\sqrt{10})/2$, giving $m+n=14$."
+        ],
+        "stepsZh": [
+          "主场首胜后，余下两场潜在比赛中至少赢一场即可，概率为 $1-(1-p)^2$。首场失利后则两场客场都必须赢，概率为 $p^2$。",
+          "所以 $\\tfrac23[1-(1-p)^2]+\\tfrac13p^2=\\tfrac12$，化为 $2p^2-8p+3=0$。在 $[0,1]$ 内的根为 $(4-\\sqrt{10})/2$，故 $m+n=14$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/17"
+  },
+  "amc10-2024a-q18": {
+    "summary": "Among integer bases $5\\le b\\le2024$, let $K$ count those for which the numeral $2024_b$ is divisible by decimal 16. What is the digit sum of $K$?",
+    "summaryZh": "整数进制满足 $5\\le b\\le2024$。在其中，有 $K$ 种进制使 $2024_b$ 能被十进制数 16 整除。求 $K$ 的数位和。",
+    "answer": "D. $20$.",
+    "answerZh": "D．$20$。",
+    "methods": [
+      {
+        "title": "Separate odd and even bases",
+        "titleZh": "按进制的奇偶分类",
+        "topics": [
+          {
+            "en": "Congruences modulo eight",
+            "zh": "模八同余"
+          },
+          {
+            "en": "Positional notation",
+            "zh": "位值制"
+          }
+        ],
+        "steps": [
+          "The numeral is $2b^3+2b+4$, so we need $b^3+b+2\\equiv0\\pmod8$. For even $b$, the cube vanishes mod 8, giving $b\\equiv6$. For odd $b$, $b^2\\equiv1\\pmod8$, so $2b+2\\equiv0\\pmod8$, giving $b\\equiv3,7\\pmod8$.",
+          "As $2024=253\\cdot8$, the range 1 through 2024 contains 253 instances of each of the three residues. Among 1 through 4 only 3 qualifies, so $K=3\\cdot253-1=758$. Its digit sum is 20."
+        ],
+        "stepsZh": [
+          "该数等于 $2b^3+2b+4$，故需 $b^3+b+2\\equiv0\\pmod8$。若 $b$ 偶，立方为 8 的倍数，得 $b\\equiv6\\pmod8$。若 $b$ 奇，则 $b^2\\equiv1\\pmod8$，故 $2b+2\\equiv0\\pmod8$，即 $b\\equiv3,7\\pmod8$。",
+          "因 $2024=253\\cdot8$，从 1 至 2024 每一类余数均有 253 个数。其中 1 至 4 只有 3 符合，应剔除。于是 $K=3\\cdot253-1=758$，数位和为 20。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/18"
+  },
+  "amc10-2024a-q19": {
+    "summary": "Three consecutive terms of a geometric sequence are integers $a<720<b$, with middle term 720. Find the digit sum of the smallest possible $b$.",
+    "summaryZh": "等比数列中连续三项为整数 $a,720,b$，且 $a<720<b$。求最小可能的 $b$ 的数位和。",
+    "answer": "E. $21$.",
+    "answerZh": "E．$21$。",
+    "methods": [
+      {
+        "title": "Bound the denominator of the common ratio",
+        "titleZh": "限制公比的分母",
+        "topics": [
+          {
+            "en": "Reduced fractions",
+            "zh": "最简分数"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ],
+        "steps": [
+          "Write the positive common ratio as $p/q>1$ in lowest terms. Since $a=720q/p$ and $b=720p/q$ are integers, the coprime integers $p,q$ both divide 720. Hence $pq\\le720$ and $q<27$. The ratio $16/15$ works, giving $(a,b)=(675,768)$.",
+          "If $1<p/q<16/15$, then $q>15(p-q)$, so $16\\le q\\le26$ and $p-q=1$. The only divisors of $720=2^4\\cdot3^2\\cdot5$ between 16 and 27 are $16,18,20,24$, no two consecutive. This rules out a smaller ratio and thus a smaller $b$. The digit sum of 768 is $21$."
+        ],
+        "stepsZh": [
+          "将正公比写为最简分数 $p/q>1$。由 $a=720q/p$ 与 $b=720p/q$ 均为整数，互素的 $p,q$ 都整除 720。故 $pq\\le720$，有 $q<27$。公比 $16/15$ 可行，给出 $(a,b)=(675,768)$。",
+          "若 $1<p/q<16/15$，则 $q>15(p-q)$，所以 $16\\le q\\le26$ 且 $p-q=1$。由 $720=2^4\\cdot3^2\\cdot5$ 可列出 16 至 27 之间的因数仅有 $16,18,20,24$，其中没有连续整数。因此不存在更小公比，最小的 $b$ 为 768，数位和为 $21$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/19"
+  },
+  "amc10-2024a-q20": {
+    "summary": "Choose numbers from $1$ through $2024$. Every two chosen numbers must differ by more than 2, and every two chosen odd numbers by more than 6. What is the largest possible selection?",
+    "summaryZh": "从 1 到 2024 中选数，任意两数之差的绝对值大于 2，任意两个所选奇数之差的绝对值大于 6。最多能选几个？",
+    "answer": "C. $608$.",
+    "answerZh": "C．$608$ 个。",
+    "methods": [
+      {
+        "title": "Use ten-number blocks",
+        "titleZh": "每十个数分块",
+        "topics": [
+          {
+            "en": "Packing bounds",
+            "zh": "选数上界"
+          },
+          {
+            "en": "Periodic constructions",
+            "zh": "周期构造"
+          }
+        ],
+        "steps": [
+          "Four chosen numbers in ten consecutive positions would have three gaps of at least 3. They must therefore occupy positions $s,s+3,s+6,s+9$. Regardless of the parity of $s$, two of the odd entries then differ by 6, which is forbidden.",
+          "Thus each of 202 complete blocks of ten gives at most three entries. The last four give at most two, so the bound is $202\\cdot3+2=608$.",
+          "Choose precisely the numbers congruent to $1,4,8\\pmod{10}$. Their successive gaps are 3, 4, 3, and the selected odd numbers are ten apart. The last block contributes 2021 and 2024, giving the full bound."
+        ],
+        "stepsZh": [
+          "若在连续十个数中选四个，三个相邻间隔均须至少为 3，只能取 $s,s+3,s+6,s+9$。无论 $s$ 奇偶，其中都有两个奇数相差 6，不合要求。",
+          "故 202 个完整十数块各至多贡献三项，剩余四数至多取两项。上界为 $202\\cdot3+2=608$。",
+          "选取模 10 余 $1,4,8$ 的所有数，连续间隔为 3、4、3，所选奇数相隔 10。最后一块有 2021、2024，恰好达到上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/20"
+  },
+  "amc10-2024a-q21": {
+    "summary": "In a $5\\times5$ array each row and each column is an arithmetic progression. Entries at $(5,5),(2,4),(4,3),(3,1)$ are respectively $0,48,16,12$ (row first). Find the entry at $(1,2)$.",
+    "summaryZh": "一个 $5\\times5$ 方阵的每行、每列都是等差数列。按先行后列，$(5,5),(2,4),(4,3),(3,1)$ 的值分别为 $0,48,16,12$。求 $(1,2)$ 的值。",
+    "answer": "C. $29$.",
+    "answerZh": "C．$29$。",
+    "methods": [
+      {
+        "title": "Shift coordinates to a known entry",
+        "titleZh": "以一个已知格为坐标原点",
+        "topics": [
+          {
+            "en": "Bilinear interpolation",
+            "zh": "双线性插值"
+          },
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Put $x=i-3$, $y=j-1$ for row $i$, column $j$. Every column is linear in $x$, and the intercepts and slopes vary linearly in $y$: the slopes are differences of adjacent rows, both linear in $y$. Hence all entries have form $12+ux+vy+wxy$.",
+          "The three remaining clues give $u+2v+4w=-6$, $-u+3v-3w=36$, $u+2v+2w=4$. Subtract the third from the first to get $w=-5$. Adding the last two gives $5v-w=40$, hence $v=7$, then $u=0$.",
+          "At $(i,j)=(1,2)$ the shifted coordinates are $(-2,1)$, giving $12+7+10=29$."
+        ],
+        "stepsZh": [
+          "对第 $i$ 行、第 $j$ 列取 $x=i-3$、$y=j-1$。每一列对 $x$ 呈线性，截距随 $y$ 呈线性，斜率是相邻两行之差，也随 $y$ 呈线性。因此通式为 $12+ux+vy+wxy$。",
+          "另三个已知条件给出 $u+2v+4w=-6$、$-u+3v-3w=36$、$u+2v+2w=4$。第一式减第三式得 $w=-5$；后两式相加得 $5v-w=40$，所以 $v=7$，代回得 $u=0$。",
+          "目标位置的平移坐标为 $(-2,1)$，值为 $12+7+10=29$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/21"
+  },
+  "amc10-2024a-q22": {
+    "summary": "Join two congruent right triangles of legs $1,\\sqrt3$ along their hypotenuse to make a kite. Eight such kites tile the outlined polygon in the drawing. Find the area of the marked triangle $ABC$.",
+    "summaryZh": "将两个直角边长为 $1,\\sqrt3$ 的全等直角三角形沿斜边拼成筝形。用八个这样的筝形拼成图中外框多边形。求标出的 $\\triangle ABC$ 的面积。",
+    "answer": "B. $9\\sqrt3/2$.",
+    "answerZh": "B．$9\\sqrt3/2$。",
+    "methods": [
+      {
+        "title": "Project the kite edges onto the base",
+        "titleZh": "把筝形边投影到底边上",
+        "topics": [
+          {
+            "en": "Special right triangles",
+            "zh": "特殊直角三角形"
+          },
+          {
+            "en": "Projections",
+            "zh": "投影"
+          }
+        ],
+        "steps": [
+          "The half-kites have angles $30^\\circ,60^\\circ,90^\\circ$. Trace a zigzag from $A$ to $B$ using four consecutive long kite edges: go up-right, down-right to the middle of $AB$, down-right, then up-right. Each edge is $\\sqrt3$ long and makes a $30^\\circ$ angle with $AB$. Thus $AB=4\\sqrt3\\cos30^\\circ=6$.",
+          "To reach $C$ from $A$ along the upper-left outline, first rise along one such inclined edge, then along a vertical long edge, then move horizontally. The net height is $\\sqrt3\\sin30^\\circ+\\sqrt3=3\\sqrt3/2$. The triangle’s area is $6(3\\sqrt3/2)/2=9\\sqrt3/2$."
+        ],
+        "stepsZh": [
+          "半个筝形的三个角为 $30^\\circ,60^\\circ,90^\\circ$。从 $A$ 到 $B$，沿四条相连的筝形长边走折线：先向右上，再向右下至 $AB$ 中点，再向右下，最后向右上。四条边长均为 $\\sqrt3$，与底边均成 $30^\\circ$，故 $AB=4\\sqrt3\\cos30^\\circ=6$。",
+          "从 $A$ 沿左上外框到 $C$ 时，先走一条这样的斜长边，再竖直上移一条长边，最后水平移动。故高为 $\\sqrt3\\sin30^\\circ+\\sqrt3=3\\sqrt3/2$。三角形面积为 $6(3\\sqrt3/2)/2=9\\sqrt3/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/22",
+    "figure": {
+      "url": "/commentary-figures/amc10-2024a-q22.svg",
+      "alt": "Kite tiling with horizontal base AB. From A to B follow four long edges inclined successively +30°, −30°, −30°, +30°. From A to C follow the first inclined edge, a vertical long edge, then a horizontal short edge.",
+      "altZh": "筝形拼图的 AB 水平。从 A 到 B 可沿四条长边依次走 +30°、−30°、−30°、+30°。从 A 到 C 先走第一条斜边，再竖直上移一条长边，最后水平走一条短边。"
+    }
+  },
+  "amc10-2024a-q23": {
+    "summary": "Integers $a,b,c$ obey $ab+c=100$, $bc+a=87$ and $ca+b=60$. Determine $ab+bc+ca$.",
+    "summaryZh": "整数 $a,b,c$ 满足 $ab+c=100$、$bc+a=87$、$ca+b=60$。求 $ab+bc+ca$。",
+    "answer": "D. $276$.",
+    "answerZh": "D．$276$。",
+    "methods": [
+      {
+        "title": "Factor the difference of two equations",
+        "titleZh": "将两方程之差分解因式",
+        "topics": [
+          {
+            "en": "Factoring differences",
+            "zh": "作差分解"
+          },
+          {
+            "en": "Integer constraints",
+            "zh": "整数限制"
+          }
+        ],
+        "steps": [
+          "Subtract the second equation from the first to obtain $(a-c)(b-1)=13$. This forces $b\\in\\{2,14,0,-12\\}$. Write $u=13/(b-1)=a-c$. Then $bc+a=(b+1)c+u=87$.",
+          "For $b=2,14$, this gives $c=74/3,86/15$ respectively, impossible. If $b=0$, the first two original equations require $c=100,a=87$, violating the third. If $b=-12$, then $u=-1$, $c=-8$ and $a=-9$, which satisfy all three equations.",
+          "Their pairwise products sum to $108+96+72=276$."
+        ],
+        "stepsZh": [
+          "第一式减第二式得 $(a-c)(b-1)=13$，由此得 $b\\in\\{2,14,0,-12\\}$。记 $u=13/(b-1)=a-c$，则 $bc+a=(b+1)c+u=87$。",
+          "当 $b=2,14$ 时，分别得 $c=74/3,86/15$，不是整数。若 $b=0$，原方程前两式要求 $c=100,a=87$，与第三式矛盾。若 $b=-12$，则 $u=-1,c=-8,a=-9$，三式均成立。",
+          "两两乘积之和为 $108+96+72=276$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/23"
+  },
+  "amc10-2024a-q24": {
+    "summary": "A walker on the three-dimensional integer lattice makes four independent unit moves, each uniformly chosen from the six signed coordinate directions. What is the probability that all four traversed edges are distinct edges of a single unit cube?",
+    "summaryZh": "在三维整数格点上独立走四步，每步等概率选六个有向坐标轴方向之一前进一个单位。四条经过的边互不相同且属于同一个单位立方体的概率是多少？",
+    "answer": "B. $7/54$.",
+    "answerZh": "B．$7/54$。",
+    "methods": [
+      {
+        "title": "Count by the axes used",
+        "titleZh": "按使用的坐标轴分类",
+        "topics": [
+          {
+            "en": "Lattice paths",
+            "zh": "格点路径"
+          },
+          {
+            "en": "Counting with cases",
+            "zh": "分类计数"
+          }
+        ],
+        "steps": [
+          "If exactly two axes are used, the four distinct edges must go around one square face. Choose its two axes in 3 ways, the initial sign on each in 4 ways, and which axis comes first in 2 ways. This gives 24 paths; only one axis cannot supply four distinct cube edges.",
+          "If all three axes occur, one repeats. Choose the repeated axis in 3 ways and its two positions in 3 ways: $(1,3),(1,4),(2,4)$. Adjacent repeats would either leave the cube or retrace an edge. Order the remaining axes in 2 ways and choose the first sign of each axis in $2^3$ ways. The repeated move must reverse sign; an intervening other move makes the repeated-axis edges distinct. This gives $3\\cdot3\\cdot2\\cdot8=144$.",
+          "The die has $6^4$ equally probable four-roll sequences, giving $(24+144)/6^4=7/54$."
+        ],
+        "stepsZh": [
+          "若恰使用两根轴，则四条不同棱必须恰绕一个正方形面。选两根轴有 3 种，分别选首次方向有 4 种，再选先走哪根轴有 2 种，共 24 条。仅使用一根轴无法走过同一立方体的四条不同棱。",
+          "若三根轴都出现，一根恰好重复。重复轴有 3 种，其两次出现的位置只能是 $(1,3),(1,4),(2,4)$ 共 3 种，相邻重复会出界或原路折返。其余两轴有 2 种次序，三轴的首次方向有 $2^3$ 种。重复轴第二次必须反向，中间已有其他方向的位移，保证这两条棱不同。计 $3\\cdot3\\cdot2\\cdot8=144$。",
+          "四步路径总数为 $6^4$，等概率，故所求为 $(24+144)/6^4=7/54$。"
+        ]
+      },
+      {
+        "title": "Count walks in cubes and correct the overlap",
+        "titleZh": "按立方体计数，再扣重复",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          }
+        ],
+        "steps": [
+          "Exactly eight unit cubes touch the starting lattice vertex. Within any fixed one of them, a walk with four distinct edges has 3 initial choices and 2 at each later step if immediate reversals are excluded. This is sufficient: returning to a previously used edge after a detour requires at least four steps to complete a face before reusing an edge on step five. Hence the number counted with a specified cube is $8\\cdot3\\cdot2^3=192$.",
+          "A walk using all three axes belongs to only one cube. A walk in a face must traverse its whole boundary and belongs to two cubes. There are $3\\cdot4\\cdot2=24$ such walks (plane, signs, direction), each counted once too often. Dividing $192-24$ by $6^4$ gives $7/54$."
+        ],
+        "stepsZh": [
+          "恰有八个单位立方体包含起始顶点。固定其中一个，第一步有三种，此后每步排除原路折返便各有两种。在前四步中这样就保证不重复用棱：若要绕行后再次使用以前的棱，至少先走完一个四边形，再在第五步重用。因此带指定立方体共计 $8\\cdot3\\cdot2^3=192$。",
+          "三根轴均用到的路径只属于一个立方体。仅在一个面上走时必须走完整圈，此路径属于两个立方体。选坐标平面、两轴符号与绕行方向，共 $3\\cdot4\\cdot2=24$ 条这样的路径，各多算了一次。用 $192-24$ 除以 $6^4$ 得 $7/54$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/24"
+  },
+  "amc10-2024a-q25": {
+    "summary": "On the edges of a grid eight cells wide and three high, draw one simple closed loop. Each of the eight middle-row cells must have exactly one edge on the loop. The top and bottom rows carry no restriction. Count the loops.",
+    "summaryZh": "在宽八格、高三格的方格图上，沿格线画一个不自交的闭环。中间一行八个格子各恰有一条边属于闭环，上下两行不限制。共有多少种闭环？",
+    "answer": "C. $146$.",
+    "answerZh": "C．$146$ 种。",
+    "methods": [
+      {
+        "title": "Classify the cells inside the loop",
+        "titleZh": "按闭环内部的方格分类",
+        "topics": [
+          {
+            "en": "Planar separation",
+            "zh": "平面分隔"
+          },
+          {
+            "en": "Binary patterns",
+            "zh": "二元模式"
+          }
+        ],
+        "steps": [
+          "Mark each cell inside the loop 1 and each cell outside 0; the exterior of the board also has value 0. An edge is on the loop exactly when its two sides have different marks. Thus each middle cell has exactly one neighbour with the opposite mark. The interior cells of a simple grid loop are edge-connected.",
+          "Suppose some middle cell is inside. Wherever consecutive middle marks change, the different horizontal neighbour uses up each cell’s allowance. Both vertical neighbours of either cell must match it. Thus beside a change there is an entirely empty column next to an entirely full column. An empty column disconnects inside cells on its two sides, so the middle 1s form one block. Outside that block there is at most one column at either end: any farther middle 0 would need an inside vertical neighbour cut off by the empty column.",
+          "Each end column of the block is full, also at a board edge where the outside mark is 0. For each strictly interior column of this block the middle cell already has two 1s horizontally, so exactly one of its top or bottom neighbours is 1. Each independent choice works: the marked cells extend the solid middle strip up or down by one, forming a connected shape without holes or corner pinches, hence one simple boundary. Omitting 0, 1 or 2 end columns gives $2^6+2\\cdot2^5+2^4=144$ loops.",
+          "If no middle cell is inside, each column must have exactly one of its top and bottom cells inside. Connectivity forces all eight to be in the same row, yielding two more loops. The total is 146."
+        ],
+        "stepsZh": [
+          "在环内的格子标 1，环外格子以及棋盘外部标 0。一条边属于环，当且仅当其两侧标记不同。故每个中行格的四个邻居中恰有一个与它不同。简单格线闭环的内部各格按共边相连。",
+          "若有中行格在环内，在两个相邻中行格的标记发生变化之处，不同的水平邻居已用完各格的限额；它们各自的上下邻格必须与自身相同。因此变化处必然一列全空、相邻一列全满。空列会隔断两侧的内部格，故中行的 1 连成单一段。段外左右至多各留一列：更远处的中行 0 需要上或下邻格为 1，却被空列与内部隔断。",
+          "段的两端列必须全满，贴棋盘边时也一样，因为外部为 0。段内非端点的中行格已有两个水平邻居为 1，故其上下邻格恰有一个为 1。可以逐列独立选择；所得形状在连续中段上朝上或朝下各添一格，无洞、无仅角相接的断点，边界正是一条简单闭环。省去首尾零列、一列、两列分别得到 $2^6+2\\cdot2^5+2^4=144$ 种。",
+          "若中行全在环外，则每列必须恰有顶格或底格在环内。为保证内部连通，八格必须全在同一行。再加上下两种，共 146 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2024A/problem/25",
+    "figure": {
+      "url": "/commentary-figures/amc10-2024a-q25.svg",
+      "alt": "A three-row grid eight squares wide. Every square in the middle row is marked 1.",
+      "altZh": "三行八列的方格图，每个中间行的方格均标有数字 1。"
+    }
   }
 }

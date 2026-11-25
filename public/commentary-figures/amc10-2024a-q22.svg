@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 301 211">
+  <title>Eight congruent kites with the marked triangle ABC</title>
+<path d="M20.000 159.000L41.500 196.239L127.500 196.239L149.000 159.000L213.500 196.239L278.000 159.000L256.500 121.761L213.500 121.761L213.500 47.283L149.000 10.044L127.500 47.283L84.500 47.283L84.500 121.761L20.000 159.000Z" fill="#f8fafb"/>
+<path d="M20.000 159.000L127.500 47.283L278.000 159.000L20.000 159.000Z" fill="#d8e4e9"/>
+<path d="M84.500 196.239L84.500 121.761" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M84.500 121.761L149.000 159.000" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M84.500 121.761L213.500 47.283" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M127.500 47.283L170.500 121.761L149.000 159.000" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M170.500 121.761L213.500 121.761" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M213.500 121.761L213.500 196.239" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M20.000 159.000L278.000 159.000L127.500 47.283" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M20.000 159.000L127.500 47.283" fill="none" stroke="#577383" stroke-width="1.35"/>
+<path d="M20.000 159.000L41.500 196.239L127.500 196.239L149.000 159.000L213.500 196.239L278.000 159.000L256.500 121.761L213.500 121.761L213.500 47.283L149.000 10.044L127.500 47.283L84.500 47.283L84.500 121.761L20.000 159.000Z" fill="none" stroke="#294551" stroke-width="2.6" stroke-linejoin="round"/>
+<circle cx="20" cy="159.0" r="2.8" fill="#223a45"/>
+<text x="11" y="172" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">A</text>
+<circle cx="278" cy="159.0" r="2.8" fill="#223a45"/>
+<text x="288" y="169" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">B</text>
+<circle cx="127.5" cy="47.282722911807426" r="2.8" fill="#223a45"/>
+<text x="118.5" y="40.2827" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">C</text>
+</svg>

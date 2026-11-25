@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314 230">
+  <title>Areas of eleven rectangles similar to their common outer rectangle</title>
+<rect x="16" y="9" width="84" height="118.794" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="58" y="72.897" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">36</text>
+<rect x="16" y="127.794" width="112" height="79.196" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="72" y="171.892" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">32</text>
+<rect x="100" y="9" width="56" height="79.196" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="128" y="53.098" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">16</text>
+<rect x="100" y="88.196" width="28" height="39.598" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="114" y="112.495" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">4</text>
+<rect x="128" y="88.196" width="28" height="19.799" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="142" y="102.595" fill="#253d4b" text-anchor="middle" style="font:13px Georgia,serif">2</text>
+<rect x="128" y="107.995" width="70" height="98.9949" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="163" y="161.992" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">25</text>
+<rect x="156" y="9" width="56" height="39.598" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="184" y="33.299" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">8</text>
+<rect x="156" y="48.598" width="42" height="59.397" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="177" y="82.7965" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">9</text>
+<rect x="198" y="48.598" width="14" height="19.799" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="205" y="62.9975" fill="#253d4b" text-anchor="middle" style="font:13px Georgia,serif">1</text>
+<rect x="212" y="9" width="84" height="59.397" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="254" y="43.1985" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">18</text>
+<rect x="198" y="68.397" width="98" height="138.593" fill="#f7fafb" stroke="#365361" stroke-width="1.4"/>
+<text x="247" y="142.193" fill="#253d4b" text-anchor="middle" style="font:16px Georgia,serif">49</text>
+<text x="11" y="224" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">A</text>
+<text x="301" y="224" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">B</text>
+</svg>

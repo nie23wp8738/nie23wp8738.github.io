@@ -40,7 +40,10 @@ const guideReader = (id:string) => prefix + '/tara/guide/' + id + '/';
     </section>
 
     <section aria-labelledby="guide" class="tara-section">
-      <h2 id="guide">{t('Official worked examples','官方例题')}</h2>
+      <div class="section-heading">
+        <h2 id="guide">{t('Official worked examples','官方例题')}</h2>
+        <a href={prefix+'/problems/?kind=guide'}>{t('Choose guide examples for a worksheet','选择指南例题组卷')}</a>
+      </div>
       <p>{t('Read each example in brief, then open our worked explanations or sample writing responses here.','点击查看官方例题的题意概述，再在站内展开解法或写作范例。')}</p>
       <div class="tara-grid">{modules.map(module=><section class="guide-module">
         <h3>{t(module.title,module.titleZh)}</h3>

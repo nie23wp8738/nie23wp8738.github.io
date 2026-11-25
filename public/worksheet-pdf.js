@@ -220,7 +220,11 @@ function renderPages(problems, { solutions, layout, title }, questionStrips) {
       y -= solutions ? 12 : 27;
       return;
     }
-    if (problem.exam?.includes('TARA')) paragraph('TARA-style original practice', 'label', 9, 13);
+    if (problem.kind === 'guide') {
+      paragraph('TARA Question Guide (UAT-UK, June 2026), '+problem.code+', p. '+problem.sourcePage+' | Site adaptation', 'label', 9, 13);
+    } else if (problem.exam?.includes('TARA')) {
+      paragraph('TARA-style original practice', 'label', 9, 13);
+    }
     paragraph(problem.statement);
     for (const [i,option] of (problem.options || []).entries()) {
       paragraph(String.fromCharCode(65+i) + '. ' + option);

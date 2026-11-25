@@ -29,7 +29,11 @@ const url = (page:number) => guide.url + '#page=' + page;
     <section aria-labelledby="outline">
       <h2 id="outline">{t('Question in brief','题意概述')}</h2>
       <p class="statement">{t(note.outline,note.outlineZh)}</p>
+      {question.options && <ol type="A" class="guide-options">
+        {(zh ? question.optionsZh : question.options).map((option:string) => <li>{option}</li>)}
+      </ol>}
     </section>
+    <div class="btnrow"><a class="button" href={prefix+'/problems/?kind=guide&add='+question.id+'#worksheet'}>{t('Add to worksheet','加入我的试卷')}</a></div>
     <WorkedAnswer id={question.id} lang={lang} answer={note} original={true} writing={writing} />
     <footer class="guide-source">
       <p>{t('Source: UAT-UK Question Guide. The question outline and worked commentary on this page were written for this site.','来源为 UAT-UK 官方题型指南。本页的题意概述、推理过程及写作示例均为本站撰写。')}</p>
@@ -44,6 +48,8 @@ const url = (page:number) => guide.url + '#page=' + page;
 <style>
   .guide-reader h2#outline { color: var(--muted); font: 550 .875rem/1.55 var(--sans); margin: 1.15rem 0 .3rem; }
   .guide-reader p.statement { margin: 0 0 1.35rem; }
+  .guide-options { padding-left: 1.9rem; margin: 0 0 1.3rem; }
+  .guide-options li { margin: .35rem 0; padding-left: .3rem; }
   .guide-source { border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: .9rem; }
   .guide-source p { margin: 0 0 .35rem; }
 </style>

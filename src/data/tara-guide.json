@@ -7,7 +7,21 @@
       "label": "Locate the main conclusion",
       "labelZh": "识别主要结论",
       "page": 4,
-      "answerPage": 4
+      "answerPage": 4,
+      "options": [
+        "The society's investment portfolio includes a sizeable stake in fossil fuels.",
+        "The businesses it invests in have aims at odds with its own work.",
+        "The society is inconsistent in keeping these investments.",
+        "The society ought to sell its holdings in fossil-fuel businesses.",
+        "The society should take its lead from the two arts institutions mentioned."
+      ],
+      "optionsZh": [
+        "学会投资组合中包含相当数量的化石燃料企业股份。",
+        "学会投资的企业与它自身的研究目标存在冲突。",
+        "学会继续保有这类投资，显得言行不一。",
+        "学会应出售化石燃料企业的持股。",
+        "学会应以文中提到的两家艺术机构为榜样。"
+      ]
     },
     {
       "id": "tara-guide-ct-2",
@@ -15,7 +29,21 @@
       "label": "Draw a conclusion from the evidence",
       "labelZh": "从证据推出结论",
       "page": 5,
-      "answerPage": 5
+      "answerPage": 5,
+      "options": [
+        "People have overstated the extent of wolf attacks in this region.",
+        "A reported loss attributed to a wolf deserves investigation.",
+        "Farmers generally dislike the wolf's protected status.",
+        "Wolves do not deserve their reputation as sheep killers.",
+        "The compensation payments should end."
+      ],
+      "optionsZh": [
+        "人们夸大了当地狼袭击羊群的严重程度。",
+        "对于声称由狼造成的损失，应该审慎核实。",
+        "农场主普遍不赞成保护狼的政策。",
+        "狼不应有捕杀羊只的恶名。",
+        "应取消此项赔偿。"
+      ]
     },
     {
       "id": "tara-guide-ct-3",
@@ -23,7 +51,21 @@
       "label": "Find an unstated assumption",
       "labelZh": "找出隐含假设",
       "page": 6,
-      "answerPage": 6
+      "answerPage": 6,
+      "options": [
+        "Schools with and without a religious affiliation exist in similar numbers.",
+        "Many parents in this situation would have objected to the religious placement.",
+        "Religiously affiliated schools are much more common at secondary than primary level.",
+        "Only adults can make an informed choice about religion.",
+        "Most parents ask their children before ranking their school preferences."
+      ],
+      "optionsZh": [
+        "宗教学校和非宗教学校的数量相近。",
+        "处于这种情况的许多家长本来就不愿孩子进入宗教学校。",
+        "宗教中学的数量远多于宗教小学。",
+        "人只有成年后才能对宗教作出知情选择。",
+        "大多数家长填写学校志愿前会征求孩子的意见。"
+      ]
     },
     {
       "id": "tara-guide-ct-4",
@@ -31,7 +73,21 @@
       "label": "Weigh new evidence against a claim",
       "labelZh": "评估新证据对论点的影响",
       "page": 7,
-      "answerPage": 7
+      "answerPage": 7,
+      "options": [
+        "Repeated use can make the medicine less effective for headaches.",
+        "Symptom relief makes people more likely to go back to work while contagious.",
+        "The studies on reducing fever used animals as their subjects.",
+        "Yearly vaccination is the most effective way to prevent flu.",
+        "A viral illness makes an unintended overdose more likely."
+      ],
+      "optionsZh": [
+        "反复使用这种药物可能使它缓解头痛的效果减弱。",
+        "症状缓解后，人们更可能在仍有传染性时回去工作。",
+        "关于退烧作用的研究使用的是动物实验对象。",
+        "每年接种疫苗是预防流感最有效的方式。",
+        "病毒感染时更可能意外服药过量。"
+      ]
     },
     {
       "id": "tara-guide-ct-5",
@@ -39,7 +95,21 @@
       "label": "Spot an error in an inference",
       "labelZh": "识别推理错误",
       "page": 8,
-      "answerPage": 8
+      "answerPage": 8,
+      "options": [
+        "It relies on past generations being unaware of the risks of childbirth.",
+        "Its conclusion applies only to women in wealthy countries.",
+        "It overlooks a fall in the mortality rate among infants.",
+        "It treats early death as inevitable after several pregnancies.",
+        "It ignores other changes that could have extended women's lives."
+      ],
+      "optionsZh": [
+        "论证预设过去的人不了解生育的风险。",
+        "结论只涉及富裕国家的女性。",
+        "论证未提及婴儿死亡率下降。",
+        "它把多次妊娠后的早逝视作必然。",
+        "它忽略了同期其他可能延长女性寿命的变化。"
+      ]
     },
     {
       "id": "tara-guide-ct-6",
@@ -47,7 +117,21 @@
       "label": "Match the logical form of two arguments",
       "labelZh": "比较两个论证的逻辑结构",
       "page": 9,
-      "answerPage": 10
+      "answerPage": 10,
+      "options": [
+        "An applicant seeking a top university place needs a special interest. A student seeks such a place, so she needs a special interest.",
+        "A parent seeking honest children should tell the truth. A parent often lies, so she cannot have that aim.",
+        "Persistent poor results trigger state intervention at a school. This school has had poor results for years, so intervention will follow.",
+        "Persistent lateness leads to dismissal. A worker is punctual, so his job is safe.",
+        "A future English student needs to read quickly. A pupil reads remarkably fast, so she must be aiming to study English."
+      ],
+      "optionsZh": [
+        "想进顶尖大学的申请人需要特长。一名学生想进这样的大学，所以她需要特长。",
+        "希望孩子诚实的家长应该说真话。一名家长经常撒谎，所以她不可能有那个目标。",
+        "成绩持续很差会导致学校受到政府干预。该校成绩连年很差，因此将受到干预。",
+        "经常迟到会被辞退。一名员工一向准时，因此工作有保障。",
+        "想在大学读英语的人需要读得快。一名学生读得特别快，所以她一定打算在大学读英语。"
+      ]
     },
     {
       "id": "tara-guide-ct-7",
@@ -55,7 +139,21 @@
       "label": "Apply a principle to a new case",
       "labelZh": "将原则应用于新情境",
       "page": 11,
-      "answerPage": 11
+      "answerPage": 11,
+      "options": [
+        "Heavy demand is no justification for a hotel to charge inflated prices.",
+        "Someone who was betrayed by a former partner is still wrong to tell lies about that partner.",
+        "A shop should not inflate prices to advertise a larger discount later.",
+        "People should avoid posting messages they would dislike seeing about themselves.",
+        "A player's criticism of a referee's error is justified only if the other side benefited."
+      ],
+      "optionsZh": [
+        "酒店不能以需求旺盛为由收取过高房费。",
+        "即使前任曾经背叛自己，对其散布谎言依然是错的。",
+        "商店不应先抬高价格，再借机宣传大幅折扣。",
+        "人们不应发布自己也不愿成为其对象的信息。",
+        "只有当裁判失误使对手获益时，球员批评这种失误才有正当理由。"
+      ]
     },
     {
       "id": "tara-guide-ps-1",
@@ -63,7 +161,21 @@
       "label": "Select the relevant timetable data",
       "labelZh": "筛选课程表中的相关信息",
       "page": 12,
-      "answerPage": 13
+      "answerPage": 13,
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "optionsZh": [
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五"
+      ]
     },
     {
       "id": "tara-guide-ps-2",
@@ -71,7 +183,21 @@
       "label": "Calculate a fare after several price changes",
       "labelZh": "计算多项变动后的票价",
       "page": 14,
-      "answerPage": 14
+      "answerPage": 14,
+      "options": [
+        "$335.00",
+        "$344.20",
+        "$349.80",
+        "$374.80",
+        "$407.80"
+      ],
+      "optionsZh": [
+        "$335.00",
+        "$344.20",
+        "$349.80",
+        "$374.80",
+        "$407.80"
+      ]
     },
     {
       "id": "tara-guide-ps-3",
@@ -79,7 +205,21 @@
       "label": "Compare a bar chart and a pie chart",
       "labelZh": "比较条形图与饼图",
       "page": 15,
-      "answerPage": 16
+      "answerPage": 16,
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "optionsZh": [
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五"
+      ]
     },
     {
       "id": "tara-guide-wt-1",

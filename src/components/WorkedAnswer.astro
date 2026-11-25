@@ -21,6 +21,7 @@ const topicHref = (en) => (zh ? '/zh' : '') + '/topics/methods/?' + new URLSearc
           {method.topics.map(topic => <a href={topicHref(topic.en)}>{t(topic.en,topic.zh)}</a>)}
         </div>
         {t(method.steps,method.stepsZh).map(step => original ? <p>{step}</p> : <TypesetText id={id} text={step} />)}
+        {method.figure && <figure class="solution-figure"><img src={method.figure.url} alt={t(method.figure.alt,method.figure.altZh)} /></figure>}
         {method.credit && <p class="solution-credit">{t('Adapted from the solution by ','依据以下作者的解法整理：')}{method.credit}{sourceUrl && <> · <a href={sourceUrl} target="_blank" rel="noopener noreferrer">{t('Published solution (external)','解答出处（外站）')}</a></>}</p>}
       </div>
     </details>)}

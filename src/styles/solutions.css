@@ -25,6 +25,8 @@
 .worked-answer .method-panel > summary { font: 550 var(--subhead-size)/1.5 var(--heading); }
 .worked-answer .method-number { margin-inline-end: .4rem; }
 .worked-answer .method-content { margin-block: .85rem; }
+.worked-answer .solution-figure { margin: 1rem 0; }
+.worked-answer .solution-figure img { max-width: 100%; height: auto; }
 .worked-answer .method-content > p {
   font: 400 var(--reading-size)/1.75 var(--serif);
   overflow-x: auto;

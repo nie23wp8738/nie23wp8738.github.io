@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 179">
+  <title>Changes in score on five consecutive days</title>
+<path d="M16 88L236 88" fill="none" stroke="#365361" stroke-width="1.6"/>
+<rect x="30" y="28" width="20" height="60" fill="#8eaebc" stroke="#365361" stroke-width="1.3"/>
+<text x="40" y="23" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">+80</text>
+<rect x="72" y="88" width="20" height="67.5" fill="#8eaebc" stroke="#365361" stroke-width="1.3"/>
+<text x="82" y="171.5" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">−90</text>
+<rect x="114" y="88" width="20" height="7.5" fill="#8eaebc" stroke="#365361" stroke-width="1.3"/>
+<text x="124" y="111.5" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">−10</text>
+<rect x="156" y="43" width="20" height="45" fill="#8eaebc" stroke="#365361" stroke-width="1.3"/>
+<text x="166" y="38" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">+60</text>
+<rect x="198" y="88" width="20" height="30" fill="#8eaebc" stroke="#365361" stroke-width="1.3"/>
+<text x="208" y="134" fill="#253d4b" text-anchor="middle" style="font:14px Georgia,serif">−40</text>
+</svg>

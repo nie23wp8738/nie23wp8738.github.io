@@ -23,5 +23,887 @@
       }
     ],
     "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/1"
+  },
+  "amc12-2024a-q2": {
+    "summary": "A trail with length $L$ miles and ascent $G$ feet has predicted time $aL+bG$ minutes. Both $(L,G)=(1.5,800)$ and $(1.2,1100)$ give 69 minutes. Predict the time for $(4.2,4000)$.",
+    "summaryZh": "步道长 $L$ 英里，累计爬升 $G$ 英尺，预计用时为 $aL+bG$ 分钟。两条步道的数据 $(1.5,800)$、$(1.2,1100)$ 都给出 69 分钟。求 $(4.2,4000)$ 的预计用时。",
+    "answer": "B. $246$ minutes.",
+    "answerZh": "B．$246$ 分钟。",
+    "methods": [
+      {
+        "title": "Identify equivalent effort",
+        "titleZh": "计算等效路程",
+        "topics": [
+          {
+            "en": "Linear models",
+            "zh": "线性模型"
+          }
+        ],
+        "steps": [
+          "Comparing the two known routes shows that $0.3a=300b$, so $a=1000b$. The rule becomes $b(1000L+G)$.",
+          "The first example gives $2300b=69$, or $b=0.03$. The requested time is $0.03(4200+4000)=246$."
+        ],
+        "stepsZh": [
+          "比较两条已知路线得 $0.3a=300b$，所以 $a=1000b$，模型化为 $b(1000L+G)$。",
+          "用第一组数据得 $2300b=69$，即 $b=0.03$。目标用时为 $0.03(4200+4000)=246$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/2"
+  },
+  "amc12-2024a-q3": {
+    "summary": "What is the fewest two-digit positive integers whose sum is 2024? Repetitions are allowed.",
+    "summaryZh": "若干个两位正整数相加得 2024，允许重复。最少需要几项？",
+    "answer": "B. $21$.",
+    "answerZh": "B．$21$ 项。",
+    "methods": [
+      {
+        "title": "Match a bound with an example",
+        "titleZh": "找下界并构造",
+        "topics": [
+          {
+            "en": "Extremal counting",
+            "zh": "极值计数"
+          }
+        ],
+        "steps": [
+          "Each term is at most 99, and $20\\cdot99=1980<2024$. Thus 20 terms cannot suffice.",
+          "Take twenty copies of 99 and one 44. Their total is $1980+44=2024$, so 21 suffice."
+        ],
+        "stepsZh": [
+          "每项至多 99，而 $20\\cdot99=1980<2024$，所以至少要 21 项。",
+          "取二十个 99 和一个 44，和为 $1980+44=2024$，达到下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/3"
+  },
+  "amc12-2024a-q4": {
+    "summary": "Find the smallest positive $n$ for which $2024$ divides $n!$.",
+    "summaryZh": "求使 $2024$ 整除 $n!$ 的最小正整数 $n$。",
+    "answer": "D. $23$.",
+    "answerZh": "D．$23$。",
+    "methods": [
+      {
+        "title": "Factor the target",
+        "titleZh": "分解所需因数",
+        "topics": [
+          {
+            "en": "Prime factorization",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "$2024=8\\cdot253=2^3\\cdot11\\cdot23$. The prime 23 cannot divide a factorial smaller than $23!$.",
+          "At $n=23$ the factors $8,11,23$ all occur and are pairwise coprime. Their product divides the factorial."
+        ],
+        "stepsZh": [
+          "$2024=8\\cdot253=2^3\\cdot11\\cdot23$。若 $n<23$，则 $n!$ 不含质因数 23。",
+          "当 $n=23$ 时，互素的三个因数 $8,11,23$ 均已出现，它们的乘积整除 $23!$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/4"
+  },
+  "amc12-2024a-q5": {
+    "summary": "Twenty observations have arithmetic mean 45. Discard every observation equal to 6, and the mean of the remaining observations is 66. How many observations were discarded?",
+    "summaryZh": "20 个观测值的算术平均数为 45。删去其中所有等于 6 的值后，其余数的平均数为 66。共删去了几个观测值？",
+    "answer": "D. $7$.",
+    "answerZh": "D. $7$。",
+    "methods": [
+      {
+        "title": "Measure the combined shortfall from 66",
+        "titleZh": "以 66 为基准计算总差额",
+        "topics": [
+          {
+            "en": "Arithmetic mean",
+            "zh": "算术平均数"
+          },
+          {
+            "en": "Weighted averages",
+            "zh": "加权平均数"
+          }
+        ],
+        "steps": [
+          "Relative to 66, the original observations fall short in total by $20(66-45)=420$. Values greater than 66 count as negative shortfalls.",
+          "The observations retained have mean 66, so their shortfalls cancel exactly. Every discarded 6 contributes $66-6=60$ to the original shortfall.",
+          "Consequently the count is $420/60=7$."
+        ],
+        "stepsZh": [
+          "原来的 20 个数相对于 66 的总差额为 $20(66-45)=420$。超过 66 的数按负差额计算。",
+          "保留的数平均为 66，故其差额之和为零。删去的每个 6 各贡献差额 $66-6=60$。",
+          "所以删去了 $420/60=7$ 个数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/5"
+  },
+  "amc12-2024a-q6": {
+    "summary": "Three integers have product 60. Find the smallest strictly positive value their sum can take.",
+    "summaryZh": "三个整数的积为 60，它们的和若为正整数，最小能是多少？",
+    "answer": "B. $3$.",
+    "answerZh": "B．$3$。",
+    "methods": [
+      {
+        "title": "List only candidate sign patterns",
+        "titleZh": "只枚举可能取小值的符号组合",
+        "topics": [
+          {
+            "en": "Integer factorization",
+            "zh": "整数因数分解"
+          }
+        ],
+        "steps": [
+          "Three positives have sum at least 3. Otherwise write the numbers $-p,-q,r$ with $1\\le p\\le q$ and $r>p+q$. Since $pqr=60$, one has $p\\le3$.",
+          "For $p=1$, possible $q\\le r$ are $1,2,3,4,5,6$, yielding sums $58,27,16,10,6,3$. For $p=2$, try $q=2,3,5$, giving $11,5,-1$. For $p=3$, only $q=4$ is possible, giving $-2$.",
+          "The positive minimum 3 occurs for $(-1,-6,10)$."
+        ],
+        "stepsZh": [
+          "三个数全正时和至少为 3。其余情形记为 $-p,-q,r$，其中 $1\\le p\\le q$，为使和为正还须 $r>p+q$。由 $pqr=60$ 得 $p\\le3$。",
+          "当 $p=1$，可取 $q=1,2,3,4,5,6$，依次得和 $58,27,16,10,6,3$。当 $p=2$，试 $q=2,3,5$，得 $11,5,-1$。当 $p=3$，只能 $q=4$，得 $-2$。",
+          "所以最小正和为 3，由 $(-1,-6,10)$ 达到。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/6"
+  },
+  "amc12-2024a-q7": {
+    "summary": "An isosceles right triangle has right vertex $B$ and legs $BA=BC=\\sqrt2$. Mark 2024 interior points $P_1,\\ldots,P_{2024}$ along $AC$ in order so that the resulting 2025 segments have equal length. Find the magnitude of $\\sum_{j=1}^{2024}\\overrightarrow{BP_j}$.",
+    "summaryZh": "等腰直角三角形的直角顶点为 $B$，两条直角边 $BA=BC=\\sqrt2$。沿斜边 $AC$ 依次标出 2024 个内分点 $P_1,\\ldots,P_{2024}$，将它等分成 2025 段。求向量和 $\\sum_{j=1}^{2024}\\overrightarrow{BP_j}$ 的模。",
+    "answer": "D. $2024$.",
+    "answerZh": "D. $2024$。",
+    "methods": [
+      {
+        "title": "Pair vectors at mirror-image division points",
+        "titleZh": "将关于中点对称的分点配对",
+        "topics": [
+          {
+            "en": "Vector addition",
+            "zh": "向量加法"
+          },
+          {
+            "en": "Midpoint of a hypotenuse",
+            "zh": "斜边中点"
+          }
+        ],
+        "steps": [
+          "Let $M$ be the midpoint of $AC$. For $1\\le j\\le1012$, the two points $P_j,P_{2025-j}$ lie the same distance from $M$ on opposite sides.",
+          "Write each vector as $\\overrightarrow{BM}+\\overrightarrow{MP}$. In a mirror pair the two $\\overrightarrow{MP}$ terms cancel, leaving $2\\overrightarrow{BM}$. The whole sum is $2024\\overrightarrow{BM}$.",
+          "By Pythagoras $AC=2$. The midpoint of a right triangle’s hypotenuse is equidistant from its vertices, so $BM=1$ and the magnitude is $2024$."
+        ],
+        "stepsZh": [
+          "设 $M$ 为 $AC$ 中点。对 $1\\le j\\le1012$，$P_j$ 与 $P_{2025-j}$ 位于 $M$ 的两侧且与它等距。",
+          "把每个向量写成 $\\overrightarrow{BM}+\\overrightarrow{MP}$。配对的两个 $\\overrightarrow{MP}$ 相消，每对留下 $2\\overrightarrow{BM}$，总和即 $2024\\overrightarrow{BM}$。",
+          "勾股定理给出 $AC=2$。直角三角形的斜边中点至三个顶点等距，所以 $BM=1$，所求模为 $2024$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/7"
+  },
+  "amc12-2024a-q8": {
+    "summary": "How many real $\\theta$ in $[0,2\\pi]$ make both logarithms real and satisfy $\\log(\\sin 3\\theta)+\\log(\\cos 2\\theta)=0$?",
+    "summaryZh": "在区间 $[0,2\\pi]$ 中，有多少个实数 $\\theta$ 使两个对数均有意义，并满足 $\\log(\\sin 3\\theta)+\\log(\\cos 2\\theta)=0$？",
+    "answer": "A. $0$.",
+    "answerZh": "A. $0$。",
+    "methods": [
+      {
+        "title": "Use equality in the product bound",
+        "titleZh": "分析乘积达到上界的条件",
+        "topics": [
+          {
+            "en": "Logarithm domain",
+            "zh": "对数定义域"
+          },
+          {
+            "en": "Trigonometric equations",
+            "zh": "三角方程"
+          }
+        ],
+        "steps": [
+          "The logarithms require $0<\\sin 3\\theta\\le1$ and $0<\\cos 2\\theta\\le1$. Combining them gives $\\sin 3\\theta\\cos 2\\theta=1$.",
+          "Two positive numbers at most one can have product one only if both equal one. Here $\\cos 2\\theta=1$ forces $\\theta=0,\\pi$ or $2\\pi$.",
+          "At each candidate $\\sin3\\theta=0$, so none gives a solution."
+        ],
+        "stepsZh": [
+          "对数有意义要求 $0<\\sin 3\\theta\\le1$ 及 $0<\\cos 2\\theta\\le1$。合并对数得 $\\sin 3\\theta\\cos 2\\theta=1$。",
+          "两个不超过 1 的正数之积为 1，要求两者同时等于 1。由 $\\cos 2\\theta=1$ 得 $\\theta=0,\\pi,2\\pi$。",
+          "这三个候选值都使 $\\sin 3\\theta=0$，所以没有解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/8"
+  },
+  "amc12-2024a-q9": {
+    "summary": "Take the largest integer $M$ for which $M+1213$ and $M+3773$ are both squares of integers. What digit ends $M$?",
+    "summaryZh": "整数 $M$ 满足 $M+1213$、$M+3773$ 均为完全平方数。求最大的这样的 $M$ 的个位数字。",
+    "answer": "E. $8$.",
+    "answerZh": "E．$8$。",
+    "methods": [
+      {
+        "title": "Maximize a difference of paired factors",
+        "titleZh": "利用因数对取最大根",
+        "topics": [
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          },
+          {
+            "en": "Units digits",
+            "zh": "个位数字"
+          }
+        ],
+        "steps": [
+          "Write $M+1213=a^2$ and $M+3773=b^2$ with $0\\le a<b$. Then $(b-a)(b+a)=2560$. The two factors have the same parity and their product is even, so both are even.",
+          "For a fixed product, $2a=(b+a)-(b-a)$ is largest when the smaller factor is as small as possible. The pair $(2,1280)$ is valid and gives $a=639$. Thus the units digit of $M$ is that of $9^2-3=78$, namely 8."
+        ],
+        "stepsZh": [
+          "设 $M+1213=a^2$、$M+3773=b^2$，其中 $0\\le a<b$。相减得 $(b-a)(b+a)=2560$。两个因数同奇偶，乘积为偶数，故二者均偶。",
+          "乘积一定时，小因数越小，差 $2a=(b+a)-(b-a)$ 越大。取可行的最小小因数 2，另一个为 1280，得 $a=639$。所以 $M$ 的个位与 $9^2-3=78$ 相同，为 8。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/9"
+  },
+  "amc12-2024a-q10": {
+    "summary": "Write $\\alpha$ for the angle opposite the side of length 3 in a right triangle of side lengths $3,4,5$. In a second right triangle of side lengths $7,24,25$, write $\\beta$ for the angle opposite the side of length 7. Express $\\beta$ in radians in terms of $\\alpha$.",
+    "summaryZh": "边长为 $3,4,5$ 的直角三角形中，长度为 3 的边所对角为 $\\alpha$。在边长为 $7,24,25$ 的直角三角形中，长度为 7 的边所对角为 $\\beta$。用 $\\alpha$ 表示 $\\beta$ 的弧度数。",
+    "answer": "C. $\\pi/2-2\\alpha$.",
+    "answerZh": "C. $\\pi/2-2\\alpha$。",
+    "methods": [
+      {
+        "title": "Recognise the cosine of a double angle",
+        "titleZh": "识别二倍角的余弦",
+        "topics": [
+          {
+            "en": "Double-angle formulas",
+            "zh": "二倍角公式"
+          },
+          {
+            "en": "Complementary angles",
+            "zh": "余角"
+          }
+        ],
+        "steps": [
+          "The first triangle gives $\\sin\\alpha=3/5$ and $\\cos\\alpha=4/5$. Thus $\\cos(2\\alpha)=(4/5)^2-(3/5)^2=7/25$.",
+          "In the second triangle $\\sin\\beta=7/25=\\sin(\\pi/2-2\\alpha)$. Also $0<\\alpha<\\pi/4$ since its opposite leg is the shorter one.",
+          "Both $\\beta$ and $\\pi/2-2\\alpha$ are acute, where sine is one-to-one. Hence the two angles are equal."
+        ],
+        "stepsZh": [
+          "第一个直角三角形给出 $\\sin\\alpha=3/5$、$\\cos\\alpha=4/5$，所以 $\\cos(2\\alpha)=(4/5)^2-(3/5)^2=7/25$。",
+          "第二个三角形中 $\\sin\\beta=7/25=\\sin(\\pi/2-2\\alpha)$。$\\alpha$ 对着较短直角边，故 $0<\\alpha<\\pi/4$。",
+          "$\\beta$ 与 $\\pi/2-2\\alpha$ 均为锐角，而正弦函数在锐角范围内严格递增，两角必相等。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/10"
+  },
+  "amc12-2024a-q11": {
+    "summary": "Among integer bases $5\\le b\\le2024$, let $K$ count those for which the numeral $2024_b$ is divisible by decimal 16. What is the digit sum of $K$?",
+    "summaryZh": "整数进制满足 $5\\le b\\le2024$。在其中，有 $K$ 种进制使 $2024_b$ 能被十进制数 16 整除。求 $K$ 的数位和。",
+    "answer": "D. $20$.",
+    "answerZh": "D．$20$。",
+    "methods": [
+      {
+        "title": "Separate odd and even bases",
+        "titleZh": "按进制的奇偶分类",
+        "topics": [
+          {
+            "en": "Congruences modulo eight",
+            "zh": "模八同余"
+          },
+          {
+            "en": "Positional notation",
+            "zh": "位值制"
+          }
+        ],
+        "steps": [
+          "The numeral is $2b^3+2b+4$, so we need $b^3+b+2\\equiv0\\pmod8$. For even $b$, the cube vanishes mod 8, giving $b\\equiv6$. For odd $b$, $b^2\\equiv1\\pmod8$, so $2b+2\\equiv0\\pmod8$, giving $b\\equiv3,7\\pmod8$.",
+          "As $2024=253\\cdot8$, the range 1 through 2024 contains 253 instances of each of the three residues. Among 1 through 4 only 3 qualifies, so $K=3\\cdot253-1=758$. Its digit sum is 20."
+        ],
+        "stepsZh": [
+          "该数等于 $2b^3+2b+4$，故需 $b^3+b+2\\equiv0\\pmod8$。若 $b$ 偶，立方为 8 的倍数，得 $b\\equiv6\\pmod8$。若 $b$ 奇，则 $b^2\\equiv1\\pmod8$，故 $2b+2\\equiv0\\pmod8$，即 $b\\equiv3,7\\pmod8$。",
+          "因 $2024=253\\cdot8$，从 1 至 2024 每一类余数均有 253 个数。其中 1 至 4 只有 3 符合，应剔除。于是 $K=3\\cdot253-1=758$，数位和为 20。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/11"
+  },
+  "amc12-2024a-q12": {
+    "summary": "Three consecutive terms of a geometric sequence are integers $a<720<b$, with middle term 720. Find the digit sum of the smallest possible $b$.",
+    "summaryZh": "等比数列中连续三项为整数 $a,720,b$，且 $a<720<b$。求最小可能的 $b$ 的数位和。",
+    "answer": "E. $21$.",
+    "answerZh": "E．$21$。",
+    "methods": [
+      {
+        "title": "Bound the denominator of the common ratio",
+        "titleZh": "限制公比的分母",
+        "topics": [
+          {
+            "en": "Reduced fractions",
+            "zh": "最简分数"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          }
+        ],
+        "steps": [
+          "Write the positive common ratio as $p/q>1$ in lowest terms. Since $a=720q/p$ and $b=720p/q$ are integers, the coprime integers $p,q$ both divide 720. Hence $pq\\le720$ and $q<27$. The ratio $16/15$ works, giving $(a,b)=(675,768)$.",
+          "If $1<p/q<16/15$, then $q>15(p-q)$, so $16\\le q\\le26$ and $p-q=1$. The only divisors of $720=2^4\\cdot3^2\\cdot5$ between 16 and 27 are $16,18,20,24$, no two consecutive. This rules out a smaller ratio and thus a smaller $b$. The digit sum of 768 is $21$."
+        ],
+        "stepsZh": [
+          "将正公比写为最简分数 $p/q>1$。由 $a=720q/p$ 与 $b=720p/q$ 均为整数，互素的 $p,q$ 都整除 720。故 $pq\\le720$，有 $q<27$。公比 $16/15$ 可行，给出 $(a,b)=(675,768)$。",
+          "若 $1<p/q<16/15$，则 $q>15(p-q)$，所以 $16\\le q\\le26$ 且 $p-q=1$。由 $720=2^4\\cdot3^2\\cdot5$ 可列出 16 至 27 之间的因数仅有 $16,18,20,24$，其中没有连续整数。因此不存在更小公比，最小的 $b$ 为 768，数位和为 $21$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/12"
+  },
+  "amc12-2024a-q13": {
+    "summary": "Find the image of $(-1,1/2)$ under reflection in the symmetry axis of the curve $y=e^{x+1}+e^{-x}-2$.",
+    "summaryZh": "将点 $(-1,1/2)$ 关于曲线 $y=e^{x+1}+e^{-x}-2$ 的对称轴作反射，求像点坐标。",
+    "answer": "D. $(0,1/2)$.",
+    "answerZh": "D. $(0,1/2)$。",
+    "methods": [
+      {
+        "title": "Shift the variable to obtain an even function",
+        "titleZh": "平移变量得到偶函数",
+        "topics": [
+          {
+            "en": "Even functions",
+            "zh": "偶函数"
+          },
+          {
+            "en": "Reflection in a line",
+            "zh": "直线反射"
+          }
+        ],
+        "steps": [
+          "Set $u=x+1/2$. The right-hand side becomes $e^{1/2}(e^u+e^{-u})-2$, unchanged when $u$ changes sign.",
+          "The symmetry axis $u=0$ therefore corresponds to $x=-1/2$. Reflection keeps the height and reverses the signed horizontal distance to that line.",
+          "The original point is half a unit to the left, so its image is half a unit to the right at $(0,1/2)$."
+        ],
+        "stepsZh": [
+          "令 $u=x+1/2$。函数可改写为 $e^{1/2}(e^u+e^{-u})-2$，把 $u$ 换成 $-u$ 不改变函数值。",
+          "故对称轴 $u=0$ 即 $x=-1/2$。反射保留纵坐标，同时把相对该直线的水平位移变为相反数。",
+          "原来的点在对称轴左侧半个单位，像点在右侧半个单位，坐标为 $(0,1/2)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/13"
+  },
+  "amc12-2024a-q14": {
+    "summary": "In a $5\\times5$ array each row and each column is an arithmetic progression. Entries at $(5,5),(2,4),(4,3),(3,1)$ are respectively $0,48,16,12$ (row first). Find the entry at $(1,2)$.",
+    "summaryZh": "一个 $5\\times5$ 方阵的每行、每列都是等差数列。按先行后列，$(5,5),(2,4),(4,3),(3,1)$ 的值分别为 $0,48,16,12$。求 $(1,2)$ 的值。",
+    "answer": "C. $29$.",
+    "answerZh": "C．$29$。",
+    "methods": [
+      {
+        "title": "Shift coordinates to a known entry",
+        "titleZh": "以一个已知格为坐标原点",
+        "topics": [
+          {
+            "en": "Bilinear interpolation",
+            "zh": "双线性插值"
+          },
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "Put $x=i-3$, $y=j-1$ for row $i$, column $j$. Every column is linear in $x$, and the intercepts and slopes vary linearly in $y$: the slopes are differences of adjacent rows, both linear in $y$. Hence all entries have form $12+ux+vy+wxy$.",
+          "The three remaining clues give $u+2v+4w=-6$, $-u+3v-3w=36$, $u+2v+2w=4$. Subtract the third from the first to get $w=-5$. Adding the last two gives $5v-w=40$, hence $v=7$, then $u=0$.",
+          "At $(i,j)=(1,2)$ the shifted coordinates are $(-2,1)$, giving $12+7+10=29$."
+        ],
+        "stepsZh": [
+          "对第 $i$ 行、第 $j$ 列取 $x=i-3$、$y=j-1$。每一列对 $x$ 呈线性，截距随 $y$ 呈线性，斜率是相邻两行之差，也随 $y$ 呈线性。因此通式为 $12+ux+vy+wxy$。",
+          "另三个已知条件给出 $u+2v+4w=-6$、$-u+3v-3w=36$、$u+2v+2w=4$。第一式减第三式得 $w=-5$；后两式相加得 $5v-w=40$，所以 $v=7$，代回得 $u=0$。",
+          "目标位置的平移坐标为 $(-2,1)$，值为 $12+7+10=29$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/14"
+  },
+  "amc12-2024a-q15": {
+    "summary": "Let $p,q,r$ be the three roots, counted with multiplicity, of $x^3+2x^2-x+3$. Evaluate $(4+p^2)(4+q^2)(4+r^2)$ without needing explicit formulas for the roots.",
+    "summaryZh": "设 $p,q,r$ 是 $x^3+2x^2-x+3$ 的三个根（计重数）。不必求出各根，计算 $(4+p^2)(4+q^2)(4+r^2)$。",
+    "answer": "D. $125$.",
+    "answerZh": "D. $125$。",
+    "methods": [
+      {
+        "title": "Evaluate the polynomial at a conjugate pair",
+        "titleZh": "在一对共轭复数处求多项式值",
+        "topics": [
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式的根"
+          },
+          {
+            "en": "Complex conjugates",
+            "zh": "共轭复数"
+          }
+        ],
+        "steps": [
+          "Write $P(x)=(x-p)(x-q)(x-r)$. Each root $t$ satisfies $(2i-t)(-2i-t)=4+t^2$.",
+          "Multiplying over all three roots gives the desired number as $P(2i)P(-2i)$. Substitution gives $P(2i)=-8i-8-2i+3=-5-10i$.",
+          "The coefficients are real, so $P(-2i)=-5+10i$. Their product is $25+100=125$."
+        ],
+        "stepsZh": [
+          "写成 $P(x)=(x-p)(x-q)(x-r)$。对每个根 $t$ 有 $(2i-t)(-2i-t)=4+t^2$。",
+          "把三根对应的因式相乘，可将所求数写成 $P(2i)P(-2i)$。直接代入得 $P(2i)=-8i-8-2i+3=-5-10i$。",
+          "因系数均为实数，$P(-2i)=-5+10i$，两者的积为 $25+100=125$。"
+        ]
+      },
+      {
+        "title": "Expand using symmetric sums",
+        "titleZh": "用对称和展开",
+        "topics": [
+          {
+            "en": "Vieta’s formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "Symmetric polynomials",
+            "zh": "对称多项式"
+          }
+        ],
+        "steps": [
+          "Vieta gives $p+q+r=-2$, $pq+qr+rp=-1$, $pqr=-3$. Then $p^2+q^2+r^2=(-2)^2-2(-1)=6$.",
+          "The sum of pairwise products of the squares is $(-1)^2-2(-3)(-2)=-11$, and their triple product is $(-3)^2=9$.",
+          "Expanding the target now yields $4^3+4^2(6)+4(-11)+9=125$."
+        ],
+        "stepsZh": [
+          "韦达定理给出 $p+q+r=-2$、$pq+qr+rp=-1$、$pqr=-3$，故 $p^2+q^2+r^2=(-2)^2-2(-1)=6$。",
+          "三个平方数的两两乘积之和为 $(-1)^2-2(-3)(-2)=-11$，三者之积为 $(-3)^2=9$。",
+          "展开原式得 $4^3+4^2(6)+4(-11)+9=125$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/15"
+  },
+  "amc12-2024a-q16": {
+    "summary": "Deal three red, two white, one blue and six black tokens uniformly at random into three labelled hands of four. What is $m+n$ if $m/n$ in lowest terms is the probability that one hand contains all the reds, a different hand both whites, and the third the blue?",
+    "summaryZh": "将 3 枚红筹码、2 枚白筹码、1 枚蓝筹码和 6 枚黑筹码随机均分给三位玩家，每人 4 枚。设下列事件的概率写成最简分数 $m/n$：一人拿到全部红筹码，另一人拿到全部白筹码，第三人拿到蓝筹码。求 $m+n$。",
+    "answer": "C. $389$.",
+    "answerZh": "C. $389$。",
+    "methods": [
+      {
+        "title": "Assign player roles and fill the vacant places",
+        "titleZh": "先分配玩家角色，再分黑筹码",
+        "topics": [
+          {
+            "en": "Multinomial counting",
+            "zh": "多项式系数计数"
+          },
+          {
+            "en": "Classical probability",
+            "zh": "古典概率"
+          }
+        ],
+        "steps": [
+          "Label the tokens temporarily. There are $\\binom{12}{4}\\binom84=34650$ equally likely deals into three labelled hands.",
+          "Assign the red, white and blue roles to distinct hands in $3!=6$ ways. Their nonblack tokens are fixed. They require respectively one, two and three black tokens, which can be assigned in $\\binom61\\binom52=60$ ways.",
+          "The probability is $6\\cdot60/34650=4/385$. Thus $m+n=389$."
+        ],
+        "stepsZh": [
+          "给每枚筹码暂时编号。给三位玩家发牌共有 $\\binom{12}{4}\\binom84=34650$ 种等可能的分法。",
+          "红、白、蓝三种角色分配给不同玩家有 $3!=6$ 种方式。非黑筹码的归属随即确定，三人尚缺的黑筹码依次为 1、2、3 枚，可用 $\\binom61\\binom52=60$ 种方式填满。",
+          "事件概率为 $6\\cdot60/34650=4/385$，故 $m+n=389$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/16"
+  },
+  "amc12-2024a-q17": {
+    "summary": "Integers $a,b,c$ obey $ab+c=100$, $bc+a=87$ and $ca+b=60$. Determine $ab+bc+ca$.",
+    "summaryZh": "整数 $a,b,c$ 满足 $ab+c=100$、$bc+a=87$、$ca+b=60$。求 $ab+bc+ca$。",
+    "answer": "D. $276$.",
+    "answerZh": "D．$276$。",
+    "methods": [
+      {
+        "title": "Factor the difference of two equations",
+        "titleZh": "将两方程之差分解因式",
+        "topics": [
+          {
+            "en": "Factoring differences",
+            "zh": "作差分解"
+          },
+          {
+            "en": "Integer constraints",
+            "zh": "整数限制"
+          }
+        ],
+        "steps": [
+          "Subtract the second equation from the first to obtain $(a-c)(b-1)=13$. This forces $b\\in\\{2,14,0,-12\\}$. Write $u=13/(b-1)=a-c$. Then $bc+a=(b+1)c+u=87$.",
+          "For $b=2,14$, this gives $c=74/3,86/15$ respectively, impossible. If $b=0$, the first two original equations require $c=100,a=87$, violating the third. If $b=-12$, then $u=-1$, $c=-8$ and $a=-9$, which satisfy all three equations.",
+          "Their pairwise products sum to $108+96+72=276$."
+        ],
+        "stepsZh": [
+          "第一式减第二式得 $(a-c)(b-1)=13$，由此得 $b\\in\\{2,14,0,-12\\}$。记 $u=13/(b-1)=a-c$，则 $bc+a=(b+1)c+u=87$。",
+          "当 $b=2,14$ 时，分别得 $c=74/3,86/15$，不是整数。若 $b=0$，原方程前两式要求 $c=100,a=87$，与第三式矛盾。若 $b=-12$，则 $u=-1,c=-8,a=-9$，三式均成立。",
+          "两两乘积之和为 $108+96+72=276$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/17"
+  },
+  "amc12-2024a-q18": {
+    "summary": "Stand a rectangular card with its long sides vertical, width $1$, and height $2+\\sqrt3$. Its upper-left, upper-right, lower-left and lower-right corners are $B,A,C,D$, respectively. Place an identical card by rotating clockwise about the card centre by the smallest positive angle that sends diagonal $BD$ onto $AC$. Add successive copies by the same rotation each time, so consecutive cards share one diagonal. Counting the original card, when does a corner of an added card first coincide with $B$? (A) $6$   (B) $8$   (C) $10$   (D) $12$   (E) No later card reaches $B$.",
+    "summaryZh": "将宽 $1$、高 $2+\\sqrt3$ 的长方形卡片竖放，左上、右上、左下、右下角依次记为 $B,A,C,D$。将一张相同卡片绕中心顺时针旋转，以使对角线 $BD$ 落在 $AC$ 上的最小正角度放置。以后逐张按相同角度继续旋转放置，相邻两张共享一条对角线。从最初的卡片开始计数，第几张卡片首次有顶点再次落在 $B$ 上？ (A) $6$   (B) $8$   (C) $10$   (D) $12$   (E) 以后任何卡片都不会到达 $B$。",
+    "answer": "A. The sixth card.",
+    "answerZh": "A。第六张。",
+    "methods": [
+      {
+        "title": "Track the directions of the diameters",
+        "titleZh": "跟踪两条直径的方向",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Rotations",
+            "zh": "旋转"
+          },
+          {
+            "en": "Rectangles",
+            "zh": "矩形"
+          }
+        ],
+        "steps": [
+          "All copies have the same centre $O$ and the same diagonal length. Thus a corner coincides with $B$ exactly when one of its diagonal lines coincides with $BD$. If $\\theta$ is the angle of a diagonal with a long side, then $\\tan\\theta=1/(2+\\sqrt3)=2-\\sqrt3=\\tan(45^\\circ-30^\\circ)$. Hence $\\theta=15^\\circ$.",
+          "Start counting directions at $BD$, clockwise and modulo $180^\\circ$ because the diagonals are unoriented lines. The diagonals of card one have directions $0^\\circ$ and $30^\\circ$: the latter is $AC$. The two diagonals of card $k$ therefore have directions $(k-1)30^\\circ$ and $k\\cdot30^\\circ$.",
+          "For cards two through five, neither value is a multiple of $180^\\circ$. On card six the second value is $180^\\circ$, so that diagonal has the original endpoints $B,D$."
+        ],
+        "stepsZh": [
+          "所有卡片中心均为 $O$，且对角线等长。因此卡片有顶点与 $B$ 重合，当且仅当它的一条对角线与 $BD$ 所在直线重合。设对角线与长边的夹角为 $\\theta$，则 $\\tan\\theta=1/(2+\\sqrt3)=2-\\sqrt3=\\tan(45^\\circ-30^\\circ)$，所以 $\\theta=15^\\circ$。",
+          "以 $BD$ 的方向为零，顺时针计角；对角线所在直线无方向，故方向角按模 $180^\\circ$ 计算。第一张卡片的两条对角线方向角是 $0^\\circ,30^\\circ$，后者是 $AC$。于是第 $k$ 张的两条对角线方向角为 $(k-1)30^\\circ$ 和 $k\\cdot30^\\circ$。",
+          "从第二张到第五张，两个方向角都不是 $180^\\circ$ 的倍数。第六张的第二个方向角达到 $180^\\circ$，这条对角线的端点就是原来的 $B,D$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/18",
+    "figure": {
+      "url": "/commentary-figures/amc12-2024a-q18.svg",
+      "alt": "The upright card has B and A at the upper corners and C and D at the lower corners. The second card shares diagonal AC.",
+      "altZh": "竖直卡片上方两角为 B、A，下方两角为 C、D；另一张卡片与它共用对角线 AC。"
+    }
+  },
+  "amc12-2024a-q19": {
+    "summary": "In a convex cyclic quadrilateral whose vertices occur in the order $A,B,C,D$, the sides $BC$ and $CD$ each measure $3$ and $DA$ measures $5$. The interior angle at $D$ is $120^\\circ$. Find the shorter of $AC$ and $BD$ as a reduced fraction. (A) $31/7$   (B) $33/7$   (C) $5$   (D) $39/7$   (E) $41/7$",
+    "summaryZh": "凸圆内接四边形的顶点依次为 $A,B,C,D$。已知 $BC=CD=3,DA=5$，顶点 $D$ 处的内角为 $120^\\circ$。以最简分数给出 $AC,BD$ 中较短的一条的长度。 (A) $31/7$   (B) $33/7$   (C) $5$   (D) $39/7$   (E) $41/7$",
+    "answer": "D. $39/7$.",
+    "answerZh": "D。$39/7$。",
+    "methods": [
+      {
+        "title": "Find the other side, then use Ptolemy",
+        "titleZh": "先求边长再用托勒密定理",
+        "topics": [
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          },
+          {
+            "en": "Ptolemy’s theorem",
+            "zh": "托勒密定理"
+          },
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "圆内接四边形"
+          }
+        ],
+        "steps": [
+          "Triangle $CDA$ gives $AC^2=3^2+5^2-2\\cdot3\\cdot5\\cos120^\\circ=49$, so $AC=7$. Opposite angles in the cyclic quadrilateral sum to $180^\\circ$, hence $\\angle ABC=60^\\circ$.",
+          "Let $AB=x$. The cosine rule in $ABC$ yields $49=x^2+9-3x$, or $(x-8)(x+5)=0$. Only $x=8$ is a length.",
+          "Ptolemy gives $AC\\cdot BD=AB\\cdot CD+BC\\cdot DA=8\\cdot3+3\\cdot5=39$. It follows that $BD=39/7<7=AC$."
+        ],
+        "stepsZh": [
+          "在三角形 $CDA$ 中，$AC^2=3^2+5^2-2\\cdot3\\cdot5\\cos120^\\circ=49$，故 $AC=7$。圆内接四边形的对角互补，所以 $\\angle ABC=60^\\circ$。",
+          "设 $AB=x$。对三角形 $ABC$ 用余弦定理得 $49=x^2+9-3x$，即 $(x-8)(x+5)=0$。长度取正，得 $AB=8$。",
+          "托勒密定理给出 $AC\\cdot BD=AB\\cdot CD+BC\\cdot DA=8\\cdot3+3\\cdot5=39$。所以 $BD=39/7<7=AC$。"
+        ]
+      },
+      {
+        "title": "Compare chords by doubling an angle",
+        "titleZh": "利用倍角比较两条弦",
+        "topics": [
+          {
+            "en": "Inscribed angles",
+            "zh": "圆周角"
+          },
+          {
+            "en": "Double-angle formula",
+            "zh": "倍角公式"
+          },
+          {
+            "en": "Extended sine rule",
+            "zh": "扩展正弦定理"
+          }
+        ],
+        "steps": [
+          "Let $\\gamma=\\angle CAD$. The equal chords $BC$ and $CD$ subtend equal angles at $A$, so $\\angle BAC=\\gamma$ and $\\angle BAD=2\\gamma$. The chord formula yields $BD/CD=\\sin(2\\gamma)/\\sin\\gamma=2\\cos\\gamma$.",
+          "First use the cosine rule at $D$ to get $AC^2=9+25-30\\cos120^\\circ=49$. At $A$ in triangle $CAD$, it then gives $\\cos\\gamma=(7^2+5^2-3^2)/(2\\cdot7\\cdot5)=13/14$. Therefore $BD=2\\cdot3\\cdot13/14=39/7$, less than $AC=7$."
+        ],
+        "stepsZh": [
+          "令 $\\gamma=\\angle CAD$。相等的弦 $BC,CD$ 在 $A$ 处所对的圆周角相等，故 $\\angle BAC=\\gamma$，$\\angle BAD=2\\gamma$。由弦长公式，$BD/CD=\\sin(2\\gamma)/\\sin\\gamma=2\\cos\\gamma$。",
+          "先在 $D$ 处用余弦定理得 $AC^2=9+25-30\\cos120^\\circ=49$。再在三角形 $CAD$ 的 $A$ 处用余弦定理，得 $\\cos\\gamma=(7^2+5^2-3^2)/(2\\cdot7\\cdot5)=13/14$。于是 $BD=2\\cdot3\\cdot13/14=39/7$，比 $AC=7$ 短。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/19"
+  },
+  "amc12-2024a-q20": {
+    "summary": "Choose $P$ uniformly on $AB$ and $Q$ independently and uniformly on $AC$ in equilateral triangle $ABC$. Where does the probability $\\Pr([APQ]<[ABC]/2)$ fall among $[3/8,1/2]$, $(1/2,2/3]$, $(2/3,3/4]$, $(3/4,7/8]$, and $(7/8,1]$? Brackets around a triangle denote its area.",
+    "summaryZh": "在等边三角形 $ABC$ 的边 $AB,AC$ 上分别独立、均匀地选点 $P,Q$。记 $[T]$ 为三角形 $T$ 的面积，判断 $\\Pr([APQ]<[ABC]/2)$ 属于哪个区间：$[3/8,1/2]$、$(1/2,2/3]$、$(2/3,3/4]$、$(3/4,7/8]$、$(7/8,1]$。",
+    "answer": "D. $(3/4,7/8]$.",
+    "answerZh": "D. $(3/4,7/8]$。",
+    "methods": [
+      {
+        "title": "Integrate the area under a hyperbola",
+        "titleZh": "求双曲线下方的面积",
+        "topics": [
+          {
+            "en": "Geometric probability",
+            "zh": "几何概率"
+          },
+          {
+            "en": "Definite integrals",
+            "zh": "定积分"
+          }
+        ],
+        "steps": [
+          "Set $x=AP/AB$ and $y=AQ/AC$. The common included angle at $A$ gives $[APQ]/[ABC]=xy$. The pair $(x,y)$ is uniform in the unit square.",
+          "For $0<x<1/2$, the entire column satisfies $xy<1/2$. For $1/2<x<1$, the allowed column has height $1/(2x)$. The boundary has probability zero.",
+          "Thus the probability is $1/2+\\int_{1/2}^1 dx/(2x)=(1+\\ln2)/2\\approx0.8466$, which lies between $3/4$ and $7/8$."
+        ],
+        "stepsZh": [
+          "令 $x=AP/AB$、$y=AQ/AC$。两个三角形有相同的夹角 $A$，面积比 $[APQ]/[ABC]=xy$。点 $(x,y)$ 在单位正方形中均匀分布。",
+          "当 $0<x<1/2$ 时整条竖列都满足 $xy<1/2$；当 $1/2<x<1$ 时，符合条件的高度为 $1/(2x)$。边界的概率为零。",
+          "故概率为 $1/2+\\int_{1/2}^1 dx/(2x)=(1+\\ln2)/2\\approx0.8466$，介于 $3/4$ 和 $7/8$ 之间。"
+        ]
+      },
+      {
+        "title": "Trap the probability between elementary areas",
+        "titleZh": "用平面图形估计上下界",
+        "topics": [
+          {
+            "en": "Geometric bounds",
+            "zh": "几何估计"
+          },
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "For the same unit-square variables $x=AP/AB,y=AQ/AC$, the desired region is $xy<1/2$. The portion with $x<1/2$ or $y<1/2$ has area $3/4$. The disjoint small square $1/2<x,y<2/3$ also qualifies, giving a strict lower bound.",
+          "On the triangle $x+y\\ge3/2$, the identity $xy-(x+y-1)=(1-x)(1-y)\\ge0$ ensures $xy\\ge1/2$. The triangle has perpendicular sides of length $1/2$, so its area is $1/8$.",
+          "The desired probability exceeds $3/4$ and is at most $1-1/8=7/8$."
+        ],
+        "stepsZh": [
+          "仍取单位正方形变量 $x=AP/AB,y=AQ/AC$，目标区域为 $xy<1/2$。只要 $x<1/2$ 或 $y<1/2$ 就符合要求，这部分面积为 $3/4$。另外不重叠的小正方形 $1/2<x,y<2/3$ 也符合要求，故下界是严格的。",
+          "在 $x+y\\ge3/2$ 的三角形上，利用 $xy-(x+y-1)=(1-x)(1-y)\\ge0$ 可知 $xy\\ge1/2$。三角形两条直角边长均为 $1/2$，面积为 $1/8$。",
+          "所求概率大于 $3/4$ 且不超过 $1-1/8=7/8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/20"
+  },
+  "amc12-2024a-q21": {
+    "summary": "A sequence starts at $a_1=2$ and for $n\\ge2$ satisfies $(a_n-1)/(n-1)=(a_{n-1}+1)/n$. Find the floor of the sum of the squares of its first $100$ terms. (A) $338550$   (B) $338551$   (C) $338552$   (D) $338553$   (E) $338554$",
+    "summaryZh": "数列首项为 $a_1=2$，当 $n\\ge2$ 时满足 $(a_n-1)/(n-1)=(a_{n-1}+1)/n$。求前 $100$ 项的平方和向下取整的结果。 (A) $338550$   (B) $338551$   (C) $338552$   (D) $338553$   (E) $338554$",
+    "answer": "B. $338551$.",
+    "answerZh": "B。$338551$。",
+    "methods": [
+      {
+        "title": "Telescope the weighted terms and bound the tail",
+        "titleZh": "加权递推望远镜求和并估计尾项",
+        "topics": [
+          {
+            "en": "Telescoping sums",
+            "zh": "裂项求和"
+          },
+          {
+            "en": "Sum of squares",
+            "zh": "平方和公式"
+          },
+          {
+            "en": "Floor function",
+            "zh": "向下取整"
+          }
+        ],
+        "steps": [
+          "Cross-multiplying the recurrence gives $na_n-(n-1)a_{n-1}=2n-1=n^2-(n-1)^2$. Thus $na_n-n^2$ is constant. Its value at $n=1$ is $1$, so $a_n=n+1/n$.",
+          "Squaring gives $a_n^2=n^2+2+1/n^2$. The sum of the integer portions is $100\\cdot101\\cdot201/6+200=338550$.",
+          "The fractional sum is greater than $1$, from its first term and the positive remainder. For $n\\ge2$, $1/n^2<1/(n(n-1))=1/(n-1)-1/n$. Therefore $\\sum_{n=1}^{100}1/n^2<1+(1-1/100)<2$. Exactly one more whole unit is included in the floor."
+        ],
+        "stepsZh": [
+          "交叉相乘得 $na_n-(n-1)a_{n-1}=2n-1=n^2-(n-1)^2$。故 $na_n-n^2$ 是常数，代入 $n=1$ 得其值为 $1$，即 $a_n=n+1/n$。",
+          "平方得 $a_n^2=n^2+2+1/n^2$。整数部分之和为 $100\\cdot101\\cdot201/6+200=338550$。",
+          "各 $1/n^2$ 的和大于 $1$，因为首项为 $1$、其余各项为正。对 $n\\ge2$ 有 $1/n^2<1/(n(n-1))=1/(n-1)-1/n$。于是 $\\sum_{n=1}^{100}1/n^2<1+(1-1/100)<2$，其整数部分恰为 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/21"
+  },
+  "amc12-2024a-q22": {
+    "summary": "On the edges of a grid eight cells wide and three high, draw one simple closed loop. Each of the eight middle-row cells must have exactly one edge on the loop. The top and bottom rows carry no restriction. Count the loops.",
+    "summaryZh": "在宽八格、高三格的方格图上，沿格线画一个不自交的闭环。中间一行八个格子各恰有一条边属于闭环，上下两行不限制。共有多少种闭环？",
+    "answer": "C. $146$.",
+    "answerZh": "C．$146$ 种。",
+    "methods": [
+      {
+        "title": "Classify the cells inside the loop",
+        "titleZh": "按闭环内部的方格分类",
+        "topics": [
+          {
+            "en": "Planar separation",
+            "zh": "平面分隔"
+          },
+          {
+            "en": "Binary patterns",
+            "zh": "二元模式"
+          }
+        ],
+        "steps": [
+          "Mark each cell inside the loop 1 and each cell outside 0; the exterior of the board also has value 0. An edge is on the loop exactly when its two sides have different marks. Thus each middle cell has exactly one neighbour with the opposite mark. The interior cells of a simple grid loop are edge-connected.",
+          "Suppose some middle cell is inside. Wherever consecutive middle marks change, the different horizontal neighbour uses up each cell’s allowance. Both vertical neighbours of either cell must match it. Thus beside a change there is an entirely empty column next to an entirely full column. An empty column disconnects inside cells on its two sides, so the middle 1s form one block. Outside that block there is at most one column at either end: any farther middle 0 would need an inside vertical neighbour cut off by the empty column.",
+          "Each end column of the block is full, also at a board edge where the outside mark is 0. For each strictly interior column of this block the middle cell already has two 1s horizontally, so exactly one of its top or bottom neighbours is 1. Each independent choice works: the marked cells extend the solid middle strip up or down by one, forming a connected shape without holes or corner pinches, hence one simple boundary. Omitting 0, 1 or 2 end columns gives $2^6+2\\cdot2^5+2^4=144$ loops.",
+          "If no middle cell is inside, each column must have exactly one of its top and bottom cells inside. Connectivity forces all eight to be in the same row, yielding two more loops. The total is 146."
+        ],
+        "stepsZh": [
+          "在环内的格子标 1，环外格子以及棋盘外部标 0。一条边属于环，当且仅当其两侧标记不同。故每个中行格的四个邻居中恰有一个与它不同。简单格线闭环的内部各格按共边相连。",
+          "若有中行格在环内，在两个相邻中行格的标记发生变化之处，不同的水平邻居已用完各格的限额；它们各自的上下邻格必须与自身相同。因此变化处必然一列全空、相邻一列全满。空列会隔断两侧的内部格，故中行的 1 连成单一段。段外左右至多各留一列：更远处的中行 0 需要上或下邻格为 1，却被空列与内部隔断。",
+          "段的两端列必须全满，贴棋盘边时也一样，因为外部为 0。段内非端点的中行格已有两个水平邻居为 1，故其上下邻格恰有一个为 1。可以逐列独立选择；所得形状在连续中段上朝上或朝下各添一格，无洞、无仅角相接的断点，边界正是一条简单闭环。省去首尾零列、一列、两列分别得到 $2^6+2\\cdot2^5+2^4=144$ 种。",
+          "若中行全在环外，则每列必须恰有顶格或底格在环内。为保证内部连通，八格必须全在同一行。再加上下两种，共 146 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/22",
+    "figure": {
+      "url": "/commentary-figures/amc10-2024a-q25.svg",
+      "alt": "A three-row grid eight squares wide. Every square in the middle row is marked 1.",
+      "altZh": "三行八列的方格图，每个中间行的方格均标有数字 1。"
+    }
+  },
+  "amc12-2024a-q23": {
+    "summary": "For $j\\in\\{1,3,5,7\\}$ write $t_j=\\tan^2(j\\pi/16)$. Determine $t_1t_3+t_1t_5+t_3t_7+t_5t_7$.",
+    "summaryZh": "对 $j\\in\\{1,3,5,7\\}$，设 $t_j=\\tan^2(j\\pi/16)$，求 $t_1t_3+t_1t_5+t_3t_7+t_5t_7$。",
+    "answer": "B. $68$.",
+    "answerZh": "B. $68$。",
+    "methods": [
+      {
+        "title": "Factor, then eliminate the half-angle values",
+        "titleZh": "因式分解后消去半角数值",
+        "topics": [
+          {
+            "en": "Complementary angles",
+            "zh": "余角"
+          },
+          {
+            "en": "Double-angle identities",
+            "zh": "二倍角恒等式"
+          },
+          {
+            "en": "Factorisation",
+            "zh": "因式分解"
+          }
+        ],
+        "steps": [
+          "The four products factor as $(t_1+t_7)(t_3+t_5)$. The angles inside each bracket are complementary. For any such starting angle $u$, $\\tan^2u+\\cot^2u=(\\tan u+\\cot u)^2-2=4/\\sin^2(2u)-2$.",
+          "Put $s=\\sin^2(\\pi/8)$ and $v=\\sin^2(3\\pi/8)=\\cos^2(\\pi/8)$. Then $s+v=1$ and $sv=\\sin^2(\\pi/4)/4=1/8$.",
+          "The factored expression becomes $(4/s-2)(4/v-2)=[16-8(s+v)]/(sv)+4=8/(1/8)+4=68$."
+        ],
+        "stepsZh": [
+          "四项可分解为 $(t_1+t_7)(t_3+t_5)$，每组内的角互余。对角 $u$ 有 $\\tan^2u+\\cot^2u=(\\tan u+\\cot u)^2-2=4/\\sin^2(2u)-2$。",
+          "记 $s=\\sin^2(\\pi/8)$、$v=\\sin^2(3\\pi/8)=\\cos^2(\\pi/8)$，则 $s+v=1$、$sv=\\sin^2(\\pi/4)/4=1/8$。",
+          "原式等于 $(4/s-2)(4/v-2)=[16-8(s+v)]/(sv)+4=8/(1/8)+4=68$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/23"
+  },
+  "amc12-2024a-q24": {
+    "summary": "Consider all tetrahedra of positive volume whose four faces are congruent. Their common face must have three different positive integer side lengths. Find the minimum possible sum of the areas of the four faces. $(A)\\ \\sqrt3$  $(B)\\ 3\\sqrt{15}$  $(C)\\ 15$  $(D)\\ 15\\sqrt7$  $(E)\\ 24\\sqrt6$",
+    "summaryZh": "考察所有四个面彼此全等且体积为正的四面体。每个三角形面的三条边长都是互不相同的正整数。求四面面积之和的最小值。 $(A)\\ \\sqrt3$  $(B)\\ 3\\sqrt{15}$  $(C)\\ 15$  $(D)\\ 15\\sqrt7$  $(E)\\ 24\\sqrt6$",
+    "answer": "D. $15\\sqrt7$.",
+    "answerZh": "D。$15\\sqrt7$。",
+    "methods": [
+      {
+        "title": "Bound the shortest sides, then construct the minimiser",
+        "titleZh": "先限制短边，再构造取等的四面体",
+        "topics": [
+          {
+            "en": "Median of a triangle",
+            "zh": "三角形中线"
+          },
+          {
+            "en": "Heron’s formula",
+            "zh": "海伦公式"
+          },
+          {
+            "en": "Surface area",
+            "zh": "表面积"
+          },
+          {
+            "en": "Coordinates in space",
+            "zh": "空间坐标"
+          }
+        ],
+        "steps": [
+          "Write the common side lengths as $u<v<w$. Each length appears on exactly two opposite edges: each of the four faces uses it once, and two edges meeting at a vertex belong to a common face, which cannot repeat a length. Label the longest opposite edges $BC$ and $AD$, and take the midpoint $M$ of $BC$. Triangles $ABC$ and $DCB$ are congruent by SSS, so $AM=DM$. Since the tetrahedron is not coplanar, $A,M,D$ cannot be collinear. Thus $2AM>AD=BC=w$.",
+          "By the median formula in $ABC$, $4AM^2=2u^2+2v^2-w^2$. The previous inequality gives $w^2<u^2+v^2$, so the largest face angle is acute. Now $w\\ge v+1$ implies $u^2>2v+1$. For $u=1,2,3$ we instead have $u^2\\le 2u+3\\le 2v+1$. Hence $u\\ge4$. If $u=4,v=5$, the conditions $5<w$ and $w^2<41$ force $w=6$. Heron’s formula gives the face area $K=\\sqrt{(15/2)(7/2)(5/2)(3/2)}=15\\sqrt7/4$.",
+          "For every other possible pair of shorter sides, $uv\\ge24$. The angle $\\theta$ between them is the largest angle, so $60^\\circ\\le\\theta<90^\\circ$. Hence the face area is at least $uv\\sqrt3/4\\ge6\\sqrt3>15\\sqrt7/4$.",
+          "To realise the remaining candidate, take positive $x,y,z$ whose squares are $5/2,27/2,45/2$, respectively. Use the points $(0,0,0),(x,y,0),(x,0,z),(0,y,z)$. Each face has one edge of each length $\\sqrt{x^2+y^2}=4$, $\\sqrt{x^2+z^2}=5$, and $\\sqrt{y^2+z^2}=6$. The determinant of the three nonzero position vectors is $-2xyz\\ne0$, so the tetrahedron has positive volume. Its surface area is $4K=15\\sqrt7$."
+        ],
+        "stepsZh": [
+          "把各面的三边长记作 $u<v<w$。四个面各使用一次同一边长，而每条棱属于两个面，因此每种边长出现于两条棱上。同一顶点处的两棱属于同一个面，长度不能相等，所以这两条必是对棱。设最长的对棱为 $BC,AD$，取 $BC$ 的中点 $M$。由三边分别相等，三角形 $ABC$ 与 $DCB$ 全等，故 $AM=DM$。若 $A,M,D$ 共线，则四个顶点共面，与体积为正矛盾。因此 $2AM>AD=BC=w$。",
+          "由三角形 $ABC$ 的中线公式，$4AM^2=2u^2+2v^2-w^2$。结合上一步得 $w^2<u^2+v^2$，所以面上的最大角是锐角。由 $w\\ge v+1$ 得 $u^2>2v+1$。若 $u=1,2,3$，则 $u^2\\le 2u+3\\le 2v+1$，矛盾。故 $u\\ge4$。当 $u=4,v=5$ 时，$5<w$ 且 $w^2<41$，只能有 $w=6$。海伦公式给出单面面积 $K=\\sqrt{(15/2)(7/2)(5/2)(3/2)}=15\\sqrt7/4$。",
+          "对于其他可能的两条短边，$uv\\ge24$。它们的夹角 $\\theta$ 是面的最大角，故 $60^\\circ\\le\\theta<90^\\circ$。单面面积因而至少为 $uv\\sqrt3/4\\ge6\\sqrt3>15\\sqrt7/4$。",
+          "还须验证边长 $4,5,6$ 的候选确能实现。取正数 $x,y,z$，其平方依次为 $5/2,27/2,45/2$，再取四点 $(0,0,0),(x,y,0),(x,0,z),(0,y,z)$。每个面的三条边长恰为 $\\sqrt{x^2+y^2}=4$、$\\sqrt{x^2+z^2}=5$ 和 $\\sqrt{y^2+z^2}=6$。三个非零位置向量的行列式为 $-2xyz\\ne0$，保证体积为正。该四面体的表面积为 $4K=15\\sqrt7$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/24"
+  },
+  "amc12-2024a-q25": {
+    "summary": "Choose an ordered integer quadruple $(a,b,c,d)$ from $[-5,5]^4$, with $(c,d)\\ne(0,0)$. On its real domain $cx+d\\ne0$, draw $y=(ax+b)/(cx+d)$. How many quadruples produce a graph unchanged when the two coordinates are exchanged? $(A)\\ 1282$  $(B)\\ 1292$  $(C)\\ 1310$  $(D)\\ 1320$  $(E)\\ 1330$",
+    "summaryZh": "从 $[-5,5]^4$ 中选取有序整数四元组 $(a,b,c,d)$，其中 $(c,d)\\ne(0,0)$。在实数定义域 $cx+d\\ne0$ 上作出函数 $y=(ax+b)/(cx+d)$ 的图像。交换横纵坐标后图像保持不变的四元组有多少个？ $(A)\\ 1282$  $(B)\\ 1292$  $(C)\\ 1310$  $(D)\\ 1320$  $(E)\\ 1330$",
+    "answer": "B. $1292$.",
+    "answerZh": "B。$1292$。",
+    "methods": [
+      {
+        "title": "Interchange the coordinates in the graph equation",
+        "titleZh": "在图像方程中交换横纵坐标",
+        "topics": [
+          {
+            "en": "Graph symmetry",
+            "zh": "图像对称"
+          },
+          {
+            "en": "Rational functions",
+            "zh": "有理函数"
+          },
+          {
+            "en": "Counting by cases",
+            "zh": "分类计数"
+          }
+        ],
+        "steps": [
+          "At every graph point $(x,y)$ we have $cxy+dy-ax-b=0$. For the reflected point $(y,x)$ to belong as well, the swapped equation must hold. Subtracting the two equations gives $(a+d)(y-x)=0$. If $a+d\\ne0$, this forces every graph point onto $y=x$. The polynomial identity $cx^2+dx=ax+b$ follows on the infinite domain, so $c=b=0$ and $a=d\\ne0$. All $10$ such quadruples work.",
+          "Now let $d=-a$. When $c=0$, we must have $a\\ne0$, and the graph is the entire line $y=-x+b/d$, which is symmetric. There are $10\\cdot11=110$ possibilities. When $c\\ne0$, the equation $cxy-a(x+y)-b=0$ is symmetric, but we must still exclude the original pole $x=a/c$. At this value the implicit equation has no solutions if $a^2+bc\\ne0$. In that case the graph equals the entire symmetric implicit curve. If $a^2+bc=0$, cancellation gives the horizontal line $y=a/c$ with its point at $x=a/c$ omitted. Its reflection is a punctured vertical line, so it fails.",
+          "For $c\\ne0,d=-a$ there are initially $11\\cdot11\\cdot10=1210$ choices of $(a,b,c)$. Remove the solutions of $bc=-a^2$. For $a=0$ this means $b=0$, giving $10$ exclusions. For each nonzero $a$, the signs of $b,c$ are opposite. For $|a|=1,3,4,5$ the only admissible absolute pair is $(|a|,|a|)$, giving two sign orders for each of eight values of $a$. For $|a|=2$ the pairs of magnitudes are $(1,4),(2,2),(4,1)$, giving six choices for each sign of $a$. This removes $10+16+12=38$.",
+          "Combining the disjoint cases gives $10+110+1210-38=1292$ quadruples."
+        ],
+        "stepsZh": [
+          "图像上任一点 $(x,y)$ 满足 $cxy+dy-ax-b=0$。反射后的点 $(y,x)$ 若也在图像上，就必须满足交换 $x,y$ 后的方程。两式相减得 $(a+d)(y-x)=0$。若 $a+d\\ne0$，则图像上处处有 $y=x$。由此在无穷多个 $x$ 上有 $cx^2+dx=ax+b$，比较多项式系数得 $c=b=0$ 且 $a=d\\ne0$。这 $10$ 个四元组全部可行。",
+          "再设 $d=-a$。若 $c=0$，则须有 $a\\ne0$，图像为整条直线 $y=-x+b/d$，交换坐标后不变，共有 $10\\cdot11=110$ 种。若 $c\\ne0$，隐式方程 $cxy-a(x+y)-b=0$ 已经对称，但原函数必须避开 $x=a/c$。当 $a^2+bc\\ne0$ 时，把 $x=a/c$ 代入隐式方程也无解，故原图像就是整条对称曲线。当 $a^2+bc=0$ 时，约分后是水平直线 $y=a/c$，且必须删去横坐标为 $a/c$ 的点；它反射后成为删去一点的竖直线，因此不满足要求。",
+          "在 $c\\ne0,d=-a$ 的情形，$(a,b,c)$ 原有 $11\\cdot11\\cdot10=1210$ 种取法，需要扣除 $bc=-a^2$ 的情形。若 $a=0$，须有 $b=0$，要扣 $10$ 种。若 $a\\ne0$，则 $b,c$ 异号。对于 $|a|=1,3,4,5$，符合取值范围的绝对值对只有 $(|a|,|a|)$，八个 $a$ 各有两种符号安排。对于 $|a|=2$，绝对值对可以是 $(1,4),(2,2),(4,1)$，两个 $a$ 各有六种安排。共扣除 $10+16+12=38$ 种。",
+          "三个互不重叠的情形合计为 $10+110+1210-38=1292$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2024A/problem/25"
   }
 }

@@ -25,7 +25,11 @@ function startBank(root) {
     ...p, kind:'practice', topicKeys:[p.topicKey], href:prefix + '/problems/' + p.id + '/',
     search:compact([p.id,p.title,...p.exam,p.topic,p.method,p.level,p.statement].join(' ')),
   }));
-  const byId = new Map(originals.map(q => [q.id, q]));
+  const guides = JSON.parse(get('guide-data').textContent).map(q => ({
+    ...q, topicKeys:[q.topicKey], href:prefix+'/tara/guide/'+q.id+'/',
+    search:compact([q.id,q.title,q.topic,q.code,q.statement,q.preview].join(' '))
+  }));
+  const byId = new Map([...originals,...guides].map(q => [q.id, q]));
   const originalExams = [...new Set(originals.flatMap(q => q.exam))];
   const storageKey = 'drwang.worksheet.v1';
   const pageSize = 20;
@@ -94,10 +98,11 @@ function startBank(root) {
     if (items.includes(previous)) select.value = previous;
   }
   function refreshMode() {
-    const historical = control('kind').value === 'past';
+    const kind = control('kind').value;
+    const historical = kind === 'past';
     root.querySelectorAll('[data-past-only]').forEach(x => { x.hidden = !historical; x.querySelector('input,select').disabled = !historical; });
-    root.querySelectorAll('[data-practice-only]').forEach(x => { x.hidden = historical; x.querySelector('select').disabled = historical; });
-    const exams = historical ? [...new Set(past.map(q=>q.exam[0]))] : originalExams;
+    root.querySelectorAll('[data-practice-only]').forEach(x => { x.hidden = kind !== 'practice'; x.querySelector('select').disabled = kind !== 'practice'; });
+    const exams = historical ? [...new Set(past.map(q=>q.exam[0]))] : kind === 'guide' ? ['TARA'] : originalExams;
     replaceOptions(control('exam'),exams.sort(),t('All exams','全部考试'));
     control('q').placeholder = historical ? t('Exam, year, paper or question number','考试、年份、试卷或题号') : t('Title, keyword or question text','题名、关键词或英文题干');
   }
@@ -116,7 +121,7 @@ function startBank(root) {
   function applyURL() {
     const params = new URLSearchParams(location.search);
     const kind = params.get('kind') || (params.has('method') || params.has('level') || params.get('exam')==='TARA' ? 'practice' : 'past');
-    control('kind').value = kind === 'practice' ? 'practice' : 'past';
+    control('kind').value = ['past','practice','guide'].includes(kind) ? kind : 'past';
     refreshMode();
     for (const key of filters.slice(1)) {
       const field = control(key), value = params.get(key) || '';
@@ -153,7 +158,7 @@ function startBank(root) {
       article.append(el('p',q.concepts.join(zh ? '、' : ' · '),'bank-source-block'));
     }
     if (!isPast) {
-      const statement = el('p',q.statement); statement.lang = 'en'; article.append(statement);
+      const statement = el('p',q.preview || q.statement); statement.lang = q.preview && zh ? 'zh' : 'en'; article.append(statement);
     }
     const foot = el('div',null,'bank-card-foot');
     if (isPast) {
@@ -162,7 +167,9 @@ function startBank(root) {
       if (label) foot.append(link(label, q.href+'#solutions','bank-card-source'));
       else foot.append(el('span',t('Index only · Answer pending','题目索引 · 暂无站内答案')));
     } else {
-      foot.append(el('span',q.method),link(t('Answer & methods','答案与解法'),q.href+'#solutions','bank-card-source'));
+      if (q.method) foot.append(el('span',q.method));
+      const label = q.module === 'writing-task' ? t('Sample responses','写作范例') : t('Answer & methods','答案与解法');
+      foot.append(link(label,q.href+'#solutions','bank-card-source'));
     }
     foot.append(addButton(q));
     article.append(foot); return article;
@@ -171,7 +178,8 @@ function startBank(root) {
     const values = Object.fromEntries(new FormData(form));
     const isPast = values.kind === 'past';
     const tokens = compact(values.q).split(/\s+/u).filter(Boolean);
-    const filtered = (isPast ? past : originals).filter(q =>
+    const collection = isPast ? past : values.kind === 'guide' ? guides : originals;
+    const filtered = collection.filter(q =>
       (!values.exam || q.exam.includes(values.exam)) && (!values.topic || q.topicKeys.includes(values.topic))
       && (!values.year || q.year === values.year) && (!values.number || String(q.n) === values.number)
       && matchesReading(q, values.reading)
@@ -224,6 +232,7 @@ function startBank(root) {
     const url = new URL(location.href); const ids=url.searchParams.getAll('add');
     if (!ids.length) return;
     const available = [...new Set(ids)].filter(id=>byId.has(id));
+    if (sourceState === 'loading' && available.length !== new Set(ids).size) return;
     for(const id of available) if (!selected.includes(id)) selected.push(id);
     if (available.length) changed(t('Worksheet updated.','试卷已更新。'));
     const waitForSources = sourceState !== 'ready' && available.length !== new Set(ids).size;
@@ -239,7 +248,7 @@ function startBank(root) {
       replaceOptions(control('year'),[...new Set(past.map(q=>q.year))].sort((a,b)=>Number(b)-Number(a)),t('All years','全部年份'));
       selected=selected.filter(id=>byId.has(id)); save(); addIncoming(); applyURL(); renderSheet();
     } catch {
-      sourceState='error'; renderResults(); renderSheet();
+      sourceState='error'; addIncoming(); renderResults(); renderSheet();
     }
   }
   try { readStorage(localStorage.getItem(storageKey)); } catch { readStorage(null); }

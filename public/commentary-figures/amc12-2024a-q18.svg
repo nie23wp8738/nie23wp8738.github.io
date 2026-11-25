@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="276" viewBox="0 0 260 276" role="img" aria-labelledby="title desc">
+  <title id="title">Two rectangular cards with common diagonal AC</title>
+  <desc id="desc">The upright rectangle has B at upper left, A at upper right, C at lower left and D at lower right. A second copy is rotated clockwise around the common midpoint so that its diagonal coincides with AC.</desc>
+  <rect x="103" y="38" width="54" height="201.5307" fill="#f2e6d1" stroke="#594a32" stroke-width="2.5"/>
+  <rect x="103" y="38" width="54" height="201.5307" transform="rotate(30 130.0000 138.7654)" fill="#b6d8db" fill-opacity=".62" stroke="#325a64" stroke-width="2.5"/>
+  <path d="M157 38 L103 239.5307" fill="none" stroke="#233944" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <g fill="#233944"><circle cx="157" cy="38" r="2.7"/><circle cx="103" cy="38" r="2.7"/><circle cx="103" cy="239.5307" r="2.7"/><circle cx="157" cy="239.5307" r="2.7"/></g>
+  <g font-family="Georgia,serif" font-style="italic" font-size="18" fill="#172d38"><text x="161" y="32">A</text><text x="87" y="32">B</text><text x="87" y="253">C</text><text x="159" y="256">D</text></g>
+</svg>
