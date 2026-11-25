@@ -62,6 +62,82 @@
     ],
     "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_1"
   },
+  "usamo-2010-q2": {
+    "summary": "Rank $n$ students from $1$ (shortest) to $n$ (tallest). They stand in a circle, all facing forwards along the circle. A student may change places with the person directly ahead only if the student is at least two ranks taller. Show that every sequence of such exchanges terminates after at most $\\binom n3$ moves.",
+    "summaryZh": "将 $n$ 名身高各异的学生从矮到高编号为 $1,\\ldots,n$。他们围成一圈，沿圆周朝同一方向站立。只有当前方紧邻的学生比自己至少低两个名次时，才允许与其交换位置。证明无论如何选择交换，总会停止，而且交换次数至多为 $\\binom n3$。",
+    "answer": "Ranks $i<j$ exchange at most $j-i-1$ times. Summing gives the stated bound.",
+    "answerZh": "编号 $i<j$ 的两人最多交换 $j-i-1$ 次，对所有编号对求和即得结论。",
+    "methods": [
+      {
+        "title": "Count overtakes between two consecutive ranks",
+        "titleZh": "用相邻身高的两人限制超越次数",
+        "topics": [
+          {
+            "en": "Circular order",
+            "zh": "环形顺序"
+          },
+          {
+            "en": "Mathematical induction",
+            "zh": "数学归纳法"
+          },
+          {
+            "en": "Double counting",
+            "zh": "双重计数"
+          }
+        ],
+        "steps": [
+          "Consider any finite prefix of a legal move sequence. Write $T(i,j)$ for the number of times $j$ passes $i$, with $j>i$. Consecutive ranks never exchange, so $T(i,i+1)=0$.",
+          "For $j\\ge i+2$, follow only $i,i+1,j$ in their circular order, looking in the direction of travel. Immediately before $j$ passes $i$ their order starting at $j$ is $j,i,i+1$; immediately afterwards it is $j,i+1,i$. To pass $i$ again, $j$ must return to the first order. No exchange with an outsider affects this order, and $i,i+1$ cannot pass one another. Consequently some exchange of $j$ with $i+1$ must occur between successive passes of $i$ by $j$.",
+          "It follows that $T(i,j)\\le1+T(i+1,j)$. Inducting on $j-i$ yields $T(i,j)\\le j-i-1$. On summing over all $i<j$, the quantity $j-i-1$ counts the possible third ranks $k$ with $i<k<j$. Each triple occurs once, so the bound is $\\binom n3$. It applies to every finite prefix, ruling out an infinite sequence."
+        ],
+        "stepsZh": [
+          "考察任一合法交换序列的一个有限初段。对 $j>i$，记 $T(i,j)$ 为 $j$ 超过 $i$ 的次数。身高编号相邻者不能交换，故 $T(i,i+1)=0$。",
+          "当 $j\\ge i+2$ 时，只保留 $i,i+1,j$ 三人，观察其沿前进方向的环形次序。在 $j$ 超过 $i$ 的瞬间，交换前从 $j$ 开始的顺序为 $j,i,i+1$，交换后为 $j,i+1,i$。要再次超过 $i$，必须先回到前一种次序。与其他人的交换不改变这三人的环序，而 $i,i+1$ 无法互换，因此两次超过 $i$ 之间必有一次 $j$ 超过 $i+1$。",
+          "所以 $T(i,j)\\le1+T(i+1,j)$。对编号差 $j-i$ 归纳得 $T(i,j)\\le j-i-1$。对所有 $i<j$ 求和时，$j-i-1$ 等于其间可选的编号 $k$ 的个数。每组三人 $i<k<j$ 正好计一次，故上界为 $\\binom n3$。每个有限初段都有这个上界，因此不可能无限交换。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_2"
+  },
+  "usamo-2010-q3": {
+    "summary": "Choose $2010$ positive real numbers $a_1,\\ldots,a_{2010}$ subject to $a_i a_j\\le i+j$ whenever $i<j$. Determine the maximum product of all $2010$ entries, and exhibit a choice attaining it.",
+    "summaryZh": "有 $2010$ 个正实数 $a_1,\\ldots,a_{2010}$，任意 $i<j$ 都满足 $a_i a_j\\le i+j$。求所有数的乘积的最大值，并构造取到最大值的一组数。",
+    "answer": "$\\prod_{r=1}^{1005}(4r-1)=3\\cdot7\\cdot11\\cdots4019$.",
+    "answerZh": "最大值为 $\\prod_{r=1}^{1005}(4r-1)=3\\cdot7\\cdot11\\cdots4019$。",
+    "methods": [
+      {
+        "title": "Saturate paired constraints and check the gaps",
+        "titleZh": "令成对约束取等并按下标间距验证",
+        "topics": [
+          {
+            "en": "Construction",
+            "zh": "构造"
+          },
+          {
+            "en": "Extremal principle",
+            "zh": "极值原理"
+          },
+          {
+            "en": "Product inequalities",
+            "zh": "乘积不等式"
+          }
+        ],
+        "steps": [
+          "Pair positions $2r-1,2r$ for $1\\le r\\le1005$. Their product is bounded by $4r-1$, so the product of these bounds is an upper bound for the whole problem. To reach it, set $a_{2r}=2\\sqrt r$ and $a_{2r-1}=(4r-1)/(2\\sqrt r)$. All entries are positive and the chosen pairs have equality.",
+          "For the other adjacent pairs the required inequality is $a_{2r}a_{2r+1}=(4r+3)\\sqrt{r/(r+1)}\\le4r+1$. Both sides are positive, and $(r+1)(4r+1)^2-r(4r+3)^2=1$, which proves it.",
+          "For every index $i$ we have $a_i^2\\le2i+1/(2(i+1))$: at even $i$ the square is exactly $2i$ and at odd $i$ the displayed upper bound is an equality. If $j=i+d$ with $d\\ge2$, multiply these bounds to get $a_i^2a_j^2\\le4ij+i/(j+1)+j/(i+1)+1/(4(i+1)(j+1))$.",
+          "The first and last of the three extra terms are each less than $1$. The middle one is $1+(d-1)/(i+1)\\le(d+1)/2$. Since $2+(d+1)/2\\le d^2$ for integer $d\\ge2$, we get $a_i^2a_j^2\\le4ij+d^2=(i+j)^2$. This verifies every remaining constraint, so the upper bound is attained."
+        ],
+        "stepsZh": [
+          "对 $1\\le r\\le1005$ 将第 $2r-1,2r$ 项配成一对。每对乘积至多为 $4r-1$，这些上界之积即为总乘积的上界。为使各对同时取等，取 $a_{2r}=2\\sqrt r$、$a_{2r-1}=(4r-1)/(2\\sqrt r)$。各项为正，且所选配对均已取等。",
+          "对于其余相邻项，需证 $a_{2r}a_{2r+1}=(4r+3)\\sqrt{r/(r+1)}\\le4r+1$。两边均为正数，平方后通分，利用恒等式 $(r+1)(4r+1)^2-r(4r+3)^2=1$ 即得。",
+          "对任意指标 $i$ 有 $a_i^2\\le2i+1/(2(i+1))$：偶数下标恰有 $a_i^2=2i$，奇数下标则等于所写上界。设 $j=i+d$ 且 $d\\ge2$，两式相乘得 $a_i^2a_j^2\\le4ij+i/(j+1)+j/(i+1)+1/(4(i+1)(j+1))$。",
+          "附加三项中的第一项、最后一项都小于 $1$，中间项为 $1+(d-1)/(i+1)\\le(d+1)/2$。又因整数 $d\\ge2$ 时 $2+(d+1)/2\\le d^2$，所以 $a_i^2a_j^2\\le4ij+d^2=(i+j)^2$。由此验证了全部约束，该构造确实取到上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_3"
+  },
   "usamo-2010-q4": {
     "summary": "Triangle $ABC$ is right-angled at $A$. The internal bisector at $B$ meets $AC$ at $D$, and the internal bisector at $C$ meets $AB$ at $E$. Let $I$ be the intersection of $BD$ and $CE$. Can $AB,AC,BI,ID,CI,IE$ all have integer lengths?",
     "summaryZh": "在直角三角形 $ABC$ 中，$\\angle A=90^\\circ$。$B$ 的内角平分线交 $AC$ 于 $D$，$C$ 的内角平分线交 $AB$ 于 $E$，$BD$ 与 $CE$ 交于 $I$。$AB,AC,BI,ID,CI,IE$ 这六条线段的长度可以全是整数吗？",
@@ -98,5 +174,81 @@
       }
     ],
     "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_4"
+  },
+  "usamo-2010-q5": {
+    "summary": "Let $p$ be an odd prime, set $h=(p-1)/2$ and $q=3h-1$. Form $S=\\sum_{k=1}^{h}1/((3k-1)(3k)(3k+1))$, whose last denominator is $q(q+1)(q+2)$. If integers $m,n$ with $n\\ne0$ satisfy $m/n=1/p-2S$, prove $p\\mid(m-n)$.",
+    "summaryZh": "设 $p$ 为奇素数，$h=(p-1)/2$，$q=3h-1$。令 $S=\\sum_{k=1}^{h}1/((3k-1)(3k)(3k+1))$，其末项分母即 $q(q+1)(q+2)$。若整数 $m,n$ 满足 $n\\ne0$ 且 $m/n=1/p-2S$，证明 $p\\mid(m-n)$。",
+    "answer": "$m\\equiv n\\pmod p$, for any integer representation of the fraction.",
+    "answerZh": "任一整数分子分母表示都满足 $m\\equiv n\\pmod p$。",
+    "methods": [
+      {
+        "title": "Remove the exceptional reciprocal before reducing modulo the prime",
+        "titleZh": "先消去分母为素数的那一项",
+        "topics": [
+          {
+            "en": "Partial fractions",
+            "zh": "部分分式"
+          },
+          {
+            "en": "Harmonic sums",
+            "zh": "调和和"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "For each $k$, twice the summand equals $1/(3k-1)-2/(3k)+1/(3k+1)$ by direct common denominators. Write this as the sum of three consecutive reciprocals minus $3/(3k)$. With $H_t=\\sum_{j=1}^t1/j$ the consecutive triples run from $2$ through $3h+1=p+h$, giving $2S=H_{p+h}-1-H_h$.",
+          "Isolate $1/p$ in this expression. The identity becomes $m/n-1=-H_{p-1}+\\sum_{k=1}^h(1/k-1/(p+k))$. The first sum pairs $k$ with $p-k$ for $1\\le k\\le h$; their reciprocals add to $p/(k(p-k))$. The difference in each term of the second sum is $p/(k(p+k))$.",
+          "All these denominators are coprime to $p$, whereas every numerator contains $p$. Hence $m/n-1=pU/V$ for integers $U,V$ with $p\\nmid V$. Clearing denominators gives $V(m-n)=pnU$, and primality gives the required divisibility, whether or not the original fraction was reduced."
+        ],
+        "stepsZh": [
+          "将各分式通分可得，第 $k$ 个被加数的两倍为 $1/(3k-1)-2/(3k)+1/(3k+1)$。它等于三个连续整数的倒数和再减去 $3/(3k)$。记 $H_t=\\sum_{j=1}^t1/j$；这些连续三数组从 $2$ 一直到 $3h+1=p+h$，故 $2S=H_{p+h}-1-H_h$。",
+          "将其中的 $1/p$ 单独取出，可写成 $m/n-1=-H_{p-1}+\\sum_{k=1}^h(1/k-1/(p+k))$。第一项中的 $k,p-k$ 两两配对，其中 $1\\le k\\le h$，各对倒数和为 $p/(k(p-k))$。第二个和式的每项则为 $p/(k(p+k))$。",
+          "所有这些分母均与 $p$ 互素，而每项分子均含因子 $p$。因此有 $m/n-1=pU/V$，其中 $U,V$ 为整数且 $p\\nmid V$。交叉相乘得 $V(m-n)=pnU$，再利用 $p$ 为素数即知它整除 $m-n$，无需假设原分数已经约分。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_5"
+  },
+  "usamo-2010-q6": {
+    "summary": "A board contains $68$ ordered pairs of nonzero integers, repetitions allowed. It never contains both $(k,k)$ and $(-k,-k)$. A player may erase individual entries, provided no two erased entries sum to zero. Each pair with at least one erased entry earns one point. What is the largest score the player can guarantee on every such board?",
+    "summaryZh": "黑板上有 $68$ 个非零整数的有序对，允许重复。对每个 $k$，$(k,k)$ 与 $(-k,-k)$ 不会同时出现。可以擦掉若干个别数字，但所擦数字中不能有两个的和为零。每个至少有一个数字被擦的数对计一分。求无论黑板如何安排都能保证取得的最大分数。",
+    "answer": "$43$ points.",
+    "answerZh": "最多能保证 $43$ 分。",
+    "methods": [
+      {
+        "title": "Bias the sign choices, then build a worst-case board",
+        "titleZh": "带偏置地选择正负号，再构造最不利的黑板",
+        "topics": [
+          {
+            "en": "Probabilistic method",
+            "zh": "概率方法"
+          },
+          {
+            "en": "Expected value",
+            "zh": "数学期望"
+          },
+          {
+            "en": "Extremal construction",
+            "zh": "极值构造"
+          }
+        ],
+        "steps": [
+          "For each absolute value present, independently choose one sign and erase all occurrences of that signed value. Designate as preferred the sign used in a pair $(k,k)$ if such a pair exists, otherwise either sign. The hypothesis makes that choice consistent. Choose the preferred sign with probability $t=(\\sqrt5-1)/2$, the other sign with probability $1-t$. Here $1/2<t<1$ and $1-t^2=t$.",
+          "A pair with identical entries scores with probability $t$. A pair of opposite entries scores surely. For two different absolute values, either entry is missed with probability at most $t$, and the sign choices are independent. Thus this pair scores with probability at least $1-t^2=t$. The mean score is at least $68t>42$: indeed $17^2\\cdot5=1445>1444=38^2$. Some integer score is therefore at least $43$.",
+          "For sharpness, for each $i=1,\\ldots,8$ write five copies of $(i,i)$, and for each $1\\le i<j\\le8$ write one $(-i,-j)$. This is $40+28=68$ admissible pairs. Any legal erasure can be extended without loss by choosing exactly one full sign class for each absolute value.",
+          "If positive signs are chosen for $r$ of the eight magnitudes, the score is $5r+28-\\binom r2=43-(r-5)(r-6)/2$. The last product is nonnegative for every integer $r$, and equality is possible at $r=5,6$. Thus no greater guarantee exists."
+        ],
+        "stepsZh": [
+          "对出现过的每个绝对值独立选取一个符号，擦掉具有该绝对值及该符号的全部数字。若出现过相等数对 $(k,k)$，把其符号作为优先符号；否则任选一方为优先。题设保证不会同时要求两个符号优先。取 $t=(\\sqrt5-1)/2$，以概率 $t$ 选优先符号，以概率 $1-t$ 选另一符号。这里 $1/2<t<1$ 且 $1-t^2=t$。",
+          "相等数对得分的概率为 $t$；互为相反数的数对必然得分。对于绝对值不同的两个数，每一个未被擦掉的概率至多为 $t$，且符号选择独立，故该对得分的概率至少为 $1-t^2=t$。所以期望分数至少为 $68t>42$，最后一个不等式可由 $17^2\\cdot5=1445>1444=38^2$ 得到。因此至少有一次选择能取得不低于 $43$ 的整数分。",
+          "说明上界时，对每个 $i=1,\\ldots,8$ 写五份 $(i,i)$；对每个 $1\\le i<j\\le8$ 再写一份 $(-i,-j)$，合计 $40+28=68$ 对，符合限制。任意合法擦法都可以扩充至每个绝对值恰选一个符号并全部擦去，从而得分不会下降。",
+          "若八个绝对值中有 $r$ 个选了正号，得分为 $5r+28-\\binom r2=43-(r-5)(r-6)/2$。对整数 $r$，最后的乘积非负，且 $r=5,6$ 时取等。故不能保证超过 $43$ 分。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2010_USAMO_Problems/Problem_6"
   }
 }

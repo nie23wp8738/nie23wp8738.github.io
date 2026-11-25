@@ -1,0 +1,622 @@
+{
+  "tmua-2020-p2-q1": {
+    "summary": "For which $k$ do the line $y=x-2$ and the parabola $y=x^2+kx+2$ have at least one common point?",
+    "summaryZh": "直线 $y=x-2$ 与抛物线 $y=x^2+kx+2$ 至少有一个公共点时，$k$ 的范围是什么？",
+    "answer": "E. $k\\le-3$ or $k\\ge5$",
+    "answerZh": "E．$k\\le-3$ 或 $k\\ge5$",
+    "methods": [
+      {
+        "title": "Use a nonnegative discriminant",
+        "titleZh": "令判别式非负",
+        "topics": [
+          {
+            "en": "Quadratic discriminants",
+            "zh": "二次式判别式"
+          },
+          {
+            "en": "Intersections",
+            "zh": "交点"
+          }
+        ],
+        "steps": [
+          "Equating the two expressions for $y$ gives $x^2+(k-1)x+4=0$. Tangency counts, so its discriminant may equal zero.",
+          "Therefore $(k-1)^2-16\\ge0$, or $|k-1|\\ge4$. The two intervals follow."
+        ],
+        "stepsZh": [
+          "联立两式得 $x^2+(k-1)x+4=0$。相切也符合要求，所以判别式允许等于零。",
+          "因而 $(k-1)^2-16\\ge0$，即 $|k-1|\\ge4$，解得所列两个区间。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=3"
+  },
+  "tmua-2020-p2-q2": {
+    "summary": "Given $180^\\circ<\\theta<360^\\circ$ and $\\tan\\theta=2$, calculate $\\cos\\theta$.",
+    "summaryZh": "已知 $180^\\circ<\\theta<360^\\circ$ 且 $\\tan\\theta=2$，求 $\\cos\\theta$。",
+    "answer": "F. $-\\dfrac{\\sqrt5}{5}$",
+    "answerZh": "F．$-\\dfrac{\\sqrt5}{5}$",
+    "methods": [
+      {
+        "title": "Use the quadrant to fix the sign",
+        "titleZh": "由象限确定符号",
+        "topics": [
+          {
+            "en": "Trigonometric identities",
+            "zh": "三角恒等式"
+          },
+          {
+            "en": "Quadrant signs",
+            "zh": "象限符号"
+          }
+        ],
+        "steps": [
+          "Since tangent is positive in the specified half-turn, the angle is in the third quadrant, where cosine is negative.",
+          "From $1/\\cos^2\\theta=1+\\tan^2\\theta=5$, obtain $\\cos\\theta=-1/\\sqrt5$."
+        ],
+        "stepsZh": [
+          "给定的半周范围中，正切为正的角在第三象限，所以余弦为负。",
+          "利用 $1/\\cos^2\\theta=1+\\tan^2\\theta=5$，可得 $\\cos\\theta=-1/\\sqrt5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=4"
+  },
+  "tmua-2020-p2-q3": {
+    "summary": "A divisibility argument starts with $4((9n+1)/2-(3n-1)/2)$. Step I writes $4=2\\cdot2$; step II simplifies the expression to $2(9n+1-3n-1)$; later steps obtain $12n$. Where is the first mistake?",
+    "summaryZh": "某整除性证明从 $4((9n+1)/2-(3n-1)/2)$ 出发。第 I 步将 $4$ 写成 $2\\cdot2$；第 II 步将整体化为 $2(9n+1-3n-1)$；随后得到 $12n$。最早在哪步出错？",
+    "answer": "C. Step II",
+    "answerZh": "C．第 II 步",
+    "methods": [
+      {
+        "title": "Distribute the minus sign",
+        "titleZh": "将负号分配给括号内各项",
+        "topics": [
+          {
+            "en": "Algebraic manipulation",
+            "zh": "代数运算"
+          },
+          {
+            "en": "Proof analysis",
+            "zh": "证明辨析"
+          }
+        ],
+        "steps": [
+          "Step I simply factors out a two. After cancelling the inner denominators, the difference is $(9n+1)-(3n-1)=9n+1-3n+1$.",
+          "Step II gave the last term the wrong sign. The actual expression is $2(6n+2)=12n+4$, congruent to $1$ modulo $3$."
+        ],
+        "stepsZh": [
+          "第 I 步只是把四拆成两个二。约去内层分母后，应有 $(9n+1)-(3n-1)=9n+1-3n+1$。",
+          "第 II 步最后的常数项符号错误。实际表达式为 $2(6n+2)=12n+4$，除以 $3$ 余 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=5"
+  },
+  "tmua-2020-p2-q4": {
+    "summary": "Consider the claim that every integer greater than $6$ is a sum of two composite positive integers. Which of $5,7,9$ are counterexamples?",
+    "summaryZh": "某命题称每个大于 $6$ 的整数都能写成两个正合数之和。$5,7,9$ 中哪些是反例？",
+    "answer": "G. $7,9$",
+    "answerZh": "G．$7,9$",
+    "methods": [
+      {
+        "title": "List the smallest composites",
+        "titleZh": "列出最小的合数",
+        "topics": [
+          {
+            "en": "Prime and composite numbers",
+            "zh": "质数与合数"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "A counterexample must exceed $6$, ruling out $5$. The smallest composite is $4$, so even the smallest allowed sum is $8>7$.",
+          "For a sum of $9$, the smaller summand must be at most $4$, so it must be $4$. Its partner $5$ is prime. Thus $9$ also fails."
+        ],
+        "stepsZh": [
+          "反例本身必须大于 $6$，先排除 $5$。最小合数是 $4$，所以最小的合数和已是 $8>7$。",
+          "若和为 $9$，较小加数至多为 $4$，只能取 $4$，但另一数 $5$ 是质数。故 $9$ 也是反例。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=6"
+  },
+  "tmua-2020-p2-q5": {
+    "summary": "Describe the position, monotonicity and horizontal asymptotes of the graph $y=2^x/(1+2^x)$.",
+    "summaryZh": "描述 $y=2^x/(1+2^x)$ 的取值范围、单调性与水平渐近线。",
+    "answer": "A. Increasing from $0$ to $1$, through $(0,1/2)$",
+    "answerZh": "A．从 $0$ 递增趋向 $1$，经过 $(0,1/2)$",
+    "methods": [
+      {
+        "title": "Rewrite the function as one minus a reciprocal",
+        "titleZh": "改写成一减去倒数",
+        "topics": [
+          {
+            "en": "Exponential graphs",
+            "zh": "指数函数图像"
+          },
+          {
+            "en": "Asymptotes",
+            "zh": "渐近线"
+          }
+        ],
+        "steps": [
+          "Put $u=2^x>0$. Then $y=1-1/(1+u)$, which increases with $u$ and stays strictly between zero and one. At $x=0$ its value is $1/2$.",
+          "As $x$ tends to negative infinity, $u$ tends to zero and $y$ to zero. At positive infinity $u$ grows without bound and $y$ tends to one from below. These features identify sketch A."
+        ],
+        "stepsZh": [
+          "令 $u=2^x>0$，有 $y=1-1/(1+u)$。它随 $u$ 递增，且总在零与一之间；当 $x=0$ 时取 $1/2$。",
+          "当 $x$ 趋于负无穷时，$u$ 趋于零，$y$ 也趋于零；当 $x$ 趋于正无穷时，$u$ 无界增大，$y$ 从下方趋于一。这些特征对应图 A。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=7"
+  },
+  "tmua-2020-p2-q6": {
+    "summary": "Suppose the integral of $f$ on $[-5,0]$ equals its integral on $[0,5]$. Which properties on $[-5,5]$ are necessary: I evenness, II constancy, III oddness?",
+    "summaryZh": "已知 $f$ 在 $[-5,0]$ 和 $[0,5]$ 上的积分相等。在 $[-5,5]$ 上，I．为偶函数，II．为常函数，III．为奇函数，哪些是必要条件？",
+    "answer": "A. None",
+    "answerZh": "A．均非必要",
+    "methods": [
+      {
+        "title": "Construct a shifted periodic function",
+        "titleZh": "构造平移后的周期函数",
+        "topics": [
+          {
+            "en": "Integral symmetry",
+            "zh": "积分对称性"
+          },
+          {
+            "en": "Necessary conditions",
+            "zh": "必要条件"
+          }
+        ],
+        "steps": [
+          "Take $f(x)=1+\\sin(2\\pi x/5)$. Each interval covers one full period of the sine, so each integral is $5$.",
+          "This $f$ varies and has $f(0)=1$, ruling out constancy and oddness. Also $f(5/4)=2$ while $f(-5/4)=0$, ruling out evenness. The same example refutes all three necessities."
+        ],
+        "stepsZh": [
+          "取 $f(x)=1+\\sin(2\\pi x/5)$。两个区间各覆盖正弦函数的一个完整周期，所以两个积分都等于 $5$。",
+          "此函数取值会变化，且 $f(0)=1$，因此既非常函数也非奇函数。另有 $f(5/4)=2$、$f(-5/4)=0$，故也非偶函数。一个例子即可说明三者都不是必要条件。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=8"
+  },
+  "tmua-2020-p2-q7": {
+    "summary": "In a parallelogram $PQRS$ with vertices in order, which single condition suffices to force a square? I: $PQ=QR$. II: the diagonals are perpendicular. III: the interior angles at $Q$ and $R$ are equal.",
+    "summaryZh": "依次连接的四点 $P,Q,R,S$ 构成平行四边形。判断哪个条件能独自保证它是正方形：I．$PQ=QR$；II．对角线互相垂直；III．$Q$ 和 $R$ 处的内角相等。",
+    "answer": "H. None",
+    "answerZh": "H．均不充分",
+    "methods": [
+      {
+        "title": "Use nonsquare rhombi and rectangles",
+        "titleZh": "用非正方形的菱形和矩形作反例",
+        "topics": [
+          {
+            "en": "Parallelograms",
+            "zh": "平行四边形"
+          },
+          {
+            "en": "Sufficient conditions",
+            "zh": "充分条件"
+          }
+        ],
+        "steps": [
+          "Take a rhombus with a $60^\\circ$ angle. Its adjacent sides agree and its diagonals are perpendicular, satisfying I and II, yet it is not square.",
+          "A $2$-by-$1$ rectangle has equal adjacent right angles, satisfying III, but it is not square either."
+        ],
+        "stepsZh": [
+          "取一个内角为 $60^\\circ$ 的菱形。它的邻边等长、对角线互相垂直，满足 I 和 II，却不是正方形。",
+          "一个长 $2$、宽 $1$ 的矩形有相等的相邻直角，满足 III，也不是正方形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=9"
+  },
+  "tmua-2020-p2-q8": {
+    "summary": "A student disproves the proposed strict inequality $|a+b|<|a|+|b|$ for all real $a,b$ by taking $a=3,b=4$. Does that example settle the claim?",
+    "summaryZh": "有人用 $a=3,b=4$ 反驳“所有实数 $a,b$ 均满足 $|a+b|<|a|+|b|$”。这一反例能否完整地否定命题？",
+    "answer": "E. Yes; the counterexample disproves the universal claim",
+    "answerZh": "E．可以，该反例足以否定全称命题",
+    "methods": [
+      {
+        "title": "Negate a universal statement",
+        "titleZh": "否定全称命题",
+        "topics": [
+          {
+            "en": "Quantifiers",
+            "zh": "量词"
+          },
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          }
+        ],
+        "steps": [
+          "With these values both sides equal $7$, so the stated strict inequality fails. Equality is enough to violate a strict less-than sign.",
+          "The claim requires success for every pair. A single admissible pair where it fails is a complete disproof."
+        ],
+        "stepsZh": [
+          "代入后两边都等于 $7$，因此严格不等式不成立。左右相等已足以反驳严格小于。",
+          "命题要求每一对实数都满足它，而一个符合前提却不满足结论的取值就足以完成反驳。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=10"
+  },
+  "tmua-2020-p2-q9": {
+    "summary": "If $f(x)=x\\sin x$ uses radians, how can $f(4)$ be entered on a calculator fixed in degree mode?",
+    "summaryZh": "若 $f(x)=x\\sin x$ 按弧度制定义，怎样在只能使用角度制的计算器上输入 $f(4)$？",
+    "answer": "F. $4\\sin_{\\mathrm{deg}}(720/\\pi)$",
+    "answerZh": "F．$4\\sin_{\\mathrm{deg}}(720/\\pi)$",
+    "methods": [
+      {
+        "title": "Convert the angle input alone",
+        "titleZh": "仅对三角函数的输入换算单位",
+        "topics": [
+          {
+            "en": "Radians and degrees",
+            "zh": "弧度与角度"
+          },
+          {
+            "en": "Function evaluation",
+            "zh": "函数求值"
+          }
+        ],
+        "steps": [
+          "As an angle, $4$ radians corresponds to $4(180/\\pi)=720/\\pi$ degrees. Enter that value inside the degree-mode sine.",
+          "The leading $4$ is a numerical multiplier from evaluating $x$ and stays $4$. The full entry is $4$ times the sine of $720/\\pi$ degrees."
+        ],
+        "stepsZh": [
+          "作为角度，$4$ 弧度应换为 $4(180/\\pi)=720/\\pi$ 度，在角度制正弦中输入该数。",
+          "正弦外面的 $4$ 是 $x$ 的数值乘因子，仍取 $4$。整个输入为 $4$ 乘以 $720/\\pi$ 度的正弦。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=11"
+  },
+  "tmua-2020-p2-q10": {
+    "summary": "Real numbers satisfy $0<a+b<c+d$ and $0<a+c<b+d$. Which statements follow: I $a<d$, II $b<c$, III $a+b+c+d>0$?",
+    "summaryZh": "实数满足 $0<a+b<c+d$ 与 $0<a+c<b+d$。判断哪些结论必成立：I．$a<d$；II．$b<c$；III．$a+b+c+d>0$。",
+    "answer": "F. I and III",
+    "answerZh": "F．I、III",
+    "methods": [
+      {
+        "title": "Add inequalities and test equal variables",
+        "titleZh": "叠加不等式并检验相等取值",
+        "topics": [
+          {
+            "en": "Linear inequalities",
+            "zh": "线性不等式"
+          },
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          }
+        ],
+        "steps": [
+          "Add $a+b<c+d$ to $a+c<b+d$: cancelling equal terms leaves $2a<2d$. Also $a+b$ and $c+d$ are both positive, proving III.",
+          "Set $a=0$, $b=c=1$ and $d=2$. Both hypotheses hold, but $b<c$ is false."
+        ],
+        "stepsZh": [
+          "将 $a+b<c+d$ 与 $a+c<b+d$ 相加，消项得 $2a<2d$。另外 $a+b$ 与 $c+d$ 均为正，故 III 成立。",
+          "取 $a=0$、$b=c=1$、$d=2$，题设两式都成立，而 $b<c$ 不成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=12"
+  },
+  "tmua-2020-p2-q11": {
+    "summary": "A square spiral starts at $(0,0)$, goes left $2$, down $2$, right $4$, up $4$, left $6$, down $6$, and so on. Among the eight signed and permuted versions of $(99,100)$, which point does it miss?",
+    "summaryZh": "方形螺线从 $(0,0)$ 出发，向左 $2$、下 $2$、右 $4$、上 $4$、左 $6$、下 $6$，每两段长度增加 $2$。将 $(99,100)$ 两坐标分别改变正负并交换位置所得八点中，哪个点不在螺线上？",
+    "answer": "G. $(-100,99)$",
+    "answerZh": "G．$(-100,99)$",
+    "methods": [
+      {
+        "title": "Trace the sides at radius one hundred",
+        "titleZh": "追踪坐标绝对值为一百的边",
+        "topics": [
+          {
+            "en": "Coordinate patterns",
+            "zh": "坐标规律"
+          },
+          {
+            "en": "Sequences",
+            "zh": "数列"
+          }
+        ],
+        "steps": [
+          "Near this layer the spiral goes from $(98,98)$ to $(-100,98)$, then to $(-100,-100)$, $(100,-100)$ and $(100,100)$; it then moves left to $(-102,100)$.",
+          "Both horizontal lines $y=\\pm100$ contain the candidate points at $x=\\pm99$, and $x=100$ covers both heights $\\pm99$. On $x=-100$ its vertical segment reaches only up to $y=98$, so it contains $-99$ but misses $99$. All later segments lie beyond this point."
+        ],
+        "stepsZh": [
+          "在这一层，螺线从 $(98,98)$ 到 $(-100,98)$，再依次到 $(-100,-100)$、$(100,-100)$ 和 $(100,100)$，随后向左至 $(-102,100)$。",
+          "两条水平线段 $y=\\pm100$ 均包含 $x=\\pm99$ 的候选点，右侧线段 $x=100$ 也包含 $y=\\pm99$。左侧 $x=-100$ 的竖线段最高只到 $y=98$，能经过 $-99$，却达不到 $99$。后续各段都在该点之外。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=13"
+  },
+  "tmua-2020-p2-q12": {
+    "summary": "On $[a,b]$, $f$ is positive. Compare two proposed tests for the trapezium rule to overestimate its integral: increasing and strictly concave, or decreasing and strictly convex. Which test is sufficient, and is it necessary?",
+    "summaryZh": "在 $[a,b]$ 上 $f$ 为正，考虑梯形法高估其积分的两个检验条件：递增且严格凹，或递减且严格凸。哪个条件充分？它是否必要？",
+    "answer": "D. Decreasing and strictly convex is sufficient",
+    "answerZh": "D．递减且严格凸是充分条件",
+    "methods": [
+      {
+        "title": "Compare the graph with its chords",
+        "titleZh": "比较函数图像与弦的位置",
+        "topics": [
+          {
+            "en": "Trapezium rule",
+            "zh": "梯形法"
+          },
+          {
+            "en": "Convexity",
+            "zh": "凸性"
+          }
+        ],
+        "steps": [
+          "For $f''>0$, each chord lies above the graph on the inside of its subinterval. The sum of trapezium areas is therefore too large, in particular when $f'<0$ as in option D. A concave graph gives the opposite comparison.",
+          "Decrease is unnecessary: $f(x)=1+x^2$ on $[1,2]$ is increasing and strictly convex, and its trapezium estimate also exceeds the integral."
+        ],
+        "stepsZh": [
+          "若 $f''>0$，各分段内连接端点的弦位于图像上方，梯形面积之和便高估积分。即使同时要求 $f'<0$ 仍然充分，对应选项 D。凹函数的弦则在另一侧。",
+          "递减并非必要，例如 $[1,2]$ 上的 $f(x)=1+x^2$ 递增且严格凸，梯形法同样高估积分。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=14"
+  },
+  "tmua-2020-p2-q13": {
+    "summary": "An integrable function satisfies $\\int_0^3f(x)^2\\,dx+\\int_0^3f(x)\\,dx=\\int_0^1f(x)\\,dx$. Must I, $f(x)\\le0$ somewhere on $[1,3]$, or II, $\\int_0^3 f\\le\\int_0^1 f$, hold?",
+    "summaryZh": "已知 $\\int_0^3f(x)^2\\,dx+\\int_0^3f(x)\\,dx=\\int_0^1f(x)\\,dx$。判断 I．$[1,3]$ 内至少有一点 $f(x)\\le0$；II．$\\int_0^3 f\\le\\int_0^1 f$。哪些必成立？",
+    "answer": "D. Both I and II",
+    "answerZh": "D．I、II 均成立",
+    "methods": [
+      {
+        "title": "Isolate the integral of the square",
+        "titleZh": "单独考察平方项积分",
+        "topics": [
+          {
+            "en": "Integral inequalities",
+            "zh": "积分不等式"
+          },
+          {
+            "en": "Sign analysis",
+            "zh": "符号分析"
+          }
+        ],
+        "steps": [
+          "The integral of $f^2$ is nonnegative. Subtracting it from the right side yields $\\int_0^3f\\le\\int_0^1 f$, proving II.",
+          "Subtracting the common interval yields $\\int_1^3 f=-\\int_0^3 f^2\\le0$. If $f$ were strictly positive everywhere on $[1,3]$, this integral would be positive, so I also follows."
+        ],
+        "stepsZh": [
+          "$f^2$ 的积分非负，把它移项即得 $\\int_0^3f\\le\\int_0^1 f$，故 II 成立。",
+          "再减去两边公共的区间积分，得 $\\int_1^3 f=-\\int_0^3 f^2\\le0$。若 $f$ 在 $[1,3]$ 上处处严格为正，其积分应为正，故 I 也成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=15"
+  },
+  "tmua-2020-p2-q14": {
+    "summary": "An arithmetic progression has nonzero integer initial term $a$ and difference $d$. It has property P if $S_m=S_{2m}$ for some positive integer $m$. Is I, $ad<0$ suffices, or II, $d$ must be even, true?",
+    "summaryZh": "等差数列的首项 $a$ 和公差 $d$ 均为非零整数。若存在正整数 $m$ 使前项和 $S_m=S_{2m}$，称其满足 P。判断 I．$ad<0$ 足以推出 P；II．满足 P 时 $d$ 必为偶数。",
+    "answer": "A. Neither I nor II",
+    "answerZh": "A．I、II 均不成立",
+    "methods": [
+      {
+        "title": "Sum the middle block",
+        "titleZh": "求后半段的和",
+        "topics": [
+          {
+            "en": "Arithmetic sequences",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Necessary and sufficient conditions",
+            "zh": "充分必要条件"
+          }
+        ],
+        "steps": [
+          "The $m$ terms from index $m+1$ to $2m$ have sum $m[2a+(3m-1)d]/2$. They must sum to zero. With $a=1,d=-2$, this requires $m=2/3$, so $ad<0$ does not suffice.",
+          "With $a=1,d=-1$, the first two terms are $1,0$; thus $S_1=S_2$ despite the odd difference. This refutes II."
+        ],
+        "stepsZh": [
+          "从第 $m+1$ 项到第 $2m$ 项共 $m$ 项，其和为 $m[2a+(3m-1)d]/2$，必须等于零。若 $a=1,d=-2$，该条件要求 $m=2/3$，故 $ad<0$ 不充分。",
+          "若 $a=1,d=-1$，前两项为 $1,0$，满足 $S_1=S_2$，尽管公差为奇数。故 II 也不成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=16"
+  },
+  "tmua-2020-p2-q15": {
+    "summary": "For positive integers $n$, when is $\\sum_{k=1}^{n}\\sin(k\\pi/3)=\\sqrt3/2$?",
+    "summaryZh": "对正整数 $n$，何时有 $\\sum_{k=1}^{n}\\sin(k\\pi/3)=\\sqrt3/2$？",
+    "answer": "D. $n\\equiv1\\pmod3$",
+    "answerZh": "D．$n\\equiv1\\pmod3$",
+    "methods": [
+      {
+        "title": "Tabulate one period of partial sums",
+        "titleZh": "列出一个周期的部分和",
+        "topics": [
+          {
+            "en": "Trigonometric sequences",
+            "zh": "三角数列"
+          },
+          {
+            "en": "Periodicity",
+            "zh": "周期性"
+          }
+        ],
+        "steps": [
+          "Let $u=\\sqrt3/2$. The summands in a block of six are $u,u,0,-u,-u,0$ and add to zero, so whole blocks can be discarded.",
+          "The running sums after one through six terms are $u,2u,2u,u,0,0$. The target occurs at residues $1$ and $4$ modulo $6$, equivalently $n\\equiv1\\pmod3$."
+        ],
+        "stepsZh": [
+          "令 $u=\\sqrt3/2$。每六项依次为 $u,u,0,-u,-u,0$，总和为零，所以可略去完整的六项组。",
+          "一个周期前一至六项的部分和依次为 $u,2u,2u,u,0,0$。目标恰在 $n$ 除以 $6$ 余 $1$ 或 $4$ 时达到，等价于 $n\\equiv1\\pmod3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=17"
+  },
+  "tmua-2020-p2-q16": {
+    "summary": "To differentiate $\\int_x^{2x}t^2\\,dt$, a student splits it at $0$ in step I, obtains $x^2$ for the derivative of $\\int_0^x t^2\\,dt$ in II, and $4x^2$ for that of $\\int_0^{2x}t^2\\,dt$ in III, concluding $3x^2$. Find the first error and correct the result.",
+    "summaryZh": "求 $\\int_x^{2x}t^2\\,dt$ 的导数时，某学生在第 I 步按零点拆分，第 II 步求得 $\\int_0^x t^2\\,dt$ 的导数为 $x^2$，第 III 步求得 $\\int_0^{2x}t^2\\,dt$ 的导数为 $4x^2$，最终得到 $3x^2$。找出最早错误并给出正确结果。",
+    "answer": "D. Step III; derivative $7x^2$",
+    "answerZh": "D．第 III 步；正确导数为 $7x^2$",
+    "methods": [
+      {
+        "title": "Differentiate the moving endpoint",
+        "titleZh": "对变化的积分上限使用链式法则",
+        "topics": [
+          {
+            "en": "Fundamental theorem of calculus",
+            "zh": "微积分基本定理"
+          },
+          {
+            "en": "Chain rule",
+            "zh": "链式法则"
+          }
+        ],
+        "steps": [
+          "Writing $F(u)=\\int_0^u t^2\\,dt$ gives $F'(u)=u^2$. Steps I and II correctly express the difference as $F(2x)-F(x)$ and obtain $F'(x)=x^2$.",
+          "In step III, differentiating $F(2x)$ requires the factor $2$ from the inner derivative, yielding $2(2x)^2=8x^2$. Subtract $x^2$ to obtain $7x^2$."
+        ],
+        "stepsZh": [
+          "令 $F(u)=\\int_0^u t^2\\,dt$，则 $F'(u)=u^2$。前两步正确地把原式写成 $F(2x)-F(x)$，并得到 $F'(x)=x^2$。",
+          "第 III 步对 $F(2x)$ 求导时缺少内层导数 $2$，正确结果是 $2(2x)^2=8x^2$。再减去 $x^2$ 得 $7x^2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=18"
+  },
+  "tmua-2020-p2-q17": {
+    "summary": "Six distinct integers are divided into triples. One triple has mean $10$ and median $8$; the other has mean $12$ and median $9$. Minimise the overall range.",
+    "summaryZh": "将六个互不相同的整数分为两个三元组。第一组均值为 $10$、中位数为 $8$，第二组均值为 $12$、中位数为 $9$。求六个数的最小极差。",
+    "answer": "E. $14$",
+    "answerZh": "E．$14$",
+    "methods": [
+      {
+        "title": "Bound the extremes and attain the bound",
+        "titleZh": "约束两端并构造等号情形",
+        "topics": [
+          {
+            "en": "Mean and median",
+            "zh": "均值与中位数"
+          },
+          {
+            "en": "Extremal arguments",
+            "zh": "极值论证"
+          }
+        ],
+        "steps": [
+          "Let the smaller entries be $u<8$ and $v<9$. The integer $v$ cannot equal $8$, already used, so both are at most $7$. As they are distinct, one is at most $6$. The largest entry in the second triple is $36-9-v=27-v\\ge20$.",
+          "Thus the range is at least $20-6=14$. The triples $(6,8,16)$ and $(7,9,20)$ meet all constraints and attain $14$."
+        ],
+        "stepsZh": [
+          "设两组的较小数依次为 $u<8$ 与 $v<9$。由于 $8$ 已被使用，整数 $v$ 也不能为 $8$，故二者都至多为 $7$，又因互不相同，至少一个不超过 $6$。第二组的最大数为 $36-9-v=27-v\\ge20$。",
+          "因此极差至少为 $20-6=14$。两组取 $(6,8,16)$ 和 $(7,9,20)$ 时符合全部条件且达到此下界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=19"
+  },
+  "tmua-2020-p2-q18": {
+    "summary": "Let $f=ax^3+bx^2+cx+d$ and $g=px^3+qx^2+rx+s$ be cubics with $f(x)>g(x)$ for all real $x$. Test I $a>p$, II $b=q\\Rightarrow c=r$, and III $d>s$.",
+    "summaryZh": "设三次函数 $f=ax^3+bx^2+cx+d$、$g=px^3+qx^2+rx+s$ 对所有实数均满足 $f(x)>g(x)$。判断 I．$a>p$；II．$b=q\\Rightarrow c=r$；III．$d>s$。",
+    "answer": "G. II and III",
+    "answerZh": "G．II、III",
+    "methods": [
+      {
+        "title": "Inspect the leading and constant terms",
+        "titleZh": "检查最高次项及常数项",
+        "topics": [
+          {
+            "en": "Polynomial end behaviour",
+            "zh": "多项式端点趋势"
+          },
+          {
+            "en": "Polynomial inequalities",
+            "zh": "多项式不等式"
+          }
+        ],
+        "steps": [
+          "A nonzero cubic term in $f-g$ would give opposite signs at its two tails. Thus $a=p$, refuting I. If $b=q$ as well, the difference is at most linear; remaining positive everywhere then requires zero slope, $c=r$.",
+          "Evaluating the original strict inequality at $x=0$ gives $d>s$. Hence II and III are necessary."
+        ],
+        "stepsZh": [
+          "若 $f-g$ 的三次项系数非零，它在两端将异号。因此必有 $a=p$，I 不成立。若又有 $b=q$，差至多为一次式，要处处为正就必须斜率为零，即 $c=r$。",
+          "在已知严格不等式中令 $x=0$ 得 $d>s$。故 II 与 III 都是必要结论。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=20"
+  },
+  "tmua-2020-p2-q19": {
+    "summary": "Each cell of a $3\\times3$ grid contains a truth-teller or liar. Everyone says all their side-neighbours are liars. What are the minimum and maximum possible numbers of truth-tellers?",
+    "summaryZh": "一个 $3\\times3$ 方格每格坐一位诚实者或说谎者。每个人都说，所有与自己格子共边的人都说谎。诚实者的人数最少和最多各为多少？",
+    "answer": "E. Minimum $3$, maximum $5$",
+    "answerZh": "E．最少 $3$，最多 $5$",
+    "methods": [
+      {
+        "title": "Cover the grid with nonadjacent truth-tellers",
+        "titleZh": "用互不相邻的诚实者覆盖方格",
+        "topics": [
+          {
+            "en": "Graph independence",
+            "zh": "图的独立集"
+          },
+          {
+            "en": "Combinatorial bounds",
+            "zh": "组合界限"
+          }
+        ],
+        "steps": [
+          "Truth-tellers cannot be adjacent, and each liar needs an adjacent truth-teller. Two truth-tellers cannot cover the four corners unless both sit at opposite edge midpoints: a corner covers only itself among the corners, the centre covers none, and an edge midpoint covers two. In that opposite arrangement the two other edge midpoints are uncovered. Three suffice: use the top middle and both bottom corners.",
+          "For the upper bound, partition eight cells into four disjoint adjacent pairs, leaving one singleton (pair the first two columns in each row, then pair two cells in the last column). Each pair has at most one truth-teller, so there are at most five. The four corners and centre realise five."
+        ],
+        "stepsZh": [
+          "诚实者不能相邻，并且每个说谎者都必须与至少一位诚实者相邻。若只用两人覆盖四个角，只能让两人位于一对相对的边中点，因为角格只覆盖自己所在的角，中心格不覆盖角，边中点覆盖两个角。但这样另两个边中点无人覆盖。取上边中点和下方两个角，则三人即可。",
+          "估计上界时，每一行把前两格配对，再将最后一列的两个格配对，得到四组相邻格，另余一格。每组至多一位诚实者，故最多五人。取四个角和中心即能达到五人。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=21"
+  },
+  "tmua-2020-p2-q20": {
+    "summary": "Write $P$ for $x\\ge0$ and $Q$ for $f(x)\\ge0$. Exactly one proposed global rule holds: A $P\\Rightarrow\\neg Q$, B $Q\\Rightarrow\\neg P$, C $P\\Rightarrow Q$, D $\\neg P\\Rightarrow\\neg Q$, E $Q\\Rightarrow P$, F $Q\\Leftrightarrow\\neg P$. Identify it.",
+    "summaryZh": "记 $P$ 为 $x\\ge0$，$Q$ 为 $f(x)\\ge0$。以下六条拟定的全局规律中恰有一条成立：A $P\\Rightarrow\\neg Q$，B $Q\\Rightarrow\\neg P$，C $P\\Rightarrow Q$，D $\\neg P\\Rightarrow\\neg Q$，E $Q\\Rightarrow P$，F $Q\\Leftrightarrow\\neg P$。求唯一成立者。",
+    "answer": "C. $x\\ge0\\Rightarrow f(x)\\ge0$",
+    "answerZh": "C．$x\\ge0\\Rightarrow f(x)\\ge0$",
+    "methods": [
+      {
+        "title": "Pair contrapositives",
+        "titleZh": "配对互为逆否的命题",
+        "topics": [
+          {
+            "en": "Contraposition",
+            "zh": "逆否命题"
+          },
+          {
+            "en": "Logical equivalence",
+            "zh": "逻辑等价"
+          }
+        ],
+        "steps": [
+          "A and B are contrapositives, so neither can be the sole true rule. D and E are another equivalent pair. F includes B as one direction and therefore cannot stand alone.",
+          "This leaves C. For a consistency check set $f(x)=1$ for all real $x$: every nonnegative input gives a nonnegative output, while positive and negative inputs supply counterexamples to the other rules."
+        ],
+        "stepsZh": [
+          "A 与 B 互为逆否，不能只有其中之一成立。D 与 E 同样等价。F 的一个方向就是 B，故它也无法单独成立。",
+          "只余 C。可用恒函数 $f(x)=1$ 验证这种情形确实存在：所有非负输入均对应非负输出，而正、负输入能分别给其余规律提供反例。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf#page=22"
+  }
+}

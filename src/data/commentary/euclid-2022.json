@@ -1,0 +1,392 @@
+{
+  "euclid-2022-q1": {
+    "summary": "(a) Evaluate $(3^2-2^3)/(2^3-3^2)$. (b) Find $\\sqrt{\\sqrt{81}+\\sqrt9-\\sqrt{64}}$. (c) Solve $1/\\sqrt{x^2+7}=1/4$ over the reals.",
+    "summaryZh": "(a) 计算 $(3^2-2^3)/(2^3-3^2)$。(b) 求 $\\sqrt{\\sqrt{81}+\\sqrt9-\\sqrt{64}}$。(c) 在实数范围内解 $1/\\sqrt{x^2+7}=1/4$。",
+    "answer": "(a) $-1$. (b) $2$. (c) $x=\\pm3$.",
+    "answerZh": "(a) $-1$；(b) $2$；(c) $x=\\pm3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Evaluate powers and isolate the radical",
+        "titleZh": "计算幂并分离根式",
+        "steps": [
+          "(a) The numerator is $9-8=1$ and the denominator is its negative, so the quotient is $-1$.",
+          "(b) The three inner square roots are $9,3,8$. The outer root is therefore $\\sqrt{9+3-8}=\\sqrt4=2$.",
+          "(c) Both denominators are positive. Equality gives $\\sqrt{x^2+7}=4$, then $x^2=9$. Substitution verifies both $3$ and $-3$."
+        ],
+        "stepsZh": [
+          "(a) 分子是 $9-8=1$，分母是它的相反数，所以商为 $-1$。",
+          "(b) 三个内层平方根分别为 $9,3,8$，故外层为 $\\sqrt{9+3-8}=\\sqrt4=2$。",
+          "(c) 两个分母都为正，相等即得 $\\sqrt{x^2+7}=4$，于是 $x^2=9$。代入检验，$3$ 与 $-3$ 均成立。"
+        ],
+        "topics": [
+          {
+            "en": "Exponents",
+            "zh": "指数"
+          },
+          {
+            "en": "Square roots",
+            "zh": "平方根"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q2": {
+    "summary": "(a) List the integer pairs $1<a<b$ with $ab=2022$. (b) Positive integers $c,d$ satisfy $(2c+1)/(2d+1)=1/17$. Find the smallest $d$. (c) The identity $(px+r)(x+5)=x^2+3x+t$ holds for every real $x$. Find $t$.",
+    "summaryZh": "(a) 列出所有满足 $1<a<b$ 且 $ab=2022$ 的整数对。(b) 正整数 $c,d$ 满足 $(2c+1)/(2d+1)=1/17$，求最小的 $d$。(c) 若对任意实数 $x$ 都有 $(px+r)(x+5)=x^2+3x+t$，求 $t$。",
+    "answer": "(a) $(2,1011),(3,674),(6,337)$. (b) $25$. (c) $-10$.",
+    "answerZh": "(a) $(2,1011),(3,674),(6,337)$；(b) $25$；(c) $-10$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Enumerate factors and choose a convenient substitution",
+        "titleZh": "枚举因数与特殊值代入",
+        "steps": [
+          "(a) Factor $2022=2\\cdot3\\cdot337$. The number $337$ is prime since none of $2,3,5,7,11,13,17$, the primes up to its square root, divides it. Hence the smaller factors greater than $1$ are $2,3,6$, with the three partners listed.",
+          "(b) Cross-multiplication gives $2d+1=34c+17$, hence $d=17c+8$. The smallest allowed $c$ is $1$, giving $d=25$.",
+          "(c) Set $x=-5$ so the product vanishes. The other side is $25-15+t$, forcing $t=-10$."
+        ],
+        "stepsZh": [
+          "(a) 分解得 $2022=2\\cdot3\\cdot337$。不超过 $\\sqrt{337}$ 的质数 $2,3,5,7,11,13,17$ 均不整除 $337$，所以 $337$ 是质数。较小且大于 $1$ 的因数只能是 $2,3,6$，配对即得答案。",
+          "(b) 交叉相乘得 $2d+1=34c+17$，故 $d=17c+8$。取允许的最小值 $c=1$，得 $d=25$。",
+          "(c) 取 $x=-5$，左边乘积为零，右边是 $25-15+t$，故 $t=-10$。"
+        ],
+        "topics": [
+          {
+            "en": "Prime factorisation",
+            "zh": "质因数分解"
+          },
+          {
+            "en": "Linear equations",
+            "zh": "一次方程"
+          },
+          {
+            "en": "Polynomial identities",
+            "zh": "多项式恒等式"
+          }
+        ]
+      },
+      {
+        "title": "Part (c) · Match the polynomial coefficients",
+        "titleZh": "第 (c) 问 · 比较多项式系数",
+        "steps": [
+          "Expand the product as $px^2+(5p+r)x+5r$. Equality for every real $x$ forces the quadratic coefficient $p=1$, the linear coefficient $5p+r=3$, and $t=5r$. Thus $r=-2$ and $t=-10$."
+        ],
+        "stepsZh": [
+          "展开得 $px^2+(5p+r)x+5r$。因为对所有实数 $x$ 恒等，二次项系数满足 $p=1$，一次项系数满足 $5p+r=3$，常数项满足 $t=5r$。所以 $r=-2,\\ t=-10$。"
+        ],
+        "topics": [
+          {
+            "en": "Coefficient comparison",
+            "zh": "比较系数"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q3": {
+    "summary": "(a) Adding $24$ litres changes a jug from $1/4$ full to $5/8$ full. Find its capacity. (b) From an initial stock of balls, fractions $2/5$ and $6/11$ of the original stock go to two people. The remaining whole balls form a multiple of $9$. Find the least possible positive initial stock. (c) A club is split into juniors and seniors. Left-handed students make up $60\\%$ of juniors, $10\\%$ of seniors, and exactly half of the whole club. What percentage of members are juniors?",
+    "summaryZh": "(a) 加入 $24$ 升水后，水量从壶容量的 $1/4$ 升至 $5/8$，求壶的容量。(b) 一批球分给两人，分别给出总数的 $2/5$ 与 $6/11$，各人数目均为整数。剩下的球数是 $9$ 的倍数。求原有球数的最小正值。(c) 社团分为初级组和高级组，左撇子分别占各组的 $60\\%$ 和 $10\\%$，占全社团的一半。初级组占总人数的百分之几？",
+    "answer": "(a) $64$ litres. (b) $165$. (c) $80\\%$.",
+    "answerZh": "(a) $64$ 升；(b) $165$；(c) $80\\%$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Convert fractions into differences, counts and weights",
+        "titleZh": "用分数建立差量、人数与权重关系",
+        "steps": [
+          "(a) The added water fills $5/8-1/4=3/8$ of the jug. Its capacity is $24/(3/8)=64$ litres.",
+          "(b) Whole gifts require the stock to be divisible by both $5$ and $11$, so write it as $55k$. The remainder is $55k-22k-30k=3k$. For divisibility by $9$ we need $3\\mid k$, with least positive $k=3$. The stock is $165$.",
+          "(c) If $j$ is the junior fraction, the total left-handed fraction is $0.6j+0.1(1-j)=0.5$. Thus $0.5j=0.4$ and $j=0.8$."
+        ],
+        "stepsZh": [
+          "(a) 加入的水占容量的 $5/8-1/4=3/8$，故壶的容量为 $24/(3/8)=64$ 升。",
+          "(b) 两份球数均为整数，故总数是 $5$ 和 $11$ 的公倍数，可设为 $55k$。剩余 $55k-22k-30k=3k$ 个，要求 $9\\mid 3k$，故最小正整数 $k=3$，总数为 $165$。",
+          "(c) 设初级组所占比例为 $j$，则左撇子的总比例为 $0.6j+0.1(1-j)=0.5$。解得 $0.5j=0.4$，故 $j=0.8$。"
+        ],
+        "topics": [
+          {
+            "en": "Fractions",
+            "zh": "分数"
+          },
+          {
+            "en": "Divisibility",
+            "zh": "整除"
+          },
+          {
+            "en": "Weighted means",
+            "zh": "加权平均"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q4": {
+    "summary": "(a) A hexagon has consecutive vertices $(0,0),(4,0),(7,2),(7,5),(3,5),(0,3)$. Find its area. (b) Diagonal $QS$ divides quadrilateral $PQRS$ into triangles $PQS$ and $QRS$, right-angled at $P$ and $Q$ respectively. The side lengths in order are $PQ=x,\\ QR=8,\\ RS=x+8,\\ SP=x+3$. Find all possible perimeters.",
+    "summaryZh": "(a) 六边形的顶点依次为 $(0,0),(4,0),(7,2),(7,5),(3,5),(0,3)$，求面积。(b) 四边形 $PQRS$ 的对角线 $QS$ 将其分为三角形 $PQS$ 和 $QRS$，直角分别在 $P$ 和 $Q$。各边长为 $PQ=x,\\ QR=8,\\ RS=x+8,\\ SP=x+3$，求所有可能的周长。",
+    "answer": "(a) $29$. (b) $22$ and $46$.",
+    "answerZh": "(a) $29$；(b) $22$ 和 $46$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Subtract corner triangles and eliminate a diagonal",
+        "titleZh": "减去角落三角形并消去对角线",
+        "steps": [
+          "(a) The enclosing rectangle has area $7\\cdot5=35$. At its bottom-right and top-left corners two right triangles are missing. Each has legs $3,2$, so the area left is $35-2(3\\cdot2/2)=29$.",
+          "(b) The two right triangles give $QS^2=x^2+(x+3)^2=(x+8)^2-8^2$. Rearrangement gives $(x-1)(x-9)=0$. For either positive value the first right triangle supplies the length $QS$ and the second has hypotenuse $x+8$, so both are realisable on opposite sides of $QS$. The perimeter $3x+19$ is $22$ or $46$."
+        ],
+        "stepsZh": [
+          "(a) 外接矩形面积为 $7\\cdot5=35$。右下角和左上角各去掉一个直角边为 $3,2$ 的三角形，余下面积为 $35-2(3\\cdot2/2)=29$。",
+          "(b) 两个直角三角形给出 $QS^2=x^2+(x+3)^2=(x+8)^2-8^2$。整理得 $(x-1)(x-9)=0$。两个正根都能使第一三角形给出所需的 $QS$、第二三角形的斜边等于 $x+8$，将两者置于 $QS$ 的两侧即可实现。周长 $3x+19$ 对应为 $22$ 或 $46$。"
+        ],
+        "topics": [
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          },
+          {
+            "en": "Pythagorean theorem",
+            "zh": "勾股定理"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q5": {
+    "summary": "(a) In a rational sequence each term $r$ is followed by $1+1/(1+r)$. The third term is $41/29$. Find the first term. (b) A vertical cylindrical tube of radius $10$ mm and height $100$ mm initially holds water of depth $h$. A vertical solid rod of radius $2.5$ mm and height $150$ mm is lowered to the bottom. The water depth becomes $64$ mm. Find $h$.",
+    "summaryZh": "(a) 有理数列中，项 $r$ 的后一项为 $1+1/(1+r)$。已知第三项为 $41/29$，求首项。(b) 竖直圆筒内半径为 $10$ 毫米、高为 $100$ 毫米，原有水深 $h$。将半径 $2.5$ 毫米、高 $150$ 毫米的实心圆柱竖直放至筒底，水深变为 $64$ 毫米。求 $h$。",
+    "answer": "(a) $7/5$. (b) $60$ mm.",
+    "answerZh": "(a) $7/5$；(b) $60$ 毫米。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Invert the recurrence and conserve volume",
+        "titleZh": "反解递推式与水体积守恒",
+        "steps": [
+          "(a) If the next term is $s$, subtract $1$ and take its reciprocal to recover $r=1/(s-1)-1$. Thus the second term is $29/12-1=17/12$, and the first is $12/5-1=7/5$.",
+          "(b) The rod occupies $(2.5/10)^2=1/16$ of the cross-sectional area below the waterline. The other $15/16$ of that area, to height $64$, contains exactly the original water, so $h=64(15/16)=60$ mm."
+        ],
+        "stepsZh": [
+          "(a) 若后一项为 $s$，将它减 $1$ 后取倒数，得到前一项 $r=1/(s-1)-1$。所以第二项为 $29/12-1=17/12$，首项为 $12/5-1=7/5$。",
+          "(b) 在水面以下，圆柱占筒横截面积的 $(2.5/10)^2=1/16$。其余 $15/16$ 的截面积乘以高度 $64$ 正好容纳原有的水，故 $h=64(15/16)=60$ 毫米。"
+        ],
+        "topics": [
+          {
+            "en": "Inverse functions",
+            "zh": "反函数"
+          },
+          {
+            "en": "Cylinder volume",
+            "zh": "圆柱体积"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q6": {
+    "summary": "(a) For every nonzero real $x$ a function satisfies $f((2x+1)/x)=x+6$. Find $f(4)$. (b) A curve $y=\\log_a(x+b)+c$ contains $(3,5),(5,4),(11,3)$. Find $a,b,c$.",
+    "summaryZh": "(a) 对每个非零实数 $x$ 均有 $f((2x+1)/x)=x+6$，求 $f(4)$。(b) 曲线 $y=\\log_a(x+b)+c$ 经过 $(3,5),(5,4),(11,3)$，求 $a,b,c$。",
+    "answer": "(a) $13/2$. (b) $(a,b,c)=(1/3,-2,5)$.",
+    "answerZh": "(a) $13/2$；(b) $(a,b,c)=(1/3,-2,5)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Match a function input and compare log increments",
+        "titleZh": "匹配自变量与比较对数的变化",
+        "steps": [
+          "(a) The input equals $2+1/x$. Set it equal to $4$, giving $x=1/2$. The output is therefore $6+1/2=13/2$.",
+          "(b) Moving through the three given points decreases $y$ by $1$ each time. The positive quantities $3+b,5+b,11+b$ must consequently have the same successive ratio $1/a$. So $(5+b)^2=(3+b)(11+b)$, which reduces to $b=-2$. The three arguments are now $1,3,9$, giving $1/a=3$. At the first point $5=\\log_{1/3}1+c=c$, as required."
+        ],
+        "stepsZh": [
+          "(a) 输入可写成 $2+1/x$。令它等于 $4$，得 $x=1/2$，故输出为 $6+1/2=13/2$。",
+          "(b) 从第一个点到第二个、再到第三个，$y$ 每次减少 $1$。于是三个正数 $3+b,5+b,11+b$ 的相邻项之比均为 $1/a$。故 $(5+b)^2=(3+b)(11+b)$，化简得 $b=-2$。三个真数依次为 $1,3,9$，故 $1/a=3$。代入第一点得 $5=\\log_{1/3}1+c=c$。"
+        ],
+        "topics": [
+          {
+            "en": "Functions",
+            "zh": "函数"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Geometric sequences",
+            "zh": "等比数列"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q7": {
+    "summary": "(a) For $j=1,\\ldots,99$ a random integer $X$ has $\\Pr(X=j)=\\log_{100}(1+1/j)$. If $\\Pr(81\\le X\\le99)=2\\Pr(X=n)$, find $n$. (b) In triangle $ABD$ the point $C$ lies between $B,D$, with $BC=2$, $CD=1$, $AC/AD=3/4$, and $\\cos\\angle ACD=-3/5$. Find $AB$.",
+    "summaryZh": "(a) 对 $j=1,\\ldots,99$，随机整数 $X$ 满足 $\\Pr(X=j)=\\log_{100}(1+1/j)$。若 $\\Pr(81\\le X\\le99)=2\\Pr(X=n)$，求 $n$。(b) 三角形 $ABD$ 中，点 $C$ 在 $B,D$ 之间，$BC=2,\\ CD=1,\\ AC/AD=3/4$，且 $\\cos\\angle ACD=-3/5$。求 $AB$。",
+    "answer": "(a) $n=9$. (b) $AB=13/7$.",
+    "answerZh": "(a) $n=9$；(b) $AB=13/7$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Telescope the probabilities and project a triangle side",
+        "titleZh": "连乘消项与边长投影",
+        "steps": [
+          "(a) Adding the individual logarithms produces one logarithm of $\\prod_{j=81}^{99}(j+1)/j=100/81$. Therefore $(1+1/n)^2=100/81$. The positive root gives $1+1/n=10/9$ and $n=9$.",
+          "(b) Put $C=(0,0),D=(1,0),B=(-2,0)$ and take $A$ above the axis. If $AC=s>0$, the given cosine and positive sine give $A=(-3s/5,4s/5)$. Then $AD^2=s^2+6s/5+1=(4s/3)^2$, so $(7s-15)(5s+3)=0$. Hence $s=15/7$.",
+          "Thus $A=(-9/7,12/7)$. From $B$ to $A$ the displacements are $5/7$ horizontally and $12/7$ vertically, so $AB=13/7$."
+        ],
+        "stepsZh": [
+          "(a) 将各项概率相加，得到乘积 $\\prod_{j=81}^{99}(j+1)/j=100/81$ 的对数。因此 $(1+1/n)^2=100/81$。取正根得 $1+1/n=10/9$，所以 $n=9$。",
+          "(b) 取 $C=(0,0),D=(1,0),B=(-2,0)$，不妨取 $A$ 在横轴上方。设 $AC=s>0$，由已知余弦及正的正弦得 $A=(-3s/5,4s/5)$。于是 $AD^2=s^2+6s/5+1=(4s/3)^2$，整理得 $(7s-15)(5s+3)=0$，故 $s=15/7$。",
+          "由此 $A=(-9/7,12/7)$。从 $B$ 到 $A$ 的横、纵位移分别为 $5/7,12/7$，故 $AB=13/7$。"
+        ],
+        "topics": [
+          {
+            "en": "Telescoping products",
+            "zh": "连乘消项"
+          },
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q8": {
+    "summary": "(a) For $a>1/2$, the line $y=-x+4a$ cuts $y=ax^2+2$ at $B,C$. The parabola's vertex is $V$ and $[VBC]=72/5$. Find $a$. (b) Can a triangle with unequal side lengths have its sides in geometric progression and its angles in arithmetic progression? Prove your conclusion.",
+    "summaryZh": "(a) 设 $a>1/2$，直线 $y=-x+4a$ 交抛物线 $y=ax^2+2$ 于 $B,C$。若顶点为 $V$ 且 $[VBC]=72/5$，求 $a$。(b) 非等边三角形的三边能否成等比数列、三个角同时成等差数列？证明结论。",
+    "answer": "(a) $5/2$. (b) No such non-equilateral triangle exists.",
+    "answerZh": "(a) $5/2$；(b) 不存在这样的非等边三角形。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Use the chord as a base and the middle angle in the cosine rule",
+        "titleZh": "以弦为底与对中间角应用余弦定理",
+        "steps": [
+          "(a) Equating the two expressions for $y$ gives $(x+2)(ax+1-2a)=0$. The horizontal separation of $B,C$ is $4-1/a$. Their line has slope $-1$, so the chord length is $\\sqrt2(4-1/a)$. The vertex is $(0,2)$, whose distance from the line $x+y=4a$ is $(4a-2)/\\sqrt2$.",
+          "Thus $(4-1/a)(2a-1)=72/5$. Clearing denominators and factoring gives $(20a-1)(2a-5)=0$. Only $a=5/2$ exceeds $1/2$.",
+          "(b) In increasing order let the sides be $u,v,w$. Geometric progression gives $v^2=uw$. Their opposite angles have the same order, and the middle of three angles in arithmetic progression is their mean, $60^\\circ$. The cosine rule gives $v^2=u^2+w^2-uw$. Equating yields $(u-w)^2=0$, forcing all three sides equal."
+        ],
+        "stepsZh": [
+          "(a) 令两个纵坐标相等，得 $(x+2)(ax+1-2a)=0$。两交点横坐标相差 $4-1/a$。弦的斜率为 $-1$，故弦长为 $\\sqrt2(4-1/a)$。顶点 $(0,2)$ 到直线 $x+y=4a$ 的距离为 $(4a-2)/\\sqrt2$。",
+          "所以 $(4-1/a)(2a-1)=72/5$。消去分母并分解得 $(20a-1)(2a-5)=0$，只有 $a=5/2$ 大于 $1/2$。",
+          "(b) 按大小排列边长为 $u,v,w$。三边成等比数列意味着 $v^2=uw$。对角与边的顺序相同，成等差数列的三个角中间项等于平均数 $60^\\circ$。用余弦定理得 $v^2=u^2+w^2-uw$，故 $(u-w)^2=0$，三边只能全相等。"
+        ],
+        "topics": [
+          {
+            "en": "Parabolas",
+            "zh": "抛物线"
+          },
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          },
+          {
+            "en": "Cosine rule",
+            "zh": "余弦定理"
+          }
+        ]
+      },
+      {
+        "title": "Part (b) · Compare the sines of the three angles",
+        "titleZh": "第 (b) 问 · 比较三个角的正弦",
+        "steps": [
+          "Write the angles in increasing order as $60^\\circ-d,\\ 60^\\circ,\\ 60^\\circ+d$ with $0\\le d<60^\\circ$. By the sine rule their sines have the same ratios as their opposite sides. A geometric progression would require $\\sin^2 60^\\circ=\\sin(60^\\circ-d)\\sin(60^\\circ+d)$.",
+          "The right side equals $\\sin^2 60^\\circ-\\sin^2d$ by the angle-addition formulas. Thus $\\sin d=0$, so $d=0$ and the triangle must be equilateral."
+        ],
+        "stepsZh": [
+          "将三个角从小到大记为 $60^\\circ-d,\\ 60^\\circ,\\ 60^\\circ+d$，其中 $0\\le d<60^\\circ$。由正弦定理，三个正弦值的比与三边之比相同。等比条件要求 $\\sin^2 60^\\circ=\\sin(60^\\circ-d)\\sin(60^\\circ+d)$。",
+          "由和差角公式，右边等于 $\\sin^2 60^\\circ-\\sin^2d$。因此 $\\sin d=0$，在给定范围内只能 $d=0$，三角形必为等边三角形。"
+        ],
+        "topics": [
+          {
+            "en": "Sine rule",
+            "zh": "正弦定理"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q9": {
+    "summary": "For integers $m\\ge2,n\\ge1$, build a list starting with $1$, then append $n$ identical blocks. Each block runs from $2$ to $m$ by unit steps and returns from $m-1$ down to $1$. (a) Sum the list for $(m,n)=(4,2)$. (b) Find the sum for $(m,3)$. (c) Find all $(m,n)$ giving sum $145$. (d) Prove the mean of the list is never an integer.",
+    "summaryZh": "对整数 $m\\ge2,n\\ge1$，先写一个 $1$，再接 $n$ 个完全相同的区段。每段从 $2$ 逐个整数上升到 $m$，再从 $m-1$ 下降到 $1$。(a) 求 $(m,n)=(4,2)$ 时的总和。(b) 求 $(m,3)$ 对应的总和。(c) 求使总和为 $145$ 的所有 $(m,n)$。(d) 证明整列数的平均数不可能是整数。",
+    "answer": "(a) $31$. (b) $3m^2-2$. (c) $(2,48),(3,18),(5,6),(7,3)$. (d) The mean lies strictly between $m/2$ and $(m+1)/2$.",
+    "answerZh": "(a) $31$；(b) $3m^2-2$；(c) $(2,48),(3,18),(5,6),(7,3)$；(d) 平均数严格介于 $m/2$ 与 $(m+1)/2$ 之间。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Each complete tooth has a fixed mean",
+        "titleZh": "每个完整区段的平均数",
+        "steps": [
+          "Pair the $m-1$ ascending entries $2,\\ldots,m$ with $m-1,\\ldots,1$ from the descending half. Each pair sums to $m+1$, giving $m^2-1$ per block. There are $2(m-1)$ entries per block. The total sum is therefore $S=1+n(m^2-1)$.",
+          "(a) Substituting $m=4,n=2$ gives $1+2\\cdot15=31$. (b) Taking $n=3$ gives $1+3(m^2-1)=3m^2-2$.",
+          "(c) We need $m^2-1$ to divide $144$, so $2\\le m\\le12$. In order, the possible values of $m^2-1$ are $3,8,15,24,35,48,63,80,99,120,143$. Only $3,8,24,48$ divide $144$. Dividing gives the four listed values of $n$.",
+          "(d) Let $L=1+2n(m-1)$ be the number of entries. Direct subtraction gives $S/L=(m+1)/2-(m-1)/(2L)$. Since $0<m-1<L$, the correction is strictly between $0$ and $1/2$. No integer lies strictly between the consecutive half-integer multiples $m/2$ and $(m+1)/2$."
+        ],
+        "stepsZh": [
+          "将上升段的 $2,\\ldots,m$ 与下降段的 $m-1,\\ldots,1$ 依次配对。共 $m-1$ 对，每对和为 $m+1$，故每段之和为 $m^2-1$、项数为 $2(m-1)$。于是全列总和为 $S=1+n(m^2-1)$。",
+          "(a) 代入 $m=4,n=2$ 得 $1+2\\cdot15=31$。(b) 取 $n=3$ 得 $1+3(m^2-1)=3m^2-2$。",
+          "(c) 需 $m^2-1$ 整除 $144$，故 $2\\le m\\le12$。依次算得 $m^2-1$ 为 $3,8,15,24,35,48,63,80,99,120,143$，仅 $3,8,24,48$ 整除 $144$。相除便得所列四组 $n$。",
+          "(d) 设项数 $L=1+2n(m-1)$。直接整理得 $S/L=(m+1)/2-(m-1)/(2L)$。因 $0<m-1<L$，被减去的量严格介于 $0$ 与 $1/2$ 之间，故平均数严格介于 $m/2$ 与 $(m+1)/2$ 之间。两者是相邻的 $1/2$ 的整数倍，中间没有整数。"
+        ],
+        "topics": [
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差求和"
+          },
+          {
+            "en": "Divisors",
+            "zh": "因数"
+          },
+          {
+            "en": "Bounds",
+            "zh": "界与不等式"
+          }
+        ]
+      }
+    ]
+  },
+  "euclid-2022-q10": {
+    "summary": "Each topping covers one independently chosen uniform semicircle of a disk: the dividing diameter has a uniformly random orientation and either half is equally likely. (a) With two toppings, what is the probability their overlap covers at least one quarter of the disk? (b) With three, what is the probability they all overlap on positive area? (c) Answer (b) for any positive number $N$ of toppings.",
+    "summaryZh": "每种配料独立地覆盖圆盘的一个随机半圆：分割直径的方向均匀随机，选取哪一半的概率各为一半。(a) 两种配料的重叠面积至少占圆盘四分之一的概率是多少？(b) 三种配料共同覆盖正面积区域的概率是多少？(c) 将 (b) 推广到任意正整数 $N$ 种配料。",
+    "answer": "(a) $1/2$. (b) $3/4$. (c) $N/2^{N-1}$.",
+    "answerZh": "(a) $1/2$；(b) $3/4$；(c) $N/2^{N-1}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2022/2022EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Mark each semicircle by its middle direction",
+        "titleZh": "用半圆的中心方向表示覆盖范围",
+        "steps": [
+          "Represent a semicircle by the unit direction pointing into its middle. These directions are independent and uniform on the full circle. A radial ray is strictly inside a topping if its direction differs from that topping's middle direction by less than $90^\\circ$.",
+          "(a) Fix the first direction. The smaller angle $\\delta$ to the second is uniform from $0$ to $180^\\circ$. The overlap sector has angle $180^\\circ-\\delta$, so it covers at least one quarter exactly when $\\delta\\le90^\\circ$. This has probability $1/2$.",
+          "(b,c) Positive common area is equivalent to a common strictly interior ray, or equivalently to all $N$ marked directions lying in some open semicircle. For $N\\ge2$, ties and antipodal pairs have probability zero. When the directions fit in an open semicircle, the complementary gap between successive marks exceeds $180^\\circ$. There can be only one such gap, since all gaps sum to $360^\\circ$.",
+          "Start clockwise just after that gap. Its first mark is the unique one for which all other marks lie within the next $180^\\circ$. Conversely that condition produces a positive overlap, apart from the zero-probability endpoints. For any fixed mark the other $N-1$ independently pass this test with probability $2^{-(N-1)}$. Summing over $N$ disjoint choices gives $N/2^{N-1}$; this also gives the certain event for $N=1$. For $N=3$ it gives $3/4$."
+        ],
+        "stepsZh": [
+          "用从圆心指向半圆正中间的单位方向表示该半圆。各方向彼此独立且在整圆上均匀分布。一条射线严格位于某配料的半圆内部，等价于它与该半圆的中心方向相差小于 $90^\\circ$。",
+          "(a) 固定第一个方向，它与第二个方向的较小夹角 $\\delta$ 在 $0$ 至 $180^\\circ$ 间均匀分布。重叠扇形的圆心角是 $180^\\circ-\\delta$，故面积至少占四分之一恰好等价于 $\\delta\\le90^\\circ$，概率为 $1/2$。",
+          "(b,c) 公共面积为正，等价于存在一条在所有半圆内部的射线，也等价于全部 $N$ 个标记方向能落在某个开半圆内。对 $N\\ge2$，方向重合或互为反向的概率为零。若这些标记能装入开半圆，则圆上相邻两个标记间有一个互补空隙大于 $180^\\circ$。因各空隙总和为 $360^\\circ$，这个空隙唯一。",
+          "沿顺时针从该空隙之后的第一个标记出发，其余标记都在接下来的 $180^\\circ$ 内，且满足这一条件的起点唯一。反过来，除去概率为零的端点情形，只要满足这一条件就有正面积的公共区域。固定一个起点后，其余 $N-1$ 个方向各自独立落入指定半圆，联合概率为 $2^{-(N-1)}$。对 $N$ 个互斥的起点情况求和得 $N/2^{N-1}$，$N=1$ 时也给出必然事件的概率。取 $N=3$ 即为 $3/4$。"
+        ],
+        "topics": [
+          {
+            "en": "Geometric probability",
+            "zh": "几何概率"
+          },
+          {
+            "en": "Circular arrangements",
+            "zh": "圆周排列"
+          },
+          {
+            "en": "Independence",
+            "zh": "独立性"
+          }
+        ]
+      }
+    ]
+  }
+}

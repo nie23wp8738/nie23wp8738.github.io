@@ -1,0 +1,238 @@
+{
+  "step-2024-p3-q1": {
+    "summary": "For $N\\ge1$ let $S_N=\\sum_{r=1}^N r^{-2}$ and assume $S_N\\to\\pi^2/6$. Verify $1/(r+1)-1/r+1/r^2=1/[r^2(r+1)]$. Sum to obtain $\\sum_{r=1}^N1/[r^2(r+1)]=S_N-1+1/(N+1)$ and evaluate the corresponding infinite series. Express $\\sum_{r=1}^N1/[r^2(r+1)(r+2)]$ in terms of $N,S_N$, and find its infinite limit. Finally prove $\\sum_{r\\ge1}1/[r^2(r+1)^2]=2\\sum_{r\\ge1}1/[r^2(r+1)]-1$.",
+    "summaryZh": "对 $N\\ge1$ 记 $S_N=\\sum_{r=1}^N r^{-2}$，已知 $S_N\\to\\pi^2/6$。验证 $1/(r+1)-1/r+1/r^2=1/[r^2(r+1)]$。据此求和得到 $\\sum_{r=1}^N1/[r^2(r+1)]=S_N-1+1/(N+1)$，并求相应的无穷和。用 $N,S_N$ 表示 $\\sum_{r=1}^N1/[r^2(r+1)(r+2)]$，再取极限。最后证明 $\\sum_{r\\ge1}1/[r^2(r+1)^2]=2\\sum_{r\\ge1}1/[r^2(r+1)]-1$。",
+    "answer": "The first infinite sum is $\\pi^2/6-1$. The second partial sum is $S_N/2-5/8+3/[4(N+1)]-1/[4(N+2)]$, with limit $\\pi^2/12-5/8$. The final series sums to $\\pi^2/3-3$.",
+    "answerZh": "第一组的无穷和为 $\\pi^2/6-1$。第二组的部分和为 $S_N/2-5/8+3/[4(N+1)]-1/[4(N+2)]$，极限为 $\\pi^2/12-5/8$。最后的级数和为 $\\pi^2/3-3$。",
+    "topics": [
+      {
+        "en": "Partial fractions",
+        "zh": "部分分式"
+      },
+      {
+        "en": "Telescoping series",
+        "zh": "裂项级数"
+      }
+    ]
+  },
+  "step-2024-p3-q2": {
+    "summary": "Put $R(x)=\\sqrt{4x^2-8x+64}$. Solve $R(x)\\le|x+8|$ and $R(x)\\le|3x-8|$ separately. Show $R(x)-2(x-1)\\to0$ as $x\\to+\\infty$ and draw $R$ alongside the line $y=2(x-1)$. Choose $m,c$ to make $\\sqrt{4x^2-5x+4}\\le|mx+c|$ hold exactly on $[3,\\infty)$. Then construct $p,q,m,c$ so that $|x^2+px+q|\\le mx+c$ holds exactly on $[-5,1]\\cup[5,7]$.",
+    "summaryZh": "设 $R(x)=\\sqrt{4x^2-8x+64}$。分别解 $R(x)\\le|x+8|$ 和 $R(x)\\le|3x-8|$。证明 $x\\to+\\infty$ 时 $R(x)-2(x-1)\\to0$，并在同一坐标系画出 $R$ 与直线 $y=2(x-1)$。选取 $m,c$，使 $\\sqrt{4x^2-5x+4}\\le|mx+c|$ 的解集恰为 $[3,\\infty)$。再构造 $p,q,m,c$，使 $|x^2+px+q|\\le mx+c$ 的解集恰为 $[-5,1]\\cup[5,7]$。",
+    "answer": "The first two sets are $[0,8]$ and $(-\\infty,0]\\cup[8,\\infty)$. One choice for the half-line is $(m,c)=(2,-1)$. For the two intervals take $(p,q,m,c)=(-4,-15,-2,20)$.",
+    "answerZh": "前两问解集依次为 $[0,8]$ 和 $(-\\infty,0]\\cup[8,\\infty)$。半直线情形可取 $(m,c)=(2,-1)$；两区间情形取 $(p,q,m,c)=(-4,-15,-2,20)$。",
+    "topics": [
+      {
+        "en": "Absolute-value inequalities",
+        "zh": "绝对值不等式"
+      },
+      {
+        "en": "Asymptotes",
+        "zh": "渐近线"
+      },
+      {
+        "en": "Quadratic factorisation",
+        "zh": "二次式因式分解"
+      }
+    ]
+  },
+  "step-2024-p3-q3": {
+    "summary": "On $x>0$, let $g(x)=\\ln(1+1/x)-(x+c)/[x(x+1)]$ for $c\\ge0$. Prove $g'(x)>0$ everywhere if $c\\ge1/2$, and find exactly where $g'(x)<0$ for $0\\le c<1/2$. You are given $g(x)\\to-\\infty$ at $0^+$ when $c>0$. Sketch $g$ separately for $c=3/4$ and $c=1/4$. Study $f(x)=(1+1/x)^{x+c}$: prove it decreases for $c\\ge1/2$, has a turning point for $0<c<1/2$, and increases when $c=0$.",
+    "summaryZh": "在 $x>0$ 上设 $g(x)=\\ln(1+1/x)-(x+c)/[x(x+1)]$，其中 $c\\ge0$。证明当 $c\\ge1/2$ 时处处有 $g'(x)>0$；当 $0\\le c<1/2$ 时，求 $g'(x)<0$ 的全部范围。已知 $c>0$ 时 $g(x)\\to-\\infty$（$x\\to0^+$）。分别对 $c=3/4$ 和 $c=1/4$ 作出 $g$ 的图像。再考察 $f(x)=(1+1/x)^{x+c}$，证明 $c\\ge1/2$ 时它递减，$0<c<1/2$ 时有极值点，而 $c=0$ 时递增。",
+    "answer": "$g'$ has the sign of $(2c-1)x+c$, so its negative-slope interval is $x>c/(1-2c)$ when $c<1/2$. At $c=3/4$ the graph rises to zero from below. At $c=1/4$ it rises past zero to a maximum at $x=1/2$ and then decreases to zero. Since $f'/f=g$, the intermediate case has one minimum.",
+    "answerZh": "$g'$ 与 $(2c-1)x+c$ 同号，故 $c<1/2$ 时负斜率区间为 $x>c/(1-2c)$。$c=3/4$ 时曲线从下方递增趋于零；$c=1/4$ 时先上升穿过横轴，在 $x=1/2$ 达到极大值后下降趋于零。由 $f'/f=g$，中间参数情形恰有一个极小点。",
+    "topics": [
+      {
+        "en": "Logarithmic differentiation",
+        "zh": "对数求导"
+      },
+      {
+        "en": "Monotonicity",
+        "zh": "单调性"
+      },
+      {
+        "en": "Graph sketching",
+        "zh": "函数作图"
+      }
+    ]
+  },
+  "step-2024-p3-q4": {
+    "summary": "For two lines of finite slopes $m_1,m_2$ making a $45^\\circ$ acute angle, prove $(m_1-m_2)/(1+m_1m_2)=\\pm1$. Fix a nonzero real $a$. On $x^2=4ay$ take tangents at distinct horizontal coordinates $p,q$. Show their intersection has horizontal coordinate $(p+q)/2$ and find its vertical coordinate. Prove every intersection of tangents inclined at $45^\\circ$ satisfies $(y+3a)^2=8a^2+x^2$. If instead two tangents meet on $(y+7a)^2=48a^2+3x^2$, prove their acute angle is independent of the intersection and determine it.",
+    "summaryZh": "两条斜率有限的直线斜率为 $m_1,m_2$，若其锐夹角为 $45^\\circ$，证明 $(m_1-m_2)/(1+m_1m_2)=\\pm1$。固定非零实数 $a$，在抛物线 $x^2=4ay$ 上横坐标分别为 $p,q$ 的不同点作切线。证明交点横坐标为 $(p+q)/2$，并求纵坐标。证明夹角为 $45^\\circ$ 的两切线的交点满足 $(y+3a)^2=8a^2+x^2$。若两切线交于 $(y+7a)^2=48a^2+3x^2$，证明锐夹角为定值并求其值。",
+    "answer": "The tangent intersection is $((p+q)/2,pq/(4a))$. Its squared angle tangent is $(x^2-4ay)/(y+a)^2$. On the last locus this ratio is $1/3$, giving $30^\\circ$.",
+    "answerZh": "切线交点为 $((p+q)/2,pq/(4a))$。夹角的正切平方为 $(x^2-4ay)/(y+a)^2$，代入最后的轨迹得 $1/3$，故锐夹角为 $30^\\circ$。",
+    "topics": [
+      {
+        "en": "Parabola tangents",
+        "zh": "抛物线切线"
+      },
+      {
+        "en": "Angle between lines",
+        "zh": "直线夹角"
+      },
+      {
+        "en": "Loci",
+        "zh": "轨迹"
+      }
+    ]
+  },
+  "step-2024-p3-q5": {
+    "summary": "For $2\\times2$ matrices write $\\operatorname{tr}$ for the diagonal sum. Prove $\\operatorname{tr}(MN)=\\operatorname{tr}(NM)$ and give the sum rule for $\\operatorname{tr}(M+N)$. Let $M'$ denote entrywise differentiation in $t$. For invertible $M$ establish $(\\det M)'/\\det M=\\operatorname{tr}(M^{-1}M')$. When $M'=MN-NM$, with $N$ also depending on $t$, show $\\det M$, $\\operatorname{tr}M$ and $\\operatorname{tr}(M^2)$ are constant. Solve this equation with $N=\\left(\\begin{smallmatrix}t&t\\\\0&t\\end{smallmatrix}\\right)$ and $M(0)=\\left(\\begin{smallmatrix}A&B\\\\C&D\\end{smallmatrix}\\right)$. Finally, if invertible matrices obey $M'=MN$ and $\\operatorname{tr}M$ is a nonzero constant, must $\\operatorname{tr}N$ vanish? Justify your answer.",
+    "summaryZh": "对 $2\\times2$ 矩阵，用 $\\operatorname{tr}$ 表示对角线元素之和。证明 $\\operatorname{tr}(MN)=\\operatorname{tr}(NM)$，并写出 $\\operatorname{tr}(M+N)$ 的加法公式。设 $M'$ 表示对每个矩阵元素按 $t$ 求导。当 $M$ 可逆时证明 $(\\det M)'/\\det M=\\operatorname{tr}(M^{-1}M')$。若 $M'=MN-NM$，其中 $N$ 也依赖 $t$，证明 $\\det M$、$\\operatorname{tr}M$ 和 $\\operatorname{tr}(M^2)$ 都为常数。当 $N=\\left(\\begin{smallmatrix}t&t\\\\0&t\\end{smallmatrix}\\right)$ 且 $M(0)=\\left(\\begin{smallmatrix}A&B\\\\C&D\\end{smallmatrix}\\right)$ 时求 $M(t)$。最后，若可逆矩阵满足 $M'=MN$，且 $\\operatorname{tr}M$ 为非零常数，是否必有 $\\operatorname{tr}N=0$？说明理由。",
+    "answer": "Writing $s=t^2/2$, the solution has rows $(A-Cs,\\ B+(A-D)s-Cs^2)$ and $(C,\\ D+Cs)$. The last implication is false. Take $M$ with rows $(1,t),(-t,1)$ and $N=M^{-1}M'$. Then $\\operatorname{tr}M=2$ but $\\operatorname{tr}N=2t/(1+t^2)$.",
+    "answerZh": "令 $s=t^2/2$，则解的两行为 $(A-Cs,\\ B+(A-D)s-Cs^2)$ 与 $(C,\\ D+Cs)$。末问的结论不成立。取 $M$ 的两行为 $(1,t),(-t,1)$，并令 $N=M^{-1}M'$，则 $\\operatorname{tr}M=2$，而 $\\operatorname{tr}N=2t/(1+t^2)$。",
+    "topics": [
+      {
+        "en": "Matrix trace",
+        "zh": "矩阵的迹"
+      },
+      {
+        "en": "Determinants",
+        "zh": "行列式"
+      },
+      {
+        "en": "Matrix differential equations",
+        "zh": "矩阵微分方程"
+      }
+    ]
+  },
+  "step-2024-p3-q6": {
+    "summary": "The control $u(t)$ enters both equations $x'=-x+3y+u$, $y'=x+y+u$. At $t=0$ the position is $(x_0,y_0)$. Analyse $(x-y)'$ to prove that reaching the origin at positive time requires $x_0=y_0$. Under this condition find a constant $u$ giving arrival at a prescribed $T>0$. Repeat in three dimensions with $x'=4y-5z+u$, $y'=x-2z+u$, $z'=x-2y+u$ and initial position $(x_0,y_0,z_0)$. First prove that reaching the origin requires $2y_0=x_0+z_0$, then prove all three initial coordinates must agree. For equal initial coordinates determine a constant $u$ achieving arrival at $T$.",
+    "summaryZh": "控制函数 $u(t)$ 同时出现在 $x'=-x+3y+u$、$y'=x+y+u$ 中，初始位置为 $(x_0,y_0)$。考察 $(x-y)'$，证明能在正时间到达原点必有 $x_0=y_0$。在此条件下，求一个常数 $u$ 使质点在指定的 $T>0$ 到达原点。再考虑三维方程 $x'=4y-5z+u$、$y'=x-2z+u$、$z'=x-2y+u$，初始位置为 $(x_0,y_0,z_0)$。先证明到达原点必须满足 $2y_0=x_0+z_0$，再证明三个初始坐标必须相等。若三者相等，求能在 $T$ 到达原点的常数 $u$。",
+    "answer": "On the diagonal the plane system becomes $x'=2x+u$, giving $u=-2x_0/(1-e^{-2T})$. The spatial system there becomes $x'=-x+u$, giving $u=-x_0/(e^T-1)$.",
+    "answerZh": "在对角线上，平面系统化为 $x'=2x+u$，故 $u=-2x_0/(1-e^{-2T})$。三维系统化为 $x'=-x+u$，故 $u=-x_0/(e^T-1)$。",
+    "topics": [
+      {
+        "en": "Linear differential equations",
+        "zh": "线性微分方程"
+      },
+      {
+        "en": "Invariant subspaces",
+        "zh": "不变子空间"
+      },
+      {
+        "en": "Control inputs",
+        "zh": "控制输入"
+      }
+    ]
+  },
+  "step-2024-p3-q7": {
+    "summary": "For integers $n,j\\ge1$ put $a_j=n!/(n+j)!$, $f(n)=\\sum_{j\\ge1}a_j$ and $g(n)=\\sum_{j\\ge1}(-1)^{j-1}a_j$. Assume convergence. Compare with a geometric series to prove $0<f(n)<1/n$ and compare adjacent terms to prove $0<g(n)<1/(n+1)$. Using the exponential series prove both $(2n)!e-f(2n)$ and $(2n)!/e+g(2n)$ are integers. If positive integers $p,q$ satisfied $qe=p/e$, prove $qf(2n)+pg(2n)$ would be an integer for every $n$. Deduce the irrationality of $e^2$.",
+    "summaryZh": "对整数 $n,j\\ge1$ 记 $a_j=n!/(n+j)!$、$f(n)=\\sum_{j\\ge1}a_j$、$g(n)=\\sum_{j\\ge1}(-1)^{j-1}a_j$，可假设收敛。与等比级数比较，证明 $0<f(n)<1/n$；比较相邻项，证明 $0<g(n)<1/(n+1)$。用指数级数证明 $(2n)!e-f(2n)$ 及 $(2n)!/e+g(2n)$ 均为整数。若存在正整数 $p,q$ 满足 $qe=p/e$，证明对一切 $n$，$qf(2n)+pg(2n)$ 也为整数。由此推出 $e^2$ 无理。",
+    "answer": "The two factorial-scaled expressions are the finite series through degree $2n$ for $e$ and $e^{-1}$, multiplied by $(2n)!$. Under the rationality assumption their integer combination would satisfy $0<qf(2n)+pg(2n)<q/(2n)+p/(2n+1)<1$ for sufficiently large $n$.",
+    "answerZh": "两项乘阶乘的表达式分别等于 $e$ 与 $e^{-1}$ 的级数截到 $2n$ 次后乘以 $(2n)!$。若假定 $e^2$ 有理，整数 $qf(2n)+pg(2n)$ 在 $n$ 充分大时满足 $0<qf(2n)+pg(2n)<q/(2n)+p/(2n+1)<1$，产生矛盾。",
+    "topics": [
+      {
+        "en": "Alternating series",
+        "zh": "交错级数"
+      },
+      {
+        "en": "Irrationality proofs",
+        "zh": "无理性证明"
+      },
+      {
+        "en": "Exponential series",
+        "zh": "指数级数"
+      }
+    ]
+  },
+  "step-2024-p3-q8": {
+    "summary": "Describe the two lines whose union is $(y-x+3)(y+x-5)=0$. Prove that $y^2-x^2+py+qx+r=0$ splits into two lines of slopes $1,-1$ exactly when $p^2-q^2=4r$. Consider $C_1:x=y^2+2sy+s(s+1)$ and $C_2:y=x^2$. Explain why every common point satisfies $y^2+2sy+s(s+1)-x+k(y-x^2)=0$ for every real $k$. Show that $k=1$ places all common points on a pair of lines of slopes $\\pm1$. Prove in both directions that the curves have four distinct intersections exactly when $s<-3/4$.",
+    "summaryZh": "指出 $(y-x+3)(y+x-5)=0$ 表示的两条直线。证明 $y^2-x^2+py+qx+r=0$ 能分解为斜率 $1,-1$ 的两条直线，当且仅当 $p^2-q^2=4r$。现取 $C_1:x=y^2+2sy+s(s+1)$、$C_2:y=x^2$。说明任意公共点对一切实数 $k$ 均满足 $y^2+2sy+s(s+1)-x+k(y-x^2)=0$。证明取 $k=1$ 可将所有交点定位在斜率 $\\pm1$ 的一对直线上。分别证明两方向，得出恰有四个不同交点当且仅当 $s<-3/4$。",
+    "answer": "The initial lines are $y=x-3$ and $y=5-x$. For the two parabolas the lines are $y=x-s$ and $y=-x-s-1$. Substitution into $y=x^2$ gives discriminants $1-4s$ and $-3-4s$. For $s<-3/4$ both are positive, and a common root of the two quadratics could occur only at $x=-1/2$, $s=-3/4$.",
+    "answerZh": "最初的直线为 $y=x-3$、$y=5-x$。两抛物线交点所在直线为 $y=x-s$、$y=-x-s-1$。代入 $y=x^2$ 得两个二次方程，判别式为 $1-4s$ 和 $-3-4s$。当 $s<-3/4$ 时两式均为正；两方程有公共根只可能发生在 $x=-1/2$、$s=-3/4$。",
+    "topics": [
+      {
+        "en": "Conic intersections",
+        "zh": "圆锥曲线交点"
+      },
+      {
+        "en": "Factorisation",
+        "zh": "因式分解"
+      },
+      {
+        "en": "Discriminants",
+        "zh": "判别式"
+      }
+    ]
+  },
+  "step-2024-p3-q9": {
+    "summary": "Use coordinates of the lowest points of smooth spheres on a smooth horizontal table. Sphere $A$ is at rest at $(0,0)$ and an identical sphere $B$ approaches with velocity $(-u,0)$ along $y=2r\\sin\\alpha$, from large positive $x$. Both have mass $m$ and radius $r$, $0<\\alpha<\\pi/2$, and the collision has restitution $1/3$. Derive the velocity of $B$ after impact. If it then crosses the $y$-axis at $(0,Y)$, show $Y=2r(\\cos\\alpha\\tan\\beta+\\sin\\alpha)$, where $\\beta$ is the acute angle its path makes with the negative horizontal direction and $\\tan\\beta=2\\sin\\alpha\\cos\\alpha/(1+2\\sin^2\\alpha)$. Another sphere of radius $r$ is at rest at $(0,h)$ with $h>0$. Show that $h>Y+2r\\sec\\beta$ rules out a subsequent collision of $B$ with this sphere. Prove $Y<2r\\sec\\beta$ and hence give $h>8r/\\sqrt3$ as a sufficient bound for all $\\alpha$.",
+    "summaryZh": "用光滑水平桌面上光滑球的最低点来表示位置。球 $A$ 静止于 $(0,0)$，相同的球 $B$ 从很大的正横坐标处沿 $y=2r\\sin\\alpha$ 以速度 $(-u,0)$ 接近。两球质量为 $m$、半径为 $r$，$0<\\alpha<\\pi/2$，恢复系数为 $1/3$。求碰撞后 $B$ 的速度。设此后它穿过纵轴于 $(0,Y)$，其轨迹与水平向左方向的锐夹角为 $\\beta$。证明 $Y=2r(\\cos\\alpha\\tan\\beta+\\sin\\alpha)$ 及 $\\tan\\beta=2\\sin\\alpha\\cos\\alpha/(1+2\\sin^2\\alpha)$。另一半径 $r$ 的球静止于 $(0,h)$，$h>0$。证明若 $h>Y+2r\\sec\\beta$，碰后 $B$ 不会撞到该球。再证 $Y<2r\\sec\\beta$，进而说明 $h>8r/\\sqrt3$ 对所有 $\\alpha$ 都足以避免相撞。",
+    "answer": "The velocity is $\\big(-u(1+2\\sin^2\\alpha)/3,\\ 2u\\sin\\alpha\\cos\\alpha/3\\big)$. The distance of $(0,h)$ from the path line is $(h-Y)\\cos\\beta$ when $h>Y$. Since $\\tan\\beta\\le1/\\sqrt3$ and $Y<2r\\sec\\beta$, the claimed uniform bound suffices.",
+    "answerZh": "速度为 $\\big(-u(1+2\\sin^2\\alpha)/3,\\ 2u\\sin\\alpha\\cos\\alpha/3\\big)$。当 $h>Y$ 时，$(0,h)$ 到轨迹直线的距离为 $(h-Y)\\cos\\beta$。因为 $\\tan\\beta\\le1/\\sqrt3$ 且 $Y<2r\\sec\\beta$，所给统一上界足以避免碰撞。",
+    "topics": [
+      {
+        "en": "Oblique impact",
+        "zh": "斜碰撞"
+      },
+      {
+        "en": "Restitution",
+        "zh": "恢复系数"
+      },
+      {
+        "en": "Distance to a line",
+        "zh": "点到直线的距离"
+      }
+    ]
+  },
+  "step-2024-p3-q10": {
+    "summary": "Stack centred, edge-aligned uniform cubes of density $\\rho$ on a horizontal floor; their side lengths are $1$ below and $0<a\\le1$ above. Both contacts have friction coefficient $\\mu<1$. Push horizontally and normally on an upper vertical face, midway across it and height $h$ above its bottom, $0<h<a$. Call the force $P$ and the base centres of the upper and lower cubes $X,Y$. In equilibrium show the floor reaction’s normal component acts a distance $P(1+h)/[(1+a^3)\\rho g]$ from $Y$, and find the analogous distance from $X$ for the inter-cube reaction. Increase $P$ from zero. Show that if tipping is excluded the upper contact slips first. For $a=1$ show that $\\mu(1+h)<1$ gives upper slipping first and $\\mu(1+h)>1$ gives tipping of the whole stack first. For $a<1$, assuming no slip, show that $h[1+a^3(1-a)]>a^4$ makes the upper cube tip first. Give feasible $h,\\mu$ with $a=1/2$ for this last event.",
+    "summaryZh": "将两个密度为 $\\rho$ 的均质立方体叠放于水平地面，中心上下对齐且对应棱平行。下方边长为 $1$，上方边长为 $0<a\\le1$，两接触面的摩擦系数均为 $\\mu<1$。在上方立方体某竖直面的横向中央、离其底边 $h$ 处施加垂直于该面的水平推力 $P$，$0<h<a$。设上下立方体底面中心分别为 $X,Y$。平衡时证明地面法向支持力的作用点距 $Y$ 为 $P(1+h)/[(1+a^3)\\rho g]$，并求两立方体间法向支持力的作用点到 $X$ 的距离。令 $P$ 从零增大。证明若不倾覆，则先在两立方体之间滑动。当 $a=1$ 时，证明 $\\mu(1+h)<1$ 时上块先滑动，而 $\\mu(1+h)>1$ 时两块作为整体先倾覆。当 $a<1$ 且无滑动时，证明 $h[1+a^3(1-a)]>a^4$ 足以使上块先倾覆。取 $a=1/2$，给出能实现最后情形的一组 $h,\\mu$。",
+    "answer": "The upper reaction offset is $Ph/(a^3\\rho g)$. In units of $\\rho g$, the upper-slip, upper-tip and whole-stack-tip thresholds are $\\mu a^3$, $a^4/(2h)$ and $(1+a^3)/[2(1+h)]$. At $a=1/2$, choose $h=2/5$, $\\mu=3/4$; the upper-tip threshold is then the smallest.",
+    "answerZh": "上块支持力的偏移距离为 $Ph/(a^3\\rho g)$。以 $\\rho g$ 为单位，上块滑动、上块倾覆、整体倾覆的临界推力分别为 $\\mu a^3$、$a^4/(2h)$、$(1+a^3)/[2(1+h)]$。在 $a=1/2$ 时可取 $h=2/5$、$\\mu=3/4$，此时上块倾覆的临界力最小。",
+    "topics": [
+      {
+        "en": "Taking moments",
+        "zh": "取力矩"
+      },
+      {
+        "en": "Tipping and sliding",
+        "zh": "倾覆与滑动"
+      },
+      {
+        "en": "Limiting friction",
+        "zh": "极限摩擦力"
+      }
+    ]
+  },
+  "step-2024-p3-q11": {
+    "summary": "Let $n$ be a positive integer and write $b_r=\\binom{2n}{r}$. Prove $rb_r=(2n+1-r)b_{2n+1-r}$ for $1\\le r\\le2n$ and hence $\\sum_{r=0}^{2n}rb_r=2\\sum_{r=n+1}^{2n}rb_r$. You may use $\\sum_r\\binom mr=2^m$ and $\\sum_r r\\binom mr=m2^{m-1}$. A fair coin is tossed $2n$ times. Let $X$ equal the larger count of heads and tails, taking value $n$ in a tie. Show $E[X]=n(1+2^{-2n}b_n)$ and that $2^{-2n}b_n$ strictly decreases with $n$. A game costs £$n$ to play and pays £$X$. Select $n$ to maximise the expected winnings per pound spent.",
+    "summaryZh": "令 $n$ 为正整数，记 $b_r=\\binom{2n}{r}$。对 $1\\le r\\le2n$ 证明 $rb_r=(2n+1-r)b_{2n+1-r}$，并导出 $\\sum_{r=0}^{2n}rb_r=2\\sum_{r=n+1}^{2n}rb_r$。可使用 $\\sum_r\\binom mr=2^m$、$\\sum_r r\\binom mr=m2^{m-1}$。抛一枚公平硬币 $2n$ 次，设正反面次数中较大值为 $X$，平手时取 $X=n$。证明 $E[X]=n(1+2^{-2n}b_n)$，并证明 $2^{-2n}b_n$ 随 $n$ 严格递减。若游戏入场费为 $n$ 英镑，奖金为 $X$ 英镑，选择 $n$ 使每支付一英镑的期望所得最大。",
+    "answer": "Put $c_n=4^{-n}\\binom{2n}{n}$. The ratio $c_{n+1}/c_n=(2n+1)/(2n+2)<1$. Thus $n=1$ maximises the expected gross return $1+c_n$, at £1.50 per £1 staked (net £0.50).",
+    "answerZh": "设 $c_n=4^{-n}\\binom{2n}{n}$，则 $c_{n+1}/c_n=(2n+1)/(2n+2)<1$。故选 $n=1$，每支付 1 英镑时的期望奖金 $1+c_n$ 最高，为 1.50 英镑（净收益 0.50 英镑）。",
+    "topics": [
+      {
+        "en": "Binomial identities",
+        "zh": "二项式恒等式"
+      },
+      {
+        "en": "Expected value",
+        "zh": "数学期望"
+      },
+      {
+        "en": "Discrete optimisation",
+        "zh": "离散最优化"
+      }
+    ]
+  },
+  "step-2024-p3-q12": {
+    "summary": "Select $(x,y)$ uniformly in the unit square $[0,1]^2$, and let $R$ be its distance from $(0,0)$. Derive the distribution function on $0\\le r\\le1$. For $1\\le r\\le\\sqrt2$, prove $P(R\\le r)=\\sqrt{r^2-1}+\\pi r^2/4-r^2\\arccos(1/r)$. Show $E[R]=\\tfrac23\\int_1^{\\sqrt2}r^2/\\sqrt{r^2-1}\\,dr$ and obtain its exact value.",
+    "summaryZh": "在单位正方形 $[0,1]^2$ 内均匀选取点 $(x,y)$，记它到 $(0,0)$ 的距离为 $R$。求 $0\\le r\\le1$ 时的分布函数，并在 $1\\le r\\le\\sqrt2$ 时证明 $P(R\\le r)=\\sqrt{r^2-1}+\\pi r^2/4-r^2\\arccos(1/r)$。证明 $E[R]=\\tfrac23\\int_1^{\\sqrt2}r^2/\\sqrt{r^2-1}\\,dr$，并求出精确值。",
+    "answer": "For $0\\le r\\le1$ the distribution function is $\\pi r^2/4$. The mean distance is $[\\sqrt2+\\ln(1+\\sqrt2)]/3$.",
+    "answerZh": "当 $0\\le r\\le1$ 时分布函数为 $\\pi r^2/4$。平均距离为 $[\\sqrt2+\\ln(1+\\sqrt2)]/3$。",
+    "topics": [
+      {
+        "en": "Geometric probability",
+        "zh": "几何概率"
+      },
+      {
+        "en": "Cumulative distributions",
+        "zh": "累积分布函数"
+      },
+      {
+        "en": "Expected distance",
+        "zh": "距离的期望"
+      }
+    ]
+  }
+}

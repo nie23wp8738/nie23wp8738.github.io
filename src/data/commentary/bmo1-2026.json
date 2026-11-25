@@ -1,0 +1,214 @@
+{
+  "bmo1-2026-q1": {
+    "summary": "For which primes $p$ and integers $n\\ge1$ is $p^n=a+b+c$ possible with positive integers $a<b<c$, $a\\mid b$ and $b\\mid c$?",
+    "summaryZh": "求所有可行的素数 $p$ 及正整数 $n$，使得 $p^n=a+b+c$，其中 $a<b<c$ 为正整数，且 $a\\mid b$、$b\\mid c$。",
+    "answer": "All prime powers except $2,3,4,5,8$.",
+    "answerZh": "除 $2,3,4,5,8$ 外的所有素数幂。",
+    "methods": [
+      {
+        "title": "Separate odd sums and powers of two",
+        "titleZh": "分别处理奇数和与二的幂",
+        "topics": [
+          {
+            "en": "Divisibility",
+            "zh": "整除性"
+          },
+          {
+            "en": "Constructive proof",
+            "zh": "构造证明"
+          }
+        ],
+        "steps": [
+          "Since $b\\ge2a$ and $c\\ge2b$, the sum is at least $7a$. This excludes $2,3,4,5$. Every odd integer $N\\ge7$ works: take $1,2,N-3$. The last term is even and at least 4.",
+          "For $N=8$, the bound forces $a=1$. Then $b+c=7$, and $b\\mid c$ implies $b\\mid7$. Neither positive divisor of 7 can be $b$ since $1<b<c$.",
+          "Finally $16=1+3+12$. For every $n\\ge4$, multiplication of these three terms by $2^{n-4}$ gives a valid sum for $2^n$."
+        ],
+        "stepsZh": [
+          "由 $b\\ge2a,c\\ge2b$ 知和至少为 $7a$，故 $2,3,4,5$ 均不行。任意奇数 $N\\ge7$ 可取 $1,2,N-3$，最后一项是至少为 4 的偶数。",
+          "当 $N=8$ 时，上述界迫使 $a=1$。此时 $b+c=7$，且 $b\\mid c$，故 $b\\mid7$。7 的两个正因子都不满足 $1<b<c$。",
+          "最后，$16=1+3+12$ 合乎条件。对 $n\\ge4$，三项同乘 $2^{n-4}$ 即得 $2^n$ 的分解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2"
+  },
+  "bmo1-2026-q2": {
+    "summary": "Determine all real triples with $x^2+2yz=y^2+2zx=4$ and $z^2+2xy=1$.",
+    "summaryZh": "求使 $x^2+2yz=y^2+2zx=4$ 且 $z^2+2xy=1$ 的所有实数三元组。",
+    "answer": "$(2,0,1),(0,2,1),(-2,0,-1),(0,-2,-1)$.",
+    "answerZh": "$(2,0,1),(0,2,1),(-2,0,-1),(0,-2,-1)$。",
+    "methods": [
+      {
+        "title": "Factor the difference and use a mean",
+        "titleZh": "作差分解，再引入平均数",
+        "topics": [
+          {
+            "en": "Symmetric systems",
+            "zh": "对称方程组"
+          },
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          }
+        ],
+        "steps": [
+          "The first two expressions give $(x-y)(x+y-2z)=0$. If $x=y$, the last equation gives $2x^2+z^2=1$. Thus $\\lvert x\\rvert,\\lvert z\\rvert\\le1$ and $x^2+2xz\\le3$, which contradicts its required value 4.",
+          "It follows that $z=(x+y)/2$. Set $x=z+d$, $y=z-d$. The two remaining conditions become $3z^2+d^2=4$ and $3z^2-2d^2=1$. Subtraction gives $d^2=1$, and then $z^2=1$.",
+          "Combining the two signs independently produces the four listed triples. Substitution into the reduced equations verifies all four."
+        ],
+        "stepsZh": [
+          "由前两式之差得 $(x-y)(x+y-2z)=0$。若 $x=y$，则 $2x^2+z^2=1$，推出 $\\lvert x\\rvert,\\lvert z\\rvert\\le1$。但这使 $x^2+2xz\\le3$，不能等于 4。",
+          "因此 $z=(x+y)/2$。设 $x=z+d,y=z-d$，原条件化为 $3z^2+d^2=4$ 和 $3z^2-2d^2=1$。作差得 $d^2=1$，再得 $z^2=1$。",
+          "分别组合 $d,z$ 的正负号得到所列的四个三元组，回代化简后的方程均成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2"
+  },
+  "bmo1-2026-q3": {
+    "summary": "For each $m=2,\\ldots,11$ there is one L-shaped piece formed by a whole row and a whole column meeting at the corner of an $m\\times m$ square. Together with a single cell, use these pieces to tile an $11\\times11$ board. Rotations are allowed, reflections are forbidden. How many tilings place the single cell at row 3, column 3 from the upper left?",
+    "summaryZh": "对每个 $m=2,\\ldots,11$，各有一块由 $m\\times m$ 正方形的一条整行和一条整列在角上拼成的 L 形块。再添一个单位方块，用这些拼块铺满 $11\\times11$ 方格。允许旋转，不允许翻面。若单位方块最后位于从左上数第 3 行、第 3 列，共有多少种铺法？",
+    "answer": "$2025$ tilings.",
+    "answerZh": "$2025$ 种。",
+    "methods": [
+      {
+        "title": "Remove the largest remaining piece",
+        "titleZh": "从最大拼块向内剥离",
+        "topics": [
+          {
+            "en": "Bijections",
+            "zh": "双射"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "In an $m\\times m$ remaining square, both arms of the size-$m$ piece span its full width or height. Because the arms end together at the elbow, it must occupy a boundary row and a boundary column meeting at a corner. Removing it leaves an $(m-1)\\times(m-1)$ square.",
+          "For each of ten removals, choose independently top or bottom, and left or right. All four choices are rotations of the L, and the sequence of choices reconstructs a unique tiling in both directions.",
+          "The surviving cell is in row 3 exactly when two top rows have been removed. Its column is 3 exactly when two left columns have been removed. These choices of removal times are independent, giving $\\binom{10}{2}^2=45^2=2025$."
+        ],
+        "stepsZh": [
+          "剩余区域若为 $m\\times m$ 正方形，最大 L 形块的双臂各占满一行和一列。因拐点是双臂的共同端点，这行和这列必须是相交于某个角的两条边界。取走后剩下 $(m-1)\\times(m-1)$ 正方形。",
+          "十次取块时，每次独立选择上或下，以及左或右。四种组合都可由旋转得到；反过来，每一种铺法也能依次唯一还原这十次选择。",
+          "剩余格在第 3 行，等价于恰有两次取走上边。同理，它在第 3 列等价于恰有两次取走左边。这两组时刻可独立指定，故有 $\\binom{10}{2}^2=45^2=2025$ 种。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2"
+  },
+  "bmo1-2026-q4": {
+    "summary": "In an acute triangle $ABC$ with $AB>AC$, let $M$ bisect $BC$. A circle through $M,B$ is tangent to $AB$ at $B$, and a circle through $M,C$ is tangent to $AC$ at $C$. Their second intersection is $D$. Show that $MA\\cdot MD=MB\\cdot MC$.",
+    "summaryZh": "在锐角三角形 $ABC$ 中，$AB>AC$，$M$ 是 $BC$ 的中点。过 $M,B$ 的圆在 $B$ 处与 $AB$ 相切，过 $M,C$ 的圆在 $C$ 处与 $AC$ 相切。两圆除 $M$ 外的交点是 $D$。证明 $MA\\cdot MD=MB\\cdot MC$。",
+    "answer": "$MD=MB^2/MA$, and $MB=MC$.",
+    "answerZh": "$MD=MB^2/MA$，且 $MB=MC$。",
+    "methods": [
+      {
+        "title": "Normalize the base and find the radical axis",
+        "titleZh": "归一化底边，求两圆的根轴",
+        "topics": [
+          {
+            "en": "Circle equations",
+            "zh": "圆的方程"
+          },
+          {
+            "en": "Radical axis",
+            "zh": "根轴"
+          }
+        ],
+        "steps": [
+          "Take $M=(0,0)$, $B=(-1,0)$, $C=(1,0)$ and $A=(u,v)$ with $v>0$, measuring length in units of $MB$. Write $S=x^2+y^2$. The circle through $M,B$ has equation $S+x+ky=0$. Its normal at $B$ is $(-1,k)$, perpendicular to $BA=(1+u,v)$, so $k=(1+u)/v$.",
+          "For the other circle the equation is $S-x+ly=0$, and its normal at $C$ is $(1,l)$. Tangency to $CA=(u-1,v)$ gives $l=(1-u)/v$. Subtracting the two circle equations gives $vx+uy=0$.",
+          "Write $D=(tu,-tv)$ on this line. Substituting into the first circle gives $t^2(u^2+v^2)-t=0$. The zero root corresponds to $M$, so $MD=1/\\sqrt{u^2+v^2}=1/MA$. Returning to the original scale gives $MA\\cdot MD=MB^2=MB\\cdot MC$."
+        ],
+        "stepsZh": [
+          "以 $MB$ 为单位，取 $M=(0,0),B=(-1,0),C=(1,0),A=(u,v)$，其中 $v>0$。记 $S=x^2+y^2$。过 $M,B$ 的圆可写成 $S+x+ky=0$，其在 $B$ 的法向量 $(-1,k)$ 垂直于 $BA=(1+u,v)$，得 $k=(1+u)/v$。",
+          "另一圆为 $S-x+ly=0$，在 $C$ 的法向量为 $(1,l)$。由它垂直于 $CA=(u-1,v)$ 得 $l=(1-u)/v$。两圆方程相减得 $vx+uy=0$。",
+          "设 $D=(tu,-tv)$，代入第一圆得 $t^2(u^2+v^2)-t=0$。零根对应 $M$，故 $MD=1/\\sqrt{u^2+v^2}=1/MA$。换回原来的长度单位，得 $MA\\cdot MD=MB^2=MB\\cdot MC$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2",
+    "figure": {
+      "url": "/commentary-figures/bmo1-2026-q4.svg",
+      "alt": "Two circles through the midpoint M, tangent to the two sides at B and C and meeting again at D.",
+      "altZh": "两圆均经过底边中点 M，分别在 B、C 与两腰相切，并交于 D。"
+    }
+  },
+  "bmo1-2026-q5": {
+    "summary": "Start a list at 1. After the $k$th occurrence of 1, append $2025k$. Otherwise halve an even entry, or for an odd entry greater than 1 divide by three and round to the nearest integer. Does every positive integer occur?",
+    "summaryZh": "数列从 1 开始。每当 1 第 $k$ 次出现，下一项取 $2025k$。其他情况下，偶数减半；大于 1 的奇数则除以 3 并四舍五入到最接近的整数。是否所有正整数都会出现？",
+    "answer": "Yes, every positive integer occurs.",
+    "answerZh": "是，每个正整数都会出现。",
+    "methods": [
+      {
+        "title": "Build predecessors using a congruence cycle",
+        "titleZh": "利用同余循环逆向构造前项",
+        "topics": [
+          {
+            "en": "Reverse iteration",
+            "zh": "逆向迭代"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          }
+        ],
+        "steps": [
+          "Every term above 1 drops strictly under the rule and stays positive. Thus visits to 1 continue indefinitely and all positive multiples of 2025 occur.",
+          "Write $F(s)=6s+1$. For $s\\ge2$, the rules carry $F(s)$ to $2s$ and then to $s$. It is therefore enough to reach a suitable iterate of $F$ starting from a known multiple of 2025.",
+          "Modulo 5, $F(s)\\equiv s+1$, so given a target $s\\ge2$ we can iterate at least once to obtain an odd multiple of 5. Modulo 25, $6^5\\equiv1$ and $1+6+6^2+6^3+6^4\\equiv5$, hence $F^5(t)\\equiv t+5$. Applying blocks of five more iterations, zero to four times, produces an odd multiple $m$ of 25.",
+          "Now $81m$ is a positive multiple of $2025=81\\cdot25$. Four exact divisions by 3 carry it to $m$, because every number on this part of the path is odd. Undoing the iterates of $F$ by the two-step descent brings us to $s$. The remaining target 1 is the initial term."
+        ],
+        "stepsZh": [
+          "大于 1 的项经规则变换后仍为正且严格减小，因此一定又会得到 1，依次产生所有正的 $2025$ 倍数。",
+          "记 $F(s)=6s+1$。对 $s\\ge2$，从 $F(s)$ 出发，规则先给出 $2s$，再给出 $s$。因此可先从目标向前反推若干步，然后让某个已知会出现的 $2025$ 倍数按规则走回目标。",
+          "模 5 有 $F(s)\\equiv s+1$，故从任意目标 $s\\ge2$ 至少做一次迭代，即可在某一步得到一个 5 的奇倍数。模 25 有 $6^5\\equiv1$ 及 $1+6+6^2+6^3+6^4\\equiv5$，故 $F^5(t)\\equiv t+5$。继续按五步一组，再做零至四组即可得到 25 的奇倍数 $m$。",
+          "因 $2025=81\\cdot25$，所以 $81m$ 必然出现。它和除以 3 的各个中间商都是奇数，故连续四次精确地除以 3 就到达 $m$。再按前述两步下降逐次抵消 $F$，即可走到 $s$。目标 1 本身就是首项。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=2"
+  },
+  "bmo1-2026-q6": {
+    "summary": "On a cycle of 1000 pads, positions $1,\\ldots,n$ each start with one frog and the others are empty. A frog may move four pads in either direction into an empty pad. It may instead move three pads into an empty pad if the two intervening pads each hold a frog, removing both of those frogs. Exactly one move is made at a time. For which $1\\le n\\le1000$ can a single frog remain?",
+    "summaryZh": "1000 个位置首尾相接，初始时 $1,\\ldots,n$ 各有一只青蛙，其余位置空着。每次任选一只蛙，向任一方向移动四格到空位；或向任一方向移动三格到空位，此时跨过的两格必须各有一只蛙，且这两只蛙均被移除。求哪些 $1\\le n\\le1000$ 能最终恰剩一只蛙。",
+    "answer": "Precisely $n\\equiv1$ or $3\\pmod8$.",
+    "answerZh": "恰为 $n\\equiv1$ 或 $3\\pmod8$。",
+    "methods": [
+      {
+        "title": "Combine four parity classes with a local reduction",
+        "titleZh": "四组奇偶性与局部消去",
+        "topics": [
+          {
+            "en": "Parity invariants",
+            "zh": "奇偶性不变量"
+          },
+          {
+            "en": "Constructive induction",
+            "zh": "构造性归纳"
+          }
+        ],
+        "steps": [
+          "Partition the pads by their residues modulo 4, which remain consistent across the wrap because $4\\mid1000$. A four-step move preserves all four class counts. A three-step jump changes each class count by one in absolute value, flipping all four parities. A successful play from $n$ needs exactly $(n-1)/2$ jumps, so $n$ must be odd.",
+          "Each complete block of eight initial frogs contributes two to each class. For residues $n\\equiv1,3,5,7\\pmod8$, the initial numbers of odd classes are respectively $1,3,3,1$. The required jump counts have parities even, odd, even, odd respectively. Thus the final numbers of odd classes are $1,1,3,3$. One frog has exactly one odd class, excluding residues 5 and 7.",
+          "It remains to construct the moves. In a local segment numbered 1 to 10, start with 1 through 9 occupied and 10 empty. Make the moves $7\\to10$, $4\\to7$, $1\\to5$, $10\\to6$, $7\\to4$, $4\\to1$. The first two and last two are jumps removing two frogs apiece. The middle two are four-step moves. Only pad 1 remains occupied in the segment.",
+          "Apply this pattern to the last nine frogs in the initial block and the next empty pad. This shortens the contiguous block by eight without affecting anything before it. Valid $n$ are at most 995, so the first empty pad always exists for this construction. Repeat until one or three frogs remain. From three, jump the first over the other two to the empty fourth pad."
+        ],
+        "stepsZh": [
+          "按编号模 4 分成四类。因为 $4\\mid1000$，首尾相接处也保持这个分类。移动四格不会改变各类的数量；跳三格则使每类的数量恰好增加或减少 1，四类的奇偶性同时翻转。每跳一次少两只，故成功时 $n$ 必须为奇数，且跳跃次数恰为 $(n-1)/2$。",
+          "初始每连续八只对每类贡献两只。若 $n\\equiv1,3,5,7\\pmod8$，四种情形最初的奇数类个数依次为 $1,3,3,1$，所需跳跃次数的奇偶性依次为偶、奇、偶、奇。因此最后的奇数类个数分别为 $1,1,3,3$。一只蛙只能产生一个奇数类，遂排除余 5 和余 7。",
+          "为证明充分性，用局部编号 1 到 10，前九格有蛙，第十格为空。依次走 $7\\to10$、$4\\to7$、$1\\to5$、$10\\to6$、$7\\to4$、$4\\to1$。前两步和后两步各跳过并移除两只蛙，中间两步移动四格。最终这十格中仅第 1 格有蛙。",
+          "将此方法用于连续蛙群末尾九只和紧随其后的空格，可在保持前部不变的情况下使连续蛙群缩短八只。符合条件的 $n$ 最大为 995，因此所需空格存在。反复消去，最后剩一只或三只。若剩三只，让第一只跨过另外两只跳到空着的第四格即可。"
+        ],
+        "figure": {
+          "url": "/commentary-figures/bmo1-2026-q6-method-1.svg",
+          "alt": "Occupied pads after each move of the nine-to-one reduction.",
+          "altZh": "从九只减为一只的六步中，实心圆表示每步结束后有蛙的位置。"
+        }
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2026.pdf#page=3"
+  }
+}
