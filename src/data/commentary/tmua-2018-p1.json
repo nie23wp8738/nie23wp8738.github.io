@@ -1,0 +1,434 @@
+{
+  "tmua-2018-p1-q1": {
+    "summary": "Evaluate $\\displaystyle\\int_1^4\\frac{3-2x}{x\\sqrt{x}}\\,dx$.",
+    "summaryZh": "计算 $\\displaystyle\\int_1^4\\frac{3-2x}{x\\sqrt{x}}\\,dx$。",
+    "answer": "D. $-1$",
+    "answerZh": "D．$-1$",
+    "methods": [{
+      "title": "Integrate powers of $x$",
+      "titleZh": "化为幂函数积分",
+      "topics": [{"en":"Definite integration","zh":"定积分"},{"en":"Laws of indices","zh":"指数运算"}],
+      "steps": [
+        "Rewrite the integrand as $3x^{-3/2}-2x^{-1/2}$. An antiderivative is $-6x^{-1/2}-4x^{1/2}$.",
+        "At $x=4$ this equals $-3-8=-11$, while at $x=1$ it equals $-6-4=-10$. The definite integral is therefore $-11-(-10)=-1$."
+      ],
+      "stepsZh": [
+        "把被积函数改写为 $3x^{-3/2}-2x^{-1/2}$，其一个原函数为 $-6x^{-1/2}-4x^{1/2}$。",
+        "代入 $x=4$ 得 $-3-8=-11$，代入 $x=1$ 得 $-6-4=-10$，故定积分为 $-11-(-10)=-1$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=3"
+  },
+  "tmua-2018-p1-q2": {
+    "summary": "An arithmetic progression has first term $a$ and common difference $d$. Its first five terms and its first eight terms have equal sums. Find the relation between $a$ and $d$.",
+    "summaryZh": "一个等差数列的首项为 $a$、公差为 $d$，前五项和等于前八项和。求 $a$ 与 $d$ 的关系。",
+    "answer": "C. $a=-6d$",
+    "answerZh": "C．$a=-6d$",
+    "methods": [
+      {
+        "title": "Subtract the two partial sums",
+        "titleZh": "利用两个部分和之差",
+        "topics": [{"en":"Arithmetic progressions","zh":"等差数列"},{"en":"Partial sums","zh":"前 $n$ 项和"}],
+        "steps": [
+          "The equality $S_5=S_8$ says that terms 6, 7 and 8 add to zero.",
+          "Those terms are $a+5d,a+6d,a+7d$, so $3a+18d=0$ and hence $a=-6d$."
+        ],
+        "stepsZh": [
+          "$S_5=S_8$ 表明第 $6,7,8$ 项之和为零。",
+          "这三项分别为 $a+5d,a+6d,a+7d$，故 $3a+18d=0$，即 $a=-6d$。"
+        ]
+      },
+      {
+        "title": "Use the sum formula",
+        "titleZh": "直接使用求和公式",
+        "topics": [{"en":"Arithmetic-series formula","zh":"等差数列求和公式"}],
+        "steps": [
+          "$S_5=\\frac52(2a+4d)$ and $S_8=4(2a+7d)$. Equating them gives $5(2a+4d)=8(2a+7d)$.",
+          "Thus $10a+20d=16a+56d$, which again reduces to $a=-6d$."
+        ],
+        "stepsZh": [
+          "$S_5=\\frac52(2a+4d)$，$S_8=4(2a+7d)$。令两者相等得 $5(2a+4d)=8(2a+7d)$。",
+          "所以 $10a+20d=16a+56d$，化简仍得 $a=-6d$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=4"
+  },
+  "tmua-2018-p1-q3": {
+    "summary": "Find the shortest distance between the circles $(x+2)^2+(y-3)^2=18$ and $(x-7)^2+(y+6)^2=2$.",
+    "summaryZh": "求圆 $(x+2)^2+(y-3)^2=18$ 与圆 $(x-7)^2+(y+6)^2=2$ 之间的最短距离。",
+    "answer": "E. $5\\sqrt2$",
+    "answerZh": "E．$5\\sqrt2$",
+    "methods": [{
+      "title": "Subtract both radii from the centre distance",
+      "titleZh": "圆心距减去两圆半径",
+      "topics": [{"en":"Circle geometry","zh":"圆的几何"},{"en":"Coordinate distance","zh":"坐标距离"}],
+      "steps": [
+        "The centres are $(-2,3)$ and $(7,-6)$, whose distance is $\\sqrt{9^2+(-9)^2}=9\\sqrt2$. The radii are $3\\sqrt2$ and $\\sqrt2$.",
+        "The circles are disjoint, so the nearest points lie on the line of centres. Their separation is $9\\sqrt2-3\\sqrt2-\\sqrt2=5\\sqrt2$."
+      ],
+      "stepsZh": [
+        "两圆圆心为 $(-2,3)$ 与 $(7,-6)$，圆心距为 $\\sqrt{9^2+(-9)^2}=9\\sqrt2$；两圆半径分别为 $3\\sqrt2$ 与 $\\sqrt2$。",
+        "两圆相离，最近点位于圆心连线上，故最短距离为 $9\\sqrt2-3\\sqrt2-\\sqrt2=5\\sqrt2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=5"
+  },
+  "tmua-2018-p1-q4": {
+    "summary": "For real $a$, consider $3x^2+2xy=4$ and $x+y=a$. Determine all $a$ for which there are two distinct real solutions for $x$.",
+    "summaryZh": "对实数 $a$，考虑方程组 $3x^2+2xy=4$、$x+y=a$。求使 $x$ 有两个不同实数解的全部 $a$。",
+    "answer": "G. Every real value of $a$",
+    "answerZh": "G．任意实数 $a$",
+    "methods": [{
+      "title": "Check the quadratic discriminant",
+      "titleZh": "考察二次方程判别式",
+      "topics": [{"en":"Simultaneous equations","zh":"方程组"},{"en":"Quadratic discriminant","zh":"二次方程判别式"}],
+      "steps": [
+        "From $x+y=a$, substitute $y=a-x$ into the first equation. This gives $x^2+2ax-4=0$.",
+        "Its discriminant is $(2a)^2-4(1)(-4)=4a^2+16>0$ for every real $a$. Thus there are always two distinct real values of $x$."
+      ],
+      "stepsZh": [
+        "由 $x+y=a$ 得 $y=a-x$，代入第一式后得到 $x^2+2ax-4=0$。",
+        "判别式为 $(2a)^2-4(1)(-4)=4a^2+16>0$，对任意实数 $a$ 均成立，因此始终有两个不同实数解。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=6"
+  },
+  "tmua-2018-p1-q5": {
+    "summary": "Let $f(x)=x^3+ax^2+bx+c$, where $a,b,c$ are the numbers $1,2,3$ in some order. If the remainders on division by $x+2$ and $x+3$ are $R$ and $S$, find the greatest possible value of $R-S$.",
+    "summaryZh": "设 $f(x)=x^3+ax^2+bx+c$，其中 $a,b,c$ 是 $1,2,3$ 的某种排列。若除以 $x+2$ 与 $x+3$ 的余数分别为 $R,S$，求 $R-S$ 的最大值。",
+    "answer": "D. $17$",
+    "answerZh": "D．$17$",
+    "methods": [{
+      "title": "Use the remainder theorem",
+      "titleZh": "使用余数定理",
+      "topics": [{"en":"Remainder theorem","zh":"余数定理"},{"en":"Finite optimisation","zh":"有限情形最优化"}],
+      "steps": [
+        "$R=f(-2)=-8+4a-2b+c$ and $S=f(-3)=-27+9a-3b+c$, so $R-S=19-5a+b$.",
+        "This is largest when $a$ is the smallest available value and $b$ the largest: $a=1,b=3$. It then equals $19-5+3=17$; the remaining coefficient is $c=2$."
+      ],
+      "stepsZh": [
+        "$R=f(-2)=-8+4a-2b+c$，$S=f(-3)=-27+9a-3b+c$，所以 $R-S=19-5a+b$。",
+        "要使其最大，应取最小的 $a=1$ 与最大的 $b=3$，此时 $R-S=19-5+3=17$，余下 $c=2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=7"
+  },
+  "tmua-2018-p1-q6": {
+    "summary": "How many solutions does $x\\sin(2x)=\\cos(2x)$ have on $0\\le x\\le2\\pi$?",
+    "summaryZh": "方程 $x\\sin(2x)=\\cos(2x)$ 在 $0\\le x\\le2\\pi$ 上有多少个解？",
+    "answer": "E. $4$",
+    "answerZh": "E．$4$",
+    "methods": [{
+      "title": "Count intersections on positive tangent branches",
+      "titleZh": "计算正切函数正分支上的交点",
+      "topics": [{"en":"Trigonometric equations","zh":"三角方程"},{"en":"Monotonicity","zh":"单调性"}],
+      "steps": [
+        "No solution has $\\cos(2x)=0$, so division is valid and the equation becomes $\\tan(2x)=1/x$. Also $x=0$ is not a solution.",
+        "On $(0,2\\pi]$, $\\tan(2x)$ has four branches that rise from $0$ to $+\\infty$: $(0,\\pi/4)$, $(\\pi/2,3\\pi/4)$, $(\\pi,5\\pi/4)$ and $(3\\pi/2,7\\pi/4)$. On each branch it strictly increases while $1/x$ strictly decreases, so each branch contributes exactly one solution and no negative tangent branch contributes one."
+      ],
+      "stepsZh": [
+        "若 $\\cos(2x)=0$，原方程不可能成立，因此可安全相除并得到 $\\tan(2x)=1/x$；同时 $x=0$ 不是解。",
+        "在 $(0,2\\pi]$ 上，$\\tan(2x)$ 有四个从 $0$ 严格增至 $+\\infty$ 的正分支：$(0,\\pi/4)$、$(\\pi/2,3\\pi/4)$、$(\\pi,5\\pi/4)$、$(3\\pi/2,7\\pi/4)$。每段上 $1/x$ 严格递减，故各有且仅有一个交点；负分支不可能与正的 $1/x$ 相交。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=8"
+  },
+  "tmua-2018-p1-q7": {
+    "summary": "A non-zero $k$ makes the coefficients of $x^6$ in $(1+kx^2)^7$ and $(k+x)^{10}$ equal. Find $k$.",
+    "summaryZh": "非零常数 $k$ 使 $(1+kx^2)^7$ 与 $(k+x)^{10}$ 展开式中 $x^6$ 的系数相等。求 $k$。",
+    "answer": "A. $1/6$",
+    "answerZh": "A．$1/6$",
+    "methods": [{
+      "title": "Extract only the required coefficients",
+      "titleZh": "只提取所需项的系数",
+      "topics": [{"en":"Binomial theorem","zh":"二项式定理"},{"en":"Coefficient extraction","zh":"系数提取"}],
+      "steps": [
+        "The $x^6$ term in $(1+kx^2)^7$ is obtained by choosing $(kx^2)^3$, so its coefficient is $\\binom73k^3=35k^3$.",
+        "For $(k+x)^{10}$ the coefficient is $\\binom{10}{6}k^4=210k^4$. Since $k\\ne0$, equality gives $35=210k$, hence $k=1/6$."
+      ],
+      "stepsZh": [
+        "$(1+kx^2)^7$ 中的 $x^6$ 来自选取 $(kx^2)^3$，其系数为 $\\binom73k^3=35k^3$。",
+        "$(k+x)^{10}$ 中 $x^6$ 的系数为 $\\binom{10}{6}k^4=210k^4$。因 $k\\ne0$，令两者相等得 $35=210k$，故 $k=1/6$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=9"
+  },
+  "tmua-2018-p1-q8": {
+    "summary": "A geometric progression has sum to infinity $6$, while the sum to infinity of the squares of its terms is $12$. Find the sum to infinity of the cubes of its terms.",
+    "summaryZh": "一个等比数列的无穷和为 $6$，各项平方组成数列的无穷和为 $12$。求各项立方组成数列的无穷和。",
+    "answer": "D. $216/7$",
+    "answerZh": "D．$216/7$",
+    "methods": [{
+      "title": "Determine the first term and ratio",
+      "titleZh": "先求首项与公比",
+      "topics": [{"en":"Geometric series","zh":"等比数列"},{"en":"Infinite sums","zh":"无穷级数求和"}],
+      "steps": [
+        "Let the first term be $a$ and ratio be $r$. Then $a/(1-r)=6$ and $a^2/(1-r^2)=12$. Dividing the second equation by the first gives $a/(1+r)=2$.",
+        "Thus $a=6(1-r)=2(1+r)$, so $r=1/2$ and $a=3$. The required sum is $a^3/(1-r^3)=27/(1-1/8)=216/7$."
+      ],
+      "stepsZh": [
+        "设首项为 $a$、公比为 $r$，则 $a/(1-r)=6$，且 $a^2/(1-r^2)=12$。第二式除以第一式得 $a/(1+r)=2$。",
+        "于是 $a=6(1-r)=2(1+r)$，解得 $r=1/2,a=3$。所求无穷和为 $a^3/(1-r^3)=27/(1-1/8)=216/7$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=10"
+  },
+  "tmua-2018-p1-q9": {
+    "summary": "Find all real $c$ for which $2x^3-3x^2-12x+c=0$ has three distinct real roots.",
+    "summaryZh": "求全部实数 $c$，使方程 $2x^3-3x^2-12x+c=0$ 有三个不同的实根。",
+    "answer": "B. $-7<c<20$",
+    "answerZh": "B．$-7<c<20$",
+    "methods": [{
+      "title": "Place the turning points on opposite sides of the axis",
+      "titleZh": "使两个极值点位于横轴两侧",
+      "topics": [{"en":"Cubic graphs","zh":"三次函数图像"},{"en":"Stationary points","zh":"驻点"}],
+      "steps": [
+        "For $f(x)=2x^3-3x^2-12x+c$, $f'(x)=6(x-2)(x+1)$. The turning-point values are $f(-1)=c+7$ and $f(2)=c-20$.",
+        "A cubic with positive leading coefficient has three distinct real zeros exactly when its local maximum is positive and its local minimum is negative. Hence $c+7>0$ and $c-20<0$, or $-7<c<20$. Equality would create a repeated root and is excluded."
+      ],
+      "stepsZh": [
+        "令 $f(x)=2x^3-3x^2-12x+c$，则 $f'(x)=6(x-2)(x+1)$。两个极值点的函数值为 $f(-1)=c+7$ 与 $f(2)=c-20$。",
+        "首项系数为正的三次函数恰有三个不同实零点，当且仅当极大值为正、极小值为负。因此需 $c+7>0$ 且 $c-20<0$，即 $-7<c<20$。端点会产生重根，不能取。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=11"
+  },
+  "tmua-2018-p1-q10": {
+    "summary": "Real numbers $x,y$ satisfy $|2-x|\\le6$ and $|y+2|\\le4$. Find the greatest possible value of $|xy|$.",
+    "summaryZh": "实数 $x,y$ 满足 $|2-x|\\le6$ 与 $|y+2|\\le4$。求 $|xy|$ 的最大值。",
+    "answer": "E. $48$",
+    "answerZh": "E．$48$",
+    "methods": [{
+      "title": "Convert the absolute-value bounds to intervals",
+      "titleZh": "把绝对值条件化为区间",
+      "topics": [{"en":"Absolute-value inequalities","zh":"绝对值不等式"},{"en":"Optimisation on intervals","zh":"区间最值"}],
+      "steps": [
+        "The inequalities are equivalent to $-4\\le x\\le8$ and $-6\\le y\\le2$.",
+        "Therefore $|x|\\le8$ and $|y|\\le6$, so $|xy|\\le48$. Equality is attained, for example, by $(x,y)=(8,-6)$, hence the maximum is $48$."
+      ],
+      "stepsZh": [
+        "两个不等式分别等价于 $-4\\le x\\le8$ 与 $-6\\le y\\le2$。",
+        "因此 $|x|\\le8$、$|y|\\le6$，从而 $|xy|\\le48$。取 $(x,y)=(8,-6)$ 可达到等号，所以最大值为 $48$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=12"
+  },
+  "tmua-2018-p1-q11": {
+    "summary": "The line $y=mx+5$, with $m>0$, is normal to $y=10-x^2$ at $(p,q)$. Find $p$.",
+    "summaryZh": "直线 $y=mx+5$（$m>0$）是曲线 $y=10-x^2$ 在 $(p,q)$ 处的法线。求 $p$。",
+    "answer": "C. $3\\sqrt2/2$",
+    "answerZh": "C．$3\\sqrt2/2$",
+    "methods": [{
+      "title": "Match the normal's intercept",
+      "titleZh": "比较法线的截距",
+      "topics": [{"en":"Tangents and normals","zh":"切线与法线"},{"en":"Differentiation","zh":"微分"}],
+      "steps": [
+        "At $x=p$ the tangent slope is $-2p$, so the normal slope is $1/(2p)$. Since the point is $(p,10-p^2)$, the normal is $y-(10-p^2)=\\frac1{2p}(x-p)$.",
+        "Its $y$-intercept is $10-p^2-1/2=19/2-p^2$. Setting this equal to $5$ gives $p^2=9/2$. The condition $m=1/(2p)>0$ selects $p=3\\sqrt2/2$."
+      ],
+      "stepsZh": [
+        "在 $x=p$ 处切线斜率为 $-2p$，故法线斜率为 $1/(2p)$。切点为 $(p,10-p^2)$，于是法线为 $y-(10-p^2)=\\frac1{2p}(x-p)$。",
+        "其纵截距是 $10-p^2-1/2=19/2-p^2$。令其等于 $5$，得 $p^2=9/2$；又因 $m=1/(2p)>0$，故 $p=3\\sqrt2/2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=13"
+  },
+  "tmua-2018-p1-q12": {
+    "summary": "Let $f(x)=x(x-p)(x-q)(r-x)$ with $0<p<q<r$. Given $\\int_0^r f(x)dx=0$, $\\int_0^q f(x)dx=-2$, and $\\int_p^r f(x)dx=-3$, find the total area between the curve and the $x$-axis on $0\\le x\\le r$.",
+    "summaryZh": "设 $f(x)=x(x-p)(x-q)(r-x)$，其中 $0<p<q<r$。已知 $\\int_0^r f(x)dx=0$、$\\int_0^q f(x)dx=-2$、$\\int_p^r f(x)dx=-3$，求曲线在 $0\\le x\\le r$ 上与 $x$ 轴围成的总面积。",
+    "answer": "F. $10$",
+    "answerZh": "F．$10$",
+    "methods": [{
+      "title": "Translate signed integrals into three positive areas",
+      "titleZh": "把有向积分转化为三个正面积",
+      "topics": [{"en":"Signed area","zh":"有向面积"},{"en":"Definite integration","zh":"定积分"}],
+      "steps": [
+        "The sign of $f$ is positive on $(0,p)$, negative on $(p,q)$ and positive on $(q,r)$. Call the corresponding positive areas $A,B,C$.",
+        "The data give $A-B+C=0$, $A-B=-2$ and $-B+C=-3$. Subtracting the third equation from the first yields $A=3$; then $B=5$ and $C=2$. The total area is $A+B+C=10$."
+      ],
+      "stepsZh": [
+        "$f$ 在 $(0,p)$ 上为正、在 $(p,q)$ 上为负、在 $(q,r)$ 上为正。把三段的正面积依次记为 $A,B,C$。",
+        "题设给出 $A-B+C=0$、$A-B=-2$、$-B+C=-3$。第一式减第三式得 $A=3$，继而 $B=5,C=2$，总面积为 $A+B+C=10$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=14"
+  },
+  "tmua-2018-p1-q13": {
+    "summary": "A labelled graph of $f'(x)$ has these features, equivalent to the supplied diagram: at A it crosses the axis from positive to negative; B is a non-zero local minimum; at C it crosses from negative to positive; D is the point above the origin on the vertical axis; E is a non-zero local maximum; and at F it touches zero at a local minimum. Which labelled point corresponds to a local minimum of $f$?",
+    "summaryZh": "给出的 $f'(x)$ 图像具有以下等价特征：在 A 处由正穿过横轴变负；B 是非零的局部极小点；在 C 处由负穿过横轴变正；D 是纵轴上方的一点；E 是非零的局部极大点；F 在局部极小处与横轴相切。哪个标记点对应 $f$ 的局部极小值？",
+    "answer": "C",
+    "answerZh": "C",
+    "methods": [{
+      "title": "Read the sign change of the derivative",
+      "titleZh": "读取导数的变号方向",
+      "topics": [{"en":"Derivative graphs","zh":"导函数图像"},{"en":"Local extrema","zh":"局部极值"}],
+      "steps": [
+        "A local minimum of $f$ occurs where $f'$ changes from negative to positive. Merely having a local extremum of $f'$ does not create an extremum of $f$.",
+        "Among the labelled points, only C is a zero of $f'$ with the required negative-to-positive sign change. At F the derivative touches zero but remains positive, so $f$ continues increasing there."
+      ],
+      "stepsZh": [
+        "$f$ 的局部极小值出现在 $f'$ 从负变正的位置。$f'$ 自身出现局部极值并不意味着 $f$ 出现极值。",
+        "各标记点中，只有 C 是 $f'$ 由负变正的零点。F 处导数虽等于零，但两侧仍为正，因此 $f$ 在那里继续递增。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=15"
+  },
+  "tmua-2018-p1-q14": {
+    "summary": "The line $y=mx+4$ passes through both $(3,\\log_2p)$ and $(\\log_2p,4)$. Find all possible positive values of $p$.",
+    "summaryZh": "直线 $y=mx+4$ 同时经过 $(3,\\log_2p)$ 与 $(\\log_2p,4)$。求正数 $p$ 的全部可能值。",
+    "answer": "B. $p=1$ or $p=16$",
+    "answerZh": "B．$p=1$ 或 $p=16$",
+    "methods": [{
+      "title": "Substitute both points",
+      "titleZh": "分别代入两个点",
+      "topics": [{"en":"Straight lines","zh":"直线"},{"en":"Logarithms","zh":"对数"}],
+      "steps": [
+        "Substitution gives $\\log_2p=3m+4$ and $4=m\\log_2p+4$. Hence $m\\log_2p=0$.",
+        "If $m=0$, the first equation gives $\\log_2p=4$, so $p=16$. If $\\log_2p=0$, then $p=1$ and the first equation determines $m=-4/3$. Both values work."
+      ],
+      "stepsZh": [
+        "代入两点得到 $\\log_2p=3m+4$ 与 $4=m\\log_2p+4$，故 $m\\log_2p=0$。",
+        "若 $m=0$，第一式给出 $\\log_2p=4$，所以 $p=16$；若 $\\log_2p=0$，则 $p=1$，第一式相应给出 $m=-4/3$。两者均满足条件。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=16"
+  },
+  "tmua-2018-p1-q15": {
+    "summary": "Find the sum of the real solutions of $3^x-(\\sqrt3)^{x+4}+20=0$.",
+    "summaryZh": "求方程 $3^x-(\\sqrt3)^{x+4}+20=0$ 的所有实数解之和。",
+    "answer": "E. $2\\log_3 20$",
+    "answerZh": "E．$2\\log_3 20$",
+    "methods": [{
+      "title": "Turn the exponential equation into a quadratic",
+      "titleZh": "把指数方程化为二次方程",
+      "topics": [{"en":"Exponential equations","zh":"指数方程"},{"en":"Logarithm laws","zh":"对数运算律"}],
+      "steps": [
+        "Set $t=(\\sqrt3)^x>0$. Then $3^x=t^2$ and $(\\sqrt3)^{x+4}=9t$, so the equation becomes $t^2-9t+20=0$.",
+        "Thus $t=4$ or $5$, giving $x=2\\log_3 4$ or $2\\log_3 5$. Their sum is $2(\\log_3 4+\\log_3 5)=2\\log_3 20$."
+      ],
+      "stepsZh": [
+        "令 $t=(\\sqrt3)^x>0$，则 $3^x=t^2$，$(\\sqrt3)^{x+4}=9t$，原方程化为 $t^2-9t+20=0$。",
+        "所以 $t=4$ 或 $5$，相应地 $x=2\\log_3 4$ 或 $2\\log_3 5$。两根之和为 $2(\\log_3 4+\\log_3 5)=2\\log_3 20$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=17"
+  },
+  "tmua-2018-p1-q16": {
+    "summary": "For $b\\ge0$, the curve $y=x^2+bx+2$ has one stationary point. Find the value of $b$ that minimises the distance from that point to the origin.",
+    "summaryZh": "对 $b\\ge0$，曲线 $y=x^2+bx+2$ 有一个驻点。求使该驻点到原点距离最小的 $b$。",
+    "answer": "F. $\\sqrt6$",
+    "answerZh": "F．$\\sqrt6$",
+    "methods": [{
+      "title": "Minimise the squared distance",
+      "titleZh": "最小化距离的平方",
+      "topics": [{"en":"Quadratic vertices","zh":"二次函数顶点"},{"en":"Optimisation","zh":"最优化"}],
+      "steps": [
+        "The stationary point is $(-b/2,2-b^2/4)$. Its squared distance from the origin is $D^2=b^2/4+(2-b^2/4)^2=b^4/16-3b^2/4+4$.",
+        "Put $B=b^2\\ge0$. Then $D^2=B^2/16-3B/4+4=((B-6)^2+28)/16$, which is minimised at $B=6$. Since $b\\ge0$, $b=\\sqrt6$."
+      ],
+      "stepsZh": [
+        "驻点为 $(-b/2,2-b^2/4)$，其到原点距离的平方为 $D^2=b^2/4+(2-b^2/4)^2=b^4/16-3b^2/4+4$。",
+        "令 $B=b^2\\ge0$，则 $D^2=B^2/16-3B/4+4=((B-6)^2+28)/16$，在 $B=6$ 时最小。由于 $b\\ge0$，所以 $b=\\sqrt6$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=18"
+  },
+  "tmua-2018-p1-q17": {
+    "summary": "Two data sets initially have means $15$ and $20$. One value from each set is exchanged; their means then become $16$ and $17$, respectively. Find the mean after combining the original two sets.",
+    "summaryZh": "两组数据原来的平均数分别为 $15$ 与 $20$。两组各取一个数据互换后，平均数分别变为 $16$ 与 $17$。求把原来两组数据合并后的平均数。",
+    "answer": "A. $65/4=16\\tfrac14$",
+    "answerZh": "A．$65/4=16\\tfrac14$",
+    "methods": [{
+      "title": "Use conservation of the combined total",
+      "titleZh": "利用总和不变",
+      "topics": [{"en":"Weighted means","zh":"加权平均数"},{"en":"Algebraic modelling","zh":"代数建模"}],
+      "steps": [
+        "Let the set sizes be $n$ and $m$. The exchange does not alter the combined total, so $15n+20m=16n+17m$, giving $n=3m$.",
+        "The combined mean is therefore $(15n+20m)/(n+m)=(45m+20m)/(4m)=65/4$."
+      ],
+      "stepsZh": [
+        "设两组数据量分别为 $n,m$。交换数据不会改变总和，因此 $15n+20m=16n+17m$，解得 $n=3m$。",
+        "合并后的平均数为 $(15n+20m)/(n+m)=(45m+20m)/(4m)=65/4$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=19"
+  },
+  "tmua-2018-p1-q18": {
+    "summary": "Find the smallest positive $a$ such that $x=a$ is an axis of symmetry of $y=\\sin(2x-4\\pi/3)$.",
+    "summaryZh": "求最小正数 $a$，使直线 $x=a$ 是函数 $y=\\sin(2x-4\\pi/3)$ 图像的对称轴。",
+    "answer": "B. $5\\pi/12$",
+    "answerZh": "B．$5\\pi/12$",
+    "methods": [{
+      "title": "Locate the sine graph's extrema",
+      "titleZh": "确定正弦图像的极值位置",
+      "topics": [{"en":"Trigonometric graphs","zh":"三角函数图像"},{"en":"Symmetry","zh":"对称性"}],
+      "steps": [
+        "A vertical symmetry axis of a sine graph passes through an extremum, so $2a-4\\pi/3=\\pi/2+n\\pi$ for some integer $n$.",
+        "Hence $a=11\\pi/12+n\\pi/2$. Choosing $n=-1$ gives $5\\pi/12$, the smallest positive member; decreasing $n$ once more makes it negative."
+      ],
+      "stepsZh": [
+        "正弦函数图像的竖直对称轴经过极值点，因此应有 $2a-4\\pi/3=\\pi/2+n\\pi$，其中 $n$ 为整数。",
+        "于是 $a=11\\pi/12+n\\pi/2$。取 $n=-1$ 得 $5\\pi/12$；若再减小一次 $n$，所得值为负，故这就是最小正值。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=20"
+  },
+  "tmua-2018-p1-q19": {
+    "summary": "A triangle has $AB=10$, $BC=7$ and $\\angle A=\\theta$. Exactly two triangles satisfy these data, and the larger has three times the area of the smaller. Find $\\cos\\theta$.",
+    "summaryZh": "三角形满足 $AB=10$、$BC=7$、$\\angle A=\\theta$。这些条件恰能作出两个三角形，且较大者面积是较小者的三倍。求 $\\cos\\theta$。",
+    "answer": "D. $\\sqrt{17}/5$",
+    "answerZh": "D．$\\sqrt{17}/5$",
+    "methods": [
+      {
+        "title": "Compare the two cosine-rule equations",
+        "titleZh": "比较两个余弦定理方程",
+        "topics": [{"en":"Ambiguous SSA case","zh":"SSA 二义性"},{"en":"Cosine rule","zh":"余弦定理"}],
+        "steps": [
+          "The two possible third vertices lie on the same ray from A. Their perpendicular height from B is the same, so the area ratio equals the ratio of their lengths from A. Write the shorter length as $s$; the longer is $3s$.",
+          "The cosine rule gives $49=s^2+100-20s\\cos\\theta$ and $49=9s^2+100-60s\\cos\\theta$. Subtracting yields $s=5\\cos\\theta$.",
+          "Substitution into the first equation gives $49=100-75\\cos^2\\theta$, so $\\cos^2\\theta=17/25$. The two intersections occur on the forward ray, hence $\\cos\\theta>0$ and $\\cos\\theta=\\sqrt{17}/5$."
+        ],
+        "stepsZh": [
+          "两个可能的第三顶点位于从 A 出发的同一射线上，它们到直线的高相同，所以面积比等于从 A 到两点的长度比。设较短边长为 $s$，较长边长即为 $3s$。",
+          "分别使用余弦定理得 $49=s^2+100-20s\\cos\\theta$ 与 $49=9s^2+100-60s\\cos\\theta$。两式相减得到 $s=5\\cos\\theta$。",
+          "代回第一式得 $49=100-75\\cos^2\\theta$，故 $\\cos^2\\theta=17/25$。两个交点都在正向射线上，因此 $\\cos\\theta>0$，所以 $\\cos\\theta=\\sqrt{17}/5$。"
+        ]
+      },
+      {
+        "title": "Use the midpoint of the chord",
+        "titleZh": "利用弦的中点",
+        "topics": [{"en":"Circle chords","zh":"圆的弦"},{"en":"Pythagoras' theorem","zh":"勾股定理"}],
+        "steps": [
+          "Let the two possible points be $C_1,C_2$ with $AC_1=s$ and $AC_2=3s$. Since $BC_1=BC_2=7$, the perpendicular from B to $C_1C_2$ bisects that chord. Thus its foot D satisfies $C_1D=DC_2=s$ and $AD=2s$.",
+          "If $BD=h$, then $s^2+h^2=49$ and $(2s)^2+h^2=100$. Hence $3s^2=51$, so $s=\\sqrt{17}$. Finally $\\cos\\theta=AD/AB=2s/10=\\sqrt{17}/5$."
+        ],
+        "stepsZh": [
+          "把两个可能的顶点记为 $C_1,C_2$，其中 $AC_1=s,AC_2=3s$。因 $BC_1=BC_2=7$，从 B 向弦 $C_1C_2$ 作垂线，其垂足 D 平分该弦，所以 $C_1D=DC_2=s$，并且 $AD=2s$。",
+          "设 $BD=h$，则 $s^2+h^2=49$，$(2s)^2+h^2=100$。相减得 $3s^2=51$，故 $s=\\sqrt{17}$。最后 $\\cos\\theta=AD/AB=2s/10=\\sqrt{17}/5$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=21"
+  },
+  "tmua-2018-p1-q20": {
+    "summary": "Evaluate $\\sum_{k=0}^{90}\\sin^2(k^\\circ)$.",
+    "summaryZh": "计算 $\\displaystyle\\sum_{k=0}^{90}\\sin^2(k^\\circ)$。",
+    "answer": "E. $45.5=91/2$",
+    "answerZh": "E．$45.5=91/2$",
+    "methods": [{
+      "title": "Pair complementary angles",
+      "titleZh": "配对余角",
+      "topics": [{"en":"Trigonometric identities","zh":"三角恒等式"},{"en":"Symmetric sums","zh":"对称求和"}],
+      "steps": [
+        "Let $S=\\sum_{k=0}^{90}\\sin^2(k^\\circ)$. Reversing the order gives the same sum as $\\sum_{k=0}^{90}\\sin^2((90-k)^\\circ)=\\sum_{k=0}^{90}\\cos^2(k^\\circ)$.",
+        "Adding these two expressions yields $2S=\\sum_{k=0}^{90}(\\sin^2k^\\circ+\\cos^2k^\\circ)=91$. Therefore $S=91/2=45.5$."
+      ],
+      "stepsZh": [
+        "令 $S=\\sum_{k=0}^{90}\\sin^2(k^\\circ)$。把求和次序反向，得到同一个和 $\\sum_{k=0}^{90}\\sin^2((90-k)^\\circ)=\\sum_{k=0}^{90}\\cos^2(k^\\circ)$。",
+        "两式相加得 $2S=\\sum_{k=0}^{90}(\\sin^2k^\\circ+\\cos^2k^\\circ)=91$，故 $S=91/2=45.5$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf#page=22"
+  }
+}
