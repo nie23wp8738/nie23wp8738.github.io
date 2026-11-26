@@ -1,0 +1,191 @@
+{
+  "bmo2-2021-q1": {
+    "summary": "Call a positive integer $n$ good if some set of distinct positive divisors of $n$ includes $1$ and has sum $n$. Prove that every positive integer has a multiple which is good.",
+    "summaryZh": "若正整数 $n$ 的某个互不相同的正因数集合包含 $1$，且这些因数之和等于 $n$，则称 $n$ 为好数。证明每个正整数都有一个倍数是好数。",
+    "answer": "For every positive integer $m$, the number $N!$ with $N=\\max(m,3)$ is a good multiple of $m$.",
+    "answerZh": "对任意正整数 $m$，令 $N=\\max(m,3)$，则 $N!$ 是 $m$ 的一个好数倍数。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+    "methods": [
+      {
+        "title": "Prove inductively that every factorial from $3!$ onward is good",
+        "titleZh": "归纳证明从 $3!$ 起的每个阶乘都是好数",
+        "topics": [
+          {"en": "Mathematical induction", "zh": "数学归纳法"},
+          {"en": "Divisors", "zh": "因数"},
+          {"en": "Constructive proof", "zh": "构造性证明"}
+        ],
+        "steps": [
+          "The base case is $3!=6=1+2+3$, using distinct divisors and including $1$.",
+          "Suppose $r!$ is good for some $r\\ge3$, so $r!=1+d_1+\\cdots+d_s$, where the $d_i$ are distinct divisors of $r!$ different from $1$. Then $(r+1)! = 1+r+(r+1)d_1+\\cdots+(r+1)d_s$.",
+          "Indeed, the displayed right side equals $1+r+(r+1)(r!-1)=(r+1)r!$. Every displayed term divides $(r+1)!$: the scaled terms do because $d_i\\mid r!$, while $1$ and $r$ plainly do. They are distinct, since the scaled terms are at least $r+1$ and retain the distinctness of the $d_i$. Thus $(r+1)!$ is good.",
+          "By induction, $N!$ is good for every $N\\ge3$. Given $m$, choose $N=\\max(m,3)$. Then $m\\mid N!$, so this good number is a multiple of the original integer."
+        ],
+        "stepsZh": [
+          "基础情形为 $3!=6=1+2+3$，所用因数互不相同且包含 $1$。",
+          "设对某个 $r\\ge3$，$r!$ 是好数，即 $r!=1+d_1+\\cdots+d_s$，其中 $d_i$ 是互不相同且不等于 $1$ 的 $r!$ 的因数。则有 $(r+1)! = 1+r+(r+1)d_1+\\cdots+(r+1)d_s$。",
+          "右边确实等于 $1+r+(r+1)(r!-1)=(r+1)r!$。其中每一项都整除 $(r+1)!$：$(r+1)d_i$ 整除它，而 $1,r$ 也显然整除它。这些因数彼此不同，因为所有放大后的因数至少为 $r+1$，且仍保持 $d_i$ 之间的互异性。因此 $(r+1)!$ 也是好数。",
+          "由归纳法，对每个 $N\\ge3$，$N!$ 都是好数。给定 $m$，取 $N=\\max(m,3)$，则 $m\\mid N!$，所以这个好数就是原整数的一个倍数。"
+        ]
+      },
+      {
+        "title": "A direct binary construction for the odd part",
+        "titleZh": "对奇数部分作二进制直接构造",
+        "topics": [
+          {"en": "Binary expansion", "zh": "二进制展开"},
+          {"en": "Geometric series", "zh": "等比数列"},
+          {"en": "Parity", "zh": "奇偶性"}
+        ],
+        "steps": [
+          "Write the given integer as $m=2^s a$ with $a$ odd. If $a>1$, choose $k\\ge s$ so large that every power of $2$ occurring in the binary expansion of $a$ is at most $2^{k-1}$, and put $n=2^k a$.",
+          "The distinct divisors $a,2a,\\ldots,2^{k-1}a$ sum to $(2^k-1)a=n-a$. The binary expansion writes the odd number $a$ as a sum of distinct powers of $2$, including $1$; all these powers divide $n$. None equals a divisor in the first list because $a>1$. Together the two lists sum to $n$, so $n$ is good, and $m\\mid n$.",
+          "If $a=1$, start from the good number $6=1+2+3$. Whenever $u>1$ is good, adjoining the divisor $u$ to a good divisor set for $u$ proves that $2u$ is good. Repeated doubling gives a good multiple of $2^s=m$."
+        ],
+        "stepsZh": [
+          "把给定整数写成 $m=2^s a$，其中 $a$ 为奇数。若 $a>1$，取充分大的 $k\\ge s$，使 $a$ 的二进制展开中出现的每个二次幂都不超过 $2^{k-1}$，并令 $n=2^k a$。",
+          "互异因数 $a,2a,\\ldots,2^{k-1}a$ 的和为 $(2^k-1)a=n-a$。另一方面，奇数 $a$ 的二进制展开把它写成若干互异二次幂之和，其中包括 $1$；这些二次幂也都整除 $n$。由于 $a>1$，它们不会与第一组因数重合。两组因数合起来恰好和为 $n$，故 $n$ 是好数，且 $m\\mid n$。",
+          "若 $a=1$，从好数 $6=1+2+3$ 出发。若 $u>1$ 为好数，在表示 $u$ 的因数集合中再加入因数 $u$，即可证明 $2u$ 是好数。反复加倍便得到 $2^s=m$ 的一个好数倍数。"
+        ]
+      }
+    ]
+  },
+  "bmo2-2021-q2": {
+    "summary": "Eliza has arbitrarily many square tiles of side lengths $a$ and $b$, where $a,b$ are positive integers. She uses some of both available types, without overlap, to tile an $n\\times n$ square. Prove that another $n\\times n$ square can be tiled using just one of the two tile sizes.",
+    "summaryZh": "Eliza 有足够多的两种正方形瓷砖，边长分别为正整数 $a,b$。她用这些瓷砖中的若干块，无重叠地铺满一个 $n\\times n$ 正方形。证明：另一个同样大小的正方形可以只用其中一种尺寸的瓷砖铺满。",
+    "answer": "The existence of the mixed tiling forces $a\\mid n$ or $b\\mid n$; use the corresponding tile alone.",
+    "answerZh": "混合铺法必然推出 $a\\mid n$ 或 $b\\mid n$；只用相应尺寸的瓷砖即可铺满。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+    "methods": [
+      {
+        "title": "Assign periodic weights to the rows",
+        "titleZh": "给各行赋周期权值",
+        "topics": [
+          {"en": "Colouring invariants", "zh": "染色不变量"},
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Tilings", "zh": "铺砖问题"}
+        ],
+        "steps": [
+          "If $a\\mid n$, an $n\\times n$ square is immediately tiled by an $(n/a)\\times(n/a)$ array of $a\\times a$ tiles. It remains to prove that if $a\\nmid n$, then $b\\mid n$.",
+          "Number the unit-cell rows $1,\\ldots,n$. Give every cell in a row numbered $1\\pmod a$ weight $+1$, every cell in a row numbered $0\\pmod a$ weight $-1$, and every other cell weight $0$.",
+          "Because $a\\nmid n$, the row weights from $1$ through $n$ cancel in complete blocks of $a$ and leave one extra $+1$. With $n$ cells per row, the total weight of the board is therefore $n$.",
+          "Every $a\\times a$ tile spans $a$ consecutive rows, whose row weights sum to $0$, so its total weight is $0$. Every $b\\times b$ tile has $b$ cells in each row it meets, so its total weight is a multiple of $b$. Since the tiles partition the board, the board's total weight $n$ must be divisible by $b$.",
+          "Thus either $a\\mid n$ or $b\\mid n$. In the first case use only $a\\times a$ tiles; in the second use only $b\\times b$ tiles."
+        ],
+        "stepsZh": [
+          "若 $a\\mid n$，把大正方形分成 $(n/a)\\times(n/a)$ 个 $a\\times a$ 小正方形即可。下面只需证明：若 $a\\nmid n$，则必有 $b\\mid n$。",
+          "把单位方格的行编号为 $1,\\ldots,n$。行号模 $a$ 余 $1$ 的每个格赋权 $+1$，行号能被 $a$ 整除的每个格赋权 $-1$，其他格赋权 $0$。",
+          "因 $a\\nmid n$，从第 $1$ 行到第 $n$ 行的权值在每个完整的 $a$ 行块中互相抵消，最后多出一个 $+1$。每行有 $n$ 格，所以整块棋盘的总权值为 $n$。",
+          "每块 $a\\times a$ 瓷砖跨越连续 $a$ 行，这些行权值之和为 $0$，所以它的总权值为 $0$。每块 $b\\times b$ 瓷砖在所跨每一行中都有 $b$ 格，因此其总权值是 $b$ 的倍数。所有瓷砖恰好分割棋盘，所以棋盘总权值 $n$ 必须被 $b$ 整除。",
+          "因此必有 $a\\mid n$ 或 $b\\mid n$。前一种情形只用 $a\\times a$ 瓷砖，后一种情形只用 $b\\times b$ 瓷砖。"
+        ]
+      },
+      {
+        "title": "Track the top edges of the $b\\times b$ tiles",
+        "titleZh": "追踪 $b\\times b$ 瓷砖的顶边",
+        "topics": [
+          {"en": "Row counting", "zh": "逐行计数"},
+          {"en": "Congruences", "zh": "同余"},
+          {"en": "Boundary argument", "zh": "边界论证"}
+        ],
+        "steps": [
+          "Call a cell special when it lies in the top row of a $b\\times b$ tile. In any board row, the number of cells covered by $b\\times b$ tiles is congruent to $n$ modulo $a$, because the remaining cells are covered in blocks of width $a$.",
+          "A special cell contributes a cell of its $b\\times b$ tile to that row and to the next $b-1$ rows. Inducting downward shows that the number of special cells in rows $1,b+1,2b+1,\\ldots$ is congruent to $n\\pmod a$, while in other rows it is $0\\pmod a$.",
+          "All $b$-tiles meeting the bottom row start in row $n-b+1$. The special-cell count there is congruent to $n\\pmod a$. Hence either $n\\equiv0\\pmod a$, or $n-b+1\\equiv1\\pmod b$, which gives $b\\mid n$. This again proves the required dichotomy."
+        ],
+        "stepsZh": [
+          "若某格位于一块 $b\\times b$ 瓷砖的最上行，就称它为特殊格。在大正方形任意一行中，被 $b\\times b$ 瓷砖覆盖的格数模 $a$ 同余于 $n$，因为其余格都以宽度为 $a$ 的块出现。",
+          "每个特殊格所属的瓷砖在该行及其下方 $b-1$ 行各贡献一个格。自上而下归纳可得：第 $1,b+1,2b+1,\\ldots$ 行的特殊格数模 $a$ 同余于 $n$，其他行的特殊格数模 $a$ 同余于 $0$。",
+          "所有接触底行的 $b$ 瓷砖，其顶行都是第 $n-b+1$ 行；该行特殊格数模 $a$ 同余于 $n$。因此要么 $n\\equiv0\\pmod a$，要么 $n-b+1\\equiv1\\pmod b$，后者给出 $b\\mid n$。这再次证明了所需二分结论。"
+        ]
+      }
+    ]
+  },
+  "bmo2-2021-q3": {
+    "summary": "Let $ABC$ be a triangle with $AB>AC$, circumcircle $\\Gamma$, incentre $I$, and incircle touchpoint $D$ on $BC$. Let $K$ be the second intersection of $\\Gamma$ with the circle having diameter $AI$; equivalently, $K\\in\\Gamma$ and $\\angle AKI=90^\\circ$. Prove that the lines $AI$ and $KD$ meet at a point of $\\Gamma$.",
+    "summaryZh": "设三角形 $ABC$ 满足 $AB>AC$，外接圆为 $\\Gamma$，内心为 $I$，内切圆与 $BC$ 的切点为 $D$。令 $K$ 为 $\\Gamma$ 与以 $AI$ 为直径的圆除 $A$ 外的交点；等价地，$K\\in\\Gamma$ 且 $\\angle AKI=90^\\circ$。证明直线 $AI$ 与 $KD$ 的交点位于 $\\Gamma$ 上。",
+    "answer": "If $M$ is the midpoint of the arc $BC$ not containing $A$, then $M\\in AI\\cap KD\\cap\\Gamma$.",
+    "answerZh": "若 $M$ 是不含 $A$ 的弧 $BC$ 的中点，则 $M\\in AI\\cap KD\\cap\\Gamma$。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+    "methods": [
+      {
+        "title": "Use the two circles to obtain the angle-bisector ratio",
+        "titleZh": "利用两个圆得到角平分线比例",
+        "topics": [
+          {"en": "Cyclic quadrilaterals", "zh": "圆内接四边形"},
+          {"en": "Similar triangles", "zh": "相似三角形"},
+          {"en": "Converse angle-bisector theorem", "zh": "角平分线定理的逆定理"}
+        ],
+        "steps": [
+          "Let the incircle touch $CA$ and $AB$ at $E$ and $F$. Since $IE\\perp AC$, $IF\\perp AB$, and $\\angle AKI=90^\\circ$, the five points $A,E,I,F,K$ lie on the circle with diameter $AI$.",
+          "The triangles $KFB$ and $KEC$ are similar using directed angles. Indeed, $\\angle KBF=\\angle KBA=\\angle KCA=\\angle KCE$ because $A,B,C,K$ are cyclic, and $\\angle KFB=\\angle KFA=\\angle KEA=\\angle KEC$ modulo $180^\\circ$ because $A,E,F,K$ are cyclic and $A,E,C$ are collinear.",
+          "Therefore $KB/KC=BF/CE$. Equal tangents to the incircle give $BF=BD$ and $CE=CD$, so $KB/KC=BD/DC$. By the converse of the internal angle-bisector theorem in triangle $KBC$, the line $KD$ bisects $\\angle BKC$.",
+          "The line $AI$ meets $\\Gamma$ again at the midpoint $M$ of the arc $BC$ not containing $A$. Since the arcs $BM$ and $MC$ are equal, $KM$ also bisects $\\angle BKC$. The internal angle bisector is unique, so $K,D,M$ are collinear. Thus $AI$ and $KD$ meet at $M\\in\\Gamma$."
+        ],
+        "stepsZh": [
+          "设内切圆与 $CA,AB$ 的切点分别为 $E,F$。因 $IE\\perp AC$、$IF\\perp AB$ 且 $\\angle AKI=90^\\circ$，五点 $A,E,I,F,K$ 都位于以 $AI$ 为直径的圆上。",
+          "用有向角可证三角形 $KFB$ 与 $KEC$ 相似。由 $A,B,C,K$ 共圆，$\\angle KBF=\\angle KBA=\\angle KCA=\\angle KCE$；又由 $A,E,F,K$ 共圆及 $A,E,C$ 共线，模 $180^\\circ$ 有 $\\angle KFB=\\angle KFA=\\angle KEA=\\angle KEC$。",
+          "因此 $KB/KC=BF/CE$。同一点向内切圆所作切线段相等，故 $BF=BD$、$CE=CD$，从而 $KB/KC=BD/DC$。在三角形 $KBC$ 中应用内角平分线定理的逆定理，得到 $KD$ 平分 $\\angle BKC$。",
+          "直线 $AI$ 与 $\\Gamma$ 的另一交点 $M$ 是不含 $A$ 的弧 $BC$ 的中点。因弧 $BM$ 与 $MC$ 相等，$KM$ 也平分 $\\angle BKC$。内角平分线唯一，所以 $K,D,M$ 共线。因此 $AI$ 与 $KD$ 交于圆上点 $M$。"
+        ]
+      },
+      {
+        "title": "Construct the desired intersection first",
+        "titleZh": "先构造所需的圆上交点",
+        "topics": [
+          {"en": "Arc midpoints", "zh": "弧中点"},
+          {"en": "Tangent-secant theorem", "zh": "切割线定理"},
+          {"en": "Angle chasing", "zh": "追角"}
+        ],
+        "steps": [
+          "Let $M=AI\\cap\\Gamma$ with $M\\ne A$, so $M$ is the midpoint of the arc $BC$ not containing $A$. Extend $MD$ to meet $\\Gamma$ again at $K'$. It is enough to prove $\\angle AK'I=90^\\circ$, because the second intersection of $\\Gamma$ with the circle having diameter $AI$ is unique.",
+          "Write $A,B,C$ also for the angles of triangle $ABC$. Since $M$ is the arc midpoint, $\\angle MK'B=\\angle CBM=A/2$. As $K',D,M$ are collinear, this is exactly the tangent--chord angle needed to show that $MB$ is tangent at $B$ to the circle through $B,D,K'$. Hence $MB^2=MD\\cdot MK'$.",
+          "The standard incenter--arc-midpoint fact gives $MB=MC=MI$. Thus $MI^2=MD\\cdot MK'$, and the converse tangent--secant theorem shows that $MI$ is tangent at $I$ to the circle through $D,I,K'$. Since $ID\\perp BC$, $BI$ bisects angle $B$, and $A,I,M$ are collinear, the resulting tangent--chord relation gives $\\angle MID=(B-C)/2$ as a directed angle.",
+          "Following the rays around $K'$ and using $A,B,C,K'$ cyclic, $\\angle MK'B=A/2$, and the preceding tangent--chord equality, we obtain $\\angle AK'I=(180^\\circ-C)-(B-C)/2-A/2=180^\\circ-(A+B+C)/2=90^\\circ$.",
+          "Thus $K'=K$. Since $K'$ was constructed on $MD$ and $M$ lies on $AI$, the required lines meet at $M\\in\\Gamma$."
+        ],
+        "stepsZh": [
+          "令 $M=AI\\cap\\Gamma$ 且 $M\\ne A$，则 $M$ 是不含 $A$ 的弧 $BC$ 的中点。延长 $MD$ 再次交 $\\Gamma$ 于 $K'$。只需证明 $\\angle AK'I=90^\\circ$，因为 $\\Gamma$ 与以 $AI$ 为直径的圆除 $A$ 外只有一个交点。",
+          "仍用 $A,B,C$ 表示三角形的三个角。因 $M$ 是弧中点，$\\angle MK'B=\\angle CBM=A/2$。又因 $K',D,M$ 共线，这正是证明 $MB$ 为圆 $BDK'$ 在 $B$ 点切线所需的切线弦角关系。因此 $MB^2=MD\\cdot MK'$。",
+          "内心与弧中点的标准性质给出 $MB=MC=MI$。故 $MI^2=MD\\cdot MK'$；由切割线定理的逆定理，$MI$ 是圆 $DIK'$ 在 $I$ 点的切线。结合 $ID\\perp BC$、$BI$ 平分角 $B$ 以及 $A,I,M$ 共线，切线弦角关系给出有向角 $\\angle MID=(B-C)/2$。",
+          "沿 $K'$ 点各射线的顺序追角，并使用 $A,B,C,K'$ 共圆、$\\angle MK'B=A/2$ 及上一步的切线弦角关系，得到 $\\angle AK'I=(180^\\circ-C)-(B-C)/2-A/2=180^\\circ-(A+B+C)/2=90^\\circ$。",
+          "因此 $K'=K$。由于 $K'$ 按构造位于 $MD$ 上，而 $M$ 位于 $AI$ 上，故所求两直线交于 $M\\in\\Gamma$。"
+        ]
+      }
+    ]
+  },
+  "bmo2-2021-q4": {
+    "summary": "Matthew constructs a sequence $a_1,a_2,\\ldots$ of positive integers. At stage $n$, he chooses $a_n$ to be the smallest positive integer not used earlier for which the mean of $a_1,\\ldots,a_n$ is an integer. Prove that the sequence $b_i=a_i-i$ contains every integer exactly once.",
+    "summaryZh": "Matthew 构造正整数序列 $a_1,a_2,\\ldots$。在第 $n$ 步，他选择尚未出现过的最小正整数 $a_n$，使 $a_1,\\ldots,a_n$ 的平均数为整数。证明序列 $b_i=a_i-i$ 中每个整数恰好出现一次。",
+    "answer": "For every integer $z$, there is a unique positive integer $i$ with $a_i-i=z$.",
+    "answerZh": "对每个整数 $z$，恰有一个正整数 $i$ 满足 $a_i-i=z$。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2021.pdf#page=2",
+    "methods": [
+      {
+        "title": "Show that the attained differences are always a growing interval",
+        "titleZh": "证明已出现的差值始终组成不断扩张的整数区间",
+        "topics": [
+          {"en": "Strong induction", "zh": "强归纳法"},
+          {"en": "Congruences", "zh": "同余"},
+          {"en": "Extremal argument", "zh": "极值论证"}
+        ],
+        "steps": [
+          "Put $b_i=a_i-i$. We prove by induction that $b_1,\\ldots,b_n$ are $n$ consecutive integers in some order. The base case is $a_1=1$, so $b_1=0$.",
+          "Assume the claim through $n$, and let $B_n=\\max(b_1,\\ldots,b_n)$. The $n$ values are then the interval $B_n-n+1,\\ldots,B_n$, which contains $0$; in particular $B_n<n$.",
+          "The number $x=n+2+B_n$ is an admissible unused choice for $a_{n+1}$. Indeed, the $n+1$ prospective terms split as $(1,2,\\ldots,n,n+1)$ plus the consecutive integers $(b_1,\\ldots,b_n,B_n+1)$. Each list has an integer mean or each has a half-integer mean, so their sum has integer mean. Also $x>a_i$ for every earlier $i$.",
+          "Every admissible next value is congruent to $x$ modulo $n+1$. Since $a_{n+1}\\le x$ and $x-2(n+1)=B_n-n\\le0$, the only positive possibilities are $x$ and $x-(n+1)=B_n+1$. Hence $b_{n+1}$ is respectively $B_n+1$ or $B_n-n$: exactly the new integer just above or just below the current interval. The induction follows, and no integer can occur twice.",
+          "It remains to show that the interval expands without bound in both directions. If its upper endpoint eventually stopped increasing, every later step would add the new lower endpoint. Then $b_n$ would decrease by $1$ at each step and $a_n=n+b_n$ would eventually be constant, contradicting the requirement that the $a_n$ are distinct. Thus the upper endpoints are unbounded.",
+          "Suppose instead that the lower endpoint eventually stopped decreasing. Then for all large $n$ every step adds the upper endpoint, so $b_n=n-\\delta$ and $a_n=2n-\\delta$ for a fixed integer $\\delta$. At stage $n$, replacing the admissible $a_n$ by $a_n-n=n-\\delta$ preserves divisibility of the total by $n$. Since the algorithm did not choose this smaller positive number, it must already occur among $a_1,\\ldots,a_{n-1}$.",
+          "For infinitely many large odd $n$, the number $n-\\delta$ cannot equal a later-tail value $2j-\\delta$, because that would require the odd number $n$ to equal $2j$. It would therefore have to lie in one fixed finite initial segment, impossible for infinitely many distinct values of $n-\\delta$. Hence the lower endpoints are also unbounded. The nested consecutive intervals therefore exhaust all integers, each exactly once."
+        ],
+        "stepsZh": [
+          "令 $b_i=a_i-i$。用归纳法证明：$b_1,\\ldots,b_n$ 按某种顺序恰为 $n$ 个连续整数。基础情形中 $a_1=1$，所以 $b_1=0$。",
+          "设结论对前 $n$ 项成立，并记 $B_n=\\max(b_1,\\ldots,b_n)$。这 $n$ 个数就是区间 $B_n-n+1,\\ldots,B_n$，且其中包含 $0$，所以 $B_n<n$。",
+          "数 $x=n+2+B_n$ 是 $a_{n+1}$ 的一个合法且未用过的候选。事实上，未来的 $n+1$ 项可拆成 $(1,2,\\ldots,n,n+1)$ 与连续整数 $(b_1,\\ldots,b_n,B_n+1)$ 之和。两列的平均数要么同为整数，要么同为半整数，因此总平均数为整数。又有 $x>a_i$ 对所有旧项成立。",
+          "所有合法的下一项都与 $x$ 模 $n+1$ 同余。因为 $a_{n+1}\\le x$ 且 $x-2(n+1)=B_n-n\\le0$，不超过 $x$ 的正候选只有 $x$ 与 $x-(n+1)=B_n+1$。因此 $b_{n+1}$ 分别为 $B_n+1$ 或 $B_n-n$，恰好是在原区间的上端或下端添一个新整数。归纳完成，也说明任何整数至多出现一次。",
+          "还需证明区间向两端都无界扩张。若上端从某步起不再增加，则以后每步都只能添加新的下端点。于是 $b_n$ 每步减 $1$，从而 $a_n=n+b_n$ 最终保持常数，这与 $a_n$ 必须互不相同矛盾。因此上端无界。",
+          "反设下端从某步起不再下降，则以后每步都添加上端点，故对所有充分大的 $n$，有 $b_n=n-\\delta$、$a_n=2n-\\delta$，其中 $\\delta$ 为固定整数。在第 $n$ 步，把合法候选 $a_n$ 换成 $a_n-n=n-\\delta$，总和模 $n$ 不变，所以它也是合法的更小正数。算法没有选择它，说明它必已在 $a_1,\\ldots,a_{n-1}$ 中出现。",
+          "对无穷多个充分大的奇数 $n$，$n-\\delta$ 不可能等于尾部某项 $2j-\\delta$，否则奇数 $n$ 会等于 $2j$。所以它只能来自某个固定的有限初始段；但互不相同的 $n-\\delta$ 有无穷多个，矛盾。因此下端也无界。嵌套的连续整数区间最终覆盖全体整数，且每个整数恰出现一次。"
+        ]
+      }
+    ]
+  }
+}
