@@ -1,0 +1,360 @@
+{
+  "aime-2020ii-q1": {
+    "summary": "Find the number of ordered pairs of positive integers $(m,n)$ satisfying $m^2n=20^{20}$.",
+    "summaryZh": "求满足 $m^2n=20^{20}$ 的正整数有序对 $(m,n)$ 的个数。",
+    "answer": "231",
+    "answerZh": "231",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/1",
+    "methods": [{
+      "title": "Count the possible prime exponents of m",
+      "titleZh": "计数 m 的质因数指数",
+      "topics": [{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Product rule","zh":"乘法原理"}],
+      "steps": [
+        "Factor the right side as $20^{20}=2^{40}5^{20}$. Every valid $m$ must therefore have the form $m=2^a5^b$.",
+        "Once $m$ is chosen, $n$ is forced to be $2^{40-2a}5^{20-2b}$. It is a positive integer exactly when $0\\le a\\le20$ and $0\\le b\\le10$.",
+        "Conversely every pair of exponents in these ranges gives one valid ordered pair. Hence the count is $21\\cdot11=231$."
+      ],
+      "stepsZh": [
+        "将右端分解为 $20^{20}=2^{40}5^{20}$。因此每个可行的 $m$ 必须写成 $m=2^a5^b$。",
+        "选定 $m$ 后，$n$ 被唯一确定为 $2^{40-2a}5^{20-2b}$。它为正整数当且仅当 $0\\le a\\le20$ 且 $0\\le b\\le10$。",
+        "反之，这些范围内的每组指数都产生一个可行有序对，所以总数为 $21\\cdot11=231$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q2": {
+    "summary": "A point $P$ is chosen uniformly inside the unit square. Let $Q=(5/8,3/8)$. The probability that the slope of $PQ$ is at least $1/2$ is $m/n$ in lowest terms. Find $m+n$.",
+    "summaryZh": "在单位正方形内部均匀随机选点 $P$，并令 $Q=(5/8,3/8)$。直线 $PQ$ 的斜率至少为 $1/2$ 的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": "171",
+    "answerZh": "171",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/2",
+    "methods": [{
+      "title": "Split the favourable region into two trapezoids",
+      "titleZh": "把有利区域分成两个梯形",
+      "topics": [{"en":"Geometric probability","zh":"几何概率"},{"en":"Coordinate inequalities","zh":"坐标不等式"}],
+      "steps": [
+        "Write $P=(x,y)$. If $x>5/8$, the slope condition is $y\\ge x/2+1/16$; if $x<5/8$, multiplying by the negative denominator reverses the inequality and gives $y\\le x/2+1/16$.",
+        "On the right of $Q$, the favourable trapezoid has width $3/8$ and vertical sides $5/8$ and $7/16$, so its area is $51/256$.",
+        "On the left, the favourable trapezoid has width $5/8$ and vertical sides $1/16$ and $3/8$, so its area is $35/256$.",
+        "The square has area $1$, so the probability is $(51+35)/256=43/128$. Therefore $m+n=43+128=171$."
+      ],
+      "stepsZh": [
+        "设 $P=(x,y)$。当 $x>5/8$ 时，斜率条件等价于 $y\\ge x/2+1/16$；当 $x<5/8$ 时，因分母为负，不等号反向，得到 $y\\le x/2+1/16$。",
+        "在 $Q$ 右侧，有利梯形宽为 $3/8$，两条竖边长为 $5/8$ 与 $7/16$，面积为 $51/256$。",
+        "在 $Q$ 左侧，有利梯形宽为 $5/8$，两条竖边长为 $1/16$ 与 $3/8$，面积为 $35/256$。",
+        "单位正方形面积为 $1$，故概率为 $(51+35)/256=43/128$，所以 $m+n=171$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q3": {
+    "summary": "The solution of $\\log_{2^x}(3^{20})=\\log_{2^{x+3}}(3^{2020})$ is $m/n$ in lowest terms. Find $m+n$.",
+    "summaryZh": "方程 $\\log_{2^x}(3^{20})=\\log_{2^{x+3}}(3^{2020})$ 的解为最简分数 $m/n$，求 $m+n$。",
+    "answer": "103",
+    "answerZh": "103",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/3",
+    "methods": [{
+      "title": "Use change of base",
+      "titleZh": "使用换底公式",
+      "topics": [{"en":"Logarithms","zh":"对数"},{"en":"Rational equations","zh":"分式方程"}],
+      "steps": [
+        "Changing both logarithms to a common base gives $20/(x\\log2)=2020/((x+3)\\log2)$ after cancelling the common factor $\\log3$.",
+        "Thus $20/x=2020/(x+3)$. Cross-multiplication gives $20x+60=2020x$, so $x=3/100$.",
+        "The bases are positive and different from $1$ at this value. Hence $m+n=3+100=103$."
+      ],
+      "stepsZh": [
+        "对两边使用换底公式，并约去公共因子 $\\log3/\\log2$，得到 $20/x=2020/(x+3)$。",
+        "交叉相乘得 $20x+60=2020x$，所以 $x=3/100$。",
+        "此时两个对数的底均为正且不等于 $1$，故解有效，答案为 $3+100=103$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q4": {
+    "summary": "Triangle $ABC$ has $A(0,0),B(0,12),C(16,0)$, while $A'B'C'$ has $A'(24,18),B'(36,18),C'(24,2)$. A clockwise rotation through $m$ degrees about $(x,y)$ maps the first triangle to the second, where $0<m<180$. Find $m+x+y$.",
+    "summaryZh": "三角形 $ABC$ 的顶点为 $A(0,0),B(0,12),C(16,0)$，三角形 $A'B'C'$ 的顶点为 $A'(24,18),B'(36,18),C'(24,2)$。绕 $(x,y)$ 顺时针旋转 $m$ 度把前者变为后者，且 $0<m<180$。求 $m+x+y$。",
+    "answer": "108",
+    "answerZh": "108",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/4",
+    "methods": [{
+      "title": "Identify the rotation and solve for its centre",
+      "titleZh": "确定旋转角并求旋转中心",
+      "topics": [{"en":"Rotations","zh":"旋转变换"},{"en":"Coordinate geometry","zh":"解析几何"}],
+      "steps": [
+        "The vector $\\overrightarrow{AB}=(0,12)$ maps to $\\overrightarrow{A'B'}=(12,0)$, so the rotation is $90^\\circ$ clockwise and $m=90$.",
+        "A $90^\\circ$ clockwise rotation about $(a,b)$ sends $(p,q)$ to $(a+q-b,\\ b-p+a)$. Mapping $A=(0,0)$ to $A'=(24,18)$ gives $a-b=24$ and $a+b=18$.",
+        "Solving yields $(a,b)=(21,-3)$. The formula also sends $B$ to $B'$ and $C$ to $C'$, so $m+x+y=90+21-3=108$."
+      ],
+      "stepsZh": [
+        "向量 $\\overrightarrow{AB}=(0,12)$ 被映到 $\\overrightarrow{A'B'}=(12,0)$，故旋转为顺时针 $90^\\circ$，即 $m=90$。",
+        "绕 $(a,b)$ 顺时针旋转 $90^\\circ$ 会把 $(p,q)$ 映到 $(a+q-b,\\ b-p+a)$。令 $A=(0,0)$ 的像为 $A'=(24,18)$，得到 $a-b=24$、$a+b=18$。",
+        "解得旋转中心 $(a,b)=(21,-3)$。代入可验证 $B,C$ 也分别映到 $B',C'$，所以 $m+x+y=108$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q5": {
+    "summary": "Let $f(n)$ be the base-$4$ digit sum of $n$, and let $g(n)$ be the base-$8$ digit sum of $f(n)$. Let $N$ be the least positive integer for which the base-$16$ representation of $g(N)$ uses a digit other than $0,1,\\ldots,9$. Find $N\\bmod1000$.",
+    "summaryZh": "令 $f(n)$ 为 $n$ 的四进制数码和，$g(n)$ 为 $f(n)$ 的八进制数码和。设 $N$ 是使 $g(N)$ 的十六进制表示首次出现 $0,1,\\ldots,9$ 以外数码的最小正整数，求 $N$ 除以 $1000$ 的余数。",
+    "answer": "151",
+    "answerZh": "151",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/5",
+    "methods": [{
+      "title": "Work backwards through the digit sums",
+      "titleZh": "从数码和反向构造",
+      "topics": [{"en":"Number bases","zh":"进位制"},{"en":"Digit sums","zh":"数码和"},{"en":"Extremal construction","zh":"极值构造"}],
+      "steps": [
+        "The smallest integer whose base-$16$ notation requires a digit beyond $9$ is $10$, represented by the single digit $A$. Thus the least possible offending value of $g(N)$ is $10$.",
+        "The least integer having base-$8$ digit sum $10$ is $31=37_8$; every smaller nonnegative integer has base-$8$ digit sum at most $9$. Hence the least candidate must satisfy $f(N)=31$.",
+        "Base-$4$ digits are at most $3$. The smallest base-$4$ number with digit sum $31$ is $13333333333_4$, so $N=4^{10}+(4^{10}-1)=2\\cdot4^{10}-1$.",
+        "Since $4^5=1024\\equiv24\\pmod{1000}$, $N\\equiv2\\cdot24^2-1=1151\\equiv151\\pmod{1000}$."
+      ],
+      "stepsZh": [
+        "十六进制中首次必须使用 $9$ 以外数码的最小整数是 $10$，它写作单个数码 $A$，因此最小的违规值为 $g(N)=10$。",
+        "八进制数码和为 $10$ 的最小整数是 $31=37_8$；所有更小非负整数的八进制数码和至多为 $9$。所以最小候选必须满足 $f(N)=31$。",
+        "四进制每位至多为 $3$。数码和为 $31$ 的最小四进制数是 $13333333333_4$，故 $N=4^{10}+(4^{10}-1)=2\\cdot4^{10}-1$。",
+        "由 $4^5=1024\\equiv24\\pmod{1000}$，有 $N\\equiv2\\cdot24^2-1=1151\\equiv151\\pmod{1000}$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q6": {
+    "summary": "The sequence satisfies $t_1=20$, $t_2=21$, and $t_n=(5t_{n-1}+1)/(25t_{n-2})$ for $n\\ge3$. Write $t_{2020}=p/q$ in lowest terms and find $p+q$.",
+    "summaryZh": "数列满足 $t_1=20$、$t_2=21$，且当 $n\\ge3$ 时 $t_n=(5t_{n-1}+1)/(25t_{n-2})$。将 $t_{2020}$ 写成最简分数 $p/q$，求 $p+q$。",
+    "answer": "626",
+    "answerZh": "626",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/6",
+    "methods": [{
+      "title": "Reveal the period after rescaling",
+      "titleZh": "缩放后找出周期",
+      "topics": [{"en":"Recurrence relations","zh":"递推数列"},{"en":"Periodicity","zh":"周期性"}],
+      "steps": [
+        "Set $u_n=5t_n$. The recurrence becomes $u_n=(u_{n-1}+1)/u_{n-2}$, with $u_1=a=100$ and $u_2=b=105$.",
+        "Direct symbolic substitution gives $u_3=(b+1)/a$, $u_4=(a+b+1)/(ab)$, $u_5=(a+1)/b$, $u_6=a$, and $u_7=b$.",
+        "The initial ordered pair repeats after five steps, so the sequence has period $5$. As $2020\\equiv0\\pmod5$, $u_{2020}=u_5=(a+1)/b=101/105$.",
+        "Therefore $t_{2020}=u_{2020}/5=101/525$. The fraction is reduced, giving $p+q=626$."
+      ],
+      "stepsZh": [
+        "令 $u_n=5t_n$，递推式化为 $u_n=(u_{n-1}+1)/u_{n-2}$，其中 $u_1=a=100$、$u_2=b=105$。",
+        "逐项代入并化简可得 $u_3=(b+1)/a$、$u_4=(a+b+1)/(ab)$、$u_5=(a+1)/b$、$u_6=a$、$u_7=b$。",
+        "初始有序对经过五步重新出现，因此数列以 $5$ 为周期。由于 $2020\\equiv0\\pmod5$，有 $u_{2020}=u_5=101/105$。",
+        "所以 $t_{2020}=u_{2020}/5=101/525$，已经最简，答案为 $101+525=626$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q7": {
+    "summary": "Two congruent right circular cones have base radius $3$ and height $8$. Their axes meet perpendicularly at a point inside both cones, $3$ units from each base plane. A sphere of radius $r$ lies inside both cones. If the maximum $r^2$ is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "两个全等直圆锥的底面半径为 $3$、高为 $8$。两圆锥轴线在内部一点垂直相交，该点到各自底面均为 $3$。半径为 $r$ 的球同时位于两圆锥内。若 $r^2$ 的最大值为最简分数 $m/n$，求 $m+n$。",
+    "answer": "298",
+    "answerZh": "298",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/7",
+    "methods": [{
+      "title": "Use axial cross-sections and distance to the slant sides",
+      "titleZh": "利用轴截面和到母线的距离",
+      "topics": [{"en":"Solid geometry","zh":"立体几何"},{"en":"Distance to a line","zh":"点到直线距离"},{"en":"Optimisation","zh":"最优化"}],
+      "steps": [
+        "Place the axes' intersection at the origin. In an axial section of either cone, the apex is $5$ units along its axis and the base edge is $3$ units from the origin on the other side. A slant side therefore joins $(5,0)$ to $(-3,3)$ and has equation $3u+8w=15$.",
+        "For a sphere centre with axial coordinate $u$ and perpendicular distance $\\rho$ from that axis, tangency to the slant surface requires $r\\le(15-3u-8\\rho)/\\sqrt{73}$.",
+        "Let $u_1,u_2$ be its coordinates along the two perpendicular axes. Its distances from the respective axes are at least $|u_2|$ and $|u_1|$. Adding the two cone inequalities gives $2\\sqrt{73}r\\le30-3(u_1+u_2)-8(|u_1|+|u_2|)\\le30$.",
+        "Thus $r\\le15/\\sqrt{73}$. A sphere centred at the axes' intersection attains this bound and remains farther than $r$ from both base planes. Hence $r^2=225/73$ and $m+n=298$."
+      ],
+      "stepsZh": [
+        "把两轴交点设为原点。在任一圆锥的轴截面中，顶点沿轴距原点 $5$，底边在另一侧距原点 $3$，半宽为 $3$。母线连接 $(5,0)$ 与 $(-3,3)$，方程为 $3u+8w=15$。",
+        "若球心在该轴方向的坐标为 $u$，到该轴距离为 $\\rho$，要位于圆锥内必须满足 $r\\le(15-3u-8\\rho)/\\sqrt{73}$。",
+        "设球心沿两条垂直轴的坐标为 $u_1,u_2$，则它到两轴的距离分别至少为 $|u_2|,|u_1|$。相加两圆锥的限制，得 $2\\sqrt{73}r\\le30-3(u_1+u_2)-8(|u_1|+|u_2|)\\le30$。",
+        "因此 $r\\le15/\\sqrt{73}$。球心取在两轴交点时达到此界，且到两个底面的距离仍大于 $r$。故 $r^2=225/73$，答案为 $298$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q8": {
+    "summary": "Define $f_1(x)=|x-1|$ and $f_n(x)=f_{n-1}(|x-n|)$ for integers $n>1$. Find the least $n$ for which the sum of all zeros of $f_n$ exceeds $500000$.",
+    "summaryZh": "定义 $f_1(x)=|x-1|$，并对整数 $n>1$ 定义 $f_n(x)=f_{n-1}(|x-n|)$。求使 $f_n$ 的全部零点之和超过 $500000$ 的最小 $n$。",
+    "answer": "101",
+    "answerZh": "101",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/8",
+    "methods": [{
+      "title": "Describe the zero set by induction",
+      "titleZh": "归纳描述零点集合",
+      "topics": [{"en":"Functional recurrence","zh":"函数递推"},{"en":"Arithmetic progressions","zh":"等差数列"},{"en":"Induction","zh":"数学归纳法"}],
+      "steps": [
+        "A zero of $f_n$ has the form $x=n\\pm z$, where $z$ is a nonnegative zero of $f_{n-1}$. The first zero sets are $\\{1\\}$, $\\{1,3\\}$, and $\\{0,2,4,6\\}$.",
+        "Let $T_k=k(k+1)/2$. Induction on the preceding rule shows that the zeros of $f_n$ are every other integer from $n-T_{n-1}$ through $T_n$.",
+        "This arithmetic progression has $n(n-1)/2+1$ terms. Its first and last terms sum to $2n$, so the sum of all zeros is $S_n=n(n(n-1)/2+1)$.",
+        "$S_{100}=495100\\le500000$, while $S_{101}=510151>500000$. Since $S_n$ increases, the least possible index is $101$."
+      ],
+      "stepsZh": [
+        "$f_n$ 的零点恰为 $x=n\\pm z$，其中 $z$ 是 $f_{n-1}$ 的非负零点。最初几个零点集为 $\\{1\\}$、$\\{1,3\\}$、$\\{0,2,4,6\\}$。",
+        "令 $T_k=k(k+1)/2$。根据上述递推归纳可证，$f_n$ 的零点是从 $n-T_{n-1}$ 到 $T_n$、公差为 $2$ 的全部整数。",
+        "该等差数列有 $n(n-1)/2+1$ 项，首末项之和为 $2n$，所以零点和为 $S_n=n(n(n-1)/2+1)$。",
+        "$S_{100}=495100\\le500000$，而 $S_{101}=510151>500000$。因 $S_n$ 递增，最小的 $n$ 为 $101$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q9": {
+    "summary": "Six people originally sit in the order $1,2,3,4,5,6$. Count the new seating orders in which no pair who were adjacent originally are adjacent after returning from a break.",
+    "summaryZh": "六个人原先按 $1,2,3,4,5,6$ 的顺序就座。休息后重新就座，要求原来相邻的任意两人不再相邻。求新的座次总数。",
+    "answer": "090",
+    "answerZh": "090",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/9",
+    "methods": [{
+      "title": "Apply inclusion-exclusion to the five forbidden adjacencies",
+      "titleZh": "对五个禁相邻关系使用容斥",
+      "topics": [{"en":"Inclusion-exclusion","zh":"容斥原理"},{"en":"Block method","zh":"捆绑法"}],
+      "steps": [
+        "There are five forbidden unordered pairs $\\{1,2\\},\\ldots,\\{5,6\\}$. For a selected set of $k$ adjacencies forming $r$ maximal consecutive runs, glue each run into a reversible block. The number of permutations containing them is $2^r(6-k)!$.",
+        "Summing over the selected edge sets gives the totals $720,1200,768,228,32,2$ for $k=0,1,2,3,4,5$, respectively. For example, when $k=2$, four selections form one run and six form two, giving $(4\\cdot2+6\\cdot4)4!=768$.",
+        "Inclusion-exclusion now gives $720-1200+768-228+32-2=90$. In three-digit AIME notation the answer is $090$."
+      ],
+      "stepsZh": [
+        "五个禁止相邻的无序对为 $\\{1,2\\},\\ldots,\\{5,6\\}$。若选中的 $k$ 个相邻关系组成 $r$ 段连续链，把每段捆成可正反排列的一块，则同时包含这些关系的排列数为 $2^r(6-k)!$。",
+        "按 $k=0,1,2,3,4,5$ 汇总所选边集，分别得到 $720,1200,768,228,32,2$。例如 $k=2$ 时，四种选法形成一段，六种形成两段，贡献为 $(4\\cdot2+6\\cdot4)4!=768$。",
+        "由容斥原理，总数为 $720-1200+768-228+32-2=90$，按 AIME 三位格式记为 $090$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q10": {
+    "summary": "Find the sum of all positive integers $n$ for which division of $1^3+2^3+\\cdots+n^3$ by $n+5$ leaves remainder $17$.",
+    "summaryZh": "求所有正整数 $n$ 之和，使得 $1^3+2^3+\\cdots+n^3$ 除以 $n+5$ 的余数为 $17$。",
+    "answer": "239",
+    "answerZh": "239",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/10",
+    "methods": [{
+      "title": "Reduce the square of the triangular number modulo n+5",
+      "titleZh": "模 n+5 化简三角数的平方",
+      "topics": [{"en":"Sum of cubes","zh":"立方和"},{"en":"Modular arithmetic","zh":"模运算"},{"en":"Divisibility","zh":"整除性"}],
+      "steps": [
+        "Let $K=n(n+1)/2$. The cube sum is $K^2$. Modulo $d=n+5$, $2K=n(n+1)\\equiv(-5)(-4)=20$.",
+        "If $K^2\\equiv17\\pmod d$, then $d$ divides $400-4\\cdot17=332=4\\cdot83$. A remainder of $17$ also requires $d>17$, so $d\\in\\{83,166,332\\}$.",
+        "From $n=d-5$, $K=10+d(d-9)/2$. Thus $K\\equiv10\\pmod d$ for odd $d$, while for even $d$ it is congruent to $10+d/2$.",
+        "The values $d=83$ and $166$ give remainder $17$, but $d=332$ gives remainder $100$. Hence $n=78,161$, whose sum is $239$."
+      ],
+      "stepsZh": [
+        "令 $K=n(n+1)/2$，立方和为 $K^2$。模 $d=n+5$，有 $2K=n(n+1)\\equiv(-5)(-4)=20$。",
+        "若 $K^2\\equiv17\\pmod d$，则 $d$ 整除 $400-4\\cdot17=332=4\\cdot83$。余数为 $17$ 还要求 $d>17$，所以 $d\\in\\{83,166,332\\}$。",
+        "由 $n=d-5$ 得 $K=10+d(d-9)/2$。当 $d$ 为奇数时 $K\\equiv10\\pmod d$；当 $d$ 为偶数时 $K\\equiv10+d/2\\pmod d$。",
+        "代入验证：$d=83,166$ 的余数均为 $17$，而 $d=332$ 的余数为 $100$。故 $n=78,161$，所求和为 $239$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q11": {
+    "summary": "Let $P(x)=x^2-3x-7$, and let $Q,R$ be monic quadratics. Each pair among $P+Q$, $P+R$, and $Q+R$ has a common root, and the three resulting common roots are distinct. If $Q(0)=2$ and $R(0)=m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "设 $P(x)=x^2-3x-7$，$Q,R$ 为首一二次多项式。$P+Q,P+R,Q+R$ 中每两式都有一个公共根，且所得三个公共根互不相同。已知 $Q(0)=2$，若 $R(0)=m/n$ 为最简分数，求 $m+n$。",
+    "answer": "071",
+    "answerZh": "071",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/11",
+    "methods": [{
+      "title": "Label the three shared roots and compare coefficients",
+      "titleZh": "标记三个公共根并比较系数",
+      "topics": [{"en":"Vieta's formulas","zh":"韦达定理"},{"en":"Polynomial identities","zh":"多项式恒等式"}],
+      "steps": [
+        "Let $a$ be shared by $P+Q,P+R$; let $b$ be shared by $P+Q,Q+R$; and let $c$ be shared by $P+R,Q+R$. Then $P+Q=2(x-a)(x-b)$, $P+R=2(x-a)(x-c)$, and $Q+R=2(x-b)(x-c)$.",
+        "Write $Q=x^2+qx+2$ and $R=x^2+rx+s$. Comparing root sums gives $a+b=(3-q)/2$, $a+c=(3-r)/2$, and $b+c=-(q+r)/2$. Adding the first two and subtracting the third yields $2a=3$, so $a=3/2$.",
+        "The constant term of $P+Q$ gives $2ab=-5$, hence $b=-5/3$. The other constant terms give $2ac=s-7$ and $2bc=s+2$.",
+        "Subtracting gives $2c(b-a)=9$, so $c=-27/19$. Therefore $s=2bc-2=52/19$, and $m+n=52+19=71$, recorded as $071$."
+      ],
+      "stepsZh": [
+        "设 $a$ 是 $P+Q,P+R$ 的公共根，$b$ 是 $P+Q,Q+R$ 的公共根，$c$ 是 $P+R,Q+R$ 的公共根。于是 $P+Q=2(x-a)(x-b)$、$P+R=2(x-a)(x-c)$、$Q+R=2(x-b)(x-c)$。",
+        "写 $Q=x^2+qx+2$、$R=x^2+rx+s$。比较根和得 $a+b=(3-q)/2$、$a+c=(3-r)/2$、$b+c=-(q+r)/2$。前两式相加再减第三式，得到 $2a=3$，故 $a=3/2$。",
+        "$P+Q$ 的常数项给出 $2ab=-5$，所以 $b=-5/3$。另两式的常数项给出 $2ac=s-7$、$2bc=s+2$。",
+        "两式相减得 $2c(b-a)=9$，故 $c=-27/19$。于是 $s=2bc-2=52/19$，答案为 $52+19=71$，记作 $071$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q12": {
+    "summary": "Odd integers $m,n>1$ form an $m$-by-$n$ array of unit squares numbered row by row from the upper left. Square $200$ is in the top row and square $2000$ in the bottom row. Count the ordered pairs $(m,n)$ for which the line through their centres intersects the interior of square $1099$.",
+    "summaryZh": "奇数 $m,n>1$ 构成一个 $m\\times n$ 单位方格矩形，从左上角起逐行编号。方格 $200$ 位于首行，方格 $2000$ 位于末行。求使这两个方格中心连线穿过方格 $1099$ 内部的有序对 $(m,n)$ 个数。",
+    "answer": "248",
+    "answerZh": "248",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/12",
+    "methods": [{
+      "title": "Locate the midpoint square and count admissible slopes",
+      "titleZh": "定位中点方格并计数允许斜率",
+      "topics": [{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Parity","zh":"奇偶性"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": [
+        "Since square $200$ is in the top row, $n\\ge201$. If square $2000$ is in the bottom row, its column is $b=2000-(m-1)n$, with $(m-1)n<2000\\le mn$.",
+        "Both $m,n$ are odd, so $b$ is even. The midpoint of the two centres has row $(m+1)/2$ and column $100+b/2$; its square number is $1100$. Thus the line passes through the centre of square $1100$, immediately to the right of square $1099$.",
+        "The line enters the interior of square $1099$ exactly when its absolute slope is below $1$. With slope $(m-1)/(b-200)$, this is $m-1<|1800-(m-1)n|$.",
+        "The row and column bounds force $m\\in\\{3,5,7,9\\}$. The eligible odd $n$ counts are respectively $165,48,22,13$: for these four $m$, begin with the intervals $[667,999]$, $[401,499]$, $[287,333]$, $[223,249]$ and remove the one or two central values that violate the strict slope inequality.",
+        "Therefore the number of ordered pairs is $165+48+22+13=248$."
+      ],
+      "stepsZh": [
+        "方格 $200$ 位于首行，所以 $n\\ge201$。若方格 $2000$ 位于末行，其列号为 $b=2000-(m-1)n$，并满足 $(m-1)n<2000\\le mn$。",
+        "因 $m,n$ 均为奇数，$b$ 为偶数。两个中心的中点位于第 $(m+1)/2$ 行、第 $100+b/2$ 列，其方格编号恰为 $1100$。因此连线经过方格 $1100$ 中心，而方格 $1099$ 就在其左侧。",
+        "连线穿入方格 $1099$ 内部当且仅当斜率绝对值小于 $1$。斜率为 $(m-1)/(b-200)$，故条件为 $m-1<|1800-(m-1)n|$。",
+        "行列范围迫使 $m\\in\\{3,5,7,9\\}$。对应的可行奇数 $n$ 个数分别为 $165,48,22,13$：先取区间 $[667,999]$、$[401,499]$、$[287,333]$、$[223,249]$ 中的奇数，再删去使严格斜率条件失败的中心一至两个值。",
+        "所以有序对总数为 $165+48+22+13=248$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q13": {
+    "summary": "A convex tangential pentagon $ABCDE$ has side lengths $AB=5$, $BC=CD=DE=6$, and $EA=7$. Find its area.",
+    "summaryZh": "凸五边形 $ABCDE$ 有内切圆，且边长满足 $AB=5$、$BC=CD=DE=6$、$EA=7$。求五边形面积。",
+    "answer": "060",
+    "answerZh": "060",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/13",
+    "methods": [{
+      "title": "Recover the tangent lengths and inradius",
+      "titleZh": "求切线段长与内切圆半径",
+      "topics": [{"en":"Tangential polygons","zh":"圆外切多边形"},{"en":"Tangent lengths","zh":"切线段"},{"en":"Trigonometric identities","zh":"三角恒等式"}],
+      "steps": [
+        "Let the equal tangent lengths from $A,B,C,D,E$ be $a,b,c,d,e$. The side equations are $a+b=5$, $b+c=6$, $c+d=6$, $d+e=6$, and $e+a=7$. Solving gives $(a,b,c,d,e)=(3,2,4,2,4)$.",
+        "If the inradius is $r$, the half-exterior angle at a vertex with tangent length $t$ is $\\arctan(t/r)$. These five half-exterior angles total $180^\\circ$.",
+        "At $r=4$, the two tangent lengths $4$ contribute $45^\\circ$ each. If $\\beta=\\arctan(1/2)$ is the contribution from each length $2$, then $\\tan(2\\beta)=4/3$, so $2\\beta$ is complementary to $\\arctan(3/4)$, the contribution from length $3$. The five contributions therefore total $180^\\circ$.",
+        "Each contribution decreases strictly with $r$, so this radius is unique. The semiperimeter is $15$, hence the area is $rs=4\\cdot15=60$, recorded as $060$."
+      ],
+      "stepsZh": [
+        "设从顶点 $A,B,C,D,E$ 引出的两条相等切线段长分别为 $a,b,c,d,e$。边长方程为 $a+b=5$、$b+c=6$、$c+d=6$、$d+e=6$、$e+a=7$，解得 $(a,b,c,d,e)=(3,2,4,2,4)$。",
+        "若内切圆半径为 $r$，切线段长为 $t$ 的顶点所对应的半外角为 $\\arctan(t/r)$。五个半外角之和为 $180^\\circ$。",
+        "取 $r=4$ 时，两段长度 $4$ 各贡献 $45^\\circ$。令 $\\beta=\\arctan(1/2)$ 为长度 $2$ 的贡献，则 $\\tan(2\\beta)=4/3$，所以 $2\\beta$ 与长度 $3$ 的贡献 $\\arctan(3/4)$ 互余。五项总和正好为 $180^\\circ$。",
+        "各项都随 $r$ 严格递减，故该半径唯一。半周长为 $15$，面积为 $rs=4\\cdot15=60$，记作 $060$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q14": {
+    "summary": "For real $x$, let $\\{x\\}=x-\\lfloor x\\rfloor$ and $f(x)=x\\{x\\}$. Let $N$ be the number of real solutions of $f(f(f(x)))=17$ on $0\\le x\\le2020$. Find $N\\bmod1000$.",
+    "summaryZh": "对实数 $x$，令 $\\{x\\}=x-\\lfloor x\\rfloor$，并定义 $f(x)=x\\{x\\}$。设 $N$ 为区间 $0\\le x\\le2020$ 上方程 $f(f(f(x)))=17$ 的实数解个数，求 $N$ 除以 $1000$ 的余数。",
+    "answer": "010",
+    "answerZh": "010",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/14",
+    "methods": [{
+      "title": "Count inverse branches interval by interval",
+      "titleZh": "逐区间计数反函数分支",
+      "topics": [{"en":"Floor and fractional-part functions","zh":"取整与小数部分函数"},{"en":"Hockey-stick identity","zh":"曲棍球杆恒等式"}],
+      "steps": [
+        "On $[k,k+1)$ write $x=k+t$ with $0\\le t<1$. Then $f(x)=(k+t)t$ increases strictly from $0$ toward $k+1$, so it maps this interval bijectively onto $[0,k+1)$.",
+        "For any $c$ with $n<c<n+1$, the equation $f(w)=c$ has one solution in each $[k,k+1)$ with $k\\ge n$ and none in smaller intervals.",
+        "First, $f(z)=17$ has one solution $z_n\\in(n,n+1)$ for every $n\\ge17$. For each such $z_n$, $f(w)=z_n$ has one solution in every interval indexed by $k\\ge n$.",
+        "For $x\\in[j,j+1)$ with $17\\le j\\le2019$, the number of chains $17\\le n\\le k\\le j$ is $\\binom{j-15}{2}$. The endpoint $x=2020$ is not a solution.",
+        "Thus $N=\\sum_{j=17}^{2019}\\binom{j-15}{2}=\\binom{2005}{3}=2005\\cdot334\\cdot2003$. Modulo $1000$ this is $5\\cdot334\\cdot3=5010\\equiv10$, so the answer is $010$."
+      ],
+      "stepsZh": [
+        "在区间 $[k,k+1)$ 上写 $x=k+t$，其中 $0\\le t<1$。则 $f(x)=(k+t)t$ 从 $0$ 严格递增到趋近于 $k+1$，所以该区间与 $[0,k+1)$ 一一对应。",
+        "对满足 $n<c<n+1$ 的 $c$，方程 $f(w)=c$ 在每个 $k\\ge n$ 的区间 $[k,k+1)$ 内各有一解，在更小区间无解。",
+        "首先，$f(z)=17$ 对每个 $n\\ge17$ 都有唯一解 $z_n\\in(n,n+1)$。随后对每个 $z_n$，方程 $f(w)=z_n$ 在所有 $k\\ge n$ 的区间各有一解。",
+        "当 $x\\in[j,j+1)$ 且 $17\\le j\\le2019$ 时，反推链 $17\\le n\\le k\\le j$ 的个数为 $\\binom{j-15}{2}$。端点 $x=2020$ 使 $f(x)=0$，不是解。",
+        "因此 $N=\\sum_{j=17}^{2019}\\binom{j-15}{2}=\\binom{2005}{3}=2005\\cdot334\\cdot2003$。模 $1000$ 化为 $5\\cdot334\\cdot3=5010\\equiv10$，答案记作 $010$。"
+      ]
+    }]
+  },
+  "aime-2020ii-q15": {
+    "summary": "In an acute scalene triangle $ABC$ with circumcircle $\\omega$, the tangents at $B$ and $C$ meet at $T$. Let $X,Y$ be the feet from $T$ to lines $AB,AC$. Given $BT=CT=16$, $BC=22$, and $TX^2+TY^2+XY^2=1143$, find $XY^2$.",
+    "summaryZh": "锐角不等边三角形 $ABC$ 的外接圆为 $\\omega$，圆在 $B,C$ 处的切线交于 $T$。从 $T$ 向直线 $AB,AC$ 作垂线，垂足分别为 $X,Y$。已知 $BT=CT=16$、$BC=22$，且 $TX^2+TY^2+XY^2=1143$，求 $XY^2$。",
+    "answer": "717",
+    "answerZh": "717",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2020II/problem/15",
+    "methods": [{
+      "title": "Combine two cosine-law identities",
+      "titleZh": "联立两个余弦定理恒等式",
+      "topics": [{"en":"Tangent-chord theorem","zh":"切弦定理"},{"en":"Sine and cosine rules","zh":"正弦定理与余弦定理"},{"en":"Cyclic quadrilaterals","zh":"圆内接四边形"}],
+      "steps": [
+        "By the tangent-chord theorem, $\\angle TBC=A$. In isosceles triangle $TBC$, $\\cos A=BC/(2BT)=11/16$, so $256\\sin^2A=135$.",
+        "The perpendicular distances are $TX=16\\sin C$ and $TY=16\\sin B$. Let $S=TX^2+TY^2$ and $D=XY^2$.",
+        "The cosine rule for $ABC$, divided by the common circumdiameter via the sine rule and then multiplied by $256$, gives $S-2(TX)(TY)\\cos A=135$.",
+        "The right angles at $X,Y$ make $AXTY$ cyclic, so $\\angle XTY=180^\\circ-A$. Applying the cosine rule to $XTY$ gives $D=S+2(TX)(TY)\\cos A$. Adding the two identities yields $D=2S-135$.",
+        "The given condition is $S+D=1143$. Hence $3S=1278$, so $S=426$ and $D=1143-426=717$."
+      ],
+      "stepsZh": [
+        "由切弦定理，$\\angle TBC=A$。在等腰三角形 $TBC$ 中，$\\cos A=BC/(2BT)=11/16$，故 $256\\sin^2A=135$。",
+        "两个垂距满足 $TX=16\\sin C$、$TY=16\\sin B$。记 $S=TX^2+TY^2$、$D=XY^2$。",
+        "对三角形 $ABC$ 使用余弦定理，再由正弦定理除去公共外接圆直径并乘以 $256$，得到 $S-2(TX)(TY)\\cos A=135$。",
+        "$X,Y$ 处均为直角，所以 $AXTY$ 共圆，且 $\\angle XTY=180^\\circ-A$。对三角形 $XTY$ 用余弦定理，得 $D=S+2(TX)(TY)\\cos A$。与上式相加可得 $D=2S-135$。",
+        "题设给出 $S+D=1143$，所以 $3S=1278$，即 $S=426$，从而 $D=1143-426=717$。"
+      ]
+    }]
+  }
+}
