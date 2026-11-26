@@ -192,5 +192,305 @@
       }
     ],
     "sourceUrl": "https://step.maths.org/node/409"
+  },
+  "step-1994-p1-q2": {
+    "summary": "For a constant $a$, differentiate with respect to $x$: (i) $x^a$; (ii) $a^x$; (iii) $x^x$; (iv) $x^{(x^x)}$; (v) $(x^x)^x$. State the domain assumptions needed for logarithmic differentiation.",
+    "summaryZh": "设 $a$ 为常数，分别求下列函数关于 $x$ 的导数：（i）$x^a$；（ii）$a^x$；（iii）$x^x$；（iv）$x^{(x^x)}$；（v）$(x^x)^x$。同时说明使用对数微分所需的定义域条件。",
+    "answer": "For $x>0$ and $a>0$: (i) $ax^{a-1}$; (ii) $a^x\\ln a$; (iii) $x^x(1+\\ln x)$; (iv) $x^{x^x}x^x\\{x^{-1}+\\ln x+(\\ln x)^2\\}$; (v) $x^{x^2+1}(1+2\\ln x)$.",
+    "answerZh": "在 $x>0,a>0$ 下：（i）$ax^{a-1}$；（ii）$a^x\\ln a$；（iii）$x^x(1+\\ln x)$；（iv）$x^{x^x}x^x\\{x^{-1}+\\ln x+(\\ln x)^2\\}$；（v）$x^{x^2+1}(1+2\\ln x)$。",
+    "methods": [
+      {
+        "title": "Take logarithms before differentiating variable powers",
+        "titleZh": "先取对数，再对变底变指数幂求导",
+        "topics": [
+          {"en": "Logarithmic differentiation", "zh": "对数微分"},
+          {"en": "Chain rule", "zh": "链式法则"},
+          {"en": "Product rule", "zh": "乘积法则"}
+        ],
+        "steps": [
+          "The ordinary rules give $\\frac{d}{dx}x^a=ax^{a-1}$ and, from $a^x=e^{x\\ln a}$, $\\frac{d}{dx}a^x=a^x\\ln a$.",
+          "For $y=x^x$, $\\ln y=x\\ln x$, so $y'/y=1+\\ln x$ and $y'=x^x(1+\\ln x)$.",
+          "For $y=x^{(x^x)}$, $\\ln y=x^x\\ln x$. The product rule and the previous derivative give $y'/y=x^x\\{(1+\\ln x)\\ln x+x^{-1}\\}$, which is the stated expression.",
+          "Finally $(x^x)^x=x^{x^2}$. If $y=x^{x^2}$, then $\\ln y=x^2\\ln x$ and $y'/y=x(1+2\\ln x)$, giving the last derivative. Real logarithmic differentiation requires $x>0$; the real expression $a^x$ is treated here with $a>0$."
+        ],
+        "stepsZh": [
+          "普通求导法则给出 $\\frac{d}{dx}x^a=ax^{a-1}$。又因 $a^x=e^{x\\ln a}$，有 $\\frac{d}{dx}a^x=a^x\\ln a$。",
+          "令 $y=x^x$，则 $\\ln y=x\\ln x$，所以 $y'/y=1+\\ln x$，即 $y'=x^x(1+\\ln x)$。",
+          "令 $y=x^{(x^x)}$，则 $\\ln y=x^x\\ln x$。利用乘积法则和上一步的结果，$y'/y=x^x\\{(1+\\ln x)\\ln x+x^{-1}\\}$，整理即得答案。",
+          "最后，$(x^x)^x=x^{x^2}$。若 $y=x^{x^2}$，则 $\\ln y=x^2\\ln x$，故 $y'/y=x(1+2\\ln x)$。在实数范围内使用上述对数微分需有 $x>0$；这里还取 $a>0$ 以定义一般实指数的 $a^x$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q2"
+  },
+  "step-1994-p1-q4": {
+    "summary": "Prove (i) $(1-\\cos\\alpha)/\\sin\\alpha=\\tan(\\alpha/2)$; (ii) for $|k|<1$, integrate $1/(1-2kx+x^2)$. Hence evaluate $\\int_0^1 \\frac{\\sin\\alpha}{1-2x\\cos\\alpha+x^2}\\,dx$ for $0<\\alpha<\\pi$.",
+    "summaryZh": "证明：（i）$(1-\\cos\\alpha)/\\sin\\alpha=\\tan(\\alpha/2)$；（ii）当 $|k|<1$ 时，求 $1/(1-2kx+x^2)$ 的不定积分。进而在 $0<\\alpha<\\pi$ 时计算 $\\int_0^1 \\frac{\\sin\\alpha}{1-2x\\cos\\alpha+x^2}\\,dx$。",
+    "answer": "The antiderivative is $\\frac1{\\sqrt{1-k^2}}\\tan^{-1}\\!\\left(\\frac{x-k}{\\sqrt{1-k^2}}\\right)+C$, and the definite integral is $(\\pi-\\alpha)/2$.",
+    "answerZh": "不定积分为 $\\frac1{\\sqrt{1-k^2}}\\tan^{-1}\\!\\left(\\frac{x-k}{\\sqrt{1-k^2}}\\right)+C$，所求定积分为 $(\\pi-\\alpha)/2$。",
+    "methods": [
+      {
+        "title": "Use half-angle formulae and complete the square",
+        "titleZh": "使用半角公式并配方",
+        "topics": [
+          {"en": "Trigonometric identities", "zh": "三角恒等式"},
+          {"en": "Inverse tangent integration", "zh": "反正切积分"},
+          {"en": "Principal values", "zh": "反三角函数主值"}
+        ],
+        "steps": [
+          "From $1-\\cos\\alpha=2\\sin^2(\\alpha/2)$ and $\\sin\\alpha=2\\sin(\\alpha/2)\\cos(\\alpha/2)$, their quotient is $\\tan(\\alpha/2)$ whenever it is defined.",
+          "Complete the square: $1-2kx+x^2=(x-k)^2+(1-k^2)$. Since $|k|<1$, substituting $x-k=\\sqrt{1-k^2}\\tan t$ gives the displayed antiderivative.",
+          "Put $k=\\cos\\alpha$. Because $0<\\alpha<\\pi$, $\\sqrt{1-k^2}=\\sin\\alpha>0$, so the factor in the numerator cancels and the integral equals $[\\tan^{-1}((x-\\cos\\alpha)/\\sin\\alpha)]_0^1$.",
+          "At $x=1$, part (i) gives the argument $\\tan(\\alpha/2)$, whose inverse tangent is $\\alpha/2$. At $x=0$, the argument is $-\\cot\\alpha=\\tan(\\alpha-\\pi/2)$; the angle $\\alpha-\\pi/2$ lies in the principal range. The difference is $\\alpha/2-(\\alpha-\\pi/2)=(\\pi-\\alpha)/2$."
+        ],
+        "stepsZh": [
+          "由 $1-\\cos\\alpha=2\\sin^2(\\alpha/2)$ 及 $\\sin\\alpha=2\\sin(\\alpha/2)\\cos(\\alpha/2)$，两式相除即得 $\\tan(\\alpha/2)$。",
+          "配方得 $1-2kx+x^2=(x-k)^2+(1-k^2)$。因 $|k|<1$，令 $x-k=\\sqrt{1-k^2}\\tan t$，即可得到答案中的反正切原函数。",
+          "取 $k=\\cos\\alpha$。由 $0<\\alpha<\\pi$，有 $\\sqrt{1-k^2}=\\sin\\alpha>0$，分子中的 $\\sin\\alpha$ 正好约去，故原积分等于 $[\\tan^{-1}((x-\\cos\\alpha)/\\sin\\alpha)]_0^1$。",
+          "当 $x=1$ 时，由（i）知反正切的自变量为 $\\tan(\\alpha/2)$，主值为 $\\alpha/2$。当 $x=0$ 时，自变量为 $-\\cot\\alpha=\\tan(\\alpha-\\pi/2)$，且该角在主值区间内。因此结果为 $\\alpha/2-(\\alpha-\\pi/2)=(\\pi-\\alpha)/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q4"
+  },
+  "step-1994-p1-q5": {
+    "summary": "On the parabola $y=x^2$, let $P=(p,p^2)$ and $Q=(q,q^2)$ move so that $\\angle POQ=90^\\circ$. Find and sketch (i) the locus of the midpoint $R$ of $PQ$ and (ii) the locus of the intersection $T$ of the tangents at $P$ and $Q$.",
+    "summaryZh": "在抛物线 $y=x^2$ 上，点 $P=(p,p^2)$、$Q=(q,q^2)$ 运动并始终满足 $\\angle POQ=90^\\circ$。求并画出：（i）弦 $PQ$ 中点 $R$ 的轨迹；（ii）$P,Q$ 两点切线交点 $T$ 的轨迹。",
+    "answer": "(i) The whole parabola $y=2x^2+1$, with vertex $(0,1)$. (ii) The whole line $y=-1$. Both loci have unrestricted real $x$.",
+    "answerZh": "（i）完整抛物线 $y=2x^2+1$，顶点为 $(0,1)$；（ii）完整直线 $y=-1$。两条轨迹的横坐标均可取任意实数。",
+    "methods": [
+      {
+        "title": "Eliminate the two point parameters",
+        "titleZh": "消去两个动点参数",
+        "topics": [
+          {"en": "Loci", "zh": "轨迹"},
+          {"en": "Dot product", "zh": "向量点积"},
+          {"en": "Tangents to a parabola", "zh": "抛物线的切线"}
+        ],
+        "steps": [
+          "The right angle gives $(p,p^2)\\cdot(q,q^2)=pq(1+pq)=0$. Neither point can be the origin, so $pq=-1$. Conversely every nonzero $p$ with $q=-1/p$ satisfies the condition.",
+          "If $R=(x,y)$, then $x=(p+q)/2$ and $y=(p^2+q^2)/2=((p+q)^2-2pq)/2=2x^2+1$.",
+          "The tangent at parameter $p$ is $y=2px-p^2$, and similarly for $q$. Their intersection has $x=(p+q)/2$ and $y=pq=-1$.",
+          "To check completeness, for any real $s$ the equation $p^2-sp-1=0$ has discriminant $s^2+4>0$ and roots whose product is $-1$. Hence $p+q=s$ can be arbitrary. Thus the sketches are the entire upward parabola with axis the $y$-axis and vertex $(0,1)$, and the entire horizontal line one unit below the $x$-axis."
+        ],
+        "stepsZh": [
+          "直角条件给出 $(p,p^2)\\cdot(q,q^2)=pq(1+pq)=0$。由于两点均不能是原点，故 $pq=-1$。反之，任取非零 $p$ 并令 $q=-1/p$ 都满足条件。",
+          "若 $R=(x,y)$，则 $x=(p+q)/2$，且 $y=(p^2+q^2)/2=((p+q)^2-2pq)/2=2x^2+1$。",
+          "参数为 $p$ 的点处切线为 $y=2px-p^2$，参数为 $q$ 时同理。联立两条切线可得交点横坐标 $(p+q)/2$，纵坐标 $pq=-1$。",
+          "还需证明轨迹没有缺段。对任意实数 $s$，方程 $p^2-sp-1=0$ 的判别式为 $s^2+4>0$，两根乘积为 $-1$，故 $p+q=s$ 可取任意实数。因此图形分别是顶点 $(0,1)$、对称轴为 $y$ 轴的完整开口向上抛物线，以及位于 $x$ 轴下方一单位的完整水平直线。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q5"
+  },
+  "step-1994-p1-q6": {
+    "summary": "Define $f(z)=(iz-1)/(iz+1)$ for complex $z$, and let $x$ be real. (i) Find $\\operatorname{Re}f(x)$ and $\\operatorname{Im}f(x)$. (ii) Show $f(x)f(x)^*=1$. (iii) Find the real and imaginary parts of $f(f(x))$. (iv) Find $f(f(f(x)))$, noting any excluded input.",
+    "summaryZh": "对复数 $z$ 定义 $f(z)=(iz-1)/(iz+1)$，并设 $x$ 为实数。（i）求 $\\operatorname{Re}f(x)$ 与 $\\operatorname{Im}f(x)$；（ii）证明 $f(x)f(x)^*=1$；（iii）求 $f(f(x))$ 的实部与虚部；（iv）求 $f(f(f(x)))$，并说明需排除的输入。",
+    "answer": "(i) $\\operatorname{Re}f(x)=(x^2-1)/(x^2+1)$, $\\operatorname{Im}f(x)=2x/(x^2+1)$. (ii) $|f(x)|=1$. (iii) $f(f(x))=i(x+1)/(x-1)$ for $x\\ne1$. (iv) $f^{\\circ3}(x)=x$ for $x\\ne1$.",
+    "answerZh": "（i）$\\operatorname{Re}f(x)=(x^2-1)/(x^2+1)$，$\\operatorname{Im}f(x)=2x/(x^2+1)$；（ii）$|f(x)|=1$；（iii）当 $x\\ne1$ 时，$f(f(x))=i(x+1)/(x-1)$；（iv）当 $x\\ne1$ 时，$f^{\\circ3}(x)=x$。",
+    "methods": [
+      {
+        "title": "Rationalise once, then compose algebraically",
+        "titleZh": "先用共轭化简，再直接复合函数",
+        "topics": [
+          {"en": "Complex conjugates", "zh": "复共轭"},
+          {"en": "Function composition", "zh": "函数复合"},
+          {"en": "Möbius transformations", "zh": "莫比乌斯变换"}
+        ],
+        "steps": [
+          "Multiply $f(x)$ by $(1-ix)/(1-ix)$. This gives $f(x)=(x^2-1+2ix)/(x^2+1)$, so the real and imaginary parts are as stated.",
+          "Their squared moduli sum to $((x^2-1)^2+4x^2)/(x^2+1)^2=1$, proving $f(x)f(x)^*=1$.",
+          "For a general $z$, substitute $f(z)$ into $f$ and simplify: $f(f(z))=i(z+1)/(z-1)$. Thus for real $x\\ne1$ its real part is $0$ and its imaginary part is $(x+1)/(x-1)$.",
+          "Write $y=(x+1)/(x-1)$. Since $f(iy)=(-y-1)/(-y+1)=(y+1)/(y-1)=x$, the third iterate returns $x$. The input $x=1$ must be excluded because $f(1)=i$ and the denominator of $f(i)$ is zero."
+        ],
+        "stepsZh": [
+          "把 $f(x)$ 的分子分母同乘 $1-ix$，得到 $f(x)=(x^2-1+2ix)/(x^2+1)$，从而直接读出实部和虚部。",
+          "两部分平方和为 $((x^2-1)^2+4x^2)/(x^2+1)^2=1$，所以 $f(x)f(x)^*=|f(x)|^2=1$。",
+          "对一般复数 $z$ 直接代入并化简，可得 $f(f(z))=i(z+1)/(z-1)$。因此当实数 $x\\ne1$ 时，实部为 $0$，虚部为 $(x+1)/(x-1)$。",
+          "令 $y=(x+1)/(x-1)$。则 $f(iy)=(-y-1)/(-y+1)=(y+1)/(y-1)=x$，故三次复合回到 $x$。必须排除 $x=1$，因为此时 $f(1)=i$，而 $f(i)$ 的分母为零。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q6"
+  },
+  "step-1994-p1-q8": {
+    "summary": "By substituting $\\theta=\\pi/4-\\phi$, evaluate $I=\\int_0^{\\pi/4}\\ln(1+\\tan\\theta)\\,d\\theta$. Then evaluate $\\int_0^1\\frac{\\ln(1+x)}{1+x^2}\\,dx$ and $\\int_0^{\\pi/2}\\ln\\!\\left(\\frac{1+\\sin x}{1+\\cos x}\\right)dx$.",
+    "summaryZh": "利用代换 $\\theta=\\pi/4-\\phi$ 计算 $I=\\int_0^{\\pi/4}\\ln(1+\\tan\\theta)\\,d\\theta$。再求 $\\int_0^1\\frac{\\ln(1+x)}{1+x^2}\\,dx$ 以及 $\\int_0^{\\pi/2}\\ln\\!\\left(\\frac{1+\\sin x}{1+\\cos x}\\right)dx$。",
+    "answer": "The three values are respectively $\\frac\\pi8\\ln2$, $\\frac\\pi8\\ln2$, and $0$.",
+    "answerZh": "三个积分依次为 $\\frac\\pi8\\ln2$、$\\frac\\pi8\\ln2$ 和 $0$。",
+    "methods": [
+      {
+        "title": "Reflect the interval and reuse the first integral",
+        "titleZh": "反射积分区间并复用第一个积分",
+        "topics": [
+          {"en": "Definite-integral symmetry", "zh": "定积分对称性"},
+          {"en": "Trigonometric substitution", "zh": "三角代换"},
+          {"en": "Half-angle identities", "zh": "半角恒等式"}
+        ],
+        "steps": [
+          "Under $\\theta=\\pi/4-\\phi$, $1+\\tan(\\pi/4-\\phi)=2/(1+\\tan\\phi)$. Hence $I=\\int_0^{\\pi/4}[\\ln2-\\ln(1+\\tan\\phi)]\\,d\\phi=(\\pi/4)\\ln2-I$, so $I=(\\pi/8)\\ln2$.",
+          "For the second integral put $x=\\tan\\theta$. Then $dx/(1+x^2)=d\\theta$ and the limits become $0$ and $\\pi/4$, so it is exactly $I$.",
+          "For the last integral, replacing $x$ by $\\pi/2-x$ swaps sine and cosine, changes the logarithm to its negative, and preserves the interval. Therefore the integral equals its own negative and is $0$.",
+          "Equivalently, with $t=x/2$, $(1+\\sin x)/(1+\\cos x)=(1+\\tan t)^2/2$. The integral becomes $4I-(\\pi/2)\\ln2=0$, independently confirming the symmetry result."
+        ],
+        "stepsZh": [
+          "作代换 $\\theta=\\pi/4-\\phi$，有 $1+\\tan(\\pi/4-\\phi)=2/(1+\\tan\\phi)$。故 $I=\\int_0^{\\pi/4}[\\ln2-\\ln(1+\\tan\\phi)]\\,d\\phi=(\\pi/4)\\ln2-I$，解得 $I=(\\pi/8)\\ln2$。",
+          "第二个积分令 $x=\\tan\\theta$，则 $dx/(1+x^2)=d\\theta$，上下限变为 $0$ 与 $\\pi/4$，所以它恰等于 $I$。",
+          "最后一个积分中，用 $\\pi/2-x$ 替换 $x$ 会交换正弦与余弦，使对数变号，同时积分区间不变。因此该积分等于自身的相反数，只能为 $0$。",
+          "也可令 $t=x/2$，利用 $(1+\\sin x)/(1+\\cos x)=(1+\\tan t)^2/2$，把积分化为 $4I-(\\pi/2)\\ln2=0$，从而独立核验结果。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q8"
+  },
+  "step-1994-p1-q9": {
+    "summary": "A projectile is fired at speed $u$. At time $t$ it is at horizontal distance $x$ and height $h$. Derive an equation involving $t,u,g,h,x$. Then, assuming $u^2>2gh$, prove the sharp upper bound for the horizontal range at height $h$ and show that some firing angle attains it.",
+    "summaryZh": "一物体以初速度大小 $u$ 斜抛。时刻 $t$ 时，它的水平位移为 $x$、高度为 $h$。先推导 $t,u,g,h,x$ 之间的方程；再在 $u^2>2gh$ 下证明物体到达高度 $h$ 时水平距离的最优上界，并证明某个发射角能取到该上界。",
+    "answer": "$\\frac14g^2t^4-(u^2-gh)t^2+h^2+x^2=0$, and $x\\le u\\sqrt{u^2-2gh}/g$. Equality is attained when $\\tan\\theta=u/\\sqrt{u^2-2gh}$.",
+    "answerZh": "$\\frac14g^2t^4-(u^2-gh)t^2+h^2+x^2=0$，且 $x\\le u\\sqrt{u^2-2gh}/g$。当 $\\tan\\theta=u/\\sqrt{u^2-2gh}$ 时取等号。",
+    "methods": [
+      {
+        "title": "Eliminate the angle and use a discriminant",
+        "titleZh": "消去发射角并使用判别式",
+        "topics": [
+          {"en": "Projectile motion", "zh": "抛体运动"},
+          {"en": "Discriminants", "zh": "判别式"},
+          {"en": "Sharp bounds", "zh": "最优界"}
+        ],
+        "steps": [
+          "If the firing angle is $\\theta$, then $x=ut\\cos\\theta$ and $h=ut\\sin\\theta-gt^2/2$. Thus $ut\\cos\\theta=x$ and $ut\\sin\\theta=h+gt^2/2$.",
+          "Squaring and adding eliminates $\\theta$: $u^2t^2=x^2+(h+gt^2/2)^2$. Rearrangement gives the stated quartic, which is a quadratic in $T=t^2$.",
+          "For a real time $T$, its discriminant must be nonnegative: $(u^2-gh)^2-g^2(h^2+x^2)\\ge0$. Hence $g^2x^2\\le u^2(u^2-2gh)$, yielding the bound.",
+          "At equality the quadratic has the positive double root $t^2=2(u^2-gh)/g^2$. Define $\\sin\\theta=u/(gt)$ and $\\cos\\theta=\\sqrt{u^2-2gh}/(gt)$. Both are nonnegative and their squares sum to $1$, so a firing angle exists; its tangent has the stated value and attains the bound."
+        ],
+        "stepsZh": [
+          "若发射角为 $\\theta$，则 $x=ut\\cos\\theta$，$h=ut\\sin\\theta-gt^2/2$。所以 $ut\\cos\\theta=x$，$ut\\sin\\theta=h+gt^2/2$。",
+          "两式平方相加即可消去 $\\theta$：$u^2t^2=x^2+(h+gt^2/2)^2$。整理后得到答案中的四次方程；把 $T=t^2$ 看作未知量，它是一个二次方程。",
+          "存在实时间要求该二次方程的判别式非负，即 $(u^2-gh)^2-g^2(h^2+x^2)\\ge0$。于是 $g^2x^2\\le u^2(u^2-2gh)$，得到所需上界。",
+          "取等时二次方程有正的二重根 $t^2=2(u^2-gh)/g^2$。令 $\\sin\\theta=u/(gt)$、$\\cos\\theta=\\sqrt{u^2-2gh}/(gt)$；两者非负且平方和为 $1$，故确有相应发射角。其正切值如答案所示，且水平距离达到上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q9"
+  },
+  "step-1994-p1-q10": {
+    "summary": "A particle of mass $m$ is attached to a light elastic string of natural length $l$ and modulus $\\lambda$, whose other end is fixed at $A$. It moves in a horizontal circle with angular speed $\\omega$; the string makes angle $\\theta$ with the downward vertical. Find $\\cos\\theta$ and determine exactly when this non-degenerate circular motion is possible.",
+    "summaryZh": "质量为 $m$ 的质点连接在一根原长为 $l$、弹性模量为 $\\lambda$ 的轻弹性绳一端，另一端固定于 $A$。质点以角速度 $\\omega$ 作水平圆周运动，绳与竖直向下方向夹角为 $\\theta$。求 $\\cos\\theta$，并确定这种非退化圆周运动存在的充要条件。",
+    "answer": "$\\displaystyle \\cos\\theta=\\frac{g(\\lambda-m\\omega^2l)}{l\\lambda\\omega^2}$, and motion is possible exactly when $\\displaystyle \\frac{g\\lambda}{l(\\lambda+mg)}<\\omega^2<\\frac{\\lambda}{ml}$.",
+    "answerZh": "$\\displaystyle \\cos\\theta=\\frac{g(\\lambda-m\\omega^2l)}{l\\lambda\\omega^2}$；运动存在当且仅当 $\\displaystyle \\frac{g\\lambda}{l(\\lambda+mg)}<\\omega^2<\\frac{\\lambda}{ml}$。",
+    "methods": [
+      {
+        "title": "Resolve the tension and impose Hooke's law",
+        "titleZh": "分解张力并结合胡克定律",
+        "topics": [
+          {"en": "Conical pendulum", "zh": "圆锥摆"},
+          {"en": "Elastic strings", "zh": "弹性绳"},
+          {"en": "Centripetal force", "zh": "向心力"}
+        ],
+        "steps": [
+          "Let the extension be $e$ and the tension be $T=\\lambda e/l$. The actual string length is $l+e$, so the circle radius is $(l+e)\\sin\\theta$.",
+          "Vertical balance and horizontal circular motion give $T\\cos\\theta=mg$ and $T\\sin\\theta=m\\omega^2(l+e)\\sin\\theta$. For a genuine circle $\\sin\\theta\\ne0$, hence $T=m\\omega^2(l+e)$.",
+          "Combining this with Hooke's law gives $e=m\\omega^2l^2/(\\lambda-m\\omega^2l)$ and $T=m\\omega^2l\\lambda/(\\lambda-m\\omega^2l)$. Substitution into the vertical equation yields the formula for $\\cos\\theta$.",
+          "A circle below $A$ requires $0<\\cos\\theta<1$. Positivity gives $\\omega^2<\\lambda/(ml)$; the inequality $\\cos\\theta<1$ rearranges to $\\omega^2>g\\lambda/[l(\\lambda+mg)]$. Conversely these two strict inequalities make the extension positive and give a unique $0<\\theta<\\pi/2$, so they are sufficient as well."
+        ],
+        "stepsZh": [
+          "设绳的伸长量为 $e$，张力为 $T=\\lambda e/l$。绳的实际长度是 $l+e$，故水平圆的半径为 $(l+e)\\sin\\theta$。",
+          "竖直方向平衡、水平向心运动分别给出 $T\\cos\\theta=mg$ 与 $T\\sin\\theta=m\\omega^2(l+e)\\sin\\theta$。非退化圆周运动满足 $\\sin\\theta\\ne0$，所以 $T=m\\omega^2(l+e)$。",
+          "与胡克定律联立可得 $e=m\\omega^2l^2/(\\lambda-m\\omega^2l)$，进而 $T=m\\omega^2l\\lambda/(\\lambda-m\\omega^2l)$。代回竖直方向方程，即得 $\\cos\\theta$ 的公式。",
+          "圆周位于 $A$ 下方要求 $0<\\cos\\theta<1$。正性给出 $\\omega^2<\\lambda/(ml)$；而 $\\cos\\theta<1$ 化简为 $\\omega^2>g\\lambda/[l(\\lambda+mg)]$。反之，这两个严格不等式使伸长量为正，并唯一确定 $0<\\theta<\\pi/2$，所以条件也是充分的。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q10"
+  },
+  "step-1994-p1-q11": {
+    "summary": "A wagon $A$ of mass $m$ rests at the foot of a smooth track of length $d$ inclined at angle $\\theta$. A light string of length $d$ passes over a frictionless pulley at the top and supports a hanging ball $B$ of mass $M$. After release, (i) find the condition for the ball to reach the ground and its impact speed; (ii) find the condition for the wagon not to collide with the pulley.",
+    "summaryZh": "质量为 $m$ 的小车 $A$ 位于长为 $d$、倾角为 $\\theta$ 的光滑斜轨底端。一根长为 $d$ 的轻绳跨过顶端光滑轻滑轮，另一端悬挂质量为 $M$ 的球 $B$。释放系统后：（i）求球落地的条件及落地速度；（ii）求小车不与顶端滑轮发生碰撞的条件。",
+    "answer": "(i) $M>m\\sin\\theta$ and $v^2=2g(M-m\\sin\\theta)d\\sin\\theta/(M+m)$. (ii) Given (i), no positive-speed collision occurs iff $M\\sin\\theta\\le m$, i.e. $m\\sin\\theta<M\\le m/\\sin\\theta$; equality means the wagon only reaches the pulley at rest.",
+    "answerZh": "（i）$M>m\\sin\\theta$，且 $v^2=2g(M-m\\sin\\theta)d\\sin\\theta/(M+m)$。（ii）在（i）成立时，不以正速度碰撞滑轮当且仅当 $M\\sin\\theta\\le m$，即 $m\\sin\\theta<M\\le m/\\sin\\theta$；等号时小车恰以零速度到达滑轮。",
+    "methods": [
+      {
+        "title": "Separate the taut-string and slack-string phases",
+        "titleZh": "分开处理绳绷紧与绳松弛两个阶段",
+        "topics": [
+          {"en": "Connected particles", "zh": "连接质点"},
+          {"en": "Newton's second law", "zh": "牛顿第二定律"},
+          {"en": "Piecewise motion", "zh": "分阶段运动"}
+        ],
+        "steps": [
+          "While the string is taut, let the ball accelerate downward and the wagon upward along the track with acceleration $a$. The equations are $Mg-T=Ma$ and $T-mg\\sin\\theta=ma$, so $a=g(M-m\\sin\\theta)/(M+m)$. Thus the ball descends only if $M>m\\sin\\theta$.",
+          "The pulley is at height $d\\sin\\theta$, so the ball falls that distance before reaching the ground. Starting from rest, $v^2=2a(d\\sin\\theta)$, giving the stated expression.",
+          "At impact the wagon has travelled $d\\sin\\theta$ up the track and retains speed $v$. The ball stops and the string becomes slack; the wagon then decelerates at $g\\sin\\theta$ and travels a further $s=v^2/(2g\\sin\\theta)=(M-m\\sin\\theta)d/(M+m)$.",
+          "The remaining track length is $d(1-\\sin\\theta)$. The condition $s<d(1-\\sin\\theta)$ simplifies to $M\\sin\\theta<m$. Equality means arrival at the pulley with zero speed, not a positive-speed collision. Combining with the falling condition gives the interval in the answer; if 'not reach the pulley' is intended, the upper inequality is strict."
+        ],
+        "stepsZh": [
+          "绳保持绷紧时，设球向下、小车沿斜面向上的加速度均为 $a$。列方程 $Mg-T=Ma$、$T-mg\\sin\\theta=ma$，相加得 $a=g(M-m\\sin\\theta)/(M+m)$。因此球能下降的条件是 $M>m\\sin\\theta$。",
+          "滑轮离地高度为 $d\\sin\\theta$，故球落地前下降这一距离。由静止开始，$v^2=2a(d\\sin\\theta)$，代入 $a$ 即得答案中的速度公式。",
+          "球落地时，小车已沿轨道上升 $d\\sin\\theta$，速度仍为 $v$。随后球停止、绳松弛，小车只受沿斜面向下的重力分量，以 $g\\sin\\theta$ 减速，再上行 $s=v^2/(2g\\sin\\theta)=(M-m\\sin\\theta)d/(M+m)$。",
+          "此时余下轨道长 $d(1-\\sin\\theta)$。要求 $s<d(1-\\sin\\theta)$，化简得 $M\\sin\\theta<m$。等号时小车仅以零速度到达滑轮，并非正速度碰撞。与球落地条件合并即得答案区间；若题意要求“不能到达滑轮”，则上端也应取严格不等号。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q11"
+  },
+  "step-1994-p1-q13": {
+    "summary": "A bag contains $M$ tokens, $m$ red. Draw $n$ without replacement. Let $X_i$ indicate whether draw $i$ is red and let $X$ be the number of red tokens drawn. Relate $X$ to the indicators, find $E(X_i)$ and $E(X)$, derive the distribution of $X$, and deduce a weighted binomial-coefficient identity.",
+    "summaryZh": "袋中有 $M$ 个筹码，其中 $m$ 个为红色；无放回抽取 $n$ 个。令 $X_i$ 表示第 $i$ 次抽到红色与否，$X$ 为抽出的红色筹码总数。写出 $X$ 与各指示变量的关系，求 $E(X_i)$、$E(X)$ 和 $X$ 的分布，并推出一个带权二项式系数恒等式。",
+    "answer": "$X=\\sum_{i=1}^nX_i$, $E(X_i)=m/M$, $E(X)=mn/M$, and $P(X=k)=\\binom mk\\binom{M-m}{n-k}/\\binom Mn$. Hence $\\sum_{k=1}^n k\\binom mk\\binom{M-m}{n-k}=m\\binom{M-1}{n-1}$.",
+    "answerZh": "$X=\\sum_{i=1}^nX_i$，$E(X_i)=m/M$，$E(X)=mn/M$，且 $P(X=k)=\\binom mk\\binom{M-m}{n-k}/\\binom Mn$。因此 $\\sum_{k=1}^n k\\binom mk\\binom{M-m}{n-k}=m\\binom{M-1}{n-1}$。",
+    "methods": [
+      {
+        "title": "Use indicators, then compute the same expectation twice",
+        "titleZh": "使用指示变量，再从两种方式计算同一期望",
+        "topics": [
+          {"en": "Indicator variables", "zh": "指示变量"},
+          {"en": "Linearity of expectation", "zh": "期望的线性性"},
+          {"en": "Hypergeometric distribution", "zh": "超几何分布"}
+        ],
+        "steps": [
+          "Each red draw contributes $1$ to exactly one indicator and every other draw contributes $0$, so $X=X_1+\\cdots+X_n$.",
+          "By symmetry, the token in any fixed draw position is uniformly distributed among the $M$ tokens. Thus $E(X_i)=P(X_i=1)=m/M$. Linearity of expectation, which does not require independent draws, gives $E(X)=mn/M$.",
+          "Every $n$-token subset is equally likely. Exactly $k$ reds can be chosen in $\\binom mk\\binom{M-m}{n-k}$ ways, out of $\\binom Mn$ total subsets, giving the hypergeometric probability. Impossible values are automatically zero under the usual binomial-coefficient convention.",
+          "Now compute $E(X)=\\sum_{k=1}^n kP(X=k)$ and equate it to $mn/M$. Multiplying by $\\binom Mn$ and using $(n/M)\\binom Mn=\\binom{M-1}{n-1}$ yields the required identity."
+        ],
+        "stepsZh": [
+          "每抽到一个红色筹码，恰有一个指示变量贡献 $1$；非红色抽取贡献 $0$。因此 $X=X_1+\\cdots+X_n$。",
+          "由对称性，任意固定抽取位置上的筹码都等可能是 $M$ 个筹码中的任意一个，所以 $E(X_i)=P(X_i=1)=m/M$。期望的线性性不要求各次抽取独立，故 $E(X)=mn/M$。",
+          "所有大小为 $n$ 的筹码子集等可能。恰含 $k$ 个红色筹码的选法数为 $\\binom mk\\binom{M-m}{n-k}$，总选法为 $\\binom Mn$，于是得到超几何概率；按通常约定，不可行的二项式系数为零。",
+          "另一方面，$E(X)=\\sum_{k=1}^n kP(X=k)$。把它与 $mn/M$ 相等，乘以 $\\binom Mn$，再用 $(n/M)\\binom Mn=\\binom{M-1}{n-1}$，即可得到所需恒等式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q13"
+  },
+  "step-1994-p1-q14": {
+    "summary": "The independent submission times $T_1,\\ldots,T_n$ have density $\\lambda e^{-\\lambda t}$ for $t>0$. Let $T=\\min_iT_i$ be the first submission time and $U=\\max_iT_i$ the last. Find the mean and variance of each $T_i$, the distribution and density of $U$, the survival function and density of $T$, and then the mean and variance of $T$.",
+    "summaryZh": "独立的交稿时间 $T_1,\\ldots,T_n$ 在 $t>0$ 上的密度为 $\\lambda e^{-\\lambda t}$。令 $T=\\min_iT_i$ 为最早交稿时间，$U=\\max_iT_i$ 为最晚交稿时间。求每个 $T_i$ 的均值与方差、$U$ 的分布函数和密度、$T$ 的生存函数和密度，以及 $T$ 的均值与方差。",
+    "answer": "$E(T_i)=1/\\lambda$, $\\operatorname{Var}(T_i)=1/\\lambda^2$; $F_U(u)=(1-e^{-\\lambda u})^n$ and $f_U(u)=n\\lambda e^{-\\lambda u}(1-e^{-\\lambda u})^{n-1}$; $P(T>t)=e^{-n\\lambda t}$, $f_T(t)=n\\lambda e^{-n\\lambda t}$, $E(T)=1/(n\\lambda)$, $\\operatorname{Var}(T)=1/(n^2\\lambda^2)$.",
+    "answerZh": "$E(T_i)=1/\\lambda$，$\\operatorname{Var}(T_i)=1/\\lambda^2$；$F_U(u)=(1-e^{-\\lambda u})^n$，$f_U(u)=n\\lambda e^{-\\lambda u}(1-e^{-\\lambda u})^{n-1}$；$P(T>t)=e^{-n\\lambda t}$，$f_T(t)=n\\lambda e^{-n\\lambda t}$，$E(T)=1/(n\\lambda)$，$\\operatorname{Var}(T)=1/(n^2\\lambda^2)$。",
+    "methods": [
+      {
+        "title": "Turn extrema into intersections of independent events",
+        "titleZh": "把最大值与最小值事件化为独立事件的交集",
+        "topics": [
+          {"en": "Exponential distribution", "zh": "指数分布"},
+          {"en": "Order statistics", "zh": "顺序统计量"},
+          {"en": "Independence", "zh": "独立性"}
+        ],
+        "steps": [
+          "For one exponential variable, integration by parts gives $E(T_i)=\\int_0^\\infty t\\lambda e^{-\\lambda t}dt=1/\\lambda$ and $E(T_i^2)=2/\\lambda^2$, hence variance $1/\\lambda^2$.",
+          "The event $U\\le u$ means every $T_i\\le u$. Since $P(T_i\\le u)=1-e^{-\\lambda u}$ and the variables are independent, $F_U(u)=(1-e^{-\\lambda u})^n$ for $u\\ge0$. Differentiation gives the stated density.",
+          "The event $T>t$ means every $T_i>t$. Each has survival probability $e^{-\\lambda t}$, so independence gives $P(T>t)=e^{-n\\lambda t}$. Thus $F_T(t)=1-e^{-n\\lambda t}$ and $f_T(t)=n\\lambda e^{-n\\lambda t}$ for $t\\ge0$.",
+          "Therefore $T$ itself is exponential with rate $n\\lambda$. Replacing $\\lambda$ by $n\\lambda$ in the first step gives its mean and variance. All densities are $0$ on negative arguments."
+        ],
+        "stepsZh": [
+          "对单个指数随机变量分部积分，得 $E(T_i)=\\int_0^\\infty t\\lambda e^{-\\lambda t}dt=1/\\lambda$，又有 $E(T_i^2)=2/\\lambda^2$，故方差为 $1/\\lambda^2$。",
+          "事件 $U\\le u$ 等价于所有 $T_i\\le u$。单个变量满足 $P(T_i\\le u)=1-e^{-\\lambda u}$，再由独立性得 $F_U(u)=(1-e^{-\\lambda u})^n$（$u\\ge0$）。对其求导即得密度。",
+          "事件 $T>t$ 等价于所有 $T_i>t$。每个变量的生存概率为 $e^{-\\lambda t}$，故独立性给出 $P(T>t)=e^{-n\\lambda t}$。于是 $F_T(t)=1-e^{-n\\lambda t}$，$f_T(t)=n\\lambda e^{-n\\lambda t}$（$t\\ge0$）。",
+          "因此 $T$ 本身服从参数为 $n\\lambda$ 的指数分布。把第一步中的 $\\lambda$ 替换为 $n\\lambda$，即可读出其均值与方差。所有密度在负数处均为 $0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/94-s1-q14"
   }
 }
