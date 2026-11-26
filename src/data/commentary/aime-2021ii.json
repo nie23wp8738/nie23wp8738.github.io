@@ -1,0 +1,334 @@
+{
+  "aime-2021ii-q1": {
+    "summary": "A three-digit palindrome reads the same in both directions. Find the arithmetic mean of all three-digit palindromes.",
+    "summaryZh": "三位回文数从左向右与从右向左读均相同。求所有三位回文数的算术平均数。",
+    "answer": "550",
+    "answerZh": "550",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/1",
+    "methods": [{
+      "title": "Average the two digits independently",
+      "titleZh": "分别求两个数位的平均值",
+      "topics": [{"en":"Place value","zh":"数位"},{"en":"Linearity of averages","zh":"平均值的线性性"}],
+      "steps": [
+        "Every such number is $\\overline{aba}=101a+10b$, where $a\\in\\{1,\\ldots,9\\}$ and $b\\in\\{0,\\ldots,9\\}$. Every ordered pair $(a,b)$ occurs once.",
+        "The mean of $a$ is $5$ and the mean of $b$ is $9/2$. Therefore the required mean is $101\\cdot5+10\\cdot(9/2)=550$."
+      ],
+      "stepsZh": [
+        "每个三位回文数均可写成 $\\overline{aba}=101a+10b$，其中 $a\\in\\{1,\\ldots,9\\}$、$b\\in\\{0,\\ldots,9\\}$，且每个有序数对 $(a,b)$ 恰出现一次。",
+        "$a$ 的平均值为 $5$，$b$ 的平均值为 $9/2$。因此所求平均数为 $101\\cdot5+10\\cdot(9/2)=550$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q2": {
+    "summary": "Equilateral triangle $ABC$ has side $840$. Point $D$ is on the side of line $BC$ containing $A$, with $BD\\perp BC$. The line through $D$ parallel to $BC$ meets $AB,AC$ at $E,F$. On the same line choose $G$ beyond $F$ so that $AFG$ is isosceles and $[AFG]:[BED]=8:9$. Find $AF$.",
+    "summaryZh": "等边三角形 $ABC$ 的边长为 $840$。点 $D$ 与 $A$ 位于直线 $BC$ 同侧，且 $BD\\perp BC$。过 $D$ 作 $BC$ 的平行线，分别交 $AB,AC$ 于 $E,F$；在该直线上取点 $G$，使 $F$ 位于 $E,G$ 之间，三角形 $AFG$ 为等腰三角形，且 $[AFG]:[BED]=8:9$。求 $AF$。",
+    "answer": "336",
+    "answerZh": "336",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/2",
+    "methods": [{
+      "title": "Relate the two areas to one length",
+      "titleZh": "把两个面积都化为同一长度的函数",
+      "topics": [{"en":"Similar triangles","zh":"相似三角形"},{"en":"Triangle area","zh":"三角形面积"},{"en":"Equilateral triangles","zh":"等边三角形"}],
+      "steps": [
+        "Because $EF\\parallel BC$, triangle $AEF$ is equilateral. Put $s=AF=EF$ and $h=BD$. Comparing altitudes gives $h=\\frac{\\sqrt3}{2}(840-s)$.",
+        "The horizontal distance from $E$ to $BD$ is $h/\\sqrt3$, so $[BED]=h^2/(2\\sqrt3)$. Also $\\angle AFG=120^\\circ$. In an isosceles triangle this must be the vertex angle, hence $FA=FG=s$ and $[AFG]=\\sqrt3s^2/4$.",
+        "Thus $\\frac{[AFG]}{[BED]}=\\frac32\\frac{s^2}{h^2}=\\frac89$, so $s/h=4/(3\\sqrt3)$. Substitute the formula for $h$: $s=\\frac23(840-s)$. Therefore $5s=1680$ and $AF=s=336$."
+      ],
+      "stepsZh": [
+        "由 $EF\\parallel BC$，三角形 $AEF$ 也是等边三角形。令 $s=AF=EF$、$h=BD$。比较两个等边三角形的高，得 $h=\\frac{\\sqrt3}{2}(840-s)$。",
+        "点 $E$ 到直线 $BD$ 的水平距离为 $h/\\sqrt3$，故 $[BED]=h^2/(2\\sqrt3)$。又因 $\\angle AFG=120^\\circ$，该角只能是等腰三角形 $AFG$ 的顶角，所以 $FA=FG=s$，并有 $[AFG]=\\sqrt3s^2/4$。",
+        "于是 $\\frac{[AFG]}{[BED]}=\\frac32\\frac{s^2}{h^2}=\\frac89$，从而 $s/h=4/(3\\sqrt3)$。代入 $h$ 得 $s=\\frac23(840-s)$，故 $5s=1680$，所以 $AF=336$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q3": {
+    "summary": "Count the permutations $(x_1,x_2,x_3,x_4,x_5)$ of $1,2,3,4,5$ for which $x_1x_2x_3+x_2x_3x_4+x_3x_4x_5+x_4x_5x_1+x_5x_1x_2$ is divisible by $3$.",
+    "summaryZh": "将 $1,2,3,4,5$ 排列为 $(x_1,x_2,x_3,x_4,x_5)$。求使 $x_1x_2x_3+x_2x_3x_4+x_3x_4x_5+x_4x_5x_1+x_5x_1x_2$ 能被 $3$ 整除的排列数。",
+    "answer": "080",
+    "answerZh": "080",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/3",
+    "methods": [{
+      "title": "Place the unique multiple of three",
+      "titleZh": "固定唯一的三的倍数",
+      "topics": [{"en":"Modular arithmetic","zh":"模运算"},{"en":"Permutations","zh":"排列"}],
+      "steps": [
+        "Suppose $x_i=3$, with indices read cyclically. Three terms then vanish modulo $3$. The other two sum to $x_{i+2}x_{i+3}(x_{i+1}+x_{i+4})$, so divisibility is equivalent to $x_{i+1}+x_{i+4}\\equiv0\\pmod3$.",
+        "Among $1,2,4,5$, the residues are two $1$'s and two $2$'s. The ordered pair $(x_{i+1},x_{i+4})$ must use one of each residue: $2\\cdot2\\cdot2=8$ choices. The remaining two values can be ordered in $2$ ways.",
+        "There are $5$ positions for $3$, hence $5\\cdot8\\cdot2=80$ permutations."
+      ],
+      "stepsZh": [
+        "设 $x_i=3$，下标按模 $5$ 循环。含 $x_i$ 的三个乘积模 $3$ 均为零，另外两个之和为 $x_{i+2}x_{i+3}(x_{i+1}+x_{i+4})$，故条件等价于 $x_{i+1}+x_{i+4}\\equiv0\\pmod3$。",
+        "在 $1,2,4,5$ 中，模 $3$ 余 $1$ 与余 $2$ 的数各有两个。因此有序数对 $(x_{i+1},x_{i+4})$ 必须各取一类，共有 $2\\cdot2\\cdot2=8$ 种；剩余两个数有 $2$ 种排列。",
+        "$3$ 的位置有 $5$ 种，所以总数为 $5\\cdot8\\cdot2=80$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q4": {
+    "summary": "The cubic $x^3+ax+b$ has root $-20$, and $x^3+cx^2+d$ has root $-21$, where $a,b,c,d$ are real. They share a nonreal root $m+\\sqrt n\\,i$ with positive integers $m,n$. Find $m+n$.",
+    "summaryZh": "实系数三次多项式 $x^3+ax+b$ 以 $-20$ 为根，$x^3+cx^2+d$ 以 $-21$ 为根，且两者共有非实根 $m+\\sqrt n\\,i$，其中 $m,n$ 为正整数。求 $m+n$。",
+    "answer": "330",
+    "answerZh": "330",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/4",
+    "methods": [{
+      "title": "Use conjugate roots and Vieta's formulas",
+      "titleZh": "利用共轭根与韦达定理",
+      "topics": [{"en":"Complex conjugates","zh":"共轭复数"},{"en":"Vieta's formulas","zh":"韦达定理"}],
+      "steps": [
+        "Real coefficients force the conjugate $m-\\sqrt n\\,i$ to be a root of both cubics. The first cubic has root sum zero, so $-20+2m=0$ and $m=10$.",
+        "The second cubic has zero coefficient of $x$. Its pairwise root products therefore sum to zero: $(m^2+n)-42m=0$. Hence $n=42m-m^2=320$.",
+        "Therefore $m+n=10+320=330$."
+      ],
+      "stepsZh": [
+        "因系数为实数，共轭数 $m-\\sqrt n\\,i$ 也是两个多项式的根。第一个三次式的三根之和为零，故 $-20+2m=0$，得到 $m=10$。",
+        "第二个三次式的一次项系数为零，故三根两两乘积之和为零：$(m^2+n)-42m=0$。于是 $n=42m-m^2=320$。",
+        "所以 $m+n=10+320=330$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q5": {
+    "summary": "For $s>0$, let $\\tau(s)$ be the obtuse triangles of area $s$ having two sides of lengths $4$ and $10$. The values of $s$ for which $\\tau(s)$ is nonempty and all its triangles are congruent form $[a,b)$. Find $a^2+b^2$.",
+    "summaryZh": "对 $s>0$，令 $\\tau(s)$ 表示面积为 $s$ 且有两边长分别为 $4,10$ 的所有钝角三角形。使 $\\tau(s)$ 非空且其中三角形全等的 $s$ 构成区间 $[a,b)$。求 $a^2+b^2$。",
+    "answer": "736",
+    "answerZh": "736",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/5",
+    "methods": [{
+      "title": "Classify the two possible included angles",
+      "titleZh": "分类讨论两个可能的夹角",
+      "topics": [{"en":"Triangle area","zh":"三角形面积"},{"en":"Law of cosines","zh":"余弦定理"},{"en":"Obtuse triangles","zh":"钝角三角形"}],
+      "steps": [
+        "If the angle between sides $4$ and $10$ is $\\theta$, then $s=20\\sin\\theta$. The obtuse choice $90^\\circ<\\theta<180^\\circ$ gives exactly one triangle for every $0<s<20$.",
+        "For the supplementary acute choice, the third side satisfies $c^2=116-80\\cos\\theta$. This triangle is obtuse precisely when the angle opposite side $10$ is obtuse, namely $16+c^2<100$. Thus $\\cos\\theta>2/5$, or $\\sin\\theta<\\sqrt{21}/5$, so this second triangle exists for $s<4\\sqrt{21}$.",
+        "Hence there are two noncongruent candidates below $4\\sqrt{21}$ and exactly one for $4\\sqrt{21}\\le s<20$. Therefore $a=4\\sqrt{21}$ and $b=20$, giving $a^2+b^2=336+400=736$."
+      ],
+      "stepsZh": [
+        "设边长 $4,10$ 的夹角为 $\\theta$，则面积 $s=20\\sin\\theta$。当 $90^\\circ<\\theta<180^\\circ$ 时，夹角本身为钝角，对每个 $0<s<20$ 恰给出一个三角形。",
+        "对与其正弦相同的锐角，第三边满足 $c^2=116-80\\cos\\theta$。此时只有边 $10$ 的对角可能为钝角，条件是 $16+c^2<100$。化简得 $\\cos\\theta>2/5$，即 $\\sin\\theta<\\sqrt{21}/5$，所以第二个三角形恰在 $s<4\\sqrt{21}$ 时存在。",
+        "故 $s<4\\sqrt{21}$ 时有两个不全等的候选，而 $4\\sqrt{21}\\le s<20$ 时恰有一个。因此 $a=4\\sqrt{21},b=20$，从而 $a^2+b^2=336+400=736$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q6": {
+    "summary": "Count ordered pairs $(A,B)$ of subsets of $\\{1,2,3,4,5\\}$ satisfying $|A||B|=|A\\cap B||A\\cup B|$.",
+    "summaryZh": "求集合 $\\{1,2,3,4,5\\}$ 的子集所成有序对 $(A,B)$ 的数量，使 $|A||B|=|A\\cap B||A\\cup B|$。",
+    "answer": "454",
+    "answerZh": "454",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/6",
+    "methods": [{
+      "title": "Reduce the equation to containment",
+      "titleZh": "把等式化为集合包含关系",
+      "topics": [{"en":"Set cardinality","zh":"集合基数"},{"en":"Inclusion-exclusion","zh":"容斥原理"}],
+      "steps": [
+        "Let $a=|A|$, $b=|B|$, and $i=|A\\cap B|$. Since $|A\\cup B|=a+b-i$, the equation becomes $(a-i)(b-i)=0$. Thus $A\\subseteq B$ or $B\\subseteq A$.",
+        "For $A\\subseteq B$, each of the five elements has three states: outside both, in $B$ only, or in both. This gives $3^5=243$ pairs. The reverse containment also gives $243$.",
+        "Pairs with $A=B$ were counted twice, and there are $2^5=32$ of them. Inclusion-exclusion gives $243+243-32=454$."
+      ],
+      "stepsZh": [
+        "令 $a=|A|,b=|B|,i=|A\\cap B|$。由 $|A\\cup B|=a+b-i$，原等式化为 $(a-i)(b-i)=0$，所以必有 $A\\subseteq B$ 或 $B\\subseteq A$。",
+        "若 $A\\subseteq B$，每个元素可处于三种状态：两集合均不含、只在 $B$ 中、两集合均含。因此共有 $3^5=243$ 对。反向包含同样有 $243$ 对。",
+        "$A=B$ 的 $2^5=32$ 对被重复计算，故由容斥原理得到 $243+243-32=454$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q7": {
+    "summary": "Real numbers $a,b,c,d$ satisfy $a+b=-3$, $ab+bc+ca=-4$, $abc+bcd+cda+dab=14$, and $abcd=30$. Write $a^2+b^2+c^2+d^2=m/n$ in lowest terms. Find $m+n$.",
+    "summaryZh": "实数 $a,b,c,d$ 满足 $a+b=-3$、$ab+bc+ca=-4$、$abc+bcd+cda+dab=14$、$abcd=30$。将 $a^2+b^2+c^2+d^2$ 写成最简分数 $m/n$，求 $m+n$。",
+    "answer": "145",
+    "answerZh": "145",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/7",
+    "methods": [{
+      "title": "Compress the system with one product",
+      "titleZh": "用一个乘积压缩方程组",
+      "topics": [{"en":"Systems of equations","zh":"方程组"},{"en":"Factoring","zh":"因式分解"}],
+      "steps": [
+        "From the first two equations, $ab=3c-4$. Put $t=abc=c(3c-4)$. The third equation is $t-4d=14$, while the fourth is $td=30$.",
+        "Eliminating $d$ gives $t(t-14)=120$, hence $t=20$ or $-6$. The latter makes $3c^2-4c+6=0$, with no real roots. Thus $3c^2-4c-20=0$, so $c=-2$ or $10/3$.",
+        "If $c=10/3$, then $a+b=-3,ab=6$, impossible for real $a,b$. Hence $c=-2$, $ab=-10$, and $d=3/2$. Therefore $a^2+b^2=9-2(-10)=29$ and $c^2+d^2=4+9/4=25/4$. The total is $141/4$, so $m+n=145$."
+      ],
+      "stepsZh": [
+        "由前两个方程得 $ab=3c-4$。令 $t=abc=c(3c-4)$。第三个方程化为 $t-4d=14$，第四个方程为 $td=30$。",
+        "消去 $d$ 得 $t(t-14)=120$，所以 $t=20$ 或 $-6$。后者使 $3c^2-4c+6=0$，无实根。故 $3c^2-4c-20=0$，得到 $c=-2$ 或 $10/3$。",
+        "若 $c=10/3$，则 $a+b=-3,ab=6$，不存在实数 $a,b$。所以 $c=-2,ab=-10,d=3/2$。于是 $a^2+b^2=9-2(-10)=29$，$c^2+d^2=4+9/4=25/4$，总和为 $141/4$，故 $m+n=145$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q8": {
+    "summary": "An ant walks along cube edges. Its first move is chosen from three edges. Thereafter it never immediately reverses, choosing equally between the other two edges. If the ant starts on the bottom face, write the probability that it is on the top face after exactly eight moves as $m/n$ in lowest terms. Find $m+n$.",
+    "summaryZh": "一只蚂蚁沿立方体棱移动。第一步在三条相邻棱中等可能选择，此后不立即沿原路返回，而在另外两条棱中等可能选择。蚂蚁从底面顶点出发，恰走八步后位于顶面顶点的概率为最简分数 $m/n$。求 $m+n$。",
+    "answer": "049",
+    "answerZh": "049",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/8",
+    "methods": [{
+      "title": "Track the face and the last edge type",
+      "titleZh": "记录所在面与上一步棱的类型",
+      "topics": [{"en":"Random walks","zh":"随机游走"},{"en":"Recurrence","zh":"递推"}],
+      "steps": [
+        "Let $(B_h,B_v,T_h,T_v)$ count paths on the bottom or top whose last edge was horizontal or vertical. After a horizontal move, one allowed continuation is horizontal and one vertical. After a vertical move, both allowed continuations are horizontal. Thus $(B_h',B_v',T_h',T_v')=(B_h+2B_v,T_h,T_h+2T_v,B_h)$.",
+        "After move 1 the vector is $(2,0,0,1)$. Repeated application through move 8 gives $(118,62,138,66)$. Hence $138+66=204$ paths end on top.",
+        "There are $3\\cdot2^7=384$ equally likely paths, so the probability is $204/384=17/32$. Therefore $m+n=49$."
+      ],
+      "stepsZh": [
+        "用 $(B_h,B_v,T_h,T_v)$ 分别记录位于底面或顶面且上一步为水平棱或竖直棱的路径数。水平移动后，一条可选棱仍为水平棱，另一条为竖直棱；竖直移动后，两条可选棱均为水平棱。因此递推为 $(B_h',B_v',T_h',T_v')=(B_h+2B_v,T_h,T_h+2T_v,B_h)$。",
+        "第一步后的向量是 $(2,0,0,1)$。递推至第八步得到 $(118,62,138,66)$，所以到达顶面的路径数为 $138+66=204$。",
+        "全部等可能路径共有 $3\\cdot2^7=384$ 条，概率为 $204/384=17/32$，故 $m+n=49$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q9": {
+    "summary": "Count ordered pairs $(m,n)$ with $1\\le m,n\\le30$ for which $\\gcd(2^m+1,2^n-1)>1$.",
+    "summaryZh": "求满足 $1\\le m,n\\le30$ 且 $\\gcd(2^m+1,2^n-1)>1$ 的有序整数对 $(m,n)$ 的数量。",
+    "answer": "295",
+    "answerZh": "295",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/9",
+    "methods": [{
+      "title": "Compare powers of two in the exponents",
+      "titleZh": "比较指数中因子二的次数",
+      "topics": [{"en":"Multiplicative order","zh":"乘法阶"},{"en":"Two-adic valuation","zh":"二进赋值"},{"en":"Counting","zh":"计数"}],
+      "steps": [
+        "If an odd prime divides both numbers, $2^m\\equiv-1$ while $2^n\\equiv1$ modulo that prime. The order of $2$ then has one more factor of $2$ than $m$ and divides $n$, so $v_2(n)>v_2(m)$.",
+        "Conversely, if $v_2(n)>v_2(m)$ and $g=\\gcd(m,n)$, then $m/g$ is odd and $2g\\mid n$. Therefore $2^g+1$ divides both $2^m+1$ and $2^n-1$, proving equivalence.",
+        "For $1$ through $30$, the counts with $v_2=0,1,2,3,4$ are $15,8,4,2,1$. The desired number is $15(8+4+2+1)+8(4+2+1)+4(2+1)+2(1)=225+56+12+2=295$."
+      ],
+      "stepsZh": [
+        "若某个奇素数同时整除两数，则模该素数有 $2^m\\equiv-1$、$2^n\\equiv1$。于是 $2$ 的乘法阶所含因子 $2$ 的次数比 $m$ 多一次，并且该阶整除 $n$，故 $v_2(n)>v_2(m)$。",
+        "反之，若 $v_2(n)>v_2(m)$，令 $g=\\gcd(m,n)$，则 $m/g$ 为奇数且 $2g\\mid n$。所以 $2^g+1$ 同时整除 $2^m+1$ 与 $2^n-1$，条件充分。",
+        "$1$ 至 $30$ 中，$v_2=0,1,2,3,4$ 的数分别有 $15,8,4,2,1$ 个。所求为 $15(8+4+2+1)+8(4+2+1)+4(2+1)+2=295$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q10": {
+    "summary": "Two spheres of radius $36$ and one sphere of radius $13$ are pairwise externally tangent and each is tangent to two distinct planes $\\mathcal P,\\mathcal Q$. Their planes meet in line $\\ell$. The distance from $\\ell$ to the radius-$13$ sphere's tangency point on $\\mathcal P$ is $m/n$ in lowest terms. Find $m+n$.",
+    "summaryZh": "两个半径为 $36$ 的球和一个半径为 $13$ 的球两两外切，并且每个球都与两个不同平面 $\\mathcal P,\\mathcal Q$ 相切。两平面的交线为 $\\ell$。从 $\\ell$ 到半径 $13$ 的球在 $\\mathcal P$ 上切点的距离为最简分数 $m/n$。求 $m+n$。",
+    "answer": "335",
+    "answerZh": "335",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/10",
+    "methods": [{
+      "title": "Take a cross-section of the dihedral angle",
+      "titleZh": "截取二面角的垂直截面",
+      "topics": [{"en":"Three-dimensional geometry","zh":"立体几何"},{"en":"Spheres","zh":"球"},{"en":"Right triangles","zh":"直角三角形"}],
+      "steps": [
+        "All three centers lie in the same angle between the planes. If its half-angle is $\\theta$, a radius-$r$ center is $r/\\sin\\theta$ from $\\ell$, and its tangency point on either plane is $r\\cot\\theta$ from $\\ell$.",
+        "The two radius-$36$ centers are at the same perpendicular distance from $\\ell$ and are $72$ apart along $\\ell$. The radius-$13$ center lies midway between them along $\\ell$. Tangency to either large sphere gives $(23/\\sin\\theta)^2+36^2=49^2$.",
+        "Thus $(23/\\sin\\theta)^2=1105=23^2+24^2$, so $\\sin\\theta=23/\\sqrt{1105}$ and $\\cos\\theta=24/\\sqrt{1105}$. The requested distance is $13\\cot\\theta=13\\cdot24/23=312/23$, hence $m+n=335$."
+      ],
+      "stepsZh": [
+        "三个球心位于两平面所成的同一二面角内。若二面角的一半为 $\\theta$，则半径为 $r$ 的球心到 $\\ell$ 的距离为 $r/\\sin\\theta$，其在任一平面上的切点到 $\\ell$ 的距离为 $r\\cot\\theta$。",
+        "两个半径 $36$ 的球心到 $\\ell$ 的垂距相同，且沿 $\\ell$ 方向相距 $72$。半径 $13$ 的球心在两者沿 $\\ell$ 方向的中点。由球外切，得 $(23/\\sin\\theta)^2+36^2=49^2$。",
+        "所以 $(23/\\sin\\theta)^2=1105=23^2+24^2$，即 $\\sin\\theta=23/\\sqrt{1105}$、$\\cos\\theta=24/\\sqrt{1105}$。所求距离为 $13\\cot\\theta=13\\cdot24/23=312/23$，故 $m+n=335$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q11": {
+    "summary": "A teacher gives four logical students distinct members of a set $S$ of four consecutive two-digit integers. The class is told that one member is divisible by $6$ and a different member by $7$. Initially all four students say they cannot identify $S$. On hearing all four answers, each can identify it. Find the sum of all possible greatest elements of $S$.",
+    "summaryZh": "老师把集合 $S$ 中四个不同的数分别给四名逻辑完美的学生。已知 $S$ 由四个连续的两位正整数组成，其中一个数能被 $6$ 整除，另一个不同的数能被 $7$ 整除。四名学生起初同时表示无法确定 $S$；听到所有人的回答后，每人都能确定 $S$。求所有可能的 $S$ 的最大元素之和。",
+    "answer": "258",
+    "answerZh": "258",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/11",
+    "methods": [{
+      "title": "Enumerate candidate runs and use common knowledge",
+      "titleZh": "枚举候选四连数并利用公共信息",
+      "topics": [{"en":"Logical deduction","zh":"逻辑推理"},{"en":"Divisibility","zh":"整除"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": [
+        "Call a four-number interval admissible when it contains distinct multiples of $6$ and $7$. Listing its possible starting values gives the isolated groups $(11,12),(18,21),(27,28),(33,34,35),(46,47,48),(53,54),(60,63),(69,70),(75,76,77),(88,89,90),(95,96)$.",
+        "A student could answer immediately if their number appeared in only one admissible interval. Therefore every number of the true interval must also lie in another candidate. With equal-length intervals, this is possible only for the middle start in a block of three consecutive starts.",
+        "The surviving starts are $34,47,76,89$. In each case the neighboring two candidates cover the middle interval, and after the unanimous first response all four students identify the same surviving interval. Their greatest elements are $37,50,79,92$, whose sum is $258$."
+      ],
+      "stepsZh": [
+        "把含有不同的 $6$ 的倍数与 $7$ 的倍数的四连数称为候选集合。枚举起点可得互不相连的各组：$(11,12),(18,21),(27,28),(33,34,35),(46,47,48),(53,54),(60,63),(69,70),(75,76,77),(88,89,90),(95,96)$。",
+        "若某学生手中的数只属于一个候选四连数，他会立刻确定 $S$。因此真实集合中的每个数都必须还出现在另一候选中。由于所有区间长度相同，只有三个连续起点的一组中的中间起点可能满足。",
+        "保留下来的起点为 $34,47,76,89$。每组中相邻两个候选恰能覆盖中间候选，听到四人均回答“不知道”后，每名学生都能锁定该中间集合。最大元素分别为 $37,50,79,92$，和为 $258$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q12": {
+    "summary": "A convex quadrilateral has consecutive side lengths $5,6,9,7$ and area $30$. If $\\theta$ is the acute angle between its diagonals and $\\tan\\theta=m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "一个凸四边形的四条边按顺序长为 $5,6,9,7$，面积为 $30$。两条对角线所成锐角为 $\\theta$，且 $\\tan\\theta=m/n$ 为最简分数。求 $m+n$。",
+    "answer": "047",
+    "answerZh": "047",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/12",
+    "methods": [{
+      "title": "Combine four cosine laws at the diagonal intersection",
+      "titleZh": "在对角线交点处合并四个余弦定理",
+      "topics": [{"en":"Law of cosines","zh":"余弦定理"},{"en":"Quadrilateral area","zh":"四边形面积"}],
+      "steps": [
+        "Label the sides $AB=5,BC=6,CD=9,DA=7$. Applying the cosine law to the four triangles formed by the diagonals and adding with alternating signs yields $BC^2+DA^2-AB^2-CD^2=2(AC)(BD)\\cos\\varphi$, where $\\varphi$ is one angle between the diagonals.",
+        "The left side is $36+49-25-81=-21$. For the acute angle $\\theta$, this gives $(AC)(BD)\\cos\\theta=21/2$.",
+        "The area formula for a quadrilateral in terms of its diagonals gives $30=\\frac12(AC)(BD)\\sin\\theta$, so $(AC)(BD)\\sin\\theta=60$. Dividing, $\\tan\\theta=60/(21/2)=40/7$, hence $m+n=47$."
+      ],
+      "stepsZh": [
+        "标记四边为 $AB=5,BC=6,CD=9,DA=7$。对两条对角线分成的四个三角形分别使用余弦定理，再交替相加，得 $BC^2+DA^2-AB^2-CD^2=2(AC)(BD)\\cos\\varphi$，其中 $\\varphi$ 是两对角线所成的一个角。",
+        "左边为 $36+49-25-81=-21$。改取两对角线所成锐角 $\\theta$，可得 $(AC)(BD)\\cos\\theta=21/2$。",
+        "由四边形面积公式，$30=\\frac12(AC)(BD)\\sin\\theta$，故 $(AC)(BD)\\sin\\theta=60$。两式相除得 $\\tan\\theta=60/(21/2)=40/7$，所以 $m+n=47$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q13": {
+    "summary": "Find the least positive integer $n$ such that $2^n+5^n-n$ is divisible by $1000$.",
+    "summaryZh": "求最小正整数 $n$，使 $2^n+5^n-n$ 能被 $1000$ 整除。",
+    "answer": "797",
+    "answerZh": "797",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/13",
+    "methods": [{
+      "title": "Lift the congruence from 5 to 125",
+      "titleZh": "把同余条件从模五逐级提升到模一百二十五",
+      "topics": [{"en":"Chinese remainder theorem","zh":"中国剩余定理"},{"en":"Modular exponentiation","zh":"模幂"},{"en":"Euler's theorem","zh":"欧拉定理"}],
+      "steps": [
+        "For $n\\ge3$, modulo $8$ the condition is $5^n\\equiv n$. Even $n$ is impossible, while odd $n$ gives $n\\equiv5\\pmod8$. Modulo $125$, $5^n\\equiv0$, so $n\\equiv2^n\\pmod{125}$.",
+        "Since $n\\equiv5\\pmod8$, we have $n\\equiv1\\pmod4$. Reducing successively gives $n\\equiv2\\pmod5$, hence $n\\equiv17\\pmod{20}$. Then $2^{17}\\equiv22\\pmod{25}$, so $n\\equiv22\\pmod{25}$ and together with the mod-$4$ condition, $n\\equiv97\\pmod{100}$.",
+        "Now $2^{100}\\equiv1\\pmod{125}$ and $2^{97}\\equiv2^{-3}\\equiv47\\pmod{125}$ because $8\\cdot47\\equiv1$. Thus $n\\equiv47\\pmod{125}$. Solving this with $n\\equiv5\\pmod8$ gives $n\\equiv797\\pmod{1000}$. Directly, $n=1,2$ fail, so the least positive solution is $797$."
+      ],
+      "stepsZh": [
+        "当 $n\\ge3$ 时，模 $8$ 的条件为 $5^n\\equiv n$。偶数 $n$ 不可能；奇数 $n$ 给出 $n\\equiv5\\pmod8$。模 $125$ 时 $5^n\\equiv0$，故需 $n\\equiv2^n\\pmod{125}$。",
+        "由 $n\\equiv5\\pmod8$ 得 $n\\equiv1\\pmod4$。逐级取模可得 $n\\equiv2\\pmod5$，所以 $n\\equiv17\\pmod{20}$。又 $2^{17}\\equiv22\\pmod{25}$，故 $n\\equiv22\\pmod{25}$；结合模 $4$ 条件得 $n\\equiv97\\pmod{100}$。",
+        "由 $2^{100}\\equiv1\\pmod{125}$，且 $2^{97}\\equiv2^{-3}\\equiv47\\pmod{125}$，可得 $n\\equiv47\\pmod{125}$。再与 $n\\equiv5\\pmod8$ 联立，得到 $n\\equiv797\\pmod{1000}$。直接检验 $n=1,2$ 均不成立，故最小解为 $797$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q14": {
+    "summary": "In acute triangle $ABC$, let $O$ and $G$ be the circumcenter and centroid. The tangent at $A$ to the circumcircle meets the line through $G$ perpendicular to $GO$ at $X$. Let $Y=XG\\cap BC$. If $\\angle ABC:\\angle BCA:\\angle XOY=13:2:17$, express $\\angle BAC=m/n$ degrees in lowest terms and find $m+n$.",
+    "summaryZh": "在锐角三角形 $ABC$ 中，$O,G$ 分别为外心与重心。三角形外接圆在 $A$ 点的切线与过 $G$ 且垂直于 $GO$ 的直线交于 $X$，再令 $Y=XG\\cap BC$。若 $\\angle ABC:\\angle BCA:\\angle XOY=13:2:17$，将 $\\angle BAC$ 的度数写成最简分数 $m/n$，求 $m+n$。",
+    "answer": "592",
+    "answerZh": "592",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/14",
+    "methods": [{
+      "title": "Convert the constructed angle to a central angle",
+      "titleZh": "把构造角转化为圆心角",
+      "topics": [{"en":"Circumcircle","zh":"外接圆"},{"en":"Centroid","zh":"重心"},{"en":"Angle chasing","zh":"角度追踪"}],
+      "steps": [
+        "Let $M$ be the midpoint of $BC$. Choose coordinates $G=(0,0)$ and $O=(0,1)$, and write $A=(a,b)$. Since $G$ divides median $AM$ in the ratio $2:1$, $M=(-a/2,-b/2)$. The line $XG$ is the horizontal axis.",
+        "For either $V=A$ or $V=M$, let the perpendicular to $OV$ at $V$ meet the horizontal axis at $Q$. The same rotation-and-scaling relation sends $OV$ to $OQ$. For $V=A$, $Q=X$ because $AX$ is tangent; for $V=M$, $Q=Y$ because $OM\\perp BC$. Hence $\\angle XOY=\\angle AOM$.",
+        "Write $\\angle B=13k$ and $\\angle C=2k$, so $\\angle A=180^\\circ-15k$. We have $\\angle AOB=2\\angle C=4k$, while $OM$ bisects the central angle subtending $BC$, giving $\\angle BOM=\\angle A=180^\\circ-15k$ on the relevant side. Thus $\\angle AOM=180^\\circ-11k$.",
+        "Since this equals $17k$, we get $28k=180^\\circ$ and $k=45/7$. Therefore $\\angle A=180^\\circ-15(45/7)=585/7$ degrees, so $m+n=585+7=592$."
+      ],
+      "stepsZh": [
+        "设 $M$ 为 $BC$ 中点。取坐标 $G=(0,0),O=(0,1)$，并设 $A=(a,b)$。因重心以 $2:1$ 分中线 $AM$，故 $M=(-a/2,-b/2)$；直线 $XG$ 即水平轴。",
+        "对 $V=A$ 或 $V=M$，过 $V$ 作 $OV$ 的垂线并交水平轴于 $Q$。由同一旋转加伸缩关系，向量 $OV$ 到 $OQ$ 的角度变化相同。当 $V=A$ 时，由切线性质 $Q=X$；当 $V=M$ 时，由 $OM\\perp BC$ 得 $Q=Y$。所以 $\\angle XOY=\\angle AOM$。",
+        "设 $\\angle B=13k,\\angle C=2k$，则 $\\angle A=180^\\circ-15k$。圆心角 $\\angle AOB=2\\angle C=4k$；又 $OM$ 平分弦 $BC$ 所对的圆心角，在相应一侧有 $\\angle BOM=\\angle A=180^\\circ-15k$。故 $\\angle AOM=180^\\circ-11k$。",
+        "由 $180^\\circ-11k=17k$ 得 $k=45/7$。因此 $\\angle A=180^\\circ-15(45/7)=585/7$ 度，故 $m+n=585+7=592$。"
+      ]
+    }]
+  },
+  "aime-2021ii-q15": {
+    "summary": "For positive integers $n$, define $f(n)=\\sqrt n$ when $n$ is a square and otherwise $f(n)=1+f(n+1)$. Define $g(n)=\\sqrt n$ when $n$ is a square and otherwise $g(n)=2+g(n+2)$. Find the least $n$ such that $f(n)/g(n)=4/7$.",
+    "summaryZh": "对正整数 $n$，若 $n$ 是完全平方数则 $f(n)=\\sqrt n$，否则 $f(n)=1+f(n+1)$；若 $n$ 是完全平方数则 $g(n)=\\sqrt n$，否则 $g(n)=2+g(n+2)$。求满足 $f(n)/g(n)=4/7$ 的最小正整数 $n$。",
+    "answer": "258",
+    "answerZh": "258",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2021II/problem/15",
+    "methods": [{
+      "title": "Locate the next reachable square",
+      "titleZh": "寻找递推能够到达的下一个平方数",
+      "topics": [{"en":"Recursive functions","zh":"递归函数"},{"en":"Perfect squares","zh":"完全平方数"},{"en":"Parity","zh":"奇偶性"}],
+      "steps": [
+        "Let $k$ be the least integer with $k^2\\ge n$. Then $f(n)=k+k^2-n$. For $g$, steps of size two preserve parity, so it stops at $j^2$, where $j\\ge k$ is least with $j\\equiv n\\pmod2$. Thus $g(n)=j+j^2-n$.",
+        "If $j=k$, the ratio is $1$. Otherwise $j=k+1$, and $g-f=2k+2$. The equation $7f=4g$ gives $f=8(k+1)/3$, so $k\\equiv2\\pmod3$ and $n=k^2+k-8(k+1)/3$.",
+        "Test $k=2,5,8,11,14,\\ldots$. The first four resulting values $-2,14,48,100$ do not lie above $(k-1)^2$. For $k=14$, $n=170$ has the wrong parity, so $j=k$. For $k=17$, $n=258$ lies between $16^2$ and $17^2$ and has parity opposite to $17$.",
+        "Indeed $f(258)=17+31=48$ and $g(258)=18+66=84$, so the ratio is $4/7$. Therefore the least $n$ is $258$."
+      ],
+      "stepsZh": [
+        "设 $k$ 是满足 $k^2\\ge n$ 的最小整数，则 $f(n)=k+k^2-n$。计算 $g$ 时每次增加 $2$，奇偶性不变，所以它在 $j^2$ 处停止，其中 $j\\ge k$ 是与 $n$ 同奇偶的最小整数。因此 $g(n)=j+j^2-n$。",
+        "若 $j=k$，比值为 $1$。否则 $j=k+1$，且 $g-f=2k+2$。由 $7f=4g$ 得 $f=8(k+1)/3$，所以 $k\\equiv2\\pmod3$，并有 $n=k^2+k-8(k+1)/3$。",
+        "依次检验 $k=2,5,8,11,14,\\ldots$。前四个 $n$ 为 $-2,14,48,100$，均不满足 $n>(k-1)^2$。$k=14$ 时 $n=170$ 与 $k$ 同奇偶，仍有 $j=k$。$k=17$ 时 $n=258$ 位于 $16^2$ 与 $17^2$ 之间，且与 $17$ 奇偶性相反。",
+        "直接计算 $f(258)=17+31=48$、$g(258)=18+66=84$，比值确为 $4/7$。所以最小的 $n$ 是 $258$。"
+      ]
+    }]
+  }
+}
