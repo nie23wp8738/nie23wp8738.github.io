@@ -1,0 +1,459 @@
+{
+  "tmua-2018-p2-q1": {
+    "summary": "For $x>0$, let $f(x)=\\dfrac{x^3-4x}{2\\sqrt{x}}$. Find $f'(4)$.",
+    "summaryZh": "对 $x>0$，设 $f(x)=\\dfrac{x^3-4x}{2\\sqrt{x}}$。求 $f'(4)$。",
+    "answer": "C. $19/2$",
+    "answerZh": "C．$19/2$",
+    "methods": [{
+      "title": "Rewrite using powers before differentiating",
+      "titleZh": "先化为幂函数再求导",
+      "topics": [{"en":"Differentiation","zh":"微分"},{"en":"Laws of indices","zh":"指数运算"}],
+      "steps": [
+        "$f(x)=\\tfrac12x^{5/2}-2x^{1/2}$, so $f'(x)=\\tfrac54x^{3/2}-x^{-1/2}$.",
+        "At $x=4$, $4^{3/2}=8$ and $4^{-1/2}=1/2$. Hence $f'(4)=10-1/2=19/2$."
+      ],
+      "stepsZh": [
+        "$f(x)=\\tfrac12x^{5/2}-2x^{1/2}$，故 $f'(x)=\\tfrac54x^{3/2}-x^{-1/2}$。",
+        "当 $x=4$ 时，$4^{3/2}=8$、$4^{-1/2}=1/2$，所以 $f'(4)=10-1/2=19/2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=3"
+  },
+  "tmua-2018-p2-q2": {
+    "summary": "Find the constant term in the expansion of $\\left(x^6-x^{-2}\\right)^{12}$.",
+    "summaryZh": "求 $\\left(x^6-x^{-2}\\right)^{12}$ 展开式中的常数项。",
+    "answer": "B. $-220$",
+    "answerZh": "B．$-220$",
+    "methods": [{
+      "title": "Match the exponent of $x$ to zero",
+      "titleZh": "令 $x$ 的指数为零",
+      "topics": [{"en":"Binomial theorem","zh":"二项式定理"},{"en":"Coefficient extraction","zh":"系数提取"}],
+      "steps": [
+        "Choosing $k$ copies of $-x^{-2}$ gives exponent $6(12-k)-2k=72-8k$. The constant term therefore has $k=9$.",
+        "Its coefficient is $\\binom{12}{9}(-1)^9=-\\binom{12}{3}=-220$."
+      ],
+      "stepsZh": [
+        "若选取 $k$ 个 $-x^{-2}$，所得项中 $x$ 的指数为 $6(12-k)-2k=72-8k$。常数项要求 $k=9$。",
+        "相应系数为 $\\binom{12}{9}(-1)^9=-\\binom{12}{3}=-220$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=4"
+  },
+  "tmua-2018-p2-q3": {
+    "summary": "A journey has two parts with average speeds $u$ and $v$. Test the claim that the overall average is $(u+v)/2$ using: I, $100$ km at $50$ km/h then $100$ km at $40$ km/h; II, one hour at each of $50$ and $40$ km/h; III, $80$ km at $50$ km/h then $100$ km at $40$ km/h. Which are counterexamples?",
+    "summaryZh": "一段行程分为两部分，平均速度分别为 $u,v$。检验“全程平均速度为 $(u+v)/2$”这一断言：I，先以 $50$ km/h 行驶 $100$ km，再以 $40$ km/h 行驶 $100$ km；II，分别以 $50,40$ km/h 各行驶一小时；III，先以 $50$ km/h 行驶 $80$ km，再以 $40$ km/h 行驶 $100$ km。哪些是反例？",
+    "answer": "F. I and III only",
+    "answerZh": "F．仅 I 与 III",
+    "methods": [{
+      "title": "Use total distance divided by total time",
+      "titleZh": "用总路程除以总时间",
+      "topics": [{"en":"Average speed","zh":"平均速度"},{"en":"Counterexamples","zh":"反例"}],
+      "steps": [
+        "In I the total time is $100/50+100/40=9/2$ hours, so the average is $200/(9/2)=400/9\\ne45$.",
+        "In II equal times give $(50+40)/2=45$, so II is not a counterexample. In III the time is $80/50+100/40=41/10$ hours, giving $1800/41\\ne45$. Thus I and III are counterexamples."
+      ],
+      "stepsZh": [
+        "I 中总时间为 $100/50+100/40=9/2$ 小时，平均速度为 $200/(9/2)=400/9\\ne45$。",
+        "II 中两段时间相等，平均速度确为 $(50+40)/2=45$，故不是反例。III 中总时间为 $80/50+100/40=41/10$ 小时，平均速度为 $1800/41\\ne45$。所以反例是 I 与 III。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=5"
+  },
+  "tmua-2018-p2-q4": {
+    "summary": "A non-zero real number $c$ is such that $\\cos x=c$ has exactly two solutions on $0<x<3\\pi/2$. How many solutions does $\\cos^2(2x)=c^2$ have on the same interval?",
+    "summaryZh": "非零实数 $c$ 使方程 $\\cos x=c$ 在 $0<x<3\\pi/2$ 上恰有两个解。方程 $\\cos^2(2x)=c^2$ 在同一区间有多少个解？",
+    "answer": "D. $6$",
+    "answerZh": "D．$6$",
+    "methods": [{
+      "title": "First locate $c$, then count level crossings",
+      "titleZh": "先确定 $c$ 的范围，再数水平线交点",
+      "topics": [{"en":"Trigonometric graphs","zh":"三角函数图像"},{"en":"Counting solutions","zh":"解的个数"}],
+      "steps": [
+        "On $0<x<3\\pi/2$, the equation $\\cos x=c$ has two solutions exactly when $-1<c<0$.",
+        "$\\cos^2(2x)=c^2$ is equivalent to $\\cos(2x)=c$ or $\\cos(2x)=-c$. Put $u=2x$, so $0<u<3\\pi$. For any $c\\in(-1,0)$, the two horizontal levels $c$ and $-c$ meet the cosine graph a total of six times on this interval."
+      ],
+      "stepsZh": [
+        "在 $0<x<3\\pi/2$ 上，$\\cos x=c$ 恰有两个解当且仅当 $-1<c<0$。",
+        "$\\cos^2(2x)=c^2$ 等价于 $\\cos(2x)=c$ 或 $\\cos(2x)=-c$。令 $u=2x$，则 $0<u<3\\pi$。对任意 $c\\in(-1,0)$，水平线 $y=c$ 与 $y=-c$ 同余弦图像共有六个交点。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=6"
+  },
+  "tmua-2018-p2-q5": {
+    "summary": "A quadrilateral $Q$ has perpendicular diagonals. Decide which statements are necessarily true: I, one diagonal is a line of symmetry; II, the four side-midpoints are the vertices of a square.",
+    "summaryZh": "四边形 $Q$ 的两条对角线互相垂直。判断哪些结论必然成立：I，某一条对角线是对称轴；II，四条边的中点构成正方形。",
+    "answer": "A. Neither I nor II",
+    "answerZh": "A．I、II 均不必然成立",
+    "methods": [{
+      "title": "Construct one counterexample for both claims",
+      "titleZh": "构造同时否定两项的反例",
+      "topics": [{"en":"Quadrilaterals","zh":"四边形"},{"en":"Counterexamples","zh":"反例"}],
+      "steps": [
+        "Take the vertices $(0,3),(-1,0),(0,-2),(5,0)$ in cyclic order. The diagonals lie on the coordinate axes and are perpendicular, but neither diagonal bisects the other, so neither is a line of symmetry.",
+        "By the midpoint theorem, the side-midpoints form a parallelogram whose side lengths are half the two diagonal lengths. Perpendicular diagonals make it a rectangle; it is a square only if the diagonals also have equal lengths. Here the diagonal lengths are $5$ and $6$, so the midpoint rectangle is not a square. Thus neither statement is forced."
+      ],
+      "stepsZh": [
+        "按顺序取顶点 $(0,3),(-1,0),(0,-2),(5,0)$。两条对角线分别位于坐标轴上，因而互相垂直；但它们并不互相平分，所以任何一条都不是对称轴。",
+        "由中位线定理，四边中点构成的平行四边形，其两组边长分别为原两条对角线长度的一半。对角线垂直只保证它是矩形；还需两条对角线等长才是正方形。本例对角线长为 $5$ 与 $6$，所以 II 也不成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=7"
+  },
+  "tmua-2018-p2-q6": {
+    "summary": "Which function is a counterexample to: if $f'(x)>0$ for every real $x$, then $f(x)>0$ for every real $x$? The candidates are $x^2+1$, $x^2-1$, $x^3+x+1$, $1-x$, and $2^x$.",
+    "summaryZh": "下列哪个函数是命题“若对所有实数 $x$ 均有 $f'(x)>0$，则对所有实数 $x$ 均有 $f(x)>0$”的反例？候选函数为 $x^2+1$、$x^2-1$、$x^3+x+1$、$1-x$、$2^x$。",
+    "answer": "C. $f(x)=x^3+x+1$",
+    "answerZh": "C．$f(x)=x^3+x+1$",
+    "methods": [{
+      "title": "Make the hypothesis true and conclusion false",
+      "titleZh": "使前件为真而后件为假",
+      "topics": [{"en":"Counterexamples","zh":"反例"},{"en":"Derivatives","zh":"导数"}],
+      "steps": [
+        "For $f(x)=x^3+x+1$, $f'(x)=3x^2+1>0$ for every real $x$, so the hypothesis is satisfied.",
+        "But $f(-2)=-8-2+1=-9<0$, so the conclusion fails. Hence this function is a counterexample."
+      ],
+      "stepsZh": [
+        "对 $f(x)=x^3+x+1$，有 $f'(x)=3x^2+1>0$，所以前件对所有实数成立。",
+        "但 $f(-2)=-8-2+1=-9<0$，后件不成立，因此该函数构成反例。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=8"
+  },
+  "tmua-2018-p2-q7": {
+    "summary": "Sequence 1 is the arithmetic progression with first term $11$ and difference $3$; Sequence 2 has first term $2$ and difference $5$. Find the remainder when the twentieth common term is divided by $7$.",
+    "summaryZh": "数列 1 是首项为 $11$、公差为 $3$ 的等差数列；数列 2 的首项为 $2$、公差为 $5$。求第二十个公共项除以 $7$ 的余数。",
+    "answer": "B. $1$",
+    "answerZh": "B．$1$",
+    "methods": [{
+      "title": "Find the arithmetic progression of common terms",
+      "titleZh": "求公共项组成的等差数列",
+      "topics": [{"en":"Arithmetic progressions","zh":"等差数列"},{"en":"Congruences","zh":"同余"}],
+      "steps": [
+        "The terms are $11+3n$ and $2+5m$ for non-negative integers $n,m$. Solving modulo $5$ gives $11+3n\\equiv2\\pmod5$, hence $n\\equiv2\\pmod5$.",
+        "Thus the common terms are $17,32,47,\\ldots$, with difference $15$. The twentieth is $17+19\\cdot15=302$, and $302\\equiv1\\pmod7$."
+      ],
+      "stepsZh": [
+        "两数列通项分别为 $11+3n$ 与 $2+5m$（$n,m$ 为非负整数）。模 $5$ 考察得 $11+3n\\equiv2\\pmod5$，故 $n\\equiv2\\pmod5$。",
+        "公共项依次为 $17,32,47,\\ldots$，公差为 $15$。第二十项为 $17+19\\cdot15=302$，且 $302\\equiv1\\pmod7$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=9"
+  },
+  "tmua-2018-p2-q8": {
+    "summary": "A mountain profile of order $n$ is a path encoded by $n$ letters U and $n$ letters D, beginning and ending at sea level and never going below it. Decide which operations always produce another valid code: I, reverse the code; II, interchange every U and D; III, add U at the start and D at the end.",
+    "summaryZh": "$n$ 阶山形路径用 $n$ 个 U（上升）与 $n$ 个 D（下降）编码，从海平面出发并回到海平面，途中不低于海平面。判断哪些操作总能得到合法编码：I，倒序书写；II，交换每个 U 与 D；III，在开头添加 U、末尾添加 D。",
+    "answer": "D. III only",
+    "answerZh": "D．仅 III",
+    "methods": [{
+      "title": "Use a minimal counterexample and a height argument",
+      "titleZh": "用最小反例与高度论证",
+      "topics": [{"en":"Combinatorial paths","zh":"组合路径"},{"en":"Proof and counterexample","zh":"证明与反例"}],
+      "steps": [
+        "The valid code UUDD reverses to DDUU, which immediately goes below sea level; swapping U and D also gives DDUU. Thus I and II are false.",
+        "For III, the initial U raises the whole original profile by one unit. The original middle portion never goes below its starting height, and the final D returns the path to sea level. Hence III is always valid."
+      ],
+      "stepsZh": [
+        "合法编码 UUDD 倒序后为 DDUU，一开始便低于海平面；交换 U、D 后也得到 DDUU。因此 I、II 均不成立。",
+        "对 III，开头的 U 把原路径整体抬高一个单位；中间原编码不会低于其起始高度，最后的 D 恰好回到海平面。所以 III 总成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=10"
+  },
+  "tmua-2018-p2-q9": {
+    "summary": "Solve $4x\\sqrt{2x-1}=10x-5$ and identify the flaw in an attempt that squares and then divides by $2x-1$.",
+    "summaryZh": "求解 $4x\\sqrt{2x-1}=10x-5$，并指出一个“先平方、再除以 $2x-1$”的尝试中的错误。",
+    "answer": "F. $x=1/2,\\ 5/8,\\ 5/2$; division by $2x-1$ loses $x=1/2$",
+    "answerZh": "F．$x=1/2,\\ 5/8,\\ 5/2$；除以 $2x-1$ 时漏掉了 $x=1/2$",
+    "methods": [{
+      "title": "Separate the zero factor before dividing",
+      "titleZh": "相除前单独处理零因子",
+      "topics": [{"en":"Surd equations","zh":"根式方程"},{"en":"Logical equivalence","zh":"等价变形"}],
+      "steps": [
+        "The domain is $x\\ge1/2$. Since $10x-5=5(2x-1)$, $x=1/2$ satisfies the original equation and must be kept before any division by $2x-1$.",
+        "For $x>1/2$, square and divide by $2x-1$: $16x^2=25(2x-1)$, so $16x^2-50x+25=0$. Its roots are $(50\\pm30)/32=5/8,5/2$.",
+        "Both are in the domain and direct substitution confirms them. Thus there are three roots; the attempted division discarded the first one."
+      ],
+      "stepsZh": [
+        "定义域为 $x\\ge1/2$。由于 $10x-5=5(2x-1)$，$x=1/2$ 直接满足原方程，因此在除以 $2x-1$ 前必须单独保留。",
+        "对 $x>1/2$，平方并除以 $2x-1$，得 $16x^2=25(2x-1)$，即 $16x^2-50x+25=0$。两根为 $(50\\pm30)/32=5/8,5/2$。",
+        "两根均在定义域内，代回原式也成立。因此共有三个解；错误正是相除时漏掉零因子对应的解。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=11"
+  },
+  "tmua-2018-p2-q10": {
+    "summary": "For a real-valued function $f$, decide which conditions are necessary and sufficient for symmetry about $x=a$: I, $f(a-x)=f(a+x)$ for all $x$; II, $f(2a-x)=f(x)$ for all $x$; III, $f(a-x)=f(x)$ for all $x$.",
+    "summaryZh": "对实值函数 $f$，判断哪些条件是图像关于 $x=a$ 对称的充要条件：I，对所有 $x$ 有 $f(a-x)=f(a+x)$；II，对所有 $x$ 有 $f(2a-x)=f(x)$；III，对所有 $x$ 有 $f(a-x)=f(x)$。",
+    "answer": "B. I and II are necessary and sufficient; III is not",
+    "answerZh": "B．I、II 是充要条件，III 不是",
+    "methods": [{
+      "title": "Pair points equidistant from the axis",
+      "titleZh": "配对对称轴两侧等距点",
+      "topics": [{"en":"Symmetry","zh":"对称性"},{"en":"Necessary and sufficient conditions","zh":"充要条件"}],
+      "steps": [
+        "Reflection in $x=a$ pairs $a-t$ with $a+t$, so I states exactly the required symmetry.",
+        "In II, write $x=a+t$; then $2a-x=a-t$, so II is equivalent to I. In III, the pair $x$ and $a-x$ has midpoint $a/2$, so it instead describes symmetry about $x=a/2$ and is not the required condition in general."
+      ],
+      "stepsZh": [
+        "关于 $x=a$ 的反射把 $a-t$ 与 $a+t$ 配成一对，所以 I 恰好表述了所需对称性。",
+        "在 II 中令 $x=a+t$，则 $2a-x=a-t$，故 II 与 I 等价。III 中 $x$ 与 $a-x$ 的中点是 $a/2$，它一般描述的是关于 $x=a/2$ 的对称，而非关于 $x=a$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=12"
+  },
+  "tmua-2018-p2-q11": {
+    "summary": "For $2^x=mx+c$ with real $m,c$, assess: I, a negative real solution is possible only if $c>1$; II, $c>1$ guarantees two distinct real solutions; III, there are two distinct positive solutions if and only if $c\\le1$.",
+    "summaryZh": "对方程 $2^x=mx+c$（$m,c$ 为实数），判断：I，存在负实根仅当 $c>1$；II，$c>1$ 保证有两个不同实根；III，有两个不同正实根当且仅当 $c\\le1$。",
+    "answer": "A. None of I, II or III",
+    "answerZh": "A．I、II、III 均不成立",
+    "methods": [{
+      "title": "Disprove all three with horizontal lines",
+      "titleZh": "用水平直线逐项构造反例",
+      "topics": [{"en":"Logic","zh":"逻辑"},{"en":"Exponential graphs","zh":"指数函数图像"}],
+      "steps": [
+        "Set $m=0$. With $c=1/2$, $2^x=1/2$ has the negative solution $x=-1$, disproving I.",
+        "With $c=2$, the equation has only $x=1$, disproving II. With $c=0\\le1$, $2^x=0$ has no solution, disproving the sufficient direction of III. Hence none is true."
+      ],
+      "stepsZh": [
+        "令 $m=0$。取 $c=1/2$ 时，$2^x=1/2$ 有负根 $x=-1$，故 I 错。",
+        "取 $c=2$ 时方程只有 $x=1$ 一个解，故 II 错。取 $c=0\\le1$ 时 $2^x=0$ 无解，否定了 III 的充分性。因此三项均不成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=13"
+  },
+  "tmua-2018-p2-q12": {
+    "summary": "Negate the statement: “For every positive integer $N$, there exists a positive integer $K$ such that $N(Km+1)-1$ is not prime for every positive integer $m$.”",
+    "summaryZh": "写出下列命题的否定：“对每个正整数 $N$，存在正整数 $K$，使得对每个正整数 $m$，$N(Km+1)-1$ 都不是素数。”",
+    "answer": "F. There exists $N$ such that for every $K$ there exists $m$ for which $N(Km+1)-1$ is prime",
+    "answerZh": "F．存在正整数 $N$，使得对每个正整数 $K$，都存在正整数 $m$ 令 $N(Km+1)-1$ 为素数",
+    "methods": [{
+      "title": "Reverse each quantifier in order",
+      "titleZh": "依次翻转每一层量词",
+      "topics": [{"en":"Quantifiers","zh":"量词"},{"en":"Negation","zh":"命题否定"}],
+      "steps": [
+        "The statement has the form $\\forall N\\,\\exists K\\,\\forall m:\\neg P(N,K,m)$, where $P$ means “the number is prime”.",
+        "Its negation is $\\exists N\\,\\forall K\\,\\exists m:P(N,K,m)$. Thus one fixed positive $N$ must defeat every positive $K$ by allowing some positive $m$ that makes the number prime."
+      ],
+      "stepsZh": [
+        "原命题形式为 $\\forall N\\,\\exists K\\,\\forall m:\\neg P(N,K,m)$，其中 $P$ 表示“该数为素数”。",
+        "其否定为 $\\exists N\\,\\forall K\\,\\exists m:P(N,K,m)$。也就是说，存在一个固定正整数 $N$，对任意正整数 $K$ 都能找到某个正整数 $m$ 使该数为素数。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=14"
+  },
+  "tmua-2018-p2-q13": {
+    "summary": "An attempted proof of “if $\\tan\\theta>0$, then $\\sin\\theta+\\cos\\theta>1$” derives: (I) $\\sin\\theta\\cos\\theta=\\tan\\theta\\cos^2\\theta>0$; (II) $1+2\\sin\\theta\\cos\\theta>1$; (III) $\\sin^2\\theta+2\\sin\\theta\\cos\\theta+\\cos^2\\theta>1$; (IV) $(\\sin\\theta+\\cos\\theta)^2>1$; (V) $\\sin\\theta+\\cos\\theta>1$. Find the first error.",
+    "summaryZh": "一个对“若 $\\tan\\theta>0$，则 $\\sin\\theta+\\cos\\theta>1$”的尝试依次推出：(I) $\\sin\\theta\\cos\\theta=\\tan\\theta\\cos^2\\theta>0$；(II) $1+2\\sin\\theta\\cos\\theta>1$；(III) $\\sin^2\\theta+2\\sin\\theta\\cos\\theta+\\cos^2\\theta>1$；(IV) $(\\sin\\theta+\\cos\\theta)^2>1$；(V) $\\sin\\theta+\\cos\\theta>1$。指出首次错误。",
+    "answer": "F. The first error is line (V)",
+    "answerZh": "F．首次错误在第 (V) 步",
+    "methods": [{
+      "title": "Track the sign lost when taking square roots",
+      "titleZh": "追踪开平方时丢失的符号",
+      "topics": [{"en":"Proof analysis","zh":"证明辨析"},{"en":"Trigonometric inequalities","zh":"三角不等式"}],
+      "steps": [
+        "Lines I–IV are valid: $\\cos^2\\theta>0$ when $\\tan\\theta$ is defined, and the identity $\\sin^2\\theta+\\cos^2\\theta=1$ gives the square.",
+        "But $u^2>1$ implies $u>1$ or $u<-1$, not only $u>1$. At $\\theta=5\\pi/4$, $\\tan\\theta=1>0$ while $\\sin\\theta+\\cos\\theta=-\\sqrt2$. Thus line V is the first error and the conjecture is false."
+      ],
+      "stepsZh": [
+        "第 I–IV 步均正确：$\\tan\\theta$ 有定义时 $\\cos^2\\theta>0$，并可用恒等式 $\\sin^2\\theta+\\cos^2\\theta=1$ 得到完全平方。",
+        "但 $u^2>1$ 推出的是 $u>1$ 或 $u<-1$，不能只保留正分支。取 $\\theta=5\\pi/4$，有 $\\tan\\theta=1>0$，而 $\\sin\\theta+\\cos\\theta=-\\sqrt2$。故首次错误在 V，原猜想也不成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=15"
+  },
+  "tmua-2018-p2-q14": {
+    "summary": "In triangle $PQR$, $PR=2$, $QR=p$, and $\\angle RPQ=30^\\circ$. Find all $p$ for which these data determine a unique possible length $PQ$ (equivalently, a unique triangle).",
+    "summaryZh": "在三角形 $PQR$ 中，$PR=2$、$QR=p$、$\\angle RPQ=30^\\circ$。求使这些条件唯一确定 $PQ$ 长度（等价地，唯一确定三角形）的全部 $p$。",
+    "answer": "E. $p=1$ or $p\\ge2$",
+    "answerZh": "E．$p=1$ 或 $p\\ge2$",
+    "methods": [
+      {
+        "title": "Intersect a ray with a circle",
+        "titleZh": "用射线与圆的交点判断",
+        "topics": [{"en":"Ambiguous SSA case","zh":"SSA 不定情形"},{"en":"Circle-line intersections","zh":"圆与直线交点"}],
+        "steps": [
+          "Point $Q$ lies on the ray from $P$ making $30^\\circ$ with $PR$, and also on the circle centred at $R$ with radius $p$. The perpendicular distance from $R$ to the ray is $2\\sin30^\\circ=1$.",
+          "At $p=1$ the circle is tangent, giving one triangle. For $1<p<2$ the ray meets the circle twice, giving two possible values of $PQ$; for $p<1$ there is no triangle.",
+          "At $p=2$, one line intersection is $P$ itself and is degenerate, leaving one genuine triangle. For $p>2$, the second line intersection lies behind $P$, so the ray again has one intersection. Hence $p=1$ or $p\\ge2$."
+        ],
+        "stepsZh": [
+          "点 $Q$ 位于从 $P$ 出发、与 $PR$ 成 $30^\\circ$ 的射线上，同时位于以 $R$ 为圆心、$p$ 为半径的圆上。$R$ 到该射线的垂距为 $2\\sin30^\\circ=1$。",
+          "当 $p=1$ 时圆与射线相切，三角形唯一；当 $1<p<2$ 时有两个交点，对应两个不同的 $PQ$；当 $p<1$ 时无三角形。",
+          "当 $p=2$ 时，直线上的一个交点是退化点 $P$，只剩一个真正三角形；当 $p>2$ 时另一个交点落在射线反向延长线上，射线上仍只有一个交点。因此 $p=1$ 或 $p\\ge2$。"
+        ]
+      },
+      {
+        "title": "Use the sine rule and the ambiguous angle",
+        "titleZh": "用正弦定理分析二义角",
+        "topics": [{"en":"Sine rule","zh":"正弦定理"}],
+        "steps": [
+          "The sine rule gives $\\sin Q/PR=\\sin30^\\circ/QR$, hence $\\sin Q=1/p$.",
+          "For $1<p<2$, both $Q=\\arcsin(1/p)$ and $180^\\circ-Q$ leave a positive third angle because the obtuse choice is still below $150^\\circ$; two triangles result. At $p=1$ the two angles merge at $90^\\circ$. If $p\\ge2$, the supplementary choice is at least $150^\\circ$ and makes the third angle non-positive, leaving only one triangle."
+        ],
+        "stepsZh": [
+          "由正弦定理，$\\sin Q/PR=\\sin30^\\circ/QR$，所以 $\\sin Q=1/p$。",
+          "当 $1<p<2$ 时，$Q=\\arcsin(1/p)$ 与其补角都能使第三角为正，因而有两个三角形；$p=1$ 时两种情形合并为 $Q=90^\\circ$。当 $p\\ge2$ 时，补角至少为 $150^\\circ$，第三角不再为正，只剩一个三角形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=16"
+  },
+  "tmua-2018-p2-q15": {
+    "summary": "Let $f(x)=x^3+3qx^2+2$, where $q$ is real, and suppose $f(x)=0$ has three distinct real roots. Which must also have three distinct real roots: I, $f(x)+1=0$; II, $f(x+1)=0$; III, $f(-x)-1=0$?",
+    "summaryZh": "设 $f(x)=x^3+3qx^2+2$，其中 $q$ 为实数，且 $f(x)=0$ 有三个不同实根。判断下列哪些方程也必有三个不同实根：I，$f(x)+1=0$；II，$f(x+1)=0$；III，$f(-x)-1=0$。",
+    "answer": "G. II and III only",
+    "answerZh": "G．仅 II 与 III",
+    "methods": [{
+      "title": "Use graph transformations and stationary values",
+      "titleZh": "结合图像变换与极值",
+      "topics": [{"en":"Cubic graphs","zh":"三次函数图像"},{"en":"Graph transformations","zh":"图像变换"}],
+      "steps": [
+        "$f'(x)=3x(x+2q)$, so the stationary values are $f(0)=2$ and $f(-2q)=2+4q^3$. Three distinct zeros require $2+4q^3<0<2$.",
+        "Replacing $x$ by $x+1$ is a horizontal translation, so II preserves all three roots. Statement III is $f(-x)=1$; the level $1$ lies strictly between the negative minimum and the maximum $2$, so it has three intersections.",
+        "Statement I asks for $f(x)=-1$. The minimum need not lie below $-1$: for example $q=-0.85$ gives $2+4q^3\\approx-0.456$. Thus I is not necessary."
+      ],
+      "stepsZh": [
+        "$f'(x)=3x(x+2q)$，两个驻点函数值为 $f(0)=2$ 与 $f(-2q)=2+4q^3$。有三个不同零点要求 $2+4q^3<0<2$。",
+        "把 $x$ 换为 $x+1$ 只是水平平移，所以 II 保留三个根。III 等价于 $f(-x)=1$；水平线 $y=1$ 严格位于负的极小值与极大值 $2$ 之间，故有三个交点。",
+        "I 等价于 $f(x)=-1$，但极小值未必低于 $-1$。例如 $q=-0.85$ 时 $2+4q^3\\approx-0.456$，原方程仍有三根而 I 不成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=17"
+  },
+  "tmua-2018-p2-q16": {
+    "summary": "The integer sequence $x_1,x_2,\\ldots$ is arithmetic. If the median of its first $n$ terms is an integer, which must be integers: I, the median of the first $n+2$ terms; II, the median of the first $2n$ terms; III, the median of $x_2,x_4,\\ldots,x_{2n}$?",
+    "summaryZh": "整数数列 $x_1,x_2,\\ldots$ 为等差数列。若前 $n$ 项的中位数为整数，判断下列哪些必为整数：I，前 $n+2$ 项的中位数；II，前 $2n$ 项的中位数；III，$x_2,x_4,\\ldots,x_{2n}$ 的中位数。",
+    "answer": "F. I and III only",
+    "answerZh": "F．仅 I 与 III",
+    "methods": [{
+      "title": "Write every median from the first term and difference",
+      "titleZh": "用首项与公差统一表示中位数",
+      "topics": [{"en":"Arithmetic progressions","zh":"等差数列"},{"en":"Parity","zh":"奇偶性"}],
+      "steps": [
+        "Let $x_k=a+(k-1)d$. The median of the first $n$ terms is $a+(n-1)d/2$. If $n$ is even, the hypothesis forces $d$ even; if $n$ is odd, the median is automatically a term.",
+        "The median for $n+2$ is $a+(n+1)d/2$, which differs by the integer $d$, so I holds. The even-indexed subsequence has median $a+nd$, so III holds.",
+        "II need not hold: take $a=0,d=1,n=1$. The first median is $0$, but the median of the first two terms is $1/2$."
+      ],
+      "stepsZh": [
+        "设 $x_k=a+(k-1)d$。前 $n$ 项的中位数为 $a+(n-1)d/2$。若 $n$ 为偶数，题设迫使 $d$ 为偶数；若 $n$ 为奇数，中位数本身就是数列的一项。",
+        "前 $n+2$ 项中位数为 $a+(n+1)d/2$，与原中位数相差整数 $d$，故 I 成立。偶数下标子列的中位数为 $a+nd$，故 III 成立。",
+        "II 不必成立：取 $a=0,d=1,n=1$，首项中位数为 $0$，而前两项中位数为 $1/2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=18"
+  },
+  "tmua-2018-p2-q17": {
+    "summary": "A positive integer is a “squaresum” if it is a sum of two integer squares; an “awkward” prime is congruent to $3\\pmod4$. Use the stated theorem that an integer is a squaresum exactly when every awkward prime has even exponent in its factorisation. Which assertion is false? A, every square is a squaresum; B, a product of two squaresums is a squaresum; C, if $NM$ is a squaresum then both $N,M$ are; D, every non-squaresum $N$ can be made a squaresum by multiplying it by a product of awkward primes.",
+    "summaryZh": "若正整数可写成两个整数平方之和，则称其为“平方和数”；若素数模 $4$ 余 $3$，则称其为“特殊素数”。使用已给定定理：一个数是平方和数，当且仅当其分解中每个特殊素数的指数均为偶数。判断哪项为假：A，每个平方数都是平方和数；B，两个平方和数之积仍是平方和数；C，若 $NM$ 是平方和数，则 $N,M$ 都是；D，每个非平方和数 $N$ 都可乘以若干特殊素数之积而成为平方和数。",
+    "answer": "C",
+    "answerZh": "C",
+    "methods": [{
+      "title": "Translate every assertion into exponent parity",
+      "titleZh": "把各命题转化为指数奇偶性",
+      "topics": [{"en":"Sum of two squares","zh":"两平方和"},{"en":"Prime factorisation","zh":"素因数分解"}],
+      "steps": [
+        "A is true because $N^2=N^2+0^2$. B is true because multiplying adds even exponents. D is true: multiply by each awkward prime whose exponent in $N$ is odd, changing precisely those exponents to even.",
+        "C is false. Take $N=M=3$. Neither factor is a squaresum because the awkward prime $3$ has odd exponent, but $NM=9=3^2+0^2$ is a squaresum."
+      ],
+      "stepsZh": [
+        "A 成立，因为 $N^2=N^2+0^2$。B 成立，因为相乘时偶指数相加仍为偶数。D 成立：把 $N$ 中指数为奇数的每个特殊素数各乘一次，即可把这些指数全部变为偶数。",
+        "C 不成立。取 $N=M=3$，两个因子中特殊素数 $3$ 的指数均为奇数，故都不是平方和数；但 $NM=9=3^2+0^2$ 是平方和数。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=19"
+  },
+  "tmua-2018-p2-q18": {
+    "summary": "A polynomial $f$ satisfies $\\dfrac{f(a)+f(b)}2\\ge f\\!\\left(\\dfrac{a+b}2\\right)$ for every pair of real numbers $a<b$. Which is necessary: $f\\ge0$, $f'\\ge0$, $f''\\ge0$, $f\\le0$, $f'\\le0$, or $f''\\le0$ on the real line?",
+    "summaryZh": "多项式 $f$ 对任意实数 $a<b$ 均满足 $\\dfrac{f(a)+f(b)}2\\ge f\\!\\left(\\dfrac{a+b}2\\right)$。下列哪一条件是必要的：在实数轴上 $f\\ge0$、$f'\\ge0$、$f''\\ge0$、$f\\le0$、$f'\\le0$ 或 $f''\\le0$？",
+    "answer": "C. $f''(x)\\ge0$ for every real $x$",
+    "answerZh": "C．对所有实数 $x$，$f''(x)\\ge0$",
+    "methods": [
+      {
+        "title": "Interpret the midpoint inequality as convexity",
+        "titleZh": "把中点不等式解释为凸性",
+        "topics": [{"en":"Convexity","zh":"凸性"},{"en":"Second derivative","zh":"二阶导数"}],
+        "steps": [
+          "The left side is the height of the midpoint of the chord joining $(a,f(a))$ to $(b,f(b))$. The inequality says every such chord midpoint lies on or above the graph.",
+          "For a polynomial this midpoint-convexity is ordinary convexity, equivalent to $f''(x)\\ge0$ everywhere. Vertical translations and linear terms show that no fixed sign of $f$ or $f'$ is necessary."
+        ],
+        "stepsZh": [
+          "左侧是连接 $(a,f(a))$ 与 $(b,f(b))$ 的弦中点的纵坐标。不等式说明每条弦的中点都位于图像上方或图像上。",
+          "对多项式而言，这一中点凸性等价于通常的凸性，也等价于处处 $f''(x)\\ge0$。竖直平移或加上线性项不会破坏凸性，因此 $f$ 或 $f'$ 的固定符号都不是必要条件。"
+        ]
+      },
+      {
+        "title": "A local symmetric expansion",
+        "titleZh": "用局部对称展开验证",
+        "topics": [{"en":"Taylor expansion","zh":"泰勒展开"}],
+        "steps": [
+          "Fix $x$ and take $a=x-h,b=x+h$. The hypothesis gives $f(x-h)+f(x+h)-2f(x)\\ge0$.",
+          "Divide by $h^2$ and let $h\\to0$. For a polynomial the limit is $f''(x)$, hence $f''(x)\\ge0$ for every $x$."
+        ],
+        "stepsZh": [
+          "固定 $x$，取 $a=x-h,b=x+h$。题设给出 $f(x-h)+f(x+h)-2f(x)\\ge0$。",
+          "两边除以 $h^2$ 并令 $h\\to0$。对多项式，该极限为 $f''(x)$，故任意 $x$ 都有 $f''(x)\\ge0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=20"
+  },
+  "tmua-2018-p2-q19": {
+    "summary": "Let $x>y>z>1$. Which inequality must hold? A, $\\dfrac{2^{z+1}}{2^x}>\\dfrac{2^x+2^z}{2^y}$; B, $2>\\dfrac{3^x+3^z}{3^y}$; C, $\\dfrac{2\\cdot5^x}{5^z}>\\dfrac{5^x+5^z}{5^y}$; D, $2<\\dfrac{7^x+7^z}{7^y}$.",
+    "summaryZh": "设 $x>y>z>1$。下列哪个不等式必成立？A，$\\dfrac{2^{z+1}}{2^x}>\\dfrac{2^x+2^z}{2^y}$；B，$2>\\dfrac{3^x+3^z}{3^y}$；C，$\\dfrac{2\\cdot5^x}{5^z}>\\dfrac{5^x+5^z}{5^y}$；D，$2<\\dfrac{7^x+7^z}{7^y}$。",
+    "answer": "C",
+    "answerZh": "C",
+    "methods": [{
+      "title": "Clear the positive denominators",
+      "titleZh": "消去正的分母",
+      "topics": [{"en":"Exponential inequalities","zh":"指数不等式"},{"en":"Order reasoning","zh":"序关系推理"}],
+      "steps": [
+        "For C, multiply by $5^{y+z}>0$. It becomes $2\\cdot5^{x+y}>5^{x+z}+5^{2z}$.",
+        "Since $y>z$, $5^{x+y}>5^{x+z}$; since $x>z$ and $y>z$, also $x+y>2z$, so $5^{x+y}>5^{2z}$. Adding these two strict inequalities proves C.",
+        "The others are not forced: B fails when $x-y$ is large; D fails when $x-y$ is tiny and $y-z$ is large; A likewise fails for a sufficiently large $x-y$."
+      ],
+      "stepsZh": [
+        "对 C，两边乘以正数 $5^{y+z}$，得到 $2\\cdot5^{x+y}>5^{x+z}+5^{2z}$。",
+        "因 $y>z$，有 $5^{x+y}>5^{x+z}$；又因 $x>z$ 且 $y>z$，有 $x+y>2z$，所以 $5^{x+y}>5^{2z}$。两式相加即证 C。",
+        "其余选项均不必然成立：令 $x-y$ 很大可否定 B 与 A；令 $x-y$ 很小而 $y-z$ 很大可否定 D。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=21"
+  },
+  "tmua-2018-p2-q20": {
+    "summary": "For real $p$, determine all values of $p$ for which $\\sqrt{x+p}+\\sqrt{x}=p$ has at least one real solution $x$.",
+    "summaryZh": "对实数 $p$，求使方程 $\\sqrt{x+p}+\\sqrt{x}=p$ 至少有一个实数解 $x$ 的全部 $p$。",
+    "answer": "B. $p=0$ or $p\\ge1$",
+    "answerZh": "B．$p=0$ 或 $p\\ge1$",
+    "methods": [
+      {
+        "title": "Isolate one square root",
+        "titleZh": "分离一个平方根",
+        "topics": [{"en":"Surd equations","zh":"根式方程"},{"en":"Parameter ranges","zh":"参数范围"}],
+        "steps": [
+          "The left side is non-negative, so $p\\ge0$. If $p=0$, then $x=0$ is a solution.",
+          "For $p>0$, write $\\sqrt{x+p}=p-\\sqrt{x}$ and square: $x+p=p^2-2p\\sqrt{x}+x$. Hence $2\\sqrt{x}=p-1$, requiring $p\\ge1$, and then $x=(p-1)^2/4$.",
+          "Substitution gives $\\sqrt{x+p}=(p+1)/2$ and $\\sqrt{x}=(p-1)/2$, whose sum is $p$. Thus every $p\\ge1$ works, and no other positive $p$ does."
+        ],
+        "stepsZh": [
+          "左侧非负，所以必须 $p\\ge0$。当 $p=0$ 时，$x=0$ 是解。",
+          "对 $p>0$，写成 $\\sqrt{x+p}=p-\\sqrt{x}$ 并平方，得 $x+p=p^2-2p\\sqrt{x}+x$。所以 $2\\sqrt{x}=p-1$，这要求 $p\\ge1$，并给出 $x=(p-1)^2/4$。",
+          "代回可得 $\\sqrt{x+p}=(p+1)/2$、$\\sqrt{x}=(p-1)/2$，和恰为 $p$。因此所有 $p\\ge1$ 都成立，其他正数均不成立。"
+        ]
+      },
+      {
+        "title": "Compare the minimum of the left side with $p$",
+        "titleZh": "比较左侧最小值与 $p$",
+        "topics": [{"en":"Monotonic functions","zh":"单调函数"}],
+        "steps": [
+          "For $p\\ge0$ and $x\\ge0$, $g(x)=\\sqrt{x+p}+\\sqrt{x}$ is continuous and strictly increasing, with minimum $g(0)=\\sqrt p$ and no upper bound.",
+          "Thus $g(x)=p$ has a solution exactly when $p\\ge\\sqrt p$, i.e. $p=0$ or $p\\ge1$."
+        ],
+        "stepsZh": [
+          "对 $p\\ge0$、$x\\ge0$，$g(x)=\\sqrt{x+p}+\\sqrt{x}$ 连续且严格递增，最小值为 $g(0)=\\sqrt p$，并且无上界。",
+          "所以 $g(x)=p$ 有解当且仅当 $p\\ge\\sqrt p$，即 $p=0$ 或 $p\\ge1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf#page=22"
+  }
+}
