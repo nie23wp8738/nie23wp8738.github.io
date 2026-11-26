@@ -33,7 +33,7 @@
   },
   "bmo2-2020-q2": {
     "summary": "Classify all sets $S$ of at least four points in the plane, with no three collinear, for which every triangle whose vertices lie in $S$ has one common circumradius.",
-    "summaryZh": "分类所有至少含四个点的有限平面点集 $S$：任意三点不共线，且由 $S$ 中任意三点组成的三角形都有相同的外接圆半径。",
+    "summaryZh": "分类所有至少含四个点的平面点集 $S$：任意三点不共线，且由 $S$ 中任意三点组成的三角形都有相同的外接圆半径。",
     "answer": "Either all the points lie on one circle, or $S$ consists of exactly four distinct points forming an orthocentric system (each point is the orthocentre of the triangle formed by the other three).",
     "answerZh": "或者所有点共圆；或者 $S$ 恰含四个互异点，并构成一个正交心点组（每一点都是其余三点所成三角形的垂心）。",
     "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
