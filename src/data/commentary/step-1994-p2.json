@@ -1,0 +1,286 @@
+{
+  "step-1994-p2-q1": {
+    "summary": "Work in decimal notation. (i) If a positive integer $n$ ends in neither 5 nor an even digit, prove that some positive multiple of $n$ ends in 1. (ii) Deduce that every positive integer has a multiple whose final non-zero digit is 1 and is followed only by zeros. (iii) If $n=10^r q$ with $q$ ending in 1, prove that a multiple of $n$ contains every digit $0,1,\\ldots,9$ at least once.",
+    "summaryZh": "研究十进制整数。（i）若正整数 $n$ 的末位既不是 5 也不是偶数，证明 $n$ 的某个正倍数末位为 1。（ii）推出每个正整数都有一个倍数，其最后一个非零数字为 1，之后全为 0。（iii）若 $n=10^r q$ 且 $q$ 末位为 1，证明 $n$ 的某个倍数至少出现一次十个数字 $0,1,\\ldots,9$。",
+    "answer": "All three assertions hold. In (iii) one may require $qm\\equiv1234567890\\pmod{10^{10}}$.",
+    "answerZh": "三项命题均成立；（iii）中可令 $qm\\equiv1234567890\\pmod{10^{10}}$。",
+    "methods": [{
+      "title": "Remove factors of 2 and 5, then use invertibility",
+      "titleZh": "先剥离因子 2、5，再利用模逆元",
+      "topics": [{"en":"Modular arithmetic","zh":"模算术"},{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Pigeonhole principle","zh":"抽屉原理"}],
+      "steps": [
+        "An integer coprime to 10 ends in $1,3,7$ or $9$; multiplication respectively by $1,7,3$ or $9$ makes the last digit 1. Write an arbitrary $n=2^a5^b k$ with $\\gcd(k,10)=1$. If $km'$ ends in 1, then $m=2^b5^a m'$ gives $nm=10^{a+b}km'$, proving (ii).",
+        "For (iii), put $N=10^{10}$ and $X=1234567890$. Since $q$ ends in 1, $\\gcd(q,N)=1$. The $N$ residues $0,q,2q,\\ldots,(N-1)q$ are distinct modulo $N$, so one is $X$. For the corresponding non-zero $m$, $qm$ ends in the ten-digit block $X$; multiplying by $10^r$ only appends zeros."
+      ],
+      "stepsZh": [
+        "与 10 互素的整数末位只能是 $1,3,7,9$；分别乘以 $1,7,3,9$ 后末位均为 1。任意写 $n=2^a5^b k$，其中 $\\gcd(k,10)=1$。若 $km'$ 末位为 1，则取 $m=2^b5^a m'$，有 $nm=10^{a+b}km'$，得到（ii）。",
+        "对（iii），令 $N=10^{10}$、$X=1234567890$。因 $q$ 末位为 1，$\\gcd(q,N)=1$。模 $N$ 的 $N$ 个余数 $0,q,2q,\\ldots,(N-1)q$ 两两不同，故其中一个等于 $X$。相应的非零 $m$ 使 $qm$ 以十位数字块 $X$ 结尾；再乘 $10^r$ 只会补零。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q1"
+  },
+  "step-1994-p2-q2": {
+    "summary": "If $P(x)=(x-a)^mQ(x)$, prove that $P'(x)=(x-a)^{m-1}R(x)$ for a polynomial $R$, and hence that $P^{(r)}(a)=0$ for $1\\le r\\le m-1$. Define $P_n(x)=\\frac{d^n}{dx^n}(x^2-1)^n$. Prove that $P_n$ has degree $n$, that $\\int_{-1}^1x^mP_n(x)\\,dx=0$ for $0\\le m<n$, and evaluate the integral for $m=n$ using the supplied cosine integral.",
+    "summaryZh": "若 $P(x)=(x-a)^mQ(x)$，证明存在多项式 $R$ 使 $P'(x)=(x-a)^{m-1}R(x)$，并推出 $1\\le r\\le m-1$ 时 $P^{(r)}(a)=0$。定义 $P_n(x)=\\frac{d^n}{dx^n}(x^2-1)^n$。证明 $P_n$ 的次数为 $n$，当 $0\\le m<n$ 时 $\\int_{-1}^1x^mP_n(x)\\,dx=0$，并利用所给余弦积分求 $m=n$ 的值。",
+    "answer": "$P_n$ has degree $n$; the integrals vanish for $0\\le m<n$, and $\\int_{-1}^1x^nP_n(x)\\,dx=\\frac{2^{2n+1}(n!)^3}{(2n+1)!}$.",
+    "answerZh": "$P_n$ 的次数为 $n$；$0\\le m<n$ 时积分为 0，而 $\\int_{-1}^1x^nP_n(x)\\,dx=\\frac{2^{2n+1}(n!)^3}{(2n+1)!}$。",
+    "methods": [{
+      "title": "Repeated integration by parts",
+      "titleZh": "反复分部积分",
+      "topics": [{"en":"Polynomials","zh":"多项式"},{"en":"Integration by parts","zh":"分部积分"},{"en":"Orthogonal polynomials","zh":"正交多项式"}],
+      "steps": [
+        "Differentiate $(x-a)^mQ(x)$ once and factor $(x-a)^{m-1}$; iteration leaves a factor $x-a$ through derivative order $m-1$. For $F=(x^2-1)^n$, the leading term $x^{2n}$ becomes $((2n)!/n!)x^n$, so $P_n=F^{(n)}$ has degree exactly $n$.",
+        "Because $F=(x-1)^n(x+1)^n$, every $F^{(r)}(\\pm1)$ with $0\\le r<n$ is zero. Integrating $\\int x^mF^{(n)}$ by parts $m$ times removes every boundary term. If $m<n$, one final antiderivative is another endpoint-vanishing derivative of $F$, so the result is zero.",
+        "For $m=n$, the same calculation gives $n!\\int_{-1}^1(1-x^2)^n dx$. Set $x=\\sin t$, use evenness and the supplied value of $\\int_0^{\\pi/2}\\cos^{2n+1}t\\,dt$ to obtain the stated factorial expression."
+      ],
+      "stepsZh": [
+        "对 $(x-a)^mQ(x)$ 求导一次并提出 $(x-a)^{m-1}$；迭代后，在第 $m-1$ 阶导数以前始终保留因子 $x-a$。令 $F=(x^2-1)^n$，首项 $x^{2n}$ 经 $n$ 次求导变成 $((2n)!/n!)x^n$，故 $P_n=F^{(n)}$ 恰为 $n$ 次。",
+        "因为 $F=(x-1)^n(x+1)^n$，对 $0\\le r<n$ 有 $F^{(r)}(\\pm1)=0$。将 $\\int x^mF^{(n)}$ 分部积分 $m$ 次，所有边界项都消失。若 $m<n$，最后仍是 $F$ 的一个导数在端点之差，因此结果为 0。",
+        "若 $m=n$，同样计算得到 $n!\\int_{-1}^1(1-x^2)^n dx$。令 $x=\\sin t$，利用偶性及题中给出的 $\\int_0^{\\pi/2}\\cos^{2n+1}t\\,dt$ 即得答案。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q2"
+  },
+  "step-1994-p2-q3": {
+    "summary": "A non-constant real function satisfies $f(0)=1$ and $f(x-y)=f(x)f(y)-f(a-x)f(a+y)$ for all real $x,y$. Prove successively that $f$ is even, $f(2a)=-1$, $f(2a-x)=-f(x)$ and $f(4a+x)=f(x)$. Give examples for $a=\\pi/2$ and $a=-2$.",
+    "summaryZh": "非恒定实函数满足 $f(0)=1$，且对所有实数 $x,y$ 有 $f(x-y)=f(x)f(y)-f(a-x)f(a+y)$。依次证明 $f$ 为偶函数、$f(2a)=-1$、$f(2a-x)=-f(x)$ 以及 $f(4a+x)=f(x)$；并分别为 $a=\\pi/2$、$a=-2$ 给出例子。",
+    "answer": "The four identities hold; examples are $f(x)=\\cos x$ when $a=\\pi/2$, and $f(x)=\\cos(\\pi x/4)$ when $a=-2$.",
+    "answerZh": "四个恒等式均成立；$a=\\pi/2$ 时可取 $f(x)=\\cos x$，$a=-2$ 时可取 $f(x)=\\cos(\\pi x/4)$。",
+    "methods": [{
+      "title": "Strategic substitutions",
+      "titleZh": "选择特殊值代入",
+      "topics": [{"en":"Functional equations","zh":"函数方程"},{"en":"Periodicity","zh":"周期性"}],
+      "steps": [
+        "Put $x=y=0$ to obtain $f(a)=0$. Then $x=0$ gives $f(-y)=f(y)$; $x=y=a$ gives $f(2a)=-1$.",
+        "Putting $x=a$ gives $f(a-y)=-f(a+y)$; replace $y$ by $a-t$ to get $f(2a-t)=-f(t)$. Combining this with evenness yields $f(t+2a)=-f(t)$ and hence $f(t+4a)=f(t)$.",
+        "The proposed cosine examples follow from the cosine subtraction identity; direct substitution checks both required values of $a$."
+      ],
+      "stepsZh": [
+        "令 $x=y=0$ 得 $f(a)=0$。再令 $x=0$ 得 $f(-y)=f(y)$；令 $x=y=a$ 得 $f(2a)=-1$。",
+        "令 $x=a$ 得 $f(a-y)=-f(a+y)$；把 $y$ 换为 $a-t$，得到 $f(2a-t)=-f(t)$。结合偶性可得 $f(t+2a)=-f(t)$，再平移一次即 $f(t+4a)=f(t)$。",
+        "所给余弦例子由余弦差角公式直接验证，并分别满足对应的 $a$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q3"
+  },
+  "step-1994-p2-q4": {
+    "summary": "For $0<c\\le1$, evaluate $\\int_0^c\\sqrt{1-x^2}\\,dx$ geometrically. Hence find the area under $x^2/a^2+y^2/b^2=1$ between $x=0$ and $x=c$ $(0<c\\le a)$. Finally, for $0<b\\le a$, find the area common to $x^2/a^2+y^2/b^2\\le1$ and $x^2/b^2+y^2/a^2\\le1$.",
+    "summaryZh": "对 $0<c\\le1$，用几何方法求 $\\int_0^c\\sqrt{1-x^2}\\,dx$。由此求椭圆 $x^2/a^2+y^2/b^2=1$ 在 $x=0$ 与 $x=c$（$0<c\\le a$）之间下方的面积。最后在 $0<b\\le a$ 时，求两个椭圆域 $x^2/a^2+y^2/b^2\\le1$ 与 $x^2/b^2+y^2/a^2\\le1$ 的公共面积。",
+    "answer": "$\\frac12[c\\sqrt{1-c^2}+\\sin^{-1}c]$; $\\frac12[bc\\sqrt{1-c^2/a^2}+ab\\sin^{-1}(c/a)]$; common area $4ab\\sin^{-1}\\!\\left(\\frac b{\\sqrt{a^2+b^2}}\\right)$.",
+    "answerZh": "依次为 $\\frac12[c\\sqrt{1-c^2}+\\sin^{-1}c]$，$\\frac12[bc\\sqrt{1-c^2/a^2}+ab\\sin^{-1}(c/a)]$，以及 $4ab\\sin^{-1}\\!\\left(\\frac b{\\sqrt{a^2+b^2}}\\right)$。",
+    "methods": [{
+      "title": "Sector, triangle and symmetry",
+      "titleZh": "扇形、三角形与对称性",
+      "topics": [{"en":"Area under a curve","zh":"曲线下面积"},{"en":"Ellipses","zh":"椭圆"},{"en":"Symmetry","zh":"对称性"}],
+      "steps": [
+        "The unit-circle region is a right triangle of area $c\\sqrt{1-c^2}/2$ plus a sector of angle $\\sin^{-1}c$, giving the first formula. Stretching horizontally by $a$ and vertically by $b$ gives the second.",
+        "The two ellipses are reflections in $y=x$. By four-axis and diagonal symmetry, the intersection is eight copies of the first-quadrant part above $y=x$. Its diagonal endpoint is $x_0=ab/\\sqrt{a^2+b^2}$. Integrate the upper boundary of the first ellipse from $0$ to $x_0$ and subtract $x_0^2/2$; the algebraic terms cancel."
+      ],
+      "stepsZh": [
+        "单位圆中的区域由面积 $c\\sqrt{1-c^2}/2$ 的直角三角形和圆心角为 $\\sin^{-1}c$ 的扇形组成，得到第一式。再把横向伸缩 $a$ 倍、纵向伸缩 $b$ 倍，得到第二式。",
+        "两个椭圆关于 $y=x$ 对称；结合坐标轴及对角线对称，公共部分是第一象限中 $y=x$ 上方区域的 8 倍。对角交点为 $x_0=ab/\\sqrt{a^2+b^2}$。对第一个椭圆的上边界从 $0$ 积到 $x_0$，再减去 $x_0^2/2$；代数项恰好抵消。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q4"
+  },
+  "step-1994-p2-q5": {
+    "summary": "Determine, with reasons and for every real $c$, the numbers of real roots of (i) $(x-1)^4+(x+1)^4=c$, (ii) $(x-3)^4+(x-1)^4=c$, (iii) $|x-3|+|x-1|=c$, and (iv) $(x-3)^3+(x-1)^3=c$.",
+    "summaryZh": "对每个实数 $c$，判断并说明下列方程的实根个数：（i）$(x-1)^4+(x+1)^4=c$；（ii）$(x-3)^4+(x-1)^4=c$；（iii）$|x-3|+|x-1|=c$；（iv）$(x-3)^3+(x-1)^3=c$。",
+    "answer": "(i),(ii): 2,1,0 roots according as $c>2,c=2,c<2$. (iii): 2 roots for $c>2$, infinitely many for $c=2$, none for $c<2$. (iv): exactly one root for every $c$.",
+    "answerZh": "（i）（ii）：$c>2,c=2,c<2$ 时分别有 2、1、0 个根。（iii）：分别有 2 个、无穷多个、0 个根。（iv）：任意 $c$ 都恰有一个实根。",
+    "methods": [{
+      "title": "Shift to the centre and analyse monotonicity",
+      "titleZh": "平移到中心并分析单调性",
+      "topics": [{"en":"Root counting","zh":"根的个数"},{"en":"Monotonicity","zh":"单调性"},{"en":"Absolute values","zh":"绝对值"}],
+      "steps": [
+        "Expand (i) as $2x^4+12x^2+2$, an even function with unique minimum 2 and strict increase for $x>0$. In (ii) put $y=x-2$ to reduce to (i).",
+        "For (iii), the left side is $4-2x$ for $x<1$, equals 2 on $[1,3]$, and is $2x-4$ for $x>3$. For (iv), the same shift gives $2y^3+6y$, whose derivative $6y^2+6$ is everywhere positive and whose range is all real numbers."
+      ],
+      "stepsZh": [
+        "（i）展开为 $2x^4+12x^2+2$，它是偶函数，唯一最小值为 2，且在 $x>0$ 上严格递增。（ii）令 $y=x-2$，便化为（i）。",
+        "（iii）的左端在 $x<1$ 时为 $4-2x$，在 $[1,3]$ 上恒为 2，在 $x>3$ 时为 $2x-4$。（iv）同样平移后变成 $2y^3+6y$，其导数 $6y^2+6$ 始终为正，值域为全体实数。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q5"
+  },
+  "step-1994-p2-q6": {
+    "summary": "For $0<\\theta<\\pi$, prove by induction that $\\sum_{r=1}^n2^{-r}\\tan(\\theta/2^r)=2^{-n}\\cot(\\theta/2^n)-\\cot\\theta$, and hence evaluate the corresponding infinite series.",
+    "summaryZh": "设 $0<\\theta<\\pi$。用归纳法证明 $\\sum_{r=1}^n2^{-r}\\tan(\\theta/2^r)=2^{-n}\\cot(\\theta/2^n)-\\cot\\theta$，并由此求相应无穷级数。",
+    "answer": "$\\displaystyle \\sum_{r=1}^{\\infty}2^{-r}\\tan(\\theta/2^r)=\\theta^{-1}-\\cot\\theta$.",
+    "answerZh": "$\\displaystyle \\sum_{r=1}^{\\infty}2^{-r}\\tan(\\theta/2^r)=\\theta^{-1}-\\cot\\theta$。",
+    "methods": [{
+      "title": "A telescoping cotangent identity",
+      "titleZh": "利用余切恒等式裂项",
+      "topics": [{"en":"Trigonometric identities","zh":"三角恒等式"},{"en":"Induction","zh":"数学归纳法"},{"en":"Infinite series","zh":"无穷级数"}],
+      "steps": [
+        "From the double-angle formula, $\\tan x=\\cot x-2\\cot2x$. Apply this with $x=\\theta/2^r$ and multiply by $2^{-r}$; adjacent cotangent terms telescope, which also supplies the inductive step.",
+        "Put $\\phi_n=\\theta/2^n$. Then $2^{-n}\\cot(\\theta/2^n)=\\theta^{-1}\\phi_n\\cot\\phi_n\\to1/\\theta$, since $\\sin\\phi/\\phi\\to1$."
+      ],
+      "stepsZh": [
+        "由倍角公式得到 $\\tan x=\\cot x-2\\cot2x$。令 $x=\\theta/2^r$ 并乘 $2^{-r}$，相邻余切项裂项抵消；这也正好给出归纳步骤。",
+        "令 $\\phi_n=\\theta/2^n$。则 $2^{-n}\\cot(\\theta/2^n)=\\theta^{-1}\\phi_n\\cot\\phi_n\\to1/\\theta$，这里使用 $\\sin\\phi/\\phi\\to1$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q6"
+  },
+  "step-1994-p2-q7": {
+    "summary": "First identify the centre and radius of $ax^2+ay^2+2gx+2fy+c=0$ when $a>0$ and $f^2+g^2>ac$. Two unequal vertical flagpoles of heights $h_1,h_2$ stand a distance $d$ apart. Prove that the locus from which their tops have equal elevation is a circle and find its centre and radius. For three non-collinear poles of distinct heights, prove the stated linear relations among the three pairwise locus centres and hence their collinearity.",
+    "summaryZh": "先在 $a>0$、$f^2+g^2>ac$ 时求圆 $ax^2+ay^2+2gx+2fy+c=0$ 的圆心与半径。两根高度分别为 $h_1,h_2$ 的不等高竖直旗杆相距 $d$；证明看到两杆顶仰角相等的观察点轨迹为圆，并求圆心、半径。再对三根足点不共线、高度互异的旗杆，证明三条两两轨迹的圆心满足题给线性关系，并推出三圆心共线。",
+    "answer": "The first circle has centre $(-g/a,-f/a)$ and radius $\\sqrt{f^2+g^2-ac}/a$. For the two poles the centre lies on the line of the feet, at signed coordinate $-h_1^2d/(h_2^2-h_1^2)$ from the first foot, and the radius is $h_1h_2d/|h_2^2-h_1^2|$. The three pairwise centres are collinear.",
+    "answerZh": "第一圆的圆心为 $(-g/a,-f/a)$，半径为 $\\sqrt{f^2+g^2-ac}/a$。两旗杆情形的圆心在两足点连线上，从第一足点起的有向坐标为 $-h_1^2d/(h_2^2-h_1^2)$，半径为 $h_1h_2d/|h_2^2-h_1^2|$。三根旗杆产生的三个圆心共线。",
+    "methods": [{
+      "title": "Distance ratios and vector centres",
+      "titleZh": "距离比与圆心向量",
+      "topics": [{"en":"Circles of Apollonius","zh":"阿波罗尼斯圆"},{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Collinearity","zh":"共线"}],
+      "steps": [
+        "Complete squares for the first formula. Equal acute elevation angles mean $h_1/r_1=h_2/r_2$, so with feet at $(0,0),(d,0)$ the locus is $h_2^2(x^2+y^2)=h_1^2((x-d)^2+y^2)$. Complete squares again to obtain the centre and radius.",
+        "For feet with position vectors $p_i$, the centre $c_{ij}$ satisfies $(h_j^2-h_i^2)c_{ij}=h_j^2p_i-h_i^2p_j$. Substitute these three expressions into the stated weighted sum: every $p_i$ term cancels. The three weights also sum to zero and are non-zero, so the displacement vectors between the centres are parallel."
+      ],
+      "stepsZh": [
+        "第一式配方即可。相等的锐角仰角等价于 $h_1/r_1=h_2/r_2$；把足点放在 $(0,0),(d,0)$，轨迹方程为 $h_2^2(x^2+y^2)=h_1^2((x-d)^2+y^2)$。再次配方得到圆心和半径。",
+        "若足点位置向量为 $p_i$，则圆心 $c_{ij}$ 满足 $(h_j^2-h_i^2)c_{ij}=h_j^2p_i-h_i^2p_j$。代入题给加权和后，每个 $p_i$ 项两两抵消。三个权重之和又为 0 且均非零，故圆心之间的位移向量平行。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q7"
+  },
+  "step-1994-p2-q8": {
+    "summary": "A shop receives $X$ units every $T$ hours, sells continuously at rate $r$, charges $p+q$ per unit, pays $a+qX$ per delivery, storage cost $b$ per unit-hour and running cost $c$ per hour. Explain why $X\\le rT$, sketch stock against time, obtain profit per cycle, and, assuming $T\\ge p/b$, find the order size and condition for positive profit.",
+    "summaryZh": "一家商店每隔 $T$ 小时进货 $X$ 件，以恒定速率 $r$ 销售，每件售价 $p+q$；每次进货成本为 $a+qX$，库存成本为每件每小时 $b$，营业成本为每小时 $c$。说明为何应有 $X\\le rT$，画出库存随时间的图像，求每周期利润；在 $T\\ge p/b$ 下求最优订货量及盈利条件。",
+    "answer": "$P(X)=pX-bX^2/(2r)-a-cT$. The optimum is $X=pr/b$, and positive profit is possible iff $p^2>2b(a+cT)/r$.",
+    "answerZh": "$P(X)=pX-bX^2/(2r)-a-cT$。最优订货量为 $X=pr/b$，可盈利当且仅当 $p^2>2b(a+cT)/r$。",
+    "methods": [{
+      "title": "Area under the stock graph",
+      "titleZh": "利用库存图像下的面积",
+      "topics": [{"en":"Mathematical modelling","zh":"数学建模"},{"en":"Quadratic optimisation","zh":"二次函数最优化"}],
+      "steps": [
+        "Ordering more than $rT$ creates an ever-growing unsold surplus, so restrict to $X\\le rT$. Then $S(t)=X-rt$ until $t=X/r$, and $S(t)=0$ thereafter. Storage cost is $b\\int_0^T S(t)dt=bX^2/(2r)$.",
+        "Revenue minus purchase, storage and running costs gives the displayed $P(X)$. Completing the square places its vertex at $pr/b$; the assumption $T\\ge p/b$ makes this feasible. Substitution gives maximum $p^2r/(2b)-a-cT$, yielding the condition."
+      ],
+      "stepsZh": [
+        "若 $X>rT$，未售出的库存会逐周期无界累积，故只需考虑 $X\\le rT$。此时 $S(t)=X-rt$ 直到 $t=X/r$，之后为 0。库存成本是 $b\\int_0^T S(t)dt=bX^2/(2r)$。",
+        "用销售收入减去进货、库存和营业成本，得到所列 $P(X)$。配方知顶点在 $pr/b$；条件 $T\\ge p/b$ 保证它满足约束。代入后的最大利润为 $p^2r/(2b)-a-cT$，即得盈利条件。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q8"
+  },
+  "step-1994-p2-q9": {
+    "summary": "A light rod $AB$ of length $2a$ carries particles of masses $m$ and $2m$ at $A,B$. It is suspended from a point $O$ by two light strings $OA=OB=b$, where $b>a$, and rests with $B$ lower. Find the angle $\\theta$ made by the rod with the horizontal and the tension in $OA$.",
+    "summaryZh": "轻杆 $AB$ 长 $2a$，端点 $A,B$ 分别有质量 $m,2m$ 的质点。用两根轻绳 $OA=OB=b$（$b>a$）悬挂于 $O$，平衡时 $B$ 较低。求杆与水平线的夹角 $\\theta$ 以及绳 $OA$ 的张力。",
+    "answer": "$\\tan\\theta=\\frac{a}{3\\sqrt{b^2-a^2}}$ and $T_{OA}=\\frac{3mgb}{\\sqrt{9b^2-8a^2}}$.",
+    "answerZh": "$\\tan\\theta=\\frac{a}{3\\sqrt{b^2-a^2}}$，且 $T_{OA}=\\frac{3mgb}{\\sqrt{9b^2-8a^2}}$。",
+    "methods": [{
+      "title": "Centre of mass and moments",
+      "titleZh": "质心与力矩平衡",
+      "topics": [{"en":"Statics","zh":"静力学"},{"en":"Centre of mass","zh":"质心"},{"en":"Moments","zh":"力矩"}],
+      "steps": [
+        "Let $M$ be the midpoint of $AB$, so $OM=\\sqrt{b^2-a^2}$. The combined centre of mass $G$ lies $a/3$ from $M$ towards $B$. In equilibrium $G$ is vertically below $O$, hence $\\tan\\theta=MG/OM$.",
+        "Take moments about $B$. The moment arm of the tension in $OA$ is $2a\\sqrt{b^2-a^2}/b$, while the weight $mg$ has arm $2a\\cos\\theta$. Solve and eliminate $\\theta$ using the first result."
+      ],
+      "stepsZh": [
+        "设 $M$ 为 $AB$ 中点，则 $OM=\\sqrt{b^2-a^2}$。两质点的合质心 $G$ 位于 $M$ 朝 $B$ 方向 $a/3$ 处。平衡时 $G$ 必在 $O$ 的正下方，因此 $\\tan\\theta=MG/OM$。",
+        "对 $B$ 点取矩。绳 $OA$ 张力的力臂为 $2a\\sqrt{b^2-a^2}/b$，重力 $mg$ 的力臂为 $2a\\cos\\theta$。由力矩平衡解出张力，再用第一式消去 $\\theta$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q9"
+  },
+  "step-1994-p2-q10": {
+    "summary": "A truck moves at constant speed $u$ and tows a stationary trailer of mass $m$ by a light elastic rope of natural length $l$ and modulus $\\lambda$. Starting when the rope first becomes taut, determine when it next becomes slack, the trailer speed then, and the time until the trailer collides with the truck.",
+    "summaryZh": "卡车以恒速 $u$ 行驶，用自然长为 $l$、弹性模量为 $\\lambda$ 的轻弹性绳牵引初始静止、质量为 $m$ 的拖车。从绳刚拉紧时计时，求绳再次松弛的时刻、此时拖车速度，以及拖车撞上卡车的时间。",
+    "answer": "The rope goes slack at $\\pi\\sqrt{lm/\\lambda}$, when the trailer speed is $2u$; collision occurs at $\\pi\\sqrt{lm/\\lambda}+l/u$.",
+    "answerZh": "绳在 $\\pi\\sqrt{lm/\\lambda}$ 后松弛，此时拖车速度为 $2u$；相撞时刻为 $\\pi\\sqrt{lm/\\lambda}+l/u$。",
+    "methods": [{
+      "title": "Simple harmonic motion of the extension",
+      "titleZh": "绳伸长量的简谐运动",
+      "topics": [{"en":"Simple harmonic motion","zh":"简谐运动"},{"en":"Elastic strings","zh":"弹性绳"}],
+      "steps": [
+        "If $y$ is the trailer displacement, the extension is $x=ut-y$. While taut, $my''=\\lambda x/l$, hence $x''=-(\\lambda/(ml))x$. With $x(0)=0,x'(0)=u$, $x=(u/\\omega)\\sin\\omega t$, $\\omega^2=\\lambda/(ml)$.",
+        "The first return to zero extension is $t=\\pi/\\omega$ and $y'=u-x'=2u$. The rope then stays slack; the trailer closes the remaining distance $l$ at relative speed $u$, taking a further $l/u$."
+      ],
+      "stepsZh": [
+        "若拖车位移为 $y$，绳伸长量为 $x=ut-y$。绳拉紧时 $my''=\\lambda x/l$，故 $x''=-(\\lambda/(ml))x$。由 $x(0)=0,x'(0)=u$ 得 $x=(u/\\omega)\\sin\\omega t$，其中 $\\omega^2=\\lambda/(ml)$。",
+        "伸长量首次回到 0 的时刻为 $t=\\pi/\\omega$，且 $y'=u-x'=2u$。此后绳保持松弛；拖车以相对速度 $u$ 追上仍相距 $l$ 的卡车，还需 $l/u$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q10"
+  },
+  "step-1994-p2-q11": {
+    "summary": "A shell is projected vertically upwards at speed $v$ and explodes at its highest point into two equal fragments that move with equal and opposite velocities of magnitude $u$. Find the greatest possible distance between their landing points, distinguishing the cases $u\\le v$ and $u\\ge v$.",
+    "summaryZh": "炮弹以速度 $v$ 竖直上抛，在最高点爆炸成质量相等的两块；两碎片爆炸后的速度大小均为 $u$、方向相反。求两落地点间的最大可能距离，并区分 $u\\le v$ 与 $u\\ge v$。",
+    "answer": "$D_{\\max}=2uv/g$ if $u\\le v$, and $D_{\\max}=(u^2+v^2)/g$ if $u\\ge v$.",
+    "answerZh": "$u\\le v$ 时 $D_{\\max}=2uv/g$；$u\\ge v$ 时 $D_{\\max}=(u^2+v^2)/g$。",
+    "methods": [{
+      "title": "Optimise over the explosion angle",
+      "titleZh": "关于爆炸方向求最值",
+      "topics": [{"en":"Projectile motion","zh":"抛体运动"},{"en":"Quadratic optimisation","zh":"二次函数最优化"}],
+      "steps": [
+        "The explosion height is $v^2/(2g)$. If one fragment leaves at angle $\\theta$ above the horizontal, the positive landing times are $(u\\sin\\theta\\pm\\sqrt{u^2\\sin^2\\theta+v^2})/g$ with the signs arranged for the two fragments. Their separation is $D=2u\\cos\\theta\\sqrt{u^2\\sin^2\\theta+v^2}/g$.",
+        "Set $x=\\sin^2\\theta$. Apart from a positive constant, $D^2=(1-x)(v^2+u^2x)$, a concave quadratic. Its vertex is $x=(u^2-v^2)/(2u^2)$. It is feasible exactly when $u\\ge v$; otherwise the maximum is the endpoint $x=0$."
+      ],
+      "stepsZh": [
+        "爆炸高度为 $v^2/(2g)$。若一块碎片以与水平线夹角 $\\theta$ 向上飞出，则两碎片的正落地时间由竖直运动二次方程求得；相加后落点间距为 $D=2u\\cos\\theta\\sqrt{u^2\\sin^2\\theta+v^2}/g$。",
+        "令 $x=\\sin^2\\theta$。除去正常数，$D^2=(1-x)(v^2+u^2x)$，是开口向下的二次函数，顶点在 $x=(u^2-v^2)/(2u^2)$。该点恰在 $u\\ge v$ 时可行；否则最大值在端点 $x=0$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q11"
+  },
+  "step-1994-p2-q12": {
+    "summary": "In a dice game, the first sum wins immediately on 7 or 11, loses immediately on 2, 3 or 12, and otherwise establishes a point in $\\{4,5,6,8,9,10\\}$. Later throws win on the point, lose on 7 and otherwise continue. Find the probability of a first-throw win, then the probability of winning on throw $n$ conditional on playing more than once; finally condition on playing more than $m>1$ throws.",
+    "summaryZh": "在一项掷两枚公平骰子的游戏中，首掷和为 7 或 11 立即获胜，为 2、3 或 12 立即失败；否则把 $\\{4,5,6,8,9,10\\}$ 中的和值定为 point。以后掷出 point 获胜，掷出 7 失败，其余继续。求首掷获胜概率；再求已知游戏超过一掷时在第 $n$ 掷获胜的概率；最后改为已知游戏超过 $m>1$ 掷。",
+    "answer": "$P(W_1)=2/9$. Given more than one throw, $P(W_n)=\\frac1{48}(\\frac34)^{n-2}+\\frac1{27}(\\frac{13}{18})^{n-2}+\\frac{25}{432}(\\frac{25}{36})^{n-2}$ for $n\\ge2$. Given more than $m$ throws, the probability is 0 for $n\\le m$ and the same numerator divided by $\\frac14(\\frac34)^{m-1}+\\frac13(\\frac{13}{18})^{m-1}+\\frac5{12}(\\frac{25}{36})^{m-1}$ for $n>m$.",
+    "answerZh": "$P(W_1)=2/9$。已知超过一掷时，对 $n\\ge2$，$P(W_n)=\\frac1{48}(\\frac34)^{n-2}+\\frac1{27}(\\frac{13}{18})^{n-2}+\\frac{25}{432}(\\frac{25}{36})^{n-2}$。已知超过 $m$ 掷时，$n\\le m$ 的概率为 0；$n>m$ 时用前式分子除以 $\\frac14(\\frac34)^{m-1}+\\frac13(\\frac{13}{18})^{m-1}+\\frac5{12}(\\frac{25}{36})^{m-1}$。",
+    "methods": [{
+      "title": "Condition on the established point",
+      "titleZh": "按建立的 point 分类",
+      "topics": [{"en":"Conditional probability","zh":"条件概率"},{"en":"Geometric distributions","zh":"几何分布"},{"en":"Law of total probability","zh":"全概率公式"}],
+      "steps": [
+        "The sum probabilities are $(1,2,3,4,5,6,5,4,3,2,1)/36$. Thus the first-throw win chance is $(6+2)/36=2/9$, and the chance of continuing is $2/3$.",
+        "For a point with probability $p=k/36$, $k=3,4,5$, a later throw wins with probability $p$, loses with $1/6$, and continues with $(30-k)/36$. Multiply the probability of establishing that point by the required continuation powers and the final success, pair symmetric points, then divide by the relevant conditioning probability."
+      ],
+      "stepsZh": [
+        "和值 $2$ 到 $12$ 的概率依次为 $(1,2,3,4,5,6,5,4,3,2,1)/36$。因此首掷获胜概率为 $(6+2)/36=2/9$，继续游戏的概率为 $2/3$。",
+        "若 point 的单次概率为 $p=k/36$，其中 $k=3,4,5$，则以后每掷获胜概率为 $p$、失败概率为 $1/6$、继续概率为 $(30-k)/36$。将建立该 point、连续继续以及最终获胜的概率相乘，对称 point 成对合并，再除以相应条件事件概率。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q12"
+  },
+  "step-1994-p2-q13": {
+    "summary": "Packets independently contain one of $n$ equally likely cards. If $r$ distinct cards are already held, find the expected number of further packets needed for a new card. Prove the supplied integral bounds for harmonic sums, then find and bound the expected number of packets required to collect the complete set.",
+    "summaryZh": "每包独立地含有 $n$ 种等可能卡片之一。若已收集 $r$ 种不同卡片，求再得到一种新卡片所需包数的期望。证明题给调和和的积分界，再求收齐全套卡片所需包数的期望并给出上下界。",
+    "answer": "$E(X_r)=n/(n-r)$ and $E(T)=nH_n=n\\sum_{k=1}^n1/k$, with $n\\ln n+1\\le E(T)\\le n\\ln n+n$.",
+    "answerZh": "$E(X_r)=n/(n-r)$，且 $E(T)=nH_n=n\\sum_{k=1}^n1/k$；上下界为 $n\\ln n+1\\le E(T)\\le n\\ln n+n$。",
+    "methods": [{
+      "title": "Decompose the coupon-collector waiting time",
+      "titleZh": "分解集齐卡片的等待时间",
+      "topics": [{"en":"Expected value","zh":"期望值"},{"en":"Geometric distribution","zh":"几何分布"},{"en":"Integral comparison","zh":"积分比较"}],
+      "steps": [
+        "With $r$ types held, a packet is new with probability $(n-r)/n$. The waiting time is geometric, so its mean is $n/(n-r)$. Summing these stage means from $r=0$ to $n-1$ gives $nH_n$ by linearity of expectation; independence between stages is unnecessary.",
+        "Because $1/x$ decreases, $1/(r+1)\\le\\int_r^{r+1}dx/x\\le1/r$. Sum for $r=1,\\ldots,n-1$ and add the missing endpoint terms to obtain the two bounds."
+      ],
+      "stepsZh": [
+        "已有 $r$ 种时，一包出现新品种的概率为 $(n-r)/n$。等待时间服从几何分布，均值为 $n/(n-r)$。由期望的线性性，把 $r=0$ 到 $n-1$ 各阶段均值相加得到 $nH_n$；阶段间无需独立。",
+        "因 $1/x$ 递减，$1/(r+1)\\le\\int_r^{r+1}dx/x\\le1/r$。对 $r=1,\\ldots,n-1$ 求和，再补上两端缺少的项，即得上下界。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q13"
+  },
+  "step-1994-p2-q14": {
+    "summary": "A dart lands uniformly on a circular board of radius $a$, and $R$ is its distance from the centre. Find the distribution, mean and variance of $R$. A player pays £12 plus £1 for each of $m$ independent throws and receives £12 back if at least one dart lands within $a/\\sqrt{10}$ of the centre. Find the integer $m\\ge1$ that minimises expected loss.",
+    "summaryZh": "飞镖均匀落在半径为 $a$ 的圆靶上，$R$ 为落点到圆心的距离。求 $R$ 的分布、均值与方差。玩家先付 £12，再为 $m$ 次独立投掷每次付 £1；若至少一镖落在距圆心 $a/\\sqrt{10}$ 内，则退回 £12。求使期望损失最小的整数 $m\\ge1$。",
+    "answer": "$F_R(r)=r^2/a^2$ and $f_R(r)=2r/a^2$ for $0\\le r\\le a$; $E(R)=2a/3$, $\\operatorname{Var}(R)=a^2/18$. The unique optimum is $m=2$, with expected loss £11.72.",
+    "answerZh": "$0\\le r\\le a$ 时 $F_R(r)=r^2/a^2$、$f_R(r)=2r/a^2$；$E(R)=2a/3$，$\\operatorname{Var}(R)=a^2/18$。唯一最优选择为 $m=2$，期望损失 £11.72。",
+    "methods": [{
+      "title": "Area probability and finite differences",
+      "titleZh": "面积概率与有限差分",
+      "topics": [{"en":"Geometric probability","zh":"几何概率"},{"en":"Continuous distributions","zh":"连续分布"},{"en":"Discrete optimisation","zh":"离散最优化"}],
+      "steps": [
+        "$P(R\\le r)$ is the ratio of disc areas, $r^2/a^2$. Differentiate for the density, then integrate $r f(r)$ and $r^2f(r)$ to obtain the mean and variance.",
+        "A single throw hits the prize disc with probability $1/10$, so the expected loss is $L(m)=m+12(0.9)^m$. The difference $L(m+1)-L(m)=1-1.2(0.9)^m$ is negative at $m=1$ and positive for every $m\\ge2$, proving the unique minimum at 2."
+      ],
+      "stepsZh": [
+        "$P(R\\le r)$ 等于两个圆盘的面积比 $r^2/a^2$。求导得到密度，再分别积分 $r f(r)$ 与 $r^2f(r)$，得到均值和方差。",
+        "单次投中返奖圆盘的概率为 $1/10$，故期望损失 $L(m)=m+12(0.9)^m$。相邻差为 $L(m+1)-L(m)=1-1.2(0.9)^m$；它在 $m=1$ 时为负，对所有 $m\\ge2$ 为正，所以唯一最小值在 $m=2$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s2-q14"
+  }
+}
