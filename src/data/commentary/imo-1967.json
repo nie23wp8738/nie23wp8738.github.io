@@ -1,0 +1,185 @@
+{
+  "imo-1967-q1": {
+    "summary": "Let $ABCD$ be a parallelogram with $AB=a$, $AD=1$, and $\\angle BAD=\\alpha$. Assume $\\triangle ABD$ is acute. Prove that the four closed unit disks centred at $A,B,C,D$ cover the parallelogram if and only if $a\\le\\cos\\alpha+\\sqrt3\\sin\\alpha$.",
+    "summaryZh": "设平行四边形 $ABCD$ 满足 $AB=a$、$AD=1$、$\\angle BAD=\\alpha$，且 $\\triangle ABD$ 为锐角三角形。证明：以 $A,B,C,D$ 为圆心的四个闭单位圆盘覆盖该平行四边形，当且仅当 $a\\le\\cos\\alpha+\\sqrt3\\sin\\alpha$。",
+    "answer": "The four disks cover the parallelogram exactly when $a\\le\\cos\\alpha+\\sqrt3\\sin\\alpha$.",
+    "answerZh": "四个圆盘覆盖平行四边形的充要条件为 $a\\le\\cos\\alpha+\\sqrt3\\sin\\alpha$。",
+    "methods": [
+      {
+        "title": "Reduce the covering question to the circumradius",
+        "titleZh": "把覆盖问题化为外接圆半径条件",
+        "topics": [
+          {"en": "Circle geometry", "zh": "圆几何"},
+          {"en": "Barycentric coordinates", "zh": "重心坐标"},
+          {"en": "Cosine and sine rules", "zh": "余弦定理与正弦定理"}
+        ],
+        "steps": [
+          "Let $O$ and $R$ be the circumcentre and circumradius of $\\triangle ABD$. Any triangle is covered by the three closed disks of radius equal to its circumradius centred at its vertices. Indeed, if $P=\\sum_{i=1}^3\\lambda_iX_i$ with $\\lambda_i\\ge0$ and $\\sum\\lambda_i=1$, then $\\sum\\lambda_iPX_i^2=R^2-PO^2\\le R^2$, so at least one $PX_i\\le R$.",
+          "If $R\\le1$, the disks at $A,B,D$ cover $\\triangle ABD$. The congruent triangle $BCD$ is covered by the disks at $B,C,D$, so the whole parallelogram is covered.",
+          "Conversely, suppose $R>1$. Since $\\triangle ABD$ is acute, $O$ lies inside it. Put $A=\\mathbf0$, $B=\\mathbf b$, $D=\\mathbf d$, and $O=\\mathbf o$. From $OA=OB=OD=R$ we get $2\\mathbf o\\cdot\\mathbf b=|\\mathbf b|^2$ and $2\\mathbf o\\cdot\\mathbf d=|\\mathbf d|^2$. Hence $OC^2=|\\mathbf o-\\mathbf b-\\mathbf d|^2=R^2+2\\mathbf b\\cdot\\mathbf d=R^2+2a\\cos\\alpha>R^2$. Thus $O$ is farther than $1$ from all four vertices, so coverage fails. Therefore coverage is equivalent to $R\\le1$.",
+          "The cosine and extended sine rules give $BD^2=a^2+1-2a\\cos\\alpha$ and $R=BD/(2\\sin\\alpha)$. Thus $R\\le1$ is equivalent to $(a-\\cos\\alpha)^2\\le3\\sin^2\\alpha$. The angle at $B$ is acute, so $a-\\cos\\alpha>0$. Taking square roots yields $a\\le\\cos\\alpha+\\sqrt3\\sin\\alpha$, including equality because the disks are closed."
+        ],
+        "stepsZh": [
+          "记 $\\triangle ABD$ 的外心和外接圆半径为 $O,R$。任意三角形都被以三个顶点为圆心、外接圆半径为半径的三个闭圆盘覆盖。事实上，若 $P=\\sum_{i=1}^3\\lambda_iX_i$，其中 $\\lambda_i\\ge0$、$\\sum\\lambda_i=1$，则 $\\sum\\lambda_iPX_i^2=R^2-PO^2\\le R^2$，故至少有一个 $PX_i\\le R$。",
+          "若 $R\\le1$，则 $A,B,D$ 处的单位圆盘覆盖 $\\triangle ABD$；全等的 $\\triangle BCD$ 被 $B,C,D$ 处的圆盘覆盖，因而整个平行四边形被覆盖。",
+          "反之设 $R>1$。由于 $\\triangle ABD$ 为锐角三角形，$O$ 位于其内部。令 $A=\\mathbf0$、$B=\\mathbf b$、$D=\\mathbf d$、$O=\\mathbf o$。由 $OA=OB=OD=R$ 得 $2\\mathbf o\\cdot\\mathbf b=|\\mathbf b|^2$、$2\\mathbf o\\cdot\\mathbf d=|\\mathbf d|^2$，从而 $OC^2=|\\mathbf o-\\mathbf b-\\mathbf d|^2=R^2+2\\mathbf b\\cdot\\mathbf d=R^2+2a\\cos\\alpha>R^2$。所以 $O$ 到四个顶点的距离都大于 $1$，覆盖失败。故覆盖等价于 $R\\le1$。",
+          "由余弦定理与正弦定理，$BD^2=a^2+1-2a\\cos\\alpha$ 且 $R=BD/(2\\sin\\alpha)$。因此 $R\\le1$ 等价于 $(a-\\cos\\alpha)^2\\le3\\sin^2\\alpha$。又因 $B$ 角为锐角，$a-\\cos\\alpha>0$，开平方即得 $a\\le\\cos\\alpha+\\sqrt3\\sin\\alpha$。圆盘为闭集，故包含等号情形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1"
+  },
+  "imo-1967-q2": {
+    "summary": "Prove that if exactly one edge of a tetrahedron is longer than $1$, then its volume is at most $1/8$.",
+    "summaryZh": "证明：若一个四面体恰有一条棱长大于 $1$，则其体积不超过 $1/8$。",
+    "answer": "The volume is at most $1/8$, and the bound is attainable.",
+    "answerZh": "体积至多为 $1/8$，且该上界可以达到。",
+    "methods": [
+      {
+        "title": "Bound two heights from a common midpoint",
+        "titleZh": "从公共中点控制两个高",
+        "topics": [
+          {"en": "Tetrahedron volume", "zh": "四面体体积"},
+          {"en": "Median identity", "zh": "中线公式"},
+          {"en": "Sharp inequalities", "zh": "精确不等式"}
+        ],
+        "steps": [
+          "Label the vertices so that $AB>1$; the other five edges are at most $1$. Put $CD=c$ with $0<c\\le1$, and let $M$ be the midpoint of $CD$. The median identity gives $AM^2=(AC^2+AD^2)/2-c^2/4\\le1-c^2/4$, and similarly $BM^2\\le1-c^2/4$.",
+          "Let $h$ be the distance from $A$ to line $CD$, and let $H$ be the distance from $B$ to plane $ACD$. Since $M$ lies on that line and plane, $h\\le AM$ and $H\\le BM$. Therefore $V=\\frac13(\\frac12ch)H\\le\\frac c6(1-c^2/4)=(4c-c^3)/24$.",
+          "For $0<c\\le1$, $3-(4c-c^3)=(1-c)(3-c-c^2)\\ge0$. Hence $V\\le3/24=1/8$.",
+          "The bound is sharp: take $C=(-1/2,0,0)$, $D=(1/2,0,0)$, $A=(0,\\sqrt3/2,0)$, and $B=(0,0,\\sqrt3/2)$. Then $AB=\\sqrt{3/2}>1$, every other edge is $1$, and the volume is $\\frac13(\\sqrt3/4)(\\sqrt3/2)=1/8$."
+        ],
+        "stepsZh": [
+          "给顶点编号使 $AB>1$，其余五条棱都不超过 $1$。令 $CD=c$，其中 $0<c\\le1$，并令 $M$ 为 $CD$ 中点。由中线公式，$AM^2=(AC^2+AD^2)/2-c^2/4\\le1-c^2/4$；同理 $BM^2\\le1-c^2/4$。",
+          "设 $h$ 为 $A$ 到直线 $CD$ 的距离，$H$ 为 $B$ 到平面 $ACD$ 的距离。因为 $M$ 同时位于该直线与该平面上，$h\\le AM$、$H\\le BM$。所以 $V=\\frac13(\\frac12ch)H\\le\\frac c6(1-c^2/4)=(4c-c^3)/24$。",
+          "当 $0<c\\le1$ 时，$3-(4c-c^3)=(1-c)(3-c-c^2)\\ge0$，故 $V\\le3/24=1/8$。",
+          "此界可达：取 $C=(-1/2,0,0)$、$D=(1/2,0,0)$、$A=(0,\\sqrt3/2,0)$、$B=(0,0,\\sqrt3/2)$。此时 $AB=\\sqrt{3/2}>1$，其余各棱均为 $1$，体积为 $\\frac13(\\sqrt3/4)(\\sqrt3/2)=1/8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1"
+  },
+  "imo-1967-q3": {
+    "summary": "Let $k,m,n$ be natural numbers such that $p=m+k+1$ is a prime greater than $n+1$, and put $c_s=s(s+1)$. Prove that $\\prod_{i=1}^n(c_{m+i}-c_k)$ is divisible by $c_1c_2\\cdots c_n$.",
+    "summaryZh": "设 $k,m,n$ 为自然数，$p=m+k+1$ 是大于 $n+1$ 的素数，并令 $c_s=s(s+1)$。证明 $\\prod_{i=1}^n(c_{m+i}-c_k)$ 能被 $c_1c_2\\cdots c_n$ 整除。",
+    "answer": "$c_1c_2\\cdots c_n=n!(n+1)!$ divides the stated product.",
+    "answerZh": "$c_1c_2\\cdots c_n=n!(n+1)!$ 整除题设乘积。",
+    "methods": [
+      {
+        "title": "Factor into two blocks of consecutive integers",
+        "titleZh": "分解为两段连续整数乘积",
+        "topics": [
+          {"en": "Divisibility", "zh": "整除"},
+          {"en": "Factorials", "zh": "阶乘"},
+          {"en": "Coprimality", "zh": "互素性"}
+        ],
+        "steps": [
+          "For $1\\le i\\le n$, factor $c_{m+i}-c_k=(m+i)(m+i+1)-k(k+1)=(m-k+i)(p+i)$. Thus the required product is $AB$, where $A=\\prod_{i=1}^n(m-k+i)$ and $B=\\prod_{i=1}^n(p+i)$.",
+          "The product of any $r$ consecutive integers is divisible by $r!$; this remains true if a factor is zero or the integers are negative. Hence $n!\\mid A$.",
+          "Now $pB=p(p+1)\\cdots(p+n)$ is a product of $n+1$ consecutive integers, so $(n+1)!\\mid pB$. Since $p>n+1$ is prime, $\\gcd(p,(n+1)!)=1$, and therefore $(n+1)!\\mid B$.",
+          "Multiplying gives $n!(n+1)!\\mid AB$. Finally $c_1c_2\\cdots c_n=\\prod_{i=1}^ni(i+1)=n!(n+1)!$, proving the claim. If $n=0$ is allowed, both products are empty and equal to $1$."
+        ],
+        "stepsZh": [
+          "对 $1\\le i\\le n$，分解得 $c_{m+i}-c_k=(m+i)(m+i+1)-k(k+1)=(m-k+i)(p+i)$。所以题设乘积为 $AB$，其中 $A=\\prod_{i=1}^n(m-k+i)$、$B=\\prod_{i=1}^n(p+i)$。",
+          "任意 $r$ 个连续整数的乘积都能被 $r!$ 整除；含零因子或全为负数时结论仍成立。因此 $n!\\mid A$。",
+          "$pB=p(p+1)\\cdots(p+n)$ 是 $n+1$ 个连续整数之积，故 $(n+1)!\\mid pB$。又因素数 $p>n+1$，有 $\\gcd(p,(n+1)!)=1$，于是 $(n+1)!\\mid B$。",
+          "相乘得到 $n!(n+1)!\\mid AB$。而 $c_1c_2\\cdots c_n=\\prod_{i=1}^ni(i+1)=n!(n+1)!$，命题得证。若自然数包含 $0$，则 $n=0$ 时两边均为空积 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1"
+  },
+  "imo-1967-q4": {
+    "summary": "Let $A_0B_0C_0$ and $A_1B_1C_1$ be acute triangles. Among all triangles $ABC$ similar to $A_1B_1C_1$ (with corresponding vertices) and circumscribed about $A_0B_0C_0$, where $A_0\\in BC$, $B_0\\in CA$, and $C_0\\in AB$, determine and construct the triangle of maximum area.",
+    "summaryZh": "设 $A_0B_0C_0$ 与 $A_1B_1C_1$ 都是锐角三角形。在所有与 $A_1B_1C_1$ 对应相似、且外切于 $A_0B_0C_0$ 的三角形 $ABC$ 中（$A_0\\in BC$、$B_0\\in CA$、$C_0\\in AB$），确定并作出面积最大的三角形。",
+    "answer": "Let $\\alpha=\\angle A_1$, $\\beta=\\angle B_1$, and $\\gamma=\\angle C_1$. Construct the unique interior point $P$ with $\\angle B_0PC_0=\\pi-\\alpha$, $\\angle C_0PA_0=\\pi-\\beta$, and $\\angle A_0PB_0=\\pi-\\gamma$. The maximizing sides are the lines through $A_0,B_0,C_0$ perpendicular to $PA_0,PB_0,PC_0$, respectively.",
+    "answerZh": "令 $\\alpha=\\angle A_1$、$\\beta=\\angle B_1$、$\\gamma=\\angle C_1$。作三角形内部唯一一点 $P$，使 $\\angle B_0PC_0=\\pi-\\alpha$、$\\angle C_0PA_0=\\pi-\\beta$、$\\angle A_0PB_0=\\pi-\\gamma$。分别过 $A_0,B_0,C_0$ 作 $PA_0,PB_0,PC_0$ 的垂线，三条直线围成所求最大三角形。",
+    "methods": [
+      {
+        "title": "Construct the common angle point and prove three sharp side bounds",
+        "titleZh": "作公共角点并证明三条精确边界",
+        "topics": [
+          {"en": "Geometric construction", "zh": "几何作图"},
+          {"en": "Radical axis", "zh": "根轴"},
+          {"en": "Extremal geometry", "zh": "极值几何"},
+          {"en": "Similar triangles", "zh": "相似三角形"}
+        ],
+        "steps": [
+          "Write $\\alpha=\\angle A_1$, $\\beta=\\angle B_1$, $\\gamma=\\angle C_1$. On the side of $B_0C_0$ opposite $A_0$, construct $O_A$ on its perpendicular bisector at distance $(B_0C_0)\\cot\\alpha/2$ from the line, and draw $\\omega_A$ through $B_0,C_0$. Construct $\\omega_B,\\omega_C$ cyclically. A point $X$ on the arc of $\\omega_A$ on $A_0$'s side satisfies $\\angle B_0XC_0=\\pi-\\alpha$.",
+          "The circles $\\omega_A,\\omega_B$ meet at $C_0$ and at a second point $P$. They are not tangent because the angle between their radii through $\\angle B_0C_0A_0$ equals $\\angle B_0C_0A_0+\\gamma\\in(0,\\pi)$. The part of the $\\omega_A$ disk on $A_0$'s side is contained in the disk with diameter $B_0C_0$; since $\\angle B_0A_0C_0$ is acute, $A_0$ is outside both disks. Similarly $B_0$ is outside $\\omega_B$. Hence the power difference changes sign on $A_0B_0$, and the radical axis $C_0P$ crosses that segment at $D$. If $P$ lies on the ray opposite $D$, the circle angles force $\\angle B_0C_0A_0>\\alpha+\\beta=\\pi-\\gamma>\\pi/2$, impossible; if $P$ lies on ray $C_0D$ at or beyond $D$, they force $(\\pi-\\alpha)+(\\pi-\\beta)\\le\\pi$, also impossible. Thus $P$ is inside $A_0B_0C_0$, with $\\angle B_0PC_0=\\pi-\\alpha$, $\\angle C_0PA_0=\\pi-\\beta$, and $\\angle A_0PB_0=\\pi-\\gamma$. Consequently $P\\in\\omega_C$, and the construction is unique.",
+          "Draw $\\ell_a$ through $A_0$ perpendicular to $PA_0$, and define $\\ell_b,\\ell_c$ cyclically. Their inward half-planes contain $P$ and have a bounded triangular intersection. If $A^*=\\ell_b\\cap\\ell_c$, then $\\angle A^*=\\pi-\\angle B_0PC_0=\\alpha$; cyclically the other angles are $\\beta,\\gamma$. The prescribed contacts lie inside their respective sides, so $A^*B^*C^*$ is admissible.",
+          "For any admissible $ABC$, set $B=(0,0)$, $C=(a,0)$ and write $A_0=(x,0)$, $C_0=(t\\cos\\beta,t\\sin\\beta)$, $B_0=(a-s\\cos\\gamma,s\\sin\\gamma)$. If $J(u,v)=(-v,u)$, the constructed circle centres satisfy $O_B=(A_0+C_0)/2+(\\cot\\beta/2)J(C_0-A_0)$ and $O_C=(A_0+B_0)/2-(\\cot\\gamma/2)J(B_0-A_0)$. Their horizontal coordinates are $x/2$ and $(a+x)/2$, so $BC=a\\le2O_BO_C$. In the constructed triangle, $O_BO_C\\perp PA_0$ and $\\ell_a\\perp PA_0$, hence equality holds. Since all admissible triangles are similar and area is proportional to $BC^2$, this triangle uniquely maximizes the area.",
+          "If $a_0=B_0C_0$, $b_0=C_0A_0$, $c_0=A_0B_0$, and $K_0=[A_0B_0C_0]$, expanding the preceding centre formula gives $4O_BO_C^2=(1-rs)a_0^2+(r+s)(rb_0^2+sc_0^2)+4K_0(r+s)$, where $r=\\cot\\beta$, $s=\\cot\\gamma$. Using $1-rs=(r+s)\\cot\\alpha$ and $r+s=\\sin\\alpha/(\\sin\\beta\\sin\\gamma)$ yields the maximum area $2K_0+\\frac12(a_0^2\\cot\\alpha+b_0^2\\cot\\beta+c_0^2\\cot\\gamma)$."
+        ],
+        "stepsZh": [
+          "记 $\\alpha=\\angle A_1$、$\\beta=\\angle B_1$、$\\gamma=\\angle C_1$。在 $B_0C_0$ 的垂直平分线上、$A_0$ 的另一侧作点 $O_A$，使其到直线 $B_0C_0$ 的距离为 $(B_0C_0)\\cot\\alpha/2$，再作经过 $B_0,C_0$ 的圆 $\\omega_A$。循环作出 $\\omega_B,\\omega_C$。$\\omega_A$ 上位于 $A_0$ 一侧的弧上任一点 $X$ 满足 $\\angle B_0XC_0=\\pi-\\alpha$。",
+          "$\\omega_A,\\omega_B$ 除公共点 $C_0$ 外还有交点 $P$。两圆在 $C_0$ 处相应半径的夹角为 $\\angle B_0C_0A_0+\\gamma\\in(0,\\pi)$，故不相切。$\\omega_A$ 圆盘在 $A_0$ 一侧的部分包含在以 $B_0C_0$ 为直径的圆盘内；因 $\\angle B_0A_0C_0$ 为锐角，$A_0$ 在这两个圆盘外。同理 $B_0$ 在 $\\omega_B$ 外。故两圆幂之差在 $A_0B_0$ 两端异号，根轴 $C_0P$ 与该边交于 $D$。若 $P$ 位于背离 $D$ 的射线上，圆周角关系推出 $\\angle B_0C_0A_0>\\alpha+\\beta=\\pi-\\gamma>\\pi/2$，矛盾；若 $P$ 位于射线 $C_0D$ 上且不在 $C_0D$ 内部，则推出 $(\\pi-\\alpha)+(\\pi-\\beta)\\le\\pi$，同样矛盾。因此 $P$ 在三角形内部，并满足 $\\angle B_0PC_0=\\pi-\\alpha$、$\\angle C_0PA_0=\\pi-\\beta$、$\\angle A_0PB_0=\\pi-\\gamma$。于是 $P\\in\\omega_C$，且该构造唯一。",
+          "过 $A_0$ 作 $PA_0$ 的垂线 $\\ell_a$，循环定义 $\\ell_b,\\ell_c$。包含 $P$ 的三个半平面交成有界三角形。若 $A^*=\\ell_b\\cap\\ell_c$，则 $\\angle A^*=\\pi-\\angle B_0PC_0=\\alpha$；另外两角同理为 $\\beta,\\gamma$。三个给定接触点都位于相应边的内部，所以 $A^*B^*C^*$ 合乎题意。",
+          "任取一个合乎题意的 $ABC$，令 $B=(0,0)$、$C=(a,0)$，并写成 $A_0=(x,0)$、$C_0=(t\\cos\\beta,t\\sin\\beta)$、$B_0=(a-s\\cos\\gamma,s\\sin\\gamma)$。令 $J(u,v)=(-v,u)$，则圆心得 $O_B=(A_0+C_0)/2+(\\cot\\beta/2)J(C_0-A_0)$、$O_C=(A_0+B_0)/2-(\\cot\\gamma/2)J(B_0-A_0)$。两圆心横坐标分别为 $x/2$、$(a+x)/2$，故 $BC=a\\le2O_BO_C$。对所构造的三角形，$O_BO_C\\perp PA_0$ 且 $\\ell_a\\perp PA_0$，因此取等号。所有候选三角形都相似，面积与 $BC^2$ 成正比，所以该三角形唯一取得最大面积。",
+          "若记 $a_0=B_0C_0$、$b_0=C_0A_0$、$c_0=A_0B_0$、$K_0=[A_0B_0C_0]$，展开上述圆心公式可得 $4O_BO_C^2=(1-rs)a_0^2+(r+s)(rb_0^2+sc_0^2)+4K_0(r+s)$，其中 $r=\\cot\\beta$、$s=\\cot\\gamma$。再用 $1-rs=(r+s)\\cot\\alpha$ 与 $r+s=\\sin\\alpha/(\\sin\\beta\\sin\\gamma)$，最大面积为 $2K_0+\\frac12(a_0^2\\cot\\alpha+b_0^2\\cot\\beta+c_0^2\\cot\\gamma)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1"
+  },
+  "imo-1967-q5": {
+    "summary": "Let $a_1,\\ldots,a_8$ be real numbers, not all zero, and define $c_n=a_1^n+\\cdots+a_8^n$ for $n=1,2,\\ldots$. Suppose infinitely many terms $c_n$ are zero. Determine every positive integer $n$ for which $c_n=0$.",
+    "summaryZh": "设实数 $a_1,\\ldots,a_8$ 不全为零，并对 $n=1,2,\\ldots$ 定义 $c_n=a_1^n+\\cdots+a_8^n$。已知数列中有无穷多项为零，求所有满足 $c_n=0$ 的正整数 $n$。",
+    "answer": "$c_n=0$ exactly for all odd positive integers $n$.",
+    "answerZh": "$c_n=0$ 恰好对所有正奇数 $n$ 成立。",
+    "methods": [
+      {
+        "title": "Let the largest absolute value dominate",
+        "titleZh": "利用最大绝对值项的支配性",
+        "topics": [
+          {"en": "Power sums", "zh": "幂和"},
+          {"en": "Dominant terms", "zh": "支配项"},
+          {"en": "Limits", "zh": "极限"}
+        ],
+        "steps": [
+          "For every positive integer $m$, $c_{2m}=\\sum_i a_i^{2m}>0$, because all summands are nonnegative and at least one is positive. Hence the infinitely many zero terms occur at a strictly increasing sequence of odd indices $n_k$.",
+          "Let $0<r_1<\\cdots<r_s$ be the distinct nonzero absolute values among the $a_i$, and put $d_j=\\#\\{i:a_i=r_j\\}-\\#\\{i:a_i=-r_j\\}$. For odd $n$, grouping equal absolute values gives $c_n=\\sum_{j=1}^sd_jr_j^n$.",
+          "If some $d_j\\ne0$, choose the largest such $j$. From $c_{n_k}=0$, divide by $r_j^{n_k}$ to obtain $0=d_j+\\sum_{i<j}d_i(r_i/r_j)^{n_k}$. Every ratio $r_i/r_j$ lies in $(0,1)$, so letting $k\\to\\infty$ gives $d_j=0$, a contradiction.",
+          "Thus every $d_j=0$, which makes $c_n=0$ for every odd positive $n$. The even terms are strictly positive, so these and only these indices are the answer."
+        ],
+        "stepsZh": [
+          "对每个正整数 $m$，$c_{2m}=\\sum_i a_i^{2m}>0$，因为各项非负且至少一项为正。因此无穷多个零项必出现在一个严格递增的奇数下标列 $n_k$ 上。",
+          "设 $0<r_1<\\cdots<r_s$ 是 $a_i$ 中互不相同的非零绝对值，并令 $d_j=\\#\\{i:a_i=r_j\\}-\\#\\{i:a_i=-r_j\\}$。当 $n$ 为奇数时，按绝对值分组可得 $c_n=\\sum_{j=1}^sd_jr_j^n$。",
+          "若存在 $d_j\\ne0$，取最大的这种下标 $j$。由 $c_{n_k}=0$，同除以 $r_j^{n_k}$ 得 $0=d_j+\\sum_{i<j}d_i(r_i/r_j)^{n_k}$。每个比值 $r_i/r_j$ 都在 $(0,1)$ 内，令 $k\\to\\infty$ 即得 $d_j=0$，矛盾。",
+          "所以所有 $d_j=0$，从而每个正奇数 $n$ 都有 $c_n=0$。偶数项严格为正，因此答案恰为全部正奇数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=1"
+  },
+  "imo-1967-q6": {
+    "summary": "A sports contest awarded $m$ medals over $n>1$ successive days. On day $1$, one medal and one seventh of the remaining $m-1$ medals were awarded; on day $2$, two medals and one seventh of what then remained were awarded; and so on. On day $n$, the remaining $n$ medals were awarded. Determine $n$ and $m$.",
+    "summaryZh": "某项体育比赛在连续 $n>1$ 天内共颁发 $m$ 枚奖牌。第一天先颁发 $1$ 枚，再颁发余下 $m-1$ 枚的七分之一；第二天先颁发 $2$ 枚，再颁发当时余下奖牌的七分之一；依此类推。第 $n$ 天颁发最后剩余的 $n$ 枚。求 $n,m$。",
+    "answer": "The contest lasted $n=6$ days and awarded $m=36$ medals.",
+    "answerZh": "比赛持续 $n=6$ 天，共颁发 $m=36$ 枚奖牌。",
+    "methods": [
+      {
+        "title": "Derive an integer recurrence for the daily totals",
+        "titleZh": "建立每日颁发总数的整数递推",
+        "topics": [
+          {"en": "Recurrence relations", "zh": "递推关系"},
+          {"en": "Divisibility", "zh": "整除"},
+          {"en": "Exponential bounds", "zh": "指数估计"}
+        ],
+        "steps": [
+          "Let $a_k$ be the total number awarded on day $k$. After the first $k$ medals are awarded, the extra seventh is $a_k-k$, so $6(a_k-k)$ medals remain after that day. Hence for $1\\le k<n$, $a_{k+1}=(k+1)+[6(a_k-k)-(k+1)]/7=6(a_k+1)/7$. The same formula reaches the last day, where $a_n=n$.",
+          "Rearrange as $7(a_{k+1}-6)=6(a_k-6)$. Iterating and using $a_n=n$ gives $7^{n-1}(n-6)=6^{n-1}(a_1-6)$. Since $6^{n-1}$ is coprime to $7^{n-1}$, it follows that $6^{n-1}\\mid n-6$.",
+          "For every $n\\ge2$, the binomial theorem gives $6^{n-1}=(1+5)^{n-1}\\ge1+5(n-1)=5n-4>|n-6|$. The only multiple of $6^{n-1}$ with smaller absolute value is $0$, so $n=6$.",
+          "The iterated identity now yields $a_1=6$. From $1+(m-1)/7=6$ we obtain $m=36$. Indeed, awarding six medals daily works: before day $k$, $36-6(k-1)$ remain, and after the first $k$ are awarded the remaining number is $7(6-k)$, so its seventh is $6-k$; on day $6$ the last six medals are awarded."
+        ],
+        "stepsZh": [
+          "设第 $k$ 天共颁发 $a_k$ 枚。先颁发 $k$ 枚后，额外颁发的七分之一为 $a_k-k$，故当天结束后剩余 $6(a_k-k)$ 枚。因此对 $1\\le k<n$，$a_{k+1}=(k+1)+[6(a_k-k)-(k+1)]/7=6(a_k+1)/7$。该式也连接到最后一天，此时 $a_n=n$。",
+          "改写为 $7(a_{k+1}-6)=6(a_k-6)$。迭代并代入 $a_n=n$ 得 $7^{n-1}(n-6)=6^{n-1}(a_1-6)$。因为 $6^{n-1}$ 与 $7^{n-1}$ 互素，所以 $6^{n-1}\\mid n-6$。",
+          "对每个 $n\\ge2$，二项式定理给出 $6^{n-1}=(1+5)^{n-1}\\ge1+5(n-1)=5n-4>|n-6|$。绝对值小于 $6^{n-1}$ 的倍数只有 $0$，故 $n=6$。",
+          "递推恒等式随即给出 $a_1=6$。由 $1+(m-1)/7=6$ 得 $m=36$。验证：每天颁发六枚；第 $k$ 天前剩 $36-6(k-1)$ 枚，先颁发 $k$ 枚后还剩 $7(6-k)$ 枚，其七分之一为 $6-k$。第六天恰好颁完最后六枚。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf#page=2"
+  }
+}
