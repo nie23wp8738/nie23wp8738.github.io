@@ -1,0 +1,142 @@
+{
+  "bmo2-2020-q1": {
+    "summary": "A sequence starts with $a_1>2$ and obeys $a_{n+1}=a_n(a_n-1)/2$. Determine every initial value for which every term is an odd integer.",
+    "summaryZh": "数列满足 $a_1>2$ 及 $a_{n+1}=a_n(a_n-1)/2$。求所有使每一项都是奇整数的初值 $a_1$。",
+    "answer": "$a_1=3$ only.",
+    "answerZh": "仅有 $a_1=3$。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+    "methods": [
+      {
+        "title": "Descend the power of two in $a_n-3$",
+        "titleZh": "考察 $a_n-3$ 中二因子的递降",
+        "topics": [
+          {"en": "Recurrences", "zh": "递推数列"},
+          {"en": "$2$-adic valuation", "zh": "二因子次数"},
+          {"en": "Infinite descent", "zh": "无穷递降"}
+        ],
+        "steps": [
+          "The value $a_1=3$ works, because the recurrence then gives $a_n=3$ for every $n$.",
+          "Conversely, suppose every term is an odd integer. Since $a_1>2$, either $a_1=3$ or $a_1\\ge5$. In the latter case $a_{n+1}>a_n$ whenever $a_n>3$, so no later term can equal $3$.",
+          "Subtract the fixed point $3$ from the recurrence: $a_{n+1}-3=(a_n-3)(a_n+2)/2$. Every $a_n$ is odd, so $a_n+2$ is odd, while $a_n-3$ is a positive even integer.",
+          "Let $v_2(m)$ denote the exponent of $2$ in a positive integer $m$. The displayed identity gives $v_2(a_{n+1}-3)=v_2(a_n-3)-1$.",
+          "Starting from the finite nonnegative integer $v_2(a_1-3)$, repeated subtraction of $1$ eventually gives $v_2(a_N-3)=0$. That says $a_N-3$ is odd, contradicting the fact that both $a_N$ and $3$ are odd. Hence the case $a_1\\ge5$ is impossible, leaving only $a_1=3$."
+        ],
+        "stepsZh": [
+          "当 $a_1=3$ 时，递推式给出所有 $a_n=3$，所以该初值确实可行。",
+          "反过来，设每一项都是奇整数。由 $a_1>2$，要么 $a_1=3$，要么 $a_1\\ge5$。后一情形中，只要 $a_n>3$ 就有 $a_{n+1}>a_n$，因此以后也不可能出现 $3$。",
+          "从递推式中减去不动点 $3$，得到 $a_{n+1}-3=(a_n-3)(a_n+2)/2$。每个 $a_n$ 都是奇数，所以 $a_n+2$ 为奇数，而 $a_n-3$ 是正偶数。",
+          "用 $v_2(m)$ 表示正整数 $m$ 中因子 $2$ 的次数。上式立即给出 $v_2(a_{n+1}-3)=v_2(a_n-3)-1$。",
+          "从有限的非负整数 $v_2(a_1-3)$ 出发，每次减 $1$，最终会得到 $v_2(a_N-3)=0$。这说明 $a_N-3$ 是奇数，但 $a_N$ 与 $3$ 都是奇数，它们的差应为偶数，矛盾。因此 $a_1\\ge5$ 不可能，只剩 $a_1=3$。"
+        ]
+      }
+    ]
+  },
+  "bmo2-2020-q2": {
+    "summary": "Classify all sets $S$ of at least four points in the plane, with no three collinear, for which every triangle whose vertices lie in $S$ has one common circumradius.",
+    "summaryZh": "分类所有至少含四个点的有限平面点集 $S$：任意三点不共线，且由 $S$ 中任意三点组成的三角形都有相同的外接圆半径。",
+    "answer": "Either all the points lie on one circle, or $S$ consists of exactly four distinct points forming an orthocentric system (each point is the orthocentre of the triangle formed by the other three).",
+    "answerZh": "或者所有点共圆；或者 $S$ 恰含四个互异点，并构成一个正交心点组（每一点都是其余三点所成三角形的垂心）。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+    "methods": [
+      {
+        "title": "Normalize the circumcircle and locate a fourth point",
+        "titleZh": "标准化外接圆并确定第四点的位置",
+        "topics": [
+          {"en": "Circumcircles", "zh": "外接圆"},
+          {"en": "Vector geometry", "zh": "向量几何"},
+          {"en": "Orthocentric systems", "zh": "正交心点组"}
+        ],
+        "steps": [
+          "Choose three points $A,B,C\\in S$. Translate and scale so that their common circumcircle $\\Gamma$ is the unit circle centred at the origin, and write their position vectors as $\\mathbf a,\\mathbf b,\\mathbf c$, with $|\\mathbf a|=|\\mathbf b|=|\\mathbf c|=1$.",
+          "A unit circle through $A$ and $B$ has centre either $\\mathbf0$ or $\\mathbf a+\\mathbf b$: both candidate centres are at unit distance from $\\mathbf a$ and $\\mathbf b$, and a chord has at most two circle centres on its perpendicular bisector. If $A,B$ are antipodal these centres coincide, which only makes the conclusion stronger.",
+          "Let $D\\in S\\setminus\\{A,B,C\\}$. If $D$ lies on $\\Gamma$, there is nothing to prove. If it does not, then the unit circumcircles of $ABD,ACD,BCD$ must use the other centres $\\mathbf a+\\mathbf b$, $\\mathbf a+\\mathbf c$, and $\\mathbf b+\\mathbf c$.",
+          "The circles centred at $\\mathbf a+\\mathbf b$ and $\\mathbf a+\\mathbf c$ meet at $A$ and at the point whose vector is $\\mathbf h=\\mathbf a+\\mathbf b+\\mathbf c$. Since $D\\ne A$, its vector is $\\mathbf h$. Moreover $(\\mathbf h-\\mathbf a)\\mathbin\\cdot(\\mathbf b-\\mathbf c)=(\\mathbf b+\\mathbf c)\\mathbin\\cdot(\\mathbf b-\\mathbf c)=0$, so $AD\\perp BC$; cyclically, $BD\\perp CA$ and $CD\\perp AB$. Thus $D$ is the orthocentre of $ABC$.",
+          "This proves a useful lemma: relative to any three chosen points, every further point is either on their circumcircle or is their orthocentre. If an off-circle point $D$ exists and there were a fifth point $E$, then $E$ must lie on $\\Gamma$, because the off-circle alternative is the unique point $D$.",
+          "Apply the lemma again to triangle $ABE$ and the off-circle point $D$. It makes $D$ the orthocentre of $ABE$. Hence both $CD$ and $ED$ are perpendicular to $AB$, so $C,D,E$ are collinear, contrary to the hypothesis. Therefore an off-circle example has exactly four points and is an orthocentric system.",
+          "Conversely, any set of at least four points on one circle works. An orthocentric system also works: in the normalized notation, the circle through $A,B,H$ has centre $\\mathbf a+\\mathbf b$ and unit radius because its distances to $\\mathbf a,\\mathbf b,\\mathbf h$ are $1,1,|\\mathbf c|$. The other triples are identical cyclic cases. These are exactly the required collections."
+        ],
+        "stepsZh": [
+          "任取 $A,B,C\\in S$。通过平移和缩放，可设它们的公共外接圆 $\\Gamma$ 是以原点为圆心的单位圆；记三点位置向量为 $\\mathbf a,\\mathbf b,\\mathbf c$，则 $|\\mathbf a|=|\\mathbf b|=|\\mathbf c|=1$。",
+          "经过 $A,B$ 的单位圆，其圆心只能是 $\\mathbf0$ 或 $\\mathbf a+\\mathbf b$：这两个候选点到 $\\mathbf a,\\mathbf b$ 的距离都为 $1$，而一条弦的垂直平分线上至多有两个满足条件的圆心。若 $A,B$ 为对径点，两圆心重合，结论只会更强。",
+          "取 $D\\in S\\setminus\\{A,B,C\\}$。若 $D\\in\\Gamma$，无需再证。若 $D$ 不在 $\\Gamma$ 上，则三角形 $ABD,ACD,BCD$ 的单位外接圆只能分别取另一个圆心 $\\mathbf a+\\mathbf b$、$\\mathbf a+\\mathbf c$、$\\mathbf b+\\mathbf c$。",
+          "以 $\\mathbf a+\\mathbf b$ 和 $\\mathbf a+\\mathbf c$ 为圆心的两个单位圆交于 $A$ 以及向量为 $\\mathbf h=\\mathbf a+\\mathbf b+\\mathbf c$ 的点。因 $D\\ne A$，故 $D$ 的向量为 $\\mathbf h$。又有 $(\\mathbf h-\\mathbf a)\\mathbin\\cdot(\\mathbf b-\\mathbf c)=(\\mathbf b+\\mathbf c)\\mathbin\\cdot(\\mathbf b-\\mathbf c)=0$，所以 $AD\\perp BC$；循环可得 $BD\\perp CA$、$CD\\perp AB$。因此 $D$ 是三角形 $ABC$ 的垂心。",
+          "由此得到引理：相对于任取的三个点，其余每一点要么在这三点的外接圆上，要么是这三点的垂心。若存在圆外点 $D$，而点集中还有第五点 $E$，则 $E$ 必须在 $\\Gamma$ 上，因为圆外的垂心候选只有唯一的 $D$。",
+          "再对三角形 $ABE$ 和圆外点 $D$ 应用引理，得到 $D$ 也是三角形 $ABE$ 的垂心。于是 $CD$ 与 $ED$ 都垂直于 $AB$，从而 $C,D,E$ 共线，与题设矛盾。因此只要存在圆外点，点集就恰有四点，并构成正交心点组。",
+          "反之，同一圆上的任意至少四个点显然满足条件。正交心点组也满足：在上述标准化记号下，经过 $A,B,H$ 的圆以 $\\mathbf a+\\mathbf b$ 为圆心，因为该圆心到 $\\mathbf a,\\mathbf b,\\mathbf h$ 的距离分别为 $1,1,|\\mathbf c|=1$；其余三点组同理。因此上述两类恰为全部答案。"
+        ]
+      }
+    ]
+  },
+  "bmo2-2020-q3": {
+    "summary": "Colour every cell of a $2019\\times2019$ grid black or white. Call a colouring balanced when every contiguous $k\\times k$ square, for $1\\le k\\le2019$, contains numbers of black and white cells differing by at most one. Count the balanced colourings.",
+    "summaryZh": "把 $2019\\times2019$ 方格的每个单位格染成黑色或白色。若对每个 $1\\le k\\le2019$，任意连续的 $k\\times k$ 正方形子格中黑白格数之差的绝对值不超过 $1$，则称染色平衡。求平衡染色的总数。",
+    "answer": "$2^{1012}-6$.",
+    "answerZh": "$2^{1012}-6$。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+    "methods": [
+      {
+        "title": "Reduce the grid to a one-dimensional prefix-sum count",
+        "titleZh": "把方格问题化为一维前缀和计数",
+        "topics": [
+          {"en": "Colouring invariants", "zh": "染色不变量"},
+          {"en": "Prefix sums", "zh": "前缀和"},
+          {"en": "Inclusion-exclusion", "zh": "容斥原理"}
+        ],
+        "steps": [
+          "Encode black by $+1$ and white by $-1$, writing the entry in row $r$, column $c$ as $x_{r,c}$. A balanced $2\\times2$ square has an even sum of absolute value at most $1$, so every adjacent $2\\times2$ square has sum $0$.",
+          "Suppose some horizontally adjacent entries in a row are equal. The $2\\times2$ condition forces the two entries immediately below them to be equal and opposite. Moving one column at a time then shows that the whole next row is the negative of the first; repeating upward and downward shows $x_{r,c}=(-1)^{r-1}s_c$ after an inessential overall change of sign and row index.",
+          "If no horizontal adjacent pair is equal anywhere, every row alternates, so $x_{r,c}=t_r(-1)^{c-1}$. Thus every balanced grid belongs to one of two families: consecutive rows are negatives of one another, or consecutive columns are negatives of one another. Their intersection consists of the two chessboard colourings.",
+          "Consider the first family. Every even-sided square has sum $0$ because its rows cancel in pairs. An odd-sided square has sum, up to sign, equal to the sum of the corresponding odd-length block of $s_1,\\ldots,s_{2019}$. Hence the grid is balanced exactly when every odd-length consecutive block of this sign sequence has sum $\\pm1$. The second family has the identical one-dimensional condition on $t$.",
+          "Let $P_0=0$ and $P_j=s_1+\\cdots+s_j$. The block condition says $|P_q-P_p|=1$ whenever $p$ and $q$ have opposite parity. In particular every odd-indexed prefix sum is either $1$ or $-1$.",
+          "If both signs occur among the $1010$ odd-indexed prefix sums, every even-indexed prefix sum must be at distance $1$ from both signs, hence must be $0$. The odd prefix sums may then be chosen independently, except that both signs must occur, giving $2^{1010}-2$ sequences.",
+          "If all odd prefix sums equal $1$, each of the $1009$ positive even-indexed prefix sums may independently be $0$ or $2$, giving $2^{1009}$ sequences. If all odd prefix sums equal $-1$, the symmetric count is another $2^{1009}$. Thus the number of admissible sign sequences is $L=(2^{1010}-2)+2^{1009}+2^{1009}=2^{1011}-2$.",
+          "There are $L$ grids of each of the two families, and exactly two grids lie in both. Inclusion-exclusion gives $2L-2=2(2^{1011}-2)-2=2^{1012}-6$. The reduction also proves that every counted grid is balanced, so there is no overcount from merely necessary local conditions."
+        ],
+        "stepsZh": [
+          "用 $+1$ 表示黑格、$-1$ 表示白格，记第 $r$ 行第 $c$ 列的数为 $x_{r,c}$。平衡的 $2\\times2$ 方格之和是偶数，且绝对值不超过 $1$，所以每个相邻 $2\\times2$ 方格的和都为 $0$。",
+          "若某一行中有两个水平相邻且相等的数，则 $2\\times2$ 条件迫使它们正下方的两个数相等且反号。逐列向左右推进可知下一整行都是上一行的相反数；再向上、向下重复，适当调整整体符号和行号后可写成 $x_{r,c}=(-1)^{r-1}s_c$。",
+          "若任何位置都没有水平相邻的同号数，则每一行都严格交替，于是 $x_{r,c}=t_r(-1)^{c-1}$。所以每个平衡染色都属于两类之一：相邻两行互为相反数，或相邻两列互为相反数。两类的交集恰为两种棋盘格染色。",
+          "先看第一类。边长为偶数的正方形中，各行两两抵消，总和为 $0$。边长为奇数的正方形之和，除一个符号外，等于 $s_1,\\ldots,s_{2019}$ 中相应奇数长度连续段的和。因此该方格平衡，当且仅当这个符号序列的每个奇数长度连续段之和都是 $\\pm1$。第二类对序列 $t$ 有完全相同的一维条件。",
+          "令 $P_0=0$，$P_j=s_1+\\cdots+s_j$。连续段条件等价于：只要 $p,q$ 奇偶性不同，就有 $|P_q-P_p|=1$。特别地，每个奇数下标前缀和都只能是 $1$ 或 $-1$。",
+          "若 $1010$ 个奇数下标前缀和中两种符号都出现，则每个偶数下标前缀和都必须同时与 $1,-1$ 相差 $1$，故只能为 $0$。此时奇数前缀和可独立选择，但要排除全同号的两种，得到 $2^{1010}-2$ 个序列。",
+          "若所有奇数下标前缀和都等于 $1$，则 $1009$ 个正的偶数下标前缀和可各自独立取 $0$ 或 $2$，共有 $2^{1009}$ 个序列。若它们全为 $-1$，对称地还有 $2^{1009}$ 个。因此合格的一维符号序列数为 $L=(2^{1010}-2)+2^{1009}+2^{1009}=2^{1011}-2$。",
+          "两类方格各有 $L$ 个，交集有两种棋盘格。由容斥原理，总数为 $2L-2=2(2^{1011}-2)-2=2^{1012}-6$。上述化简同时验证了每个被计数的方格都确实平衡，因此没有把仅满足局部必要条件的染色误计入。"
+        ]
+      }
+    ]
+  },
+  "bmo2-2020-q4": {
+    "summary": "A nonzero real sequence satisfies $b_{n+2}=(b_{n+1}^2-1)/b_n$, with $b_1=1$ and $b_2=k$ for $1<k<2$. Prove that the sequence is bounded by a constant depending on $k$, and exhibit a permissible $k$ for which some term exceeds $2020$.",
+    "summaryZh": "非零实数数列满足 $b_{n+2}=(b_{n+1}^2-1)/b_n$，且 $b_1=1$、$b_2=k$，其中 $1<k<2$。证明该数列被一个依赖于 $k$ 的常数所控制，并给出某个允许的 $k$，使数列中有一项大于 $2020$。",
+    "answer": "Write $k=2\\cos\\theta$ with $0<\\theta<\\pi/3$. Then $b_n=\\sin(n\\theta)/\\sin\\theta$, so $B=1/\\sin\\theta$ works. For example, take $\\theta=1/5000$ and $k=2\\cos(1/5000)$; an integer $n$ nearest to $2500\\pi$ gives $b_n>2500>2020$.",
+    "answerZh": "令 $k=2\\cos\\theta$，其中 $0<\\theta<\\pi/3$。则 $b_n=\\sin(n\\theta)/\\sin\\theta$，所以可取 $B=1/\\sin\\theta$。例如取 $\\theta=1/5000$、$k=2\\cos(1/5000)$；令 $n$ 为最接近 $2500\\pi$ 的整数，就有 $b_n>2500>2020$。",
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo2-2020.pdf#page=2",
+    "methods": [
+      {
+        "title": "Linearize the recurrence and solve it trigonometrically",
+        "titleZh": "把非线性递推线性化并用三角函数求解",
+        "topics": [
+          {"en": "Nonlinear recurrences", "zh": "非线性递推"},
+          {"en": "Linearization", "zh": "线性化"},
+          {"en": "Trigonometric sequences", "zh": "三角函数数列"}
+        ],
+        "steps": [
+          "Rewrite the recurrence as $b_{n+1}^2-b_nb_{n+2}=1$. The same identity one index earlier is $b_n^2-b_{n-1}b_{n+1}=1$. Subtracting and factoring gives $b_{n+1}(b_{n+1}+b_{n-1})=b_n(b_{n+2}+b_n)$.",
+          "All terms are nonzero, so division shows that $(b_{n+1}+b_{n-1})/b_n$ is independent of $n$. Since $b_3=k^2-1$, its value at $n=2$ is $(b_3+b_1)/b_2=k$. Therefore the original sequence satisfies the linear recurrence $b_{n+1}=kb_n-b_{n-1}$.",
+          "Because $1<k<2$, write $k=2\\cos\\theta$ with $0<\\theta<\\pi/3$. The sine addition identity gives $\\sin((n+1)\\theta)=2\\cos\\theta\\sin(n\\theta)-\\sin((n-1)\\theta)$. Matching $b_1=1$ and $b_2=2\\cos\\theta$ yields $b_n=\\sin(n\\theta)/\\sin\\theta$ for every $n$.",
+          "Consequently $|b_n|\\le1/\\sin\\theta$ for all $n$, so $B=1/\\sin\\theta$ proves the first claim.",
+          "For an explicit large term, take $\\theta=1/5000$ and $k=2\\cos(1/5000)$. This $k$ lies between $1$ and $2$, and no term vanishes: $\\sin(n/5000)=0$ would make the irrational number $\\pi$ rational.",
+          "Choose an integer $n$ nearest to $2500\\pi$, so $|n/5000-\\pi/2|\\le1/10000$. Hence $\\sin(n/5000)\\ge\\cos(1/10000)>1/2$, whereas $\\sin(1/5000)<1/5000$. Thus $b_n>2500>2020$, as required."
+        ],
+        "stepsZh": [
+          "把原递推式改写为 $b_{n+1}^2-b_nb_{n+2}=1$。下标前移一位得到 $b_n^2-b_{n-1}b_{n+1}=1$。两式相减并因式分解，可得 $b_{n+1}(b_{n+1}+b_{n-1})=b_n(b_{n+2}+b_n)$。",
+          "所有项均非零，所以相除可知 $(b_{n+1}+b_{n-1})/b_n$ 与 $n$ 无关。又因 $b_3=k^2-1$，在 $n=2$ 时该常数为 $(b_3+b_1)/b_2=k$。因此原数列满足线性递推 $b_{n+1}=kb_n-b_{n-1}$。",
+          "由于 $1<k<2$，可写成 $k=2\\cos\\theta$，其中 $0<\\theta<\\pi/3$。正弦递推恒等式为 $\\sin((n+1)\\theta)=2\\cos\\theta\\sin(n\\theta)-\\sin((n-1)\\theta)$。再匹配 $b_1=1$、$b_2=2\\cos\\theta$，得到对所有 $n$ 都有 $b_n=\\sin(n\\theta)/\\sin\\theta$。",
+          "于是对所有 $n$，$|b_n|\\le1/\\sin\\theta$，故取 $B=1/\\sin\\theta$ 即证明第一问。",
+          "为构造一个很大的项，取 $\\theta=1/5000$、$k=2\\cos(1/5000)$。此时 $1<k<2$，且数列没有零项：若 $\\sin(n/5000)=0$，就会推出无理数 $\\pi$ 是有理数。",
+          "取最接近 $2500\\pi$ 的整数 $n$，则 $|n/5000-\\pi/2|\\le1/10000$。因此 $\\sin(n/5000)\\ge\\cos(1/10000)>1/2$，而 $\\sin(1/5000)<1/5000$。所以 $b_n>2500>2020$，完成证明。"
+        ]
+      }
+    ]
+  }
+}
