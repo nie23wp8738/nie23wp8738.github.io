@@ -1,0 +1,211 @@
+{
+  "usajmo-2018-q1": {
+    "summary": "For each positive integer $n$, determine the number of $n$-digit positive integers whose adjacent digits are never equal and whose last digit is prime.",
+    "summaryZh": "对每个正整数 $n$，求满足下列条件的 $n$ 位正整数个数：任意相邻两位数字不相等，且末位数字为素数。",
+    "answer": "$\\displaystyle \\frac{2}{5}\\bigl(9^n-(-1)^n\\bigr)$.",
+    "answerZh": "$\\displaystyle \\frac{2}{5}\\bigl(9^n-(-1)^n\\bigr)$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2018_USAJMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Count a relaxed class and solve a recurrence",
+        "titleZh": "先计数放宽条件的数，再解递推",
+        "topics": [
+          {"en": "Recurrence relations", "zh": "递推关系"},
+          {"en": "Complementary counting", "zh": "补集计数"},
+          {"en": "Digit strings", "zh": "数字串计数"}
+        ],
+        "steps": [
+          "Let $p_n$ be the required number. Call an $n$-digit integer *good* if its last digit is one of $2,3,5,7$ and no equality occurs among the first $n-1$ adjacent pairs; we temporarily allow the last two digits to be equal.",
+          "Choose the first digit in $9$ ways, each of the next $n-2$ digits in $9$ ways, and the last prime digit in $4$ ways. Hence there are $4\\cdot9^{n-1}$ good numbers.",
+          "A good number is not counted by $p_n$ exactly when its last two digits are equal. Deleting its last digit then gives, bijectively, one of the $p_{n-1}$ admissible $(n-1)$-digit numbers. Therefore $p_n=4\\cdot9^{n-1}-p_{n-1}$, with $p_1=4$.",
+          "Iterating the recurrence gives $p_n=4(9^{n-1}-9^{n-2}+\\cdots+(-1)^{n-1})$. Summing this finite geometric series yields $p_n=\\frac{2}{5}(9^n-(-1)^n)$, which is an integer for every $n\\ge1$."
+        ],
+        "stepsZh": [
+          "记所求个数为 $p_n$。若一个 $n$ 位数的末位属于 $2,3,5,7$，且前 $n-1$ 位之间的相邻数字均不相等，则称其为“良好数”；暂时允许最后两位相等。",
+          "首位有 $9$ 种选择，中间每一位都有 $9$ 种不与前一位相同的选择，末位素数有 $4$ 种选择。因此良好数共有 $4\\cdot9^{n-1}$ 个。",
+          "一个良好数不计入 $p_n$，当且仅当最后两位相等。删去最后一位后，恰好得到一个符合要求的 $(n-1)$ 位数，且这是双射。因此 $p_n=4\\cdot9^{n-1}-p_{n-1}$，初值为 $p_1=4$。",
+          "逐次代入得 $p_n=4(9^{n-1}-9^{n-2}+\\cdots+(-1)^{n-1})$。求有限等比数列之和，得到 $p_n=\\frac{2}{5}(9^n-(-1)^n)$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2018-q2": {
+    "summary": "Let $a,b,c$ be positive real numbers satisfying $a+b+c=4\\sqrt[3]{abc}$. Prove that $2(ab+bc+ca)+4\\min(a^2,b^2,c^2)\\ge a^2+b^2+c^2$.",
+    "summaryZh": "设正实数 $a,b,c$ 满足 $a+b+c=4\\sqrt[3]{abc}$。证明：$2(ab+bc+ca)+4\\min(a^2,b^2,c^2)\\ge a^2+b^2+c^2$。",
+    "answer": "The inequality holds; equality occurs when $(a,b,c)$ is a permutation of $((7-\\sqrt{17})r,(7+\\sqrt{17})r,2r)$ for some $r>0$.",
+    "answerZh": "不等式成立；等号成立当且仅当 $(a,b,c)$ 是 $((7-\\sqrt{17})r,(7+\\sqrt{17})r,2r)$ 的某个排列，其中 $r>0$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2018_USAJMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "One AM-GM estimate",
+        "titleZh": "一次 AM-GM 估计",
+        "topics": [
+          {"en": "Homogeneous inequalities", "zh": "齐次不等式"},
+          {"en": "AM-GM", "zh": "算术—几何平均不等式"},
+          {"en": "Equality cases", "zh": "等号条件"}
+        ],
+        "steps": [
+          "By symmetry, assume $c=\\min(a,b,c)$. It is enough to prove $2(ab+bc+ca)+4c^2\\ge a^2+b^2+c^2$.",
+          "Apply AM-GM to the two positive quantities $4c(a+b+c)$ and $4ab$: $4c(a+b+c)+4ab\\ge2\\sqrt{16abc(a+b+c)}$.",
+          "Since $abc=((a+b+c)/4)^3$, the right side equals $2\\sqrt{16((a+b+c)/4)^3(a+b+c)}=(a+b+c)^2$.",
+          "Expanding $(a+b+c)^2$ and subtracting $2(ab+bc+ca)$ gives exactly $2(ab+bc+ca)+4c^2\\ge a^2+b^2+c^2$.",
+          "For equality, AM-GM requires $c(a+b+c)=ab$. Together with the given condition this yields $ab=8c^2$ and $a+b=7c$, hence $a,b=\\frac{7\\pm\\sqrt{17}}2c$. Writing $c=2r$ gives the stated equality family."
+        ],
+        "stepsZh": [
+          "由对称性，不妨设 $c=\\min(a,b,c)$。只需证明 $2(ab+bc+ca)+4c^2\\ge a^2+b^2+c^2$。",
+          "对正数 $4c(a+b+c)$ 与 $4ab$ 使用 AM-GM：$4c(a+b+c)+4ab\\ge2\\sqrt{16abc(a+b+c)}$。",
+          "由已知条件，$abc=((a+b+c)/4)^3$，故右端等于 $2\\sqrt{16((a+b+c)/4)^3(a+b+c)}=(a+b+c)^2$。",
+          "展开 $(a+b+c)^2$，再从两边减去 $2(ab+bc+ca)$，恰得目标不等式。",
+          "等号要求 $c(a+b+c)=ab$。结合原条件可得 $ab=8c^2$、$a+b=7c$，从而 $a,b=\\frac{7\\pm\\sqrt{17}}2c$。令 $c=2r$，即得到所述等号情形。"
+        ]
+      },
+      {
+        "title": "Normalize and factor",
+        "titleZh": "归一化后因式分解",
+        "topics": [
+          {"en": "Normalization", "zh": "归一化"},
+          {"en": "Factorization", "zh": "因式分解"}
+        ],
+        "steps": [
+          "Again take $c=\\min(a,b,c)$ and divide by $c^2$. Put $A=a/c$, $B=b/c$, and $D=A+B$. Then $D+1=4\\sqrt[3]{AB}$, so $AB=(D+1)^3/64$.",
+          "The desired inequality becomes $2(AB+A+B)+4\\ge A^2+B^2+1$, or $2D+3-D^2+4AB\\ge0$.",
+          "Substitution gives $2D+3-D^2+(D+1)^3/16=(D+1)(D-7)^2/16\\ge0$."
+        ],
+        "stepsZh": [
+          "仍设 $c$ 为三者最小值，并除以 $c^2$。令 $A=a/c,B=b/c,D=A+B$。由条件 $D+1=4\\sqrt[3]{AB}$，故 $AB=(D+1)^3/64$。",
+          "待证式化为 $2(AB+A+B)+4\\ge A^2+B^2+1$，即 $2D+3-D^2+4AB\\ge0$。",
+          "代入 $AB$ 后，左端为 $2D+3-D^2+(D+1)^3/16=(D+1)(D-7)^2/16\\ge0$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2018-q3": {
+    "summary": "A cyclic quadrilateral $ABCD$ lies on circle $\\omega$ and $AC\\perp BD$. Points $E,F$ are the reflections of $D$ across $BA,BC$, respectively, and $P=BD\\cap EF$. The circumcircles of $EPD$ and $FPD$ meet $\\omega$ again at $Q$ and $R$. Prove that $EQ=FR$.",
+    "summaryZh": "圆 $\\omega$ 上有内接四边形 $ABCD$，且 $AC\\perp BD$。点 $E,F$ 分别是 $D$ 关于直线 $BA,BC$ 的对称点，$P=BD\\cap EF$。三角形 $EPD$、$FPD$ 的外接圆分别与 $\\omega$ 再交于 $Q,R$。证明 $EQ=FR$。",
+    "answer": "$EQ=FR$.",
+    "answerZh": "$EQ=FR$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2018_USAJMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Simson line, homothety, and two cyclic trapezoids",
+        "titleZh": "Simson 线、位似与两个圆内接梯形",
+        "topics": [
+          {"en": "Simson line", "zh": "Simson 线"},
+          {"en": "Homothety", "zh": "位似"},
+          {"en": "Orthocenter", "zh": "垂心"},
+          {"en": "Cyclic quadrilaterals", "zh": "圆内接四边形"}
+        ],
+        "steps": [
+          "Let $X,Y$ be the perpendicular feet from $D$ to $BA,BC$, and let $Z=BD\\cap AC$. Since $D$ is on the circumcircle of $ABC$, Simson's theorem makes $X,Y,Z$ collinear.",
+          "The homothety centered at $D$ with ratio $2$ sends $X$ to $E$ and $Y$ to $F$. It sends $Z$ to a point $P'$ lying on both $BD$ and $EF$, so $P'=P$. Because $Z$ lies on $AC$ and $BD\\perp AC$, $P$ is the orthocenter of triangle $ABC$.",
+          "Reflect the orthocenter $P$ across $AB$ to $Q'$. Since $CP\\perp AB$, the point $Q'$ lies on line $CP$. Reflection preserves angles, so $\\angle AQ'B=\\angle APB=180^\\circ-\\angle ACB$; hence $A,B,C,Q'$ are cyclic. Thus $Q'$ is the second intersection of ray $CP$ with $\\omega$, and $AB$ is the perpendicular bisector of $PQ'$. By the definition of $E$, it is also the perpendicular bisector of $DE$.",
+          "Consequently, $PQ'\\parallel DE$ and the legs $PD,Q'E$ are equal; hence $PQ'ED$ is an isosceles trapezoid and is cyclic. Therefore $Q'$ lies on the circumcircle of $EPD$. By its definition $Q'\\in\\omega$ and $Q'\\ne D$, so $Q'=Q$. The same argument with ray $AP$ gives that $R$ is its second intersection with $\\omega$.",
+          "The isosceles trapezoid $PQED$ gives $EQ=PD$. Symmetrically, the isosceles trapezoid $PRFD$ gives $FR=PD$. Hence $EQ=FR$."
+        ],
+        "stepsZh": [
+          "从 $D$ 分别向 $BA,BC$ 作垂足 $X,Y$，令 $Z=BD\\cap AC$。因为 $D$ 在三角形 $ABC$ 的外接圆上，由 Simson 定理，$X,Y,Z$ 共线。",
+          "以 $D$ 为中心、倍率为 $2$ 的位似把 $X,Y$ 分别映到 $E,F$，并把 $Z$ 映到同时位于 $BD$ 与 $EF$ 上的点 $P'$，故 $P'=P$。又 $Z\\in AC$ 且 $BD\\perp AC$，所以 $P$ 是三角形 $ABC$ 的垂心。",
+          "把垂心 $P$ 关于 $AB$ 对称到 $Q'$。因 $CP\\perp AB$，点 $Q'$ 位于直线 $CP$ 上；对称保持角度，故 $\\angle AQ'B=\\angle APB=180^\\circ-\\angle ACB$，从而 $A,B,C,Q'$ 共圆。因此 $Q'$ 是射线 $CP$ 与 $\\omega$ 的另一个交点，且 $AB$ 是 $PQ'$ 的垂直平分线；由 $E$ 的定义，$AB$ 也是 $DE$ 的垂直平分线。",
+          "于是 $PQ'\\parallel DE$ 且两腰 $PD=Q'E$，故 $PQ'ED$ 为等腰梯形，从而四点共圆。因此 $Q'$ 在圆 $(EPD)$ 上；又 $Q'\\in\\omega$ 且 $Q'\\ne D$，所以 $Q'=Q$。同理，$R$ 是射线 $AP$ 与 $\\omega$ 的另一个交点。",
+          "等腰梯形 $PQED$ 给出 $EQ=PD$；对称地，等腰梯形 $PRFD$ 给出 $FR=PD$。因此 $EQ=FR$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2018-q4": {
+    "summary": "Find all real $x$ for which there exists a triangle $ABC$ with circumradius $2$ and $\\angle ABC\\ge90^\\circ$ such that $x^4+ax^3+bx^2+cx+1=0$, where $a=BC$, $b=CA$, and $c=AB$.",
+    "summaryZh": "求所有实数 $x$，使得存在一个外接圆半径为 $2$ 且 $\\angle ABC\\ge90^\\circ$ 的三角形 $ABC$，满足 $x^4+ax^3+bx^2+cx+1=0$，其中 $a=BC,b=CA,c=AB$。",
+    "answer": "$\\displaystyle x=-\\frac{\\sqrt6+\\sqrt2}{2}$ or $\\displaystyle x=-\\frac{\\sqrt6-\\sqrt2}{2}$.",
+    "answerZh": "$\\displaystyle x=-\\frac{\\sqrt6+\\sqrt2}{2}$ 或 $\\displaystyle x=-\\frac{\\sqrt6-\\sqrt2}{2}$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2018_USAJMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Complete two squares and force equality",
+        "titleZh": "配成两个平方并锁定等号",
+        "topics": [
+          {"en": "Completing the square", "zh": "配方法"},
+          {"en": "Extended law of sines", "zh": "正弦定理"},
+          {"en": "Obtuse-triangle inequality", "zh": "钝角三角形边长关系"}
+        ],
+        "steps": [
+          "Because all side lengths and the constant term are positive, any root must satisfy $x<0$, in particular $x\\ne0$.",
+          "Rewrite the left side as $(x^2+ax/2)^2+\\left(b-(a^2+c^2)/4\\right)x^2+(cx/2+1)^2$.",
+          "Since $\\angle B\\ge90^\\circ$, the cosine law gives $b^2\\ge a^2+c^2$. Also $b=2R\\sin B=4\\sin B\\le4$, so $b^2\\le4b$. Therefore $b-(a^2+c^2)/4\\ge0$, and all three displayed terms are nonnegative.",
+          "Their sum can vanish only if $x=-a/2=-2/c$ and $b=(a^2+c^2)/4$. Both inequalities in $a^2+c^2\\le b^2\\le4b$ must then be equalities: $b=4$, $a^2+c^2=16$, and $ac=4$.",
+          "Thus $(a+c)^2=24$ and $(a-c)^2=8$, so $\\{a,c\\}=\\{\\sqrt6+\\sqrt2,\\sqrt6-\\sqrt2\\}$. Hence the two possible values of $x=-a/2$ are those stated.",
+          "Conversely, each ordering of these two values for $a,c$, together with $b=4$, forms a right triangle of circumradius $2$ and makes every nonnegative term above zero. Thus both values really occur."
+        ],
+        "stepsZh": [
+          "因为各边长和常数项均为正，方程的实根必有 $x<0$，特别地 $x\\ne0$。",
+          "将左端改写为 $(x^2+ax/2)^2+\\left(b-(a^2+c^2)/4\\right)x^2+(cx/2+1)^2$。",
+          "因 $\\angle B\\ge90^\\circ$，余弦定理给出 $b^2\\ge a^2+c^2$。又由正弦定理 $b=2R\\sin B=4\\sin B\\le4$，所以 $b^2\\le4b$。故中间项的系数非负，三项均非负。",
+          "和为零时必须有 $x=-a/2=-2/c$ 且 $b=(a^2+c^2)/4$。这又迫使 $a^2+c^2\\le b^2\\le4b$ 两处均取等号，因此 $b=4,a^2+c^2=16,ac=4$。",
+          "于是 $(a+c)^2=24,(a-c)^2=8$，故 $\\{a,c\\}=\\{\\sqrt6+\\sqrt2,\\sqrt6-\\sqrt2\\}$，而 $x=-a/2$ 给出题述两个值。",
+          "反过来，取这两个数作为 $a,c$（次序任意），并取 $b=4$，可组成外接圆半径为 $2$ 的直角三角形，且上述三个非负项都为零。因此两个值均能实现。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2018-q5": {
+    "summary": "Let $p$ be a prime and $a_1,\\ldots,a_p$ be integers. Prove that some integer $k$ makes $a_1+k,a_2+2k,\\ldots,a_p+pk$ attain at least $p/2$ distinct residues modulo $p$.",
+    "summaryZh": "设 $p$ 为素数，$a_1,\\ldots,a_p$ 为整数。证明：存在整数 $k$，使 $a_1+k,a_2+2k,\\ldots,a_p+pk$ 模 $p$ 至少得到 $p/2$ 个不同余数。",
+    "answer": "Such a $k$ always exists; in fact one can guarantee at least $(p+1)/2$ distinct residues when $p$ is odd.",
+    "answerZh": "这样的 $k$ 总存在；当 $p$ 为奇素数时，实际上可保证至少有 $(p+1)/2$ 个不同余数。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2018_USAJMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Average the collisions over all slopes",
+        "titleZh": "对所有斜率平均计算碰撞数",
+        "topics": [
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Double counting", "zh": "二重计数"},
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"}
+        ],
+        "steps": [
+          "The case $p=2$ is immediate, so let $p=2q+1$. For each residue $k\\in\\{0,1,\\ldots,p-1\\}$, consider the row $a_1+k,a_2+2k,\\ldots,a_p+pk$ modulo $p$.",
+          "Fix two columns $i\\ne j$. Their entries coincide precisely when $(i-j)k\\equiv a_j-a_i\\pmod p$. Since $p$ is prime and $i-j$ is nonzero modulo $p$, exactly one residue $k$ solves this equation.",
+          "Across all $p$ rows, therefore, the total number of colliding unordered column-pairs is $\\binom p2=pq$. Some row has at most $q$ colliding pairs.",
+          "Read the entries of that row from left to right. Each repeated entry creates at least one colliding pair with an earlier entry. Hence at most $q$ of the $p$ entries can be repetitions, leaving at least $p-q=q+1=(p+1)/2>p/2$ distinct residues. Choose an integer representative of this row's $k$."
+        ],
+        "stepsZh": [
+          "$p=2$ 时结论显然。以下设 $p=2q+1$。对每个余数 $k\\in\\{0,1,\\ldots,p-1\\}$，考察模 $p$ 的一行数 $a_1+k,a_2+2k,\\ldots,a_p+pk$。",
+          "固定两列 $i\\ne j$。两项相等当且仅当 $(i-j)k\\equiv a_j-a_i\\pmod p$。因 $p$ 为素数且 $i-j$ 模 $p$ 非零，该同余方程恰有一个 $k$。",
+          "因此在全部 $p$ 行中，同余的无序列对总数为 $\\binom p2=pq$。由平均值原理，至少有一行的碰撞对不超过 $q$ 对。",
+          "从左到右读取该行。每出现一个重复余数，它至少与前面一项形成一对碰撞。因此重复项最多有 $q$ 个，不同余数至少有 $p-q=q+1=(p+1)/2>p/2$ 个。取该行 $k$ 的任意整数代表即可。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2018-q6": {
+    "summary": "Cards labeled $1,2,\\ldots,n$ are arranged in a row. A pair $(a,b)$ is swapped if $a>b$ and card $a$ lies left of card $b$. In order $1,2,\\ldots,n$, Karl removes each card and reinserts it in the opposite position: if it had $i$ cards to its left, it is reinserted with $i$ cards to its right. Prove that the final and initial arrangements have the same number of swapped pairs.",
+    "summaryZh": "标号 $1,2,\\ldots,n$ 的卡片排成一列。若 $a>b$ 且卡片 $a$ 位于卡片 $b$ 左侧，则称数对 $(a,b)$ 为一个逆序对。Karl 按 $1,2,\\ldots,n$ 的顺序依次取出每张卡片并放到相反位置：若取出前其左侧有 $i$ 张卡片，则重新插入后令其右侧有 $i$ 张卡片。证明最终排列与初始排列的逆序对数相同。",
+    "answer": "The number of swapped pairs (inversions) is invariant under the complete procedure.",
+    "answerZh": "整个操作完成后，逆序对总数保持不变。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2018_USAJMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Raise each moved label by $n$",
+        "titleZh": "把每张已移动卡片的标号增加 $n$",
+        "topics": [
+          {"en": "Inversions", "zh": "逆序对"},
+          {"en": "Invariant", "zh": "不变量"},
+          {"en": "Equivalent process", "zh": "等价过程"}
+        ],
+        "steps": [
+          "Modify the procedure as follows: just before reinserting card $i$, change its label from $i$ to $n+i$. Positions are otherwise exactly those in the original procedure.",
+          "Suppose card $i$ has $r$ cards to its left before its move, so it is reinserted with $r$ cards to its right. At this time cards $1,\\ldots,i-1$ have already become labels above $n$, while the unmoved cards $i+1,\\ldots,n$ retain labels below $n$.",
+          "Before the move, every other current label exceeds $i$: an already moved card has label $n+j$, and an unmoved one has label greater than $i$. Hence card $i$ belongs to exactly the $r$ inversions formed with the cards to its left. After becoming $n+i$, it exceeds every other current label and, with $r$ cards to its right, again belongs to exactly $r$ inversions.",
+          "The relative order and labels of every other pair are unchanged by this move, so each modified step preserves the total inversion count.",
+          "At the end the labels are $n+1,\\ldots,2n$, in exactly the same positional order as the original procedure's final labels $1,\\ldots,n$. Subtracting $n$ from every label preserves all comparisons. Hence the original final arrangement has the same inversion count as the initial one."
+        ],
+        "stepsZh": [
+          "考虑一个改写后的过程：在重新插入卡片 $i$ 之前，先把其标号由 $i$ 改为 $n+i$；插入位置与原过程完全相同。",
+          "设移动前卡片 $i$ 左侧有 $r$ 张卡片，因此插回后右侧有 $r$ 张。此时卡片 $1,\\ldots,i-1$ 已经变成大于 $n$ 的标号，而尚未移动的卡片 $i+1,\\ldots,n$ 仍保持不超过 $n$ 的标号。",
+          "移动前，其余每张卡片的当前标号都大于 $i$：已移动卡片的标号为 $n+j$，未移动卡片的标号则大于 $i$。因此卡片 $i$ 恰与其左侧的 $r$ 张卡片构成 $r$ 个逆序对。改标为 $n+i$ 后，它比其余所有当前标号都大；其右侧恰有 $r$ 张卡片，因此仍恰参与 $r$ 个逆序对。",
+          "该步没有改变其余任意两张卡片的相对次序与标号关系，所以改写后过程的每一步都保持逆序对总数。",
+          "最终标号为 $n+1,\\ldots,2n$，其位置次序与原过程最终的 $1,\\ldots,n$ 完全一致。所有标号同时减去 $n$ 不改变大小比较，故原过程最终排列与初始排列的逆序对数相同。"
+        ]
+      }
+    ]
+  }
+}
