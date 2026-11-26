@@ -1,0 +1,226 @@
+{
+  "imo-1969-q1": {
+    "summary": "Prove that infinitely many natural numbers $a$ have the property that $n^4+a$ is composite for every natural number $n$.",
+    "summaryZh": "证明：存在无穷多个自然数 $a$，使得对每个自然数 $n$，数 $n^4+a$ 都不是素数。",
+    "answer": "Every $a=4m^4$ with an integer $m\\ge2$ has the required property.",
+    "answerZh": "对任意整数 $m\\ge2$，取 $a=4m^4$ 均满足要求。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use the Sophie Germain factorization",
+        "titleZh": "使用 Sophie Germain 恒等式构造",
+        "topics": [
+          {"en": "Constructive number theory", "zh": "构造性数论"},
+          {"en": "Sophie Germain identity", "zh": "Sophie Germain 恒等式"},
+          {"en": "Composite numbers", "zh": "合数"}
+        ],
+        "steps": [
+          "For every integer $m\\ge2$, choose $a=4m^4$. The Sophie Germain identity gives $n^4+4m^4=(n^2-2mn+2m^2)(n^2+2mn+2m^2)$.",
+          "Rewrite the two factors as $(n-m)^2+m^2$ and $(n+m)^2+m^2$. They are positive integers and each is at least $m^2\\ge4$.",
+          "Thus $n^4+a$ is a product of two integers greater than $1$, so it is composite for every natural number $n$ (including $n=0$ if that convention is used).",
+          "The values $4m^4$ are distinct and strictly increasing for $m\\ge2$. Hence this construction supplies infinitely many admissible values of $a$."
+        ],
+        "stepsZh": [
+          "对任意整数 $m\\ge2$，取 $a=4m^4$。由 Sophie Germain 恒等式，$n^4+4m^4=(n^2-2mn+2m^2)(n^2+2mn+2m^2)$。",
+          "两个因子可分别写成 $(n-m)^2+m^2$ 与 $(n+m)^2+m^2$。它们都是正整数，并且都不小于 $m^2\\ge4$。",
+          "所以对每个自然数 $n$，$n^4+a$ 都是两个大于 $1$ 的整数之积，因而为合数；若自然数包含 $0$，结论仍成立。",
+          "当 $m\\ge2$ 变化时，$4m^4$ 严格递增且互不相同，因此得到无穷多个满足要求的 $a$。"
+        ]
+      }
+    ]
+  },
+  "imo-1969-q2": {
+    "summary": "Let $a_1,\\ldots,a_n$ be real constants and $f(x)=\\cos(a_1+x)+\\frac12\\cos(a_2+x)+\\cdots+\\frac1{2^{n-1}}\\cos(a_n+x)$. If $f(x_1)=f(x_2)=0$, prove that $x_2-x_1=m\\pi$ for some integer $m$.",
+    "summaryZh": "设 $a_1,\\ldots,a_n$ 为实常数，且 $f(x)=\\cos(a_1+x)+\\frac12\\cos(a_2+x)+\\cdots+\\frac1{2^{n-1}}\\cos(a_n+x)$。若 $f(x_1)=f(x_2)=0$，证明存在整数 $m$ 使 $x_2-x_1=m\\pi$。",
+    "answer": "$x_2-x_1\\in\\pi\\mathbb Z$.",
+    "answerZh": "$x_2-x_1\\in\\pi\\mathbb Z$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Reduce to one sinusoid and use a determinant",
+        "titleZh": "化为单一正弦型函数并计算行列式",
+        "topics": [
+          {"en": "Angle-addition formulas", "zh": "和角公式"},
+          {"en": "Trigonometric polynomials", "zh": "三角多项式"},
+          {"en": "Determinants", "zh": "行列式"}
+        ],
+        "steps": [
+          "Expanding each cosine gives $f(x)=A\\cos x-B\\sin x$, where $A=\\sum_{j=1}^n2^{1-j}\\cos a_j$ and $B=\\sum_{j=1}^n2^{1-j}\\sin a_j$.",
+          "The pair $(A,B)$ is nonzero. Indeed, $f(-a_1)=1+\\sum_{j=2}^n2^{1-j}\\cos(a_j-a_1)\\ge1-\\sum_{j=2}^n2^{1-j}=2^{1-n}>0$.",
+          "The equations $f(x_1)=f(x_2)=0$ form a homogeneous linear system in the nonzero vector $(A,B)$. Its determinant must vanish: $\\cos x_1(-\\sin x_2)-\\cos x_2(-\\sin x_1)=\\sin(x_1-x_2)=0$.",
+          "Therefore $x_1-x_2$ is an integer multiple of $\\pi$, equivalently $x_2-x_1=m\\pi$ for some $m\\in\\mathbb Z$."
+        ],
+        "stepsZh": [
+          "展开每个余弦项，得到 $f(x)=A\\cos x-B\\sin x$，其中 $A=\\sum_{j=1}^n2^{1-j}\\cos a_j$、$B=\\sum_{j=1}^n2^{1-j}\\sin a_j$。",
+          "向量 $(A,B)$ 不可能为零。事实上，$f(-a_1)=1+\\sum_{j=2}^n2^{1-j}\\cos(a_j-a_1)\\ge1-\\sum_{j=2}^n2^{1-j}=2^{1-n}>0$。",
+          "方程 $f(x_1)=f(x_2)=0$ 构成关于非零向量 $(A,B)$ 的齐次线性方程组，因此系数行列式必须为零：$\\cos x_1(-\\sin x_2)-\\cos x_2(-\\sin x_1)=\\sin(x_1-x_2)=0$。",
+          "所以 $x_1-x_2$ 是 $\\pi$ 的整数倍，等价地，存在 $m\\in\\mathbb Z$ 使 $x_2-x_1=m\\pi$。"
+        ]
+      },
+      {
+        "title": "Write the function in phase-shift form",
+        "titleZh": "写成振幅—相位形式",
+        "topics": [
+          {"en": "Amplitude-phase form", "zh": "振幅—相位形式"},
+          {"en": "Zeros of sine", "zh": "正弦函数的零点"}
+        ],
+        "steps": [
+          "From the first method, $f(x)=A\\cos x-B\\sin x$ with $R=\\sqrt{A^2+B^2}>0$.",
+          "Choose an angle $\\phi$ with $A=R\\sin\\phi$ and $-B=R\\cos\\phi$. Then $f(x)=R\\sin(x+\\phi)$.",
+          "All zeros therefore have the form $x=-\\phi+k\\pi$. Any two zeros differ by an integer multiple of $\\pi$."
+        ],
+        "stepsZh": [
+          "由上一解法，$f(x)=A\\cos x-B\\sin x$，且 $R=\\sqrt{A^2+B^2}>0$。",
+          "取角 $\\phi$ 使 $A=R\\sin\\phi$、$-B=R\\cos\\phi$，则 $f(x)=R\\sin(x+\\phi)$。",
+          "因此所有零点均形如 $x=-\\phi+k\\pi$，任意两个零点之差必为 $\\pi$ 的整数倍。"
+        ]
+      }
+    ]
+  },
+  "imo-1969-q3": {
+    "summary": "For each $k=1,2,3,4,5$, determine the necessary and sufficient conditions on $a>0$ for the existence of a nondegenerate tetrahedron having exactly $k$ edges of length $a$ and the other $6-k$ edges of length $1$.",
+    "summaryZh": "对每个 $k=1,2,3,4,5$，求 $a>0$ 的充要条件，使得存在一个非退化四面体，恰有 $k$ 条棱长为 $a$，其余 $6-k$ 条棱长为 $1$。",
+    "answer": "$\\begin{array}{c|c}k&\\text{condition on }a\\\\ \\hline 1&0<a<\\sqrt3\\\\ 2&0<a<\\sqrt{2+\\sqrt3}\\\\ 3&a>0\\\\ 4&a>\\sqrt{2-\\sqrt3}\\\\ 5&a>1/\\sqrt3\\end{array}$.",
+    "answerZh": "$\\begin{array}{c|c}k&a\\text{ 的条件}\\\\ \\hline 1&0<a<\\sqrt3\\\\ 2&0<a<\\sqrt{2+\\sqrt3}\\\\ 3&a>0\\\\ 4&a>\\sqrt{2-\\sqrt3}\\\\ 5&a>1/\\sqrt3\\end{array}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Coordinate models and reciprocal scaling",
+        "titleZh": "坐标构造与倒数缩放",
+        "topics": [
+          {"en": "Three-dimensional coordinates", "zh": "空间坐标"},
+          {"en": "Tetrahedron volume", "zh": "四面体体积"},
+          {"en": "Case analysis", "zh": "分类讨论"},
+          {"en": "Scaling", "zh": "缩放变换"}
+        ],
+        "steps": [
+          "First prove a lemma. If opposite edges satisfy $AB=p$, $CD=q$, and the four cross-edges all have length $1$, place $A=(p/2,0,0)$, $B=(-p/2,0,0)$, $C=(0,q/2,h)$, $D=(0,-q/2,h)$. The cross-edge equations give $h^2=1-(p^2+q^2)/4$. Hence a nondegenerate tetrahedron exists exactly when $p^2+q^2<4$.",
+          "For $k=1$, the exceptional edge and its opposite unit edge give $(p,q)=(a,1)$ in the lemma. Thus the exact condition is $a^2+1<4$, or $0<a<\\sqrt3$.",
+          "For $k=2$, the two $a$-edges may be opposite or adjacent. If opposite, the lemma gives $2a^2<4$, hence $0<a<\\sqrt2$.",
+          "If the two $a$-edges are adjacent, label them $AB=AC=a$ and make $BCD$ equilateral of side $1$. Put $B=(-1/2,0,0)$, $C=(1/2,0,0)$, $D=(0,\\sqrt3/2,0)$, and $A=(0,u,v)$. From $AB=a$ and $AD=1$, one obtains $u=(a^2-1/2)/\\sqrt3$ and $v^2=[3-(a^2-2)^2]/3$.",
+          "The adjacent arrangement is nondegenerate exactly when $v^2>0$, namely $\\sqrt{2-\\sqrt3}<a<\\sqrt{2+\\sqrt3}$. Its interval overlaps the opposite-edge interval, so their union is $0<a<\\sqrt{2+\\sqrt3}$. This is the answer for $k=2$.",
+          "For $k=3$, every $a>0$ works. Let $s=\\min(a,1)$ and $t=\\max(a,1)$. Use an equilateral base of side $s$ and put the fourth vertex above its center at height $h=\\sqrt{t^2-s^2/3}>0$. Then the three base edges have length $s$ and the three lateral edges length $t$, giving three edges of each required length.",
+          "Finally scale all edges by $1/a$. A $k=4$ tetrahedron with parameter $a$ becomes a $k=2$ tetrahedron with parameter $1/a$; thus $1/a<\\sqrt{2+\\sqrt3}$, equivalent to $a>\\sqrt{2-\\sqrt3}$. Likewise $k=5$ is dual to $k=1$, giving $a>1/\\sqrt3$.",
+          "Every endpoint excluded above makes the constructed height zero, so the vertices become coplanar. Thus all inequalities are strict and the conditions are both necessary and sufficient."
+        ],
+        "stepsZh": [
+          "先证明一个引理。若相对棱满足 $AB=p$、$CD=q$，四条交叉棱均长为 $1$，取 $A=(p/2,0,0)$、$B=(-p/2,0,0)$、$C=(0,q/2,h)$、$D=(0,-q/2,h)$。由交叉棱长条件得 $h^2=1-(p^2+q^2)/4$，故非退化四面体存在当且仅当 $p^2+q^2<4$。",
+          "当 $k=1$ 时，唯一的 $a$ 棱与其对棱（长为 $1$）代入引理，得到 $a^2+1<4$，即 $0<a<\\sqrt3$。",
+          "当 $k=2$ 时，两条 $a$ 棱可能相对或相邻。若相对，由引理得 $2a^2<4$，所以 $0<a<\\sqrt2$。",
+          "若两条 $a$ 棱相邻，记为 $AB=AC=a$，并令 $BCD$ 为边长 $1$ 的等边三角形。取 $B=(-1/2,0,0)$、$C=(1/2,0,0)$、$D=(0,\\sqrt3/2,0)$、$A=(0,u,v)$。由 $AB=a$、$AD=1$ 可得 $u=(a^2-1/2)/\\sqrt3$ 以及 $v^2=[3-(a^2-2)^2]/3$。",
+          "相邻构型非退化当且仅当 $v^2>0$，即 $\\sqrt{2-\\sqrt3}<a<\\sqrt{2+\\sqrt3}$。该区间与相对棱情形的区间有重叠，二者并集为 $0<a<\\sqrt{2+\\sqrt3}$，这就是 $k=2$ 的答案。",
+          "当 $k=3$ 时，每个 $a>0$ 都可行。令 $s=\\min(a,1)$、$t=\\max(a,1)$，取边长 $s$ 的等边三角形为底面，在其中心的垂线上取高 $h=\\sqrt{t^2-s^2/3}>0$ 的第四点。三条底棱长为 $s$，三条侧棱长为 $t$，恰好各有三条所需长度。",
+          "最后把全部棱长同时乘以 $1/a$。参数为 $a$ 的 $k=4$ 情形变成参数为 $1/a$ 的 $k=2$ 情形，故 $1/a<\\sqrt{2+\\sqrt3}$，等价于 $a>\\sqrt{2-\\sqrt3}$。同理，$k=5$ 与 $k=1$ 对偶，得到 $a>1/\\sqrt3$。",
+          "上述各端点都会使相应高度为零，四点共面，不能构成非退化四面体。因此所有不等号均为严格不等号，所得条件既必要又充分。"
+        ]
+      }
+    ]
+  },
+  "imo-1969-q4": {
+    "summary": "On diameter $AB$ draw a semicircle $\\gamma$, and choose $C\\in\\gamma$ with $C\\ne A,B$. Let $D$ be the foot from $C$ to $AB$. Three circles tangent to line $AB$ are given: $\\gamma_1$ is the incircle of triangle $ABC$, while $\\gamma_2,\\gamma_3$ are tangent to $CD$ and to $\\gamma$, on opposite sides of $CD$. Prove that the three circles have another common tangent besides $AB$.",
+    "summaryZh": "以 $AB$ 为直径作半圆弧 $\\gamma$，取 $C\\in\\gamma$ 且 $C\\ne A,B$，从 $C$ 向 $AB$ 作垂足 $D$。三个圆都与直线 $AB$ 相切：$\\gamma_1$ 是三角形 $ABC$ 的内切圆，$\\gamma_2,\\gamma_3$ 分居 $CD$ 两侧并同时与 $CD$ 和 $\\gamma$ 相切。证明除 $AB$ 外，这三个圆还有一条公共切线。",
+    "answer": "Their centers are collinear; reflecting $AB$ in that line gives the second common tangent.",
+    "answerZh": "三个圆心共线；把 $AB$ 关于这条圆心连线反射，即得到第二条公共切线。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Find the three centers and reflect the known tangent",
+        "titleZh": "求出三个圆心并反射已知切线",
+        "topics": [
+          {"en": "Circle tangency", "zh": "圆的相切"},
+          {"en": "Coordinate geometry", "zh": "解析几何"},
+          {"en": "Incircle", "zh": "内切圆"},
+          {"en": "Reflection", "zh": "轴对称"}
+        ],
+        "steps": [
+          "Scale so that $A=(0,0)$ and $B=(1,0)$, with the semicircle above the $x$-axis. Put $a=AC$ and $b=BC$. Since $\\angle ACB=90^\\circ$, $a^2+b^2=1$, $C=(a^2,ab)$, and $D=(a^2,0)$.",
+          "Let $I_i,r_i$ be the center and radius of $\\gamma_i$. The inradius formula and equal tangent lengths give $r_1=ab/(1+a+b)=(a+b-1)/2$ and $I_1=((1+a-b)/2,(a+b-1)/2)$.",
+          "Label $\\gamma_2$ on the left of $CD$ and $\\gamma_3$ on the right. Tangency to $AB$ and $CD$ gives $I_2=(a^2-r_2,r_2)$ and $I_3=(a^2+r_3,r_3)$, with $0<r_2,r_3\\le ab$.",
+          "The full circle containing $\\gamma$ has center $O=(1/2,0)$ and radius $1/2$. The auxiliary circles must be internally tangent to it: external tangency for $\\gamma_2$ would force $r_2=a^2+a>ab$, and similarly external tangency for $\\gamma_3$ would force $r_3=b^2+b>ab$.",
+          "Internal tangency gives $|OI_2|=1/2-r_2$. After squaring and using $a^2+b^2=1$, this becomes $(r_2+b^2)^2=b^2$, hence $r_2=b-b^2$. By symmetry, $r_3=a-a^2$.",
+          "Therefore $I_2=(1-b,b-b^2)$ and $I_3=(a,a-a^2)$. Their midpoint is $((1+a-b)/2,(a+b-a^2-b^2)/2)=I_1$. Thus $I_1,I_2,I_3$ are collinear.",
+          "Reflection across their common line fixes each circle, so it sends the common tangent $AB$ to another common tangent. The image is distinct from $AB$: the center line is neither $AB$ nor perpendicular to it, since the centers have positive heights and $x(I_3)-x(I_2)=a+b-1>0$."
+        ],
+        "stepsZh": [
+          "缩放并建立坐标：取 $A=(0,0)$、$B=(1,0)$，半圆位于 $x$ 轴上方。令 $a=AC,b=BC$。因 $\\angle ACB=90^\\circ$，有 $a^2+b^2=1$、$C=(a^2,ab)$、$D=(a^2,0)$。",
+          "记 $\\gamma_i$ 的圆心、半径为 $I_i,r_i$。由内切圆半径公式和同点引圆的切线段相等，$r_1=ab/(1+a+b)=(a+b-1)/2$，且 $I_1=((1+a-b)/2,(a+b-1)/2)$。",
+          "令 $\\gamma_2$ 位于 $CD$ 左侧、$\\gamma_3$ 位于右侧。它们同时与 $AB,CD$ 相切，因此 $I_2=(a^2-r_2,r_2)$、$I_3=(a^2+r_3,r_3)$，并且 $0<r_2,r_3\\le ab$。",
+          "包含半圆弧 $\\gamma$ 的整圆圆心为 $O=(1/2,0)$，半径为 $1/2$。两个辅助圆必须与它内切：若 $\\gamma_2$ 外切，则会推出 $r_2=a^2+a>ab$；同理，$\\gamma_3$ 外切会推出 $r_3=b^2+b>ab$，均矛盾。",
+          "内切条件为 $|OI_2|=1/2-r_2$。平方并用 $a^2+b^2=1$ 化简，得到 $(r_2+b^2)^2=b^2$，故 $r_2=b-b^2$。由对称性，$r_3=a-a^2$。",
+          "于是 $I_2=(1-b,b-b^2)$、$I_3=(a,a-a^2)$。二者中点为 $((1+a-b)/2,(a+b-a^2-b^2)/2)=I_1$，所以三个圆心共线。",
+          "关于这条圆心直线的反射保持三个圆不变，因而把公共切线 $AB$ 映成另一条公共切线。该像直线不同于 $AB$：圆心线既不是 $AB$，也不垂直于 $AB$，因为圆心高度均为正且 $x(I_3)-x(I_2)=a+b-1>0$。"
+        ]
+      }
+    ]
+  },
+  "imo-1969-q5": {
+    "summary": "Given $n>4$ points in the plane with no three collinear, prove that at least $\\binom{n-3}{2}$ convex quadrilaterals have all four vertices among the given points.",
+    "summaryZh": "平面上给定 $n>4$ 个点，任意三点不共线。证明：至少有 $\\binom{n-3}{2}$ 个凸四边形的四个顶点均取自这些点。",
+    "answer": "The number $q$ of such quadrilaterals satisfies $q\\ge\\binom{n-3}{2}$.",
+    "answerZh": "若所求凸四边形数为 $q$，则 $q\\ge\\binom{n-3}{2}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "A five-point lemma and double counting",
+        "titleZh": "五点引理与二重计数",
+        "topics": [
+          {"en": "Convex hull", "zh": "凸包"},
+          {"en": "Double counting", "zh": "二重计数"},
+          {"en": "Combinatorial geometry", "zh": "组合几何"}
+        ],
+        "steps": [
+          "First prove that any five points in general position contain four vertices of a convex quadrilateral. If their convex hull has at least four vertices, choose any four hull vertices.",
+          "Otherwise the convex hull is a triangle $ABC$, and the remaining points $D,E$ lie inside it. The segments $AD,BD,CD$ divide the triangle into three smaller triangles; after relabeling, suppose $E$ lies inside $ABD$.",
+          "The segment $CE$ enters triangle $ABD$. It cannot cross $AB$ because $C,E$ are on the same side of line $AB$, so it crosses $AD$ or $BD$ in their interiors. The four endpoints of two crossing segments form a convex quadrilateral. This proves the five-point lemma.",
+          "Let $q$ be the total number of convex quadrilaterals. Count pairs $(S,Q)$ where $S$ is a five-point subset and $Q$ is a convex quadrilateral using four points of $S$.",
+          "Every one of the $\\binom n5$ choices of $S$ contributes at least one pair by the lemma. Conversely, each fixed quadrilateral belongs to exactly $n-4$ such five-point sets. Hence $(n-4)q\\ge\\binom n5$ and $q\\ge n(n-1)(n-2)(n-3)/120$.",
+          "Finally, $n(n-1)(n-2)(n-3)/120-\\binom{n-3}{2}=(n-3)(n-5)(n-6)(n+8)/120\\ge0$ for every integer $n\\ge5$. Therefore $q\\ge\\binom{n-3}{2}$."
+        ],
+        "stepsZh": [
+          "先证明五点引理：任取五个一般位置的点，其中必有四点构成凸四边形。若这五点的凸包至少有四个顶点，任取其中四个凸包顶点即可。",
+          "否则凸包是三角形 $ABC$，其余两点 $D,E$ 在内部。线段 $AD,BD,CD$ 把三角形分成三个小三角形；适当重标后，可设 $E$ 位于三角形 $ABD$ 内。",
+          "线段 $CE$ 从三角形 $ABD$ 外进入其内部。因 $C,E$ 位于直线 $AB$ 同侧，它不能穿过 $AB$，故必在内部与 $AD$ 或 $BD$ 相交。两条相交线段的四个端点构成凸四边形，五点引理得证。",
+          "设全部凸四边形数为 $q$。二重计数数对 $(S,Q)$：$S$ 是五点子集，$Q$ 是以 $S$ 中四点为顶点的凸四边形。",
+          "由五点引理，每个五点集至少贡献一个数对，所以数对总数至少为 $\\binom n5$。反过来，每个固定的凸四边形恰好属于 $n-4$ 个五点集。因此 $(n-4)q\\ge\\binom n5$，从而 $q\\ge n(n-1)(n-2)(n-3)/120$。",
+          "最后，$n(n-1)(n-2)(n-3)/120-\\binom{n-3}{2}=(n-3)(n-5)(n-6)(n+8)/120\\ge0$ 对每个整数 $n\\ge5$ 都成立。因此 $q\\ge\\binom{n-3}{2}$。"
+        ]
+      }
+    ]
+  },
+  "imo-1969-q6": {
+    "summary": "For real $x_1,x_2,y_1,y_2,z_1,z_2$ satisfying $x_i>0$ and $x_iy_i-z_i^2>0$ for $i=1,2$, prove $\\frac8{(x_1+x_2)(y_1+y_2)-(z_1+z_2)^2}\\le\\frac1{x_1y_1-z_1^2}+\\frac1{x_2y_2-z_2^2}$, and determine all equality cases.",
+    "summaryZh": "对实数 $x_1,x_2,y_1,y_2,z_1,z_2$，若 $i=1,2$ 时均有 $x_i>0$ 且 $x_iy_i-z_i^2>0$，证明 $\\frac8{(x_1+x_2)(y_1+y_2)-(z_1+z_2)^2}\\le\\frac1{x_1y_1-z_1^2}+\\frac1{x_2y_2-z_2^2}$，并求全部等号情形。",
+    "answer": "Equality holds exactly when $x_1=x_2$, $y_1=y_2$, and $z_1=z_2$.",
+    "answerZh": "等号成立当且仅当 $x_1=x_2$、$y_1=y_2$ 且 $z_1=z_2$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Complete a square and apply AM-GM twice",
+        "titleZh": "补平方并两次使用 AM-GM",
+        "topics": [
+          {"en": "Positive definite quadratic forms", "zh": "正定二次型"},
+          {"en": "Completing the square", "zh": "配平方"},
+          {"en": "AM-GM", "zh": "算术—几何平均不等式"},
+          {"en": "Equality conditions", "zh": "等号条件"}
+        ],
+        "steps": [
+          "For $i=1,2$, set $u_i=y_i-z_i^2/x_i>0$ and $d_i=x_iy_i-z_i^2=x_iu_i>0$. Denote the denominator on the left by $D$.",
+          "Substituting $y_i=u_i+z_i^2/x_i$ and expanding gives the exact identity $D=(x_1+x_2)(u_1+u_2)+(x_2z_1-x_1z_2)^2/(x_1x_2)$.",
+          "Therefore $D\\ge(x_1+x_2)(u_1+u_2)\\ge4\\sqrt{x_1x_2u_1u_2}=4\\sqrt{d_1d_2}>0$.",
+          "Applying AM-GM once more to $1/d_1$ and $1/d_2$ yields $\\frac8D\\le\\frac2{\\sqrt{d_1d_2}}\\le\\frac1{d_1}+\\frac1{d_2}$, proving the inequality.",
+          "If equality holds, the square term must vanish and both AM-GM inequalities must be equalities. Hence $x_1=x_2$, $u_1=u_2$, $d_1=d_2$, and $x_2z_1=x_1z_2$. Since $x_1=x_2>0$, we get $z_1=z_2$, then $y_i=u_i+z_i^2/x_i$ gives $y_1=y_2$.",
+          "Conversely, if $x_1=x_2=x$, $y_1=y_2=y$, and $z_1=z_2=z$, both sides equal $2/(xy-z^2)$. Thus the stated conditions are necessary and sufficient."
+        ],
+        "stepsZh": [
+          "对 $i=1,2$，令 $u_i=y_i-z_i^2/x_i>0$、$d_i=x_iy_i-z_i^2=x_iu_i>0$，并把左端分母记为 $D$。",
+          "代入 $y_i=u_i+z_i^2/x_i$ 并展开，得到恒等式 $D=(x_1+x_2)(u_1+u_2)+(x_2z_1-x_1z_2)^2/(x_1x_2)$。",
+          "因此 $D\\ge(x_1+x_2)(u_1+u_2)\\ge4\\sqrt{x_1x_2u_1u_2}=4\\sqrt{d_1d_2}>0$。",
+          "再对 $1/d_1$ 与 $1/d_2$ 使用 AM-GM，得到 $\\frac8D\\le\\frac2{\\sqrt{d_1d_2}}\\le\\frac1{d_1}+\\frac1{d_2}$，目标不等式得证。",
+          "若等号成立，平方项必须为零，且两次 AM-GM 都必须取等号。因此 $x_1=x_2$、$u_1=u_2$、$d_1=d_2$，并且 $x_2z_1=x_1z_2$。由 $x_1=x_2>0$ 得 $z_1=z_2$，再由 $y_i=u_i+z_i^2/x_i$ 得 $y_1=y_2$。",
+          "反过来，若 $x_1=x_2=x$、$y_1=y_2=y$、$z_1=z_2=z$，则两边都等于 $2/(xy-z^2)$。故所给条件既必要又充分。"
+        ]
+      }
+    ]
+  }
+}
+
