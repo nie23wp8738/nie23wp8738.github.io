@@ -1,0 +1,225 @@
+{
+  "bmo1-2024-q1": {
+    "summary": "A typist rearranges the nine distinct letters of OLYMPIADS. Every letter must appear exactly once, and the letter originally in position $i$ may be typed no later than position $i+1$ (but may be moved arbitrarily far earlier). How many typed strings satisfy this rule?",
+    "summaryZh": "一名打字员会重新排列 OLYMPIADS 的九个互不相同的字母。每个字母恰出现一次，且原来位于第 $i$ 位的字母最迟只能出现在第 $i+1$ 位，但可以提前任意多位。满足条件的字符串共有多少个？",
+    "answer": "$2^8=256$ possible strings.",
+    "answerZh": "共有 $2^8=256$ 种。",
+    "methods": [
+      {
+        "title": "Choose positions for the letters from left to right",
+        "titleZh": "从左到右确定各字母的位置",
+        "topics": [
+          {"en": "Permutations", "zh": "排列"},
+          {"en": "Sequential counting", "zh": "逐步计数"},
+          {"en": "Invariant constraints", "zh": "位置限制"}
+        ],
+        "steps": [
+          "For each $i<9$, the letter originally in position $i$ must occupy one of the first $i+1$ typed positions. Choose the positions of the original letters in the order $1,2,\\ldots,8$.",
+          "For letter $1$, two positions are available. When positions have been chosen for letters $1,\\ldots,i-1$, exactly $i-1$ of the first $i+1$ positions are occupied, so letter $i$ has exactly two choices.",
+          "These choices are made sequentially, so they produce $2^8$ different partial placements. The ninth letter is then forced into the only remaining position.",
+          "Every resulting placement satisfies the deadline for each letter, and every valid string appears in this procedure. Hence the answer is $2^8=256$."
+        ],
+        "stepsZh": [
+          "对每个 $i<9$，原来位于第 $i$ 位的字母必须落在打字结果的前 $i+1$ 个位置中。依次为原字符串中的第 $1,2,\\ldots,8$ 个字母选择位置。",
+          "第一个字母有两个可选位置。若前 $i-1$ 个字母的位置已经确定，则前 $i+1$ 个位置中恰有 $i-1$ 个被占用，所以第 $i$ 个字母仍恰有两个选择。",
+          "这些选择按顺序作出，因此得到 $2^8$ 个不同的部分排列。最后一个字母只能放入唯一的空位。",
+          "所得每个排列都满足各字母的最迟位置限制；反过来，每个合法字符串也必由这一过程得到。因此答案为 $2^8=256$。"
+        ]
+      },
+      {
+        "title": "Remove and reinsert the first letter",
+        "titleZh": "删去并重新插入首字母",
+        "topics": [
+          {"en": "Recurrence relations", "zh": "递推关系"},
+          {"en": "Bijections", "zh": "双射"}
+        ],
+        "steps": [
+          "Let $f(n)$ be the number of valid strings from a word of $n$ distinct letters. Removing the first original letter from any valid string leaves a valid string for the remaining $n-1$ letters.",
+          "Conversely, from any valid string on the last $n-1$ letters, insert the first letter either in position $1$ or position $2$. Both insertions are valid and distinct, and every valid $n$-letter string arises in exactly one of these two ways.",
+          "Thus $f(n)=2f(n-1)$ for $n\\ge2$, while $f(1)=1$. Therefore $f(9)=2^8=256$."
+        ],
+        "stepsZh": [
+          "令 $f(n)$ 表示由 $n$ 个不同字母组成的单词的合法结果数。从任一合法结果中删去原单词的第一个字母，余下部分仍是后 $n-1$ 个字母的合法结果。",
+          "反过来，任取后 $n-1$ 个字母的合法结果，把首字母插入第 $1$ 位或第 $2$ 位，均得到合法且不同的结果；每个 $n$ 字母合法结果也恰由其中一种方式产生。",
+          "所以 $f(n)=2f(n-1)$（$n\\ge2$），且 $f(1)=1$。因此 $f(9)=2^8=256$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2"
+  },
+  "bmo1-2024-q2": {
+    "summary": "An integer sequence $a_0,a_1,\\ldots$ is generated so that for every $i\\ge2$, either $a_i=2a_{i-1}-a_{i-2}$ or $a_i=2a_{i-2}-a_{i-1}$. Given $|a_{2024}-a_{2023}|=1$, prove $|a_1-a_0|=1$.",
+    "summaryZh": "整数数列 $a_0,a_1,\\ldots$ 满足：对每个 $i\\ge2$，都有 $a_i=2a_{i-1}-a_{i-2}$ 或 $a_i=2a_{i-2}-a_{i-1}$。已知 $|a_{2024}-a_{2023}|=1$，证明 $|a_1-a_0|=1$。",
+    "answer": "$a_0$ and $a_1$ must be consecutive integers.",
+    "answerZh": "$a_0$ 与 $a_1$ 必为相邻整数。",
+    "methods": [
+      {
+        "title": "Track absolute consecutive differences backwards",
+        "titleZh": "逆向追踪相邻项差的绝对值",
+        "topics": [
+          {"en": "Sequences", "zh": "数列"},
+          {"en": "Monotonic invariants", "zh": "单调不变量"},
+          {"en": "Integer parity", "zh": "整数奇偶性"}
+        ],
+        "steps": [
+          "Put $d_i=a_i-a_{i-1}$. The two allowed rules give $d_i=d_{i-1}$ or $d_i=-2d_{i-1}$. Consequently $|d_i|$ is either $|d_{i-1}|$ or $2|d_{i-1}|$, so $|d_i|\\ge|d_{i-1}|$.",
+          "Since $|d_{2024}|=1$, the chain of inequalities gives $1\\ge|d_{2023}|\\ge\\cdots\\ge|d_1|$. Each $d_i$ is an integer.",
+          "If $d_1=0$, then both recurrence options keep every later difference equal to $0$, contradicting $|d_{2024}|=1$. Hence $|d_1|$ is a positive integer.",
+          "Therefore $1\\ge|d_1|\\ge1$, so $|a_1-a_0|=|d_1|=1$, as required."
+        ],
+        "stepsZh": [
+          "令 $d_i=a_i-a_{i-1}$。两种递推规则分别给出 $d_i=d_{i-1}$ 或 $d_i=-2d_{i-1}$。因此 $|d_i|$ 等于 $|d_{i-1}|$ 或 $2|d_{i-1}|$，从而 $|d_i|\\ge|d_{i-1}|$。",
+          "由 $|d_{2024}|=1$，得到 $1\\ge|d_{2023}|\\ge\\cdots\\ge|d_1|$。每个 $d_i$ 都是整数。",
+          "若 $d_1=0$，则两种递推选择都会使以后所有相邻差保持为 $0$，与 $|d_{2024}|=1$ 矛盾。因此 $|d_1|$ 是正整数。",
+          "于是 $1\\ge|d_1|\\ge1$，故 $|a_1-a_0|=|d_1|=1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2"
+  },
+  "bmo1-2024-q3": {
+    "summary": "In triangle $ABC$, assume $\\angle ACB<\\angle BAC<90^\\circ$. Point $X\\ne A$ lies on $AC$, and point $Y\\ne A$ lies on the circumcircle of $ABC$, with $BA=BX=BY$. The line $XY$ meets the circumcircle again at $Z$. Prove $BZ\\perp AC$.",
+    "summaryZh": "在三角形 $ABC$ 中，$\\angle ACB<\\angle BAC<90^\\circ$。点 $X\\ne A$ 位于 $AC$ 上，点 $Y\\ne A$ 位于 $ABC$ 的外接圆上，并满足 $BA=BX=BY$。直线 $XY$ 再次交外接圆于 $Z$。证明 $BZ\\perp AC$。",
+    "answer": "$BZ$ is perpendicular to $AC$.",
+    "answerZh": "$BZ\\perp AC$。",
+    "methods": [
+      {
+        "title": "Show that $BZ$ bisects an isosceles apex angle",
+        "titleZh": "证明 $BZ$ 平分等腰三角形的顶角",
+        "topics": [
+          {"en": "Cyclic quadrilaterals", "zh": "圆内接四边形"},
+          {"en": "Central angles", "zh": "圆心角"},
+          {"en": "Isosceles triangles", "zh": "等腰三角形"}
+        ],
+        "steps": [
+          "Let $\\theta=\\angle ZBA$. Since $A,B,Y,Z$ are concyclic, angles subtending chord $ZA$ give $\\angle ZYA=\\theta$. Because $Y,X,Z$ are collinear in that order, $\\angle XYA=\\theta$.",
+          "The points $A,X,Y$ lie on the circle centred at $B$ because $BA=BX=BY$. On this circle, the central angle $\\angle XBA$ subtending chord $XA$ is twice the inscribed angle $\\angle XYA$. Hence $\\angle XBA=2\\theta$.",
+          "Thus $\\angle ZBA=\\theta=\\frac12\\angle XBA$, so $BZ$ is the internal angle bisector of the apex angle of isosceles triangle $ABX$.",
+          "In an isosceles triangle, the apex angle bisector is also an altitude. Therefore $BZ\\perp AX$, and since $A,X,C$ are collinear, $BZ\\perp AC$."
+        ],
+        "stepsZh": [
+          "令 $\\theta=\\angle ZBA$。因 $A,B,Y,Z$ 共圆，同弦 $ZA$ 所对圆周角相等，故 $\\angle ZYA=\\theta$。又 $Y,X,Z$ 共线且依次排列，所以 $\\angle XYA=\\theta$。",
+          "由 $BA=BX=BY$，点 $A,X,Y$ 位于以 $B$ 为圆心的同一圆上。在此圆中，同弦 $XA$ 所对圆心角 $\\angle XBA$ 是圆周角 $\\angle XYA$ 的两倍，故 $\\angle XBA=2\\theta$。",
+          "因此 $\\angle ZBA=\\theta=\\frac12\\angle XBA$，所以 $BZ$ 平分等腰三角形 $ABX$ 的顶角。",
+          "等腰三角形的顶角平分线也是底边上的高，故 $BZ\\perp AX$。由于 $A,X,C$ 共线，得到 $BZ\\perp AC$。"
+        ]
+      },
+      {
+        "title": "Form a kite",
+        "titleZh": "构造风筝形",
+        "topics": [
+          {"en": "Angle chasing", "zh": "追角"},
+          {"en": "Kites", "zh": "风筝形"}
+        ],
+        "steps": [
+          "Put $\\alpha=\\angle BAC$ and $\\delta=\\angle XYB$. From $BA=BX$ and $BX=BY$, we have $\\angle BAX=\\angle AXB=\\alpha$ and $\\angle BXY=\\angle XYB=\\delta$.",
+          "Since $Y,X,Z$ are collinear, $\\angle ZXA=180^\\circ-\\alpha-\\delta$. Since $A,B,Y,Z$ are cyclic, $\\angle BAZ=180^\\circ-\\delta$, and hence $\\angle XAZ=180^\\circ-\\alpha-\\delta$.",
+          "Thus triangle $AXZ$ is isosceles and $ZA=ZX$. Together with $BA=BX$, quadrilateral $ABXZ$ is a kite whose symmetry diagonal is $BZ$.",
+          "The diagonals of a kite are perpendicular, so $BZ\\perp AX=AC$."
+        ],
+        "stepsZh": [
+          "令 $\\alpha=\\angle BAC$、$\\delta=\\angle XYB$。由 $BA=BX$ 与 $BX=BY$，有 $\\angle BAX=\\angle AXB=\\alpha$，且 $\\angle BXY=\\angle XYB=\\delta$。",
+          "由于 $Y,X,Z$ 共线，$\\angle ZXA=180^\\circ-\\alpha-\\delta$。又因 $A,B,Y,Z$ 共圆，$\\angle BAZ=180^\\circ-\\delta$，所以 $\\angle XAZ=180^\\circ-\\alpha-\\delta$。",
+          "故三角形 $AXZ$ 为等腰三角形，$ZA=ZX$。结合 $BA=BX$，四边形 $ABXZ$ 是以 $BZ$ 为对称对角线的风筝形。",
+          "风筝形的两条对角线互相垂直，所以 $BZ\\perp AX=AC$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2"
+  },
+  "bmo1-2024-q4": {
+    "summary": "Find all positive integers $n$ for which $n2^n+1$ is a perfect square.",
+    "summaryZh": "求所有使 $n2^n+1$ 为完全平方数的正整数 $n$。",
+    "answer": "$n=2$ and $n=3$.",
+    "answerZh": "$n=2$ 或 $n=3$。",
+    "methods": [
+      {
+        "title": "Factor the difference of two squares",
+        "titleZh": "利用平方差分解",
+        "topics": [
+          {"en": "Diophantine equations", "zh": "丢番图方程"},
+          {"en": "Powers of two", "zh": "二的幂"},
+          {"en": "Exponential bounds", "zh": "指数估计"}
+        ],
+        "steps": [
+          "Suppose $n2^n+1=a^2$ for a positive integer $a$. Then $(a-1)(a+1)=n2^n$. Both factors are even and differ by $2$.",
+          "Among two consecutive even integers, exactly one is divisible by $4$. Hence one of $a-1,a+1$ contains only one factor $2$, while the other is divisible by $2^{n-1}$. In particular, $a+1\\ge2^{n-1}$.",
+          "Using $(a-1)(a+1)=n2^n$ and $a+1\\ge2^{n-1}$ gives $a-1\\le2n$, so $2^{n-1}\\le a+1\\le2n+2$.",
+          "For $n=5$, $2^{n-1}=16>12=2n+2$. If $2^{k-1}>2k+2$ for $k\\ge5$, then $2^k=2\\cdot2^{k-1}>4k+4>2(k+1)+2$, so the inequality persists for all $n\\ge5$. Therefore only $n=1,2,3,4$ require checking.",
+          "The values $n2^n+1$ are respectively $3,9,25,65$. Thus precisely $n=2$ and $n=3$ work."
+        ],
+        "stepsZh": [
+          "设正整数 $a$ 满足 $n2^n+1=a^2$。则 $(a-1)(a+1)=n2^n$，两因子均为偶数且相差 $2$。",
+          "两个相邻偶数中恰有一个能被 $4$ 整除。因此 $a-1,a+1$ 中一个只含一个因子 $2$，另一个必能被 $2^{n-1}$ 整除。特别地，$a+1\\ge2^{n-1}$。",
+          "由 $(a-1)(a+1)=n2^n$ 及 $a+1\\ge2^{n-1}$ 得 $a-1\\le2n$，所以 $2^{n-1}\\le a+1\\le2n+2$。",
+          "当 $n=5$ 时，$2^{n-1}=16>12=2n+2$。若对某个 $k\\ge5$ 有 $2^{k-1}>2k+2$，则 $2^k=2\\cdot2^{k-1}>4k+4>2(k+1)+2$，故该不等式对所有 $n\\ge5$ 成立。因此只需检查 $n=1,2,3,4$。",
+          "相应的 $n2^n+1$ 依次为 $3,9,25,65$。所以恰有 $n=2,3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2"
+  },
+  "bmo1-2024-q5": {
+    "summary": "Colour $1000$ equally spaced points on a circle red or blue. Count one fault for each adjacent red pair and one fault for each blue pair separated by exactly one point. Determine the minimum possible number of faults.",
+    "summaryZh": "将圆周上均匀分布的 $1000$ 个点染成红色或蓝色。每一对相邻红点记作一个错误；每一对中间恰隔一个点的蓝点也记作一个错误。求错误数的最小可能值。",
+    "answer": "The minimum number of faults is $250$.",
+    "answerZh": "最少有 $250$ 个错误。",
+    "methods": [
+      {
+        "title": "Use overlapping blocks of five points",
+        "titleZh": "使用首尾相交的五点分组",
+        "topics": [
+          {"en": "Colourings", "zh": "染色"},
+          {"en": "Block arguments", "zh": "分组论证"},
+          {"en": "Extremal constructions", "zh": "极值构造"}
+        ],
+        "steps": [
+          "The periodic colouring $RRBBRRBB\\cdots$ fits around the circle because $4\\mid1000$. Each four-point block contributes one adjacent red pair, and no two blue points are two positions apart. Hence this construction has $250$ faults.",
+          "Every five consecutive points contain a fault. If one of the middle three is red, then either it has a red neighbour or both its neighbours are blue; these alternatives give a red fault or a blue fault. If all middle three are blue, the first and third of them form a blue fault.",
+          "Form $250$ cyclic blocks of five points, starting every four positions. Consecutive blocks share only their endpoint, so no fault pair can belong to two different blocks: a fault uses two distinct points at cyclic distance $1$ or $2$.",
+          "Each block contains at least one distinct fault, giving at least $250$ faults altogether. The construction attains this bound, so the minimum is $250$."
+        ],
+        "stepsZh": [
+          "由于 $4\\mid1000$，可以沿圆周重复染色 $RRBBRRBB\\cdots$。每个四点块恰贡献一对相邻红点，且不存在相隔一个点的蓝点对，所以共有 $250$ 个错误。",
+          "任意连续五点中至少有一个错误。若中间三点之一为红色，则它或者有红色邻点，或者两个邻点均为蓝色；前者产生红色错误，后者产生蓝色错误。若中间三点全为蓝色，则其中第一与第三点构成蓝色错误。",
+          "沿圆周每隔四个位置取一个连续五点块，共得到 $250$ 个块。相邻块只共享一个端点，而一个错误由循环距离为 $1$ 或 $2$ 的两个不同点组成，所以同一错误不可能属于两个块。",
+          "每个块至少含一个彼此不同的错误，故总错误数至少为 $250$。上述构造达到此界，因此最小值为 $250$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2"
+  },
+  "bmo1-2024-q6": {
+    "summary": "A convex equilateral $n$-gon $(n>4)$ has vertices $v_1,\\ldots,v_n$ in cyclic order, and all step-three diagonals $v_iv_{i+3}$ (indices modulo $n$) have the same length. For which $n$ must the polygon be equiangular?",
+    "summaryZh": "一个凸等边 $n$ 边形（$n>4$）的顶点按顺序为 $v_1,\\ldots,v_n$，并且所有跨三步的对角线 $v_iv_{i+3}$（下标模 $n$）等长。对哪些 $n$，该多边形必为等角多边形？",
+    "answer": "Exactly the odd integers $n>4$.",
+    "answerZh": "恰为所有大于 $4$ 的奇数 $n$。",
+    "methods": [
+      {
+        "title": "Compare angles two vertices apart and construct even counterexamples",
+        "titleZh": "比较相隔两个顶点的内角并构造偶数反例",
+        "topics": [
+          {"en": "Polygon geometry", "zh": "多边形几何"},
+          {"en": "SSS congruence", "zh": "SSS 全等"},
+          {"en": "Modular indices", "zh": "模下标"},
+          {"en": "Counterexamples", "zh": "反例构造"}
+        ],
+        "steps": [
+          "Assume first that $n$ is odd. For five consecutive vertices, triangles $v_iv_{i+1}v_{i+3}$ and $v_{i+4}v_{i+3}v_{i+1}$ have one common step-two side, one polygon edge each, and one step-three diagonal each. They are congruent by SSS.",
+          "Let the equal angles opposite their polygon-edge sides be $\\beta$. Triangle $v_{i+1}v_{i+2}v_{i+3}$ is isosceles because its two polygon edges are equal; call its equal base angles $\\alpha$. The interior angles at $v_{i+1}$ and $v_{i+3}$ are both $\\alpha+\\beta$.",
+          "Thus every interior angle satisfies $\\theta_j=\\theta_{j+2}$. When $n$ is odd, repeatedly adding $2$ modulo $n$ reaches every index, so all the $\\theta_j$ are equal.",
+          "Now let $n=2k$ be even. Start with a regular $k$-gon and erect congruent outward isosceles triangles on its sides, each with base angle $\\alpha$, where $0<\\alpha<90^\\circ/k$. Reading alternately an original vertex and the adjacent new apex produces an equilateral convex $2k$-gon.",
+          "Its exterior angles alternate between $2\\alpha$ and $360^\\circ/k-2\\alpha$, so it is not equiangular. Every step-three diagonal is the third side of a triangle having one new polygon edge, one side of the original regular $k$-gon, and the same included angle $180^\\circ-360^\\circ/k+\\alpha$; SAS therefore makes all these diagonals equal. Hence no even $n$ has the required necessity, and exactly odd $n>4$ work."
+        ],
+        "stepsZh": [
+          "先设 $n$ 为奇数。对任意连续五个顶点，三角形 $v_iv_{i+1}v_{i+3}$ 与 $v_{i+4}v_{i+3}v_{i+1}$ 共有一条跨两步的边，并各含一条多边形边和一条跨三步对角线，因此由 SSS 全等。",
+          "把两个三角形中多边形边所对的相等角记为 $\\beta$。三角形 $v_{i+1}v_{i+2}v_{i+3}$ 的两腰是多边形边，所以它是等腰三角形；把两个底角记为 $\\alpha$。于是多边形在 $v_{i+1}$ 与 $v_{i+3}$ 处的内角都等于 $\\alpha+\\beta$。",
+          "因此所有内角满足 $\\theta_j=\\theta_{j+2}$。当 $n$ 为奇数时，在模 $n$ 意义下反复加 $2$ 可以遍历全部下标，所以所有内角相等。",
+          "再设 $n=2k$ 为偶数。从一个正 $k$ 边形出发，在每条边外侧作全等的等腰三角形，底角均为 $\\alpha$，其中 $0<\\alpha<90^\\circ/k$。把原顶点与相邻的新顶点交替连接，得到一个凸等边 $2k$ 边形。",
+          "该多边形的外角交替为 $2\\alpha$ 与 $360^\\circ/k-2\\alpha$，所以并不等角。每条跨三步对角线都是某个三角形的第三边，而这些三角形都含有一条新多边形边、一条原正 $k$ 边形的边及相同夹角 $180^\\circ-360^\\circ/k+\\alpha$；由 SAS，它们的第三边全相等。因此偶数 $n$ 均不满足“必然等角”，答案恰为大于 $4$ 的奇数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://bmos.ukmt.org.uk/home/bmo1-2024.pdf#page=2"
+  }
+}
