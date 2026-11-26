@@ -1,0 +1,178 @@
+{
+  "amc8-1986-q1": {
+    "summary": "In July 1861, Cherrapunji received $366$ inches of rain. Find the average rainfall in inches per hour for the $31$-day month. Options: A $366/(31\\cdot24)$, B $366\\cdot31/24$, C $366\\cdot24/31$, D $31\\cdot24/366$, E $366\\cdot31\\cdot24$.",
+    "summaryZh": "1861 年 7 月，乞拉朋齐降雨 $366$ 英寸。求这个 $31$ 天月份中平均每小时的降雨量。选项为 A $366/(31\\cdot24)$，B $366\\cdot31/24$，C $366\\cdot24/31$，D $31\\cdot24/366$，E $366\\cdot31\\cdot24$。",
+    "answer": "A. $366/(31\\cdot24)=61/124$ inches per hour.",
+    "answerZh": "A．$366/(31\\cdot24)=61/124$ 英寸/小时。",
+    "methods": [{"title":"Divide the total by the elapsed hours","titleZh":"总量除以总时数","topics":[{"en":"Rates","zh":"平均速率"},{"en":"Unit conversion","zh":"单位换算"}],"steps":["July contains $31\\cdot24=744$ hours.","The hourly average is $366/744=61/124$ inch, which is option A."],"stepsZh":["7 月共有 $31\\cdot24=744$ 小时。","平均每小时降雨量为 $366/744=61/124$ 英寸，对应 A。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/1"
+  },
+  "amc8-1986-q2": {
+    "summary": "Which listed number has the largest reciprocal? A $1/3$, B $2/5$, C $1$, D $5$, E $1986$.",
+    "summaryZh": "下列哪个数的倒数最大？A $1/3$，B $2/5$，C $1$，D $5$，E $1986$。",
+    "answer": "A. $1/3$.", "answerZh": "A．$1/3$。",
+    "methods": [{"title":"Order positive numbers and their reciprocals","titleZh":"利用正数与倒数的反序关系","topics":[{"en":"Reciprocals","zh":"倒数"}],"steps":["All five numbers are positive, so the smallest number has the largest reciprocal.","The smallest listed number is $1/3$, whose reciprocal is $3$."],"stepsZh":["五个数均为正数，因此原数越小，倒数越大。","最小的数是 $1/3$，其倒数为 $3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/2"
+  },
+  "amc8-1986-q3": {
+    "summary": "Find the smallest sum of three distinct elements of $\\{7,25,-1,12,-3\\}$. Options: A $-3$, B $-1$, C $3$, D $5$, E $21$.",
+    "summaryZh": "从集合 $\\{7,25,-1,12,-3\\}$ 中选三个不同的数，求最小可能的和。选项为 A $-3$，B $-1$，C $3$，D $5$，E $21$。",
+    "answer": "C. $3$.", "answerZh": "C．$3$。",
+    "methods": [{"title":"Choose the three smallest elements","titleZh":"选取最小的三个元素","topics":[{"en":"Ordering integers","zh":"整数大小比较"}],"steps":["A sum of three distinct entries is minimised by choosing the three least entries.","They are $-3,-1,7$, and their sum is $-3-1+7=3$."],"stepsZh":["要使三个不同元素之和最小，应选择集合中最小的三个数。","这三个数是 $-3,-1,7$，其和为 $-3-1+7=3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/3"
+  },
+  "amc8-1986-q4": {
+    "summary": "Which choice is closest to $(1.8)(40.3+0.07)$? A $7$, B $42$, C $74$, D $84$, E $737$.",
+    "summaryZh": "$(1.8)(40.3+0.07)$ 最接近哪个选项？A $7$，B $42$，C $74$，D $84$，E $737$。",
+    "answer": "C. $74$.", "answerZh": "C．$74$。",
+    "methods": [{"title":"Compute and compare","titleZh":"计算后比较","topics":[{"en":"Decimal arithmetic","zh":"小数运算"},{"en":"Estimation","zh":"估算"}],"steps":["First $40.3+0.07=40.37$.","Then $1.8\\cdot40.37=72.666$, whose distance from $74$ is smaller than its distance from every other choice."],"stepsZh":["先算 $40.3+0.07=40.37$。","再算 $1.8\\cdot40.37=72.666$，它与 $74$ 的差小于与其他各选项的差。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/4"
+  },
+  "amc8-1986-q5": {
+    "summary": "A contest starts at noon and ends $1000$ minutes later. At what time does it end? A $10{:}00$ p.m., B midnight, C $2{:}30$ a.m., D $4{:}40$ a.m., E $6{:}40$ a.m.",
+    "summaryZh": "一场比赛从中午开始，$1000$ 分钟后结束。结束时间是什么？A 晚上 $10{:}00$，B 午夜，C 凌晨 $2{:}30$，D 凌晨 $4{:}40$，E 早上 $6{:}40$。",
+    "answer": "D. $4{:}40$ a.m.", "answerZh": "D．凌晨 $4{:}40$。",
+    "methods": [{"title":"Convert minutes into hours and minutes","titleZh":"把分钟化为小时和分钟","topics":[{"en":"Time conversion","zh":"时间换算"}],"steps":["$1000=16\\cdot60+40$, so the duration is $16$ hours $40$ minutes.","Twelve hours after noon is midnight, and another $4$ hours $40$ minutes gives $4{:}40$ a.m."],"stepsZh":["$1000=16\\cdot60+40$，所以时长为 $16$ 小时 $40$ 分钟。","从中午起 $12$ 小时到午夜，再过 $4$ 小时 $40$ 分钟即凌晨 $4{:}40$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/5"
+  },
+  "amc8-1986-q6": {
+    "summary": "Evaluate $\\dfrac{2}{1-2/3}$. Options: A $-3$, B $-4/3$, C $2/3$, D $2$, E $6$.",
+    "summaryZh": "计算 $\\dfrac{2}{1-2/3}$。选项为 A $-3$，B $-4/3$，C $2/3$，D $2$，E $6$。",
+    "answer": "E. $6$.", "answerZh": "E．$6$。",
+    "methods": [{"title":"Simplify the denominator first","titleZh":"先化简分母","topics":[{"en":"Complex fractions","zh":"繁分数"}],"steps":["The denominator is $1-2/3=1/3$.","Therefore $2/(1/3)=2\\cdot3=6$."],"stepsZh":["分母为 $1-2/3=1/3$。","因此 $2/(1/3)=2\\cdot3=6$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/6"
+  },
+  "amc8-1986-q7": {
+    "summary": "How many whole numbers lie strictly between $\\sqrt8$ and $\\sqrt{80}$? Options: A $5$, B $6$, C $7$, D $8$, E $9$.",
+    "summaryZh": "$\\sqrt8$ 与 $\\sqrt{80}$ 之间严格有多少个非负整数？选项为 A $5$，B $6$，C $7$，D $8$，E $9$。",
+    "answer": "B. $6$.", "answerZh": "B．$6$。",
+    "methods": [{"title":"Bracket the square roots","titleZh":"用完全平方数夹逼","topics":[{"en":"Square roots","zh":"平方根"},{"en":"Integer counting","zh":"整数计数"}],"steps":["Since $4<8<9$, we have $2<\\sqrt8<3$. Since $64<80<81$, we have $8<\\sqrt{80}<9$.","The intervening whole numbers are $3,4,5,6,7,8$, giving six numbers."],"stepsZh":["由 $4<8<9$ 得 $2<\\sqrt8<3$；由 $64<80<81$ 得 $8<\\sqrt{80}<9$。","其间的非负整数为 $3,4,5,6,7,8$，共六个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/7"
+  },
+  "amc8-1986-q8": {
+    "summary": "The two-digit numbers $B2$ and $7B$ have the same unknown digit $B$, and $(B2)(7B)=6396$. Find $B$. Options: A $3$, B $5$, C $6$, D $7$, E $8$.",
+    "summaryZh": "两位数 $B2$ 与 $7B$ 中的 $B$ 表示同一个数字，且 $(B2)(7B)=6396$。求 $B$。选项为 A $3$，B $5$，C $6$，D $7$，E $8$。",
+    "answer": "E. $B=8$.", "answerZh": "E．$B=8$。",
+    "methods": [{"title":"Use the units digit and the product size","titleZh":"结合个位数与乘积大小","topics":[{"en":"Digits","zh":"数位"},{"en":"Multiplication","zh":"乘法"}],"steps":["The units digit comes from $2B$ and equals $6$, so $B$ is $3$ or $8$.","If $B=3$, then $32\\cdot73<3000$. Thus $B=8$, and indeed $82\\cdot78=6396$."],"stepsZh":["乘积个位来自 $2B$，末位为 $6$，所以 $B=3$ 或 $8$。","若 $B=3$，则 $32\\cdot73<3000$，不合题意。因此 $B=8$，且 $82\\cdot78=6396$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/8"
+  },
+  "amc8-1986-q9": {
+    "summary": "A directed network has vertices $M,A,B,C,D,N$. Its directed edges are $M\\to A$, $M\\to B$, $B\\to A$, $A\\to C$, $A\\to D$, $D\\to C$, $B\\to C$, $B\\to N$, $C\\to N$. How many directed routes lead from $M$ to $N$? Options: A $2$, B $3$, C $4$, D $5$, E $6$.",
+    "summaryZh": "一个有向网络含顶点 $M,A,B,C,D,N$，有向边为 $M\\to A$、$M\\to B$、$B\\to A$、$A\\to C$、$A\\to D$、$D\\to C$、$B\\to C$、$B\\to N$、$C\\to N$。从 $M$ 到 $N$ 有多少条有向路径？选项为 A $2$，B $3$，C $4$，D $5$，E $6$。",
+    "answer": "E. $6$ routes.", "answerZh": "E．$6$ 条路径。",
+    "methods": [{"title":"List routes by their first edge","titleZh":"按第一条边分类列举","topics":[{"en":"Directed paths","zh":"有向路径"},{"en":"Systematic counting","zh":"分类计数"}],"steps":["Starting $M\\to A$ gives $MACN$ and $MADCN$.","Starting $M\\to B$ gives $MBN$, $MBCN$, $MBACN$ and $MBADCN$. These six routes are distinct and exhaustive."],"stepsZh":["以 $M\\to A$ 开始的路径为 $MACN$ 与 $MADCN$。","以 $M\\to B$ 开始的路径为 $MBN$、$MBCN$、$MBACN$ 与 $MBADCN$。六条路径互不相同且已穷尽。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/9"
+  },
+  "amc8-1986-q10": {
+    "summary": "A picture $3$ feet wide is centred on a wall $19$ feet wide. Find the distance from either end of the wall to the nearest picture edge. Options: A $1.5$, B $8$, C $9.5$, D $16$, E $22$ feet.",
+    "summaryZh": "一幅宽 $3$ 英尺的画居中挂在宽 $19$ 英尺的墙上。求墙的一端到画的最近边缘的距离。选项为 A $1.5$，B $8$，C $9.5$，D $16$，E $22$ 英尺。",
+    "answer": "B. $8$ feet.", "answerZh": "B．$8$ 英尺。",
+    "methods": [{"title":"Split the unused width equally","titleZh":"平分剩余宽度","topics":[{"en":"Symmetry","zh":"对称"},{"en":"Length","zh":"长度"}],"steps":["The unused wall width is $19-3=16$ feet.","Centring gives equal gaps, so each gap is $16/2=8$ feet."],"stepsZh":["墙上未被画占用的宽度为 $19-3=16$ 英尺。","由于画居中，两侧间距相等，每侧为 $16/2=8$ 英尺。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/10"
+  },
+  "amc8-1986-q11": {
+    "summary": "Define $A*B=(A+B)/2$. Evaluate $(3*5)*8$. Options: A $6$, B $8$, C $12$, D $16$, E $30$.",
+    "summaryZh": "定义 $A*B=(A+B)/2$。计算 $(3*5)*8$。选项为 A $6$，B $8$，C $12$，D $16$，E $30$。",
+    "answer": "A. $6$.", "answerZh": "A．$6$。",
+    "methods": [{"title":"Apply the operation from the inner pair outward","titleZh":"由内向外使用新运算","topics":[{"en":"Defined operations","zh":"新定义运算"}],"steps":["First $3*5=(3+5)/2=4$.","Then $4*8=(4+8)/2=6$."],"stepsZh":["先算 $3*5=(3+5)/2=4$。","再算 $4*8=(4+8)/2=6$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/11"
+  },
+  "amc8-1986-q12": {
+    "summary": "A table classifies $30$ students by grades A, B, C, D, F on two tests. The five cells for receiving the same grade on both tests contain $2,4,5,1,0$ students, respectively. What percent received the same grade twice? Options: A $12\\%$, B $25\\%$, C $33\\tfrac13\\%$, D $40\\%$, E $50\\%$.",
+    "summaryZh": "一个表格按两次考试的 A、B、C、D、F 成绩对 $30$ 名学生分类。两次成绩相同的五个对角单元格人数依次为 $2,4,5,1,0$。求两次成绩相同的学生所占百分比。选项为 A $12\\%$，B $25\\%$，C $33\\tfrac13\\%$，D $40\\%$，E $50\\%$。",
+    "answer": "D. $40\\%$.", "answerZh": "D．$40\\%$。",
+    "methods": [{"title":"Add the main diagonal","titleZh":"相加主对角线","topics":[{"en":"Two-way tables","zh":"双向分类表"},{"en":"Percentages","zh":"百分数"}],"steps":["Equal grades occur in the five diagonal cells, whose total is $2+4+5+1+0=12$.","Thus the percentage is $12/30\\cdot100\\%=40\\%$."],"stepsZh":["两次成绩相同对应五个对角单元格，总人数为 $2+4+5+1+0=12$。","所占百分比为 $12/30\\cdot100\\%=40\\%$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/12"
+  },
+  "amc8-1986-q13": {
+    "summary": "A rectilinear polygon is obtained from an $8$-by-$6$ rectangle by cutting a rectangular notch inward from one side; all its angles are right angles. Find its perimeter. Options: A $14$, B $20$, C $28$, D $48$, E cannot be determined.",
+    "summaryZh": "从一个 $8\\times6$ 长方形的一侧向内挖去一个矩形缺口，得到的多边形各角均为直角。求其周长。选项为 A $14$，B $20$，C $28$，D $48$，E 无法确定。",
+    "answer": "C. $28$ units.", "answerZh": "C．$28$ 个长度单位。",
+    "methods": [{"title":"Collect horizontal and vertical travel","titleZh":"分别统计横向与纵向路程","topics":[{"en":"Rectilinear perimeter","zh":"直角折线周长"}],"steps":["Around the boundary, total rightward length equals total leftward length, and each equals the full width $8$. The horizontal contribution is therefore $16$.","Likewise the upward and downward totals are each $6$, contributing $12$. The perimeter is $16+12=28$."],"stepsZh":["沿边界行走时，向右和向左的总长度相等，且各等于整体宽度 $8$，所以横向边总长为 $16$。","同理，向上和向下总长各为 $6$，纵向边总长为 $12$，故周长为 $16+12=28$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/13"
+  },
+  "amc8-1986-q14": {
+    "summary": "Given $200\\le a\\le400$ and $600\\le b\\le1200$, find the largest possible value of $b/a$. Options: A $3/2$, B $3$, C $6$, D $300$, E $600$.",
+    "summaryZh": "已知 $200\\le a\\le400$ 且 $600\\le b\\le1200$，求 $b/a$ 的最大可能值。选项为 A $3/2$，B $3$，C $6$，D $300$，E $600$。",
+    "answer": "C. $6$.", "answerZh": "C．$6$。",
+    "methods": [{"title":"Use the largest numerator and smallest denominator","titleZh":"取最大分子与最小分母","topics":[{"en":"Inequalities","zh":"不等式"},{"en":"Optimisation","zh":"最值"}],"steps":["For positive variables, $b/a$ increases with $b$ and decreases with $a$.","Thus its maximum is $1200/200=6$."],"stepsZh":["正数范围内，$b/a$ 随 $b$ 增大而增大，随 $a$ 增大而减小。","故最大值为 $1200/200=6$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/14"
+  },
+  "amc8-1986-q15": {
+    "summary": "An outlet's sale price is $50\\%$ below the original price. On Saturdays it takes another $20\\%$ off the sale price. Find the Saturday price of a coat originally priced at 180 dollars. Options: A 54, B 72, C 90, D 108, E 110 dollars.",
+    "summaryZh": "某商店的促销价比原价低 $50\\%$，星期六再按促销价打八折。一件原价 180 美元的外套星期六售价是多少？选项为 A 54，B 72，C 90，D 108，E 110 美元。",
+    "answer": "B. 72 dollars.", "answerZh": "B．72 美元。",
+    "methods": [{"title":"Apply the two discounts successively","titleZh":"依次计算两次折扣","topics":[{"en":"Successive percentages","zh":"连续百分数变化"}],"steps":["After the first discount the price is $180(0.5)=90$ dollars.","The Saturday discount leaves $80\\%$ of this, so the price is $90(0.8)=72$ dollars."],"stepsZh":["第一次折扣后价格为 $180(0.5)=90$ 美元。","星期六再保留该价格的 $80\\%$，所以售价为 $90(0.8)=72$ 美元。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/15"
+  },
+  "amc8-1986-q16": {
+    "summary": "Seasonal hamburger sales, in millions, are spring $4.5$, summer $5$, fall $4$, and an unknown winter amount. Fall accounts for exactly $25\\%$ of annual sales. Find winter sales. Options: A $2.5$, B $3$, C $3.5$, D $4$, E $4.5$ million.",
+    "summaryZh": "某快餐连锁店各季汉堡销量（百万个）为：春季 $4.5$、夏季 $5$、秋季 $4$、冬季未知。秋季恰占全年销量的 $25\\%$。求冬季销量。选项为 A $2.5$，B $3$，C $3.5$，D $4$，E $4.5$ 百万个。",
+    "answer": "A. $2.5$ million.", "answerZh": "A．$2.5$ 百万个。",
+    "methods": [{"title":"Recover the annual total","titleZh":"先求全年总量","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Data interpretation","zh":"数据图表"}],"steps":["If $4$ million is $25\\%$ of the total, annual sales are $4/0.25=16$ million.","Winter sales are $16-(4.5+5+4)=2.5$ million."],"stepsZh":["若 $4$ 百万个占全年 $25\\%$，则全年销量为 $4/0.25=16$ 百万个。","冬季销量为 $16-(4.5+5+4)=2.5$ 百万个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/16"
+  },
+  "amc8-1986-q17": {
+    "summary": "Let $o$ be an odd whole number and $n$ any whole number. Which statement about $o^2+no$ is always true? A always odd, B always even, C even only if $n$ is even, D odd only if $n$ is odd, E odd only if $n$ is even.",
+    "summaryZh": "设 $o$ 为奇数，$n$ 为任意非负整数。关于 $o^2+no$，哪个说法恒成立？A 恒为奇数，B 恒为偶数，C 仅当 $n$ 为偶数时为偶数，D 仅当 $n$ 为奇数时为奇数，E 仅当 $n$ 为偶数时为奇数。",
+    "answer": "E. It is odd only if $n$ is even.", "answerZh": "E．它为奇数时，$n$ 必为偶数。",
+    "methods": [{"title":"Factor and compare parity","titleZh":"因式分解并判断奇偶性","topics":[{"en":"Parity","zh":"奇偶性"},{"en":"Factorisation","zh":"因式分解"}],"steps":["Factor $o^2+no=o(o+n)$. Since $o$ is odd, the product has the parity of $o+n$.","The sum $o+n$ is odd exactly when $n$ is even. Hence the expression can be odd only when $n$ is even."],"stepsZh":["因式分解得 $o^2+no=o(o+n)$。由于 $o$ 为奇数，乘积的奇偶性与 $o+n$ 相同。","$o+n$ 为奇数当且仅当 $n$ 为偶数，因此原式为奇数时 $n$ 必为偶数。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/17"
+  },
+  "amc8-1986-q18": {
+    "summary": "A $36$ m by $60$ m rectangular grazing area uses a $100$ m rock wall as one side and fencing on the other three sides. Posts are placed every $12$ m, including both endpoints at the wall. Find the fewest posts required. Options: A $11$, B $12$, C $13$, D $14$, E $16$.",
+    "summaryZh": "一个 $36$ m × $60$ m 的长方形牧场把一段 $100$ m 石墙作为一边，另外三边围篱笆。每隔 $12$ m 立一根柱，并包括篱笆与石墙相接的两个端点。求最少需要多少根柱。选项为 A $11$，B $12$，C $13$，D $14$，E $16$。",
+    "answer": "B. $12$ posts.", "answerZh": "B．$12$ 根柱。",
+    "methods": [{"title":"Put the longer side against the wall","titleZh":"把长边贴墙","topics":[{"en":"Perimeter optimisation","zh":"周长最优化"},{"en":"Fencepost counting","zh":"间隔计数"}],"steps":["Using the $60$ m side along the wall minimises fenced length. The three fenced sides total $36+60+36=132$ m.","This is $132/12=11$ intervals. Including both endpoints requires $11+1=12$ posts."],"stepsZh":["把 $60$ m 长边沿石墙放置可使篱笆最短，三条篱笆边总长为 $36+60+36=132$ m。","共有 $132/12=11$ 个间隔，包括两个端点共需 $11+1=12$ 根柱。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/18"
+  },
+  "amc8-1986-q19": {
+    "summary": "A trip begins with odometer $56{,}200$ and a full tank. The tank is refilled with $12$ gallons at $56{,}560$ and with $20$ gallons at the trip's end, $57{,}060$. Find the trip's average miles per gallon to the nearest tenth. Options: A $22.5$, B $22.6$, C $24.0$, D $26.9$, E $27.5$.",
+    "summaryZh": "汽车在里程表 $56{,}200$ 时加满油并出发；到 $56{,}560$ 时补入 $12$ 加仑；行程结束于 $57{,}060$ 时又补入 $20$ 加仑至满。求全程平均每加仑英里数，精确到十分位。选项为 A $22.5$，B $22.6$，C $24.0$，D $26.9$，E $27.5$。",
+    "answer": "D. $26.9$ miles per gallon.", "answerZh": "D．$26.9$ 英里/加仑。",
+    "methods": [{"title":"Use full-tank accounting","titleZh":"利用满油箱法核算","topics":[{"en":"Fuel economy","zh":"燃油效率"},{"en":"Rates","zh":"平均速率"}],"steps":["The distance is $57{,}060-56{,}200=860$ miles.","Because the tank is full at both endpoints, fuel used equals the two later refills, $12+20=32$ gallons. Thus $860/32=26.875$, which rounds to $26.9$."],"stepsZh":["总路程为 $57{,}060-56{,}200=860$ 英里。","起点和终点油箱均加满，因此耗油量等于途中和终点补入量之和 $12+20=32$ 加仑。故 $860/32=26.875$，四舍五入得 $26.9$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/19"
+  },
+  "amc8-1986-q20": {
+    "summary": "Which choice is closest to $\\dfrac{304^5}{29.7\\cdot399^4}$? A $0.003$, B $0.03$, C $0.3$, D $3$, E $30$.",
+    "summaryZh": "$\\dfrac{304^5}{29.7\\cdot399^4}$ 最接近哪个选项？A $0.003$，B $0.03$，C $0.3$，D $3$，E $30$。",
+    "answer": "D. $3$.", "answerZh": "D．$3$。",
+    "methods": [{"title":"Round to convenient benchmark values","titleZh":"取便于计算的近似值","topics":[{"en":"Estimation","zh":"估算"},{"en":"Exponents","zh":"指数"}],"steps":["Replace $304,29.7,399$ by the nearby values $300,30,400$.","The estimate is $300^5/(30\\cdot400^4)=10(3/4)^4=810/256\\approx3.16$, closest to $3$."],"stepsZh":["把 $304,29.7,399$ 分别近似为 $300,30,400$。","得到 $300^5/(30\\cdot400^4)=10(3/4)^4=810/256\\approx3.16$，最接近 $3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/20"
+  },
+  "amc8-1986-q21": {
+    "summary": "Four shaded unit squares occupy grid cells $(1,1),(1,2),(2,2),(1,3)$. One fifth square is chosen from the eight labelled cells $A=(1,0)$, $B=(0,1)$, $C=(2,1)$, $D=(0,2)$, $E=(3,2)$, $F=(0,3)$, $G=(2,3)$, $H=(1,4)$. For how many choices can the five-square figure fold into a topless cubical box? Options: A $2$, B $3$, C $4$, D $5$, E $6$.",
+    "summaryZh": "方格坐标中，四个阴影单位正方形位于 $(1,1),(1,2),(2,2),(1,3)$。从八个标记格中再选一个：$A=(1,0)$、$B=(0,1)$、$C=(2,1)$、$D=(0,2)$、$E=(3,2)$、$F=(0,3)$、$G=(2,3)$、$H=(1,4)$。有多少种选择能把五格图形折成无盖立方体盒？选项为 A $2$，B $3$，C $4$，D $5$，E $6$。",
+    "answer": "E. $6$ choices.", "answerZh": "E．$6$ 种选择。",
+    "methods": [{"title":"Track the face reached by each candidate","titleZh":"追踪每个候选格折到的面","topics":[{"en":"Cube nets","zh":"立方体展开图"},{"en":"Spatial reasoning","zh":"空间想象"}],"steps":["Take $(1,2)$ as the bottom. The shaded neighbours become three side walls, leaving one side wall and the face opposite the bottom available.","Candidates $B,D,F$ fold to the missing side wall, while $A,E,H$ fold to the opposite face. Candidates $C,G$ overlap the already occupied side at $(2,2)$.","Thus $A,B,D,E,F,H$ work, for a total of six."],"stepsZh":["把 $(1,2)$ 作为底面，其余三个阴影格折成三个侧面，尚缺一个侧面以及底面的对面。","候选格 $B,D,F$ 折到缺少的侧面，$A,E,H$ 折到底面的对面；$C,G$ 会与 $(2,2)$ 对应的已有侧面重合。","所以可行的是 $A,B,D,E,F,H$，共六种。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/21"
+  },
+  "amc8-1986-q22": {
+    "summary": "Four true statements are considered: Alan's A grade would force Beth's; Beth's A would force Carlos's; Carlos's A would force Diana's. Exactly two students receive A grades. Which pair is it? A Alan and Beth, B Beth and Carlos, C Carlos and Diana, D Alan and Diana, E Beth and Diana.",
+    "summaryZh": "有三个均为真的条件命题：Alan 得 A 会推出 Beth 得 A；Beth 得 A 会推出 Carlos 得 A；Carlos 得 A 会推出 Diana 得 A。恰有两人得 A，他们是谁？A Alan 与 Beth，B Beth 与 Carlos，C Carlos 与 Diana，D Alan 与 Diana，E Beth 与 Diana。",
+    "answer": "C. Carlos and Diana.", "answerZh": "C．Carlos 与 Diana。",
+    "methods": [{"title":"Follow the implication chain","titleZh":"沿蕴含链推理","topics":[{"en":"Logical implication","zh":"逻辑蕴含"}],"steps":["An A for Alan forces four A grades, while an A for Beth forces at least three.","To obtain exactly two A grades, Carlos may receive an A and thereby force Diana's A, while Alan and Beth do not. Thus the pair is Carlos and Diana."],"stepsZh":["若 Alan 得 A，则会依次推出四人都得 A；若 Beth 得 A，则至少三人得 A。","要恰有两人得 A，只能由 Carlos 得 A 推出 Diana 得 A，而 Alan、Beth 均不得 A。因此答案为 Carlos 与 Diana。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/22"
+  },
+  "amc8-1986-q23": {
+    "summary": "A circle of radius $2$ contains two internally tangent circles of radius $1$. Their centres and their tangency point are collinear along a diameter of the large circle. One of the two congruent regions inside the large circle but outside both small circles is shaded. Find the ratio of the shaded area to the area of one small circle. Options: A between $1/2$ and $1$, B $1$, C between $1$ and $3/2$, D between $3/2$ and $2$, E indeterminate.",
+    "summaryZh": "一个半径为 $2$ 的圆内含两个半径为 $1$、彼此相切且与大圆内切的小圆；两个小圆圆心和切点位于大圆同一直径上。大圆内、小圆外的两个全等区域中有一个被涂色。求阴影面积与一个小圆面积之比。选项为 A 在 $1/2$ 与 $1$ 之间，B $1$，C 在 $1$ 与 $3/2$ 之间，D 在 $3/2$ 与 $2$ 之间，E 无法确定。",
+    "answer": "B. $1$.", "answerZh": "B．$1$。",
+    "methods": [{"title":"Subtract the two small circles and use symmetry","titleZh":"面积相减并利用对称性","topics":[{"en":"Circle area","zh":"圆的面积"},{"en":"Area decomposition","zh":"面积分割"}],"steps":["The area inside the large circle but outside the two small circles is $4\\pi-2\\pi=2\\pi$.","Symmetry divides this remainder into two equal regions, so the shaded area is $\\pi$. One small circle also has area $\\pi$, giving ratio $1$."],"stepsZh":["大圆内且两个小圆外的面积为 $4\\pi-2\\pi=2\\pi$。","由对称性，两块余下区域面积相等，所以阴影面积为 $\\pi$。一个小圆面积也是 $\\pi$，比值为 $1$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/23"
+  },
+  "amc8-1986-q24": {
+    "summary": "$600$ students are split randomly into three lunch groups of $200$. Which choice is closest to the probability that three specified friends are assigned to the same group? A $1/27$, B $1/9$, C $1/8$, D $1/6$, E $1/3$.",
+    "summaryZh": "$600$ 名学生被随机分入三个各 $200$ 人的午餐组。三个指定朋友被分到同一组的概率最接近哪个选项？A $1/27$，B $1/9$，C $1/8$，D $1/6$，E $1/3$。",
+    "answer": "B. $1/9$.", "answerZh": "B．$1/9$。",
+    "methods": [{"title":"Condition on the first friend's group","titleZh":"固定第一位朋友所在组","topics":[{"en":"Conditional probability","zh":"条件概率"},{"en":"Sampling without replacement","zh":"不放回抽样"}],"steps":["After fixing the first friend, the second joins that group with probability $199/599$ and then the third with probability $198/598$.","Their product is approximately $0.11037$, while $1/9\\approx0.11111$. This is closer than any other choice."],"stepsZh":["固定第一位朋友所在组后，第二位进入同组的概率为 $199/599$；在此前提下，第三位进入同组的概率为 $198/598$。","乘积约为 $0.11037$，而 $1/9\\approx0.11111$，比其他选项都更接近。"]},{"title":"Use the independent-group approximation","titleZh":"使用等概率分组近似","topics":[{"en":"Probability approximation","zh":"概率近似"}],"steps":["Ignoring the tiny capacity correction, after the first friend's group is fixed, each remaining friend has probability about $1/3$ of joining it.","The estimate is $(1/3)^2=1/9$; the exact calculation confirms that this is the nearest option."],"stepsZh":["忽略人数固定带来的微小修正，第一位朋友所在组确定后，另外两人各约有 $1/3$ 的概率进入该组。","估计值为 $(1/3)^2=1/9$；精确计算也确认它是最近选项。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/24"
+  },
+  "amc8-1986-q25": {
+    "summary": "Which set has the largest average? A multiples of $2$ between $1$ and $101$, B multiples of $3$, C multiples of $4$, D multiples of $5$, E multiples of $6$, with the same bounds.",
+    "summaryZh": "下列哪个集合的平均数最大？A $1$ 到 $101$ 之间的 $2$ 的倍数，B $3$ 的倍数，C $4$ 的倍数，D $5$ 的倍数，E $6$ 的倍数。",
+    "answer": "D. The multiples of $5$.", "answerZh": "D．$5$ 的倍数集合。",
+    "methods": [{"title":"Average the first and last terms","titleZh":"用首项与末项求平均数","topics":[{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Mean","zh":"平均数"}],"steps":["Each set is an arithmetic sequence, so its mean is the average of its first and last terms.","The means for multiples of $2,3,4,5,6$ are respectively $51,51,52,52.5,51$. The largest is $52.5$, from the multiples of $5$."],"stepsZh":["每个集合都是等差数列，其平均数等于首项与末项的平均数。","$2,3,4,5,6$ 的倍数集合平均数依次为 $51,51,52,52.5,51$，最大的是 $5$ 的倍数集合。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1986/problem/25"
+  }
+}
