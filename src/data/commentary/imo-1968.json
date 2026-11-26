@@ -1,0 +1,195 @@
+{
+  "imo-1968-q1": {
+    "summary": "Prove that exactly one triangle has three consecutive integer side lengths and also has one angle equal to twice another angle.",
+    "summaryZh": "证明：边长为三个连续整数且有一个角等于另一个角两倍的三角形恰有一个。",
+    "answer": "The unique triangle has side lengths $4,5,6$; the angle opposite side $6$ is twice the angle opposite side $4$.",
+    "answerZh": "唯一的三角形边长为 $4,5,6$；边 $6$ 所对的角是边 $4$ 所对角的两倍。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1968_IMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Convert the angle condition to a side equation",
+        "titleZh": "把倍角条件化为边长方程",
+        "topics": [
+          {"en": "Law of sines", "zh": "正弦定理"},
+          {"en": "Triple-angle identity", "zh": "三倍角恒等式"},
+          {"en": "Divisibility", "zh": "整除性"}
+        ],
+        "steps": [
+          "Let sides $a,b,c$ be opposite angles $A,B,C$, and suppose without loss of generality that $A=2B$. Then $C=\\pi-3B$. The identity $\\sin^2(2B)=\\sin B(\\sin B+\\sin3B)$, together with the law of sines, gives $a^2=b(b+c)$.",
+          "Thus $b\\mid a^2$. If $a$ and $b$ were consecutive, then $\\gcd(a,b)=1$, forcing $b=1$; the three consecutive side lengths would then be $1,2,3$, which do not form a triangle. Hence $a$ and $b$ must be the smallest and largest of the three consecutive integers.",
+          "If $a=b+2$ and $c=b+1$, the equation becomes $(b+2)^2=b(2b+1)$, or $(b-4)(b+1)=0$. Positivity gives $b=4$, hence $(a,b,c)=(6,4,5)$.",
+          "If $a=b-2$ and $c=b-1$, the equation becomes $(b-2)^2=b(2b-1)$, or $(b-1)(b+4)=0$. The only positive root $b=1$ makes $a$ negative, so this case is impossible.",
+          "It remains to verify existence. For sides $(a,b,c)=(6,4,5)$, the cosine law gives $\\cos B=(36+25-16)/(2\\cdot6\\cdot5)=3/4$ and $\\cos A=(16+25-36)/(2\\cdot4\\cdot5)=1/8$. Since $\\cos(2B)=2(3/4)^2-1=1/8=\\cos A$ and both angles lie in $(0,\\pi)$, we have $A=2B$. Thus the $4$-$5$-$6$ triangle is the unique one."
+        ],
+        "stepsZh": [
+          "设边 $a,b,c$ 分别对应角 $A,B,C$，不妨设 $A=2B$，则 $C=\\pi-3B$。利用恒等式 $\\sin^2(2B)=\\sin B(\\sin B+\\sin3B)$，再结合正弦定理，可得 $a^2=b(b+c)$。",
+          "于是 $b\\mid a^2$。若 $a,b$ 相邻，则 $\\gcd(a,b)=1$，从而只能有 $b=1$；此时三个连续边长为 $1,2,3$，不能组成三角形。因此 $a,b$ 必须分别是三个连续整数中的最小值与最大值。",
+          "若 $a=b+2,c=b+1$，则方程化为 $(b+2)^2=b(2b+1)$，即 $(b-4)(b+1)=0$。由正性得 $b=4$，所以 $(a,b,c)=(6,4,5)$。",
+          "若 $a=b-2,c=b-1$，则方程化为 $(b-2)^2=b(2b-1)$，即 $(b-1)(b+4)=0$。唯一正根 $b=1$ 会使 $a<0$，故此情形不成立。",
+          "最后验证存在性。对 $(a,b,c)=(6,4,5)$，余弦定理给出 $\\cos B=(36+25-16)/(2\\cdot6\\cdot5)=3/4$、$\\cos A=(16+25-36)/(2\\cdot4\\cdot5)=1/8$。又 $\\cos(2B)=2(3/4)^2-1=1/8=\\cos A$，且相关角均在 $(0,\\pi)$ 内，故 $A=2B$。因此 $4$-$5$-$6$ 三角形唯一。"
+        ]
+      }
+    ]
+  },
+  "imo-1968-q2": {
+    "summary": "Find all natural numbers $x$ for which the product of the decimal digits of $x$ equals $x^2-10x-22$.",
+    "summaryZh": "求所有自然数 $x$，使 $x$ 的十进制各位数字之积等于 $x^2-10x-22$。",
+    "answer": "$x=12$.",
+    "answerZh": "$x=12$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1968_IMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Bound the digit product by the number itself",
+        "titleZh": "用原数控制数位乘积",
+        "topics": [
+          {"en": "Decimal digits", "zh": "十进制数位"},
+          {"en": "Quadratic inequalities", "zh": "二次不等式"},
+          {"en": "Finite verification", "zh": "有限检验"}
+        ],
+        "steps": [
+          "Write the decimal expansion as $x=\\overline{d_1d_2\\cdots d_m}$ with $d_1\\ge1$. Its digit product $P=d_1d_2\\cdots d_m$ satisfies $P\\le d_1\\,9^{m-1}<d_1\\,10^{m-1}\\le x$ when $m\\ge2$; for a one-digit number, $P=x$. Thus always $P\\le x$.",
+          "The required equality therefore implies $x^2-10x-22\\le x$, or $x^2-11x-22\\le0$. The positive root of the quadratic lies between $12$ and $13$, so a natural-number solution must satisfy $1\\le x\\le12$.",
+          "For $1\\le x\\le11$, the quantity $x^2-10x-22$ is negative, whereas a digit product is nonnegative. At $x=12$, the right side is $144-120-22=2$, equal to the digit product $1\\cdot2$. Hence $12$ is the unique solution."
+        ],
+        "stepsZh": [
+          "把十进制展开写成 $x=\\overline{d_1d_2\\cdots d_m}$，其中 $d_1\\ge1$。数位积 $P=d_1d_2\\cdots d_m$ 在 $m\\ge2$ 时满足 $P\\le d_1\\,9^{m-1}<d_1\\,10^{m-1}\\le x$；一位数时 $P=x$。因此总有 $P\\le x$。",
+          "题设等式于是推出 $x^2-10x-22\\le x$，即 $x^2-11x-22\\le0$。该二次式的正根位于 $12$ 与 $13$ 之间，所以自然数解只能满足 $1\\le x\\le12$。",
+          "当 $1\\le x\\le11$ 时，$x^2-10x-22<0$，而数位积非负，不可能相等。取 $x=12$ 时，右边为 $144-120-22=2$，恰等于数位积 $1\\cdot2$。故唯一解为 $12$。"
+        ]
+      }
+    ]
+  },
+  "imo-1968-q3": {
+    "summary": "Let $a,b,c$ be real with $a\\ne0$. For the cyclic system $ax_i^2+bx_i+c=x_{i+1}$ for $i=1,\\ldots,n$, where $x_{n+1}=x_1$, put $\\Delta=(b-1)^2-4ac$. Prove: (a) if $\\Delta<0$ there is no real solution; (b) if $\\Delta=0$ there is exactly one; (c) if $\\Delta>0$ there is more than one.",
+    "summaryZh": "设 $a,b,c$ 为实数且 $a\\ne0$。考虑循环方程组 $ax_i^2+bx_i+c=x_{i+1}$（$i=1,\\ldots,n$，其中 $x_{n+1}=x_1$），并记 $\\Delta=(b-1)^2-4ac$。证明：（a）$\\Delta<0$ 时无实数解；（b）$\\Delta=0$ 时恰有一解；（c）$\\Delta>0$ 时不止一解。",
+    "answer": "Let $q(t)=at^2+(b-1)t+c$. Summing forces $\\sum q(x_i)=0$. The sign and roots of $q$ give respectively zero, one, or at least two constant solutions according as $\\Delta<0$, $=0$, or $>0$.",
+    "answerZh": "令 $q(t)=at^2+(b-1)t+c$。把方程相加得到 $\\sum q(x_i)=0$；再按 $q$ 的符号与实根个数，即可分别得到零个、一个或至少两个常值解。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1968_IMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Sum the cycle and inspect one quadratic",
+        "titleZh": "循环求和并考察一个二次式",
+        "topics": [
+          {"en": "Quadratic discriminant", "zh": "二次方程判别式"},
+          {"en": "Cyclic systems", "zh": "循环方程组"},
+          {"en": "Sign arguments", "zh": "符号论证"}
+        ],
+        "steps": [
+          "Move $x_i$ to the left in each equation and sum cyclically. Because $\\sum x_{i+1}=\\sum x_i$, every solution must satisfy $\\sum_{i=1}^n q(x_i)=0$, where $q(t)=at^2+(b-1)t+c$ has discriminant $\\Delta$.",
+          "If $\\Delta<0$, the quadratic $q$ never vanishes and has the constant sign of $a$. Hence all $q(x_i)$ have the same strict sign and their sum cannot be zero. There is no solution.",
+          "If $\\Delta=0$, let $r=-(b-1)/(2a)$ be the double root. Then $q(t)=a(t-r)^2$, so the sum can vanish only when every $x_i=r$. Since $q(r)=0$ means $ar^2+br+c=r$, the constant tuple $(r,\\ldots,r)$ satisfies the system and is its unique solution.",
+          "If $\\Delta>0$, let $r_1\\ne r_2$ be the two real roots of $q$. For either $r_j$, the identity $q(r_j)=0$ is $ar_j^2+br_j+c=r_j$. Therefore both distinct constant tuples $(r_1,\\ldots,r_1)$ and $(r_2,\\ldots,r_2)$ solve the cyclic system, so it has more than one solution."
+        ],
+        "stepsZh": [
+          "把每个方程中的 $x_i$ 移到左边，再对循环指标求和。由于 $\\sum x_{i+1}=\\sum x_i$，每个解都必须满足 $\\sum_{i=1}^n q(x_i)=0$，其中 $q(t)=at^2+(b-1)t+c$ 的判别式正是 $\\Delta$。",
+          "若 $\\Delta<0$，二次式 $q$ 从不为零，并始终与 $a$ 同号。因此所有 $q(x_i)$ 都有相同的严格符号，其和不可能为零，故无解。",
+          "若 $\\Delta=0$，设重根为 $r=-(b-1)/(2a)$。此时 $q(t)=a(t-r)^2$，其和为零只能发生在所有 $x_i=r$ 时。又 $q(r)=0$ 等价于 $ar^2+br+c=r$，故常值组 $(r,\\ldots,r)$ 确实是解，并且是唯一解。",
+          "若 $\\Delta>0$，设 $q$ 的两个不同实根为 $r_1,r_2$。对任一 $r_j$，$q(r_j)=0$ 即 $ar_j^2+br_j+c=r_j$。所以两个不同常值组 $(r_1,\\ldots,r_1)$、$(r_2,\\ldots,r_2)$ 都满足方程组，解不止一个。"
+        ]
+      }
+    ]
+  },
+  "imo-1968-q4": {
+    "summary": "Prove that every tetrahedron has a vertex at which the lengths of the three incident edges can themselves form a triangle.",
+    "summaryZh": "证明：任意四面体都存在一个顶点，使从该顶点出发的三条棱长能够组成一个三角形。",
+    "answer": "Choose a longest edge $AB$. At least one of the triples of incident edges at $A$ or $B$ satisfies the triangle inequalities.",
+    "answerZh": "取最长棱 $AB$，则顶点 $A$ 或 $B$ 处的三条棱中，至少有一组满足三角不等式。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1968_IMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Use the two faces containing a longest edge",
+        "titleZh": "利用包含最长棱的两个面",
+        "topics": [
+          {"en": "Tetrahedra", "zh": "四面体"},
+          {"en": "Triangle inequality", "zh": "三角不等式"},
+          {"en": "Extremal choice", "zh": "极值选择"}
+        ],
+        "steps": [
+          "Label the tetrahedron $ABCD$ and choose a longest edge $AB=a$. Write $AC=b$, $BC=c$, $BD=e$, and $AD=f$. The three incident edges at $A$ are $a,b,f$, while those at $B$ are $a,c,e$.",
+          "Because $a$ is a longest edge, each of the triples forms a triangle exactly when the sum of its two shorter members exceeds $a$. Thus vertex $A$ works if $b+f>a$, and vertex $B$ works if $c+e>a$.",
+          "Suppose $b+f\\le a$. In face $ABD$, the ordinary triangle inequality gives $e+f>a$, hence $e>b$. In face $ABC$, it gives $b+c>a$. Therefore $e+c>b+c>a$, so vertex $B$ works.",
+          "Consequently either $b+f>a$ from the start, making $A$ suitable, or its failure forces $c+e>a$, making $B$ suitable. A required vertex always exists."
+        ],
+        "stepsZh": [
+          "将四面体记为 $ABCD$，并取最长棱 $AB=a$。记 $AC=b,BC=c,BD=e,AD=f$。顶点 $A$ 处的三条棱为 $a,b,f$，顶点 $B$ 处的三条棱为 $a,c,e$。",
+          "因为 $a$ 是最长棱，每组三数能组成三角形，当且仅当另外两数之和大于 $a$。所以若 $b+f>a$，顶点 $A$ 符合要求；若 $c+e>a$，顶点 $B$ 符合要求。",
+          "反设 $b+f\\le a$。在面 $ABD$ 中，三角不等式给出 $e+f>a$，所以 $e>b$。在面 $ABC$ 中，又有 $b+c>a$。于是 $e+c>b+c>a$，故顶点 $B$ 符合要求。",
+          "因此，若一开始 $b+f>a$，就选择 $A$；否则该不等式的失败必推出 $c+e>a$，可选择 $B$。所需顶点总是存在。"
+        ]
+      }
+    ]
+  },
+  "imo-1968-q5": {
+    "summary": "A real-valued function $f$ on $\\mathbb R$ satisfies $f(x+a)=\\frac12+\\sqrt{f(x)-f(x)^2}$ for every real $x$, where $a>0$. (a) Prove that $f$ is periodic. (b) When $a=1$, give a nonconstant example.",
+    "summaryZh": "实函数 $f:\\mathbb R\\to\\mathbb R$ 对某个常数 $a>0$ 及所有实数 $x$ 满足 $f(x+a)=\\frac12+\\sqrt{f(x)-f(x)^2}$。（a）证明 $f$ 为周期函数；（b）当 $a=1$ 时给出一个非常值例子。",
+    "answer": "Every such function has period $2a$. For $a=1$, one example alternates between $1$ on $[2m,2m+1)$ and $1/2$ on $[2m+1,2m+2)$ for integers $m$.",
+    "answerZh": "每个这样的函数都以 $2a$ 为周期。当 $a=1$ 时，可令函数在每个 $[2m,2m+1)$ 上等于 $1$，在 $[2m+1,2m+2)$ 上等于 $1/2$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1968_IMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Iterate the transformation twice",
+        "titleZh": "把变换连续迭代两次",
+        "topics": [
+          {"en": "Functional equations", "zh": "函数方程"},
+          {"en": "Periodicity", "zh": "周期性"},
+          {"en": "Range restrictions", "zh": "值域限制"}
+        ],
+        "steps": [
+          "The square root must be real, so $f(x)-f(x)^2\\ge0$ and hence $0\\le f(x)\\le1$ for every $x$. The equation also gives $f(x+a)\\ge1/2$; since $x+a$ ranges over all reals, in fact $1/2\\le f(x)\\le1$ everywhere.",
+          "Let $u=f(x)$. From the defining equation, $f(x+a)=1/2+\\sqrt{u-u^2}$. Therefore $f(x+a)(1-f(x+a))=1/4-(u-u^2)=(u-1/2)^2$.",
+          "Apply the equation once more: $f(x+2a)=1/2+\\sqrt{(u-1/2)^2}=1/2+|u-1/2|=u=f(x)$, because $u\\ge1/2$. Thus $2a>0$ is a period.",
+          "For $a=1$, define $f(x)=1$ on $[2m,2m+1)$ and $f(x)=1/2$ on $[2m+1,2m+2)$ for every integer $m$. Shifting by $1$ swaps the two values. If $f(x)=1$, the right side is $1/2$; if $f(x)=1/2$, it is $1$. Hence the equation holds, and the function is nonconstant."
+        ],
+        "stepsZh": [
+          "根式必须为实数，所以 $f(x)-f(x)^2\\ge0$，从而对所有 $x$ 都有 $0\\le f(x)\\le1$。原方程还给出 $f(x+a)\\ge1/2$；由于 $x+a$ 遍历全体实数，实际有 $1/2\\le f(x)\\le1$。",
+          "令 $u=f(x)$。由定义式，$f(x+a)=1/2+\\sqrt{u-u^2}$。因此 $f(x+a)(1-f(x+a))=1/4-(u-u^2)=(u-1/2)^2$。",
+          "再次应用原方程：$f(x+2a)=1/2+\\sqrt{(u-1/2)^2}=1/2+|u-1/2|=u=f(x)$，最后一步使用了 $u\\ge1/2$。所以 $2a>0$ 是一个周期。",
+          "当 $a=1$ 时，对每个整数 $m$，在 $[2m,2m+1)$ 上定义 $f(x)=1$，在 $[2m+1,2m+2)$ 上定义 $f(x)=1/2$。平移 $1$ 会交换这两个函数值。若 $f(x)=1$，右边为 $1/2$；若 $f(x)=1/2$，右边为 $1$。因此方程成立，且该函数非常值。"
+        ]
+      }
+    ]
+  },
+  "imo-1968-q6": {
+    "summary": "For every natural number $n$, evaluate $\\sum_{k=0}^{\\infty}\\left\\lfloor\\frac{n+2^k}{2^{k+1}}\\right\\rfloor$.",
+    "summaryZh": "对每个自然数 $n$，求和 $\\sum_{k=0}^{\\infty}\\left\\lfloor\\frac{n+2^k}{2^{k+1}}\\right\\rfloor$。",
+    "answer": "The sum equals $n$.",
+    "answerZh": "该无穷和等于 $n$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1968_IMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Make the series telescope",
+        "titleZh": "构造望远镜求和",
+        "topics": [
+          {"en": "Floor functions", "zh": "取整函数"},
+          {"en": "Telescoping series", "zh": "望远镜求和"}
+        ],
+        "steps": [
+          "For every real $y$, $\\lfloor y+1/2\\rfloor=\\lfloor2y\\rfloor-\\lfloor y\\rfloor$. This follows by writing $y=m+r$ with integer $m$ and $0\\le r<1$ and checking whether $r<1/2$.",
+          "Take $y=n/2^{k+1}$. The $k$th summand becomes $\\left\\lfloor n/2^k\\right\\rfloor-\\left\\lfloor n/2^{k+1}\\right\\rfloor$.",
+          "The partial sum through $k=K$ is therefore $n-\\lfloor n/2^{K+1}\\rfloor$. For all sufficiently large $K$ the last floor is $0$, so the infinite sum equals $n$."
+        ],
+        "stepsZh": [
+          "对任意实数 $y$，都有 $\\lfloor y+1/2\\rfloor=\\lfloor2y\\rfloor-\\lfloor y\\rfloor$。把 $y$ 写成整数部分 $m$ 加 $0\\le r<1$，再按 $r<1/2$ 与否分类即可验证。",
+          "取 $y=n/2^{k+1}$，第 $k$ 项化为 $\\left\\lfloor n/2^k\\right\\rfloor-\\left\\lfloor n/2^{k+1}\\right\\rfloor$。",
+          "因此从 $k=0$ 到 $K$ 的部分和为 $n-\\lfloor n/2^{K+1}\\rfloor$。当 $K$ 充分大时，最后一项为 $0$，所以无穷和等于 $n$。"
+        ]
+      },
+      {
+        "title": "Partition the integers by their exact power of two",
+        "titleZh": "按恰好含有的二因子次数分组",
+        "topics": [
+          {"en": "Two-adic valuation", "zh": "二进赋值"},
+          {"en": "Combinatorial counting", "zh": "组合计数"}
+        ],
+        "steps": [
+          "For fixed $k$, the quantity $\\left\\lfloor(n+2^k)/2^{k+1}\\right\\rfloor$ counts integers $m$ with $1\\le m\\le n$ that are divisible by $2^k$ but not by $2^{k+1}$. Indeed, such numbers are $2^k$ times the odd integers not exceeding $n/2^k$.",
+          "Every positive integer $m\\le n$ contains a unique exact power $2^k$ in its factorization. Hence it is counted in exactly one summand. The sum therefore counts the $n$ integers $1,2,\\ldots,n$ once each."
+        ],
+        "stepsZh": [
+          "固定 $k$，数 $\\left\\lfloor(n+2^k)/2^{k+1}\\right\\rfloor$ 正好统计 $1\\le m\\le n$ 中能被 $2^k$ 整除但不能被 $2^{k+1}$ 整除的整数；它们就是 $2^k$ 乘以不超过 $n/2^k$ 的奇数。",
+          "每个不超过 $n$ 的正整数在其因数分解中都恰含一个确定的最高二次幂 $2^k$，所以恰被一个求和项计算一次。总和因此就是整数 $1,2,\\ldots,n$ 的个数，即 $n$。"
+        ]
+      }
+    ]
+  }
+}
