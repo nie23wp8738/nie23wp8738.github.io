@@ -1,0 +1,427 @@
+{
+  "tmua-2016-p1-q1": {
+    "summary": "The expansion of $(ax+b)^3$ is $8x^3-px^2+18x-3\\sqrt3$, where $a,b,p$ are real. Find $p$.",
+    "summaryZh": "已知 $(ax+b)^3$ 展开为 $8x^3-px^2+18x-3\\sqrt3$，其中 $a,b,p$ 为实数。求 $p$。",
+    "answer": "H. $12\\sqrt3$",
+    "answerZh": "H．$12\\sqrt3$",
+    "methods": [{
+      "title": "Compare the four coefficients",
+      "titleZh": "逐项比较四个系数",
+      "topics": [{"en":"Binomial expansion","zh":"二项式展开"},{"en":"Coefficient comparison","zh":"系数比较"}],
+      "steps": [
+        "Expand $(ax+b)^3=a^3x^3+3a^2bx^2+3ab^2x+b^3$. From $a^3=8$ and $b^3=-3\\sqrt3$, the real values are $a=2$ and $b=-\\sqrt3$.",
+        "The coefficient of $x^2$ satisfies $3a^2b=-p$. Hence $-p=3(2^2)(-\\sqrt3)=-12\\sqrt3$, so $p=12\\sqrt3$. The $x$ coefficient checks: $3ab^2=3(2)(3)=18$."
+      ],
+      "stepsZh": [
+        "展开得 $(ax+b)^3=a^3x^3+3a^2bx^2+3ab^2x+b^3$。由 $a^3=8$ 与 $b^3=-3\\sqrt3$，取实数值得 $a=2,b=-\\sqrt3$。",
+        "$x^2$ 项满足 $3a^2b=-p$，故 $-p=3(2^2)(-\\sqrt3)=-12\\sqrt3$，所以 $p=12\\sqrt3$。同时 $3ab^2=3(2)(3)=18$，与 $x$ 项一致。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=3"
+  },
+  "tmua-2016-p1-q2": {
+    "summary": "The polynomial $3x^3+13x^2+8x+a$ has $x+2$ as a factor. Find its complete factorisation.",
+    "summaryZh": "多项式 $3x^3+13x^2+8x+a$ 含因式 $x+2$。求其完全因式分解。",
+    "answer": "E. $(x+2)(x+3)(3x-2)$",
+    "answerZh": "E．$(x+2)(x+3)(3x-2)$",
+    "methods": [{
+      "title": "Use the factor theorem, then divide",
+      "titleZh": "先用因式定理，再作除法",
+      "topics": [{"en":"Factor theorem","zh":"因式定理"},{"en":"Polynomial factorisation","zh":"多项式因式分解"}],
+      "steps": [
+        "Let $f(x)=3x^3+13x^2+8x+a$. Since $x+2$ is a factor, $f(-2)=0$, so $-24+52-16+a=0$ and $a=-12$.",
+        "Division by $x+2$ gives $f(x)=(x+2)(3x^2+7x-6)$. The quadratic factors as $(x+3)(3x-2)$, giving the stated result."
+      ],
+      "stepsZh": [
+        "令 $f(x)=3x^3+13x^2+8x+a$。因 $x+2$ 是因式，故 $f(-2)=0$，即 $-24+52-16+a=0$，所以 $a=-12$。",
+        "除以 $x+2$ 得 $f(x)=(x+2)(3x^2+7x-6)$，而 $3x^2+7x-6=(x+3)(3x-2)$，得到所述分解。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=3"
+  },
+  "tmua-2016-p1-q3": {
+    "summary": "The normal to $y=2/x^2$ at the point with $x=1$ meets the coordinate axes at $P$ and $Q$. Find $PQ$.",
+    "summaryZh": "曲线 $y=2/x^2$ 在 $x=1$ 处的法线分别交两坐标轴于 $P,Q$。求 $PQ$。",
+    "answer": "C. $7\\sqrt{17}/4$",
+    "answerZh": "C．$7\\sqrt{17}/4$",
+    "methods": [{
+      "title": "Find the normal and its intercepts",
+      "titleZh": "求法线及其截距",
+      "topics": [{"en":"Tangents and normals","zh":"切线与法线"},{"en":"Coordinate distance","zh":"坐标距离"}],
+      "steps": [
+        "Write $y=2x^{-2}$, so $dy/dx=-4x^{-3}$. At $(1,2)$ the tangent slope is $-4$, hence the normal slope is $1/4$ and its equation is $y-2=(x-1)/4$.",
+        "Putting $y=0$ gives $P=(-7,0)$; putting $x=0$ gives $Q=(0,7/4)$. Therefore $PQ=\\sqrt{7^2+(7/4)^2}=7\\sqrt{17}/4$."
+      ],
+      "stepsZh": [
+        "写成 $y=2x^{-2}$，则 $dy/dx=-4x^{-3}$。在 $(1,2)$ 处切线斜率为 $-4$，故法线斜率为 $1/4$，方程为 $y-2=(x-1)/4$。",
+        "令 $y=0$ 得 $P=(-7,0)$；令 $x=0$ 得 $Q=(0,7/4)$。因此 $PQ=\\sqrt{7^2+(7/4)^2}=7\\sqrt{17}/4$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=4"
+  },
+  "tmua-2016-p1-q4": {
+    "summary": "For $n\\ge1$, let $a_n=(-1)^n-(-1)^{n-1}+(-1)^{n+2}$. Evaluate $\\sum_{n=1}^{39}a_n$.",
+    "summaryZh": "对 $n\\ge1$，定义 $a_n=(-1)^n-(-1)^{n-1}+(-1)^{n+2}$。计算 $\\sum_{n=1}^{39}a_n$。",
+    "answer": "B. $-3$",
+    "answerZh": "B．$-3$",
+    "methods": [{
+      "title": "Pair the alternating terms",
+      "titleZh": "将交替项两两配对",
+      "topics": [{"en":"Periodic sequences","zh":"周期数列"},{"en":"Finite sums","zh":"有限求和"}],
+      "steps": [
+        "For odd $n$, all three signs give $a_n=-3$; for even $n$, $a_n=3$. Thus the sequence alternates $-3,3,-3,3,\\ldots$.",
+        "The first $38$ terms form $19$ zero-sum pairs. Since $39$ is odd, the remaining term is $a_{39}=-3$, so the sum is $-3$."
+      ],
+      "stepsZh": [
+        "当 $n$ 为奇数时 $a_n=-3$，当 $n$ 为偶数时 $a_n=3$，故数列交替为 $-3,3,-3,3,\\ldots$。",
+        "前 $38$ 项组成 $19$ 对，每对和为零；余下 $a_{39}=-3$，所以总和为 $-3$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=4"
+  },
+  "tmua-2016-p1-q5": {
+    "summary": "Find the total unsigned area between $y=x^2-1$, the $x$-axis, and the lines $x=-2$ and $x=2$.",
+    "summaryZh": "求曲线 $y=x^2-1$、$x$ 轴及直线 $x=-2,x=2$ 围成的总面积（取几何面积）。",
+    "answer": "C. $4$",
+    "answerZh": "C．$4$",
+    "methods": [
+      {
+        "title": "Split at the two roots",
+        "titleZh": "在两个零点处分段",
+        "topics": [{"en":"Area between curves","zh":"曲线间面积"},{"en":"Definite integration","zh":"定积分"}],
+        "steps": [
+          "The curve crosses the axis at $x=\\pm1$. It is below the axis on $[-1,1]$ and above it on $[-2,-1]\\cup[1,2]$.",
+          "By symmetry, the total area is $2\\int_1^2(x^2-1)\\,dx+2\\int_0^1(1-x^2)\\,dx=2(4/3)+2(2/3)=4$."
+        ],
+        "stepsZh": [
+          "曲线在 $x=\\pm1$ 与横轴相交；在 $[-1,1]$ 上位于横轴下方，在 $[-2,-1]\\cup[1,2]$ 上位于横轴上方。",
+          "利用对称性，总面积为 $2\\int_1^2(x^2-1)\\,dx+2\\int_0^1(1-x^2)\\,dx=2(4/3)+2(2/3)=4$。"
+        ]
+      },
+      {
+        "title": "Integrate the absolute value",
+        "titleZh": "直接积分绝对值",
+        "topics": [{"en":"Absolute-value integrals","zh":"绝对值积分"}],
+        "steps": [
+          "The required area is $\\int_{-2}^{2}|x^2-1|\\,dx$. The integrand is even, so it equals $2\\{\\int_0^1(1-x^2)\\,dx+\\int_1^2(x^2-1)\\,dx\\}=4$."
+        ],
+        "stepsZh": [
+          "所求面积为 $\\int_{-2}^{2}|x^2-1|\\,dx$。被积函数为偶函数，因此等于 $2\\{\\int_0^1(1-x^2)\\,dx+\\int_1^2(x^2-1)\\,dx\\}=4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=5"
+  },
+  "tmua-2016-p1-q6": {
+    "summary": "Paints $P,Q,R$ contain red paint in proportions $30\\%,20\\%,$ and $r$ respectively. They are mixed in the volume ratio $12:5:3$, producing a $25\\%$ red mixture. Find $r$.",
+    "summaryZh": "油漆 $P,Q,R$ 的红色成分比例分别为 $30\\%,20\\%$ 与 $r$。按体积比 $12:5:3$ 混合后红色占 $25\\%$。求 $r$。",
+    "answer": "C. $13\\frac13\\%$",
+    "answerZh": "C．$13\\frac13\\%$",
+    "methods": [{
+      "title": "Balance the red-paint volumes",
+      "titleZh": "列红色成分体积平衡式",
+      "topics": [{"en":"Weighted averages","zh":"加权平均"},{"en":"Ratios","zh":"比例"}],
+      "steps": [
+        "Let $r$ be the red fraction in $R$. In $20$ volume units of final paint, the red volume is $12(0.3)+5(0.2)+3r$.",
+        "Equate this to $20(0.25)=5$: $3.6+1+3r=5$. Thus $3r=0.4$, so $r=2/15=13\\frac13\\%$."
+      ],
+      "stepsZh": [
+        "设 $R$ 中红色所占比例为 $r$。总共 $20$ 份体积中，红色体积为 $12(0.3)+5(0.2)+3r$。",
+        "令其等于 $20(0.25)=5$，得 $3.6+1+3r=5$。因此 $3r=0.4$，故 $r=2/15=13\\frac13\\%$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=5"
+  },
+  "tmua-2016-p1-q7": {
+    "summary": "In a club, $60\\%$ of members are women. Every member plays exactly one of tennis or cricket; $2/5$ of the men play cricket, and $2/3$ of all cricketers are women. Find the probability that a random member is a woman who plays tennis.",
+    "summaryZh": "某俱乐部中女性占 $60\\%$。每人只参加网球或板球之一；男性中有 $2/5$ 参加板球，全部板球成员中有 $2/3$ 是女性。随机选一人，求其为参加网球的女性的概率。",
+    "answer": "B. $7/25$",
+    "answerZh": "B．$7/25$",
+    "methods": [{
+      "title": "Build a two-way table",
+      "titleZh": "建立二向分类表",
+      "topics": [{"en":"Conditional proportions","zh":"条件比例"},{"en":"Two-way tables","zh":"二向表"}],
+      "steps": [
+        "Take $300$ members. Then there are $120$ men and $180$ women. Of the men, $(2/5)120=48$ play cricket and $72$ play tennis.",
+        "Because the $48$ male cricketers form one third of all cricketers, there are $144$ cricketers, including $96$ women. Hence $180-96=84$ women play tennis, giving probability $84/300=7/25$."
+      ],
+      "stepsZh": [
+        "假设共有 $300$ 人，则男性 $120$ 人、女性 $180$ 人。男性中有 $(2/5)120=48$ 人参加板球，其余 $72$ 人参加网球。",
+        "$48$ 名男性占全部板球成员的三分之一，所以共有 $144$ 名板球成员，其中女性 $96$ 人。故参加网球的女性有 $180-96=84$ 人，概率为 $84/300=7/25$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=6"
+  },
+  "tmua-2016-p1-q8": {
+    "summary": "Find the greatest angle $x$ in $0^\\circ\\le x\\le360^\\circ$ satisfying $\\cos^2(2x)+\\sqrt3\\sin(2x)-7/4=0$.",
+    "summaryZh": "在 $0^\\circ\\le x\\le360^\\circ$ 中，求满足 $\\cos^2(2x)+\\sqrt3\\sin(2x)-7/4=0$ 的最大角 $x$。",
+    "answer": "F. $240^\\circ$",
+    "answerZh": "F．$240^\\circ$",
+    "methods": [{
+      "title": "Turn the equation into a quadratic in $\\sin(2x)$",
+      "titleZh": "化为关于 $\\sin(2x)$ 的二次方程",
+      "topics": [{"en":"Trigonometric identities","zh":"三角恒等式"},{"en":"Trigonometric equations","zh":"三角方程"}],
+      "steps": [
+        "Use $\\cos^2(2x)=1-\\sin^2(2x)$. The equation becomes $\\sin^2(2x)-\\sqrt3\\sin(2x)+3/4=0$, hence $\\sin(2x)=\\sqrt3/2$.",
+        "As $0^\\circ\\le2x\\le720^\\circ$, the possibilities are $2x=60^\\circ,120^\\circ,420^\\circ,480^\\circ$. The largest corresponding $x$ is $240^\\circ$."
+      ],
+      "stepsZh": [
+        "利用 $\\cos^2(2x)=1-\\sin^2(2x)$，原式化为 $\\sin^2(2x)-\\sqrt3\\sin(2x)+3/4=0$，故 $\\sin(2x)=\\sqrt3/2$。",
+        "由于 $0^\\circ\\le2x\\le720^\\circ$，可取 $2x=60^\\circ,120^\\circ,420^\\circ,480^\\circ$。对应的最大 $x$ 为 $240^\\circ$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=6"
+  },
+  "tmua-2016-p1-q9": {
+    "summary": "The segment from $(3,3)$ to $(7,5)$ is a circle's diameter. Translate the circle three units left, reflect it in the $x$-axis, then enlarge it by factor $4$ about its new centre. Find the final circle's equation.",
+    "summaryZh": "线段 $(3,3)$ 至 $(7,5)$ 是某圆的直径。将圆向左平移 $3$ 个单位，再关于 $x$ 轴反射，最后以所得圆心为中心放大 $4$ 倍。求最终圆的方程。",
+    "answer": "D. $(x-2)^2+(y+4)^2=80$",
+    "answerZh": "D．$(x-2)^2+(y+4)^2=80$",
+    "methods": [{
+      "title": "Track the centre and radius separately",
+      "titleZh": "分别追踪圆心与半径",
+      "topics": [{"en":"Circle equations","zh":"圆的方程"},{"en":"Geometric transformations","zh":"几何变换"}],
+      "steps": [
+        "The original centre is the midpoint $(5,4)$ and the radius is $\\sqrt{(5-3)^2+(4-3)^2}=\\sqrt5$.",
+        "Translation gives centre $(2,4)$; reflection gives $(2,-4)$; enlargement about that centre leaves it fixed and changes the radius to $4\\sqrt5$. Thus $(x-2)^2+(y+4)^2=(4\\sqrt5)^2=80$."
+      ],
+      "stepsZh": [
+        "原圆圆心为直径中点 $(5,4)$，半径为 $\\sqrt{(5-3)^2+(4-3)^2}=\\sqrt5$。",
+        "平移后圆心为 $(2,4)$，反射后为 $(2,-4)$；以圆心放大不改变圆心，半径变为 $4\\sqrt5$。故方程为 $(x-2)^2+(y+4)^2=80$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=7"
+  },
+  "tmua-2016-p1-q10": {
+    "summary": "How many real solutions does $x\\tan x=1$ have on $-2\\pi\\le x\\le2\\pi$?",
+    "summaryZh": "方程 $x\\tan x=1$ 在 $-2\\pi\\le x\\le2\\pi$ 上有多少个实数解？",
+    "answer": "E. $4$",
+    "answerZh": "E．$4$",
+    "methods": [{
+      "title": "Count intersections branch by branch",
+      "titleZh": "逐分支计算交点数",
+      "topics": [{"en":"Trigonometric graphs","zh":"三角函数图像"},{"en":"Monotonicity","zh":"单调性"}],
+      "steps": [
+        "$x=0$ is not a solution. For $x\\ne0$, rewrite the equation as $\\tan x=1/x$. Both sides are odd, so nonzero solutions occur in opposite pairs.",
+        "For $x>0$, a solution requires $\\tan x>0$. On $(0,\\pi/2)$ and $(\\pi,3\\pi/2)$, $\\tan x$ rises from $0$ to $+\\infty$ while $1/x$ decreases, giving exactly one intersection on each branch. Thus there are two positive and two negative solutions, four in total."
+      ],
+      "stepsZh": [
+        "$x=0$ 不是解；当 $x\\ne0$ 时可写为 $\\tan x=1/x$。两边均为奇函数，因此非零解成正负对出现。",
+        "对 $x>0$，必须有 $\\tan x>0$。在 $(0,\\pi/2)$ 与 $(\\pi,3\\pi/2)$ 上，$\\tan x$ 从 $0$ 严格增至 $+\\infty$，而 $1/x$ 递减，每段恰有一个交点。故正解两个、负解两个，共 $4$ 个。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=7"
+  },
+  "tmua-2016-p1-q11": {
+    "summary": "The real roots of $4^{2x}+12=2^{2x+3}$ are $p>q$. Find $p-q$.",
+    "summaryZh": "方程 $4^{2x}+12=2^{2x+3}$ 的两个实根为 $p>q$。求 $p-q$。",
+    "answer": "E. $\\log_{10}3/\\log_{10}4$",
+    "answerZh": "E．$\\log_{10}3/\\log_{10}4$",
+    "methods": [{
+      "title": "Use a quadratic substitution",
+      "titleZh": "作指数二次代换",
+      "topics": [{"en":"Exponential equations","zh":"指数方程"},{"en":"Logarithm laws","zh":"对数运算"}],
+      "steps": [
+        "Set $u=2^{2x}>0$. Since $4^{2x}=u^2$ and $2^{2x+3}=8u$, the equation becomes $u^2-8u+12=0$, so $u=6$ or $u=2$.",
+        "Thus $2^{2p}=6$ and $2^{2q}=2$. Hence $p=\\log_{10}6/(2\\log_{10}2)$ and $q=1/2$, so $p-q=\\log_{10}3/(2\\log_{10}2)=\\log_{10}3/\\log_{10}4$."
+      ],
+      "stepsZh": [
+        "令 $u=2^{2x}>0$。因 $4^{2x}=u^2$、$2^{2x+3}=8u$，方程化为 $u^2-8u+12=0$，所以 $u=6$ 或 $u=2$。",
+        "故 $2^{2p}=6$、$2^{2q}=2$。于是 $p=\\log_{10}6/(2\\log_{10}2)$、$q=1/2$，从而 $p-q=\\log_{10}3/(2\\log_{10}2)=\\log_{10}3/\\log_{10}4$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=8"
+  },
+  "tmua-2016-p1-q12": {
+    "summary": "A right circular cylinder is inscribed symmetrically in a sphere of radius $5$ cm, with both circular rims touching the sphere. Find the cylinder's maximum volume.",
+    "summaryZh": "一个直圆柱对称内接于半径为 $5$ cm 的球，两端圆周均与球面接触。求圆柱的最大体积。",
+    "answer": "E. $500\\sqrt3\\pi/9\\text{ cm}^3$",
+    "answerZh": "E．$500\\sqrt3\\pi/9\\text{ cm}^3$",
+    "methods": [{
+      "title": "Optimise using the half-height",
+      "titleZh": "以半高为变量优化",
+      "topics": [{"en":"Optimisation by differentiation","zh":"导数优化"},{"en":"Solid geometry","zh":"立体几何"}],
+      "steps": [
+        "Let the cylinder have radius $r$ and half-height $h$. A central cross-section gives $r^2+h^2=25$. Its volume is $V=\\pi r^2(2h)=2\\pi(25h-h^3)$.",
+        "$dV/dh=2\\pi(25-3h^2)$, so the interior critical point is $h=5/\\sqrt3$. The derivative changes from positive to negative there, so it is the maximum. Substitution gives $V=2\\pi(25-25/3)(5/\\sqrt3)=500\\sqrt3\\pi/9$."
+      ],
+      "stepsZh": [
+        "设圆柱半径为 $r$、半高为 $h$。过球心的截面给出 $r^2+h^2=25$，故体积 $V=\\pi r^2(2h)=2\\pi(25h-h^3)$。",
+        "$dV/dh=2\\pi(25-3h^2)$，内部驻点为 $h=5/\\sqrt3$。导数在此由正变负，故为最大值。代入得 $V=2\\pi(25-25/3)(5/\\sqrt3)=500\\sqrt3\\pi/9$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=9"
+  },
+  "tmua-2016-p1-q13": {
+    "summary": "How many real roots does $3x^5-10x^3-120x+30=0$ have?",
+    "summaryZh": "方程 $3x^5-10x^3-120x+30=0$ 有多少个实根？",
+    "answer": "C. $3$",
+    "answerZh": "C．$3$",
+    "methods": [{
+      "title": "Use stationary points and end behaviour",
+      "titleZh": "利用驻点与端点趋势",
+      "topics": [{"en":"Stationary points","zh":"驻点"},{"en":"Root counting","zh":"实根计数"}],
+      "steps": [
+        "Let $f(x)=3x^5-10x^3-120x+30$. Then $f'(x)=15(x^2-4)(x^2+2)$, so the only stationary points are $x=-2$ and $x=2$.",
+        "$f$ increases on $(-\\infty,-2)$, decreases on $(-2,2)$, and increases on $(2,\\infty)$. Moreover $f(-2)=254>0$ and $f(2)=-194<0$, while $f(x)\\to-\\infty$ as $x\\to-\\infty$ and $f(x)\\to\\infty$ as $x\\to\\infty$. Each monotone interval therefore contains exactly one zero, for a total of three."
+      ],
+      "stepsZh": [
+        "令 $f(x)=3x^5-10x^3-120x+30$，则 $f'(x)=15(x^2-4)(x^2+2)$，唯一驻点为 $x=-2,2$。",
+        "$f$ 在 $(-\\infty,-2)$ 上递增、在 $(-2,2)$ 上递减、在 $(2,\\infty)$ 上递增。又 $f(-2)=254>0$、$f(2)=-194<0$，且两端分别趋于 $-\\infty$ 与 $+\\infty$。因此三个单调区间各恰有一个零点，共 $3$ 个。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=10"
+  },
+  "tmua-2016-p1-q14": {
+    "summary": "Each term of an infinite series $S$ is the sum of corresponding terms of geometric series $T$ and $U$. Both $T$ and $U$ start with $4$, while the first three terms of $S$ are $8,3,5/4$. Find the sum to infinity of $S$.",
+    "summaryZh": "无穷级数 $S$ 的每一项等于两个等比级数 $T,U$ 对应项之和。$T,U$ 的首项均为 $4$，而 $S$ 的前三项为 $8,3,5/4$。求 $S$ 的无穷和。",
+    "answer": "D. $40/3$",
+    "answerZh": "D．$40/3$",
+    "methods": [{
+      "title": "Recover the two common ratios",
+      "titleZh": "求出两个公比",
+      "topics": [{"en":"Geometric series","zh":"等比级数"},{"en":"Symmetric equations","zh":"对称方程"}],
+      "steps": [
+        "Let the common ratios be $R,r$. From the second and third terms, $4(R+r)=3$ and $4(R^2+r^2)=5/4$, so $R+r=3/4$ and $R^2+r^2=5/16$.",
+        "Since $(R+r)^2=R^2+r^2+2Rr$, we get $Rr=1/8$. Thus $R,r$ are the roots of $t^2-(3/4)t+1/8=0$, namely $1/2$ and $1/4$.",
+        "The required sum is the sum of the two geometric sums: $4/(1-1/2)+4/(1-1/4)=8+16/3=40/3$."
+      ],
+      "stepsZh": [
+        "设两个公比分别为 $R,r$。由第二、三项得 $4(R+r)=3$、$4(R^2+r^2)=5/4$，即 $R+r=3/4$、$R^2+r^2=5/16$。",
+        "由 $(R+r)^2=R^2+r^2+2Rr$ 得 $Rr=1/8$。所以 $R,r$ 是 $t^2-(3/4)t+1/8=0$ 的两根，即 $1/2$ 与 $1/4$。",
+        "所求无穷和为两个等比级数之和：$4/(1-1/2)+4/(1-1/4)=8+16/3=40/3$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=10"
+  },
+  "tmua-2016-p1-q15": {
+    "summary": "For $y=(2x+a)(x-2a)^2$, find the least possible value, as real $a$ varies, of the gradient at $x=1$.",
+    "summaryZh": "对 $y=(2x+a)(x-2a)^2$，当实数 $a$ 变化时，求曲线在 $x=1$ 处斜率的最小可能值。",
+    "answer": "C. $-25/4$",
+    "answerZh": "C．$-25/4$",
+    "methods": [{
+      "title": "Differentiate, then complete the square",
+      "titleZh": "先求导，再配方",
+      "topics": [{"en":"Differentiation","zh":"微分"},{"en":"Completing the square","zh":"配方法"}],
+      "steps": [
+        "Expanding gives $y=2x^3-7ax^2+4a^2x+4a^3$, hence $dy/dx=6x^2-14ax+4a^2$. At $x=1$ the gradient is $4a^2-14a+6$.",
+        "Complete the square: $4a^2-14a+6=4(a-7/4)^2-25/4$. Its least value is therefore $-25/4$, attained at $a=7/4$."
+      ],
+      "stepsZh": [
+        "展开得 $y=2x^3-7ax^2+4a^2x+4a^3$，故 $dy/dx=6x^2-14ax+4a^2$。在 $x=1$ 处斜率为 $4a^2-14a+6$。",
+        "配方得 $4a^2-14a+6=4(a-7/4)^2-25/4$，所以最小值为 $-25/4$，在 $a=7/4$ 时取得。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=11"
+  },
+  "tmua-2016-p1-q16": {
+    "summary": "Solve for the possible values of $y$ in $\\log_{10}2+\\log_{10}(y-1)=2\\log_{10}x$ and $\\log_{10}(y+3-3x)=0$.",
+    "summaryZh": "解方程组 $\\log_{10}2+\\log_{10}(y-1)=2\\log_{10}x$、$\\log_{10}(y+3-3x)=0$，求 $y$ 的所有可能值。",
+    "answer": "C. $7\\pm3\\sqrt3$",
+    "answerZh": "C．$7\\pm3\\sqrt3$",
+    "methods": [{
+      "title": "Remove logarithms and eliminate $x$",
+      "titleZh": "去对数并消去 $x$",
+      "topics": [{"en":"Logarithm laws","zh":"对数运算"},{"en":"Simultaneous equations","zh":"方程组"}],
+      "steps": [
+        "The first equation gives $2(y-1)=x^2$. The second gives $y+3-3x=1$, so $x=(y+2)/3$.",
+        "Substitution yields $2y-2=(y+2)^2/9$, or $y^2-14y+22=0$. Hence $y=7\\pm\\sqrt{27}=7\\pm3\\sqrt3$.",
+        "Both roots satisfy $y>1$, and then $x=(y+2)/3>0$, so both obey the logarithm domains."
+      ],
+      "stepsZh": [
+        "第一式给出 $2(y-1)=x^2$；第二式给出 $y+3-3x=1$，所以 $x=(y+2)/3$。",
+        "代入得 $2y-2=(y+2)^2/9$，即 $y^2-14y+22=0$，故 $y=7\\pm\\sqrt{27}=7\\pm3\\sqrt3$。",
+        "两根均满足 $y>1$，且此时 $x=(y+2)/3>0$，所以均符合对数定义域。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=11"
+  },
+  "tmua-2016-p1-q17": {
+    "summary": "For $0<x<\\pi$, determine exactly where $y=(1+2\\cos x)\\cos(2x)$ is negative.",
+    "summaryZh": "在 $0<x<\\pi$ 上，求 $y=(1+2\\cos x)\\cos(2x)<0$ 的完整取值范围。",
+    "answer": "D. $\\pi/4<x<2\\pi/3$ or $3\\pi/4<x<\\pi$",
+    "answerZh": "D．$\\pi/4<x<2\\pi/3$ 或 $3\\pi/4<x<\\pi$",
+    "methods": [{
+      "title": "Make a sign chart for the two factors",
+      "titleZh": "对两个因式作符号表",
+      "topics": [{"en":"Trigonometric inequalities","zh":"三角不等式"},{"en":"Sign charts","zh":"符号表"}],
+      "steps": [
+        "$1+2\\cos x=0$ at $x=2\\pi/3$. Also $\\cos2x=0$ at $x=\\pi/4$ and $x=3\\pi/4$ within the given interval.",
+        "Across the ordered breakpoints $0,\\pi/4,2\\pi/3,3\\pi/4,\\pi$, the factor signs show the product is negative on $(\\pi/4,2\\pi/3)$ and $(3\\pi/4,\\pi)$. The three zero points are excluded because the inequality is strict."
+      ],
+      "stepsZh": [
+        "$1+2\\cos x=0$ 在 $x=2\\pi/3$；而 $\\cos2x=0$ 在区间内对应 $x=\\pi/4,3\\pi/4$。",
+        "按 $0,\\pi/4,2\\pi/3,3\\pi/4,\\pi$ 排序作符号表，乘积在 $(\\pi/4,2\\pi/3)$ 与 $(3\\pi/4,\\pi)$ 上为负。因不等式严格，三个零点均不取。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=12"
+  },
+  "tmua-2016-p1-q18": {
+    "summary": "For $x\\ne0$, let $f(x)=(1-x)/\\sqrt[3]{x^2}$. Determine where the function is decreasing, noting the endpoint convention used by the official option.",
+    "summaryZh": "对 $x\\ne0$，令 $f(x)=(1-x)/\\sqrt[3]{x^2}$。求函数的递减范围，并说明官方选项采用的端点约定。",
+    "answer": "A. Official option: $x\\le-2$ or $x>0$; strictly decreasing on $x<-2$ and $x>0$",
+    "answerZh": "A．官方选项为 $x\\le-2$ 或 $x>0$；严格递减区间为 $x<-2$ 与 $x>0$",
+    "methods": [{
+      "title": "Differentiate on both domain components",
+      "titleZh": "在定义域的两个分支上求导",
+      "topics": [{"en":"Monotonicity","zh":"单调性"},{"en":"Fractional powers","zh":"分数指数幂"}],
+      "steps": [
+        "For real cube roots, write $f(x)=x^{-2/3}-x^{1/3}$. Then $f'(x)=-(1/3)x^{-5/3}(x+2)$ for $x\\ne0$.",
+        "If $x<-2$, both $x^{-5/3}$ and $x+2$ are negative, so their product is positive and $f'(x)<0$. If $-2<x<0$, the derivative is positive; if $x>0$, it is negative. Thus the strict decreasing intervals are $(-\\infty,-2)$ and $(0,\\infty)$.",
+        "At $x=-2$, $f'(-2)=0$. The official answer key selects option A, which writes $x\\le-2$ and $x>0$; this includes the stationary boundary under a non-increasing endpoint convention, but the open interval is the precise strict-monotonicity statement."
+      ],
+      "stepsZh": [
+        "按实数立方根写成 $f(x)=x^{-2/3}-x^{1/3}$，则对 $x\\ne0$ 有 $f'(x)=-(1/3)x^{-5/3}(x+2)$。",
+        "当 $x<-2$ 时，$x^{-5/3}$ 与 $x+2$ 都为负，二者乘积为正，故 $f'(x)<0$；当 $-2<x<0$ 时导数为正；当 $x>0$ 时导数为负。因此严格递减区间为 $(-\\infty,-2)$ 与 $(0,\\infty)$。",
+        "在 $x=-2$ 处有 $f'(-2)=0$。官方答案键选 A，写成 $x\\le-2$ 与 $x>0$，这是按非增端点约定把驻点边界包含在内；若表述严格递减区间，应使用开端点。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=12"
+  },
+  "tmua-2016-p1-q19": {
+    "summary": "The coefficient of $x^3$ in $(1+2x+3x^2)^6$ is twice the coefficient of $x^4$ in $(1-ax^2)^5$. Find all real $a$.",
+    "summaryZh": "$(1+2x+3x^2)^6$ 中 $x^3$ 的系数，是 $(1-ax^2)^5$ 中 $x^4$ 系数的两倍。求所有实数 $a$。",
+    "answer": "B. $a=\\pm\\sqrt{17}$",
+    "answerZh": "B．$a=\\pm\\sqrt{17}$",
+    "methods": [{
+      "title": "Extract only the required coefficients",
+      "titleZh": "只提取所需系数",
+      "topics": [{"en":"Coefficient extraction","zh":"系数提取"},{"en":"Binomial theorem","zh":"二项式定理"}],
+      "steps": [
+        "To obtain $x^3$ from six factors of $1+2x+3x^2$, either choose three $2x$ terms, contributing $\\binom63 2^3=160$, or choose one $3x^2$ and one $2x$, contributing $6\\cdot5\\cdot3\\cdot2=180$. The coefficient is $340$.",
+        "In $(1-ax^2)^5$, the $x^4$ term comes from choosing two copies of $-ax^2$, so its coefficient is $\\binom52a^2=10a^2$.",
+        "The condition is $340=2(10a^2)$, giving $a^2=17$ and hence $a=\\pm\\sqrt{17}$."
+      ],
+      "stepsZh": [
+        "从六个 $1+2x+3x^2$ 因式中取得 $x^3$ 有两种方式：选三个 $2x$，贡献 $\\binom63 2^3=160$；或选一个 $3x^2$ 与一个 $2x$，贡献 $6\\cdot5\\cdot3\\cdot2=180$。总系数为 $340$。",
+        "在 $(1-ax^2)^5$ 中，$x^4$ 来自选取两个 $-ax^2$，系数为 $\\binom52a^2=10a^2$。",
+        "条件给出 $340=2(10a^2)$，故 $a^2=17$，所以 $a=\\pm\\sqrt{17}$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=13"
+  },
+  "tmua-2016-p1-q20": {
+    "summary": "A square-based pyramid has base $PQRS$, apex $O$, and all eight edges of length $20$ m. Find the shortest path on the outer surface from $P$ to the midpoint $T$ of edge $OR$.",
+    "summaryZh": "一座正方形底棱锥的底面为 $PQRS$、顶点为 $O$，全部八条棱长均为 $20$ m。求沿外表面从 $P$ 到棱 $OR$ 中点 $T$ 的最短路程。",
+    "answer": "D. $10\\sqrt7\\text{ m}$",
+    "answerZh": "D．$10\\sqrt7\\text{ m}$",
+    "methods": [{
+      "title": "Unfold the competing face routes",
+      "titleZh": "展开可能经过的相邻表面",
+      "topics": [{"en":"Surface nets","zh":"表面展开图"},{"en":"Shortest paths","zh":"最短路径"},{"en":"Pythagoras' theorem","zh":"勾股定理"}],
+      "steps": [
+        "Every triangular side face is equilateral with side $20$. A shortest surface path becomes a straight segment in an appropriate unfolding. Up to reflection there are two relevant unfoldings: through the base and face $ORS$, or through side faces $OPS$ and $ORS$.",
+        "For the base route, the unfolded coordinate differences from $P$ to $T$ are $15$ and $20+5\\sqrt3$, so the squared length is $15^2+(20+5\\sqrt3)^2=700+200\\sqrt3$.",
+        "For the two-side-face route, the perpendicular separation across the common edge is $10\\sqrt3+5\\sqrt3=15\\sqrt3$, and the displacement along that edge is $5$. Hence the squared length is $(15\\sqrt3)^2+5^2=700$.",
+        "The second is shorter, so the required distance is $\\sqrt{700}=10\\sqrt7$ m. The reflected routes give the same two lengths, so no further case is needed."
+      ],
+      "stepsZh": [
+        "每个三角形侧面都是边长 $20$ 的等边三角形。表面最短路在适当展开图中成为直线。除镜像外，只需比较两种展开：经过底面与侧面 $ORS$，或经过侧面 $OPS$ 与 $ORS$。",
+        "对经过底面的路线，展开后从 $P$ 到 $T$ 的两个坐标差为 $15$ 与 $20+5\\sqrt3$，故长度平方为 $15^2+(20+5\\sqrt3)^2=700+200\\sqrt3$。",
+        "对经过两个侧面的路线，跨公共棱的垂直距离为 $10\\sqrt3+5\\sqrt3=15\\sqrt3$，沿棱方向的位移为 $5$，故长度平方为 $(15\\sqrt3)^2+5^2=700$。",
+        "第二条更短，所以所求距离为 $\\sqrt{700}=10\\sqrt7$ m。镜像路线只会给出相同的两种长度，无须另增情形。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf#page=14"
+  }
+}
