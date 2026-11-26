@@ -1,0 +1,240 @@
+{
+  "euclid-2017-q1": {
+    "summary": "(a) Find the unique pair of positive integers $(a,b)$ satisfying $5a+3b=19$. (b) How many positive integers $n$ satisfy $5<2^n<2017$? (c) Jimmy buys $600$ euros at $1$ euro = $1.50$ dollars, then converts them back at $1$ dollar = $0.75$ euro. How many dollars does he lose?",
+    "summaryZh": "(a) 求满足 $5a+3b=19$ 的唯一一组正整数 $(a,b)$。(b) 有多少个正整数 $n$ 满足 $5<2^n<2017$？(c) Jimmy 按 $1$ 欧元兑换 $1.50$ 美元买入 $600$ 欧元，再按 $1$ 美元兑换 $0.75$ 欧元换回美元。他损失了多少美元？",
+    "answer": "(a) $(a,b)=(2,3)$. (b) $8$. (c) $100$ dollars.",
+    "answerZh": "(a) $(a,b)=(2,3)$。(b) $8$ 个。(c) $100$ 美元。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Bound the integers and track the two exchange rates",
+      "titleZh": "限定整数范围并逐次计算汇率",
+      "topics": [{"en":"Linear Diophantine equations","zh":"线性丢番图方程"},{"en":"Powers and inequalities","zh":"幂与不等式"},{"en":"Rates and proportional reasoning","zh":"汇率与比例推理"}],
+      "steps": [
+        "(a) Since $a,b>0$, $5a<19$, so $a\\in\\{1,2,3\\}$. Testing these values, only $a=2$ makes $19-5a=9$ divisible by $3$; hence $b=3$. Direct substitution gives $5(2)+3(3)=19$.",
+        "(b) The relevant powers are $2^3=8>5$ through $2^{10}=1024<2017$. The next power is $2^{11}=2048>2017$, so $n=3,4,\\ldots,10$, a total of $10-3+1=8$ values.",
+        "(c) Buying the euros costs $600(1.50)=900$ dollars. Because one dollar buys $0.75$ euro, $600$ euros convert back to $600/0.75=800$ dollars. The loss is $900-800=100$ dollars."
+      ],
+      "stepsZh": [
+        "(a) 因 $a,b>0$，有 $5a<19$，所以 $a\\in\\{1,2,3\\}$。逐一检验，只有 $a=2$ 使 $19-5a=9$ 能被 $3$ 整除，于是 $b=3$。代回得 $5(2)+3(3)=19$。",
+        "(b) $2^3=8>5$，而 $2^{10}=1024<2017$；下一项 $2^{11}=2048>2017$。故 $n=3,4,\\ldots,10$，共有 $10-3+1=8$ 个。",
+        "(c) 买入欧元花费 $600(1.50)=900$ 美元。因 $1$ 美元兑换 $0.75$ 欧元，$600$ 欧元换回 $600/0.75=800$ 美元。因此损失 $900-800=100$ 美元。"
+      ]
+    }]
+  },
+  "euclid-2017-q2": {
+    "summary": "(a) Solve $\\frac5{x(x-1)}=\\frac1x+\\frac1{x-1}$ subject to $x\\ne0,1$. (b) A $3\\times3$ magic square has rows $(0,20,a)$, $(c,4,\\square)$, and $(\\square,-12,b)$. Find $a,b,c$. (c) (i) Find the positive integer $n$ satisfying $100^2-n^2=9559$. (ii) Give one factor pair $(a,b)$ with $a,b>1$ and $ab=9559$.",
+    "summaryZh": "(a) 在 $x\\ne0,1$ 的条件下解方程 $\\frac5{x(x-1)}=\\frac1x+\\frac1{x-1}$。(b) 一个 $3\\times3$ 幻方的三行依次为 $(0,20,a)$、$(c,4,\\square)$、$(\\square,-12,b)$，求 $a,b,c$。(c) (i) 求满足 $100^2-n^2=9559$ 的正整数 $n$；(ii) 给出一组 $a,b>1$ 且 $ab=9559$ 的因数对 $(a,b)$。",
+    "answer": "(a) $x=3$. (b) $a=-8$, $b=8$, $c=-4$. (c) (i) $n=21$. (ii) For example, $(a,b)=(121,79)$.",
+    "answerZh": "(a) $x=3$。(b) $a=-8,b=8,c=-4$。(c) (i) $n=21$；(ii) 例如 $(a,b)=(121,79)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Clear denominators, use the magic sum, and factor a difference of squares",
+      "titleZh": "消去分母、利用幻方和并作平方差分解",
+      "topics": [{"en":"Rational equations","zh":"分式方程"},{"en":"Magic squares","zh":"幻方"},{"en":"Difference of squares","zh":"平方差公式"}],
+      "steps": [
+        "(a) The restrictions allow multiplication by $x(x-1)$. This gives $5=(x-1)+x=2x-1$, hence $x=3$, which is admissible and satisfies the original equation.",
+        "(b) The middle column fixes the common magic sum as $20+4-12=12$. Thus $0+20+a=12$, so $a=-8$; the main diagonal gives $0+4+b=12$, so $b=8$. The last column must be $(-8,12,8)$, and then the middle row gives $c+4+12=12$, so $c=-4$.",
+        "(c) From $100^2-n^2=9559$, $n^2=10000-9559=441$, and positivity gives $n=21$. Then $9559=100^2-21^2=(100-21)(100+21)=79\\cdot121$, so $(121,79)$ is a valid pair."
+      ],
+      "stepsZh": [
+        "(a) 由定义域限制可将等式两边同乘 $x(x-1)$，得到 $5=(x-1)+x=2x-1$，故 $x=3$。该值符合限制，代回原式成立。",
+        "(b) 中间一列确定幻方的公共和为 $20+4-12=12$。因此 $0+20+a=12$，得 $a=-8$；主对角线给出 $0+4+b=12$，得 $b=8$。第三列应为 $(-8,12,8)$，再由第二行 $c+4+12=12$ 得 $c=-4$。",
+        "(c) 由 $100^2-n^2=9559$ 得 $n^2=10000-9559=441$，因 $n>0$，所以 $n=21$。继而 $9559=100^2-21^2=(100-21)(100+21)=79\\cdot121$，故可取 $(121,79)$。"
+      ]
+    }]
+  },
+  "euclid-2017-q3": {
+    "summary": "(a) Triangles $ABC$ and $ACD$ lie on opposite sides of $AC$; $\\angle ABC=90^\\circ$, $\\angle CAD=90^\\circ$, $AB=3$, $BC=4$, and $CD=13$. Find the area of quadrilateral $ABCD$. (b) Three congruent rectangles are joined: two stand side by side as rectangles $WTUV$ and $XWVY$, while a third rectangle $PQRS$ overlaps their common top line $TX$ with $RS$ lying along $TX$. Each rectangle has perimeter $21$ cm. Find the outer perimeter of the union. (c) A rectangular prism has two adjacent face areas $27$ and $32$ cm$^2$ and volume $144$ cm$^3$. Find its surface area.",
+    "summaryZh": "(a) 三角形 $ABC$ 与 $ACD$ 位于 $AC$ 两侧，$\\angle ABC=90^\\circ$、$\\angle CAD=90^\\circ$，且 $AB=3,BC=4,CD=13$。求四边形 $ABCD$ 的面积。(b) 三个全等矩形拼接：矩形 $WTUV$ 与 $XWVY$ 左右并排，第三个矩形 $PQRS$ 与它们的公共上边 $TX$ 重叠，且 $RS$ 位于 $TX$ 上。每个矩形周长为 $21$ cm，求整体外周长。(c) 一个长方体的两个相邻面面积为 $27$ 和 $32$ cm$^2$，体积为 $144$ cm$^3$，求表面积。",
+    "answer": "(a) $36$. (b) $42$ cm. (c) $166$ cm$^2$.",
+    "answerZh": "(a) $36$。(b) $42$ cm。(c) $166$ cm$^2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use Pythagorean triples, boundary cancellation, and face-area products",
+      "titleZh": "利用勾股数组、边界抵消与面面积乘积",
+      "topics": [{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Perimeter of composite shapes","zh":"组合图形周长"},{"en":"Rectangular prisms","zh":"长方体"}],
+      "steps": [
+        "(a) Triangle $ABC$ is a $3$-$4$-$5$ triangle, so $AC=5$ and its area is $\\frac12(3)(4)=6$. In right triangle $ACD$, $AD=\\sqrt{13^2-5^2}=12$, so its area is $\\frac12(5)(12)=30$. The quadrilateral area is $6+30=36$.",
+        "(b) Let the rectangle side lengths be $u$ and $v$, so $2u+2v=21$. Tracing the outside boundary, the horizontal pieces total $4u$ and the vertical pieces total $4v$: the portions hidden by the overlap are replaced by exposed portions of equal total length. Hence the union has perimeter $4u+4v=2(2u+2v)=42$ cm.",
+        "(c) Let the side lengths be $p,q,r$ with $pq=27$, $pr=32$, and $pqr=144$. The third face area is $qr=(pqr)^2/((pq)(pr))=144^2/(27\\cdot32)=24$. Therefore the surface area is $2(27+32+24)=166$ cm$^2$."
+      ],
+      "stepsZh": [
+        "(a) 三角形 $ABC$ 是 $3$-$4$-$5$ 直角三角形，所以 $AC=5$，面积为 $\\frac12(3)(4)=6$。在直角三角形 $ACD$ 中，$AD=\\sqrt{13^2-5^2}=12$，面积为 $\\frac12(5)(12)=30$。故四边形面积为 $6+30=36$。",
+        "(b) 设矩形边长为 $u,v$，则 $2u+2v=21$。沿拼接图形外边界计数，所有水平边段总长为 $4u$，所有竖直边段总长为 $4v$；重叠处被隐藏的边长恰由等长的外露边段补回。因此外周长为 $4u+4v=2(2u+2v)=42$ cm。",
+        "(c) 设三条棱长为 $p,q,r$，有 $pq=27,pr=32,pqr=144$。第三种面面积 $qr=(pqr)^2/((pq)(pr))=144^2/(27\\cdot32)=24$。故表面积为 $2(27+32+24)=166$ cm$^2$。"
+      ]
+    }]
+  },
+  "euclid-2017-q4": {
+    "summary": "(a) The equations $y=a(x-2)(x+4)$ and $y=2(x-h)^2+k$ describe the same parabola. Find $a,h,k$. (b) A five-term arithmetic sequence starts with $5$. The sum of the squares of its first three terms equals the sum of the squares of its last two terms. Find every possible fifth term.",
+    "summaryZh": "(a) 方程 $y=a(x-2)(x+4)$ 与 $y=2(x-h)^2+k$ 表示同一条抛物线，求 $a,h,k$。(b) 一个五项等差数列的首项为 $5$，前三项平方和等于后两项平方和，求所有可能的第五项。",
+    "answer": "(a) $a=2$, $h=-1$, $k=-18$. (b) The fifth term is $-5$ or $7$.",
+    "answerZh": "(a) $a=2,h=-1,k=-18$。(b) 第五项为 $-5$ 或 $7$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Compare parabola features and solve for the common difference",
+      "titleZh": "比较抛物线特征并求等差数列公差",
+      "topics": [{"en":"Quadratic functions","zh":"二次函数"},{"en":"Vertex form","zh":"顶点式"},{"en":"Arithmetic sequences","zh":"等差数列"}],
+      "steps": [
+        "(a) The leading coefficient gives $a=2$. The roots $2$ and $-4$ have midpoint $-1$, so the axis is $x=-1$ and hence $h=-1$. Substituting $x=-1$ into $2(x-2)(x+4)$ gives the vertex height $k=2(-3)(3)=-18$.",
+        "(b) Let the common difference be $d$. The terms are $5,5+d,5+2d,5+3d,5+4d$. The condition becomes $25+(5+d)^2+(5+2d)^2=(5+3d)^2+(5+4d)^2$.",
+        "Expanding and simplifying gives $4d^2+8d-5=0=(2d+5)(2d-1)$. Thus $d=-5/2$ or $d=1/2$, and the fifth term $5+4d$ is respectively $-5$ or $7$."
+      ],
+      "stepsZh": [
+        "(a) 比较最高次项系数得 $a=2$。两个零点 $2,-4$ 的中点为 $-1$，故对称轴是 $x=-1$，从而 $h=-1$。把 $x=-1$ 代入 $2(x-2)(x+4)$，得顶点纵坐标 $k=2(-3)(3)=-18$。",
+        "(b) 设公差为 $d$，五项为 $5,5+d,5+2d,5+3d,5+4d$。条件化为 $25+(5+d)^2+(5+2d)^2=(5+3d)^2+(5+4d)^2$。",
+        "展开整理得 $4d^2+8d-5=0=(2d+5)(2d-1)$。所以 $d=-5/2$ 或 $d=1/2$，第五项 $5+4d$ 分别为 $-5$ 或 $7$。"
+      ]
+    }]
+  },
+  "euclid-2017-q5": {
+    "summary": "(a) Dan was born on April 6 in a perfect-square year between 1300 and 1400; Steve was born on April 6 in a perfect-square year between 1400 and 1500. Each lived for 110 years. Find a year in which, on April 7 while both were alive, both ages were perfect squares. (b) Find all real $k$ for which $A(1,2)$, $B(11,2)$, and $C(k,6)$ form a right triangle.",
+    "summaryZh": "(a) Dan 出生于 1300 与 1400 之间某个完全平方年份的 4 月 6 日；Steve 出生于 1400 与 1500 之间某个完全平方年份的 4 月 6 日。两人都活了 110 年。求两人均在世且在某年 4 月 7 日年龄都为完全平方数的年份。(b) 求所有实数 $k$，使 $A(1,2),B(11,2),C(k,6)$ 构成直角三角形。",
+    "answer": "(a) $1469$. (b) $k\\in\\{1,3,9,11\\}$.",
+    "answerZh": "(a) $1469$ 年。(b) $k\\in\\{1,3,9,11\\}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Compare square ages and test the three possible right angles",
+      "titleZh": "比较平方年龄并检验三个可能的直角",
+      "topics": [{"en":"Perfect squares","zh":"完全平方数"},{"en":"Difference of squares","zh":"平方差"},{"en":"Coordinate geometry","zh":"坐标几何"}],
+      "steps": [
+        "(a) The only square years in the stated intervals are $37^2=1369$ and $38^2=1444$. If Dan and Steve have square ages $r^2$ and $s^2$ in the same year, then $1369+r^2=1444+s^2$, so $(r-s)(r+s)=75$.",
+        "Both ages must be below $110$. The positive factorization $75=5\\cdot15$ gives $r=(15+5)/2=10$ and $s=(15-5)/2=5$, hence ages $100$ and $25$. The year is $1369+100=1444+25=1469$, when both are alive.",
+        "(b) Since $AB$ is horizontal, a right angle at $A$ requires $AC$ vertical, giving $k=1$; a right angle at $B$ requires $BC$ vertical, giving $k=11$. For a right angle at $C$, $(A-C)\\cdot(B-C)=0$: $(1-k)(11-k)+16=0$, or $k^2-12k+27=(k-3)(k-9)=0$. Thus $k=3$ or $9$."
+      ],
+      "stepsZh": [
+        "(a) 两个区间内唯一的平方年份分别是 $37^2=1369$ 与 $38^2=1444$。若同一年 Dan 与 Steve 的年龄分别为 $r^2,s^2$，则 $1369+r^2=1444+s^2$，故 $(r-s)(r+s)=75$。",
+        "两人年龄都小于 $110$。取正因数分解 $75=5\\cdot15$，得 $r=(15+5)/2=10,s=(15-5)/2=5$，年龄分别为 $100,25$。年份为 $1369+100=1444+25=1469$，此时两人均在世。",
+        "(b) 因 $AB$ 水平，若 $A$ 为直角，则 $AC$ 竖直，得 $k=1$；若 $B$ 为直角，则 $BC$ 竖直，得 $k=11$。若 $C$ 为直角，则 $(A-C)\\cdot(B-C)=0$，即 $(1-k)(11-k)+16=0$，化为 $(k-3)(k-9)=0$，得 $k=3$ 或 $9$。"
+      ]
+    }]
+  },
+  "euclid-2017-q6": {
+    "summary": "(a) Two straight hills meet at $O$, making angles $30^\\circ$ and $45^\\circ$ with the horizontal. Points $A$ and $B$ lie on the respective hills with $OA=OB=20$ m. Vertical poles $AC$ and $BD$ are joined by cable $CD$. If $AC=6$ m, find $BD$ when $CD$ is as short as possible. (b) If $\\cos\\theta=\\tan\\theta$, find every possible exact value of $\\sin\\theta$.",
+    "summaryZh": "(a) 两条直山坡相交于 $O$，与水平线分别成 $30^\\circ,45^\\circ$。点 $A,B$ 分别在两坡上，且 $OA=OB=20$ m。竖直杆 $AC,BD$ 的顶端由缆线 $CD$ 相连。若 $AC=6$ m，求使 $CD$ 最短时的 $BD$。(b) 若 $\\cos\\theta=\\tan\\theta$，求 $\\sin\\theta$ 的所有可能精确值。",
+    "answer": "(a) $BD=16-10\\sqrt2$ m. (b) $\\sin\\theta=(\\sqrt5-1)/2$.",
+    "answerZh": "(a) $BD=16-10\\sqrt2$ m。(b) $\\sin\\theta=(\\sqrt5-1)/2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Minimize perpendicular distance and solve a quadratic in sine",
+      "titleZh": "用垂直距离取最短并解正弦的二次方程",
+      "topics": [{"en":"Trigonometric heights","zh":"三角函数求高度"},{"en":"Shortest distance","zh":"最短距离"},{"en":"Trigonometric equations","zh":"三角方程"}],
+      "steps": [
+        "(a) Relative to the horizontal through $O$, point $A$ is $20\\sin30^\\circ=10$ m high, so $C$ is $10+6=16$ m high. Point $B$ is $20\\sin45^\\circ=10\\sqrt2$ m high.",
+        "The top $D$ may move only on the vertical line through $B$. The shortest segment from fixed $C$ to that vertical line is perpendicular to it, hence horizontal. Thus $D$ must also be $16$ m above the horizontal, and $BD=16-10\\sqrt2$ m.",
+        "(b) The equation requires $\\cos\\theta\\ne0$. Using $\\tan\\theta=\\sin\\theta/\\cos\\theta$ gives $\\cos^2\\theta=\\sin\\theta$. Put $s=\\sin\\theta$; then $1-s^2=s$, so $s^2+s-1=0$ and $s=(-1\\pm\\sqrt5)/2$. Only $(\\sqrt5-1)/2$ lies in $[-1,1]$."
+      ],
+      "stepsZh": [
+        "(a) 相对于过 $O$ 的水平线，$A$ 的高度为 $20\\sin30^\\circ=10$ m，因此 $C$ 的高度为 $10+6=16$ m；$B$ 的高度为 $20\\sin45^\\circ=10\\sqrt2$ m。",
+        "$D$ 只能在过 $B$ 的竖直线上移动。固定点 $C$ 到该竖直线的最短线段必与其垂直，即为水平线。因此 $D$ 的高度也应为 $16$ m，故 $BD=16-10\\sqrt2$ m。",
+        "(b) 原方程要求 $\\cos\\theta\\ne0$。由 $\\tan\\theta=\\sin\\theta/\\cos\\theta$ 得 $\\cos^2\\theta=\\sin\\theta$。令 $s=\\sin\\theta$，则 $1-s^2=s$，即 $s^2+s-1=0$，所以 $s=(-1\\pm\\sqrt5)/2$。其中只有 $(\\sqrt5-1)/2$ 位于 $[-1,1]$。"
+      ]
+    }]
+  },
+  "euclid-2017-q7": {
+    "summary": "(a) Linh drives at $60$ km/h along a highway parallel to a railway. Trains travelling in her direction pass her every $10$ minutes; they leave a station behind her every $3$ minutes and all have the same speed. Find that speed. (b) Find all real pairs $(a,b)$ satisfying $\\sqrt a+\\sqrt b=8$ and $\\log_{10}a+\\log_{10}b=2$.",
+    "summaryZh": "(a) Linh 以 $60$ km/h 沿与铁路平行的公路行驶。同向列车每隔 $10$ 分钟超过她一次；各列车从她后方的车站每隔 $3$ 分钟发车，速度相同。求列车速度。(b) 求所有满足 $\\sqrt a+\\sqrt b=8$ 及 $\\log_{10}a+\\log_{10}b=2$ 的实数对 $(a,b)$。",
+    "answer": "(a) $600/7$ km/h. (b) $(a,b)=(22+8\\sqrt6,22-8\\sqrt6)$ or the reversed pair.",
+    "answerZh": "(a) $600/7$ km/h。(b) $(a,b)=(22+8\\sqrt6,22-8\\sqrt6)$ 或交换两数所得的数对。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Relate departure spacing to overtaking spacing and use symmetric equations",
+      "titleZh": "联系发车间隔与超车间隔并利用对称方程",
+      "topics": [{"en":"Relative speed","zh":"相对速度"},{"en":"Logarithm laws","zh":"对数运算法则"},{"en":"Symmetric systems","zh":"对称方程组"}],
+      "steps": [
+        "(a) If the train speed is $v$, successive trains are separated by the distance travelled in $3$ minutes, namely $v/20$ km. Relative to Linh, trains approach at $v-60$ km/h, and consecutive passes are $1/6$ hour apart. Hence $(v-60)/6=v/20$.",
+        "Solving $10(v-60)=3v$ gives $7v=600$, so $v=600/7$ km/h, which is indeed greater than $60$.",
+        "(b) The logarithms force $a,b>0$ and give $\\log_{10}(ab)=2$, hence $ab=100$. Squaring the first equation gives $a+b+2\\sqrt{ab}=64$, so $a+b=44$.",
+        "Thus $a,b$ are roots of $t^2-44t+100=0$. The roots are $t=(44\\pm\\sqrt{1536})/2=22\\pm8\\sqrt6$, both positive. Either ordering therefore gives a solution."
+      ],
+      "stepsZh": [
+        "(a) 设列车速度为 $v$。相邻两列车的间距等于列车 $3$ 分钟内行驶的距离，即 $v/20$ km。相对于 Linh，列车以 $v-60$ km/h 追近，而两次超越间隔为 $1/6$ 小时，故 $(v-60)/6=v/20$。",
+        "解 $10(v-60)=3v$ 得 $7v=600$，所以 $v=600/7$ km/h，确实大于 $60$。",
+        "(b) 对数定义域要求 $a,b>0$，且 $\\log_{10}(ab)=2$，故 $ab=100$。将第一式平方得 $a+b+2\\sqrt{ab}=64$，所以 $a+b=44$。",
+        "因此 $a,b$ 是 $t^2-44t+100=0$ 的两个根，即 $t=(44\\pm\\sqrt{1536})/2=22\\pm8\\sqrt6$。两根均为正，任意交换顺序都满足原方程组。"
+      ]
+    }]
+  },
+  "euclid-2017-q8": {
+    "summary": "(a) Lines $AC$ and $DF$ are tangent to a circle at $B$ and $E$. The secant $AF$ meets the circle in order at $P,R$ and meets chord $BE$ at $Q$. Here $A,B,C$ are collinear, $D,E,F$ are collinear, and $Q$ lies on both $AF$ and $BE$. Given $\\angle CAF=35^\\circ$, $\\angle DFA=30^\\circ$, and $\\angle FPE=25^\\circ$, find $\\angle PEQ$. (b) Squares $ABCD$ and $PNCD$, each of side $2$, share $CD$ and lie in perpendicular planes. The plane through $P,M,N$ is parallel to $ABCD$; $\\angle PMN=90^\\circ$, $PM=MN$, and $M$ is on the same side of plane $PNCD$ as $AB$. Find the volume of the convex solid $ABCDPMN$.",
+    "summaryZh": "(a) 直线 $AC,DF$ 分别在 $B,E$ 处与同一圆相切。割线 $AF$ 依次与圆交于 $P,R$，并与弦 $BE$ 交于 $Q$；其中 $A,B,C$ 共线，$D,E,F$ 共线，$Q$ 同时位于 $AF,BE$ 上。已知 $\\angle CAF=35^\\circ$、$\\angle DFA=30^\\circ$、$\\angle FPE=25^\\circ$，求 $\\angle PEQ$。(b) 正方形 $ABCD$ 与 $PNCD$ 的边长均为 $2$，共用边 $CD$ 且所在平面互相垂直。平面 $PMN$ 平行于 $ABCD$，$\\angle PMN=90^\\circ$、$PM=MN$，且 $M$ 与 $AB$ 位于平面 $PNCD$ 的同侧。求凸多面体 $ABCDPMN$ 的体积。",
+    "answer": "(a) $32.5^\\circ$. (b) $16/3$ cubic units.",
+    "answerZh": "(a) $32.5^\\circ$。(b) $16/3$ 立方单位。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Apply the tangent-chord theorem and split the solid into a prism and a pyramid",
+      "titleZh": "应用切线弦定理，并把立体分成棱柱与棱锥",
+      "topics": [{"en":"Tangent-chord theorem","zh":"切线弦定理"},{"en":"Angle chasing","zh":"角度追踪"},{"en":"Volumes in three dimensions","zh":"空间体积"}],
+      "steps": [
+        "(a) Put $\\theta=\\angle PEQ$. Since $A,P,Q,R,F$ are collinear, $\\angle EFP=30^\\circ$. In triangle $FPE$, the exterior angle at $E$ between $ED$ and $EP$ is $25^\\circ+30^\\circ=55^\\circ$.",
+        "By the tangent-chord theorem at $E$, $\\angle PBE=55^\\circ$; by the same theorem at $B$, $\\angle ABP=\\angle PEQ=\\theta$. Hence $\\angle ABQ=\\theta+55^\\circ$. Also, the exterior angle of triangle $PQE$ at $Q$ is $\\angle AQB=25^\\circ+\\theta$.",
+        "In triangle $ABQ$, $35^\\circ+(\\theta+55^\\circ)+(25^\\circ+\\theta)=180^\\circ$. Therefore $2\\theta=65^\\circ$ and $\\theta=32.5^\\circ$.",
+        "(b) Choose coordinates $A=(0,0,0)$, $B=(2,0,0)$, $C=(2,2,0)$, $D=(0,2,0)$, $P=(0,2,2)$, and $N=(2,2,2)$. The right isosceles triangle with hypotenuse $PN=2$ has its third vertex on the stated side at $M=(1,1,2)$.",
+        "Slice along plane $ABNP$, whose equation is $z=y$. The part $ABCDPN$ is a triangular prism with volume $\\frac12(2)(2)(2)=4$. The remaining part is pyramid $ABNPM$. Its rectangular base $ABNP$ has area $2\\cdot2\\sqrt2=4\\sqrt2$, while the perpendicular distance from $M$ to $z=y$ is $|2-1|/\\sqrt2=1/\\sqrt2$. Its volume is $\\frac13(4\\sqrt2)(1/\\sqrt2)=4/3$. The total is $4+4/3=16/3$."
+      ],
+      "stepsZh": [
+        "(a) 令 $\\theta=\\angle PEQ$。因 $A,P,Q,R,F$ 共线，$\\angle EFP=30^\\circ$。在三角形 $FPE$ 中，$E$ 点处由 $ED$ 与 $EP$ 构成的外角为 $25^\\circ+30^\\circ=55^\\circ$。",
+        "由 $E$ 点的切线弦定理，$\\angle PBE=55^\\circ$；由 $B$ 点的切线弦定理，$\\angle ABP=\\angle PEQ=\\theta$。因此 $\\angle ABQ=\\theta+55^\\circ$。又三角形 $PQE$ 在 $Q$ 处的外角为 $\\angle AQB=25^\\circ+\\theta$。",
+        "在三角形 $ABQ$ 中，$35^\\circ+(\\theta+55^\\circ)+(25^\\circ+\\theta)=180^\\circ$。所以 $2\\theta=65^\\circ$，即 $\\theta=32.5^\\circ$。",
+        "(b) 建立坐标：$A=(0,0,0),B=(2,0,0),C=(2,2,0),D=(0,2,0),P=(0,2,2),N=(2,2,2)$。以 $PN=2$ 为斜边的等腰直角三角形，按题意一侧的第三个顶点为 $M=(1,1,2)$。",
+        "沿平面 $ABNP$（方程为 $z=y$）分割。部分 $ABCDPN$ 是三棱柱，体积为 $\\frac12(2)(2)(2)=4$。余下部分是棱锥 $ABNPM$；矩形底面 $ABNP$ 面积为 $2\\cdot2\\sqrt2=4\\sqrt2$，点 $M$ 到平面 $z=y$ 的距离为 $|2-1|/\\sqrt2=1/\\sqrt2$。故棱锥体积为 $\\frac13(4\\sqrt2)(1/\\sqrt2)=4/3$，总体积为 $4+4/3=16/3$。"
+      ]
+    }]
+  },
+  "euclid-2017-q9": {
+    "summary": "For a uniformly chosen permutation $a_1,\\ldots,a_n$: (a) when $n=4$, find the average of $|a_1-a_2|+|a_3-a_4|$; (b) when $n=7$, find the average of $a_1-a_2+a_3-a_4+a_5-a_6+a_7$; (c) when $n=200$, find the average of $|a_1-a_2|+|a_3-a_4|+\\cdots+|a_{199}-a_{200}|$.",
+    "summaryZh": "从所有排列中等可能选取 $a_1,\\ldots,a_n$：(a) 当 $n=4$ 时，求 $|a_1-a_2|+|a_3-a_4|$ 的平均值；(b) 当 $n=7$ 时，求 $a_1-a_2+a_3-a_4+a_5-a_6+a_7$ 的平均值；(c) 当 $n=200$ 时，求 $|a_1-a_2|+|a_3-a_4|+\\cdots+|a_{199}-a_{200}|$ 的平均值。",
+    "answer": "(a) $10/3$. (b) $4$. (c) $6700$.",
+    "answerZh": "(a) $10/3$。(b) $4$。(c) $6700$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=5",
+    "methods": [{
+      "title": "Use linearity of expectation and count unordered differences",
+      "titleZh": "利用期望的线性性并统计无序数对差",
+      "topics": [{"en":"Permutations","zh":"排列"},{"en":"Linearity of expectation","zh":"期望的线性性"},{"en":"Finite sums","zh":"有限求和"}],
+      "steps": [
+        "For two distinct uniformly placed values $X,Y$ from $\\{1,\\ldots,N\\}$, each unordered pair occurs in either order equally often. Hence $E|X-Y|=\\frac{2}{N(N-1)}\\sum_{1\\le j<i\\le N}(i-j)$.",
+        "For a fixed difference $d$, there are $N-d$ pairs, so the sum is $\\sum_{d=1}^{N-1}d(N-d)=N(N-1)(N+1)/6$. Therefore $E|X-Y|=(N+1)/3$.",
+        "(a) With $N=4$, each of the two absolute-difference terms has mean $5/3$. Linearity gives $2(5/3)=10/3$; independence is not needed.",
+        "(b) Every position in a random permutation of $1,\\ldots,7$ has mean $(1+7)/2=4$. There are four positive and three negative signs, so the mean is $(4-3)4=4$.",
+        "(c) With $N=200$, each of the $100$ paired differences has mean $(201)/3=67$. The requested average is $100\\cdot67=6700$."
+      ],
+      "stepsZh": [
+        "从 $\\{1,\\ldots,N\\}$ 中不放回地等可能取两个有序数 $X,Y$。每个无序数对的两个顺序出现次数相同，因此 $E|X-Y|=\\frac{2}{N(N-1)}\\sum_{1\\le j<i\\le N}(i-j)$。",
+        "固定差值 $d$ 时共有 $N-d$ 个数对，所以总和为 $\\sum_{d=1}^{N-1}d(N-d)=N(N-1)(N+1)/6$。于是 $E|X-Y|=(N+1)/3$。",
+        "(a) 当 $N=4$ 时，每个绝对差项的均值为 $5/3$。由期望线性性，两项之和为 $2(5/3)=10/3$，不需要独立性。",
+        "(b) $1,\\ldots,7$ 的随机排列中，每个位置的均值均为 $(1+7)/2=4$。正号有四个、负号有三个，故均值为 $(4-3)4=4$。",
+        "(c) 当 $N=200$ 时，每个配对差的均值为 $201/3=67$。共有 $100$ 项，所以所求平均值为 $100\\cdot67=6700$。"
+      ]
+    }]
+  },
+  "euclid-2017-q10": {
+    "summary": "A finite set of distinct positive integers is called boring if it contains four distinct elements $a,b,c,d$ with $a+b=c+d$, and exciting otherwise. (a) Find an exciting five-element subset of $\\{1,2,\\ldots,8\\}$. (b) Prove that every exciting set of $m\\ge4$ positive integers contains an element at least $(m^2-m)/4$. (c) For $n\\ge10$, define $x_k=2n\\,\\operatorname{rem}(k^2,n)+k$ for $1\\le k\\le n$, where $\\operatorname{rem}(u,n)$ is the remainder of $u$ modulo $n$. Determine, with proof, all $n$ for which $\\{x_1,\\ldots,x_n\\}$ is exciting.",
+    "summaryZh": "若一个由互不相同正整数组成的有限集合含有四个不同元素 $a,b,c,d$ 满足 $a+b=c+d$，则称其为 boring；否则称为 exciting。(a) 从 $\\{1,2,\\ldots,8\\}$ 中找一个含五个元素的 exciting 子集。(b) 证明：任意含 $m\\ge4$ 个正整数的 exciting 集合中，至少有一个元素不小于 $(m^2-m)/4$。(c) 对 $n\\ge10$，令 $x_k=2n\\,\\operatorname{rem}(k^2,n)+k$（$1\\le k\\le n$），其中 $\\operatorname{rem}(u,n)$ 表示 $u$ 除以 $n$ 的余数。求并证明使 $\\{x_1,\\ldots,x_n\\}$ 为 exciting 的所有 $n$。",
+    "answer": "(a) For example, $\\{1,2,3,5,8\\}$. (b) The stated bound holds. (c) Exactly the primes $n\\ge10$.",
+    "answerZh": "(a) 例如 $\\{1,2,3,5,8\\}$。(b) 结论成立。(c) 恰为所有不小于 $10$ 的质数 $n$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2017/2017EuclidContest.pdf#page=5",
+    "methods": [{
+      "title": "Count distinct pair sums and characterize the modular construction",
+      "titleZh": "统计不同的两两和并刻画模构造",
+      "topics": [{"en":"Sidon-type sets","zh":"Sidon 型集合"},{"en":"Pigeonhole principle","zh":"抽屉原理"},{"en":"Modular arithmetic","zh":"模运算"},{"en":"Prime and composite cases","zh":"质数与合数分类"}],
+      "steps": [
+        "(a) In $\\{1,2,3,5,8\\}$ the ten sums of two distinct elements are $3,4,6,9,5,7,10,8,11,13$, all different. Thus no equality of the required kind exists, so the set is exciting.",
+        "(b) An exciting $m$-element set has $\\binom m2=m(m-1)/2$ distinct positive pair sums. Therefore its largest pair sum is at least $m(m-1)/2$. At least one of the two elements in that pair is at least half the sum, namely $m(m-1)/4=(m^2-m)/4$.",
+        "(c) Write $r_k=\\operatorname{rem}(k^2,n)$. First, the $x_k$ are distinct because $x_k\\equiv k\\pmod{2n}$ and $1\\le k\\le n$. If four distinct indices satisfy $x_a+x_b=x_c+x_d$, then $2n(r_a+r_b-r_c-r_d)=c+d-a-b$. The right side has absolute value at most $2n-4$, so it must be $0$. Consequently $a+b=c+d$ and $r_a+r_b=r_c+r_d$.",
+        "Suppose $n$ is prime. It is odd because $n\\ge10$. From equality of the remainder sums, $a^2+b^2\\equiv c^2+d^2\\pmod n$. Together with $a+b=c+d$, this gives $2(c-a)(c-b)\\equiv0\\pmod n$. Primality forces $c\\equiv a$ or $c\\equiv b\\pmod n$. Since all indices lie in $[1,n]$, this means $c=a$ or $c=b$, contradicting distinctness. Hence the set is exciting.",
+        "Now suppose $n$ is composite. If $n=p^2$ for a prime $p$, then $p\\ge5$ and the four indices $p,4p,2p,3p$ are distinct, have equal pair sums $5p$, and all four squares have remainder $0$ modulo $n$; the set is boring.",
+        "If $n=2t$ is even, $t\\ge5$. Take $(a,b,c,d)=(1,t+2,2,t+1)$. The pair sums are both $t+3$. Also $r_1=1,r_2=4$, and $(t+2)^2-(t+1)^2=2t+3$, so $r_{t+2}=r_{t+1}+3$; no wrap occurs because $t^2\\bmod 2t$ is $0$ for even $t$ and $t$ for odd $t$, with $t\\ge5$. Thus $r_1+r_{t+2}=r_2+r_{t+1}$, making the set boring.",
+        "For every remaining odd composite $n$, write $n=MN$ with odd $M>N>1$. Set $a=(M+N)/2$, $c=(M-N)/2$, $b=n-a$, and $d=n-c$. These are four distinct indices and $a+b=c+d=n$. Moreover $b^2\\equiv a^2$, $d^2\\equiv c^2$, and $a^2-c^2=MN=n$, so all four square remainders are equal. The set is again boring. Therefore the construction is exciting exactly for prime $n\\ge10$."
+      ],
+      "stepsZh": [
+        "(a) 在 $\\{1,2,3,5,8\\}$ 中，两两不同元素的十个和为 $3,4,6,9,5,7,10,8,11,13$，彼此不同。因此不存在题设等式，该集合是 exciting。",
+        "(b) 含 $m$ 个元素的 exciting 集合有 $\\binom m2=m(m-1)/2$ 个互不相同的正整数两两和。因此最大的两两和至少为 $m(m-1)/2$。构成该和的两个数中至少有一个不小于其一半，即 $m(m-1)/4=(m^2-m)/4$。",
+        "(c) 记 $r_k=\\operatorname{rem}(k^2,n)$。首先，因 $x_k\\equiv k\\pmod{2n}$ 且 $1\\le k\\le n$，各 $x_k$ 互不相同。若四个不同下标满足 $x_a+x_b=x_c+x_d$，则 $2n(r_a+r_b-r_c-r_d)=c+d-a-b$。右边绝对值至多为 $2n-4$，故只能为 $0$。于是 $a+b=c+d$ 且 $r_a+r_b=r_c+r_d$。",
+        "设 $n$ 为质数。因 $n\\ge10$，故 $n$ 为奇数。由余数和相等，有 $a^2+b^2\\equiv c^2+d^2\\pmod n$；结合 $a+b=c+d$，可得 $2(c-a)(c-b)\\equiv0\\pmod n$。由质性知 $c\\equiv a$ 或 $c\\equiv b\\pmod n$。所有下标均在 $[1,n]$ 内，故 $c=a$ 或 $c=b$，与四下标不同矛盾。因此集合是 exciting。",
+        "再设 $n$ 为合数。若 $n=p^2$（$p$ 为质数），则 $p\\ge5$。取四个下标 $p,4p,2p,3p$，两组和均为 $5p$，且四个平方模 $n$ 的余数全为 $0$，所以集合 boring。",
+        "若 $n=2t$ 为偶数，则 $t\\ge5$。取 $(a,b,c,d)=(1,t+2,2,t+1)$，两组下标和均为 $t+3$。又 $r_1=1,r_2=4$，且 $(t+2)^2-(t+1)^2=2t+3$，所以 $r_{t+2}=r_{t+1}+3$；由于 $t^2$ 模 $2t$ 在 $t$ 偶时为 $0$、在 $t$ 奇时为 $t$，且 $t\\ge5$，此处不会跨越模边界。因此 $r_1+r_{t+2}=r_2+r_{t+1}$，集合 boring。",
+        "对其余奇合数 $n$，写成 $n=MN$，其中奇数 $M>N>1$。令 $a=(M+N)/2,c=(M-N)/2,b=n-a,d=n-c$。四个下标互不相同，且 $a+b=c+d=n$。同时 $b^2\\equiv a^2$、$d^2\\equiv c^2$，而 $a^2-c^2=MN=n$，故四个平方的余数相同，集合仍 boring。综上，恰当且仅当 $n\\ge10$ 为质数时，该集合 exciting。"
+      ]
+    }]
+  }
+}
