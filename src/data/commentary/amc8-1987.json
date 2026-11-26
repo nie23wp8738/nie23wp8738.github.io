@@ -1,0 +1,177 @@
+{
+  "amc8-1987-q1": {
+    "summary": "Evaluate $0.4+0.02+0.006$. Options: A $0.012$, B $0.066$, C $0.12$, D $0.24$, E $0.426$.",
+    "summaryZh": "计算 $0.4+0.02+0.006$。选项为 A $0.012$，B $0.066$，C $0.12$，D $0.24$，E $0.426$。",
+    "answer": "E. $0.426$.", "answerZh": "E．$0.426$。",
+    "methods": [{"title":"Align decimal places","titleZh":"对齐小数位","topics":[{"en":"Decimal addition","zh":"小数加法"},{"en":"Place value","zh":"位值制"}],"steps":["Write the addends as $0.400,0.020,0.006$.","Adding corresponding place values gives $0.400+0.020+0.006=0.426$."],"stepsZh":["把三个加数写成 $0.400,0.020,0.006$。","对应数位相加得 $0.400+0.020+0.006=0.426$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/1"
+  },
+  "amc8-1987-q2": {
+    "summary": "Write $2/25$ as a decimal. Options: A $0.008$, B $0.08$, C $0.8$, D $1.25$, E $12.5$.",
+    "summaryZh": "把 $2/25$ 写成小数。选项为 A $0.008$，B $0.08$，C $0.8$，D $1.25$，E $12.5$。",
+    "answer": "B. $0.08$.", "answerZh": "B．$0.08$。",
+    "methods": [{"title":"Make the denominator one hundred","titleZh":"把分母化为一百","topics":[{"en":"Fractions","zh":"分数"},{"en":"Decimals","zh":"小数"}],"steps":["Multiply numerator and denominator by $4$: $2/25=8/100$.","Therefore $2/25=0.08$."],"stepsZh":["分子、分母同乘 $4$，得 $2/25=8/100$。","因此 $2/25=0.08$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/2"
+  },
+  "amc8-1987-q3": {
+    "summary": "Evaluate $2(81+83+85+87+89+91+93+95+97+99)$. Options: A $1600$, B $1650$, C $1700$, D $1750$, E $1800$.",
+    "summaryZh": "计算 $2(81+83+85+87+89+91+93+95+97+99)$。选项为 A $1600$，B $1650$，C $1700$，D $1750$，E $1800$。",
+    "answer": "E. $1800$.", "answerZh": "E．$1800$。",
+    "methods": [{"title":"Use the mean of an arithmetic sequence","titleZh":"利用等差数列平均数","topics":[{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Mean","zh":"平均数"}],"steps":["The ten odd integers from $81$ through $99$ have mean $(81+99)/2=90$.","Their sum is $10\\cdot90=900$, and the outside factor gives $2\\cdot900=1800$."],"stepsZh":["从 $81$ 到 $99$ 的十个奇数平均数为 $(81+99)/2=90$。","它们的和为 $10\\cdot90=900$，再乘外面的 $2$ 得 $1800$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/3"
+  },
+  "amc8-1987-q4": {
+    "summary": "A full circle measures $500$ clerts in a fictional angle unit. How many clerts are in a right angle? Options: A $90$, B $100$, C $125$, D $180$, E $250$.",
+    "summaryZh": "在一种虚构角度单位中，周角为 $500$ clerts。一个直角是多少 clerts？选项为 A $90$，B $100$，C $125$，D $180$，E $250$。",
+    "answer": "C. $125$ clerts.", "answerZh": "C．$125$ clerts。",
+    "methods": [{"title":"Take one quarter of a full circle","titleZh":"取周角的四分之一","topics":[{"en":"Ratio and proportion","zh":"比与比例"},{"en":"Angles","zh":"角"}],"steps":["A right angle is one quarter of a full circle.","Thus its measure is $500/4=125$ clerts."],"stepsZh":["直角是周角的四分之一。","所以其度数为 $500/4=125$ clerts。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/4"
+  },
+  "amc8-1987-q5": {
+    "summary": "A rectangle is $0.4$ metre long and $0.22$ metre wide. Find its area in square metres. Options: A $0.088$, B $0.62$, C $0.88$, D $1.24$, E $4.22$.",
+    "summaryZh": "一个长方形长 $0.4$ 米、宽 $0.22$ 米。求其面积（平方米）。选项为 A $0.088$，B $0.62$，C $0.88$，D $1.24$，E $4.22$。",
+    "answer": "A. $0.088\\text{ m}^2$.", "answerZh": "A．$0.088$ 平方米。",
+    "methods": [{"title":"Multiply length by width","titleZh":"长乘宽","topics":[{"en":"Rectangle area","zh":"长方形面积"},{"en":"Decimal multiplication","zh":"小数乘法"}],"steps":["The area of a rectangle is length times width.","Hence $A=(0.4)(0.22)=0.088\\text{ m}^2$."],"stepsZh":["长方形面积等于长乘宽。","故 $A=(0.4)(0.22)=0.088$ 平方米。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/5"
+  },
+  "amc8-1987-q6": {
+    "summary": "Choose two numbers from $\\{-7,-5,-1,1,3\\}$ and multiply them. Find the smallest possible product. Options: A $-35$, B $-21$, C $-15$, D $-1$, E $3$.",
+    "summaryZh": "从 $\\{-7,-5,-1,1,3\\}$ 中选择两个数相乘，求最小可能的乘积。选项为 A $-35$，B $-21$，C $-15$，D $-1$，E $3$。",
+    "answer": "B. $-21$.", "answerZh": "B．$-21$。",
+    "methods": [{"title":"Make the product as negative as possible","titleZh":"使乘积尽可能小","topics":[{"en":"Signed numbers","zh":"有理数正负"},{"en":"Optimisation","zh":"最值"}],"steps":["A negative product uses one negative and one positive factor.","For the greatest negative magnitude, use the negative number with largest absolute value and the largest positive number: $(-7)(3)=-21$."],"stepsZh":["负乘积必须由一个负数与一个正数相乘得到。","要使负值绝对值最大，取绝对值最大的负数和最大的正数：$(-7)(3)=-21$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/6"
+  },
+  "amc8-1987-q7": {
+    "summary": "A $3\\times3\\times3$ cube is built from $27$ unit cubes. Opposite large faces carry matching $3\\times3$ shading patterns: the top/bottom pair has only its centre square shaded; one side-face pair has its four corners and centre shaded; the remaining side-face pair has its four edge-midpoint squares shaded. How many unit cubes have at least one shaded face? Options: A $10$, B $16$, C $20$, D $22$, E $24$.",
+    "summaryZh": "一个 $3\\times3\\times3$ 大立方体由 $27$ 个单位小立方体组成。每对相对的大面采用相同的 $3\\times3$ 阴影图案：上、下面仅中心格涂色；一对侧面涂四个角格和中心格；另一对侧面涂四个边中格。至少有一个面被涂色的小立方体有多少个？选项为 A $10$，B $16$，C $20$，D $22$，E $24$。",
+    "answer": "C. $20$ unit cubes.", "answerZh": "C．$20$ 个小立方体。",
+    "methods": [{"title":"Count the completely unshaded cubes","titleZh":"用补集计数完全未涂色的小立方体","topics":[{"en":"Cube geometry","zh":"立方体几何"},{"en":"Complementary counting","zh":"补集计数"}],"steps":["A unit cube is unshaded only if every exposed square at its position is blank. The hidden centre cube is unshaded.","Two face-centre cubes on the edge-midpoint-pattern faces have blank exposed centre squares. Four edge-midpoint cubes where a corner-and-centre face meets the top or bottom also have only blank exposed squares.","Thus $1+2+4=7$ cubes are completely unshaded, so $27-7=20$ have at least one shaded face."],"stepsZh":["一个小立方体完全未涂色，当且仅当它所在位置的所有外露方格均为空白。内部中心小立方体满足条件。","采用边中格图案的两个相对面，其面中心位置为空白，给出两个未涂色小立方体；四个“角格与中心格图案侧面”和上、下面相交的棱中点位置也都只露出空白格。","故完全未涂色的共有 $1+2+4=7$ 个，至少有一个面涂色的共有 $27-7=20$ 个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/7"
+  },
+  "amc8-1987-q8": {
+    "summary": "In the vertical sum $9876+A32+B1$, the symbols $A,B$ are nonzero digits. How many digits are always in the resulting sum? Options: A $4$, B $5$, C $6$, D $9$, E it depends on $A,B$.",
+    "summaryZh": "在竖式 $9876+A32+B1$ 中，$A,B$ 为非零数码。所得总和恒有多少位？选项为 A $4$，B $5$，C $6$，D $9$，E 取决于 $A,B$。",
+    "answer": "B. $5$ digits.", "answerZh": "B．$5$ 位。",
+    "methods": [{"title":"Bound the smallest and largest possible sums","titleZh":"夹逼最小与最大总和","topics":[{"en":"Place value","zh":"位值制"},{"en":"Bounding","zh":"范围估计"}],"steps":["The minimum occurs at $A=B=1$: $9876+132+11=10019$, which has five digits.","The maximum occurs at $A=B=9$: $9876+932+91=10899$, also with five digits. Every possible sum therefore has five digits."],"stepsZh":["$A=B=1$ 时总和最小，为 $9876+132+11=10019$，是五位数。","$A=B=9$ 时总和最大，为 $9876+932+91=10899$，仍是五位数。因此所有可能总和都恰有五位。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/8"
+  },
+  "amc8-1987-q9": {
+    "summary": "When adding $1/2+1/3+1/4+1/5+1/6+1/7$, what is the least common denominator? Options: A $120$, B $210$, C $420$, D $840$, E $5040$.",
+    "summaryZh": "计算 $1/2+1/3+1/4+1/5+1/6+1/7$ 时，最小公分母是多少？选项为 A $120$，B $210$，C $420$，D $840$，E $5040$。",
+    "answer": "C. $420$.", "answerZh": "C．$420$。",
+    "methods": [{"title":"Take the least common multiple","titleZh":"求分母的最小公倍数","topics":[{"en":"Least common multiple","zh":"最小公倍数"},{"en":"Fractions","zh":"分数"}],"steps":["The least common denominator is $\\operatorname{lcm}(2,3,4,5,6,7)$.","The needed prime powers are $2^2,3,5,7$, so the result is $4\\cdot3\\cdot5\\cdot7=420$."],"stepsZh":["最小公分母为 $\\operatorname{lcm}(2,3,4,5,6,7)$。","所需最高质因数幂为 $2^2,3,5,7$，故结果是 $4\\cdot3\\cdot5\\cdot7=420$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/9"
+  },
+  "amc8-1987-q10": {
+    "summary": "Evaluate $4(299)+3(299)+2(299)+298$. Options: A $2889$, B $2989$, C $2991$, D $2999$, E $3009$.",
+    "summaryZh": "计算 $4(299)+3(299)+2(299)+298$。选项为 A $2889$，B $2989$，C $2991$，D $2999$，E $3009$。",
+    "answer": "B. $2989$.", "answerZh": "B．$2989$。",
+    "methods": [{"title":"Factor the common term","titleZh":"提取公因数","topics":[{"en":"Distributive property","zh":"分配律"}],"steps":["Combine the first three terms: $(4+3+2)(299)=9\\cdot299=2691$.","Adding $298$ gives $2691+298=2989$."],"stepsZh":["合并前三项：$(4+3+2)(299)=9\\cdot299=2691$。","再加 $298$，得 $2691+298=2989$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/10"
+  },
+  "amc8-1987-q11": {
+    "summary": "Between which consecutive half-unit benchmarks does $2\\tfrac17+3\\tfrac12+5\\tfrac1{19}$ lie? Options: A $10$ and $10\\tfrac12$, B $10\\tfrac12$ and $11$, C $11$ and $11\\tfrac12$, D $11\\tfrac12$ and $12$, E $12$ and $12\\tfrac12$.",
+    "summaryZh": "$2\\tfrac17+3\\tfrac12+5\\tfrac1{19}$ 位于哪两个相邻的半单位界点之间？选项为 A $10$ 与 $10\\tfrac12$，B $10\\tfrac12$ 与 $11$，C $11$ 与 $11\\tfrac12$，D $11\\tfrac12$ 与 $12$，E $12$ 与 $12\\tfrac12$。",
+    "answer": "B. Between $10\\tfrac12$ and $11$.", "answerZh": "B．在 $10\\tfrac12$ 与 $11$ 之间。",
+    "methods": [{"title":"Separate whole and fractional parts","titleZh":"分开整数部分与分数部分","topics":[{"en":"Mixed numbers","zh":"带分数"},{"en":"Estimation","zh":"估算"}],"steps":["The whole-number parts sum to $2+3+5=10$.","The fractional part is $1/2+1/7+1/19$, which is greater than $1/2$ and less than $1/2+1/6+1/6<1$. Therefore the total lies between $10\\tfrac12$ and $11$."],"stepsZh":["整数部分之和为 $2+3+5=10$。","分数部分为 $1/2+1/7+1/19$，它大于 $1/2$，且小于 $1/2+1/6+1/6<1$。因此总和位于 $10\\tfrac12$ 与 $11$ 之间。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/11"
+  },
+  "amc8-1987-q12": {
+    "summary": "A $12$-by-$18$ rectangle is divided as shown; the shaded portion is the lower-right $3$-by-$6$ rectangle (equivalently, the rightmost third of the lower-right quarter of the whole rectangle). What fraction of the large rectangle is shaded? Options: A $1/108$, B $1/18$, C $1/12$, D $2/9$, E $1/3$.",
+    "summaryZh": "一个 $12\\times18$ 长方形按图分割；阴影部分是右下角的 $3\\times6$ 小长方形（等价地，是整个长方形右下四分之一区域的最右侧三分之一）。阴影占大长方形的几分之几？选项为 A $1/108$，B $1/18$，C $1/12$，D $2/9$，E $1/3$。",
+    "answer": "C. $1/12$.", "answerZh": "C．$1/12$。",
+    "methods": [{"title":"Compare the two rectangle areas","titleZh":"比较两个长方形面积","topics":[{"en":"Area ratio","zh":"面积比"},{"en":"Fractions","zh":"分数"}],"steps":["The whole rectangle has area $12\\cdot18=216$.","The shaded rectangle has area $3\\cdot6=18$, so the fraction is $18/216=1/12$."],"stepsZh":["大长方形面积为 $12\\cdot18=216$。","阴影长方形面积为 $3\\cdot6=18$，所以所占比例为 $18/216=1/12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/12"
+  },
+  "amc8-1987-q13": {
+    "summary": "Which fraction is largest? A $3/7$, B $4/9$, C $17/35$, D $100/201$, E $151/301$.",
+    "summaryZh": "下列哪个分数最大？A $3/7$，B $4/9$，C $17/35$，D $100/201$，E $151/301$。",
+    "answer": "E. $151/301$.", "answerZh": "E．$151/301$。",
+    "methods": [{"title":"Compare every choice with one half","titleZh":"把每个选项与二分之一比较","topics":[{"en":"Fraction comparison","zh":"分数比较"},{"en":"Benchmarking","zh":"基准比较"}],"steps":["For $3/7,4/9,17/35,100/201$, doubling the numerator gives a value smaller than the denominator, so each is less than $1/2$.","For $151/301$, $2\\cdot151=302>301$, so it is greater than $1/2$ and therefore larger than all other choices."],"stepsZh":["对 $3/7,4/9,17/35,100/201$，分子的两倍都小于分母，因此这些分数均小于 $1/2$。","对 $151/301$，有 $2\\cdot151=302>301$，所以它大于 $1/2$，从而大于其余所有选项。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/13"
+  },
+  "amc8-1987-q14": {
+    "summary": "A computer performs $10{,}000$ additions per second. How many additions can it perform in one hour? Options: A $6$ million, B $36$ million, C $60$ million, D $216$ million, E $360$ million.",
+    "summaryZh": "一台计算机每秒可完成 $10{,}000$ 次加法。一小时可完成多少次？选项为 A $6$ 百万，B $36$ 百万，C $60$ 百万，D $216$ 百万，E $360$ 百万。",
+    "answer": "B. $36$ million additions.", "answerZh": "B．$36$ 百万次。",
+    "methods": [{"title":"Convert one hour to seconds","titleZh":"把一小时换算为秒","topics":[{"en":"Rates","zh":"速率"},{"en":"Unit conversion","zh":"单位换算"}],"steps":["One hour contains $60\\cdot60=3600$ seconds.","The number of additions is $10{,}000\\cdot3600=36{,}000{,}000$, or $36$ million."],"stepsZh":["一小时有 $60\\cdot60=3600$ 秒。","加法次数为 $10{,}000\\cdot3600=36{,}000{,}000$，即 $36$ 百万次。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/14"
+  },
+  "amc8-1987-q15": {
+    "summary": "A sale offers three tires at regular price and a fourth tire for 3 dollars. Sam pays 240 dollars for four tires. Find the regular price of one tire. Options: A 59.25 dollars, B 60 dollars, C 70 dollars, D 79 dollars, E 80 dollars.",
+    "summaryZh": "促销方案为三条轮胎按原价购买，第四条仅需 $3$ 美元。Sam 购买四条共付 $240$ 美元。求一条轮胎的原价。选项为 A $59.25$ 美元，B $60$ 美元，C $70$ 美元，D $79$ 美元，E $80$ 美元。",
+    "answer": "D. 79 dollars.", "answerZh": "D．$79$ 美元。",
+    "methods": [{"title":"Remove the discounted tire first","titleZh":"先减去特价轮胎","topics":[{"en":"Money","zh":"货币计算"},{"en":"Working backwards","zh":"逆向计算"}],"steps":["The three regular-price tires together cost $240-3=237$ dollars.","Each regular-price tire costs $237/3=79$ dollars."],"stepsZh":["三条原价轮胎合计为 $240-3=237$ 美元。","每条原价轮胎为 $237/3=79$ 美元。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/15"
+  },
+  "amc8-1987-q16": {
+    "summary": "Joyce made $12$ of her first $30$ basketball shots. In the next game she attempted $10$ more shots and raised her season average from $40\\%$ to $50\\%$. How many of the last $10$ did she make? Options: A $2$, B $3$, C $5$, D $6$, E $8$.",
+    "summaryZh": "Joyce 前 $30$ 次篮球投篮命中 $12$ 次。下一场她又投 $10$ 次，使赛季命中率从 $40\\%$ 提高到 $50\\%$。后 $10$ 次中命中多少次？选项为 A $2$，B $3$，C $5$，D $6$，E $8$。",
+    "answer": "E. $8$ shots.", "answerZh": "E．$8$ 次。",
+    "methods": [{"title":"Recover the new total number made","titleZh":"先求新的总命中数","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Weighted average","zh":"加权平均"}],"steps":["After the next game she has attempted $30+10=40$ shots. A $50\\%$ average means $20$ makes.","She already had $12$ makes, so she made $20-12=8$ of the last ten."],"stepsZh":["下一场后共投篮 $30+10=40$ 次，命中率 $50\\%$ 表示总命中 $20$ 次。","此前已命中 $12$ 次，所以后十次命中 $20-12=8$ 次。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/16"
+  },
+  "amc8-1987-q17": {
+    "summary": "Abby, Bret, Carl, and Dana occupy seats $1$ through $4$. Both statements “Bret is next to Carl” and “Abby is between Bret and Carl” are false. Bret is in seat $3$. Who is in seat $2$? Options: A Abby, B Bret, C Carl, D Dana, E not enough information.",
+    "summaryZh": "Abby、Bret、Carl、Dana 坐在编号 $1$ 至 $4$ 的四个座位上。“Bret 与 Carl 相邻”和“Abby 坐在 Bret 与 Carl 之间”两句话都为假。Bret 坐在 $3$ 号座位。谁坐在 $2$ 号座位？选项为 A Abby，B Bret，C Carl，D Dana，E 信息不足。",
+    "answer": "D. Dana.", "answerZh": "D．Dana。",
+    "methods": [{"title":"Use both false statements","titleZh":"依次利用两个假命题","topics":[{"en":"Logical deduction","zh":"逻辑推理"}],"steps":["Since Bret is in seat $3$ and is not next to Carl, Carl can be neither seat $2$ nor seat $4$; hence Carl is in seat $1$.","Seat $2$ lies between seats $1$ and $3$. Abby is not between Carl and Bret, so Abby must be in seat $4$. The remaining seat $2$ belongs to Dana."],"stepsZh":["Bret 在 $3$ 号座位且不与 Carl 相邻，所以 Carl 不能在 $2$ 或 $4$ 号，只能在 $1$ 号。","$2$ 号座位位于 $1$ 与 $3$ 之间；Abby 不在 Carl 与 Bret 之间，所以 Abby 在 $4$ 号。剩下的 $2$ 号座位属于 Dana。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/17"
+  },
+  "amc8-1987-q18": {
+    "summary": "Half the people in a room leave. One third of those remaining begin to dance, leaving $12$ people who are not dancing. How many people were originally in the room? Options: A $24$, B $30$, C $36$, D $42$, E $72$.",
+    "summaryZh": "房间里一半的人离开；剩下的人中有三分之一开始跳舞，此时不跳舞的有 $12$ 人。原来房间里有多少人？选项为 A $24$，B $30$，C $36$，D $42$，E $72$。",
+    "answer": "C. $36$ people.", "answerZh": "C．$36$ 人。",
+    "methods": [{"title":"Work backwards through the fractions","titleZh":"按分数关系逆推","topics":[{"en":"Fractions","zh":"分数"},{"en":"Working backwards","zh":"逆向计算"}],"steps":["The non-dancers are $2/3$ of those who remained, so the number remaining was $12/(2/3)=18$.","Those $18$ people are half the original group, so the original number was $2\\cdot18=36$."],"stepsZh":["不跳舞的人占留下者的 $2/3$，所以留下人数为 $12/(2/3)=18$。","这 $18$ 人是原人数的一半，因此原来有 $2\\cdot18=36$ 人。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/18"
+  },
+  "amc8-1987-q19": {
+    "summary": "A calculator initially displays $2$. Each press of its squaring key replaces the display by its square. How many presses are needed before the display first exceeds $500$? Options: A $4$, B $5$, C $8$, D $9$, E $250$.",
+    "summaryZh": "计算器最初显示 $2$；每按一次平方键，屏幕上的数就被替换为它的平方。至少按多少次后显示值首次超过 $500$？选项为 A $4$，B $5$，C $8$，D $9$，E $250$。",
+    "answer": "A. $4$ presses.", "answerZh": "A．$4$ 次。",
+    "methods": [{"title":"List the successive displays","titleZh":"列出连续显示值","topics":[{"en":"Exponents","zh":"指数"},{"en":"Iteration","zh":"迭代"}],"steps":["Successive presses produce $2\\to4\\to16\\to256\\to65536$.","Since $256<500<65536$, the display first exceeds $500$ on the fourth press."],"stepsZh":["连续按键得到 $2\\to4\\to16\\to256\\to65536$。","因为 $256<500<65536$，所以第四次按键后首次超过 $500$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/19"
+  },
+  "amc8-1987-q20": {
+    "summary": "The claim is: “If a whole number $n$ is not prime, then $n-2$ is not prime.” Which value is a counterexample? Options: A $9$, B $12$, C $13$, D $16$, E $23$.",
+    "summaryZh": "考虑命题：“若非负整数 $n$ 不是质数，则 $n-2$ 也不是质数。”哪个数是反例？选项为 A $9$，B $12$，C $13$，D $16$，E $23$。",
+    "answer": "A. $n=9$.", "answerZh": "A．$n=9$。",
+    "methods": [{"title":"Make the hypothesis true and conclusion false","titleZh":"使前件为真、结论为假","topics":[{"en":"Counterexamples","zh":"反例"},{"en":"Prime numbers","zh":"质数"}],"steps":["A counterexample must have $n$ composite while $n-2$ is prime.","For $n=9$, $9$ is composite but $9-2=7$ is prime. Thus the implication is false at $n=9$."],"stepsZh":["反例必须满足 $n$ 为合数，而 $n-2$ 为质数。","取 $n=9$ 时，$9$ 是合数，但 $9-2=7$ 是质数，因此该命题在 $n=9$ 时不成立。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/20"
+  },
+  "amc8-1987-q21": {
+    "summary": "Define $n^*=1/n$. How many statements are true? (i) $3^*+6^*=9^*$; (ii) $6^*-4^*=2^*$; (iii) $2^*\\cdot6^*=12^*$; (iv) $10^*\\div2^*=5^*$. Options: A $0$, B $1$, C $2$, D $3$, E $4$.",
+    "summaryZh": "定义 $n^*=1/n$。下列四式有几个成立？(i) $3^*+6^*=9^*$；(ii) $6^*-4^*=2^*$；(iii) $2^*\\cdot6^*=12^*$；(iv) $10^*\\div2^*=5^*$。选项为 A $0$，B $1$，C $2$，D $3$，E $4$。",
+    "answer": "C. $2$ statements.", "answerZh": "C．$2$ 个。",
+    "methods": [{"title":"Replace every starred number by its reciprocal","titleZh":"把星号数全部换成倒数","topics":[{"en":"Defined operations","zh":"新定义运算"},{"en":"Fractions","zh":"分数运算"}],"steps":["(i) gives $1/3+1/6=1/2\\ne1/9$, and (ii) gives $1/6-1/4=-1/12\\ne1/2$, so both are false.","(iii) gives $(1/2)(1/6)=1/12=12^*$, and (iv) gives $(1/10)/(1/2)=1/5=5^*$, so both are true.","Exactly two statements are true."],"stepsZh":["(i) 为 $1/3+1/6=1/2\\ne1/9$；(ii) 为 $1/6-1/4=-1/12\\ne1/2$，二者均为假。","(iii) 为 $(1/2)(1/6)=1/12=12^*$；(iv) 为 $(1/10)/(1/2)=1/5=5^*$，二者均为真。","所以恰有两个式子成立。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/21"
+  },
+  "amc8-1987-q22": {
+    "summary": "In rectangle $ABCD$, $AD=4$, $CD=3$, $D$ is the centre of a circle, and $B$ lies on the circle. The shaded region is the part of the quarter-circle sector at $D$ that lies outside the rectangle. Between which integers is its area? Options: A $4$ and $5$, B $5$ and $6$, C $6$ and $7$, D $7$ and $8$, E $8$ and $9$.",
+    "summaryZh": "在长方形 $ABCD$ 中，$AD=4,CD=3$；$D$ 为一圆的圆心，$B$ 在圆上。阴影是以 $D$ 为圆心的四分之一圆扇形中位于长方形外的部分。其面积位于哪两个整数之间？选项为 A $4$ 与 $5$，B $5$ 与 $6$，C $6$ 与 $7$，D $7$ 与 $8$，E $8$ 与 $9$。",
+    "answer": "D. Between $7$ and $8$.", "answerZh": "D．在 $7$ 与 $8$ 之间。",
+    "methods": [{"title":"Subtract the rectangle from the quarter circle","titleZh":"用四分之一圆减去长方形","topics":[{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Sector area","zh":"扇形面积"}],"steps":["The radius is diagonal $DB=\\sqrt{3^2+4^2}=5$.","The shaded area is $\\frac14\\pi(5)^2-(3)(4)=25\\pi/4-12\\approx7.63$, which lies between $7$ and $8$."],"stepsZh":["半径为对角线 $DB=\\sqrt{3^2+4^2}=5$。","阴影面积为 $\\frac14\\pi(5)^2-(3)(4)=25\\pi/4-12\\approx7.63$，位于 $7$ 与 $8$ 之间。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/22"
+  },
+  "amc8-1987-q23": {
+    "summary": "A table gives 1980 U.S. population counts in millions by region. Its Black-population row is: Northeast $5$, Midwest $5$, South $15$, West $2$. To the nearest percent, what percentage of the Black population lived in the South? Options: A $20\\%$, B $25\\%$, C $40\\%$, D $56\\%$, E $80\\%$.",
+    "summaryZh": "一张表给出 1980 年美国各地区人口（百万）。其中黑人一行为：东北部 $5$、中西部 $5$、南部 $15$、西部 $2$。南部黑人占全美黑人人口的百分比最接近多少？选项为 A $20\\%$，B $25\\%$，C $40\\%$，D $56\\%$，E $80\\%$。",
+    "answer": "D. $56\\%$.", "answerZh": "D．$56\\%$。",
+    "methods": [{"title":"Divide the South count by the row total","titleZh":"用南部人数除以该行总人数","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Data interpretation","zh":"数据解读"}],"steps":["The total Black population shown is $5+5+15+2=27$ million.","The South's share is $15/27=5/9\\approx55.56\\%$, which rounds to $56\\%$."],"stepsZh":["表中全美黑人人口总数为 $5+5+15+2=27$ 百万。","南部占比为 $15/27=5/9\\approx55.56\\%$，四舍五入为 $56\\%$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/23"
+  },
+  "amc8-1987-q24": {
+    "summary": "A $20$-question test awards $5$ points for a correct answer, subtracts $2$ for an incorrect answer, and gives $0$ for an unanswered question. John scores $48$. What is the greatest possible number he answered correctly? Options: A $9$, B $10$, C $11$, D $12$, E $16$.",
+    "summaryZh": "一张 $20$ 题试卷中，答对得 $5$ 分，答错扣 $2$ 分，不答得 $0$ 分。John 得分 $48$。他最多可能答对多少题？选项为 A $9$，B $10$，C $11$，D $12$，E $16$。",
+    "answer": "D. $12$ correct answers.", "answerZh": "D．最多答对 $12$ 题。",
+    "methods": [{"title":"Solve the score equation under the question limit","titleZh":"在题数限制下解得分方程","topics":[{"en":"Linear Diophantine equations","zh":"线性丢番图方程"},{"en":"Optimisation","zh":"最值"}],"steps":["Let $c$ be correct and $w$ be wrong. Then $5c-2w=48$, so $w=(5c-48)/2$. Thus $c$ must be even and $c+w\\le20$.","If $c=14$, then $w=11$ and $c+w=25>20$; all larger even $c$ are also impossible. If $c=12$, then $w=6$ and $c+w=18\\le20$.","Therefore the greatest possible value is $c=12$."],"stepsZh":["设答对 $c$ 题、答错 $w$ 题，则 $5c-2w=48$，所以 $w=(5c-48)/2$。因此 $c$ 必为偶数且 $c+w\\le20$。","若 $c=14$，则 $w=11$，总答题数 $25>20$；更大的偶数 $c$ 也不可能。若 $c=12$，则 $w=6$，总答题数 $18\\le20$，可行。","所以最多答对 $12$ 题。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/24"
+  },
+  "amc8-1987-q25": {
+    "summary": "Ten balls numbered $1$ through $10$ are in a jar. Jack removes one uniformly at random, then Jill removes a different one uniformly from the remaining balls. What is the probability that the two numbers have an even sum? Options: A $4/9$, B $9/19$, C $1/2$, D $10/19$, E $5/9$.",
+    "summaryZh": "罐中有编号 $1$ 至 $10$ 的十个球。Jack 等概率取出一个，随后 Jill 从剩余球中等概率再取一个。两球编号之和为偶数的概率是多少？选项为 A $4/9$，B $9/19$，C $1/2$，D $10/19$，E $5/9$。",
+    "answer": "A. $4/9$.", "answerZh": "A．$4/9$。",
+    "methods": [{"title":"Count same-parity unordered pairs","titleZh":"计数同奇偶性的无序数对","topics":[{"en":"Probability","zh":"概率"},{"en":"Parity","zh":"奇偶性"},{"en":"Combinations","zh":"组合"}],"steps":["An even sum requires two odd numbers or two even numbers. Among $1,\\ldots,10$ there are five of each parity.","The favorable unordered pairs number $\\binom52+\\binom52=20$, while all pairs number $\\binom{10}2=45$. Thus the probability is $20/45=4/9$."],"stepsZh":["和为偶数当且仅当两数同为奇数或同为偶数。$1$ 至 $10$ 中奇数、偶数各五个。","有利无序数对数为 $\\binom52+\\binom52=20$，全部数对数为 $\\binom{10}2=45$，所以概率为 $20/45=4/9$。"]},{"title":"Condition on Jack's parity","titleZh":"按 Jack 取出球的奇偶性分类","topics":[{"en":"Conditional probability","zh":"条件概率"}],"steps":["Whatever parity Jack draws, four of the remaining nine balls have the same parity.","The sum is even exactly when Jill matches Jack's parity, so the probability is $4/9$."],"stepsZh":["无论 Jack 取到奇数还是偶数，剩余九个球中都恰有四个与它同奇偶。","两数同奇偶时和为偶数，所以概率为 $4/9$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1987/problem/25"
+  }
+}
