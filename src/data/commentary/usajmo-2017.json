@@ -1,0 +1,195 @@
+{
+  "usajmo-2017-q1": {
+    "summary": "Prove that infinitely many distinct pairs $(a,b)$ of relatively prime positive integers with $a,b>1$ satisfy $a+b\\mid a^b+b^a$.",
+    "summaryZh": "证明：存在无穷多组互不相同的正整数对 $(a,b)$，满足 $a,b>1$、$(a,b)=1$，并且 $a+b\\mid a^b+b^a$。",
+    "answer": "The family $(a,b)=(2n-1,2n+1)$ for every integer $n\\ge2$ supplies infinitely many such pairs.",
+    "answerZh": "对每个整数 $n\\ge2$，取 $(a,b)=(2n-1,2n+1)$，即可得到无穷多组所求数对。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2017_USAJMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Use consecutive odd integers",
+        "titleZh": "构造相邻的两个奇数",
+        "topics": [
+          {"en": "Constructive number theory", "zh": "构造性数论"},
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Coprimality", "zh": "互素性"}
+        ],
+        "steps": [
+          "For any integer $n\\ge2$, set $a=2n-1$ and $b=2n+1$. Their gcd divides their difference $2$. Because both numbers are odd, $\\gcd(a,b)=1$, and both exceed $1$.",
+          "The modulus is $a+b=4n$. Moreover, $(2n-1)^2=4n(n-1)+1$ and $(2n+1)^2=4n(n+1)+1$, so both squares are congruent to $1$ modulo $4n$.",
+          "Hence $(2n-1)^{2n+1}=((2n-1)^2)^n(2n-1)\\equiv2n-1\\pmod{4n}$, while $(2n+1)^{2n-1}=((2n+1)^2)^{n-1}(2n+1)\\equiv2n+1\\pmod{4n}$.",
+          "Adding gives $a^b+b^a\\equiv(2n-1)+(2n+1)=4n\\equiv0\\pmod{a+b}$. Different values of $n$ give different pairs, proving infinitude."
+        ],
+        "stepsZh": [
+          "任取整数 $n\\ge2$，令 $a=2n-1,b=2n+1$。两数的最大公因数整除其差 $2$；又两数均为奇数，故 $\\gcd(a,b)=1$，且二者都大于 $1$。",
+          "模数为 $a+b=4n$。同时 $(2n-1)^2=4n(n-1)+1$、$(2n+1)^2=4n(n+1)+1$，所以这两个平方模 $4n$ 均余 $1$。",
+          "因此 $(2n-1)^{2n+1}=((2n-1)^2)^n(2n-1)\\equiv2n-1\\pmod{4n}$，并且 $(2n+1)^{2n-1}=((2n+1)^2)^{n-1}(2n+1)\\equiv2n+1\\pmod{4n}$。",
+          "两式相加得到 $a^b+b^a\\equiv(2n-1)+(2n+1)=4n\\equiv0\\pmod{a+b}$。不同的 $n$ 对应不同数对，故这样的数对有无穷多组。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2017-q2": {
+    "summary": "For positive integers $x,y$, consider $(3x^3+xy^2)(x^2y+3y^3)=(x-y)^7$. (a) Prove that infinitely many pairs satisfy it. (b) Determine every positive-integer solution.",
+    "summaryZh": "对正整数 $x,y$，考虑方程 $(3x^3+xy^2)(x^2y+3y^3)=(x-y)^7$。（a）证明该方程有无穷多组正整数解；（b）求出全部正整数解。",
+    "answer": "All solutions are $(x,y)=\\left(\\frac{(k+1)(k^6-1)}8,\\frac{(k-1)(k^6-1)}8\\right)$, where $k$ is any odd integer at least $3$.",
+    "answerZh": "全部解为 $(x,y)=\\left(\\frac{(k+1)(k^6-1)}8,\\frac{(k-1)(k^6-1)}8\\right)$，其中 $k\\ge3$ 为任意奇整数。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2017_USAJMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Recognize a difference of sixth powers",
+        "titleZh": "识别六次幂之差",
+        "topics": [
+          {"en": "Diophantine equations", "zh": "丢番图方程"},
+          {"en": "Binomial identities", "zh": "二项式恒等式"},
+          {"en": "Rational perfect powers", "zh": "有理数完全幂"}
+        ],
+        "steps": [
+          "Expanding the difference of sixth powers gives $(x+y)^6-(x-y)^6=12x^5y+40x^3y^3+12xy^5=4(3x^3+xy^2)(x^2y+3y^3)$.",
+          "The left side of the original equation is positive, so $x>y$. Put $d=x-y>0$. Using the identity, the equation becomes $(x+y)^6=d^6(4d+1)$, or $\\left(\\frac{x+y}{d}\\right)^6=4d+1$.",
+          "If a reduced rational number has an integral sixth power, its denominator is $1$. Hence $k=(x+y)/d$ is a positive integer. Since $4d+1=k^6$ is odd and $d>0$, $k$ is odd and $k\\ge3$, while $d=(k^6-1)/4$.",
+          "Solving $x-y=d$ and $x+y=kd$ gives $x=(k+1)(k^6-1)/8$ and $y=(k-1)(k^6-1)/8$. For odd $k$, $k^6\\equiv1\\pmod8$, so both values are positive integers.",
+          "Conversely, every odd $k\\ge3$ makes these formulas integral and retraces the equivalent equations, so it gives a solution. This proves the classification and, because there are infinitely many such $k$, also proves part (a)."
+        ],
+        "stepsZh": [
+          "展开六次幂之差可得 $(x+y)^6-(x-y)^6=12x^5y+40x^3y^3+12xy^5=4(3x^3+xy^2)(x^2y+3y^3)$。",
+          "原方程左边为正，故 $x>y$。令 $d=x-y>0$。利用上述恒等式，原方程化为 $(x+y)^6=d^6(4d+1)$，即 $\\left(\\frac{x+y}{d}\\right)^6=4d+1$。",
+          "一个最简有理数的六次幂若为整数，则其分母只能为 $1$。因此 $k=(x+y)/d$ 是正整数。由 $4d+1=k^6$ 为奇数且 $d>0$，可知 $k$ 是不小于 $3$ 的奇数，并且 $d=(k^6-1)/4$。",
+          "联立 $x-y=d$ 与 $x+y=kd$，得到 $x=(k+1)(k^6-1)/8$、$y=(k-1)(k^6-1)/8$。奇数 $k$ 满足 $k^6\\equiv1\\pmod8$，所以二者都是正整数。",
+          "反过来，任意奇数 $k\\ge3$ 代入这两个公式均得到整数，并可沿上述等价变形验证原方程。因此这就是全部解；这样的 $k$ 有无穷多个，也同时完成了第（a）问。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2017-q3": {
+    "summary": "Let $ABC$ be equilateral and let $P$ lie on its circumcircle. Define $D=PA\\cap BC$, $E=PB\\cap CA$, and $F=PC\\cap AB$. Prove that $[DEF]=2[ABC]$.",
+    "summaryZh": "设 $ABC$ 为等边三角形，点 $P$ 位于其外接圆上。令 $D=PA\\cap BC$、$E=PB\\cap CA$、$F=PC\\cap AB$。证明 $[DEF]=2[ABC]$。",
+    "answer": "The signed area ratio is $[DEF]/[ABC]=-2$ for a consistent orientation, hence the ordinary area satisfies $[DEF]=2[ABC]$.",
+    "answerZh": "在统一取向下，有向面积比为 $[DEF]/[ABC]=-2$，所以普通面积满足 $[DEF]=2[ABC]$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2017_USAJMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Compute the area in barycentric coordinates",
+        "titleZh": "用重心坐标计算面积",
+        "topics": [
+          {"en": "Barycentric coordinates", "zh": "重心坐标"},
+          {"en": "Circumcircle equation", "zh": "外接圆方程"},
+          {"en": "Signed area", "zh": "有向面积"}
+        ],
+        "steps": [
+          "Use homogeneous barycentric coordinates with respect to $ABC$, and write $P=(x:y:z)$. The lines through a vertex and $P$ give $D=(0:y:z)$, $E=(x:0:z)$, and $F=(x:y:0)$.",
+          "After normalizing each row so that its coordinates sum to $1$, the signed area ratio is the determinant of the three normalized coordinate rows. Therefore $$\\frac{[DEF]}{[ABC]}=\\frac{\\det\\!\\begin{pmatrix}0&y&z\\\\x&0&z\\\\x&y&0\\end{pmatrix}}{(y+z)(x+z)(x+y)}=\\frac{2xyz}{(x+y)(y+z)(z+x)}.$$",
+          "For an equilateral reference triangle, the circumcircle has barycentric equation $xy+yz+zx=0$. Also $$(x+y)(y+z)(z+x)=(x+y+z)(xy+yz+zx)-xyz=-xyz.$$",
+          "Substitution gives the signed ratio $-2$. Taking absolute values yields the ordinary area relation $[DEF]=2[ABC]$. The coordinate description includes all incidences, so no auxiliary diagram is required."
+        ],
+        "stepsZh": [
+          "以 $ABC$ 为参考三角形使用齐次重心坐标，设 $P=(x:y:z)$。由经过顶点与 $P$ 的三条直线可得 $D=(0:y:z)$、$E=(x:0:z)$、$F=(x:y:0)$。",
+          "把每一行除以其坐标和进行归一化，三个归一化坐标行的行列式就是有向面积比。因此 $$\\frac{[DEF]}{[ABC]}=\\frac{\\det\\!\\begin{pmatrix}0&y&z\\\\x&0&z\\\\x&y&0\\end{pmatrix}}{(y+z)(x+z)(x+y)}=\\frac{2xyz}{(x+y)(y+z)(z+x)}.$$",
+          "对于等边参考三角形，外接圆的重心坐标方程为 $xy+yz+zx=0$。另一方面， $$(x+y)(y+z)(z+x)=(x+y+z)(xy+yz+zx)-xyz=-xyz.$$",
+          "代入即得有向面积比为 $-2$。取绝对值后得到普通面积关系 $[DEF]=2[ABC]$。上述坐标已经完整刻画全部点线关系，因此无需依赖附图。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2017-q4": {
+    "summary": "Determine whether positive integers $(a,b,c)$ can make $p=(a-2)(b-2)(c-2)+12$ a prime that properly divides the positive integer $a^2+b^2+c^2+abc-2017$.",
+    "summaryZh": "判断是否存在正整数三元组 $(a,b,c)$，使 $p=(a-2)(b-2)(c-2)+12$ 为素数，并且 $p$ 是正整数 $a^2+b^2+c^2+abc-2017$ 的真因子。",
+    "answer": "No such triple exists.",
+    "answerZh": "不存在这样的三元组。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2017_USAJMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Factor after shifting all three variables",
+        "titleZh": "平移三个变量后因式分解",
+        "topics": [
+          {"en": "Divisibility", "zh": "整除性"},
+          {"en": "Prime divisors", "zh": "素因子"},
+          {"en": "Inequalities", "zh": "不等式"}
+        ],
+        "steps": [
+          "Set $x=a-2$, $y=b-2$, $z=c-2$, and $s=x+y+z$. Then $x,y,z\\ge-1$ and $$a^2+b^2+c^2+abc-2017=(s-41)(s+49)+(xyz+12).$$ Write $p=xyz+12$.",
+          "Because $p$ is a proper divisor of the positive expression, $(s-41)(s+49)/p$ is a positive integer. Since $s+49>0$, this forces $s>41$. Also $p$ divides $s-41$ or $s+49$.",
+          "None of $x,y,z$ is zero, because then $p=12$. If exactly one equals $-1$, say $x=-1$, positivity of $p=12-yz$ gives $yz\\le10$, while $s=-1+y+z\\le yz\\le10$, contradicting $s>41$.",
+          "If exactly two equal $-1$, say $x=y=-1$, then $z>43$ and $p=z+12>55$. It cannot divide $z-43$, which is smaller than $p$, or $z+47=p+35$, since that would require $p\\mid35$.",
+          "It remains that $x,y,z$ are positive. If one were even, $p=xyz+12$ would be an even integer greater than $2$, not prime. Thus all three are odd, so $s$ is odd and both $s-41,s+49$ are even. If the odd prime $p$ divides either positive even number, then $2p\\le s+49$.",
+          "For positive integers with sum $s$, $xyz\\ge s-2$: first $(x-1)(y-1)\\ge0$ gives $xy\\ge x+y-1$, and then $(x+y-2)(z-1)\\ge0$ gives $(x+y-1)z\\ge x+y+z-2$. Hence $2p=2xyz+24\\ge2s+20>s+49$ for $s>41$, a final contradiction."
+        ],
+        "stepsZh": [
+          "令 $x=a-2,y=b-2,z=c-2$，并记 $s=x+y+z$。则 $x,y,z\\ge-1$，且 $$a^2+b^2+c^2+abc-2017=(s-41)(s+49)+(xyz+12).$$ 记 $p=xyz+12$。",
+          "因为 $p$ 是上述正整数的真因子，所以 $(s-41)(s+49)/p$ 是正整数。又 $s+49>0$，故 $s>41$。同时，由 $p$ 为素数可知 $p$ 整除 $s-41$ 或 $s+49$。",
+          "$x,y,z$ 均不可能为零，否则 $p=12$。若恰有一个等于 $-1$，不妨设 $x=-1$，则 $p=12-yz>0$ 给出 $yz\\le10$；但 $s=-1+y+z\\le yz\\le10$，与 $s>41$ 矛盾。",
+          "若恰有两个等于 $-1$，不妨设 $x=y=-1$，则 $z>43$ 且 $p=z+12>55$。$p$ 不可能整除比它小的 $z-43$；若整除 $z+47=p+35$，又会推出 $p\\mid35$，同样矛盾。",
+          "于是只剩 $x,y,z$ 全为正数。若其中一个为偶数，则 $p=xyz+12$ 是大于 $2$ 的偶数，不可能为素数。所以三者均为奇数，$s$ 为奇数，$s-41,s+49$ 均为偶数。奇素数 $p$ 若整除其中任一正偶数，就必有 $2p\\le s+49$。",
+          "对和为 $s$ 的正整数 $x,y,z$，有 $xyz\\ge s-2$：先由 $(x-1)(y-1)\\ge0$ 得 $xy\\ge x+y-1$，再由 $(x+y-2)(z-1)\\ge0$ 得 $(x+y-1)z\\ge x+y+z-2$。因此 $2p=2xyz+24\\ge2s+20>s+49$，与上一结论矛盾。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2017-q5": {
+    "summary": "In acute triangle $ABC$, let $O,H$ be the circumcenter and orthocenter. Let $M$ be the midpoint of $BC$, and let the internal angle bisector from $A$ meet $BC$ at $D$. Ray $MO$ meets the circumcircle of $BHC$ at $N$. Prove that $\\angle ADO=\\angle HAN$.",
+    "summaryZh": "在锐角三角形 $ABC$ 中，$O,H$ 分别为外心和垂心。$M$ 为 $BC$ 的中点，$A$ 的内角平分线交 $BC$ 于 $D$。射线 $MO$ 与三角形 $BHC$ 的外接圆交于 $N$。证明 $\\angle ADO=\\angle HAN$。",
+    "answer": "Reflecting the relevant arc midpoint across $BC$ identifies $N$, and one obtains the cyclic quadrilateral $A,D,O,N$, which yields the required angle equality.",
+    "answerZh": "把相应弧中点关于 $BC$ 反射即可确定 $N$，并可证明 $A,D,O,N$ 四点共圆，从而得到所需角相等。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2017_USAJMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Reflect the circumcircle and use power of a point",
+        "titleZh": "反射外接圆并使用点幂",
+        "topics": [
+          {"en": "Circle reflection", "zh": "圆的反射"},
+          {"en": "Power of a point", "zh": "点幂"},
+          {"en": "Cyclic quadrilaterals", "zh": "四点共圆"},
+          {"en": "Angle bisectors", "zh": "角平分线"}
+        ],
+        "steps": [
+          "Let $P$ be the midpoint of the arc $BC$ of the circumcircle of $ABC$ that does not contain $A$. Then $A,D,P$ are collinear because $AD$ is the internal angle bisector, and $O,M,P$ are collinear because $OM$ is the perpendicular bisector of $BC$.",
+          "The reflection of $H$ across $BC$ lies on the circumcircle of $ABC$. Hence the circle through $B,H,C$ is the reflection of the circumcircle of $ABC$ across $BC$. The reflection of $P$ is therefore the point $N$ on ray $MO$, and $M$ is the midpoint of $PN$.",
+          "Triangles $PBD$ and $PAB$ are similar: they share the line $PA=PD$ and use the equal arc-midpoint angles at $P$ and $B$. Thus $PD/PB=PB/PA$, giving $PD\\cdot PA=PB^2$.",
+          "Let the circumradius be $R=PO=PB$. Since $OM\\perp BC$, Pythagoras in $OMB$ and $PMB$ gives $$PB^2=PM^2+BM^2=PM^2+R^2-OM^2=R(R+PM-OM).$$ Because $P,M,O$ are collinear with $PM+OM=R$, the last factor equals $2PM=PN$. Therefore $PB^2=PO\\cdot PN$.",
+          "We now have $PD\\cdot PA=PO\\cdot PN$. The converse of the intersecting-secants theorem shows that $A,D,O,N$ are concyclic.",
+          "Finally, $AH\\perp BC$ and $ON\\perp BC$, so $AH\\parallel ON$ and $\\angle HAN=\\angle ANO$. In cyclic quadrilateral $ADON$, the angles $\\angle ANO$ and $\\angle ADO$ subtend the same chord $AO$. Hence $\\angle HAN=\\angle ADO$."
+        ],
+        "stepsZh": [
+          "设 $P$ 为三角形 $ABC$ 外接圆上不含 $A$ 的弧 $BC$ 的中点。因为 $AD$ 是内角平分线，所以 $A,D,P$ 共线；又因 $OM$ 是 $BC$ 的垂直平分线，所以 $O,M,P$ 共线。",
+          "垂心 $H$ 关于 $BC$ 的对称点位于 $ABC$ 的外接圆上。因此圆 $(BHC)$ 是圆 $(ABC)$ 关于 $BC$ 的反射。点 $P$ 的反射正是射线 $MO$ 上的点 $N$，并且 $M$ 为 $PN$ 的中点。",
+          "三角形 $PBD$ 与 $PAB$ 相似：$PA,PD$ 在同一直线上，且弧中点性质给出所需的两个相等角。因此 $PD/PB=PB/PA$，即 $PD\\cdot PA=PB^2$。",
+          "记外接圆半径为 $R=PO=PB$。因为 $OM\\perp BC$，分别在直角三角形 $OMB$ 与 $PMB$ 中使用勾股定理，得到 $$PB^2=PM^2+BM^2=PM^2+R^2-OM^2=R(R+PM-OM).$$ 又因 $P,M,O$ 共线且 $PM+OM=R$，最后一个因子等于 $2PM=PN$。所以 $PB^2=PO\\cdot PN$。",
+          "于是 $PD\\cdot PA=PO\\cdot PN$。由相交割线定理的逆命题，$A,D,O,N$ 四点共圆。",
+          "最后，$AH\\perp BC$ 且 $ON\\perp BC$，故 $AH\\parallel ON$，从而 $\\angle HAN=\\angle ANO$。在圆内接四边形 $ADON$ 中，$\\angle ANO$ 与 $\\angle ADO$ 同对弦 $AO$，所以 $\\angle HAN=\\angle ADO$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2017-q6": {
+    "summary": "There are $n$ red and $n$ blue marked points on the unit circle, none equal to $(1,0)$. Process the red points in any order; each red point is paired with the first still-unpaired blue point encountered counterclockwise. Prove that the number of paired counterclockwise arcs containing $(1,0)$ is independent of the processing order.",
+    "summaryZh": "单位圆上有 $n$ 个红点与 $n$ 个蓝点，且均不等于 $(1,0)$。任意排列红点并依次处理，每个红点都与从它出发沿逆时针方向遇到的第一个尚未配对的蓝点配对。证明：所得配对弧中经过 $(1,0)$ 的弧数与红点处理顺序无关。",
+    "answer": "The crossing count is invariant under every adjacent swap of the red processing order; since adjacent swaps generate all permutations, it is independent of the order.",
+    "answerZh": "经过基准点的弧数在红点处理顺序的任意相邻交换下保持不变；相邻交换可生成所有排列，因此该数目与顺序无关。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2017_USAJMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Preserve total arc length under adjacent swaps",
+        "titleZh": "用相邻换序保持弧长总和",
+        "topics": [
+          {"en": "Invariants", "zh": "不变量"},
+          {"en": "Greedy matching", "zh": "贪心匹配"},
+          {"en": "Adjacent transpositions", "zh": "相邻换位"}
+        ],
+        "steps": [
+          "Measure counterclockwise position from $(1,0)$ by a number in $(0,1)$. For a red point at $r$ paired to a blue point at $b$, let $L(r,b)$ be the counterclockwise arc length in turns. Then $L(r,b)=b-r+w(r,b)$, where $w(r,b)$ is $1$ exactly when the arc passes through $(1,0)$ and is $0$ otherwise.",
+          "For a complete matching, summing gives $$\\sum w(r_i,b_i)=\\sum L(r_i,b_i)-\\sum b_i+\\sum r_i.$$ The last two sums use every blue and red point once, so they do not depend on the pairing. It is enough to prove that the total counterclockwise arc length is independent of the red processing order.",
+          "Consider swapping two consecutive red points $r,s$ in the processing order, at the moment when the same set of blue points remains. If the first available blue point after $r$ differs from the first available one after $s$, the two red points receive the same two blue points under either order, so their two arc lengths are unchanged.",
+          "Otherwise both first encounter the same available blue point $b$. Let $c$ be the next available blue point after $b$. Whichever red is processed first receives $b$, and the other receives $c$. Both $r$ and $s$ lie in the same circular gap immediately preceding $b$, so $$L(r,b)+L(s,c)=L(r,b)+L(s,b)+L(b,c)=L(s,b)+L(r,c).$$ Thus their combined arc length is unchanged by the swap.",
+          "Every adjacent swap preserves the total arc length and therefore the number of arcs through $(1,0)$. Any two orderings of the red points are connected by adjacent swaps, which proves the required independence."
+        ],
+        "stepsZh": [
+          "从 $(1,0)$ 起沿逆时针方向，用 $(0,1)$ 中的数表示圆周位置。若位置为 $r$ 的红点与位置为 $b$ 的蓝点配对，记逆时针弧长为 $L(r,b)$。则 $L(r,b)=b-r+w(r,b)$，其中当且仅当该弧经过 $(1,0)$ 时 $w(r,b)=1$，否则为 $0$。",
+          "对一个完整匹配求和，得到 $$\\sum w(r_i,b_i)=\\sum L(r_i,b_i)-\\sum b_i+\\sum r_i.$$ 后两项分别把全部蓝点和红点恰计算一次，与配对方式无关。因此只需证明所有配对弧的逆时针弧长总和与处理顺序无关。",
+          "考虑交换处理顺序中相邻的两个红点 $r,s$，并观察处理它们之前同一个剩余蓝点集合。若从 $r$ 与从 $s$ 出发遇到的第一个可用蓝点不同，则无论先处理哪一个，它们仍分别得到原来的蓝点，所以两段弧长不变。",
+          "若二者首先遇到同一个可用蓝点 $b$，设 $c$ 为 $b$ 之后的下一个可用蓝点。先处理的红点得到 $b$，另一个得到 $c$。$r,s$ 都位于紧接在 $b$ 之前的同一个圆周空隙内，因此 $$L(r,b)+L(s,c)=L(r,b)+L(s,b)+L(b,c)=L(s,b)+L(r,c).$$ 所以交换前后这两段弧长之和不变。",
+          "任意一次相邻交换都保持弧长总和，从而保持经过 $(1,0)$ 的弧数。任意两个红点排列都可通过一系列相邻交换互相转化，因此所求数目与排列无关。"
+        ]
+      }
+    ]
+  }
+}
