@@ -167,5 +167,378 @@
       }
     ],
     "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=7"
+  },
+  "step-2006-p2-q1": {
+    "summary": "Let $u_1=2$ and $u_{n+1}=k-36/u_n$. (i) Find all $k$ for which the sequence has least period $1$, $2$, or $4$. (ii) For $k=37$, prove $u_n\\ge2$ for every $n$ and, assuming convergence, determine the limit.",
+    "summaryZh": "设 $u_1=2$，且 $u_{n+1}=k-36/u_n$。（i）分别求数列的最小周期为 $1,2,4$ 时的全部 $k$；（ii）当 $k=37$ 时，证明对所有 $n$ 均有 $u_n\\ge2$，并在已知数列收敛的条件下求其极限。",
+    "answer": "Least periods $1,2,4$ occur for $k=20$, $k=0$, and $k=\\pm6\\sqrt2$, respectively. For $k=37$ the limit is $36$.",
+    "answerZh": "最小周期为 $1,2,4$ 时分别有 $k=20$、$k=0$、$k=\\pm6\\sqrt2$。当 $k=37$ 时极限为 $36$。",
+    "methods": [
+      {
+        "title": "Close each cycle and then use an invariant lower bound",
+        "titleZh": "令周期闭合，再用下界不变量求极限",
+        "topics": [
+          {
+            "en": "Recurrence relations",
+            "zh": "递推数列"
+          },
+          {
+            "en": "Periodic sequences",
+            "zh": "周期数列"
+          },
+          {
+            "en": "Induction and limits",
+            "zh": "归纳法与极限"
+          }
+        ],
+        "steps": [
+          "A period closes once $u_{p+1}=u_1=2$, because the recurrence then forces every later term to repeat. For period one, $u_2=k-18=2$, so $k=20$.",
+          "For period two, $u_3=k-36/(k-18)=2$. This gives $k(k-20)=0$. The value $20$ already has period one, whereas $k=0$ gives $2,-18,2,-18,\\ldots$; hence the least period is two only for $k=0$.",
+          "For period four, compute $u_3=(k^2-18k-36)/(k-18)$ and $u_4=(k^3-18k^2-72k+648)/(k^2-18k-36)$. The condition $u_5=2$ reduces to $k(k-20)(k^2-72)=0$. Excluding the smaller periods leaves $k=\\pm6\\sqrt2$; direct substitution confirms that no denominator vanishes.",
+          "Now take $k=37$. If $u_n\\ge2$, then $0<36/u_n\\le18$, so $u_{n+1}=37-36/u_n\\ge19\\ge2$. Since $u_1=2$, induction proves the required bound.",
+          "If $u_n\\to\\ell$, the bound gives $\\ell\\ge2$, so it is legitimate to pass to the limit in the reciprocal. Thus $\\ell=37-36/\\ell$, or $(\\ell-1)(\\ell-36)=0$. The lower bound excludes $1$, hence $\\ell=36$."
+        ],
+        "stepsZh": [
+          "只要 $u_{p+1}=u_1=2$，递推关系就会迫使以后各项逐项重复，周期即闭合。周期为 1 时，$u_2=k-18=2$，故 $k=20$。",
+          "周期为 2 时，令 $u_3=k-36/(k-18)=2$，得到 $k(k-20)=0$。其中 $k=20$ 已是常数列；$k=0$ 时数列为 $2,-18,2,-18,\\ldots$，所以最小周期为 2 恰对应 $k=0$。",
+          "对周期 4，计算 $u_3=(k^2-18k-36)/(k-18)$、$u_4=(k^3-18k^2-72k+648)/(k^2-18k-36)$。条件 $u_5=2$ 化为 $k(k-20)(k^2-72)=0$。排除较小周期后得 $k=\\pm6\\sqrt2$；代回可验证所有分母均非零。",
+          "再取 $k=37$。若 $u_n\\ge2$，则 $0<36/u_n\\le18$，从而 $u_{n+1}=37-36/u_n\\ge19\\ge2$。结合 $u_1=2$，归纳得所需下界。",
+          "若 $u_n\\to\\ell$，则 $\\ell\\ge2$，可以对倒数取极限。于是 $\\ell=37-36/\\ell$，即 $(\\ell-1)(\\ell-36)=0$。下界排除 $\\ell=1$，故 $\\ell=36$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=2"
+  },
+  "step-2006-p2-q3": {
+    "summary": "(i) Prove that $(5+\\sqrt{24})^4+(5+\\sqrt{24})^{-4}$ is an integer, establish $0.1<(5+\\sqrt{24})^{-1}<2/19<0.11$, and find $(5+\\sqrt{24})^4$ to four decimal places. (ii) For integers $N>1$ and $k>0$, bound the distance from $(N+\\sqrt{N^2-1})^k$ to its nearest integer by $(2N-\\tfrac12)^{-k}$.",
+    "summaryZh": "（i）证明 $(5+\\sqrt{24})^4+(5+\\sqrt{24})^{-4}$ 是整数，证明 $0.1<(5+\\sqrt{24})^{-1}<2/19<0.11$，并求 $(5+\\sqrt{24})^4$ 精确到小数点后四位；（ii）对整数 $N>1,k>0$，证明 $(N+\\sqrt{N^2-1})^k$ 与最近整数之差小于 $(2N-\\tfrac12)^{-k}$。",
+    "answer": "The integer is $9602$ and $(5+\\sqrt{24})^4=9601.9999$ to four decimal places. The stated general bound holds.",
+    "answerZh": "该整数为 $9602$，且 $(5+\\sqrt{24})^4=9601.9999$（精确到小数点后四位）。一般情形的不等式成立。",
+    "methods": [
+      {
+        "title": "Pair each quadratic surd with its conjugate",
+        "titleZh": "将二次根式与其共轭配对",
+        "topics": [
+          {
+            "en": "Quadratic surds",
+            "zh": "二次根式"
+          },
+          {
+            "en": "Conjugates",
+            "zh": "共轭数"
+          },
+          {
+            "en": "Nearest-integer bounds",
+            "zh": "最近整数估计"
+          }
+        ],
+        "steps": [
+          "Put $a=5+\\sqrt{24}$ and $b=5-\\sqrt{24}$. Then $a+b=10$, $ab=1$, and $b=a^{-1}$. Hence $a^2+b^2=98$ and $a^4+b^4=98^2-2=9602$.",
+          "Because $b=5-\\sqrt{24}>0$, direct squaring gives $b>0.1$ and $b<2/19$; also $2/19<0.11$. Thus $0.0001<b^4<0.00014641$.",
+          "Since $a^4=9602-b^4$, we obtain $9601.99985359<a^4<9601.9999$, so the four-decimal value is $9601.9999$.",
+          "For the general case set $A=N+\\sqrt{N^2-1}$ and $B=N-\\sqrt{N^2-1}$. Then $AB=1$. The binomial expansions of $A^k$ and $B^k$ have opposite irrational terms, so $S_k=A^k+B^k$ is an integer.",
+          "Moreover $0<B<(2N-\\tfrac12)^{-1}$: after taking reciprocals this is equivalent to $\\sqrt{N^2-1}>N-\\tfrac12$, whose square reduces to $N>5/4$. Therefore $0<B^k<(2N-\\tfrac12)^{-k}$. Since $A^k=S_k-B^k$, its distance from the integer $S_k$, and hence from the nearest integer, satisfies the required bound."
+        ],
+        "stepsZh": [
+          "令 $a=5+\\sqrt{24}$、$b=5-\\sqrt{24}$。则 $a+b=10$、$ab=1$，故 $b=a^{-1}$。于是 $a^2+b^2=98$，进而 $a^4+b^4=98^2-2=9602$。",
+          "由于 $b=5-\\sqrt{24}>0$，分别平方比较可得 $b>0.1$、$b<2/19$，且 $2/19<0.11$。所以 $0.0001<b^4<0.00014641$。",
+          "由 $a^4=9602-b^4$，得到 $9601.99985359<a^4<9601.9999$，故精确到四位小数为 $9601.9999$。",
+          "一般地，令 $A=N+\\sqrt{N^2-1}$、$B=N-\\sqrt{N^2-1}$，则 $AB=1$。展开 $A^k+B^k$ 时，含奇次根式的项两两抵消，所以 $S_k=A^k+B^k$ 是整数。",
+          "又有 $0<B<(2N-\\tfrac12)^{-1}$：取倒数后等价于 $\\sqrt{N^2-1}>N-\\tfrac12$，平方后只需 $N>5/4$。故 $0<B^k<(2N-\\tfrac12)^{-k}$。因 $A^k=S_k-B^k$，它到整数 $S_k$、从而到最近整数的距离满足所需上界。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=3"
+  },
+  "step-2006-p2-q4": {
+    "summary": "First prove $\\int_0^\\pi x f(\\sin x)\\,dx=\\frac\\pi2\\int_0^\\pi f(\\sin x)\\,dx$ by substituting $x=\\pi-t$. Then evaluate $\\int_0^\\pi \\frac{x\\sin x}{3+\\sin^2x}\\,dx$, $\\int_0^{2\\pi}\\frac{x\\sin x}{3+\\sin^2x}\\,dx$, and $\\int_0^\\pi\\frac{x|\\sin2x|}{3+\\sin^2x}\\,dx$.",
+    "summaryZh": "先用代换 $x=\\pi-t$ 证明 $\\int_0^\\pi x f(\\sin x)\\,dx=\\frac\\pi2\\int_0^\\pi f(\\sin x)\\,dx$，再计算 $\\int_0^\\pi \\frac{x\\sin x}{3+\\sin^2x}\\,dx$、$\\int_0^{2\\pi}\\frac{x\\sin x}{3+\\sin^2x}\\,dx$ 以及 $\\int_0^\\pi\\frac{x|\\sin2x|}{3+\\sin^2x}\\,dx$。",
+    "answer": "The three integrals are $\\frac\\pi4\\ln3$, $-\\frac\\pi2\\ln3$, and $\\pi\\ln(4/3)$.",
+    "answerZh": "三个积分依次为 $\\frac\\pi4\\ln3$、$-\\frac\\pi2\\ln3$、$\\pi\\ln(4/3)$。",
+    "methods": [
+      {
+        "title": "Exploit reflection about $\\pi/2$",
+        "titleZh": "利用关于 $\\pi/2$ 的对称性",
+        "topics": [
+          {
+            "en": "Definite-integral symmetry",
+            "zh": "定积分对称性"
+          },
+          {
+            "en": "Substitution",
+            "zh": "换元积分"
+          },
+          {
+            "en": "Partial fractions",
+            "zh": "部分分式"
+          }
+        ],
+        "steps": [
+          "Let $I=\\int_0^\\pi x f(\\sin x)\\,dx$. Substituting $x=\\pi-t$ gives $I=\\pi\\int_0^\\pi f(\\sin t)\\,dt-I$, proving the identity.",
+          "For the first integral the identity reduces it to $(\\pi/2)J$, where $J=\\int_0^\\pi\\sin x/(3+\\sin^2x)\\,dx$. With $u=\\cos x$, $J=\\int_{-1}^1du/(4-u^2)=\\tfrac12\\ln3$, so the result is $\\frac\\pi4\\ln3$.",
+          "For the range $[\\pi,2\\pi]$, write $x=\\pi+t$. The integral becomes $-\\pi J-\\int_0^\\pi t\\sin t/(3+\\sin^2t)\\,dt=-\\tfrac34\\pi\\ln3$. Adding the first-half value gives $-\\frac\\pi2\\ln3$.",
+          "On $[0,\\pi]$, $|\\sin2x|=2\\sin x|\\cos x|$ is a function of $\\sin x$, so the identity applies again. Symmetry about $\\pi/2$ gives $\\int_0^\\pi |\\sin2x|/(3+\\sin^2x)\\,dx=2\\ln(4/3)$.",
+          "Multiplying the last value by $\\pi/2$ yields $\\pi\\ln(4/3)$."
+        ],
+        "stepsZh": [
+          "令 $I=\\int_0^\\pi x f(\\sin x)\\,dx$。作代换 $x=\\pi-t$，得到 $I=\\pi\\int_0^\\pi f(\\sin t)\\,dt-I$，从而证明恒等式。",
+          "第一个积分由恒等式化为 $(\\pi/2)J$，其中 $J=\\int_0^\\pi\\sin x/(3+\\sin^2x)\\,dx$。令 $u=\\cos x$，则 $J=\\int_{-1}^1du/(4-u^2)=\\tfrac12\\ln3$，故结果为 $\\frac\\pi4\\ln3$。",
+          "对区间 $[\\pi,2\\pi]$ 令 $x=\\pi+t$，该段积分为 $-\\pi J-\\int_0^\\pi t\\sin t/(3+\\sin^2t)\\,dt=-\\tfrac34\\pi\\ln3$。再加上前半段，得到 $-\\frac\\pi2\\ln3$。",
+          "在 $[0,\\pi]$ 上，$|\\sin2x|=2\\sin x|\\cos x|$ 可写成 $\\sin x$ 的函数，所以仍可使用恒等式。关于 $\\pi/2$ 的对称性给出 $\\int_0^\\pi |\\sin2x|/(3+\\sin^2x)\\,dx=2\\ln(4/3)$。",
+          "将最后的积分乘以 $\\pi/2$，即得 $\\pi\\ln(4/3)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=3"
+  },
+  "step-2006-p2-q5": {
+    "summary": "Let $\\lfloor x\\rfloor$ be the greatest integer not exceeding $x$. (i) Compare $y=x^2+3x-1$ with $y=x^2+3\\lfloor x\\rfloor-1$, sketching them on $1\\le x\\le3$, and find the enclosed area on $1\\le x\\le n$. (ii) Repeat for $y=\\lfloor x\\rfloor^2+3\\lfloor x\\rfloor-1$ and prove the stated area formula.",
+    "summaryZh": "设 $\\lfloor x\\rfloor$ 为不超过 $x$ 的最大整数。（i）比较 $y=x^2+3x-1$ 与 $y=x^2+3\\lfloor x\\rfloor-1$，在 $1\\le x\\le3$ 上作图，并求 $1\\le x\\le n$ 间的面积；（ii）将第二条曲线改为 $y=\\lfloor x\\rfloor^2+3\\lfloor x\\rfloor-1$，作图并证明给定的面积公式。",
+    "answer": "The areas are $\\frac32(n-1)$ in (i) and $\\frac16(n-1)(3n+11)$ in (ii).",
+    "answerZh": "（i）的面积为 $\\frac32(n-1)$；（ii）的面积为 $\\frac16(n-1)(3n+11)$。",
+    "methods": [
+      {
+        "title": "Integrate one unit strip at a time",
+        "titleZh": "逐个单位区间计算面积",
+        "topics": [
+          {
+            "en": "Floor functions",
+            "zh": "取整函数"
+          },
+          {
+            "en": "Piecewise integration",
+            "zh": "分段积分"
+          },
+          {
+            "en": "Arithmetic sums",
+            "zh": "等差数列求和"
+          }
+        ],
+        "steps": [
+          "Write $f(x)=x^2+3x-1$. It is increasing for $x\\ge1$. In part (i), on $k\\le x<k+1$ the lower curve is $x^2+3k-1$, a parabolic piece meeting $f$ at the left endpoint; the vertical gap is $3(x-k)$.",
+          "Each unit strip therefore has area $\\int_k^{k+1}3(x-k)\\,dx=3/2$. There are $n-1$ strips, giving $\\frac32(n-1)$. On $[1,3]$ the lower pieces rise from $3$ towards $6$, jump to $9$, and rise towards $14$, while $f$ passes through $(1,3),(2,9),(3,17)$.",
+          "In part (ii), the lower graph is the step function $f(\\lfloor x\\rfloor)$: it equals $3$ on $[1,2)$ and $9$ on $[2,3)$. Since $f$ is increasing, it stays below $f(x)$.",
+          "On $[k,k+1]$ put $x=k+t$. The gap is $f(k+t)-f(k)=2kt+t^2+3t$, whose integral from $0$ to $1$ is $k+11/6$.",
+          "Summing for $k=1,\\ldots,n-1$ gives $\\frac12n(n-1)+\\frac{11}{6}(n-1)=\\frac16(n-1)(3n+11)$."
+        ],
+        "stepsZh": [
+          "记 $f(x)=x^2+3x-1$；它在 $x\\ge1$ 上递增。（i）中，当 $k\\le x<k+1$ 时，下方曲线为 $x^2+3k-1$，它在左端点与 $f$ 相交，两曲线的竖直距离为 $3(x-k)$。",
+          "每个单位条带的面积为 $\\int_k^{k+1}3(x-k)\\,dx=3/2$。共有 $n-1$ 个条带，故总面积为 $\\frac32(n-1)$。在 $[1,3]$ 上，下方曲线从 $3$ 增至接近 $6$，跳到 $9$ 后增至接近 $14$；上方抛物线经过 $(1,3),(2,9),(3,17)$。",
+          "（ii）中，下方图像是阶梯函数 $f(\\lfloor x\\rfloor)$：在 $[1,2)$ 上等于 $3$，在 $[2,3)$ 上等于 $9$。由于 $f$ 递增，阶梯始终位于 $f(x)$ 下方。",
+          "在 $[k,k+1]$ 上令 $x=k+t$，间距为 $f(k+t)-f(k)=2kt+t^2+3t$，从 $0$ 到 $1$ 积分得 $k+11/6$。",
+          "对 $k=1,\\ldots,n-1$ 求和，得到 $\\frac12n(n-1)+\\frac{11}{6}(n-1)=\\frac16(n-1)(3n+11)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=4"
+  },
+  "step-2006-p2-q7": {
+    "summary": "For the ellipse $x^2/a^2+y^2/b^2=1$, derive the tangent at $(a\\cos\\alpha,b\\sin\\alpha)$. With $A=(-a,-b)$, $E=(-a,0)$ and $P=(a,kb)$, the line through $E$ parallel to $AP$ meets $y=b$ at $Q$. Prove that $PQ$ is tangent at the point satisfying $\\tan(\\alpha/2)=k$, and decide whether the result remains valid for $k=0$ and $k=1$.",
+    "summaryZh": "对椭圆 $x^2/a^2+y^2/b^2=1$，推导其在 $(a\\cos\\alpha,b\\sin\\alpha)$ 处的切线。设 $A=(-a,-b)$、$E=(-a,0)$、$P=(a,kb)$，过 $E$ 作 $AP$ 的平行线并与 $y=b$ 交于 $Q$。证明 $PQ$ 在满足 $\\tan(\\alpha/2)=k$ 的点处与椭圆相切，并判断 $k=0,1$ 时结论是否仍成立。",
+    "answer": "The tangent is $y=-(b/a)\\cot\\alpha\\,x+b\\csc\\alpha$. The construction works for $0\\le k\\le1$, including both endpoints.",
+    "answerZh": "切线为 $y=-(b/a)\\cot\\alpha\\,x+b\\csc\\alpha$。该构造对 $0\\le k\\le1$ 均成立，包括两个端点。",
+    "methods": [
+      {
+        "title": "Match the constructed line with the half-angle tangent form",
+        "titleZh": "将构造直线与半角形式的切线配对",
+        "topics": [
+          {
+            "en": "Tangents to conics",
+            "zh": "圆锥曲线切线"
+          },
+          {
+            "en": "Implicit differentiation",
+            "zh": "隐函数求导"
+          },
+          {
+            "en": "Tangent half-angle identities",
+            "zh": "正切半角公式"
+          }
+        ],
+        "steps": [
+          "Implicit differentiation gives $dy/dx=-b^2x/(a^2y)$. At $(a\\cos\\alpha,b\\sin\\alpha)$ this yields $y=-(b/a)\\cot\\alpha\\,x+b\\csc\\alpha$.",
+          "The slope of $AP$ is $(1+k)b/(2a)$. Its parallel through $E$ meets $y=b$ at $Q=(a(1-k)/(1+k),b)$.",
+          "Using $P=(a,kb)$ and this $Q$, the line $PQ$ is $y=-(b/a)(1-k^2)/(2k)\\,x+b(1+k^2)/(2k)$.",
+          "If $\\tan(\\alpha/2)=k$, the half-angle identities give $\\cot\\alpha=(1-k^2)/(2k)$ and $\\csc\\alpha=(1+k^2)/(2k)$. Thus $PQ$ is exactly the tangent, at $(a(1-k^2)/(1+k^2),2kb/(1+k^2))$.",
+          "When $k=0$, $P=(a,0)$ and $Q=(a,b)$, so $PQ$ is the vertical tangent $x=a$ at $\\alpha=0$. When $k=1$, $P=(a,b)$ and $Q=(0,b)$, so $PQ$ is the horizontal tangent $y=b$ at $\\alpha=\\pi/2$. Hence the geometric result survives both endpoint cases."
+        ],
+        "stepsZh": [
+          "对椭圆方程作隐函数求导，得 $dy/dx=-b^2x/(a^2y)$。代入 $(a\\cos\\alpha,b\\sin\\alpha)$，得到切线 $y=-(b/a)\\cot\\alpha\\,x+b\\csc\\alpha$。",
+          "$AP$ 的斜率为 $(1+k)b/(2a)$。过 $E$ 的平行线与 $y=b$ 相交于 $Q=(a(1-k)/(1+k),b)$。",
+          "利用 $P=(a,kb)$ 与上述 $Q$，可写出 $PQ$：$y=-(b/a)(1-k^2)/(2k)\\,x+b(1+k^2)/(2k)$。",
+          "若 $\\tan(\\alpha/2)=k$，半角公式给出 $\\cot\\alpha=(1-k^2)/(2k)$、$\\csc\\alpha=(1+k^2)/(2k)$。故 $PQ$ 正是椭圆切线，切点为 $(a(1-k^2)/(1+k^2),2kb/(1+k^2))$。",
+          "当 $k=0$ 时，$P=(a,0)$、$Q=(a,b)$，所以 $PQ$ 是 $\\alpha=0$ 处的竖直切线 $x=a$；当 $k=1$ 时，$P=(a,b)$、$Q=(0,b)$，所以 $PQ$ 是 $\\alpha=\\pi/2$ 处的水平切线 $y=b$。两个端点情形均成立。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=4"
+  },
+  "step-2006-p2-q8": {
+    "summary": "Prove that the line through position vectors $\\mathbf x,\\mathbf y$ is $\\mathbf r=(1-\\alpha)\\mathbf x+\\alpha\\mathbf y$. In trapezium $OABC$, $OA\\parallel CB$ and $OA>CB$. Point $E$ divides $OA$ in the ratio $1:2$, $F$ is the midpoint of $CB$, $D=OC\\cap AB$ after both sides are produced, $G=OB\\cap EF$, and $H=DG\\cap OA$. With $\\vec{OA}=\\mathbf a$ and $\\vec{OC}=\\mathbf c$, find all five position vectors and $OH:HA$.",
+    "summaryZh": "证明过位置向量为 $\\mathbf x,\\mathbf y$ 两点的直线可写为 $\\mathbf r=(1-\\alpha)\\mathbf x+\\alpha\\mathbf y$。在梯形 $OABC$ 中，$OA\\parallel CB$ 且 $OA>CB$；$E$ 将 $OA$ 按 $1:2$ 分割，$F$ 为 $CB$ 中点，$D$ 是 $OC$ 与 $AB$ 延长线的交点，$G=OB\\cap EF$，$H=DG\\cap OA$。设 $\\vec{OA}=\\mathbf a$、$\\vec{OC}=\\mathbf c$，求五个点的位置向量及 $OH:HA$。",
+    "answer": "Writing $\\vec{OB}=\\lambda\\mathbf a+\\mathbf c$ with $0<\\lambda<1$, the vectors are $\\mathbf d=\\mathbf c/(1-\\lambda)$, $\\mathbf e=\\mathbf a/3$, $\\mathbf f=\\lambda\\mathbf a/2+\\mathbf c$, $\\mathbf g=2(\\lambda\\mathbf a+\\mathbf c)/(3\\lambda+2)$, and $\\mathbf h=2\\mathbf a/5$. Thus $OH:HA=2:3$.",
+    "answerZh": "写成 $\\vec{OB}=\\lambda\\mathbf a+\\mathbf c$（$0<\\lambda<1$）后，有 $\\mathbf d=\\mathbf c/(1-\\lambda)$、$\\mathbf e=\\mathbf a/3$、$\\mathbf f=\\lambda\\mathbf a/2+\\mathbf c$、$\\mathbf g=2(\\lambda\\mathbf a+\\mathbf c)/(3\\lambda+2)$、$\\mathbf h=2\\mathbf a/5$，故 $OH:HA=2:3$。",
+    "methods": [
+      {
+        "title": "Intersect affine line parametrisations",
+        "titleZh": "联立仿射直线参数式",
+        "topics": [
+          {
+            "en": "Vector equations of lines",
+            "zh": "直线的向量方程"
+          },
+          {
+            "en": "Affine geometry",
+            "zh": "仿射几何"
+          },
+          {
+            "en": "Comparing vector coefficients",
+            "zh": "比较向量系数"
+          }
+        ],
+        "steps": [
+          "A line through $\\mathbf x$ in direction $\\mathbf y-\\mathbf x$ has $\\mathbf r=\\mathbf x+\\alpha(\\mathbf y-\\mathbf x)=(1-\\alpha)\\mathbf x+\\alpha\\mathbf y$. Since $CB\\parallel OA$, write $\\vec{OB}=\\lambda\\mathbf a+\\mathbf c$; the length condition gives $0<\\lambda<1$.",
+          "Ratios immediately give $\\mathbf e=\\mathbf a/3$ and $\\mathbf f=(\\mathbf c+\\vec{OB})/2=\\lambda\\mathbf a/2+\\mathbf c$. Intersecting $OC$ with $AB$ and comparing the independent coefficients of $\\mathbf a,\\mathbf c$ gives $\\mathbf d=\\mathbf c/(1-\\lambda)$.",
+          "A point on $OB$ is $t(\\lambda\\mathbf a+\\mathbf c)$. Equating it to a point on $EF$ gives $t=2/(3\\lambda+2)$, so $\\mathbf g=2(\\lambda\\mathbf a+\\mathbf c)/(3\\lambda+2)$.",
+          "Parametrise $DG$ by $(1-s)\\mathbf d+s\\mathbf g$. At $H\\in OA$, its coefficient of $\\mathbf c$ must vanish. This gives $s=(3\\lambda+2)/(5\\lambda)$.",
+          "The remaining coefficient of $\\mathbf a$ is $2/5$, hence $\\mathbf h=2\\mathbf a/5$. Therefore $OH=(2/5)OA$ and $HA=(3/5)OA$, so $OH:HA=2:3$."
+        ],
+        "stepsZh": [
+          "过 $\\mathbf x$ 且方向为 $\\mathbf y-\\mathbf x$ 的直线满足 $\\mathbf r=\\mathbf x+\\alpha(\\mathbf y-\\mathbf x)=(1-\\alpha)\\mathbf x+\\alpha\\mathbf y$。由 $CB\\parallel OA$，可写 $\\vec{OB}=\\lambda\\mathbf a+\\mathbf c$；长度条件给出 $0<\\lambda<1$。",
+          "由分点关系直接得 $\\mathbf e=\\mathbf a/3$、$\\mathbf f=(\\mathbf c+\\vec{OB})/2=\\lambda\\mathbf a/2+\\mathbf c$。联立 $OC$ 与 $AB$ 的参数式，比较线性无关的 $\\mathbf a,\\mathbf c$ 系数，得到 $\\mathbf d=\\mathbf c/(1-\\lambda)$。",
+          "$OB$ 上的点可写为 $t(\\lambda\\mathbf a+\\mathbf c)$。将它与 $EF$ 上的点相等，得 $t=2/(3\\lambda+2)$，所以 $\\mathbf g=2(\\lambda\\mathbf a+\\mathbf c)/(3\\lambda+2)$。",
+          "将 $DG$ 参数化为 $(1-s)\\mathbf d+s\\mathbf g$。因为 $H\\in OA$，其 $\\mathbf c$ 的系数必须为零，从而 $s=(3\\lambda+2)/(5\\lambda)$。",
+          "此时 $\\mathbf a$ 的系数为 $2/5$，故 $\\mathbf h=2\\mathbf a/5$。于是 $OH=(2/5)OA$、$HA=(3/5)OA$，所以 $OH:HA=2:3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=5"
+  },
+  "step-2006-p2-q9": {
+    "summary": "A uniform ladder of length $6a$ and weight $W$ rests against a smooth wall at angle $\\arctan2$ with its foot at the centre of a square table top of side $a/2$ and leg height $a$. A painter of weight $kW$ climbs the ladder. The ladder-table friction coefficient is $1/2$. (i) If the table is fixed, prove the ladder never slips. (ii) For $k=9$ and table-ground friction coefficient $1/3$, determine whether the unfixed table first slides or tilts.",
+    "summaryZh": "一架长 $6a$、重 $W$ 的均匀梯子以倾角 $\\arctan2$ 靠在光滑墙上，梯脚位于方形桌面中心；桌面边长 $a/2$、桌腿长 $a$。重为 $kW$ 的油漆工沿梯子上爬，梯脚与桌面间摩擦系数为 $1/2$。（i）若桌腿固定，证明梯子始终不会滑动；（ii）当 $k=9$ 且桌腿与地面摩擦系数为 $1/3$ 时，判断未固定的桌子先滑动还是先倾倒。",
+    "answer": "The ladder never slips on the table. For $k=9$, the table tilts first, when the painter is $11a/3$ along the ladder; sliding would begin only at $x=5a$.",
+    "answerZh": "梯子不会在桌面上滑动。当 $k=9$ 时，油漆工沿梯子上升到 $11a/3$ 处，桌子先发生倾倒；若要滑动则需到 $x=5a$。",
+    "methods": [
+      {
+        "title": "Compare the friction and toppling thresholds",
+        "titleZh": "比较滑动与倾倒的临界条件",
+        "topics": [
+          {
+            "en": "Static equilibrium",
+            "zh": "静力平衡"
+          },
+          {
+            "en": "Friction",
+            "zh": "摩擦力"
+          },
+          {
+            "en": "Moments and toppling",
+            "zh": "力矩与倾倒"
+          }
+        ],
+        "steps": [
+          "Let the painter be distance $x$ from the foot. If $R,F$ are the vertical and horizontal forces at the foot and $S$ is the wall reaction, equilibrium gives $R=(k+1)W$ and $F=S$. Taking moments about the foot yields $F=W(3+kx/a)/12$.",
+          "This is largest at $x=6a$, where $F_{\\max}=(2k+1)W/4$. The limiting friction on the table is $R/2=(2k+2)W/4$, which is larger. Thus the ladder itself cannot slip for any position.",
+          "For $k=9$, the ladder exerts $10W$ downward and $F=W(1+3x/a)/4$ horizontally on the table. Including the table's own weight, the ground's total normal reaction is $12W$.",
+          "About the feet of the far pair of legs, the downward forces have restoring moment $12W(a/4)=3Wa$, while the horizontal push has overturning moment $Fa$. The near-leg reaction vanishes when $F=3W$, giving $x=11a/3$.",
+          "The maximum total ground friction is $(1/3)(12W)=4W$, so sliding would begin when $F=4W$, giving $x=5a$. Since $11a/3<5a$, tilting occurs first, and the available friction has not yet been exhausted."
+        ],
+        "stepsZh": [
+          "设油漆工距梯脚为 $x$。记梯脚处竖直支持力、水平摩擦力为 $R,F$，墙面支持力为 $S$。平衡条件给出 $R=(k+1)W$、$F=S$。对梯脚取矩，得到 $F=W(3+kx/a)/12$。",
+          "$F$ 在 $x=6a$ 时最大，$F_{\\max}=(2k+1)W/4$。桌面可提供的最大摩擦力为 $R/2=(2k+2)W/4$，始终更大，所以梯子本身不会滑动。",
+          "当 $k=9$ 时，梯子对桌面施加 $10W$ 的向下压力及 $F=W(1+3x/a)/4$ 的水平力。加上桌子自重，地面对桌腿的总支持力为 $12W$。",
+          "以远离墙面的两条桌腿底端连线为轴，向下合力的恢复力矩为 $12W(a/4)=3Wa$，水平力的倾覆力矩为 $Fa$。靠墙侧桌腿支持力降为零时 $F=3W$，解得 $x=11a/3$。",
+          "地面可提供的最大总摩擦力为 $(1/3)(12W)=4W$，滑动临界点满足 $F=4W$，即 $x=5a$。因 $11a/3<5a$，桌子先倾倒，此时地面摩擦尚未达到极限。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=6"
+  },
+  "step-2006-p2-q10": {
+    "summary": "Particles $A,B,C$ of masses $m,km,3m$ lie in that order at rest on a smooth line. Particle $A$ is projected at speed $u$; the coefficients of restitution for $AB$ and $BC$ are $1/2$ and $1/4$. (i) Find the $k$ for which $A$ and $B$ collide again. (ii) When $k=1$ and $B,C$ initially differ by distance $d$, prove that the time between the two $AB$ collisions is $60d/(13u)$.",
+    "summaryZh": "质量分别为 $m,km,3m$ 的粒子 $A,B,C$ 依次静止在同一直线上。$A$ 以速率 $u$ 射向 $B$；$AB$、$BC$ 碰撞的恢复系数分别为 $1/2$、$1/4$。（i）求使 $A,B$ 再次碰撞的 $k$ 的范围；（ii）当 $k=1$ 且 $B,C$ 初距为 $d$ 时，证明两次 $AB$ 碰撞之间的时间为 $60d/(13u)$。",
+    "answer": "A second $AB$ collision occurs exactly for $0<k<3/2$. For $k=1$ the elapsed time is $60d/(13u)$.",
+    "answerZh": "$A,B$ 再次碰撞当且仅当 $0<k<3/2$。当 $k=1$ 时，所需时间为 $60d/(13u)$。",
+    "methods": [
+      {
+        "title": "Solve both impacts, then treat the second meeting as pursuit",
+        "titleZh": "依次求两次碰撞速度，再转化为追及问题",
+        "topics": [
+          {
+            "en": "Conservation of momentum",
+            "zh": "动量守恒"
+          },
+          {
+            "en": "Coefficient of restitution",
+            "zh": "恢复系数"
+          },
+          {
+            "en": "Relative velocity",
+            "zh": "相对速度"
+          }
+        ],
+        "steps": [
+          "After the first collision, momentum and $v_B-v_A=u/2$ give $v_B=3u/[2(1+k)]$ and $v_A=(2-k)u/[2(1+k)]$.",
+          "After $B$ hits $C$, momentum and $w_C-w_B=v_B/4$ give $w_B=3(4k-3)u/[8(1+k)(k+3)]$.",
+          "At that moment $A$ is behind $B$. They meet again exactly when the gap shrinks, i.e. $v_A>w_B$. Clearing positive factors reduces this to $(2k-3)(2k+11)<0$. Since $k>0$, the range is $0<k<3/2$.",
+          "For $k=1$, $v_A=u/4$, $v_B=3u/4$, and after the $BC$ collision $w_B=3u/64$. Particle $B$ reaches $C$ after $t_1=d/(3u/4)=4d/(3u)$; meanwhile $A$ travels $d/3$, leaving a gap $2d/3$.",
+          "The closing speed is $u/4-3u/64=13u/64$, so the chase takes $t_2=(2d/3)/(13u/64)=128d/(39u)$. Thus $t_1+t_2=60d/(13u)$."
+        ],
+        "stepsZh": [
+          "第一次碰撞后，由动量守恒和 $v_B-v_A=u/2$ 得 $v_B=3u/[2(1+k)]$、$v_A=(2-k)u/[2(1+k)]$。",
+          "$B$ 与 $C$ 碰撞后，由动量守恒和 $w_C-w_B=v_B/4$ 得 $w_B=3(4k-3)u/[8(1+k)(k+3)]$。",
+          "此时 $A$ 位于 $B$ 后方，两者再次相遇当且仅当间距缩小，即 $v_A>w_B$。约去正因子后化为 $(2k-3)(2k+11)<0$。由于 $k>0$，故 $0<k<3/2$。",
+          "当 $k=1$ 时，$v_A=u/4$、$v_B=3u/4$，而 $BC$ 碰撞后 $w_B=3u/64$。$B$ 经 $t_1=d/(3u/4)=4d/(3u)$ 到达 $C$；此期间 $A$ 前进 $d/3$，剩余间距为 $2d/3$。",
+          "追及相对速度为 $u/4-3u/64=13u/64$，故追及时间 $t_2=(2d/3)/(13u/64)=128d/(39u)$。相加得 $t_1+t_2=60d/(13u)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=6"
+  },
+  "step-2006-p2-q14": {
+    "summary": "Sketch $y=1/(x\\ln x)$ for $x>0$, $x\\ne1$. A continuous random variable has density $f(x)=\\lambda/(x\\ln x)$ on $[a,b]$ and zero elsewhere. (i) Find $\\lambda$ for $a=1/4,b=1/2$. (ii) For $\\lambda=1,a>1$, prove $b=a^e$. (iii) For $\\lambda=1,a=e$, estimate $P(e^{3/2}\\le X\\le e^2)$ as $31/108$. (iv) Repeat when $a=e^{1/2}$.",
+    "summaryZh": "作出 $y=1/(x\\ln x)$（$x>0,x\\ne1$）的图像。连续随机变量的密度在 $[a,b]$ 上为 $f(x)=\\lambda/(x\\ln x)$，其余处为零。（i）当 $a=1/4,b=1/2$ 时求 $\\lambda$；（ii）当 $\\lambda=1,a>1$ 时证明 $b=a^e$；（iii）当 $\\lambda=1,a=e$ 时，用 $31/108$ 近似 $P(e^{3/2}\\le X\\le e^2)$；（iv）当 $a=e^{1/2}$ 时重新求该概率。",
+    "answer": "The graph has a left-branch maximum at $(e^{-1},-e)$ and vertical asymptote $x=1$. The answers are (i) $\\lambda=-1/\\ln2$; (ii) $b=a^e$; (iii) $\\ln(4/3)\\approx31/108$; (iv) $0$.",
+    "answerZh": "图像左支在 $(e^{-1},-e)$ 取得极大，且 $x=1$ 为竖直渐近线。（i）$\\lambda=-1/\\ln2$；（ii）$b=a^e$；（iii）概率为 $\\ln(4/3)\\approx31/108$；（iv）概率为 $0$。",
+    "methods": [
+      {
+        "title": "Normalize with the antiderivative $\\ln|\\ln x|$",
+        "titleZh": "利用原函数 $\\ln|\\ln x|$ 归一化",
+        "topics": [
+          {
+            "en": "Probability densities",
+            "zh": "概率密度"
+          },
+          {
+            "en": "Improper graph behaviour",
+            "zh": "函数端点行为"
+          },
+          {
+            "en": "Logarithmic integration",
+            "zh": "对数积分"
+          },
+          {
+            "en": "Alternating series",
+            "zh": "交错级数"
+          }
+        ],
+        "steps": [
+          "The function is negative on $(0,1)$ and positive on $(1,\\infty)$. It tends to $-\\infty$ as $x\\to0^+$ and $x\\to1^-$, to $+\\infty$ as $x\\to1^+$, and to $0^+$ as $x\\to\\infty$. Since $y'=-(\\ln x+1)/(x\\ln x)^2$, the left branch has a maximum at $(e^{-1},-e)$ and the right branch decreases throughout.",
+          "Use $\\int dx/(x\\ln x)=\\ln|\\ln x|+C$. On $[1/4,1/2]$ the integral equals $-\\ln2$, so normalization gives $\\lambda=-1/\\ln2$; this sign also makes the density non-negative.",
+          "If $\\lambda=1$ and $a>1$, normalization gives $1=\\ln(\\ln b/\\ln a)$. Hence $\\ln b=e\\ln a$ and $b=a^e$.",
+          "For $a=e$, the support is $[e,e^e]$, which contains $[e^{3/2},e^2]$. The desired probability is $\\ln2-\\ln(3/2)=\\ln(4/3)$. With $\\ln(1+t)=t-t^2/2+t^3/3-t^4/4+\\cdots$ at $t=1/3$, four terms give $31/108$, with error below the next term.",
+          "For $a=e^{1/2}$, the upper endpoint is $b=e^{e/2}<e^{3/2}$ because $e<3$. The requested interval lies outside the support, so its probability is $0$."
+        ],
+        "stepsZh": [
+          "该函数在 $(0,1)$ 上为负，在 $(1,\\infty)$ 上为正；当 $x\\to0^+$、$x\\to1^-$ 时趋于 $-\\infty$，当 $x\\to1^+$ 时趋于 $+\\infty$，而当 $x\\to\\infty$ 时趋于 $0^+$。由 $y'=-(\\ln x+1)/(x\\ln x)^2$，左支在 $(e^{-1},-e)$ 取得极大，右支始终递减。",
+          "使用 $\\int dx/(x\\ln x)=\\ln|\\ln x|+C$。在 $[1/4,1/2]$ 上该积分等于 $-\\ln2$，归一化得到 $\\lambda=-1/\\ln2$；这个负号也保证密度非负。",
+          "若 $\\lambda=1$ 且 $a>1$，归一化条件为 $1=\\ln(\\ln b/\\ln a)$。故 $\\ln b=e\\ln a$，即 $b=a^e$。",
+          "当 $a=e$ 时，支持集为 $[e,e^e]$，包含 $[e^{3/2},e^2]$。所求概率为 $\\ln2-\\ln(3/2)=\\ln(4/3)$。在 $t=1/3$ 处使用 $\\ln(1+t)=t-t^2/2+t^3/3-t^4/4+\\cdots$，取前四项得 $31/108$，误差小于下一项。",
+          "当 $a=e^{1/2}$ 时，上端点 $b=e^{e/2}<e^{3/2}$，因为 $e<3$。所求区间完全位于支持集右侧，所以概率为 $0$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S2.pdf#page=9"
   }
 }
