@@ -1,0 +1,242 @@
+{
+  "euclid-2018-q1": {
+    "summary": "(a) Evaluate $x+(x+1)+(x+2)+(x+3)$ when $x=11$. (b) Solve $a/6+6/18=1$. (c) One chocolate bar and two identical packs of gum cost $4.15$ dollars in total, and the chocolate bar costs $1.00$ more than one pack of gum. Find the price of the chocolate bar.",
+    "summaryZh": "(a) 当 $x=11$ 时，计算 $x+(x+1)+(x+2)+(x+3)$。(b) 解方程 $a/6+6/18=1$。(c) 一块巧克力和两包相同的口香糖共 $4.15$ 美元，且巧克力比一包口香糖贵 $1.00$ 美元。求一块巧克力的价格。",
+    "answer": "(a) $50$. (b) $a=4$. (c) $2.05$ dollars.",
+    "answerZh": "(a) $50$。(b) $a=4$。(c) $2.05$ 美元。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Simplify each expression and model the price",
+        "titleZh": "化简式子并建立价格方程",
+        "topics": [{"en":"Linear equations","zh":"一元一次方程"},{"en":"Algebraic simplification","zh":"代数化简"},{"en":"Mathematical modelling","zh":"数学建模"}],
+        "steps": [
+          "(a) The four terms are $11,12,13,14$, so their sum is $50$.",
+          "(b) Since $6/18=1/3$, the equation gives $a/6=2/3$, and hence $a=4$.",
+          "(c) Let a pack of gum cost $g$ dollars. The bar costs $g+1$, so $(g+1)+2g=4.15$. Thus $3g=3.15$, $g=1.05$, and the bar costs $g+1=2.05$ dollars. Substitution gives $2.05+2(1.05)=4.15$."
+        ],
+        "stepsZh": [
+          "(a) 四项依次为 $11,12,13,14$，其和为 $50$。",
+          "(b) 因 $6/18=1/3$，原方程给出 $a/6=2/3$，故 $a=4$。",
+          "(c) 设一包口香糖为 $g$ 美元，则巧克力为 $g+1$ 美元。由 $(g+1)+2g=4.15$ 得 $3g=3.15$，所以 $g=1.05$，巧克力价格为 $2.05$ 美元。代回可得 $2.05+2(1.05)=4.15$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q2": {
+    "summary": "(a) A five-digit integer uses each of $1,3,5,7,9$ exactly once. It lies between $80000$ and $92000$, its units digit is $3$, and its hundreds and tens digits, in that order, form a multiple of $5$. Find the integer. (b) Point $D$ lies on $AC$, $BD\\perp AC$, $AB=13$, $BC=12\\sqrt2$, and $BD=12$. Find $AC$. (c) Square $OABC$ has side $6$, with $O=(0,0)$, $A=(6,0)$, $B=(6,6)$, and $C=(0,6)$. The line $y=2x$ meets $CB$ at $D$. Find the area inside the square and on the side of the line containing $A$ and $B$.",
+    "summaryZh": "(a) 一个五位数恰好各用一次数字 $1,3,5,7,9$。它大于 $80000$ 且小于 $92000$，个位为 $3$，百位与十位按顺序组成的两位数能被 $5$ 整除。求该五位数。(b) 点 $D$ 在线段 $AC$ 上，$BD\\perp AC$，且 $AB=13,BC=12\\sqrt2,BD=12$。求 $AC$。(c) 正方形 $OABC$ 的边长为 $6$，其中 $O=(0,0),A=(6,0),B=(6,6),C=(0,6)$。直线 $y=2x$ 与 $CB$ 交于 $D$。求正方形内、直线的 $A,B$ 所在一侧的区域面积。",
+    "answer": "(a) $91753$. (b) $AC=17$. (c) $27$ square units.",
+    "answerZh": "(a) $91753$。(b) $AC=17$。(c) $27$ 平方单位。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=2",
+    "methods": [
+      {
+        "title": "Use place value, the Pythagorean theorem, and area subtraction",
+        "titleZh": "利用数位条件、勾股定理与面积作差",
+        "topics": [{"en":"Digits and place value","zh":"数位与位值"},{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Coordinate area","zh":"坐标几何面积"}],
+        "steps": [
+          "(a) The first digit must be $9$, and being below $92000$ forces the second digit to be $1$. The last digit is $3$, leaving $5$ and $7$ for the hundreds and tens places. Their two-digit number must end in $5$, so it is $75$. The integer is $91753$.",
+          "(b) In right triangles $ADB$ and $CDB$, $AD=\\sqrt{13^2-12^2}=5$ and $CD=\\sqrt{(12\\sqrt2)^2-12^2}=12$. Since $D$ lies on $AC$, $AC=AD+DC=17$.",
+          "(c) On $CB$ we have $y=6$, so $6=2x$ gives $D=(3,6)$. Triangle $OCD$ has area $\\tfrac12(6)(3)=9$. The requested region is the rest of the $6$ by $6$ square, with area $36-9=27$."
+        ],
+        "stepsZh": [
+          "(a) 万位只能是 $9$；又因该数小于 $92000$，千位只能是 $1$。个位为 $3$，百位、十位剩下 $5,7$。两位数要能被 $5$ 整除，其末位必须为 $5$，故为 $75$，原数是 $91753$。",
+          "(b) 在直角三角形 $ADB,CDB$ 中，$AD=\\sqrt{13^2-12^2}=5$，$CD=\\sqrt{(12\\sqrt2)^2-12^2}=12$。因 $D$ 在线段 $AC$ 上，$AC=AD+DC=17$。",
+          "(c) 边 $CB$ 上 $y=6$，代入 $y=2x$ 得 $D=(3,6)$。三角形 $OCD$ 的面积为 $\\tfrac12(6)(3)=9$。所求区域为正方形减去该三角形，面积是 $36-9=27$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q3": {
+    "summary": "(a) Evaluate $(\\sqrt{4+\\sqrt4})^4$. (b) Find the unique pair $(x,y)$ of positive integers satisfying $\\sqrt{23-x}=8-y^2$. (c) The line $y=mx+2$ and the parabola $y=ax^2+5x-2$ meet at $P=(1,5)$ and a second point $Q$. Find (i) $m$, (ii) $a$, and (iii) $Q$.",
+    "summaryZh": "(a) 计算 $(\\sqrt{4+\\sqrt4})^4$。(b) 求满足 $\\sqrt{23-x}=8-y^2$ 的唯一一组正整数 $(x,y)$。(c) 直线 $y=mx+2$ 与抛物线 $y=ax^2+5x-2$ 交于 $P=(1,5)$ 及另一点 $Q$。求 (i) $m$，(ii) $a$，(iii) 点 $Q$。",
+    "answer": "(a) $36$. (b) $(x,y)=(7,2)$. (c) $m=3$, $a=2$, and $Q=(-2,-4)$.",
+    "answerZh": "(a) $36$。(b) $(x,y)=(7,2)$。(c) $m=3$，$a=2$，$Q=(-2,-4)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Perfect squares and the two intersection roots",
+        "titleZh": "利用完全平方数与两个交点的横坐标",
+        "topics": [{"en":"Radicals","zh":"根式"},{"en":"Integer solutions","zh":"整数解"},{"en":"Line-parabola intersections","zh":"直线与抛物线交点"}],
+        "steps": [
+          "(a) Since $\\sqrt4=2$, the value is $(\\sqrt6)^4=6^2=36$.",
+          "(b) The right side is an integer, so $23-x$ must be a square less than $23$: $16,9,4,1,$ or $0$. The corresponding right-side square roots are $4,3,2,1,0$. Only $8-y^2=4$ gives a positive integral $y$, namely $y=2$; then $23-x=16$ and $x=7$.",
+          "(c) Substituting $P$ into the line gives $5=m+2$, so $m=3$. Substitution into the parabola gives $5=a+5-2$, so $a=2$. Equating the curves yields $2x^2+5x-2=3x+2$, or $(x-1)(x+2)=0$. The second root is $x=-2$, and the line gives $y=3(-2)+2=-4$."
+        ],
+        "stepsZh": [
+          "(a) 因 $\\sqrt4=2$，原式为 $(\\sqrt6)^4=6^2=36$。",
+          "(b) 右边是整数，所以 $23-x$ 必须是小于 $23$ 的完全平方数，即 $16,9,4,1,0$；其平方根依次为 $4,3,2,1,0$。只有 $8-y^2=4$ 给出正整数 $y=2$，继而 $23-x=16$，得到 $x=7$。",
+          "(c) 将 $P$ 代入直线得 $5=m+2$，所以 $m=3$；代入抛物线得 $5=a+5-2$，所以 $a=2$。联立两曲线：$2x^2+5x-2=3x+2$，即 $(x-1)(x+2)=0$。除已知根 $x=1$ 外，另一根为 $x=-2$，代入直线得 $y=-4$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q4": {
+    "summary": "(a) How many positive integers $n$ with $1\\le n\\le30$ have exactly two positive common divisors with $80$? (For example, $34$ and $80$ have only $1$ and $2$ in common.) (b) A function on the positive integers satisfies $f(1)=1$; for even $n$, $f(n)=f(n/2)$; and for odd $n>1$, $f(n)=f(n-1)+1$. Find $f(50)$.",
+    "summaryZh": "(a) 有多少个满足 $1\\le n\\le30$ 的正整数 $n$ 与 $80$ 恰有两个正公因数？（例如 $34$ 与 $80$ 的正公因数只有 $1,2$。）(b) 正整数上的函数满足 $f(1)=1$；若 $n$ 为偶数，则 $f(n)=f(n/2)$；若 $n>1$ 为奇数，则 $f(n)=f(n-1)+1$。求 $f(50)$。",
+    "answer": "(a) $9$. (b) $f(50)=3$.",
+    "answerZh": "(a) $9$。(b) $f(50)=3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Classify the gcd and unwind the recursion",
+        "titleZh": "分类最大公因数并逐步回代递推",
+        "topics": [{"en":"Greatest common divisor","zh":"最大公因数"},{"en":"Divisibility","zh":"整除"},{"en":"Recursive functions","zh":"递归函数"}],
+        "steps": [
+          "(a) Having exactly two common positive divisors means $\\gcd(n,80)$ is prime. Since $80=2^4\\cdot5$, the gcd must be $2$ or $5$. Thus $n$ is either divisible by $2$ but not $4$ or $5$, or divisible by $5$ but not $2$. In $1$ through $30$ these values are $2,6,14,18,22,26$ and $5,15,25$, giving $9$ integers.",
+          "(b) Apply the rules until reaching $1$: $f(50)=f(25)=f(24)+1=f(12)+1=f(6)+1=f(3)+1=f(2)+2=f(1)+2=3$."
+        ],
+        "stepsZh": [
+          "(a) 恰有两个正公因数等价于 $\\gcd(n,80)$ 为质数。因 $80=2^4\\cdot5$，最大公因数只能是 $2$ 或 $5$。所以 $n$ 要么能被 $2$ 整除但不能被 $4$ 或 $5$ 整除，要么能被 $5$ 整除但不能被 $2$ 整除。在 $1$ 到 $30$ 中分别为 $2,6,14,18,22,26$ 与 $5,15,25$，共 $9$ 个。",
+          "(b) 反复应用定义：$f(50)=f(25)=f(24)+1=f(12)+1=f(6)+1=f(3)+1=f(2)+2=f(1)+2=3$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q5": {
+    "summary": "(a) An equilateral triangle and a regular hexagon each have perimeter $12$. Find the ratio of the triangle's area to the hexagon's area. (b) Sector $AOB$ is one sixth of a circle of radius $18$, so $\\angle AOB=60^\\circ$. A point $P$ lies on radius $OB$, and segment $AP$ divides the sector into two equal-area regions. Find $OP$.",
+    "summaryZh": "(a) 一个等边三角形与一个正六边形的周长都为 $12$。求三角形面积与六边形面积之比。(b) 扇形 $AOB$ 是半径为 $18$ 的圆的六分之一，因此 $\\angle AOB=60^\\circ$。点 $P$ 在半径 $OB$ 上，线段 $AP$ 将扇形分成面积相等的两部分。求 $OP$。",
+    "answer": "(a) $2:3$. (b) $OP=2\\sqrt3\\pi$.",
+    "answerZh": "(a) $2:3$。(b) $OP=2\\sqrt3\\pi$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Decompose regular polygons and equate half the sector area",
+        "titleZh": "分割正多边形并令三角形面积等于半个扇形",
+        "topics": [{"en":"Regular polygons","zh":"正多边形"},{"en":"Sector area","zh":"扇形面积"},{"en":"Triangle area with sine","zh":"正弦三角形面积公式"}],
+        "steps": [
+          "(a) The triangle has side $4$ and is made from four equilateral triangles of side $2$. The regular hexagon has side $2$ and is made from six such triangles. Their area ratio is therefore $4:6=2:3$.",
+          "(b) The sector area is $\\tfrac16\\pi(18)^2=54\\pi$, so triangle $AOP$ must have area $27\\pi$. Since $OA=18$, $\\angle AOP=60^\\circ$, and $OP=p$, its area is $\\tfrac12(18)p\\sin60^\\circ=\\tfrac{9\\sqrt3}{2}p$. Equating this to $27\\pi$ gives $p=2\\sqrt3\\pi$. This is less than $18$, so $P$ indeed lies on the radius."
+        ],
+        "stepsZh": [
+          "(a) 等边三角形边长为 $4$，可分成四个边长为 $2$ 的等边三角形；正六边形边长为 $2$，可分成六个同样的小三角形。因此面积比为 $4:6=2:3$。",
+          "(b) 扇形面积为 $\\tfrac16\\pi(18)^2=54\\pi$，故三角形 $AOP$ 的面积应为 $27\\pi$。设 $OP=p$，由 $OA=18$、$\\angle AOP=60^\\circ$，三角形面积为 $\\tfrac12(18)p\\sin60^\\circ=\\tfrac{9\\sqrt3}{2}p$。令其等于 $27\\pi$，得到 $p=2\\sqrt3\\pi$。该值小于 $18$，故 $P$ 确实在半径上。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q6": {
+    "summary": "(a) For how many integers $k$ with $0<k<18$ is $\\dfrac{5\\sin(10k^\\circ)-2}{\\sin^2(10k^\\circ)}\\ge2$? (b) A straight road $AB$ is $297$ m long. Starting together, Karuna runs from $A$ to $B$ and immediately back to $A$ at $6$ m/s. Jorge runs from $B$ to $A$ at $5$ m/s and immediately back to $B$ at $7.5$ m/s. Each route takes $99$ s. Find the two times $t$ when they are at the same point of the road.",
+    "summaryZh": "(a) 对满足 $0<k<18$ 的整数 $k$，有多少个使 $\\dfrac{5\\sin(10k^\\circ)-2}{\\sin^2(10k^\\circ)}\\ge2$？(b) 直路 $AB$ 长 $297$ 米。两人同时出发：Karuna 从 $A$ 以 $6$ 米/秒跑到 $B$ 后立即折返 $A$；Jorge 从 $B$ 以 $5$ 米/秒跑到 $A$，再立即以 $7.5$ 米/秒折返 $B$。两人的全程都用 $99$ 秒。求两人位于道路同一点的两个时刻 $t$。",
+    "answer": "(a) $13$. (b) $t=27$ s and $t=77$ s.",
+    "answerZh": "(a) $13$ 个。(b) $t=27$ 秒和 $t=77$ 秒。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Factor the sine inequality and use relative distance",
+        "titleZh": "因式分解三角不等式并利用相对路程",
+        "topics": [{"en":"Trigonometric inequalities","zh":"三角不等式"},{"en":"Distance, rate and time","zh":"路程、速度与时间"},{"en":"Piecewise motion","zh":"分段运动"}],
+        "steps": [
+          "(a) Put $\\theta=10k^\\circ$, so $0<\\theta<180^\\circ$ and $\\sin^2\\theta>0$. Multiplication and rearrangement give $(2\\sin\\theta-1)(\\sin\\theta-2)\\le0$. Since $\\sin\\theta-2<0$, this is equivalent to $\\sin\\theta\\ge1/2$, hence $30^\\circ\\le\\theta\\le150^\\circ$. Therefore $3\\le k\\le15$, giving $13$ integers.",
+          "(b) Before either turns, their covered distances sum to $297$: $(6+5)t=297$, so the first meeting is at $t=27$. For the second meeting both are on their return legs. At time $t$, their remaining distances to $A$ and $B$ are respectively $6(99-t)$ and $7.5(99-t)$; these sum to the road length. Thus $13.5(99-t)=297$, so $99-t=22$ and $t=77$. Their turning times are $49.5$ s and $59.4$ s, confirming that both are returning then."
+        ],
+        "stepsZh": [
+          "(a) 令 $\\theta=10k^\\circ$，则 $0<\\theta<180^\\circ$ 且 $\\sin^2\\theta>0$。同乘分母并整理得 $(2\\sin\\theta-1)(\\sin\\theta-2)\\le0$。因 $\\sin\\theta-2<0$，等价于 $\\sin\\theta\\ge1/2$，即 $30^\\circ\\le\\theta\\le150^\\circ$。所以 $3\\le k\\le15$，共有 $13$ 个整数。",
+          "(b) 第一次相遇前两人都未折返，所跑路程之和为 $297$：$(6+5)t=297$，得 $t=27$。第二次相遇时二人均在返程；此时到各自终点尚余的路程分别为 $6(99-t)$ 与 $7.5(99-t)$，二者之和为整条路长。因此 $13.5(99-t)=297$，得 $99-t=22$，即 $t=77$。两人的折返时刻分别为 $49.5$ 秒与 $59.4$ 秒，故该分段判断正确。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q7": {
+    "summary": "(a) Eight people, including triplets Barry, Carrie, and Mary, are randomly paired into four labelled two-person canoes. Find the probability that no two triplets share a canoe. (b) Diagonal $WY$ of square $WXYZ$ has slope $2$. Find the sum of the slopes of adjacent sides $WX$ and $XY$.",
+    "summaryZh": "(a) 八个人中包括三胞胎 Barry、Carrie、Mary。将八人随机两两分入四条有标号的双人独木舟。求三胞胎中任意两人都不在同一舟中的概率。(b) 正方形 $WXYZ$ 的对角线 $WY$ 的斜率为 $2$。求相邻边 $WX$ 与 $XY$ 的斜率之和。",
+    "answer": "(a) $4/7$. (b) $-8/3$.",
+    "answerZh": "(a) $4/7$。(b) $-8/3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Use complementary probability and rotate the diagonal direction",
+        "titleZh": "利用补事件概率并旋转对角线方向",
+        "topics": [{"en":"Complementary probability","zh":"补事件概率"},{"en":"Mutually exclusive events","zh":"互斥事件"},{"en":"Slopes of perpendicular lines","zh":"垂直直线斜率"}],
+        "steps": [
+          "(a) Fix Barry. Each of the other seven people is equally likely to be Barry's partner, so a specified other triplet is paired with him with probability $1/7$. The three events that Barry-Carrie, Barry-Mary, or Carrie-Mary form a pair are disjoint, because one person cannot occupy two pairs. Thus the probability that some two triplets share a canoe is $3/7$, and the required complement is $1-3/7=4/7$.",
+          "(b) Translate so $W=(0,0)$ and take a diagonal vector $WY=(2,4)$. Its midpoint is $C=(1,2)$. Rotating the half-diagonal $WC=(1,2)$ by $90^\\circ$ gives $CX=(-2,1)$, so one possible vertex is $X=(-1,3)$. Hence $m_{WX}=-3$. The adjacent side is perpendicular, so $m_{XY}=1/3$. Their sum is $-3+1/3=-8/3$; the alternative labelling swaps the two slopes but not their sum."
+        ],
+        "stepsZh": [
+          "(a) 固定 Barry，其同舟伙伴在其余七人中等可能，因此与某一指定三胞胎同舟的概率为 $1/7$。Barry–Carrie、Barry–Mary、Carrie–Mary 成对这三个事件互斥，因为一人不能同时属于两对。因此至少有两名三胞胎同舟的概率为 $3/7$，所求补事件概率为 $1-3/7=4/7$。",
+          "(b) 平移正方形令 $W=(0,0)$，取对角线向量 $WY=(2,4)$，其中点为 $C=(1,2)$。把半对角线向量 $WC=(1,2)$ 旋转 $90^\\circ$ 得 $CX=(-2,1)$，可取 $X=(-1,3)$。于是 $WX$ 的斜率为 $-3$；相邻边与它垂直，斜率为 $1/3$。所求和为 $-3+1/3=-8/3$。交换两个相邻顶点只会交换两斜率，不改变其和。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q8": {
+    "summary": "(a) Solve $\\log_{2x}(48\\sqrt[3]{3})=\\log_{3x}(162\\sqrt[3]{2})$. (b) Rectangle $PQRS$ is placed in rectangle $ABCD$ in two ways. In the first, $Q=B$ and $R=C$, so $QR=BC$. In the second, the vertices $P,Q,R,S$ lie respectively on $AB,BC,CD,DA$. Given $AB=718$ and $PQ=250$, find $BC$.",
+    "summaryZh": "(a) 解方程 $\\log_{2x}(48\\sqrt[3]{3})=\\log_{3x}(162\\sqrt[3]{2})$。(b) 矩形 $PQRS$ 以两种方式放入矩形 $ABCD$。第一次放置时 $Q=B,R=C$，因此 $QR=BC$；第二次放置时 $P,Q,R,S$ 分别位于 $AB,BC,CD,DA$ 上。已知 $AB=718$、$PQ=250$，求 $BC$。",
+    "answer": "(a) $x=\\sqrt6$. (b) $BC=1375$.",
+    "answerZh": "(a) $x=\\sqrt6$。(b) $BC=1375$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Change logarithm bases and compare similar corner triangles",
+        "titleZh": "换底化简对数，并比较四角相似三角形",
+        "topics": [{"en":"Logarithm change of base","zh":"对数换底"},{"en":"Similar triangles","zh":"相似三角形"},{"en":"Pythagorean theorem","zh":"勾股定理"}],
+        "steps": [
+          "(a) The bases require $x>0$, $x\\ne1/2$, and $x\\ne1/3$. Let $u=\\log2$, $v=\\log3$, and $z=\\log x$. Change of base gives $(4u+\\tfrac43v)/(u+z)=(4v+\\tfrac43u)/(v+z)$. After cancelling common terms, $(v-u)(v+u)=2z(v-u)$. Since $v\\ne u$, $z=(u+v)/2=\\tfrac12\\log6$, hence $x=\\sqrt6$, which satisfies the domain restrictions.",
+          "(b) Let $BC=x$, $BQ=a$, and $PB=b$ in the second placement. The four corner right triangles are similar; opposite ones are congruent. Consequently their legs around the outer rectangle are $BQ=SD=a$, $PB=DR=b$, $QC=AS=x-a$, and $AP=RC=718-b$. Similarity with hypotenuse $PQ=250$ gives $(x-a)/b=(718-b)/a=x/250$. Also $a^2+b^2=250^2$.",
+          "From $(718-b)/a=x/250$, $ax=250(718-b)$. Applying Pythagoras to the right triangle with hypotenuse $x$ and legs $x-a,718-b$ gives $0=-2ax+a^2+(718-b)^2$. Substitute $ax=250(718-b)$ and $a^2=250^2-b^2$ to obtain $b^2=(468-b)^2$. Positive lengths give $b=234$, then $a=\\sqrt{250^2-234^2}=88$. Finally $x=250(718-234)/88=1375$."
+        ],
+        "stepsZh": [
+          "(a) 对数底数要求 $x>0$、$x\\ne1/2$、$x\\ne1/3$。令 $u=\\log2,v=\\log3,z=\\log x$。换底后有 $(4u+\\tfrac43v)/(u+z)=(4v+\\tfrac43u)/(v+z)$。展开约去公共项得 $(v-u)(v+u)=2z(v-u)$。因 $v\\ne u$，故 $z=(u+v)/2=\\tfrac12\\log6$，所以 $x=\\sqrt6$，且满足定义域。",
+          "(b) 第二种放置中记 $BC=x,BQ=a,PB=b$。外框四角的直角三角形彼此相似，对角位置的两组全等，因此 $BQ=SD=a$、$PB=DR=b$、$QC=AS=x-a$、$AP=RC=718-b$。与斜边 $PQ=250$ 的三角形比较，得到 $(x-a)/b=(718-b)/a=x/250$，并有 $a^2+b^2=250^2$。",
+          "由 $(718-b)/a=x/250$ 得 $ax=250(718-b)$。对斜边为 $x$、两直角边为 $x-a,718-b$ 的三角形使用勾股定理，整理为 $0=-2ax+a^2+(718-b)^2$。代入 $ax=250(718-b)$ 与 $a^2=250^2-b^2$，得 $b^2=(468-b)^2$。由长度为正，$b=234$，继而 $a=\\sqrt{250^2-234^2}=88$。最后 $x=250(718-234)/88=1375$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q9": {
+    "summary": "An L-triomino consists of three unit squares in a $2\\times2$ block with one corner square removed. Rotations and translations are allowed. (a) Give a tiling of a $3\\times8$ rectangle. (b) Determine, with proof, all positive integers $W$ for which a $6\\times W$ rectangle can be tiled. (c) Determine, with proof, all integer pairs $(H,W)$ with $H,W\\ge4$ for which an $H\\times W$ rectangle can be tiled.",
+    "summaryZh": "一个 L 形三连方由 $2\\times2$ 方格删去一个角格后剩下的三个单位正方形组成，允许旋转和平移。(a) 给出 $3\\times8$ 矩形的一种铺法。(b) 求出并证明所有可被铺满的 $6\\times W$ 矩形所对应的正整数 $W$。(c) 对 $H,W\\ge4$，求出并证明所有可铺满的整数对 $(H,W)$。",
+    "answer": "(a) A construction is given below. (b) Exactly $W\\ge2$. (c) Exactly the pairs for which $3\\mid H$ or $3\\mid W$.",
+    "answerZh": "(a) 见下述构造。(b) 恰为 $W\\ge2$。(c) 恰为 $3\\mid H$ 或 $3\\mid W$ 的整数对。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=4",
+    "methods": [
+      {
+        "title": "Build from small tiled rectangles and use area divisibility",
+        "titleZh": "用小矩形拼接，并利用面积整除性",
+        "topics": [{"en":"Tilings","zh":"铺砖问题"},{"en":"Constructive proof","zh":"构造性证明"},{"en":"Divisibility","zh":"整除"}],
+        "steps": [
+          "(a) Divide the $3\\times8$ board into four $3\\times2$ blocks. In each block, one triomino occupies the top two cells and the left cell of the middle row; the other occupies the bottom two cells and the right cell of the middle row. Thus every block, and hence the whole rectangle, is tiled.",
+          "(b) Width $1$ is impossible because an L-triomino spans two rows and two columns. For even $W$, concatenate $W/2$ tiled $6\\times2$ rectangles, each made from two $3\\times2$ blocks. For odd $W\\ge3$, start with a $6\\times3$ rectangle made from three tiled $2\\times3$ blocks, then append $(W-3)/2$ tiled $6\\times2$ rectangles. Hence exactly $W\\ge2$ work.",
+          "(c) Necessity: every triomino has area $3$, so $3\\mid HW$, equivalently $3\\mid H$ or $3\\mid W$. By rotating if needed, assume $3\\mid H$. If $6\\mid H$, stack $H/6$ tiled $6\\times W$ rectangles. If $H$ is an odd multiple of $3$ and $W$ is even, partition the board into tiled $3\\times2$ blocks.",
+          "It remains when $H$ and $W$ are odd. Then $H=9+6s$ and $W=5+2t$ for $s,t\\ge0$. The following letter grid tiles a $9\\times5$ base; each letter marks one L-triomino.",
+          "$\\begin{array}{ccccc}A&A&C&C&D\\\\B&A&C&D&D\\\\B&B&F&F&E\\\\G&G&F&E&E\\\\G&N&N&H&H\\\\O&N&M&M&H\\\\O&O&M&K&K\\\\I&L&L&J&K\\\\I&I&L&J&J\\end{array}$",
+          "The remaining $9\\times2t$ strip is tiled by $3\\times2$ blocks and the $6s\\times W$ strip by $6\\times W$ blocks from part (b). Thus the divisibility condition is also sufficient."
+        ],
+        "stepsZh": [
+          "(a) 把 $3\\times8$ 分成四个 $3\\times2$ 小矩形。每个小矩形中，一块 L 形占据顶行两格及中行左格，另一块占据底行两格及中行右格。故四个小矩形乃至整块矩形均被铺满。",
+          "(b) $W=1$ 不可能，因为 L 形在行、列方向都至少跨两格。若 $W$ 为偶数，将 $W/2$ 个可铺的 $6\\times2$ 矩形并排，其中每个由两个 $3\\times2$ 块组成。若 $W\\ge3$ 为奇数，先用三个 $2\\times3$ 块组成 $6\\times3$，再接上 $(W-3)/2$ 个 $6\\times2$ 块。因此恰好所有 $W\\ge2$ 可行。",
+          "(c) 必要性：每块 L 形面积为 $3$，故必须有 $3\\mid HW$，等价于 $3\\mid H$ 或 $3\\mid W$。必要时旋转，设 $3\\mid H$。若 $6\\mid H$，把矩形分成 $H/6$ 个可铺的 $6\\times W$ 条带；若 $H$ 为 $3$ 的奇数倍且 $W$ 为偶数，则分成若干 $3\\times2$ 块。",
+          "最后考虑 $H,W$ 均为奇数。此时可写成 $H=9+6s,W=5+2t$，其中 $s,t\\ge0$。下列字母阵给出一个 $9\\times5$ 基本铺法，同一字母的三格组成一块 L。",
+          "$\\begin{array}{ccccc}A&A&C&C&D\\\\B&A&C&D&D\\\\B&B&F&F&E\\\\G&G&F&E&E\\\\G&N&N&H&H\\\\O&N&M&M&H\\\\O&O&M&K&K\\\\I&L&L&J&K\\\\I&I&L&J&J\\end{array}$",
+          "余下的 $9\\times2t$ 条带由 $3\\times2$ 块铺成，$6s\\times W$ 条带由第 (b) 问的 $6\\times W$ 块铺成。因此整除条件也充分。"
+        ]
+      }
+    ]
+  },
+  "euclid-2018-q10": {
+    "summary": "An infinite two-row array has top entries $A_k$ and bottom entries $B_k$ for every integer $k$. Each entry is the average of its left neighbour, right neighbour, and the entry directly across in the other row. (a) If $A_0=A_1=A_2=0$ and $A_3=1$, find $A_4$. (b) With $S_k=A_k+B_k$, prove $S_{k+1}=2S_k-S_{k-1}$. (c) Prove that if every entry is a positive real number, then all entries in the array are equal.",
+    "summaryZh": "一个双向无限的两行数阵在每个整数列 $k$ 的上、下两项分别为 $A_k,B_k$。每一项都等于其左邻项、右邻项及另一行正对项的平均数。(a) 若 $A_0=A_1=A_2=0,A_3=1$，求 $A_4$。(b) 令 $S_k=A_k+B_k$，证明 $S_{k+1}=2S_k-S_{k-1}$。(c) 证明：若数阵中每一项都是正实数，则所有项都相等。",
+    "answer": "(a) $A_4=6$. (b) The stated recurrence holds for every integer $k$. (c) There is a constant $c>0$ such that $A_k=B_k=c/2$ for all $k$.",
+    "answerZh": "(a) $A_4=6$。(b) 所给递推式对每个整数 $k$ 成立。(c) 存在常数 $c>0$，使所有 $k$ 都有 $A_k=B_k=c/2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2018/2018EuclidContest.pdf#page=5",
+    "methods": [
+      {
+        "title": "Separate column sums and differences",
+        "titleZh": "分别研究每列的和与差",
+        "topics": [{"en":"Recurrence relations","zh":"递推关系"},{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Proof by contradiction","zh":"反证法"}],
+        "steps": [
+          "The averaging rules are $3A_k=A_{k-1}+B_k+A_{k+1}$ and $3B_k=B_{k-1}+A_k+B_{k+1}$. For (a), the equations at $A_1,A_2,B_2,A_3$ successively give $B_1=0$, $B_2=-1$, $B_3=-3$, and $3=A_2+B_3+A_4$, so $A_4=6$.",
+          "(b) Add the two averaging equations: $3S_k=S_{k-1}+S_k+S_{k+1}$. Rearranging yields $S_{k+1}=2S_k-S_{k-1}$.",
+          "(c) The recurrence says $S_{k+1}-S_k=S_k-S_{k-1}$, so $(S_k)$ is a two-sided arithmetic sequence. Since every $S_k=A_k+B_k$ is positive for all positive and negative indices, its common difference must be $0$; otherwise it becomes negative in one direction. Hence $S_k=c>0$ for every $k$.",
+          "Let $D_k=A_k-B_k$. Subtracting the averaging equations gives $D_{k+1}=4D_k-D_{k-1}$. Also positivity and $A_k+B_k=c$ imply $|D_k|<c$ for all $k$. Suppose some $D_k\\ne0$; shift indices and, if necessary, exchange the rows so that $D_0>0$. If $D_1\\ge D_0$, then $D_2=4D_1-D_0\\ge3D_1$ and induction gives unbounded positive growth forward. If $D_1<D_0$, rewrite as $D_{k-1}=4D_k-D_{k+1}$; then $D_{-1}>3D_0$ and the same induction gives unbounded growth backward. Both contradict $|D_k|<c$. Thus $D_k=0$, so $A_k=B_k=c/2$ for all $k$."
+        ],
+        "stepsZh": [
+          "平均条件写成 $3A_k=A_{k-1}+B_k+A_{k+1}$ 与 $3B_k=B_{k-1}+A_k+B_{k+1}$。对第 (a) 问，依次在 $A_1,A_2,B_2,A_3$ 处使用方程，得到 $B_1=0,B_2=-1,B_3=-3$，再由 $3=A_2+B_3+A_4$ 得 $A_4=6$。",
+          "(b) 两式相加得 $3S_k=S_{k-1}+S_k+S_{k+1}$，移项即得 $S_{k+1}=2S_k-S_{k-1}$。",
+          "(c) 该递推式说明 $S_{k+1}-S_k=S_k-S_{k-1}$，故双向序列 $(S_k)$ 为等差数列。因对所有正、负整数下标都有 $S_k=A_k+B_k>0$，公差只能为 $0$；否则沿某一方向终会变为负数。因此所有 $S_k=c>0$。",
+          "令 $D_k=A_k-B_k$。两平均方程相减得 $D_{k+1}=4D_k-D_{k-1}$。又因 $A_k+B_k=c$ 且两项为正，故所有 $k$ 都有 $|D_k|<c$。若某个 $D_k\\ne0$，平移下标并在必要时交换两行，可设 $D_0>0$。若 $D_1\\ge D_0$，则 $D_2=4D_1-D_0\\ge3D_1$，归纳可知正向无界增长；若 $D_1<D_0$，把递推式改写为 $D_{k-1}=4D_k-D_{k+1}$，得 $D_{-1}>3D_0$，同理反向无界增长。两者都与 $|D_k|<c$ 矛盾。因此 $D_k=0$，从而所有 $k$ 均有 $A_k=B_k=c/2$。"
+        ]
+      }
+    ]
+  }
+}
