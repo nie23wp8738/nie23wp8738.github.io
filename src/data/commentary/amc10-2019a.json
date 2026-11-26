@@ -1,0 +1,202 @@
+{
+  "amc10-2019a-q1": {
+    "summary": "Evaluate $2^{0^{1^9}}+((2^0)^1)^9$, taking each exponent tower from the top downward.",
+    "summaryZh": "按指数塔从上到下的顺序计算 $2^{0^{1^9}}+((2^0)^1)^9$。",
+    "answer": "C. $2$",
+    "answerZh": "C．$2$",
+    "methods": [{"title":"Evaluate the exponent towers","titleZh":"逐层计算指数塔","topics":[{"en":"Exponents","zh":"指数"},{"en":"Order of operations","zh":"运算顺序"}],"steps":["Since $1^9=1$, the first term is $2^{0^1}=2^0=1$.","Also $2^0=1$, so the second term is $(1^1)^9=1$. The sum is $1+1=2$."],"stepsZh":["因为 $1^9=1$，第一项为 $2^{0^1}=2^0=1$。","又因 $2^0=1$，第二项为 $(1^1)^9=1$，故总和为 $1+1=2$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/1"
+  },
+  "amc10-2019a-q2": {
+    "summary": "Find the hundreds digit of $20!-15!$.",
+    "summaryZh": "求 $20!-15!$ 的百位数字。",
+    "answer": "A. $0$",
+    "answerZh": "A．$0$",
+    "methods": [{"title":"Use divisibility by $1000$","titleZh":"利用被 $1000$ 整除","topics":[{"en":"Factorials","zh":"阶乘"},{"en":"Trailing zeros","zh":"末尾零"}],"steps":["Both $15!$ and $20!$ contain at least three factors $2$ and three factors $5$, hence both are divisible by $2^3 5^3=1000$.","Their difference is therefore divisible by $1000$, so its last three digits, including the hundreds digit, are all $0$."],"stepsZh":["$15!$ 与 $20!$ 都至少含三个因子 $2$ 和三个因子 $5$，所以都能被 $2^3 5^3=1000$ 整除。","两者之差仍能被 $1000$ 整除，末三位全为 $0$，故百位数字为 $0$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/2"
+  },
+  "amc10-2019a-q3": {
+    "summary": "Ana and Bonita share a birthday but were born $n$ years apart. Last year Ana was five times Bonita's age; this year Ana's age is the square of Bonita's age. Find $n$.",
+    "summaryZh": "Ana 与 Bonita 生日相同但相差 $n$ 岁。去年 Ana 的年龄是 Bonita 的 $5$ 倍；今年 Ana 的年龄等于 Bonita 年龄的平方。求 $n$。",
+    "answer": "D. $12$",
+    "answerZh": "D．$12$",
+    "methods": [{"title":"Solve the age equations","titleZh":"联立年龄方程","topics":[{"en":"Systems of equations","zh":"方程组"},{"en":"Quadratics","zh":"二次方程"}],"steps":["Let their current ages be $a$ and $b$. Then $a-1=5(b-1)$ and $a=b^2$.","Thus $b^2-1=5b-5$, so $(b-1)(b-4)=0$. The root $b=1$ would make their ages equal, hence $b=4$ and $a=16$.","Therefore $n=a-b=16-4=12$."],"stepsZh":["设两人今年年龄为 $a,b$，则 $a-1=5(b-1)$ 且 $a=b^2$。","代入得 $b^2-1=5b-5$，即 $(b-1)(b-4)=0$。$b=1$ 会使两人同岁，故 $b=4,a=16$。","所以年龄差 $n=a-b=16-4=12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/3"
+  },
+  "amc10-2019a-q4": {
+    "summary": "A box contains $28,20,19,13,11,9$ balls of six respective colors. Balls are drawn without replacement. Find the minimum number of draws that guarantees at least $15$ balls of one color.",
+    "summaryZh": "盒中六种颜色的球数依次为 $28,20,19,13,11,9$。不放回抽取，至少抽多少个才能保证某一种颜色至少出现 $15$ 个？",
+    "answer": "B. $76$",
+    "answerZh": "B．$76$",
+    "methods": [{"title":"Maximise draws while avoiding fifteen","titleZh":"在避免出现十五个同色球时取最大值","topics":[{"en":"Pigeonhole principle","zh":"抽屉原理"},{"en":"Extremal reasoning","zh":"极值思想"}],"steps":["To avoid reaching $15$ of a color, at most $14$ can be drawn from each of the three colors having at least $15$ balls.","All balls of the smaller colors may also be drawn, giving $3(14)+13+11+9=75$ draws without a guarantee.","The next draw must make one of the three large colors reach $15$, so the minimum is $76$."],"stepsZh":["要避免某色达到 $15$ 个，球数不少于 $15$ 的三种颜色各最多抽 $14$ 个。","另外三种较少的球可全部抽出，因此仍不保证的最大抽取数为 $3(14)+13+11+9=75$。","再抽一个必使某种大类达到 $15$ 个，故答案为 $76$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/4"
+  },
+  "amc10-2019a-q5": {
+    "summary": "What is the greatest possible number of consecutive integers whose sum is $45$? Negative integers are allowed.",
+    "summaryZh": "若允许出现负整数，和为 $45$ 的连续整数列最多可以包含多少项？",
+    "answer": "D. $90$",
+    "answerZh": "D．$90$",
+    "methods": [{"title":"Construct the longest symmetric run","titleZh":"构造最长的对称连续整数列","topics":[{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Extremal reasoning","zh":"极值思想"}],"steps":["The integers from $-44$ through $44$ cancel in pairs and sum to $0$; adjoining $45$ gives a run summing to $45$.","This run has $45-(-44)+1=90$ terms. If a run has $L$ terms and sum $45$, then twice its sum is $L$ times an integer, so $L$ divides $90$ and cannot exceed $90$."],"stepsZh":["从 $-44$ 到 $44$ 的整数两两抵消，和为 $0$；再接上 $45$，所得连续整数列之和为 $45$。","该数列有 $45-(-44)+1=90$ 项。若另一列有 $L$ 项且和为 $45$，则和的两倍 $90$ 必为 $L$ 的整数倍，所以 $L\\le90$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/5"
+  },
+  "amc10-2019a-q6": {
+    "summary": "Among these five quadrilateral types, count those for which some point in the plane is equidistant from all four vertices: a square; a nonsquare rectangle; a nonsquare rhombus; a parallelogram that is neither a rectangle nor a rhombus; and an isosceles trapezoid that is not a parallelogram.",
+    "summaryZh": "在以下五类四边形中，统计存在一个平面内点到四个顶点等距的类型数：正方形、非正方形矩形、非正方形菱形、既非矩形也非菱形的平行四边形、非平行四边形的等腰梯形。",
+    "answer": "C. $3$",
+    "answerZh": "C．$3$",
+    "methods": [{"title":"Recognise cyclic quadrilaterals","titleZh":"判断哪些四边形可内接于圆","topics":[{"en":"Cyclic quadrilaterals","zh":"圆内接四边形"},{"en":"Circumcenters","zh":"外心"}],"steps":["A point equidistant from all four vertices is the center of a circle through those vertices, so the quadrilateral must be cyclic.","A square and every rectangle are cyclic. An isosceles trapezoid is cyclic because its opposite angles are supplementary.","A nonrectangular parallelogram has equal opposite angles that are not right angles, so it is not cyclic; this excludes both listed parallelogram cases. Exactly $3$ types work."],"stepsZh":["到四个顶点等距的点就是经过四个顶点之圆的圆心，因此四边形必须可以内接于圆。","正方形和矩形均可内接于圆；等腰梯形的对角互补，也可内接于圆。","非矩形平行四边形的对角相等但不是直角，因而不互补；所列两种此类平行四边形均不成立。共有 $3$ 类。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/6"
+  },
+  "amc10-2019a-q7": {
+    "summary": "Two lines of slopes $1/2$ and $2$ meet at $(2,2)$. Find the area of the triangle enclosed by these two lines and $x+y=10$.",
+    "summaryZh": "斜率分别为 $1/2$ 和 $2$ 的两条直线交于 $(2,2)$。求这两条直线与 $x+y=10$ 围成的三角形面积。",
+    "answer": "C. $6$",
+    "answerZh": "C．$6$",
+    "methods": [{"title":"Find the three vertices","titleZh":"求出三个顶点","topics":[{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Triangle area","zh":"三角形面积"}],"steps":["The two lines are $y=x/2+1$ and $y=2x-2$.","Their intersections with $x+y=10$ are $(6,4)$ and $(4,6)$, while their mutual intersection is $(2,2)$.","The segment from $(6,4)$ to $(4,6)$ has length $2\\sqrt2$ and lies on $x+y=10$. Its distance from $(2,2)$ is $3\\sqrt2$, so the area is $\\tfrac12(2\\sqrt2)(3\\sqrt2)=6$."],"stepsZh":["两条直线分别为 $y=x/2+1$ 与 $y=2x-2$。","它们与 $x+y=10$ 的交点分别为 $(6,4)$、$(4,6)$，另一个顶点为 $(2,2)$。","前两点间距离为 $2\\sqrt2$，$(2,2)$ 到直线 $x+y=10$ 的距离为 $3\\sqrt2$，故面积为 $\\tfrac12(2\\sqrt2)(3\\sqrt2)=6$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/7"
+  },
+  "amc10-2019a-q8": {
+    "summary": "An infinite horizontal line $\\ell$ carries a periodic motif. Congruent axis-aligned squares alternate above and below $\\ell$, each sharing a horizontal side with $\\ell$. From the upper-right corner of every upper square a short segment slopes up-right; from the lower-left corner of every lower square a congruent segment slopes down-left. The motif repeats at equal intervals. Of these four transformation types, how many have a nonidentity example preserving the whole figure: rotation about a point on $\\ell$; translation parallel to $\\ell$; reflection in $\\ell$; reflection in a line perpendicular to $\\ell$?",
+    "summaryZh": "无限水平直线 $\\ell$ 上有周期图案：全等且边平行于坐标轴的正方形等距地在直线上下交替出现，每个正方形的一条水平边与 $\\ell$ 重合；每个上方正方形的右上角伸出一条向右上倾斜的短线段，每个下方正方形的左下角伸出一条全等的向左下倾斜线段。以下四类变换中，有多少类存在非恒等变换可使整个图形保持不变：绕 $\\ell$ 上一点旋转、沿 $\\ell$ 平移、关于 $\\ell$ 反射、关于垂直于 $\\ell$ 的直线反射？",
+    "answer": "C. $2$",
+    "answerZh": "C．$2$",
+    "methods": [{"title":"Test the four symmetries","titleZh":"逐一检验四类对称变换","topics":[{"en":"Rigid motions","zh":"刚体变换"},{"en":"Periodic symmetry","zh":"周期对称"}],"steps":["A translation by one full motif period preserves the figure.","A $180^\\circ$ rotation about the midpoint on $\\ell$ between a neighboring upper and lower square interchanges those squares and their slanted segments, so it also works.","Reflection in $\\ell$ or in a perpendicular line reverses the handed direction of the slanted segments, so neither reflection preserves the motif. Thus exactly $2$ types work."],"stepsZh":["沿 $\\ell$ 平移一个完整周期后图案不变。","绕相邻上下正方形之间位于 $\\ell$ 上的中点旋转 $180^\\circ$，正方形及倾斜短线段恰好互换，因此旋转也成立。","关于 $\\ell$ 或其垂线反射都会把倾斜短线段的方向反转，均不能保持图案。故共有 $2$ 类。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/8"
+  },
+  "amc10-2019a-q9": {
+    "summary": "Find the greatest three-digit positive integer $n$ for which $1+2+\\cdots+n$ does not divide $1\\cdot2\\cdots n$.",
+    "summaryZh": "求最大的三位正整数 $n$，使得 $1+2+\\cdots+n$ 不能整除 $1\\cdot2\\cdots n$。",
+    "answer": "B. $996$",
+    "answerZh": "B．$996$",
+    "methods": [{"title":"Characterise the obstruction by $n+1$","titleZh":"用 $n+1$ 刻画不整除情形","topics":[{"en":"Divisibility","zh":"整除"},{"en":"Prime numbers","zh":"素数"}],"steps":["The required divisor is $n(n+1)/2$, while the product is $n!$.","If $n+1$ is composite, its factors can be found in $(n-1)!$ (with the square case supplied by $a$ and $2a$), so $n(n+1)/2$ divides $n!$. If $n+1$ is prime, that prime is absent from $n!$, so divisibility fails.","Among $997,998,999,1000$, only $997$ is prime. Hence the greatest eligible $n$ is $997-1=996$."],"stepsZh":["前 $n$ 个正整数之和为 $n(n+1)/2$，乘积为 $n!$。","若 $n+1$ 为合数，其因子可在 $(n-1)!$ 中配出（平方情形可用 $a$ 与 $2a$），于是 $n(n+1)/2\\mid n!$；若 $n+1$ 为素数，该素因子不在 $n!$ 中，整除失败。","在 $997,998,999,1000$ 中只有 $997$ 是素数，所以最大的 $n$ 为 $997-1=996$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/9"
+  },
+  "amc10-2019a-q10": {
+    "summary": "A $10$-by-$17$ foot floor is tiled by unit squares. A bug walks along the straight diagonal from one corner to the opposite corner. Counting the first and last tiles, how many tiles does it enter?",
+    "summaryZh": "一个 $10\\times17$ 英尺的矩形地面由单位正方形铺成。虫子沿一条对角线从一个顶点直线走到对角顶点。包括起点和终点所在方格，它经过多少个方格？",
+    "answer": "C. $26$",
+    "answerZh": "C．$26$",
+    "methods": [{"title":"Count grid-line crossings","titleZh":"统计穿过的网格线","topics":[{"en":"Lattice geometry","zh":"格点几何"},{"en":"Greatest common divisor","zh":"最大公因数"}],"steps":["Because $\\gcd(10,17)=1$, the diagonal passes through no interior grid vertex, so no horizontal and vertical crossing occurs simultaneously.","It crosses $9$ interior horizontal grid lines and $16$ interior vertical grid lines. Starting in one tile, it therefore visits $1+9+16=26$ tiles."],"stepsZh":["因为 $\\gcd(10,17)=1$，对角线不经过内部格点，所以不会同时穿过一条水平线和一条竖直线。","它穿过 $9$ 条内部水平网格线和 $16$ 条内部竖直网格线，从第一个方格开始，共经过 $1+9+16=26$ 个方格。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/10"
+  },
+  "amc10-2019a-q11": {
+    "summary": "How many positive divisors of $201^9$ are perfect squares or perfect cubes, including divisors that are both?",
+    "summaryZh": "$201^9$ 的正因数中，有多少个是完全平方数或完全立方数（两者兼是的也计入）？",
+    "answer": "C. $37$",
+    "answerZh": "C．$37$",
+    "methods": [{"title":"Count exponent pairs by inclusion--exclusion","titleZh":"对指数对使用容斥原理","topics":[{"en":"Prime factorization","zh":"质因数分解"},{"en":"Inclusion--exclusion","zh":"容斥原理"}],"steps":["Since $201=3\\cdot67$, every divisor of $201^9$ is $3^a67^b$ with $0\\le a,b\\le9$.","For a square, each exponent has $5$ choices $0,2,4,6,8$, giving $25$ divisors. For a cube, each has $4$ choices $0,3,6,9$, giving $16$.","A divisor counted twice is a sixth power; each exponent is $0$ or $6$, giving $4$. The union has $25+16-4=37$ divisors."],"stepsZh":["因 $201=3\\cdot67$，每个因数可写成 $3^a67^b$，其中 $0\\le a,b\\le9$。","完全平方数的每个指数有 $0,2,4,6,8$ 共 $5$ 种，得 $25$ 个；完全立方数的每个指数有 $0,3,6,9$ 共 $4$ 种，得 $16$ 个。","重复计算的是六次幂，每个指数只能为 $0$ 或 $6$，共有 $4$ 个。故总数为 $25+16-4=37$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/11"
+  },
+  "amc10-2019a-q12": {
+    "summary": "Form a data set from every calendar date number in the twelve months of 2019: twelve copies each of $1$ through $28$, eleven copies each of $29$ and $30$, and seven copies of $31$. Let $\\mu$ be its mean, $M$ its median, and $d$ the median of all its modes. Determine the correct ordering of $d,\\mu,M$.",
+    "summaryZh": "把 2019 年十二个月中的每一个日期数字组成数据集：$1$ 至 $28$ 各出现 $12$ 次，$29,30$ 各出现 $11$ 次，$31$ 出现 $7$ 次。设均值为 $\\mu$、中位数为 $M$、所有众数的中位数为 $d$，判断三者的大小关系。",
+    "answer": "E. $d<\\mu<M$",
+    "answerZh": "E．$d<\\mu<M$",
+    "methods": [{"title":"Locate the three statistics","titleZh":"分别确定三个统计量","topics":[{"en":"Mean","zh":"均值"},{"en":"Median and mode","zh":"中位数与众数"}],"steps":["The modes are $1,2,\\ldots,28$, so $d=(14+15)/2=14.5$.","The median is the $183$rd of $365$ entries. The first $15$ date values occupy $180$ places, so $M=16$.","The $336$ entries from $1$ through $28$ average $14.5$, and the other $29$ entries are larger, so $\\mu>14.5$. Relative to $16$, the first group has deficit $336(1.5)=504$, while the remaining group has excess at most $29(15)=435$; hence $\\mu<16$. Thus $d<\\mu<M$."],"stepsZh":["众数为 $1,2,\\ldots,28$，所以它们的中位数 $d=(14+15)/2=14.5$。","全体 $365$ 个数的中位数是第 $183$ 个。$1$ 至 $15$ 共占 $180$ 个位置，因此 $M=16$。","$1$ 至 $28$ 的 $336$ 个数均值为 $14.5$，其余 $29$ 个数更大，故 $\\mu>14.5$。相对 $16$，前一组总缺口为 $336(1.5)=504$，后一组总超额至多 $29(15)=435$，所以 $\\mu<16$。综上 $d<\\mu<M$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/12"
+  },
+  "amc10-2019a-q13": {
+    "summary": "In isosceles triangle $ABC$, $AC=BC$ and $\\angle ACB=40^\\circ$. The circle with diameter $BC$ meets $AC$ again at $D$ and $AB$ again at $E$. If $F=BD\\cap CE$, find $\\angle BFC$.",
+    "summaryZh": "在等腰三角形 $ABC$ 中，$AC=BC$ 且 $\\angle ACB=40^\\circ$。以 $BC$ 为直径的圆与 $AC$ 再交于 $D$、与 $AB$ 再交于 $E$。若 $F=BD\\cap CE$，求 $\\angle BFC$。",
+    "answer": "D. $110^\\circ$",
+    "answerZh": "D．$110^\\circ$",
+    "methods": [{"title":"Use right angles from the diameter","titleZh":"利用直径所对的直角追角","topics":[{"en":"Inscribed angles","zh":"圆周角"},{"en":"Angle chasing","zh":"角度追踪"}],"steps":["Since $BC$ is a diameter, $\\angle BDC=\\angle BEC=90^\\circ$. Also $\\angle ABC=\\angle BAC=70^\\circ$.","In $\\triangle BCE$, $\\angle ECB=180^\\circ-90^\\circ-70^\\circ=20^\\circ$. In $\\triangle BCD$, $\\angle DBC=180^\\circ-90^\\circ-40^\\circ=50^\\circ$.","Because $F$ lies on $BD$ and $CE$, triangle $BFC$ has angles $50^\\circ$ and $20^\\circ$ at $B,C$. Hence $\\angle BFC=180^\\circ-70^\\circ=110^\\circ$."],"stepsZh":["因 $BC$ 为直径，$\\angle BDC=\\angle BEC=90^\\circ$。又因 $AC=BC$，所以 $\\angle ABC=\\angle BAC=70^\\circ$。","在 $\\triangle BCE$ 中，$\\angle ECB=180^\\circ-90^\\circ-70^\\circ=20^\\circ$；在 $\\triangle BCD$ 中，$\\angle DBC=180^\\circ-90^\\circ-40^\\circ=50^\\circ$。","$F$ 位于 $BD$ 与 $CE$ 上，所以 $\\triangle BFC$ 在 $B,C$ 处的角为 $50^\\circ,20^\\circ$，故 $\\angle BFC=110^\\circ$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/13"
+  },
+  "amc10-2019a-q14": {
+    "summary": "Four distinct lines in a plane determine exactly $N$ distinct points that lie on at least two of the lines. Find the sum of all possible values of $N$.",
+    "summaryZh": "平面内四条互不相同的直线恰有 $N$ 个点分别位于其中至少两条直线上。求 $N$ 所有可能取值之和。",
+    "answer": "D. $19$",
+    "answerZh": "D．$19$",
+    "methods": [{"title":"Classify intersection patterns","titleZh":"分类讨论交点结构","topics":[{"en":"Counting intersections","zh":"交点计数"},{"en":"Casework","zh":"分类讨论"}],"steps":["The values $0,1,3,4,5,6$ are attainable: use four parallel lines; four concurrent lines; three parallel plus a transversal; three concurrent plus another line; a triangle plus a line parallel to one side; or four lines in general position.","Exactly $2$ is impossible. Once two nonparallel lines meet, any additional distinct line either passes through that point, is parallel to one of them, or creates further intersection points; a fourth line cannot leave exactly one additional distinct point.","Therefore the sum is $0+1+3+4+5+6=19$."],"stepsZh":["$0,1,3,4,5,6$ 都能实现：分别取四线平行、四线共点、三线平行另加截线、三线共点另加一线、三线成三角形另加一条平行于某边的直线、四线一般位置。","$2$ 不可能。两条不平行直线产生一个交点后，新增直线要么通过该点、要么与其中一条平行、要么立即产生更多交点；第四条不同直线无法让总数恰停在两个。","故所有可能值之和为 $0+1+3+4+5+6=19$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/14"
+  },
+  "amc10-2019a-q15": {
+    "summary": "Let $a_1=1$, $a_2=3/7$, and for $n\\ge3$ let $a_n=\\dfrac{a_{n-2}a_{n-1}}{2a_{n-2}-a_{n-1}}$. Write $a_{2019}=p/q$ in lowest terms and find $p+q$.",
+    "summaryZh": "设 $a_1=1$、$a_2=3/7$，且当 $n\\ge3$ 时 $a_n=\\dfrac{a_{n-2}a_{n-1}}{2a_{n-2}-a_{n-1}}$。将 $a_{2019}=p/q$ 写成最简分数，求 $p+q$。",
+    "answer": "E. $8078$",
+    "answerZh": "E．$8078$",
+    "methods": [{"title":"Turn reciprocals into an arithmetic sequence","titleZh":"把倒数化为等差数列","topics":[{"en":"Recurrence relations","zh":"递推数列"},{"en":"Arithmetic sequences","zh":"等差数列"}],"steps":["Taking reciprocals gives $1/a_n=2/a_{n-1}-1/a_{n-2}$, hence $1/a_n-1/a_{n-1}=1/a_{n-1}-1/a_{n-2}$.","Thus $1/a_n$ is arithmetic with first term $1$ and common difference $7/3-1=4/3$.","So $1/a_{2019}=1+2018(4/3)=8075/3$, giving $a_{2019}=3/8075$ and $p+q=8078$."],"stepsZh":["两边取倒数得 $1/a_n=2/a_{n-1}-1/a_{n-2}$，即 $1/a_n-1/a_{n-1}=1/a_{n-1}-1/a_{n-2}$。","因此 $1/a_n$ 是首项为 $1$、公差为 $7/3-1=4/3$ 的等差数列。","所以 $1/a_{2019}=1+2018(4/3)=8075/3$，从而 $a_{2019}=3/8075$，$p+q=8078$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/15"
+  },
+  "amc10-2019a-q16": {
+    "summary": "Thirteen unit circles lie inside a larger circle, tangent only at the shown contacts. Their centers form five horizontal rows containing $1,4,3,4,1$ circles; adjacent circles in the staggered rows are tangent, the top and bottom circles are centered on the vertical diameter, and the outermost small circles are tangent internally to the large circle. Find the area inside the large circle but outside all thirteen unit circles.",
+    "summaryZh": "一个大圆内放置 $13$ 个半径为 $1$ 的小圆，所有相交均为相切。小圆圆心按从上到下 $1,4,3,4,1$ 个排成五条水平错位行；相邻行的小圆按三角格相切，最上与最下小圆的圆心位于竖直直径上，最外层小圆均与大圆内切。求大圆内且所有小圆外区域的面积。",
+    "answer": "A. $4\\pi\\sqrt3$",
+    "answerZh": "A．$4\\pi\\sqrt3$",
+    "methods": [{"title":"Find the outer radius from the triangular lattice","titleZh":"由三角格求大圆半径","topics":[{"en":"Tangent circles","zh":"相切圆"},{"en":"Equilateral triangles","zh":"等边三角形"}],"steps":["Joining centers of tangent unit circles produces equilateral triangles of side $2$. From the center $O$ of the large circle to the center $C$ of the top unit circle, two such triangle altitudes give $OC=2\\sqrt3$.","The top small circle is internally tangent to the large circle, so the large radius is $R=OC+1=2\\sqrt3+1$.","The required area is $\\pi R^2-13\\pi=\\pi(2\\sqrt3+1)^2-13\\pi=4\\pi\\sqrt3$."],"stepsZh":["连接相切单位圆的圆心，可得边长为 $2$ 的等边三角形。从大圆圆心 $O$ 到最上方小圆圆心 $C$ 的距离等于两个等边三角形的高，因此 $OC=2\\sqrt3$。","最上方小圆与大圆内切，所以大圆半径 $R=OC+1=2\\sqrt3+1$。","所求面积为 $\\pi R^2-13\\pi=\\pi(2\\sqrt3+1)^2-13\\pi=4\\pi\\sqrt3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/16"
+  },
+  "amc10-2019a-q17": {
+    "summary": "A child has $2$ red, $3$ blue, and $4$ green cubes. How many color towers of height $8$ can be made, using exactly eight cubes and leaving one cube unused?",
+    "summaryZh": "现有红色方块 $2$ 个、蓝色 $3$ 个、绿色 $4$ 个。任选八个叠成高为 $8$ 的颜色塔并留下一个方块不用，共有多少种不同的颜色排列？",
+    "answer": "D. $1260$",
+    "answerZh": "D．$1260$",
+    "methods": [{"title":"Add the omitted cube on top","titleZh":"把未使用的方块加到塔顶","topics":[{"en":"Multiset permutations","zh":"多重集排列"},{"en":"Bijections","zh":"双射"}],"steps":["Given any height-$8$ tower, its color counts identify the unique unused cube; append that cube on top. Conversely, remove the top cube from any arrangement of all nine cubes. These operations are inverse.","Thus the desired towers correspond to permutations of all nine cubes with color multiplicities $2,3,4$.","The number is $\\dfrac{9!}{2!3!4!}=1260$."],"stepsZh":["对任意八层塔，其各色数量唯一确定未使用方块的颜色；把该方块放到顶端。反之，从任意九层排列去掉顶端即可。这两个操作互逆。","因此所求塔与全部九个方块的多重集排列一一对应，三种颜色的重数为 $2,3,4$。","排列数为 $\\dfrac{9!}{2!3!4!}=1260$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/17"
+  },
+  "amc10-2019a-q18": {
+    "summary": "For a positive integer base $k$, the repeating base-$k$ numeral $0.\\overline{23}_k$ equals the ordinary fraction $7/51$. Find $k$.",
+    "summaryZh": "对某个正整数进制 $k$，循环小数 $0.\\overline{23}_k$ 的十进制数值等于 $7/51$。求 $k$。",
+    "answer": "D. $16$",
+    "answerZh": "D．$16$",
+    "methods": [{"title":"Sum the base-$k$ geometric series","titleZh":"求进制展开的等比级数和","topics":[{"en":"Number bases","zh":"进位制"},{"en":"Geometric series","zh":"等比级数"}],"steps":["The expansion is $2k^{-1}+3k^{-2}+2k^{-3}+3k^{-4}+\\cdots$.","Grouping each pair gives $0.\\overline{23}_k=(2k+3)/(k^2-1)$.","Set $(2k+3)/(k^2-1)=7/51$. Then $7k^2-102k-160=0=(k-16)(7k+10)$, so the positive integer base is $k=16$."],"stepsZh":["其展开式为 $2k^{-1}+3k^{-2}+2k^{-3}+3k^{-4}+\\cdots$。","每两位分组并求等比级数和，得 $0.\\overline{23}_k=(2k+3)/(k^2-1)$。","令 $(2k+3)/(k^2-1)=7/51$，得到 $7k^2-102k-160=(k-16)(7k+10)=0$，故正整数进制 $k=16$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/18"
+  },
+  "amc10-2019a-q19": {
+    "summary": "Find the least value of $(x+1)(x+2)(x+3)(x+4)+2019$ over all real $x$.",
+    "summaryZh": "求实数 $x$ 变化时，$(x+1)(x+2)(x+3)(x+4)+2019$ 的最小值。",
+    "answer": "B. $2018$",
+    "answerZh": "B．$2018$",
+    "methods": [{"title":"Complete a square in the quartic","titleZh":"把四次式配成平方","topics":[{"en":"Difference of squares","zh":"平方差"},{"en":"Optimization","zh":"最值"}],"steps":["Pair the outer and inner factors: $(x+1)(x+4)=x^2+5x+4$ and $(x+2)(x+3)=x^2+5x+6$.","Their product is $(x^2+5x+5)^2-1$, so the whole expression is $(x^2+5x+5)^2+2018$.","The quadratic $x^2+5x+5$ has positive discriminant $5$, so it can equal $0$. Hence the minimum is $2018$."],"stepsZh":["将首尾与中间因式配对：$(x+1)(x+4)=x^2+5x+4$，$(x+2)(x+3)=x^2+5x+6$。","乘积为 $(x^2+5x+5)^2-1$，原式即 $(x^2+5x+5)^2+2018$。","二次式 $x^2+5x+5$ 的判别式为 $5>0$，可以取到 $0$，故最小值为 $2018$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/19"
+  },
+  "amc10-2019a-q20": {
+    "summary": "Place the numbers $1,2,\\ldots,9$ uniformly at random into a $3\\times3$ grid, one per cell. Find the probability that every row sum and every column sum is odd.",
+    "summaryZh": "把数字 $1,2,\\ldots,9$ 随机放入 $3\\times3$ 方格，每格一个。求每一行和每一列的数字和均为奇数的概率。",
+    "answer": "B. $\\dfrac1{14}$",
+    "answerZh": "B．$\\dfrac1{14}$",
+    "methods": [{"title":"Count the parity patterns","titleZh":"统计奇偶位置图案","topics":[{"en":"Parity","zh":"奇偶性"},{"en":"Permutations","zh":"排列"}],"steps":["There are five odd numbers and four even numbers. Every row and column must contain an odd number of odd entries.","With exactly five odd cells, the only possible pattern is one complete row together with one complete column, a plus shape of $5$ cells. There are $3\\cdot3=9$ such patterns.","For each pattern, the odd and even numbers can be assigned in $5!4!$ ways out of $9!$ total placements. Thus the probability is $9\\cdot5!4!/9!=1/14$."],"stepsZh":["共有五个奇数和四个偶数。每行、每列都必须含奇数个奇数。","在恰有五个奇数位置时，唯一结构是一整行与一整列的并集，即含五格的十字形；选择行列共有 $3\\cdot3=9$ 种。","每种图案中奇数与偶数分别有 $5!,4!$ 种排法，而总排法为 $9!$，故概率为 $9\\cdot5!4!/9!=1/14$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/20"
+  },
+  "amc10-2019a-q21": {
+    "summary": "A sphere of radius $6$ and center $O$ is tangent to all three sides of a spatial triangle with side lengths $15,15,24$. Find the perpendicular distance from $O$ to the plane of the triangle.",
+    "summaryZh": "一个半径为 $6$、圆心为 $O$ 的球与空间中一个边长为 $15,15,24$ 的三角形的三条边均相切。求 $O$ 到该三角形所在平面的垂直距离。",
+    "answer": "D. $2\\sqrt5$",
+    "answerZh": "D．$2\\sqrt5$",
+    "methods": [{"title":"Use the planar cross-section of the sphere","titleZh":"利用球与三角形平面的截圆","topics":[{"en":"Spheres and plane sections","zh":"球与平面截面"},{"en":"Triangle inradius","zh":"三角形内切圆半径"}],"steps":["The $15,15,24$ triangle has altitude $\\sqrt{15^2-12^2}=9$, area $108$, and semiperimeter $27$. Its inradius is $108/27=4$.","If $d$ is the distance from $O$ to the plane, the sphere cuts that plane in a circle of radius $\\sqrt{6^2-d^2}$. Because all three sides are tangent to the sphere, this section is the triangle's incircle.","Thus $\\sqrt{36-d^2}=4$, so $d^2=20$ and $d=2\\sqrt5$."],"stepsZh":["边长为 $15,15,24$ 的三角形高为 $\\sqrt{15^2-12^2}=9$，面积为 $108$，半周长为 $27$，故内切圆半径为 $108/27=4$。","设 $O$ 到平面距离为 $d$，球与该平面的截圆半径为 $\\sqrt{6^2-d^2}$。因三条边均与球相切，该截圆就是三角形的内切圆。","所以 $\\sqrt{36-d^2}=4$，得 $d^2=20$，即 $d=2\\sqrt5$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/21"
+  },
+  "amc10-2019a-q22": {
+    "summary": "A random number in $[0,1]$ is generated as follows: flip a fair coin; after heads, flip again and choose $0$ after heads or $1$ after tails; after an initial tails, choose uniformly from $[0,1]$. Generate independent $x,y$ this way. Find $P(|x-y|>1/2)$.",
+    "summaryZh": "按如下规则在 $[0,1]$ 中取随机数：先掷公平硬币；首次为正面时再掷一次，第二次正面取 $0$、反面取 $1$；首次为反面时在 $[0,1]$ 上均匀随机取值。独立生成 $x,y$，求 $P(|x-y|>1/2)$。",
+    "answer": "B. $\\dfrac7{16}$",
+    "answerZh": "B．$\\dfrac7{16}$",
+    "methods": [{"title":"Condition on discrete or uniform selection","titleZh":"按离散取值或均匀取值分类","topics":[{"en":"Conditional probability","zh":"条件概率"},{"en":"Geometric probability","zh":"几何概率"}],"steps":["Each number is endpoint-discrete with probability $1/2$ and uniform with probability $1/2$, so the four type pairs each have weight $1/4$.","If both are endpoints, the success probability is $1/2$. If exactly one is an endpoint, the uniform value lies more than $1/2$ away with probability $1/2$; the two mixed cases are identical.","If both are uniform, the region $|x-y|>1/2$ consists of two corner triangles of total area $1/4$. Therefore the answer is $\\tfrac14(\\tfrac12+\\tfrac12+\\tfrac12+\\tfrac14)=7/16$."],"stepsZh":["每个数以概率 $1/2$ 取端点、以概率 $1/2$ 均匀取值，因此四种类型组合的权重均为 $1/4$。","两者都取端点时，不同端点的概率为 $1/2$；恰有一个取端点时，均匀数落在相距超过 $1/2$ 的半区内，概率也为 $1/2$，两种混合情形相同。","两者都均匀时，单位正方形中 $|x-y|>1/2$ 的两个角三角形总面积为 $1/4$。故总概率为 $\\tfrac14(\\tfrac12+\\tfrac12+\\tfrac12+\\tfrac14)=7/16$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/22"
+  },
+  "amc10-2019a-q23": {
+    "summary": "Three children repeatedly say consecutive positive integers. Tadd says $1$ number, Todd the next $2$, Tucker the next $3$, then Tadd the next $4$, and so on; turns rotate among the three children and each turn is one number longer than the preceding turn. What is the $2019$th number spoken by Tadd?",
+    "summaryZh": "三名孩子轮流报连续正整数。Tadd 先报 $1$ 个数，Todd 报接下来的 $2$ 个，Tucker 报接下来的 $3$ 个，然后 Tadd 报接下来的 $4$ 个；此后仍按三人顺序轮换，且每轮比上一轮多报一个数。Tadd 报出的第 $2019$ 个数是多少？",
+    "answer": "C. $5979$",
+    "answerZh": "C．$5979$",
+    "methods": [{"title":"Locate Tadd's thirty-seventh turn","titleZh":"定位 Tadd 的第三十七轮","topics":[{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Triangular numbers","zh":"三角数"}],"steps":["Tadd's turn lengths are $1,4,7,\\ldots$. After $n$ of his turns he has said $\\sum_{i=1}^n(3i-2)=(3n^2-n)/2$ numbers.","For $n=36$ this is $1926$, and for $n=37$ it is $2035$. Thus his $2019$th number is the $2019-1926=93$rd number of his $37$th turn.","Before this turn, all turns of lengths $1$ through $108$ are complete, ending at $108\\cdot109/2=5886$. The requested number is $5886+93=5979$."],"stepsZh":["Tadd 各轮报数长度为 $1,4,7,\\ldots$。完成自己的前 $n$ 轮后，他共报了 $\\sum_{i=1}^n(3i-2)=(3n^2-n)/2$ 个数。","$n=36$ 时为 $1926$，$n=37$ 时为 $2035$，所以第 $2019$ 个是他第 $37$ 轮中的第 $2019-1926=93$ 个。","该轮前，长度 $1$ 至 $108$ 的所有轮次均已完成，最后一个数为 $108\\cdot109/2=5886$。故所求为 $5886+93=5979$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/23"
+  },
+  "amc10-2019a-q24": {
+    "summary": "Let $p,q,r$ be the distinct roots of $x^3-22x^2+80x-67$. Suppose $\\dfrac1{s^3-22s^2+80s-67}=\\dfrac A{s-p}+\\dfrac B{s-q}+\\dfrac C{s-r}$ away from the roots. Find $1/A+1/B+1/C$.",
+    "summaryZh": "设 $p,q,r$ 是 $x^3-22x^2+80x-67$ 的三个不同实根，并且对非根的 $s$ 有 $\\dfrac1{s^3-22s^2+80s-67}=\\dfrac A{s-p}+\\dfrac B{s-q}+\\dfrac C{s-r}$。求 $1/A+1/B+1/C$。",
+    "answer": "B. $244$",
+    "answerZh": "B．$244$",
+    "methods": [{"title":"Evaluate the partial fractions at the roots","titleZh":"在各根处计算部分分式系数","topics":[{"en":"Partial fractions","zh":"部分分式"},{"en":"Vieta's formulas","zh":"韦达定理"}],"steps":["Multiply by $(s-p)(s-q)(s-r)$ and set $s=p,q,r$. This gives $1/A=(p-q)(p-r)$ and the two cyclic analogues.","Adding and expanding yields $1/A+1/B+1/C=p^2+q^2+r^2-pq-pr-qr$.","Vieta gives $p+q+r=22$ and $pq+pr+qr=80$, so $p^2+q^2+r^2=22^2-2(80)=324$. The requested value is $324-80=244$."],"stepsZh":["等式两边乘 $(s-p)(s-q)(s-r)$，再分别令 $s=p,q,r$，得 $1/A=(p-q)(p-r)$ 以及另外两个循环式。","三式相加展开得 $1/A+1/B+1/C=p^2+q^2+r^2-pq-pr-qr$。","由韦达定理，$p+q+r=22$、$pq+pr+qr=80$，所以 $p^2+q^2+r^2=22^2-2(80)=324$。所求为 $324-80=244$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/24"
+  },
+  "amc10-2019a-q25": {
+    "summary": "For how many integers $n$ with $1\\le n\\le50$ is $\\dfrac{(n^2-1)!}{(n!)^n}$ an integer? Use $0!=1$.",
+    "summaryZh": "对 $1\\le n\\le50$ 的整数 $n$，有多少个使 $\\dfrac{(n^2-1)!}{(n!)^n}$ 为整数？约定 $0!=1$。",
+    "answer": "D. $34$",
+    "answerZh": "D．$34$",
+    "methods": [{"title":"Reduce to divisibility of $(n-1)!$","titleZh":"化为 $n$ 对 $(n-1)!$ 的整除条件","topics":[{"en":"Factorials","zh":"阶乘"},{"en":"Prime divisibility","zh":"素数整除性"}],"steps":["The number $(n^2)!/(n!)^{n+1}$ is an integer: it counts partitions of $n^2$ labeled objects into $n$ unlabeled groups of size $n$. Also $\\dfrac{(n^2-1)!}{(n!)^n}=\\dfrac{(n^2)!}{(n!)^{n+1}}\\cdot\\dfrac{n!}{n^2}$.","If $n\\mid(n-1)!$, then $n^2\\mid n!$, so the displayed factorization proves integrality. Every composite $n\\ne4$ satisfies this by factoring $n=ab$ with factors below $n$ (for a square $a^2\\ge9$, use $a$ and $2a$). Also $n=1$ works directly.","For prime $n=p$, the denominator contains $p^p$ while $(p^2-1)!$ contains only $p^{p-1}$ from multiples of $p$, so no prime works. Directly, $n=4$ also fails. There are $15$ primes at most $50$, hence $16$ failures and $50-16=34$ successes."],"stepsZh":["$(n^2)!/(n!)^{n+1}$ 是整数，因为它计数把 $n^2$ 个有标号对象分成 $n$ 个无标号、每组 $n$ 个的分法。又有 $\\dfrac{(n^2-1)!}{(n!)^n}=\\dfrac{(n^2)!}{(n!)^{n+1}}\\cdot\\dfrac{n!}{n^2}$。","若 $n\\mid(n-1)!$，则 $n^2\\mid n!$，由上式可知原式为整数。除 $4$ 外每个合数都可由小于 $n$ 的因子在 $(n-1)!$ 中配出；平方 $a^2\\ge9$ 时可用 $a$ 与 $2a$。$n=1$ 也直接成立。","若 $n=p$ 为素数，分母含 $p^p$，而 $(p^2-1)!$ 中由 $p$ 的倍数贡献的 $p$ 次数只有 $p-1$，故所有素数均失败；直接检验 $n=4$ 也失败。$50$ 以内有 $15$ 个素数，所以失败 $16$ 个，成功 $50-16=34$ 个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2019A/problem/25"
+  }
+}
