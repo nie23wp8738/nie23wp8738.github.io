@@ -1,0 +1,202 @@
+{
+  "amc12-2019a-q1": {
+    "summary": "A pizza of radius $4$ inches has area $N$ percent greater than a pizza of radius $3$ inches. Find the integer nearest to $N$.",
+    "summaryZh": "半径为 $4$ 英寸的披萨面积比半径为 $3$ 英寸的披萨大 $N\\%$。求最接近 $N$ 的整数。",
+    "answer": "E. $78$",
+    "answerZh": "E．$78$",
+    "methods": [{"title":"Compare the circle areas","titleZh":"比较圆的面积","topics":[{"en":"Circle area","zh":"圆的面积"},{"en":"Percent increase","zh":"百分比增长"}],"steps":["The areas are proportional to the squares of the radii, so the larger-to-smaller ratio is $4^2/3^2=16/9$.","The percent increase is $100(16/9-1)=700/9\\approx77.78$, whose nearest integer is $78$."],"stepsZh":["圆面积与半径平方成正比，因此大披萨与小披萨的面积比为 $4^2/3^2=16/9$。","增长百分比为 $100(16/9-1)=700/9\\approx77.78$，最接近的整数是 $78$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/1"
+  },
+  "amc12-2019a-q2": {
+    "summary": "Suppose $a$ is $150\\%$ of $b$. What percent of $a$ is $3b$?",
+    "summaryZh": "若 $a$ 是 $b$ 的 $150\\%$，则 $3b$ 是 $a$ 的百分之多少？",
+    "answer": "D. $200$",
+    "answerZh": "D．$200$",
+    "methods": [{"title":"Convert the ratio to a percentage","titleZh":"把比值化为百分数","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Ratios","zh":"比与比例"}],"steps":["The condition says $a=1.5b=3b/2$.","Hence $3b/a=3b/(3b/2)=2$, so $3b$ is $200\\%$ of $a$."],"stepsZh":["题设等价于 $a=1.5b=3b/2$。","于是 $3b/a=3b/(3b/2)=2$，所以 $3b$ 是 $a$ 的 $200\\%$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/2"
+  },
+  "amc12-2019a-q3": {
+    "summary": "A box contains $28,20,19,13,11,9$ balls of six respective colors. Balls are drawn without replacement. Find the minimum number of draws that guarantees at least $15$ balls of one color.",
+    "summaryZh": "盒中六种颜色的球数依次为 $28,20,19,13,11,9$。不放回抽取，至少抽多少个才能保证某一种颜色至少出现 $15$ 个？",
+    "answer": "B. $76$",
+    "answerZh": "B．$76$",
+    "methods": [{"title":"Maximise draws while avoiding fifteen","titleZh":"在避免出现十五个同色球时取最大值","topics":[{"en":"Pigeonhole principle","zh":"抽屉原理"},{"en":"Extremal reasoning","zh":"极值思想"}],"steps":["To avoid reaching $15$ of a color, at most $14$ may be drawn from each of the three colors having at least $15$ balls.","All balls of the smaller colors may also be drawn, giving $3(14)+13+11+9=75$ draws without a guarantee.","The next draw must make one of the three large colors reach $15$, so the minimum is $76$."],"stepsZh":["要避免某色达到 $15$ 个，球数不少于 $15$ 的三种颜色各最多抽 $14$ 个。","另外三种较少的球可全部抽出，因此仍不保证的最大抽取数为 $3(14)+13+11+9=75$。","再抽一个必使某种大类达到 $15$ 个，故答案为 $76$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/3"
+  },
+  "amc12-2019a-q4": {
+    "summary": "What is the greatest possible number of consecutive integers whose sum is $45$? Negative integers are allowed.",
+    "summaryZh": "若允许出现负整数，和为 $45$ 的连续整数列最多可以包含多少项？",
+    "answer": "D. $90$",
+    "answerZh": "D．$90$",
+    "methods": [{"title":"Construct the longest run and prove maximality","titleZh":"构造最长数列并证明最优","topics":[{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Divisibility","zh":"整除"}],"steps":["The integers from $-44$ through $44$ cancel in pairs and sum to $0$; adjoining $45$ produces $90$ consecutive integers with sum $45$.","If $L$ consecutive integers have sum $45$, then twice their sum equals $L$ times the sum of the first and last terms. Thus $L\\mid90$, so $L\\le90$.","The construction attains this bound, hence the answer is $90$."],"stepsZh":["从 $-44$ 到 $44$ 的整数两两抵消，和为 $0$；再接上 $45$，得到和为 $45$ 的 $90$ 个连续整数。","若另一个连续整数列有 $L$ 项且和为 $45$，则和的两倍等于 $L$ 乘首末项之和，所以 $L\\mid90$，从而 $L\\le90$。","上述构造达到此上界，故答案为 $90$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/4"
+  },
+  "amc12-2019a-q5": {
+    "summary": "Two lines of slopes $1/2$ and $2$ meet at $(2,2)$. Find the area of the triangle enclosed by these two lines and $x+y=10$.",
+    "summaryZh": "斜率分别为 $1/2$ 和 $2$ 的两条直线交于 $(2,2)$。求这两条直线与 $x+y=10$ 围成的三角形面积。",
+    "answer": "C. $6$",
+    "answerZh": "C．$6$",
+    "methods": [{"title":"Find the three vertices","titleZh":"求出三个顶点","topics":[{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Triangle area","zh":"三角形面积"}],"steps":["The two lines are $y=x/2+1$ and $y=2x-2$.","Their intersections with $x+y=10$ are $(6,4)$ and $(4,6)$, while their mutual intersection is $(2,2)$.","The segment between $(6,4)$ and $(4,6)$ has length $2\\sqrt2$ and its supporting line is $x+y=10$. The distance from $(2,2)$ to that line is $3\\sqrt2$, so the area is $\\tfrac12(2\\sqrt2)(3\\sqrt2)=6$."],"stepsZh":["两条直线分别为 $y=x/2+1$ 与 $y=2x-2$。","它们与 $x+y=10$ 的交点分别为 $(6,4)$、$(4,6)$，另一个顶点为 $(2,2)$。","前两点间距离为 $2\\sqrt2$，$(2,2)$ 到直线 $x+y=10$ 的距离为 $3\\sqrt2$，故面积为 $\\tfrac12(2\\sqrt2)(3\\sqrt2)=6$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/5"
+  },
+  "amc12-2019a-q6": {
+    "summary": "An infinite horizontal line $\\ell$ carries a periodic motif. Congruent axis-aligned squares alternate above and below $\\ell$, each sharing a horizontal side with $\\ell$. From the upper-right corner of every upper square a short segment slopes up-right; from the lower-left corner of every lower square a congruent segment slopes down-left. The motif repeats at equal intervals. Of these four transformation types, how many have a nonidentity example preserving the whole figure: rotation about a point on $\\ell$; translation parallel to $\\ell$; reflection in $\\ell$; reflection in a line perpendicular to $\\ell$?",
+    "summaryZh": "无限水平直线 $\\ell$ 上有周期图案：全等且边平行于坐标轴的正方形等距地在直线上下交替出现，每个正方形的一条水平边与 $\\ell$ 重合；每个上方正方形的右上角伸出一条向右上倾斜的短线段，每个下方正方形的左下角伸出一条全等的向左下倾斜线段。以下四类变换中，有多少类存在非恒等变换可使整个图形保持不变：绕 $\\ell$ 上一点旋转、沿 $\\ell$ 平移、关于 $\\ell$ 反射、关于垂直于 $\\ell$ 的直线反射？",
+    "answer": "C. $2$",
+    "answerZh": "C．$2$",
+    "methods": [{"title":"Test the four symmetries","titleZh":"逐一检验四类对称变换","topics":[{"en":"Rigid motions","zh":"刚体变换"},{"en":"Periodic symmetry","zh":"周期对称"}],"steps":["A translation by one full motif period preserves the figure.","A $180^\\circ$ rotation about the midpoint on $\\ell$ between a neighboring upper and lower square interchanges those squares and their slanted segments, so it also works.","Reflection in $\\ell$ or in a perpendicular line reverses the handed direction of the slanted segments, so neither reflection preserves the motif. Thus exactly $2$ types work."],"stepsZh":["沿 $\\ell$ 平移一个完整周期后图案不变。","绕相邻上下正方形之间位于 $\\ell$ 上的中点旋转 $180^\\circ$，正方形及倾斜短线段恰好互换，因此旋转也成立。","关于 $\\ell$ 或其垂线反射都会把倾斜短线段的方向反转，均不能保持图案。故共有 $2$ 类。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/6"
+  },
+  "amc12-2019a-q7": {
+    "summary": "Form a data set from every calendar date number in the twelve months of 2019: twelve copies each of $1$ through $28$, eleven copies each of $29$ and $30$, and seven copies of $31$. Let $\\mu$ be its mean, $M$ its median, and $d$ the median of all its modes. Determine the correct ordering of $d,\\mu,M$.",
+    "summaryZh": "把 2019 年十二个月中的每一个日期数字组成数据集：$1$ 至 $28$ 各出现 $12$ 次，$29,30$ 各出现 $11$ 次，$31$ 出现 $7$ 次。设均值为 $\\mu$、中位数为 $M$、所有众数的中位数为 $d$，判断三者的大小关系。",
+    "answer": "E. $d<\\mu<M$",
+    "answerZh": "E．$d<\\mu<M$",
+    "methods": [{"title":"Calculate the three statistics","titleZh":"分别计算三个统计量","topics":[{"en":"Mean","zh":"均值"},{"en":"Median and mode","zh":"中位数与众数"}],"steps":["The modes are $1,2,\\ldots,28$, so $d=(14+15)/2=14.5$.","The median is the $183$rd of $365$ entries. Values $1$ through $15$ occupy the first $180$ places, so $M=16$.","The total is $12(1+\\cdots+28)+11(29+30)+7(31)=5738$, hence $\\mu=5738/365\\approx15.72$. Therefore $d<\\mu<M$."],"stepsZh":["众数为 $1,2,\\ldots,28$，所以它们的中位数 $d=(14+15)/2=14.5$。","全体 $365$ 个数的中位数是第 $183$ 个。$1$ 至 $15$ 共占 $180$ 个位置，因此 $M=16$。","总和为 $12(1+\\cdots+28)+11(29+30)+7(31)=5738$，故 $\\mu=5738/365\\approx15.72$。所以 $d<\\mu<M$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/7"
+  },
+  "amc12-2019a-q8": {
+    "summary": "Four distinct lines in a plane determine exactly $N$ distinct points that lie on at least two of the lines. Find the sum of all possible values of $N$.",
+    "summaryZh": "平面内四条互不相同的直线恰有 $N$ 个点分别位于其中至少两条直线上。求 $N$ 所有可能取值之和。",
+    "answer": "D. $19$",
+    "answerZh": "D．$19$",
+    "methods": [{"title":"Classify intersection patterns","titleZh":"分类讨论交点结构","topics":[{"en":"Counting intersections","zh":"交点计数"},{"en":"Casework","zh":"分类讨论"}],"steps":["The values $0,1,3,4,5,6$ are attainable: use four parallel lines; four concurrent lines; three parallel plus a transversal; three concurrent plus another line; one parallel pair with no triple concurrence; or four lines in general position.","Exactly $2$ is impossible. After two nonparallel lines meet, any further distinct line either passes through their intersection, is parallel to one of them, or creates additional intersections; four distinct lines cannot leave exactly one more point.","Therefore the sum is $0+1+3+4+5+6=19$."],"stepsZh":["$0,1,3,4,5,6$ 均可实现：分别取四线平行、四线共点、三线平行另加截线、三线共点另加一线、恰有一对平行且无三线共点、四线一般位置。","$2$ 不可能。两条不平行直线产生一个交点后，新增直线要么通过该点、要么与其中一条平行、要么产生更多交点；四条互异直线无法让总数恰停在两个。","故所有可能值之和为 $0+1+3+4+5+6=19$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/8"
+  },
+  "amc12-2019a-q9": {
+    "summary": "Let $a_1=1$, $a_2=3/7$, and for $n\\ge3$ let $a_n=\\dfrac{a_{n-2}a_{n-1}}{2a_{n-2}-a_{n-1}}$. Write $a_{2019}=p/q$ in lowest terms and find $p+q$.",
+    "summaryZh": "设 $a_1=1$、$a_2=3/7$，且当 $n\\ge3$ 时 $a_n=\\dfrac{a_{n-2}a_{n-1}}{2a_{n-2}-a_{n-1}}$。将 $a_{2019}=p/q$ 写成最简分数，求 $p+q$。",
+    "answer": "E. $8078$",
+    "answerZh": "E．$8078$",
+    "methods": [{"title":"Turn reciprocals into an arithmetic sequence","titleZh":"把倒数化为等差数列","topics":[{"en":"Recurrence relations","zh":"递推数列"},{"en":"Arithmetic sequences","zh":"等差数列"}],"steps":["Taking reciprocals gives $1/a_n=2/a_{n-1}-1/a_{n-2}$, hence the first differences of $1/a_n$ are constant.","Thus $1/a_n$ is arithmetic with first term $1$ and common difference $7/3-1=4/3$.","So $1/a_{2019}=1+2018(4/3)=8075/3$, giving $a_{2019}=3/8075$ and $p+q=8078$."],"stepsZh":["两边取倒数得 $1/a_n=2/a_{n-1}-1/a_{n-2}$，所以数列 $1/a_n$ 的一阶差分不变。","因此 $1/a_n$ 是首项为 $1$、公差为 $7/3-1=4/3$ 的等差数列。","所以 $1/a_{2019}=1+2018(4/3)=8075/3$，从而 $a_{2019}=3/8075$，$p+q=8078$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/9"
+  },
+  "amc12-2019a-q10": {
+    "summary": "Inside a large circle lie $13$ unit circles, all intersections being tangencies. Their centers form five staggered horizontal rows containing $1,4,3,4,1$ circles; adjacent rows follow the triangular lattice, the top and bottom centers lie on a vertical diameter, and every outermost unit circle is internally tangent to the large circle. Find the area inside the large circle but outside all $13$ unit circles.",
+    "summaryZh": "一个大圆内放置 $13$ 个半径为 $1$ 的小圆，所有相交均为相切。小圆圆心按从上到下 $1,4,3,4,1$ 个排成五条水平错位行；相邻行的小圆按三角格相切，最上与最下小圆的圆心位于竖直直径上，最外层小圆均与大圆内切。求大圆内且所有小圆外区域的面积。",
+    "answer": "A. $4\\pi\\sqrt3$",
+    "answerZh": "A．$4\\pi\\sqrt3$",
+    "methods": [{"title":"Find the large radius from the triangular lattice","titleZh":"由三角格求大圆半径","topics":[{"en":"Tangent circles","zh":"相切圆"},{"en":"Area subtraction","zh":"面积作差"}],"steps":["The centers consist of one central point, six points at distance $2$, and six outer points in the gaps. An outer center is at distance $2\\sqrt3$ from the common center.","Since every small circle has radius $1$, the large circle has radius $R=2\\sqrt3+1$.","The required area is $\\pi R^2-13\\pi=\\pi(2\\sqrt3+1)^2-13\\pi=4\\pi\\sqrt3$."],"stepsZh":["圆心可看作一个中心点、距中心 $2$ 的六个点，以及位于外层缺口的六个点。外层圆心距共同中心为 $2\\sqrt3$。","每个小圆半径为 $1$，所以大圆半径为 $R=2\\sqrt3+1$。","所求面积为 $\\pi R^2-13\\pi=\\pi(2\\sqrt3+1)^2-13\\pi=4\\pi\\sqrt3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/10"
+  },
+  "amc12-2019a-q11": {
+    "summary": "For a positive integer base $k$, the base-ten fraction $7/51$ has repeating base-$k$ representation $0.\\overline{23}_k=0.232323\\ldots_k$. Find $k$.",
+    "summaryZh": "对某个正整数进制 $k$，十进制分数 $7/51$ 的 $k$ 进制循环表示为 $0.\\overline{23}_k=0.232323\\ldots_k$。求 $k$。",
+    "answer": "D. $16$",
+    "answerZh": "D．$16$",
+    "methods": [{"title":"Sum the repeating geometric series","titleZh":"求循环小数对应的等比级数","topics":[{"en":"Number bases","zh":"进位制"},{"en":"Geometric series","zh":"等比级数"}],"steps":["One repeating block has value $(2k+3)/k^2$, and the later blocks scale by $k^{-2}$, so $0.\\overline{23}_k=(2k+3)/(k^2-1)$.","Set $(2k+3)/(k^2-1)=7/51$. Clearing denominators gives $7k^2-102k-160=0$.","The positive root is $k=(102+122)/14=16$; the other root is negative."],"stepsZh":["首个循环节的值为 $(2k+3)/k^2$，以后每个循环节乘 $k^{-2}$，故 $0.\\overline{23}_k=(2k+3)/(k^2-1)$。","令 $(2k+3)/(k^2-1)=7/51$，交叉相乘得 $7k^2-102k-160=0$。","正根为 $k=(102+122)/14=16$，另一个根为负数。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/11"
+  },
+  "amc12-2019a-q12": {
+    "summary": "Positive reals $x\\ne1$ and $y\\ne1$ satisfy $\\log_2x=\\log_y16$ and $xy=64$. Find $\\left(\\log_2(x/y)\\right)^2$.",
+    "summaryZh": "正实数 $x\\ne1,y\\ne1$ 满足 $\\log_2x=\\log_y16$ 且 $xy=64$。求 $\\left(\\log_2(x/y)\\right)^2$。",
+    "answer": "B. $20$",
+    "answerZh": "B．$20$",
+    "methods": [{"title":"Introduce base-two logarithms","titleZh":"引入以二为底的对数","topics":[{"en":"Logarithms","zh":"对数"},{"en":"Symmetric identities","zh":"对称恒等式"}],"steps":["Let $a=\\log_2x$ and $b=\\log_2y$. Then $\\log_y16=4/b$, so the first condition gives $ab=4$.","The product condition gives $a+b=\\log_2(xy)=6$.","Therefore $\\left(\\log_2(x/y)\\right)^2=(a-b)^2=(a+b)^2-4ab=36-16=20$."],"stepsZh":["令 $a=\\log_2x,b=\\log_2y$。因 $\\log_y16=4/b$，第一个条件给出 $ab=4$。","由 $xy=64$ 得 $a+b=\\log_2(xy)=6$。","因此 $\\left(\\log_2(x/y)\\right)^2=(a-b)^2=(a+b)^2-4ab=36-16=20$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/12"
+  },
+  "amc12-2019a-q13": {
+    "summary": "Color each integer $2,3,\\ldots,9$ red, green, or blue so that every number has a color different from each of its proper divisors that also lies in this set. How many colorings are possible?",
+    "summaryZh": "把整数 $2,3,\\ldots,9$ 各涂成红、绿、蓝三色之一，要求每个数与该集合中它的每个真因数颜色不同。共有多少种涂色？",
+    "answer": "E. $432$",
+    "answerZh": "E．$432$",
+    "methods": [{"title":"Count by the colors of 2 and 3","titleZh":"按 2 与 3 的颜色分类计数","topics":[{"en":"Graph coloring","zh":"图着色"},{"en":"Casework","zh":"分类计数"}],"steps":["The constraints are the edges $2$--$4$, $2$--$6$, $2$--$8$, $3$--$6$, $3$--$9$, and $4$--$8$. The primes $5$ and $7$ are free, contributing $3^2=9$.","If $2$ and $3$ have the same color, there are $3$ choices for that color; then $4,6,9$ each have $2$ choices and $8$ is forced after $4$. This gives $3\\cdot2^3=24$.","If $2$ and $3$ have different colors, there are $3\\cdot2=6$ ordered choices; $4$ has $2$ choices, $6$ is forced, $9$ has $2$ choices, and $8$ is forced. This gives $6\\cdot2\\cdot2=24$.","Multiplying the $48$ constrained colorings by the $9$ choices for $5,7$ gives $48\\cdot9=432$."],"stepsZh":["限制关系为边 $2$--$4$、$2$--$6$、$2$--$8$、$3$--$6$、$3$--$9$、$4$--$8$。素数 $5,7$ 可任意涂色，贡献 $3^2=9$。","若 $2,3$ 同色，该颜色有 $3$ 种；随后 $4,6,9$ 各有 $2$ 种选择，而 $4$ 确定后 $8$ 被迫取第三色，共 $3\\cdot2^3=24$ 种。","若 $2,3$ 异色，有 $3\\cdot2=6$ 个有序选择；$4$ 有 $2$ 种，$6$ 被迫取第三色，$9$ 有 $2$ 种，$8$ 也被迫确定，共 $6\\cdot2\\cdot2=24$ 种。","受限部分共有 $48$ 种，再乘 $5,7$ 的 $9$ 种选择，得 $48\\cdot9=432$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/13"
+  },
+  "amc12-2019a-q14": {
+    "summary": "For a complex number $c$, the polynomial $P(x)=(x^2-2x+2)(x^2-cx+4)(x^2-4x+8)$ has exactly four distinct roots. Find $|c|$.",
+    "summaryZh": "对某个复数 $c$，多项式 $P(x)=(x^2-2x+2)(x^2-cx+4)(x^2-4x+8)$ 恰有四个不同的根。求 $|c|$。",
+    "answer": "E. $\\sqrt{10}$",
+    "answerZh": "E．$\\sqrt{10}$",
+    "methods": [{"title":"Reuse the four existing roots","titleZh":"让中间因式复用已有四个根","topics":[{"en":"Complex roots","zh":"复根"},{"en":"Vieta's formulas","zh":"韦达定理"}],"steps":["The first and third factors have roots $1\\pm i$ and $2\\pm2i$, four distinct numbers.","For the product to have only four distinct roots, both roots of $x^2-cx+4$ must be chosen from these four. Their product must be $4$; one valid pair is $1+i$ and $2-2i$, and the conjugate pairing gives the conjugate value of $c$.","Thus $c=(1+i)+(2-2i)=3-i$ or $3+i$, and in either case $|c|=\\sqrt{3^2+1^2}=\\sqrt{10}$."],"stepsZh":["第一、第三个因式的根分别为 $1\\pm i$ 与 $2\\pm2i$，共四个不同的数。","要使整个乘积只有四个不同根，$x^2-cx+4$ 的两个根必须从这四个数中选取，且乘积为 $4$。可取 $1+i$ 与 $2-2i$；共轭配对给出共轭的 $c$。","所以 $c=(1+i)+(2-2i)=3-i$ 或 $3+i$，两种情况下均有 $|c|=\\sqrt{3^2+1^2}=\\sqrt{10}$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/14"
+  },
+  "amc12-2019a-q15": {
+    "summary": "Positive reals $a,b$ satisfy $\\sqrt{\\log a}+\\sqrt{\\log b}+\\log\\sqrt a+\\log\\sqrt b=100$, where every displayed term is a positive integer and $\\log$ is base $10$. Find $ab$.",
+    "summaryZh": "正实数 $a,b$ 满足 $\\sqrt{\\log a}+\\sqrt{\\log b}+\\log\\sqrt a+\\log\\sqrt b=100$，其中四项均为正整数，$\\log$ 表示常用对数。求 $ab$。",
+    "answer": "D. $10^{164}$",
+    "answerZh": "D．$10^{164}$",
+    "methods": [{"title":"Reduce to triangular numbers","titleZh":"化为三角数方程","topics":[{"en":"Logarithms","zh":"对数"},{"en":"Diophantine equations","zh":"丢番图方程"}],"steps":["Let $p=\\sqrt{\\log a}$ and $q=\\sqrt{\\log b}$. Then $\\log\\sqrt a=p^2/2$ and $\\log\\sqrt b=q^2/2$. Since all four terms are positive integers, $p,q$ are positive even integers.","Write $p=2m,q=2n$. Dividing the given equation by $2$ yields $m(m+1)+n(n+1)=50$.","For positive integers with $m(m+1)<50$, the values are $2,6,12,20,30,42$; the only pair summing to $50$ is $20+30$, so $\\{m,n\\}=\\{4,5\\}$.","Hence $\\log(ab)=p^2+q^2=4(4^2+5^2)=164$, and $ab=10^{164}$."],"stepsZh":["令 $p=\\sqrt{\\log a},q=\\sqrt{\\log b}$，则 $\\log\\sqrt a=p^2/2$、$\\log\\sqrt b=q^2/2$。四项均为正整数，因此 $p,q$ 均为正偶数。","写成 $p=2m,q=2n$。原方程除以 $2$ 后得到 $m(m+1)+n(n+1)=50$。","对满足 $m(m+1)<50$ 的正整数，可能值为 $2,6,12,20,30,42$；只有 $20+30=50$，故 $\\{m,n\\}=\\{4,5\\}$。","于是 $\\log(ab)=p^2+q^2=4(4^2+5^2)=164$，所以 $ab=10^{164}$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/15"
+  },
+  "amc12-2019a-q16": {
+    "summary": "Place $1,2,\\ldots,9$ uniformly at random in a $3\\times3$ grid, using each number once. Find the probability that every row sum and every column sum is odd.",
+    "summaryZh": "把 $1,2,\\ldots,9$ 随机放入 $3\\times3$ 方格，每个数恰用一次。求每一行与每一列的和均为奇数的概率。",
+    "answer": "B. $\\dfrac1{14}$",
+    "answerZh": "B．$\\dfrac1{14}$",
+    "methods": [{"title":"Count the parity patterns","titleZh":"统计奇偶位置图案","topics":[{"en":"Parity","zh":"奇偶性"},{"en":"Probability by counting","zh":"古典概型"}],"steps":["There are five odd and four even numbers. Each row and column must contain an odd number of odd entries.","The three row counts are each $1$ or $3$ and total $5$, so one row contains three odds and the other two contain one each. The same holds for columns. Consequently the odd cells are exactly one full row together with one full column, a five-cell plus shape.","There are $3\\cdot3=9$ choices of the full row and column. For each, the odd numbers can be permuted in $5!$ ways and the evens in $4!$ ways.","The probability is $9\\cdot5!\\cdot4!/9!=1/14$."],"stepsZh":["共有五个奇数和四个偶数。每行、每列都必须含奇数个奇数。","三行中的奇数个数均为 $1$ 或 $3$，总和为 $5$，所以恰有一行含三个奇数，另两行各含一个；列也同理。因此奇数位置恰为一整行与一整列的并，即五格十字形。","完整行与完整列各有 $3$ 种选择，共 $9$ 种位置图案。每种图案内五个奇数有 $5!$ 种排列，四个偶数有 $4!$ 种排列。","所求概率为 $9\\cdot5!\\cdot4!/9!=1/14$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/16"
+  },
+  "amc12-2019a-q17": {
+    "summary": "Let $s_k$ be the sum of the $k$th powers of the roots of $x^3-5x^2+8x-13$. Real numbers $a,b,c$ satisfy $s_{k+1}=as_k+bs_{k-1}+cs_{k-2}$ for every $k\\ge2$. Find $a+b+c$.",
+    "summaryZh": "设 $s_k$ 为多项式 $x^3-5x^2+8x-13$ 各根的 $k$ 次幂之和。实数 $a,b,c$ 满足对每个 $k\\ge2$，$s_{k+1}=as_k+bs_{k-1}+cs_{k-2}$。求 $a+b+c$。",
+    "answer": "D. $10$",
+    "answerZh": "D．$10$",
+    "methods": [{"title":"Use the equation satisfied by each root","titleZh":"利用每个根满足的多项式方程","topics":[{"en":"Polynomial roots","zh":"多项式根"},{"en":"Power-sum recurrence","zh":"幂和递推"}],"steps":["Every root $r$ satisfies $r^3=5r^2-8r+13$.","Multiplying by $r^{k-2}$ gives $r^{k+1}=5r^k-8r^{k-1}+13r^{k-2}$.","Sum over all three roots: $s_{k+1}=5s_k-8s_{k-1}+13s_{k-2}$. Thus $(a,b,c)=(5,-8,13)$ and $a+b+c=10$."],"stepsZh":["每个根 $r$ 都满足 $r^3=5r^2-8r+13$。","两边乘 $r^{k-2}$，得到 $r^{k+1}=5r^k-8r^{k-1}+13r^{k-2}$。","对三个根求和可得 $s_{k+1}=5s_k-8s_{k-1}+13s_{k-2}$，故 $(a,b,c)=(5,-8,13)$，$a+b+c=10$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/17"
+  },
+  "amc12-2019a-q18": {
+    "summary": "A sphere centered at $O$ has radius $6$. A triangle of side lengths $15,15,24$ lies in space, and each of its three side-lines is tangent to the sphere. Find the distance from $O$ to the plane of the triangle.",
+    "summaryZh": "以 $O$ 为球心、半径为 $6$ 的球与空间中一个边长为 $15,15,24$ 的三角形三条边所在直线均相切。求 $O$ 到三角形所在平面的距离。",
+    "answer": "D. $2\\sqrt5$",
+    "answerZh": "D．$2\\sqrt5$",
+    "methods": [{"title":"Use the planar cross-section","titleZh":"利用球与平面的截圆","topics":[{"en":"Sphere cross-sections","zh":"球的截面"},{"en":"Triangle inradius","zh":"三角形内切圆半径"}],"steps":["If the distance from $O$ to the plane is $d$, the sphere cuts the plane in a circle of radius $\\sqrt{6^2-d^2}$. Because the three side-lines are tangent to the sphere, this circle is the triangle's incircle.","The isosceles triangle has altitude $\\sqrt{15^2-12^2}=9$, area $24\\cdot9/2=108$, and semiperimeter $27$. Its inradius is $108/27=4$.","Thus $\\sqrt{36-d^2}=4$, so $d^2=20$ and $d=2\\sqrt5$."],"stepsZh":["设 $O$ 到平面的距离为 $d$，则球与该平面的截圆半径为 $\\sqrt{6^2-d^2}$。因三条边所在直线均与球相切，该截圆就是三角形的内切圆。","等腰三角形的高为 $\\sqrt{15^2-12^2}=9$，面积为 $24\\cdot9/2=108$，半周长为 $27$，故内切圆半径为 $108/27=4$。","所以 $\\sqrt{36-d^2}=4$，得到 $d^2=20$，即 $d=2\\sqrt5$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/18"
+  },
+  "amc12-2019a-q19": {
+    "summary": "Triangle $ABC$ has integer side lengths and $\\cos A=11/16$, $\\cos B=7/8$, $\\cos C=-1/4$. Find its least possible perimeter.",
+    "summaryZh": "三角形 $ABC$ 的边长均为整数，且 $\\cos A=11/16$、$\\cos B=7/8$、$\\cos C=-1/4$。求其最小可能周长。",
+    "answer": "A. $9$",
+    "answerZh": "A．$9$",
+    "methods": [{"title":"Recover the side ratio from the sines","titleZh":"由正弦求边长比","topics":[{"en":"Law of sines","zh":"正弦定理"},{"en":"Integer scaling","zh":"整数比例"}],"steps":["The angles lie in $(0,\\pi)$, so their sines are positive: $\\sin A=3\\sqrt{15}/16$, $\\sin B=2\\sqrt{15}/16$, and $\\sin C=4\\sqrt{15}/16$.","By the sine rule, the opposite side lengths are in the ratio $3:2:4$.","The primitive integer triple is $(3,2,4)$, which satisfies the triangle inequality. Every other integer realization is a positive integer multiple, so the least perimeter is $3+2+4=9$."],"stepsZh":["三个角均在 $(0,\\pi)$ 内，故正弦为正：$\\sin A=3\\sqrt{15}/16$、$\\sin B=2\\sqrt{15}/16$、$\\sin C=4\\sqrt{15}/16$。","由正弦定理，对边边长之比为 $3:2:4$。","最简整数边长为 $(3,2,4)$，且满足三角不等式；其他整数解均为其正整数倍，所以最小周长为 $3+2+4=9$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/19"
+  },
+  "amc12-2019a-q20": {
+    "summary": "A random number in $[0,1]$ is generated as follows. Flip a fair coin: after heads, flip again and output $0$ for heads or $1$ for tails; after tails, choose uniformly from $[0,1]$. Generate independent $x,y$ this way. Find $P(|x-y|>1/2)$.",
+    "summaryZh": "按如下规则在 $[0,1]$ 中生成随机数：先掷公平硬币；若正面，再掷一次，正面输出 $0$、反面输出 $1$；若第一次为反面，则在 $[0,1]$ 上均匀选取。独立生成 $x,y$，求 $P(|x-y|>1/2)$。",
+    "answer": "B. $\\dfrac7{16}$",
+    "answerZh": "B．$\\dfrac7{16}$",
+    "methods": [{"title":"Condition on the three component types","titleZh":"按三种分布成分分类","topics":[{"en":"Mixture distributions","zh":"混合分布"},{"en":"Geometric probability","zh":"几何概率"}],"steps":["Each generated value equals $0$ with probability $1/4$, equals $1$ with probability $1/4$, and is uniform on $[0,1]$ with probability $1/2$.","The ordered point pairs $(0,1)$ and $(1,0)$ always qualify and together contribute $2(1/4)^2=2/16$.","There are four ordered point-versus-uniform types. Each has type probability $(1/4)(1/2)$ and conditional success probability $1/2$, so together they contribute $4/16$.","For two uniforms, the successful region consists of two right triangles of total area $1/4$; after multiplying by the type probability $1/4$, this contributes $1/16$. The total is $(2+4+1)/16=7/16$."],"stepsZh":["每个随机数以概率 $1/4$ 等于 $0$，以概率 $1/4$ 等于 $1$，以概率 $1/2$ 服从 $[0,1]$ 上的均匀分布。","有序点对 $(0,1),(1,0)$ 必定满足条件，共贡献 $2(1/4)^2=2/16$。","点值与均匀变量共有四种有序类型。每种类型概率为 $(1/4)(1/2)$，条件成功概率为 $1/2$，合计贡献 $4/16$。","两者均匀时，单位正方形内成功区域为两个直角三角形，总面积 $1/4$；再乘该类型概率 $1/4$，贡献 $1/16$。总概率为 $(2+4+1)/16=7/16$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/20"
+  },
+  "amc12-2019a-q21": {
+    "summary": "Let $z=(1+i)/\\sqrt2$. Evaluate $\\left(\\sum_{k=1}^{12}z^{k^2}\\right)\\left(\\sum_{k=1}^{12}z^{-k^2}\\right)$.",
+    "summaryZh": "设 $z=(1+i)/\\sqrt2$。计算 $\\left(\\sum_{k=1}^{12}z^{k^2}\\right)\\left(\\sum_{k=1}^{12}z^{-k^2}\\right)$。",
+    "answer": "C. $36$",
+    "answerZh": "C．$36$",
+    "methods": [{"title":"Reduce the square exponents modulo eight","titleZh":"把平方指数模八化简","topics":[{"en":"Complex roots of unity","zh":"复数单位根"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["Since $z=e^{i\\pi/4}$, its powers have period $8$, so $z^{k^2}$ depends only on $k^2\\pmod8$.","For $1\\le k\\le12$, the residue is $1$ six times, $4$ three times, and $0$ three times. Therefore the first sum is $6z+3(-1)+3(1)=6z$.","Similarly the second sum is $6z^{-1}$. Their product is $6z\\cdot6z^{-1}=36$."],"stepsZh":["因为 $z=e^{i\\pi/4}$，其幂以 $8$ 为周期，所以 $z^{k^2}$ 只取决于 $k^2\\pmod8$。","当 $1\\le k\\le12$ 时，余数 $1$ 出现六次，$4$ 出现三次，$0$ 出现三次。因此第一项和为 $6z+3(-1)+3(1)=6z$。","同理第二项和为 $6z^{-1}$，乘积为 $6z\\cdot6z^{-1}=36$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/21"
+  },
+  "amc12-2019a-q22": {
+    "summary": "Concentric circles $\\omega,\\gamma$ centered at $O$ have radii $20,17$. An equilateral triangle $ABC$ lies inside $\\omega$ and outside $\\gamma$, with $A$ on $\\omega$ and line $BC$ tangent to $\\gamma$. If $P=AO\\cap BC$ and $BP/CP=3$, write $AB=m/\\sqrt n-p/\\sqrt q$ with the stated coprimality conditions and find $m+n+p+q$.",
+    "summaryZh": "同心圆 $\\omega,\\gamma$ 的圆心为 $O$，半径分别为 $20,17$。等边三角形 $ABC$ 位于 $\\omega$ 内、$\\gamma$ 外，$A$ 在 $\\omega$ 上，直线 $BC$ 与 $\\gamma$ 相切。若 $P=AO\\cap BC$ 且 $BP/CP=3$，把 $AB$ 写成 $m/\\sqrt n-p/\\sqrt q$（满足题设互素条件），求 $m+n+p+q$。",
+    "answer": "E. $130$",
+    "answerZh": "E．$130$",
+    "methods": [{"title":"Use coordinates at the tangent point","titleZh":"以切线交点建立坐标","topics":[{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Equilateral triangles","zh":"等边三角形"}],"steps":["Let $s=AB$ and put $P=(0,0)$ with $BC$ on the $x$-axis. Since $BP:CP=3:1$, take $B=(-3s/4,0)$ and $C=(s/4,0)$. The equilateral apex is $A=(-s/4,s\\sqrt3/2)$, so $|A|=s\\sqrt{13}/4$.","Because $P,O,A$ are collinear, write $O=tA$. Tangency to $BC$ gives $|t|s\\sqrt3/2=17$, hence $|t|s=34/\\sqrt3$.","Also $A$ lies on the radius-$20$ circle, so $AO=|t-1||A|=20$ and $|t-1|s=80/\\sqrt{13}$.","The valid configuration has $O$ and $A$ on opposite sides of $P$, so $|t-1|s=s+|t|s$. Therefore $s=80/\\sqrt{13}-34/\\sqrt3$, and $m+n+p+q=80+13+34+3=130$."],"stepsZh":["令 $s=AB$，取 $P=(0,0)$ 且 $BC$ 为 $x$ 轴。由 $BP:CP=3:1$，可设 $B=(-3s/4,0)$、$C=(s/4,0)$。等边三角形顶点为 $A=(-s/4,s\\sqrt3/2)$，故 $|A|=s\\sqrt{13}/4$。","因 $P,O,A$ 共线，写成 $O=tA$。直线 $BC$ 与半径 $17$ 的圆相切，故 $|t|s\\sqrt3/2=17$，即 $|t|s=34/\\sqrt3$。","又因 $A$ 在半径 $20$ 的圆上，$AO=|t-1||A|=20$，所以 $|t-1|s=80/\\sqrt{13}$。","有效图形中 $O,A$ 位于 $P$ 两侧，故 $|t-1|s=s+|t|s$。于是 $s=80/\\sqrt{13}-34/\\sqrt3$，从而 $m+n+p+q=80+13+34+3=130$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/22"
+  },
+  "amc12-2019a-q23": {
+    "summary": "Define $a\\diamond b=a^{\\log_7b}$ and $a\\heartsuit b=a^{1/\\log_7b}$. Let $a_3=3\\heartsuit2$ and $a_n=(n\\heartsuit(n-1))\\diamond a_{n-1}$ for $n\\ge4$. Find the nearest integer to $\\log_7(a_{2019})$.",
+    "summaryZh": "定义 $a\\diamond b=a^{\\log_7b}$、$a\\heartsuit b=a^{1/\\log_7b}$。设 $a_3=3\\heartsuit2$，且对 $n\\ge4$，$a_n=(n\\heartsuit(n-1))\\diamond a_{n-1}$。求最接近 $\\log_7(a_{2019})$ 的整数。",
+    "answer": "D. $11$",
+    "answerZh": "D．$11$",
+    "methods": [{"title":"Apply logarithms and telescope","titleZh":"取对数并作连乘消去","topics":[{"en":"Logarithms","zh":"对数"},{"en":"Telescoping products","zh":"连乘消去"}],"steps":["Write $L(x)=\\log_7x$. Then $L(a\\diamond b)=L(a)L(b)$ and $L(a\\heartsuit b)=L(a)/L(b)$.","Thus $L(a_3)=L(3)/L(2)$ and $L(a_n)=\\frac{L(n)}{L(n-1)}L(a_{n-1})$.","The product telescopes: $L(a_N)=\\frac{L(3)}{L(2)}\\prod_{n=4}^N\\frac{L(n)}{L(n-1)}=L(N)/L(2)=\\log_2N$.","Hence $\\log_7(a_{2019})=\\log_2(2019)$. Since $2^{10}=1024<2019<2048=2^{11}$ and it is very close to $2^{11}$, this value is about $10.98$ and rounds to $11$."],"stepsZh":["记 $L(x)=\\log_7x$，则 $L(a\\diamond b)=L(a)L(b)$，且 $L(a\\heartsuit b)=L(a)/L(b)$。","所以 $L(a_3)=L(3)/L(2)$，并且 $L(a_n)=\\frac{L(n)}{L(n-1)}L(a_{n-1})$。","连乘消去得 $L(a_N)=\\frac{L(3)}{L(2)}\\prod_{n=4}^N\\frac{L(n)}{L(n-1)}=L(N)/L(2)=\\log_2N$。","因此 $\\log_7(a_{2019})=\\log_2(2019)$。因 $2^{10}=1024<2019<2048=2^{11}$ 且 $2019$ 很接近 $2048$，其值约为 $10.98$，四舍五入得 $11$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/23"
+  },
+  "amc12-2019a-q24": {
+    "summary": "For how many integers $n$ with $1\\le n\\le50$ is $\\dfrac{(n^2-1)!}{(n!)^n}$ an integer? Use $0!=1$.",
+    "summaryZh": "对 $1\\le n\\le50$ 的整数 $n$，有多少个使 $\\dfrac{(n^2-1)!}{(n!)^n}$ 为整数？约定 $0!=1$。",
+    "answer": "D. $34$",
+    "answerZh": "D．$34$",
+    "methods": [{"title":"Compare prime valuations","titleZh":"比较各素数的指数","topics":[{"en":"Legendre's formula","zh":"勒让德公式"},{"en":"Prime powers","zh":"素数幂"}],"steps":["For a prime $p\\le n$, the excess exponent in the numerator is $D_p=\\sum_{j\\ge1}\\left(\\lfloor(n^2-1)/p^j\\rfloor-n\\lfloor n/p^j\\rfloor\\right)$. If $r_j$ is the remainder of $n$ modulo $p^j$, the $j$th summand equals $\\lfloor(nr_j-1)/p^j\\rfloor$.","Let $a=v_p(n)$. The first $a$ summands are $-1$. If $n=p^am$ with $m\\ge2$, the next summand supplies at least $a$ and all later summands are nonnegative; if $a=0$, all summands are nonnegative. Thus failure can occur only when $n$ is a power of $p$.","For $n=p^a$, Legendre's formula reduces integrality to $p^a-1\\ge2a(p-1)$. Among prime powers at most $50$, this inequality fails exactly for $a=1$ (all primes) and for $n=2^2=4$.","There are $15$ primes at most $50$, so $16$ values fail and $50-16=34$ values work."],"stepsZh":["对素数 $p\\le n$，分子中 $p$ 的指数减去分母中的指数为 $D_p=\\sum_{j\\ge1}\\left(\\lfloor(n^2-1)/p^j\\rfloor-n\\lfloor n/p^j\\rfloor\\right)$。若 $r_j$ 是 $n$ 除以 $p^j$ 的余数，则第 $j$ 项等于 $\\lfloor(nr_j-1)/p^j\\rfloor$。","令 $a=v_p(n)$。前 $a$ 项均为 $-1$。若 $n=p^am$ 且 $m\\ge2$，下一项至少补回 $a$，以后各项均非负；若 $a=0$，所有项本来就非负。因此只有当 $n$ 是 $p$ 的幂时才可能失败。","当 $n=p^a$ 时，勒让德公式把整除条件化为 $p^a-1\\ge2a(p-1)$。在不超过 $50$ 的素数幂中，该不等式恰在 $a=1$（即所有素数）以及 $n=2^2=4$ 时失败。","$50$ 以内有 $15$ 个素数，因此失败 $16$ 个，成功数为 $50-16=34$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/24"
+  },
+  "amc12-2019a-q25": {
+    "summary": "Triangle $A_0B_0C_0$ has angles $59.999^\\circ,60^\\circ,60.001^\\circ$. For each $n\\ge1$, let $A_n,B_n,C_n$ be the feet of the three altitudes of triangle $A_{n-1}B_{n-1}C_{n-1}$. Find the least positive $n$ for which triangle $A_nB_nC_n$ is obtuse.",
+    "summaryZh": "三角形 $A_0B_0C_0$ 的三个角为 $59.999^\\circ,60^\\circ,60.001^\\circ$。对每个 $n\\ge1$，令 $A_n,B_n,C_n$ 分别为三角形 $A_{n-1}B_{n-1}C_{n-1}$ 三条高的垂足。求使三角形 $A_nB_nC_n$ 首次成为钝角三角形的最小正整数 $n$。",
+    "answer": "E. $15$",
+    "answerZh": "E．$15$",
+    "methods": [{"title":"Track deviations from sixty degrees","titleZh":"追踪各角偏离六十度的量","topics":[{"en":"Orthic triangles","zh":"垂足三角形"},{"en":"Recurrence","zh":"递推"}],"steps":["For an acute triangle with an angle $\\alpha$, the corresponding angle of its orthic triangle is $180^\\circ-2\\alpha$.","Write $\\alpha=60^\\circ+x$. The new angle is $60^\\circ-2x$, so at every step each deviation from $60^\\circ$ is multiplied by $-2$.","The initial nonzero deviations have magnitude $0.001^\\circ$. After $n$ steps the largest deviation has magnitude $0.001\\cdot2^n$ degrees. The triangle is obtuse exactly when the positive deviation first exceeds $30^\\circ$.","Thus we need $2^n>30000$. Since $2^{14}=16384$ and $2^{15}=32768$, the least such $n$ is $15$. At step $14$ all angles are still acute, so no earlier stopping is hidden."],"stepsZh":["若原三角形为锐角三角形，原角 $\\alpha$ 在垂足三角形中对应的角为 $180^\\circ-2\\alpha$。","写成 $\\alpha=60^\\circ+x$，新角为 $60^\\circ-2x$，所以每一步都会把偏离 $60^\\circ$ 的量乘以 $-2$。","初始非零偏差的绝对值为 $0.001^\\circ$。经过 $n$ 步，最大偏差绝对值为 $0.001\\cdot2^n$ 度；当正偏差首次超过 $30^\\circ$ 时出现钝角。","因此需 $2^n>30000$。由于 $2^{14}=16384$、$2^{15}=32768$，最小的 $n$ 为 $15$。第 $14$ 步所有角仍为锐角，所以递推在此前始终适用。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2019A/problem/25"
+  }
+}
