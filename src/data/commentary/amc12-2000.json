@@ -1,0 +1,177 @@
+{
+  "amc12-2000-q1": {
+    "summary":"Distinct positive integers $I,M,O$ satisfy $IMO=2001$. Find the largest possible value of $I+M+O$. Options: A $23$, B $55$, C $99$, D $111$, E $671$.",
+    "summaryZh":"互不相同的正整数 $I,M,O$ 满足 $IMO=2001$。求 $I+M+O$ 的最大值。选项为 A $23$，B $55$，C $99$，D $111$，E $671$。",
+    "answer":"E. $671$.", "answerZh":"E．$671$。",
+    "methods":[{"title":"Factor and compare the divisor triples","titleZh":"分解质因数并比较因数组","topics":[{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Optimisation","zh":"最值"}],"steps":["Factor $2001=3\\cdot23\\cdot29$. With one factor equal to $1$, the remaining distinct pairs are $(3,667),(23,87),(29,69)$.","The corresponding sums are $671,111,99$. Without a factor $1$, splitting the three primes gives only $3+23+29=55$. Hence the maximum is $671$."],"stepsZh":["分解得 $2001=3\\cdot23\\cdot29$。若一个因数为 $1$，其余不同因数对为 $(3,667),(23,87),(29,69)$。","对应的和为 $671,111,99$。若不含 $1$，只能把三个质因数分别分配，和为 $55$。故最大值为 $671$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/1"
+  },
+  "amc12-2000-q2": {
+    "summary":"Which expression equals $2000\\cdot2000^{2000}$? Options: A $2000^{2001}$, B $4000^{2000}$, C $2000^{4000}$, D $4{,}000{,}000^{2000}$, E $2000^{4{,}000{,}000}$.",
+    "summaryZh":"下列哪个式子等于 $2000\\cdot2000^{2000}$？选项为 A $2000^{2001}$，B $4000^{2000}$，C $2000^{4000}$，D $4{,}000{,}000^{2000}$，E $2000^{4{,}000{,}000}$。",
+    "answer":"A. $2000^{2001}$.", "answerZh":"A．$2000^{2001}$。",
+    "methods":[{"title":"Add exponents with the same base","titleZh":"同底数幂相乘指数相加","topics":[{"en":"Exponent laws","zh":"指数运算"}],"steps":["Write $2000=2000^1$.","Then $2000^1\\cdot2000^{2000}=2000^{1+2000}=2000^{2001}$."],"stepsZh":["把 $2000$ 写成 $2000^1$。","于是 $2000^1\\cdot2000^{2000}=2000^{1+2000}=2000^{2001}$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/2"
+  },
+  "amc12-2000-q3": {
+    "summary":"Jenny eats $20\\%$ of the jellybeans present at the beginning of each day. After the second day, $32$ remain. How many were present originally? Options: A $40$, B $50$, C $55$, D $60$, E $75$.",
+    "summaryZh":"Jenny 每天吃掉当天开始时糖豆数的 $20\\%$。第二天结束时剩下 $32$ 颗。最初有多少颗？选项为 A $40$，B $50$，C $55$，D $60$，E $75$。",
+    "answer":"B. $50$.", "answerZh":"B．$50$。",
+    "methods":[{"title":"Work backwards with the remaining fraction","titleZh":"利用剩余比例逆推","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Working backwards","zh":"逆推"}],"steps":["Each day leaves $80\\%=0.8$ of the previous amount.","If the original amount is $x$, then $(0.8)^2x=32$, so $x=32/0.64=50$."],"stepsZh":["每天结束时留下原有数量的 $80\\%=0.8$。","设最初有 $x$ 颗，则 $(0.8)^2x=32$，所以 $x=32/0.64=50$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/3"
+  },
+  "amc12-2000-q4": {
+    "summary":"The Fibonacci sequence begins $1,1,2,3,5,8,\\ldots$. Which digit is the last of the ten digits to appear as a units digit of a Fibonacci number? Options: A $0$, B $4$, C $6$, D $7$, E $9$.",
+    "summaryZh":"斐波那契数列从 $1,1,2,3,5,8,\\ldots$ 开始。十个数码中，最后一个作为某项个位数出现的是哪个？选项为 A $0$，B $4$，C $6$，D $7$，E $9$。",
+    "answer":"C. $6$.", "answerZh":"C．$6$。",
+    "methods":[{"title":"Track only residues modulo ten","titleZh":"只追踪模十余数","topics":[{"en":"Fibonacci sequence","zh":"斐波那契数列"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["The units digits begin $1,1,2,3,5,8,3,1,4,5,9,4,3,7,0,7,7,4,1,5,6$.","When $6$ first appears, every other digit has already appeared. Thus $6$ is last."],"stepsZh":["个位数依次为 $1,1,2,3,5,8,3,1,4,5,9,4,3,7,0,7,7,4,1,5,6$。","当 $6$ 首次出现时，其余九个数码都已出现，所以最后出现的是 $6$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/4"
+  },
+  "amc12-2000-q5": {
+    "summary":"If $|x-2|=p$ and $x<2$, find $x-p$. Options: A $-2$, B $2$, C $2-2p$, D $2p-2$, E $|2p-2|$.",
+    "summaryZh":"若 $|x-2|=p$ 且 $x<2$，求 $x-p$。选项为 A $-2$，B $2$，C $2-2p$，D $2p-2$，E $|2p-2|$。",
+    "answer":"C. $2-2p$.", "answerZh":"C．$2-2p$。",
+    "methods":[{"title":"Remove the absolute value using the sign condition","titleZh":"利用符号条件去绝对值","topics":[{"en":"Absolute value","zh":"绝对值"}],"steps":["Since $x<2$, $|x-2|=2-x=p$, so $x=2-p$.","Therefore $x-p=(2-p)-p=2-2p$."],"stepsZh":["因为 $x<2$，所以 $|x-2|=2-x=p$，从而 $x=2-p$。","故 $x-p=(2-p)-p=2-2p$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/5"
+  },
+  "amc12-2000-q6": {
+    "summary":"Choose two different primes between $4$ and $18$. Which value could equal their product minus their sum? Options: A $21$, B $60$, C $119$, D $180$, E $231$.",
+    "summaryZh":"从 $4$ 与 $18$ 之间选择两个不同质数。它们的积减去和可能等于哪个数？选项为 A $21$，B $60$，C $119$，D $180$，E $231$。",
+    "answer":"C. $119$.", "answerZh":"C．$119$。",
+    "methods":[{"title":"Use parity, bounds, and verification","titleZh":"利用奇偶性、范围与验证","topics":[{"en":"Prime numbers","zh":"质数"},{"en":"Bounding","zh":"范围估计"}],"steps":["The primes are $5,7,11,13,17$. The product is odd and the sum even, so the result is odd; it lies from $23$ to $191$.","Only $119$ is an odd option in this interval, and $11\\cdot13-(11+13)=119$."],"stepsZh":["质数为 $5,7,11,13,17$。积为奇数、和为偶数，故结果为奇数，且范围为 $23$ 到 $191$。","选项中只有 $119$ 是该范围内的奇数，并且 $11\\cdot13-(11+13)=119$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/6"
+  },
+  "amc12-2000-q7": {
+    "summary":"For how many positive integers $b$ is $\\log_b729$ a positive integer? Options: A $0$, B $1$, C $2$, D $3$, E $4$.",
+    "summaryZh":"有多少个正整数 $b$ 使 $\\log_b729$ 为正整数？选项为 A $0$，B $1$，C $2$，D $3$，E $4$。",
+    "answer":"E. $4$ values.", "answerZh":"E．$4$ 个。",
+    "methods":[{"title":"Express 729 as a perfect power","titleZh":"把 729 写成完全幂","topics":[{"en":"Logarithms","zh":"对数"},{"en":"Perfect powers","zh":"完全幂"}],"steps":["If $\\log_b729=n$ is a positive integer, then $b^n=729=3^6$.","For integer $b$, $n$ must divide $6$. The choices $n=1,2,3,6$ give $b=729,27,9,3$, so there are $4$."],"stepsZh":["若 $\\log_b729=n$ 为正整数，则 $b^n=729=3^6$。","要使 $b$ 为整数，$n$ 必须整除 $6$。$n=1,2,3,6$ 分别给出 $b=729,27,9,3$，共 $4$ 个。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/7"
+  },
+  "amc12-2000-q8": {
+    "summary":"Figures $0,1,2,3$ contain $1,5,13,25$ nonoverlapping unit squares. Equivalently, figure $n$ is a diamond with row lengths $1,3,\\ldots,2n+1,\\ldots,3,1$. How many unit squares are in figure $100$? Options: A $10401$, B $19801$, C $20201$, D $39801$, E $40801$.",
+    "summaryZh":"图形 $0,1,2,3$ 分别含 $1,5,13,25$ 个单位正方形。等价地，图形 $n$ 是各行长度依次为 $1,3,\\ldots,2n+1,\\ldots,3,1$ 的菱形阵列。图形 $100$ 含多少个单位正方形？选项为 A $10401$，B $19801$，C $20201$，D $39801$，E $40801$。",
+    "answer":"C. $20201$.", "answerZh":"C．$20201$。",
+    "methods":[{"title":"Sum the odd-number rows","titleZh":"求奇数行长度之和","topics":[{"en":"Figurate patterns","zh":"图形规律"},{"en":"Sums of odd integers","zh":"奇数求和"}],"steps":["The rows increase through the first $n+1$ odd numbers and then decrease through the first $n$ odd numbers. Their total is $(n+1)^2+n^2$.","At $n=100$, this is $101^2+100^2=20201$."],"stepsZh":["各行先经过前 $n+1$ 个奇数，再反向经过前 $n$ 个奇数，总数为 $(n+1)^2+n^2$。","当 $n=100$ 时，得到 $101^2+100^2=20201$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/8"
+  },
+  "amc12-2000-q9": {
+    "summary":"The scores $71,76,80,82,91$ were entered in some order. After each entry, the average of all scores entered so far was an integer. Which score was entered last? Options: A $71$, B $76$, C $80$, D $82$, E $91$.",
+    "summaryZh":"分数 $71,76,80,82,91$ 按某种顺序录入。每次录入后，当前所有分数的平均数始终是整数。最后录入的是哪个分数？选项为 A $71$，B $76$，C $80$，D $82$，E $91$。",
+    "answer":"C. $80$.", "answerZh":"C．$80$。",
+    "methods":[{"title":"Use divisibility of partial sums","titleZh":"利用部分和的整除性","topics":[{"en":"Divisibility","zh":"整除"},{"en":"Mean","zh":"平均数"}],"steps":["The first three scores must sum to a multiple of $3$. The only possible triple is $76,82,91$, with sum $249$; the first two must be $76,82$.","Since $249\\equiv1\\pmod4$, the fourth score must be $71\\equiv3\\pmod4$. Thus $80$ is last, and the final total $400$ is divisible by $5$."],"stepsZh":["前三个分数之和须被 $3$ 整除，唯一可能三元组为 $76,82,91$，和为 $249$；前两个必须是 $76,82$。","因为 $249\\equiv1\\pmod4$，第四个分数须为 $71\\equiv3\\pmod4$。所以最后是 $80$，总和 $400$ 也能被 $5$ 整除。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/9"
+  },
+  "amc12-2000-q10": {
+    "summary":"Starting with $P=(1,2,3)$, reflect in the $xy$-plane to get $Q$, rotate $Q$ through $180^\\circ$ about the $x$-axis to get $R$, then translate $R$ by $5$ units in the positive $y$-direction to get $S$. Find $S$. Options: A $(1,7,-3)$, B $(-1,7,-3)$, C $(-1,-2,8)$, D $(-1,3,3)$, E $(1,3,3)$.",
+    "summaryZh":"从 $P=(1,2,3)$ 出发，先关于 $xy$ 平面反射得到 $Q$，再绕 $x$ 轴旋转 $180^\\circ$ 得到 $R$，最后沿 $y$ 轴正方向平移 $5$ 个单位得到 $S$。求 $S$。选项为 A $(1,7,-3)$，B $(-1,7,-3)$，C $(-1,-2,8)$，D $(-1,3,3)$，E $(1,3,3)$。",
+    "answer":"E. $(1,3,3)$.", "answerZh":"E．$(1,3,3)$。",
+    "methods":[{"title":"Apply the transformations in order","titleZh":"依次实施三个变换","topics":[{"en":"Three-dimensional transformations","zh":"三维变换"},{"en":"Coordinates","zh":"坐标"}],"steps":["Reflection in the $xy$-plane negates $z$, so $Q=(1,2,-3)$.","A $180^\\circ$ rotation about the $x$-axis negates $y,z$, giving $R=(1,-2,3)$. Adding $5$ to the $y$-coordinate gives $S=(1,3,3)$."],"stepsZh":["关于 $xy$ 平面反射使 $z$ 变号，故 $Q=(1,2,-3)$。","绕 $x$ 轴旋转 $180^\\circ$ 使 $y,z$ 同时变号，得到 $R=(1,-2,3)$；再把 $y$ 坐标加 $5$，得到 $S=(1,3,3)$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/10"
+  },
+  "amc12-2000-q11": {
+    "summary":"Nonzero real numbers $a,b$ satisfy $ab=a-b$. Which is a possible value of $a/b+b/a-ab$? Options: A $-2$, B $-1/2$, C $1/3$, D $1/2$, E $2$.",
+    "summaryZh":"非零实数 $a,b$ 满足 $ab=a-b$。$a/b+b/a-ab$ 的一个可能值是？选项为 A $-2$，B $-1/2$，C $1/3$，D $1/2$，E $2$。",
+    "answer":"E. $2$.", "answerZh":"E．$2$。",
+    "methods":[{"title":"Combine over a common denominator","titleZh":"通分并代入条件","topics":[{"en":"Algebraic manipulation","zh":"代数化简"}],"steps":["Combine the terms: $a/b+b/a-ab=(a^2+b^2-a^2b^2)/(ab)$.","Since $a^2b^2=(a-b)^2$, the numerator is $a^2+b^2-(a-b)^2=2ab$. Thus the expression equals $2$."],"stepsZh":["通分得 $a/b+b/a-ab=(a^2+b^2-a^2b^2)/(ab)$。","由 $a^2b^2=(a-b)^2$，分子为 $a^2+b^2-(a-b)^2=2ab$，故原式等于 $2$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/11"
+  },
+  "amc12-2000-q12": {
+    "summary":"Nonnegative integers $A,M,C$ satisfy $A+M+C=12$. Maximise $AMC+AM+MC+CA$. Options: A $62$, B $72$, C $92$, D $102$, E $112$.",
+    "summaryZh":"非负整数 $A,M,C$ 满足 $A+M+C=12$。求 $AMC+AM+MC+CA$ 的最大值。选项为 A $62$，B $72$，C $92$，D $102$，E $112$。",
+    "answer":"E. $112$.", "answerZh":"E．$112$。",
+    "methods":[{"title":"Convert to a balanced product","titleZh":"化为均衡乘积","topics":[{"en":"Factoring","zh":"因式分解"},{"en":"Integer optimisation","zh":"整数最值"}],"steps":["Expand $(A+1)(M+1)(C+1)$ to obtain $AMC+AM+MC+CA=(A+1)(M+1)(C+1)-13$.","The three positive integer factors sum to $15$, so their product is largest at $5,5,5$. The maximum is $125-13=112$."],"stepsZh":["展开 $(A+1)(M+1)(C+1)$ 得 $AMC+AM+MC+CA=(A+1)(M+1)(C+1)-13$。","三个正整数因子的和为 $15$，乘积在 $5,5,5$ 时最大。故最大值为 $125-13=112$。"]},{"title":"Balance unequal integer factors","titleZh":"用调整法平衡整数因子","topics":[{"en":"Discrete optimisation","zh":"离散最值"}],"steps":["If positive integers $u<v-1$ have fixed sum, replacing them by $u+1,v-1$ changes their product by $v-u-1>0$.","Therefore any maximizing triple with sum $15$ must differ pairwise by at most $1$, forcing $(5,5,5)$ and again giving $112$."],"stepsZh":["固定和的正整数 $u<v-1$ 若改为 $u+1,v-1$，乘积增加 $v-u-1>0$。","因此和为 $15$ 的最优三元组两两之差至多为 $1$，只能是 $(5,5,5)$，仍得 $112$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/12"
+  },
+  "amc12-2000-q13": {
+    "summary":"Each of $n$ family members drank an $8$-ounce nontrivial coffee-milk mixture. Angela drank one quarter of all the milk and one sixth of all the coffee. Find $n$. Options: A $3$, B $4$, C $5$, D $6$, E $7$.",
+    "summaryZh":"一家 $n$ 口每人喝一杯 $8$ 盎司且咖啡、牛奶均非零的混合饮料。Angela 喝掉了全家牛奶总量的四分之一及咖啡总量的六分之一。求 $n$。选项为 A $3$，B $4$，C $5$，D $6$，E $7$。",
+    "answer":"C. $5$ people.", "answerZh":"C．$5$ 人。",
+    "methods":[{"title":"Bound a weighted average","titleZh":"夹逼加权平均","topics":[{"en":"Weighted averages","zh":"加权平均"},{"en":"Mixtures","zh":"混合问题"}],"steps":["Let total milk and coffee be $M,C>0$. Angela's cup gives $M/4+C/6=8$, while $M+C=8n$. Hence $(M/4+C/6)/(M+C)=1/n$.","This weighted average lies strictly between $1/6$ and $1/4$. Thus $4<n<6$, so $n=5$."],"stepsZh":["设牛奶、咖啡总量为 $M,C>0$。Angela 的杯子给出 $M/4+C/6=8$，而 $M+C=8n$，故 $(M/4+C/6)/(M+C)=1/n$。","该加权平均严格介于 $1/6$ 与 $1/4$ 之间，所以 $4<n<6$，从而 $n=5$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/13"
+  },
+  "amc12-2000-q14": {
+    "summary":"For the list $10,2,5,2,4,2,x$, the mean, median, and mode, arranged increasingly, form a nonconstant arithmetic progression. Find the sum of all possible real $x$. Options: A $3$, B $6$, C $9$, D $17$, E $20$.",
+    "summaryZh":"数列 $10,2,5,2,4,2,x$ 的平均数、中位数、众数按递增顺序排列后构成非常数等差数列。求所有可能实数 $x$ 之和。选项为 A $3$，B $6$，C $9$，D $17$，E $20$。",
+    "answer":"E. $20$.", "answerZh":"E．$20$。",
+    "methods":[{"title":"Split according to the median","titleZh":"按中位数分类讨论","topics":[{"en":"Mean, median and mode","zh":"平均数、中位数与众数"},{"en":"Casework","zh":"分类讨论"}],"steps":["The mode is $2$ and the mean is $\\mu=(25+x)/7$. If $x\\le2$, the median is also $2$, impossible for a nonconstant progression.","If $2<x<4$, the median is $x$ and $x-2=\\mu-x$, giving $x=3$. If $x\\ge4$, the median is $4$ and $4-2=\\mu-4$, giving $x=17$. Their sum is $20$."],"stepsZh":["众数为 $2$，平均数为 $\\mu=(25+x)/7$。若 $x\\le2$，中位数也为 $2$，无法形成非常数等差数列。","若 $2<x<4$，由 $x-2=\\mu-x$ 得 $x=3$；若 $x\\ge4$，由 $4-2=\\mu-4$ 得 $x=17$。两者之和为 $20$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/14"
+  },
+  "amc12-2000-q15": {
+    "summary":"A function satisfies $f(x/3)=x^2+x+1$. Find the sum of all $z$ satisfying $f(3z)=7$. Options: A $-1/3$, B $-1/9$, C $0$, D $5/9$, E $5/3$.",
+    "summaryZh":"函数满足 $f(x/3)=x^2+x+1$。求所有满足 $f(3z)=7$ 的 $z$ 之和。选项为 A $-1/3$，B $-1/9$，C $0$，D $5/9$，E $5/3$。",
+    "answer":"B. $-1/9$.", "answerZh":"B．$-1/9$。",
+    "methods":[{"title":"Substitute and use Vieta's formula","titleZh":"代入并用韦达定理","topics":[{"en":"Functions","zh":"函数"},{"en":"Vieta's formulas","zh":"韦达定理"}],"steps":["To make $x/3=3z$, set $x=9z$. Hence $f(3z)=81z^2+9z+1$.","Setting this equal to $7$ gives $81z^2+9z-6=0$. The sum of its roots is $-9/81=-1/9$."],"stepsZh":["令 $x/3=3z$，即 $x=9z$，则 $f(3z)=81z^2+9z+1$。","令其等于 $7$ 得 $81z^2+9z-6=0$。由韦达定理，根之和为 $-9/81=-1/9$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/15"
+  },
+  "amc12-2000-q16": {
+    "summary":"A $13$-row, $17$-column board is numbered first across rows: square $(m,n)$ receives $17(m-1)+n$. It is then numbered down columns: $(m,n)$ receives $13(n-1)+m$. Find the sum of the numbers in squares whose two labels agree. Options: A $222$, B $333$, C $444$, D $555$, E $666$.",
+    "summaryZh":"一个 $13$ 行、$17$ 列的棋盘先按行依次编号：格子 $(m,n)$ 的编号为 $17(m-1)+n$；再按列依次编号：同一格的编号为 $13(n-1)+m$。求两种编号相同的所有格子中编号之和。选项为 A $222$，B $333$，C $444$，D $555$，E $666$。",
+    "answer":"D. $555$.", "answerZh":"D．$555$。",
+    "methods":[{"title":"Solve the row-column Diophantine equation","titleZh":"求解行列编号的丢番图方程","topics":[{"en":"Diophantine equations","zh":"丢番图方程"},{"en":"Systematic listing","zh":"系统枚举"}],"steps":["Equating the labels gives $17(m-1)+n=13(n-1)+m$, or $4m-3n=1$.","Within $1\\le m\\le13$, $1\\le n\\le17$, the solutions are $(1,1),(4,5),(7,9),(10,13),(13,17)$.","Their common labels are $1,56,111,166,221$, whose sum is $555$."],"stepsZh":["令两种编号相等，得 $17(m-1)+n=13(n-1)+m$，即 $4m-3n=1$。","在 $1\\le m\\le13$、$1\\le n\\le17$ 内，解为 $(1,1),(4,5),(7,9),(10,13),(13,17)$。","对应公共编号为 $1,56,111,166,221$，总和为 $555$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/16"
+  },
+  "amc12-2000-q17": {
+    "summary":"A circle has centre $O$, radius $1$, and $A$ on the circle. From an external point $B$, $AB$ is tangent at $A$, and $\\angle AOB=\\theta$. Point $C$ lies on segment $OA$, and $BC$ bisects $\\angle ABO$. Find $OC$. Options: A $\\sec^2\\theta-\\tan\\theta$, B $1/2$, C $\\cos^2\\theta/(1+\\sin\\theta)$, D $1/(1+\\sin\\theta)$, E $\\sin\\theta/\\cos^2\\theta$.",
+    "summaryZh":"圆心为 $O$、半径为 $1$ 的圆上有点 $A$。外点 $B$ 到圆的切线 $AB$ 切于 $A$，且 $\\angle AOB=\\theta$。点 $C$ 在线段 $OA$ 上，$BC$ 平分 $\\angle ABO$。求 $OC$。选项为 A $\\sec^2\\theta-\\tan\\theta$，B $1/2$，C $\\cos^2\\theta/(1+\\sin\\theta)$，D $1/(1+\\sin\\theta)$，E $\\sin\\theta/\\cos^2\\theta$。",
+    "answer":"D. $1/(1+\\sin\\theta)$.", "answerZh":"D．$1/(1+\\sin\\theta)$。",
+    "methods":[{"title":"Apply the angle-bisector theorem","titleZh":"应用角平分线定理","topics":[{"en":"Angle bisector theorem","zh":"角平分线定理"},{"en":"Trigonometry","zh":"三角函数"}],"steps":["Since $OA=1$ and $AB\\perp OA$, right triangle $AOB$ gives $BA=\\tan\\theta$ and $OB=\\sec\\theta$.","The angle-bisector theorem gives $OC/CA=OB/BA$. With $OC+CA=1$, $OC=OB/(OB+BA)$.","Thus $OC=\\sec\\theta/(\\sec\\theta+\\tan\\theta)=1/(1+\\sin\\theta)$."],"stepsZh":["因为 $OA=1$ 且 $AB\\perp OA$，直角三角形 $AOB$ 给出 $BA=\\tan\\theta$、$OB=\\sec\\theta$。","角平分线定理给出 $OC/CA=OB/BA$。又 $OC+CA=1$，故 $OC=OB/(OB+BA)$。","于是 $OC=\\sec\\theta/(\\sec\\theta+\\tan\\theta)=1/(1+\\sin\\theta)$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/17"
+  },
+  "amc12-2000-q18": {
+    "summary":"In year $N$, day $300$ is Tuesday; in year $N+1$, day $200$ is also Tuesday. On what weekday was day $100$ of year $N-1$? Options: A Thursday, B Friday, C Saturday, D Sunday, E Monday.",
+    "summaryZh":"在 $N$ 年，第 $300$ 天是星期二；在 $N+1$ 年，第 $200$ 天也是星期二。$N-1$ 年的第 $100$ 天是星期几？选项为 A 星期四，B 星期五，C 星期六，D 星期日，E 星期一。",
+    "answer":"A. Thursday.", "answerZh":"A．星期四。",
+    "methods":[{"title":"Count days modulo seven","titleZh":"按模七计算日期间隔","topics":[{"en":"Calendar arithmetic","zh":"日历计算"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["From day $300$ of year $N$ to day $200$ of year $N+1$ are $L-100$ days. Equal weekdays require a multiple of $7$; only $366-100=266=38\\cdot7$ works, so $N$ is a leap year.","Year $N-1$ is ordinary. From its day $100$ to day $300$ of year $N$ are $(365-100)+300=565\\equiv5\\pmod7$ days. Five days before Tuesday is Thursday."],"stepsZh":["从 $N$ 年第 $300$ 天到 $N+1$ 年第 $200$ 天相隔 $L-100$ 天。同为星期二要求被 $7$ 整除；只有 $366-100=266=38\\cdot7$ 成立，所以 $N$ 是闰年。","$N-1$ 年为平年。从其第 $100$ 天到 $N$ 年第 $300$ 天相隔 $(365-100)+300=565\\equiv5\\pmod7$ 天。比星期二早五天是星期四。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/18"
+  },
+  "amc12-2000-q19": {
+    "summary":"In triangle $ABC$, $AB=13$, $BC=14$, $AC=15$. Point $D$ is the midpoint of $BC$, and the bisector of $\\angle BAC$ meets $BC$ at $E$. Find the exact area of triangle $ADE$. Options: A $2$, B $2.5$, C $3$, D $3.5$, E $4$.",
+    "summaryZh":"在三角形 $ABC$ 中，$AB=13$、$BC=14$、$AC=15$。点 $D$ 是 $BC$ 的中点，$\\angle BAC$ 的角平分线交 $BC$ 于 $E$。求三角形 $ADE$ 的准确面积。选项为 A $2$，B $2.5$，C $3$，D $3.5$，E $4$。",
+    "answer":"C. $3$.", "answerZh":"C．$3$。",
+    "methods":[{"title":"Use Heron's formula and the angle bisector","titleZh":"使用海伦公式与角平分线定理","topics":[{"en":"Heron's formula","zh":"海伦公式"},{"en":"Angle bisector theorem","zh":"角平分线定理"}],"steps":["The semiperimeter is $21$, so $[ABC]=\\sqrt{21\\cdot8\\cdot7\\cdot6}=84$. The altitude from $A$ to $BC$ is $2\\cdot84/14=12$.","Since $D$ is the midpoint, $BD=7$. The angle-bisector theorem gives $BE:EC=13:15$, hence $BE=14\\cdot13/28=6.5$.","Thus $DE=0.5$, and $[ADE]=(1/2)(0.5)(12)=3$."],"stepsZh":["半周长为 $21$，故 $[ABC]=\\sqrt{21\\cdot8\\cdot7\\cdot6}=84$，从 $A$ 到 $BC$ 的高为 $2\\cdot84/14=12$。","$D$ 为中点，所以 $BD=7$。由角平分线定理，$BE:EC=13:15$，从而 $BE=14\\cdot13/28=6.5$。","因此 $DE=0.5$，$[ADE]=(1/2)(0.5)(12)=3$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/19"
+  },
+  "amc12-2000-q20": {
+    "summary":"Positive numbers $x,y,z$ satisfy $x+1/y=4$, $y+1/z=1$, and $z+1/x=7/3$. Find $xyz$. Options: A $2/3$, B $1$, C $4/3$, D $2$, E $7/3$.",
+    "summaryZh":"正数 $x,y,z$ 满足 $x+1/y=4$、$y+1/z=1$、$z+1/x=7/3$。求 $xyz$。选项为 A $2/3$，B $1$，C $4/3$，D $2$，E $7/3$。",
+    "answer":"B. $1$.", "answerZh":"B．$1$。",
+    "methods":[{"title":"Add and multiply the three equations","titleZh":"把三个等式分别相加与相乘","topics":[{"en":"Symmetric algebra","zh":"对称代数"},{"en":"Systems of equations","zh":"方程组"}],"steps":["Adding the equations gives $x+y+z+1/x+1/y+1/z=22/3$.","Multiplying their left sides and expanding gives $xyz+(x+y+z+1/x+1/y+1/z)+1/(xyz)=28/3$.","Hence $t=xyz>0$ satisfies $t+1/t=2$, so $(t-1)^2=0$ and $xyz=1$."],"stepsZh":["三式相加得 $x+y+z+1/x+1/y+1/z=22/3$。","三式左端相乘并展开，得到 $xyz+(x+y+z+1/x+1/y+1/z)+1/(xyz)=28/3$。","因此 $t=xyz>0$ 满足 $t+1/t=2$，所以 $(t-1)^2=0$，即 $xyz=1$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/20"
+  },
+  "amc12-2000-q21": {
+    "summary":"Through a point on a right triangle's hypotenuse, draw lines parallel to the legs, dividing the triangle into a square and two smaller right triangles. One small triangle has area $m$ times the square's area. What is the other small triangle's area divided by the square's area? Options: A $1/(2m+1)$, B $m$, C $1-m$, D $1/(4m)$, E $1/(8m^2)$.",
+    "summaryZh":"过直角三角形斜边上一点分别作两直角边的平行线，将原三角形分成一个正方形和两个小直角三角形。一个小三角形的面积是正方形面积的 $m$ 倍。另一个小三角形面积与正方形面积之比是多少？选项为 A $1/(2m+1)$，B $m$，C $1-m$，D $1/(4m)$，E $1/(8m^2)$。",
+    "answer":"D. $1/(4m)$.", "answerZh":"D．$1/(4m)$。",
+    "methods":[{"title":"Scale the square and use similarity","titleZh":"令正方形边长为一并利用相似","topics":[{"en":"Similarity","zh":"相似三角形"},{"en":"Area ratios","zh":"面积比"}],"steps":["Scale the square to side $1$. If the first triangle's other perpendicular leg is $r$, its area ratio is $r/2=m$, so $r=2m$.","The two small right triangles are similar; the corresponding other leg of the second is $1/r$. Its area ratio is $(1/2)(1/r)=1/(4m)$."],"stepsZh":["令正方形边长为 $1$。若第一个小三角形的另一条直角边为 $r$，其面积比为 $r/2=m$，故 $r=2m$。","两个小直角三角形相似，第二个对应的另一条直角边为 $1/r$，其面积比为 $(1/2)(1/r)=1/(4m)$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/21"
+  },
+  "amc12-2000-q22": {
+    "summary":"Let $P(x)=x^4+ax^3+bx^2+cx+d$. Its displayed graph rises at both ends, has exactly two positive real zeros $r_1,r_2$, and its other two zeros are non-real. The graph also shows $P(-1)>4$, $P(1)>3$, $0<d<6$, $r_1+r_2>4.5$, and $r_1r_2>4.5$. Which is smallest? A $P(-1)$; B the product of all zeros; C the product of the non-real zeros; D the sum of the coefficients; E the sum of the real zeros.",
+    "summaryZh":"设 $P(x)=x^4+ax^3+bx^2+cx+d$。题图显示曲线两端向上，恰有两个正实根 $r_1,r_2$，另外两个根为非实根；并可读出 $P(-1)>4$、$P(1)>3$、$0<d<6$、$r_1+r_2>4.5$、$r_1r_2>4.5$。下列哪一项最小？A $P(-1)$；B 全部根之积；C 两个非实根之积；D 所有系数之和；E 两个实根之和。",
+    "answer":"C. The product of the non-real zeros.", "answerZh":"C．两个非实根之积。",
+    "methods":[{"title":"Compare the root products using Vieta","titleZh":"用韦达定理比较根的乘积","topics":[{"en":"Vieta's formulas","zh":"韦达定理"},{"en":"Complex conjugate roots","zh":"共轭复根"}],"steps":["The product of all four zeros is $d$. If $R=r_1r_2$, the product of the conjugate non-real pair is $d/R$.","Because $R>4.5$ and $0<d<6$, $0<d/R<6/4.5<2$; also $d/R<d$ since $R>1$.","The other listed values are $P(-1)>4$, $P(1)>3$ (the coefficient sum), and $r_1+r_2>4.5$. Therefore $d/R$ is the smallest."],"stepsZh":["四个根之积为 $d$。若 $R=r_1r_2$，则一对共轭非实根之积为 $d/R$。","由于 $R>4.5$ 且 $0<d<6$，有 $0<d/R<6/4.5<2$；又因 $R>1$，故 $d/R<d$。","其余各项为 $P(-1)>4$、系数和 $P(1)>3$、实根和 $r_1+r_2>4.5$，所以 $d/R$ 最小。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/22"
+  },
+  "amc12-2000-q23": {
+    "summary":"A lottery ticket chooses six distinct integers from $1$ through $46$. Both Professor Gamble's ticket and the winning ticket are known to have an integer sum of the base-ten logarithms of their six entries. What is the probability that his ticket wins? Options: A $1/5$, B $1/4$, C $1/3$, D $1/2$, E $1$.",
+    "summaryZh":"一张彩票从 $1$ 到 $46$ 中选择六个不同整数。已知 Professor Gamble 的号码与中奖彩票的六个数，其常用对数之和都为整数。求他中奖的概率。选项为 A $1/5$，B $1/4$，C $1/3$，D $1/2$，E $1$。",
+    "answer":"B. $1/4$.", "answerZh":"B．$1/4$。",
+    "methods":[{"title":"Classify the possible powers of ten","titleZh":"分类所有可能的十的幂乘积","topics":[{"en":"Logarithms","zh":"对数"},{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Counting","zh":"计数"}],"steps":["An integer logarithm sum means the product is a power of $10$. Hence every selected number has only primes $2,5$: $1,2,4,5,8,10,16,20,25,32,40$.","Record exponent excess $v_2-v_5$: $0,1,2,-1,3,0,4,1,-2,5,2$. A six-number selection with total excess $0$ must contain $5$ and $25$; the other four must have excesses $0,0,1,2$.","Both excess-$0$ numbers are forced, while there are two choices for the excess-$1$ number and two for the excess-$2$ number. Thus exactly $4$ tickets qualify, and one is the winner, giving probability $1/4$."],"stepsZh":["对数和为整数等价于六数之积是 $10$ 的幂。因此每个数只能含质因数 $2,5$，候选为 $1,2,4,5,8,10,16,20,25,32,40$。","记录指数差 $v_2-v_5$，依次为 $0,1,2,-1,3,0,4,1,-2,5,2$。六个数的指数差总和为 $0$ 时，必须含 $5,25$；其余四个数的指数差必须为 $0,0,1,2$。","两个差为 $0$ 的数被强制选取，差为 $1$ 和 $2$ 的数各有两种选择，共 $4$ 张合格彩票。中奖彩票是其中一张，概率为 $1/4$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/23"
+  },
+  "amc12-2000-q24": {
+    "summary":"Points $A,B$ are the centres of arcs $BC,AC$, respectively, and both arcs have radius $AB$; they meet at $C$ on the same side of $AB$, so $ABC$ is equilateral. A smaller circle inside the curvilinear region is tangent to both arcs and to segment $AB$. If arc $BC$ has length $12$, find the smaller circle's circumference. Options: A $24$, B $25$, C $26$, D $27$, E $28$.",
+    "summaryZh":"点 $A,B$ 分别是圆弧 $BC,AC$ 的圆心，两圆弧半径均为 $AB$，并在 $AB$ 同侧交于 $C$，所以 $ABC$ 为等边三角形。曲边三角形内部有一小圆同时与两圆弧及线段 $AB$ 相切。若圆弧 $BC$ 长为 $12$，求小圆周长。选项为 A $24$，B $25$，C $26$，D $27$，E $28$。",
+    "answer":"D. $27$.", "answerZh":"D．$27$。",
+    "methods":[{"title":"Find the radius ratio from tangency","titleZh":"由相切关系求半径比","topics":[{"en":"Tangent circles","zh":"相切圆"},{"en":"Power of a point","zh":"点幂"},{"en":"Arc length","zh":"弧长"}],"steps":["Let $s=AB$. Since $ABC$ is equilateral, arc $BC$ subtends $60^\\circ$ at $A$. Thus the full circumference of its circle is $6\\cdot12=72$.","By symmetry the small circle touches $AB$ at its midpoint $D$. If its radius is $r$, internal tangency to the circle centred at $A$ gives $AD^2=s(s-2r)$.","With $AD=s/2$, $s^2/4=s^2-2rs$, so $r=3s/8$. Circumferences scale with radii; the required circumference is $(3/8)72=27$."],"stepsZh":["令 $s=AB$。由于 $ABC$ 为等边三角形，圆弧 $BC$ 在圆心 $A$ 处所对圆心角为 $60^\\circ$，故对应整圆周长为 $6\\cdot12=72$。","由对称性，小圆与 $AB$ 的切点 $D$ 是中点。设小圆半径为 $r$，它与圆心为 $A$ 的大圆内切，得到 $AD^2=s(s-2r)$。","代入 $AD=s/2$，有 $s^2/4=s^2-2rs$，故 $r=3s/8$。周长按半径同比例缩放，所求为 $(3/8)72=27$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/24"
+  },
+  "amc12-2000-q25": {
+    "summary":"Eight congruent equilateral triangles, each a different colour, form the eight faces of a regular octahedron. How many colourings are distinguishable up to rotation? Options: A $210$, B $560$, C $840$, D $1260$, E $1680$.",
+    "summaryZh":"八个全等的等边三角形颜色各不相同，用作正八面体的八个面。若旋转后相同的着色视为同一种，共有多少种可区分着色？选项为 A $210$，B $560$，C $840$，D $1260$，E $1680$。",
+    "answer":"E. $1680$.", "answerZh":"E．$1680$。",
+    "methods":[{"title":"Divide labelled assignments by the rotation group","titleZh":"用旋转群大小除标号方案数","topics":[{"en":"Symmetry","zh":"对称性"},{"en":"Permutations","zh":"排列"}],"steps":["There are $8!$ assignments of the eight distinct colours to labelled faces.","A regular octahedron has $24$ rotations. Because all colours are distinct, no nonidentity rotation fixes a colouring, so every orbit contains exactly $24$ assignments.","Hence the number of distinguishable colourings is $8!/24=40320/24=1680$."],"stepsZh":["把八种不同颜色分配给有标号的八个面共有 $8!$ 种。","正八面体有 $24$ 个旋转。由于八种颜色互不相同，任何非恒等旋转都不可能保持着色不变，所以每个等价类恰含 $24$ 种标号方案。","因此可区分着色数为 $8!/24=40320/24=1680$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc12/2000/problem/25"
+  }
+}
