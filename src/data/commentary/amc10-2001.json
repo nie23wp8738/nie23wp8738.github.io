@@ -1,0 +1,183 @@
+{
+  "amc10-2001-q1": {
+    "summary": "The ordered list $n,n+3,n+4,n+5,n+6,n+8,n+10,n+12,n+15$ has median $10$. Find its mean. Options: A $4$, B $6$, C $7$, D $10$, E $11$.",
+    "summaryZh": "递增数列 $n,n+3,n+4,n+5,n+6,n+8,n+10,n+12,n+15$ 的中位数为 $10$。求其平均数。选项为 A $4$，B $6$，C $7$，D $10$，E $11$。",
+    "answer": "E. $11$.", "answerZh": "E．$11$。",
+    "methods": [{"title":"Use the middle term and total","titleZh":"利用中间项与总和","topics":[{"en":"Mean and median","zh":"平均数与中位数"},{"en":"Arithmetic expressions","zh":"代数式"}],"steps":["There are nine ordered terms, so the fifth term is the median: $n+6=10$, hence $n=4$.","The total is $9n+(3+4+5+6+8+10+12+15)=9n+63=99$.","Therefore the mean is $99/9=11$."],"stepsZh":["共有九个递增项，第五项为中位数：$n+6=10$，故 $n=4$。","总和为 $9n+(3+4+5+6+8+10+12+15)=9n+63=99$。","所以平均数为 $99/9=11$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/1"
+  },
+  "amc10-2001-q2": {
+    "summary": "A nonzero number $x$ is $2$ more than the product of its reciprocal and its additive inverse. In which interval does $x$ lie? A $-4\\le x\\le-2$, B $-2<x\\le0$, C $0<x\\le2$, D $2<x\\le4$, E $4<x\\le6$.",
+    "summaryZh": "非零数 $x$ 比它的倒数与相反数的乘积大 $2$。$x$ 位于哪个区间？A $-4\\le x\\le-2$，B $-2<x\\le0$，C $0<x\\le2$，D $2<x\\le4$，E $4<x\\le6$。",
+    "answer": "C. $0<x\\le2$.", "answerZh": "C．$0<x\\le2$。",
+    "methods": [{"title":"Translate the verbal relation","titleZh":"把文字关系写成代数式","topics":[{"en":"Reciprocals","zh":"倒数"},{"en":"Algebraic translation","zh":"代数翻译"}],"steps":["The reciprocal is $1/x$ and the additive inverse is $-x$, so their product is $(1/x)(-x)=-1$.","Thus $x=-1+2=1$, which lies in $0<x\\le2$."],"stepsZh":["$x$ 的倒数为 $1/x$，相反数为 $-x$，两者乘积为 $(1/x)(-x)=-1$。","因此 $x=-1+2=1$，位于 $0<x\\le2$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/2"
+  },
+  "amc10-2001-q3": {
+    "summary": "Two numbers have sum $S$. Add $3$ to each number and then double each result. Find the final sum. Options: A $2S+3$, B $3S+2$, C $3S+6$, D $2S+6$, E $2S+12$.",
+    "summaryZh": "两数之和为 $S$。先给每个数加 $3$，再把所得两数分别乘 $2$。求最终两数之和。选项为 A $2S+3$，B $3S+2$，C $3S+6$，D $2S+6$，E $2S+12$。",
+    "answer": "E. $2S+12$.", "answerZh": "E．$2S+12$。",
+    "methods": [{"title":"Track the sum","titleZh":"追踪总和的变化","topics":[{"en":"Distributive property","zh":"分配律"},{"en":"Algebraic expressions","zh":"代数式"}],"steps":["Adding $3$ to both numbers increases their sum by $6$, giving $S+6$.","Doubling both resulting numbers doubles that sum: $2(S+6)=2S+12$."],"stepsZh":["两个数各加 $3$，总和增加 $6$，得到 $S+6$。","再把两个结果都乘 $2$，总和也乘 $2$：$2(S+6)=2S+12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/3"
+  },
+  "amc10-2001-q4": {
+    "summary": "What is the greatest possible number of distinct intersection points between a circle and the three sides of a triangle? Options: A $2$, B $3$, C $4$, D $5$, E $6$.",
+    "summaryZh": "一个圆与三角形三条边最多能有多少个不同交点？选项为 A $2$，B $3$，C $4$，D $5$，E $6$。",
+    "answer": "E. $6$.", "answerZh": "E．$6$ 个。",
+    "methods": [{"title":"Bound each side and show attainability","titleZh":"逐边给出上界并验证可达到","topics":[{"en":"Circle-line intersections","zh":"圆与直线的交点"},{"en":"Extremal geometry","zh":"几何极值"}],"steps":["A line segment can meet a circle in at most two points. Therefore three sides give at most $3\\cdot2=6$ intersections.","This is attainable: for an equilateral triangle, choose a concentric circle with radius strictly between the inradius and circumradius. It cuts every side twice."],"stepsZh":["一条线段与圆至多有两个交点，因此三条边至多产生 $3\\cdot2=6$ 个交点。","该上界可以达到：对正三角形，取与其同心且半径严格介于内切圆半径和外接圆半径之间的圆，它与每条边都有两个交点。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/4"
+  },
+  "amc10-2001-q5": {
+    "summary": "Consider the twelve free pentominoes, each made from five edge-connected unit squares. How many have at least one reflection-symmetry line? Options: A $3$, B $4$, C $5$, D $6$, E $7$.",
+    "summaryZh": "考虑全部十二种自由五连方：每种由五个边相邻的单位正方形组成，旋转或翻转后相同者视为同一种。其中有多少种至少有一条轴对称线？选项为 A $3$，B $4$，C $5$，D $6$，E $7$。",
+    "answer": "D. $6$.", "answerZh": "D．$6$ 种。",
+    "methods": [{"title":"Classify the twelve shapes","titleZh":"逐类检查十二种图形","topics":[{"en":"Reflection symmetry","zh":"轴对称"},{"en":"Systematic enumeration","zh":"系统枚举"}],"steps":["Test each pentomino for a horizontal, vertical, or diagonal reflection that maps every unit square onto another square of the shape.","Exactly the $I,X,T,U,V,$ and $W$ pentominoes have a reflection axis. The other six do not.","Hence the count is $6$."],"stepsZh":["逐一检查每个五连方是否存在水平、竖直或斜向对称轴，使每个单位方格映到图形中的另一个方格。","恰有 $I,X,T,U,V,W$ 六种五连方具有轴对称；其余六种没有。","所以共有 $6$ 种。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/5"
+  },
+  "amc10-2001-q6": {
+    "summary": "Let $P(n)$ and $S(n)$ be the product and sum of the digits of $n$. A two-digit number $N$ satisfies $N=P(N)+S(N)$. Find the units digit of $N$. Options: A $2$, B $3$, C $6$, D $8$, E $9$.",
+    "summaryZh": "设 $P(n)$、$S(n)$ 分别为整数 $n$ 各位数字的乘积与和。两位数 $N$ 满足 $N=P(N)+S(N)$。求 $N$ 的个位数字。选项为 A $2$，B $3$，C $6$，D $8$，E $9$。",
+    "answer": "E. $9$.", "answerZh": "E．$9$。",
+    "methods": [{"title":"Use place value","titleZh":"利用十进制位值","topics":[{"en":"Digits","zh":"数字问题"},{"en":"Place value","zh":"位值"}],"steps":["Write $N=10a+b$, where $a\\ne0$ is the tens digit and $b$ is the units digit.","The condition becomes $10a+b=ab+a+b$, so $9a=ab$.","Since $a\\ne0$, division by $a$ gives $b=9$."],"stepsZh":["设 $N=10a+b$，其中 $a\\ne0$ 为十位数字，$b$ 为个位数字。","条件化为 $10a+b=ab+a+b$，即 $9a=ab$。","因 $a\\ne0$，两边除以 $a$ 得 $b=9$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/6"
+  },
+  "amc10-2001-q7": {
+    "summary": "Moving the decimal point of a positive number $x$ four places right produces four times its reciprocal. Find $x$. Options: A $0.0002$, B $0.002$, C $0.02$, D $0.2$, E $2$.",
+    "summaryZh": "把正数 $x$ 的小数点向右移动四位，所得数等于 $x$ 的倒数的 $4$ 倍。求 $x$。选项为 A $0.0002$，B $0.002$，C $0.02$，D $0.2$，E $2$。",
+    "answer": "C. $0.02$.", "answerZh": "C．$0.02$。",
+    "methods": [{"title":"Form a quadratic equation","titleZh":"建立二次方程","topics":[{"en":"Decimals","zh":"小数"},{"en":"Reciprocal equations","zh":"倒数方程"}],"steps":["Moving the decimal four places right multiplies by $10^4$, so $10000x=4/x$.","Thus $x^2=4/10000=1/2500$. Since $x>0$, $x=1/50=0.02$."],"stepsZh":["小数点右移四位相当于乘 $10^4$，所以 $10000x=4/x$。","因此 $x^2=4/10000=1/2500$。由 $x>0$，得 $x=1/50=0.02$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/7"
+  },
+  "amc10-2001-q8": {
+    "summary": "Four tutors work every $3$, $4$, $6$, and $7$ school days, respectively. They all work today. After how many school days will they next work together? Options: A $42$, B $84$, C $126$, D $178$, E $252$.",
+    "summaryZh": "四位辅导员分别每隔 $3$、$4$、$6$、$7$ 个上课日值班一次。今天四人同时值班。再过多少个上课日他们会再次同时值班？选项为 A $42$，B $84$，C $126$，D $178$，E $252$。",
+    "answer": "B. $84$.", "answerZh": "B．$84$。",
+    "methods": [{"title":"Find the least common multiple","titleZh":"求最小公倍数","topics":[{"en":"Least common multiple","zh":"最小公倍数"},{"en":"Prime factorisation","zh":"质因数分解"}],"steps":["A common workday must be a multiple of $3,4,6,$ and $7$.","Using $4=2^2$ and $6=2\\cdot3$, the least common multiple is $2^2\\cdot3\\cdot7=84$."],"stepsZh":["再次同时值班所经过的天数必须同时是 $3,4,6,7$ 的倍数。","由 $4=2^2$、$6=2\\cdot3$，最小公倍数为 $2^2\\cdot3\\cdot7=84$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/8"
+  },
+  "amc10-2001-q9": {
+    "summary": "Income tax is $p\\%$ of the first USD $28{,}000$ plus $(p+2)\\%$ of income above USD $28{,}000$. Kristin's total tax is $(p+0.25)\\%$ of her annual income. Find her income. Options: A USD $28{,}000$, B USD $32{,}000$, C USD $35{,}000$, D USD $42{,}000$, E USD $56{,}000$.",
+    "summaryZh": "所得税为前 $28{,}000$ 美元收入的 $p\\%$，超过部分按 $(p+2)\\%$ 征税。Kristin 的总税额恰为年收入的 $(p+0.25)\\%$。求其年收入。选项为 A $28{,}000$ 美元，B $32{,}000$ 美元，C $35{,}000$ 美元，D $42{,}000$ 美元，E $56{,}000$ 美元。",
+    "answer": "B. USD $32{,}000$.", "answerZh": "B．$32{,}000$ 美元。",
+    "methods": [{"title":"Equate the two tax expressions","titleZh":"联立两种税额表达式","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Linear equations","zh":"一元一次方程"}],"steps":["Let the income be $x\\ge28000$. Multiplying the tax equation by $100$ gives $28000p+(x-28000)(p+2)=x(p+0.25)$.","Expand. The $p$ terms cancel, leaving $2x-56000=0.25x$.","Thus $1.75x=56000$ and $x=32000$."],"stepsZh":["设年收入为 $x\\ge28000$。税额等式乘以 $100$ 后为 $28000p+(x-28000)(p+2)=x(p+0.25)$。","展开后所有含 $p$ 的项抵消，得到 $2x-56000=0.25x$。","故 $1.75x=56000$，从而 $x=32000$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/9"
+  },
+  "amc10-2001-q10": {
+    "summary": "Positive numbers $x,y,z$ satisfy $xy=24$, $xz=48$, and $yz=72$. Find $x+y+z$. Options: A $18$, B $19$, C $20$, D $22$, E $24$.",
+    "summaryZh": "正数 $x,y,z$ 满足 $xy=24$、$xz=48$、$yz=72$。求 $x+y+z$。选项为 A $18$，B $19$，C $20$，D $22$，E $24$。",
+    "answer": "D. $22$.", "answerZh": "D．$22$。",
+    "methods": [
+      {"title":"Use ratios","titleZh":"利用比值","topics":[{"en":"Systems of equations","zh":"方程组"},{"en":"Ratios","zh":"比值"}],"steps":["Divide $xz=48$ by $xy=24$ to obtain $z=2y$.","Then $yz=2y^2=72$, so $y=6$ because the variables are positive. Hence $z=12$ and $x=24/y=4$.","Therefore $x+y+z=4+6+12=22$."],"stepsZh":["用 $xz=48$ 除以 $xy=24$，得 $z=2y$。","于是 $yz=2y^2=72$。因变量均为正，$y=6$，继而 $z=12$、$x=24/y=4$。","所以 $x+y+z=4+6+12=22$。"]},
+      {"title":"Recover each variable symmetrically","titleZh":"对称地分别求出三个变量","topics":[{"en":"Algebraic identities","zh":"代数恒等式"},{"en":"Square roots","zh":"平方根"}],"steps":["Multiply the first two equations and divide by the third: $x^2=(xy)(xz)/(yz)=24\\cdot48/72=16$, so $x=4$.","Similarly, $y^2=(xy)(yz)/(xz)=36$ and $z^2=(xz)(yz)/(xy)=144$. Positivity gives $y=6,z=12$.","The sum is $22$."],"stepsZh":["前两式相乘再除以第三式：$x^2=(xy)(xz)/(yz)=24\\cdot48/72=16$，所以 $x=4$。","同理 $y^2=(xy)(yz)/(xz)=36$、$z^2=(xz)(yz)/(xy)=144$。由正性得 $y=6,z=12$。","三者之和为 $22$。"]}
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/10"
+  },
+  "amc10-2001-q11": {
+    "summary": "A central unit square is surrounded by concentric square rings of unit squares. Ring $1$ contains $8$ squares and ring $2$ contains $16$. How many squares are in ring $100$? Options: A $396$, B $404$, C $800$, D $10{,}000$, E $10{,}404$.",
+    "summaryZh": "一个中心单位正方形外依次围上同心的单位方格正方形环。第 $1$ 环有 $8$ 个方格，第 $2$ 环有 $16$ 个。第 $100$ 环有多少个方格？选项为 A $396$，B $404$，C $800$，D $10{,}000$，E $10{,}404$。",
+    "answer": "C. $800$.", "answerZh": "C．$800$。",
+    "methods": [{"title":"Subtract consecutive square areas","titleZh":"作相邻正方形面积之差","topics":[{"en":"Difference of squares","zh":"平方差"},{"en":"Patterns","zh":"数列规律"}],"steps":["Ring $n$ is the border between squares of side lengths $2n+1$ and $2n-1$.","Its number of unit squares is $(2n+1)^2-(2n-1)^2=8n$.","At $n=100$, the count is $800$."],"stepsZh":["第 $n$ 环是边长分别为 $2n+1$ 与 $2n-1$ 的两个正方形之间的边框。","方格数为 $(2n+1)^2-(2n-1)^2=8n$。","取 $n=100$，得到 $800$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/11"
+  },
+  "amc10-2001-q12": {
+    "summary": "An integer $n$ is the product of three consecutive integers and is divisible by $7$. Which need not divide $n$? Options: A $6$, B $14$, C $21$, D $28$, E $42$.",
+    "summaryZh": "整数 $n$ 是三个连续整数的乘积，并且可被 $7$ 整除。下列哪个数不一定整除 $n$？选项为 A $6$，B $14$，C $21$，D $28$，E $42$。",
+    "answer": "D. $28$.", "answerZh": "D．$28$。",
+    "methods": [{"title":"Identify guaranteed factors and give a counterexample","titleZh":"找必含因子并给出反例","topics":[{"en":"Divisibility","zh":"整除"},{"en":"Counterexamples","zh":"反例"}],"steps":["Among three consecutive integers, one is even and one is divisible by $3$, so their product is divisible by $6$. The extra condition supplies a factor $7$.","Therefore $6,14,21,$ and $42$ always divide $n$.","But $5\\cdot6\\cdot7=210$ is divisible by $7$ and is not divisible by $28$, so $28$ is not guaranteed."],"stepsZh":["三个连续整数中必有一个偶数和一个 $3$ 的倍数，因此其乘积必含因子 $6$；题设又保证因子 $7$。","所以 $6,14,21,42$ 都一定整除 $n$。","但 $5\\cdot6\\cdot7=210$ 可被 $7$ 整除，却不能被 $28$ 整除，故 $28$ 不一定是因数。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/12"
+  },
+  "amc10-2001-q13": {
+    "summary": "A phone number is $ABC$-$DEF$-$GHIJ$, using every digit $0$ through $9$ exactly once. Digits decrease within each block. The digits $D,E,F$ are three consecutive even digits, $G,H,I,J$ are four consecutive odd digits, and $A+B+C=9$. Find $A$. Options: A $4$, B $5$, C $6$, D $7$, E $8$.",
+    "summaryZh": "电话号码写成 $ABC$-$DEF$-$GHIJ$，字母恰好各代表数字 $0$ 至 $9$ 中的一个且互不相同；每一段内数字严格递减。$D,E,F$ 是三个连续偶数，$G,H,I,J$ 是四个连续奇数，且 $A+B+C=9$。求 $A$。选项为 A $4$，B $5$，C $6$，D $7$，E $8$。",
+    "answer": "E. $8$.", "answerZh": "E．$8$。",
+    "methods": [{"title":"Eliminate digit blocks","titleZh":"逐块排除数字","topics":[{"en":"Digits","zh":"数字问题"},{"en":"Casework","zh":"分类讨论"}],"steps":["The decreasing block of four consecutive odd digits is either $9753$ or $7531$, leaving odd digit $1$ or $9$ for $ABC$. Since $A+B+C=9$, it must leave $1$.","The even block is one of $864,642,420$. The unused even pairs are respectively $\\{2,0\\},\\{8,0\\},\\{8,6\\}$.","Together with odd digit $1$, only $\\{8,0\\}$ gives sum $9$. Thus $ABC=810$ and $A=8$."],"stepsZh":["四个连续奇数按递减排列只能是 $9753$ 或 $7531$，从而留给 $ABC$ 的奇数为 $1$ 或 $9$。由 $A+B+C=9$，只能留下 $1$。","三个连续偶数段只能为 $864,642,420$，相应未使用的偶数对分别为 $\\{2,0\\},\\{8,0\\},\\{8,6\\}$。","与奇数 $1$ 合并后，只有 $\\{8,0\\}$ 能使数字和为 $9$，故 $ABC=810$，$A=8$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/13"
+  },
+  "amc10-2001-q14": {
+    "summary": "A charity sells $140$ tickets for USD $2001$. A whole-number full price is charged for some tickets, and half that price for the rest. How much is raised by the full-price tickets? Options: A USD $782$, B USD $986$, C USD $1158$, D USD $1219$, E USD $1449$.",
+    "summaryZh": "慈善机构售出 $140$ 张票，共收入 $2001$ 美元。部分票按整数美元的全价出售，其余票按全价的一半出售。全价票共收入多少？选项为 A $782$ 美元，B $986$ 美元，C $1158$ 美元，D $1219$ 美元，E $1449$ 美元。",
+    "answer": "A. USD $782$.", "answerZh": "A．$782$ 美元。",
+    "methods": [{"title":"Use integer factorisation","titleZh":"利用整数因数分解","topics":[{"en":"Diophantine equations","zh":"不定方程"},{"en":"Factorisation","zh":"因数分解"}],"steps":["Let $n$ tickets sell at full price $p$ dollars. Then $np+(140-n)p/2=2001$, so $p(n+140)=4002$.","Here $140\\le n+140\\le280$. Since $4002=2\\cdot3\\cdot23\\cdot29$, its only factor in this interval is $174$.","Thus $n=34$ and $p=4002/174=23$. Full-price revenue is $34\\cdot23=782$ dollars."],"stepsZh":["设有 $n$ 张票按全价 $p$ 美元出售，则 $np+(140-n)p/2=2001$，所以 $p(n+140)=4002$。","又有 $140\\le n+140\\le280$。由 $4002=2\\cdot3\\cdot23\\cdot29$，此区间内唯一因数是 $174$。","故 $n=34$、$p=4002/174=23$，全价票收入为 $34\\cdot23=782$ 美元。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/14"
+  },
+  "amc10-2001-q15": {
+    "summary": "Parallel curbs are $40$ ft apart. Two parallel crosswalk stripes of length $50$ ft meet each curb, and their intersection points on either curb are $15$ ft apart. Find the perpendicular distance between the stripes. Options: A $9$, B $10$, C $12$, D $15$, E $25$ ft.",
+    "summaryZh": "两条平行路缘相距 $40$ 英尺。两条平行斑马线边界均长 $50$ 英尺并连接两侧路缘；它们在同一路缘上的交点相距 $15$ 英尺。求两边界之间的垂直距离。选项为 A $9$，B $10$，C $12$，D $15$，E $25$ 英尺。",
+    "answer": "C. $12$ ft.", "answerZh": "C．$12$ 英尺。",
+    "methods": [{"title":"Compute one parallelogram area two ways","titleZh":"用两种底边计算平行四边形面积","topics":[{"en":"Parallelogram area","zh":"平行四边形面积"},{"en":"Equivalent bases","zh":"等积变换"}],"steps":["The crosswalk is a parallelogram. Taking the curb segment as base gives area $15\\cdot40=600$ square feet.","Taking a $50$-ft stripe as base, the same area is $50d$, where $d$ is the perpendicular distance between stripes.","Thus $50d=600$ and $d=12$."],"stepsZh":["斑马线区域是平行四边形。以路缘上的 $15$ 英尺线段为底、高为街道宽 $40$ 英尺，面积为 $15\\cdot40=600$ 平方英尺。","以长 $50$ 英尺的边界为底时，同一面积为 $50d$，其中 $d$ 为两边界的垂直距离。","故 $50d=600$，得到 $d=12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/15"
+  },
+  "amc10-2001-q16": {
+    "summary": "For three numbers, the mean is $10$ more than the least and $15$ less than the greatest. Their median is $5$. Find their sum. Options: A $5$, B $20$, C $25$, D $30$, E $36$.",
+    "summaryZh": "三个数的平均数比最小数大 $10$，又比最大数小 $15$；中位数为 $5$。求三数之和。选项为 A $5$，B $20$，C $25$，D $30$，E $36$。",
+    "answer": "D. $30$.", "answerZh": "D．$30$。",
+    "methods": [{"title":"Express all numbers through the mean","titleZh":"用平均数表示三个数","topics":[{"en":"Mean and median","zh":"平均数与中位数"},{"en":"Linear equations","zh":"一元一次方程"}],"steps":["Let the mean be $m$. Then the least number is $m-10$, the middle number is $5$, and the greatest is $m+15$.","Their sum is also $3m$, so $(m-10)+5+(m+15)=3m$.","This gives $m=10$, hence the sum is $3m=30$."],"stepsZh":["设平均数为 $m$，则最小数为 $m-10$，中间数为 $5$，最大数为 $m+15$。","三数之和也等于 $3m$，所以 $(m-10)+5+(m+15)=3m$。","解得 $m=10$，故总和为 $3m=30$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/16"
+  },
+  "amc10-2001-q17": {
+    "summary": "A $252^\\circ$ sector of radius $10$ is rolled into a cone by joining its radial edges. Which description is correct? A slant height $10$, base radius $6$; B height $10$, radius $6$; C slant height $10$, radius $7$; D height $10$, radius $7$; E slant height $10$, radius $8$.",
+    "summaryZh": "把半径为 $10$、圆心角为 $252^\\circ$ 的扇形两条半径边重合，卷成圆锥。哪个描述正确？A 母线长 $10$、底面半径 $6$；B 高 $10$、底面半径 $6$；C 母线长 $10$、底面半径 $7$；D 高 $10$、底面半径 $7$；E 母线长 $10$、底面半径 $8$。",
+    "answer": "C. Slant height $10$ and base radius $7$.", "answerZh": "C．母线长 $10$，底面半径 $7$。",
+    "methods": [{"title":"Match sector arc to base circumference","titleZh":"令扇形弧长等于底面周长","topics":[{"en":"Sectors","zh":"扇形"},{"en":"Cones","zh":"圆锥"}],"steps":["The sector radius becomes the cone's slant height, so the slant height is $10$.","The sector arc length is $(252/360)\\cdot2\\pi\\cdot10=14\\pi$. This becomes the base circumference.","Thus $2\\pi r=14\\pi$, giving base radius $r=7$."],"stepsZh":["扇形半径卷起后成为圆锥母线，所以母线长为 $10$。","扇形弧长为 $(252/360)\\cdot2\\pi\\cdot10=14\\pi$，卷起后等于底面圆周长。","因此 $2\\pi r=14\\pi$，底面半径 $r=7$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/17"
+  },
+  "amc10-2001-q18": {
+    "summary": "A periodic tiling uses congruent squares and congruent pentagons. One repeating $3\\times3$ unit-area cell has total area $9$; four unit squares remain, one at each corner, and pentagons fill the rest. Approximately what percent is pentagonal? Options: A $50$, B $52$, C $54$, D $56$, E $58$.",
+    "summaryZh": "一种周期铺砌由全等正方形和全等五边形组成。可取一个总面积为 $9$ 的 $3\\times3$ 重复单元；四个角各保留一个单位正方形，其余区域均由五边形覆盖。五边形约占平面的百分之几？选项为 A $50$，B $52$，C $54$，D $56$，E $58$。",
+    "answer": "D. Approximately $56\\%$.", "answerZh": "D．约为 $56\\%$。",
+    "methods": [{"title":"Use one repeating cell","titleZh":"计算一个重复单元","topics":[{"en":"Tiling","zh":"铺砌"},{"en":"Area ratios","zh":"面积比"}],"steps":["In a repeating cell of area $9$, the four unit squares occupy area $4$.","The pentagons therefore occupy area $9-4=5$, a fraction $5/9=55.5\\ldots\\%$.","The nearest option is $56\\%$."],"stepsZh":["在面积为 $9$ 的重复单元中，四个单位正方形占面积 $4$。","五边形占面积 $9-4=5$，比例为 $5/9=55.5\\ldots\\%$。","最接近的选项是 $56\\%$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/18"
+  },
+  "amc10-2001-q19": {
+    "summary": "Choose four donuts from unlimited supplies of glazed, chocolate, and powdered donuts. How many selections are possible if order does not matter? Options: A $6$, B $9$, C $12$, D $15$, E $18$.",
+    "summaryZh": "从原味、巧克力味和糖粉味三种甜甜圈中选购 $4$ 个，每种供应充足且不计顺序。共有多少种选法？选项为 A $6$，B $9$，C $12$，D $15$，E $18$。",
+    "answer": "D. $15$.", "answerZh": "D．$15$。",
+    "methods": [{"title":"Apply stars and bars","titleZh":"使用隔板法","topics":[{"en":"Stars and bars","zh":"隔板法"},{"en":"Combinations with repetition","zh":"可重复组合"}],"steps":["Let $g,c,p$ be the counts of the three types. We need nonnegative integer solutions of $g+c+p=4$.","Stars and bars gives $\\binom{4+3-1}{3-1}=\\binom62=15$."],"stepsZh":["设三种甜甜圈的数量分别为 $g,c,p$，需要计算 $g+c+p=4$ 的非负整数解数。","由隔板法，解数为 $\\binom{4+3-1}{3-1}=\\binom62=15$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/19"
+  },
+  "amc10-2001-q20": {
+    "summary": "Cut congruent isosceles right triangles from the four corners of a square of side $2000$ to form a regular octagon. Find the octagon side length. A $2000/3$, B $2000(\\sqrt2-1)$, C $2000(2-\\sqrt2)$, D $1000$, E $1000\\sqrt2$.",
+    "summaryZh": "从边长 $2000$ 的正方形四角各切去一个全等的等腰直角三角形，得到正八边形。求八边形边长。A $2000/3$，B $2000(\\sqrt2-1)$，C $2000(2-\\sqrt2)$，D $1000$，E $1000\\sqrt2$。",
+    "answer": "B. $2000(\\sqrt2-1)$.", "answerZh": "B．$2000(\\sqrt2-1)$。",
+    "methods": [{"title":"Equate straight and diagonal sides","titleZh":"令水平边与斜边等长","topics":[{"en":"Regular polygons","zh":"正多边形"},{"en":"Isosceles right triangles","zh":"等腰直角三角形"}],"steps":["Let every octagon side be $x$. A slanted octagon side is the hypotenuse of a removed isosceles right triangle, so each leg is $x/\\sqrt2$.","Along one original square side, two such legs and one octagon side total $2000$: $2x/\\sqrt2+x=2000$.","Thus $x(1+\\sqrt2)=2000$, so $x=2000/(1+\\sqrt2)=2000(\\sqrt2-1)$."],"stepsZh":["设正八边形边长为 $x$。斜边是被切去的等腰直角三角形的斜边，所以每条直角边长为 $x/\\sqrt2$。","沿原正方形一条边，两段直角边与一条八边形边之和为 $2000$：$2x/\\sqrt2+x=2000$。","故 $x(1+\\sqrt2)=2000$，从而 $x=2000/(1+\\sqrt2)=2000(\\sqrt2-1)$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/20"
+  },
+  "amc10-2001-q21": {
+    "summary": "A right circular cylinder is coaxially inscribed in a cone of base diameter $10$ and height $12$. The cylinder's height equals its diameter. Find its radius. Options: A $8/3$, B $30/11$, C $3$, D $25/8$, E $7/2$.",
+    "summaryZh": "一个直圆柱同轴内接于底面直径为 $10$、高为 $12$ 的直圆锥，且圆柱的高等于其直径。求圆柱半径。选项为 A $8/3$，B $30/11$，C $3$，D $25/8$，E $7/2$。",
+    "answer": "B. $30/11$.", "answerZh": "B．$30/11$。",
+    "methods": [{"title":"Use an axial cross-section","titleZh":"利用轴截面相似","topics":[{"en":"Similar triangles","zh":"相似三角形"},{"en":"Cones and cylinders","zh":"圆锥与圆柱"}],"steps":["Let the cylinder radius be $r$; its height is $2r$. In an axial cross-section, the cone radius decreases linearly from $5$ at the base to $0$ at height $12$.","At height $2r$, similarity gives $r/5=(12-2r)/12$, equivalently $(12-2r)/r=12/5$.","Thus $60-10r=12r$, so $r=30/11$."],"stepsZh":["设圆柱半径为 $r$，则高为 $2r$。在轴截面中，圆锥半径从底部的 $5$ 随高度线性减小到顶点的 $0$。","在高度 $2r$ 处，由相似得 $r/5=(12-2r)/12$，等价于 $(12-2r)/r=12/5$。","因此 $60-10r=12r$，解得 $r=30/11$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/21"
+  },
+  "amc10-2001-q22": {
+    "summary": "A $3\\times3$ magic square has rows $[v,24,w]$, $[18,x,y]$, and $[25,z,21]$; every row, column, and diagonal has the same sum. Find $y+z$. Options: A $43$, B $44$, C $45$, D $46$, E $47$.",
+    "summaryZh": "一个 $3\\times3$ 幻方的三行依次为 $[v,24,w]$、$[18,x,y]$、$[25,z,21]$，每行、每列及两条对角线的和均相同。求 $y+z$。选项为 A $43$，B $44$，C $45$，D $46$，E $47$。",
+    "answer": "D. $46$.", "answerZh": "D．$46$。",
+    "methods": [{"title":"Exploit lines through the same corner","titleZh":"比较经过同一角格的三条线","topics":[{"en":"Magic squares","zh":"幻方"},{"en":"Linear equations","zh":"线性方程"}],"steps":["The first row, first column, and main diagonal all contain $v$, so their other two entries have equal sums: $24+w=18+25=x+21=43$. Hence $w=19$ and $x=22$.","The anti-diagonal gives the magic sum $25+22+19=66$.","Then $y=66-18-22=26$ and $z=66-25-21=20$, so $y+z=46$."],"stepsZh":["第一行、第一列和主对角线都含 $v$，所以各自另外两格之和相等：$24+w=18+25=x+21=43$。故 $w=19$、$x=22$。","副对角线给出幻和 $25+22+19=66$。","于是 $y=66-18-22=26$、$z=66-25-21=20$，所以 $y+z=46$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/22"
+  },
+  "amc10-2001-q23": {
+    "summary": "A box has three red and two white chips. Draw without replacement until all chips of either one colour have been drawn. What is the probability that the final chip drawn before stopping is white? Options: A $3/10$, B $2/5$, C $1/2$, D $3/5$, E $7/10$.",
+    "summaryZh": "盒中有三枚红筹码和两枚白筹码。无放回逐枚抽取，直到某一种颜色的筹码全部被抽出为止。停止时最后抽出的筹码为白色的概率是多少？选项为 A $3/10$，B $2/5$，C $1/2$，D $3/5$，E $7/10$。",
+    "answer": "D. $3/5$.", "answerZh": "D．$3/5$。",
+    "methods": [{"title":"Complete the random ordering conceptually","titleZh":"把抽取过程补成完整随机排列","topics":[{"en":"Sampling without replacement","zh":"无放回抽样"},{"en":"Symmetry","zh":"对称性"}],"steps":["Imagine fixing a uniformly random full ordering of all five chips, even though the process stops early.","The stopping chip is white exactly when both white chips appear before all three red chips are exhausted; equivalently, the last chip in the full ordering is red.","Each chip is equally likely to be last, and three of the five chips are red. The probability is $3/5$."],"stepsZh":["先设想五枚筹码形成一个等可能的完整随机排列，尽管实际过程会提前停止。","停止筹码为白色，当且仅当两枚白筹码在三枚红筹码全部出现之前先用尽；这等价于完整排列的最后一枚是红色。","每枚筹码成为最后一枚的机会相同，五枚中有三枚红色，所以概率为 $3/5$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/23"
+  },
+  "amc10-2001-q24": {
+    "summary": "In trapezoid $ABCD$, both $AB$ and $CD$ are perpendicular to $AD$, with $AB+CD=BC$, $AB<CD$, and $AD=7$. Find $AB\\cdot CD$. Options: A $12$, B $12.25$, C $12.5$, D $12.75$, E $13$.",
+    "summaryZh": "在梯形 $ABCD$ 中，$AB$、$CD$ 均垂直于 $AD$，且 $AB+CD=BC$、$AB<CD$、$AD=7$。求 $AB\\cdot CD$。选项为 A $12$，B $12.25$，C $12.5$，D $12.75$，E $13$。",
+    "answer": "B. $12.25$.", "answerZh": "B．$12.25$。",
+    "methods": [{"title":"Use a right triangle and difference of squares","titleZh":"构造直角三角形并用平方差","topics":[{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Difference of squares","zh":"平方差"}],"steps":["Drop a perpendicular from $B$ to $CD$. The resulting right triangle has legs $AD=7$ and $CD-AB$, and hypotenuse $BC=CD+AB$.","Therefore $(CD+AB)^2=7^2+(CD-AB)^2$.","Subtracting the squares gives $4(AB)(CD)=49$, so $AB\\cdot CD=49/4=12.25$."],"stepsZh":["从 $B$ 向 $CD$ 作垂线。所得直角三角形两直角边为 $AD=7$ 和 $CD-AB$，斜边为 $BC=CD+AB$。","因此 $(CD+AB)^2=7^2+(CD-AB)^2$。","移项并用平方差得 $4(AB)(CD)=49$，故 $AB\\cdot CD=49/4=12.25$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/24"
+  },
+  "amc10-2001-q25": {
+    "summary": "How many positive integers at most $2001$ are divisible by $3$ or $4$, but not by $5$? Options: A $768$, B $801$, C $934$, D $1067$, E $1167$.",
+    "summaryZh": "不超过 $2001$ 的正整数中，有多少个能被 $3$ 或 $4$ 整除，但不能被 $5$ 整除？选项为 A $768$，B $801$，C $934$，D $1067$，E $1167$。",
+    "answer": "B. $801$.", "answerZh": "B．$801$。",
+    "methods": [
+      {"title":"Apply inclusion-exclusion twice","titleZh":"两次使用容斥原理","topics":[{"en":"Inclusion-exclusion","zh":"容斥原理"},{"en":"Counting multiples","zh":"倍数计数"}],"steps":["Multiples of $3$ or $4$ up to $2001$ number $\\lfloor2001/3\\rfloor+\\lfloor2001/4\\rfloor-\\lfloor2001/12\\rfloor=667+500-166=1001$.","Among these, those also divisible by $5$ are multiples of $15$ or $20$. Their count is $\\lfloor2001/15\\rfloor+\\lfloor2001/20\\rfloor-\\lfloor2001/60\\rfloor=133+100-33=200$.","Subtracting gives $1001-200=801$."],"stepsZh":["不超过 $2001$ 的 $3$ 或 $4$ 的倍数共有 $\\lfloor2001/3\\rfloor+\\lfloor2001/4\\rfloor-\\lfloor2001/12\\rfloor=667+500-166=1001$ 个。","其中还被 $5$ 整除者是 $15$ 或 $20$ 的倍数，共有 $\\lfloor2001/15\\rfloor+\\lfloor2001/20\\rfloor-\\lfloor2001/60\\rfloor=133+100-33=200$ 个。","相减得 $1001-200=801$。"]},
+      {"title":"Separate multiples of 3 and 4 after excluding 5","titleZh":"先排除 5 再分两类计数","topics":[{"en":"Divisibility","zh":"整除"},{"en":"Disjoint counting","zh":"不交分类计数"}],"steps":["Count multiples of $3$ not divisible by $5$: $667-\\lfloor2001/15\\rfloor=667-133=534$.","Now count multiples of $4$ that are neither multiples of $3$ nor $5$: $500-166-100+33=267$ by inclusion-exclusion inside the multiples of $4$.","The two classes are disjoint, so the total is $534+267=801$."],"stepsZh":["先数能被 $3$ 整除但不能被 $5$ 整除的数：$667-\\lfloor2001/15\\rfloor=667-133=534$。","再数能被 $4$ 整除但不能被 $3$ 或 $5$ 整除的数：在 $4$ 的倍数中容斥，得 $500-166-100+33=267$。","两类互不相交，总数为 $534+267=801$。"]}
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2001/problem/25"
+  }
+}
