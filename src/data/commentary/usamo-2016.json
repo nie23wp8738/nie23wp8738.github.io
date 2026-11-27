@@ -1,0 +1,196 @@
+{
+  "usamo-2016-q1": {
+    "summary": "Let $S$ be a finite set. Find the least possible $|S|$ for which one can list 100 distinct nonempty subsets $X_1,\\ldots,X_{100}$ so that, for every $i<100$, the consecutive sets are disjoint but do not cover $S$: $X_i\\cap X_{i+1}=\\varnothing$ and $X_i\\cup X_{i+1}\\ne S$.",
+    "summaryZh": "设 $S$ 为有限集。求 $|S|$ 的最小值，使得可以列出 100 个互不相同的非空子集 $X_1,\\ldots,X_{100}$，并且对每个 $i<100$，相邻两集不相交且不能覆盖 $S$：$X_i\\cap X_{i+1}=\\varnothing$、$X_i\\cup X_{i+1}\\ne S$。",
+    "answer": "$8$.",
+    "answerZh": "$8$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Separate large sets, then build a recursive sequence",
+        "titleZh": "先用小集合分隔大集合，再作递归构造",
+        "topics": [
+          { "en": "Extremal set theory", "zh": "极值集合论" },
+          { "en": "Pigeonhole principle", "zh": "抽屉原理" },
+          { "en": "Recursive construction", "zh": "递归构造" }
+        ],
+        "steps": [
+          "First suppose $|S|=7$. Any set of size at least $4$ can be adjacent only to a set of size at most $2$: if $|X_i|\\ge4$, disjointness and $X_i\\cup X_{i+1}\\ne S$ give $|X_{i+1}|\\le7-|X_i|-1\\le2$.",
+          "There are only $\\binom71+\\binom72=28$ nonempty sets of size at most $2$. In a sequence with no repetition, these small sets can separate at most $29$ sets of size at least $4$. There are $\\binom73=35$ sets of size $3$, so the total length is at most $28+29+35=92<100$. Smaller ground sets cannot work either, since they have fewer than $100$ nonempty subsets. Thus $|S|\\ge8$.",
+          "For the construction, begin on $[4]$ with the valid nine-term sequence $34,1,23,4,12,3,14,2,13$, where, for example, $34$ denotes $\\{3,4\\}$. Suppose $A_1,\\ldots,A_{2^{n-1}+1}$ is a valid sequence on $[n]$. Delete its last term and let $L=2^{n-1}$. On $[n+1]$ list $A_1\\cup\\{n+1\\},A_2,A_3\\cup\\{n+1\\},A_4,\\ldots,A_L$, then $\\{n+1\\}$, then $A_1,A_2\\cup\\{n+1\\},A_3,A_4\\cup\\{n+1\\},\\ldots,A_L\\cup\\{n+1\\}$, with $n+1$ added alternately in the two halves.",
+          "Within each half, adding $n+1$ to alternating terms preserves disjointness, while the missing old element guaranteed by the original condition still prevents a union from being all of $[n+1]$. The two terms next to the middle singleton omit $n+1$ and are proper subsets of $[n]$, so those two joins are also valid. Distinctness follows because the old $A_i$ are distinct and the membership of $n+1$ records the half and parity.",
+          "The new length is $2L+1=2^n+1$. Repeating the construction from $n=4$ through $n=8$ produces 129 valid terms on an eight-element set; its first 100 terms give the required list. Hence the minimum is $8$."
+        ],
+        "stepsZh": [
+          "先设 $|S|=7$。大小至少为 $4$ 的集合，其相邻集合只能有至多 $2$ 个元素：若 $|X_i|\\ge4$，由不相交且 $X_i\\cup X_{i+1}\\ne S$，有 $|X_{i+1}|\\le7-|X_i|-1\\le2$。",
+          "大小至多为 $2$ 的非空集合只有 $\\binom71+\\binom72=28$ 个。序列中不能重复，因此这些小集合至多能分隔 $29$ 个大小至少为 $4$ 的集合；大小为 $3$ 的集合有 $\\binom73=35$ 个。故序列长度至多为 $28+29+35=92<100$。更小的底集连 100 个非空子集都没有，所以 $|S|\\ge8$。",
+          "下面构造。先在 $[4]$ 上取九项序列 $34,1,23,4,12,3,14,2,13$，其中 $34$ 表示 $\\{3,4\\}$。假设在 $[n]$ 上已有合法序列 $A_1,\\ldots,A_{2^{n-1}+1}$。删去最后一项并令 $L=2^{n-1}$。在 $[n+1]$ 上依次列出 $A_1\\cup\\{n+1\\},A_2,A_3\\cup\\{n+1\\},A_4,\\ldots,A_L$，接着列 $\\{n+1\\}$，最后列 $A_1,A_2\\cup\\{n+1\\},A_3,A_4\\cup\\{n+1\\},\\ldots,A_L\\cup\\{n+1\\}$；即两半中交替加入新元素，奇偶恰好相反。",
+          "在每一半中，相邻项只有一项含 $n+1$，故仍不相交；原序列中未被两项覆盖的旧元素仍保证并集不等于 $[n+1]$。中间单点集两侧的项都不含 $n+1$，且都是 $[n]$ 的真子集，所以两处衔接也合法。旧集合互异，而 $n+1$ 是否出现又记录了所在半段与奇偶位置，因此新序列没有重复。",
+          "新长度为 $2L+1=2^n+1$。从 $n=4$ 递推到 $n=8$，得到八元素集合上的 129 项合法序列；截取前 100 项即可。因此最小值为 $8$。"
+        ]
+      }
+    ]
+  },
+  "usamo-2016-q2": {
+    "summary": "Prove that, for every positive integer $k$, the number $\\displaystyle (k^2)!\\prod_{j=0}^{k-1}\\frac{j!}{(j+k)!}$ is an integer.",
+    "summaryZh": "证明：对每个正整数 $k$，数 $\\displaystyle (k^2)!\\prod_{j=0}^{k-1}\\frac{j!}{(j+k)!}$ 都是整数。",
+    "answer": "The displayed number is an integer for every positive integer $k$.",
+    "answerZh": "题给数对每个正整数 $k$ 都是整数。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Check every prime valuation with Legendre's formula",
+        "titleZh": "用勒让德公式逐个检验素数赋值",
+        "topics": [
+          { "en": "$p$-adic valuation", "zh": "$p$-进赋值" },
+          { "en": "Legendre's formula", "zh": "勒让德公式" },
+          { "en": "Floor functions", "zh": "取整函数" }
+        ],
+        "steps": [
+          "Fix a prime $p$. By Legendre's formula, it is enough to prove for every prime power $q=p^r$ that $\\lfloor k^2/q\\rfloor+\\sum_{j=0}^{k-1}\\lfloor j/q\\rfloor\\ge\\sum_{j=0}^{k-1}\\lfloor(j+k)/q\\rfloor$. Summing this inequality over $r\\ge1$ makes the $p$-adic valuation of the whole expression nonnegative.",
+          "Write $k=aq+b$ with $0\\le b<q$. For a fixed $j$, $\\lfloor(j+k)/q\\rfloor-\\lfloor j/q\\rfloor=a+1$ exactly when the residue of $j$ modulo $q$ is at least $q-b$, and otherwise it is $a$.",
+          "Among $j=0,\\ldots,k-1$, there are $a$ complete residue blocks and then the residues $0,\\ldots,b-1$. Hence the number of extra carries is $ab+\\max(0,2b-q)$, and the right-hand floor-sum minus the left-hand floor-sum equals $a^2q+2ab+\\max(0,2b-q)$.",
+          "On the other hand, $\\lfloor k^2/q\\rfloor=a^2q+2ab+\\lfloor b^2/q\\rfloor$. If $2b\\le q$, the remaining required inequality is immediate. If $2b>q$, then $b^2/q-(2b-q)=(q-b)^2/q\\ge0$, so $\\lfloor b^2/q\\rfloor\\ge2b-q$. Thus the floor inequality always holds.",
+          "Every prime has nonnegative valuation in the rational number, so its reduced denominator has no prime divisor. The number is therefore an integer."
+        ],
+        "stepsZh": [
+          "固定素数 $p$。由勒让德公式，只需对每个素数幂 $q=p^r$ 证明 $\\lfloor k^2/q\\rfloor+\\sum_{j=0}^{k-1}\\lfloor j/q\\rfloor\\ge\\sum_{j=0}^{k-1}\\lfloor(j+k)/q\\rfloor$。把该不等式对所有 $r\\ge1$ 求和，就得到整个表达式的 $p$-进赋值非负。",
+          "写成 $k=aq+b$，其中 $0\\le b<q$。对固定的 $j$，当且仅当 $j$ 模 $q$ 的余数至少为 $q-b$ 时，$\\lfloor(j+k)/q\\rfloor-\\lfloor j/q\\rfloor=a+1$；其余情形该差为 $a$。",
+          "$j=0,\\ldots,k-1$ 中包含 $a$ 个完整的余数循环，随后还有余数 $0,\\ldots,b-1$。因此额外进位数为 $ab+\\max(0,2b-q)$，右侧取整和减去左侧取整和等于 $a^2q+2ab+\\max(0,2b-q)$。",
+          "另一方面，$\\lfloor k^2/q\\rfloor=a^2q+2ab+\\lfloor b^2/q\\rfloor$。若 $2b\\le q$，剩余不等式显然成立；若 $2b>q$，则 $b^2/q-(2b-q)=(q-b)^2/q\\ge0$，故 $\\lfloor b^2/q\\rfloor\\ge2b-q$。所以取整不等式总成立。",
+          "任意素数在该有理数中的赋值均非负，因此约分后的分母不含任何素因子，只能为 $1$。故题给数是整数。"
+        ]
+      }
+    ]
+  },
+  "usamo-2016-q3": {
+    "summary": "In an acute triangle $ABC$, let $I_B,I_C$ be the $B$- and $C$-excenters and let $O$ be the circumcenter. On $AC$, let $Y$ be where the internal bisector from $B$ meets the side and let $E$ be the foot of the altitude from $B$. On $AB$, define $Z$ from the internal bisector at $C$ and $F$ as the foot from $C$. If $P=I_BF\\cap I_CE$, prove that $PO\\perp YZ$.",
+    "summaryZh": "在锐角三角形 $ABC$ 中，设 $I_B,I_C$ 分别为 $B,C$ 旁心，$O$ 为外心。在 $AC$ 上，$Y$ 是 $B$ 内角平分线与该边的交点，$E$ 是从 $B$ 向 $AC$ 所作高的垂足；在 $AB$ 上类似定义 $Z$ 为 $C$ 内角平分线的落点、$F$ 为从 $C$ 作高的垂足。若 $P=I_BF\\cap I_CE$，证明 $PO\\perp YZ$。",
+    "answer": "$PO\\perp YZ$.",
+    "answerZh": "$PO\\perp YZ$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "An excentral homothety and a radical axis",
+        "titleZh": "旁心构型中的位似与根轴",
+        "topics": [
+          { "en": "Excentral geometry", "zh": "旁心几何" },
+          { "en": "Homothety", "zh": "位似" },
+          { "en": "Radical axis", "zh": "根轴" }
+        ],
+        "steps": [
+          "Let $I$ and $I_A$ be the incenter and the $A$-excenter. Let $A',B',C'$ be the reflections of $I_A$ across $BC,CA,AB$, respectively. The standard midpoint-of-altitudes lemma for the incircle and excircles gives $B',E,I_C$ collinear and $C',F,I_B$ collinear. One proof of the first statement uses the homothety centered at $B$ taking the $A$-excircle to the $C$-excircle: the corresponding contact radii form a trapezoid whose diagonal intersection bisects $BE$, and reflection across $CA$ then gives $B',E,I_C$. The second statement is symmetric.",
+          "Reflection across the three sides also gives $A'B'\\parallel II_C$, $A'C'\\parallel II_B$, and $B'C'\\parallel I_BI_C$. Thus triangles $A'B'C'$ and $II_BI_C$ are homothetic, with correspondence $A'\\leftrightarrow I$, $B'\\leftrightarrow I_C$, $C'\\leftrightarrow I_B$. The corresponding-vertex lines $B'I_C=EI_C$ and $C'I_B=FI_B$ meet at $P$, so $P$ is the homothety center.",
+          "Let $S$ be the circumcenter of triangle $II_BI_C$. Since $I_AA'=I_AB'=I_AC'$ (each is twice the $A$-exradius), $I_A$ is the circumcenter of $A'B'C'$. A homothety sends circumcenters to circumcenters, so $P,S,I_A$ are collinear. The internal and external angle bisectors at each vertex are perpendicular; applying this to the four centers shows that $I_A$ is the orthocenter of triangle $II_BI_C$ and that its nine-point center is $O$. Hence $S,O,I_A$ are collinear, and therefore $P,O,S$ are collinear.",
+          "Let $\\Gamma$ be the circumcircle of $ABC$ and $\\Omega$ the circumcircle of $II_BI_C$. Consider also the circle with diameter $II_B$. It passes through $A$ and $C$, because the corresponding internal and external angle bisectors are perpendicular. Since $Y$ lies on both $AC$ and the line $II_B$, it has equal power to this diameter circle, to $\\Gamma$, and to $\\Omega$: the first equality uses $YA\\cdot YC$, while the second uses the common chord $II_B$. Thus $Y$ lies on the radical axis of $\\Gamma$ and $\\Omega$.",
+          "Similarly, the circle with diameter $II_C$ passes through $A,B$, and $Z\\in AB\\cap II_C$ lies on the same radical axis. Consequently $YZ$ is the radical axis of $\\Gamma$ and $\\Omega$. Their centers are $O$ and $S$, so $YZ\\perp OS$. Since $P,O,S$ are collinear, this gives $YZ\\perp PO$."
+        ],
+        "stepsZh": [
+          "设 $I,I_A$ 分别为内心与 $A$ 旁心，并把 $I_A$ 关于 $BC,CA,AB$ 的对称点分别记为 $A',B',C'$。内切圆与旁切圆构型中的“高的中点”引理给出 $B',E,I_C$ 共线以及 $C',F,I_B$ 共线。以第一条为例，可用以 $B$ 为中心、把 $A$ 旁切圆映到 $C$ 旁切圆的位似：对应接触半径组成一个梯形，其对角线交点平分 $BE$，再结合关于 $CA$ 的反射即可得到 $B',E,I_C$ 共线；另一条完全对称。",
+          "由三次反射还可得 $A'B'\\parallel II_C$、$A'C'\\parallel II_B$、$B'C'\\parallel I_BI_C$，所以三角形 $A'B'C'$ 与 $II_BI_C$ 位似。结合上一步两组共线关系，两个对应顶点连线的交点正是 $P$，故 $P$ 为该位似中心。",
+          "设 $S$ 为三角形 $II_BI_C$ 的外心。由于 $I_AA'=I_AB'=I_AC'$（都等于 $A$ 旁切圆半径的两倍），$I_A$ 是三角形 $A'B'C'$ 的外心。位似把外心映为外心，因此 $P,S,I_A$ 共线。另一方面，各顶点的内、外角平分线互相垂直；用于四个心所成构型可知，$I_A$ 是三角形 $II_BI_C$ 的垂心，而其九点圆圆心为 $O$。于是 $S,O,I_A$ 共线，从而 $P,O,S$ 共线。",
+          "记 $ABC$ 的外接圆为 $\\Gamma$，三角形 $II_BI_C$ 的外接圆为 $\\Omega$。再考虑以 $II_B$ 为直径的圆。由于相应的内、外角平分线垂直，该圆经过 $A,C$。又因 $Y\\in AC$ 且 $Y$ 位于直线 $II_B$ 上，点 $Y$ 对这个直径圆、$\\Gamma$ 与 $\\Omega$ 的幂相等：前两圆的幂都可写成 $YA\\cdot YC$，后两圆则因公共弦端点为 $I,I_B$ 而相等。因此 $Y$ 在 $\\Gamma,\\Omega$ 的根轴上。",
+          "同理，以 $II_C$ 为直径的圆经过 $A,B$，且 $Z\\in AB\\cap II_C$，所以 $Z$ 也在同一根轴上。因此 $YZ$ 就是 $\\Gamma$ 与 $\\Omega$ 的根轴，必垂直于两圆心连线 $OS$。再由 $P,O,S$ 共线，得到 $YZ\\perp PO$。"
+        ]
+      }
+    ]
+  },
+  "usamo-2016-q4": {
+    "summary": "Find all functions $f:\\mathbb R\\to\\mathbb R$ such that, for all real $x,y$, $(f(x)+xy)f(x-3y)+(f(y)+xy)f(3x-y)=f(x+y)^2$.",
+    "summaryZh": "求所有函数 $f:\\mathbb R\\to\\mathbb R$，使得对任意实数 $x,y$ 都有 $(f(x)+xy)f(x-3y)+(f(y)+xy)f(3x-y)=f(x+y)^2$。",
+    "answer": "$f(x)\\equiv0$ and $f(x)=x^2$.",
+    "answerZh": "$f(x)\\equiv0$ 与 $f(x)=x^2$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Classify the zero set by strategic substitutions",
+        "titleZh": "用特殊代入分类零点集",
+        "topics": [
+          { "en": "Functional equations", "zh": "函数方程" },
+          { "en": "Zero propagation", "zh": "零点传播" },
+          { "en": "Even functions", "zh": "偶函数" }
+        ],
+        "steps": [
+          "Write the assertion as $P(x,y)$. From $P(0,0)$, $f(0)=0$. The equations $P(0,y)$ and $P(0,-y)$ give $f(y)f(-y)=f(y)^2=f(-y)^2$, so $f$ is even.",
+          "Using evenness in $P(x,-x)$ gives $2f(4x)(f(x)-x^2)=0$. Hence for every $x$, either $f(4x)=0$ or $f(x)=x^2$.",
+          "We next prove $f(x)=0\\iff f(2x)=0$. First, if $f(2x)=0$, substitute $(3x/4,x/4)$: the two shifted arguments are $0$ and $2x$, so the left side is $0$ and $f(x)^2=0$. Conversely, suppose $f(x)=0$ but $f(2x)\\ne0$. Then $P(x,x)$ gives $f(2x)=2x^2$. The dichotomy of Step 2 applied at $2x$ says either $f(8x)=0$ or $f(2x)=4x^2$. The second option contradicts $f(2x)=2x^2$ for $x\\ne0$; the first, applied three times to the implication just proved, gives $f(2x)=0$, also a contradiction.",
+          "The zero equivalence iterated twice says $f(x)\\ne0$ exactly when $f(4x)\\ne0$. Combining this with Step 2 shows that every real $x$ satisfies $f(x)=0$ or $f(x)=x^2$. In particular, $f$ is nonnegative.",
+          "If $f(a)=0$ for some $a\\ne0$, evenness lets us take $a>0$. Then $f(2^ma)=0$ for all $m$. Given any $b>0$, choose such a zero $c>b$ and put $x=(3c+b)/4$, $y=(c-b)/4$. Here $xy>0$, $x-3y=b$, and $x+y=c$. In $P(x,y)$ the right side is zero and both summands on the left are nonnegative; moreover $f(x)+xy>0$, so $f(b)=0$. Evenness now gives $f\\equiv0$.",
+          "If there is no nonzero zero, Step 4 gives $f(x)=x^2$ for every $x$. Direct substitution verifies both $f\\equiv0$ and $f(x)=x^2$, completing the classification."
+        ],
+        "stepsZh": [
+          "把题给命题记作 $P(x,y)$。由 $P(0,0)$ 得 $f(0)=0$。$P(0,y)$ 与 $P(0,-y)$ 给出 $f(y)f(-y)=f(y)^2=f(-y)^2$，所以 $f$ 为偶函数。",
+          "在 $P(x,-x)$ 中使用偶性，得到 $2f(4x)(f(x)-x^2)=0$。因此对每个 $x$，都有 $f(4x)=0$ 或 $f(x)=x^2$。",
+          "下面证明 $f(x)=0\\iff f(2x)=0$。先设 $f(2x)=0$，代入 $(3x/4,x/4)$；两个移位后的自变量分别为 $0$ 与 $2x$，故左边为零，从而 $f(x)^2=0$。反过来，若 $f(x)=0$ 但 $f(2x)\\ne0$，则 $P(x,x)$ 给出 $f(2x)=2x^2$。把第 2 步用于 $2x$，可得 $f(8x)=0$ 或 $f(2x)=4x^2$；后者与 $f(2x)=2x^2$ 矛盾，前者反复使用刚证明的“$f(2u)=0\\Rightarrow f(u)=0$”也会推出 $f(2x)=0$，仍矛盾。",
+          "把零点等价关系迭代两次，得到 $f(x)\\ne0$ 当且仅当 $f(4x)\\ne0$。与第 2 步结合可知，每个实数 $x$ 都满足 $f(x)=0$ 或 $f(x)=x^2$；特别地，$f$ 处处非负。",
+          "若存在 $a\\ne0$ 使 $f(a)=0$，由偶性可设 $a>0$，并且 $f(2^ma)=0$ 对所有 $m$ 成立。任取 $b>0$，选取大于 $b$ 的这类零点 $c$，令 $x=(3c+b)/4$、$y=(c-b)/4$。此时 $xy>0$、$x-3y=b$、$x+y=c$。在 $P(x,y)$ 中右边为零，左边两项均非负，且 $f(x)+xy>0$，故 $f(b)=0$。再由偶性得到 $f\\equiv0$。",
+          "若没有非零零点，第 3 步就给出对所有 $x$ 均有 $f(x)=x^2$。直接代入可验证 $f\\equiv0$ 与 $f(x)=x^2$ 都满足原方程，分类完成。"
+        ]
+      }
+    ]
+  },
+  "usamo-2016-q5": {
+    "summary": "An equilateral pentagon $AMNPQ$ lies inside triangle $ABC$, with $M\\in AB$, $Q\\in AC$, and $N,P\\in BC$. Let $S=MN\\cap PQ$, and let $\\ell$ be the internal angle bisector of $\\angle MSQ$. Prove that $OI\\parallel\\ell$, where $O,I$ are the circumcenter and incenter of $ABC$.",
+    "summaryZh": "等边五边形 $AMNPQ$ 内接于三角形 $ABC$，其中 $M\\in AB$、$Q\\in AC$、$N,P\\in BC$。令 $S=MN\\cap PQ$，并设 $\\ell$ 为 $\\angle MSQ$ 的内角平分线。证明 $OI\\parallel\\ell$，其中 $O,I$ 分别为三角形 $ABC$ 的外心与内心。",
+    "answer": "$OI\\parallel\\ell$.",
+    "answerZh": "$OI\\parallel\\ell$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Compare side normals on the unit circumcircle",
+        "titleZh": "在单位外接圆上比较各边法向量",
+        "topics": [
+          { "en": "Complex geometry", "zh": "复数几何" },
+          { "en": "Arc midpoints", "zh": "弧中点" },
+          { "en": "Angle-bisector vectors", "zh": "角平分线向量" }
+        ],
+        "steps": [
+          "Place the circumcircle of $ABC$ as the unit circle in the complex plane with $O=0$. Let $X,Y,Z$ be the midpoints of the arcs $BC,CA,AB$ not containing $A,B,C$, and write their unit affixes as $x,y,z$, with signs chosen toward the corresponding sides. The standard unit-circle incenter formula says that the direction of $OI$ is the direction of $x+y+z$.",
+          "Let the common side length of the pentagon be $t$. A chord is perpendicular to the radius through its arc midpoint. Therefore the directed vectors along $AM$, $NP$, and $QA$ are, in their polygonal orientations, $ti z$, $ti x$, and $ti y$, respectively. In affixes, $(m-a)+(p-n)+(a-q)=ti(x+y+z)$.",
+          "The left side rearranges as $(m-n)+(p-q)$. Since $MN=PQ=t$, the two summands are equal-length unit-direction vectors along the two lines through $S$. Their sum points along the external angle bisector of the angle formed by $MN$ and $PQ$; the internal angle bisector $\\ell$ is perpendicular to it.",
+          "Thus the external angle-bisector direction is $i(x+y+z)$, a $90^\\circ$ rotation of the direction of $OI$. Its perpendicular, namely the internal angle bisector $\\ell$, is parallel to $OI$, as required."
+        ],
+        "stepsZh": [
+          "在复平面中把三角形 $ABC$ 的外接圆取为单位圆，并令 $O=0$。设 $X,Y,Z$ 分别为不含 $A,B,C$ 的弧 $BC,CA,AB$ 的中点，单位复数分别为 $x,y,z$，符号朝向对应边选取。单位圆模型中的标准内心公式表明，$OI$ 的方向就是 $x+y+z$ 的方向。",
+          "设五边形的公共边长为 $t$。圆的一条弦垂直于通过该弧中点的半径，因此沿五边形方向的 $AM,NP,QA$ 三个有向向量依次为 $tiz,tix,tiy$。用复数表示即 $(m-a)+(p-n)+(a-q)=ti(x+y+z)$。",
+          "左边可重排为 $(m-n)+(p-q)$。由于 $MN=PQ=t$，这两个加数是沿过 $S$ 的两条直线、长度相等的方向向量；它们的和指向 $MN$ 与 $PQ$ 所成角的外角平分线，而题设内角平分线 $\\ell$ 与之外角平分线垂直。",
+          "所以外角平分线方向为 $i(x+y+z)$，恰是 $OI$ 方向旋转 $90^\\circ$ 所得。与其垂直的内角平分线 $\\ell$ 因而平行于 $OI$，结论得证。"
+        ]
+      }
+    ]
+  },
+  "usamo-2016-q6": {
+    "summary": "There are two face-down cards of each label $1,\\ldots,n$. On each move a player chooses $k$ of the $2n$ positions. The chosen cards are shown; a matching pair wins immediately. If all labels differ, an adversary secretly permutes those $k$ cards and turns them down again. For integers $n\\ge k\\ge2$, determine exactly when the player has a strategy guaranteed to win in a bounded number of moves.",
+    "summaryZh": "有 $2n$ 张背面朝上的牌，标签 $1,\\ldots,n$ 各出现两次。每步玩家选择 $2n$ 个位置中的 $k$ 个；若翻开的牌中有同标签的一对，立即获胜；若标签全异，对手可秘密任意重排这 $k$ 张牌后再次盖住。对整数 $n\\ge k\\ge2$，求玩家恰在何种情形下存在保证在有限步数内获胜的策略。",
+    "answer": "Exactly when $k<n$.",
+    "answerZh": "当且仅当 $k<n$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2016_USAMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Sliding windows versus an adversarial partition",
+        "titleZh": "滑动窗口与对手维持的二分结构",
+        "topics": [
+          { "en": "Combinatorial games", "zh": "组合博弈" },
+          { "en": "Information strategy", "zh": "信息策略" },
+          { "en": "Adversarial invariant", "zh": "对抗不变量" }
+        ],
+        "steps": [
+          "Assume first that $k<n$. Query the consecutive windows of positions $1,\\ldots,k$, then $2,\\ldots,k+1$, and so on through $2n-k+1,\\ldots,2n$. If a window contains a repeated label, the player wins at once.",
+          "Otherwise every revealed window contains $k$ distinct labels. Compare two consecutive windows. After the earlier secret permutation, the windows differ in exactly one outgoing position and one incoming position. Their revealed label multisets identify the outgoing label; if the multisets are equal, the incoming card itself identifies a matching outgoing card and the player can select that pair on the next move. Thus, unless already winning, the player learns the labels at positions $1,\\ldots,2n-k$.",
+          "Because $k<n$, we have $2n-k>n$. Among these more than $n$ known positions, two carry the same one of the $n$ labels. Choosing those two positions together with any other $k-2$ positions guarantees a match. This gives a bounded winning strategy.",
+          "It remains to show impossibility when $k=n$. After any non-winning first move, let $A$ be the chosen set of $n$ positions and $A^c$ its complement. Each block can be regarded as containing one copy of every label, while the player has no lasting information about the order inside a block.",
+          "The adversary maintains this invariant. If the next query uses $r$ positions from $A$ and $n-r$ from $A^c$, assign to the selected positions of $A$ any $r$ labels and to the selected positions of $A^c$ the complementary $n-r$ labels. The displayed cards are then exactly the $n$ distinct labels. The allowed secret permutation can restore two hidden blocks, each containing one copy of every label, with the new queried set playing the role of $A$.",
+          "Hence the adversary can avoid a match forever when $k=n$. Since the assumptions already impose $k\\le n$, the game is winnable exactly for $k<n$."
+        ],
+        "stepsZh": [
+          "先设 $k<n$。依次选择连续窗口 $1,\\ldots,k$，再选 $2,\\ldots,k+1$，如此直到 $2n-k+1,\\ldots,2n$。若某个窗口出现重复标签，玩家立即获胜。",
+          "否则每个窗口都显示 $k$ 个不同标签。比较相邻两个窗口：在前一次秘密重排后，它们只相差一个离开的位置和一个新进入的位置，两次显示的标签多重集可确定离开位置的标签；若两个多重集相同，新进入的牌本身就指出它与离开位置成对，下一步可直接同时选择这两个位置。因此，只要尚未获胜，玩家就能依次确定位置 $1,\\ldots,2n-k$ 的标签。",
+          "由于 $k<n$，有 $2n-k>n$。在这超过 $n$ 个已知位置中，按抽屉原理必有两个位置带同一标签。把这两个位置与任意另外 $k-2$ 个位置一起选择，必定获胜。因此存在有限步获胜策略。",
+          "下面证明 $k=n$ 时不可能保证获胜。第一次未获胜后，令 $A$ 为所选的 $n$ 个位置，$A^c$ 为其补集。可以把两个区块都看作各含标签 $1,\\ldots,n$ 的一份，而玩家对区块内部的排列没有可持续的信息。",
+          "对手维持这一不变量。若下一次从 $A$ 中选了 $r$ 个位置、从 $A^c$ 中选了 $n-r$ 个位置，就给前一部分安排任意 $r$ 个标签，给后一部分安排余下的 $n-r$ 个标签；这样翻开的恰是 $n$ 个互异标签。随后允许的秘密重排可重新形成两个各含每种标签一次的隐藏区块，并把本次所选集合当作新的 $A$。",
+          "因此在 $k=n$ 时，对手可以永远避免出现一对相同标签。结合题设 $k\\le n$，游戏可保证获胜当且仅当 $k<n$。"
+        ]
+      }
+    ]
+  }
+}
