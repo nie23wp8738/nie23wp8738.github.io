@@ -1,0 +1,194 @@
+{
+  "imo-1975-q1": {
+    "summary": "Let $x_1\\ge x_2\\ge\\cdots\\ge x_n$ and $y_1\\ge y_2\\ge\\cdots\\ge y_n$ be real numbers. If $(z_1,\\ldots,z_n)$ is any permutation of $(y_1,\\ldots,y_n)$, prove that $$\\sum_{i=1}^n(x_i-y_i)^2\\le\\sum_{i=1}^n(x_i-z_i)^2.$$",
+    "summaryZh": "设实数列满足 $x_1\\ge x_2\\ge\\cdots\\ge x_n$ 与 $y_1\\ge y_2\\ge\\cdots\\ge y_n$。若 $(z_1,\\ldots,z_n)$ 是 $(y_1,\\ldots,y_n)$ 的任意排列，证明 $$\\sum_{i=1}^n(x_i-y_i)^2\\le\\sum_{i=1}^n(x_i-z_i)^2$$。",
+    "answer": "Pairing the two sequences in the same decreasing order minimizes the sum of squared differences.",
+    "answerZh": "把两个数列按相同的递减顺序配对时，平方差之和最小。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Remove inversions by pairwise exchanges",
+        "titleZh": "用成对交换逐一消去逆序",
+        "topics": [
+          {"en": "Rearrangement inequality", "zh": "排序不等式"},
+          {"en": "Exchange argument", "zh": "交换论证"},
+          {"en": "Inequalities", "zh": "不等式"}
+        ],
+        "steps": [
+          "For $x\\ge x'$ and $y\\ge y'$, direct expansion gives $$(x-y')^2+(x'-y)^2-(x-y)^2-(x'-y')^2=2(x-x')(y-y')\\ge0.$$ Thus assigning the larger $y$ to the larger $x$ never gives a larger cost than crossing the two assignments.",
+          "Start with the permutation $(z_1,\\ldots,z_n)$. If it is not decreasing, there are indices $i<j$ with $z_i<z_j$. Because $x_i\\ge x_j$, Step 1 shows that exchanging $z_i$ and $z_j$ cannot increase $\\sum_k(x_k-z_k)^2$.",
+          "Repeatedly remove such inversions. Since a finite permutation has only finitely many inversions, the process ends with the entries of $z$ in decreasing order.",
+          "That decreasing list is precisely $(y_1,\\ldots,y_n)$, including repeated values. Hence the final cost is $\\sum_i(x_i-y_i)^2$ and is no greater than the initial cost $\\sum_i(x_i-z_i)^2$, proving the inequality."
+        ],
+        "stepsZh": [
+          "若 $x\\ge x'$ 且 $y\\ge y'$，直接展开可得 $$(x-y')^2+(x'-y)^2-(x-y)^2-(x'-y')^2=2(x-x')(y-y')\\ge0$$。所以把较大的 $y$ 配给较大的 $x$，代价不会比交叉配对更大。",
+          "从排列 $(z_1,\\ldots,z_n)$ 出发。若它不是递减的，则存在 $i<j$ 使 $z_i<z_j$。又因 $x_i\\ge x_j$，由第一步可知交换 $z_i,z_j$ 不会增大 $\\sum_k(x_k-z_k)^2$。",
+          "不断消去这样的逆序。有限排列的逆序数有限，因此过程最终得到按递减顺序排列的 $z$。",
+          "这个递减序列正是 $(y_1,\\ldots,y_n)$，重复值也按重数保留。因此最终的平方差和为 $\\sum_i(x_i-y_i)^2$，且不大于初始值 $\\sum_i(x_i-z_i)^2$，结论成立。"
+        ]
+      }
+    ]
+  },
+  "imo-1975-q2": {
+    "summary": "Let $a_1<a_2<a_3<\\cdots$ be an infinite increasing sequence of positive integers. Prove that for every $p\\ge1$, infinitely many terms $a_m$ can be written as $$a_m=xa_p+ya_q,$$ where $x,y$ are positive integers and $q>p$.",
+    "summaryZh": "设 $a_1<a_2<a_3<\\cdots$ 是正整数构成的无限递增序列。证明：对每个 $p\\ge1$，都有无穷多个项 $a_m$ 可写成 $$a_m=xa_p+ya_q,$$ 其中 $x,y$ 为正整数且 $q>p$。",
+    "answer": "For each fixed $p$, one may choose a single $q>p$ and take $y=1$ for infinitely many $m$.",
+    "answerZh": "对每个固定的 $p$，可以选定同一个 $q>p$，并对无穷多个 $m$ 取 $y=1$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use an infinite residue class modulo $a_p$",
+        "titleZh": "在模 $a_p$ 的无穷剩余类中选取各项",
+        "topics": [
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"},
+          {"en": "Congruences", "zh": "同余"},
+          {"en": "Infinite sequences", "zh": "无限数列"}
+        ],
+        "steps": [
+          "Fix $p\\ge1$. There are only $a_p$ residue classes modulo $a_p$, but the sequence contains infinitely many terms. Hence at least one residue class contains infinitely many of the $a_i$.",
+          "Choose one term $a_q$ from this infinite class with $q>p$. After deleting the finitely many terms with index at most $q$, infinitely many terms $a_m$ of the same class remain, all with $m>q$.",
+          "For every such $m$, $a_m\\equiv a_q\\pmod{a_p}$. Thus $$x=\\frac{a_m-a_q}{a_p}$$ is an integer. Since the sequence is strictly increasing and $m>q$, we have $a_m>a_q$, so $x$ is positive.",
+          "Taking $y=1$ gives $a_m=xa_p+ya_q$. This representation holds for infinitely many $m$, with positive integers $x,y$ and the fixed index $q>p$. Since $p$ was arbitrary, the assertion follows."
+        ],
+        "stepsZh": [
+          "固定 $p\\ge1$。模 $a_p$ 只有 $a_p$ 个剩余类，而数列有无穷多项，所以至少有一个剩余类包含无穷多个 $a_i$。",
+          "从这个无穷剩余类中选取一项 $a_q$，使 $q>p$。删去指标不超过 $q$ 的有限多项后，同一剩余类中仍有无穷多个 $a_m$，并且它们都满足 $m>q$。",
+          "对每个这样的 $m$，有 $a_m\\equiv a_q\\pmod{a_p}$，所以 $$x=\\frac{a_m-a_q}{a_p}$$ 是整数。因数列严格递增且 $m>q$，故 $a_m>a_q$，从而 $x$ 为正整数。",
+          "取 $y=1$，便有 $a_m=xa_p+ya_q$。对无穷多个 $m$，这个表示都成立，且 $x,y$ 为正整数、固定的 $q>p$。由于 $p$ 任意，结论得证。"
+        ]
+      }
+    ]
+  },
+  "imo-1975-q3": {
+    "summary": "On the sides of an arbitrary triangle $ABC$, construct externally triangles $ABR$, $BCP$, and $CAQ$ such that $\\angle CBP=\\angle CAQ=45^\\circ$, $\\angle BCP=\\angle ACQ=30^\\circ$, and $\\angle ABR=\\angle BAR=15^\\circ$. Prove that $\\angle QRP=90^\\circ$ and $QR=RP$.",
+    "summaryZh": "在任意三角形 $ABC$ 的三边外侧分别作三角形 $ABR,BCP,CAQ$，使 $\\angle CBP=\\angle CAQ=45^\\circ$，$\\angle BCP=\\angle ACQ=30^\\circ$，且 $\\angle ABR=\\angle BAR=15^\\circ$。证明 $\\angle QRP=90^\\circ$ 且 $QR=RP$。",
+    "answer": "The vectors satisfy $q-r=i(p-r)$ in suitable complex coordinates; hence $RQ$ is a $90^\\circ$ rotation of $RP$ with the same length.",
+    "answerZh": "在适当的复坐标中有 $q-r=i(p-r)$；因此向量 $RQ$ 是向量 $RP$ 旋转 $90^\\circ$ 后所得，且长度不变。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Encode the external constructions by complex rotations",
+        "titleZh": "用复数旋转表示三个外接构造",
+        "topics": [
+          {"en": "Complex numbers in geometry", "zh": "复数几何"},
+          {"en": "Rotations", "zh": "旋转"},
+          {"en": "Sine rule", "zh": "正弦定理"}
+        ],
+        "steps": [
+          "Identify the plane with the complex plane. After a similarity and, if necessary, a reflection, take $a=0$, $b=1$, and $c=u+iv$ with $v>0$. Denote the coordinates of $P,Q,R$ by $p,q,r$, and set $$t=\\frac{\\sqrt3-1}{2}.$$",
+          "The remaining angles at $P$ and $Q$ are both $105^\\circ$. By the sine rule, $$\\frac{BP}{BC}=\\frac{AQ}{AC}=\\frac{\\sin30^\\circ}{\\sin105^\\circ}=\\sqrt2\\,t.$$ The external orientations rotate $BC$ clockwise by $45^\\circ$ and $AC$ counterclockwise by $45^\\circ$, so $$p=1+t(1-i)(c-1),\\qquad q=t(1+i)c.$$",
+          "The triangle $ABR$ is isosceles and lies on the side of $AB$ opposite $C$. Its altitude gives $$r=\\frac12-\\frac i2\\tan15^\\circ=\\frac12+i\\left(t-\\frac12\\right),$$ because $\\tan15^\\circ=2-\\sqrt3$.",
+          "Substitute the expressions for $p$ and $q$: $$q-ip=t(1+i)c-i\\bigl[1+t(1-i)(c-1)\\bigr]=t+i(t-1)=(1-i)r.$$ Rearranging yields the key identity $$q-r=i(p-r).$$",
+          "The vectors are nonzero. Indeed, if $p=r$, the identity also gives $q=r$, whence $c=r/[t(1+i)]=\\tfrac12+i(t-1)/(2t)$, whose imaginary part is negative because $0<t<1$, contradicting $v>0$.",
+          "Multiplication by $i$ rotates a nonzero vector through $90^\\circ$ and preserves its length. Therefore $q-r=i(p-r)$ gives $\\angle QRP=90^\\circ$ and $QR=RP$."
+        ],
+        "stepsZh": [
+          "把平面视为复平面。经相似变换并在需要时作反射，可设 $a=0$、$b=1$、$c=u+iv$，其中 $v>0$。以 $p,q,r$ 分别表示 $P,Q,R$ 的复坐标，并令 $$t=\\frac{\\sqrt3-1}{2}$$。",
+          "$P,Q$ 处的其余内角都为 $105^\\circ$。由正弦定理，$$\\frac{BP}{BC}=\\frac{AQ}{AC}=\\frac{\\sin30^\\circ}{\\sin105^\\circ}=\\sqrt2\\,t$$。外作方向表明：$BC$ 顺时针旋转 $45^\\circ$ 得到 $BP$ 的方向，而 $AC$ 逆时针旋转 $45^\\circ$ 得到 $AQ$ 的方向。因此 $$p=1+t(1-i)(c-1),\\qquad q=t(1+i)c$$。",
+          "三角形 $ABR$ 是等腰三角形，且位于直线 $AB$ 上与 $C$ 相反的一侧。利用从 $R$ 引出的高及 $\\tan15^\\circ=2-\\sqrt3$，得到 $$r=\\frac12-\\frac i2\\tan15^\\circ=\\frac12+i\\left(t-\\frac12\\right)$$。",
+          "代入 $p,q$ 的表达式：$$q-ip=t(1+i)c-i\\bigl[1+t(1-i)(c-1)\\bigr]=t+i(t-1)=(1-i)r$$。整理得到关键恒等式 $$q-r=i(p-r)$$。",
+          "这两个向量非零。否则若 $p=r$，恒等式还给出 $q=r$，于是 $c=r/[t(1+i)]=\\tfrac12+i(t-1)/(2t)$。因 $0<t<1$，其虚部为负，与 $v>0$ 矛盾。",
+          "非零向量乘以 $i$ 等于逆时针旋转 $90^\\circ$，且长度不变。因此由 $q-r=i(p-r)$ 立即得到 $\\angle QRP=90^\\circ$ 且 $QR=RP$。"
+        ]
+      }
+    ]
+  },
+  "imo-1975-q4": {
+    "summary": "Let $A$ be the sum of the decimal digits of $4444^{4444}$, and let $B$ be the sum of the decimal digits of $A$. Find the sum of the decimal digits of $B$.",
+    "summaryZh": "设 $A$ 为 $4444^{4444}$ 的十进制各位数字之和，$B$ 为 $A$ 的十进制各位数字之和。求 $B$ 的十进制各位数字之和。",
+    "answer": "$7$.",
+    "answerZh": "$7$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Combine digit-sum bounds with congruence modulo $9$",
+        "titleZh": "结合数位和估计与模 $9$ 同余",
+        "topics": [
+          {"en": "Digit sums", "zh": "数位和"},
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Bounds", "zh": "估计"}
+        ],
+        "steps": [
+          "Let $N=4444^{4444}$ and let $C$ be the digit sum of $B$, the number requested. Since $$N<(10^4)^{4444}=10^{17776},$$ the decimal expansion of $N$ has at most $17776$ digits.",
+          "Therefore $1\\le A\\le9\\cdot17776=159984<10^6$. Thus $A$ has at most six digits, so $1\\le B\\le54$. Consequently $B$ has at most two digits and $1\\le C\\le14$ (the cruder upper bound $5+9$ is already sufficient).",
+          "Every positive integer is congruent modulo $9$ to its digit sum. Applying this three times gives $$C\\equiv B\\equiv A\\equiv N\\pmod9.$$",
+          "Now $4444\\equiv7\\pmod9$, $7^3\\equiv1\\pmod9$, and $4444=3\\cdot1481+1$. Hence $$N\\equiv7^{4444}\\equiv7\\pmod9,$$ so $C\\equiv7\\pmod9$.",
+          "Among the integers from $1$ through $14$, the only one congruent to $7$ modulo $9$ is $7$. Therefore $C=7$."
+        ],
+        "stepsZh": [
+          "令 $N=4444^{4444}$，再令 $C$ 为 $B$ 的数位和，即题目所求。因为 $$N<(10^4)^{4444}=10^{17776},$$ 所以 $N$ 的十进制表示至多有 $17776$ 位。",
+          "于是 $1\\le A\\le9\\cdot17776=159984<10^6$。因此 $A$ 至多有六位，故 $1\\le B\\le54$。进而 $B$ 至多有两位，所以 $1\\le C\\le14$（使用较粗的上界 $5+9$ 已经足够）。",
+          "每个正整数与它的十进制数位和模 $9$ 同余。连续应用三次，得到 $$C\\equiv B\\equiv A\\equiv N\\pmod9$$。",
+          "又有 $4444\\equiv7\\pmod9$、$7^3\\equiv1\\pmod9$，且 $4444=3\\cdot1481+1$。所以 $$N\\equiv7^{4444}\\equiv7\\pmod9,$$ 从而 $C\\equiv7\\pmod9$。",
+          "在 $1$ 到 $14$ 中，唯一模 $9$ 余 $7$ 的整数是 $7$。因此 $C=7$。"
+        ]
+      }
+    ]
+  },
+  "imo-1975-q5": {
+    "summary": "Determine whether one can choose $1975$ distinct points on the circumference of a unit circle so that the distance between every pair of chosen points is rational. Give a proof.",
+    "summaryZh": "判断能否在单位圆周上选取 $1975$ 个不同的点，使任意两点之间的距离都是有理数，并给出证明。",
+    "answer": "Yes. The explicit construction in the solution gives not merely $1975$ but infinitely many such points.",
+    "answerZh": "可以。解答中的显式构造实际上给出了无穷多个满足条件的点。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Square rational points on the unit circle",
+        "titleZh": "把单位圆上的有理点作复数平方",
+        "topics": [
+          {"en": "Rational parametrization", "zh": "有理参数化"},
+          {"en": "Unit circle", "zh": "单位圆"},
+          {"en": "Constructive geometry", "zh": "构造几何"}
+        ],
+        "steps": [
+          "For $k=1,2,\\ldots,1975$, define $$a_k=\\frac{k^2-1}{k^2+1},\\qquad b_k=\\frac{2k}{k^2+1},\\qquad P_k=(a_k^2-b_k^2,\\,2a_kb_k).$$ All coordinates are rational.",
+          "The standard Pythagorean parametrization gives $$a_k^2+b_k^2=\\frac{(k^2-1)^2+4k^2}{(k^2+1)^2}=1.$$ Hence $$(a_k^2-b_k^2)^2+(2a_kb_k)^2=(a_k^2+b_k^2)^2=1,$$ so every $P_k$ lies on the unit circle.",
+          "For any $i,j$, expand the squared distance and use $a_i^2+b_i^2=a_j^2+b_j^2=1$ to obtain $$|P_iP_j|^2=4(a_ib_j-a_jb_i)^2.$$ Therefore $|P_iP_j|=2|a_ib_j-a_jb_i|$.",
+          "A direct calculation gives $$a_ib_j-a_jb_i=\\frac{2(i-j)(ij+1)}{(i^2+1)(j^2+1)}.$$ Thus $$|P_iP_j|=\\frac{4|i-j|(ij+1)}{(i^2+1)(j^2+1)},$$ which is rational.",
+          "If $i\\ne j$, this distance is positive, so the points are distinct. Hence $P_1,\\ldots,P_{1975}$ are $1975$ distinct points on the unit circle and every pairwise distance is rational."
+        ],
+        "stepsZh": [
+          "对 $k=1,2,\\ldots,1975$，定义 $$a_k=\\frac{k^2-1}{k^2+1},\\qquad b_k=\\frac{2k}{k^2+1},\\qquad P_k=(a_k^2-b_k^2,\\,2a_kb_k)$$。所有坐标均为有理数。",
+          "勾股数的标准参数化给出 $$a_k^2+b_k^2=\\frac{(k^2-1)^2+4k^2}{(k^2+1)^2}=1$$。所以 $$(a_k^2-b_k^2)^2+(2a_kb_k)^2=(a_k^2+b_k^2)^2=1,$$ 即每个 $P_k$ 都在单位圆上。",
+          "对任意 $i,j$，展开距离平方并利用 $a_i^2+b_i^2=a_j^2+b_j^2=1$，得到 $$|P_iP_j|^2=4(a_ib_j-a_jb_i)^2$$。因此 $|P_iP_j|=2|a_ib_j-a_jb_i|$。",
+          "直接计算可得 $$a_ib_j-a_jb_i=\\frac{2(i-j)(ij+1)}{(i^2+1)(j^2+1)}$$，于是 $$|P_iP_j|=\\frac{4|i-j|(ij+1)}{(i^2+1)(j^2+1)},$$ 这是有理数。",
+          "当 $i\\ne j$ 时，上式为正，所以这些点彼此不同。因此 $P_1,\\ldots,P_{1975}$ 是单位圆上的 $1975$ 个不同点，任意两点距离均为有理数。"
+        ]
+      }
+    ]
+  },
+  "imo-1975-q6": {
+    "summary": "Find all two-variable polynomials $P$ satisfying: (i) for some positive integer $n$, $P(tx,ty)=t^nP(x,y)$ for all real $t,x,y$; (ii) $P(b+c,a)+P(c+a,b)+P(a+b,c)=0$ for all real $a,b,c$; and (iii) $P(1,0)=1$.",
+    "summaryZh": "求所有满足下列条件的二元多项式 $P$：(i) 存在正整数 $n$，使对所有实数 $t,x,y$ 有 $P(tx,ty)=t^nP(x,y)$；(ii) 对所有实数 $a,b,c$ 有 $P(b+c,a)+P(c+a,b)+P(a+b,c)=0$；(iii) $P(1,0)=1$。",
+    "answer": "For every positive integer $n$, $$P(x,y)=(x+y)^{n-1}(x-2y),$$ and these are all the solutions.",
+    "answerZh": "对每个正整数 $n$，都有 $$P(x,y)=(x+y)^{n-1}(x-2y),$$ 且这就是全部解。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Restrict the homogeneous polynomial to the line $x+y=1$",
+        "titleZh": "把齐次多项式限制在直线 $x+y=1$ 上",
+        "topics": [
+          {"en": "Homogeneous polynomials", "zh": "齐次多项式"},
+          {"en": "Polynomial identities", "zh": "多项式恒等式"},
+          {"en": "Functional equations", "zh": "函数方程"}
+        ],
+        "steps": [
+          "Suppose $P$ satisfies the conditions and define the one-variable polynomial $$q(u)=P(1-u,u).$$ Condition (iii) gives $q(0)=1$, so $q$ is not the zero polynomial.",
+          "In (ii), take $a=b=u$ and $c=1-2u$. Then $$2P(1-u,u)+P(2u,1-2u)=0.$$ Since $(2u)+(1-2u)=1$, this becomes $$2q(u)+q(1-2u)=0$$ for every real $u$.",
+          "Let $d$ be the degree of $q$ and let $\\lambda\\ne0$ be its leading coefficient. Comparing the coefficients of $u^d$ in the last identity gives $\\lambda[2+(-2)^d]=0$. Hence $(-2)^d=-2$, so $d=1$.",
+          "Putting $u=0$ in the identity gives $q(1)=-2q(0)=-2$. The linear polynomial with $q(0)=1$ and $q(1)=-2$ is therefore $$q(u)=1-3u.$$",
+          "If $x+y\\ne0$, put $s=x+y$. Homogeneity yields $$P(x,y)=s^nP\\left(\\frac{x}{s},\\frac{y}{s}\\right)=s^nq\\left(\\frac{y}{s}\\right)=(x+y)^{n-1}(x-2y).$$ Since both sides are polynomials, the identity extends to $x+y=0$ as well.",
+          "Conversely, for any positive integer $n$, set $P(x,y)=(x+y)^{n-1}(x-2y)$. It is homogeneous of degree $n$ and $P(1,0)=1$. If $s=a+b+c$, then the cyclic sum in (ii) equals $$s^{n-1}[(s-3a)+(s-3b)+(s-3c)]=0.$$ Thus every displayed polynomial works, and the classification is complete."
+        ],
+        "stepsZh": [
+          "设 $P$ 满足条件，定义一元多项式 $$q(u)=P(1-u,u)$$。由条件 (iii)，$q(0)=1$，所以 $q$ 不是零多项式。",
+          "在 (ii) 中取 $a=b=u$、$c=1-2u$，得到 $$2P(1-u,u)+P(2u,1-2u)=0$$。由于 $(2u)+(1-2u)=1$，上式化为对每个实数 $u$ 都成立的 $$2q(u)+q(1-2u)=0$$。",
+          "设 $q$ 的次数为 $d$，首项系数为 $\\lambda\\ne0$。比较上式中 $u^d$ 的系数，得到 $\\lambda[2+(-2)^d]=0$。因此 $(-2)^d=-2$，只能有 $d=1$。",
+          "在该恒等式中令 $u=0$，得到 $q(1)=-2q(0)=-2$。结合 $q(0)=1$ 且 $q$ 为一次多项式，可得 $$q(u)=1-3u$$。",
+          "若 $x+y\\ne0$，令 $s=x+y$。利用齐次性，$$P(x,y)=s^nP\\left(\\frac{x}{s},\\frac{y}{s}\\right)=s^nq\\left(\\frac{y}{s}\\right)=(x+y)^{n-1}(x-2y)$$。两边均为多项式，所以该恒等式在 $x+y=0$ 时也成立。",
+          "反之，对任意正整数 $n$，令 $P(x,y)=(x+y)^{n-1}(x-2y)$。它是 $n$ 次齐次多项式且 $P(1,0)=1$。若记 $s=a+b+c$，则条件 (ii) 左端为 $$s^{n-1}[(s-3a)+(s-3b)+(s-3c)]=0$$。所以所列多项式全部满足条件，分类完成。"
+        ]
+      }
+    ]
+  }
+}
