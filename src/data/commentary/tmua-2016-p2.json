@@ -1,0 +1,432 @@
+{
+  "tmua-2016-p2-q1": {
+    "summary": "Evaluate $\\int_1^2\\left(x^2-4/x^2\\right)^2\\,dx$.",
+    "summaryZh": "计算 $\\int_1^2\\left(x^2-4/x^2\\right)^2\\,dx$。",
+    "answer": "A. $43/15$",
+    "answerZh": "A．$43/15$",
+    "methods": [{
+      "title": "Expand before integrating",
+      "titleZh": "先展开再积分",
+      "topics": [{"en":"Definite integration","zh":"定积分"},{"en":"Powers","zh":"幂函数"}],
+      "steps": [
+        "Expand the integrand: $(x^2-4x^{-2})^2=x^4-8+16x^{-4}$.",
+        "Hence the integral is $[x^5/5-8x-(16/3)x^{-3}]_1^2=31/5-8+14/3=43/15$."
+      ],
+      "stepsZh": [
+        "展开被积函数：$(x^2-4x^{-2})^2=x^4-8+16x^{-4}$。",
+        "因此原积分为 $[x^5/5-8x-(16/3)x^{-3}]_1^2=31/5-8+14/3=43/15$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=3"
+  },
+  "tmua-2016-p2-q2": {
+    "summary": "For $x>0$, $f(x)=2x(x^2+5)/\\sqrt[4]{x^3}$. Find $f'(x)$.",
+    "summaryZh": "当 $x>0$ 时，$f(x)=2x(x^2+5)/\\sqrt[4]{x^3}$。求 $f'(x)$。",
+    "answer": "B. $\\frac92x^{5/4}+\\frac52x^{-3/4}$",
+    "answerZh": "B．$\\frac92x^{5/4}+\\frac52x^{-3/4}$",
+    "methods": [{
+      "title": "Rewrite with fractional powers",
+      "titleZh": "改写成分数幂",
+      "topics": [{"en":"Differentiation","zh":"微分"},{"en":"Fractional powers","zh":"分数幂"}],
+      "steps": [
+        "$f(x)=(2x^3+10x)x^{-3/4}=2x^{9/4}+10x^{1/4}$.",
+        "Differentiate term by term: $f'(x)=2(9/4)x^{5/4}+10(1/4)x^{-3/4}=\\frac92x^{5/4}+\\frac52x^{-3/4}$."
+      ],
+      "stepsZh": [
+        "$f(x)=(2x^3+10x)x^{-3/4}=2x^{9/4}+10x^{1/4}$。",
+        "逐项求导得 $f'(x)=2(9/4)x^{5/4}+10(1/4)x^{-3/4}=\\frac92x^{5/4}+\\frac52x^{-3/4}$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=3"
+  },
+  "tmua-2016-p2-q3": {
+    "summary": "Find the largest $x$ in $0\\le x\\le2\\pi$ satisfying $8\\sin^2x+4\\cos^2x=7$.",
+    "summaryZh": "在 $0\\le x\\le2\\pi$ 中，求满足 $8\\sin^2x+4\\cos^2x=7$ 的最大 $x$。",
+    "answer": "D. $5\\pi/3$",
+    "answerZh": "D．$5\\pi/3$",
+    "methods": [{
+      "title": "Use the Pythagorean identity",
+      "titleZh": "利用勾股恒等式",
+      "topics": [{"en":"Trigonometric equations","zh":"三角方程"},{"en":"Exact values","zh":"特殊角精确值"}],
+      "steps": [
+        "Since $\\cos^2x=1-\\sin^2x$, the equation becomes $4\\sin^2x+4=7$, so $\\sin x=\\pm\\sqrt3/2$.",
+        "The solutions in the interval are $\\pi/3,2\\pi/3,4\\pi/3,5\\pi/3$; the largest is $5\\pi/3$."
+      ],
+      "stepsZh": [
+        "由 $\\cos^2x=1-\\sin^2x$，方程化为 $4\\sin^2x+4=7$，故 $\\sin x=\\pm\\sqrt3/2$。",
+        "区间内的解为 $\\pi/3,2\\pi/3,4\\pi/3,5\\pi/3$，最大者为 $5\\pi/3$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=4"
+  },
+  "tmua-2016-p2-q4": {
+    "summary": "Five sealed urns contain the same positive integer number of balls. Their labels say respectively: P: 1 or 4; Q: 2 or 4; R: more than 2 and fewer than 5; S: 1 or 2; T: fewer than 3. Exactly one label is true. Which urn has the true label?",
+    "summaryZh": "五个密封罐装有相同且为正整数个球。标签依次写着：P：1 或 4 个；Q：2 或 4 个；R：多于 2 且少于 5 个；S：1 或 2 个；T：少于 3 个。恰有一个标签为真。哪个罐的标签为真？",
+    "answer": "C. Urn R (there are 3 balls in every urn)",
+    "answerZh": "C．R 罐（每罐有 3 个球）",
+    "methods": [{
+      "title": "Test the possible counts",
+      "titleZh": "逐一检验可能的球数",
+      "topics": [{"en":"Logical consistency","zh":"逻辑一致性"},{"en":"Case analysis","zh":"分类讨论"}],
+      "steps": [
+        "Counts 1 and 2 make at least two labels true; count 4 makes P, Q and R true. Counts at least 5 make every label false.",
+        "With 3 balls, only R ('more than 2 and fewer than 5') is true. Thus the unique true label is R."
+      ],
+      "stepsZh": [
+        "球数为 1 或 2 时至少两个标签为真；球数为 4 时 P、Q、R 均为真；球数至少为 5 时所有标签均为假。",
+        "球数为 3 时只有 R 的“多于 2 且少于 5”成立，所以唯一真标签是 R。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=4"
+  },
+  "tmua-2016-p2-q5": {
+    "summary": "A claim says: if a whole number $n$ is 1 less or 5 less than a multiple of 6, then $n$ is prime. How many counterexamples satisfy $0<n<50$?",
+    "summaryZh": "有命题称：若自然数 $n$ 比某个 6 的倍数少 1 或少 5，则 $n$ 是质数。在 $0<n<50$ 中有多少个反例？",
+    "answer": "C. $4$",
+    "answerZh": "C．$4$",
+    "methods": [{
+      "title": "List the relevant residue classes",
+      "titleZh": "枚举相关同余类",
+      "topics": [{"en":"Counterexamples","zh":"反例"},{"en":"Primes and residues","zh":"质数与同余"}],
+      "steps": [
+        "The premise selects numbers congruent to $1$ or $5$ modulo $6$. Below 50 these are $1,5,7,11,13,17,19,23,25,29,31,35,37,41,43,47,49$.",
+        "The non-primes are $1,25,35,49$, so there are four counterexamples."
+      ],
+      "stepsZh": [
+        "前提选出的正整数满足模 $6$ 余 $1$ 或 $5$。小于 50 的这些数为 $1,5,7,11,13,17,19,23,25,29,31,35,37,41,43,47,49$。",
+        "其中非质数为 $1,25,35,49$，故共有 4 个反例。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=5"
+  },
+  "tmua-2016-p2-q6": {
+    "summary": "Functions satisfy $f_1(x)=x^{10}$ and $f_{n+1}(x)=x f_n'(x)$ for $n\\ge1$. Find $\\sum_{n=1}^{20}f_n(x)$.",
+    "summaryZh": "函数列满足 $f_1(x)=x^{10}$，且对 $n\\ge1$ 有 $f_{n+1}(x)=x f_n'(x)$。求 $\\sum_{n=1}^{20}f_n(x)$。",
+    "answer": "C. $\\dfrac{10^{20}-1}{9}x^{10}$",
+    "answerZh": "C．$\\dfrac{10^{20}-1}{9}x^{10}$",
+    "methods": [{
+      "title": "Recognise an eigenfunction and sum geometrically",
+      "titleZh": "识别不变幂次并作等比求和",
+      "topics": [{"en":"Recurrence relations","zh":"递推关系"},{"en":"Geometric series","zh":"等比数列"}],
+      "steps": [
+        "$x(d/dx)$ sends $Cx^{10}$ to $10Cx^{10}$, so by induction $f_n(x)=10^{n-1}x^{10}$.",
+        "Therefore $\\sum_{n=1}^{20}f_n(x)=x^{10}(1+10+\\cdots+10^{19})=\\frac{10^{20}-1}{9}x^{10}$."
+      ],
+      "stepsZh": [
+        "算子 $x(d/dx)$ 将 $Cx^{10}$ 变为 $10Cx^{10}$，归纳得 $f_n(x)=10^{n-1}x^{10}$。",
+        "故 $\\sum_{n=1}^{20}f_n(x)=x^{10}(1+10+\\cdots+10^{19})=\\frac{10^{20}-1}{9}x^{10}$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=6"
+  },
+  "tmua-2016-p2-q7": {
+    "summary": "Let $a,b,c,d>1$ and suppose $\\log_c d=(\\log_a b)^2$. Prove $\\log_b d=(\\log_a b)(\\log_a c)$ by selecting a valid chain from: (1) $x=\\log_a b,y=\\log_a c$; (2) $d=(c^x)^2$; (3) $d=c^{x^2}$; (4) $d=b^{xy}$; (5) $d=(a^y)^{x^2}$; (6) $d=((a^y)^x)^2$; (7) $d=(a^x)^{xy}$; (8) $d=a^{y^{2x}}$; (9) $d=a^{x^2y}$.",
+    "summaryZh": "设 $a,b,c,d>1$ 且 $\\log_c d=(\\log_a b)^2$。从下列编号等式中选出有效推导链，证明 $\\log_b d=(\\log_a b)(\\log_a c)$：(1) $x=\\log_a b,y=\\log_a c$；(2) $d=(c^x)^2$；(3) $d=c^{x^2}$；(4) $d=b^{xy}$；(5) $d=(a^y)^{x^2}$；(6) $d=((a^y)^x)^2$；(7) $d=(a^x)^{xy}$；(8) $d=a^{y^{2x}}$；(9) $d=a^{x^2y}$。",
+    "answer": "C. Chain $(1)\\to(3)\\to(5)\\to(9)\\to(7)\\to(4)$",
+    "answerZh": "C．推导链 $(1)\\to(3)\\to(5)\\to(9)\\to(7)\\to(4)$",
+    "methods": [{
+      "title": "Change every base to $a$",
+      "titleZh": "统一换成以 $a$ 为底",
+      "topics": [{"en":"Logarithms","zh":"对数"},{"en":"Proof chains","zh":"推导链"}],
+      "steps": [
+        "Set $x=\\log_a b$ and $y=\\log_a c$, so $b=a^x$ and $c=a^y$. The assumption gives $d=c^{x^2}=(a^y)^{x^2}=a^{x^2y}$.",
+        "Since $a^{x^2y}=(a^x)^{xy}=b^{xy}$, we get $\\log_b d=xy=(\\log_a b)(\\log_a c)$. These are lines $(1),(3),(5),(9),(7),(4)$."
+      ],
+      "stepsZh": [
+        "令 $x=\\log_a b,y=\\log_a c$，则 $b=a^x,c=a^y$。由已知得 $d=c^{x^2}=(a^y)^{x^2}=a^{x^2y}$。",
+        "又 $a^{x^2y}=(a^x)^{xy}=b^{xy}$，故 $\\log_b d=xy=(\\log_a b)(\\log_a c)$。对应编号为 $(1),(3),(5),(9),(7),(4)$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=7"
+  },
+  "tmua-2016-p2-q8": {
+    "summary": "A region is defined by $x+y>6$ and $x-y>-4$. Decide which statements hold at every point of the region: (1) $x>1$; (2) $y>5$; (3) $(x+y)(x-y)>-24$.",
+    "summaryZh": "区域由 $x+y>6$ 与 $x-y>-4$ 定义。判断下列哪些命题对区域内每一点都成立：(1) $x>1$；(2) $y>5$；(3) $(x+y)(x-y)>-24$。",
+    "answer": "B. Statement 1 only",
+    "answerZh": "B．仅命题 1",
+    "methods": [{
+      "title": "Combine inequalities and construct counterexamples",
+      "titleZh": "合并不等式并构造反例",
+      "topics": [{"en":"Simultaneous inequalities","zh":"联立不等式"},{"en":"Counterexamples","zh":"反例"}],
+      "steps": [
+        "Adding the inequalities gives $2x>2$, so $x>1$ always. Thus statement 1 is true.",
+        "Point $(7,0)$ satisfies both defining inequalities but not $y>5$. Point $(5,8)$ also lies in the region, yet $(x+y)(x-y)=13(-3)=-39<-24$. Thus 2 and 3 fail."
+      ],
+      "stepsZh": [
+        "两式相加得 $2x>2$，所以恒有 $x>1$，命题 1 成立。",
+        "点 $(7,0)$ 满足区域条件但不满足 $y>5$；点 $(5,8)$ 也在区域内，但 $(x+y)(x-y)=13(-3)=-39<-24$。故命题 2、3 均不恒成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=8"
+  },
+  "tmua-2016-p2-q9": {
+    "summary": "Triangles $ABC$ and $XYZ$ have equal area. For each condition independently, decide whether it forces congruence: (1) $AB=XY$ and $BC=YZ$; (2) $AB=XY$ and $\\angle ABC=\\angle XYZ$; (3) $\\angle ABC=\\angle XYZ$ and $\\angle ACB=\\angle XZY$.",
+    "summaryZh": "三角形 $ABC$ 与 $XYZ$ 面积相等。分别判断下列附加条件是否必然推出全等：(1) $AB=XY,BC=YZ$；(2) $AB=XY,\\angle ABC=\\angle XYZ$；(3) $\\angle ABC=\\angle XYZ,\\angle ACB=\\angle XZY$。",
+    "answer": "D. Conditions 2 and 3 imply congruence; condition 1 does not",
+    "answerZh": "D．条件 2、3 能推出全等，条件 1 不能",
+    "methods": [{
+      "title": "Use the area formula and similarity",
+      "titleZh": "利用面积公式与相似",
+      "topics": [{"en":"Triangle congruence","zh":"三角形全等"},{"en":"Area formula","zh":"面积公式"}],
+      "steps": [
+        "Under (1), equal area gives $\\sin B=\\sin Y$, but $B$ may equal $180^\\circ-Y$ rather than $Y$; the triangles need not be congruent.",
+        "Under (2), equal included angles and equal areas give $BC=YZ$, so SAS applies. Under (3), the triangles are similar by AA; equal areas force scale factor 1, hence congruence."
+      ],
+      "stepsZh": [
+        "条件 (1) 下，等面积只能推出 $\\sin B=\\sin Y$，但可能有 $B=180^\\circ-Y$，不必全等。",
+        "条件 (2) 下，夹角相等且面积相等可推出 $BC=YZ$，由 SAS 全等。条件 (3) 先由 AA 得相似，再由面积相等知相似比为 1，故全等。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=9"
+  },
+  "tmua-2016-p2-q10": {
+    "summary": "Let $x,y$ be non-zero real numbers. Which condition is sufficient for $x<y$: (A) $x^4<y^4$; (B) $y^4<x^4$; (C) $x^{-1}<y^{-1}$; (D) $y^{-1}<x^{-1}$; (E) $x^{3/5}<y^{3/5}$; (F) $y^{3/5}<x^{3/5}$?",
+    "summaryZh": "设 $x,y$ 为非零实数。下列哪个条件足以推出 $x<y$：(A) $x^4<y^4$；(B) $y^4<x^4$；(C) $x^{-1}<y^{-1}$；(D) $y^{-1}<x^{-1}$；(E) $x^{3/5}<y^{3/5}$；(F) $y^{3/5}<x^{3/5}$？",
+    "answer": "E. $x^{3/5}<y^{3/5}$",
+    "answerZh": "E．$x^{3/5}<y^{3/5}$",
+    "methods": [{
+      "title": "Use strict monotonicity",
+      "titleZh": "利用严格单调性",
+      "topics": [{"en":"Monotone functions","zh":"单调函数"},{"en":"Necessary and sufficient conditions","zh":"充分必要条件"}],
+      "steps": [
+        "The real function $t\\mapsto t^{3/5}$ is strictly increasing: raising to the fifth power and then taking the real cube root preserves order. Hence option E implies $x<y$.",
+        "Even powers lose sign information, and reciprocals are not globally order-preserving across zero; counterexamples eliminate A-D. Option F instead implies $y<x$."
+      ],
+      "stepsZh": [
+        "实函数 $t\\mapsto t^{3/5}$ 严格递增：先取五次方、再取实立方根都保持大小关系。因此 E 可推出 $x<y$。",
+        "偶次幂会丢失符号信息，倒数函数跨过零点时也不能在全体非零实数上保持同一方向的次序；A-D 均有反例。F 反而推出 $y<x$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=10"
+  },
+  "tmua-2016-p2-q11": {
+    "summary": "A real-coefficient polynomial $f$ has exactly two real roots, $-p$ and $p$, where $p>0$. Which statements must hold? (1) $f'(x)=0$ for exactly one $x$ between $-p$ and $p$; (2) the area between the curve and axis from $-p$ to $p$ is $2\\int_0^p f(x)\\,dx$; (3) $y=-f(-x)$ intersects the $x$-axis only at $x=\\pm p$.",
+    "summaryZh": "实系数多项式 $f$ 恰有两个实根 $-p,p$，其中 $p>0$。判断哪些命题必然成立：(1) 在 $-p$ 与 $p$ 之间恰有一个 $x$ 使 $f'(x)=0$；(2) 曲线与横轴在 $[-p,p]$ 间围成的面积等于 $2\\int_0^p f(x)\\,dx$；(3) $y=-f(-x)$ 仅在 $x=\\pm p$ 处与横轴相交。",
+    "answer": "D. Statement 3 only",
+    "answerZh": "D．仅命题 3",
+    "methods": [{
+      "title": "Separate root-preserving transformations from shape claims",
+      "titleZh": "区分保根变换与图像形状断言",
+      "topics": [{"en":"Polynomial roots","zh":"多项式根"},{"en":"Graph transformations","zh":"图像变换"}],
+      "steps": [
+        "The graph may have several stationary points without acquiring more real roots, so (1) need not hold. The signed integral need not equal geometric area, and $f$ need not be even, so (2) need not hold.",
+        "$-f(-x)=0$ exactly when $f(-x)=0$. Since the only roots of $f$ are $\\pm p$, the transformed graph also has only the intercepts $x=\\pm p$. Thus (3) must hold."
+      ],
+      "stepsZh": [
+        "图像可在不增加实根的情况下有多个驻点，故 (1) 不必成立。定积分是带符号面积，且 $f$ 不必为偶函数，故 (2) 也不必成立。",
+        "$-f(-x)=0$ 当且仅当 $f(-x)=0$。由于 $f$ 仅有根 $\\pm p$，变换后的图像也仅在 $x=\\pm p$ 处与横轴相交，故 (3) 必然成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=11"
+  },
+  "tmua-2016-p2-q12": {
+    "summary": "An arithmetic sequence has first term $a$, common difference $d$, and partial sums $S_n$. If $S_8>3S_6$, what can be deduced about the signs of $a$ and $d$?",
+    "summaryZh": "等差数列首项为 $a$、公差为 $d$，前 $n$ 项和为 $S_n$。若 $S_8>3S_6$，能确定 $a,d$ 的符号吗？",
+    "answer": "F. Neither sign can be deduced",
+    "answerZh": "F．$a,d$ 的符号均不能确定",
+    "methods": [{
+      "title": "Reduce to one linear inequality",
+      "titleZh": "化为一个线性不等式",
+      "topics": [{"en":"Arithmetic series","zh":"等差数列求和"},{"en":"Inequalities","zh":"不等式"}],
+      "steps": [
+        "$S_8=4(2a+7d)$ and $S_6=3(2a+5d)$. Thus $S_8>3S_6$ becomes $8a+28d>18a+45d$, or $d<-10a/17$.",
+        "This allows both signs for $a$ and both signs for $d$: for example $(a,d)=(1,-1)$ and $(-2,1)$ both satisfy the inequality. Hence neither sign is forced."
+      ],
+      "stepsZh": [
+        "$S_8=4(2a+7d)$，$S_6=3(2a+5d)$。故 $S_8>3S_6$ 化为 $8a+28d>18a+45d$，即 $d<-10a/17$。",
+        "该不等式允许 $a$、$d$ 各自取正或负；例如 $(a,d)=(1,-1)$ 与 $(-2,1)$ 都满足条件。因此两个符号都不能确定。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=12"
+  },
+  "tmua-2016-p2-q13": {
+    "summary": "An attempted proof claims that for positive integers $a,b,c$, if $a\\mid bc$ then $a\\mid b$ or $a\\mid c$. It uses the contrapositive, writes $b=ax+r$, $c=ay+s$ with $0<r,s<a$, obtains $bc=a(axy+xs+ry)+rs$, and then states that the remainder on division of $bc$ by $a$ is $rs$. Which step is erroneous?",
+    "summaryZh": "一个错误证明声称：对正整数 $a,b,c$，若 $a\\mid bc$，则 $a\\mid b$ 或 $a\\mid c$。证明改用逆否命题，写成 $b=ax+r,c=ay+s$（$0<r,s<a$），得到 $bc=a(axy+xs+ry)+rs$，随后断言 $bc$ 除以 $a$ 的余数是 $rs$。哪一步错误？",
+    "answer": "E. Line 5: $rs$ need not itself be the remainder",
+    "answerZh": "E．第 5 行：$rs$ 不一定就是余数",
+    "methods": [{
+      "title": "Check the range required of a remainder",
+      "titleZh": "检查余数的取值范围",
+      "topics": [{"en":"Divisibility","zh":"整除"},{"en":"Proof checking","zh":"证明辨错"}],
+      "steps": [
+        "Although $0<r,s<a$, their product need not satisfy $rs<a$; it must be reduced modulo $a$ before it can be called a remainder.",
+        "For example $a=6,b=2,c=3$ gives $r=2,s=3$ and $rs=6\\equiv0\\pmod6$. Thus $6\\mid bc$ even though $6$ divides neither factor. The error is line 5."
+      ],
+      "stepsZh": [
+        "虽然 $0<r,s<a$，但不一定有 $rs<a$；要作为余数还必须对 $a$ 取模。",
+        "例如 $a=6,b=2,c=3$ 时 $r=2,s=3$，且 $rs=6\\equiv0\\pmod6$。于是 $6\\mid bc$，但 $6$ 不整除任一因子。错误在第 5 行。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=13"
+  },
+  "tmua-2016-p2-q14": {
+    "summary": "Let $f(x)=ax^4+bx^3+cx^2+dx+e$. The equations $f(x)=1,2,3,4$ have respectively $p,q,r,s$ distinct real solutions. Which pattern is impossible: A $(1,2,4,3)$; B $(1,3,2,4)$; C $(1,4,3,2)$; D $(2,4,3,1)$; E $(4,3,2,1)$?",
+    "summaryZh": "设 $f(x)=ax^4+bx^3+cx^2+dx+e$。方程 $f(x)=1,2,3,4$ 的互异实根数依次为 $p,q,r,s$。下列哪种模式不可能：A $(1,2,4,3)$；B $(1,3,2,4)$；C $(1,4,3,2)$；D $(2,4,3,1)$；E $(4,3,2,1)$？",
+    "answer": "B. $(p,q,r,s)=(1,3,2,4)$",
+    "answerZh": "B．$(p,q,r,s)=(1,3,2,4)$",
+    "methods": [{
+      "title": "Count horizontal-line intersections",
+      "titleZh": "计算水平线交点数",
+      "topics": [{"en":"Quartic graphs","zh":"四次函数图像"},{"en":"Continuity","zh":"连续性"}],
+      "steps": [
+        "A value with one solution must be a tangency level or lie beyond all but one branch; four solutions require the horizontal line to cut all four monotone branches of a W-shaped quartic (or its reflection).",
+        "In pattern B, one intersection at level 1 forces a minimum there. Four intersections at level 4 require two wells below 4. To have only two intersections at level 3, the second minimum must lie above 3; but then level 2 cannot have three intersections. Hence B is impossible. The other patterns can be realised by placing the three stationary levels appropriately."
+      ],
+      "stepsZh": [
+        "某水平线只有一个交点时，该高度通常是相切高度或只穿过一个外侧分支；出现四个交点则要求水平线穿过 W 形四次曲线的四个单调分支（或其关于横轴的反射）。",
+        "在模式 B 中，$y=1$ 只有一个交点迫使该处为极小值；$y=4$ 有四个交点又要求两个谷底都低于 4。若 $y=3$ 仅有两个交点，则第二个谷底必须高于 3，但这样 $y=2$ 不可能有三个交点。因此 B 不可能；其余模式可通过适当安排三个驻点高度实现。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=14"
+  },
+  "tmua-2016-p2-q15": {
+    "summary": "For $f(x)=x^2-2px+q$, find the condition equivalent to: $f(x)=0$ has two real roots whose difference is greater than 2 and less than 4.",
+    "summaryZh": "对 $f(x)=x^2-2px+q$，求与下述命题等价的条件：$f(x)=0$ 有两个实根，且两根之差大于 2、小于 4。",
+    "answer": "D. $q<p^2-1<q+3$",
+    "answerZh": "D．$q<p^2-1<q+3$",
+    "methods": [{
+      "title": "Express the root gap through the discriminant",
+      "titleZh": "用判别式表示根差",
+      "topics": [{"en":"Quadratic roots","zh":"二次方程根"},{"en":"Discriminants","zh":"判别式"}],
+      "steps": [
+        "The roots are $p\\pm\\sqrt{p^2-q}$, so their difference is $2\\sqrt{p^2-q}$.",
+        "$2<2\\sqrt{p^2-q}<4$ is equivalent to $1<p^2-q<4$, hence $q<p^2-1<q+3$. This strict inequality already ensures two distinct real roots."
+      ],
+      "stepsZh": [
+        "两根为 $p\\pm\\sqrt{p^2-q}$，故根差为 $2\\sqrt{p^2-q}$。",
+        "$2<2\\sqrt{p^2-q}<4$ 等价于 $1<p^2-q<4$，即 $q<p^2-1<q+3$。该严格不等式也已保证有两个互异实根。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=14"
+  },
+  "tmua-2016-p2-q16": {
+    "summary": "In trapezium $PQRS$, $PQ\\parallel SR$, $PQ=12$ cm and $SR=3$ cm. Diagonals $PR$ and $SQ$ meet at $X$. Through $X$, draw $UT\\parallel PQ$ with $U$ on $SP$ and $T$ on $RQ$. Find $UT$.",
+    "summaryZh": "在梯形 $PQRS$ 中，$PQ\\parallel SR$，且 $PQ=12$ cm、$SR=3$ cm。对角线 $PR,SQ$ 交于 $X$。过 $X$ 作 $UT\\parallel PQ$，其中 $U$ 在 $SP$ 上、$T$ 在 $RQ$ 上。求 $UT$。",
+    "answer": "C. $4.8$ cm",
+    "answerZh": "C．$4.8$ cm",
+    "methods": [
+      {
+        "title": "Use similar triangles on both sides",
+        "titleZh": "在两侧分别利用相似三角形",
+        "topics": [{"en":"Similar triangles","zh":"相似三角形"},{"en":"Trapezia","zh":"梯形"}],
+        "steps": [
+          "$\\triangle XSR\\sim\\triangle XQP$, with scale factor $SR:PQ=1:4$. Thus the distance from $X$ to $PQ$ is four times the distance from $X$ to $SR$, so $SU:UP=1:4$ and $SP=5SU$.",
+          "$\\triangle SUX\\sim\\triangle SPQ$, hence $UX/PQ=SU/SP=1/5$ and $UX=12/5$. Similarly $XT=12/5$, so $UT=24/5=4.8$ cm."
+        ],
+        "stepsZh": [
+          "$\\triangle XSR\\sim\\triangle XQP$，相似比 $SR:PQ=1:4$。因此 $X$ 到 $PQ$ 的距离是其到 $SR$ 距离的 4 倍，故 $SU:UP=1:4$，即 $SP=5SU$。",
+          "$\\triangle SUX\\sim\\triangle SPQ$，所以 $UX/PQ=SU/SP=1/5$，得 $UX=12/5$。同理 $XT=12/5$，故 $UT=24/5=4.8$ cm。"
+        ]
+      },
+      {
+        "title": "Coordinate check",
+        "titleZh": "坐标法核验",
+        "topics": [{"en":"Coordinate geometry","zh":"坐标几何"}],
+        "steps": [
+          "Place $P=(0,0),Q=(12,0),S=(u,h),R=(u+3,h)$. Solving the two diagonal equations gives $X$ at height $4h/5$ above $PQ$.",
+          "A horizontal cross-section of the trapezium at fraction $4/5$ of its height has length $12+(3-12)(4/5)=24/5=4.8$ cm."
+        ],
+        "stepsZh": [
+          "设 $P=(0,0),Q=(12,0),S=(u,h),R=(u+3,h)$。联立两条对角线方程可得 $X$ 的高度为距 $PQ$ 的 $4h/5$。",
+          "梯形在高度比例 $4/5$ 处的水平截线长度为 $12+(3-12)(4/5)=24/5=4.8$ cm。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=15"
+  },
+  "tmua-2016-p2-q17": {
+    "summary": "Consider $y=3\\sin x+2$ and $y=x+c$. Determine which existence statements are true: (1) for some $c$, exactly one solution lies in $0\\le x\\le\\pi$ and at least one in $-\\pi<x<0$; (2) for some $c$, exactly one lies in $0\\le x\\le\\pi$ and none in $-\\pi<x<0$; (3) for some $c$, exactly one lies in $0\\le x\\le\\pi$ and none for $x>\\pi$.",
+    "summaryZh": "考察方程组 $y=3\\sin x+2$ 与 $y=x+c$。判断下列存在性命题：(1) 存在 $c$，使 $0\\le x\\le\\pi$ 中恰有一解且 $-\\pi<x<0$ 中至少有一解；(2) 存在 $c$，使前一区间恰有一解且后一区间无解；(3) 存在 $c$，使 $0\\le x\\le\\pi$ 中恰有一解且 $x>\\pi$ 无解。",
+    "answer": "H. Statements 1, 2 and 3",
+    "answerZh": "H．命题 1、2、3 均成立",
+    "methods": [{
+      "title": "Compare the sine curve with a unit-slope line",
+      "titleZh": "比较正弦曲线与斜率为 1 的直线",
+      "topics": [{"en":"Graph intersections","zh":"图像交点"},{"en":"Trigonometric graphs","zh":"三角函数图像"}],
+      "steps": [
+        "The curve $3\\sin x+2$ oscillates between $-1$ and $5$. Taking $c$ just below $2$ gives one intersection on $[0,\\pi]$ and also an intersection on $(-\\pi,0)$, proving (1).",
+        "For (2) and (3), take $c=2-\\pi$. Then $x=\\pi$ is the unique solution on $[0,\\pi]$ because $3\\sin x+\\pi-x>0$ before the endpoint. The line lies below the sine curve for $-\\pi<x<0$, while for $x>\\pi$ it is already above every later possible crossing; thus both claimed no-solution regions hold."
+      ],
+      "stepsZh": [
+        "曲线 $3\\sin x+2$ 在 $-1$ 与 $5$ 之间振荡。取略小于 $2$ 的 $c$，可使 $[0,\\pi]$ 内恰有一个交点，同时 $(-\\pi,0)$ 内也有交点，故 (1) 成立。",
+        "对 (2)、(3) 取 $c=2-\\pi$，则 $x=\\pi$ 是 $[0,\\pi]$ 内唯一解，因为端点之前 $3\\sin x+\\pi-x>0$。在 $(-\\pi,0)$ 中直线低于正弦曲线，而在 $x>\\pi$ 后也不再相交，故 (2)、(3) 均成立。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=16"
+  },
+  "tmua-2016-p2-q18": {
+    "summary": "A claim says: if $f(x)^2\\le1$ for all $-1\\le x\\le1$, then $\\int_{-1}^1f(x)^2\\,dx\\le\\int_{-1}^1f(x)\\,dx$. Which function is a counterexample among $x+1/2$, $x-1/2$, $x+x^3$, $x-x^3$, $x^2+x^4$, and $x^2-x^4$?",
+    "summaryZh": "命题称：若对所有 $-1\\le x\\le1$ 有 $f(x)^2\\le1$，则 $\\int_{-1}^1f(x)^2\\,dx\\le\\int_{-1}^1f(x)\\,dx$。在 $x+1/2$、$x-1/2$、$x+x^3$、$x-x^3$、$x^2+x^4$、$x^2-x^4$ 中，哪个是反例？",
+    "answer": "D. $f(x)=x-x^3$",
+    "answerZh": "D．$f(x)=x-x^3$",
+    "methods": [{
+      "title": "Check the premise before the conclusion",
+      "titleZh": "先检验前提，再检验结论",
+      "topics": [{"en":"Counterexamples","zh":"反例"},{"en":"Definite integrals","zh":"定积分"}],
+      "steps": [
+        "For $f=x-x^3$, the extrema on $[-1,1]$ occur at $x=\\pm1/\\sqrt3$ and have magnitude $2/(3\\sqrt3)<1$; endpoints give zero. Hence the premise holds.",
+        "$f$ is odd, so $\\int_{-1}^1f(x)\\,dx=0$. But $f^2$ is nonnegative and not identically zero, so $\\int_{-1}^1f(x)^2\\,dx>0$. The claimed conclusion is false, making D a counterexample."
+      ],
+      "stepsZh": [
+        "对 $f=x-x^3$，在 $[-1,1]$ 上的极值点为 $x=\\pm1/\\sqrt3$，极值绝对值为 $2/(3\\sqrt3)<1$，端点函数值为零，故前提成立。",
+        "$f$ 为奇函数，所以 $\\int_{-1}^1f(x)\\,dx=0$；但 $f^2$ 非负且不恒为零，故 $\\int_{-1}^1f(x)^2\\,dx>0$。结论不成立，因此 D 是反例。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=17"
+  },
+  "tmua-2016-p2-q19": {
+    "summary": "A connected solid is built from unit cubes. Its orthographic views are: side elevation column heights $2,3,1$; front elevation column heights $2,1,3$; plan view occupying five cells in an L-shape (three consecutive cells in one row and two further cells continuing from one end at right angles). How many cubes can the solid contain?",
+    "summaryZh": "一个连通立体由单位正方体逐面粘合而成。其三视图为：侧视图三列高度依次为 $2,3,1$；正视图三列高度依次为 $2,1,3$；俯视图占据五个格子，呈 L 形（一行连续三格，并从一端沿垂直方向再延伸两格）。该立体可能含多少个正方体？",
+    "answer": "F. Either $8$ or $9$ cubes",
+    "answerZh": "F．可能为 $8$ 或 $9$ 个正方体",
+    "methods": [{
+      "title": "Reconstruct the three horizontal layers",
+      "titleZh": "逐层重建立体",
+      "topics": [{"en":"Orthographic views","zh":"三视图"},{"en":"Spatial reasoning","zh":"空间推理"}],
+      "steps": [
+        "Use the five plan cells as possible positions on each of three layers. The front heights force two cubes in the first front column, one in the middle column, and at least one cube at each height in the height-3 column.",
+        "The side heights then force the three cubes in the central arm, exclude the top cube at one corner, and force the bottom cube at the far arm. Eight cubes are forced in total. One remaining bottom/middle corner position may be present or absent without changing any view; connectivity can still be maintained. Hence the total is 8 or 9."
+      ],
+      "stepsZh": [
+        "把俯视图的五个格子看作三层中可能出现正方体的位置。正视图迫使第一列有两层、中央列有一层，并使高度为 3 的那一列在三层均有正方体。",
+        "侧视图进一步迫使 L 形中央臂三层均占据、排除一个顶层角格，并迫使远端臂底层占据。共有 8 个正方体必不可少；另有一个底层或中层角格可放可不放，且不会改变任何投影并可保持连通。因此总数可能为 8 或 9。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=18"
+  },
+  "tmua-2016-p2-q20": {
+    "summary": "Each interior angle of a regular $n$-gon is $3/4$ of each interior angle of a regular $m$-gon. How many ordered pairs of positive integers $(n,m)$ are possible?",
+    "summaryZh": "正 $n$ 边形的每个内角等于正 $m$ 边形每个内角的 $3/4$。共有多少个正整数有序对 $(n,m)$ 满足条件？",
+    "answer": "E. $4$",
+    "answerZh": "E．$4$",
+    "methods": [
+      {
+        "title": "Bound $n$ and check the finite cases",
+        "titleZh": "先限定 $n$，再逐一检验",
+        "topics": [{"en":"Regular polygons","zh":"正多边形"},{"en":"Diophantine equations","zh":"不定方程"}],
+        "steps": [
+          "Using interior angle $180^\\circ-360^\\circ/k$, the condition simplifies to $8/n-6/m=1$. Since $m,n\\ge3$, necessarily $n<8$.",
+          "Checking $n=3,4,5,6,7$ gives $m=18/5,6,10,18,42$. The four integer pairs are $(4,6),(5,10),(6,18),(7,42)$."
+        ],
+        "stepsZh": [
+          "正 $k$ 边形内角为 $180^\\circ-360^\\circ/k$，代入并化简得 $8/n-6/m=1$。因 $m,n\\ge3$，必有 $n<8$。",
+          "检验 $n=3,4,5,6,7$，对应 $m=18/5,6,10,18,42$。整数解为 $(4,6),(5,10),(6,18),(7,42)$，共 4 对。"
+        ]
+      },
+      {
+        "title": "Factor the Diophantine equation",
+        "titleZh": "因式分解不定方程",
+        "topics": [{"en":"Factorisation","zh":"因式分解"}],
+        "steps": [
+          "$8/n-6/m=1$ gives $8m-6n=mn$, hence $(m+6)(n-8)=-48$.",
+          "With $m,n\\ge3$, the valid factor pairs give $(m,n)=(6,4),(10,5),(18,6),(42,7)$, again four ordered pairs $(n,m)$."
+        ],
+        "stepsZh": [
+          "$8/n-6/m=1$ 化为 $8m-6n=mn$，进而得到 $(m+6)(n-8)=-48$。",
+          "结合 $m,n\\ge3$，有效因数配对给出 $(m,n)=(6,4),(10,5),(18,6),(42,7)$，故有序对 $(n,m)$ 共 4 个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf#page=19"
+  }
+}
