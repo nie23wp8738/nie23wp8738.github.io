@@ -1,0 +1,258 @@
+{
+  "euclid-2014-q1": {
+    "summary": "(a) Evaluate $(\\sqrt{16}+\\sqrt9)/\\sqrt{16+9}$. (b) The three angles of triangle $ABC$ are $(x-10)^\\circ,(x+10)^\\circ,x^\\circ$; find $x$. (c) Lisa earns twice Bart's hourly rate. Lisa works $6$ hours, Bart works $4$ hours, and together they earn $200$. Find Lisa's hourly rate.",
+    "summaryZh": "(a) 计算 $(\\sqrt{16}+\\sqrt9)/\\sqrt{16+9}$。(b) 三角形 $ABC$ 的三个内角分别为 $(x-10)^\\circ,(x+10)^\\circ,x^\\circ$，求 $x$。(c) Lisa 的时薪是 Bart 的两倍；Lisa 工作 $6$ 小时，Bart 工作 $4$ 小时，两人共收入 $200$，求 Lisa 的时薪。",
+    "answer": "(a) $7/5$. (b) $x=60$. (c) $25$ per hour.",
+    "answerZh": "(a) $7/5$。(b) $x=60$。(c) 每小时 $25$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Evaluate directly and translate the conditions into equations",
+      "titleZh": "直接计算并把条件化为方程",
+      "topics": [{"en":"Radicals","zh":"根式"},{"en":"Triangle angle sum","zh":"三角形内角和"},{"en":"Linear equations","zh":"线性方程"}],
+      "steps": [
+        "(a) $\\sqrt{16}=4$, $\\sqrt9=3$, and $\\sqrt{16+9}=5$. Hence the value is $(4+3)/5=7/5$.",
+        "(b) The angle sum gives $(x-10)+(x+10)+x=180$. Thus $3x=180$ and $x=60$; the three angles are $50^\\circ,70^\\circ,60^\\circ$, so the value is geometrically valid.",
+        "(c) Let Bart's hourly rate be $r$. Lisa's rate is $2r$, so $4r+6(2r)=200$. Hence $16r=200$, $r=12.50$, and Lisa earns $2r=25$ dollars per hour."
+      ],
+      "stepsZh": [
+        "(a) $\\sqrt{16}=4$、$\\sqrt9=3$ 且 $\\sqrt{16+9}=5$，所以原式为 $(4+3)/5=7/5$。",
+        "(b) 由三角形内角和，$(x-10)+(x+10)+x=180$。故 $3x=180$，得到 $x=60$；三个角为 $50^\\circ,70^\\circ,60^\\circ$，均合法。",
+        "(c) 设 Bart 的时薪为 $r$，则 Lisa 的时薪为 $2r$。由 $4r+6(2r)=200$ 得 $16r=200$，所以 $r=12.50$，Lisa 的时薪为 $2r=25$ 美元。"
+      ]
+    }]
+  },
+  "euclid-2014-q2": {
+    "summary": "(a) Find the perimeter of a semicircular region of radius $10$, including its diameter. (b) The parabola $y=10(x+2)(x-5)$ meets the $x$-axis at $P,Q$; find $PQ$. (c) The line $y=2x$ meets segment $CD$, where $C=(0,60)$ and $D=(30,0)$, at $E$. Find $E$.",
+    "summaryZh": "(a) 一个半圆区域半径为 $10$，求包含直径在内的周长。(b) 抛物线 $y=10(x+2)(x-5)$ 与 $x$ 轴交于 $P,Q$，求 $PQ$。(c) 直线 $y=2x$ 与连接 $C=(0,60),D=(30,0)$ 的线段交于 $E$，求 $E$ 的坐标。",
+    "answer": "(a) $20+10\\pi$. (b) $7$. (c) $E=(15,30)$.",
+    "answerZh": "(a) $20+10\\pi$。(b) $7$。(c) $E=(15,30)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Use standard geometric and coordinate formulas",
+      "titleZh": "使用基本几何与坐标公式",
+      "topics": [{"en":"Arc length","zh":"弧长"},{"en":"Polynomial zeros","zh":"多项式零点"},{"en":"Line intersections","zh":"直线交点"}],
+      "steps": [
+        "(a) The curved boundary is half a circumference: $\\tfrac12(2\\pi\\cdot10)=10\\pi$. Adding the diameter $20$ gives $20+10\\pi$.",
+        "(b) Setting $y=0$ gives $x=-2$ or $x=5$, so $P=(-2,0)$ and $Q=(5,0)$. Therefore $PQ=5-(-2)=7$.",
+        "(c) Segment $CD$ lies on the line of slope $(0-60)/(30-0)=-2$, hence $y=-2x+60$. At the intersection, $2x=-2x+60$, so $x=15$ and $y=30$. The point lies between $C$ and $D$."
+      ],
+      "stepsZh": [
+        "(a) 曲边长为整圆周长的一半：$\\tfrac12(2\\pi\\cdot10)=10\\pi$。再加直径 $20$，周长为 $20+10\\pi$。",
+        "(b) 令 $y=0$ 得 $x=-2$ 或 $5$，所以 $P=(-2,0),Q=(5,0)$，从而 $PQ=5-(-2)=7$。",
+        "(c) $CD$ 所在直线斜率为 $(0-60)/(30-0)=-2$，故方程为 $y=-2x+60$。联立 $y=2x$ 得 $2x=-2x+60$，于是 $x=15,y=30$；该点确在线段内部。"
+      ]
+    }]
+  },
+  "euclid-2014-q3": {
+    "summary": "(a) Two identical isosceles right triangular cookies have legs $20$ cm. They are placed in a rectangle with $A,B,D,E$ as its vertices: $BC=20$, the hypotenuses $AC$ and $DF$ are parallel, and their perpendicular separation is $4$ cm. Find the tray width $BD$. (b) Solve $(x^2+x+4)/(2x+1)=4/x$.",
+    "summaryZh": "(a) 两块全等的等腰直角三角形饼干的直角边均为 $20$ cm。它们放在以 $A,B,D,E$ 为顶点的矩形托盘中：$BC=20$，斜边 $AC$ 与 $DF$ 平行，二者的垂直距离为 $4$ cm。求托盘宽 $BD$。(b) 解方程 $(x^2+x+4)/(2x+1)=4/x$。",
+    "answer": "(a) $BD=20+4\\sqrt2$ cm. (b) $x=-2,-1,2$.",
+    "answerZh": "(a) $BD=20+4\\sqrt2$ cm。(b) $x=-2,-1,2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use a 45-degree projection and factor the cubic",
+      "titleZh": "利用 $45^\\circ$ 投影并分解三次式",
+      "topics": [{"en":"Isosceles right triangles","zh":"等腰直角三角形"},{"en":"Rational equations","zh":"分式方程"},{"en":"Factorisation","zh":"因式分解"}],
+      "steps": [
+        "(a) Draw $CP\\perp DF$. Since $AC\\parallel DF$, $CP$ is their separation, so $CP=4$. The hypotenuse $AC$ makes a $45^\\circ$ angle with the tray base, hence right triangle $CPD$ is a $45$-$45$-$90$ triangle. Therefore $CD=4\\sqrt2$ and $BD=BC+CD=20+4\\sqrt2$ cm.",
+        "(b) The domain excludes $x=0$ and $x=-1/2$. Cross-multiplication gives $x(x^2+x+4)=4(2x+1)$, or $x^3+x^2-4x-4=0$.",
+        "Grouping yields $x^2(x+1)-4(x+1)=(x+1)(x-2)(x+2)=0$. Thus $x=-1,2,-2$; none is excluded, and substitution verifies all three."
+      ],
+      "stepsZh": [
+        "(a) 作 $CP\\perp DF$。因 $AC\\parallel DF$，$CP$ 就是两平行线距离，故 $CP=4$。斜边 $AC$ 与托盘底边成 $45^\\circ$，所以直角三角形 $CPD$ 为 $45$-$45$-$90$ 三角形。于是 $CD=4\\sqrt2$，从而 $BD=BC+CD=20+4\\sqrt2$ cm。",
+        "(b) 定义域要求 $x\\ne0,-1/2$。交叉相乘得 $x(x^2+x+4)=4(2x+1)$，即 $x^3+x^2-4x-4=0$。",
+        "分组可得 $x^2(x+1)-4(x+1)=(x+1)(x-2)(x+2)=0$，所以 $x=-1,2,-2$；三者均不违反定义域，代回也都成立。"
+      ]
+    }]
+  },
+  "euclid-2014-q4": {
+    "summary": "(a) How many positive divisors of $900$, including $1$ and $900$, are perfect squares? (b) Points $A=(k,3)$, $B=(3,1)$, and $C=(6,k)$ form an isosceles triangle with $\\angle ABC=\\angle ACB$. Find all $k$.",
+    "summaryZh": "(a) $900$ 的正因数（含 $1$ 与 $900$）中有多少个完全平方数？(b) 点 $A=(k,3),B=(3,1),C=(6,k)$ 构成等腰三角形，且 $\\angle ABC=\\angle ACB$，求所有 $k$。",
+    "answer": "(a) $8$. (b) $k=4$ or $8$.",
+    "answerZh": "(a) $8$。(b) $k=4$ 或 $8$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Count even prime exponents and equate squared distances",
+      "titleZh": "统计偶数素因子指数并令距离平方相等",
+      "topics": [{"en":"Divisor counting","zh":"因数计数"},{"en":"Perfect squares","zh":"完全平方数"},{"en":"Distance formula","zh":"距离公式"}],
+      "steps": [
+        "(a) Since $900=2^2 3^2 5^2$, a square divisor has the form $2^a3^b5^c$ with each exponent independently chosen from $\\{0,2\\}$. Hence there are $2^3=8$ such divisors.",
+        "(b) Equal base angles imply the opposite sides are equal: $AC=AB$. Using squared distances avoids radicals: $(k-6)^2+(3-k)^2=(k-3)^2+(3-1)^2$.",
+        "The common $(k-3)^2$ terms cancel, leaving $(k-6)^2=4$. Thus $k-6=\\pm2$, so $k=4$ or $8$. In both cases the three points are distinct and form the required triangle."
+      ],
+      "stepsZh": [
+        "(a) 因 $900=2^2 3^2 5^2$，平方因数可写为 $2^a3^b5^c$，其中每个指数都可独立取 $0$ 或 $2$。故共有 $2^3=8$ 个。",
+        "(b) 等角所对边相等，所以 $AC=AB$。比较距离平方：$(k-6)^2+(3-k)^2=(k-3)^2+(3-1)^2$。",
+        "两边的 $(k-3)^2$ 抵消，得到 $(k-6)^2=4$。故 $k-6=\\pm2$，即 $k=4$ 或 $8$；两种情形下三点均不重合，确实构成所需三角形。"
+      ]
+    }]
+  },
+  "euclid-2014-q5": {
+    "summary": "(a) Bottles $A,B,C$ contain respectively $40$ g at $10\\%$ acid, $50$ g at $20\\%$, and $50$ g at $30\\%$. Some liquid from each makes $60$ g at $25\\%$ acid. The remaining contents are combined; find their acid percentage. (b) For real $x,y$ with $3x+4y=10$, find the minimum of $x^2+16y^2$.",
+    "summaryZh": "(a) 三瓶溶液分别为：$A$ 瓶 $40$ g、含酸 $10\\%$；$B$ 瓶 $50$ g、含酸 $20\\%$；$C$ 瓶 $50$ g、含酸 $30\\%$。从每瓶取出一部分配成 $60$ g、含酸 $25\\%$ 的溶液，再把三瓶余液混合，求新混合液的含酸百分比。(b) 实数 $x,y$ 满足 $3x+4y=10$，求 $x^2+16y^2$ 的最小值。",
+    "answer": "(a) $17.5\\%$. (b) $10$.",
+    "answerZh": "(a) $17.5\\%$。(b) $10$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Conserve acid mass and complete the square",
+      "titleZh": "利用酸的质量守恒并配方",
+      "topics": [{"en":"Mixtures","zh":"溶液混合"},{"en":"Conservation","zh":"守恒"},{"en":"Completing the square","zh":"配方法"}],
+      "steps": [
+        "(a) Initially the total mass is $40+50+50=140$ g and the acid mass is $0.10(40)+0.20(50)+0.30(50)=29$ g. The removed $60$ g mixture contains $0.25(60)=15$ g acid.",
+        "Thus the remainder has mass $140-60=80$ g and acid mass $29-15=14$ g. Its concentration is $14/80=0.175=17.5\\%$. The amounts taken from the individual bottles are irrelevant once total mass and acid are conserved.",
+        "(b) From $3x+4y=10$, $4y=10-3x$. Hence $x^2+16y^2=x^2+(10-3x)^2=10(x-3)^2+10\\ge10$.",
+        "Equality occurs at $x=3$, which gives $y=1/4$. Therefore the minimum is $10$."
+      ],
+      "stepsZh": [
+        "(a) 初始总质量为 $40+50+50=140$ g，酸的总质量为 $0.10(40)+0.20(50)+0.30(50)=29$ g。取出的 $60$ g 溶液含酸 $0.25(60)=15$ g。",
+        "所以余液质量为 $140-60=80$ g，含酸 $29-15=14$ g，浓度为 $14/80=0.175=17.5\\%$。由于总质量与酸的质量守恒，无须知道各瓶具体取出多少。",
+        "(b) 由 $3x+4y=10$ 得 $4y=10-3x$，所以 $x^2+16y^2=x^2+(10-3x)^2=10(x-3)^2+10\\ge10$。",
+        "当 $x=3$ 时取等号，此时 $y=1/4$。故最小值为 $10$。"
+      ]
+    }]
+  },
+  "euclid-2014-q6": {
+    "summary": "(a) A bag contains $40$ black or gold balls. Two are chosen uniformly without replacement, and the probability that both are gold is $5/12$. How many gold balls are there? (b) A geometric sequence $t_1,\\ldots,t_n$ satisfies $t_1t_n=3$ and $t_1t_2\\cdots t_n=59049$. Find $n$.",
+    "summaryZh": "(a) 袋中有 $40$ 个黑球或金球，不放回地等可能取出两个球，两个都是金球的概率为 $5/12$。袋中有多少个金球？(b) 等比数列 $t_1,\\ldots,t_n$ 满足 $t_1t_n=3$ 且 $t_1t_2\\cdots t_n=59049$，求 $n$。",
+    "answer": "(a) $26$. (b) $n=20$.",
+    "answerZh": "(a) $26$。(b) $n=20$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Count pairs and pair terms of a geometric sequence",
+      "titleZh": "统计取球数对并配对等比数列项",
+      "topics": [{"en":"Hypergeometric probability","zh":"不放回抽样概率"},{"en":"Geometric sequences","zh":"等比数列"},{"en":"Exponents","zh":"指数"}],
+      "steps": [
+        "(a) If there are $g$ gold balls, then $\\binom g2/\\binom{40}2=5/12$. Thus $g(g-1)=650$, or $(g-26)(g+25)=0$. The physical constraint $0\\le g\\le40$ gives $g=26$.",
+        "(b) Write $t_k=ar^{k-1}$. Then $t_1t_n=a^2r^{n-1}=3$. The product of all terms is $a^nr^{n(n-1)/2}$.",
+        "Squaring the total product gives $59049^2=a^{2n}r^{n(n-1)}=(a^2r^{n-1})^n=3^n$. Since $59049=3^{10}$, the left side is $3^{20}$, so $n=20$."
+      ],
+      "stepsZh": [
+        "(a) 设金球有 $g$ 个，则 $\\binom g2/\\binom{40}2=5/12$。因此 $g(g-1)=650$，即 $(g-26)(g+25)=0$。由 $0\\le g\\le40$，得到 $g=26$。",
+        "(b) 写成 $t_k=ar^{k-1}$，则 $t_1t_n=a^2r^{n-1}=3$；全部项之积为 $a^nr^{n(n-1)/2}$。",
+        "把总乘积平方，得 $59049^2=a^{2n}r^{n(n-1)}=(a^2r^{n-1})^n=3^n$。又 $59049=3^{10}$，故左边为 $3^{20}$，所以 $n=20$。"
+      ]
+    }]
+  },
+  "euclid-2014-q7": {
+    "summary": "(a) If $(x-2013)(y-2014)/((x-2013)^2+(y-2014)^2)=-1/2$, find $x+y$. (b) Find all real $x$ satisfying $(\\log_{10}x)^{\\log_{10}(\\log_{10}x)}=10000$.",
+    "summaryZh": "(a) 若 $(x-2013)(y-2014)/((x-2013)^2+(y-2014)^2)=-1/2$，求 $x+y$。(b) 求所有满足 $(\\log_{10}x)^{\\log_{10}(\\log_{10}x)}=10000$ 的实数 $x$。",
+    "answer": "(a) $4027$. (b) $x=10^{100}$ or $10^{1/100}$.",
+    "answerZh": "(a) $4027$。(b) $x=10^{100}$ 或 $10^{1/100}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Complete a square and take logarithms carefully",
+      "titleZh": "配成平方并谨慎取对数",
+      "topics": [{"en":"Algebraic identities","zh":"代数恒等式"},{"en":"Logarithmic equations","zh":"对数方程"},{"en":"Domain restrictions","zh":"定义域限制"}],
+      "steps": [
+        "(a) Put $a=x-2013$ and $b=y-2014$. The denominator requires $(a,b)\\ne(0,0)$. The equation gives $2ab=-(a^2+b^2)$, hence $(a+b)^2=0$ and $a+b=0$. Therefore $x+y=2013+2014=4027$.",
+        "(b) The nested logarithm requires $\\log_{10}x>0$, so $x>1$. Let $a=\\log_{10}x>0$. Then $a^{\\log_{10}a}=10^4$.",
+        "Taking base-$10$ logs is valid and gives $(\\log_{10}a)^2=4$. Thus $\\log_{10}a=2$ or $-2$, so $a=100$ or $1/100$.",
+        "Consequently $x=10^{100}$ or $10^{1/100}$. Both values satisfy the domain conditions and direct substitution gives $10^4$."
+      ],
+      "stepsZh": [
+        "(a) 令 $a=x-2013,b=y-2014$。分母要求 $(a,b)\\ne(0,0)$。原式给出 $2ab=-(a^2+b^2)$，故 $(a+b)^2=0$，即 $a+b=0$。所以 $x+y=2013+2014=4027$。",
+        "(b) 嵌套对数要求 $\\log_{10}x>0$，所以 $x>1$。令 $a=\\log_{10}x>0$，方程变为 $a^{\\log_{10}a}=10^4$。",
+        "此时可合法地取常用对数，得到 $(\\log_{10}a)^2=4$。因此 $\\log_{10}a=2$ 或 $-2$，即 $a=100$ 或 $1/100$。",
+        "从而 $x=10^{100}$ 或 $10^{1/100}$。两者均满足定义域，代回原式也都得到 $10^4$。"
+      ]
+    }]
+  },
+  "euclid-2014-q8": {
+    "summary": "(a) Right triangles $ABC$ and $ADE$ satisfy $\\angle ACB=\\angle ADE=90^\\circ$. In the diagram, rays $AB,AD$ enclose angle $BAD$, $E$ lies on $AC$, and $AB=75$, $BC=21$, $AD=20$, $CE=47$. Find $BD$. (b) Points $B,C,D$ are collinear. Equilateral triangles $ABC$ and $ECD$ lie on the same side of the line. If $M$ is the midpoint of $BE$ and $N$ the midpoint of $AD$, prove triangle $MNC$ is equilateral.",
+    "summaryZh": "(a) 直角三角形 $ABC,ADE$ 满足 $\\angle ACB=\\angle ADE=90^\\circ$。图中射线 $AB,AD$ 夹成 $\\angle BAD$，点 $E$ 位于 $AC$ 上，且 $AB=75,BC=21,AD=20,CE=47$，求 $BD$。(b) 点 $B,C,D$ 共线，等边三角形 $ABC$ 与 $ECD$ 位于直线同侧。$M$ 为 $BE$ 中点、$N$ 为 $AD$ 中点，证明三角形 $MNC$ 为等边三角形。",
+    "answer": "(a) $BD=65$. (b) $CM=CN=MN$.",
+    "answerZh": "(a) $BD=65$。(b) $CM=CN=MN$，故三角形 $MNC$ 为等边三角形。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Resolve the angle, then use a 60-degree rotation",
+      "titleZh": "分解夹角，再使用 $60^\\circ$ 旋转",
+      "topics": [{"en":"Cosine law","zh":"余弦定理"},{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Rotations","zh":"旋转变换"}],
+      "steps": [
+        "(a) Pythagoras in triangle $ABC$ gives $AC=\\sqrt{75^2-21^2}=72$. Hence $AE=AC-CE=25$, and triangle $ADE$ gives $DE=\\sqrt{25^2-20^2}=15$.",
+        "Because $\\angle BAD=\\angle BAC+\\angle EAD$, $\\cos\\angle BAD=(AC/AB)(AD/AE)-(BC/AB)(DE/AE)=3/5$.",
+        "The cosine law in triangle $ABD$ now yields $BD^2=75^2+20^2-2(75)(20)(3/5)=4225$, so $BD=65$.",
+        "(b) Since $BC=AC$, $CE=CD$, and both $\\angle BCE$ and $\\angle ACD$ are $120^\\circ$, triangles $BCE$ and $ACD$ are congruent by SAS.",
+        "A clockwise rotation of $60^\\circ$ about $C$ sends $B$ to $A$ and $E$ to $D$, hence it sends segment $BE$ to $AD$ and their midpoint $M$ to $N$. Therefore $CM=CN$ and $\\angle MCN=60^\\circ$.",
+        "An isosceles triangle with vertex angle $60^\\circ$ has both base angles $(180^\\circ-60^\\circ)/2=60^\\circ$. Thus all three angles, and hence all three sides, of triangle $MNC$ are equal."
+      ],
+      "stepsZh": [
+        "(a) 在三角形 $ABC$ 中用勾股定理得 $AC=\\sqrt{75^2-21^2}=72$，所以 $AE=AC-CE=25$；再在三角形 $ADE$ 中得 $DE=\\sqrt{25^2-20^2}=15$。",
+        "因 $\\angle BAD=\\angle BAC+\\angle EAD$，故 $\\cos\\angle BAD=(AC/AB)(AD/AE)-(BC/AB)(DE/AE)=3/5$。",
+        "在三角形 $ABD$ 中用余弦定理：$BD^2=75^2+20^2-2(75)(20)(3/5)=4225$，所以 $BD=65$。",
+        "(b) 由 $BC=AC$、$CE=CD$，且 $\\angle BCE=\\angle ACD=120^\\circ$，三角形 $BCE$ 与 $ACD$ 由边角边全等。",
+        "绕 $C$ 顺时针旋转 $60^\\circ$，$B$ 映到 $A$、$E$ 映到 $D$，因此线段 $BE$ 映到 $AD$，其中点 $M$ 映到 $N$。所以 $CM=CN$ 且 $\\angle MCN=60^\\circ$。",
+        "顶角为 $60^\\circ$ 的等腰三角形，其两个底角均为 $(180^\\circ-60^\\circ)/2=60^\\circ$。故三角形 $MNC$ 三角均为 $60^\\circ$，从而三边相等。"
+      ]
+    },{
+      "title": "Alternative for part (b): coordinates",
+      "titleZh": "第 (b) 问的另一解法：坐标法",
+      "topics": [{"en":"Coordinate proof","zh":"坐标证明"}],
+      "steps": [
+        "Put $C=(0,0)$, $B=(-2p,0)$, and $D=(2q,0)$ with $p,q>0$. Then the equilateral vertices are $A=(-p,\\sqrt3p)$ and $E=(q,\\sqrt3q)$.",
+        "Thus $M=((q-2p)/2,\\sqrt3q/2)$ and $N=((2q-p)/2,\\sqrt3p/2)$. Direct expansion gives $CM^2=CN^2=MN^2=p^2-pq+q^2$, proving the triangle is equilateral."
+      ],
+      "stepsZh": [
+        "令 $C=(0,0),B=(-2p,0),D=(2q,0)$，其中 $p,q>0$。两个等边三角形的顶点为 $A=(-p,\\sqrt3p)$、$E=(q,\\sqrt3q)$。",
+        "于是 $M=((q-2p)/2,\\sqrt3q/2)$、$N=((2q-p)/2,\\sqrt3p/2)$。直接展开可得 $CM^2=CN^2=MN^2=p^2-pq+q^2$，故三角形 $MNC$ 为等边三角形。"
+      ]
+    }]
+  },
+  "euclid-2014-q9": {
+    "summary": "(a) Without a calculator, express $\\sum_{j=1}^{89}\\sin^6(j^\\circ)$ as $m/n$ for positive integers $m,n$. (b) Let $f(n)$ count the positive $n$-digit integers whose digits sum to $5$. Prove how many of $f(1),f(2),\\ldots,f(2014)$ have units digit $1$.",
+    "summaryZh": "(a) 不使用计算器，把 $\\sum_{j=1}^{89}\\sin^6(j^\\circ)$ 写成正整数之比 $m/n$。(b) 令 $f(n)$ 为各位数字和等于 $5$ 的正 $n$ 位整数个数。证明在 $f(1),f(2),\\ldots,f(2014)$ 中，有多少个数的个位数字为 $1$。",
+    "answer": "(a) $m=221,n=8$. (b) $202$ values.",
+    "answerZh": "(a) $m=221,n=8$。(b) 共有 $202$ 个。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Pair complementary angles and use stars and bars with modular arithmetic",
+      "titleZh": "配对余角，并结合隔板法与模运算",
+      "topics": [{"en":"Trigonometric sums","zh":"三角函数求和"},{"en":"Stars and bars","zh":"隔板法"},{"en":"Modular arithmetic","zh":"模运算"}],
+      "steps": [
+        "(a) Pair $j$ with $90-j$ for $1\\le j\\le44$, leaving $45^\\circ$. Since $\\sin(90^\\circ-j^\\circ)=\\cos j^\\circ$, the sum is $S=\\sum_{j=1}^{44}(\\sin^6j^\\circ+\\cos^6j^\\circ)+1/8$.",
+        "Using $u^3+v^3=(u+v)^3-3uv(u+v)$ with $u=\\sin^2\\theta,v=\\cos^2\\theta$, we get $\\sin^6\\theta+\\cos^6\\theta=1-\\tfrac34\\sin^2(2\\theta)$. Therefore $S=353/8-(3/4)T$, where $T=\\sum_{j=1}^{44}\\sin^2(2j^\\circ)$.",
+        "Pair the even angles $2^\\circ,4^\\circ,\\ldots,88^\\circ$ about $45^\\circ$: $\\sin^2\\alpha+\\sin^2(90^\\circ-\\alpha)=1$. There are $22$ pairs, so $T=22$. Hence $S=353/8-66/4=221/8$.",
+        "(b) An $n$-digit number with digit sum $5$ corresponds bijectively to five identical marks separated into $n$ digit boxes, with at least one mark in the first box. Remove one first-box mark and use stars and bars: $f(n)=\\binom{n+3}{4}=n(n+1)(n+2)(n+3)/24$.",
+        "If $f(n)\\equiv1\\pmod{10}$, the product of four consecutive integers is not divisible by $5$, so $n\\equiv1$ or $6\\pmod{10}$. Since $3f(n)=n(n+1)(n+2)(n+3)/8$, testing these eight residues modulo $40$ shows $3f(n)\\equiv3\\pmod{10}$ exactly when $n\\equiv1,11,26,36\\pmod{40}$. Multiplication by $3$ is invertible modulo $10$, so these are exactly the desired residues.",
+        "Each complete block of $40$ contributes $4$ values. The first $2000=50\\cdot40$ indices contribute $200$, and $2001,2011$ contribute two more before $2014$. Thus the answer is $202$."
+      ],
+      "stepsZh": [
+        "(a) 把 $j$ 与 $90-j$ 配对（$1\\le j\\le44$），并单独保留 $45^\\circ$。因 $\\sin(90^\\circ-j^\\circ)=\\cos j^\\circ$，原和为 $S=\\sum_{j=1}^{44}(\\sin^6j^\\circ+\\cos^6j^\\circ)+1/8$。",
+        "令 $u=\\sin^2\\theta,v=\\cos^2\\theta$，由 $u^3+v^3=(u+v)^3-3uv(u+v)$ 得 $\\sin^6\\theta+\\cos^6\\theta=1-\\tfrac34\\sin^2(2\\theta)$。故 $S=353/8-(3/4)T$，其中 $T=\\sum_{j=1}^{44}\\sin^2(2j^\\circ)$。",
+        "把偶数角 $2^\\circ,4^\\circ,\\ldots,88^\\circ$ 关于 $45^\\circ$ 配对，利用 $\\sin^2\\alpha+\\sin^2(90^\\circ-\\alpha)=1$；共有 $22$ 对，所以 $T=22$。于是 $S=353/8-66/4=221/8$。",
+        "(b) 各位和为 $5$ 的 $n$ 位数与“把五个相同记号放入 $n$ 个数位盒、且首盒至少一个”的方案一一对应。先从首盒取走一个记号，再用隔板法，得 $f(n)=\\binom{n+3}{4}=n(n+1)(n+2)(n+3)/24$。",
+        "若 $f(n)\\equiv1\\pmod{10}$，四个连续整数之积不能被 $5$ 整除，故 $n\\equiv1$ 或 $6\\pmod{10}$。又 $3f(n)=n(n+1)(n+2)(n+3)/8$；检查模 $40$ 下对应的八类余数，恰在 $n\\equiv1,11,26,36\\pmod{40}$ 时有 $3f(n)\\equiv3\\pmod{10}$。因 $3$ 在模 $10$ 下可逆，这些恰是所求余数类。",
+        "每个完整的 $40$ 数块贡献 $4$ 个。$2000=50\\cdot40$ 之前共有 $200$ 个，随后不超过 $2014$ 的 $2001,2011$ 再贡献两个，所以总数为 $202$。"
+      ]
+    }]
+  },
+  "euclid-2014-q10": {
+    "summary": "Fiona starts with $N$ jelly beans at position $0$. A type-$1$ move replaces two beans at $0$ by one at $1$; for $i\\ge2$, a type-$i$ move replaces one bean at $i-2$ and one at $i-1$ by one at $i$. One bean is eaten in every move. A win is a terminal state with at most three beans, at distinct nonconsecutive positions. (a) Give an $N$ that can finish with one bean at position $5$. (b) Prove that for fixed $N$, if a win is possible, its final state is unique. (c) Find, with proof, the closest positive integer $N$ to $2014$ for which a win is possible.",
+    "summaryZh": "Fiona 最初在位置 $0$ 放有 $N$ 颗软糖。类型 $1$ 操作把位置 $0$ 的两颗糖替换为位置 $1$ 的一颗；当 $i\\ge2$ 时，类型 $i$ 操作把位置 $i-2$ 与 $i-1$ 各一颗替换为位置 $i$ 的一颗。每次操作会吃掉一颗糖。若终止状态至多有三颗糖、位置互不相同且任意两位置不相邻，则获胜。(a) 给出一个能最终只在位置 $5$ 留一颗糖的 $N$。(b) 证明对固定 $N$，若能获胜，则获胜终态唯一。(c) 有理有据地求最接近 $2014$ 且能获胜的正整数 $N$。",
+    "answer": "(a) $N=13$. (b) The winning final state is unique. (c) $N=2008$.",
+    "answerZh": "(a) $N=13$。(b) 获胜终态唯一。(c) $N=2008$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2014/2014EuclidContest.pdf#page=5",
+    "methods": [{
+      "title": "Use a Fibonacci weight invariant and uniqueness of sparse sums",
+      "titleZh": "使用 Fibonacci 权重不变量与稀疏和的唯一性",
+      "topics": [{"en":"Invariants","zh":"不变量"},{"en":"Fibonacci numbers","zh":"Fibonacci 数列"},{"en":"Combinatorial games","zh":"组合游戏"},{"en":"Uniqueness proofs","zh":"唯一性证明"}],
+      "steps": [
+        "Let $F_1=F_2=1$ and $F_{r+2}=F_{r+1}+F_r$. Give every bean at position $i$ weight $F_{i+2}$. A type-$1$ move preserves weight because $2F_2=F_3$; a type-$i$ move preserves it because $F_i+F_{i+1}=F_{i+2}$. Thus every reachable state has total weight $N$.",
+        "(a) A single bean at position $5$ has weight $F_7=13$, so take $N=13$. Explicitly, the move counts $5$ type-$1$, $3$ type-$2$, $2$ type-$3$, one type-$4$, and one type-$5$ transform $(13,0,0,0,0,0)$ successively to $(3,5,0,0,0,0)$, $(0,2,3,0,0,0)$, $(0,0,1,2,0,0)$, $(0,0,0,1,1,0)$, and $(0,0,0,0,0,1)$.",
+        "(b) A winning state represents $N$ as a sum of at most three distinct Fibonacci numbers $F_{i+2}$ whose indices are nonconsecutive. We prove such a representation is unique. If $2\\le x<y<z$ are pairwise nonconsecutive, then $F_x+F_y+F_z<F_{z+1}$: indeed $x\\le z-4,y\\le z-2$, so $F_x+F_y+F_z\\le F_{z-4}+F_{z-2}+F_z<F_{z-3}+F_{z-2}+F_z=F_{z+1}$.",
+        "Suppose two winning sums were equal. Cancel common terms and let $F_k$ and $F_m$ be the largest remaining terms, with $k<m$. The side headed by $F_k$ is less than $F_{k+1}\\le F_m$, while the other side is at least $F_m$, a contradiction. Hence nothing remains after cancellation, and the final state is unique.",
+        "(c) We seek the closest integer to $2014$ that is a sum of at most three distinct, pairwise nonconsecutive Fibonacci numbers. The nearby Fibonacci numbers are $144,233,377,610,987,1597,2584$, and $2008=1597+377+34=F_{17}+F_{14}+F_9$ is admissible.",
+        "No integer from $2009$ through $2019$ is admissible. Such a sum cannot use $2584$; without $1597$ its maximum is $987+377+144=1508$, so it must use $1597$. The remaining one or two terms must total $412$ to $422$. Without $377$ their maximum is $233+89=322$, so $377$ is required; the last term would then have to lie from $35$ to $45$, but no Fibonacci number does.",
+        "Finally, admissibility is achievable: reverse a type-$i$ move to replace a bean of weight $F_{i+2}$ by beans of weights $F_i,F_{i+1}$, repeating until all weight is at position $0$. Reversing that finite expansion constructs forward moves from $2008$ beans to beans at positions $15,12,7$. Thus $2008$ is attainable, and no attainable integer has distance less than $6$ from $2014$."
+      ],
+      "stepsZh": [
+        "令 $F_1=F_2=1$ 且 $F_{r+2}=F_{r+1}+F_r$，赋予位置 $i$ 的每颗糖权重 $F_{i+2}$。类型 $1$ 操作因 $2F_2=F_3$ 保持总权重；类型 $i$ 操作因 $F_i+F_{i+1}=F_{i+2}$ 保持总权重。因此任何可达状态的总权重恒为 $N$。",
+        "(a) 位置 $5$ 的一颗糖权重为 $F_7=13$，故可取 $N=13$。具体地，依次进行 $5$ 次类型 $1$、$3$ 次类型 $2$、$2$ 次类型 $3$、一次类型 $4$、一次类型 $5$，状态从 $(13,0,0,0,0,0)$ 依次变为 $(3,5,0,0,0,0)$、$(0,2,3,0,0,0)$、$(0,0,1,2,0,0)$、$(0,0,0,1,1,0)$、$(0,0,0,0,0,1)$。",
+        "(b) 每个获胜状态把 $N$ 表成至多三个互异且指标两两不相邻的 Fibonacci 数 $F_{i+2}$ 之和。先证这种表示唯一。若 $2\\le x<y<z$ 且指标两两不相邻，则 $x\\le z-4,y\\le z-2$，所以 $F_x+F_y+F_z\\le F_{z-4}+F_{z-2}+F_z<F_{z-3}+F_{z-2}+F_z=F_{z+1}$。",
+        "假设两个获胜和式相等，约去公共项。设两边剩余最大项为 $F_k,F_m$ 且 $k<m$。以 $F_k$ 为最大项的一边小于 $F_{k+1}\\le F_m$，另一边却至少为 $F_m$，矛盾。因此公共项约去后不可能有剩余项，终态唯一。",
+        "(c) 要找最接近 $2014$、且可写成至多三个互异、指标两两不相邻 Fibonacci 数之和的整数。附近数列项为 $144,233,377,610,987,1597,2584$，而 $2008=1597+377+34=F_{17}+F_{14}+F_9$ 符合要求。",
+        "证明 $2009$ 至 $2019$ 均不可能：和式不能含 $2584$；若不含 $1597$，最大仅为 $987+377+144=1508$，故必须含 $1597$。余下一至两项之和须在 $412$ 至 $422$ 之间；若不含 $377$，最大仅 $233+89=322$，故还必须含 $377$。最后一项便须落在 $35$ 至 $45$，但该区间没有 Fibonacci 数。",
+        "最后验证可达性：逆向看类型 $i$ 操作，可把权重为 $F_{i+2}$ 的一颗糖展开成权重为 $F_i,F_{i+1}$ 的两颗，反复展开直到全部权重回到位置 $0$；再把这些逆操作倒序执行即可。因此从 $2008$ 颗糖确能到达位置 $15,12,7$ 各一颗的获胜状态。故 $2008$ 可达，且确为最接近 $2014$ 的答案。"
+      ]
+    }]
+  }
+}
