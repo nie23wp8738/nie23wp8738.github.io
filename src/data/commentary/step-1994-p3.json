@@ -1,0 +1,318 @@
+{
+  "step-1994-p3-q1": {
+    "summary": "Let $I_n=\\int_0^x\\operatorname{sech}^n t\\,dt$. First calculate $I_1$. Then derive a reduction formula relating $I_n$ to $I_{n-2}$, and hence find explicit expressions for $I_5$ and $I_6$.",
+    "summaryZh": "设 $I_n=\\int_0^x\\operatorname{sech}^n t\\,dt$。先计算 $I_1$，再推导 $I_n$ 与 $I_{n-2}$ 之间的递推公式，并求出 $I_5$ 与 $I_6$ 的显式表达式。",
+    "answer": "$I_1=\\tan^{-1}(\\sinh x)$ and $(n-1)I_n=\\operatorname{sech}^{n-2}x\\tanh x+(n-2)I_{n-2}$. Thus $I_5=\\frac14\\operatorname{sech}^3x\\tanh x+\\frac38\\operatorname{sech}x\\tanh x+\\frac38\\tan^{-1}(\\sinh x)$ and $I_6=\\frac15\\operatorname{sech}^4x\\tanh x+\\frac4{15}\\operatorname{sech}^2x\\tanh x+\\frac8{15}\\tanh x$.",
+    "answerZh": "$I_1=\\arctan(\\sinh x)$，且 $(n-1)I_n=\\operatorname{sech}^{n-2}x\\tanh x+(n-2)I_{n-2}$。因此 $I_5=\\frac14\\operatorname{sech}^3x\\tanh x+\\frac38\\operatorname{sech}x\\tanh x+\\frac38\\arctan(\\sinh x)$，$I_6=\\frac15\\operatorname{sech}^4x\\tanh x+\\frac4{15}\\operatorname{sech}^2x\\tanh x+\\frac8{15}\\tanh x$。",
+    "methods": [{
+      "title": "Integration by parts and a direct substitution",
+      "titleZh": "分部积分与直接代换",
+      "topics": [{"en":"Hyperbolic functions","zh":"双曲函数"},{"en":"Integration by parts","zh":"分部积分"},{"en":"Reduction formulae","zh":"积分递推"}],
+      "steps": [
+        "Since $d(\\sinh t)=\\cosh t\\,dt$, $I_1=\\int_0^{\\sinh x}(1+u^2)^{-1}du=\\tan^{-1}(\\sinh x)$.",
+        "Write $I_n=\\int_0^x\\operatorname{sech}^{n-2}t\\,d(\\tanh t)$. Integration by parts, followed by $\\tanh^2t=1-\\operatorname{sech}^2t$, gives $I_n=\\operatorname{sech}^{n-2}x\\tanh x-(n-2)(I_n-I_{n-2})$. Rearrangement yields the stated recurrence.",
+        "Apply it successively: $I_3=\\tfrac12\\operatorname{sech}x\\tanh x+\\tfrac12I_1$, $I_5=\\tfrac14\\operatorname{sech}^3x\\tanh x+\\tfrac34I_3$; and $I_2=\\tanh x$, $I_4=\\tfrac13\\operatorname{sech}^2x\\tanh x+\\tfrac23I_2$, $I_6=\\tfrac15\\operatorname{sech}^4x\\tanh x+\\tfrac45I_4$.",
+        "As a check and an alternative for $I_6$, put $u=\\tanh t$: $I_6=\\int_0^{\\tanh x}(1-u^2)^2du=\\tanh x-\\tfrac23\\tanh^3x+\\tfrac15\\tanh^5x$."
+      ],
+      "stepsZh": [
+        "由 $d(\\sinh t)=\\cosh t\\,dt$，$I_1=\\int_0^{\\sinh x}(1+u^2)^{-1}du=\\arctan(\\sinh x)$。",
+        "写成 $I_n=\\int_0^x\\operatorname{sech}^{n-2}t\\,d(\\tanh t)$。分部积分并使用 $\\tanh^2t=1-\\operatorname{sech}^2t$，得到 $I_n=\\operatorname{sech}^{n-2}x\\tanh x-(n-2)(I_n-I_{n-2})$，整理即得递推式。",
+        "依次代入：$I_3=\\tfrac12\\operatorname{sech}x\\tanh x+\\tfrac12I_1$，$I_5=\\tfrac14\\operatorname{sech}^3x\\tanh x+\\tfrac34I_3$；另一边 $I_2=\\tanh x$，$I_4=\\tfrac13\\operatorname{sech}^2x\\tanh x+\\tfrac23I_2$，$I_6=\\tfrac15\\operatorname{sech}^4x\\tanh x+\\tfrac45I_4$。",
+        "作为校验及 $I_6$ 的另一种算法，令 $u=\\tanh t$：$I_6=\\int_0^{\\tanh x}(1-u^2)^2du=\\tanh x-\\tfrac23\\tanh^3x+\\tfrac15\\tanh^5x$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q1"
+  },
+  "step-1994-p3-q2": {
+    "summary": "(i) By using $y=x+x^{-1}$, solve $x^4+10x^3+26x^2+10x+1=0$. (ii) Solve $x^4+x^3-10x^2-4x+16=0$.",
+    "summaryZh": "（i）利用代换 $y=x+x^{-1}$ 解方程 $x^4+10x^3+26x^2+10x+1=0$。（ii）解方程 $x^4+x^3-10x^2-4x+16=0$。",
+    "answer": "(i) $x=-2\\pm\\sqrt3,-3\\pm2\\sqrt2$. (ii) $x=(1\\pm\\sqrt{17})/2,-1\\pm\\sqrt5$.",
+    "answerZh": "（i）$x=-2\\pm\\sqrt3,-3\\pm2\\sqrt2$。（ii）$x=(1\\pm\\sqrt{17})/2,-1\\pm\\sqrt5$。",
+    "methods": [{
+      "title": "Reciprocal substitutions and factorisation",
+      "titleZh": "倒数代换与因式分解",
+      "topics": [{"en":"Polynomial equations","zh":"多项式方程"},{"en":"Substitution","zh":"代换"},{"en":"Factorisation","zh":"因式分解"}],
+      "steps": [
+        "In (i), $x\\ne0$. Divide by $x^2$ and use $x^2+x^{-2}=y^2-2$. The equation becomes $y^2+10y+24=0$, so $y=-4$ or $-6$. Solving $x^2-yx+1=0$ gives the four roots stated.",
+        "For (ii), divide by $x^2$ and group as $(x^2+16x^{-2})+(x-4x^{-1})-10=0$. Put $y=x-4/x$; since $x^2+16x^{-2}=y^2+8$, one obtains $y^2+y-2=0$.",
+        "For $y=1$, $x^2-x-4=0$; for $y=-2$, $x^2+2x-4=0$. Equivalently the quartic factors as $(x^2-x-4)(x^2+2x-4)$, producing all four roots."
+      ],
+      "stepsZh": [
+        "（i）中 $x\\ne0$。两边除以 $x^2$，并用 $x^2+x^{-2}=y^2-2$，方程化为 $y^2+10y+24=0$，故 $y=-4$ 或 $-6$。再解 $x^2-yx+1=0$，得到所列四根。",
+        "（ii）两边除以 $x^2$，整理为 $(x^2+16x^{-2})+(x-4x^{-1})-10=0$。令 $y=x-4/x$；因 $x^2+16x^{-2}=y^2+8$，得到 $y^2+y-2=0$。",
+        "当 $y=1$ 时，$x^2-x-4=0$；当 $y=-2$ 时，$x^2+2x-4=0$。等价地，原四次式为 $(x^2-x-4)(x^2+2x-4)$，从而得到全部四根。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q2"
+  },
+  "step-1994-p3-q3": {
+    "summary": "Describe all possible intersections of a plane and a sphere. Let $P_1:3x-y-1=0$, $P_2:x-y+1=0$, $S_1:x^2+y^2+z^2=7$, and $S_2:x^2+y^2+z^2-6y-4z+10=0$. The circles $C_1,C_2$ are the intersections of $P_1,P_2$ with $S_1,S_2$ respectively, and $L=P_1\\cap P_2$. Find where $L$ meets each sphere and determine whether $C_1$ and $C_2$ are linked.",
+    "summaryZh": "说明平面与球面相交的全部可能情形。设 $P_1:3x-y-1=0$，$P_2:x-y+1=0$，$S_1:x^2+y^2+z^2=7$，$S_2:x^2+y^2+z^2-6y-4z+10=0$。圆 $C_1,C_2$ 分别为 $P_1,P_2$ 与 $S_1,S_2$ 的交线，$L=P_1\\cap P_2$。求 $L$ 与两球面的交点，并判断 $C_1,C_2$ 是否相链。",
+    "answer": "A plane and sphere have no point, one tangent point, or a circle in common (a great circle exactly when the plane contains the centre). Here $L=(1,2,t)$; it meets $S_1$ at $t=\\pm\\sqrt2$ and $S_2$ at $t=1,3$. Since $-\\sqrt2<1<\\sqrt2<3$, the two circles are linked.",
+    "answerZh": "平面与球面可无交点、相切于一点或交成圆；当且仅当平面经过球心时交圆为大圆。此处 $L=(1,2,t)$；与 $S_1$ 交于 $t=\\pm\\sqrt2$，与 $S_2$ 交于 $t=1,3$。由于 $-\\sqrt2<1<\\sqrt2<3$，两圆相链。",
+    "methods": [{
+      "title": "Interleaving intersections on the common plane line",
+      "titleZh": "公共直线上交点的交错判据",
+      "topics": [{"en":"Three-dimensional geometry","zh":"空间几何"},{"en":"Plane-sphere intersections","zh":"平面与球面相交"},{"en":"Linked circles","zh":"相链圆"}],
+      "steps": [
+        "The perpendicular distance from the sphere centre to a plane is respectively greater than, equal to, or less than the radius in the three cases. In the last case the intersection radius is $\\sqrt{R^2-d^2}$.",
+        "Solving the two plane equations gives $x=1,y=2$, so $L=(1,2,t)$. Substitution into $S_1$ gives $5+t^2=7$, hence $t=\\pm\\sqrt2$. Completing squares in $S_2$ gives $x^2+(y-3)^2+(z-2)^2=3$; on $L$ this gives $(t-2)^2=1$, hence $t=1,3$.",
+        "Along $L$, the two crossings of the disc bounded by $C_2$ lie at 1 and 3, while $C_1$ crosses at $-\\sqrt2$ and $\\sqrt2$. Exactly one crossing of $C_1$ lies inside the $C_2$ disc. The circles themselves are disjoint, so this odd crossing number proves that they are linked."
+      ],
+      "stepsZh": [
+        "设球心到平面的垂距为 $d$、球半径为 $R$。当 $d>R,d=R,d<R$ 时，交集依次为空、一个切点、一个半径为 $\\sqrt{R^2-d^2}$ 的圆。",
+        "联立两平面方程得 $x=1,y=2$，故 $L=(1,2,t)$。代入 $S_1$ 得 $5+t^2=7$，所以 $t=\\pm\\sqrt2$。将 $S_2$ 配方为 $x^2+(y-3)^2+(z-2)^2=3$；在 $L$ 上得到 $(t-2)^2=1$，所以 $t=1,3$。",
+        "沿 $L$，由 $C_2$ 围成的圆盘边界交点参数为 1、3，而 $C_1$ 的交点参数为 $-\\sqrt2,\\sqrt2$。$C_1$ 恰有一个交点落在该圆盘内部；两圆本身不相交，奇数次穿越说明两圆相链。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q3"
+  },
+  "step-1994-p3-q4": {
+    "summary": "Consider $(dy/dx)^2=4y$. For $b\\ne0$, find the two solutions through $(a,b^2)$. Find distinct points $(a_1,1),(a_2,1)$ such that one solution through each also passes through the origin, and identify the other solutions through those points. Sketch the resulting family, identify its common tangent, and explain its relevance to the differential equation.",
+    "summaryZh": "研究微分方程 $(dy/dx)^2=4y$。对 $b\\ne0$，求经过 $(a,b^2)$ 的两个解。再找两个不同点 $(a_1,1),(a_2,1)$，使经过每点的一个解还经过原点，并写出经过这些点的另一个解。描述解族图像、其公共切线，并说明该切线与微分方程的关系。",
+    "answer": "The two solutions are $y=(x-a+b)^2$ and $y=(x-a-b)^2$. One may take $a_1=1,a_2=-1$: the common solution is $y=x^2$, while the other two are $y=(x-2)^2$ and $y=(x+2)^2$. The family is $y=(x-c)^2$; its common tangent $y=0$ is itself a singular solution.",
+    "answerZh": "两解为 $y=(x-a+b)^2$ 与 $y=(x-a-b)^2$。可取 $a_1=1,a_2=-1$：共同解为 $y=x^2$，另外两解为 $y=(x-2)^2$、$y=(x+2)^2$。解族为 $y=(x-c)^2$；公共切线 $y=0$ 本身也是一个奇解。",
+    "methods": [{
+      "title": "Separate both square-root branches",
+      "titleZh": "分别处理平方根的两个分支",
+      "topics": [{"en":"Differential equations","zh":"微分方程"},{"en":"Singular solutions","zh":"奇解"},{"en":"Envelopes","zh":"包络"}],
+      "steps": [
+        "Where $y>0$, $dy/dx=\\pm2\\sqrt y$. Integration gives $\\sqrt y=\\pm x+C$, equivalently the one-parameter family $y=(x-c)^2$. Imposing $y(a)=b^2$ gives $c=a-b$ or $a+b$, yielding the two solutions.",
+        "A parabola $y=(x-c)^2$ passes through the origin only if $c=0$, so the shared branch is $y=x^2$. Its intersections with $y=1$ occur at $x=\\pm1$, giving $a_1=1,a_2=-1$. At $x=1$ the other parameter is $c=2$; at $x=-1$ it is $c=-2$.",
+        "Every parabola opens upward, has vertex $(c,0)$ and is tangent to the $x$-axis there. Thus the common tangent is $y=0$. It satisfies the original equation because both sides vanish. Dividing by $\\sqrt y$ would lose this singular solution; the equation also permits solutions pieced to the axis with matching zero slope."
+      ],
+      "stepsZh": [
+        "在 $y>0$ 处，$dy/dx=\\pm2\\sqrt y$。积分得 $\\sqrt y=\\pm x+C$，等价于单参数解族 $y=(x-c)^2$。代入 $y(a)=b^2$ 得 $c=a-b$ 或 $a+b$，于是得到两解。",
+        "抛物线 $y=(x-c)^2$ 经过原点当且仅当 $c=0$，故共同分支为 $y=x^2$。它与 $y=1$ 交于 $x=\\pm1$，所以 $a_1=1,a_2=-1$。在 $x=1$ 处另一个参数为 $c=2$；在 $x=-1$ 处另一个参数为 $c=-2$。",
+        "每条抛物线开口向上，顶点为 $(c,0)$，并在该点与 $x$ 轴相切，故公共切线为 $y=0$。它也满足原方程，因为两边均为零。若除以 $\\sqrt y$ 就会漏掉此奇解；原方程还允许把抛物线分支以零斜率拼接到横轴上。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q4"
+  },
+  "step-1994-p3-q5": {
+    "summary": "Let $f(x)=\\sin^{-1}x$ for $-1<x<1$. Prove $(1-x^2)f''-xf'=0$ and, for $n>0$, $(1-x^2)f^{(n+2)}-(2n+1)xf^{(n+1)}-n^2f^{(n)}=0$. Hence obtain the Maclaurin series of $f$. Also find the Maclaurin series of $g(x)=\\frac12\\log((1+x)/(1-x))$, and prove that for $n>0$ the coefficient of $x^{2n+1}$ in $g$ exceeds that in $f$.",
+    "summaryZh": "设 $f(x)=\\arcsin x$（$-1<x<1$）。证明 $(1-x^2)f''-xf'=0$，并对 $n>0$ 证明 $(1-x^2)f^{(n+2)}-(2n+1)xf^{(n+1)}-n^2f^{(n)}=0$。由此求 $f$ 的麦克劳林展开。再求 $g(x)=\\frac12\\log((1+x)/(1-x))$ 的麦克劳林展开，并证明当 $n>0$ 时，$g$ 中 $x^{2n+1}$ 的系数大于 $f$ 中相应系数。",
+    "answer": "$\\arcsin x=\\sum_{n\\ge0}\\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}$ and $g(x)=\\sum_{n\\ge0}x^{2n+1}/(2n+1)$ for $|x|<1$; the latter coefficient is strictly larger for $n>0$.",
+    "answerZh": "当 $|x|<1$ 时，$\\arcsin x=\\sum_{n\\ge0}\\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}$，$g(x)=\\sum_{n\\ge0}x^{2n+1}/(2n+1)$；对 $n>0$，后者的相应系数严格更大。",
+    "methods": [{
+      "title": "Differentiate the governing identity",
+      "titleZh": "反复求导控制恒等式",
+      "topics": [{"en":"Taylor series","zh":"泰勒级数"},{"en":"Higher derivatives","zh":"高阶导数"},{"en":"Coefficient comparison","zh":"系数比较"}],
+      "steps": [
+        "Since $f'=(1-x^2)^{-1/2}$, differentiating gives $(1-x^2)f''-xf'=0$. Differentiate the displayed recurrence once: product-rule terms combine to the same formula with $n$ replaced by $n+1$, proving it by induction from $n=0$.",
+        "At $x=0$ the recurrence gives $f^{(n+2)}(0)=n^2f^{(n)}(0)$. Because $f$ is odd, only odd derivatives remain. Thus $f=x+x^3/6+3x^5/40+5x^7/112+\\cdots$, with coefficient $\\frac1{2n+1}\\prod_{j=1}^n\\frac{2j-1}{2j}=\\frac{(2n)!}{4^n(n!)^2(2n+1)}$.",
+        "Here $g'=1/(1-x^2)=\\sum_{n\\ge0}x^{2n}$, and $g(0)=0$, so termwise integration yields $g=\\sum_{n\\ge0}x^{2n+1}/(2n+1)$. For $n>0$, every factor $(2j-1)/(2j)$ lies strictly between 0 and 1, so the coefficient in $f$ is strictly smaller."
+      ],
+      "stepsZh": [
+        "由 $f'=(1-x^2)^{-1/2}$，求导即得 $(1-x^2)f''-xf'=0$。对给出的递推式再求一次导数，乘积求导产生的各项恰好合并为把 $n$ 换成 $n+1$ 的同一公式；由 $n=0$ 的情形归纳成立。",
+        "令 $x=0$，递推式给出 $f^{(n+2)}(0)=n^2f^{(n)}(0)$。因 $f$ 为奇函数，仅奇阶导数非零。因此 $f=x+x^3/6+3x^5/40+5x^7/112+\\cdots$，其中 $x^{2n+1}$ 的系数为 $\\frac1{2n+1}\\prod_{j=1}^n\\frac{2j-1}{2j}=\\frac{(2n)!}{4^n(n!)^2(2n+1)}$。",
+        "$g'=1/(1-x^2)=\\sum_{n\\ge0}x^{2n}$ 且 $g(0)=0$，逐项积分得 $g=\\sum_{n\\ge0}x^{2n+1}/(2n+1)$。当 $n>0$ 时，每个因子 $(2j-1)/(2j)$ 都严格小于 1，故 $f$ 的相应系数严格较小。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q5"
+  },
+  "step-1994-p3-q6": {
+    "summary": "Points $A,B,C,D$ have complex coordinates $a,b,c,d$. Starting at $P_1$ with coordinate $z_1$, rotate successively through a positive right angle about $A,B,C,D$ to obtain $P_2,\\ldots,P_5$. Find $z_5$ and the condition for $P_5=P_1$ for every $P_1$, interpreting it geometrically. Then let distinct $A,B,C$ lie on the unit circle and use the same non-zero rotation angle $\\theta$ successively about them. Find necessary and sufficient conditions for $P_4=P_1$ for every $P_1$.",
+    "summaryZh": "点 $A,B,C,D$ 的复坐标为 $a,b,c,d$。从复坐标为 $z_1$ 的点 $P_1$ 出发，依次绕 $A,B,C,D$ 正向旋转直角得到 $P_2,\\ldots,P_5$。求 $z_5$，并求对任意 $P_1$ 都有 $P_5=P_1$ 的条件及其几何意义。再设互异的 $A,B,C$ 位于单位圆上，依次绕三点旋转同一个非零角 $\\theta$，求对任意 $P_1$ 都有 $P_4=P_1$ 的充要条件。",
+    "answer": "$z_5=z_1+(1-i)d-b+i(c-a)$. Thus $P_5=P_1$ for all $P_1$ iff $a-c=i(b-d)$, i.e. the diagonals $AC$ and $BD$ are equal and perpendicular with the stated orientation. In the three-centre case, necessarily and sufficiently $\\theta\\equiv\\pm2\\pi/3\\pmod{2\\pi}$ and $A,B,C$ are equally spaced in the corresponding opposite cyclic order.",
+    "answerZh": "$z_5=z_1+(1-i)d-b+i(c-a)$。故对所有 $P_1$ 都有 $P_5=P_1$ 当且仅当 $a-c=i(b-d)$，即对角线 $AC,BD$ 等长且垂直，并具有相应方向。三中心情形的充要条件为 $\\theta\\equiv\\pm2\\pi/3\\pmod{2\\pi}$，且 $A,B,C$ 以与旋转相反的相应循环方向在单位圆上等距分布。",
+    "methods": [{
+      "title": "Affine form of a complex rotation",
+      "titleZh": "复数旋转的仿射表示",
+      "topics": [{"en":"Complex numbers","zh":"复数"},{"en":"Rotations","zh":"旋转"},{"en":"Roots of unity","zh":"单位根"}],
+      "steps": [
+        "A positive right-angle rotation about $a$ maps $z$ to $a+i(z-a)=iz+(1-i)a$. Applying this four times and collecting terms gives $z_5=z_1+(1-i)d-b+i(c-a)$.",
+        "The translation term vanishes exactly when $a-c=i(b-d)$. Multiplication by $i$ rotates a vector through $90^\\circ$ without changing its length, so this is precisely the stated relation between the two diagonals.",
+        "For a rotation factor $u=e^{i\\theta}\\ne1$, three successive rotations give $z_4=u^3z_1+(1-u)(u^2a+ub+c)$. Identity for every $z_1$ requires $u^3=1$, so $u=e^{\\pm2\\pi i/3}$. The remaining condition is $u^2a+ub+c=0$.",
+        "Because $|a|=|b|=|c|=1$ and the points are distinct, equality in the resulting triangle relation forces $b=au^{-1}$ and $c=bu^{-1}$. Conversely these equal spacings make the constant term zero, proving sufficiency."
+      ],
+      "stepsZh": [
+        "绕 $a$ 正向旋转直角把 $z$ 映为 $a+i(z-a)=iz+(1-i)a$。连续应用四次并合并各项，得到 $z_5=z_1+(1-i)d-b+i(c-a)$。",
+        "平移项为零当且仅当 $a-c=i(b-d)$。乘以 $i$ 使向量旋转 $90^\\circ$ 且长度不变，因此这正表示两条对角线具有所述等长、垂直和方向关系。",
+        "一般旋转因子记为 $u=e^{i\\theta}\\ne1$。连续三次旋转后 $z_4=u^3z_1+(1-u)(u^2a+ub+c)$。要对任意 $z_1$ 恒为原点，必须 $u^3=1$，故 $u=e^{\\pm2\\pi i/3}$；余下条件为 $u^2a+ub+c=0$。",
+        "因 $|a|=|b|=|c|=1$ 且三点互异，三角关系取等迫使 $b=au^{-1}$、$c=bu^{-1}$。反过来，这种等距排列使常数项为零，故条件也充分。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q6"
+  },
+  "step-1994-p3-q7": {
+    "summary": "List the elements and their orders in $S_3$ and in the additive group $\\mathbb Z_6$, and show that these groups are not isomorphic. Let $C_6$ be the multiplicative group of sixth roots of unity; prove $C_6\\cong\\mathbb Z_6$. Finally explain why no additive or multiplicative subgroup of $\\mathbb C$ can be isomorphic to $S_3$.",
+    "summaryZh": "列出 $S_3$ 与加法群 $\\mathbb Z_6$ 的元素及其阶，并证明二者不同构。设 $C_6$ 为六次单位根构成的乘法群，证明 $C_6\\cong\\mathbb Z_6$。最后说明为何复数加法群或乘法群的任何子群都不可能与 $S_3$ 同构。",
+    "answer": "$S_3$ has orders $1,2,2,2,3,3$, whereas $\\mathbb Z_6$ has orders $1,6,3,2,3,6$, so they are not isomorphic. The map $k\\mapsto e^{ik\\pi/3}$ is an isomorphism $\\mathbb Z_6\\to C_6$. Every subgroup of $(\\mathbb C,+)$ or $(\\mathbb C^\\times,\\cdot)$ is abelian, but $S_3$ is not.",
+    "answerZh": "$S_3$ 中元素阶依次为 $1,2,2,2,3,3$，而 $\\mathbb Z_6$ 中为 $1,6,3,2,3,6$，故不同构。映射 $k\\mapsto e^{ik\\pi/3}$ 给出 $\\mathbb Z_6\\to C_6$ 的同构。复数加法群或乘法群的任意子群均为交换群，而 $S_3$ 非交换。",
+    "methods": [{
+      "title": "Orders and structure-preserving maps",
+      "titleZh": "元素阶与保结构映射",
+      "topics": [{"en":"Groups","zh":"群"},{"en":"Element order","zh":"元素阶"},{"en":"Isomorphisms","zh":"同构"}],
+      "steps": [
+        "$S_3=\\{e,(12),(13),(23),(123),(132)\\}$: the identity has order 1, the transpositions order 2, and the 3-cycles order 3. In $\\mathbb Z_6$, the elements $0,1,2,3,4,5$ have orders $1,6,3,2,3,6$ respectively. Isomorphisms preserve order, so the groups cannot be isomorphic.",
+        "Put $\\alpha=e^{i\\pi/3}$. The map $\\phi([k])=\\alpha^k$ is well defined, and $\\phi([j]+[k])=\\phi([j])\\phi([k])$. Its six images are distinct and exhaust $C_6$, hence it is an isomorphism.",
+        "Complex addition and multiplication are commutative, and every subgroup inherits commutativity. But, for example, $(12)(23)\\ne(23)(12)$ in $S_3$; therefore such an isomorphism is impossible."
+      ],
+      "stepsZh": [
+        "$S_3=\\{e,(12),(13),(23),(123),(132)\\}$：恒等置换阶为 1，三个对换阶为 2，两个三循环阶为 3。$\\mathbb Z_6$ 中 $0,1,2,3,4,5$ 的阶分别为 $1,6,3,2,3,6$。同构保持元素阶，故二者不同构。",
+        "令 $\\alpha=e^{i\\pi/3}$。映射 $\\phi([k])=\\alpha^k$ 定义良好，且 $\\phi([j]+[k])=\\phi([j])\\phi([k])$。其六个像互异并覆盖 $C_6$，故为同构。",
+        "复数加法与乘法均满足交换律，其任意子群也交换；但在 $S_3$ 中，例如 $(12)(23)\\ne(23)(12)$，所以不可能存在这种同构。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q7"
+  },
+  "step-1994-p3-q8": {
+    "summary": "By taking the determinant of a product of two suitable $2\\times2$ complex matrices, find bilinear forms $L_1,L_2,L_3,L_4$ in $a,b,c,d,p,q,r,s$ such that $(a^2+b^2+c^2+d^2)(p^2+q^2+r^2+s^2)=L_1^2+L_2^2+L_3^2+L_4^2$.",
+    "summaryZh": "通过计算两个适当的 $2\\times2$ 复矩阵乘积的行列式，求关于 $a,b,c,d,p,q,r,s$ 的双线性式 $L_1,L_2,L_3,L_4$，使 $(a^2+b^2+c^2+d^2)(p^2+q^2+r^2+s^2)=L_1^2+L_2^2+L_3^2+L_4^2$。",
+    "answer": "One valid choice is $L_1=ap-bq-cr-ds$, $L_2=aq+bp+cs-dr$, $L_3=ar-bs+cp+dq$, $L_4=as+br-cq+dp$.",
+    "answerZh": "一组可行选择为 $L_1=ap-bq-cr-ds$，$L_2=aq+bp+cs-dr$，$L_3=ar-bs+cp+dq$，$L_4=as+br-cq+dp$。",
+    "methods": [{
+      "title": "Quaternion-style complex matrices",
+      "titleZh": "四元数型复矩阵",
+      "topics": [{"en":"Matrices","zh":"矩阵"},{"en":"Determinants","zh":"行列式"},{"en":"Four-square identity","zh":"四平方恒等式"}],
+      "steps": [
+        "For complex $z,w$, define $M(z,w)=\\begin{pmatrix}z&w\\\\-\\bar w&\\bar z\\end{pmatrix}$. Then $\\det M(z,w)=|z|^2+|w|^2$ and direct multiplication gives $M(z_1,z_2)M(z_3,z_4)=M(z_1z_3-z_2\\bar z_4,\\,z_1z_4+z_2\\bar z_3)$.",
+        "Choose $z_1=a+bi,z_2=c+di,z_3=p+qi,z_4=r+si$. The real and imaginary parts of the two new complex entries are respectively $L_1,L_2,L_3,L_4$ as displayed.",
+        "Take determinants of the matrix identity. Multiplicativity of the determinant makes the left side the product of the two four-square sums, while the determinant on the right is $L_1^2+L_2^2+L_3^2+L_4^2$."
+      ],
+      "stepsZh": [
+        "对复数 $z,w$ 定义 $M(z,w)=\\begin{pmatrix}z&w\\\\-\\bar w&\\bar z\\end{pmatrix}$。则 $\\det M(z,w)=|z|^2+|w|^2$；直接相乘得 $M(z_1,z_2)M(z_3,z_4)=M(z_1z_3-z_2\\bar z_4,\\,z_1z_4+z_2\\bar z_3)$。",
+        "取 $z_1=a+bi,z_2=c+di,z_3=p+qi,z_4=r+si$。所得两个复数条目的实部与虚部分别正是所列 $L_1,L_2,L_3,L_4$。",
+        "对矩阵恒等式取行列式。由行列式乘法性，左边是两个四平方和之积；右边行列式为 $L_1^2+L_2^2+L_3^2+L_4^2$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q8"
+  },
+  "step-1994-p3-q9": {
+    "summary": "A smooth axially symmetric bowl has vertical sections satisfying $s=2\\sqrt{ky}$, where $s$ is arc length from the lowest point $V$, $y$ is height, and $k>0$. A particle is released from rest at height $h$. Use energy to find its time to reach $V$. Two particles of masses $m$ and $\\alpha m$ ($0<\\alpha<1$) are released simultaneously on opposite sides from heights $\\alpha^2h$ and $h$; their coefficient of restitution is $\\alpha$. Describe their subsequent motion.",
+    "summaryZh": "一光滑轴对称碗的竖直截面满足 $s=2\\sqrt{ky}$，其中 $s$ 是从最低点 $V$ 起量的弧长，$y$ 是高度，$k>0$。一质点从高度 $h$ 静止释放，利用能量求其到达 $V$ 的时间。另有质量为 $m$ 与 $\\alpha m$（$0<\\alpha<1$）的两质点，分别从 $V$ 两侧高度 $\\alpha^2h$ 与 $h$ 同时静止释放，恢复系数为 $\\alpha$。描述后续运动。",
+    "answer": "The time from rest to $V$ is $T=\\pi\\sqrt{k/(2g)}$. The particles collide at $V$ at times $(2n-1)T$. After the $n$th collision the mass $m$ reaches height $\\alpha^{2n+2}h$ and the mass $\\alpha m$ reaches height $\\alpha^{2n}h$ on their original sides; both tend to $V$ but never stop in finite time.",
+    "answerZh": "从静止到达 $V$ 的时间为 $T=\\pi\\sqrt{k/(2g)}$。两质点在时刻 $(2n-1)T$ 于 $V$ 碰撞。第 $n$ 次碰撞后，质量 $m$ 的质点在原侧上升至 $\\alpha^{2n+2}h$，质量 $\\alpha m$ 的质点上升至 $\\alpha^{2n}h$；二者趋向 $V$，但不会在有限时间内停止。",
+    "methods": [{
+      "title": "Energy turns the motion into SHM",
+      "titleZh": "由能量化为简谐运动",
+      "topics": [{"en":"Energy conservation","zh":"能量守恒"},{"en":"Simple harmonic motion","zh":"简谐运动"},{"en":"Collisions","zh":"碰撞"}],
+      "steps": [
+        "Since $y=s^2/(4k)$, conservation of energy gives $\\dot s^2+2gy=2gh$, hence $\\dot s^2+(g/(2k))s^2=2gh$. Thus $s$ executes SHM with $\\omega=\\sqrt{g/(2k)}$, and the time from an extreme point to $V$ is $T=\\pi/(2\\omega)=\\pi\\sqrt{k/(2g)}$.",
+        "Put $U=\\sqrt{2gh}$. Just before the first collision, the velocities towards $V$ are $+\\alpha U$ for mass $m$ and $-U$ for mass $\\alpha m$; total momentum is zero. Momentum conservation and restitution $\\alpha$ give post-collision velocities $-\\alpha^2U$ and $+\\alpha U$.",
+        "Speed squared is proportional to the next maximum height, so the particles rise to $\\alpha^4h$ and $\\alpha^2h$ on their original sides. Every excursion from $V$ and back takes $2T$, independent of amplitude. Repeating the same collision calculation gives the stated heights after collision $n$ and collision times $(2n-1)T$."
+      ],
+      "stepsZh": [
+        "由 $y=s^2/(4k)$，能量守恒给出 $\\dot s^2+2gy=2gh$，即 $\\dot s^2+(g/(2k))s^2=2gh$。因此 $s$ 作角频率 $\\omega=\\sqrt{g/(2k)}$ 的简谐运动，从端点到 $V$ 的时间为 $T=\\pi/(2\\omega)=\\pi\\sqrt{k/(2g)}$。",
+        "令 $U=\\sqrt{2gh}$。第一次碰撞前，质量 $m$ 的速度为朝向 $V$ 的 $+\\alpha U$，质量 $\\alpha m$ 的速度为 $-U$，总动量为零。结合动量守恒与恢复系数 $\\alpha$，碰撞后速度为 $-\\alpha^2U$ 与 $+\\alpha U$。",
+        "速度平方与下一次最大高度成正比，因此两质点分别在原侧上升到 $\\alpha^4h$、$\\alpha^2h$。从 $V$ 出发再返回的时间恒为 $2T$，与振幅无关。重复同一碰撞计算，即得第 $n$ 次后的高度与时刻 $(2n-1)T$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q9"
+  },
+  "step-1994-p3-q10": {
+    "summary": "A plane flies in Gammaland, where a constant wind of speed $w$ blows due east. The straight coast through Alphaport runs east-west, Betaville is distance $d$ northeast of Alphaport, and the plane's airspeed is $v>w$. The pilot flies from Alphaport to Betaville in time $t$ with the correct heading. If he returns with the opposite heading, then follows the coast west after reaching it, prove that the return time is $(v+w)t/(v-w)$. If instead he chooses the correct return heading, prove that the return time is $t+\\sqrt2wd/(v^2-w^2)$.",
+    "summaryZh": "Gammaland 有速度为 $w$ 的恒定正东风。经过 Alphaport 的笔直海岸线沿东西方向，Betaville 位于 Alphaport 东北方向、距离为 $d$；飞机空速为 $v>w$。飞行员以正确航向从 Alphaport 飞至 Betaville，用时 $t$。若返程采用与去程相反的机头方向，到达海岸后再沿海岸向西飞，证明返程总时间为 $(v+w)t/(v-w)$。若改用正确返航方向，证明返程时间为 $t+\\sqrt2wd/(v^2-w^2)$。",
+    "answer": "The two return times are respectively $\\frac{v+w}{v-w}t$ and $t+\\frac{\\sqrt2wd}{v^2-w^2}$.",
+    "answerZh": "两种返程时间分别为 $\\frac{v+w}{v-w}t$ 与 $t+\\frac{\\sqrt2wd}{v^2-w^2}$。",
+    "methods": [{
+      "title": "Resolve air and ground velocity vectors",
+      "titleZh": "分解空速与地速向量",
+      "topics": [{"en":"Relative velocity","zh":"相对速度"},{"en":"Vector mechanics","zh":"向量力学"},{"en":"Quadratic equations","zh":"二次方程"}],
+      "steps": [
+        "Use east-north coordinates with Alphaport at the origin and Betaville at $(d/\\sqrt2,d/\\sqrt2)$. If the outward air velocity is $(a,b)$, the ground velocity is $(a+w,b)$; flying northeast gives $a+w=b$ and $bt=d/\\sqrt2$.",
+        "With the opposite heading the return ground velocity is $(w-a,-b)$. After time $t$ it reaches the coast $2wt$ east of Alphaport. Flying west along the coast has ground speed $v-w$, so the coastal leg takes $2wt/(v-w)$. Adding $t$ gives $(v+w)t/(v-w)$.",
+        "For a correct diagonal track, let the outward and return ground-speed magnitudes per coordinate be $p_1$ and $p_2$. The airspeed condition gives $2p^2-2wp+w^2-v^2=0$, whose roots are $p_1$ and $-p_2$. Hence $p_1-p_2=w$ and $p_1p_2=(v^2-w^2)/2$.",
+        "The outward and return times are $d/(\\sqrt2p_1)=t$ and $d/(\\sqrt2p_2)$. Their difference is $d(p_1-p_2)/(\\sqrt2p_1p_2)=\\sqrt2wd/(v^2-w^2)$, proving the result."
+      ],
+      "stepsZh": [
+        "取东、北为坐标轴，令 Alphaport 为原点，Betaville 为 $(d/\\sqrt2,d/\\sqrt2)$。若去程空速为 $(a,b)$，则地速为 $(a+w,b)$；航迹向东北给出 $a+w=b$ 且 $bt=d/\\sqrt2$。",
+        "机头反向后返程地速为 $(w-a,-b)$。经过时间 $t$ 到达海岸，此时位于 Alphaport 以东 $2wt$。沿海岸向西的地速为 $v-w$，所以该段用时 $2wt/(v-w)$；加上 $t$ 即得 $(v+w)t/(v-w)$。",
+        "若正确沿对角线返航，令去、返地速的每个坐标分量大小为 $p_1,p_2$。空速条件给出 $2p^2-2wp+w^2-v^2=0$，其两根为 $p_1,-p_2$，故 $p_1-p_2=w$、$p_1p_2=(v^2-w^2)/2$。",
+        "去、返时间分别为 $d/(\\sqrt2p_1)=t$ 与 $d/(\\sqrt2p_2)$。二者之差为 $d(p_1-p_2)/(\\sqrt2p_1p_2)=\\sqrt2wd/(v^2-w^2)$，结论成立。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q10"
+  },
+  "step-1994-p3-q11": {
+    "summary": "A step-ladder has legs $AB,AC$, each of length $4a$, hinged at $A$ and resting on a smooth horizontal floor. A light elastic rope joins points $D,E$ with $AD=AE=a$; its natural length is $a/4$ and modulus is $W$. Leg $AB$ is uniform of weight $W$, while $AC$ has negligible weight. A man of weight $4W$ stands on a rung at distance $\\beta a$ from $B$. Find the height of the rung when $\\beta$ is as large as equilibrium permits.",
+    "summaryZh": "一架人字梯的两腿 $AB,AC$ 均长 $4a$，在 $A$ 铰接并置于光滑水平地面。轻弹性绳连接 $D,E$，其中 $AD=AE=a$；绳的原长为 $a/4$、弹性模量为 $W$。梯腿 $AB$ 均匀、重为 $W$，$AC$ 重量忽略。重为 $4W$ 的人站在距 $B$ 为 $\\beta a$ 的横档上。求平衡所允许的最大 $\\beta$ 对应的横档高度。",
+    "answer": "$\\beta_{\\max}=(3\\sqrt3-1)/2$, attained when each leg makes angle $\\pi/6$ with the vertical. The rung height is $\\boxed{(9-\\sqrt3)a/4}$.",
+    "answerZh": "$\\beta_{\\max}=(3\\sqrt3-1)/2$，在每条梯腿与竖直方向夹角为 $\\pi/6$ 时取得。横档高度为 $\\boxed{(9-\\sqrt3)a/4}$。",
+    "methods": [{
+      "title": "Moments on the whole ladder and the light leg",
+      "titleZh": "对整梯与轻梯腿分别取矩",
+      "topics": [{"en":"Statics","zh":"静力学"},{"en":"Elastic strings","zh":"弹性绳"},{"en":"Optimisation","zh":"最值"}],
+      "steps": [
+        "Let each leg make angle $\\theta$ with the vertical. Then $DE=2a\\sin\\theta$, so the taut rope tension is $T=W(DE-a/4)/(a/4)=W(8\\sin\\theta-1)$.",
+        "Let the floor reaction at $C$ be $R_C$. Taking moments about $B$ for the whole ladder gives $R_C(8a\\sin\\theta)=W(2a\\sin\\theta)+4W(\\beta a\\sin\\theta)$, hence $R_C=W(1+2\\beta)/4$.",
+        "Taking moments about $A$ for the weightless leg $AC$ gives $R_C(4a\\sin\\theta)=T(a\\cos\\theta)$. Substitution yields $1+2\\beta=8\\cos\\theta-\\cot\\theta$.",
+        "Differentiate $8\\cos\\theta-\\cot\\theta$: its derivative is $-8\\sin\\theta+\\csc^2\\theta$, so the interior maximum satisfies $8\\sin^3\\theta=1$, i.e. $\\theta=\\pi/6$. Then $\\beta=(3\\sqrt3-1)/2$ and the rung height is $\\beta a\\cos\\theta=(9-\\sqrt3)a/4$."
+      ],
+      "stepsZh": [
+        "设每条梯腿与竖直方向夹角为 $\\theta$。则 $DE=2a\\sin\\theta$，拉紧的弹性绳张力为 $T=W(DE-a/4)/(a/4)=W(8\\sin\\theta-1)$。",
+        "设地面对 $C$ 的支持力为 $R_C$。对整架梯子绕 $B$ 取矩：$R_C(8a\\sin\\theta)=W(2a\\sin\\theta)+4W(\\beta a\\sin\\theta)$，故 $R_C=W(1+2\\beta)/4$。",
+        "对无重梯腿 $AC$ 绕 $A$ 取矩：$R_C(4a\\sin\\theta)=T(a\\cos\\theta)$。代入得到 $1+2\\beta=8\\cos\\theta-\\cot\\theta$。",
+        "对 $8\\cos\\theta-\\cot\\theta$ 求导，得 $-8\\sin\\theta+\\csc^2\\theta$。内部最大值满足 $8\\sin^3\\theta=1$，即 $\\theta=\\pi/6$。于是 $\\beta=(3\\sqrt3-1)/2$，横档高度 $\\beta a\\cos\\theta=(9-\\sqrt3)a/4$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q11"
+  },
+  "step-1994-p3-q12": {
+    "summary": "Two players $A,B$ alternate serving in tennis. Player $A$ wins a game with probability $p_A$ when serving and $p_B$ when $B$ serves; put $q_A=1-p_A,q_B=1-p_B$. In a shortened set, the first player to lead by two games wins. Find the probability that $A$ wins when serving first and show it is unchanged if $B$ serves first. In a standard set, the first lead of at least two games after at least four games wins. Find the probability the set ends in exactly four games. When $p_A=p_B=p$, compare $A$'s standard-set and shortened-set winning probabilities.",
+    "summaryZh": "网球选手 $A,B$ 轮流发球。$A$ 在自己发球局获胜的概率为 $p_A$，在 $B$ 发球局获胜的概率为 $p_B$；记 $q_A=1-p_A,q_B=1-p_B$。简化赛制中，率先领先两局者获胜。求 $A$ 先发时获胜的概率，并证明改为 $B$ 先发结果不变。标准赛制中，至少打满四局后首次领先至少两局者获胜。求恰好四局结束的概率。当 $p_A=p_B=p$ 时，比较 $A$ 在两种赛制下的获胜概率。",
+    "answer": "With $a=p_Ap_B$, $b=q_Aq_B$, $s=p_Aq_B+q_Ap_B$, $P_{short}=a/(a+b)$, independent of the first server. The probability of ending in four games is $a^2+b^2+2(a+b)s$. If $p_A=p_B=p$ and $q=1-p$, $P_{standard}=p^4+4p^3q+6p^4q^2/(p^2+q^2)$ and $P_{standard}-P_{short}=p^2q^2(p-q)/(p^2+q^2)$.",
+    "answerZh": "令 $a=p_Ap_B$、$b=q_Aq_B$、$s=p_Aq_B+q_Ap_B$，则 $P_{short}=a/(a+b)$，与谁先发无关。恰好四局结束的概率为 $a^2+b^2+2(a+b)s$。若 $p_A=p_B=p$、$q=1-p$，则 $P_{standard}=p^4+4p^3q+6p^4q^2/(p^2+q^2)$，且 $P_{standard}-P_{short}=p^2q^2(p-q)/(p^2+q^2)$。",
+    "methods": [{
+      "title": "Two-game blocks and renewal",
+      "titleZh": "两局分块与更新递推",
+      "topics": [{"en":"Probability recurrences","zh":"概率递推"},{"en":"Independent games","zh":"独立局"},{"en":"Geometric renewal","zh":"几何更新"}],
+      "steps": [
+        "In any two consecutive games, $A$ wins both with probability $a$, loses both with probability $b$, and the score returns level with probability $s=1-a-b$. Therefore $P_{short}=a+sP_{short}=a/(a+b)$. Reversing the first server merely reverses the order within each block and leaves $a,b,s$ unchanged.",
+        "A standard set ends 4-0 with probability $a^2+b^2$. It ends 3-1 when a split first pair is followed by two wins or two losses; the total contribution is $2s(a+b)$. Thus the four-game probability is $a^2+b^2+2(a+b)s$.",
+        "After four games, an unfinished set is level. Conditioning on the first two two-game blocks gives $P_{standard}=a^2+2as+(s^2+2ab)P_{short}$. With $a=p^2,b=q^2,s=2pq$, simplify to the displayed formula. Subtracting $p^2/(p^2+q^2)$ and using $p+q=1$ gives $p^2q^2(p-q)/(p^2+q^2)$, so the standard set favours $A$ exactly when $p>1/2$."
+      ],
+      "stepsZh": [
+        "任意连续两局中，$A$ 两局全胜概率为 $a$、全负概率为 $b$、比分回到平局概率为 $s=1-a-b$。故 $P_{short}=a+sP_{short}=a/(a+b)$。交换先发者只改变两局内部顺序，不改变 $a,b,s$。",
+        "标准赛制以 4 比 0 结束的概率为 $a^2+b^2$。若前两局各胜一局，随后两局全胜或全负，则以 3 比 1 结束，总贡献为 $2s(a+b)$。所以恰好四局结束概率为 $a^2+b^2+2(a+b)s$。",
+        "四局后若尚未结束，比分必为平局。按前两个两局块分类得 $P_{standard}=a^2+2as+(s^2+2ab)P_{short}$。代入 $a=p^2,b=q^2,s=2pq$ 得所列公式。再减去 $p^2/(p^2+q^2)$ 并用 $p+q=1$，得到 $p^2q^2(p-q)/(p^2+q^2)$，故当且仅当 $p>1/2$ 时标准赛制更有利于 $A$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q12"
+  },
+  "step-1994-p3-q13": {
+    "summary": "A rope lifetime $T$ has density $\\lambda e^{-\\lambda t}$ for $t\\ge0$. Given that a rope has already survived time $t_0$, find the distribution and mean of its remaining life, and comment on the model. Two new independent ropes are used: find the density of the time until both have failed. They are used only during performances of length $h$; find the probability that both fail during the same performance.",
+    "summaryZh": "绳子的寿命 $T$ 在 $t\\ge0$ 上密度为 $\\lambda e^{-\\lambda t}$。已知一根绳子已经使用 $t_0$ 仍未断，求其剩余寿命分布和均值，并评论该模型。现有两根相互独立的新绳，求两根都断裂所需时间的密度。若绳子只在每场时长为 $h$ 的演出中使用，求两根绳在同一场演出中断裂的概率。",
+    "answer": "The remaining life is again exponential with rate $\\lambda$ and mean $1/\\lambda$. For $M=\\max(T_1,T_2)$, $f_M(t)=2\\lambda e^{-\\lambda t}(1-e^{-\\lambda t})$. The probability of failure in the same performance is $(1-e^{-\\lambda h})/(1+e^{-\\lambda h})=\\tanh(\\lambda h/2)$.",
+    "answerZh": "剩余寿命仍服从参数 $\\lambda$ 的指数分布，均值为 $1/\\lambda$。若 $M=\\max(T_1,T_2)$，则 $f_M(t)=2\\lambda e^{-\\lambda t}(1-e^{-\\lambda t})$。两根绳在同一场演出中断裂的概率为 $(1-e^{-\\lambda h})/(1+e^{-\\lambda h})=\\tanh(\\lambda h/2)$。",
+    "methods": [{
+      "title": "Memorylessness, order statistics and a geometric sum",
+      "titleZh": "无记忆性、次序统计量与几何级数",
+      "topics": [{"en":"Exponential distribution","zh":"指数分布"},{"en":"Order statistics","zh":"次序统计量"},{"en":"Geometric series","zh":"几何级数"}],
+      "steps": [
+        "$P(T-t_0>u\\mid T>t_0)=e^{-\\lambda(t_0+u)}/e^{-\\lambda t_0}=e^{-\\lambda u}$. Thus the remaining life is exponential with mean $1/\\lambda$. The model therefore treats an old surviving rope as statistically new, which is questionable if wear accumulates.",
+        "For independent $T_1,T_2$, $P(M\\le t)=P(T_1\\le t,T_2\\le t)=(1-e^{-\\lambda t})^2$. Differentiation gives $f_M(t)=2\\lambda e^{-\\lambda t}(1-e^{-\\lambda t})$.",
+        "Let $q=e^{-\\lambda h}$. The probability that each lifetime lies in performance $n$, namely $((n-1)h,nh]$, is $[q^{n-1}(1-q)]^2$. Summing over $n\\ge1$ gives $(1-q)^2/(1-q^2)=(1-q)/(1+q)$."
+      ],
+      "stepsZh": [
+        "$P(T-t_0>u\\mid T>t_0)=e^{-\\lambda(t_0+u)}/e^{-\\lambda t_0}=e^{-\\lambda u}$。故剩余寿命仍为指数分布，均值 $1/\\lambda$。这意味着模型把已经使用但未断的旧绳视为与新绳同样可靠；若磨损会累积，这并不现实。",
+        "对独立的 $T_1,T_2$，$P(M\\le t)=P(T_1\\le t,T_2\\le t)=(1-e^{-\\lambda t})^2$。求导得 $f_M(t)=2\\lambda e^{-\\lambda t}(1-e^{-\\lambda t})$。",
+        "令 $q=e^{-\\lambda h}$。每根绳寿命落在第 $n$ 场，即区间 $((n-1)h,nh]$，的概率为 $q^{n-1}(1-q)$；两根同时落入的概率为其平方。对 $n\\ge1$ 求和得 $(1-q)^2/(1-q^2)=(1-q)/(1+q)$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q13"
+  },
+  "step-1994-p3-q14": {
+    "summary": "Three points are chosen independently and uniformly on a circle and joined to form a triangle. Prove that for $1/2\\le k\\le1$ the probability that at least one angle exceeds $k\\pi$ is $3(1-k)^2$. Find the corresponding probability for $1/3\\le k\\le1/2$.",
+    "summaryZh": "在圆上独立、均匀地选取三点并连接成三角形。证明当 $1/2\\le k\\le1$ 时，至少一个内角大于 $k\\pi$ 的概率为 $3(1-k)^2$。再求 $1/3\\le k\\le1/2$ 时的相应概率。",
+    "answer": "For $1/2\\le k\\le1$, the probability is $3(1-k)^2$. For $1/3\\le k\\le1/2$, it is $3(1-k)^2-3(1-2k)^2=3k(2-3k)$.",
+    "answerZh": "当 $1/2\\le k\\le1$ 时，概率为 $3(1-k)^2$；当 $1/3\\le k\\le1/2$ 时，概率为 $3(1-k)^2-3(1-2k)^2=3k(2-3k)$。",
+    "methods": [{
+      "title": "Arc lengths and inclusion-exclusion",
+      "titleZh": "弧长参数与容斥原理",
+      "topics": [{"en":"Geometric probability","zh":"几何概率"},{"en":"Inclusion-exclusion","zh":"容斥原理"},{"en":"Uniform order statistics","zh":"均匀次序统计量"}],
+      "steps": [
+        "By rotation fix one point at 0 and write the other two ordered positions as $0<U<V<1$ turns. Their joint density is 2 on a triangle of area $1/2$. The three intervening arc fractions are $X=U$, $Y=V-U$, $Z=1-V$, with $X+Y+Z=1$.",
+        "By the inscribed-angle theorem, the triangle angles are $\\pi X,\\pi Y,\\pi Z$ in some order. The region $X>k$ is a similar triangle of side factor $1-k$, hence has probability $(1-k)^2$; the same holds for $Y,Z$.",
+        "If $k\\ge1/2$, two such events cannot occur, so the union has probability $3(1-k)^2$. If $1/3\\le k\\le1/2$, each pairwise overlap has probability $(1-2k)^2$, while a triple overlap is impossible except on a zero-area boundary. Inclusion-exclusion gives $3(1-k)^2-3(1-2k)^2=3k(2-3k)$."
+      ],
+      "stepsZh": [
+        "利用旋转对称性把一点固定在 0，另两点按顺序记为 $0<U<V<1$ 圈。$(U,V)$ 在面积为 $1/2$ 的三角形上联合密度为 2。三段相邻弧长占比分别为 $X=U$、$Y=V-U$、$Z=1-V$，且 $X+Y+Z=1$。",
+        "由圆周角定理，三角形三个内角按某种顺序为 $\\pi X,\\pi Y,\\pi Z$。区域 $X>k$ 是边长缩放比为 $1-k$ 的相似三角形，故其概率为 $(1-k)^2$；$Y,Z$ 同理。",
+        "若 $k\\ge1/2$，任意两个事件不可能同时发生，故并集概率为 $3(1-k)^2$。若 $1/3\\le k\\le1/2$，每一对事件交集概率为 $(1-2k)^2$，三者交集除零面积边界外为空。由容斥原理得 $3(1-k)^2-3(1-2k)^2=3k(2-3k)$。"
+      ]
+    }],
+    "sourceUrl": "https://step.maths.org/questions/94-s3-q14"
+  }
+}
