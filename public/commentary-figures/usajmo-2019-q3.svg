@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewBox="0 0 700 500" role="img" aria-labelledby="title desc">
+<title id="title">Cyclic quadrilateral and bisecting line</title>
+<desc id="desc">A cyclic quadrilateral ABCD with diagonals AC and BD meeting at E. Point P lies on AB and line PE meets CD at its midpoint M.</desc>
+<circle cx="350" cy="260" r="210" fill="none" stroke="#82959d" stroke-width="1.5" stroke-dasharray="6 5"/>
+<path d="M168.1 155 L531.9 155 L497.1 410 L202.9 410 Z" fill="none" stroke="#263d49" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M168.1 155 L497.1 410 M531.9 155 L202.9 410" fill="none" stroke="#6a7f88" stroke-width="1.6"/>
+<path d="M350 155 L350 410" fill="none" stroke="#9a684e" stroke-width="2.2"/>
+<circle cx="168.1" cy="155" r="3.2" fill="#1d3540"/><circle cx="531.9" cy="155" r="3.2" fill="#1d3540"/>
+<circle cx="497.1" cy="410" r="3.2" fill="#1d3540"/><circle cx="202.9" cy="410" r="3.2" fill="#1d3540"/>
+<circle cx="350" cy="155" r="3.2" fill="#9a684e"/><circle cx="350" cy="296" r="3.2" fill="#1d3540"/><circle cx="350" cy="410" r="3.2" fill="#9a684e"/>
+<g font-family="Georgia,serif" font-size="19" font-style="italic" fill="#142b35" stroke="#fff" stroke-width="3" paint-order="stroke">
+<text x="147" y="145">A</text><text x="540" y="145">B</text><text x="506" y="429">C</text><text x="182" y="429">D</text>
+<text x="341" y="139">P</text><text x="361" y="300">E</text><text x="360" y="429">M</text>
+</g>
+</svg>

@@ -1,0 +1,252 @@
+{
+  "usajmo-2019-q1": {
+    "summary": "There are $a+b$ bowls in a row. Initially the first $a$ bowls each hold an apple and the last $b$ bowls each hold a pear. A move sends an apple from bowl $i$ to $i+1$ and a pear from bowl $j$ to $j-1$, provided $i-j$ is even. Multiple fruits may share a bowl. Prove that the fruits can be rearranged so that the first $b$ bowls hold pears and the last $a$ bowls hold apples if and only if $ab$ is even.",
+    "summaryZh": "一排共有 $a+b$ 个碗。开始时前 $a$ 个碗各有一个苹果，后 $b$ 个碗各有一个梨。一次合法操作把第 $i$ 个碗中的一个苹果移到第 $i+1$ 个碗，同时把第 $j$ 个碗中的一个梨移到第 $j-1$ 个碗，且要求 $i-j$ 为偶数；同一碗可放多个水果。证明：能够使前 $b$ 个碗各有一个梨、后 $a$ 个碗各有一个苹果，当且仅当 $ab$ 为偶数。",
+    "answer": "The rearrangement is possible exactly when $ab$ is even.",
+    "answerZh": "当且仅当 $ab$ 为偶数时可以完成重排。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2019_USAJMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Use a parity invariant and an explicit induction",
+        "titleZh": "用奇偶不变量与构造性归纳",
+        "topics": [
+          { "en": "Parity invariants", "zh": "奇偶不变量" },
+          { "en": "Constructive induction", "zh": "构造性归纳" },
+          { "en": "Monovariants", "zh": "单调量" }
+        ],
+        "steps": [
+          "First suppose $a$ and $b$ are both odd. Let $X$ be the number of apples in odd-numbered bowls and $Y$ the number of pears in odd-numbered bowls. Because $i-j$ is even, $i$ and $j$ have the same parity. Each move therefore changes $X$ and $Y$ by the same amount, so $X-Y$ is invariant.",
+          "Initially $X=(a+1)/2$ and $Y=(b-1)/2$, while in the target arrangement $X=(a-1)/2$ and $Y=(b+1)/2$. Thus $X-Y$ would have to decrease by $2$, contradicting invariance. Hence a successful rearrangement requires $ab$ even.",
+          "Conversely, by reflecting the row if necessary, assume $a$ is even. We induct on $b$; the case $b=0$ is immediate. Focus on the leftmost pear, initially in bowl $a+1$. For $k=a+1,a,\\ldots,2$, move this pear from bowl $k$ to $k-1$ while moving the apple in bowl $a+2-k$ one step right.",
+          "At that stage the two starting bowls are $i=a+2-k$ for the apple and $j=k$ for the pear. Their difference is $a+2-2k$, which is even because $a$ is even, so every move is legal.",
+          "After these $a$ moves, bowl $1$ contains a pear, bowls $2,\\ldots,a+1$ each contain an apple, and the remaining $b-1$ pears are still to the right. Ignoring the completed first bowl, the induction hypothesis rearranges the remaining row. Therefore every case with $ab$ even is possible."
+        ],
+        "stepsZh": [
+          "先设 $a,b$ 均为奇数。记 $X$ 为奇数编号碗中的苹果数，$Y$ 为奇数编号碗中的梨数。由于 $i-j$ 为偶数，$i,j$ 同奇偶；每次操作使 $X,Y$ 同时增加 $1$ 或同时减少 $1$，故 $X-Y$ 保持不变。",
+          "初始时 $X=(a+1)/2,\\ Y=(b-1)/2$；目标状态中 $X=(a-1)/2,\\ Y=(b+1)/2$。于是 $X-Y$ 必须减少 $2$，与不变量矛盾。因此若能成功，则 $ab$ 必为偶数。",
+          "反之，必要时把整排左右翻转，可设 $a$ 为偶数。对 $b$ 归纳；$b=0$ 显然。考虑最左边的梨，它最初位于第 $a+1$ 个碗。令 $k=a+1,a,\\ldots,2$，每次把该梨从第 $k$ 个碗移到第 $k-1$ 个碗，同时把第 $a+2-k$ 个碗中的苹果向右移动一步。",
+          "此时苹果和梨的起始编号分别为 $i=a+2-k$ 与 $j=k$，故 $i-j=a+2-2k$。因 $a$ 为偶数，该差为偶数，所以每一步都合法。",
+          "这 $a$ 步完成后，第 $1$ 个碗中是梨，第 $2$ 至第 $a+1$ 个碗中各有苹果，其余 $b-1$ 个梨仍在右侧。固定第一个碗后，对剩余一排应用归纳假设即可。因此 $ab$ 为偶数时总能完成。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2019-q2": {
+    "summary": "Determine all integer pairs $(a,b)$ for which there exist functions $f,g:\\mathbb Z\\to\\mathbb Z$ satisfying $f(g(x))=x+a$ and $g(f(x))=x+b$ for every integer $x$.",
+    "summaryZh": "求所有整数对 $(a,b)$，使得存在函数 $f,g:\\mathbb Z\\to\\mathbb Z$，对每个整数 $x$ 都满足 $f(g(x))=x+a$ 且 $g(f(x))=x+b$。",
+    "answer": "Exactly the pairs with $|a|=|b|$ (equivalently, $a=b$ or $a=-b$).",
+    "answerZh": "恰为满足 $|a|=|b|$ 的整数对，即 $a=b$ 或 $a=-b$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2019_USAJMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Force equal translation lengths",
+        "titleZh": "证明两个平移长度的绝对值相等",
+        "topics": [
+          { "en": "Functional equations", "zh": "函数方程" },
+          { "en": "Injectivity and surjectivity", "zh": "单射与满射" },
+          { "en": "Modular pigeonhole principle", "zh": "模意义下的抽屉原理" }
+        ],
+        "steps": [
+          "Both functions are bijections. For example, $f(g(x))=x+a$ makes $f$ surjective; and if $f(u)=f(v)$, applying $g$ gives $u+b=v+b$, so $u=v$. The proof for $g$ is identical.",
+          "Composing the identities in the other order yields $f(x+b)=f(g(f(x)))=f(x)+a$ for all $x$. Similarly, $g(x+a)=g(x)+b$.",
+          "If $a=0$, then $f(x+b)=f(x)$; injectivity forces $b=0$. The converse is symmetric. Now assume $ab\\ne0$.",
+          "Suppose $|a|>|b|$. Among the $|a|$ residue classes modulo $|a|$, every value $f(x)$ is congruent to one of the $|b|$ numbers $f(0),\\ldots,f(|b|-1)$: repeatedly use $f(x+b)=f(x)+a$ and, when $b<0$, reverse the direction. Hence $f$ misses at least one residue class modulo $|a|$, contradicting its surjectivity onto $\\mathbb Z$.",
+          "Interchanging $f,g$ and $a,b$ rules out $|b|>|a|$. Thus $|a|=|b|$ is necessary.",
+          "It is also sufficient. If $b=a$, take $f(x)=x+2a$ and $g(x)=x-a$. If $b=-a$, take $f(x)=2a-x$ and $g(x)=a-x$. Direct substitution verifies both identities."
+        ],
+        "stepsZh": [
+          "$f,g$ 都是双射。例如，$f(g(x))=x+a$ 说明 $f$ 为满射；若 $f(u)=f(v)$，两边作用 $g$ 得 $u+b=v+b$，所以 $u=v$，故 $f$ 也是单射。$g$ 同理。",
+          "改变复合次序可得 $f(x+b)=f(g(f(x)))=f(x)+a$；同理 $g(x+a)=g(x)+b$。",
+          "若 $a=0$，则 $f(x+b)=f(x)$，由 $f$ 的单射性知 $b=0$；反向同理。下设 $ab\\ne0$。",
+          "若 $|a|>|b|$，利用 $f(x+b)=f(x)+a$ 反复平移（当 $b<0$ 时反向使用），可知任意 $f(x)$ 模 $|a|$ 都与 $f(0),\\ldots,f(|b|-1)$ 中某个数同余。因此 $f$ 的值至多覆盖 $|b|$ 个模 $|a|$ 剩余类，少于全部 $|a|$ 个剩余类，与 $f$ 对 $\\mathbb Z$ 满射矛盾。",
+          "交换 $f,g$ 以及 $a,b$，同理排除 $|b|>|a|$。故必须有 $|a|=|b|$。",
+          "反之，若 $b=a$，取 $f(x)=x+2a,\\ g(x)=x-a$；若 $b=-a$，取 $f(x)=2a-x,\\ g(x)=a-x$。直接代入即可验证两式。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2019-q3": {
+    "summary": "Let $ABCD$ be a cyclic quadrilateral with $AD^2+BC^2=AB^2$. Its diagonals meet at $E$. A point $P$ on $\\overline{AB}$ satisfies $\\angle APD=\\angle BPC$. Prove that $PE$ bisects $\\overline{CD}$.",
+    "summaryZh": "圆内接四边形 $ABCD$ 满足 $AD^2+BC^2=AB^2$，两条对角线交于 $E$。点 $P$ 位于线段 $\\overline{AB}$ 上，并满足 $\\angle APD=\\angle BPC$。证明直线 $PE$ 平分线段 $\\overline{CD}$。",
+    "answer": "$PE$ passes through the midpoint of $\\overline{CD}$.",
+    "answerZh": "$PE$ 经过线段 $\\overline{CD}$ 的中点。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2019_USAJMO_Problems/Problem_3",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2019-q3.svg",
+      "alt": "A cyclic quadrilateral ABCD with diagonals meeting at E; P lies on AB and line PE meets CD at its midpoint M.",
+      "altZh": "圆内接四边形 ABCD 的对角线交于 E；P 在线段 AB 上，直线 PE 与 CD 交于其中点 M。",
+      "printHeightPt": 255
+    },
+    "methods": [
+      {
+        "title": "Construct the unique angle point and use sine ratios",
+        "titleZh": "构造唯一角等点并比较正弦比",
+        "topics": [
+          { "en": "Cyclic quadrilaterals", "zh": "圆内接四边形" },
+          { "en": "Similar triangles", "zh": "相似三角形" },
+          { "en": "Symmedian ratio", "zh": "中线对称线比例" }
+        ],
+        "steps": [
+          "Because $AD^2+BC^2=AB^2$, there is a unique point $P_0$ on $AB$ with $AP_0=AD^2/AB$ and $BP_0=BC^2/AB$.",
+          "The equality $AP_0\\cdot AB=AD^2$ and the common angle at $A$ give $\\triangle AP_0D\\sim\\triangle ADB$. Likewise, $BP_0\\cdot BA=BC^2$ gives $\\triangle BP_0C\\sim\\triangle BCA$. Hence $\\angle AP_0D=\\angle ADB=\\angle ACB=\\angle BP_0C$.",
+          "As a point moves from $A$ to $B$, the angle made by its left-pointing ray with $D$ decreases strictly, while the angle made by its right-pointing ray with $C$ increases strictly. Thus the equality of the two angles has at most one solution; the given $P$ is therefore $P_0$.",
+          "The cyclicity of $ABCD$ gives $\\triangle AED\\sim\\triangle BEC$, so $AD/BC=AE/BE=DE/CE$. Consequently $AP/PB=AD^2/BC^2=AE^2/BE^2$.",
+          "Let $M=PE\\cap CD$. Applying the sine form of the cevian ratio in $\\triangle EAB$ gives $AP/PB=(EA/EB)\\,\\sin\\angle AEP/\\sin\\angle PEB$. Since $AP/PB=(EA/EB)^2$, the sine ratio equals $EA/EB$.",
+          "The rays $EC,EA$ are opposite, as are $ED,EB$, and $EM,EP$ are opposite. Hence in $\\triangle ECD$, $CM/MD=(EC/ED)\\,\\sin\\angle CEM/\\sin\\angle MED=(EC/ED)(EA/EB)=1$. Thus $CM=MD$."
+        ],
+        "stepsZh": [
+          "由 $AD^2+BC^2=AB^2$，线段 $AB$ 上唯一存在点 $P_0$，使 $AP_0=AD^2/AB$、$BP_0=BC^2/AB$。",
+          "由 $AP_0\\cdot AB=AD^2$ 及 $A$ 处公共角，得 $\\triangle AP_0D\\sim\\triangle ADB$；同理由 $BP_0\\cdot BA=BC^2$ 得 $\\triangle BP_0C\\sim\\triangle BCA$。因此 $\\angle AP_0D=\\angle ADB=\\angle ACB=\\angle BP_0C$。",
+          "当点从 $A$ 沿 $AB$ 移向 $B$ 时，它的向左射线与 $D$ 所成角严格减小，而向右射线与 $C$ 所成角严格增大。因此两角相等至多有一个解，题设中的 $P$ 必为 $P_0$。",
+          "由 $ABCD$ 共圆，$\\triangle AED\\sim\\triangle BEC$，故 $AD/BC=AE/BE=DE/CE$。于是 $AP/PB=AD^2/BC^2=AE^2/BE^2$。",
+          "设 $M=PE\\cap CD$。在 $\\triangle EAB$ 中使用正弦形式的分点比：$AP/PB=(EA/EB)\\,\\sin\\angle AEP/\\sin\\angle PEB$。结合上一式，得到该正弦比等于 $EA/EB$。",
+          "射线 $EC,EA$ 反向，$ED,EB$ 反向，且 $EM,EP$ 反向。因此在 $\\triangle ECD$ 中，$CM/MD=(EC/ED)\\,\\sin\\angle CEM/\\sin\\angle MED=(EC/ED)(EA/EB)=1$，所以 $CM=MD$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2019-q4": {
+    "summary": "Let $ABC$ be a triangle with $\\angle ABC>90^\\circ$. The $A$-excircle is tangent to $BC$ and to the extensions of $AB$ and $AC$. Let $E$ and $F$ be the feet of the altitudes from $B$ and $C$ to lines $AC$ and $AB$, respectively. Can $EF$ be tangent to the $A$-excircle?",
+    "summaryZh": "在三角形 $ABC$ 中，$\\angle ABC>90^\\circ$。$A$ 旁切圆与 $BC$ 以及 $AB,AC$ 的延长线相切。设 $E,F$ 分别为从 $B,C$ 向直线 $AC,AB$ 所作高的垂足。直线 $EF$ 能否与 $A$ 旁切圆相切？",
+    "answer": "No. Such tangency is impossible.",
+    "answerZh": "不能；这种相切不可能发生。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2019_USAJMO_Problems/Problem_4",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2019-q4.svg",
+      "alt": "An obtuse triangle ABC with altitude feet E and F, the segment EF, and the A-excircle outside the triangle.",
+      "altZh": "钝角三角形 ABC、两个高足 E、F、线段 EF，以及位于三角形外部的 A 旁切圆。",
+      "printHeightPt": 245
+    },
+    "methods": [
+      {
+        "title": "Compare two similar triangles and one excircle",
+        "titleZh": "比较两个相似三角形的同一旁切圆",
+        "topics": [
+          { "en": "Excircles", "zh": "旁切圆" },
+          { "en": "Orthic geometry", "zh": "垂足几何" },
+          { "en": "Similarity", "zh": "相似" }
+        ],
+        "steps": [
+          "Because $\\angle B$ is obtuse, $E$ lies on segment $AC$ and $F$ lies on the extension of $AB$ beyond $B$. From the right triangles, $AE=AB\\cos A$ and $AF=AC\\cos A$.",
+          "Therefore $AE/AB=AF/AC=\\cos A$, and the included angle at $A$ is common. Thus $\\triangle AEF\\sim\\triangle ABC$ with scale factor $\\cos A$; in particular $EF=BC\\cos A$.",
+          "Assume that $EF$ is tangent to the $A$-excircle. Since this same circle already touches the lines $AB$ and $AC$, it is then the $A$-excircle of $\\triangle AEF$ as well.",
+          "Corresponding excircle radii of similar triangles have the same scale factor. The $A$-exradius of $\\triangle AEF$ would therefore be $\\cos A$ times that of $\\triangle ABC$.",
+          "But these two radii belong to the very same circle, so $\\cos A=1$. This forces $A=0^\\circ$, impossible for a nondegenerate triangle. Hence $EF$ cannot be tangent."
+        ],
+        "stepsZh": [
+          "因为 $\\angle B$ 为钝角，$E$ 位于线段 $AC$ 上，而 $F$ 位于 $AB$ 越过 $B$ 的延长线上。由两个直角三角形，$AE=AB\\cos A$、$AF=AC\\cos A$。",
+          "故 $AE/AB=AF/AC=\\cos A$，且两三角形在 $A$ 处夹角相同，所以 $\\triangle AEF\\sim\\triangle ABC$，相似比为 $\\cos A$；特别地，$EF=BC\\cos A$。",
+          "反设 $EF$ 与 $A$ 旁切圆相切。该圆本来已经与直线 $AB,AC$ 相切，因此它同时也是 $\\triangle AEF$ 的 $A$ 旁切圆。",
+          "相似三角形的对应旁切圆半径按相似比缩放，所以 $\\triangle AEF$ 的 $A$ 旁切圆半径应是 $\\triangle ABC$ 相应半径的 $\\cos A$ 倍。",
+          "但这里两个半径属于同一个圆，只能有 $\\cos A=1$，从而 $A=0^\\circ$，与三角形非退化矛盾。因此不可能相切。"
+        ]
+      },
+      {
+        "title": "Reach a contradiction by tangent lengths",
+        "titleZh": "用切线长直接导出矛盾",
+        "topics": [
+          { "en": "Equal tangents", "zh": "切线长定理" },
+          { "en": "Semiperimeter", "zh": "半周长" }
+        ],
+        "steps": [
+          "Assume tangency and let the circle touch the rays $AC,AB$ at $U,V$ and the line $EF$ at $T$. Write $s=(AB+BC+CA)/2$.",
+          "The usual tangent-length formulas for the $A$-excircle give $AU=AV=s$. Hence $EU=s-AE$ and $FV=s-AF$ in this obtuse configuration.",
+          "Equal tangents from $E$ and $F$ give $ET=EU$ and $FT=FV$. Since $T$ lies between $E$ and $F$, $EF=ET+FT=2s-AE-AF$.",
+          "Substitute $EF=BC\\cos A$, $AE=AB\\cos A$, and $AF=AC\\cos A$. Then $BC\\cos A=AB+BC+AC-(AB+AC)\\cos A$, or $(AB+BC+AC)\\cos A=AB+BC+AC$.",
+          "Thus $\\cos A=1$, again impossible."
+        ],
+        "stepsZh": [
+          "反设相切。设该圆与射线 $AC,AB$ 分别切于 $U,V$，与直线 $EF$ 切于 $T$，并记半周长 $s=(AB+BC+CA)/2$。",
+          "$A$ 旁切圆的切线长关系给出 $AU=AV=s$，故在本题钝角构型中 $EU=s-AE$、$FV=s-AF$。",
+          "由同一点引圆的两条切线等长，$ET=EU$、$FT=FV$。又 $T$ 位于 $E,F$ 之间，所以 $EF=ET+FT=2s-AE-AF$。",
+          "代入 $EF=BC\\cos A$、$AE=AB\\cos A$、$AF=AC\\cos A$，得 $BC\\cos A=AB+BC+AC-(AB+AC)\\cos A$，即 $(AB+BC+AC)\\cos A=AB+BC+AC$。",
+          "于是 $\\cos A=1$，仍与非退化三角形矛盾。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2019-q5": {
+    "summary": "Let $n$ be a nonnegative integer. For every $0\\le i,j\\le n$, choose a set $S_{i,j}\\subseteq\\{1,2,\\ldots,2n\\}$ such that $|S_{i,j}|=i+j$ and $S_{i,j}\\subseteq S_{k,l}$ whenever $i\\le k$ and $j\\le l$. Determine the number of possible families of $(n+1)^2$ sets.",
+    "summaryZh": "设 $n$ 为非负整数。对每个 $0\\le i,j\\le n$ 选择集合 $S_{i,j}\\subseteq\\{1,2,\\ldots,2n\\}$，满足 $|S_{i,j}|=i+j$，且当 $i\\le k,\\ j\\le l$ 时 $S_{i,j}\\subseteq S_{k,l}$。求这 $(n+1)^2$ 个集合的所有可能选法数。",
+    "answer": "$(2n)!\\,2^{n^2}$.",
+    "answerZh": "$(2n)!\\,2^{n^2}$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2019_USAJMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Choose a boundary chain, then fill each interior cell",
+        "titleZh": "先选边界链，再逐格填充内部",
+        "topics": [
+          { "en": "Nested sets", "zh": "嵌套集合" },
+          { "en": "Multiplication principle", "zh": "乘法原理" },
+          { "en": "Grid posets", "zh": "网格偏序" }
+        ],
+        "steps": [
+          "Follow the boundary chain $S_{0,0}\\subset S_{0,1}\\subset\\cdots\\subset S_{0,n}\\subset S_{1,n}\\subset\\cdots\\subset S_{n,n}$. Its set sizes are $0,1,\\ldots,2n$, so exactly one new element is added at each step.",
+          "Choosing this boundary chain is therefore the same as ordering the $2n$ ground-set elements by their times of entry. There are $(2n)!$ choices.",
+          "Now fill the $n^2$ remaining cells in the order $S_{1,n-1},S_{1,n-2},\\ldots,S_{1,0},S_{2,n-1},\\ldots,S_{n,0}$. When $S_{i,j}$ is reached, both $S_{i-1,j}$ and $S_{i,j+1}$ are already known.",
+          "Their sizes differ by $2$, and $S_{i-1,j}\\subset S_{i,j}\\subset S_{i,j+1}$. Since $|S_{i,j}|=|S_{i-1,j}|+1$, exactly one of the two elements in $S_{i,j+1}\\setminus S_{i-1,j}$ must be chosen. Thus each interior cell gives exactly $2$ choices.",
+          "These local choices enforce all horizontal and vertical containments; transitivity gives every required containment. Hence the total is $(2n)!\\cdot2^{n^2}$. For $n=0$ the formula correctly gives $1$."
+        ],
+        "stepsZh": [
+          "沿边界考虑集合链 $S_{0,0}\\subset S_{0,1}\\subset\\cdots\\subset S_{0,n}\\subset S_{1,n}\\subset\\cdots\\subset S_{n,n}$。这些集合的大小依次为 $0,1,\\ldots,2n$，所以每一步恰加入一个新元素。",
+          "因此选择这条边界链，等价于排列底集中的 $2n$ 个元素，决定它们加入的先后次序，共有 $(2n)!$ 种。",
+          "再按 $S_{1,n-1},S_{1,n-2},\\ldots,S_{1,0},S_{2,n-1},\\ldots,S_{n,0}$ 的顺序填充剩余 $n^2$ 个格。轮到 $S_{i,j}$ 时，$S_{i-1,j}$ 与 $S_{i,j+1}$ 均已确定。",
+          "二者大小相差 $2$，且 $S_{i-1,j}\\subset S_{i,j}\\subset S_{i,j+1}$。又 $|S_{i,j}|=|S_{i-1,j}|+1$，故必须从差集 $S_{i,j+1}\\setminus S_{i-1,j}$ 的两个元素中任选一个加入，每个内部格恰有 $2$ 种选择。",
+          "这些局部选择保证全部横向、纵向包含关系，再由传递性得到题设所有包含关系。故总数为 $(2n)!\\cdot2^{n^2}$；$n=0$ 时公式也给出 $1$。"
+        ]
+      },
+      {
+        "title": "Interpret each element as a monotone path",
+        "titleZh": "把每个元素解释为一条单调路径",
+        "topics": [
+          { "en": "Bijections", "zh": "双射" },
+          { "en": "Lattice paths", "zh": "格路" }
+        ],
+        "steps": [
+          "Draw the $(n+1)\\times(n+1)$ array of sets diagonally. Whenever an edge is crossed upward and one new element enters the set, label that edge by the entering element.",
+          "For a fixed ground-set element, monotonicity forces its labeled edges to form one path from the left boundary to the right boundary. Conversely, a collection of such labeled paths determines every set: $S_{i,j}$ consists of the labels of paths lying below that cell.",
+          "First label the $2n$ paths; their order at one boundary is arbitrary, giving $(2n)!$ choices. At each of the $n^2$ internal vertices, the two arriving path strands may cross or not cross, independently. This contributes $2^{n^2}$ and again gives $(2n)!2^{n^2}$."
+        ],
+        "stepsZh": [
+          "把 $(n+1)\\times(n+1)$ 的集合阵列斜放。向上跨过一条边时若有一个新元素加入，就用该元素标记这条边。",
+          "对任一底集元素，单调包含关系迫使带该标记的边组成一条从左边界到右边界的路径。反之，给定这些带标记路径后，每个格中的集合由从该格下方经过的路径标号唯一确定。",
+          "先给 $2n$ 条路径编号，其在一侧边界上的次序可任意排列，共 $(2n)!$ 种。每个内部顶点处，两条到达的路径可选择交叉或不交叉，且 $n^2$ 个选择相互独立，贡献 $2^{n^2}$。总数仍为 $(2n)!2^{n^2}$。"
+        ]
+      }
+    ]
+  },
+  "usajmo-2019-q6": {
+    "summary": "Let $m,n$ be relatively prime positive integers. Initially $m/n$ and $n/m$ are on a board. From any two board numbers $x,y$, one may add either their arithmetic mean $(x+y)/2$ or their harmonic mean $2xy/(x+y)$. Determine all pairs $(m,n)$ for which $1$ can be written after finitely many steps.",
+    "summaryZh": "设 $m,n$ 为互质正整数。黑板上最初写有 $m/n$ 与 $n/m$。每次可从黑板上任选两个数 $x,y$，再写上它们的算术平均数 $(x+y)/2$ 或调和平均数 $2xy/(x+y)$。求所有能在有限步后写出 $1$ 的整数对 $(m,n)$。",
+    "answer": "Exactly those coprime positive pairs for which $m+n$ is a power of $2$.",
+    "answerZh": "恰为满足 $m+n$ 是 $2$ 的幂的互质正整数对。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2019_USAJMO_Problems/Problem_6",
+    "methods": [
+      {
+        "title": "Dyadic construction and an odd-prime obstruction",
+        "titleZh": "二进权重构造与奇素数障碍",
+        "topics": [
+          { "en": "Modular invariants", "zh": "模不变量" },
+          { "en": "Dyadic rational combinations", "zh": "二进有理数组合" },
+          { "en": "Arithmetic and harmonic means", "zh": "算术平均与调和平均" }
+        ],
+        "steps": [
+          "Put $r=m/n$, so the initial numbers are $r$ and $1/r$. Suppose first that $m+n=2^t$.",
+          "Repeated arithmetic means can produce every dyadic convex combination $(u/2^t)x+(v/2^t)y$ with nonnegative integers $u+v=2^t$. This follows by induction on $t$: split the desired multiset of $2^{t+1}$ copies into two groups of $2^t$, construct their averages, and average those two results.",
+          "Taking $x=r$, $y=1/r$, $u=n$, and $v=m$ gives $\\frac{n}{m+n}r+\\frac{m}{m+n}\\frac1r=\\frac{m}{m+n}+\\frac{n}{m+n}=1$. Thus a power-of-two sum is sufficient, using only arithmetic means.",
+          "For necessity, assume an odd prime $p$ divides $m+n$. Coprimality implies $p\\nmid mn$, and hence $r\\equiv-1\\pmod p$ and $1/r\\equiv-1\\pmod p$.",
+          "If $x\\equiv y\\equiv-1\\pmod p$, then $(x+y)/2\\equiv-1\\pmod p$. Also $x+y\\equiv-2\\not\\equiv0\\pmod p$, so the harmonic mean is defined modulo $p$ and $2xy/(x+y)\\equiv2/(-2)\\equiv-1\\pmod p$.",
+          "Inductively every number ever written is congruent to $-1$ modulo $p$, whereas $1\\not\\equiv-1\\pmod p$ for odd $p$. Therefore $m+n$ has no odd prime divisor. Since it is positive, it must be a power of $2$."
+        ],
+        "stepsZh": [
+          "令 $r=m/n$，则初始两数为 $r$ 与 $1/r$。先设 $m+n=2^t$。",
+          "反复取算术平均可以构造任意二进凸组合 $(u/2^t)x+(v/2^t)y$，其中 $u,v$ 为非负整数且 $u+v=2^t$。可对 $t$ 归纳：把 $2^{t+1}$ 个待平均的数分成两组，每组 $2^t$ 个，分别构造平均数后再取二者平均。",
+          "取 $x=r,y=1/r,u=n,v=m$，得到 $\\frac{n}{m+n}r+\\frac{m}{m+n}\\frac1r=\\frac{m}{m+n}+\\frac{n}{m+n}=1$。因此当和为 $2$ 的幂时，仅用算术平均即可构造 $1$。",
+          "下面证必要性。若奇素数 $p\\mid m+n$，由 $m,n$ 互质知 $p\\nmid mn$，于是 $r\\equiv-1\\pmod p$ 且 $1/r\\equiv-1\\pmod p$。",
+          "若 $x\\equiv y\\equiv-1\\pmod p$，则 $(x+y)/2\\equiv-1\\pmod p$。又 $x+y\\equiv-2\\not\\equiv0\\pmod p$，故调和平均在模 $p$ 下有定义，且 $2xy/(x+y)\\equiv2/(-2)\\equiv-1\\pmod p$。",
+          "归纳可知黑板上以后出现的每个数都模 $p$ 同余于 $-1$，而奇素数模下 $1\\not\\equiv-1$，所以不可能写出 $1$。因此 $m+n$ 没有奇素因子；因其为正整数，只能是 $2$ 的幂。"
+        ]
+      }
+    ]
+  }
+}

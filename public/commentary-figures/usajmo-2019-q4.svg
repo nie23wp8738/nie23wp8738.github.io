@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="500" viewBox="0 0 850 500" role="img" aria-labelledby="title desc">
+<title id="title">Altitude feet and the A-excircle</title>
+<desc id="desc">An obtuse triangle ABC with E and F the feet of altitudes from B and C. The A-excircle is outside the triangle and line EF does not touch it.</desc>
+<path d="M180 100 L380 100 L520 360 Z" fill="none" stroke="#263d49" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M180 100 L690 100 M180 100 L570 398" fill="none" stroke="#80929a" stroke-width="1.4" stroke-dasharray="6 5"/>
+<path d="M380 100 L306.2 196.5 M520 360 L520 100" fill="none" stroke="#657c86" stroke-width="1.7"/>
+<path d="M306.2 196.5 L520 100" fill="none" stroke="#9a684e" stroke-width="2.3"/>
+<circle cx="641.6" cy="256.3" r="156.3" fill="none" stroke="#6d8b7f" stroke-width="2"/>
+<path d="M299 191 L306 200 L315 194 M512 100 L512 108 L520 108" fill="none" stroke="#657c86" stroke-width="1.5"/>
+<circle cx="180" cy="100" r="3.2" fill="#1d3540"/><circle cx="380" cy="100" r="3.2" fill="#1d3540"/><circle cx="520" cy="360" r="3.2" fill="#1d3540"/>
+<circle cx="306.2" cy="196.5" r="3.2" fill="#9a684e"/><circle cx="520" cy="100" r="3.2" fill="#9a684e"/><circle cx="641.6" cy="256.3" r="3.2" fill="#6d8b7f"/>
+<g font-family="Georgia,serif" font-size="19" font-style="italic" fill="#142b35" stroke="#fff" stroke-width="3" paint-order="stroke">
+<text x="160" y="88">A</text><text x="371" y="88">B</text><text x="528" y="378">C</text><text x="286" y="214">E</text><text x="529" y="94">F</text><text x="653" y="259">I<tspan baseline-shift="sub" font-size="13">A</tspan></text>
+</g>
+</svg>
