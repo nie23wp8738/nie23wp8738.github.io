@@ -1,0 +1,211 @@
+{
+  "usamo-1973-q1": {
+    "summary": "Let $P$ and $Q$ be two points strictly inside a regular tetrahedron $ABCD$. Prove that the angle they subtend at any vertex is less than $60^\\circ$; in particular, prove $\\angle PAQ<60^\\circ$.",
+    "summaryZh": "设 $P,Q$ 是正四面体 $ABCD$ 内部的两个点。证明它们在任一顶点所张的角都小于 $60^\\circ$；特别地，证明 $\\angle PAQ<60^\\circ$。",
+    "answer": "$\\angle PAQ<60^\\circ$, and the same argument applies at every vertex.",
+    "answerZh": "$\\angle PAQ<60^\\circ$，且对任一顶点均可作同样论证。",
+    "methods": [
+      {
+        "title": "Use the Gram matrix of the three edge directions",
+        "titleZh": "利用三条棱方向的 Gram 矩阵",
+        "topics": [
+          {
+            "en": "Vectors in space",
+            "zh": "空间向量"
+          },
+          {
+            "en": "Barycentric coordinates",
+            "zh": "重心坐标"
+          },
+          {
+            "en": "Scalar products",
+            "zh": "数量积"
+          }
+        ],
+        "steps": [
+          "Scale the tetrahedron so that its edge length is $1$, and put $b=\\overrightarrow{AB}$, $c=\\overrightarrow{AC}$, $d=\\overrightarrow{AD}$. Then $|b|=|c|=|d|=1$ and every pair has scalar product $1/2$, because the three faces at $A$ are equilateral triangles.",
+          "Since $P$ and $Q$ are strictly inside the tetrahedron, the two ray directions have positive representatives $p_1b+p_2c+p_3d$ and $q_1b+q_2c+q_3d$. Multiplying all entries of either positive triple by the same positive number does not change the corresponding ray, so normalize $\\sum p_i=\\sum q_i=1$.",
+          "Write $u=p_1b+p_2c+p_3d$ and $v=q_1b+q_2c+q_3d$ for these normalized direction representatives. The pairwise scalar products give $u\\cdot v=(1+p\\cdot q)/2$, $|u|^2=(1+|p|^2)/2$, and $|v|^2=(1+|q|^2)/2$.",
+          "The positive coordinates give $p\\cdot q>0$, while $|p|^2\\le(\\sum p_i)^2=1$ and likewise $|q|^2\\le1$. Hence $4(1+p\\cdot q)^2>4\\ge(1+|p|^2)(1+|q|^2)$. Taking square roots yields $u\\cdot v>|u||v|/2$, so $\\cos\\angle PAQ>1/2$ and $\\angle PAQ<60^\\circ$. Relabeling the chosen vertex proves the full statement."
+        ],
+        "stepsZh": [
+          "把四面体边长缩放为 $1$，并记 $b=\\overrightarrow{AB},c=\\overrightarrow{AC},d=\\overrightarrow{AD}$。由于顶点 $A$ 处的三个面都是等边三角形，故 $|b|=|c|=|d|=1$，且任意两个向量的内积均为 $1/2$。",
+          "因为 $P,Q$ 严格位于四面体内部，两条射线方向分别可写成各系数均为正的 $p_1b+p_2c+p_3d$ 与 $q_1b+q_2c+q_3d$。把同一组三个系数同时乘以正数不会改变相应射线，因此可归一化为 $\\sum p_i=\\sum q_i=1$。",
+          "记归一化后的方向代表为 $u=p_1b+p_2c+p_3d$、$v=q_1b+q_2c+q_3d$。利用上述内积关系可得 $u\\cdot v=(1+p\\cdot q)/2$，$|u|^2=(1+|p|^2)/2$，$|v|^2=(1+|q|^2)/2$。",
+          "由所有坐标均为正，$p\\cdot q>0$；同时 $|p|^2\\le(\\sum p_i)^2=1$，对 $q$ 也同样成立。因此 $4(1+p\\cdot q)^2>4\\ge(1+|p|^2)(1+|q|^2)$。开平方后得到 $u\\cdot v>|u||v|/2$，即 $\\cos\\angle PAQ>1/2$，所以 $\\angle PAQ<60^\\circ$。把 $A$ 换成任一顶点即可。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1973_USAMO_Problems/Problem_1"
+  },
+  "usamo-1973-q2": {
+    "summary": "Define integer sequences by $a_1=a_2=1$, $a_{n+2}=a_{n+1}+2a_n$, and $b_1=1$, $b_2=7$, $b_{n+2}=2b_{n+1}+3b_n$. Prove that the only integer occurring in both sequences is $1$.",
+    "summaryZh": "定义整数数列 $a_1=a_2=1$，$a_{n+2}=a_{n+1}+2a_n$，以及 $b_1=1$，$b_2=7$，$b_{n+2}=2b_{n+1}+3b_n$。证明两个数列中共同出现的整数只有 $1$。",
+    "answer": "The unique common value is $1$.",
+    "answerZh": "唯一的公共值是 $1$。",
+    "methods": [
+      {
+        "title": "Solve the recurrences and reduce modulo eight",
+        "titleZh": "解递推式并模八排除",
+        "topics": [
+          {
+            "en": "Linear recurrences",
+            "zh": "线性递推数列"
+          },
+          {
+            "en": "Modular arithmetic",
+            "zh": "模运算"
+          },
+          {
+            "en": "Characteristic polynomial",
+            "zh": "特征多项式"
+          }
+        ],
+        "steps": [
+          "The characteristic roots for the first recurrence are $2,-1$, and those for the second are $3,-1$. Matching the initial values gives $a_m=(2^m+(-1)^{m+1})/3$ and $b_n=2\\cdot3^{n-1}+(-1)^n$.",
+          "If $a_m=b_n$, then $2^m=2\\cdot3^n+3(-1)^n+(-1)^m$. For $m>2$ the left side is $0\\pmod 8$. Since $3^n\\equiv(-1)^n\\pmod4$, the right side is congruent to $5(-1)^n+(-1)^m\\pmod8$.",
+          "The four possible residues $5(\\pm1)+(\\pm1)$ are $6,4,-4,-6$, none divisible by $8$. Thus no equality is possible for $m>2$.",
+          "For $m=1$ or $2$, $a_m=1$. We have $b_1=1$, while $b_2=7$ and the recurrence with positive coefficients makes $b_n$ strictly increasing for $n\\ge2$. Hence the sole common value is $1$."
+        ],
+        "stepsZh": [
+          "第一个递推式的特征根为 $2,-1$，第二个的特征根为 $3,-1$。代入初值得 $a_m=(2^m+(-1)^{m+1})/3$，$b_n=2\\cdot3^{n-1}+(-1)^n$。",
+          "若 $a_m=b_n$，整理得 $2^m=2\\cdot3^n+3(-1)^n+(-1)^m$。当 $m>2$ 时左边模 $8$ 为零。又因 $3^n\\equiv(-1)^n\\pmod4$，右边模 $8$ 同余于 $5(-1)^n+(-1)^m$。",
+          "$5(\\pm1)+(\\pm1)$ 的四种可能值为 $6,4,-4,-6$，都不被 $8$ 整除。因此 $m>2$ 时不可能相等。",
+          "当 $m=1$ 或 $2$ 时，$a_m=1$。另一方面 $b_1=1,b_2=7$，且递推式系数为正，故从 $b_2$ 起严格递增。因此唯一的公共值为 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1973_USAMO_Problems/Problem_2"
+  },
+  "usamo-1973-q3": {
+    "summary": "Choose three distinct vertices uniformly from a regular polygon with $2n+1$ vertices. Find the probability that the polygon's centre lies strictly inside the triangle formed by the chosen vertices.",
+    "summaryZh": "从一个正 $(2n+1)$ 边形的顶点中等可能地选取三个不同顶点。求多边形中心严格位于这三个顶点所成三角形内部的概率。",
+    "answer": "$\\dfrac{n+1}{4n-2}$.",
+    "answerZh": "$\\dfrac{n+1}{4n-2}$。",
+    "methods": [
+      {
+        "title": "Count triples contained in a semicircle",
+        "titleZh": "计算落在同一半圆内的三元组",
+        "topics": [
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          },
+          {
+            "en": "Regular polygons",
+            "zh": "正多边形"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "A triangle whose vertices lie on a circle contains the centre strictly inside exactly when its three vertices are not contained in any closed semicircle. Because the polygon has the odd number $2n+1$ of vertices, no diameter passes through two vertices, so no boundary case occurs.",
+          "A bad triple has a unique first vertex $V$ such that, moving clockwise from $V$, the other two chosen vertices occur among the next $n$ vertices. Conversely, any choice of two of those $n$ vertices gives a bad triple. Thus the number of bad triples is $(2n+1)\\binom n2$.",
+          "There are $\\binom{2n+1}{3}$ triples altogether. Therefore the required probability is $1-(2n+1)\\binom n2/\\binom{2n+1}{3}=(n+1)/(4n-2)$. The formula also gives $1$ when $n=1$."
+        ],
+        "stepsZh": [
+          "圆上三点组成的三角形严格包含圆心，当且仅当这三点不同时落在某个闭半圆内。由于顶点数 $2n+1$ 为奇数，没有一条直径同时通过两个顶点，因此不存在圆心恰落在三角形边上的边界情形。",
+          "对每个不合格三元组，沿顺时针方向存在唯一的起始顶点 $V$，使另外两个所选顶点都在 $V$ 之后的连续 $n$ 个顶点中。反过来，从这 $n$ 个顶点中任取两个都会得到一个不合格三元组。因此不合格三元组共有 $(2n+1)\\binom n2$ 个。",
+          "全部三元组共有 $\\binom{2n+1}{3}$ 个，故所求概率为 $1-(2n+1)\\binom n2/\\binom{2n+1}{3}=(n+1)/(4n-2)$。当 $n=1$ 时该公式同样给出 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1973_USAMO_Problems/Problem_3"
+  },
+  "usamo-1973-q4": {
+    "summary": "Determine every ordered triple of complex numbers $(x,y,z)$ satisfying $x+y+z=3$, $x^2+y^2+z^2=3$, and $x^3+y^3+z^3=3$.",
+    "summaryZh": "求所有满足 $x+y+z=3$、$x^2+y^2+z^2=3$、$x^3+y^3+z^3=3$ 的复数有序三元组 $(x,y,z)$。",
+    "answer": "$(x,y,z)=(1,1,1)$.",
+    "answerZh": "$(x,y,z)=(1,1,1)$。",
+    "methods": [
+      {
+        "title": "Recover the elementary symmetric sums",
+        "titleZh": "由幂和还原基本对称式",
+        "topics": [
+          {
+            "en": "Newton's identities",
+            "zh": "牛顿恒等式"
+          },
+          {
+            "en": "Symmetric polynomials",
+            "zh": "对称多项式"
+          }
+        ],
+        "steps": [
+          "Let $e_1=x+y+z$, $e_2=xy+yz+zx$, and $e_3=xyz$. From $e_1^2=x^2+y^2+z^2+2e_2$ we obtain $e_2=(9-3)/2=3$.",
+          "Newton's third identity gives $x^3+y^3+z^3=e_1(x^2+y^2+z^2)-e_2(x+y+z)+3e_3$. Hence $3=9-9+3e_3$, so $e_3=1$.",
+          "Thus $x,y,z$ are the three roots, counted with multiplicity, of $t^3-e_1t^2+e_2t-e_3=t^3-3t^2+3t-1=(t-1)^3$. Therefore all three equal $1$."
+        ],
+        "stepsZh": [
+          "记 $e_1=x+y+z,e_2=xy+yz+zx,e_3=xyz$。由 $e_1^2=x^2+y^2+z^2+2e_2$ 得 $e_2=(9-3)/2=3$。",
+          "牛顿第三恒等式给出 $x^3+y^3+z^3=e_1(x^2+y^2+z^2)-e_2(x+y+z)+3e_3$。因此 $3=9-9+3e_3$，从而 $e_3=1$。",
+          "$x,y,z$（计重数）正是多项式 $t^3-e_1t^2+e_2t-e_3=t^3-3t^2+3t-1=(t-1)^3$ 的三个根，所以三者都等于 $1$。"
+        ]
+      },
+      {
+        "title": "Shift every variable by one",
+        "titleZh": "把三个变量同时平移一",
+        "topics": [
+          {
+            "en": "Algebraic identities",
+            "zh": "代数恒等式"
+          },
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式根"
+          }
+        ],
+        "steps": [
+          "Put $a=x-1$, $b=y-1$, and $c=z-1$. The three equations successively yield $a+b+c=0$, $a^2+b^2+c^2=0$, and $a^3+b^3+c^3=0$.",
+          "The first two equalities imply $ab+bc+ca=0$. Also, when $a+b+c=0$, the identity $a^3+b^3+c^3=3abc$ gives $abc=0$.",
+          "Hence $a,b,c$ are the roots of $t^3-(a+b+c)t^2+(ab+bc+ca)t-abc=t^3$. Thus $a=b=c=0$, and $x=y=z=1$."
+        ],
+        "stepsZh": [
+          "令 $a=x-1,b=y-1,c=z-1$。依次展开三个方程可得 $a+b+c=0$、$a^2+b^2+c^2=0$、$a^3+b^3+c^3=0$。",
+          "由前两个等式得到 $ab+bc+ca=0$。又在 $a+b+c=0$ 时，恒等式 $a^3+b^3+c^3=3abc$ 给出 $abc=0$。",
+          "因此 $a,b,c$ 是 $t^3-(a+b+c)t^2+(ab+bc+ca)t-abc=t^3$ 的三个根，只能有 $a=b=c=0$，故 $x=y=z=1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1973_USAMO_Problems/Problem_4"
+  },
+  "usamo-1973-q5": {
+    "summary": "Prove that the real cube roots of three distinct prime numbers cannot occur as three terms, not necessarily consecutive, of one arithmetic progression.",
+    "summaryZh": "证明三个不同素数的实立方根不可能同时作为同一个等差数列中的三项，这三项不要求连续。",
+    "answer": "No such arithmetic progression exists.",
+    "answerZh": "不存在这样的等差数列。",
+    "methods": [
+      {
+        "title": "Eliminate the common difference",
+        "titleZh": "消去等差数列的公差",
+        "topics": [
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          },
+          {
+            "en": "Irrational cube roots",
+            "zh": "无理立方根"
+          },
+          {
+            "en": "Prime factorisation",
+            "zh": "素因数分解"
+          }
+        ],
+        "steps": [
+          "Assume otherwise and order the primes as $p<q<r$. After reversing the progression if needed, there are integers $0<m<n$ and a positive real common difference $d$ such that $q^{1/3}=p^{1/3}+md$ and $r^{1/3}=p^{1/3}+nd$.",
+          "Eliminating $d$ gives $nq^{1/3}-mr^{1/3}=(n-m)p^{1/3}$. Cube this equality and move the two mixed terms to one side. Factoring those terms and using $mr^{1/3}-nq^{1/3}=-(n-m)p^{1/3}$ yields $-3mn(n-m)(pqr)^{1/3}=(n-m)^3p+m^3r-n^3q$.",
+          "The right side and its coefficient on the left are nonzero integers, so this equation would make $(pqr)^{1/3}$ rational. If the cube root of an integer is rational, writing it in lowest terms shows that it is an integer. But $pqr$ is a product of three distinct primes, so each prime exponent is $1$, not a multiple of $3$; it is not a perfect cube. This contradiction completes the proof."
+        ],
+        "stepsZh": [
+          "反设可以，并把三个素数排列为 $p<q<r$。必要时把等差数列反向，可设存在整数 $0<m<n$ 及正公差 $d$，使 $q^{1/3}=p^{1/3}+md$，$r^{1/3}=p^{1/3}+nd$。",
+          "消去 $d$ 得 $nq^{1/3}-mr^{1/3}=(n-m)p^{1/3}$。将此式立方，把两个混合项移到同一边并提取公因式，再利用 $mr^{1/3}-nq^{1/3}=-(n-m)p^{1/3}$，得到 $-3mn(n-m)(pqr)^{1/3}=(n-m)^3p+m^3r-n^3q$。",
+          "右边及左边立方根前的系数都是整数，因此该式迫使 $(pqr)^{1/3}$ 为有理数。一个整数若有有理立方根，把分数写成既约形式即可证明该立方根必为整数。但 $pqr$ 中三个不同素数的指数都为 $1$，并非 $3$ 的倍数，所以 $pqr$ 不是完全立方数，矛盾。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1973_USAMO_Problems/Problem_5"
+  }
+}
