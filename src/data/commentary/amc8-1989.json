@@ -1,0 +1,189 @@
+{
+  "amc8-1989-q1": {
+    "summary": "Evaluate $(1+11+21+31+41)+(9+19+29+39+49)$.",
+    "summaryZh": "计算 $(1+11+21+31+41)+(9+19+29+39+49)$。",
+    "answer": "E. $250$.", "answerZh": "E．$250$。",
+    "methods": [
+      {"title":"Pair compatible terms","titleZh":"配对凑整","topics":[{"en":"Pairing","zh":"配对"},{"en":"Arithmetic sums","zh":"算术求和"}],"steps":["Pair terms across the two groups: $1+9=10$, $11+19=30$, $21+29=50$, $31+39=70$, and $41+49=90$.","The sum is $10+30+50+70+90=250$."],"stepsZh":["把两组中的数对应配对：$1+9=10$、$11+19=30$、$21+29=50$、$31+39=70$、$41+49=90$。","总和为 $10+30+50+70+90=250$。"]},
+      {"title":"Sum two arithmetic sequences","titleZh":"分别求两个等差数列之和","topics":[{"en":"Arithmetic sequences","zh":"等差数列"}],"steps":["The first five-term sequence has average $(1+41)/2=21$, so its sum is $5\\cdot21=105$.","The second has average $(9+49)/2=29$, so its sum is $5\\cdot29=145$. Therefore the total is $105+145=250$."],"stepsZh":["第一组五项的平均数为 $(1+41)/2=21$，所以和为 $5\\cdot21=105$。","第二组的平均数为 $(9+49)/2=29$，所以和为 $5\\cdot29=145$。总和为 $105+145=250$。"]}
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/1"
+  },
+  "amc8-1989-q2": {
+    "summary": "Evaluate $\\frac{2}{10}+\\frac{4}{100}+\\frac{6}{1000}$.",
+    "summaryZh": "计算 $\\frac{2}{10}+\\frac{4}{100}+\\frac{6}{1000}$。",
+    "answer": "D. $0.246$.", "answerZh": "D．$0.246$。",
+    "methods": [{"title":"Use place value","titleZh":"利用位值","topics":[{"en":"Decimals","zh":"小数"},{"en":"Place value","zh":"位值制"}],"steps":["Convert each fraction: $2/10=0.2$, $4/100=0.04$, and $6/1000=0.006$.","Adding by place value gives $0.2+0.04+0.006=0.246$."],"stepsZh":["分别化成小数：$2/10=0.2$、$4/100=0.04$、$6/1000=0.006$。","按位相加得 $0.2+0.04+0.006=0.246$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/2"
+  },
+  "amc8-1989-q3": {
+    "summary": "Which is greatest: $0.99$, $0.9099$, $0.9$, $0.909$, or $0.9009$?",
+    "summaryZh": "$0.99$、$0.9099$、$0.9$、$0.909$、$0.9009$ 中哪个最大？",
+    "answer": "A. $0.99$.", "answerZh": "A．$0.99$。",
+    "methods": [{"title":"Align decimal places","titleZh":"对齐小数位","topics":[{"en":"Comparing decimals","zh":"比较小数"},{"en":"Place value","zh":"位值制"}],"steps":["Write the numbers with four decimal places: $0.9900,0.9099,0.9000,0.9090,0.9009$.","All have tenths digit $9$, but $0.9900$ has hundredths digit $9$ while each other number has hundredths digit $0$. Hence $0.99$ is greatest."],"stepsZh":["都写成四位小数：$0.9900,0.9099,0.9000,0.9090,0.9009$。","十分位都是 $9$，但 $0.9900$ 的百分位为 $9$，其余各数的百分位均为 $0$，所以 $0.99$ 最大。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/3"
+  },
+  "amc8-1989-q4": {
+    "summary": "Which of $0.2,2,20,200,2000$ is closest to $\\frac{401}{0.205}$?",
+    "summaryZh": "$0.2,2,20,200,2000$ 中哪个最接近 $\\frac{401}{0.205}$？",
+    "answer": "E. $2000$.", "answerZh": "E．$2000$。",
+    "methods": [{"title":"Estimate with compatible numbers","titleZh":"用相容数估算","topics":[{"en":"Estimation","zh":"估算"},{"en":"Division of decimals","zh":"小数除法"}],"steps":["Use $401\\approx400$ and $0.205\\approx0.2$.","Then $401/0.205\\approx400/0.2=2000$, so $2000$ is the closest listed value."],"stepsZh":["取 $401\\approx400$、$0.205\\approx0.2$。","于是 $401/0.205\\approx400/0.2=2000$，故最接近的选项是 $2000$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/4"
+  },
+  "amc8-1989-q5": {
+    "summary": "Evaluate $-15+9\\left(\\frac{6}{3}\\right)$.",
+    "summaryZh": "计算 $-15+9\\left(\\frac{6}{3}\\right)$。",
+    "answer": "D. $3$.", "answerZh": "D．$3$。",
+    "methods": [{"title":"Follow the order of operations","titleZh":"按运算顺序计算","topics":[{"en":"Order of operations","zh":"运算顺序"},{"en":"Integers","zh":"整数"}],"steps":["Evaluate the parentheses first: $6/3=2$.","Then $-15+9\\cdot2=-15+18=3$."],"stepsZh":["先算括号：$6/3=2$。","再算 $-15+9\\cdot2=-15+18=3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/5"
+  },
+  "amc8-1989-q6": {
+    "summary": "A number line has equally spaced ticks. From the tick labelled $0$ to the tick labelled $20$ there are five equal intervals. The tick labelled $y$ is three of those intervals to the right of $0$. Find $y$.",
+    "summaryZh": "一条数轴的刻度等距。从标有 $0$ 的刻度到标有 $20$ 的刻度共有五个相等区间；标有 $y$ 的刻度位于 $0$ 右侧第三个区间的端点。求 $y$。",
+    "answer": "C. $12$.", "answerZh": "C．$12$。",
+    "methods": [{"title":"Find the value of one interval","titleZh":"先求每一格的数值","topics":[{"en":"Number lines","zh":"数轴"},{"en":"Proportion","zh":"比例"}],"steps":["Five equal intervals cover $20-0=20$, so each interval represents $20/5=4$.","The point $y$ is three intervals from $0$, hence $y=0+3\\cdot4=12$."],"stepsZh":["五个相等区间覆盖 $20-0=20$，所以每格表示 $20/5=4$。","$y$ 距 $0$ 三格，因此 $y=0+3\\cdot4=12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/6"
+  },
+  "amc8-1989-q7": {
+    "summary": "Twenty quarters and ten dimes have the same value as ten quarters and $n$ dimes. Find $n$.",
+    "summaryZh": "二十枚二角五分硬币与十枚一角硬币的总价值，等于十枚二角五分硬币与 $n$ 枚一角硬币的总价值。求 $n$。",
+    "answer": "D. $35$.", "answerZh": "D．$35$。",
+    "methods": [
+      {"title":"Write a cents equation","titleZh":"按美分列方程","topics":[{"en":"Linear equations","zh":"一元一次方程"},{"en":"Money","zh":"货币"}],"steps":["In cents, the equality is $20\\cdot25+10\\cdot10=10\\cdot25+10n$.","Thus $600=250+10n$, so $10n=350$ and $n=35$."],"stepsZh":["以美分为单位，有 $20\\cdot25+10\\cdot10=10\\cdot25+10n$。","因此 $600=250+10n$，从而 $10n=350$、$n=35$。"]},
+      {"title":"Cancel common coins","titleZh":"先抵消相同硬币","topics":[{"en":"Equivalent value","zh":"等值"},{"en":"Unit conversion","zh":"单位换算"}],"steps":["Cancel ten quarters from both collections. The remaining ten quarters and ten dimes must equal $n$ dimes.","Ten quarters equal $250$ cents, or $25$ dimes. Together with the original ten dimes this gives $n=25+10=35$."],"stepsZh":["两边各去掉十枚二角五分硬币，剩下的十枚二角五分硬币和十枚一角硬币应等值于 $n$ 枚一角硬币。","十枚二角五分硬币值 $250$ 美分，即 $25$ 枚一角硬币；再加原有的十枚，得 $n=25+10=35$。"]}
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/7"
+  },
+  "amc8-1989-q8": {
+    "summary": "Evaluate $(2\\cdot3\\cdot4)\\left(\\frac12+\\frac13+\\frac14\\right)$.",
+    "summaryZh": "计算 $(2\\cdot3\\cdot4)\\left(\\frac12+\\frac13+\\frac14\\right)$。",
+    "answer": "E. $26$.", "answerZh": "E．$26$。",
+    "methods": [{"title":"Distribute the common product","titleZh":"利用分配律","topics":[{"en":"Distributive property","zh":"分配律"},{"en":"Fractions","zh":"分数"}],"steps":["Since $2\\cdot3\\cdot4=24$, distribute $24$ to each fraction.","The value is $24/2+24/3+24/4=12+8+6=26$."],"stepsZh":["因为 $2\\cdot3\\cdot4=24$，把 $24$ 分配到括号内各项。","原式为 $24/2+24/3+24/4=12+8+6=26$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/8"
+  },
+  "amc8-1989-q9": {
+    "summary": "The ratio of boys to girls in a class is $2:3$, and there are $30$ students. What percentage of the class are boys?",
+    "summaryZh": "某班男生与女生人数之比为 $2:3$，全班共有 $30$ 人。男生占全班的百分之几？",
+    "answer": "C. $40\\%$.", "answerZh": "C．$40\\%$。",
+    "methods": [{"title":"Use ratio parts","titleZh":"利用比例份数","topics":[{"en":"Ratios","zh":"比"},{"en":"Percentages","zh":"百分数"}],"steps":["There are $2+3=5$ equal ratio parts, of which boys occupy $2$.","Therefore the fraction of boys is $2/5=0.4=40\\%$. (Indeed, $30\\cdot2/5=12$ boys.)"],"stepsZh":["比例总份数为 $2+3=5$，其中男生占 $2$ 份。","所以男生所占比例为 $2/5=0.4=40\\%$。（人数为 $30\\cdot2/5=12$。）"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/9"
+  },
+  "amc8-1989-q10": {
+    "summary": "Find the smaller angle between the hour hand and minute hand of a clock at exactly $7{:}00$.",
+    "summaryZh": "求时钟在正好 $7{:}00$ 时，时针与分针之间的较小夹角。",
+    "answer": "D. $150^\\circ$.", "answerZh": "D．$150^\\circ$。",
+    "methods": [{"title":"Count hour intervals","titleZh":"按小时刻度计数","topics":[{"en":"Clock angles","zh":"钟面角"},{"en":"Angles","zh":"角"}],"steps":["Adjacent hour marks are separated by $360^\\circ/12=30^\\circ$.","At $7{:}00$, the hands are five hour intervals apart along the shorter path, so the angle is $5\\cdot30^\\circ=150^\\circ$."],"stepsZh":["相邻整点刻度相隔 $360^\\circ/12=30^\\circ$。","在 $7{:}00$，两针沿较短方向相隔五个小时刻度，因此夹角为 $5\\cdot30^\\circ=150^\\circ$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/10"
+  },
+  "amc8-1989-q11": {
+    "summary": "A bow-tie figure consists of two outlined triangles meeting at one central vertex. A small square is attached to the upper-left outer vertex. The entire figure is reflected across a vertical dashed line. Which image results?",
+    "summaryZh": "一个蝴蝶结形图案由两个轮廓三角形在中央顶点相接组成，一个小正方形附在左上方的外顶点。将整个图案关于一条竖直虚线作轴对称，所得图形是哪一个？",
+    "answer": "B. The square is at the upper-right outer vertex, with every left-right slope reversed.", "answerZh": "B．小正方形移到右上方外顶点，所有斜边的左右倾斜方向反转。",
+    "methods": [{"title":"Apply the reflection rule","titleZh":"应用轴对称规律","topics":[{"en":"Reflection","zh":"轴对称"},{"en":"Transformations","zh":"几何变换"}],"steps":["Reflection across a vertical line preserves every point's height and perpendicular distance from the line, but reverses left and right.","Thus the upper-left square moves to the corresponding upper-right vertex, while all diagonal slopes reverse. This is choice B."],"stepsZh":["关于竖直直线的轴对称保持每个点的高度及到对称轴的垂直距离，但左右互换。","所以左上方的小正方形移到对应的右上方顶点，各斜线的倾斜方向反转，对应选项 B。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/11"
+  },
+  "amc8-1989-q12": {
+    "summary": "Evaluate $\\dfrac{1-\\frac13}{1-\\frac12}$.",
+    "summaryZh": "计算 $\\dfrac{1-\\frac13}{1-\\frac12}$。",
+    "answer": "E. $\\frac43$.", "answerZh": "E．$\\frac43$。",
+    "methods": [{"title":"Simplify numerator and denominator","titleZh":"分别化简分子与分母","topics":[{"en":"Complex fractions","zh":"繁分数"},{"en":"Fraction division","zh":"分数除法"}],"steps":["The numerator is $1-1/3=2/3$ and the denominator is $1-1/2=1/2$.","Therefore $(2/3)/(1/2)=(2/3)\\cdot2=4/3$."],"stepsZh":["分子为 $1-1/3=2/3$，分母为 $1-1/2=1/2$。","因此 $(2/3)/(1/2)=(2/3)\\cdot2=4/3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/12"
+  },
+  "amc8-1989-q13": {
+    "summary": "Which decimal-scaled expression is equal to $\\dfrac{9}{7\\cdot53}$?",
+    "summaryZh": "下列哪一个经过小数缩放的式子与 $\\dfrac{9}{7\\cdot53}$ 相等？",
+    "answer": "A. $\\dfrac{0.9}{0.7\\cdot53}$.", "answerZh": "A．$\\dfrac{0.9}{0.7\\cdot53}$。",
+    "methods": [{"title":"Scale numerator and denominator equally","titleZh":"分子分母同倍缩放","topics":[{"en":"Equivalent fractions","zh":"等值分数"},{"en":"Decimal scaling","zh":"小数缩放"}],"steps":["Multiplying or dividing both numerator and denominator of a fraction by the same nonzero number preserves its value.","Divide both the numerator $9$ and the factor $7$ in the denominator by $10$: $\\frac{9}{7\\cdot53}=\\frac{0.9}{0.7\\cdot53}$."],"stepsZh":["分数的分子、分母同时乘或除以同一个非零数，分数值不变。","把分子中的 $9$ 与分母因子 $7$ 同时除以 $10$：$\\frac{9}{7\\cdot53}=\\frac{0.9}{0.7\\cdot53}$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/13"
+  },
+  "amc8-1989-q14": {
+    "summary": "Use each of the digits $2,4,5,6,9$ exactly once to form a three-digit number minus a two-digit number. What is the least possible positive difference?",
+    "summaryZh": "将数字 $2,4,5,6,9$ 各使用一次，组成一个三位数减去一个两位数。所得正差的最小值是多少？",
+    "answer": "C. $149$.", "answerZh": "C．$149$。",
+    "methods": [{"title":"Minimise the minuend and maximise the subtrahend","titleZh":"使被减数尽量小、减数尽量大","topics":[{"en":"Place value","zh":"位值制"},{"en":"Optimisation","zh":"最值"}],"steps":["Every three-digit number using these digits is at least $245$: choose the smallest possible hundreds digit $2$, then arrange the remaining chosen tens and ones increasingly.","With $245$ fixed, the unused digits $9$ and $6$ form the largest possible two-digit number, $96$.","Thus the least difference is $245-96=149$. Any larger three-digit number or smaller two-digit number cannot improve it."],"stepsZh":["用这些数字组成的三位数至少为 $245$：百位取最小的 $2$，再使所选十位、个位尽量小。","确定 $245$ 后，剩余数字 $9,6$ 能组成的最大两位数是 $96$。","所以最小正差为 $245-96=149$。增大三位数或减小两位数都不会得到更小的差。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/14"
+  },
+  "amc8-1989-q15": {
+    "summary": "In parallelogram $ABCD$, $AD=10$. Point $E$ lies on $AD$ with $ED=6$, and $BE$ is perpendicular to $AD$ with $BE=8$. Find the area of trapezoid $BEDC$.",
+    "summaryZh": "在平行四边形 $ABCD$ 中，$AD=10$。点 $E$ 位于 $AD$ 上，$ED=6$；$BE\\perp AD$ 且 $BE=8$。求梯形 $BEDC$ 的面积。",
+    "answer": "D. $64$ square units.", "answerZh": "D．$64$ 平方单位。",
+    "methods": [
+      {"title":"Use the trapezoid formula","titleZh":"使用梯形面积公式","topics":[{"en":"Trapezoid area","zh":"梯形面积"},{"en":"Parallelograms","zh":"平行四边形"}],"steps":["Because $ABCD$ is a parallelogram, $BC=AD=10$. The parallel sides of trapezoid $BEDC$ are $ED=6$ and $BC=10$.","Their perpendicular separation is $BE=8$, so the area is $\\frac12(6+10)\\cdot8=64$."],"stepsZh":["因为 $ABCD$ 是平行四边形，所以 $BC=AD=10$。梯形 $BEDC$ 的两条平行边为 $ED=6$ 与 $BC=10$。","两平行边间的垂直距离为 $BE=8$，故面积为 $\\frac12(6+10)\\cdot8=64$。"]},
+      {"title":"Subtract a triangle from the parallelogram","titleZh":"用平行四边形减去三角形","topics":[{"en":"Area decomposition","zh":"面积分割"}],"steps":["The parallelogram has base $AD=10$ and height $BE=8$, so its area is $80$.","Since $AE=AD-ED=4$, right triangle $ABE$ has area $\\frac12\\cdot4\\cdot8=16$.","Therefore trapezoid $BEDC$ has area $80-16=64$."],"stepsZh":["平行四边形的底为 $AD=10$、高为 $BE=8$，面积为 $80$。","因为 $AE=AD-ED=4$，直角三角形 $ABE$ 的面积为 $\\frac12\\cdot4\\cdot8=16$。","所以梯形 $BEDC$ 的面积为 $80-16=64$。"]}
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/15"
+  },
+  "amc8-1989-q16": {
+    "summary": "In how many ways can $47$ be written as the sum of two prime numbers? Order does not matter.",
+    "summaryZh": "$47$ 有多少种表示为两个质数之和的方式？不计次序。",
+    "answer": "A. $0$.", "answerZh": "A．$0$ 种。",
+    "methods": [{"title":"Use parity of primes","titleZh":"利用质数的奇偶性","topics":[{"en":"Prime numbers","zh":"质数"},{"en":"Parity","zh":"奇偶性"}],"steps":["The sum $47$ is odd. A sum of two odd primes would be even, so one prime would have to be the only even prime, $2$.","The other number would be $47-2=45$, which is composite. Hence there are no representations."],"stepsZh":["$47$ 是奇数，而两个奇质数之和为偶数，所以其中一个质数只能是唯一的偶质数 $2$。","另一个数应为 $47-2=45$，但 $45$ 是合数。因此没有任何表示方法。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/16"
+  },
+  "amc8-1989-q17": {
+    "summary": "A number $N$ satisfies $9<N<17$. Which of $8,10,12,14,16$ could be the average of $6,10,N$?",
+    "summaryZh": "数 $N$ 满足 $9<N<17$。$8,10,12,14,16$ 中哪个可能是 $6,10,N$ 的平均数？",
+    "answer": "B. $10$.", "answerZh": "B．$10$。",
+    "methods": [{"title":"Bound the mean and test the candidate","titleZh":"先夹逼平均数再检验","topics":[{"en":"Mean","zh":"平均数"},{"en":"Inequalities","zh":"不等式"}],"steps":["From $9<N<17$, $25<6+10+N<33$. Dividing by $3$ gives $25/3<\\text{mean}<11$.","Among the choices only $10$ lies in this interval. It is attainable because mean $10$ requires $6+10+N=30$, so $N=14$, which satisfies the condition."],"stepsZh":["由 $9<N<17$ 得 $25<6+10+N<33$，除以 $3$ 后有 $25/3<\\text{平均数}<11$。","选项中只有 $10$ 位于此区间。若平均数为 $10$，则 $6+10+N=30$，解得 $N=14$，确实满足条件。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/17"
+  },
+  "amc8-1989-q18": {
+    "summary": "A calculator displays $00032$ and has a reciprocal key $1/x$. What is the smallest positive number of presses of this key that returns the display to $00032$?",
+    "summaryZh": "计算器显示 $00032$，并有倒数键 $1/x$。至少按多少次该键，显示才会回到 $00032$？要求按键次数为正。",
+    "answer": "B. $2$ presses.", "answerZh": "B．按 $2$ 次。",
+    "methods": [{"title":"Use the reciprocal as an involution","titleZh":"利用取倒数的对合性质","topics":[{"en":"Reciprocals","zh":"倒数"},{"en":"Functions","zh":"函数"}],"steps":["One press changes $32$ to $1/32$, so one press does not return the display.","A second press gives $1/(1/32)=32$. Thus two presses are necessary and sufficient."],"stepsZh":["按一次把 $32$ 变为 $1/32$，所以一次不能恢复原数。","再按一次得到 $1/(1/32)=32$。因此至少且恰好需要两次。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/18"
+  },
+  "amc8-1989-q19": {
+    "summary": "A cumulative-spending graph (in millions of dollars) shows about $2.2$ at the end of May and about $4.7$ at the end of August. Estimate the company's spending during June, July, and August.",
+    "summaryZh": "一幅累计支出折线图（单位：百万美元）显示：五月末约为 $2.2$，八月末约为 $4.7$。估计公司在六月、七月和八月三个月的支出。",
+    "answer": "B. About $2.5$ million dollars.", "answerZh": "B．约 $250$ 万美元。",
+    "methods": [{"title":"Subtract cumulative totals","titleZh":"用累计量作差","topics":[{"en":"Graph interpretation","zh":"图表解读"},{"en":"Cumulative totals","zh":"累计量"}],"steps":["Summer spending from June through August is the increase after May and through August.","Subtract the two cumulative readings: $4.7-2.2=2.5$ million dollars."],"stepsZh":["六月至八月的支出等于五月末以后、八月末以前的累计增量。","用两个累计读数作差：$4.7-2.2=2.5$（百万美元）。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/19"
+  },
+  "amc8-1989-q20": {
+    "summary": "A cube net has four faces in a horizontal row labelled $6,2,4,5$ from left to right; face $1$ is attached above face $2$, and face $3$ below face $2$. After folding the net, what is the greatest possible sum of the three face labels meeting at one vertex?",
+    "summaryZh": "一个正方体展开图的四个面从左到右排成一行，依次标为 $6,2,4,5$；标有 $1$ 的面接在 $2$ 的上方，标有 $3$ 的面接在 $2$ 的下方。折成正方体后，同一顶点处相交的三个面上的数字之和最大是多少？",
+    "answer": "D. $14$.", "answerZh": "D．$14$。",
+    "methods": [{"title":"Identify opposite pairs","titleZh":"确定相对面","topics":[{"en":"Cube nets","zh":"正方体展开图"},{"en":"Optimisation","zh":"最值"}],"steps":["Folding the net gives opposite pairs $(6,4)$, $(2,5)$, and $(1,3)$.","Three faces at a vertex contain exactly one face from each opposite pair. To maximise the sum choose the larger label from each pair: $6+5+3=14$.","These three pairwise non-opposite faces do meet at one vertex, so the bound is attained."],"stepsZh":["折叠后，相对面分别为 $(6,4)$、$(2,5)$、$(1,3)$。","一个顶点处的三个面恰好从每对相对面中各取一个。为使和最大，应分别取较大者，得 $6+5+3=14$。","这三个面两两不相对，确实能够相交于同一顶点，故该最大值可达到。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/20"
+  },
+  "amc8-1989-q21": {
+    "summary": "A farmer has $128$ apples. He sells $25\\%$ of them to Jill, then sells $25\\%$ of the remaining apples to June, and finally gives one apple to his teacher. How many apples remain?",
+    "summaryZh": "一位农夫有 $128$ 个苹果。他先把其中的 $25\\%$ 卖给 Jill，再把剩余苹果的 $25\\%$ 卖给 June，最后送给老师一个苹果。还剩多少个？",
+    "answer": "D. $71$ apples.", "answerZh": "D．$71$ 个苹果。",
+    "methods": [{"title":"Apply each change in order","titleZh":"依次处理每次变化","topics":[{"en":"Successive percentages","zh":"连续百分比变化"},{"en":"Arithmetic","zh":"算术"}],"steps":["After selling $25\\%$, the farmer keeps $75\\%$: $128\\cdot\\frac34=96$ apples.","He again keeps $75\\%$ of the remainder: $96\\cdot\\frac34=72$.","After giving away one more apple, $72-1=71$ remain."],"stepsZh":["卖出 $25\\%$ 后保留 $75\\%$：$128\\cdot\\frac34=96$ 个。","第二次又保留剩余量的 $75\\%$：$96\\cdot\\frac34=72$ 个。","再送出一个，剩下 $72-1=71$ 个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/21"
+  },
+  "amc8-1989-q22": {
+    "summary": "Successive lines are formed by shifting one place through the repeating letters $A,J,H,S,M,E$ and simultaneously one place through the repeating digits $1,9,8,9$. After how many lines do both the original letter alignment and the original digit alignment first reappear together?",
+    "summaryZh": "逐行把循环字母串 $A,J,H,S,M,E$ 向前移动一位，同时把循环数字串 $1,9,8,9$ 也向前移动一位。经过多少行后，字母与数字的初始排列第一次同时重现？",
+    "answer": "C. $12$ lines.", "answerZh": "C．$12$ 行。",
+    "methods": [{"title":"Find the least common multiple","titleZh":"求最小公倍数","topics":[{"en":"Least common multiple","zh":"最小公倍数"},{"en":"Periodic patterns","zh":"周期规律"}],"steps":["The letter pattern returns after every $6$ shifts, while the digit pattern returns after every $4$ shifts.","Both return together after the least positive common multiple: $\\operatorname{lcm}(6,4)=12$."],"stepsZh":["字母排列每移动 $6$ 次恢复一次，数字排列每移动 $4$ 次恢复一次。","二者第一次同时恢复所需次数为最小公倍数：$\\operatorname{lcm}(6,4)=12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/22"
+  },
+  "amc8-1989-q23": {
+    "summary": "An artist builds a ground-standing sculpture from $14$ unit cubes and paints every exposed face, but not the faces on the ground or between cubes. An equivalent description of the diagram is: the top projection has $10$ occupied unit positions; the exposed front and back faces number $6$ each; and the two side directions together contain $11$ exposed unit faces. What area is painted?",
+    "summaryZh": "一位艺术家用 $14$ 个棱长为 $1$ 米的单位正方体在地面上搭成雕塑，并给所有外露面涂色；接触地面或相邻正方体的面不涂色。原图可等价描述为：俯视投影有 $10$ 个被占据的单位格；正面、背面各有 $6$ 个外露单位面；左右两个方向合计有 $11$ 个外露单位面。求涂色面积。",
+    "answer": "C. $33$ square metres.", "answerZh": "C．$33$ 平方米。",
+    "methods": [{"title":"Count exposed faces by direction","titleZh":"按朝向统计外露面","topics":[{"en":"Surface area","zh":"表面积"},{"en":"Unit cubes","zh":"单位正方体"}],"steps":["Each of the $10$ occupied top-view positions contributes one exposed top face. Bottom faces are on the ground and are not painted.","The vertical exposed faces total $6+6+11=23$ from the front, back, and two side directions.","Every face is a $1\\text{ m}\\times1\\text{ m}$ square, so the painted area is $10+23=33$ square metres."],"stepsZh":["俯视投影中的每个被占据位置贡献一个外露顶面，共 $10$ 个；底面接触地面，不涂色。","正面、背面及左右方向的外露竖直面共 $6+6+11=23$ 个。","每个面面积为 $1\\text{ m}\\times1\\text{ m}=1\\text{ m}^2$，所以涂色面积为 $10+23=33$ 平方米。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/23"
+  },
+  "amc8-1989-q24": {
+    "summary": "A square sheet of side $4$ is folded in half along a vertical line, producing a $2\\times4$ folded rectangle. A cut parallel to the fold divides that folded rectangle into two $1\\times4$ strips. When unfolded, there is one $2\\times4$ rectangle and two $1\\times4$ rectangles. What is the ratio of the perimeter of a small rectangle to the perimeter of the large rectangle?",
+    "summaryZh": "一张边长为 $4$ 的正方形纸沿竖直中线对折，得到一个 $2\\times4$ 的长方形；再沿与折痕平行的直线把折后长方形切成两个 $1\\times4$ 的纸条。展开后得到一个 $2\\times4$ 长方形和两个 $1\\times4$ 长方形。求小长方形周长与大长方形周长之比。",
+    "answer": "E. $\\frac56$.", "answerZh": "E．$\\frac56$。",
+    "methods": [{"title":"Compare the two perimeters","titleZh":"分别计算两个周长","topics":[{"en":"Paper folding","zh":"纸张折叠"},{"en":"Perimeter","zh":"周长"}],"steps":["A small $1\\times4$ rectangle has perimeter $2(1+4)=10$.","The large $2\\times4$ rectangle has perimeter $2(2+4)=12$.","The requested ratio is $10/12=5/6$."],"stepsZh":["一个 $1\\times4$ 小长方形的周长为 $2(1+4)=10$。","$2\\times4$ 大长方形的周长为 $2(2+4)=12$。","所求比为 $10/12=5/6$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/24"
+  },
+  "amc8-1989-q25": {
+    "summary": "Two fair independent spinners have equal sectors. The first spinner is labelled $5,3,8,4$ and the second is labelled $6,9,7$. Find the probability that the sum of the two results is even.",
+    "summaryZh": "两个相互独立且各扇区等大的转盘：第一个标有 $5,3,8,4$，第二个标有 $6,9,7$。求两次结果之和为偶数的概率。",
+    "answer": "C. $\\frac12$.", "answerZh": "C．$\\frac12$。",
+    "methods": [
+      {"title":"Use parity probabilities","titleZh":"利用奇偶概率","topics":[{"en":"Probability","zh":"概率"},{"en":"Parity","zh":"奇偶性"}],"steps":["An even sum occurs when both results have the same parity.","The first spinner has two odd and two even labels, so each parity has probability $1/2$. The second has two odd and one even label, with probabilities $2/3$ and $1/3$.","Therefore $P(\\text{even sum})=(1/2)(2/3)+(1/2)(1/3)=1/2$."],"stepsZh":["两数之和为偶数，当且仅当两次结果奇偶性相同。","第一个转盘有两个奇数、两个偶数，两种奇偶性的概率均为 $1/2$；第二个有两个奇数、一个偶数，概率分别为 $2/3$、$1/3$。","所以 $P(\\text{和为偶数})=(1/2)(2/3)+(1/2)(1/3)=1/2$。"]},
+      {"title":"Count equally likely outcomes","titleZh":"枚举等可能结果","topics":[{"en":"Sample spaces","zh":"样本空间"}],"steps":["There are $4\\cdot3=12$ equally likely ordered pairs.","Odd-odd gives $2\\cdot2=4$ even-sum pairs and even-even gives $2\\cdot1=2$ more.","Thus $6$ of $12$ outcomes work, so the probability is $6/12=1/2$."],"stepsZh":["共有 $4\\cdot3=12$ 个等可能有序结果。","奇数配奇数产生 $2\\cdot2=4$ 个偶数和，偶数配偶数再产生 $2\\cdot1=2$ 个。","共有 $6$ 个符合条件的结果，概率为 $6/12=1/2$。"]}
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1989/problem/25"
+  }
+}
