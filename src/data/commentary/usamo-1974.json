@@ -1,0 +1,197 @@
+{
+  "usamo-1974-q1": {
+    "summary": "Let $a,b,c$ be three distinct integers and let $P(x)$ be a polynomial with integer coefficients. Prove that the three equalities $P(a)=b$, $P(b)=c$, and $P(c)=a$ cannot all hold.",
+    "summaryZh": "设 $a,b,c$ 是三个互不相同的整数，$P(x)$ 是整系数多项式。证明 $P(a)=b$、$P(b)=c$、$P(c)=a$ 不可能同时成立。",
+    "answer": "No such three distinct integers and integer-coefficient polynomial exist.",
+    "answerZh": "不存在满足条件的三个不同整数及整系数多项式。",
+    "methods": [
+      {
+        "title": "Follow divisibility around the three-cycle",
+        "titleZh": "沿三循环追踪整除关系",
+        "topics": [
+          {"en": "Polynomial divisibility", "zh": "多项式整除"},
+          {"en": "Integer differences", "zh": "整数差"},
+          {"en": "Contradiction", "zh": "反证法"}
+        ],
+        "steps": [
+          "For any integers $r,s$, the factor theorem applied to $P(x)-P(s)$ gives $r-s\\mid P(r)-P(s)$.",
+          "The three assumed equations therefore imply $a-b\\mid b-c$, $b-c\\mid c-a$, and $c-a\\mid a-b$.",
+          "None of these differences is zero. Since they divide one another cyclically, their absolute values are equal; write $|a-b|=|b-c|=|c-a|=d>0$.",
+          "But $(a-b)+(b-c)+(c-a)=0$. After division by $d$, this would express zero as a sum of three numbers, each equal to $1$ or $-1$. Such a sum is odd and cannot be zero, a contradiction."
+        ],
+        "stepsZh": [
+          "对任意整数 $r,s$，由因式定理作用于 $P(x)-P(s)$，可得 $r-s\\mid P(r)-P(s)$。",
+          "把题设的三个等式依次代入，得到 $a-b\\mid b-c$、$b-c\\mid c-a$、$c-a\\mid a-b$。",
+          "由于 $a,b,c$ 两两不同，上述三个差均非零。它们首尾相接地互相整除，所以绝对值相同；记 $|a-b|=|b-c|=|c-a|=d>0$。",
+          "另一方面，$(a-b)+(b-c)+(c-a)=0$。两边除以 $d$ 后，零将成为三个 $1$ 或 $-1$ 的和；但三个奇数之和仍为奇数，不可能等于零，矛盾。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1974_USAMO_Problems/Problem_1"
+  },
+  "usamo-1974-q2": {
+    "summary": "For positive real numbers $a,b,c$, prove $a^a b^b c^c\\ge (abc)^{(a+b+c)/3}$, and determine when equality occurs.",
+    "summaryZh": "对正实数 $a,b,c$，证明 $a^a b^b c^c\\ge (abc)^{(a+b+c)/3}$，并确定等号成立条件。",
+    "answer": "The inequality holds, with equality exactly when $a=b=c$.",
+    "answerZh": "不等式恒成立，且等号当且仅当 $a=b=c$。",
+    "methods": [
+      {
+        "title": "Take logarithms and pair similarly ordered terms",
+        "titleZh": "取对数并配对同序项",
+        "topics": [
+          {"en": "Rearrangement inequality", "zh": "排序不等式"},
+          {"en": "Logarithms", "zh": "对数"},
+          {"en": "Equality cases", "zh": "等号条件"}
+        ],
+        "steps": [
+          "Taking natural logarithms, it is enough to prove $3\\sum a\\ln a\\ge (a+b+c)(\\ln a+\\ln b+\\ln c)$.",
+          "The difference between the two sides is $$(a-b)(\\ln a-\\ln b)+(b-c)(\\ln b-\\ln c)+(c-a)(\\ln c-\\ln a).$$",
+          "Because $\\ln x$ is strictly increasing, each product $(r-s)(\\ln r-\\ln s)$ is nonnegative. Hence the displayed sum is nonnegative and the required inequality follows after exponentiation.",
+          "All three products vanish simultaneously exactly when $a=b=c$, which is therefore the equality case."
+        ],
+        "stepsZh": [
+          "两边取自然对数，只需证明 $3\\sum a\\ln a\\ge (a+b+c)(\\ln a+\\ln b+\\ln c)$。",
+          "左边减去右边恰为 $$(a-b)(\\ln a-\\ln b)+(b-c)(\\ln b-\\ln c)+(c-a)(\\ln c-\\ln a).$$",
+          "因为 $\\ln x$ 严格递增，每个乘积 $(r-s)(\\ln r-\\ln s)$ 都非负。因此上式非负，再取指数即得原不等式。",
+          "三个乘积同时为零当且仅当 $a=b=c$，这正是等号成立条件。"
+        ]
+      },
+      {
+        "title": "Combine convexity with AM-GM",
+        "titleZh": "结合凸性与算术—几何平均不等式",
+        "topics": [
+          {"en": "Jensen's inequality", "zh": "詹森不等式"},
+          {"en": "AM-GM inequality", "zh": "算术—几何平均不等式"}
+        ],
+        "steps": [
+          "Let $\\mu=(a+b+c)/3$. The function $f(t)=t\\ln t$ is strictly convex on $(0,\\infty)$ because $f''(t)=1/t>0$. Jensen's inequality gives $a\\ln a+b\\ln b+c\\ln c\\ge 3\\mu\\ln\\mu$.",
+          "AM-GM gives $\\mu\\ge(abc)^{1/3}$, so $3\\mu\\ln\\mu\\ge\\mu\\ln(abc)$.",
+          "Combining the two inequalities gives exactly the logarithm of the desired statement. Strictness in Jensen and AM-GM again shows that equality requires and is attained by $a=b=c$."
+        ],
+        "stepsZh": [
+          "令 $\\mu=(a+b+c)/3$。函数 $f(t)=t\\ln t$ 在 $(0,\\infty)$ 上严格凸，因为 $f''(t)=1/t>0$。詹森不等式给出 $a\\ln a+b\\ln b+c\\ln c\\ge 3\\mu\\ln\\mu$。",
+          "由算术—几何平均不等式，$\\mu\\ge(abc)^{1/3}$，所以 $3\\mu\\ln\\mu\\ge\\mu\\ln(abc)$。",
+          "合并即得到原不等式取对数后的形式。詹森不等式与算术—几何平均不等式的严格等号条件同样说明等号当且仅当 $a=b=c$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1974_USAMO_Problems/Problem_2"
+  },
+  "usamo-1974-q3": {
+    "summary": "Inside the closed unit ball in three-dimensional space, a rectifiable curve joins two points $A$ and $B$ on the boundary sphere and has total length less than $2$. Prove that the whole curve lies in one open hemisphere of the ball, meaning one side of a plane through the centre.",
+    "summaryZh": "在三维空间的闭单位球内，一条可求长曲线连接边界球面上的两点 $A,B$，且总长度小于 $2$。证明整条曲线位于球的某个开半球内，即位于某个过球心平面的一侧。",
+    "answer": "The curve lies in the hemisphere $(A+B)\\cdot X>0$.",
+    "answerZh": "曲线位于由 $(A+B)\\cdot X>0$ 确定的半球内。",
+    "methods": [
+      {
+        "title": "Use the two endpoints as a separating direction",
+        "titleZh": "用两个端点之和构造分离方向",
+        "topics": [
+          {"en": "Vector inequalities", "zh": "向量不等式"},
+          {"en": "Arc length versus chord length", "zh": "弧长与弦长"},
+          {"en": "Separating plane", "zh": "分离平面"}
+        ],
+        "steps": [
+          "Place the centre at the origin and regard $A,B$ as unit vectors. They cannot be antipodal, because then every curve joining them would have length at least the chord length $|A-B|=2$. Thus $N=A+B\\ne0$.",
+          "Suppose a point $X$ of the curve satisfied $N\\cdot X\\le0$. Cauchy's inequality gives $|A-X|\\ge A\\cdot(A-X)=1-A\\cdot X$ and similarly $|B-X|\\ge1-B\\cdot X$.",
+          "Therefore $|A-X|+|X-B|\\ge2-(A+B)\\cdot X\\ge2$.",
+          "The two portions of the curve from $A$ to $X$ and from $X$ to $B$ are at least their respective chord lengths, so the total curve length would be at least $2$, contradicting the hypothesis. Hence $N\\cdot X>0$ for every point $X$ of the curve, which is precisely one open hemisphere bounded by the plane $N\\cdot X=0$ through the centre."
+        ],
+        "stepsZh": [
+          "把球心置于原点，并把 $A,B$ 看作单位向量。二者不可能互为对径点，否则任意连接曲线的长度都至少为弦长 $|A-B|=2$。因此 $N=A+B\\ne0$。",
+          "反设曲线上某点 $X$ 满足 $N\\cdot X\\le0$。由柯西不等式，$|A-X|\\ge A\\cdot(A-X)=1-A\\cdot X$；同理 $|B-X|\\ge1-B\\cdot X$。",
+          "于是 $|A-X|+|X-B|\\ge2-(A+B)\\cdot X\\ge2$。",
+          "曲线从 $A$ 到 $X$、从 $X$ 到 $B$ 的两段长度分别不小于相应弦长，因此总长度至少为 $2$，与题设矛盾。故曲线上每一点都满足 $N\\cdot X>0$，这正是以过球心平面 $N\\cdot X=0$ 为边界的一个开半球。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1974_USAMO_Problems/Problem_3"
+  },
+  "usamo-1974-q4": {
+    "summary": "A father $F$, mother $M$, and son $S$ play a no-draw game repeatedly. The father is weakest and the son strongest; every pairwise win probability is fixed. The father chooses the first two players. After each game, its winner faces the player who sat out, and the first person to win two games wins the tournament. Prove that the father's best first choice is to play against the mother.",
+    "summaryZh": "父亲 $F$、母亲 $M$、儿子 $S$ 反复进行没有平局的两人游戏。父亲最弱、儿子最强，任意两人的胜率保持不变。父亲决定首局的两位参赛者；此后每局胜者与上一局轮空者比赛，最先赢得两局者赢得赛事。证明父亲的最优首局选择是亲自对阵母亲。",
+    "answer": "The father should play the first game against the mother.",
+    "answerZh": "父亲应在第一局对阵母亲。",
+    "methods": [
+      {
+        "title": "Enumerate the father's winning sequences",
+        "titleZh": "枚举父亲获胜的比赛序列",
+        "topics": [
+          {"en": "Conditional probability", "zh": "条件概率"},
+          {"en": "Casework", "zh": "分类讨论"},
+          {"en": "Strategy comparison", "zh": "策略比较"}
+        ],
+        "steps": [
+          "Write $p=\\Pr(F\\text{ beats }M)$, $q=\\Pr(F\\text{ beats }S)$, and $r=\\Pr(M\\text{ beats }S)$. Since the son is stronger than the mother from the father's viewpoint, $p>q$; all three numbers lie strictly between $0$ and $1$.",
+          "If the opening game is $F$ against $M$, the mutually exclusive winning paths for $F$ give $$P_{FM}=pq+p^2(1-q)r+p(1-p)(1-r)q.$$ The terms correspond respectively to two immediate wins, and to the two possible four-game winning sequences.",
+          "If the opening game is $F$ against $S$, interchanging $M$ and $S$ in the same enumeration gives $$P_{FS}=pq+q^2(1-p)(1-r)+pq(1-q)r.$$",
+          "Their difference factors as $$P_{FM}-P_{FS}=(p-q)\\bigl[p(1-q)r+q(1-p)(1-r)\\bigr]>0.$$",
+          "If the father sits out while $M$ and $S$ play first, then whichever opponent wins, the father must beat both opponents consecutively; hence $P_{MS}=pq$. Both $P_{FM}$ and $P_{FS}$ contain this term plus positive additional terms. Therefore the unique best of the three opening choices is $F$ against $M$."
+        ],
+        "stepsZh": [
+          "记 $p=\\Pr(F\\text{ 战胜 }M)$、$q=\\Pr(F\\text{ 战胜 }S)$、$r=\\Pr(M\\text{ 战胜 }S)$。由于从父亲的角度看儿子比母亲更强，故 $p>q$；三个概率都严格介于 $0$ 与 $1$ 之间。",
+          "若首局为父亲对母亲，枚举父亲获胜的互斥路径得到 $$P_{FM}=pq+p^2(1-q)r+p(1-p)(1-r)q.$$ 三项分别对应父亲连赢两局，以及两种四局结束的获胜序列。",
+          "若首局为父亲对儿子，在同一枚举中交换母亲与儿子的角色，得到 $$P_{FS}=pq+q^2(1-p)(1-r)+pq(1-q)r.$$",
+          "两者之差可分解为 $$P_{FM}-P_{FS}=(p-q)\\bigl[p(1-q)r+q(1-p)(1-r)\\bigr]>0.$$",
+          "若父亲首局轮空、由母亲和儿子比赛，则无论首局谁获胜，父亲都必须连续战胜两位对手，故 $P_{MS}=pq$。而 $P_{FM},P_{FS}$ 都是在该项之外再加正项。因此三种开局中，父亲亲自对阵母亲是唯一最优选择。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1974_USAMO_Problems/Problem_4"
+  },
+  "usamo-1974-q5": {
+    "summary": "The following text completely specifies the two diagrams. In triangle $ABC$, $BC=a$, $CA=b$, $AB=c$, and an interior point $D$ satisfies $\\angle ADB=\\angle BDC=\\angle CDA=120^\\circ$; put $AD=u$, $BD=v$, $CD=w$. Separately, an equilateral triangle $PQR$ has side length $x$ and contains an interior point $M$ with $MP=a$, $MQ=b$, $MR=c$. Prove that $x=u+v+w$.",
+    "summaryZh": "以下文字完整给出两幅图的条件。在三角形 $ABC$ 中，$BC=a,CA=b,AB=c$，内部点 $D$ 满足 $\\angle ADB=\\angle BDC=\\angle CDA=120^\\circ$；记 $AD=u,BD=v,CD=w$。另有边长为 $x$ 的等边三角形 $PQR$，其内部点 $M$ 满足 $MP=a,MQ=b,MR=c$。证明 $x=u+v+w$。",
+    "answer": "$x=u+v+w$.",
+    "answerZh": "$x=u+v+w$。",
+    "methods": [
+      {
+        "title": "Rotate one 120-degree sector by 60 degrees",
+        "titleZh": "把一个一百二十度扇区旋转六十度",
+        "topics": [
+          {"en": "Rotation", "zh": "旋转"},
+          {"en": "Equilateral triangles", "zh": "等边三角形"},
+          {"en": "SSS congruence", "zh": "边边边全等"}
+        ],
+        "steps": [
+          "Rotate triangle $BDC$ through $60^\\circ$ about $B$, away from triangle $ADB$, and denote the images of $D,C$ by $D',C'$. Then $BDD'$ and $BCC'$ are equilateral. The $120^\\circ$ angles at $D$ show that $A,D,D',C'$ are collinear in this order.",
+          "Consequently $AC'=AD+DD'+D'C'=u+v+w$, because $DD'=BD=v$ and $D'C'=DC=w$.",
+          "Construct the equilateral triangle $AC'Y$ on the side of $AC'$ opposite $C$. The rotation gives $BC'=CC'=a$. Comparing the $60^\\circ$ angles at $C'$ gives $\\angle BC'Y=\\angle CC'A$; together with $C'Y=C'A$ and $BC'=CC'$, SAS congruence yields $BY=CA=b$. Also $BA=c$.",
+          "Thus the equilateral triangle $AC'Y$ contains the point $B$ whose distances from its three vertices are $c,a,b$. This is the same ordered distance data as the point $M$ in the given equilateral triangle $PQR$.",
+          "For completeness, such distance data determine the side length uniquely: if the side is $s$, the three angles around the interior point are $\\arccos((r_i^2+r_j^2-s^2)/(2r_ir_j))$. Each is strictly increasing in $s$, while their sum must be $360^\\circ$. Hence the side of $AC'Y$ equals $x$, and $x=AC'=u+v+w$."
+        ],
+        "stepsZh": [
+          "以 $B$ 为中心，把三角形 $BDC$ 向远离三角形 $ADB$ 的一侧旋转 $60^\\circ$，记 $D,C$ 的像为 $D',C'$。于是 $BDD'$ 与 $BCC'$ 均为等边三角形。结合 $D$ 点处的三个 $120^\\circ$ 角，可知 $A,D,D',C'$ 依次共线。",
+          "因此 $AC'=AD+DD'+D'C'=u+v+w$，其中 $DD'=BD=v$，$D'C'=DC=w$。",
+          "在 $AC'$ 的另一侧作等边三角形 $AC'Y$，使其与 $C$ 分居直线 $AC'$ 两侧。由旋转知 $BC'=CC'=a$。比较 $C'$ 点处的两个 $60^\\circ$ 结构可得 $\\angle BC'Y=\\angle CC'A$；再结合 $C'Y=C'A$ 与 $BC'=CC'$，由边角边全等得到 $BY=CA=b$。同时 $BA=c$。",
+          "于是等边三角形 $AC'Y$ 内有点 $B$，它到三个顶点的距离依次为 $c,a,b$，与题设等边三角形 $PQR$ 中点 $M$ 的三项距离数据相同。",
+          "补充说明这些距离唯一确定等边三角形的边长：若边长为 $s$，内部点周围的三个角分别为 $\\arccos((r_i^2+r_j^2-s^2)/(2r_ir_j))$。每个角都随 $s$ 严格增大，而三角之和必须为 $360^\\circ$。故 $AC'Y$ 的边长等于 $x$，从而 $x=AC'=u+v+w$。"
+        ]
+      },
+      {
+        "title": "Use the distance-area identity for an equilateral triangle",
+        "titleZh": "使用等边三角形的距离—面积恒等式",
+        "topics": [
+          {"en": "Coordinate geometry", "zh": "坐标几何"},
+          {"en": "Law of cosines", "zh": "余弦定理"},
+          {"en": "Area decomposition", "zh": "面积分割"}
+        ],
+        "steps": [
+          "We first record a distance-area identity. If a point inside an equilateral triangle of side $x$ has distances $a,b,c$ from the vertices, and $K$ is the area of the ordinary triangle with side lengths $a,b,c$, then $$2x^2=a^2+b^2+c^2+4\\sqrt3K.$$",
+          "To verify it, set $Q=(0,0)$, $P=(x,0)$, $R=(x/2,\\sqrt3x/2)$, and $M=(s,t)$. Rotate $M$ by $60^\\circ$ about $Q$ to $M'$. Then triangle $RMM'$ has side lengths $a,b,c$, so its area is $K$. Directly expanding the three squared distances and the determinant for $[RMM']$ gives $a^2+b^2+c^2=3s^2-3sx+3t^2-\\sqrt3tx+2x^2$ and $4\\sqrt3K=-3s^2+3sx-3t^2+\\sqrt3tx$, proving the identity.",
+          "In triangle $ABC$, the cosine rule at the three $120^\\circ$ angles gives $$a^2=v^2+w^2+vw,\\quad b^2=w^2+u^2+wu,\\quad c^2=u^2+v^2+uv.$$",
+          "The same three sectors split its area into $$K=[ABC]=\\frac{\\sqrt3}{4}(uv+vw+wu).$$ Therefore $a^2+b^2+c^2=2(u^2+v^2+w^2)+(uv+vw+wu)$ and $4\\sqrt3K=3(uv+vw+wu)$.",
+          "Substitution into the identity gives $2x^2=2(u^2+v^2+w^2)+4(uv+vw+wu)=2(u+v+w)^2$. All lengths are positive, hence $x=u+v+w$."
+        ],
+        "stepsZh": [
+          "先建立一个距离—面积恒等式：若等边三角形边长为 $x$，其内部一点到三个顶点的距离为 $a,b,c$，而以 $a,b,c$ 为三边的普通三角形面积为 $K$，则 $$2x^2=a^2+b^2+c^2+4\\sqrt3K.$$",
+          "验证如下：取 $Q=(0,0),P=(x,0),R=(x/2,\\sqrt3x/2),M=(s,t)$，把 $M$ 绕 $Q$ 旋转 $60^\\circ$ 到 $M'$。三角形 $RMM'$ 的三边正是 $a,b,c$，故面积为 $K$。直接展开三个距离平方以及 $[RMM']$ 的行列式，得到 $a^2+b^2+c^2=3s^2-3sx+3t^2-\\sqrt3tx+2x^2$ 与 $4\\sqrt3K=-3s^2+3sx-3t^2+\\sqrt3tx$，相加即得恒等式。",
+          "在三角形 $ABC$ 中，对三个 $120^\\circ$ 角使用余弦定理，得到 $$a^2=v^2+w^2+vw,\\quad b^2=w^2+u^2+wu,\\quad c^2=u^2+v^2+uv.$$",
+          "三个扇区同时把面积分成 $$K=[ABC]=\\frac{\\sqrt3}{4}(uv+vw+wu).$$ 因而 $a^2+b^2+c^2=2(u^2+v^2+w^2)+(uv+vw+wu)$，且 $4\\sqrt3K=3(uv+vw+wu)$。",
+          "代入恒等式，得到 $2x^2=2(u^2+v^2+w^2)+4(uv+vw+wu)=2(u+v+w)^2$。所有长度均为正，所以 $x=u+v+w$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1974_USAMO_Problems/Problem_5"
+  }
+}
