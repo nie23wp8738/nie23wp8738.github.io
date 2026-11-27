@@ -1,0 +1,230 @@
+{
+  "aime-2001i-q1": {
+    "summary": "Find the sum of all positive two-digit integers that are divisible by both of their nonzero decimal digits.",
+    "summaryZh": "求所有满足下列条件的正两位数之和：这个数能被它的两个非零十进制数码分别整除。",
+    "answer": "630",
+    "answerZh": "630",
+    "methods": [{
+      "title": "Classify by the ratio of the digits",
+      "titleZh": "按两个数码的倍数关系分类",
+      "topics": [{"en":"Decimal digits","zh":"十进制数码"},{"en":"Divisibility","zh":"整除"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": ["Write the number as $10a+b$, where $a,b\\in\\{1,\\ldots,9\\}$. Divisibility by $a$ forces $b=ka$ for a positive integer $k$.", "Divisibility by $b=ka$ requires $ka\\mid10a$, hence $k\\mid10$. Since $ka\\le9$, only $k=1,2,5$ can occur.", "For $k=1$ the numbers are $11,22,\\ldots,99$ and sum to $11(1+\\cdots+9)=495$. For $k=2$ they are $12,24,36,48$ and sum to $120$; for $k=5$ only $15$ occurs.", "The required sum is $495+120+15=630$."],
+      "stepsZh": ["把两位数写成 $10a+b$，其中 $a,b\\in\\{1,\\ldots,9\\}$。它能被 $a$ 整除，说明 $b=ka$，其中 $k$ 为正整数。", "$10a+b$ 还要能被 $b=ka$ 整除，因此 $ka\\mid10a$，即 $k\\mid10$。再由 $ka\\le9$，只有 $k=1,2,5$。", "$k=1$ 时为 $11,22,\\ldots,99$，和为 $11(1+\\cdots+9)=495$；$k=2$ 时为 $12,24,36,48$，和为 $120$；$k=5$ 时只有 $15$。", "总和为 $495+120+15=630$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/1"
+  },
+  "aime-2001i-q2": {
+    "summary": "A finite set $S$ of distinct reals has mean $x$. Adding $1$ lowers its mean by $13$, while adding $2001$ raises its mean by $27$. Find $x$.",
+    "summaryZh": "有限互异实数集 $S$ 的平均数为 $x$。加入 $1$ 后平均数下降 $13$，加入 $2001$ 后平均数上升 $27$。求 $x$。",
+    "answer": "651",
+    "answerZh": "651",
+    "methods": [{
+      "title": "Write the two mean equations",
+      "titleZh": "列出两个平均数方程",
+      "topics": [{"en":"Mean","zh":"平均数"},{"en":"Systems of equations","zh":"方程组"}],
+      "steps": ["Let $|S|=n$ and let its sum be $nx$. Then $(nx+1)/(n+1)=x-13$ and $(nx+2001)/(n+1)=x+27$.", "Subtracting the two equations gives $2000=40(n+1)$, so $n=49$.", "The first equation simplifies to $1=x-13(n+1)$, hence $x=1+13\\cdot50=651$."],
+      "stepsZh": ["设 $|S|=n$，则集合元素和为 $nx$。条件给出 $(nx+1)/(n+1)=x-13$ 与 $(nx+2001)/(n+1)=x+27$。", "两式相减得 $2000=40(n+1)$，所以 $n=49$。", "第一式化为 $1=x-13(n+1)$，故 $x=1+13\\cdot50=651$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/2"
+  },
+  "aime-2001i-q3": {
+    "summary": "Given that $x^{2001}+(\\tfrac12-x)^{2001}=0$ has no repeated roots, find the sum of all its real and non-real roots.",
+    "summaryZh": "已知方程 $x^{2001}+(\\tfrac12-x)^{2001}=0$ 没有重根，求其全部实根与非实根之和。",
+    "answer": "500",
+    "answerZh": "500",
+    "methods": [{
+      "title": "Use the leading two coefficients",
+      "titleZh": "利用最高两项系数",
+      "topics": [{"en":"Binomial theorem","zh":"二项式定理"},{"en":"Vieta's formulas","zh":"韦达定理"}],
+      "steps": ["Because $2001$ is odd, $(\\tfrac12-x)^{2001}=-(x-\\tfrac12)^{2001}$, so the $x^{2001}$ terms cancel and the resulting polynomial has degree $2000$.", "Expanding gives leading terms $(2001/2)x^{2000}-(\\binom{2001}{2}/4)x^{1999}+\\cdots$.", "By Vieta's formula, the sum of the $2000$ roots is $\\dfrac{\\binom{2001}{2}/4}{2001/2}=500$."],
+      "stepsZh": ["因为 $2001$ 为奇数，$(\\tfrac12-x)^{2001}=-(x-\\tfrac12)^{2001}$，所以两个 $x^{2001}$ 项抵消，所得多项式次数为 $2000$。", "二项式展开后的最高两项为 $(2001/2)x^{2000}-(\\binom{2001}{2}/4)x^{1999}+\\cdots$。", "由韦达定理，$2000$ 个根之和为 $\\dfrac{\\binom{2001}{2}/4}{2001/2}=500$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/3"
+  },
+  "aime-2001i-q4": {
+    "summary": "In triangle $ABC$, $\\angle A=60^\\circ$ and $\\angle B=45^\\circ$. The bisector of $\\angle A$ meets $BC$ at $T$, and $AT=24$. If $[ABC]=a+b\\sqrt c$ with squarefree $c$, find $a+b+c$.",
+    "summaryZh": "在三角形 $ABC$ 中，$\\angle A=60^\\circ$、$\\angle B=45^\\circ$。$\\angle A$ 的角平分线交 $BC$ 于 $T$，且 $AT=24$。若 $[ABC]=a+b\\sqrt c$，其中 $c$ 无平方因子，求 $a+b+c$。",
+    "answer": "291",
+    "answerZh": "291",
+    "methods": [{
+      "title": "Find two special right triangles",
+      "titleZh": "构造两个特殊直角三角形",
+      "topics": [{"en":"Angle chasing","zh":"角度追踪"},{"en":"Special right triangles","zh":"特殊直角三角形"},{"en":"Triangle area","zh":"三角形面积"}],
+      "steps": ["Since $\\angle C=75^\\circ$ and $\\angle CAT=30^\\circ$, triangle $ACT$ has $\\angle ATC=75^\\circ$. Hence $AC=AT=24$.", "Drop altitude $CH$ to $AB$. In the $30$-$60$-$90$ triangle $ACH$, $AH=12$ and $CH=12\\sqrt3$.", "Triangle $BHC$ is $45$-$45$-$90$, so $BH=CH=12\\sqrt3$ and $AB=12+12\\sqrt3$.", "Thus $[ABC]=\\tfrac12(12+12\\sqrt3)(12\\sqrt3)=216+72\\sqrt3$, giving $a+b+c=216+72+3=291$."],
+      "stepsZh": ["$\\angle C=75^\\circ$，且 $\\angle CAT=30^\\circ$，所以在三角形 $ACT$ 中 $\\angle ATC=75^\\circ$，从而 $AC=AT=24$。", "从 $C$ 向 $AB$ 作高 $CH$。在 $30$-$60$-$90$ 三角形 $ACH$ 中，$AH=12$、$CH=12\\sqrt3$。", "三角形 $BHC$ 为 $45$-$45$-$90$，故 $BH=CH=12\\sqrt3$，于是 $AB=12+12\\sqrt3$。", "因此 $[ABC]=\\tfrac12(12+12\\sqrt3)(12\\sqrt3)=216+72\\sqrt3$，所以 $a+b+c=216+72+3=291$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/4"
+  },
+  "aime-2001i-q5": {
+    "summary": "An equilateral triangle is inscribed in $x^2+4y^2=4$. One vertex is $(0,1)$ and an altitude lies on the $y$-axis. If its side length is $\\sqrt{m/n}$ in lowest terms, find $m+n$.",
+    "summaryZh": "一个正三角形内接于椭圆 $x^2+4y^2=4$，一个顶点为 $(0,1)$，且一条高位于 $y$ 轴上。若边长为最简形式 $\\sqrt{m/n}$，求 $m+n$。",
+    "answer": "937",
+    "answerZh": "937",
+    "methods": [{
+      "title": "Use symmetry and equal side lengths",
+      "titleZh": "利用对称性与等边条件",
+      "topics": [{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Equilateral triangles","zh":"正三角形"},{"en":"Ellipses","zh":"椭圆"}],
+      "steps": ["The other vertices are $(x,y)$ and $(-x,y)$ with $x>0$, so the horizontal side has length $2x$.", "Equating it to the distance from $(0,1)$ to $(x,y)$ gives $x^2+(y-1)^2=4x^2$, hence $(y-1)^2=3x^2$.", "Together with $x^2+4y^2=4$, this yields $13y^2-2y-11=0$. The root $y=1$ is degenerate, so $y=-11/13$ and $x^2=192/169$.", "The squared side length is $4x^2=768/169$. Thus $m+n=768+169=937$."],
+      "stepsZh": ["另两个顶点必为 $(x,y)$ 与 $(-x,y)$，其中 $x>0$，所以水平边长为 $2x$。", "把它与 $(0,1)$ 到 $(x,y)$ 的距离相等，得 $x^2+(y-1)^2=4x^2$，即 $(y-1)^2=3x^2$。", "再与 $x^2+4y^2=4$ 联立，得到 $13y^2-2y-11=0$。根 $y=1$ 对应退化情形，故 $y=-11/13$，并有 $x^2=192/169$。", "边长平方为 $4x^2=768/169$，所以 $m+n=768+169=937$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/5"
+  },
+  "aime-2001i-q6": {
+    "summary": "A fair six-sided die is rolled four times. Find $m+n$ if the probability that every roll after the first is at least the preceding roll is $m/n$ in lowest terms.",
+    "summaryZh": "公平六面骰连续掷四次。若从第二次起每次点数都不小于前一次的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": "079",
+    "answerZh": "079",
+    "methods": [{
+      "title": "Count multisets of four die values",
+      "titleZh": "把非降序列视为四元素多重集",
+      "topics": [{"en":"Combinations with repetition","zh":"可重复组合"},{"en":"Probability","zh":"概率"}],
+      "steps": ["For any multiset of four values from $\\{1,\\ldots,6\\}$, exactly one ordering is nondecreasing.", "The number of such multisets is $\\binom{6+4-1}{4}=\\binom94=126$.", "There are $6^4=1296$ equally likely roll sequences, so the probability is $126/1296=7/72$. Therefore $m+n=7+72=79$, recorded as $079$."],
+      "stepsZh": ["从 $\\{1,\\ldots,6\\}$ 中取四个数形成的每个多重集，恰好对应一个非降排列。", "这样的多重集共有 $\\binom{6+4-1}{4}=\\binom94=126$ 个。", "全部等可能结果有 $6^4=1296$ 个，故概率为 $126/1296=7/72$。于是 $m+n=79$，记为 $079$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/6"
+  },
+  "aime-2001i-q7": {
+    "summary": "Triangle $ABC$ has side lengths $AB=21$, $AC=22$, $BC=20$. A line through the incenter parallel to $BC$ meets $AB,AC$ at $D,E$. If $DE=m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "三角形 $ABC$ 的边长为 $AB=21$、$AC=22$、$BC=20$。过内心作 $BC$ 的平行线，分别交 $AB,AC$ 于 $D,E$。若 $DE=m/n$ 为最简分数，求 $m+n$。",
+    "answer": "923",
+    "answerZh": "923",
+    "methods": [{
+      "title": "Compare the perimeters of similar triangles",
+      "titleZh": "比较相似三角形的周长",
+      "topics": [{"en":"Incircle geometry","zh":"内切圆几何"},{"en":"Similar triangles","zh":"相似三角形"}],
+      "steps": ["Let $O$ be the incenter on $DE$. Since $DE\\parallel BC$, angle-bisector relations give $DO=DB$ and $EO=EC$.", "Hence the perimeter of triangle $ADE$ is $(AB-DB)+(AC-EC)+(DO+OE)=AB+AC=43$.", "Triangles $ADE$ and $ABC$ are similar, so their side ratio equals their perimeter ratio: $DE/20=43/(21+22+20)=43/63$.", "Thus $DE=860/63$, and $m+n=860+63=923$."],
+      "stepsZh": ["设内心为 $O$，且 $O$ 位于 $DE$ 上。由 $DE\\parallel BC$ 与角平分线性质可得 $DO=DB$、$EO=EC$。", "于是三角形 $ADE$ 的周长为 $(AB-DB)+(AC-EC)+(DO+OE)=AB+AC=43$。", "三角形 $ADE$ 与 $ABC$ 相似，边长比等于周长比：$DE/20=43/(21+22+20)=43/63$。", "所以 $DE=860/63$，从而 $m+n=860+63=923$。"]
+    },{
+      "title": "Use the inradius-to-altitude ratio",
+      "titleZh": "利用内切圆半径与高的比值",
+      "topics": [{"en":"Area formulas","zh":"面积公式"},{"en":"Similarity","zh":"相似"}],
+      "steps": ["Let $h$ be the altitude from $A$ to $BC$ and $r$ the inradius. From $\\tfrac12 BC\\,h=rs$, where $2s=AB+AC+BC$, obtain $r/h=BC/(AB+AC+BC)=20/63$.", "The altitude of triangle $ADE$ is $h-r$, so similarity gives $DE/BC=(h-r)/h=1-20/63=43/63$.", "Therefore $DE=20\\cdot43/63=860/63$ and $m+n=923$."],
+      "stepsZh": ["设从 $A$ 到 $BC$ 的高为 $h$，内切圆半径为 $r$。由 $\\tfrac12 BC\\,h=rs$ 且 $2s=AB+AC+BC$，得 $r/h=BC/(AB+AC+BC)=20/63$。", "三角形 $ADE$ 的高为 $h-r$，相似关系给出 $DE/BC=(h-r)/h=1-20/63=43/63$。", "故 $DE=20\\cdot43/63=860/63$，所以 $m+n=923$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/7"
+  },
+  "aime-2001i-q8": {
+    "summary": "Call $N$ a 7–10 double when its base-$7$ digit string, read as a decimal integer, equals $2N$. For example, $51=(102)_7$ and $102=2\\cdot51$. Find the largest such $N$.",
+    "summaryZh": "若正整数 $N$ 的七进制数码串直接按十进制读取后等于 $2N$，则称 $N$ 为“7–10 double”。例如 $51=(102)_7$ 且 $102=2\\cdot51$。求最大的此类 $N$。",
+    "answer": "315",
+    "answerZh": "315",
+    "methods": [{
+      "title": "Compare the two place-value expansions",
+      "titleZh": "比较两种位值展开",
+      "topics": [{"en":"Number bases","zh":"进制"},{"en":"Bounding","zh":"界估计"},{"en":"Digit optimization","zh":"数码最优化"}],
+      "steps": ["If $(a_k\\cdots a_1a_0)_7=N$, the condition is $\\sum a_i10^i=2\\sum a_i7^i$, or $\\sum a_i(10^i-2\\cdot7^i)=0$.", "The coefficients for $i=0,1,2$ are $-1,-4,2$. For $i\\ge3$ the coefficient is at least $314$, while the largest possible negative contribution from $a_0,a_1$ is $6+24=30$. Hence no digit beyond $a_2$ can be nonzero.", "Thus $2a_2=4a_1+a_0$. To maximize the base-$7$ value, take $a_2=6$; then $12=4a_1+a_0$, maximized by $a_1=3,a_0=0$.", "Therefore $N=(630)_7=6\\cdot49+3\\cdot7=315$; indeed its decimal digit string $630$ equals $2N$."],
+      "stepsZh": ["若 $(a_k\\cdots a_1a_0)_7=N$，条件等价于 $\\sum a_i10^i=2\\sum a_i7^i$，即 $\\sum a_i(10^i-2\\cdot7^i)=0$。", "$i=0,1,2$ 的系数分别为 $-1,-4,2$。当 $i\\ge3$ 时系数至少为 $314$，而 $a_0,a_1$ 能提供的最大负贡献只有 $6+24=30$，所以更高位不可能非零。", "于是 $2a_2=4a_1+a_0$。为使七进制数最大，先取 $a_2=6$；此时 $12=4a_1+a_0$，最大可取 $a_1=3,a_0=0$。", "因此 $N=(630)_7=6\\cdot49+3\\cdot7=315$；其十进制数码串 $630$ 确实等于 $2N$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/8"
+  },
+  "aime-2001i-q9": {
+    "summary": "In triangle $ABC$ with $AB=13$, $BC=15$, $CA=17$, points $D,E,F$ lie on $AB,BC,CA$ with $AD=pAB$, $BE=qBC$, $CF=rCA$. Given $p+q+r=2/3$ and $p^2+q^2+r^2=2/5$, express $[DEF]/[ABC]=m/n$ in lowest terms and find $m+n$.",
+    "summaryZh": "在边长 $AB=13$、$BC=15$、$CA=17$ 的三角形 $ABC$ 中，点 $D,E,F$ 分别位于 $AB,BC,CA$ 上，且 $AD=pAB$、$BE=qBC$、$CF=rCA$。已知 $p+q+r=2/3$、$p^2+q^2+r^2=2/5$。若 $[DEF]/[ABC]=m/n$ 为最简分数，求 $m+n$。",
+    "answer": "061",
+    "answerZh": "061",
+    "methods": [{
+      "title": "Subtract the three corner triangles",
+      "titleZh": "减去三个角部三角形",
+      "topics": [{"en":"Area ratios","zh":"面积比"},{"en":"Symmetric sums","zh":"对称和"}],
+      "steps": ["Relative to $[ABC]$, the corner areas are $[BDE]=q(1-p)$, $[CEF]=r(1-q)$, and $[ADF]=p(1-r)$.", "Therefore $[DEF]/[ABC]=1-(p+q+r)+(pq+qr+rp)$.", "Use $pq+qr+rp=((p+q+r)^2-(p^2+q^2+r^2))/2=(4/9-2/5)/2=1/45$.", "The ratio is $1-2/3+1/45=16/45$, so $m+n=16+45=61$, recorded as $061$."],
+      "stepsZh": ["以 $[ABC]$ 为单位，三个角部三角形面积分别为 $[BDE]=q(1-p)$、$[CEF]=r(1-q)$、$[ADF]=p(1-r)$。", "所以 $[DEF]/[ABC]=1-(p+q+r)+(pq+qr+rp)$。", "利用 $pq+qr+rp=((p+q+r)^2-(p^2+q^2+r^2))/2=(4/9-2/5)/2=1/45$。", "所求比为 $1-2/3+1/45=16/45$，故 $m+n=61$，记为 $061$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/9"
+  },
+  "aime-2001i-q10": {
+    "summary": "Let $S=\\{(x,y,z)\\in\\mathbb Z^3:0\\le x\\le2,\\ 0\\le y\\le3,\\ 0\\le z\\le4\\}$. Two distinct points of $S$ are chosen uniformly. If the probability that their midpoint also lies in $S$ is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "设 $S=\\{(x,y,z)\\in\\mathbb Z^3:0\\le x\\le2,\\ 0\\le y\\le3,\\ 0\\le z\\le4\\}$。从 $S$ 中均匀选取两个不同点。若其中点仍属于 $S$ 的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": "200",
+    "answerZh": "200",
+    "methods": [{
+      "title": "Group points by coordinate parity",
+      "titleZh": "按三维坐标奇偶性分组",
+      "topics": [{"en":"Lattice points","zh":"格点"},{"en":"Parity","zh":"奇偶性"},{"en":"Probability","zh":"概率"}],
+      "steps": ["A midpoint is a lattice point exactly when the two endpoints have the same parity in every coordinate.", "The eight parity classes have sizes $12,4,6,12,8,8,4,6$ (for each parity triple, multiply the available counts in the $x,y,z$ coordinates).", "Hence the number of valid unordered pairs is $\\sum\\binom{s}{2}=230$. The total number is $\\binom{60}{2}=1770$.", "The probability is $230/1770=23/177$, so $m+n=23+177=200$."],
+      "stepsZh": ["中点为格点，当且仅当两个端点的三个对应坐标分别同奇偶。", "八种奇偶组合对应的点数为 $12,4,6,12,8,8,4,6$（把各坐标中符合指定奇偶性的取值数相乘）。", "因此有效无序点对数为 $\\sum\\binom{s}{2}=230$，全部点对数为 $\\binom{60}{2}=1770$。", "概率为 $230/1770=23/177$，所以 $m+n=23+177=200$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/10"
+  },
+  "aime-2001i-q11": {
+    "summary": "A $5\\times N$ point array is first numbered row by row and then column by column. One point $P_i$ is selected from each row $i$. Its two labels are $x_i,y_i$, and they satisfy $x_1=y_2$, $x_2=y_1$, $x_3=y_4$, $x_4=y_5$, $x_5=y_3$. Find the least possible $N$.",
+    "summaryZh": "一个 $5\\times N$ 点阵先按行从左到右连续编号，再按列从上到下重新编号。每一行 $i$ 选一点 $P_i$，其两次编号分别为 $x_i,y_i$，并满足 $x_1=y_2$、$x_2=y_1$、$x_3=y_4$、$x_4=y_5$、$x_5=y_3$。求最小可能的 $N$。",
+    "answer": "149",
+    "answerZh": "149",
+    "methods": [{
+      "title": "Translate the label swaps into congruences",
+      "titleZh": "把编号交换条件化为同余条件",
+      "topics": [{"en":"Systems of equations","zh":"方程组"},{"en":"Modular arithmetic","zh":"模运算"}],
+      "steps": ["If $P_i$ is in column $c_i$, then $x_i=(i-1)N+c_i$ and $y_i=5(c_i-1)+i$.", "The first two equalities give $c_1=5c_2-3$ and $N+c_2=5c_1-4$, hence $N=24c_2-19$.", "The last three equalities are $2N+c_3=5c_4-1$, $3N+c_4=5c_5$, $4N+c_5=5c_3-2$. Eliminating $c_3,c_4$ gives $124c_5=89N+7$.", "Substituting $N=24c_2-19$ shows $7c_2\\equiv18\\pmod{31}$. The least positive solution is $c_2=7$, so $N=149$.", "Back-substitution gives $(c_1,c_2,c_3,c_4,c_5)=(32,7,141,88,107)$, all at most $149$, proving feasibility and minimality."],
+      "stepsZh": ["若 $P_i$ 位于第 $c_i$ 列，则 $x_i=(i-1)N+c_i$，而 $y_i=5(c_i-1)+i$。", "前两个等式给出 $c_1=5c_2-3$ 与 $N+c_2=5c_1-4$，所以 $N=24c_2-19$。", "后三个等式为 $2N+c_3=5c_4-1$、$3N+c_4=5c_5$、$4N+c_5=5c_3-2$。消去 $c_3,c_4$ 得 $124c_5=89N+7$。", "代入 $N=24c_2-19$ 后得到 $7c_2\\equiv18\\pmod{31}$。最小正解为 $c_2=7$，故 $N=149$。", "回代得到 $(c_1,c_2,c_3,c_4,c_5)=(32,7,141,88,107)$，均不超过 $149$，从而同时验证可行性与最小性。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/11"
+  },
+  "aime-2001i-q12": {
+    "summary": "A sphere is inscribed in the tetrahedron with vertices $(6,0,0)$, $(0,4,0)$, $(0,0,2)$, and $(0,0,0)$. If its radius is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "一个球内切于顶点为 $(6,0,0)$、$(0,4,0)$、$(0,0,2)$、$(0,0,0)$ 的四面体。若球半径为最简分数 $m/n$，求 $m+n$。",
+    "answer": "005",
+    "answerZh": "005",
+    "methods": [{
+      "title": "Use volume divided by surface area",
+      "titleZh": "利用体积与表面积关系",
+      "topics": [{"en":"Tetrahedron volume","zh":"四面体体积"},{"en":"Inspheres","zh":"内切球"},{"en":"Vector area","zh":"向量面积"}],
+      "steps": ["For an insphere of radius $r$, splitting the tetrahedron into four pyramids gives $V=rS/3$, where $S$ is total surface area.", "The volume is $V=(6\\cdot4\\cdot2)/6=8$. The three coordinate-plane faces have areas $12,6,4$.", "For the fourth face, $\\overrightarrow{AB}=(-6,4,0)$ and $\\overrightarrow{AC}=(-6,0,2)$ have cross-product length $28$, so its area is $14$. Thus $S=36$.", "Therefore $r=3V/S=24/36=2/3$, and $m+n=5$, recorded as $005$."],
+      "stepsZh": ["设内切球半径为 $r$。把四面体按球心分成四个棱锥，得到 $V=rS/3$，其中 $S$ 为总表面积。", "体积 $V=(6\\cdot4\\cdot2)/6=8$。三个坐标平面上的面面积分别为 $12,6,4$。", "第四个面中，$\\overrightarrow{AB}=(-6,4,0)$、$\\overrightarrow{AC}=(-6,0,2)$ 的叉积长度为 $28$，所以该面面积为 $14$。于是 $S=36$。", "故 $r=3V/S=24/36=2/3$，所以 $m+n=5$，记为 $005$。"]
+    },{
+      "title": "Measure the distance to the slanted face",
+      "titleZh": "计算球心到斜面的距离",
+      "topics": [{"en":"Point-to-plane distance","zh":"点到平面距离"},{"en":"Coordinate geometry","zh":"空间解析几何"}],
+      "steps": ["Tangency to the three coordinate planes puts the center at $(r,r,r)$.", "The fourth face has equation $2x+3y+6z=12$. Since the center lies inside the tetrahedron, its distance to this plane is $(12-11r)/7$.", "Set this distance equal to $r$: $(12-11r)/7=r$, giving $r=2/3$ and $m+n=5$."],
+      "stepsZh": ["球与三个坐标平面相切，所以球心为 $(r,r,r)$。", "第四个面的方程是 $2x+3y+6z=12$。球心在四面体内部，因此它到该平面的距离为 $(12-11r)/7$。", "令此距离等于 $r$：$(12-11r)/7=r$，得到 $r=2/3$，故 $m+n=5$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/12"
+  },
+  "aime-2001i-q13": {
+    "summary": "In one circle, the chord of a $d^\\circ$ arc has length $22$, while the chord of a $2d^\\circ$ arc is $20$ longer than the chord of a $3d^\\circ$ arc; $d<120$. If the $3d^\\circ$ chord is $-m+\\sqrt n$, find $m+n$.",
+    "summaryZh": "在同一圆中，$d^\\circ$ 弧所对弦长为 $22$，$2d^\\circ$ 弧所对弦比 $3d^\\circ$ 弧所对弦长 $20$，且 $d<120$。若 $3d^\\circ$ 弧所对弦长为 $-m+\\sqrt n$，求 $m+n$。",
+    "answer": "174",
+    "answerZh": "174",
+    "methods": [{
+      "title": "Express all three chords trigonometrically",
+      "titleZh": "用三角函数表示三条弦",
+      "topics": [{"en":"Chord length","zh":"弦长"},{"en":"Multiple-angle identities","zh":"倍角公式"},{"en":"Quadratic equations","zh":"二次方程"}],
+      "steps": ["Let $t=d/2$ and let the radius be $R$. The three chord lengths are $2R\\sin t=22$, $2R\\sin2t$, and $2R\\sin3t$.", "Using $\\sin2t=2\\sin t\\cos t$ and $\\sin3t=\\sin t(4\\cos^2t-1)$, the latter two lengths become $44\\cos t$ and $22(4\\cos^2t-1)$.", "The difference condition gives $44\\cos t=22(4\\cos^2t-1)+20$, or $44\\cos^2t-22\\cos t-1=0$.", "Because $t<60^\\circ$, choose $\\cos t=(11+\\sqrt{165})/44$. The $3d$ chord is $44\\cos t-20=-9+\\sqrt{165}$.", "Thus $m+n=9+165=174$."],
+      "stepsZh": ["设 $t=d/2$，圆半径为 $R$。三条弦长分别为 $2R\\sin t=22$、$2R\\sin2t$、$2R\\sin3t$。", "利用 $\\sin2t=2\\sin t\\cos t$ 与 $\\sin3t=\\sin t(4\\cos^2t-1)$，后两条弦长化为 $44\\cos t$ 与 $22(4\\cos^2t-1)$。", "长度差条件给出 $44\\cos t=22(4\\cos^2t-1)+20$，即 $44\\cos^2t-22\\cos t-1=0$。", "由于 $t<60^\\circ$，应取 $\\cos t=(11+\\sqrt{165})/44$。$3d$ 弧所对弦长为 $44\\cos t-20=-9+\\sqrt{165}$。", "所以 $m+n=9+165=174$。"]
+    },{
+      "title": "Use Ptolemy after dividing the circle into equal arcs",
+      "titleZh": "把圆周分成等弧后使用托勒密定理",
+      "topics": [{"en":"Ptolemy's theorem","zh":"托勒密定理"},{"en":"Cyclic quadrilaterals","zh":"圆内接四边形"}],
+      "steps": ["Take consecutive points $A,B,C,D$ with equal $d^\\circ$ arcs. Then $AB=BC=CD=22$, $AD=x$ is the $3d$ chord, and $AC=BD=x+20$ is the $2d$ chord.", "Ptolemy's theorem for cyclic $ABCD$ gives $(x+20)^2=22x+22^2$.", "Thus $x^2+18x-84=0$, so the positive length is $x=-9+\\sqrt{165}$ and $m+n=174$."],
+      "stepsZh": ["在圆上依次取 $A,B,C,D$，使相邻弧均为 $d^\\circ$。则 $AB=BC=CD=22$，$AD=x$ 为 $3d$ 弧所对弦，而 $AC=BD=x+20$ 为 $2d$ 弧所对弦。", "对圆内接四边形 $ABCD$ 使用托勒密定理，得到 $(x+20)^2=22x+22^2$。", "于是 $x^2+18x-84=0$，取正长度 $x=-9+\\sqrt{165}$，故 $m+n=174$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/13"
+  },
+  "aime-2001i-q14": {
+    "summary": "For nineteen houses in a row, no two adjacent houses receive mail on the same day, and no three consecutive houses all receive no mail. Count the possible delivery patterns.",
+    "summaryZh": "一排有十九所房屋。每天的投递模式满足：相邻两户不能同时收到邮件，且不能连续三户都没有邮件。求可能的投递模式数。",
+    "answer": "351",
+    "answerZh": "351",
+    "methods": [{
+      "title": "Use ending-state recurrence",
+      "titleZh": "按末尾状态建立递推",
+      "topics": [{"en":"Recursive counting","zh":"递推计数"},{"en":"Binary strings","zh":"二进制串"},{"en":"Restricted arrangements","zh":"限制排列"}],
+      "steps": ["Encode mail by $1$ and no mail by $0$. Valid strings have neither $11$ nor $000$.", "Let $A_n,B_n,C_n$ count valid length-$n$ strings ending in $1$, in exactly one trailing $0$, and in exactly two trailing $0$s. Then $A_n=B_{n-1}+C_{n-1}$, $B_n=A_{n-1}$, and $C_n=B_{n-1}$.", "Starting with $(A_1,B_1,C_1)=(1,1,0)$, the totals for $n=1,\\ldots,19$ are $2,3,4,5,7,9,12,16,21,28,37,49,65,86,114,151,200,265,351$.", "Therefore there are $351$ delivery patterns."],
+      "stepsZh": ["用 $1$ 表示收到邮件，$0$ 表示没有邮件。合法串不能含有 $11$ 或 $000$。", "设 $A_n,B_n,C_n$ 分别统计长度为 $n$ 且以 $1$、恰一个末尾 $0$、恰两个末尾 $0$ 结束的合法串。则 $A_n=B_{n-1}+C_{n-1}$、$B_n=A_{n-1}$、$C_n=B_{n-1}$。", "从 $(A_1,B_1,C_1)=(1,1,0)$ 出发，$n=1,\\ldots,19$ 的总数依次为 $2,3,4,5,7,9,12,16,21,28,37,49,65,86,114,151,200,265,351$。", "因此共有 $351$ 种投递模式。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/14"
+  },
+  "aime-2001i-q15": {
+    "summary": "Place $1,2,\\ldots,8$ bijectively on the eight faces of a regular octahedron. Treat $8$ and $1$ as consecutive. If the probability that no consecutive pair lies on edge-adjacent faces is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "把 $1,2,\\ldots,8$ 一一写在正八面体的八个面上，并把 $8$ 与 $1$ 也视为相邻数。若任意相邻两数都不位于共棱的两个面上的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": "085",
+    "answerZh": "085",
+    "methods": [{
+      "title": "Count Hamiltonian cycles in the dual cube",
+      "titleZh": "在对偶立方体中计算哈密顿回路",
+      "topics": [{"en":"Dual polyhedra","zh":"对偶多面体"},{"en":"Graph theory","zh":"图论"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": ["The eight octahedron faces correspond to the eight vertices of a cube; two faces share an edge exactly when the corresponding cube vertices are adjacent.", "Thus the cyclic order $1,2,\\ldots,8,1$ must be a Hamiltonian cycle using only the cube's $16$ diagonals: twelve edges of two complementary tetrahedra and four long space diagonals joining them.", "Such a cycle uses either four alternating long diagonals or exactly two long diagonals. In the four-long case, choosing opposite edge-pairs in the two tetrahedra gives $6$ undirected cycles, hence $6\\cdot16=96$ labeled cyclic orders.", "In the two-long case, choose an oriented three-edge Hamilton path in one tetrahedron in $4!=24$ ways and one of two compatible paths in the other; accounting for the eight possible starting labels gives $8\\cdot24\\cdot2=384$ orders.", "There are $96+384=480$ favorable assignments out of $8!$, so the probability is $480/8!=1/84$. Therefore $m+n=85$, recorded as $085$."],
+      "stepsZh": ["正八面体的八个面对应立方体的八个顶点；两个面共棱，当且仅当对应的立方体顶点相邻。", "因此循环顺序 $1,2,\\ldots,8,1$ 必须成为一条只使用立方体 $16$ 条对角线的哈密顿回路：其中十二条是两个互补四面体的棱，另四条是连接两者的空间长对角线。", "这样的回路要么使用四条交替出现的长对角线，要么恰用两条。四条情形中，在两个四面体内选择对边对得到 $6$ 条无向回路，对应 $6\\cdot16=96$ 个带标号循环顺序。", "两条情形中，一个四面体内的有向三棱哈密顿路径有 $4!=24$ 种，另一个四面体有两条兼容路径；再计入八个起始标号，得到 $8\\cdot24\\cdot2=384$ 种。", "有利排列共 $96+384=480$ 个，总排列为 $8!$，概率为 $480/8!=1/84$。故 $m+n=85$，记为 $085$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2001I/problem/15"
+  }
+}
