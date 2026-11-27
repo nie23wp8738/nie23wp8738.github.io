@@ -1,0 +1,242 @@
+{
+  "euclid-2016-q1": {
+    "summary": "(a) Find the average of $5,15,25,35,45,55$. (b) If $x^2=2016$, evaluate $(x+2)(x-2)$. (c) The collinear points $P(7,5)$, $Q(a,2a)$, and $R(12,30)$ are given. Find $a$.",
+    "summaryZh": "(a) 求 $5,15,25,35,45,55$ 的平均数。(b) 若 $x^2=2016$，求 $(x+2)(x-2)$。(c) 已知三点 $P(7,5),Q(a,2a),R(12,30)$ 共线，求 $a$。",
+    "answer": "(a) $30$. (b) $2012$. (c) $a=10$.",
+    "answerZh": "(a) $30$。(b) $2012$。(c) $a=10$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Pair the data, use a difference of squares, and compare slopes",
+      "titleZh": "配对求平均、使用平方差并比较斜率",
+      "topics": [{"en":"Arithmetic mean","zh":"算术平均数"},{"en":"Difference of squares","zh":"平方差公式"},{"en":"Slope and collinearity","zh":"斜率与共线"}],
+      "steps": [
+        "(a) Pair the first and last entries: $5+55=15+45=25+35=60$. Thus the total is $3(60)=180$, and the average is $180/6=30$.",
+        "(b) Apply the difference-of-squares identity: $(x+2)(x-2)=x^2-4=2016-4=2012$. The value is independent of the sign of $x$.",
+        "(c) Since the three points are collinear, $m_{PQ}=m_{PR}$. Now $m_{PR}=(30-5)/(12-7)=5$, so $(2a-5)/(a-7)=5$. The case $a=7$ would make $PQ$ vertical while $PR$ is not, so it is excluded. Solving $2a-5=5a-35$ gives $a=10$, and $Q=(10,20)$ indeed lies on the same line."
+      ],
+      "stepsZh": [
+        "(a) 首尾配对：$5+55=15+45=25+35=60$。总和为 $3(60)=180$，故平均数为 $180/6=30$。",
+        "(b) 使用平方差公式：$(x+2)(x-2)=x^2-4=2016-4=2012$。结果与 $x$ 的正负无关。",
+        "(c) 三点共线，所以 $m_{PQ}=m_{PR}$。由 $m_{PR}=(30-5)/(12-7)=5$，得到 $(2a-5)/(a-7)=5$。若 $a=7$，则 $PQ$ 竖直而 $PR$ 不竖直，故应排除。解 $2a-5=5a-35$ 得 $a=10$；此时 $Q=(10,20)$ 确实在同一直线上。"
+      ]
+    }]
+  },
+  "euclid-2016-q2": {
+    "summary": "(a) Solve $n/9=25/n$. (b) Solve $(x-3)(x-2)=6$. (c) Two apples cost the same as three bananas. If six apples and twelve bananas cost 6.30 dollars, find the cost of one apple.",
+    "summaryZh": "(a) 解方程 $n/9=25/n$。(b) 解方程 $(x-3)(x-2)=6$。(c) 两个苹果与三个香蕉价格相同；若六个苹果和十二个香蕉共需 6.30 美元，求一个苹果的价格。",
+    "answer": "(a) $n=\\pm15$. (b) $x=0$ or $5$. (c) $0.45$ dollars.",
+    "answerZh": "(a) $n=\\pm15$。(b) $x=0$ 或 $5$。(c) $0.45$ 美元。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Clear denominators, factor, and model the prices",
+      "titleZh": "消去分母、因式分解并建立价格模型",
+      "topics": [{"en":"Rational equations","zh":"分式方程"},{"en":"Quadratic equations","zh":"二次方程"},{"en":"Linear modelling","zh":"线性建模"}],
+      "steps": [
+        "(a) The equation requires $n\\ne0$. Multiplying by $9n$ gives $n^2=225$, hence $n=15$ or $n=-15$. Both values satisfy the original equation.",
+        "(b) Expanding gives $x^2-5x+6=6$, hence $x^2-5x=x(x-5)=0$. Therefore $x=0$ or $x=5$.",
+        "(c) Let an apple cost $a$ dollars and a banana cost $b$ dollars. The data give $2a=3b$ and $6a+12b=6.30$. Since $12b=4(3b)=8a$, we get $14a=6.30$, so $a=0.45$ dollars."
+      ],
+      "stepsZh": [
+        "(a) 原方程要求 $n\\ne0$。两边同乘 $9n$ 得 $n^2=225$，所以 $n=15$ 或 $n=-15$；两值代回均成立。",
+        "(b) 展开得 $x^2-5x+6=6$，于是 $x^2-5x=x(x-5)=0$，故 $x=0$ 或 $x=5$。",
+        "(c) 设一个苹果和一个香蕉的价格分别为 $a,b$ 美元。题意给出 $2a=3b$ 与 $6a+12b=6.30$。因 $12b=4(3b)=8a$，所以 $14a=6.30$，得到 $a=0.45$ 美元。"
+      ]
+    }]
+  },
+  "euclid-2016-q3": {
+    "summary": "(a) Points $A,B,C$ are collinear in that order. Three triangles $ABD$, $BFG$, and $BCE$ lie above the line, with $F$ on $BD$ and $G$ on $BE$. Their six angles away from $B$ are $p=\\angle DAB$, $q=\\angle ADB$, $r=\\angle BFG$, $s=\\angle FGB$, $t=\\angle BEC$, and $u=\\angle ECB$. Find $p+q+r+s+t+u$. (b) If $n=10^{20}-20$, find the sum of the digits of $n$. (c) A parabola crosses the $x$-axis at $P(2,0)$ and $Q(8,0)$ and has vertex $V$ below the axis. If triangle $VPQ$ has area $12$, find $V$.",
+    "summaryZh": "(a) 点 $A,B,C$ 依次共线。直线上方有三个三角形 $ABD,BFG,BCE$，其中 $F$ 在 $BD$ 上、$G$ 在 $BE$ 上；六个不在 $B$ 点的角为 $p=\\angle DAB$、$q=\\angle ADB$、$r=\\angle BFG$、$s=\\angle FGB$、$t=\\angle BEC$、$u=\\angle ECB$。求 $p+q+r+s+t+u$。(b) 若 $n=10^{20}-20$，求 $n$ 的各位数字之和。(c) 一条抛物线与 $x$ 轴交于 $P(2,0),Q(8,0)$，顶点 $V$ 位于 $x$ 轴下方。若三角形 $VPQ$ 面积为 $12$，求 $V$ 的坐标。",
+    "answer": "(a) $360^\\circ$. (b) $170$. (c) $V=(5,-4)$.",
+    "answerZh": "(a) $360^\\circ$。(b) $170$。(c) $V=(5,-4)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use angle sums, place value, and parabola symmetry",
+      "titleZh": "利用角和、位值与抛物线对称性",
+      "topics": [{"en":"Triangle angle sums","zh":"三角形内角和"},{"en":"Digits and place value","zh":"数字与位值"},{"en":"Parabola symmetry","zh":"抛物线对称性"},{"en":"Triangle area","zh":"三角形面积"}],
+      "steps": [
+        "(a) The three triangles have total angle sum $3(180^\\circ)=540^\\circ$. Their three angles at $B$ fill the straight angle from $BA$ to $BC$, so those angles sum to $180^\\circ$. The remaining six angles therefore sum to $540^\\circ-180^\\circ=360^\\circ$.",
+        "(b) Subtracting $20$ from $10^{20}$ gives the decimal number consisting of eighteen $9$s followed by $80$. Hence the digit sum is $18(9)+8+0=170$.",
+        "(c) The base $PQ$ has length $8-2=6$. If $h$ is the distance from $V$ to the $x$-axis, then $\\frac12(6)h=12$, so $h=4$. Since $V$ is below the axis, its $y$-coordinate is $-4$.",
+        "The axis of symmetry lies midway between the two roots, so the $x$-coordinate of the vertex is $(2+8)/2=5$. Therefore $V=(5,-4)$."
+      ],
+      "stepsZh": [
+        "(a) 三个三角形的内角总和为 $3(180^\\circ)=540^\\circ$。它们在 $B$ 点的三个角恰好拼成从 $BA$ 到 $BC$ 的平角，和为 $180^\\circ$。故余下六角之和为 $540^\\circ-180^\\circ=360^\\circ$。",
+        "(b) 从 $10^{20}$ 中减去 $20$，所得十进制数由十八个 $9$ 后接 $80$ 组成。因此各位数字和为 $18(9)+8+0=170$。",
+        "(c) 底边 $PQ$ 长为 $8-2=6$。设 $V$ 到 $x$ 轴的距离为 $h$，则 $\\frac12(6)h=12$，故 $h=4$。因 $V$ 在 $x$ 轴下方，其纵坐标为 $-4$。",
+        "抛物线对称轴位于两个零点的中点，所以顶点横坐标为 $(2+8)/2=5$。因此 $V=(5,-4)$。"
+      ]
+    }]
+  },
+  "euclid-2016-q4": {
+    "summary": "(a) Find all $0^\\circ\\le\\theta\\le180^\\circ$ satisfying $\\sin^2\\theta+2\\cos^2\\theta=7/4$. (b) Two circle radii have sum $10$ cm, and the larger circumference exceeds the smaller by $3$ cm. Find the difference of their areas.",
+    "summaryZh": "(a) 求所有满足 $0^\\circ\\le\\theta\\le180^\\circ$ 且 $\\sin^2\\theta+2\\cos^2\\theta=7/4$ 的角 $\\theta$。(b) 两圆半径之和为 $10$ cm，大圆周长比小圆多 $3$ cm，求两圆面积之差。",
+    "answer": "(a) $\\theta=30^\\circ$ or $150^\\circ$. (b) $15\\text{ cm}^2$.",
+    "answerZh": "(a) $\\theta=30^\\circ$ 或 $150^\\circ$。(b) $15\\text{ cm}^2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Reduce the identity and factor the area difference",
+      "titleZh": "化简三角恒等式并分解面积差",
+      "topics": [{"en":"Trigonometric identities","zh":"三角恒等式"},{"en":"Reference angles","zh":"参考角"},{"en":"Circle measurements","zh":"圆的度量"},{"en":"Difference of squares","zh":"平方差公式"}],
+      "steps": [
+        "(a) Since $\\sin^2\\theta+\\cos^2\\theta=1$, the equation becomes $1+\\cos^2\\theta=7/4$. Thus $\\cos^2\\theta=3/4$ and $\\cos\\theta=\\pm\\sqrt3/2$.",
+        "On $0^\\circ\\le\\theta\\le180^\\circ$, these cosine values occur at $30^\\circ$ and $150^\\circ$. Both satisfy the original equation.",
+        "(b) Let the smaller and larger radii be $r$ and $R$. Then $r+R=10$ and $2\\pi(R-r)=3$. The required difference is $\\pi(R^2-r^2)=\\pi(R-r)(R+r)=\\frac12[2\\pi(R-r)](R+r)=\\frac12(3)(10)=15\\text{ cm}^2$."
+      ],
+      "stepsZh": [
+        "(a) 由 $\\sin^2\\theta+\\cos^2\\theta=1$，原方程化为 $1+\\cos^2\\theta=7/4$。所以 $\\cos^2\\theta=3/4$，即 $\\cos\\theta=\\pm\\sqrt3/2$。",
+        "在 $0^\\circ\\le\\theta\\le180^\\circ$ 内，相应角为 $30^\\circ$ 与 $150^\\circ$；两者代回原式均成立。",
+        "(b) 设小圆、大圆半径为 $r,R$。则 $r+R=10$ 且 $2\\pi(R-r)=3$。所求面积差为 $\\pi(R^2-r^2)=\\pi(R-r)(R+r)=\\frac12[2\\pi(R-r)](R+r)=\\frac12(3)(10)=15\\text{ cm}^2$。"
+      ]
+    }]
+  },
+  "euclid-2016-q5": {
+    "summary": "(a) A store buys a calculator for $p>0$, marks it up by $n\\%$, and then discounts the marked price by $20\\%$. The final price is $20\\%$ above $p$. Find $n$. (b) For an integer $n$, define $f(n)=n-1$ when $n$ is odd and $f(n)=n^2-1$ when $n$ is even. Find all integers $n$ satisfying $f(f(n))=3$.",
+    "summaryZh": "(a) 商店以 $p>0$ 的价格购入计算器，先加价 $n\\%$，再按新价格降价 $20\\%$；最终价格比 $p$ 高 $20\\%$。求 $n$。(b) 对整数 $n$，若 $n$ 为奇数则 $f(n)=n-1$，若 $n$ 为偶数则 $f(n)=n^2-1$。求所有满足 $f(f(n))=3$ 的整数 $n$。",
+    "answer": "(a) $n=50$. (b) $n=-1$ or $3$.",
+    "answerZh": "(a) $n=50$。(b) $n=-1$ 或 $3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use multiplicative percentages and split by parity",
+      "titleZh": "用乘法处理百分比并按奇偶性分类",
+      "topics": [{"en":"Percent multipliers","zh":"百分比乘数"},{"en":"Piecewise functions","zh":"分段函数"},{"en":"Parity","zh":"奇偶性"},{"en":"Quadratic factorization","zh":"二次式因式分解"}],
+      "steps": [
+        "(a) The two price changes multiply $p$ by $(1+n/100)(0.8)$. The final multiplier is $1.2$, so $0.8(1+n/100)=1.2$. Thus $1+n/100=1.5$ and $n=50$.",
+        "(b) If $n$ is even, then $f(n)=n^2-1$ is odd. Hence $f(f(n))=(n^2-1)-1=n^2-2$. The equation $n^2-2=3$ would require $n^2=5$, giving no integer solution.",
+        "If $n$ is odd, then $f(n)=n-1$ is even. Therefore $f(f(n))=(n-1)^2-1=n^2-2n$. Setting this equal to $3$ gives $n^2-2n-3=(n-3)(n+1)=0$.",
+        "Both $n=3$ and $n=-1$ are odd and satisfy the original nested equation. These are all solutions."
+      ],
+      "stepsZh": [
+        "(a) 两次价格调整使 $p$ 依次乘以 $(1+n/100)$ 与 $0.8$。最终乘数为 $1.2$，故 $0.8(1+n/100)=1.2$。于是 $1+n/100=1.5$，得到 $n=50$。",
+        "(b) 若 $n$ 为偶数，则 $f(n)=n^2-1$ 为奇数，所以 $f(f(n))=(n^2-1)-1=n^2-2$。方程 $n^2-2=3$ 要求 $n^2=5$，没有整数解。",
+        "若 $n$ 为奇数，则 $f(n)=n-1$ 为偶数，所以 $f(f(n))=(n-1)^2-1=n^2-2n$。令其等于 $3$，得 $n^2-2n-3=(n-3)(n+1)=0$。",
+        "$n=3$ 与 $n=-1$ 都是奇数，且代回嵌套方程成立。因此解仅有这两个。"
+      ]
+    }]
+  },
+  "euclid-2016-q6": {
+    "summary": "(a) Find the smallest positive integer $x$ such that $1/32=x/10^y$ for some positive integer $y$. (b) A right triangle has one side of length $60$, and its three side lengths form an arithmetic sequence. Find every possible area.",
+    "summaryZh": "(a) 求最小正整数 $x$，使得对某个正整数 $y$ 有 $1/32=x/10^y$。(b) 一个直角三角形有一边长为 $60$，且三边长构成等差数列。求其所有可能面积。",
+    "answer": "(a) $x=3125$. (b) $864$, $1350$, or $2400$ square units.",
+    "answerZh": "(a) $x=3125$。(b) 面积为 $864$、$1350$ 或 $2400$ 平方单位。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Match prime powers and classify arithmetic right triangles",
+      "titleZh": "匹配素因子幂并刻画等差直角三角形",
+      "topics": [{"en":"Prime factorization","zh":"质因数分解"},{"en":"Arithmetic sequences","zh":"等差数列"},{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Similar triangles","zh":"相似三角形"}],
+      "steps": [
+        "(a) Cross-multiplication gives $32x=10^y$. Since $32=2^5$ and $10^y=2^y5^y$, we need $x=2^{y-5}5^y$ with $y\\ge5$. The smallest choice is $y=5$, yielding $x=5^5=3125$; indeed $32(3125)=10^5$.",
+        "(b) Write the ordered side lengths as $a-d,a,a+d$, where $a>d>0$. Pythagoras gives $(a-d)^2+a^2=(a+d)^2$, which simplifies to $a^2=4ad$, so $a=4d$. Thus every such triangle has side lengths $3d,4d,5d$.",
+        "If $60=3d$, then $d=20$, the legs are $60,80$, and the area is $\\frac12(60)(80)=2400$. If $60=4d$, then $d=15$, the legs are $45,60$, and the area is $1350$.",
+        "If $60=5d$, then $d=12$, the legs are $36,48$, and the area is $\\frac12(36)(48)=864$. These three cases exhaust the possible position of the side of length $60$."
+      ],
+      "stepsZh": [
+        "(a) 交叉相乘得 $32x=10^y$。因 $32=2^5$、$10^y=2^y5^y$，需要 $x=2^{y-5}5^y$ 且 $y\\ge5$。取最小的 $y=5$，得到 $x=5^5=3125$；确有 $32(3125)=10^5$。",
+        "(b) 将递增的三边写成 $a-d,a,a+d$，其中 $a>d>0$。由勾股定理，$(a-d)^2+a^2=(a+d)^2$，化简为 $a^2=4ad$，故 $a=4d$。所以这类三角形的边长必为 $3d,4d,5d$。",
+        "若 $60=3d$，则 $d=20$，两直角边为 $60,80$，面积为 $\\frac12(60)(80)=2400$。若 $60=4d$，则 $d=15$，两直角边为 $45,60$，面积为 $1350$。",
+        "若 $60=5d$，则 $d=12$，两直角边为 $36,48$，面积为 $\\frac12(36)(48)=864$。边长 $60$ 在三边中的位置只有这三种，故已穷尽。"
+      ]
+    }]
+  },
+  "euclid-2016-q7": {
+    "summary": "(a) Amrita and Zhang cross a lake using a one-seat kayak. Each paddles at $7$ km/h and swims at $2$ km/h. Amrita first paddles while Zhang swims, leaves the kayak stationary and swims, and Zhang later reaches it and paddles. Both finish together after $90$ minutes. How long was the kayak stationary? (b) Find all real pairs $(x,y)$ satisfying $x(\\tfrac12+y-2x^2)=0$ and $y(\\tfrac52+x-y)=0$.",
+    "summaryZh": "(a) Amrita 与 Zhang 用一艘单人皮艇过湖；两人划艇速度均为 $7$ km/h，游泳速度均为 $2$ km/h。Amrita 先划艇而 Zhang 游泳，随后将艇停在湖中并改为游泳；Zhang 游到艇处后开始划艇。两人均在 $90$ 分钟后同时到岸。问皮艇静止了多长时间？(b) 求所有满足 $x(\\tfrac12+y-2x^2)=0$ 与 $y(\\tfrac52+x-y)=0$ 的实数对 $(x,y)$。",
+    "answer": "(a) $50$ minutes. (b) $(0,0),(0,5/2),(1/2,0),(-1/2,0),(3/2,4),(-1,3/2)$.",
+    "answerZh": "(a) $50$ 分钟。(b) $(0,0),(0,5/2),(1/2,0),(-1/2,0),(3/2,4),(-1,3/2)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Balance travel times and split the factored system into cases",
+      "titleZh": "平衡行程时间并对因式方程组分类",
+      "topics": [{"en":"Distance-rate-time","zh":"路程—速度—时间"},{"en":"Simultaneous equations","zh":"联立方程"},{"en":"Zero-product property","zh":"零乘积性质"},{"en":"Case analysis","zh":"分类讨论"}],
+      "steps": [
+        "(a) Suppose Amrita paddles $p$ km and swims $s$ km. Zhang then swims $p$ km and paddles $s$ km. Equal total times give $p/7+s/2=p/2+s/7$, hence $p=s$.",
+        "Their common time is $p/7+p/2=3/2$, so $(9/14)p=3/2$ and $p=7/3$ km. Amrita leaves the kayak after $(7/3)/7=1/3$ hour, while Zhang reaches it after $(7/3)/2=7/6$ hours. The stationary interval is $7/6-1/3=5/6$ hour, or $50$ minutes.",
+        "(b) From the factored equations, either $x=0$ or $\\frac12+y-2x=0$, and either $y=0$ or $\\frac52+x-y=0$. If $x=0$, then $y=0$ or $5/2$. If $y=0$, then $x=0$ or $x=\\pm1/2$ from $x(1/2-2x^2)=0$.",
+        "For $xy\\ne0$, solve $1+2y-4x^2=0$ and $5+2x-2y=0$. Adding gives $6+2x-4x^2=0$, or $(2x-3)(x+1)=0$. Thus $x=3/2$ or $-1$, and $y=x+5/2$ gives $y=4$ or $3/2$. Combining all cases gives the six listed pairs."
+      ],
+      "stepsZh": [
+        "(a) 设 Amrita 划艇 $p$ km、游泳 $s$ km，则 Zhang 游泳 $p$ km、划艇 $s$ km。两人总用时相同，所以 $p/7+s/2=p/2+s/7$，从而 $p=s$。",
+        "公共用时满足 $p/7+p/2=3/2$，故 $(9/14)p=3/2$，得到 $p=7/3$ km。Amrita 在 $(7/3)/7=1/3$ 小时后放下艇；Zhang 在 $(7/3)/2=7/6$ 小时后到达艇处。艇静止时间为 $7/6-1/3=5/6$ 小时，即 $50$ 分钟。",
+        "(b) 由因式形式，第一式给出 $x=0$ 或 $\\frac12+y-2x=0$；第二式给出 $y=0$ 或 $\\frac52+x-y=0$。若 $x=0$，则 $y=0$ 或 $5/2$；若 $y=0$，由 $x(1/2-2x^2)=0$ 得 $x=0$ 或 $x=\\pm1/2$。",
+        "当 $xy\\ne0$ 时，联立 $1+2y-4x^2=0$ 与 $5+2x-2y=0$。两式相加得 $6+2x-4x^2=0$，即 $(2x-3)(x+1)=0$。所以 $x=3/2$ 或 $-1$；再由 $y=x+5/2$ 得 $y=4$ 或 $3/2$。合并各情形即得所列六组解。"
+      ]
+    }]
+  },
+  "euclid-2016-q8": {
+    "summary": "(a) In parallelogram $ABCD$, point $E$ lies on $DC$ with $AE\\perp DC$, and point $F$ lies on $CB$ with $AF\\perp CB$. Given $AE=20$, $AF=32$, and $\\cos\\angle EAF=1/3$, find the exact area of quadrilateral $AECF$. (b) Find all $x>0$ satisfying $\\log_4x-\\log_x16=7/6-\\log_x8$.",
+    "summaryZh": "(a) 在平行四边形 $ABCD$ 中，点 $E$ 在 $DC$ 上且 $AE\\perp DC$，点 $F$ 在 $CB$ 上且 $AF\\perp CB$。已知 $AE=20$、$AF=32$、$\\cos\\angle EAF=1/3$，求四边形 $AECF$ 面积的精确值。(b) 求所有满足 $x>0$ 且 $\\log_4x-\\log_x16=7/6-\\log_x8$ 的 $x$。",
+    "answer": "(a) $302\\sqrt2$. (b) $x=2^{-2/3}$ or $8$.",
+    "answerZh": "(a) $302\\sqrt2$。(b) $x=2^{-2/3}$ 或 $8$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Subtract two right triangles and change logarithm bases",
+      "titleZh": "从平行四边形扣除两个直角三角形并换底",
+      "topics": [{"en":"Parallelogram area","zh":"平行四边形面积"},{"en":"Right-triangle trigonometry","zh":"直角三角形三角函数"},{"en":"Change of base","zh":"对数换底"},{"en":"Quadratic equations","zh":"二次方程"}],
+      "steps": [
+        "(a) Put $\\theta=\\angle EAF$. Then $\\cos\\theta=1/3$ and, since $\\theta$ is acute, $\\sin\\theta=\\sqrt{1-1/9}=2\\sqrt2/3$. Parallel sides and the two perpendiculars show that triangles $ABF$ and $ADE$ are right triangles with acute angle $\\theta$.",
+        "In triangle $ABF$, $AF/AB=\\sin\\theta$, so $AB=32/(2\\sqrt2/3)=24\\sqrt2$ and $BF=AB\\cos\\theta=8\\sqrt2$. Similarly, $AD=20/(2\\sqrt2/3)=15\\sqrt2$ and $DE=AD\\cos\\theta=5\\sqrt2$.",
+        "Quadrilateral $AECF$ is the parallelogram minus triangles $ABF$ and $ADE$. Thus its area is $(AB)(AE)-\\frac12(AF)(BF)-\\frac12(AE)(DE)=480\\sqrt2-128\\sqrt2-50\\sqrt2=302\\sqrt2$.",
+        "(b) The logarithm bases require $x>0$ and $x\\ne1$. Let $t=\\log_2x\\ne0$. By change of base, $\\log_4x=t/2$, $\\log_x16=4/t$, and $\\log_x8=3/t$.",
+        "The equation becomes $t/2-4/t=7/6-3/t$, hence $t/2=7/6+1/t$. Multiplying by $6t$ gives $3t^2-7t-6=(3t+2)(t-3)=0$. Therefore $t=-2/3$ or $3$, yielding $x=2^{-2/3}$ or $x=8$."
+      ],
+      "stepsZh": [
+        "(a) 令 $\\theta=\\angle EAF$。则 $\\cos\\theta=1/3$；因 $\\theta$ 为锐角，$\\sin\\theta=\\sqrt{1-1/9}=2\\sqrt2/3$。由对边平行及两个垂直关系，三角形 $ABF,ADE$ 均为含锐角 $\\theta$ 的直角三角形。",
+        "在三角形 $ABF$ 中，$AF/AB=\\sin\\theta$，故 $AB=32/(2\\sqrt2/3)=24\\sqrt2$，且 $BF=AB\\cos\\theta=8\\sqrt2$。同理，$AD=20/(2\\sqrt2/3)=15\\sqrt2$，$DE=AD\\cos\\theta=5\\sqrt2$。",
+        "四边形 $AECF$ 等于平行四边形扣除三角形 $ABF,ADE$，故面积为 $(AB)(AE)-\\frac12(AF)(BF)-\\frac12(AE)(DE)=480\\sqrt2-128\\sqrt2-50\\sqrt2=302\\sqrt2$。",
+        "(b) 对数底数要求 $x>0$ 且 $x\\ne1$。令 $t=\\log_2x\\ne0$。由换底公式，$\\log_4x=t/2$、$\\log_x16=4/t$、$\\log_x8=3/t$。",
+        "原方程化为 $t/2-4/t=7/6-3/t$，即 $t/2=7/6+1/t$。两边乘 $6t$ 得 $3t^2-7t-6=(3t+2)(t-3)=0$。所以 $t=-2/3$ 或 $3$，从而 $x=2^{-2/3}$ 或 $8$。"
+      ]
+    }]
+  },
+  "euclid-2016-q9": {
+    "summary": "(a) Count the length-$10$ strings over $\\{A,B\\}$ that do not contain the consecutive block $ABBA$. (b) In square $ABCD$, points $E,F$ lie on diagonal $AC$ in the order $A,E,F,C$, and $\\angle EDF=45^\\circ$. If $AE=x$, $EF=y$, and $FC=z$, prove $y^2=x^2+z^2$.",
+    "summaryZh": "(a) 求由 $A,B$ 组成且不含连续子串 $ABBA$ 的长度为 $10$ 的字符串总数。(b) 在正方形 $ABCD$ 中，点 $E,F$ 按 $A,E,F,C$ 的顺序位于对角线 $AC$ 上，且 $\\angle EDF=45^\\circ$。若 $AE=x,EF=y,FC=z$，证明 $y^2=x^2+z^2$。",
+    "answer": "(a) $631$. (b) $y^2=x^2+z^2$.",
+    "answerZh": "(a) $631$。(b) $y^2=x^2+z^2$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Use a prefix-state recurrence and a quarter-turn rotation",
+      "titleZh": "使用前缀状态递推与四分之一转旋转",
+      "topics": [{"en":"Finite-state counting","zh":"有限状态计数"},{"en":"Recurrence relations","zh":"递推关系"},{"en":"Rotations","zh":"旋转变换"},{"en":"Congruent triangles","zh":"全等三角形"},{"en":"Pythagorean theorem","zh":"勾股定理"}],
+      "steps": [
+        "(a) Track the longest suffix that is also a proper prefix of $ABBA$. Use states $0,1,2,3$ for suffixes $\\varnothing,A,AB,ABB$. From state $0$, letters $B,A$ lead to $0,1$; from $1$, $A,B$ lead to $1,2$; from $2$, $A,B$ lead to $1,3$; from $3$, $B$ leads to $0$, while $A$ is forbidden because it completes $ABBA$.",
+        "Starting from $(1,0,0,0)$ at length $0$, the state-count vectors for lengths $1$ through $10$ are $(1,1,0,0)$, $(1,2,1,0)$, $(1,4,2,1)$, $(2,7,4,2)$, $(4,13,7,4)$, $(8,24,13,7)$, $(15,45,24,13)$, $(28,84,45,24)$, $(52,157,84,45)$, and $(97,293,157,84)$. Their final sum is $631$.",
+        "(b) Rotate triangle $DFC$ by $90^\\circ$ counterclockwise about $D$, sending $C$ to $A$ and $F$ to $F'$. Then $F'A=FC=z$, $DF'=DF$, and $\\angle F'DE=45^\\circ=\\angle FDE$; the latter follows by combining the quarter-turn with $\\angle EDF=45^\\circ$.",
+        "Triangles $F'DE$ and $FDE$ are congruent by SAS, so $F'E=FE=y$. Because $AC$ is a square diagonal, $AE$ makes $45^\\circ$ with $AD$, while $AF'$ makes $45^\\circ$ on the other side; hence $\\angle F'AE=90^\\circ$.",
+        "Pythagoras in right triangle $F'AE$ gives $F'E^2=F'A^2+AE^2$. Substituting $F'E=y$, $F'A=z$, and $AE=x$ yields $y^2=z^2+x^2$."
+      ],
+      "stepsZh": [
+        "(a) 记录当前字符串的最长后缀，使其同时为 $ABBA$ 的真前缀。用状态 $0,1,2,3$ 分别表示后缀 $\\varnothing,A,AB,ABB$。从状态 $0$ 加 $B,A$ 分别到 $0,1$；从 $1$ 加 $A,B$ 到 $1,2$；从 $2$ 加 $A,B$ 到 $1,3$；从 $3$ 加 $B$ 到 $0$，而加 $A$ 会形成 $ABBA$，应禁止。",
+        "长度 $0$ 时从 $(1,0,0,0)$ 出发，长度 $1$ 至 $10$ 的状态计数依次为 $(1,1,0,0)$、$(1,2,1,0)$、$(1,4,2,1)$、$(2,7,4,2)$、$(4,13,7,4)$、$(8,24,13,7)$、$(15,45,24,13)$、$(28,84,45,24)$、$(52,157,84,45)$、$(97,293,157,84)$。最后四状态之和为 $631$。",
+        "(b) 将三角形 $DFC$ 绕 $D$ 逆时针旋转 $90^\\circ$，使 $C$ 映到 $A$、$F$ 映到 $F'$。于是 $F'A=FC=z$、$DF'=DF$，且结合四分之一转与 $\\angle EDF=45^\\circ$ 可得 $\\angle F'DE=45^\\circ=\\angle FDE$。",
+        "三角形 $F'DE$ 与 $FDE$ 由边角边全等，故 $F'E=FE=y$。正方形对角线 $AC$ 与 $AD$ 成 $45^\\circ$，而 $AF'$ 位于另一侧也成 $45^\\circ$，所以 $\\angle F'AE=90^\\circ$。",
+        "在直角三角形 $F'AE$ 中使用勾股定理，得到 $F'E^2=F'A^2+AE^2$。代入 $F'E=y$、$F'A=z$、$AE=x$，即得 $y^2=z^2+x^2$。"
+      ]
+    }]
+  },
+  "euclid-2016-q10": {
+    "summary": "For $k\\ge2$, each of two bags contains balls labelled $1,2,\\ldots,k$, and one ball is chosen uniformly from each bag. Let $P(k)$ be the probability that the product of the two labels is divisible by $k$. (a) Find $P(10)$. (b) Find a polynomial $f(n)$ such that $P(n)\\ge f(n)/n^2$ for every $n\\ge2$, with equality for infinitely many $n$. (c) Prove that some positive integer $m$ satisfies $P(m)>2016/m$.",
+    "summaryZh": "对 $k\\ge2$，两个袋中各有标号 $1,2,\\ldots,k$ 的球，每袋等可能取一球。令 $P(k)$ 为两球标号之积能被 $k$ 整除的概率。(a) 求 $P(10)$。(b) 求一个多项式 $f(n)$，使对所有 $n\\ge2$ 都有 $P(n)\\ge f(n)/n^2$，并且等号对无穷多个 $n$ 成立。(c) 证明存在正整数 $m$ 使 $P(m)>2016/m$。",
+    "answer": "(a) $P(10)=27/100$. (b) $f(n)=2n-1$. (c) One valid choice is $m=2^{8066}$.",
+    "answerZh": "(a) $P(10)=27/100$。(b) $f(n)=2n-1$。(c) 可取 $m=2^{8066}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2016/2016EuclidContest.pdf#page=5",
+    "methods": [{
+      "title": "Count ordered pairs and exploit powers of two",
+      "titleZh": "统计有序数对并利用二的幂",
+      "topics": [{"en":"Discrete probability","zh":"离散概率"},{"en":"Divisibility","zh":"整除性"},{"en":"Prime numbers","zh":"质数"},{"en":"Powers of two","zh":"二的幂"},{"en":"Valuations","zh":"素因子指数"}],
+      "steps": [
+        "(a) There are $100$ ordered pairs $(a,b)$. If $a=10$ or $b=10$, there are $10+10-1=19$ successful pairs. Otherwise a factor $5$ must come from one label being $5$, and the other must be one of $2,4,6,8$, giving $8$ more ordered pairs. Hence $P(10)=(19+8)/100=27/100$.",
+        "(b) For every $n\\ge2$, all pairs with $a=n$ or $b=n$ succeed. There are $n+n-1=2n-1$ such pairs among $n^2$, so $P(n)\\ge(2n-1)/n^2$. Thus take $f(n)=2n-1$.",
+        "If $n=p$ is prime, $p\\mid ab$ implies $p\\mid a$ or $p\\mid b$. Since $1\\le a,b\\le p$, this means $a=p$ or $b=p$, so the preceding $2p-1$ pairs are the only successful ones. Therefore equality holds for every prime $p$, and hence for infinitely many $n$.",
+        "(c) Let $N=2^k$. For each $j=1,\\ldots,k-1$, count pairs $(a,b)=(2^jx,2^{k-j}y)$ with $x,y$ odd and the labels at most $N$. There are $2^{k-j-1}$ choices for $x$ and $2^{j-1}$ for $y$, hence $2^{k-2}$ pairs for each $j$; pairs from different $j$ are distinct because the exact power of $2$ dividing $a$ differs.",
+        "Thus at least $(k-1)2^{k-2}$ of the $N^2$ pairs succeed, so $P(N)\\ge(k-1)/(4N)$. Choose $k=8066$ and $m=N=2^{8066}$. Then $(k-1)/4=8065/4>2016$, giving $P(m)>2016/m$."
+      ],
+      "stepsZh": [
+        "(a) 共有 $100$ 个有序数对 $(a,b)$。若 $a=10$ 或 $b=10$，成功数对有 $10+10-1=19$ 个。否则因数 $5$ 必须来自某个标号为 $5$ 的球，而另一个标号必须为 $2,4,6,8$ 之一，共再得 $8$ 个有序数对。因此 $P(10)=(19+8)/100=27/100$。",
+        "(b) 对任意 $n\\ge2$，所有满足 $a=n$ 或 $b=n$ 的数对均成功，共有 $n+n-1=2n-1$ 个。因此 $P(n)\\ge(2n-1)/n^2$，可取 $f(n)=2n-1$。",
+        "若 $n=p$ 为质数，则 $p\\mid ab$ 推出 $p\\mid a$ 或 $p\\mid b$。因 $1\\le a,b\\le p$，这等价于 $a=p$ 或 $b=p$，所以上述 $2p-1$ 个数对就是全部成功数对。故每个质数 $p$ 都取等号，而质数有无穷多个。",
+        "(c) 令 $N=2^k$。对每个 $j=1,\\ldots,k-1$，统计形如 $(a,b)=(2^jx,2^{k-j}y)$ 的数对，其中 $x,y$ 为奇数且标号不超过 $N$。$x$ 有 $2^{k-j-1}$ 种，$y$ 有 $2^{j-1}$ 种，因此每个 $j$ 给出 $2^{k-2}$ 个数对；不同 $j$ 产生的数对因 $a$ 中恰含的因子 $2$ 次数不同而互异。",
+        "故至少有 $(k-1)2^{k-2}$ 个成功数对，总数为 $N^2$，于是 $P(N)\\ge(k-1)/(4N)$。取 $k=8066$、$m=N=2^{8066}$，则 $(k-1)/4=8065/4>2016$，从而 $P(m)>2016/m$。"
+      ]
+    }]
+  }
+}
