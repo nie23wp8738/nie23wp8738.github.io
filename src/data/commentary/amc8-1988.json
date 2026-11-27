@@ -1,0 +1,177 @@
+{
+  "amc8-1988-q1": {
+    "summary": "A measuring scale runs from $10$ to $11$ with quarter-unit ticks. Its pointer is slightly past the $10.25$ tick. Estimate the reading. Options: A $10.05$, B $10.15$, C $10.25$, D $10.3$, E $10.6$.",
+    "summaryZh": "一只测量仪表的刻度从 $10$ 到 $11$，每隔四分之一个单位有一条刻线；指针略微越过 $10.25$ 刻线。估计读数。选项为 A $10.05$，B $10.15$，C $10.25$，D $10.3$，E $10.6$。",
+    "answer": "D. Approximately $10.3$.", "answerZh": "D．约为 $10.3$。",
+    "methods": [{"title":"Interpolate between adjacent ticks","titleZh":"在相邻刻度间估读","topics":[{"en":"Scale reading","zh":"刻度读数"},{"en":"Decimal estimation","zh":"小数估算"}],"steps":["The marked ticks represent $10,10.25,10.50,10.75,11$.","The pointer is just beyond $10.25$ but well before $10.50$, so $10.3$ is the only reasonable estimate."],"stepsZh":["各刻线依次表示 $10,10.25,10.50,10.75,11$。","指针略过 $10.25$，但明显未到 $10.50$，所以唯一合理的估读是 $10.3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/1"
+  },
+  "amc8-1988-q2": {
+    "summary": "Evaluate $8\\times0.25\\times2\\times0.125$. Options: A $1/8$, B $1/4$, C $1/2$, D $1$, E $2$.",
+    "summaryZh": "计算 $8\\times0.25\\times2\\times0.125$。选项为 A $1/8$，B $1/4$，C $1/2$，D $1$，E $2$。",
+    "answer": "C. $1/2$.", "answerZh": "C．$1/2$。",
+    "methods": [{"title":"Pair reciprocal factors","titleZh":"配对互为倒数的因子","topics":[{"en":"Fractions and decimals","zh":"分数与小数"},{"en":"Associative property","zh":"结合律"}],"steps":["Use $0.25=1/4$ and $0.125=1/8$.","Reorder the product: $(8\\cdot\\frac18)(2\\cdot\\frac14)=1\\cdot\\frac12=\\frac12$."],"stepsZh":["利用 $0.25=1/4$、$0.125=1/8$。","重排乘积：$(8\\cdot\\frac18)(2\\cdot\\frac14)=1\\cdot\\frac12=\\frac12$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/2"
+  },
+  "amc8-1988-q3": {
+    "summary": "Evaluate $\\frac1{10}+\\frac2{20}+\\frac3{30}$. Options: A $0.1$, B $0.123$, C $0.2$, D $0.3$, E $0.6$.",
+    "summaryZh": "计算 $\\frac1{10}+\\frac2{20}+\\frac3{30}$。选项为 A $0.1$，B $0.123$，C $0.2$，D $0.3$，E $0.6$。",
+    "answer": "D. $0.3$.", "answerZh": "D．$0.3$。",
+    "methods": [{"title":"Reduce before adding","titleZh":"先约分再相加","topics":[{"en":"Equivalent fractions","zh":"等值分数"},{"en":"Decimal addition","zh":"小数加法"}],"steps":["Each term equals one tenth: $2/20=3/30=1/10$.","Thus the sum is $3/10=0.3$."],"stepsZh":["三项都等于十分之一：$2/20=3/30=1/10$。","所以总和为 $3/10=0.3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/3"
+  },
+  "amc8-1988-q4": {
+    "summary": "A triangular checkerboard has $8$ horizontal rows. In every row the unit squares alternate dark and light, beginning and ending with a dark square. By how many does the number of dark squares exceed the number of light squares?",
+    "summaryZh": "一个三角形棋盘有 $8$ 条水平行。每行的单位方格按深、浅色交替排列，并且首尾都是深色方格。深色方格比浅色方格多多少个？",
+    "answer": "B. $8$.", "answerZh": "B．$8$ 个。",
+    "methods": [{"title":"Count the surplus row by row","titleZh":"逐行计算差值","topics":[{"en":"Pairing","zh":"配对"},{"en":"Counting by rows","zh":"逐行计数"}],"steps":["In one alternating row that starts and ends dark, pair every light square with the dark square immediately before it.","Exactly one dark square remains unpaired in each row. Eight rows therefore contribute a total surplus of $8$."],"stepsZh":["在任意一条首尾均为深色的交替行中，把每个浅色方格与它前面的深色方格配对。","每行恰剩一个未配对的深色方格，因此八行的总差值为 $8$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/4"
+  },
+  "amc8-1988-q5": {
+    "summary": "A protractor has centre $B$, with its left baseline labelled $0^\\circ$ and right baseline $180^\\circ$. Ray $BA$ passes through $20^\\circ$, ray $BD$ through $160^\\circ$, and $\\angle CBD=90^\\circ$. Estimate $\\angle ABC$. Options: A $20^\\circ$, B $40^\\circ$, C $50^\\circ$, D $70^\\circ$, E $120^\\circ$.",
+    "summaryZh": "量角器中心为 $B$，左端基线标作 $0^\\circ$、右端标作 $180^\\circ$。射线 $BA$ 通过 $20^\\circ$ 刻度，射线 $BD$ 通过 $160^\\circ$ 刻度，且 $\\angle CBD=90^\\circ$。估计 $\\angle ABC$。选项为 A $20^\\circ$，B $40^\\circ$，C $50^\\circ$，D $70^\\circ$，E $120^\\circ$。",
+    "answer": "C. $50^\\circ$.", "answerZh": "C．$50^\\circ$。",
+    "methods": [{"title":"Subtract protractor readings","titleZh":"利用量角器读数作差","topics":[{"en":"Angle measurement","zh":"角度测量"},{"en":"Right angles","zh":"直角"}],"steps":["Since $BD$ is at $160^\\circ$ and $\\angle CBD=90^\\circ$, ray $BC$ is at $160^\\circ-90^\\circ=70^\\circ$ on the same scale.","Therefore $\\angle ABC=70^\\circ-20^\\circ=50^\\circ$."],"stepsZh":["$BD$ 位于 $160^\\circ$ 刻度，而 $\\angle CBD=90^\\circ$，故同一刻度上的 $BC$ 读数为 $160^\\circ-90^\\circ=70^\\circ$。","所以 $\\angle ABC=70^\\circ-20^\\circ=50^\\circ$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/5"
+  },
+  "amc8-1988-q6": {
+    "summary": "Evaluate $\\dfrac{(0.2)^3}{(0.02)^2}$. Options: A $0.2$, B $2$, C $10$, D $15$, E $20$.",
+    "summaryZh": "计算 $\\dfrac{(0.2)^3}{(0.02)^2}$。选项为 A $0.2$，B $2$，C $10$，D $15$，E $20$。",
+    "answer": "E. $20$.", "answerZh": "E．$20$。",
+    "methods": [{"title":"Pair equal powers","titleZh":"配对相同次数的因子","topics":[{"en":"Powers of decimals","zh":"小数幂"},{"en":"Simplifying ratios","zh":"比值化简"}],"steps":["Separate one factor $0.2$: $\\frac{(0.2)^3}{(0.02)^2}=0.2(\\frac{0.2}{0.02})^2$.","Since $0.2/0.02=10$, the value is $0.2\\cdot100=20$."],"stepsZh":["先分出一个 $0.2$：$\\frac{(0.2)^3}{(0.02)^2}=0.2(\\frac{0.2}{0.02})^2$。","因为 $0.2/0.02=10$，结果为 $0.2\\cdot100=20$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/6"
+  },
+  "amc8-1988-q7": {
+    "summary": "Which hundred is closest to $2.46\\times8.163\\times(5.17+4.829)$? Options: A $100$, B $200$, C $300$, D $400$, E $500$.",
+    "summaryZh": "$2.46\\times8.163\\times(5.17+4.829)$ 最接近下面哪个整百数？选项为 A $100$，B $200$，C $300$，D $400$，E $500$。",
+    "answer": "B. $200$.", "answerZh": "B．$200$。",
+    "methods": [{"title":"Round compatible factors","titleZh":"把因子估成便于相乘的数","topics":[{"en":"Estimation","zh":"估算"},{"en":"Compatible numbers","zh":"相容数"}],"steps":["The parenthesis is $5.17+4.829=9.999$, essentially $10$.","Also $2.46\\approx2.5$ and $8.163\\approx8$, so the product is about $2.5\\cdot8\\cdot10=200$."],"stepsZh":["括号内 $5.17+4.829=9.999$，几乎等于 $10$。","又有 $2.46\\approx2.5$、$8.163\\approx8$，故乘积约为 $2.5\\cdot8\\cdot10=200$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/7"
+  },
+  "amc8-1988-q8": {
+    "summary": "Betty intended to multiply $0.075\\times2.56$ but entered the digits without decimal points; the calculator displayed $19200$. What should the correct product be? Options: A $0.0192$, B $0.192$, C $1.92$, D $19.2$, E $192$.",
+    "summaryZh": "Betty 原想计算 $0.075\\times2.56$，但输入时漏掉小数点，计算器显示 $19200$。正确乘积是多少？选项为 A $0.0192$，B $0.192$，C $1.92$，D $19.2$，E $192$。",
+    "answer": "B. $0.192$.", "answerZh": "B．$0.192$。",
+    "methods": [{"title":"Restore the decimal places","titleZh":"恢复小数位数","topics":[{"en":"Decimal multiplication","zh":"小数乘法"},{"en":"Place value","zh":"位值制"}],"steps":["The two factors contain $3+2=5$ decimal places in total.","Place the decimal five digits from the right in $19200$: $0.19200=0.192$."],"stepsZh":["两个因数的小数位数合计为 $3+2=5$ 位。","把 $19200$ 的小数点从右向左移动五位，得 $0.19200=0.192$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/8"
+  },
+  "amc8-1988-q9": {
+    "summary": "Five triangles have lattice-point vertices on a square grid: $[(0,6),(2,6),(1,4)]$, $[(3,4),(3,6),(5,4)]$, $[(0,1),(3,2),(6,1)]$, $[(7,4),(6,6),(9,4)]$, and $[(8,1),(9,3),(10,0)]$. How many are isosceles? Options: A $1$, B $2$, C $3$, D $4$, E $5$.",
+    "summaryZh": "方格纸上有五个顶点均为格点的三角形，其顶点分别为 $[(0,6),(2,6),(1,4)]$、$[(3,4),(3,6),(5,4)]$、$[(0,1),(3,2),(6,1)]$、$[(7,4),(6,6),(9,4)]$、$[(8,1),(9,3),(10,0)]$。其中有多少个等腰三角形？选项为 A $1$，B $2$，C $3$，D $4$，E $5$。",
+    "answer": "D. $4$.", "answerZh": "D．$4$ 个。",
+    "methods": [{"title":"Compare squared side lengths","titleZh":"比较边长平方","topics":[{"en":"Distance formula","zh":"距离公式"},{"en":"Isosceles triangles","zh":"等腰三角形"}],"steps":["For lattice points, compare $\\Delta x^2+\\Delta y^2$ instead of taking square roots.","The five squared-side triples are $(5,5,4)$, $(4,4,8)$, $(10,10,36)$, $(5,4,13)$, and $(5,5,10)$, respectively.","The first, second, third, and fifth triples contain an equal pair; the fourth does not. Hence exactly four triangles are isosceles."],"stepsZh":["对格点之间的距离，无需开方，只比较 $\\Delta x^2+\\Delta y^2$。","五个三角形的三边长平方依次为 $(5,5,4)$、$(4,4,8)$、$(10,10,36)$、$(5,4,13)$、$(5,5,10)$。","第一、二、三、五组均有两个相等值，第四组没有，所以恰有四个等腰三角形。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/9"
+  },
+  "amc8-1988-q10": {
+    "summary": "Chris's birthday is on a Thursday. What weekday is $60$ days later? Options: A Monday, B Wednesday, C Thursday, D Friday, E Saturday.",
+    "summaryZh": "Chris 的生日是星期四。$60$ 天后是星期几？选项为 A 星期一，B 星期三，C 星期四，D 星期五，E 星期六。",
+    "answer": "A. Monday.", "answerZh": "A．星期一。",
+    "methods": [{"title":"Reduce modulo seven","titleZh":"对七取余","topics":[{"en":"Modular arithmetic","zh":"模运算"},{"en":"Weekday cycles","zh":"星期周期"}],"steps":["Since $60=8\\cdot7+4$, only four extra days affect the weekday.","Four days after Thursday are Friday, Saturday, Sunday, Monday."],"stepsZh":["因为 $60=8\\cdot7+4$，整周不改变星期，只需向后数四天。","星期四之后依次为星期五、星期六、星期日、星期一。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/10"
+  },
+  "amc8-1988-q11": {
+    "summary": "Locate $\\sqrt{164}$. Options: A $42$, B less than $10$, C between $10$ and $11$, D between $11$ and $12$, E between $12$ and $13$.",
+    "summaryZh": "判断 $\\sqrt{164}$ 所在范围。选项为 A $42$，B 小于 $10$，C 在 $10$ 与 $11$ 之间，D 在 $11$ 与 $12$ 之间，E 在 $12$ 与 $13$ 之间。",
+    "answer": "E. Between $12$ and $13$.", "answerZh": "E．在 $12$ 与 $13$ 之间。",
+    "methods": [{"title":"Bracket by consecutive squares","titleZh":"用相邻完全平方数夹逼","topics":[{"en":"Square roots","zh":"平方根"},{"en":"Bounding","zh":"夹逼"}],"steps":["The consecutive squares around $164$ are $12^2=144$ and $13^2=169$.","Thus $144<164<169$, so $12<\\sqrt{164}<13$."],"stepsZh":["$164$ 两侧的相邻完全平方数为 $12^2=144$ 与 $13^2=169$。","由 $144<164<169$ 得 $12<\\sqrt{164}<13$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/11"
+  },
+  "amc8-1988-q12": {
+    "summary": "An estimated $20$ billion dollar Mars mission cost is shared equally by $250$ million people. Find each person's share. Options: A $40$, B $50$, C $80$, D $100$, E $125$.",
+    "summaryZh": "一项火星任务估计耗资 $200$ 亿美元，由 $2.5$ 亿人平均分担。每人应分担多少？选项为 A $40$ 美元，B $50$ 美元，C $80$ 美元，D $100$ 美元，E $125$ 美元。",
+    "answer": "C. $80$ dollars.", "answerZh": "C．$80$ 美元。",
+    "methods": [{"title":"Use the same large-number unit","titleZh":"统一大数单位","topics":[{"en":"Unit conversion","zh":"单位换算"},{"en":"Rates","zh":"均分"}],"steps":["Write $20$ billion as $20{,}000$ million.","Then $20{,}000\\text{ million}/250\\text{ million}=20{,}000/250=80$ dollars per person."],"stepsZh":["把 $200$ 亿写成 $20{,}000$ 百万美元。","于是每人分担 $20{,}000\\text{ 百万}/250\\text{ 百万}=20{,}000/250=80$ 美元。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/12"
+  },
+  "amc8-1988-q13": {
+    "summary": "Rose bushes are planted about one foot apart around a circular patio of radius $12$ feet. Approximately how many bushes are needed? Options: A $12$, B $38$, C $48$, D $75$, E $450$.",
+    "summaryZh": "沿半径为 $12$ 英尺的圆形露台边缘种玫瑰，相邻花丛约相隔 $1$ 英尺。大约需要多少丛？选项为 A $12$，B $38$，C $48$，D $75$，E $450$。",
+    "answer": "D. Approximately $75$ bushes.", "answerZh": "D．约 $75$ 丛。",
+    "methods": [{"title":"Use the circumference","titleZh":"使用圆周长","topics":[{"en":"Circumference","zh":"圆周长"},{"en":"Estimation","zh":"估算"}],"steps":["The boundary length is $2\\pi r=24\\pi\\approx75.4$ feet.","At roughly one bush per foot, about $75$ bushes are required."],"stepsZh":["露台边缘长度为 $2\\pi r=24\\pi\\approx75.4$ 英尺。","按每英尺约一丛，需要约 $75$ 丛。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/13"
+  },
+  "amc8-1988-q14": {
+    "summary": "Whole numbers $x,y$ satisfy $xy=36$. Find the largest possible value of $x+y$. Options: A $12$, B $13$, C $15$, D $20$, E $37$.",
+    "summaryZh": "非负整数 $x,y$ 满足 $xy=36$。求 $x+y$ 的最大可能值。选项为 A $12$，B $13$，C $15$，D $20$，E $37$。",
+    "answer": "E. $37$.", "answerZh": "E．$37$。",
+    "methods": [{"title":"List positive factor pairs","titleZh":"列出正因数对","topics":[{"en":"Factors","zh":"因数"},{"en":"Optimisation","zh":"最值"}],"steps":["Because the product is positive and equals $36$, the relevant whole-number pairs are $(1,36),(2,18),(3,12),(4,9),(6,6)$.","Their sums are $37,20,15,13,12$; the largest is $37$."],"stepsZh":["乘积为正且等于 $36$，相应非负整数因数对为 $(1,36),(2,18),(3,12),(4,9),(6,6)$。","各和依次为 $37,20,15,13,12$，最大值为 $37$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/14"
+  },
+  "amc8-1988-q15": {
+    "summary": "Find the reciprocal of $\\frac12+\\frac13$. Options: A $1/6$, B $2/5$, C $6/5$, D $5/2$, E $5$.",
+    "summaryZh": "求 $\\frac12+\\frac13$ 的倒数。选项为 A $1/6$，B $2/5$，C $6/5$，D $5/2$，E $5$。",
+    "answer": "C. $6/5$.", "answerZh": "C．$6/5$。",
+    "methods": [{"title":"Add first, then invert","titleZh":"先相加，再取倒数","topics":[{"en":"Reciprocals","zh":"倒数"},{"en":"Fraction addition","zh":"分数加法"}],"steps":["Combine the fractions: $\\frac12+\\frac13=\\frac36+\\frac26=\\frac56$.","The reciprocal of $5/6$ is $6/5$."],"stepsZh":["先通分相加：$\\frac12+\\frac13=\\frac36+\\frac26=\\frac56$。","$5/6$ 的倒数为 $6/5$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/15"
+  },
+  "amc8-1988-q16": {
+    "summary": "Place at most one $X$ in each cell of a $3\\times3$ grid. What is the greatest number of $X$'s possible if no row, column, or main diagonal may contain three $X$'s? Options: A $2$, B $3$, C $4$, D $5$, E $6$.",
+    "summaryZh": "在一个 $3\\times3$ 方格中，每格至多放一个 $X$。若任何一行、一列或两条主对角线都不能出现三个 $X$，最多能放多少个 $X$？选项为 A $2$，B $3$，C $4$，D $5$，E $6$。",
+    "answer": "E. $6$.", "answerZh": "E．$6$ 个。",
+    "methods": [{"title":"Upper bound and construction","titleZh":"上界与构造","topics":[{"en":"Extremal counting","zh":"极值计数"},{"en":"Pigeonhole principle","zh":"抽屉原理"}],"steps":["If $7$ X's were placed in three rows, some row would contain at least $\\lceil7/3\\rceil=3$ X's, which is forbidden. Thus at most $6$ X's are possible.","The bound is attainable: leave the centre and two opposite corners empty. These three cells meet all three rows, all three columns, and both main diagonals, so the other six cells may contain X's."],"stepsZh":["若在三行中放入 $7$ 个 $X$，由抽屉原理，至少一行含 $\\lceil7/3\\rceil=3$ 个 $X$，与条件矛盾。因此最多只能放 $6$ 个。","该上界可达到：留中心格和一对相对角格为空。这三格覆盖三行、三列及两条主对角线，其余六格均可放 $X$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/16"
+  },
+  "amc8-1988-q17": {
+    "summary": "A horizontal $10\\times2$ rectangle and a perpendicular vertical $3\\times8$ rectangle overlap in a $3\\times2$ rectangle. Find the area of their union. Options: A $23$, B $38$, C $44$, D $46$, E cannot be determined.",
+    "summaryZh": "一个 $10\\times2$ 的水平长方形与一个 $3\\times8$ 的竖直长方形垂直相交，重叠部分为 $3\\times2$ 长方形。求两图形并集面积。选项为 A $23$，B $38$，C $44$，D $46$，E 无法确定。",
+    "answer": "B. $38$ square units.", "answerZh": "B．$38$ 平方单位。",
+    "methods": [{"title":"Inclusion–exclusion for area","titleZh":"面积的容斥原理","topics":[{"en":"Area","zh":"面积"},{"en":"Inclusion–exclusion","zh":"容斥原理"}],"steps":["The two rectangle areas are $10\\cdot2=20$ and $3\\cdot8=24$.","Their $3\\times2$ overlap has area $6$ and was counted twice, so the union area is $20+24-6=38$."],"stepsZh":["两个长方形面积分别为 $10\\cdot2=20$ 与 $3\\cdot8=24$。","$3\\times2$ 的重叠区域面积为 $6$，相加时被重复计算，故并集面积为 $20+24-6=38$。"]},{"title":"Decompose into disjoint pieces","titleZh":"分割成互不重叠的部分","topics":[{"en":"Area decomposition","zh":"面积分割"}],"steps":["Keep the whole horizontal rectangle, area $20$.","The parts of the vertical rectangle outside it have total height $8-2=6$ and width $3$, hence area $18$. Thus the total is $20+18=38$."],"stepsZh":["保留整个水平长方形，面积为 $20$。","竖直长方形伸出部分总高为 $8-2=6$、宽为 $3$，面积为 $18$，所以总面积为 $20+18=38$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/17"
+  },
+  "amc8-1988-q18": {
+    "summary": "Six boys have average weight $150$ pounds and four girls have average weight $120$ pounds. Find the average weight of all ten children. Options: A $135$, B $137$, C $138$, D $140$, E $141$ pounds.",
+    "summaryZh": "六名男生的平均体重为 $150$ 磅，四名女生的平均体重为 $120$ 磅。求十名学生的平均体重。选项为 A $135$，B $137$，C $138$，D $140$，E $141$ 磅。",
+    "answer": "C. $138$ pounds.", "answerZh": "C．$138$ 磅。",
+    "methods": [{"title":"Combine total weights","titleZh":"合并总重量","topics":[{"en":"Weighted average","zh":"加权平均"},{"en":"Mean","zh":"平均数"}],"steps":["The boys' total is $6\\cdot150=900$ pounds and the girls' total is $4\\cdot120=480$ pounds.","The combined average is $(900+480)/10=138$ pounds."],"stepsZh":["男生总重量为 $6\\cdot150=900$ 磅，女生总重量为 $4\\cdot120=480$ 磅。","合并后的平均数为 $(900+480)/10=138$ 磅。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/18"
+  },
+  "amc8-1988-q19": {
+    "summary": "Find the $100$th term of $1,5,9,13,17,\\ldots$. Options: A $397$, B $399$, C $401$, D $403$, E $405$.",
+    "summaryZh": "求等差数列 $1,5,9,13,17,\\ldots$ 的第 $100$ 项。选项为 A $397$，B $399$，C $401$，D $403$，E $405$。",
+    "answer": "A. $397$.", "answerZh": "A．$397$。",
+    "methods": [{"title":"Use the arithmetic-sequence formula","titleZh":"使用等差数列通项公式","topics":[{"en":"Arithmetic sequences","zh":"等差数列"}],"steps":["The first term is $1$ and the common difference is $4$.","Thus $a_{100}=1+(100-1)\\cdot4=397$."],"stepsZh":["首项为 $1$，公差为 $4$。","所以 $a_{100}=1+(100-1)\\cdot4=397$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/19"
+  },
+  "amc8-1988-q20": {
+    "summary": "A cylindrical coffee maker's gauge shows $45$ cups when it is $36\\%$ full. How many cups does it hold when full? Options: A $80$, B $100$, C $125$, D $130$, E $262$.",
+    "summaryZh": "一个圆柱形咖啡壶的刻度显示：装有 $45$ 杯时达到容量的 $36\\%$。装满时可容纳多少杯？选项为 A $80$，B $100$，C $125$，D $130$，E $262$。",
+    "answer": "C. $125$ cups.", "answerZh": "C．$125$ 杯。",
+    "methods": [{"title":"Divide the part by its percentage","titleZh":"用部分量除以所占百分比","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Proportion","zh":"比例"}],"steps":["Let the full capacity be $C$. Then $0.36C=45$.","Hence $C=45/0.36=4500/36=125$ cups."],"stepsZh":["设满容量为 $C$ 杯，则 $0.36C=45$。","因此 $C=45/0.36=4500/36=125$ 杯。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/20"
+  },
+  "amc8-1988-q21": {
+    "summary": "A number $n$ is added to $\\{3,6,9,10\\}$. For how many real values of $n$ does the mean of the five numbers equal their median? Options: A $1$, B $2$, C $3$, D $4$, E more than $4$.",
+    "summaryZh": "向集合 $\\{3,6,9,10\\}$ 中加入一个实数 $n$。有多少个 $n$ 使五个数的平均数等于中位数？选项为 A $1$，B $2$，C $3$，D $4$，E 多于 $4$。",
+    "answer": "C. $3$ values: $n=2,7,17$.", "answerZh": "C．共有 $3$ 个：$n=2,7,17$。",
+    "methods": [{"title":"Split by the position of the new number","titleZh":"按新数在排序中的位置分类","topics":[{"en":"Median","zh":"中位数"},{"en":"Casework","zh":"分类讨论"},{"en":"Mean","zh":"平均数"}],"steps":["The mean is $(28+n)/5$. If $n\\le6$, the median is $6$, giving $n=2$, which fits this case.","If $6\\le n\\le9$, the median is $n$, giving $(28+n)/5=n$ and hence $n=7$.","If $n\\ge9$, the median is $9$, giving $n=17$. All three candidates satisfy their assumed ranges, so there are three values."],"stepsZh":["平均数为 $(28+n)/5$。若 $n\\le6$，中位数为 $6$，解得 $n=2$，符合范围。","若 $6\\le n\\le9$，中位数为 $n$，由 $(28+n)/5=n$ 得 $n=7$。","若 $n\\ge9$，中位数为 $9$，解得 $n=17$。三个候选值都符合各自范围，所以共有三个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/21"
+  },
+  "amc8-1988-q22": {
+    "summary": "A shop raises every original price by $25\\%$, then discounts the raised prices by $20\\%$. Which statement describes the final sale price? A It is $5\\%$ higher than the original; B it is higher by less than $5\\%$; C it is higher by more than $5\\%$; D it is lower; E it is the same as the original.",
+    "summaryZh": "一家商店先把所有原价提高 $25\\%$，再按提高后的价格打八折。最终售价如何？A 比原价高 $5\\%$；B 比原价高但不足 $5\\%$；C 比原价高且超过 $5\\%$；D 比原价低；E 与原价相同。",
+    "answer": "E. The sale price is the same as the original price.", "answerZh": "E．售价与原价相同。",
+    "methods": [{"title":"Multiply successive percentage factors","titleZh":"相乘连续百分比变化因子","topics":[{"en":"Compound percentages","zh":"连续百分比变化"},{"en":"Multipliers","zh":"倍数因子"}],"steps":["A $25\\%$ increase multiplies by $1.25$; a $20\\%$ discount multiplies by $0.80$.","The combined factor is $1.25\\cdot0.80=1$, so the final price equals the original."],"stepsZh":["上涨 $25\\%$ 相当于乘 $1.25$；打八折相当于乘 $0.80$。","合成因子为 $1.25\\cdot0.80=1$，所以最终售价等于原价。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/22"
+  },
+  "amc8-1988-q23": {
+    "summary": "Maria buys computer disks at $4$ for $5$ dollars and sells them at $3$ for $5$ dollars. How many disks must she sell to earn a profit of $100$ dollars? Options: A $100$, B $120$, C $200$, D $240$, E $1200$.",
+    "summaryZh": "Maria 以每 $4$ 张 $5$ 美元的价格买入电脑磁盘，再以每 $3$ 张 $5$ 美元的价格卖出。要获利 $100$ 美元，她必须卖出多少张？选项为 A $100$，B $120$，C $200$，D $240$，E $1200$。",
+    "answer": "D. $240$ disks.", "answerZh": "D．$240$ 张。",
+    "methods": [{"title":"Use profit per disk","titleZh":"按每张利润计算","topics":[{"en":"Unit rates","zh":"单位率"},{"en":"Profit","zh":"利润"}],"steps":["Each disk costs $5/4$ dollars and sells for $5/3$ dollars, so profit per disk is $5/3-5/4=5/12$ dollar.","The number required is $100/(5/12)=240$."],"stepsZh":["每张成本为 $5/4$ 美元，售价为 $5/3$ 美元，故每张利润为 $5/3-5/4=5/12$ 美元。","需要卖出的数量为 $100/(5/12)=240$。"]},{"title":"Work in batches of twelve","titleZh":"按十二张一批计算","topics":[{"en":"Least common multiple","zh":"最小公倍数"}],"steps":["Twelve disks cost $3\\cdot5=15$ dollars and sell for $4\\cdot5=20$ dollars, a profit of $5$ dollars.","A $100$-dollar profit needs $20$ such batches, or $20\\cdot12=240$ disks."],"stepsZh":["十二张磁盘的成本为 $3\\cdot5=15$ 美元，售价为 $4\\cdot5=20$ 美元，每批利润 $5$ 美元。","获利 $100$ 美元需要 $20$ 批，共 $20\\cdot12=240$ 张。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/23"
+  },
+  "amc8-1988-q24": {
+    "summary": "A square containing an upward-pointing marked triangle begins with its bottom edge against the top edge of a fixed regular hexagon. It rolls clockwise around three consecutive vertices until it reaches the bottom edge of the hexagon. In which direction does the marked triangle point then?",
+    "summaryZh": "一个正方形内部标有一个初始向上的实心三角形；正方形的下边最初贴在固定正六边形的上边。它沿六边形外侧顺时针绕过连续三个顶点，直至到达六边形底边。此时标记三角形指向哪个方向？",
+    "answer": "A. It points to the right.", "answerZh": "A．指向右方。",
+    "methods": [{"title":"Track the rotation at each vertex","titleZh":"追踪每个顶点处的转角","topics":[{"en":"Rotations","zh":"旋转"},{"en":"Regular hexagons","zh":"正六边形"}],"steps":["At each hexagon vertex, the square turns through $360^\\circ-120^\\circ-90^\\circ=150^\\circ$ clockwise.","After three vertices the total is $3\\cdot150^\\circ=450^\\circ$, equivalent to $90^\\circ$ clockwise.","An upward-pointing triangle rotated $90^\\circ$ clockwise points right."],"stepsZh":["每经过六边形一个顶点，正方形顺时针转过 $360^\\circ-120^\\circ-90^\\circ=150^\\circ$。","经过三个顶点的总转角为 $3\\cdot150^\\circ=450^\\circ$，等价于顺时针 $90^\\circ$。","原先向上的三角形顺时针旋转 $90^\\circ$ 后指向右方。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/24"
+  },
+  "amc8-1988-q25": {
+    "summary": "Ignore the colon in a digital time and call the display palindromic if its digits read the same forwards and backwards; examples are $1{:}01$, $4{:}44$, and $12{:}21$. How many palindromic displays occur in a $12$-hour period? Options: A $57$, B $60$, C $63$, D $90$, E $93$.",
+    "summaryZh": "忽略电子钟时间中的冒号；若所得数字串正读、反读相同，就称该时刻为回文时刻，例如 $1{:}01$、$4{:}44$、$12{:}21$。一个 $12$ 小时周期内共有多少个回文时刻？选项为 A $57$，B $60$，C $63$，D $90$，E $93$。",
+    "answer": "A. $57$.", "answerZh": "A．$57$ 个。",
+    "methods": [{"title":"Separate one-digit and two-digit hours","titleZh":"区分一位数与两位数小时","topics":[{"en":"Palindromes","zh":"回文数"},{"en":"Casework","zh":"分类讨论"},{"en":"Counting","zh":"计数"}],"steps":["For a one-digit hour $h=1,\\ldots,9$, the display has form $h{:}th$, where the tens digit $t$ of the minutes may be any of $0,1,\\ldots,5$. This gives $9\\cdot6=54$ times.","For two-digit hours, only $10{:}01$, $11{:}11$, and $12{:}21$ work, giving $3$ more.","The total is $54+3=57$."],"stepsZh":["对一位数小时 $h=1,\\ldots,9$，回文显示必须形如 $h{:}th$，分钟十位 $t$ 可为 $0,1,\\ldots,5$，共有 $9\\cdot6=54$ 个。","两位数小时只有 $10{:}01$、$11{:}11$、$12{:}21$ 三个回文时刻。","总数为 $54+3=57$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1988/problem/25"
+  }
+}
