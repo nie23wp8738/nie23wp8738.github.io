@@ -1,0 +1,177 @@
+{
+  "amc10-2000-q1": {
+    "summary": "In 2001 the United States will host the International Mathematical Olympiad. Distinct positive integers $I,M,O$ satisfy $IMO=2001$. Find the largest possible value of $I+M+O$. Options: A $23$, B $55$, C $99$, D $111$, E $671$.",
+    "summaryZh": "2001 年美国将主办国际数学奥林匹克。互不相同的正整数 $I,M,O$ 满足 $IMO=2001$。求 $I+M+O$ 的最大值。选项为 A $23$，B $55$，C $99$，D $111$，E $671$。",
+    "answer": "E. $671$.", "answerZh": "E．$671$。",
+    "methods": [{"title":"Factor and compare the divisor triples","titleZh":"分解质因数并比较因数组","topics":[{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Optimisation","zh":"最值"}],"steps":["Factor $2001=3\\cdot23\\cdot29$. A largest sum can use $1$ as one factor; the other distinct factor pairs are $(3,667),(23,87),(29,69)$.","Their sums with $1$ are $671,111,99$. If no factor is $1$, splitting the three prime factors gives $3+23+29=55$. Hence the maximum is $671$."],"stepsZh":["分解得 $2001=3\\cdot23\\cdot29$。为使和尽量大，可令一个因数为 $1$；其余两个不同因数的配对为 $(3,667),(23,87),(29,69)$。","对应总和为 $671,111,99$。若不含 $1$，只能把三个质因数分别分配，和为 $55$。所以最大值为 $671$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/1"
+  },
+  "amc10-2000-q2": {
+    "summary":"Which expression equals $2000\\cdot2000^{2000}$? Options: A $2000^{2001}$, B $4000^{2000}$, C $2000^{4000}$, D $4{,}000{,}000^{2000}$, E $2000^{4{,}000{,}000}$.",
+    "summaryZh":"下列哪个式子等于 $2000\\cdot2000^{2000}$？选项为 A $2000^{2001}$，B $4000^{2000}$，C $2000^{4000}$，D $4{,}000{,}000^{2000}$，E $2000^{4{,}000{,}000}$。",
+    "answer":"A. $2000^{2001}$.","answerZh":"A．$2000^{2001}$。",
+    "methods":[{"title":"Add exponents with the same base","titleZh":"同底数幂相乘指数相加","topics":[{"en":"Exponent laws","zh":"指数运算"}],"steps":["Write $2000=2000^1$.","Then $2000^1\\cdot2000^{2000}=2000^{1+2000}=2000^{2001}$. "],"stepsZh":["把 $2000$ 写成 $2000^1$。","于是 $2000^1\\cdot2000^{2000}=2000^{1+2000}=2000^{2001}$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/2"
+  },
+  "amc10-2000-q3": {
+    "summary":"Each day Jenny eats $20\\%$ of the jellybeans present at the beginning of that day. After the second day, $32$ remain. How many were present originally? Options: A $40$, B $50$, C $55$, D $60$, E $75$.",
+    "summaryZh":"Jenny 每天吃掉当天开始时糖豆数的 $20\\%$。第二天结束时剩下 $32$ 颗。最初有多少颗？选项为 A $40$，B $50$，C $55$，D $60$，E $75$。",
+    "answer":"B. $50$.","answerZh":"B．$50$。",
+    "methods":[{"title":"Work backwards with the remaining fraction","titleZh":"利用剩余比例逆推","topics":[{"en":"Percentages","zh":"百分数"},{"en":"Working backwards","zh":"逆推"}],"steps":["Each day leaves $80\\%=0.8$ of the previous amount.","If the original amount is $x$, then $(0.8)^2x=32$, so $x=32/0.64=50$."],"stepsZh":["每天结束时留下原有数量的 $80\\%=0.8$。","设最初有 $x$ 颗，则 $(0.8)^2x=32$，所以 $x=32/0.64=50$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/3"
+  },
+  "amc10-2000-q4": {
+    "summary":"An online service bill equals a fixed monthly fee plus an hourly connection charge. The December bill was 12.48 dollars. January cost 17.54 dollars after twice as much connection time. Find the fixed fee. Options: A 2.53, B 5.06, C 6.24, D 7.42, E 8.77 dollars.",
+    "summaryZh":"某在线服务账单由固定月费与按小时计费的上网费组成。12 月账单为 12.48 美元；1 月上网时间是 12 月的两倍，账单为 17.54 美元。求固定月费。选项为 A 2.53，B 5.06，C 6.24，D 7.42，E 8.77 美元。",
+    "answer":"D. 7.42 dollars.","answerZh":"D．7.42 美元。",
+    "methods":[{"title":"Use the increase to recover the variable charge","titleZh":"用账单增量求可变费用","topics":[{"en":"Linear equations","zh":"一次方程"},{"en":"Systems of equations","zh":"方程组"}],"steps":["Let the fixed fee be $F$ and December's connection charge be $H$. Then $F+H=12.48$ and $F+2H=17.54$.","Subtracting gives $H=5.06$, so $F=12.48-5.06=7.42$ dollars."],"stepsZh":["设固定月费为 $F$，12 月上网费为 $H$，则 $F+H=12.48$，$F+2H=17.54$。","两式相减得 $H=5.06$，所以 $F=12.48-5.06=7.42$ 美元。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/4"
+  },
+  "amc10-2000-q5": {
+    "summary":"In triangle $PAB$, $M,N$ are the midpoints of $PA,PB$. Point $P$ moves along a fixed line parallel to $AB$. How many of these quantities change: (a) $MN$; (b) the perimeter of $PAB$; (c) the area of $PAB$; (d) the area of trapezoid $ABNM$? Options: A $0$, B $1$, C $2$, D $3$, E $4$.",
+    "summaryZh":"在三角形 $PAB$ 中，$M,N$ 分别为 $PA,PB$ 的中点。点 $P$ 沿一条与 $AB$ 平行的定直线移动。下列量中有几个会改变：(a) $MN$ 的长度；(b) 三角形 $PAB$ 的周长；(c) 三角形 $PAB$ 的面积；(d) 梯形 $ABNM$ 的面积？选项为 A $0$，B $1$，C $2$，D $3$，E $4$。",
+    "answer":"B. Exactly $1$ quantity changes.","answerZh":"B．恰有 $1$ 个量改变。",
+    "methods":[{"title":"Use the midsegment theorem and constant altitude","titleZh":"利用中位线与定高","topics":[{"en":"Triangle midsegments","zh":"三角形中位线"},{"en":"Area","zh":"面积"}],"steps":["The midsegment theorem gives $MN=AB/2$, so (a) is fixed. Because $P$ stays on a line parallel to $AB$, its altitude to $AB$ is fixed, hence (c) is fixed.","Triangle $PMN$ has one quarter the area of $PAB$, so trapezoid $ABNM$ has three quarters of the same fixed area; (d) is fixed. The side lengths $PA,PB$ vary, so only the perimeter (b) changes."],"stepsZh":["由中位线定理，$MN=AB/2$，故 (a) 不变。由于 $P$ 在与 $AB$ 平行的直线上移动，到 $AB$ 的高不变，因此 (c) 不变。","三角形 $PMN$ 面积是三角形 $PAB$ 的四分之一，所以梯形面积为其四分之三，也不变。$PA,PB$ 会变化，故只有周长 (b) 改变。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/5"
+  },
+  "amc10-2000-q6": {
+    "summary":"The Fibonacci sequence begins $1,1,2,3,5,8,\\ldots$. Which digit is the last of the ten digits to appear as a units digit of a Fibonacci number? Options: A $0$, B $4$, C $6$, D $7$, E $9$.",
+    "summaryZh":"斐波那契数列从 $1,1,2,3,5,8,\\ldots$ 开始。十个数码中，最后一个作为某项个位数出现的是哪个？选项为 A $0$，B $4$，C $6$，D $7$，E $9$。",
+    "answer":"C. $6$.","answerZh":"C．$6$。",
+    "methods":[{"title":"Track only residues modulo ten","titleZh":"只追踪模十余数","topics":[{"en":"Fibonacci sequence","zh":"斐波那契数列"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["The units digits begin $1,1,2,3,5,8,3,1,4,5,9,4,3,7,0,7,7,4,1,5,6$.","By the time $6$ first appears, every other digit has already appeared. Thus $6$ is last."],"stepsZh":["个位数依次为 $1,1,2,3,5,8,3,1,4,5,9,4,3,7,0,7,7,4,1,5,6$。","当 $6$ 首次出现时，其余九个数码都已出现，所以最后出现的是 $6$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/6"
+  },
+  "amc10-2000-q7": {
+    "summary":"In rectangle $ABCD$, $AD=1$ and $P$ lies on $AB$. Rays $DP$ and $DB$ trisect the right angle $ADC$ in the order $DA,DP,DB,DC$. Find the perimeter of triangle $BDP$. Options: A $3+\\sqrt3/3$, B $2+4\\sqrt3/3$, C $2+2\\sqrt2$, D $(3+3\\sqrt5)/2$, E $2+5\\sqrt3/3$.",
+    "summaryZh":"在长方形 $ABCD$ 中，$AD=1$，点 $P$ 在 $AB$ 上。射线 $DP,DB$ 按 $DA,DP,DB,DC$ 的顺序三等分直角 $ADC$。求三角形 $BDP$ 的周长。选项为 A $3+\\sqrt3/3$，B $2+4\\sqrt3/3$，C $2+2\\sqrt2$，D $(3+3\\sqrt5)/2$，E $2+5\\sqrt3/3$。",
+    "answer":"B. $2+4\\sqrt3/3$.","answerZh":"B．$2+4\\sqrt3/3$。",
+    "methods":[{"title":"Use two 30-60-90 triangles","titleZh":"利用两个 30-60-90 三角形","topics":[{"en":"Special right triangles","zh":"特殊直角三角形"},{"en":"Perimeter","zh":"周长"}],"steps":["The trisection gives $\\angle ADP=30^\\circ$ and $\\angle ADB=60^\\circ$. Thus $DP=2\\sqrt3/3$, $AP=\\sqrt3/3$, $DB=2$, and $AB=\\sqrt3$.","Hence $PB=AB-AP=2\\sqrt3/3$. The perimeter is $DP+PB+DB=2+4\\sqrt3/3$."],"stepsZh":["三等分得 $\\angle ADP=30^\\circ$，$\\angle ADB=60^\\circ$。于是 $DP=2\\sqrt3/3$，$AP=\\sqrt3/3$，$DB=2$，$AB=\\sqrt3$。","所以 $PB=AB-AP=2\\sqrt3/3$，周长为 $DP+PB+DB=2+4\\sqrt3/3$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/7"
+  },
+  "amc10-2000-q8": {
+    "summary":"At a school, $2/5$ of the freshmen and $4/5$ of the sophomores took the AMC 10. The numbers of freshman and sophomore contestants were equal. Which must be true? A five times as many sophomores; B twice as many sophomores; C equal class sizes; D twice as many freshmen; E five times as many freshmen.",
+    "summaryZh":"某校有 $2/5$ 的一年级生和 $4/5$ 的二年级生参加 AMC 10，且两个年级的参赛人数相同。下列哪项必然成立？A 二年级生是一年级生的五倍；B 二倍；C 两年级人数相同；D 一年级生是二年级生的两倍；E 五倍。",
+    "answer":"D. There are twice as many freshmen as sophomores.","answerZh":"D．一年级生人数是二年级生的两倍。",
+    "methods":[{"title":"Equate the two contestant counts","titleZh":"令两组参赛人数相等","topics":[{"en":"Ratio and proportion","zh":"比与比例"}],"steps":["Let the class sizes be $f$ and $s$. Equal contestant counts give $(2/5)f=(4/5)s$.","Multiplying by $5$ and simplifying yields $f=2s$."],"stepsZh":["设两年级人数分别为 $f,s$，参赛人数相同给出 $(2/5)f=(4/5)s$。","同乘 $5$ 并化简得 $f=2s$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/8"
+  },
+  "amc10-2000-q9": {
+    "summary":"If $|x-2|=p$ and $x<2$, find $x-p$. Options: A $-2$, B $2$, C $2-2p$, D $2p-2$, E $|2p-2|$.",
+    "summaryZh":"若 $|x-2|=p$ 且 $x<2$，求 $x-p$。选项为 A $-2$，B $2$，C $2-2p$，D $2p-2$，E $|2p-2|$。",
+    "answer":"C. $2-2p$.","answerZh":"C．$2-2p$。",
+    "methods":[{"title":"Remove the absolute value using the sign condition","titleZh":"利用符号条件去绝对值","topics":[{"en":"Absolute value","zh":"绝对值"}],"steps":["Since $x<2$, $|x-2|=2-x=p$, so $x=2-p$.","Therefore $x-p=(2-p)-p=2-2p$."],"stepsZh":["因为 $x<2$，所以 $|x-2|=2-x=p$，从而 $x=2-p$。","故 $x-p=(2-p)-p=2-2p$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/9"
+  },
+  "amc10-2000-q10": {
+    "summary":"Two positive-area triangles have side lengths $4,6,x$ and $4,6,y$. What is the smallest positive number that cannot equal $|x-y|$? Options: A $2$, B $4$, C $6$, D $8$, E $10$.",
+    "summaryZh":"两个面积为正的三角形边长分别为 $4,6,x$ 与 $4,6,y$。不能作为 $|x-y|$ 取值的最小正数是多少？选项为 A $2$，B $4$，C $6$，D $8$，E $10$。",
+    "answer":"D. $8$.","answerZh":"D．$8$。",
+    "methods":[{"title":"Apply the strict triangle inequalities","titleZh":"应用严格三角不等式","topics":[{"en":"Triangle inequality","zh":"三角不等式"},{"en":"Intervals","zh":"区间"}],"steps":["Positive area requires $|6-4|<x<6+4$ and similarly for $y$, so $2<x,y<10$.","Thus $|x-y|$ can attain every value in $[0,8)$ but cannot attain $8$. The smallest listed positive unattainable value is $8$."],"stepsZh":["面积为正要求 $|6-4|<x<6+4$，$y$ 同理，所以 $2<x,y<10$。","因此 $|x-y|$ 可取 $[0,8)$ 中所有值，却不能等于 $8$；最小的正不可取值为 $8$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/10"
+  },
+  "amc10-2000-q11": {
+    "summary":"Choose two different primes between $4$ and $18$. Which value could equal their product minus their sum? Options: A $21$, B $60$, C $119$, D $180$, E $231$.",
+    "summaryZh":"从 $4$ 与 $18$ 之间选择两个不同质数。它们的积减去和可能等于哪个数？选项为 A $21$，B $60$，C $119$，D $180$，E $231$。",
+    "answer":"C. $119$.","answerZh":"C．$119$。",
+    "methods":[{"title":"Use parity, bounds, and direct verification","titleZh":"利用奇偶性、范围与直接验证","topics":[{"en":"Prime numbers","zh":"质数"},{"en":"Bounding","zh":"范围估计"}],"steps":["The primes are $5,7,11,13,17$. Their product is odd and their sum even, so the result is odd. It ranges from $5\\cdot7-12=23$ to $13\\cdot17-30=191$.","Among the options, only $119$ is odd and in this interval; indeed $11\\cdot13-(11+13)=143-24=119$."],"stepsZh":["质数为 $5,7,11,13,17$。两质数之积为奇数、和为偶数，所以结果为奇数；范围从 $5\\cdot7-12=23$ 到 $13\\cdot17-30=191$。","选项中只有 $119$ 是该范围内的奇数，且 $11\\cdot13-(11+13)=143-24=119$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/11"
+  },
+  "amc10-2000-q12": {
+    "summary":"Figures $0,1,2,3$ contain $1,5,13,25$ nonoverlapping unit squares. Equivalently, figure $n$ is a diamond with row lengths $1,3,\\ldots,2n+1,\\ldots,3,1$. How many unit squares are in figure $100$? Options: A $10401$, B $19801$, C $20201$, D $39801$, E $40801$.",
+    "summaryZh":"图形 $0,1,2,3$ 分别含 $1,5,13,25$ 个互不重叠的单位正方形。等价地，图形 $n$ 是各行长度依次为 $1,3,\\ldots,2n+1,\\ldots,3,1$ 的菱形阵列。图形 $100$ 含多少个单位正方形？选项为 A $10401$，B $19801$，C $20201$，D $39801$，E $40801$。",
+    "answer":"C. $20201$.","answerZh":"C．$20201$。",
+    "methods":[{"title":"Sum the odd-number rows","titleZh":"求奇数行长度之和","topics":[{"en":"Figurate patterns","zh":"图形规律"},{"en":"Sums of odd integers","zh":"奇数求和"}],"steps":["The rows increase through the first $n+1$ odd numbers and then decrease through the first $n$ odd numbers. Their total is $(n+1)^2+n^2$.","At $n=100$, this is $101^2+100^2=10201+10000=20201$."],"stepsZh":["各行先经过前 $n+1$ 个奇数，再反向经过前 $n$ 个奇数，总数为 $(n+1)^2+n^2$。","当 $n=100$ 时，得到 $101^2+100^2=10201+10000=20201$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/12"
+  },
+  "amc10-2000-q13": {
+    "summary":"A triangular board has five horizontal rows of lengths $1,2,3,4,5$ and five vertical columns of lengths $5,4,3,2,1$. Place $5$ yellow, $4$ red, $3$ green, $2$ blue, and $1$ orange peg in its $15$ positions so no row or column repeats a color. How many placements are possible? Options: A $0$, B $1$, C $5!4!3!2!1!$, D $15!/(5!4!3!2!1!)$, E $15!$.",
+    "summaryZh":"一个三角形钉板有长度为 $1,2,3,4,5$ 的五个横行，以及长度为 $5,4,3,2,1$ 的五个竖列，共 $15$ 个位置。放置 $5$ 个黄钉、$4$ 个红钉、$3$ 个绿钉、$2$ 个蓝钉和 $1$ 个橙钉，要求任一横行或竖列中同色不重复。共有多少种放法？选项为 A $0$，B $1$，C $5!4!3!2!1!$，D $15!/(5!4!3!2!1!)$，E $15!$。",
+    "answer":"B. $1$ placement.","answerZh":"B．$1$ 种。",
+    "methods":[{"title":"Force one colour at a time","titleZh":"逐种颜色强制定位","topics":[{"en":"Arrangements with restrictions","zh":"限制排列"},{"en":"Logical deduction","zh":"逻辑推理"}],"steps":["Five yellow pegs must occupy one position in each of the five rows and columns; on this triangular board that forces the long diagonal.","After removing those positions, the four red pegs are similarly forced into the only four-row/four-column diagonal. Repeating for green, blue, and orange fixes every position uniquely."],"stepsZh":["五个黄钉必须在五个横行和五个竖列中各占一个位置，在该三角板上这强制它们位于最长对角线上。","删去这些位置后，四个红钉同样被强制放在唯一覆盖四行四列的对角线上；继续对绿、蓝、橙色重复，所有位置都唯一确定。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/13"
+  },
+  "amc10-2000-q14": {
+    "summary":"The scores $71,76,80,82,91$ were entered in some order. After each entry, the average of all scores entered so far was an integer. Which score was entered last? Options: A $71$, B $76$, C $80$, D $82$, E $91$.",
+    "summaryZh":"分数 $71,76,80,82,91$ 按某种顺序录入。每录入一个分数后，当前所有已录入分数的平均数始终是整数。最后录入的是哪个分数？选项为 A $71$，B $76$，C $80$，D $82$，E $91$。",
+    "answer":"C. $80$.","answerZh":"C．$80$。",
+    "methods":[{"title":"Use divisibility of partial sums","titleZh":"利用部分和的整除性","topics":[{"en":"Divisibility","zh":"整除"},{"en":"Mean","zh":"平均数"}],"steps":["The first three scores must sum to a multiple of $3$. Their residues modulo $3$ show the only possible triple is $76,82,91$, with sum $249$. The first two must have even sum, so they are $76,82$ and the third is $91$.","Since $249\\equiv1\\pmod4$, the fourth score must be $3\\pmod4$, namely $71$. Thus $80$ is last. The final total $400$ is divisible by $5$, so the order is valid."],"stepsZh":["前三个分数之和须被 $3$ 整除。考察模 $3$ 余数可知唯一可能三元组为 $76,82,91$，和为 $249$。前两个的平均数为整数，故前两个是 $76,82$，第三个是 $91$。","因为 $249\\equiv1\\pmod4$，第四个分数须模 $4$ 余 $3$，即 $71$。所以最后是 $80$；总和 $400$ 可被 $5$ 整除。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/14"
+  },
+  "amc10-2000-q15": {
+    "summary":"Nonzero real numbers $a,b$ satisfy $ab=a-b$. Which is a possible value of $a/b+b/a-ab$? Options: A $-2$, B $-1/2$, C $1/3$, D $1/2$, E $2$.",
+    "summaryZh":"非零实数 $a,b$ 满足 $ab=a-b$。$a/b+b/a-ab$ 的一个可能值是？选项为 A $-2$，B $-1/2$，C $1/3$，D $1/2$，E $2$。",
+    "answer":"E. $2$.","answerZh":"E．$2$。",
+    "methods":[{"title":"Combine over a common denominator","titleZh":"通分并代入条件","topics":[{"en":"Algebraic manipulation","zh":"代数化简"}],"steps":["Combine the terms: $a/b+b/a-ab=(a^2+b^2-a^2b^2)/(ab)$.","Because $ab=a-b$, we have $a^2b^2=(a-b)^2$. The numerator becomes $a^2+b^2-(a-b)^2=2ab$, so the expression equals $2$."],"stepsZh":["通分得 $a/b+b/a-ab=(a^2+b^2-a^2b^2)/(ab)$。","由 $ab=a-b$，有 $a^2b^2=(a-b)^2$。分子化为 $a^2+b^2-(a-b)^2=2ab$，故原式等于 $2$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/15"
+  },
+  "amc10-2000-q16": {
+    "summary":"On a unit square lattice, take $A=(0,3)$, $B=(6,0)$, $C=(4,2)$, and $D=(2,0)$. Segments $AB$ and $CD$ meet at $E$. Find $AE$. Options: A $4\\sqrt5/3$, B $5\\sqrt5/3$, C $12\\sqrt5/7$, D $2\\sqrt5$, E $5\\sqrt{65}/9$.",
+    "summaryZh":"在单位方格点阵中，取 $A=(0,3)$、$B=(6,0)$、$C=(4,2)$、$D=(2,0)$。线段 $AB$ 与 $CD$ 交于 $E$。求 $AE$。选项为 A $4\\sqrt5/3$，B $5\\sqrt5/3$，C $12\\sqrt5/7$，D $2\\sqrt5$，E $5\\sqrt{65}/9$。",
+    "answer":"B. $5\\sqrt5/3$.","answerZh":"B．$5\\sqrt5/3$。",
+    "methods":[{"title":"Find the intersection in coordinates","titleZh":"用坐标求交点","topics":[{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Distance formula","zh":"距离公式"}],"steps":["Line $AB$ is $x+2y=6$, while line $CD$ is $x-y=2$. Solving gives $E=(10/3,4/3)$.","Then $AE=\\sqrt{(10/3)^2+(4/3-3)^2}=\\sqrt{125/9}=5\\sqrt5/3$."],"stepsZh":["直线 $AB$ 为 $x+2y=6$，直线 $CD$ 为 $x-y=2$。联立得 $E=(10/3,4/3)$。","所以 $AE=\\sqrt{(10/3)^2+(4/3-3)^2}=\\sqrt{125/9}=5\\sqrt5/3$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/16"
+  },
+  "amc10-2000-q17": {
+    "summary":"A machine exchanges one quarter for five nickels, one nickel for five pennies, or one penny for five quarters. Starting with one penny, which amount could occur after repeated exchanges? Options: A 3.63, B 5.13, C 6.30, D 7.45, E 9.07 dollars.",
+    "summaryZh":"一台机器可把一枚 25 美分硬币换成五枚 5 美分硬币，把一枚 5 美分硬币换成五枚 1 美分硬币，或把一枚 1 美分硬币换成五枚 25 美分硬币。从一枚 1 美分硬币开始，反复兑换后可能得到哪个总金额？选项为 A 3.63，B 5.13，C 6.30，D 7.45，E 9.07 美元。",
+    "answer":"D. 7.45 dollars.","answerZh":"D．7.45 美元。",
+    "methods":[{"title":"Track the value invariant modulo 124 cents","titleZh":"追踪金额模 124 美分的不变量","topics":[{"en":"Invariants","zh":"不变量"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["The quarter-to-nickels and nickel-to-pennies exchanges preserve value. A penny-to-quarters exchange increases the value by $125-1=124$ cents.","Thus every total is $1+124n$ cents. These totals are attainable because one new quarter can be changed through nickels back to pennies to enable another cycle. Only $745=1+124\\cdot6$ matches."],"stepsZh":["25 美分换 5 美分、5 美分换 1 美分都保持总金额不变；1 美分换五枚 25 美分使金额增加 $125-1=124$ 美分。","因此总金额恒为 $1+124n$ 美分。每次可把新得到的一枚 25 美分继续换成 1 美分以启动下一轮，故这些值可达。只有 $745=1+124\\cdot6$ 符合。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/17"
+  },
+  "amc10-2000-q18": {
+    "summary":"A person walks once around the boundary of a square of side $5$ km and can see all points within horizontal distance $1$ km of every point on the path. Find the total visible area, in square kilometres, rounded to the nearest integer. Options: A $24$, B $27$, C $39$, D $40$, E $42$.",
+    "summaryZh":"一人沿边长 $5$ km 的正方形边界走一周，在路径上任一点都能看到水平距离不超过 $1$ km 的所有点。求整个可见区域面积（平方千米），四舍五入到整数。选项为 A $24$，B $27$，C $39$，D $40$，E $42$。",
+    "answer":"C. $39$ square kilometres.","answerZh":"C．$39$ 平方千米。",
+    "methods":[{"title":"Decompose the one-kilometre boundary band","titleZh":"分解宽一千米的边界带","topics":[{"en":"Area decomposition","zh":"面积分割"},{"en":"Circle area","zh":"圆面积"}],"steps":["Inside the square, everything except the central $3\\times3$ square is visible, giving $25-9=16$.","Outside are four $5\\times1$ rectangles plus four quarter-circles of radius $1$, giving $20+\\pi$. The total is $36+\\pi\\approx39.14$, which rounds to $39$."],"stepsZh":["正方形内部除中央 $3\\times3$ 正方形外都可见，面积为 $25-9=16$。","外部由四个 $5\\times1$ 长方形及四个半径为 $1$ 的四分之一圆组成，面积为 $20+\\pi$。总面积 $36+\\pi\\approx39.14$，四舍五入得 $39$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/18"
+  },
+  "amc10-2000-q19": {
+    "summary":"Through a point on a right triangle's hypotenuse, draw lines parallel to the legs, dividing the triangle into a square and two smaller right triangles. One small triangle has area $m$ times the square's area. What is the other small triangle's area divided by the square's area? Options: A $1/(2m+1)$, B $m$, C $1-m$, D $1/(4m)$, E $1/(8m^2)$.",
+    "summaryZh":"过直角三角形斜边上一点分别作两直角边的平行线，将原三角形分成一个正方形和两个小直角三角形。一个小三角形的面积是正方形面积的 $m$ 倍。另一个小三角形面积与正方形面积之比是多少？选项为 A $1/(2m+1)$，B $m$，C $1-m$，D $1/(4m)$，E $1/(8m^2)$。",
+    "answer":"D. $1/(4m)$.","answerZh":"D．$1/(4m)$。",
+    "methods":[{"title":"Scale the square and use similarity","titleZh":"令正方形边长为一并利用相似","topics":[{"en":"Similarity","zh":"相似三角形"},{"en":"Area ratios","zh":"面积比"}],"steps":["Scale the square to side $1$. If the first triangle's other perpendicular leg is $r$, its area ratio is $r/2=m$, so $r=2m$.","The two small right triangles are similar; the corresponding other leg of the second is $1/r$. Its area ratio is $(1/2)(1/r)=1/(2r)=1/(4m)$."],"stepsZh":["令正方形边长为 $1$。若第一个小三角形的另一条直角边为 $r$，其面积比为 $r/2=m$，故 $r=2m$。","两个小直角三角形相似，第二个对应的另一条直角边为 $1/r$。其面积比为 $(1/2)(1/r)=1/(2r)=1/(4m)$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/19"
+  },
+  "amc10-2000-q20": {
+    "summary":"Nonnegative integers $A,M,C$ satisfy $A+M+C=10$. Maximise $AMC+AM+MC+CA$. Options: A $49$, B $59$, C $69$, D $79$, E $89$.",
+    "summaryZh":"非负整数 $A,M,C$ 满足 $A+M+C=10$。求 $AMC+AM+MC+CA$ 的最大值。选项为 A $49$，B $59$，C $69$，D $79$，E $89$。",
+    "answer":"C. $69$.","answerZh":"C．$69$。",
+    "methods":[{"title":"Convert to a balanced product","titleZh":"化为均衡乘积","topics":[{"en":"Factoring","zh":"因式分解"},{"en":"Integer optimisation","zh":"整数最值"}],"steps":["Expanding shows $AMC+AM+MC+CA=(A+1)(M+1)(C+1)-11$.","The positive integers $A+1,M+1,C+1$ sum to $13$. Their product is maximised by the most balanced split $4,4,5$, giving $80$. Therefore the maximum is $80-11=69$."],"stepsZh":["展开得 $AMC+AM+MC+CA=(A+1)(M+1)(C+1)-11$。","正整数 $A+1,M+1,C+1$ 之和为 $13$，乘积在最均衡分配 $4,4,5$ 时最大，为 $80$。故最大值为 $80-11=69$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/20"
+  },
+  "amc10-2000-q21": {
+    "summary":"All alligators are ferocious, and some creepy crawlers are alligators. Which must be true? I All alligators are creepy crawlers. II Some ferocious creatures are creepy crawlers. III Some alligators are not creepy crawlers. Options: A I only, B II only, C III only, D II and III only, E none.",
+    "summaryZh":"所有短吻鳄都是凶猛生物，且有些爬虫是短吻鳄。下列哪些必然为真？I 所有短吻鳄都是爬虫；II 有些凶猛生物是爬虫；III 有些短吻鳄不是爬虫。选项为 A 仅 I，B 仅 II，C 仅 III，D 仅 II、III，E 都不必然。",
+    "answer":"B. Statement II only.","answerZh":"B．仅命题 II。",
+    "methods":[{"title":"Follow the guaranteed set inclusion","titleZh":"追踪必然成立的集合包含关系","topics":[{"en":"Logical deduction","zh":"逻辑推理"},{"en":"Set relations","zh":"集合关系"}],"steps":["The stated creatures that are both creepy crawlers and alligators must also be ferocious, so II is guaranteed.","I need not hold because other alligators may lie outside the creepy-crawler set. III need not hold because all alligators could lie inside it. Thus only II must be true."],"stepsZh":["题设保证存在既是爬虫又是短吻鳄的个体，而所有短吻鳄都凶猛，所以 II 必然成立。","其他短吻鳄可能不属于爬虫，故 I 不必然；也可能所有短吻鳄都属于爬虫，故 III 不必然。因此只有 II 必然成立。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/21"
+  },
+  "amc10-2000-q22": {
+    "summary":"Each of $n$ family members drank an $8$-ounce nontrivial coffee-milk mixture. Angela drank one quarter of all the milk and one sixth of all the coffee. Find $n$. Options: A $3$, B $4$, C $5$, D $6$, E $7$.",
+    "summaryZh":"一家 $n$ 口每人喝一杯 $8$ 盎司且咖啡、牛奶均非零的混合饮料。Angela 喝掉了全家牛奶总量的四分之一及咖啡总量的六分之一。求 $n$。选项为 A $3$，B $4$，C $5$，D $6$，E $7$。",
+    "answer":"C. $5$ people.","answerZh":"C．$5$ 人。",
+    "methods":[{"title":"Bound a weighted average","titleZh":"夹逼加权平均","topics":[{"en":"Weighted averages","zh":"加权平均"},{"en":"Mixtures","zh":"混合问题"}],"steps":["Let total milk and coffee be $M,C>0$. Angela's cup satisfies $M/4+C/6=8$, while the family total is $M+C=8n$. Thus $(M/4+C/6)/(M+C)=1/n$.","Because both ingredients are positive, this weighted average lies strictly between $1/6$ and $1/4$. Hence $1/6<1/n<1/4$, so $4<n<6$ and $n=5$."],"stepsZh":["设全家牛奶、咖啡总量为 $M,C>0$。Angela 的杯子满足 $M/4+C/6=8$，全家总量为 $M+C=8n$，故 $(M/4+C/6)/(M+C)=1/n$。","由于两种成分均为正，该加权平均严格介于 $1/6$ 与 $1/4$ 之间。因此 $1/6<1/n<1/4$，即 $4<n<6$，所以 $n=5$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/22"
+  },
+  "amc10-2000-q23": {
+    "summary":"For the list $10,2,5,2,4,2,x$, the mean, median, and mode, arranged increasingly, form a nonconstant arithmetic progression. Find the sum of all possible real $x$. Options: A $3$, B $6$, C $9$, D $17$, E $20$.",
+    "summaryZh":"数列 $10,2,5,2,4,2,x$ 的平均数、中位数、众数按递增顺序排列后构成非常数等差数列。求所有可能实数 $x$ 之和。选项为 A $3$，B $6$，C $9$，D $17$，E $20$。",
+    "answer":"E. $20$.","answerZh":"E．$20$。",
+    "methods":[{"title":"Split according to the median","titleZh":"按中位数分类讨论","topics":[{"en":"Mean, median and mode","zh":"平均数、中位数与众数"},{"en":"Casework","zh":"分类讨论"}],"steps":["The mode is $2$ and the mean is $\\mu=(25+x)/7$. If $x\\le2$, the median is also $2$, impossible for a nonconstant three-term progression.","If $2<x<4$, the median is $x$ and $x-2=\\mu-x$, giving $x=3$. If $x\\ge4$, the median is $4$ and $4-2=\\mu-4$, giving $\\mu=6$ and $x=17$. Both satisfy their cases, so the requested sum is $3+17=20$."],"stepsZh":["众数为 $2$，平均数为 $\\mu=(25+x)/7$。若 $x\\le2$，中位数也为 $2$，无法形成非常数三项等差数列。","若 $2<x<4$，中位数为 $x$，由 $x-2=\\mu-x$ 得 $x=3$。若 $x\\ge4$，中位数为 $4$，由 $4-2=\\mu-4$ 得 $\\mu=6,x=17$。二者均满足相应范围，所求和为 $3+17=20$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/23"
+  },
+  "amc10-2000-q24": {
+    "summary":"A function satisfies $f(x/3)=x^2+x+1$. Find the sum of all $z$ satisfying $f(3z)=7$. Options: A $-1/3$, B $-1/9$, C $0$, D $5/9$, E $5/3$.",
+    "summaryZh":"函数满足 $f(x/3)=x^2+x+1$。求所有满足 $f(3z)=7$ 的 $z$ 之和。选项为 A $-1/3$，B $-1/9$，C $0$，D $5/9$，E $5/3$。",
+    "answer":"B. $-1/9$.","answerZh":"B．$-1/9$。",
+    "methods":[{"title":"Substitute and use Vieta's formula","titleZh":"代入并用韦达定理","topics":[{"en":"Functions","zh":"函数"},{"en":"Vieta's formulas","zh":"韦达定理"}],"steps":["To make $x/3=3z$, set $x=9z$. Hence $f(3z)=81z^2+9z+1$.","Setting this equal to $7$ gives $81z^2+9z-6=0$. The sum of its roots is $-9/81=-1/9$."],"stepsZh":["令 $x/3=3z$，即 $x=9z$，则 $f(3z)=81z^2+9z+1$。","令其等于 $7$ 得 $81z^2+9z-6=0$。由韦达定理，根之和为 $-9/81=-1/9$。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/24"
+  },
+  "amc10-2000-q25": {
+    "summary":"In year $N$, day $300$ is Tuesday. In year $N+1$, day $200$ is also Tuesday. On what weekday was day $100$ of year $N-1$? Options: A Thursday, B Friday, C Saturday, D Sunday, E Monday.",
+    "summaryZh":"在 $N$ 年，第 $300$ 天是星期二；在 $N+1$ 年，第 $200$ 天也是星期二。$N-1$ 年的第 $100$ 天是星期几？选项为 A 星期四，B 星期五，C 星期六，D 星期日，E 星期一。",
+    "answer":"A. Thursday.","answerZh":"A．星期四。",
+    "methods":[{"title":"Count days modulo seven","titleZh":"按模七计算日期间隔","topics":[{"en":"Calendar arithmetic","zh":"日历计算"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["From day $300$ of year $N$ to day $200$ of year $N+1$ are $L-100$ days, where $L$ is $365$ or $366$. Equal weekdays require divisibility by $7$; only $366-100=266=38\\cdot7$ works, so $N$ is a leap year.","Year $N-1$ is ordinary. From its day $100$ to day $300$ of year $N$ are $(365-100)+300=565\\equiv5\\pmod7$ days. Five days before Tuesday is Thursday."],"stepsZh":["从 $N$ 年第 $300$ 天到 $N+1$ 年第 $200$ 天相隔 $L-100$ 天，其中 $L$ 为 $365$ 或 $366$。同为星期二要求被 $7$ 整除；只有 $366-100=266=38\\cdot7$ 成立，所以 $N$ 是闰年。","$N-1$ 年为平年。从其第 $100$ 天到 $N$ 年第 $300$ 天相隔 $(365-100)+300=565\\equiv5\\pmod7$ 天。比星期二早五天是星期四。"]}],
+    "sourceUrl":"https://live.poshenloh.com/past-contests/amc10/2000/problem/25"
+  }
+}
