@@ -1,0 +1,221 @@
+{
+  "imo-1972-q1": {
+    "summary": "Ten distinct two-digit positive integers are given. Prove that one can choose two nonempty disjoint subsets of these integers whose sums are equal.",
+    "summaryZh": "给定十个互不相同的两位正整数。证明可以从中选出两个非空且互不相交的子集，使两子集的元素和相等。",
+    "answer": "Such two disjoint nonempty subsets always exist.",
+    "answerZh": "总能找到满足条件的两个非空不交子集。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Compare the number of subsets with the possible sums",
+        "titleZh": "比较子集数量与可能的和",
+        "topics": [
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"},
+          {"en": "Subset sums", "zh": "子集和"},
+          {"en": "Set difference", "zh": "集合差"}
+        ],
+        "steps": [
+          "Let the given set be $S$. It has $2^{10}=1024$ subsets, including the empty set.",
+          "The largest possible sum of ten distinct two-digit integers is $90+91+\\cdots+99=945$. Thus every subset sum is one of the $946$ integers from $0$ through $945$.",
+          "By the pigeonhole principle, two distinct subsets $A,B\\subseteq S$ have the same sum.",
+          "Remove their common part: put $C=A\\setminus B$ and $D=B\\setminus A$. Then $C\\cap D=\\varnothing$ and $\\sum C=\\sum A-\\sum(A\\cap B)=\\sum B-\\sum(A\\cap B)=\\sum D$.",
+          "Because $A\\ne B$, at least one of $C,D$ is nonempty. All elements of $S$ are positive, so equality of the two sums forces the other set to be nonempty as well. Hence $C,D$ are the required subsets."
+        ],
+        "stepsZh": [
+          "记所给集合为 $S$。包括空集在内，它共有 $2^{10}=1024$ 个子集。",
+          "十个互不相同的两位整数之和至多为 $90+91+\\cdots+99=945$。因此任一子集和只能是 $0$ 到 $945$ 之间的 $946$ 个整数之一。",
+          "由抽屉原理，存在两个不同子集 $A,B\\subseteq S$，它们的元素和相等。",
+          "删去公共部分，令 $C=A\\setminus B$、$D=B\\setminus A$。则 $C\\cap D=\\varnothing$，且 $\\sum C=\\sum A-\\sum(A\\cap B)=\\sum B-\\sum(A\\cap B)=\\sum D$。",
+          "因为 $A\\ne B$，$C,D$ 中至少一个非空。又因 $S$ 中元素均为正数，两者和相等迫使另一个也非空。因此 $C,D$ 即为所求。"
+        ]
+      }
+    ]
+  },
+  "imo-1972-q2": {
+    "summary": "Let $n\\ge4$. Prove that every cyclic quadrilateral can be partitioned into exactly $n$ quadrilaterals, each of which is cyclic.",
+    "summaryZh": "设 $n\\ge4$。证明任意圆内接四边形都能被分割成恰好 $n$ 个圆内接四边形。",
+    "answer": "First construct four cyclic pieces with one rectangular piece, then divide that rectangle into $n-3$ rectangles.",
+    "answerZh": "先构造四个圆内接子四边形，其中一个为矩形，再把该矩形分成 $n-3$ 个矩形。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Create a rectangular piece and subdivide it",
+        "titleZh": "先构造矩形子块再细分",
+        "topics": [
+          {"en": "Cyclic quadrilaterals", "zh": "圆内接四边形"},
+          {"en": "Geometric dissection", "zh": "几何分割"},
+          {"en": "Supplementary angles", "zh": "互补角"}
+        ],
+        "steps": [
+          "It is enough to split a cyclic quadrilateral into four cyclic quadrilaterals, one a rectangle. Indeed, cutting that rectangle by $n-4$ segments parallel to one pair of sides replaces it by $n-3$ rectangles and produces $3+(n-3)=n$ cyclic pieces.",
+          "Let $ABCD$ be the original quadrilateral in cyclic order. If, say, $\\angle A=90^\\circ$, then $BD$ is a diameter and the circle centre $O$ lies inside $ABCD$. Join $O$ to the midpoint of each side. Every resulting piece has two opposite right angles and is cyclic; the piece at $A$ is a rectangle. This settles the right-angle case.",
+          "Assume now that no angle is right. Relabel cyclically so that $\\angle A,\\angle B$ are acute and $\\angle C,\\angle D$ are obtuse. Draw $AB$ horizontally with the quadrilateral above it. From $D$ draw the inward ray perpendicular to $AD$, and from $C$ the inward ray perpendicular to $BC$.",
+          "Choose a horizontal line just below the lower of $C,D$. It meets the first inward ray at $P$ and the second at $Q$, both inside the quadrilateral, and the line can be chosen so that $P$ lies to the left of $Q$. To see this explicitly, suppose $C$ is no higher than $D$: the ray from $D$ crosses the diagonal $AC$ below $C$, whereas the ray from $C$ begins at $C$; a sufficiently small downward shift therefore meets the two rays in the asserted order. The other height order is symmetric.",
+          "Let $E,F$ be the perpendicular projections of $P,Q$ onto $AB$. The acuteness of $A,B$ and the ray directions give the strict order $A,E,F,B$. Draw $DP,PE,PQ,QF,QC$. The four pieces are $AEPD$, $EFQP$, $FBCQ$, and $PQCD$; the middle one is a rectangle.",
+          "The first and third pieces are cyclic because $\\angle ADP=\\angle AEP=90^\\circ$ and $\\angle BCQ=\\angle BFQ=90^\\circ$.",
+          "For the last piece, write $\\beta=\\angle ABC$. Since $ABCD$ is cyclic, $\\angle CDA=180^\\circ-\\beta$. Hence $\\angle CDP=\\angle CDA-90^\\circ=90^\\circ-\\beta$. Also $CQ\\perp BC$ and $QP\\parallel BA$, so $\\angle CQP=90^\\circ+\\beta$. These opposite angles sum to $180^\\circ$, proving that $PQCD$ is cyclic.",
+          "Thus the required four-piece construction always exists, and the subdivision in the first step gives exactly $n$ cyclic quadrilaterals for every $n\\ge4$."
+        ],
+        "stepsZh": [
+          "只需把一个圆内接四边形分成四个圆内接四边形，并使其中一个为矩形。事实上，在该矩形内作 $n-4$ 条平行于一组对边的线，可把它替换为 $n-3$ 个矩形，总块数变为 $3+(n-3)=n$。",
+          "设原四边形按圆周顺序为 $ABCD$。若某角（不妨为 $\\angle A$）等于 $90^\\circ$，则 $BD$ 是直径，圆心 $O$ 位于四边形内部。连接 $O$ 与四边中点，每一子块都有一对对角为直角，故均为圆内接四边形；含 $A$ 的子块还是矩形。",
+          "以下设没有直角。循环重标号，使 $\\angle A,\\angle B$ 为锐角，$\\angle C,\\angle D$ 为钝角。令 $AB$ 水平且四边形位于其上方。从 $D$ 向四边形内部作垂直于 $AD$ 的射线，从 $C$ 向内部作垂直于 $BC$ 的射线。",
+          "在 $C,D$ 中较低点的稍下方取一条水平线，使其分别与两条射线交于内部点 $P,Q$，并使 $P$ 位于 $Q$ 左侧。具体地，若 $C$ 不高于 $D$，则从 $D$ 出发的射线先在低于 $C$ 处穿过对角线 $AC$，而另一射线从 $C$ 出发；把过 $C$ 的水平线略向下平移即可得到所需次序。另一种高低关系完全对称。",
+          "把 $P,Q$ 向 $AB$ 作垂线，垂足分别为 $E,F$。由 $A,B$ 为锐角及两射线的方向可得严格次序 $A,E,F,B$。作线段 $DP,PE,PQ,QF,QC$，得到四块 $AEPD$、$EFQP$、$FBCQ$、$PQCD$，其中 $EFQP$ 是矩形。",
+          "第一块与第三块均为圆内接四边形，因为 $\\angle ADP=\\angle AEP=90^\\circ$，且 $\\angle BCQ=\\angle BFQ=90^\\circ$。",
+          "对最后一块，记 $\\beta=\\angle ABC$。原四边形圆内接，所以 $\\angle CDA=180^\\circ-\\beta$，从而 $\\angle CDP=\\angle CDA-90^\\circ=90^\\circ-\\beta$。又由 $CQ\\perp BC$、$QP\\parallel BA$，有 $\\angle CQP=90^\\circ+\\beta$。这两个对角互补，故 $PQCD$ 也圆内接。",
+          "因此四块分割总能完成，再按第一步细分矩形，便对每个 $n\\ge4$ 得到恰好 $n$ 个圆内接四边形。"
+        ]
+      }
+    ]
+  },
+  "imo-1972-q3": {
+    "summary": "For arbitrary nonnegative integers $m,n$, prove that $\\dfrac{(2m)!(2n)!}{m!n!(m+n)!}$ is an integer, with $0!=1$.",
+    "summaryZh": "对任意非负整数 $m,n$，证明 $\\dfrac{(2m)!(2n)!}{m!n!(m+n)!}$ 是整数，其中 $0!=1$。",
+    "answer": "The displayed quantity is an integer for all $m,n\\ge0$.",
+    "answerZh": "该式对所有 $m,n\\ge0$ 均为整数。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use a two-variable recurrence",
+        "titleZh": "利用二元递推关系",
+        "topics": [
+          {"en": "Factorials", "zh": "阶乘"},
+          {"en": "Mathematical induction", "zh": "数学归纳法"},
+          {"en": "Binomial coefficients", "zh": "二项式系数"}
+        ],
+        "steps": [
+          "Write $S(m,n)=\\dfrac{(2m)!(2n)!}{m!n!(m+n)!}$.",
+          "Direct cancellation gives $S(m+1,n)=\\dfrac{2(2m+1)}{m+n+1}S(m,n)$ and $S(m,n+1)=\\dfrac{2(2n+1)}{m+n+1}S(m,n)$. Adding yields the recurrence $$S(m+1,n)+S(m,n+1)=4S(m,n).$$",
+          "We induct on $n$, with the assertion required simultaneously for every $m\\ge0$. At $n=0$, $S(m,0)=\\dfrac{(2m)!}{m!m!}=\\binom{2m}{m}$ is an integer.",
+          "Assume $S(m,n)$ is an integer for every $m\\ge0$. Rearranging the recurrence gives $$S(m,n+1)=4S(m,n)-S(m+1,n),$$ an integer for every $m$ by the induction hypothesis.",
+          "The induction covers every $n\\ge0$, proving the claim for all nonnegative $m,n$."
+        ],
+        "stepsZh": [
+          "记 $S(m,n)=\\dfrac{(2m)!(2n)!}{m!n!(m+n)!}$。",
+          "直接约分得到 $S(m+1,n)=\\dfrac{2(2m+1)}{m+n+1}S(m,n)$ 以及 $S(m,n+1)=\\dfrac{2(2n+1)}{m+n+1}S(m,n)$。两式相加得递推式 $$S(m+1,n)+S(m,n+1)=4S(m,n).$$",
+          "对 $n$ 归纳，并在每一步同时证明所有 $m\\ge0$ 的结论。当 $n=0$ 时，$S(m,0)=\\dfrac{(2m)!}{m!m!}=\\binom{2m}{m}$ 是整数。",
+          "假设固定的 $n$ 下，所有 $S(m,n)$ 都是整数。由递推式改写为 $$S(m,n+1)=4S(m,n)-S(m+1,n),$$ 右边由归纳假设为整数，因此对每个 $m$ 都成立。",
+          "归纳覆盖所有 $n\\ge0$，所以结论对任意非负整数 $m,n$ 成立。"
+        ]
+      }
+    ]
+  },
+  "imo-1972-q4": {
+    "summary": "Positive real numbers $x_1,\\ldots,x_5$ satisfy, with indices read cyclically modulo $5$, $$(x_i^2-x_{i+2}x_{i+4})(x_{i+1}^2-x_{i+2}x_{i+4})\\le0\\qquad(i=1,\\ldots,5).$$ Determine all such five-tuples.",
+    "summaryZh": "正实数 $x_1,\\ldots,x_5$ 满足（下标按模 $5$ 循环）$$(x_i^2-x_{i+2}x_{i+4})(x_{i+1}^2-x_{i+2}x_{i+4})\\le0\\qquad(i=1,\\ldots,5).$$ 求所有这样的五元组。",
+    "answer": "Exactly $(x_1,x_2,x_3,x_4,x_5)=(t,t,t,t,t)$ for arbitrary $t>0$.",
+    "answerZh": "全部解恰为 $(x_1,x_2,x_3,x_4,x_5)=(t,t,t,t,t)$，其中 $t>0$ 任意。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Linearise the signs with logarithms and sum",
+        "titleZh": "用对数线性化符号并求和",
+        "topics": [
+          {"en": "Logarithmic substitution", "zh": "对数代换"},
+          {"en": "Cyclic sums", "zh": "循环和"},
+          {"en": "Sum of squares", "zh": "平方和"}
+        ],
+        "steps": [
+          "Put $a_i=\\ln x_i$ and read all subscripts modulo $5$. Since the logarithm is strictly increasing, $x_j^2-x_kx_l$ has the same sign as $2a_j-a_k-a_l$.",
+          "Hence the five hypotheses become $$(2a_i-a_{i+2}-a_{i+4})(2a_{i+1}-a_{i+2}-a_{i+4})\\le0\\qquad(i=1,\\ldots,5).$$",
+          "Add their left sides. Expanding and collecting cyclic terms gives $$\\sum_{i=1}^5(2a_i-a_{i+2}-a_{i+4})(2a_{i+1}-a_{i+2}-a_{i+4})=\\sum_{i=1}^5(a_i-a_{i+2})^2.$$",
+          "The left side is nonpositive because each summand is nonpositive, whereas the right side is nonnegative. Therefore every square is zero: $a_i=a_{i+2}$ for all $i$.",
+          "Because adding $2$ cycles through all five residues, $a_1=a_2=\\cdots=a_5$ and hence $x_1=\\cdots=x_5=t>0$. Conversely, such a tuple makes every factor zero, so all and only these tuples are solutions."
+        ],
+        "stepsZh": [
+          "令 $a_i=\\ln x_i$，所有下标按模 $5$ 循环。由于对数严格递增，$x_j^2-x_kx_l$ 与 $2a_j-a_k-a_l$ 同号。",
+          "因此五个条件化为 $$(2a_i-a_{i+2}-a_{i+4})(2a_{i+1}-a_{i+2}-a_{i+4})\\le0\\qquad(i=1,\\ldots,5).$$",
+          "把五个左端相加，展开并按循环下标合并同类项，得到 $$\\sum_{i=1}^5(2a_i-a_{i+2}-a_{i+4})(2a_{i+1}-a_{i+2}-a_{i+4})=\\sum_{i=1}^5(a_i-a_{i+2})^2.$$",
+          "左边因每一项非正而非正，右边则为非负平方和。因此每个平方都等于零，即对所有 $i$ 有 $a_i=a_{i+2}$。",
+          "模 $5$ 反复加 $2$ 会遍历全部下标，所以 $a_1=a_2=\\cdots=a_5$，进而 $x_1=\\cdots=x_5=t>0$。反过来，这样的五元组使原式每个因子都为零，故这就是全部解。"
+        ]
+      }
+    ]
+  },
+  "imo-1972-q5": {
+    "summary": "Real-valued functions $f,g$ satisfy $f(x+y)+f(x-y)=2f(x)g(y)$ for all real $x,y$. Assume $f$ is not identically zero and $|f(x)|\\le1$ for every $x$. Prove that $|g(y)|\\le1$ for every real $y$.",
+    "summaryZh": "实值函数 $f,g$ 对所有实数 $x,y$ 满足 $f(x+y)+f(x-y)=2f(x)g(y)$。已知 $f$ 不恒为零，且对每个 $x$ 都有 $|f(x)|\\le1$。证明对每个实数 $y$ 都有 $|g(y)|\\le1$。",
+    "answer": "$|g(y)|\\le1$ for every real $y$.",
+    "answerZh": "对每个实数 $y$，都有 $|g(y)|\\le1$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Take the supremum of the bounded function",
+        "titleZh": "利用有界函数的上确界",
+        "topics": [
+          {"en": "Functional equations", "zh": "函数方程"},
+          {"en": "Supremum", "zh": "上确界"},
+          {"en": "Triangle inequality", "zh": "三角不等式"}
+        ],
+        "steps": [
+          "Let $M=\\sup_{t\\in\\mathbb R}|f(t)|$. The assumptions give $0<M\\le1$.",
+          "Fix $y$. For every $x$, the functional equation and triangle inequality give $$2|f(x)|\\,|g(y)|=|f(x+y)+f(x-y)|\\le |f(x+y)|+|f(x-y)|\\le2M.$$",
+          "Taking the supremum over $x$ on the left yields $2M|g(y)|\\le2M$. Since $M>0$, division gives $|g(y)|\\le1$.",
+          "The choice of $y$ was arbitrary, so the bound holds on all of $\\mathbb R$."
+        ],
+        "stepsZh": [
+          "令 $M=\\sup_{t\\in\\mathbb R}|f(t)|$。由题设可知 $0<M\\le1$。",
+          "固定任意 $y$。对每个 $x$，由函数方程和三角不等式，$$2|f(x)|\\,|g(y)|=|f(x+y)+f(x-y)|\\le |f(x+y)|+|f(x-y)|\\le2M.$$",
+          "对左端关于 $x$ 取上确界，得到 $2M|g(y)|\\le2M$。因为 $M>0$，相除即得 $|g(y)|\\le1$。",
+          "$y$ 的选择任意，故该界对所有实数 $y$ 成立。"
+        ]
+      },
+      {
+        "title": "Build a sequence that would grow if $|g(y)|>1$",
+        "titleZh": "构造在 $|g(y)|>1$ 时增长的序列",
+        "topics": [
+          {"en": "Contradiction", "zh": "反证法"},
+          {"en": "Recursive construction", "zh": "递推构造"},
+          {"en": "Boundedness", "zh": "有界性"}
+        ],
+        "steps": [
+          "Fix $y$ and choose $x_0$ with $f(x_0)\\ne0$. From $|f(x+y)+f(x-y)|=2|f(x)|\\,|g(y)|$, at least one of $|f(x+y)|,|f(x-y)|$ is at least $|f(x)|\\,|g(y)|$.",
+          "Starting at $x_0$, choose $x_{k+1}$ to be either $x_k+y$ or $x_k-y$ so that $$|f(x_{k+1})|\\ge |g(y)|\\,|f(x_k)|.$$",
+          "Induction gives $|f(x_k)|\\ge |g(y)|^k|f(x_0)|$. If $|g(y)|>1$, the right side eventually exceeds $1$, contradicting the global bound $|f|\\le1$.",
+          "Thus $|g(y)|\\le1$ for the fixed $y$, and hence for every real $y$."
+        ],
+        "stepsZh": [
+          "固定 $y$，并选取满足 $f(x_0)\\ne0$ 的 $x_0$。由 $|f(x+y)+f(x-y)|=2|f(x)|\\,|g(y)|$ 可知，$|f(x+y)|,|f(x-y)|$ 中至少一个不小于 $|f(x)|\\,|g(y)|$。",
+          "从 $x_0$ 开始，每一步在 $x_k+y$ 与 $x_k-y$ 中选择 $x_{k+1}$，使 $$|f(x_{k+1})|\\ge |g(y)|\\,|f(x_k)|.$$",
+          "归纳得到 $|f(x_k)|\\ge |g(y)|^k|f(x_0)|$。若 $|g(y)|>1$，右端最终会超过 $1$，与全局条件 $|f|\\le1$ 矛盾。",
+          "故固定的 $y$ 必满足 $|g(y)|\\le1$；由于 $y$ 任意，结论对所有实数成立。"
+        ]
+      }
+    ]
+  },
+  "imo-1972-q6": {
+    "summary": "Four distinct parallel planes are given in three-dimensional space. Prove that a nondegenerate regular tetrahedron can be positioned with one vertex on each plane.",
+    "summaryZh": "三维空间中给定四个互不相同的平行平面。证明可以放置一个非退化正四面体，使每个平面上恰有其一个顶点。",
+    "answer": "Such a regular tetrahedron exists for every four distinct parallel planes.",
+    "answerZh": "对任意四个不同的平行平面，都存在满足条件的正四面体。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Rotate and scale a vector model of a regular tetrahedron",
+        "titleZh": "旋转并缩放正四面体的向量模型",
+        "topics": [
+          {"en": "Three-dimensional vectors", "zh": "空间向量"},
+          {"en": "Dot products", "zh": "数量积"},
+          {"en": "Rigid motions and dilation", "zh": "刚体运动与伸缩"}
+        ],
+        "steps": [
+          "Choose coordinates so that the planes are $z=h_i$ for pairwise distinct real numbers $h_1,h_2,h_3,h_4$. Put $m=(h_1+h_2+h_3+h_4)/4$ and $t_i=h_i-m$, so $\\sum t_i=0$.",
+          "Use the four vectors $$v_1=(1,1,1),\\ v_2=(1,-1,-1),\\ v_3=(-1,1,-1),\\ v_4=(-1,-1,1).$$ Their endpoints form a regular tetrahedron because $|v_i-v_j|=2\\sqrt2$ for $i\\ne j$. They also satisfy $v_i\\cdot v_i=3$ and $v_i\\cdot v_j=-1$ for $i\\ne j$.",
+          "Define $w=\\frac14\\sum_{j=1}^4t_jv_j$. Then $$w\\cdot v_i=\\frac14\\left(3t_i-\\sum_{j\\ne i}t_j\\right)=t_i,$$ using $\\sum t_j=0$. Since the $h_i$ are not all equal, $w\\ne0$; set $r=|w|>0$.",
+          "Let $e_3=(0,0,1)$ and choose a rotation $R$ with $R(w/r)=e_3$. Rotations preserve dot products, hence $$e_3\\cdot Rv_i=R(w/r)\\cdot Rv_i=(w\\cdot v_i)/r=t_i/r.$$",
+          "Define points $p_i=rRv_i+me_3$. Their vertical coordinates are $e_3\\cdot p_i=t_i+m=h_i$, so $p_i$ lies on the prescribed plane $z=h_i$.",
+          "All mutual distances are $|p_i-p_j|=r|v_i-v_j|=2\\sqrt2r$. Therefore the four $p_i$ form a nondegenerate regular tetrahedron, with one vertex on each given plane."
+        ],
+        "stepsZh": [
+          "选取坐标系，使四个平面的方程为 $z=h_i$，其中实数 $h_1,h_2,h_3,h_4$ 两两不同。令 $m=(h_1+h_2+h_3+h_4)/4$、$t_i=h_i-m$，于是 $\\sum t_i=0$。",
+          "考虑四个向量 $$v_1=(1,1,1),\\ v_2=(1,-1,-1),\\ v_3=(-1,1,-1),\\ v_4=(-1,-1,1).$$ 因为 $i\\ne j$ 时 $|v_i-v_j|=2\\sqrt2$，它们的终点构成正四面体；同时 $v_i\\cdot v_i=3$，$v_i\\cdot v_j=-1$。",
+          "定义 $w=\\frac14\\sum_{j=1}^4t_jv_j$。利用 $\\sum t_j=0$，有 $$w\\cdot v_i=\\frac14\\left(3t_i-\\sum_{j\\ne i}t_j\\right)=t_i.$$ 因各 $h_i$ 不全相同，$w\\ne0$；记 $r=|w|>0$。",
+          "令 $e_3=(0,0,1)$，选取旋转 $R$ 使 $R(w/r)=e_3$。旋转保持数量积，所以 $$e_3\\cdot Rv_i=R(w/r)\\cdot Rv_i=(w\\cdot v_i)/r=t_i/r.$$",
+          "定义点 $p_i=rRv_i+me_3$。它的竖直坐标为 $e_3\\cdot p_i=t_i+m=h_i$，故 $p_i$ 位于指定平面 $z=h_i$ 上。",
+          "任意两点间距离均为 $|p_i-p_j|=r|v_i-v_j|=2\\sqrt2r$。因此四点构成非退化正四面体，并且每个给定平面上各有一个顶点。"
+        ]
+      }
+    ]
+  }
+}
