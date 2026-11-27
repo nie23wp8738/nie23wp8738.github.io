@@ -1,0 +1,244 @@
+{
+  "euclid-2015-q1": {
+    "summary": "(a) Evaluate $(10^2-9^2)/(10+9)$. (b) Given $(x+1)/(x+4)=4$, find $3x+8$. (c) If $f(x)=2x-1$, evaluate $(f(3))^2+2f(3)+1$.",
+    "summaryZh": "(a) 计算 $(10^2-9^2)/(10+9)$。(b) 已知 $(x+1)/(x+4)=4$，求 $3x+8$。(c) 若 $f(x)=2x-1$，计算 $(f(3))^2+2f(3)+1$。",
+    "answer": "(a) $1$. (b) $-7$. (c) $36$.",
+    "answerZh": "(a) $1$。(b) $-7$。(c) $36$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Use identities and solve the linear equation",
+      "titleZh": "使用恒等式并解线性方程",
+      "topics": [{"en":"Difference of squares","zh":"平方差公式"},{"en":"Linear equations","zh":"线性方程"},{"en":"Function evaluation","zh":"函数求值"}],
+      "steps": [
+        "(a) Factor the numerator: $10^2-9^2=(10-9)(10+9)$. Since $10+9\\ne0$, the quotient is $10-9=1$.",
+        "(b) The denominator condition is $x\\ne-4$. Cross-multiplication gives $x+1=4x+16$, hence $3x=-15$. Therefore $3x+8=-15+8=-7$; the implied value $x=-5$ is allowed.",
+        "(c) We have $f(3)=2(3)-1=5$. Thus $(f(3))^2+2f(3)+1=5^2+2(5)+1=36$. Equivalently, the expression is $(f(3)+1)^2$."
+      ],
+      "stepsZh": [
+        "(a) 分解分子：$10^2-9^2=(10-9)(10+9)$。因 $10+9\\ne0$，约分得 $10-9=1$。",
+        "(b) 定义域要求 $x\\ne-4$。交叉相乘得 $x+1=4x+16$，所以 $3x=-15$，从而 $3x+8=-15+8=-7$；相应的 $x=-5$ 合法。",
+        "(c) $f(3)=2(3)-1=5$，故 $(f(3))^2+2f(3)+1=5^2+2(5)+1=36$。也可直接识别为 $(f(3)+1)^2$。"
+      ]
+    }]
+  },
+  "euclid-2015-q2": {
+    "summary": "(a) If $\\sqrt a+\\sqrt a=20$, find $a$. (b) Two concentric circles have smaller radius $1$, and the annular area equals the smaller circle's area. Find the larger radius. (c) A class of $30$ has mean $80$; after two students leave, the remaining $28$ have mean $82$. Find the mean of the two departing marks.",
+    "summaryZh": "(a) 若 $\\sqrt a+\\sqrt a=20$，求 $a$。(b) 两个同心圆中小圆半径为 $1$，两圆之间的圆环面积等于小圆面积，求大圆半径。(c) $30$ 名学生的平均分为 $80$；两人退课后，余下 $28$ 人平均分为 $82$。求退课两人的平均分。",
+    "answer": "(a) $100$. (b) $\\sqrt2$. (c) $52$.",
+    "answerZh": "(a) $100$。(b) $\\sqrt2$。(c) $52$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Translate each condition into an equation",
+      "titleZh": "把每个条件转化为方程",
+      "topics": [{"en":"Radical equations","zh":"根式方程"},{"en":"Circle area","zh":"圆面积"},{"en":"Weighted means","zh":"加权平均数"}],
+      "steps": [
+        "(a) $2\\sqrt a=20$, so $\\sqrt a=10$ and $a=100$.",
+        "(b) If the larger radius is $R>0$, then $\\pi R^2-\\pi(1)^2=\\pi(1)^2$. Hence $R^2=2$ and $R=\\sqrt2$.",
+        "(c) The original total is $30(80)=2400$ and the remaining total is $28(82)=2296$. The two removed marks sum to $104$, so their mean is $104/2=52$."
+      ],
+      "stepsZh": [
+        "(a) $2\\sqrt a=20$，所以 $\\sqrt a=10$，进而 $a=100$。",
+        "(b) 设大圆半径为 $R>0$。由 $\\pi R^2-\\pi(1)^2=\\pi(1)^2$，得 $R^2=2$，故 $R=\\sqrt2$。",
+        "(c) 原总分为 $30(80)=2400$，剩余总分为 $28(82)=2296$。退课两人的总分为 $104$，平均分为 $104/2=52$。"
+      ]
+    }]
+  },
+  "euclid-2015-q3": {
+    "summary": "(a) Points $B,C,D$ are collinear with $BD=4$ and $C$ the midpoint of $BD$; triangle $ABC$ is equilateral on one side of the line. Find $AD$. (b) Triangle $MNP$ has $M(1,4)$, $N(5,3)$, and $P(5,c)$. The area is $14$ for two values of $c$; find their sum.",
+    "summaryZh": "(a) 点 $B,C,D$ 共线，$BD=4$ 且 $C$ 为 $BD$ 的中点；在线段一侧作等边三角形 $ABC$。求 $AD$。(b) 三角形 $MNP$ 的顶点为 $M(1,4),N(5,3),P(5,c)$。其面积为 $14$ 时有两个 $c$ 值，求二者之和。",
+    "answer": "(a) $2\\sqrt3$. (b) $6$.",
+    "answerZh": "(a) $2\\sqrt3$。(b) $6$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use special triangles and a vertical base",
+      "titleZh": "使用特殊三角形与竖直底边",
+      "topics": [{"en":"Equilateral triangles","zh":"等边三角形"},{"en":"30-60-90 triangles","zh":"30-60-90 三角形"},{"en":"Coordinate area","zh":"坐标面积"}],
+      "steps": [
+        "(a) Since $C$ is the midpoint, $BC=CD=2$, and equilateral $ABC$ gives $AB=AC=2$ and $\\angle ACB=60^\\circ$. Thus $\\angle ACD=120^\\circ$. In isosceles triangle $ACD$, the other two angles are $30^\\circ$, so triangle $ABD$ is right at $A$ with hypotenuse $BD=4$. Its side opposite $60^\\circ$ is $AD=(\\sqrt3/2)4=2\\sqrt3$.",
+        "(b) Segment $NP$ is vertical with length $|c-3|$, and the perpendicular distance from $M$ to the line $x=5$ is $4$. Hence $14=\\tfrac12|c-3|(4)$, so $|c-3|=7$. Thus $c=10$ or $-4$, whose sum is $6$."
+      ],
+      "stepsZh": [
+        "(a) 因 $C$ 为中点，$BC=CD=2$；等边三角形给出 $AB=AC=2$ 且 $\\angle ACB=60^\\circ$，故 $\\angle ACD=120^\\circ$。等腰三角形 $ACD$ 的另两角均为 $30^\\circ$，于是三角形 $ABD$ 在 $A$ 处为直角、斜边 $BD=4$。其 $60^\\circ$ 对边 $AD=(\\sqrt3/2)4=2\\sqrt3$。",
+        "(b) $NP$ 是长度为 $|c-3|$ 的竖直线段，点 $M$ 到直线 $x=5$ 的距离为 $4$。所以 $14=\\tfrac12|c-3|(4)$，即 $|c-3|=7$。得到 $c=10$ 或 $-4$，和为 $6$。"
+      ]
+    },{
+      "title": "Alternative for part (a): cosine law",
+      "titleZh": "第 (a) 问的另一解法：余弦定理",
+      "topics": [{"en":"Cosine law","zh":"余弦定理"}],
+      "steps": [
+        "In triangle $ACD$, $AC=CD=2$ and $\\angle ACD=120^\\circ$. Therefore $AD^2=2^2+2^2-2(2)(2)\\cos120^\\circ=12$, so $AD=2\\sqrt3$."
+      ],
+      "stepsZh": [
+        "在三角形 $ACD$ 中，$AC=CD=2$ 且 $\\angle ACD=120^\\circ$。由余弦定理，$AD^2=2^2+2^2-2(2)(2)\\cos120^\\circ=12$，故 $AD=2\\sqrt3$。"
+      ]
+    }]
+  },
+  "euclid-2015-q4": {
+    "summary": "(a) Find all intercepts of $y=(x-1)(x-2)(x-3)-(x-2)(x-3)(x-4)$. (b) The curves $y=x^3-x^2+3x-4$ and $y=ax^2-x-4$ meet at exactly two points. Find all real $a$.",
+    "summaryZh": "(a) 求曲线 $y=(x-1)(x-2)(x-3)-(x-2)(x-3)(x-4)$ 的所有坐标轴截距。(b) 曲线 $y=x^3-x^2+3x-4$ 与 $y=ax^2-x-4$ 恰有两个交点，求所有实数 $a$。",
+    "answer": "(a) $(2,0),(3,0),(0,18)$. (b) $a=3$ or $a=-5$.",
+    "answerZh": "(a) $(2,0),(3,0),(0,18)$。(b) $a=3$ 或 $a=-5$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Factor common terms and impose a repeated quadratic root",
+      "titleZh": "提取公因式并令二次方程出现重根",
+      "topics": [{"en":"Polynomial factorisation","zh":"多项式因式分解"},{"en":"Intercepts","zh":"坐标轴截距"},{"en":"Discriminants","zh":"判别式"}],
+      "steps": [
+        "(a) Factoring gives $y=(x-2)(x-3)[(x-1)-(x-4)]=3(x-2)(x-3)$. Hence the $x$-intercepts are $(2,0)$ and $(3,0)$. At $x=0$, $y=3(-2)(-3)=18$, giving $(0,18)$.",
+        "(b) Equating the curves and cancelling constants gives $x[x^2-(a+1)x+4]=0$. The root $x=0$ never satisfies the quadratic because its constant term is $4$. Exactly two distinct intersection abscissae therefore require the quadratic to have one repeated root: $(a+1)^2-16=0$. Thus $a+1=\\pm4$, so $a=3$ or $-5$."
+      ],
+      "stepsZh": [
+        "(a) 提取公因式得 $y=(x-2)(x-3)[(x-1)-(x-4)]=3(x-2)(x-3)$。故 $x$ 轴交点为 $(2,0),(3,0)$；令 $x=0$ 得 $y=18$，所以 $y$ 轴交点为 $(0,18)$。",
+        "(b) 联立两式并约去常数项，得 $x[x^2-(a+1)x+4]=0$。由于二次因子的常数项为 $4$，$x=0$ 不可能同时是其根。要恰有两个不同交点，二次方程必须有一个重根，即 $(a+1)^2-16=0$。所以 $a+1=\\pm4$，得到 $a=3$ 或 $-5$。"
+      ]
+    }]
+  },
+  "euclid-2015-q5": {
+    "summary": "(a) Triangle $ABC$ is right at $A$. Points $D$ on $AB$ and $E$ on $AC$ satisfy $AB=AC=DE$, $DB=9$, and $EC=8$. Find $DE$. (b) Two lists contain six consecutive positive integers, beginning at $a$ and $b$ with $a<b$. All $36$ pairwise products are formed. The products include $49$, include no multiple of $64$, and include a value greater than $75$. Find all $(a,b)$.",
+    "summaryZh": "(a) 三角形 $ABC$ 在 $A$ 处为直角。点 $D,E$ 分别在 $AB,AC$ 上，且 $AB=AC=DE$、$DB=9$、$EC=8$。求 $DE$。(b) 两个数列各含六个连续正整数，首项分别为 $a,b$ 且 $a<b$。取两列中各一数相乘得到 $36$ 个乘积。已知其中出现 $49$、不出现 $64$ 的倍数，且至少一个乘积大于 $75$。求所有 $(a,b)$。",
+    "answer": "(a) $29$. (b) $(1,49),(2,6),(2,7)$.",
+    "answerZh": "(a) $29$。(b) $(1,49),(2,6),(2,7)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Apply Pythagoras and filter the finite cases",
+      "titleZh": "使用勾股定理并逐层筛选有限情形",
+      "topics": [{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Consecutive integers","zh":"连续整数"},{"en":"Divisibility by powers of two","zh":"二的幂整除性"}],
+      "steps": [
+        "(a) Put $AB=AC=DE=x$. Then $AD=x-9$ and $AE=x-8$. Since $AD\\perp AE$, Pythagoras gives $(x-9)^2+(x-8)^2=x^2$, or $x^2-34x+145=(x-5)(x-29)=0$. Because $x\\ge9$, only $x=29$ is possible.",
+        "(b) Since $49=1\\cdot49=7\\cdot7$, either $a=1$ and the second list contains $49$, giving $44\\le b\\le49$, or both lists contain $7$, giving $2\\le a<b\\le7$.",
+        "For the first group, every $b=44,45,46,47,48$ puts $4$ in the first list and $48$ in the second, producing $192=3(64)$; only $(1,49)$ survives. In the second group, if $a\\ge3$, both lists contain $8$, producing $64$. Thus only $(2,b)$ with $3\\le b\\le7$ survive the no-multiple-of-$64$ condition.",
+        "The largest products for $(2,3),(2,4),(2,5),(2,6),(2,7)$ are respectively $7\\cdot8=56$, $7\\cdot9=63$, $7\\cdot10=70$, $7\\cdot11=77$, and $7\\cdot12=84$. Keeping only values exceeding $75$, and retaining $(1,49)$ whose maximum is $6\\cdot54$, gives $(1,49),(2,6),(2,7)$."
+      ],
+      "stepsZh": [
+        "(a) 令 $AB=AC=DE=x$，则 $AD=x-9,AE=x-8$。因 $AD\\perp AE$，勾股定理给出 $(x-9)^2+(x-8)^2=x^2$，即 $x^2-34x+145=(x-5)(x-29)=0$。又 $x\\ge9$，故只能有 $x=29$。",
+        "(b) 因 $49=1\\cdot49=7\\cdot7$，要么 $a=1$ 且第二列含 $49$，从而 $44\\le b\\le49$；要么两列都含 $7$，从而 $2\\le a<b\\le7$。",
+        "第一组中，$b=44,45,46,47,48$ 时第一列含 $4$、第二列含 $48$，会产生 $192=3(64)$，所以仅 $(1,49)$ 保留。第二组若 $a\\ge3$，两列都含 $8$，会产生 $64$；因此“不含 $64$ 的倍数”只留下 $(2,b)$，其中 $3\\le b\\le7$。",
+        "$(2,3),(2,4),(2,5),(2,6),(2,7)$ 的最大乘积依次为 $56,63,70,77,84$。只保留大于 $75$ 的情形，并加上最大乘积为 $6\\cdot54$ 的 $(1,49)$，得到 $(1,49),(2,6),(2,7)$。"
+      ]
+    }]
+  },
+  "euclid-2015-q6": {
+    "summary": "(a) A circular disc has $36$ sectors. If three consecutive sector values are $a,b,c$ in order, they satisfy $b=ac$. Adjacent sectors are labelled $2,3$; find the sum of all $36$ values. (b) Solve $0<(x^2-11)/(x+1)<7$.",
+    "summaryZh": "(a) 一个圆盘分成 $36$ 个扇区。任意按顺序相邻的三个数 $a,b,c$ 均满足 $b=ac$。相邻两个扇区标为 $2,3$，求全部 $36$ 个数之和。(b) 解不等式 $0<(x^2-11)/(x+1)<7$。",
+    "answer": "(a) $48$. (b) $-\\sqrt{11}<x<-2$ or $\\sqrt{11}<x<9$.",
+    "answerZh": "(a) $48$。(b) $-\\sqrt{11}<x<-2$ 或 $\\sqrt{11}<x<9$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Find the six-term cycle and use a sign chart",
+      "titleZh": "找出六项循环并使用符号分析",
+      "topics": [{"en":"Recurrences","zh":"递推关系"},{"en":"Periodicity","zh":"周期性"},{"en":"Rational inequalities","zh":"分式不等式"}],
+      "steps": [
+        "(a) From $b=ac$, two consecutive values $a,b$ determine the next as $c=b/a$. Starting with $2,3$ gives $2,3,\\tfrac32,\\tfrac12,\\tfrac13,\\tfrac23$, after which $2,3$ recur. The six-term sum is $8$, and this block repeats $36/6=6$ times, so the total is $48$.",
+        "(b) Rewrite the two conditions as $(x^2-11)/(x+1)>0$ and $(x^2-7x-18)/(x+1)<0$, where $x\\ne-1$. The critical values are $-\\sqrt{11},-2,-1,\\sqrt{11},9$ because $x^2-7x-18=(x-9)(x+2)$.",
+        "Intersecting the sign-positive intervals of the first fraction with the sign-negative intervals of the second gives $(-\\sqrt{11},-2)\\cup(\\sqrt{11},9)$. All endpoints are excluded because the inequalities are strict or the expression is undefined."
+      ],
+      "stepsZh": [
+        "(a) 由 $b=ac$，相邻两项 $a,b$ 决定下一项 $c=b/a$。从 $2,3$ 开始依次得到 $2,3,\\tfrac32,\\tfrac12,\\tfrac13,\\tfrac23$，随后 $2,3$ 再次出现。六项之和为 $8$，在 $36$ 个扇区中重复 $6$ 次，总和为 $48$。",
+        "(b) 两个条件分别等价于 $(x^2-11)/(x+1)>0$ 与 $(x^2-7x-18)/(x+1)<0$，且 $x\\ne-1$。因 $x^2-7x-18=(x-9)(x+2)$，临界点为 $-\\sqrt{11},-2,-1,\\sqrt{11},9$。",
+        "把第一个分式为正的区间与第二个分式为负的区间取交集，得到 $(-\\sqrt{11},-2)\\cup(\\sqrt{11},9)$。由于均为严格不等式且 $x=-1$ 无定义，所有端点均不取。"
+      ]
+    }]
+  },
+  "euclid-2015-q7": {
+    "summary": "(a) $ACDF$ is a $200$ by $50$ rectangle. Points $B$ on $AC$ and $E$ on $FD$ make right triangles $FBD$ and $AEC$ congruent, right-angled at $B$ and $E$. The shaded quadrilateral is the union of the two triangles with common base $BE$ and third vertices at the intersections of the diagonals of rectangles $ABEF$ and $BCDE$. Find its area. (b) A non-constant arithmetic sequence has $a_1,a_2,a_6$ in geometric progression. Find all positive integers $k$ for which $a_1,a_4,a_k$ are also in geometric progression.",
+    "summaryZh": "(a) $ACDF$ 是长 $200$、高 $50$ 的矩形。点 $B$ 在 $AC$ 上、点 $E$ 在 $FD$ 上，使直角三角形 $FBD$ 与 $AEC$ 全等，直角分别在 $B,E$。阴影四边形由两部分组成：以 $BE$ 为公共底边，第三个顶点分别为矩形 $ABEF$ 与 $BCDE$ 两条对角线交点的两个三角形。求阴影面积。(b) 一个非常数等差数列的 $a_1,a_2,a_6$ 依次成等比数列。求所有使 $a_1,a_4,a_k$ 也依次成等比数列的正整数 $k$。",
+    "answer": "(a) $2500$. (b) $k=34$.",
+    "answerZh": "(a) $2500$。(b) $k=34$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Partition the rectangles and parameterise the sequence",
+      "titleZh": "分割矩形并参数化数列",
+      "topics": [{"en":"Congruent triangles","zh":"全等三角形"},{"en":"Rectangle diagonals","zh":"矩形对角线"},{"en":"Arithmetic and geometric sequences","zh":"等差与等比数列"}],
+      "steps": [
+        "(a) Congruence gives $FB=AE$. Right triangles $FAB$ and $AFE$ share $AF$ and have equal hypotenuses, so they are congruent and $AB=FE$. Hence $ABEF$ and $BCDE$ are rectangles.",
+        "The diagonals of a rectangle divide it into four equal-area triangles. The shaded part contains one such quarter from each of the two rectangles, so its area is one quarter of the whole $200\\times50$ rectangle: $\\tfrac14(10000)=2500$.",
+        "(b) Write $a_n=a+(n-1)d$ with $d\\ne0$. Since $a_1,a_2,a_6$ are geometric, $(a+d)^2=a(a+5d)$, so $d^2=3ad$. Dividing by $d$ gives $d=3a$, and in particular $a\\ne0$.",
+        "Thus $a_n=(3n-2)a$, so $a_4=10a$ and $a_k=(3k-2)a$. The condition $(a_4)^2=a_1a_k$ becomes $100a^2=(3k-2)a^2$. Cancelling $a^2$ gives $3k-2=100$, hence $k=34$. Indeed $a,10a,100a$ is geometric."
+      ],
+      "stepsZh": [
+        "(a) 由全等得 $FB=AE$。直角三角形 $FAB$ 与 $AFE$ 共用 $AF$ 且斜边相等，故二者全等，从而 $AB=FE$；于是 $ABEF$ 与 $BCDE$ 都是矩形。",
+        "矩形的两条对角线把它分成四个等面积三角形。阴影在左右两个矩形中各占四分之一，所以其面积等于整个 $200\\times50$ 矩形面积的四分之一，即 $\\tfrac14(10000)=2500$。",
+        "(b) 设 $a_n=a+(n-1)d$，其中 $d\\ne0$。因 $a_1,a_2,a_6$ 成等比数列，$(a+d)^2=a(a+5d)$，故 $d^2=3ad$。除以 $d$ 得 $d=3a$，同时 $a\\ne0$。",
+        "所以 $a_n=(3n-2)a$，特别地 $a_4=10a,a_k=(3k-2)a$。条件 $(a_4)^2=a_1a_k$ 化为 $100a^2=(3k-2)a^2$。约去 $a^2$ 得 $3k-2=100$，故 $k=34$；此时 $a,10a,100a$ 确实成等比数列。"
+      ]
+    }]
+  },
+  "euclid-2015-q8": {
+    "summary": "(a) For positive integer $k$, the parabola $y=x^2/k-5$ and circle $x^2+y^2=25$ meet at exactly three distinct points. Find all $k$ for which the triangle formed by them has integer area. (b) An isosceles triangle has equal sides $a$ and base $b<2a$. Its incircle has radius $R$; a second circle of radius $r$ is tangent to both equal sides and externally tangent to the incircle above it. Find $R/r$ in terms of $a,b$.",
+    "summaryZh": "(a) 对正整数 $k$，抛物线 $y=x^2/k-5$ 与圆 $x^2+y^2=25$ 恰有三个不同交点。求使三交点所成三角形面积为整数的所有 $k$。(b) 一个等腰三角形的腰长为 $a$、底边为 $b<2a$。内切圆半径为 $R$；其上方另有半径为 $r$ 的圆，同时与两腰和内切圆外切。求用 $a,b$ 表示的 $R/r$。",
+    "answer": "(a) $k=1,2,5,8,9$. (b) $R/r=(2a+b)/(2a-b)$.",
+    "answerZh": "(a) $k=1,2,5,8,9$。(b) $R/r=(2a+b)/(2a-b)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Eliminate a coordinate and compare similar right triangles",
+      "titleZh": "消去一个坐标并比较相似直角三角形",
+      "topics": [{"en":"Circle-parabola intersections","zh":"圆与抛物线交点"},{"en":"Exact triangle area","zh":"三角形精确面积"},{"en":"Tangency and similarity","zh":"相切与相似"}],
+      "steps": [
+        "(a) The point $(0,-5)$ is always common. Since $x^2=k(y+5)$, substitution into the circle gives $(y+5)(y+k-5)=0$. The other two points therefore have $y=5-k$ and $x=\\pm\\sqrt{k(10-k)}$.",
+        "Three distinct points require $1\\le k\\le9$. Their horizontal base is $2\\sqrt{k(10-k)}$ and their height above $(0,-5)$ is $10-k$, so the area is $(10-k)\\sqrt{k(10-k)}$.",
+        "For $k=1,\\ldots,9$, these areas are $27,32,7\\sqrt{21},6\\sqrt{24},25,4\\sqrt{24},3\\sqrt{21},8,3$. Hence precisely $k=1,2,5,8,9$ give integer area.",
+        "(b) The two circle centres lie on the angle bisector from the apex. Let $M$ be the base midpoint, $P$ the incircle centre, and $O$ the smaller-circle centre. Construct the standard right triangle using a perpendicular from $O$ to a radius of the incircle perpendicular to a side. It is similar to the half-triangle with hypotenuse $a$ and half-base $b/2$.",
+        "The corresponding lengths are $OP=R+r$ and the perpendicular separation $R-r$. Thus $a/(b/2)=(R+r)/(R-r)$. Solving $2a(R-r)=b(R+r)$ gives $R(2a-b)=r(2a+b)$, so $R/r=(2a+b)/(2a-b)$; the denominator is positive because $b<2a$."
+      ],
+      "stepsZh": [
+        "(a) 点 $(0,-5)$ 恒为公共点。由 $x^2=k(y+5)$ 代入圆方程，得到 $(y+5)(y+k-5)=0$。另两个交点因此满足 $y=5-k$、$x=\\pm\\sqrt{k(10-k)}$。",
+        "要有三个不同交点，必须 $1\\le k\\le9$。水平底边长为 $2\\sqrt{k(10-k)}$，到点 $(0,-5)$ 的高为 $10-k$，故面积为 $(10-k)\\sqrt{k(10-k)}$。",
+        "对 $k=1,\\ldots,9$，面积依次为 $27,32,7\\sqrt{21},6\\sqrt{24},25,4\\sqrt{24},3\\sqrt{21},8,3$。所以且仅所以 $k=1,2,5,8,9$ 时面积为整数。",
+        "(b) 两圆圆心都在顶角平分线上。设 $M$ 为底边中点、$P$ 为内切圆圆心、$O$ 为小圆圆心。从 $O$ 向一条与腰垂直的内切圆半径作垂线，可得一个直角三角形；它与斜边为 $a$、底边为 $b/2$ 的半个等腰三角形相似。",
+        "对应长度为 $OP=R+r$ 与垂直间距 $R-r$，所以 $a/(b/2)=(R+r)/(R-r)$。解 $2a(R-r)=b(R+r)$，得 $R(2a-b)=r(2a+b)$，从而 $R/r=(2a+b)/(2a-b)$；因 $b<2a$，分母为正。"
+      ]
+    }]
+  },
+  "euclid-2015-q9": {
+    "summary": "All logarithms are base $10$. Solve the system $(\\log x)(\\log y)-3\\log(5y)-\\log(8x)=a$, $(\\log y)(\\log z)-4\\log(5y)-\\log(16z)=b$, $(\\log z)(\\log x)-4\\log(8x)-3\\log(625z)=c$. (a) Solve when $(a,b,c)=(-4,4,-18)$. (b) Find all real $(a,b,c)$ for which there are infinitely many positive solutions $(x,y,z)$.",
+    "summaryZh": "所有对数均以 $10$ 为底。求解方程组 $(\\log x)(\\log y)-3\\log(5y)-\\log(8x)=a$，$(\\log y)(\\log z)-4\\log(5y)-\\log(16z)=b$，$(\\log z)(\\log x)-4\\log(8x)-3\\log(625z)=c$。(a) 当 $(a,b,c)=(-4,4,-18)$ 时求解。(b) 求使正数解 $(x,y,z)$ 有无穷多个的所有实数三元组 $(a,b,c)$。",
+    "answer": "(a) $(10^4,10^3,10^{10})$ and $(10^2,10^{-1},10^{-2})$. (b) At least one of: $a=-6,b=-8$; $a=-6,c=-24$; $b=-8,c=-24$, with the remaining coordinate arbitrary.",
+    "answerZh": "(a) $(10^4,10^3,10^{10})$ 与 $(10^2,10^{-1},10^{-2})$。(b) 至少满足下列一组：$a=-6,b=-8$；$a=-6,c=-24$；$b=-8,c=-24$，未列出的坐标可任取实数。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=5",
+    "methods": [{
+      "title": "Shift the logarithms to a product system",
+      "titleZh": "平移对数变量，化为乘积方程组",
+      "topics": [{"en":"Logarithm laws","zh":"对数运算律"},{"en":"Systems of equations","zh":"方程组"},{"en":"Degenerate parameter cases","zh":"退化参数情形"}],
+      "steps": [
+        "Let $X=\\log x,Y=\\log y,Z=\\log z$. Expanding the logarithms and completing products turns the system into $(X-3)(Y-1)=a+6$, $(Y-1)(Z-4)=b+8$, and $(X-3)(Z-4)=c+24$.",
+        "Put $p=X-3,q=Y-1,r=Z-4$. For part (a), $pq=2,qr=12,pr=6$. Multiplying gives $(pqr)^2=144$, so $pqr=\\pm12$. Division yields $(p,q,r)=(1,2,6)$ or $(-1,-2,-6)$.",
+        "Thus $(X,Y,Z)=(4,3,10)$ or $(2,-1,-2)$, producing $(x,y,z)=(10^4,10^3,10^{10})$ or $(10^2,10^{-1},10^{-2})$.",
+        "For part (b), write $A=a+6,B=b+8,C=c+24$. If $ABC<0$ there is no real product solution; if $ABC>0$, multiplication and division give only two solutions. If exactly one of $A,B,C$ is zero, the other two equations contradict it.",
+        "If at least two of $A,B,C$ are zero, the remaining product equation leaves one nonzero parameter free (and if all three vanish, solutions along coordinate axes already form infinite families). Therefore infinitely many solutions occur exactly when $A=B=0$, or $A=C=0$, or $B=C=0$, which is the stated union of three families. Exponentiation maps every real $X,Y,Z$ to positive $x,y,z$, so no solutions are lost."
+      ],
+      "stepsZh": [
+        "令 $X=\\log x,Y=\\log y,Z=\\log z$。展开对数并配成乘积，原方程组等价于 $(X-3)(Y-1)=a+6$、$(Y-1)(Z-4)=b+8$、$(X-3)(Z-4)=c+24$。",
+        "再令 $p=X-3,q=Y-1,r=Z-4$。第 (a) 问变为 $pq=2,qr=12,pr=6$。三式相乘得 $(pqr)^2=144$，所以 $pqr=\\pm12$；分别相除得到 $(p,q,r)=(1,2,6)$ 或 $(-1,-2,-6)$。",
+        "于是 $(X,Y,Z)=(4,3,10)$ 或 $(2,-1,-2)$，对应 $(x,y,z)=(10^4,10^3,10^{10})$ 或 $(10^2,10^{-1},10^{-2})$。",
+        "第 (b) 问记 $A=a+6,B=b+8,C=c+24$。若 $ABC<0$，实数乘积方程无解；若 $ABC>0$，相乘再相除只得到两个解；若 $A,B,C$ 中恰有一个为零，则另外两个非零乘积方程会产生矛盾。",
+        "若 $A,B,C$ 中至少两个为零，剩余的乘积方程留下一个自由非零参数；若三个都为零，坐标轴上的解已经构成无穷族。因此无穷多解当且仅当 $A=B=0$、$A=C=0$ 或 $B=C=0$。指数映射把任意实数 $X,Y,Z$ 对应到正数 $x,y,z$，故没有遗漏。"
+      ]
+    }]
+  },
+  "euclid-2015-q10": {
+    "summary": "Let $C_n=\\{1,2,\\ldots,n\\}$. A Furoni family is a collection of subsets of $C_n$ in which no member is contained in another. (a) Starting with $A=\\{\\{1,2\\},\\{1,3\\},\\{1,4\\}\\}$, find the two inclusion-maximal Furoni families of $C_4$ containing $A$. (b) If $a_k$ counts the family members of size $k$, prove $\\sum_{k=0}^n a_k/\\binom nk\\le1$. (c) Determine the largest possible family size for every $n$.",
+    "summaryZh": "令 $C_n=\\{1,2,\\ldots,n\\}$。Furoni 族是 $C_n$ 的若干子集组成的集合，其中任意一个成员都不包含于另一个成员。(a) 从 $A=\\{\\{1,2\\},\\{1,3\\},\\{1,4\\}\\}$ 出发，求包含 $A$ 的两个极大 Furoni 族。(b) 若 $a_k$ 表示族中大小为 $k$ 的成员数，证明 $\\sum_{k=0}^n a_k/\\binom nk\\le1$。(c) 对每个 $n$ 求该族可能具有的最大成员数。",
+    "answer": "(a) $A\\cup\\{\\{2,3,4\\}\\}$ and $A\\cup\\{\\{2,3\\},\\{2,4\\},\\{3,4\\}\\}$. (b) The displayed inequality holds. (c) $\\binom n{\\lfloor n/2\\rfloor}$.",
+    "answerZh": "(a) $A\\cup\\{\\{2,3,4\\}\\}$ 与 $A\\cup\\{\\{2,3\\},\\{2,4\\},\\{3,4\\}\\}$。(b) 所示不等式成立。(c) $\\binom n{\\lfloor n/2\\rfloor}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2015/2015EuclidContest.pdf#page=5",
+    "methods": [{
+      "title": "Complete the antichain and double-count permutations",
+      "titleZh": "补全反链并双重计数排列",
+      "topics": [{"en":"Antichains","zh":"反链"},{"en":"Double counting","zh":"双重计数"},{"en":"Binomial coefficients","zh":"二项式系数"},{"en":"Sperner's theorem","zh":"Sperner 定理"}],
+      "steps": [
+        "(a) Relative to the three sets in $A$, the only incomparable candidates are $\\{2,3\\},\\{2,4\\},\\{3,4\\},\\{2,3,4\\}$. Choosing $\\{2,3,4\\}$ excludes all three two-sets; otherwise maximality forces all three two-sets. This gives exactly the two stated families.",
+        "(b) For each family member $E$ of size $k$, form permutations of $C_n$ whose first $k$ entries are precisely the elements of $E$. There are $k!(n-k)!$ such permutations.",
+        "No permutation can be generated by two different family members: if $E$ and $G$ both occur as initial segments, the shorter is a subset of the longer, contradicting the Furoni condition. Therefore $\\sum_{k=0}^n a_k k!(n-k)!\\le n!$. Dividing by $n!$ and using $k!(n-k)!/n!=1/\\binom nk$ proves the inequality.",
+        "(c) Let $M=\\binom n{\\lfloor n/2\\rfloor}$, the largest binomial coefficient in row $n$. Since $M/\\binom nk\\ge1$, part (b) gives $\\sum a_k\\le\\sum a_k M/\\binom nk\\le M$.",
+        "This bound is attained by taking every subset of size $\\lfloor n/2\\rfloor$: distinct sets of the same size cannot properly contain one another. Hence the maximum is $\\binom n{\\lfloor n/2\\rfloor}$."
+      ],
+      "stepsZh": [
+        "(a) 与 $A$ 中三个集合均不可比较的候选只有 $\\{2,3\\},\\{2,4\\},\\{3,4\\},\\{2,3,4\\}$。若加入 $\\{2,3,4\\}$，三个二元集都被排除；否则为了极大性，必须把三个二元集全部加入。因此恰有题述两个族。",
+        "(b) 对族中每个大小为 $k$ 的集合 $E$，考察前 $k$ 项恰为 $E$ 中元素的 $C_n$ 排列，共有 $k!(n-k)!$ 个。",
+        "同一个排列不可能由两个不同成员生成：若 $E,G$ 都是其初始段，则较短者包含于较长者，与 Furoni 条件矛盾。因此 $\\sum_{k=0}^n a_k k!(n-k)!\\le n!$。两边除以 $n!$，并用 $k!(n-k)!/n!=1/\\binom nk$，即得所需不等式。",
+        "(c) 令 $M=\\binom n{\\lfloor n/2\\rfloor}$，它是第 $n$ 行最大的二项式系数。因为 $M/\\binom nk\\ge1$，由第 (b) 问可得 $\\sum a_k\\le\\sum a_k M/\\binom nk\\le M$。",
+        "取所有大小为 $\\lfloor n/2\\rfloor$ 的子集即可达到此上界，因为两个不同的同大小集合不可能真包含。因此最大成员数为 $\\binom n{\\lfloor n/2\\rfloor}$。"
+      ]
+    }]
+  }
+}
