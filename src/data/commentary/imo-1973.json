@@ -1,0 +1,202 @@
+{
+  "imo-1973-q1": {
+    "summary": "From a point $O$ on a line $g$, draw an odd number $n$ of unit vectors $\\overrightarrow{OP_1},\\ldots,\\overrightarrow{OP_n}$ in one closed half-plane bounded by $g$. Prove that the length of their vector sum is at least $1$.",
+    "summaryZh": "点 $O$ 位于直线 $g$ 上。从 $O$ 引出奇数条单位向量 $\\overrightarrow{OP_1},\\ldots,\\overrightarrow{OP_n}$，其终点都位于 $g$ 的同一侧（可在边界上）。证明这些向量之和的长度至少为 $1$。",
+    "answer": "$\\left|\\sum_{i=1}^n\\overrightarrow{OP_i}\\right|\\ge1$; the bound is sharp.",
+    "answerZh": "$\\left|\\sum_{i=1}^n\\overrightarrow{OP_i}\\right|\\ge1$，且该下界可以取到。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Remove the two extreme directions and induct",
+        "titleZh": "删去两个极端方向并作归纳",
+        "topics": [
+          {"en": "Vectors", "zh": "向量"},
+          {"en": "Mathematical induction", "zh": "数学归纳法"},
+          {"en": "Dot products", "zh": "向量内积"}
+        ],
+        "steps": [
+          "Rotate the picture so that the allowed half-plane is above the horizontal line through $O$. Write the directions of the unit vectors as $0\\le\\theta_1\\le\\theta_2\\le\\cdots\\le\\theta_n\\le\\pi$.",
+          "We induct on the odd integer $n$. For $n=1$ the assertion is immediate. Suppose $n\\ge3$ and let $v$ be the sum of the middle $n-2$ vectors, those with directions $\\theta_2,\\ldots,\\theta_{n-1}$. By induction, $|v|\\ge1$.",
+          "All the middle vectors lie in the convex cone between the extreme directions $\\theta_1$ and $\\theta_n$. Since $v\\ne0$, its direction also lies in this cone. Let $s$ be the sum of the two extreme unit vectors. If they are opposite then $s=0$ and there is nothing to prove. Otherwise $s$ points in direction $(\\theta_1+\\theta_n)/2$.",
+          "The angle between $s$ and $v$ is at most $(\\theta_n-\\theta_1)/2\\le\\pi/2$. Therefore $s\\cdot v\\ge0$, and $$|s+v|^2=|s|^2+2s\\cdot v+|v|^2\\ge|v|^2\\ge1.$$ This is exactly the required inequality for all $n$ vectors.",
+          "Equality is possible, for example by taking $(n-1)/2$ opposite pairs on $g$ together with one additional unit vector. Hence the constant $1$ cannot be improved."
+        ],
+        "stepsZh": [
+          "旋转图形，使允许的半平面位于过 $O$ 的水平线之上。把各单位向量的方向角依次记为 $0\\le\\theta_1\\le\\theta_2\\le\\cdots\\le\\theta_n\\le\\pi$。",
+          "对奇数 $n$ 归纳。当 $n=1$ 时结论显然。设 $n\\ge3$，并令 $v$ 为中间 $n-2$ 条向量（方向为 $\\theta_2,\\ldots,\\theta_{n-1}$）的和。由归纳假设，$|v|\\ge1$。",
+          "所有中间向量都位于两个极端方向 $\\theta_1,\\theta_n$ 张成的凸锥内。由于 $v\\ne0$，其方向也在这个凸锥内。令 $s$ 为两条极端单位向量之和。若二者方向相反，则 $s=0$，结论立即成立；否则 $s$ 的方向角为 $(\\theta_1+\\theta_n)/2$。",
+          "$s$ 与 $v$ 的夹角至多为 $(\\theta_n-\\theta_1)/2\\le\\pi/2$，所以 $s\\cdot v\\ge0$。于是 $$|s+v|^2=|s|^2+2s\\cdot v+|v|^2\\ge|v|^2\\ge1,$$ 这正是全部 $n$ 条向量所需的不等式。",
+          "该下界能够取到：可取 $(n-1)/2$ 对沿 $g$ 且互相反向的单位向量，再加一条任意单位向量。因此常数 $1$ 不能提高。"
+        ]
+      }
+    ]
+  },
+  "imo-1973-q2": {
+    "summary": "Determine whether there is a finite, non-coplanar set $M$ of points in three-dimensional space such that every line through two points of $M$ has a distinct parallel line through two other points of $M$.",
+    "summaryZh": "判断是否存在空间中的有限非共面点集 $M$，使得由 $M$ 中任意两点确定的直线，都存在另一条由 $M$ 中另外两点确定、与它平行但不重合的直线。",
+    "answer": "Yes. The $27$ lattice points $M=\\{0,1,2\\}^3$ form one such set.",
+    "answerZh": "存在。例如 $27$ 个格点组成的集合 $M=\\{0,1,2\\}^3$ 满足条件。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use a three-layer cubic lattice",
+        "titleZh": "利用三层立方格点",
+        "topics": [
+          {"en": "Spatial geometry", "zh": "空间几何"},
+          {"en": "Lattice constructions", "zh": "格点构造"},
+          {"en": "Vectors", "zh": "向量"}
+        ],
+        "steps": [
+          "Take $M=\\{0,1,2\\}^3$. It is finite and contains the four non-coplanar points $(0,0,0),(1,0,0),(0,1,0),(0,0,1)$.",
+          "Choose distinct $A,B\\in M$ and write $d=B-A$. Each coordinate of $d$ belongs to $\\{-2,-1,0,1,2\\}$. We construct two other lattice points $C,D$ such that $D-C$ is a nonzero multiple of $d$ and the line $CD$ is not the line $AB$.",
+          "If some coordinate of $d$ is $0$, then $A$ and $B$ lie in the same coordinate layer. Shift both by one unit in that coordinate, toward either adjacent layer that remains in $\\{0,1,2\\}$. The shifted segment is parallel to $AB$, and its line is different because the shift direction is not parallel to $d$.",
+          "Otherwise, suppose some coordinate of $d$ is $1$ or $-1$. In that coordinate the endpoints occupy either levels $0,1$ or levels $1,2$. Shift both endpoints by one unit so that this pair of levels becomes the other pair. All coordinates remain in $\\{0,1,2\\}$; because the other coordinates of $d$ are nonzero, the shift is not parallel to $d$, so the new line is distinct.",
+          "The only remaining case has every coordinate of $d$ equal to $2$ or $-2$, so $A,B$ are opposite corners of the cube. Let $e$ be a signed coordinate unit vector pointing from the first coordinate of $A$ toward level $1$, and set $C=A+e$ and $D=A+d/2+e$. Both points lie in $M$, $D-C=d/2$, and $e$ is not parallel to $d$; hence $CD$ is parallel to but distinct from $AB$.",
+          "These cases cover every pair of points of $M$, so the required finite non-coplanar set exists."
+        ],
+        "stepsZh": [
+          "取 $M=\\{0,1,2\\}^3$。它是有限集，并且含有四个不共面的点 $(0,0,0),(1,0,0),(0,1,0),(0,0,1)$。",
+          "任取不同的 $A,B\\in M$，记 $d=B-A$。$d$ 的每个坐标都属于 $\\{-2,-1,0,1,2\\}$。下面构造另外两个格点 $C,D$，使 $D-C$ 是 $d$ 的非零倍数，且直线 $CD$ 不等于 $AB$。",
+          "若 $d$ 的某个坐标为 $0$，则 $A,B$ 位于同一坐标层。沿该坐标方向把两点同时平移一个单位，选择仍落在 $\\{0,1,2\\}$ 中的相邻层。新线段与 $AB$ 平行；平移方向不与 $d$ 平行，所以两直线不重合。",
+          "否则，若 $d$ 的某个坐标为 $1$ 或 $-1$，则两端点在该坐标上占据 $0,1$ 两层或 $1,2$ 两层。把两点同时平移一个单位，使这两层变为另一对层。所有坐标仍在 $\\{0,1,2\\}$ 中；又因 $d$ 的其余坐标均非零，平移方向不与 $d$ 平行，故得到不同的平行直线。",
+          "剩下的情形是 $d$ 的三个坐标全为 $2$ 或 $-2$，即 $A,B$ 是立方体的一对对顶点。取一个带符号的坐标单位向量 $e$，使 $A$ 的第一坐标沿 $e$ 移到层 $1$，并令 $C=A+e$、$D=A+d/2+e$。两点都在 $M$ 中，且 $D-C=d/2$；同时 $e$ 不与 $d$ 平行，所以 $CD$ 与 $AB$ 平行但不重合。",
+          "以上情形覆盖 $M$ 中任意一对点，因此所要求的有限非共面点集确实存在。"
+        ]
+      }
+    ]
+  },
+  "imo-1973-q3": {
+    "summary": "Real numbers $a,b$ are such that $x^4+ax^3+bx^2+ax+1=0$ has a real root. Find the minimum possible value of $a^2+b^2$.",
+    "summaryZh": "实数 $a,b$ 使方程 $x^4+ax^3+bx^2+ax+1=0$ 至少有一个实根。求 $a^2+b^2$ 的最小可能值。",
+    "answer": "$\\dfrac45$, attained at $(a,b)=(-\\frac45,-\\frac25)$ and $(\\frac45,-\\frac25)$.",
+    "answerZh": "最小值为 $\\dfrac45$，在 $(a,b)=(-\\frac45,-\\frac25)$ 与 $(\\frac45,-\\frac25)$ 时取到。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Replace the root by $t=x+1/x$",
+        "titleZh": "以 $t=x+1/x$ 化简实根条件",
+        "topics": [
+          {"en": "Polynomial roots", "zh": "多项式根"},
+          {"en": "Cauchy--Schwarz inequality", "zh": "柯西不等式"},
+          {"en": "Optimization", "zh": "最优化"}
+        ],
+        "steps": [
+          "A real root $x$ cannot be $0$. Divide the equation by $x^2$ and put $t=x+1/x$. Since $x^2+x^{-2}=t^2-2$, the root condition becomes $$t^2+at+b-2=0,\\qquad |t|\\ge2.$$ Conversely, every real $t$ with $|t|\\ge2$ equals $x+1/x$ for some nonzero real $x$.",
+          "Thus $(a,b)$ is admissible precisely when, for some $|t|\\ge2$, $$at+b=2-t^2.$$ By Cauchy--Schwarz, $$(t^2-2)^2=(at+b)^2\\le(t^2+1)(a^2+b^2),$$ so $$a^2+b^2\\ge\\frac{(t^2-2)^2}{t^2+1}.$$",
+          "Let $s=t^2\\ge4$. The lower bound is $h(s)=(s-2)^2/(s+1)$, and $$h'(s)=\\frac{(s-2)(s+4)}{(s+1)^2}>0\\quad(s\\ge4).$$ Hence $h(s)\\ge h(4)=4/5$.",
+          "Equality requires $t=2$ or $t=-2$ and equality in Cauchy--Schwarz. For $t=2$, the relation $2a+b=-2$ is minimized at $(a,b)=(-4/5,-2/5)$, and $x=1$ is indeed a root. For $t=-2$, one obtains $(a,b)=(4/5,-2/5)$ with root $x=-1$.",
+          "Therefore the minimum is $4/5$, and both equality cases have been verified in the original polynomial."
+        ],
+        "stepsZh": [
+          "实根 $x$ 不可能为 $0$。将方程除以 $x^2$ 并令 $t=x+1/x$。由 $x^2+x^{-2}=t^2-2$，实根条件化为 $$t^2+at+b-2=0,\\qquad |t|\\ge2.$$ 反过来，任意满足 $|t|\\ge2$ 的实数 $t$ 都可写成某个非零实数 $x$ 的 $x+1/x$。",
+          "因此 $(a,b)$ 可行，当且仅当存在 $|t|\\ge2$ 使 $$at+b=2-t^2.$$ 由柯西不等式，$$(t^2-2)^2=(at+b)^2\\le(t^2+1)(a^2+b^2),$$ 从而 $$a^2+b^2\\ge\\frac{(t^2-2)^2}{t^2+1}$$。",
+          "令 $s=t^2\\ge4$，右侧为 $h(s)=(s-2)^2/(s+1)$，并且 $$h'(s)=\\frac{(s-2)(s+4)}{(s+1)^2}>0\\quad(s\\ge4)$$。所以 $h(s)\\ge h(4)=4/5$。",
+          "等号要求 $t=2$ 或 $t=-2$，并且柯西不等式取等。当 $t=2$ 时，在约束 $2a+b=-2$ 下最近点为 $(a,b)=(-4/5,-2/5)$，此时 $x=1$ 确为原方程的根；当 $t=-2$ 时得到 $(a,b)=(4/5,-2/5)$，对应根 $x=-1$。",
+          "因此最小值为 $4/5$，且两个取等情形都已在原多项式中验证。"
+        ]
+      }
+    ]
+  },
+  "imo-1973-q4": {
+    "summary": "An equilateral triangular region has side length $s$. A detector covers every point within radius one half of the triangle's altitude, and its operator starts at one vertex. Determine a shortest path whose detector range covers the whole triangle.",
+    "summaryZh": "一个边长为 $s$ 的正三角形区域需要被探测。探测器能覆盖距操作者不超过该三角形高的一半的所有点，操作者从一个顶点出发。求能够覆盖整个三角形的最短行进路线。",
+    "answer": "If the start is $A$, let $M$ be the midpoint of $AB$, $P$ the midpoint of altitude $CM$, and $Q\\in PB$ satisfy $BQ=h/2$. Follow $A\\to P\\to Q$. Its length is $\\dfrac{2\\sqrt7-\\sqrt3}{4}s$.",
+    "answerZh": "设起点为 $A$，$M$ 为 $AB$ 中点，$P$ 为高 $CM$ 的中点，在 $PB$ 上取 $Q$ 使 $BQ=h/2$。沿折线 $A\\to P\\to Q$ 行进；最短长度为 $\\dfrac{2\\sqrt7-\\sqrt3}{4}s$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Meet two detector discs, then certify coverage by convexity",
+        "titleZh": "先接触两个探测圆，再用凸性验证覆盖",
+        "topics": [
+          {"en": "Geometric optimization", "zh": "几何最优化"},
+          {"en": "Triangle inequality", "zh": "三角不等式"},
+          {"en": "Convexity", "zh": "凸性"}
+        ],
+        "steps": [
+          "Let the equilateral triangle be $ABC$, with starting vertex $A$, side $s$, altitude $h=\\sqrt3s/2$, and detector radius $r=h/2$. Any successful path must come within distance $r$ of both far vertices $B$ and $C$.",
+          "By symmetry assume it first reaches a point $P$ with $PC\\le r$ and later a point $Q$ with $QB\\le r$. Its length $L$ satisfies $$L\\ge AP+PQ\\ge AP+PB-BQ\\ge AP+PB-r.$$",
+          "Put the midpoint $M$ of $AB$ at the origin, with $A=(-s/2,0)$, $B=(s/2,0)$ and $C=(0,h)$. Write $P=(x,y)$. Since $PC\\le r=h/2$, necessarily $y\\ge h/2$. The vector triangle inequality gives $$AP+PB\\ge\\sqrt{(x+s/2+s/2-x)^2+(y+y)^2}=\\sqrt{s^2+4y^2}\\ge\\sqrt{s^2+h^2}=\\frac{\\sqrt7}{2}s.$$",
+          "Therefore $$L\\ge\\frac{\\sqrt7}{2}s-\\frac{\\sqrt3}{4}s=\\frac{2\\sqrt7-\\sqrt3}{4}s.$$ Equality suggests taking $P_0=(0,h/2)$, the midpoint of $CM$, and then travelling toward $B$ only until reaching the point $Q_0\\in P_0B$ with $BQ_0=r$.",
+          "The path $A\\to P_0\\to Q_0$ has exactly the lower-bound length. It remains to check that it sweeps the whole triangle. Distance to a fixed segment is a convex function, so on a triangle it is at most the largest of its values at the three vertices.",
+          "On triangle $AMC$, the distances of $A,M,C$ from segment $AP_0$ are respectively $0,r,r$. On triangle $BMC$, the distances of $B,M,C$ from segment $P_0Q_0$ are respectively $r,r,r$. Hence every point of both subtriangles, and therefore of $ABC$, lies within detector radius of the path.",
+          "Thus the described broken line is feasible and meets the universal lower bound, so it is shortest. Reflecting it across the altitude from $A$ gives the symmetric alternative."
+        ],
+        "stepsZh": [
+          "设正三角形为 $ABC$，起点为 $A$，边长为 $s$，高为 $h=\\sqrt3s/2$，探测半径为 $r=h/2$。任何可行路线都必须分别进入以远端顶点 $B,C$ 为圆心、半径 $r$ 的圆盘。",
+          "由对称性，可设路线先到达满足 $PC\\le r$ 的点 $P$，之后到达满足 $QB\\le r$ 的点 $Q$。路线长度 $L$ 满足 $$L\\ge AP+PQ\\ge AP+PB-BQ\\ge AP+PB-r$$。",
+          "以 $AB$ 中点 $M$ 为原点，取 $A=(-s/2,0)$、$B=(s/2,0)$、$C=(0,h)$，并写 $P=(x,y)$。由 $PC\\le r=h/2$ 可知 $y\\ge h/2$。向量三角不等式给出 $$AP+PB\\ge\\sqrt{(x+s/2+s/2-x)^2+(y+y)^2}=\\sqrt{s^2+4y^2}\\ge\\sqrt{s^2+h^2}=\\frac{\\sqrt7}{2}s$$。",
+          "因此 $$L\\ge\\frac{\\sqrt7}{2}s-\\frac{\\sqrt3}{4}s=\\frac{2\\sqrt7-\\sqrt3}{4}s$$。等号提示取 $P_0=(0,h/2)$，即高 $CM$ 的中点；随后沿 $P_0B$ 前进到点 $Q_0$，使 $BQ_0=r$。",
+          "折线 $A\\to P_0\\to Q_0$ 的长度恰等于上述下界。还需验证它覆盖整个三角形。点到固定线段的距离是凸函数，因此在一个三角形上的值不超过三个顶点处距离的最大值。",
+          "在三角形 $AMC$ 上，顶点 $A,M,C$ 到线段 $AP_0$ 的距离依次为 $0,r,r$；在三角形 $BMC$ 上，顶点 $B,M,C$ 到线段 $P_0Q_0$ 的距离都等于 $r$。所以两个子三角形中的每一点都在路线的探测范围内，整个 $ABC$ 被覆盖。",
+          "该折线既可行又达到对所有路线成立的下界，因而最短。关于从 $A$ 所作的高反射，可得到另一条对称的最短路线。"
+        ]
+      }
+    ]
+  },
+  "imo-1973-q5": {
+    "summary": "A set $G$ of invertible affine functions $f(x)=ax+b$ is closed under composition and inverses. Every member of $G$ has a real fixed point. Prove that all members of $G$ share one common fixed point.",
+    "summaryZh": "设 $G$ 是一组可逆仿射函数 $f(x)=ax+b$，并且对复合与求逆封闭。$G$ 中每个函数都至少有一个实不动点。证明所有函数存在一个公共不动点。",
+    "answer": "There is a real number $k$ such that $f(k)=k$ for every $f\\in G$.",
+    "answerZh": "存在实数 $k$，使每个 $f\\in G$ 都满足 $f(k)=k$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use commutators to make the affine group abelian",
+        "titleZh": "利用交换子证明仿射群交换",
+        "topics": [
+          {"en": "Affine transformations", "zh": "仿射变换"},
+          {"en": "Groups", "zh": "群论"},
+          {"en": "Fixed points", "zh": "不动点"}
+        ],
+        "steps": [
+          "If $G$ is empty, the statement is vacuous. Otherwise, closure under inverses and composition implies that the identity map belongs to $G$.",
+          "A map of slope $1$ has the form $x\\mapsto x+c$. It has a real fixed point only when $c=0$. Hence the identity is the only element of $G$ whose slope is $1$.",
+          "For any $f,g\\in G$, the commutator $$h=g\\circ f\\circ g^{-1}\\circ f^{-1}$$ also belongs to $G$. The product of its four slopes is $1$, so Step 2 forces $h$ to be the identity. Thus $g\\circ f=f\\circ g$: all elements of $G$ commute.",
+          "If every element is the identity, any real $k$ works. Otherwise choose a nonidentity $f(x)=ax+b$ in $G$. Its slope cannot be $1$, so it has the unique fixed point $$k=\\frac{b}{1-a}.$$",
+          "For an arbitrary $g\\in G$, commutativity gives $$f(g(k))=g(f(k))=g(k).$$ Thus $g(k)$ is also a fixed point of $f$. By uniqueness, $g(k)=k$. Since $g$ was arbitrary, $k$ is fixed by every function in $G$."
+        ],
+        "stepsZh": [
+          "若 $G$ 为空，结论自然成立。否则由对求逆与复合封闭可知，恒等映射属于 $G$。",
+          "斜率为 $1$ 的仿射函数形如 $x\\mapsto x+c$。它存在实不动点当且仅当 $c=0$。因此 $G$ 中斜率为 $1$ 的元素只能是恒等映射。",
+          "任取 $f,g\\in G$，其交换子 $$h=g\\circ f\\circ g^{-1}\\circ f^{-1}$$ 仍属于 $G$。它的四个斜率之积为 $1$，故由上一步 $h$ 必为恒等映射。于是 $g\\circ f=f\\circ g$，即 $G$ 中所有元素两两交换。",
+          "若所有元素都是恒等映射，则任意实数 $k$ 都可以。否则取一个非恒等的 $f(x)=ax+b\\in G$。其斜率不等于 $1$，所以它有唯一不动点 $$k=\\frac{b}{1-a}$$。",
+          "对任意 $g\\in G$，由交换性有 $$f(g(k))=g(f(k))=g(k)$$。因而 $g(k)$ 也是 $f$ 的不动点。利用唯一性得到 $g(k)=k$。由于 $g$ 任意，$k$ 是 $G$ 中所有函数的公共不动点。"
+        ]
+      }
+    ]
+  },
+  "imo-1973-q6": {
+    "summary": "Given positive numbers $a_1,\\ldots,a_n$ and $0<q<1$, construct positive numbers $b_1,\\ldots,b_n$ such that $b_k>a_k$, consecutive ratios lie strictly between $q$ and $1/q$, and $\\sum b_k<\\frac{1+q}{1-q}\\sum a_k$.",
+    "summaryZh": "给定正数 $a_1,\\ldots,a_n$ 与 $0<q<1$，构造正数 $b_1,\\ldots,b_n$，使 $b_k>a_k$，相邻项之比严格位于 $q$ 与 $1/q$ 之间，并且 $\\sum b_k<\\frac{1+q}{1-q}\\sum a_k$。",
+    "answer": "For $n\\ge2$, take $b_k=\\sum_{j=1}^n a_jq^{|k-j|}$. For $n=1$, take for example $b_1=a_1/(1-q)$.",
+    "answerZh": "当 $n\\ge2$ 时可取 $b_k=\\sum_{j=1}^n a_jq^{|k-j|}$；当 $n=1$ 时，例如取 $b_1=a_1/(1-q)$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf#page=2",
+    "methods": [
+      {
+        "title": "Spread every term with geometric weights",
+        "titleZh": "用几何权重把每一项向两侧扩散",
+        "topics": [
+          {"en": "Constructive inequalities", "zh": "构造性不等式"},
+          {"en": "Geometric series", "zh": "等比级数"},
+          {"en": "Weighted sums", "zh": "加权和"}
+        ],
+        "steps": [
+          "If $n=1$, choose $b_1=a_1/(1-q)$. Then $a_1<b_1<(1+q)a_1/(1-q)$, while the ratio condition is empty.",
+          "Assume $n\\ge2$ and define $$b_k=\\sum_{j=1}^n a_jq^{|k-j|}\\qquad(k=1,\\ldots,n).$$ The summand with $j=k$ is $a_k$, and at least one other positive summand is present, so $b_k>a_k$.",
+          "Fix $k<n$. For $j\\le k$, the weight of $a_j$ in $b_{k+1}$ is $q$ times its weight in $b_k$; for $j\\ge k+1$, that ratio is $1/q$. Hence $$qb_k\\le b_{k+1}\\le\\frac1q b_k.$$",
+          "Both inequalities are strict: the positive term with $j=k+1$ has weight ratio $1/q>q$, while the positive term with $j=k$ has ratio $q<1/q$. Therefore $q<b_{k+1}/b_k<1/q$.",
+          "Finally, change the order of summation: $$\\sum_{k=1}^n b_k=\\sum_{j=1}^n a_j\\sum_{k=1}^nq^{|k-j|}.$$ The finite inner sum is strictly less than the two-sided infinite geometric sum $$1+2\\sum_{m=1}^{\\infty}q^m=\\frac{1+q}{1-q}.$$",
+          "Consequently $$\\sum_{k=1}^n b_k<\\frac{1+q}{1-q}\\sum_{j=1}^n a_j,$$ so all three requested conditions hold."
+        ],
+        "stepsZh": [
+          "若 $n=1$，取 $b_1=a_1/(1-q)$。则 $a_1<b_1<(1+q)a_1/(1-q)$，而相邻项之比的条件为空。",
+          "以下设 $n\\ge2$，并定义 $$b_k=\\sum_{j=1}^n a_jq^{|k-j|}\\qquad(k=1,\\ldots,n)$$。其中 $j=k$ 的项等于 $a_k$，并且还至少有一个正项，所以 $b_k>a_k$。",
+          "固定 $k<n$。当 $j\\le k$ 时，$a_j$ 在 $b_{k+1}$ 中的权重是其在 $b_k$ 中权重的 $q$ 倍；当 $j\\ge k+1$ 时，该比值为 $1/q$。所以 $$qb_k\\le b_{k+1}\\le\\frac1q b_k$$。",
+          "两个不等式都是严格的：$j=k+1$ 的正项权重比为 $1/q>q$，而 $j=k$ 的正项权重比为 $q<1/q$。因此 $q<b_{k+1}/b_k<1/q$。",
+          "最后交换求和次序：$$\\sum_{k=1}^n b_k=\\sum_{j=1}^n a_j\\sum_{k=1}^nq^{|k-j|}$$。有限的内层和严格小于双侧无限等比级数 $$1+2\\sum_{m=1}^{\\infty}q^m=\\frac{1+q}{1-q}$$。",
+          "从而 $$\\sum_{k=1}^n b_k<\\frac{1+q}{1-q}\\sum_{j=1}^n a_j,$$ 三个要求全部满足。"
+        ]
+      }
+    ]
+  }
+}
