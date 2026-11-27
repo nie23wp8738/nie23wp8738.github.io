@@ -1,0 +1,202 @@
+{
+  "imo-1974-q1": {
+    "summary": "Three cards carry distinct positive integers $p<q<r$. In each of at least two rounds, the cards are shuffled and one is dealt to each of players $A,B,C$, who receive that many counters. The final totals are $20,10,9$, respectively, and $B$ received $r$ in the final round. Determine who received $q$ in the first round.",
+    "summaryZh": "三张卡片分别写有互不相同的正整数 $p<q<r$。每轮洗牌后给 $A,B,C$ 各发一张，三人获得与卡片数字相同的筹码；游戏至少进行两轮。最终三人的筹码总数依次为 $20,10,9$，且最后一轮 $B$ 拿到 $r$。求第一轮谁拿到 $q$。",
+    "answer": "Player $C$ received $q$ in the first round. In fact $(p,q,r)=(1,4,8)$ and there were three rounds.",
+    "answerZh": "第一轮由 $C$ 拿到 $q$。事实上 $(p,q,r)=(1,4,8)$，游戏共进行三轮。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Force the number of rounds and the three card values",
+        "titleZh": "先锁定轮数，再确定三张卡片的数值",
+        "topics": [
+          {"en": "Divisibility", "zh": "整除性"},
+          {"en": "Extremal bounds", "zh": "极值估计"},
+          {"en": "Combinatorial games", "zh": "组合游戏"}
+        ],
+        "steps": [
+          "Let $n\\ge2$ be the number of rounds. Every round distributes $p+q+r$ counters, so $n(p+q+r)=20+10+9=39$. Since $p+q+r\\ge1+2+3=6$, we have $2\\le n\\le6$. The only divisor of $39$ in this interval is $3$; hence $n=3$ and $p+q+r=13$.",
+          "In the final round $B$ received $r$, and in each earlier round $B$ received at least $p$. Therefore $r+2p\\le10$.",
+          "In the final round $A$ received at most $q$, because $B$ had the largest card $r$; in each earlier round $A$ received at most $r$. Thus $20\\le2r+q=13+r-p$, so $r\\ge7+p$.",
+          "Combining $7+p\\le r\\le10-2p$ yields $3p\\le3$. Hence $p=1$, and the two bounds force $r=8$; then $q=13-1-8=4$.",
+          "The bounds are equalities. Thus $A$ received $8,8,4$ and $B$ received $1,1,8$ in the three rounds. The remaining cards went to $C$, whose row is $4,4,1$. Therefore $C$ received $q=4$ in the first round, and the totals $20,10,9$ verify the result."
+        ],
+        "stepsZh": [
+          "设游戏进行 $n\\ge2$ 轮。每轮共发出 $p+q+r$ 个筹码，所以 $n(p+q+r)=20+10+9=39$。又因 $p+q+r\\ge1+2+3=6$，故 $2\\le n\\le6$。这个范围内 $39$ 的唯一因数是 $3$，所以 $n=3$ 且 $p+q+r=13$。",
+          "最后一轮 $B$ 得到 $r$，前两轮每轮至少得到 $p$，因此 $r+2p\\le10$。",
+          "最后一轮因为 $B$ 拿走最大卡 $r$，$A$ 至多得到 $q$；前两轮 $A$ 每轮至多得到 $r$。故 $20\\le2r+q=13+r-p$，从而 $r\\ge7+p$。",
+          "合并 $7+p\\le r\\le10-2p$ 得 $3p\\le3$。于是 $p=1$，两侧界限迫使 $r=8$，再由总和得到 $q=13-1-8=4$。",
+          "上述界限均须取等。因此三轮中 $A$ 得到 $8,8,4$，$B$ 得到 $1,1,8$；剩余卡片给 $C$，即 $4,4,1$。所以第一轮由 $C$ 拿到 $q=4$，并且三人的总数确为 $20,10,9$。"
+        ]
+      }
+    ]
+  },
+  "imo-1974-q2": {
+    "summary": "In triangle $ABC$, prove that there is a point $D$ on side $AB$ satisfying $CD^2=AD\\cdot DB$ if and only if $\\sin A\\sin B\\le\\sin^2(C/2)$.",
+    "summaryZh": "在三角形 $ABC$ 中，证明：边 $AB$ 上存在一点 $D$ 使 $CD^2=AD\\cdot DB$，当且仅当 $\\sin A\\sin B\\le\\sin^2(C/2)$。",
+    "answer": "Such a point exists exactly when $\\sin A\\sin B\\le\\sin^2(C/2)$.",
+    "answerZh": "所求点存在的充要条件正是 $\\sin A\\sin B\\le\\sin^2(C/2)$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Convert the metric condition into a one-variable sine product",
+        "titleZh": "把长度条件化为单变量的正弦乘积",
+        "topics": [
+          {"en": "Sine rule", "zh": "正弦定理"},
+          {"en": "Trigonometric identities", "zh": "三角恒等式"},
+          {"en": "Intermediate value theorem", "zh": "介值定理"}
+        ],
+        "steps": [
+          "The endpoints cannot be used, because there $AD\\cdot DB=0$ but $CD>0$. For an interior point $D$, put $\\alpha=\\angle ACD$ and $\\beta=\\angle DCB$, so $\\alpha,\\beta>0$ and $\\alpha+\\beta=C$.",
+          "The sine rule in triangles $ACD$ and $BCD$ gives $AD/CD=\\sin\\alpha/\\sin A$ and $DB/CD=\\sin\\beta/\\sin B$. Consequently, $$CD^2=AD\\cdot DB\\iff\\sin\\alpha\\sin\\beta=\\sin A\\sin B.$$",
+          "If such a point exists, then $$\\sin A\\sin B=\\sin\\alpha\\sin(C-\\alpha)=\\sin^2\\frac C2-\\sin^2\\left(\\alpha-\\frac C2\\right)\\le\\sin^2\\frac C2,$$ proving necessity.",
+          "Conversely, assume $\\sin A\\sin B\\le\\sin^2(C/2)$. The continuous function $f(t)=\\sin t\\sin(C-t)$ on $[0,C/2]$ satisfies $f(0)=0$ and $f(C/2)=\\sin^2(C/2)$. Since $\\sin A\\sin B>0$, there is an $\\alpha\\in(0,C/2]$ with $f(\\alpha)=\\sin A\\sin B$.",
+          "Draw inside angle $C$ the ray making angle $\\alpha$ with $CA$, and let it meet $AB$ at $D$. Then $\\beta=C-\\alpha$, and the equivalence in Step 2 gives $CD^2=AD\\cdot DB$. This proves sufficiency and completes both directions."
+        ],
+        "stepsZh": [
+          "端点不可能作为 $D$，因为此时 $AD\\cdot DB=0$，但 $CD>0$。对内点 $D$，令 $\\alpha=\\angle ACD$、$\\beta=\\angle DCB$，则 $\\alpha,\\beta>0$ 且 $\\alpha+\\beta=C$。",
+          "在三角形 $ACD$ 与 $BCD$ 中分别使用正弦定理，得到 $AD/CD=\\sin\\alpha/\\sin A$ 与 $DB/CD=\\sin\\beta/\\sin B$。因此 $$CD^2=AD\\cdot DB\\iff\\sin\\alpha\\sin\\beta=\\sin A\\sin B$$。",
+          "若所求点存在，则 $$\\sin A\\sin B=\\sin\\alpha\\sin(C-\\alpha)=\\sin^2\\frac C2-\\sin^2\\left(\\alpha-\\frac C2\\right)\\le\\sin^2\\frac C2,$$ 必要性得证。",
+          "反之，设 $\\sin A\\sin B\\le\\sin^2(C/2)$。连续函数 $f(t)=\\sin t\\sin(C-t)$ 在 $[0,C/2]$ 上满足 $f(0)=0$、$f(C/2)=\\sin^2(C/2)$。由于 $\\sin A\\sin B>0$，由介值定理存在 $\\alpha\\in(0,C/2]$ 使 $f(\\alpha)=\\sin A\\sin B$。",
+          "在角 $C$ 内作一条与 $CA$ 成角 $\\alpha$ 的射线，交 $AB$ 于 $D$。此时 $\\beta=C-\\alpha$，由第二步的等价关系即得 $CD^2=AD\\cdot DB$。充分性成立，充要性证明完成。"
+        ]
+      }
+    ]
+  },
+  "imo-1974-q3": {
+    "summary": "For every integer $n\\ge0$, prove that $S_n=\\sum_{k=0}^{n}\\binom{2n+1}{2k+1}2^{3k}$ is not divisible by $5$.",
+    "summaryZh": "对任意整数 $n\\ge0$，证明 $S_n=\\sum_{k=0}^{n}\\binom{2n+1}{2k+1}2^{3k}$ 不被 $5$ 整除。",
+    "answer": "$5\\nmid S_n$ for every integer $n\\ge0$.",
+    "answerZh": "对每个整数 $n\\ge0$，都有 $5\\nmid S_n$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Separate even and odd binomial terms in a quadratic extension",
+        "titleZh": "在二次扩张中分离二项展开的奇偶项",
+        "topics": [
+          {"en": "Binomial theorem", "zh": "二项式定理"},
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Quadratic residues", "zh": "二次剩余"}
+        ],
+        "steps": [
+          "Write $$S=\\sum_{k=0}^{n}\\binom{2n+1}{2k+1}8^k,\\qquad T=\\sum_{k=0}^{n}\\binom{2n+1}{2k}8^k.$$ Both are integers.",
+          "Separating the odd and even powers of $\\sqrt8$ in the binomial expansions gives $$(1+\\sqrt8)^{2n+1}=T+\\sqrt8S,\\qquad (1-\\sqrt8)^{2n+1}=T-\\sqrt8S.$$",
+          "Multiplying the two equations yields $$T^2-8S^2=(1-8)^{2n+1}=-7\\cdot49^n.$$",
+          "Suppose for contradiction that $5\\mid S$. Reducing the identity modulo $5$ gives $$T^2\\equiv-7\\cdot49^n\\equiv3(-1)^n\\pmod5.$$ Thus $T^2\\equiv3\\pmod5$ when $n$ is even and $T^2\\equiv2\\pmod5$ when $n$ is odd.",
+          "But the square residues modulo $5$ are only $0,1,4$. Both alternatives are impossible, so the assumption $5\\mid S$ is false. Hence $5\\nmid S_n$ for every $n\\ge0$."
+        ],
+        "stepsZh": [
+          "记 $$S=\\sum_{k=0}^{n}\\binom{2n+1}{2k+1}8^k,\\qquad T=\\sum_{k=0}^{n}\\binom{2n+1}{2k}8^k,$$ 二者均为整数。",
+          "在二项展开中分离 $\\sqrt8$ 的奇次项与偶次项，可得 $$(1+\\sqrt8)^{2n+1}=T+\\sqrt8S,\\qquad (1-\\sqrt8)^{2n+1}=T-\\sqrt8S$$。",
+          "两式相乘，得到 $$T^2-8S^2=(1-8)^{2n+1}=-7\\cdot49^n$$。",
+          "反设 $5\\mid S$。将上式模 $5$ 化简，得到 $$T^2\\equiv-7\\cdot49^n\\equiv3(-1)^n\\pmod5$$。所以当 $n$ 为偶数时 $T^2\\equiv3\\pmod5$，当 $n$ 为奇数时 $T^2\\equiv2\\pmod5$。",
+          "然而模 $5$ 的平方剩余只有 $0,1,4$，两种情形都不可能。因此假设错误，对每个 $n\\ge0$ 都有 $5\\nmid S_n$。"
+        ]
+      }
+    ]
+  },
+  "imo-1974-q4": {
+    "summary": "Partition an $8\\times8$ chessboard into $p$ non-overlapping rectangles. Every rectangle must contain equal numbers of white and black squares, and if $a_i$ is its number of white squares, then $a_1<a_2<\\cdots<a_p$. Find the largest possible $p$ and, for that $p$, all possible sequences $(a_1,\\ldots,a_p)$.",
+    "summaryZh": "把一个 $8\\times8$ 棋盘分割成 $p$ 个互不重叠的矩形。每个矩形所含黑、白格数相等；若第 $i$ 个矩形含 $a_i$ 个白格，则 $a_1<a_2<\\cdots<a_p$。求 $p$ 的最大值，并在最大值情形下求出所有可能的序列 $(a_1,\\ldots,a_p)$。",
+    "answer": "$p_{\\max}=7$. The possible sequences are $(1,2,3,4,5,7,10)$, $(1,2,3,4,5,8,9)$, $(1,2,3,4,6,7,9)$, and $(1,2,3,5,6,7,8)$.",
+    "answerZh": "$p$ 的最大值为 $7$。所有可能序列为 $(1,2,3,4,5,7,10)$、$(1,2,3,4,5,8,9)$、$(1,2,3,4,6,7,9)$ 与 $(1,2,3,5,6,7,8)$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Partition 32 and realize every admissible sequence with domino blocks",
+        "titleZh": "分拆 $32$，再用多米诺块实现所有可行序列",
+        "topics": [
+          {"en": "Integer partitions", "zh": "整数分拆"},
+          {"en": "Tilings", "zh": "铺砌"},
+          {"en": "Constructive combinatorics", "zh": "构造组合学"}
+        ],
+        "steps": [
+          "There are $32$ white squares. Since every rectangle contains a positive integer number of white squares, $$a_1+\\cdots+a_p=32.$$ Strict increase gives $a_i\\ge i$, so $32\\ge p(p+1)/2$. Because $1+\\cdots+8=36$, we have $p\\le7$.",
+          "Assume $p=7$ and put $b_i=a_i-i$. Then $0\\le b_1\\le\\cdots\\le b_7$ and $\\sum b_i=32-28=4$. The partitions of $4$ give exactly five candidates: $$(1,2,3,4,5,6,11),\\ (1,2,3,4,5,7,10),\\ (1,2,3,4,5,8,9),$$ $$(1,2,3,4,6,7,9),\\ (1,2,3,5,6,7,8).$$",
+          "The first candidate is impossible. A rectangle with $11$ white and $11$ black squares has area $22$, whose only integer side pairs are $1\\times22$ and $2\\times11$; neither fits in an $8\\times8$ board.",
+          "To realize the other four candidates, divide every row into four horizontal dominoes. Each domino contains one white and one black square. In each of the following $8\\times4$ label arrays, equally labelled dominoes form one rectangle; the label is the number of dominoes, hence also the number of white squares in that rectangle.",
+          "For $(1,2,3,4,5,7,10)$ and $(1,2,3,4,5,8,9)$ use, respectively, $$\\begin{array}{rrrr}1&2&2&3\\\\4&4&7&3\\\\4&4&7&3\\\\10&10&7&5\\\\10&10&7&5\\\\10&10&7&5\\\\10&10&7&5\\\\10&10&7&5\\end{array}\\qquad\\begin{array}{rrrr}1&2&2&3\\\\4&8&8&3\\\\4&8&8&3\\\\4&8&8&5\\\\4&8&8&5\\\\9&9&9&5\\\\9&9&9&5\\\\9&9&9&5\\end{array}.$$",
+          "For $(1,2,3,4,6,7,9)$ and $(1,2,3,5,6,7,8)$ use, respectively, $$\\begin{array}{rrrr}1&2&2&3\\\\7&4&4&3\\\\7&4&4&3\\\\7&6&6&6\\\\7&6&6&6\\\\7&9&9&9\\\\7&9&9&9\\\\7&9&9&9\\end{array}\\qquad\\begin{array}{rrrr}1&2&2&3\\\\6&6&7&3\\\\6&6&7&3\\\\6&6&7&5\\\\8&8&7&5\\\\8&8&7&5\\\\8&8&7&5\\\\8&8&7&5\\end{array}.$$",
+          "In every array each label occupies a rectangular block, all $32$ dominoes are used once, and the label counts are the stated sequence. Thus all four sequences are attainable, proving that $p_{\\max}=7$ and that the list is complete."
+        ],
+        "stepsZh": [
+          "棋盘共有 $32$ 个白格。每个矩形含正整数个白格，所以 $$a_1+\\cdots+a_p=32$$。严格递增给出 $a_i\\ge i$，故 $32\\ge p(p+1)/2$。由于 $1+\\cdots+8=36$，得到 $p\\le7$。",
+          "设 $p=7$，令 $b_i=a_i-i$。则 $0\\le b_1\\le\\cdots\\le b_7$ 且 $\\sum b_i=32-28=4$。由 $4$ 的全部整数分拆恰得到五个候选：$$(1,2,3,4,5,6,11),\\ (1,2,3,4,5,7,10),\\ (1,2,3,4,5,8,9),$$ $$(1,2,3,4,6,7,9),\\ (1,2,3,5,6,7,8)$$。",
+          "第一个候选不可能。含 $11$ 个白格与 $11$ 个黑格的矩形面积为 $22$，整数边长只能是 $1\\times22$ 或 $2\\times11$，都无法放进 $8\\times8$ 棋盘。",
+          "为实现其余四个候选，把每一行分成四个横向多米诺块；每块恰含一个白格和一个黑格。下面每个 $8\\times4$ 标号矩阵中，相同标号的多米诺块组成一个矩形；标号也就是该矩形所含多米诺块数，因而也是白格数。",
+          "对于 $(1,2,3,4,5,7,10)$ 与 $(1,2,3,4,5,8,9)$，分别使用 $$\\begin{array}{rrrr}1&2&2&3\\\\4&4&7&3\\\\4&4&7&3\\\\10&10&7&5\\\\10&10&7&5\\\\10&10&7&5\\\\10&10&7&5\\\\10&10&7&5\\end{array}\\qquad\\begin{array}{rrrr}1&2&2&3\\\\4&8&8&3\\\\4&8&8&3\\\\4&8&8&5\\\\4&8&8&5\\\\9&9&9&5\\\\9&9&9&5\\\\9&9&9&5\\end{array}$$。",
+          "对于 $(1,2,3,4,6,7,9)$ 与 $(1,2,3,5,6,7,8)$，分别使用 $$\\begin{array}{rrrr}1&2&2&3\\\\7&4&4&3\\\\7&4&4&3\\\\7&6&6&6\\\\7&6&6&6\\\\7&9&9&9\\\\7&9&9&9\\\\7&9&9&9\\end{array}\\qquad\\begin{array}{rrrr}1&2&2&3\\\\6&6&7&3\\\\6&6&7&3\\\\6&6&7&5\\\\8&8&7&5\\\\8&8&7&5\\\\8&8&7&5\\\\8&8&7&5\\end{array}$$。",
+          "每个矩阵中，同一标号确实占据矩形区域，$32$ 个多米诺块恰好全部用完，各标号出现次数就是所列序列。因此四个序列全部可实现，且 $p_{\\max}=7$，清单完整。"
+        ]
+      }
+    ]
+  },
+  "imo-1974-q5": {
+    "summary": "For arbitrary positive real numbers $a,b,c,d$, determine the complete range of $$S=\\frac{a}{a+b+d}+\\frac{b}{a+b+c}+\\frac{c}{b+c+d}+\\frac{d}{a+c+d}.$$",
+    "summaryZh": "对任意正实数 $a,b,c,d$，求 $$S=\\frac{a}{a+b+d}+\\frac{b}{a+b+c}+\\frac{c}{b+c+d}+\\frac{d}{a+c+d}$$ 的所有可能取值。",
+    "answer": "The range is exactly the open interval $1<S<2$.",
+    "answerZh": "取值范围恰为开区间 $1<S<2$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Prove sharp bounds, then fill the interval by continuity",
+        "titleZh": "先证严格上下界，再用连续性填满区间",
+        "topics": [
+          {"en": "Inequalities", "zh": "不等式"},
+          {"en": "Continuity", "zh": "连续性"},
+          {"en": "Range of a function", "zh": "函数值域"}
+        ],
+        "steps": [
+          "Put $T=a+b+c+d$. Every denominator in $S$ is strictly less than $T$, so $$S>\\frac aT+\\frac bT+\\frac cT+\\frac dT=1.$$",
+          "Positivity also gives $$S<\\frac a{a+b}+\\frac b{a+b}+\\frac c{c+d}+\\frac d{c+d}=2.$$ Hence all values lie in $(1,2)$; neither endpoint can occur.",
+          "It remains to show that there are no gaps. Fix $0<t<1$, set $a=1$ and $b=d=t$, and view the expression as a continuous function of $c>0$: $$F_t(c)=\\frac1{1+2t}+\\frac{2t}{1+t+c}+\\frac c{2t+c}.$$",
+          "At $c=t^2$, $$F_t(t^2)=\\frac1{1+2t}+\\frac{2t}{1+t+t^2}+\\frac t{2+t}\\longrightarrow1$$ as $t\\to0^+$. At $c=1$, $$F_t(1)=\\frac2{1+2t}+\\frac{2t}{2+t}\\longrightarrow2.$$",
+          "Given any $s\\in(1,2)$, choose $t>0$ small enough that $F_t(t^2)<s<F_t(1)$. Since $F_t$ is continuous on $[t^2,1]$, the intermediate value theorem supplies a $c\\in(t^2,1)$ with $F_t(c)=s$.",
+          "All four variables in this construction are positive. Thus every $s\\in(1,2)$ is attained, while Steps 1 and 2 exclude all other values. The exact range is $(1,2)$."
+        ],
+        "stepsZh": [
+          "令 $T=a+b+c+d$。$S$ 中每个分母都严格小于 $T$，所以 $$S>\\frac aT+\\frac bT+\\frac cT+\\frac dT=1$$。",
+          "由正性还得到 $$S<\\frac a{a+b}+\\frac b{a+b}+\\frac c{c+d}+\\frac d{c+d}=2$$。因此所有值都在 $(1,2)$ 内，两个端点均不能取到。",
+          "还需证明区间中没有缺口。固定 $0<t<1$，取 $a=1$、$b=d=t$，并把原式看成关于 $c>0$ 的连续函数：$$F_t(c)=\\frac1{1+2t}+\\frac{2t}{1+t+c}+\\frac c{2t+c}$$。",
+          "当 $c=t^2$ 时，$$F_t(t^2)=\\frac1{1+2t}+\\frac{2t}{1+t+t^2}+\\frac t{2+t}\\longrightarrow1$$；当 $c=1$ 时，$$F_t(1)=\\frac2{1+2t}+\\frac{2t}{2+t}\\longrightarrow2$$，其中极限均取 $t\\to0^+$。",
+          "任给 $s\\in(1,2)$，可取充分小的 $t>0$，使 $F_t(t^2)<s<F_t(1)$。$F_t$ 在 $[t^2,1]$ 上连续，所以由介值定理存在 $c\\in(t^2,1)$ 满足 $F_t(c)=s$。",
+          "此构造中的四个变量均为正数。因此 $(1,2)$ 中每个值都能取到，而前两步排除了其余值，故精确值域为 $(1,2)$。"
+        ]
+      }
+    ]
+  },
+  "imo-1974-q6": {
+    "summary": "Let $P$ be a non-constant polynomial with integer coefficients. If $n(P)$ is the number of distinct integers $k$ such that $P(k)^2=1$, prove that $n(P)-\\deg(P)\\le2$.",
+    "summaryZh": "设 $P$ 是非常数整系数多项式，$n(P)$ 表示满足 $P(k)^2=1$ 的不同整数 $k$ 的个数。证明 $n(P)-\\deg(P)\\le2$。",
+    "answer": "$n(P)\\le\\deg(P)+2$.",
+    "answerZh": "$n(P)\\le\\deg(P)+2$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf#page=2",
+    "methods": [
+      {
+        "title": "Anchor at the least solution and use polynomial congruence",
+        "titleZh": "以最小整数解为锚点并使用多项式同余",
+        "topics": [
+          {"en": "Integer polynomials", "zh": "整系数多项式"},
+          {"en": "Divisibility", "zh": "整除性"},
+          {"en": "Root counting", "zh": "根的计数"}
+        ],
+        "steps": [
+          "Let $d=\\deg(P)\\ge1$. The integers counted by $n(P)$ are roots of the nonzero polynomial $P(x)^2-1$, so there are finitely many. If there are none, the desired inequality is immediate.",
+          "Otherwise, let $m$ be the smallest counted integer and put $s=P(m)\\in\\{1,-1\\}$. Split all counted integers into the group with $P(k)=s$ and the group with $P(k)=-s$.",
+          "The first group has at most $d$ members, because its members are distinct roots of the nonzero degree-$d$ polynomial $P(x)-s$.",
+          "For integers $u,v$, the difference $u-v$ divides $P(u)-P(v)$: this follows term by term from $u-v\\mid u^j-v^j$ and the integrality of the coefficients.",
+          "If $P(k)=-s$, then $k-m\\mid P(k)-P(m)=-2s$. By minimality of $m$, every such $k$ is larger than $m$, so $k-m$ is a positive divisor of $2$. Hence $k\\in\\{m+1,m+2\\}$, and the second group has at most two members.",
+          "Adding the two bounds gives $n(P)\\le d+2$, equivalently $n(P)-\\deg(P)\\le2$, as required."
+        ],
+        "stepsZh": [
+          "令 $d=\\deg(P)\\ge1$。$n(P)$ 所计数的整数都是非零多项式 $P(x)^2-1$ 的根，所以个数有限。若一个也没有，结论立即成立。",
+          "否则令 $m$ 为这些整数中最小者，并记 $s=P(m)\\in\\{1,-1\\}$。把所有被计数的整数分成 $P(k)=s$ 与 $P(k)=-s$ 两组。",
+          "第一组至多有 $d$ 个元素，因为它们是非零 $d$ 次多项式 $P(x)-s$ 的不同根。",
+          "对任意整数 $u,v$，都有 $u-v\\mid P(u)-P(v)$：这是因为逐项有 $u-v\\mid u^j-v^j$，并且 $P$ 的系数均为整数。",
+          "若 $P(k)=-s$，则 $k-m\\mid P(k)-P(m)=-2s$。由 $m$ 的最小性，这样的 $k$ 必大于 $m$，故 $k-m$ 是 $2$ 的正因数。于是 $k\\in\\{m+1,m+2\\}$，第二组至多有两个元素。",
+          "两组相加得到 $n(P)\\le d+2$，即 $n(P)-\\deg(P)\\le2$，证毕。"
+        ]
+      }
+    ]
+  }
+}
