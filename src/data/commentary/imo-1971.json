@@ -1,0 +1,195 @@
+{
+  "imo-1971-q1": {
+    "summary": "For $n>2$ and arbitrary real numbers $a_1,\\ldots,a_n$, put $S_n=\\sum_{i=1}^n\\prod_{j\\ne i}(a_i-a_j)$. Prove that the assertion $S_n\\ge0$ for every real choice of the $a_i$ is true exactly for $n=3$ and $n=5$.",
+    "summaryZh": "对 $n>2$ 及任意实数 $a_1,\\ldots,a_n$，令 $S_n=\\sum_{i=1}^n\\prod_{j\\ne i}(a_i-a_j)$。证明：对所有实数取值恒有 $S_n\\ge0$ 当且仅当 $n=3$ 或 $n=5$。",
+    "answer": "The assertion holds exactly for $n=3$ and $n=5$.",
+    "answerZh": "该断言恰在 $n=3$ 与 $n=5$ 时成立。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Order the variables and construct counterexamples",
+        "titleZh": "排序变量并构造反例",
+        "topics": [
+          {"en": "Inequalities", "zh": "不等式"},
+          {"en": "Symmetric expressions", "zh": "对称式"},
+          {"en": "Counterexamples", "zh": "反例构造"}
+        ],
+        "steps": [
+          "For $n=3$, direct expansion gives $S_3=\\frac12[(a_1-a_2)^2+(a_1-a_3)^2+(a_2-a_3)^2]\\ge0$.",
+          "For $n=5$, symmetry lets us assume $a_1\\le a_2\\le a_3\\le a_4\\le a_5$ and write $P_i=\\prod_{j\\ne i}(a_i-a_j)$. Factoring the first pair gives $P_1+P_2=(a_2-a_1)[(a_3-a_1)(a_4-a_1)(a_5-a_1)-(a_3-a_2)(a_4-a_2)(a_5-a_2)]\\ge0$.",
+          "The same comparison from the other end gives $P_4+P_5\\ge0$, while $P_3=(a_3-a_1)(a_3-a_2)(a_4-a_3)(a_5-a_3)\\ge0$. Hence $S_5\\ge0$, including repeated-value cases.",
+          "If $n>2$ is even, take $a_1=-1$ and $a_2=\\cdots=a_n=0$. All terms except the first vanish and $S_n=(-1)^{n-1}=-1$.",
+          "If $n\\ge7$ is odd, take $a_1=a_2=a_3=-1$, $a_4=0$, and $a_5=\\cdots=a_n=1$. Terms belonging to repeated values vanish; only the $a_4$ term remains, equal to $1^3(-1)^{n-4}=-1$. Thus every remaining $n$ has a counterexample."
+        ],
+        "stepsZh": [
+          "当 $n=3$ 时，直接展开得 $S_3=\\frac12[(a_1-a_2)^2+(a_1-a_3)^2+(a_2-a_3)^2]\\ge0$。",
+          "当 $n=5$ 时，由对称性可设 $a_1\\le a_2\\le a_3\\le a_4\\le a_5$，并记 $P_i=\\prod_{j\\ne i}(a_i-a_j)$。将前两项配对并因式分解：$P_1+P_2=(a_2-a_1)[(a_3-a_1)(a_4-a_1)(a_5-a_1)-(a_3-a_2)(a_4-a_2)(a_5-a_2)]\\ge0$。",
+          "从另一端同样比较得到 $P_4+P_5\\ge0$；中间项 $P_3=(a_3-a_1)(a_3-a_2)(a_4-a_3)(a_5-a_3)\\ge0$。故 $S_5\\ge0$，即使某些 $a_i$ 相等也成立。",
+          "若 $n>2$ 为偶数，取 $a_1=-1$、$a_2=\\cdots=a_n=0$。除第一项外其余项都含零因子，于是 $S_n=(-1)^{n-1}=-1$。",
+          "若 $n\\ge7$ 为奇数，取 $a_1=a_2=a_3=-1$、$a_4=0$、$a_5=\\cdots=a_n=1$。重复值对应的项均为零，只剩 $a_4$ 对应项，其值为 $1^3(-1)^{n-4}=-1$。因此其余所有 $n$ 均有反例。"
+        ]
+      }
+    ]
+  },
+  "imo-1971-q2": {
+    "summary": "A convex three-dimensional polyhedron $P_1$ has nine vertices $A_1,\\ldots,A_9$. For $i=2,\\ldots,9$, let $P_i$ be the translate of $P_1$ that sends $A_1$ to $A_i$. Prove that two of $P_1,\\ldots,P_9$ have a common interior point.",
+    "summaryZh": "一个三维凸多面体 $P_1$ 有九个顶点 $A_1,\\ldots,A_9$。对 $i=2,\\ldots,9$，令 $P_i$ 为把 $A_1$ 平移到 $A_i$ 后所得的 $P_1$ 的平移像。证明 $P_1,\\ldots,P_9$ 中至少两个有公共内点。",
+    "answer": "At least two of the nine translates overlap in their interiors.",
+    "answerZh": "九个平移多面体中至少两个的内部相交。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Pack nine equal volumes into a dilation of factor two",
+        "titleZh": "把九份等体积多面体装入二倍放大体",
+        "topics": [
+          {"en": "Convexity", "zh": "凸性"},
+          {"en": "Volume", "zh": "体积"},
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"}
+        ],
+        "steps": [
+          "Take $A_1$ as the origin, write $P=P_1$, and let $a_i$ be the position vector of $A_i$. Then $P_i=P+a_i$ for $i=1,\\ldots,9$.",
+          "Every translate lies in the dilation $2P=\\{2x:x\\in P\\}$. Indeed, if $z=x+a_i$ with $x,a_i\\in P$, convexity gives $z/2=(x+a_i)/2\\in P$.",
+          "Let $V>0$ be the volume of $P$. Each $P_i$ has volume $V$, whereas $2P$ has volume $2^3V=8V$.",
+          "If the interiors of all nine translates were pairwise disjoint, their boundaries would contribute zero volume and their union would have volume $9V$. But the union is contained in $2P$, whose volume is only $8V$. This contradiction proves that two interiors meet."
+        ],
+        "stepsZh": [
+          "以 $A_1$ 为原点，记 $P=P_1$，并用 $a_i$ 表示顶点 $A_i$ 的位置向量，则 $P_i=P+a_i$，$i=1,\\ldots,9$。",
+          "每个平移像都包含在二倍放大体 $2P=\\{2x:x\\in P\\}$ 中。事实上，若 $z=x+a_i$，其中 $x,a_i\\in P$，则由凸性有 $z/2=(x+a_i)/2\\in P$。",
+          "设 $P$ 的体积为 $V>0$。每个 $P_i$ 的体积均为 $V$，而 $2P$ 的体积为 $2^3V=8V$。",
+          "若九个平移像的内部两两不交，则其边界体积为零，故并集体积为 $9V$。但该并集包含在体积仅为 $8V$ 的 $2P$ 中，矛盾。因此至少两个多面体的内部相交。"
+        ]
+      }
+    ]
+  },
+  "imo-1971-q3": {
+    "summary": "Prove that among the integers $2^k-3$ for $k=2,3,\\ldots$ there is an infinite subset whose members are pairwise relatively prime.",
+    "summaryZh": "证明：在整数集合 $\\{2^k-3:k=2,3,\\ldots\\}$ 中存在一个无限子集，使其中任意两个数都互素。",
+    "answer": "Such an infinite pairwise-coprime subset can be constructed inductively.",
+    "answerZh": "可用归纳构造得到这样的无限两两互素子集。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Choose each new exponent modulo the previous product",
+        "titleZh": "按已有乘积的模选择新指数",
+        "topics": [
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"},
+          {"en": "Inductive construction", "zh": "归纳构造"}
+        ],
+        "steps": [
+          "Start with $k_1=3$, so $2^{k_1}-3=5$. Suppose $k_1<\\cdots<k_r$ have been chosen and the corresponding numbers are pairwise coprime. Put $M=\\prod_{i=1}^r(2^{k_i}-3)$; this $M$ is odd.",
+          "Among $2^0,2^1,\\ldots,2^M$, two have the same residue modulo $M$. Cancelling the smaller power of $2$, which is invertible modulo odd $M$, gives an integer $d\\ge1$ with $2^d\\equiv1\\pmod M$.",
+          "Set $k_{r+1}=2+k_rd$. It is larger than $k_r$, and $2^{k_{r+1}}-3=4(2^d)^{k_r}-3\\equiv1\\pmod M$.",
+          "Therefore the new number is relatively prime to $M$ and hence to every earlier chosen number. The construction continues indefinitely and the increasing exponents give distinct members."
+        ],
+        "stepsZh": [
+          "先取 $k_1=3$，于是 $2^{k_1}-3=5$。假设已选出 $k_1<\\cdots<k_r$，且对应各数两两互素。令 $M=\\prod_{i=1}^r(2^{k_i}-3)$，则 $M$ 为奇数。",
+          "在 $2^0,2^1,\\ldots,2^M$ 这 $M+1$ 个数中，至少两个模 $M$ 同余。由于 $M$ 为奇数，可约去较小的 $2$ 的幂，从而得到某个整数 $d\\ge1$ 满足 $2^d\\equiv1\\pmod M$。",
+          "令 $k_{r+1}=2+k_rd$。显然 $k_{r+1}>k_r$，并且 $2^{k_{r+1}}-3=4(2^d)^{k_r}-3\\equiv1\\pmod M$。",
+          "所以新得到的数与 $M$ 互素，进而与此前每个数都互素。该构造可无限继续，且严格递增的指数保证所得各数互不相同。"
+        ]
+      }
+    ]
+  },
+  "imo-1971-q4": {
+    "summary": "Every face of tetrahedron $ABCD$ is acute. Let $X,Y,Z,T$ range over the interiors of edges $AB,BC,CD,DA$, respectively, and consider the closed path $XYZTX$. Put $a=\\angle DAB$, $b=\\angle ABC$, $c=\\angle BCD$, $d=\\angle CDA$, and $\\alpha=\\angle BAC+\\angle CAD+\\angle DAB$. (a) Prove that if $a+c\\ne b+d$, no such path has minimum length. (b) If $a+c=b+d$, prove that infinitely many shortest paths exist and that their common length is $2AC\\sin(\\alpha/2)$.",
+    "summaryZh": "四面体 $ABCD$ 的每个面都是锐角三角形。令 $X,Y,Z,T$ 分别在棱 $AB,BC,CD,DA$ 的内部，并考虑闭折线 $XYZTX$。记 $a=\\angle DAB$、$b=\\angle ABC$、$c=\\angle BCD$、$d=\\angle CDA$，以及 $\\alpha=\\angle BAC+\\angle CAD+\\angle DAB$。（a）证明若 $a+c\\ne b+d$，则不存在长度最小的这类折线。（b）若 $a+c=b+d$，证明有无穷多条最短折线，且公共长度为 $2AC\\sin(\\alpha/2)$。",
+    "answer": "A minimum exists exactly in the balanced case $a+c=b+d$; then infinitely many paths attain $2AC\\sin(\\alpha/2)$.",
+    "answerZh": "仅在平衡条件 $a+c=b+d$ 下存在最短值；此时无穷多条折线达到 $2AC\\sin(\\alpha/2)$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "First variation and unfolding the four faces",
+        "titleZh": "一阶变分与四个面的展开",
+        "topics": [
+          {"en": "Unfolding a polyhedron", "zh": "多面体展开"},
+          {"en": "Reflection law", "zh": "反射定律"},
+          {"en": "Triangle inequality", "zh": "三角不等式"},
+          {"en": "Chord length", "zh": "弦长公式"}
+        ],
+        "steps": [
+          "For part (a), suppose a shortest admissible path exists. Moving $X$ slightly along $AB$ while fixing the other points makes the derivative of $XY+XT$ vanish, so $\\angle BXY=\\angle AXT$. The same first-variation argument at $Y,Z,T$ gives angles $u,v,w,s$ with $\\angle BXY=\\angle AXT=u$, $\\angle BYX=\\angle CYZ=v$, $\\angle CZY=\\angle DZT=w$, and $\\angle DTZ=\\angle ATX=s$.",
+          "The angle sums in triangles $BXY,CYZ,DZT,ATX$ are $u+v+b=\\pi$, $v+w+c=\\pi$, $w+s+d=\\pi$, and $s+u+a=\\pi$. Comparing the first plus third with the second plus fourth forces $b+d=a+c$. Thus if the two sums differ, a minimum cannot exist.",
+          "Assume now $a+c=b+d$. Unfold the faces in order as $ABC$, $BCD$, $CDA'$, $DA'B'$, placing consecutive faces on opposite sides of their common edge; append a translated-or-reflected copy $A'B'C'$ of $ABC$. The signed turns from $AB$ to $A'B'$ sum to $b-c+d-a=0$, so $\\overrightarrow{A'B'}=\\overrightarrow{AB}$. Hence the last copy of $ABC$ is a translate of the first by a vector $v$: $A'=A+v$, $B'=B+v$, $C'=C+v$.",
+          "Let $\\omega=\\angle ACB+\\angle BCD+\\angle DCA$. Triangle angle sums and $a+c=b+d$ give $\\alpha+\\omega=2\\pi$. Since $CA=CA'=AC$, the chord formula yields $|v|=AA'=2AC\\sin(\\omega/2)=2AC\\sin(\\alpha/2)$.",
+          "Any admissible path unfolds to a polygonal line $XYZTX'$, where $X'$ is the copy of $X$ on $A'B'$, hence $X'=X+v$. The triangle inequality therefore gives $XY+YZ+ZT+TX\\ge XX'=|v|$.",
+          "It remains to attain the bound. Use the following planar observation: if rays $OP,OQ,OR,OS$ occur successively with three acute intervening angles and $OP=OS$, then, after making chord $PS$ horizontal, $Q$ and $R$ lie strictly above $O$. Their direction angles are $(\\pi-p+q+r)/2$ and $(\\pi-p-q+r)/2$, both in $(0,\\pi)$.",
+          "Apply this observation at $C$ to $CA,CB,CD,CA'$ and at $A'$ to $A'C,A'D,A'B',A'C'$. With $v$ horizontal, every point of $\\{A,C,A'\\}$ lies strictly below every point of $\\{B,D,B'\\}$. Thus each horizontal line in a nonempty open strip crosses $AB,BC,CD,DA',A'B'$ in interior points $X,Y,Z,T,X'$ and these pieces form the straight segment $XX'$.",
+          "Folding back gives a closed path of length $|v|=2AC\\sin(\\alpha/2)$. The strip contains infinitely many horizontal lines, so it produces infinitely many distinct shortest paths."
+        ],
+        "stepsZh": [
+          "先证（a）。反设存在最短折线。固定其余三点，让 $X$ 沿 $AB$ 作微小移动，则 $XY+XT$ 的导数必须为零，故 $\\angle BXY=\\angle AXT$。在 $Y,Z,T$ 处同理，记所得角为 $u,v,w,s$，有 $\\angle BXY=\\angle AXT=u$、$\\angle BYX=\\angle CYZ=v$、$\\angle CZY=\\angle DZT=w$、$\\angle DTZ=\\angle ATX=s$。",
+          "在三角形 $BXY,CYZ,DZT,ATX$ 中分别有 $u+v+b=\\pi$、$v+w+c=\\pi$、$w+s+d=\\pi$、$s+u+a=\\pi$。比较第一式与第三式之和及另外两式之和，必得 $b+d=a+c$。因此两边角和不等时不可能存在最短折线。",
+          "以下设 $a+c=b+d$。按顺序把四个面展开为 $ABC$、$BCD$、$CDA'$、$DA'B'$，相邻三角形放在公共边两侧，再在 $A'B'$ 外接一份 $ABC$ 的副本 $A'B'C'$。从 $AB$ 到 $A'B'$ 的有向转角之和为 $b-c+d-a=0$，所以 $\\overrightarrow{A'B'}=\\overrightarrow{AB}$。于是末尾的 $ABC$ 副本是开头副本沿向量 $v$ 的平移：$A'=A+v$、$B'=B+v$、$C'=C+v$。",
+          "令 $\\omega=\\angle ACB+\\angle BCD+\\angle DCA$。利用三角形内角和及 $a+c=b+d$，得到 $\\alpha+\\omega=2\\pi$。又 $CA=CA'=AC$，由弦长公式 $|v|=AA'=2AC\\sin(\\omega/2)=2AC\\sin(\\alpha/2)$。",
+          "任一允许的折线展开后成为折线 $XYZTX'$，其中 $X'$ 是 $X$ 在 $A'B'$ 上的对应点，因此 $X'=X+v$。三角不等式给出 $XY+YZ+ZT+TX\\ge XX'=|v|$。",
+          "下面说明该下界可以达到。使用平面观察：若射线 $OP,OQ,OR,OS$ 依次出现，三个相邻夹角 $p,q,r$ 均为锐角，且 $OP=OS$，把弦 $PS$ 放成水平后，$Q,R$ 都严格位于 $O$ 上方。事实上它们相对水平正方向的方向角为 $(\\pi-p+q+r)/2$ 与 $(\\pi-p-q+r)/2$，均在 $(0,\\pi)$ 内。",
+          "在 $C$ 点把该观察用于 $CA,CB,CD,CA'$，在 $A'$ 点用于 $A'C,A'D,A'B',A'C'$。令 $v$ 水平，则集合 $\\{A,C,A'\\}$ 中各点严格低于 $\\{B,D,B'\\}$ 中各点。因此两者之间存在非空水平开带；其中每条水平线依次与 $AB,BC,CD,DA',A'B'$ 的内部相交于 $X,Y,Z,T,X'$，并组成直线段 $XX'$。",
+          "把各面折回即得到长度为 $|v|=2AC\\sin(\\alpha/2)$ 的闭折线。开带内有无穷多条水平线，因此得到无穷多条不同的最短折线。"
+        ]
+      }
+    ]
+  },
+  "imo-1971-q5": {
+    "summary": "For every natural number $m$, construct a finite set $S$ of points in the plane such that every point of $S$ has exactly $m$ other points of $S$ at distance $1$.",
+    "summaryZh": "对每个自然数 $m$，构造平面上的有限点集 $S$，使 $S$ 中每个点恰有 $m$ 个其他点与它的距离为 $1$。",
+    "answer": "Such a finite set exists for every $m$; it can be built inductively by adjoining a carefully translated copy.",
+    "answerZh": "对每个 $m$ 都存在这样的有限点集；可通过加入适当平移的副本归纳构造。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Double the set with one controlled new neighbour",
+        "titleZh": "复制点集并只增加一个受控邻点",
+        "topics": [
+          {"en": "Mathematical induction", "zh": "数学归纳法"},
+          {"en": "Unit-distance graphs", "zh": "单位距离图"},
+          {"en": "Translations", "zh": "平移变换"}
+        ],
+        "steps": [
+          "For $m=0$, one point suffices. Assume a finite nonempty set $S$ has exactly $m$ unit-distance neighbours at every point.",
+          "Let $D=\\{p-q:p,q\\in S,\\ p\\ne q\\}$. Choose a unit vector $u$ such that $u\\ne d$ and $|u-d|\\ne1$ for every $d\\in D$. This is possible: each fixed $d$ excludes at most one point by $u=d$ and at most two more because $|u-d|=1$ cuts the unit circle by a line; only finitely many unit vectors are forbidden.",
+          "Set $T=S\\cup(S+u)$. The two copies are disjoint because $u$ is not a nonzero difference of points of $S$.",
+          "Each point keeps its $m$ unit neighbours within its own copy. Across the two copies, $p$ is at unit distance from its corresponding point $p+u$. For distinct $p,q\\in S$, the choice of $u$ gives $|p-(q+u)|=|u-(p-q)|\\ne1$.",
+          "Thus every point of $T$ has exactly $m+1$ unit-distance neighbours. Induction proves the construction for every natural number $m$."
+        ],
+        "stepsZh": [
+          "当 $m=0$ 时，一个点即可。假设有限非空点集 $S$ 中每个点恰有 $m$ 个单位距离邻点。",
+          "令 $D=\\{p-q:p,q\\in S,\\ p\\ne q\\}$。选择单位向量 $u$，使对每个 $d\\in D$ 都有 $u\\ne d$ 且 $|u-d|\\ne1$。这样的 $u$ 存在：固定一个 $d$ 时，条件 $u=d$ 至多排除单位圆上一点，而 $|u-d|=1$ 等价于一条直线与单位圆相交，至多再排除两点；所有禁用方向仍只有有限个。",
+          "令 $T=S\\cup(S+u)$。因为 $u$ 不是 $S$ 中两点的非零差向量，两个副本互不相交。",
+          "每个点在自己的副本内仍有 $m$ 个单位距离邻点。两个副本之间，$p$ 与对应点 $p+u$ 的距离为 $1$。若 $p,q\\in S$ 不同，则由 $u$ 的选择有 $|p-(q+u)|=|u-(p-q)|\\ne1$。",
+          "因此 $T$ 中每个点恰有 $m+1$ 个单位距离邻点。由归纳法，对每个自然数 $m$ 均可构造。"
+        ]
+      }
+    ]
+  },
+  "imo-1971-q6": {
+    "summary": "Let $A=(a_{ij})$ be an $n\\times n$ matrix of nonnegative integers. Whenever $a_{ij}=0$, assume that the sum of row $i$ and column $j$ is at least $n$. Prove that the sum of all entries of $A$ is at least $n^2/2$.",
+    "summaryZh": "设 $A=(a_{ij})$ 是一个 $n\\times n$ 非负整数矩阵。若 $a_{ij}=0$，则假设第 $i$ 行元素和与第 $j$ 列元素和之和至少为 $n$。证明矩阵全部元素之和至少为 $n^2/2$。",
+    "answer": "$\\displaystyle \\sum_{i,j}a_{ij}\\ge n^2/2$.",
+    "answerZh": "$\\displaystyle \\sum_{i,j}a_{ij}\\ge n^2/2$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use the smallest row or column sum",
+        "titleZh": "利用最小行和或列和",
+        "topics": [
+          {"en": "Matrices", "zh": "矩阵"},
+          {"en": "Extremal argument", "zh": "极值论证"},
+          {"en": "Counting zero entries", "zh": "零元素计数"}
+        ],
+        "steps": [
+          "Let $S$ be the sum of all entries and let $m$ be the least among all row sums and column sums. If $m\\ge n/2$, summing the $n$ row sums immediately gives $S\\ge nm\\ge n^2/2$.",
+          "Suppose $m<n/2$. After transposing if necessary, choose a row whose sum is $m$. Because nonzero entries are positive integers, this row contains at most $m$ nonzero entries and therefore at least $n-m$ zeros.",
+          "For each column containing one of these zeros, the hypothesis says its column sum is at least $n-m$. There are at least $n-m$ such columns. Every remaining column has sum at least $m$ by the definition of $m$.",
+          "Consequently $S\\ge(n-m)^2+m^2=n^2/2+2(m-n/2)^2\\ge n^2/2$, as required."
+        ],
+        "stepsZh": [
+          "设矩阵全部元素之和为 $S$，并令 $m$ 为所有行和、列和中的最小值。若 $m\\ge n/2$，把 $n$ 个行和相加即得 $S\\ge nm\\ge n^2/2$。",
+          "以下设 $m<n/2$。必要时转置矩阵，可取某一行的行和等于 $m$。由于非零元素都是正整数，该行至多有 $m$ 个非零元素，因而至少有 $n-m$ 个零元素。",
+          "对含有这些零元素的每一列，题设给出其列和至少为 $n-m$；这样的列至少有 $n-m$ 列。其余每一列的列和由 $m$ 的定义至少为 $m$。",
+          "所以 $S\\ge(n-m)^2+m^2=n^2/2+2(m-n/2)^2\\ge n^2/2$，结论成立。"
+        ]
+      }
+    ]
+  }
+}
