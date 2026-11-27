@@ -1,0 +1,201 @@
+{
+  "imo-1970-q1": {
+    "summary": "Let $M$ be an interior point of side $AB$ of triangle $ABC$. Let $r_1,r_2,r$ be the inradii of triangles $ACM,BCM,ABC$, and let $\\rho_1,\\rho_2,\\rho$ be the exradii of those triangles opposite $C$ (their excircles lie in angle $ACB$). Prove that $\\frac{r_1}{\\rho_1}\\frac{r_2}{\\rho_2}=\\frac r\\rho$.",
+    "summaryZh": "设 $M$ 是三角形 $ABC$ 的边 $AB$ 上的内点。令 $r_1,r_2,r$ 分别为三角形 $ACM,BCM,ABC$ 的内切圆半径，$\\rho_1,\\rho_2,\\rho$ 分别为这三个三角形中顶点 $C$ 所对的旁切圆半径（相应旁切圆位于角 $ACB$ 内）。证明 $\\frac{r_1}{\\rho_1}\\frac{r_2}{\\rho_2}=\\frac r\\rho$。",
+    "answer": "$\\displaystyle \\frac{r_1}{\\rho_1}\\frac{r_2}{\\rho_2}=\\frac r\\rho$.",
+    "answerZh": "$\\displaystyle \\frac{r_1}{\\rho_1}\\frac{r_2}{\\rho_2}=\\frac r\\rho$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Cancel complementary half-angle factors",
+        "titleZh": "消去互余角的半角因子",
+        "topics": [
+          {"en": "Incircle and excircle", "zh": "内切圆与旁切圆"},
+          {"en": "Angle bisectors", "zh": "角平分线"},
+          {"en": "Half-angle identities", "zh": "半角恒等式"}
+        ],
+        "steps": [
+          "First establish a triangle lemma. In a nondegenerate triangle $XYZ$, let the angles at $X,Y$ be $\\alpha,\\beta$, let the inradius be $u$, and let the exradius opposite $Z$ be $v$. Then $u/v=\\tan(\\alpha/2)\\tan(\\beta/2)$.",
+          "To prove the lemma, drop perpendiculars from the incenter and the $Z$-excenter to $XY$. The two decompositions of $XY$ give $XY=u(\\cot(\\alpha/2)+\\cot(\\beta/2))$ and $XY=v(\\tan(\\alpha/2)+\\tan(\\beta/2))$. Dividing and simplifying yields the stated ratio.",
+          "Write $\\alpha=\\angle CAB$, $\\beta=\\angle CBA$, and $\\theta=\\angle AMC$. Applying the lemma to $ACM$ gives $r_1/\\rho_1=\\tan(\\alpha/2)\\tan(\\theta/2)$.",
+          "Because $A,M,B$ are collinear, $\\angle BMC=180^\\circ-\\theta$. Hence the lemma applied to $BCM$ gives $r_2/\\rho_2=\\tan(\\beta/2)\\tan(90^\\circ-\\theta/2)=\\tan(\\beta/2)\\cot(\\theta/2)$.",
+          "Multiplication cancels the two $\\theta$-factors: $(r_1/\\rho_1)(r_2/\\rho_2)=\\tan(\\alpha/2)\\tan(\\beta/2)$. Applying the lemma once more to $ABC$ identifies the last expression as $r/\\rho$."
+        ],
+        "stepsZh": [
+          "先证明一个三角形引理。在非退化三角形 $XYZ$ 中，设 $X,Y$ 处的角为 $\\alpha,\\beta$，内切圆半径为 $u$，顶点 $Z$ 所对的旁切圆半径为 $v$，则 $u/v=\\tan(\\alpha/2)\\tan(\\beta/2)$。",
+          "证明引理：分别从内心和 $Z$-旁心向 $XY$ 作垂线。由角平分线形成的直角三角形，线段 $XY$ 有两种分解：$XY=u(\\cot(\\alpha/2)+\\cot(\\beta/2))$ 与 $XY=v(\\tan(\\alpha/2)+\\tan(\\beta/2))$。两式相除并化简即得引理。",
+          "记 $\\alpha=\\angle CAB$、$\\beta=\\angle CBA$、$\\theta=\\angle AMC$。对 $ACM$ 应用引理，得到 $r_1/\\rho_1=\\tan(\\alpha/2)\\tan(\\theta/2)$。",
+          "由于 $A,M,B$ 共线，$\\angle BMC=180^\\circ-\\theta$。对 $BCM$ 应用引理，得到 $r_2/\\rho_2=\\tan(\\beta/2)\\tan(90^\\circ-\\theta/2)=\\tan(\\beta/2)\\cot(\\theta/2)$。",
+          "两式相乘后，关于 $\\theta$ 的两个因子恰好抵消：$(r_1/\\rho_1)(r_2/\\rho_2)=\\tan(\\alpha/2)\\tan(\\beta/2)$。再对 $ABC$ 应用一次引理，最后一式正是 $r/\\rho$。"
+        ]
+      }
+    ]
+  },
+  "imo-1970-q2": {
+    "summary": "The same digits $x_0,x_1,\\ldots,x_n$ are valid in bases $a$ and $b$, with $x_0x_1\\ne0$. Let $A_n=\\overline{x_1x_2\\cdots x_n}^{(a)}$, $A_{n+1}=\\overline{x_0x_1\\cdots x_n}^{(a)}$, and define $B_n,B_{n+1}$ analogously in base $b$. Prove that $a>b$ if and only if $A_n/A_{n+1}<B_n/B_{n+1}$.",
+    "summaryZh": "同一组数字 $x_0,x_1,\\ldots,x_n$ 在 $a,b$ 两种进位制中均合法，且 $x_0x_1\\ne0$。令 $A_n=\\overline{x_1x_2\\cdots x_n}^{(a)}$、$A_{n+1}=\\overline{x_0x_1\\cdots x_n}^{(a)}$，并在 $b$ 进制中类似定义 $B_n,B_{n+1}$。证明：$a>b$ 当且仅当 $A_n/A_{n+1}<B_n/B_{n+1}$。",
+    "answer": "$a>b\\iff A_n/A_{n+1}<B_n/B_{n+1}$.",
+    "answerZh": "$a>b\\iff A_n/A_{n+1}<B_n/B_{n+1}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Normalize the suffix and use monotonicity",
+        "titleZh": "归一化尾部数字并利用单调性",
+        "topics": [
+          {"en": "Positional notation", "zh": "进位制记数法"},
+          {"en": "Monotone functions", "zh": "单调函数"},
+          {"en": "Equivalent inequalities", "zh": "等价不等式"}
+        ],
+        "steps": [
+          "For $t>0$, define $S(t)=\\sum_{j=1}^{n}x_j/t^j$. Every digit is nonnegative and $x_1>0$, so $S(t)>0$ and $S$ is strictly decreasing: when $s>t$, every summand at $s$ is no larger, while the $j=1$ summand is strictly smaller.",
+          "Positional notation gives $A_n=a^nS(a)$ and $A_{n+1}=a^n(x_0+S(a))$. Thus $A_n/A_{n+1}=S(a)/(x_0+S(a))$. Similarly, $B_n/B_{n+1}=S(b)/(x_0+S(b))$.",
+          "Since all quantities are positive and $x_0>0$, cross-multiplication shows $S(a)/(x_0+S(a))<S(b)/(x_0+S(b))$ if and only if $x_0S(a)<x_0S(b)$, hence if and only if $S(a)<S(b)$.",
+          "The strict decrease of $S$ turns the final inequality into $a>b$. Reversing every equivalence proves both directions of the required statement."
+        ],
+        "stepsZh": [
+          "对 $t>0$，定义 $S(t)=\\sum_{j=1}^{n}x_j/t^j$。各位数字非负且 $x_1>0$，所以 $S(t)>0$，并且 $S$ 严格递减：若 $s>t$，每一项在 $s$ 处都不大于在 $t$ 处的值，而 $j=1$ 项严格变小。",
+          "由进位制记数法，$A_n=a^nS(a)$、$A_{n+1}=a^n(x_0+S(a))$，故 $A_n/A_{n+1}=S(a)/(x_0+S(a))$。同理，$B_n/B_{n+1}=S(b)/(x_0+S(b))$。",
+          "所有量均为正且 $x_0>0$，交叉相乘可得 $S(a)/(x_0+S(a))<S(b)/(x_0+S(b))$ 当且仅当 $x_0S(a)<x_0S(b)$，也就是当且仅当 $S(a)<S(b)$。",
+          "由于 $S$ 严格递减，最后一个不等式等价于 $a>b$。上述每一步均为等价变形，因此两个方向同时得证。"
+        ]
+      }
+    ]
+  },
+  "imo-1970-q3": {
+    "summary": "Let $1=a_0\\le a_1\\le a_2\\le\\cdots$ be real numbers and define $b_n=\\sum_{k=1}^{n}(1-a_{k-1}/a_k)/\\sqrt{a_k}$. (a) Prove $0\\le b_n<2$. (b) For every $0\\le c<2$, construct such a sequence for which $b_n>c$ for infinitely many $n$.",
+    "summaryZh": "设实数列满足 $1=a_0\\le a_1\\le a_2\\le\\cdots$，并定义 $b_n=\\sum_{k=1}^{n}(1-a_{k-1}/a_k)/\\sqrt{a_k}$。（a）证明 $0\\le b_n<2$。（b）对任意 $0\\le c<2$，构造这样的数列，使 $b_n>c$ 对无穷多个 $n$ 成立。",
+    "answer": "Always $0\\le b_n<2$; for part (b), one may take $a_k=r^{-2k}$ with $r=(c+1)/3$.",
+    "answerZh": "恒有 $0\\le b_n<2$；对（b），可取 $r=(c+1)/3$ 并令 $a_k=r^{-2k}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Telescoping bound and a geometric construction",
+        "titleZh": "伸缩求和估计与等比构造",
+        "topics": [
+          {"en": "Sequences", "zh": "数列"},
+          {"en": "Telescoping sums", "zh": "伸缩求和"},
+          {"en": "Geometric progression", "zh": "等比数列"},
+          {"en": "Sharp constants", "zh": "最优常数"}
+        ],
+        "steps": [
+          "Set $x_k=1/\\sqrt{a_k}$. Then $1=x_0\\ge x_1\\ge x_2\\ge\\cdots>0$. The $k$th summand becomes $x_k(1-x_k^2/x_{k-1}^2)=(x_{k-1}-x_k)(x_k/x_{k-1})(1+x_k/x_{k-1})$.",
+          "Because $0<x_k/x_{k-1}\\le1$, each summand is nonnegative and at most $2(x_{k-1}-x_k)$. Therefore $0\\le b_n\\le2\\sum_{k=1}^{n}(x_{k-1}-x_k)=2(1-x_n)<2$, proving part (a).",
+          "For part (b), fix $0\\le c<2$ and put $r=(c+1)/3$. Then $0<r<1$ and $r(1+r)-c=(2-c)^2/9>0$.",
+          "Choose $a_k=r^{-2k}$. This is increasing and begins with $a_0=1$. Moreover, $a_{k-1}/a_k=r^2$ and $1/\\sqrt{a_k}=r^k$, so $b_n=(1-r^2)\\sum_{k=1}^{n}r^k=r(1+r)(1-r^n)$.",
+          "As $n\\to\\infty$, the last expression tends to $r(1+r)>c$. Hence $b_n>c$ for all sufficiently large $n$, which is stronger than requiring infinitely many such indices."
+        ],
+        "stepsZh": [
+          "令 $x_k=1/\\sqrt{a_k}$，则 $1=x_0\\ge x_1\\ge x_2\\ge\\cdots>0$。第 $k$ 个被加数可写为 $x_k(1-x_k^2/x_{k-1}^2)=(x_{k-1}-x_k)(x_k/x_{k-1})(1+x_k/x_{k-1})$。",
+          "因为 $0<x_k/x_{k-1}\\le1$，每个被加数非负且不超过 $2(x_{k-1}-x_k)$。因此 $0\\le b_n\\le2\\sum_{k=1}^{n}(x_{k-1}-x_k)=2(1-x_n)<2$，（a）得证。",
+          "对（b），固定 $0\\le c<2$，令 $r=(c+1)/3$。则 $0<r<1$，并且 $r(1+r)-c=(2-c)^2/9>0$。",
+          "取 $a_k=r^{-2k}$。该数列递增且 $a_0=1$。又有 $a_{k-1}/a_k=r^2$、$1/\\sqrt{a_k}=r^k$，所以 $b_n=(1-r^2)\\sum_{k=1}^{n}r^k=r(1+r)(1-r^n)$。",
+          "当 $n\\to\\infty$ 时，上式趋于 $r(1+r)>c$。因此所有充分大的 $n$ 都满足 $b_n>c$，这比题目要求的“无穷多个”更强。"
+        ]
+      }
+    ]
+  },
+  "imo-1970-q4": {
+    "summary": "Determine all positive integers $n$ for which the six numbers $n,n+1,\\ldots,n+5$ can be partitioned into two sets having equal products.",
+    "summaryZh": "求所有正整数 $n$，使六个数 $n,n+1,\\ldots,n+5$ 可以分成两个子集，且两个子集中各数之积相等。",
+    "answer": "No positive integer $n$ works.",
+    "answerZh": "不存在满足条件的正整数 $n$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=2",
+    "methods": [
+      {
+        "title": "Order bounds reduce the partition to four cases",
+        "titleZh": "用乘积大小关系化为四种情形",
+        "topics": [
+          {"en": "Integer partitions", "zh": "整数划分"},
+          {"en": "Product inequalities", "zh": "乘积不等式"},
+          {"en": "Case analysis", "zh": "分类讨论"}
+        ],
+        "steps": [
+          "Assume a valid partition exists. For $n=1$, exactly one of $1,2,3,4,5,6$ is divisible by $5$, so the two products cannot be equal. Hence it remains to consider $n\\ge2$.",
+          "Each part must contain three numbers. Otherwise one part has at most two and the other at least four; their products are at most $(n+4)(n+5)$ and at least $n(n+1)(n+2)(n+3)$ respectively. For $n\\ge2$, $n(n+1)\\ge n+4$ and $(n+2)(n+3)>n+5$, so equality is impossible.",
+          "The numbers $n$ and $n+5$ must lie in the same part. If not, the part containing $n$ has product at most $n(n+3)(n+4)$, while the other has product at least $(n+1)(n+2)(n+5)$; the latter is larger because $n(n+3)<(n+1)(n+2)$ and $n+4<n+5$.",
+          "Thus one part is $\\{n,n+k,n+5\\}$ for $k\\in\\{1,2,3,4\\}$. If $k=1$ or $2$, its product is at most $n(n+2)(n+5)<(n+1)(n+3)(n+4)$, a lower bound for the complementary product.",
+          "If $k=4$, then $n(n+4)(n+5)>(n+1)(n+2)(n+3)$ because $n(n+5)-(n+1)(n+2)=2(n-1)>0$ and $n+4>n+3$.",
+          "Finally, $k=3$ would require $n(n+3)(n+5)=(n+1)(n+2)(n+4)$. Expansion reduces this to $n(n+1)=8$, impossible because it equals $6$ at $n=2$ and is at least $12$ for $n\\ge3$. Hence no positive integer works."
+        ],
+        "stepsZh": [
+          "反设存在合适的划分。当 $n=1$ 时，$1,2,3,4,5,6$ 中恰有一个数能被 $5$ 整除，因此两个乘积不可能相等。以下只需考虑 $n\\ge2$。",
+          "每个子集必须恰含三个数。否则一边至多含两个数，另一边至少含四个数；前者乘积至多为 $(n+4)(n+5)$，后者至少为 $n(n+1)(n+2)(n+3)$。当 $n\\ge2$ 时，$n(n+1)\\ge n+4$ 且 $(n+2)(n+3)>n+5$，故两乘积不可能相等。",
+          "$n$ 与 $n+5$ 必须在同一子集中。否则含 $n$ 的一边乘积至多为 $n(n+3)(n+4)$，另一边至少为 $(n+1)(n+2)(n+5)$；由 $n(n+3)<(n+1)(n+2)$ 及 $n+4<n+5$，后者严格更大。",
+          "因此其中一个子集必为 $\\{n,n+k,n+5\\}$，其中 $k\\in\\{1,2,3,4\\}$。若 $k=1$ 或 $2$，该边乘积至多为 $n(n+2)(n+5)<(n+1)(n+3)(n+4)$，而右侧又是另一边乘积的下界。",
+          "若 $k=4$，则 $n(n+4)(n+5)>(n+1)(n+2)(n+3)$，因为 $n(n+5)-(n+1)(n+2)=2(n-1)>0$ 且 $n+4>n+3$。",
+          "最后，$k=3$ 要求 $n(n+3)(n+5)=(n+1)(n+2)(n+4)$。展开化简得到 $n(n+1)=8$；但 $n=2$ 时左侧为 $6$，$n\\ge3$ 时左侧至少为 $12$，均不可能。因此不存在满足条件的正整数。"
+        ]
+      }
+    ]
+  },
+  "imo-1970-q5": {
+    "summary": "In tetrahedron $ABCD$, $BD\\perp CD$. The perpendicular projection $H$ of $D$ onto plane $ABC$ is the orthocentre of triangle $ABC$. Prove $(AB+BC+CA)^2\\le6(AD^2+BD^2+CD^2)$ and determine the equality cases.",
+    "summaryZh": "在四面体 $ABCD$ 中，$BD\\perp CD$。点 $D$ 在平面 $ABC$ 上的垂足 $H$ 是三角形 $ABC$ 的垂心。证明 $(AB+BC+CA)^2\\le6(AD^2+BD^2+CD^2)$，并求等号成立的情形。",
+    "answer": "Equality holds exactly when $DA,DB,DC$ are pairwise perpendicular and $DA=DB=DC$.",
+    "answerZh": "等号成立当且仅当 $DA,DB,DC$ 两两垂直且 $DA=DB=DC$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=2",
+    "methods": [
+      {
+        "title": "Use vectors to reveal a tri-rectangular tetrahedron",
+        "titleZh": "用向量揭示三直角四面体结构",
+        "topics": [
+          {"en": "Three-dimensional vectors", "zh": "空间向量"},
+          {"en": "Orthocentre", "zh": "垂心"},
+          {"en": "Cauchy-Schwarz inequality", "zh": "柯西—施瓦茨不等式"},
+          {"en": "Equality conditions", "zh": "等号条件"}
+        ],
+        "steps": [
+          "Take $D$ as the origin and write $\\mathbf a=\\overrightarrow{DA}$, $\\mathbf b=\\overrightarrow{DB}$, $\\mathbf c=\\overrightarrow{DC}$, and $\\mathbf h=\\overrightarrow{DH}$.",
+          "Since $DH\\perp ABC$, $\\mathbf h\\cdot(\\mathbf b-\\mathbf c)=0$. Since $AH$ is an altitude of $ABC$, $(\\mathbf a-\\mathbf h)\\cdot(\\mathbf b-\\mathbf c)=0$. Adding these relations gives $\\mathbf a\\cdot\\mathbf b=\\mathbf a\\cdot\\mathbf c$.",
+          "Applying the same argument to the altitude through $B$ gives $\\mathbf b\\cdot\\mathbf a=\\mathbf b\\cdot\\mathbf c$. Hence all three pairwise dot products are equal. The condition $BD\\perp CD$ says $\\mathbf b\\cdot\\mathbf c=0$, so $\\mathbf a,\\mathbf b,\\mathbf c$ are pairwise perpendicular.",
+          "Pythagoras now gives $AB^2=AD^2+BD^2$, $BC^2=BD^2+CD^2$, and $CA^2=CD^2+AD^2$. Therefore, by Cauchy-Schwarz, $(AB+BC+CA)^2\\le3(AB^2+BC^2+CA^2)=6(AD^2+BD^2+CD^2)$.",
+          "Equality in Cauchy-Schwarz holds exactly when $AB=BC=CA$. Subtracting the three Pythagorean identities shows that this is equivalent to $AD=BD=CD$. Together with the already proved pairwise perpendicularity, these are the necessary equality conditions.",
+          "They are also sufficient. For $t>0$, take $D=(0,0,0)$, $A=(t,0,0)$, $B=(0,t,0)$, $C=(0,0,t)$. Plane $ABC$ is $x+y+z=t$, and the perpendicular foot $H=(t/3,t/3,t/3)$ lies on all three altitudes of the equilateral triangle $ABC$. Thus all hypotheses and equality are attained."
+        ],
+        "stepsZh": [
+          "以 $D$ 为原点，记 $\\mathbf a=\\overrightarrow{DA}$、$\\mathbf b=\\overrightarrow{DB}$、$\\mathbf c=\\overrightarrow{DC}$、$\\mathbf h=\\overrightarrow{DH}$。",
+          "因为 $DH\\perp ABC$，有 $\\mathbf h\\cdot(\\mathbf b-\\mathbf c)=0$。又因 $AH$ 是三角形 $ABC$ 的高，$(\\mathbf a-\\mathbf h)\\cdot(\\mathbf b-\\mathbf c)=0$。两式相加得到 $\\mathbf a\\cdot\\mathbf b=\\mathbf a\\cdot\\mathbf c$。",
+          "对从 $B$ 引出的高作同样论证，得到 $\\mathbf b\\cdot\\mathbf a=\\mathbf b\\cdot\\mathbf c$。因此三个两两数量积相等。条件 $BD\\perp CD$ 给出 $\\mathbf b\\cdot\\mathbf c=0$，所以 $\\mathbf a,\\mathbf b,\\mathbf c$ 两两垂直。",
+          "由勾股定理，$AB^2=AD^2+BD^2$、$BC^2=BD^2+CD^2$、$CA^2=CD^2+AD^2$。再由柯西—施瓦茨不等式，$(AB+BC+CA)^2\\le3(AB^2+BC^2+CA^2)=6(AD^2+BD^2+CD^2)$。",
+          "柯西—施瓦茨不等式取等当且仅当 $AB=BC=CA$。将三个勾股等式两两相减可知，这等价于 $AD=BD=CD$。结合已证的两两垂直性，得到等号成立的必要条件。",
+          "这些条件也充分。对任意 $t>0$，取 $D=(0,0,0)$、$A=(t,0,0)$、$B=(0,t,0)$、$C=(0,0,t)$。平面 $ABC$ 为 $x+y+z=t$，从 $D$ 作垂线的垂足 $H=(t/3,t/3,t/3)$ 位于等边三角形 $ABC$ 的三条高上，因此题设与等号均成立。"
+        ]
+      }
+    ]
+  },
+  "imo-1970-q6": {
+    "summary": "Among 100 points in the plane, no three collinear, consider all triangles with vertices chosen from the points. Prove that at most $70\\%$ of these triangles are acute.",
+    "summaryZh": "平面上有 $100$ 个点，任意三点不共线。考虑以这些点为顶点的所有三角形，证明其中至多 $70\\%$ 是锐角三角形。",
+    "answer": "The number of acute triangles is at most $\\frac7{10}\\binom{100}{3}$.",
+    "answerZh": "锐角三角形的数量至多为 $\\frac7{10}\\binom{100}{3}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf#page=2",
+    "methods": [
+      {
+        "title": "A four-point lemma followed by double counting",
+        "titleZh": "四点引理与二重计数",
+        "topics": [
+          {"en": "Combinatorial geometry", "zh": "组合几何"},
+          {"en": "Convex hull", "zh": "凸包"},
+          {"en": "Double counting", "zh": "二重计数"},
+          {"en": "Binomial coefficients", "zh": "二项式系数"}
+        ],
+        "steps": [
+          "Call a triangle non-acute if it has an angle at least $90^\\circ$. Any four of the points determine a non-acute triangle. If their convex hull is a quadrilateral, one interior angle is at least $90^\\circ$, and its vertex with the two neighboring vertices forms such a triangle.",
+          "If instead the convex hull of the four points is a triangle $ABC$, the fourth point $P$ lies strictly inside it. The angles $\\angle APB,\\angle BPC,\\angle CPA$ sum to $360^\\circ$, so one is at least $120^\\circ$; the corresponding triangle is non-acute. This proves the four-point lemma.",
+          "Take any five points and let $m$ be their number of non-acute triangles. Each of the five four-point subsets contains at least one by the lemma. Each fixed triangle lies in exactly two of these four-point subsets, obtained by adjoining either remaining point. Hence $2m\\ge5$, so the integer $m$ satisfies $m\\ge3$.",
+          "Let $N$ be the total number of non-acute triangles among the 100 points. Count pairs $(T,S)$ in which $S$ is a five-point subset and $T$ is a non-acute triangle contained in $S$. The five-point count gives at least $3\\binom{100}{5}$ pairs.",
+          "Every fixed triangle belongs to exactly $\\binom{97}{2}$ five-point subsets. Thus $N\\binom{97}{2}\\ge3\\binom{100}{5}$, or $N\\ge(3/10)\\binom{100}{3}$.",
+          "There are $\\binom{100}{3}$ triangles in total. Consequently the number of acute triangles is at most $\\binom{100}{3}-N\\le(7/10)\\binom{100}{3}$, which is exactly the asserted $70\\%$ bound."
+        ],
+        "stepsZh": [
+          "把至少有一个角不小于 $90^\\circ$ 的三角形称为非锐角三角形。任意四点必确定一个非锐角三角形。若四点的凸包是四边形，则其某个内角不小于 $90^\\circ$，该顶点与相邻两个顶点构成所需三角形。",
+          "若四点的凸包是三角形 $ABC$，则第四点 $P$ 严格位于内部。三个角 $\\angle APB,\\angle BPC,\\angle CPA$ 之和为 $360^\\circ$，故其中一个至少为 $120^\\circ$；相应三角形为非锐角三角形。四点引理得证。",
+          "任取五点，设它们确定的非锐角三角形有 $m$ 个。五个四点子集各自至少包含一个这样的三角形；而每个固定三角形恰属于其中两个四点子集，因为可分别加入余下两点。因此 $2m\\ge5$，由 $m$ 为整数得 $m\\ge3$。",
+          "设 100 点确定的非锐角三角形总数为 $N$。二重计数数对 $(T,S)$，其中 $S$ 是五点子集，$T$ 是包含在 $S$ 中的非锐角三角形。由上一步，数对至少有 $3\\binom{100}{5}$ 个。",
+          "每个固定三角形恰属于 $\\binom{97}{2}$ 个五点子集，因此 $N\\binom{97}{2}\\ge3\\binom{100}{5}$，即 $N\\ge(3/10)\\binom{100}{3}$。",
+          "三角形总数为 $\\binom{100}{3}$，所以锐角三角形数至多为 $\\binom{100}{3}-N\\le(7/10)\\binom{100}{3}$，恰为所要求的 $70\\%$ 上界。"
+        ]
+      }
+    ]
+  }
+}
