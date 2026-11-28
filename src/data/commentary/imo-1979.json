@@ -1,0 +1,160 @@
+{
+  "imo-1979-q1": {
+    "summary": "Let $p,q$ be positive integers satisfying $$\\frac pq=1-\\frac12+\\frac13-\\frac14+\\cdots-\\frac1{1318}+\\frac1{1319}.$$ Prove that $1979\\mid p$.",
+    "summaryZh": "设正整数 $p,q$ 满足 $$\\frac pq=1-\\frac12+\\frac13-\\frac14+\\cdots-\\frac1{1318}+\\frac1{1319}.$$ 证明 $1979\\mid p$。",
+    "answer": "$p$ is divisible by $1979$.",
+    "answerZh": "$p$ 能被 $1979$ 整除。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+    "methods": [{
+      "title": "Pair complementary denominators modulo 1979",
+      "titleZh": "按模 1979 配对互补分母",
+      "topics": [{"en":"Harmonic sums","zh":"调和和"},{"en":"Divisibility","zh":"整除性"},{"en":"Euclid's lemma","zh":"欧几里得引理"}],
+      "steps": [
+        "Subtract the even terms twice from the harmonic sum: $$\\frac pq=\\sum_{k=1}^{1319}\\frac1k-2\\sum_{j=1}^{659}\\frac1{2j}=\\sum_{k=660}^{1319}\\frac1k.$$",
+        "The integers from $660$ through $1319$ split into the pairs $k$ and $1979-k$, where $660\\le k\\le989$. Hence $$\\frac pq=\\sum_{k=660}^{989}\\left(\\frac1k+\\frac1{1979-k}\\right)=1979\\sum_{k=660}^{989}\\frac1{k(1979-k)}.\\tag{1}$$",
+        "Let $D=\\prod_{j=660}^{1319}j$. For every pair in (1), $D/[k(1979-k)]$ is an integer. Thus, for some integer $A$, equation (1) becomes $$pD=1979qA.$$",
+        "The number $1979$ is prime: $\\sqrt{1979}<45$, and none of the primes at most $43$ divides it. Every factor of $D$ lies strictly between $0$ and $1979$, so $1979\\nmid D$.",
+        "Since the prime $1979$ divides $pD$ but does not divide $D$, Euclid's lemma gives $1979\\mid p$. Notice that the argument does not require $p/q$ to have been reduced."
+      ],
+      "stepsZh": [
+        "把偶数项从调和和中减去两次：$$\\frac pq=\\sum_{k=1}^{1319}\\frac1k-2\\sum_{j=1}^{659}\\frac1{2j}=\\sum_{k=660}^{1319}\\frac1k$$。",
+        "从 $660$ 到 $1319$ 的整数可按 $k$ 与 $1979-k$ 配对，其中 $660\\le k\\le989$。因此 $$\\frac pq=\\sum_{k=660}^{989}\\left(\\frac1k+\\frac1{1979-k}\\right)=1979\\sum_{k=660}^{989}\\frac1{k(1979-k)}.\\tag{1}$$",
+        "令 $D=\\prod_{j=660}^{1319}j$。对式 (1) 中每一对分母，$D/[k(1979-k)]$ 都是整数。因此存在整数 $A$，使得 $$pD=1979qA$$。",
+        "$1979$ 是素数：$\\sqrt{1979}<45$，逐一检验不超过 $43$ 的素数可知它们都不能整除 $1979$。而 $D$ 的每个因子都严格小于 $1979$，所以 $1979\\nmid D$。",
+        "素数 $1979$ 整除 $pD$ 而不整除 $D$，由欧几里得引理得到 $1979\\mid p$。该论证并不要求 $p/q$ 已经约成最简分数。"
+      ]
+    }]
+  },
+  "imo-1979-q2": {
+    "summary": "The top and bottom faces of a prism are pentagons $A_1A_2A_3A_4A_5$ and $B_1B_2B_3B_4B_5$. Every side of these pentagons and every segment $A_iB_j$ is colored red or green. No triangle whose three sides are among these colored segments is monochromatic. Prove that all ten pentagon sides have one color.",
+    "summaryZh": "一个棱柱的上、下底面分别是五边形 $A_1A_2A_3A_4A_5$ 与 $B_1B_2B_3B_4B_5$。两个五边形的每条边以及每条线段 $A_iB_j$ 均被染成红色或绿色。任何三条边均已染色的三角形都不是单色三角形。证明两个五边形的十条边颜色全部相同。",
+    "answer": "All five top edges and all five bottom edges have the same color.",
+    "answerZh": "上、下底面的十条边具有同一种颜色。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+    "methods": [{
+      "title": "Use majority cross-edges and exclude monochromatic triangles",
+      "titleZh": "利用跨层边的多数颜色排除单色三角形",
+      "topics": [{"en":"Graph colouring","zh":"图染色"},{"en":"Pigeonhole principle","zh":"抽屉原理"},{"en":"Extremal counting","zh":"极值计数"}],
+      "steps": [
+        "Read all subscripts modulo $5$. Any three vertices of a pentagon include two adjacent vertices: otherwise the successor of each selected vertex would be a distinct unselected vertex, requiring at least six vertices.",
+        "Fix $A_i$. Among the five cross-edges $A_iB_j$, at least three share a color $c$. Two of their bottom endpoints are adjacent, say $B_j,B_{j+1}$. To avoid a monochromatic triangle, $B_jB_{j+1}$ has the other color $d$.",
+        "Let $A_k$ be either neighbor of $A_i$ on the top pentagon. If $A_iA_k$ had color $c$, then the triangles $A_iA_kB_j$ and $A_iA_kB_{j+1}$ would force both $A_kB_j$ and $A_kB_{j+1}$ to have color $d$. Together with the $d$-colored edge $B_jB_{j+1}$, these would form a monochromatic triangle. Therefore both top edges incident with $A_i$ have color $d$.",
+        "The choice of $A_i$ was arbitrary. Thus, at every top vertex, its two incident top edges have the same color; going around the five-cycle shows that all top edges have one color. Call it red.",
+        "For any bottom vertex $B_j$, at most two cross-edges $B_jA_i$ are red. Otherwise three red neighbors among the five top vertices would contain an adjacent pair, and that red top edge would complete a red triangle. Hence every $B_j$ has at least three green neighbors on top.",
+        "For a bottom edge $B_jB_{j+1}$, the two sets of green top neighbors each have at least three elements, so they intersect because $3+3>5$. A common neighbor $A_i$ gives two green sides of the triangle $A_iB_jB_{j+1}$; consequently its third side $B_jB_{j+1}$ must be red. Every bottom edge is therefore red as well."
+      ],
+      "stepsZh": [
+        "以下下标均按模 $5$ 理解。五边形的任意三个顶点中必有两个相邻；否则每个所选顶点的后继都是互不相同的未选顶点，这将至少需要六个顶点。",
+        "固定 $A_i$。五条跨层边 $A_iB_j$ 中至少有三条同色，记为颜色 $c$。它们的下层端点中有两个相邻，不妨为 $B_j,B_{j+1}$。为避免单色三角形，边 $B_jB_{j+1}$ 必须为另一种颜色 $d$。",
+        "设 $A_k$ 是上层五边形中 $A_i$ 的任一相邻顶点。若 $A_iA_k$ 的颜色为 $c$，则三角形 $A_iA_kB_j$ 与 $A_iA_kB_{j+1}$ 分别迫使 $A_kB_j,A_kB_{j+1}$ 都为颜色 $d$。再结合颜色为 $d$ 的边 $B_jB_{j+1}$，便得到单色三角形，矛盾。因此与 $A_i$ 相连的两条上层边都为颜色 $d$。",
+        "$A_i$ 的选取是任意的，所以在上层五边形的每个顶点处，两条相邻边颜色相同。沿五边形依次传递可知五条上层边全部同色，不妨称为红色。",
+        "对任一下层顶点 $B_j$，红色跨层边 $B_jA_i$ 至多有两条。否则三个红色上层邻点中必有一对相邻，它们之间的上层红边会与 $B_j$ 构成红色三角形。因此每个 $B_j$ 至少有三个绿色上层邻点。",
+        "对任一下层边 $B_jB_{j+1}$，两个端点的绿色上层邻点集合大小均至少为 $3$，而 $3+3>5$，故二者必有公共点 $A_i$。三角形 $A_iB_jB_{j+1}$ 已有两条绿色边，所以第三条边 $B_jB_{j+1}$ 必为红色。故所有下层边也都是红色。"
+      ]
+    }]
+  },
+  "imo-1979-q3": {
+    "summary": "Two intersecting circles contain a common point $A$. Two moving points start together at $A$, one on each circle, travel at constant speeds in the same orientation, and each completes one revolution in the same time. Prove that some fixed point $P$ is always equidistant from the two moving points.",
+    "summaryZh": "两个相交圆有公共点 $A$。两个动点同时从 $A$ 出发，各自在一个圆上以恒定速度沿相同方向运动，并在相同时间内各完成一周。证明：平面内存在一个定点 $P$，它在任意时刻到两个动点的距离都相等。",
+    "answer": "If the centres are $O_1,O_2$, one may take $P$ to be the reflection of $A$ across the perpendicular bisector of $O_1O_2$.",
+    "answerZh": "若两圆圆心为 $O_1,O_2$，可取 $P$ 为 $A$ 关于线段 $O_1O_2$ 垂直平分线的对称点。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+    "methods": [{
+      "title": "Reflect one motion and compare two rotations",
+      "titleZh": "反射其中一个运动并比较两个旋转",
+      "topics": [{"en":"Rotations","zh":"旋转变换"},{"en":"Reflections","zh":"轴对称"},{"en":"Rigid motions","zh":"刚体变换"}],
+      "steps": [
+        "Let the circle centres be $O_1,O_2$ and the common revolution time be $T$. At time $t$, both moving radii have turned through the same signed angle $\\theta=2\\pi t/T$, because the motions have the same orientation. Denote the moving points by $X,Y$.",
+        "If $O_1=O_2$, the two circles coincide because they both contain $A$; then $X=Y$ at all times and any fixed $P$ works. Assume $O_1\\ne O_2$.",
+        "Let $s$ be reflection across the perpendicular bisector of $O_1O_2$, and put $P=s(A)$. Write $X'=s(X)$. Reflection sends $O_1$ to $O_2$ and reverses directed angles, so $X'$ is obtained from $P$ by a rotation of angle $-\\theta$ about $O_2$.",
+        "Consequently the rotation of angle $\\theta$ about $O_2$ sends $X'$ to $P$. The same rotation sends $A$ to $Y$. Since rotations preserve distance, $$AX'=PY.$$",
+        "Reflection sends $P$ to $A$ and $X$ to $X'$, so it also gives $PX=AX'$. Combining the two equalities yields $$PX=PY$$ for every time $t$."
+      ],
+      "stepsZh": [
+        "设两圆圆心为 $O_1,O_2$，共同的绕行周期为 $T$。在时刻 $t$，由于两个运动方向相同，两条运动半径都转过同一个有向角 $\\theta=2\\pi t/T$。记两个动点为 $X,Y$。",
+        "若 $O_1=O_2$，两个圆又都经过 $A$，故两圆重合；此时始终有 $X=Y$，任意定点 $P$ 都满足要求。以下设 $O_1\\ne O_2$。",
+        "设 $s$ 为关于 $O_1O_2$ 垂直平分线的轴对称，并令 $P=s(A)$、$X'=s(X)$。该对称把 $O_1$ 映到 $O_2$，同时反转有向角，所以 $X'$ 是把 $P$ 绕 $O_2$ 旋转 $-\\theta$ 所得的点。",
+        "因此，绕 $O_2$ 旋转 $\\theta$ 会把 $X'$ 映到 $P$；同一个旋转把 $A$ 映到 $Y$。旋转保持距离，所以 $$AX'=PY$$。",
+        "另一方面，轴对称把 $P$ 映到 $A$、把 $X$ 映到 $X'$，所以 $PX=AX'$。合并两式得到任意时刻均有 $$PX=PY$$。"
+      ]
+    }]
+  },
+  "imo-1979-q4": {
+    "summary": "The official English paper contains the undefined symbol $A$ in $(QP+PA)/QR$. Using the standard correction $PA\\to PR$: a point $P$ lies in a plane $\\pi$, while $Q\\notin\\pi$. Determine all $R\\in\\pi$ maximizing $$\\frac{QP+PR}{QR}.$$",
+    "summaryZh": "官方英文试卷把比值印成 $(QP+PA)/QR$，其中 $A$ 未定义。采用公认勘误 $PA\\to PR$：点 $P$ 位于平面 $\\pi$ 内，点 $Q\\notin\\pi$。求使 $$\\frac{QP+PR}{QR}$$ 最大的所有平面内点 $R$。",
+    "answer": "Let $H$ be the perpendicular projection of $Q$ onto $\\pi$. If $P\\ne H$, the unique maximizer lies beyond $H$ on ray $PH$ and satisfies $PR=PQ$. If $P=H$, every point of the circle in $\\pi$ centred at $P$ with radius $PQ$ is a maximizer. The maximum is $\\sqrt{2PQ/(PQ-PH)}$.",
+    "answerZh": "设 $H$ 为 $Q$ 在 $\\pi$ 上的垂足。若 $P\\ne H$，唯一最大点位于射线 $PH$ 上且越过 $H$，并满足 $PR=PQ$；若 $P=H$，所有最大点组成平面 $\\pi$ 内以 $P$ 为圆心、$PQ$ 为半径的圆。最大值为 $\\sqrt{2PQ/(PQ-PH)}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+    "methods": [{
+      "title": "Project to the plane and optimize by Cauchy-Schwarz",
+      "titleZh": "作垂直投影并用柯西不等式优化",
+      "topics": [{"en":"Three-dimensional geometry","zh":"空间几何"},{"en":"Cauchy-Schwarz inequality","zh":"柯西不等式"},{"en":"Equality cases","zh":"等号条件"}],
+      "steps": [
+        "Let $H$ be the foot of the perpendicular from $Q$ to $\\pi$, and write $$a=PQ,\\qquad d=PH,\\qquad h=QH>0.$$ The right triangle $QHP$ gives $a^2=d^2+h^2$, hence $a>d$.",
+        "For $R\\in\\pi$, put $t=HR$. Then $$QR=\\sqrt{h^2+t^2},\\qquad PR\\le PH+HR=d+t.$$ Therefore $$\\frac{QP+PR}{QR}\\le\\frac{a+d+t}{\\sqrt{h^2+t^2}}.$$",
+        "Apply Cauchy-Schwarz to the numerator: $$a+d+t=\\frac{a+d}{h}h+1\\cdot t\\le\\sqrt{\\frac{(a+d)^2}{h^2}+1}\\sqrt{h^2+t^2}.$$ Since $h^2=a^2-d^2$, the ratio is at most $$\\sqrt{\\frac{(a+d)^2+h^2}{h^2}}=\\sqrt{\\frac{2a}{a-d}}.$$",
+        "Equality in Cauchy-Schwarz requires $$t=\\frac{h^2}{a+d}=a-d.$$ If $d>0$, equality in $PR\\le d+t$ further requires $P,H,R$ to be collinear with $H$ between $P$ and $R$. Thus there is one maximizing point: the point beyond $H$ on ray $PH$ with $HR=a-d$, equivalently $PR=a=PQ$.",
+        "If $d=0$, then $P=H$ and $PR=HR=t$, so the triangle inequality step is always an equality. The remaining equality condition is $t=a=PQ$. Hence the maximizing points are exactly the circle in $\\pi$ with centre $P$ and radius $PQ$."
+      ],
+      "stepsZh": [
+        "设 $H$ 为 $Q$ 到平面 $\\pi$ 的垂足，并记 $$a=PQ,\\qquad d=PH,\\qquad h=QH>0$$。直角三角形 $QHP$ 给出 $a^2=d^2+h^2$，故 $a>d$。",
+        "对任意 $R\\in\\pi$，令 $t=HR$。则 $$QR=\\sqrt{h^2+t^2},\\qquad PR\\le PH+HR=d+t$$。因而 $$\\frac{QP+PR}{QR}\\le\\frac{a+d+t}{\\sqrt{h^2+t^2}}$$。",
+        "对分子使用柯西不等式：$$a+d+t=\\frac{a+d}{h}h+1\\cdot t\\le\\sqrt{\\frac{(a+d)^2}{h^2}+1}\\sqrt{h^2+t^2}$$。又因 $h^2=a^2-d^2$，所求比值不超过 $$\\sqrt{\\frac{(a+d)^2+h^2}{h^2}}=\\sqrt{\\frac{2a}{a-d}}$$。",
+        "柯西不等式取等要求 $$t=\\frac{h^2}{a+d}=a-d$$。若 $d>0$，要使 $PR\\le d+t$ 也取等，还须 $P,H,R$ 共线且 $H$ 位于 $P,R$ 之间。因此唯一最大点是射线 $PH$ 上越过 $H$ 且满足 $HR=a-d$ 的点；等价地，$PR=a=PQ$。",
+        "若 $d=0$，则 $P=H$ 且 $PR=HR=t$，三角不等式恒取等。剩余等号条件为 $t=a=PQ$，所以全部最大点恰为平面 $\\pi$ 内以 $P$ 为圆心、$PQ$ 为半径的圆。"
+      ]
+    }]
+  },
+  "imo-1979-q5": {
+    "summary": "Determine all real numbers $a$ for which there exist nonnegative real numbers $x_1,\\ldots,x_5$ satisfying $$\\sum_{k=1}^5kx_k=a,\\qquad\\sum_{k=1}^5k^3x_k=a^2,\\qquad\\sum_{k=1}^5k^5x_k=a^3.$$",
+    "summaryZh": "求所有实数 $a$，使得存在非负实数 $x_1,\\ldots,x_5$ 满足 $$\\sum_{k=1}^5kx_k=a,\\qquad\\sum_{k=1}^5k^3x_k=a^2,\\qquad\\sum_{k=1}^5k^5x_k=a^3$$。",
+    "answer": "$a\\in\\{0,1,4,9,16,25\\}$.",
+    "answerZh": "$a\\in\\{0,1,4,9,16,25\\}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+    "methods": [{
+      "title": "Form a weighted sum of nonnegative squares",
+      "titleZh": "构造非负平方项的加权和",
+      "topics": [{"en":"Nonnegative sums","zh":"非负和"},{"en":"Moment identities","zh":"矩恒等式"},{"en":"Equality cases","zh":"等号条件"}],
+      "steps": [
+        "The first equation and $x_k\\ge0$ imply $a\\ge0$. The value $a=0$ works by taking every $x_k=0$.",
+        "Assume $a>0$. Combine the three equations in the form $$\\begin{aligned}\\sum_{k=1}^5kx_k(k^2-a)^2&=\\sum k^5x_k-2a\\sum k^3x_k+a^2\\sum kx_k\\\\&=a^3-2a^3+a^3=0.\\end{aligned}$$",
+        "Every summand $kx_k(k^2-a)^2$ is nonnegative. Since $\\sum kx_k=a>0$, at least one $x_m$ is positive. For that index, the corresponding zero summand forces $m^2-a=0$. Therefore $$a=m^2\\in\\{1,4,9,16,25\\}.$$",
+        "Conversely, for any $m\\in\\{1,2,3,4,5\\}$, set $a=m^2$, $x_m=m$, and $x_k=0$ for $k\\ne m$. The three sums become $m^2,m^4,m^6$, respectively, so all five positive listed values occur. Together with $a=0$, this completes the answer."
+      ],
+      "stepsZh": [
+        "由第一式及 $x_k\\ge0$ 可知 $a\\ge0$。取所有 $x_k=0$ 时，$a=0$ 确实可行。",
+        "以下设 $a>0$。把三个方程组合为 $$\\begin{aligned}\\sum_{k=1}^5kx_k(k^2-a)^2&=\\sum k^5x_k-2a\\sum k^3x_k+a^2\\sum kx_k\\\\&=a^3-2a^3+a^3=0.\\end{aligned}$$",
+        "每一项 $kx_k(k^2-a)^2$ 都非负。又因为 $\\sum kx_k=a>0$，至少有一个 $x_m>0$。对应的和式项等于零，迫使 $m^2-a=0$。故 $$a=m^2\\in\\{1,4,9,16,25\\}$$。",
+        "反过来，对任意 $m\\in\\{1,2,3,4,5\\}$，取 $a=m^2$、$x_m=m$，其余 $x_k=0$。三个和依次为 $m^2,m^4,m^6$，所以五个正数值均可达到。再加上 $a=0$，即得到全部答案。"
+      ]
+    }]
+  },
+  "imo-1979-q6": {
+    "summary": "In a regular octagon, $A$ and $E$ are opposite vertices. A frog starts at $A$, jumps only to adjacent vertices, and stops permanently on first reaching $E$. Let $a_n$ be the number of admissible paths of exactly $n$ jumps ending at $E$. Prove that $a_{2n-1}=0$ and $$a_{2n}=\\frac{(2+\\sqrt2)^{n-1}-(2-\\sqrt2)^{n-1}}{\\sqrt2}\\qquad(n\\ge1).$$",
+    "summaryZh": "在正八边形中，$A,E$ 是一对对顶点。青蛙从 $A$ 出发，每次只跳到相邻顶点，并在第一次到达 $E$ 后永久停止。设 $a_n$ 为恰用 $n$ 次跳跃到达 $E$ 的允许路径数。证明 $a_{2n-1}=0$，且 $$a_{2n}=\\frac{(2+\\sqrt2)^{n-1}-(2-\\sqrt2)^{n-1}}{\\sqrt2}\\qquad(n\\ge1)$$。",
+    "answer": "$a_{2n-1}=0$ and $a_{2n}=((2+\\sqrt2)^{n-1}-(2-\\sqrt2)^{n-1})/\\sqrt2$.",
+    "answerZh": "$a_{2n-1}=0$，且 $a_{2n}=((2+\\sqrt2)^{n-1}-(2-\\sqrt2)^{n-1})/\\sqrt2$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf#page=1",
+    "methods": [{
+      "title": "Reduce the walk to a two-state recurrence",
+      "titleZh": "把路径计数化为二状态递推",
+      "topics": [{"en":"Graph walks","zh":"图上游走"},{"en":"Linear recurrences","zh":"线性递推"},{"en":"Characteristic equations","zh":"特征方程"}],
+      "steps": [
+        "Label the vertices $A,B,C,D,E,F,G,H$ cyclically. Each jump switches between the two parity classes $\\{A,C,E,G\\}$ and $\\{B,D,F,H\\}$. Since $A,E$ are in the same class, every path from $A$ to $E$ has even length; hence $a_{2n-1}=0$.",
+        "For $m\\ge0$, count length-$2m$ partial paths that start at $A$ and have not visited $E$. Let $u_m$ count those ending at $A$, and let $v_m$ count together those ending at $C$ or $G$. Initially $u_0=1$ and $v_0=0$.",
+        "Extending by two jumps while still avoiding $E$ gives $$u_{m+1}=2u_m+v_m,\\qquad v_{m+1}=2u_m+2v_m.\\tag{1}$$ Indeed, from $A$ there are two returns to $A$ and two routes to $C$ or $G$; from either $C$ or $G$ there is one route to $A$, two returns to the same endpoint class, and one excluded route reaching $E$.",
+        "Every partial path counted by $v_m$ has exactly one two-jump extension reaching $E$, through $D$ from $C$ or through $F$ from $G$. Conversely every admissible length-$2m+2$ path has such a prefix. Thus $$a_{2m+2}=v_m.\\tag{2}$$",
+        "Eliminating $u_m$ from (1) yields $$v_{m+2}=4v_{m+1}-2v_m,\\qquad v_0=0,\\quad v_1=2.\\tag{3}$$ The characteristic roots are $x=2+\\sqrt2$ and $y=2-\\sqrt2$.",
+        "The sequence $w_m=(x^m-y^m)/\\sqrt2$ satisfies (3), with $w_0=0$ and $w_1=2$. Hence $v_m=w_m$. Substituting $m=n-1$ into (2) gives the required formula for $a_{2n}$."
+      ],
+      "stepsZh": [
+        "按顺序把正八边形顶点记为 $A,B,C,D,E,F,G,H$。每次跳跃都会在两类顶点 $\\{A,C,E,G\\}$ 与 $\\{B,D,F,H\\}$ 之间切换。$A,E$ 属于同一类，所以从 $A$ 到 $E$ 的路径长度必为偶数，从而 $a_{2n-1}=0$。",
+        "对 $m\\ge0$，考虑从 $A$ 出发、恰跳 $2m$ 次且尚未到达 $E$ 的部分路径。设其中终点为 $A$ 的路径数为 $u_m$，终点为 $C$ 或 $G$ 的路径总数为 $v_m$。初值为 $u_0=1,v_0=0$。",
+        "在继续避开 $E$ 的条件下延长两步，得到 $$u_{m+1}=2u_m+v_m,\\qquad v_{m+1}=2u_m+2v_m.\\tag{1}$$ 从 $A$ 出发，两条两步路径回到 $A$，两条到达 $C$ 或 $G$；从 $C$ 或 $G$ 出发，一条到 $A$，两条回到同一终点类别，另有一条因到达 $E$ 而被排除。",
+        "每条计入 $v_m$ 的部分路径都恰有一种两步延伸到达 $E$：从 $C$ 经 $D$，或从 $G$ 经 $F$。反过来，每条长度为 $2m+2$ 的允许路径都有这样的前缀。因此 $$a_{2m+2}=v_m.\\tag{2}$$",
+        "从式 (1) 消去 $u_m$，得到 $$v_{m+2}=4v_{m+1}-2v_m,\\qquad v_0=0,\\quad v_1=2.\\tag{3}$$ 其特征根为 $x=2+\\sqrt2$ 与 $y=2-\\sqrt2$。",
+        "数列 $w_m=(x^m-y^m)/\\sqrt2$ 满足式 (3)，且 $w_0=0,w_1=2$。故 $v_m=w_m$。在式 (2) 中取 $m=n-1$，即得题设 $a_{2n}$ 的公式。"
+      ]
+    }]
+  }
+}
