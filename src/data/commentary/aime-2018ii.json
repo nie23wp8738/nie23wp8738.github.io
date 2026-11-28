@@ -1,0 +1,360 @@
+{
+  "aime-2018ii-q1": {
+    "summary": "Points $A,B,C$ occur in this order on a straight path, with $AC=1800$ metres. Eve, Ina and Paul have speeds in the ratio $1:2:4$. Ina starts at $A$ toward $C$, Paul at $B$ toward $C$, and Eve at $C$ toward $A$. Paul reverses direction when he meets Eve. If Paul and Ina then reach $B$ simultaneously, find $AB$.",
+    "summaryZh": "点 $A,B,C$ 依次位于同一直线上，且 $AC=1800$ 米。Eve、Ina、Paul 的速度比为 $1:2:4$。Ina 从 $A$ 向 $C$ 跑，Paul 从 $B$ 向 $C$ 跑，Eve 从 $C$ 向 $A$ 跑；Paul 与 Eve 相遇后立即折返。若 Paul 与 Ina 随后同时到达 $B$，求 $AB$。",
+    "answer": "800",
+    "answerZh": "800",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/1",
+    "methods": [{
+      "title": "Compare the runners' distances",
+      "titleZh": "比较三人的路程",
+      "topics": [{"en":"Distance, rate and time","zh":"路程、速度与时间"},{"en":"Relative speed","zh":"相对速度"},{"en":"Linear equation","zh":"一元一次方程"}],
+      "steps": [
+        "Let $AB=x$, so $BC=1800-x$. Give Eve speed $v$; then Ina and Paul have speeds $2v$ and $4v$.",
+        "Before Paul meets Eve, the two together cover $BC$. Paul therefore covers $\\frac45(1800-x)$. He then retraces the same distance to return to $B$, so his total distance is $\\frac85(1800-x)$.",
+        "During the same time Ina covers $AB=x$. Because Paul runs twice as fast as Ina, Paul's total distance must be $2x$.",
+        "Thus $\\frac85(1800-x)=2x$. Hence $14400=18x$ and $x=800$."
+      ],
+      "stepsZh": [
+        "设 $AB=x$，则 $BC=1800-x$。令 Eve 的速度为 $v$，则 Ina、Paul 的速度分别为 $2v,4v$。",
+        "Paul 与 Eve 相遇前，两人合走完 $BC$。因此 Paul 先跑了 $\\frac45(1800-x)$；折返到 $B$ 又跑相同距离，总路程为 $\\frac85(1800-x)$。",
+        "同一时间内 Ina 从 $A$ 到 $B$，路程为 $x$。Paul 的速度是 Ina 的两倍，所以 Paul 的总路程等于 $2x$。",
+        "于是 $\\frac85(1800-x)=2x$，即 $14400=18x$，得到 $x=800$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q2": {
+    "summary": "Let $a_0=2,a_1=5,a_2=8$. For $n>2$, let $a_n$ be the remainder modulo $11$ of $4(a_{n-1}+a_{n-2}+a_{n-3})$. Find $a_{2018}a_{2020}a_{2022}$.",
+    "summaryZh": "设 $a_0=2,a_1=5,a_2=8$。当 $n>2$ 时，$a_n$ 定义为 $4(a_{n-1}+a_{n-2}+a_{n-3})$ 除以 $11$ 的余数。求 $a_{2018}a_{2020}a_{2022}$。",
+    "answer": "112",
+    "answerZh": "112",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/2",
+    "methods": [{
+      "title": "Find the period of the recurrence",
+      "titleZh": "寻找递推数列的周期",
+      "topics": [{"en":"Recurrence","zh":"递推数列"},{"en":"Modular arithmetic","zh":"模运算"},{"en":"Periodicity","zh":"周期性"}],
+      "steps": [
+        "Compute modulo $11$: $a_0,\\ldots,a_{12}=2,5,8,5,6,10,7,4,7,6,2,5,8$.",
+        "The triple $(a_{10},a_{11},a_{12})=(2,5,8)$ repeats the initial triple. Since each new term is determined by the preceding triple, the sequence has period $10$.",
+        "Reduce the indices modulo $10$: $a_{2018}=a_8=7$, $a_{2020}=a_0=2$, and $a_{2022}=a_2=8$.",
+        "Therefore the requested product is $7\\cdot2\\cdot8=112$."
+      ],
+      "stepsZh": [
+        "逐项模 $11$ 计算：$a_0,\\ldots,a_{12}=2,5,8,5,6,10,7,4,7,6,2,5,8$。",
+        "三元组 $(a_{10},a_{11},a_{12})=(2,5,8)$ 与初始三元组相同。由于后项完全由前面三项决定，数列以 $10$ 为周期。",
+        "把下标模 $10$ 化简：$a_{2018}=a_8=7$，$a_{2020}=a_0=2$，$a_{2022}=a_2=8$。",
+        "故所求乘积为 $7\\cdot2\\cdot8=112$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q3": {
+    "summary": "Find the sum of all bases $b<1000$ for which the base-$b$ numeral $36_b$ represents a perfect square and $27_b$ represents a perfect cube.",
+    "summaryZh": "求所有小于 $1000$ 的进制底数 $b$ 之和，使得 $b$ 进制数 $36_b$ 表示完全平方数，且 $27_b$ 表示完全立方数。",
+    "answer": "371",
+    "answerZh": "371",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/3",
+    "methods": [{
+      "title": "Restrict the possible cube roots",
+      "titleZh": "限制立方根的可能取值",
+      "topics": [{"en":"Number bases","zh":"进位制"},{"en":"Perfect powers","zh":"完全幂"},{"en":"Congruences","zh":"同余"}],
+      "steps": [
+        "The two values are $3b+6$ and $2b+7$. Since $3b+6$ is a square divisible by $3$, it is divisible by $9$, giving $b\\equiv1\\pmod3$.",
+        "Consequently $2b+7$ is an odd multiple of $3$. Its cube root must therefore be an odd multiple of $3$. Also $2b+7<2007<13^3$, so the cube root is only $3$ or $9$.",
+        "If $2b+7=3^3$, then $b=10$ and $3b+6=36=6^2$. If $2b+7=9^3$, then $b=361$ and $3b+6=1089=33^2$.",
+        "Both bases exceed the displayed digits, and their sum is $10+361=371$."
+      ],
+      "stepsZh": [
+        "两数的十进制值分别为 $3b+6$ 与 $2b+7$。因 $3b+6$ 是被 $3$ 整除的平方数，它必被 $9$ 整除，从而 $b\\equiv1\\pmod3$。",
+        "于是 $2b+7$ 是 $3$ 的奇数倍，其立方根必须是 $3$ 的奇数倍。又因 $2b+7<2007<13^3$，立方根只能为 $3$ 或 $9$。",
+        "若 $2b+7=3^3$，则 $b=10$，且 $3b+6=36=6^2$；若 $2b+7=9^3$，则 $b=361$，且 $3b+6=1089=33^2$。",
+        "两个底数都大于题中数字，故其和为 $10+361=371$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q4": {
+    "summary": "The vertices $C,A,R,O,L,I,N,E$ occur in that order around an equiangular octagon, whose interior angles are $135^\\circ$. The alternating side lengths satisfy $CA=RO=LI=NE=\\sqrt2$ and $AR=OL=IN=EC=1$. Traverse instead the self-intersecting closed path $C-O-R-N-E-L-I-A-C$; its six bounded triangular regions have total area $K=a/b$ in lowest terms. Find $a+b$.",
+    "summaryZh": "等角八边形的顶点按 $C,A,R,O,L,I,N,E$ 顺序排列，内角均为 $135^\\circ$；交替边长满足 $CA=RO=LI=NE=\\sqrt2$，$AR=OL=IN=EC=1$。改按自交闭合路径 $C-O-R-N-E-L-I-A-C$ 连线后形成六个有界三角形区域，其总面积为最简分数 $K=a/b$。求 $a+b$。",
+    "answer": "023",
+    "answerZh": "023",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/4",
+    "methods": [{
+      "title": "Place the octagon on a coordinate grid",
+      "titleZh": "将八边形放入坐标网格",
+      "topics": [{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Area decomposition","zh":"面积分割"},{"en":"Rotational symmetry","zh":"旋转对称"}],
+      "steps": [
+        "Use coordinates $C=(0,0),A=(1,1),R=(2,1),O=(3,0),L=(3,-1),I=(2,-2),N=(1,-2),E=(0,-1)$. They realize all given side lengths and angles.",
+        "Let $Y=AI\\cap CO$, $Z=RN\\cap CO$, and $W=AI\\cap RN$. Solving the line equations gives $Y=(4/3,0)$, $Z=(5/3,0)$, and $W=(3/2,-1/2)$.",
+        "The six bounded pieces are four congruent copies of triangle $CAY$ and two congruent copies of triangle $YZW$. Their areas are $[CAY]=\\frac12\\cdot\\frac43\\cdot1=\\frac23$ and $[YZW]=\\frac12\\cdot\\frac13\\cdot\\frac12=\\frac1{12}$.",
+        "$K=4\\cdot\\frac23+2\\cdot\\frac1{12}=\\frac{17}{6}$. Thus $a+b=17+6=23$, recorded as $023$."
+      ],
+      "stepsZh": [
+        "取坐标 $C=(0,0),A=(1,1),R=(2,1),O=(3,0),L=(3,-1),I=(2,-2),N=(1,-2),E=(0,-1)$，这些点满足全部边长与角度条件。",
+        "令 $Y=AI\\cap CO$、$Z=RN\\cap CO$、$W=AI\\cap RN$。解直线方程得 $Y=(4/3,0)$、$Z=(5/3,0)$、$W=(3/2,-1/2)$。",
+        "六个有界区域由四个全等的 $\\triangle CAY$ 与两个全等的 $\\triangle YZW$ 组成。它们的面积分别为 $\\frac12\\cdot\\frac43\\cdot1=\\frac23$ 与 $\\frac12\\cdot\\frac13\\cdot\\frac12=\\frac1{12}$。",
+        "$K=4\\cdot\\frac23+2\\cdot\\frac1{12}=\\frac{17}{6}$，所以 $a+b=23$，记为 $023$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q5": {
+    "summary": "Complex numbers $x,y,z$ satisfy $xy=-80-320i$, $yz=60$, and $zx=-96+24i$. Write $x+y+z=a+bi$ with real $a,b$. Find $a^2+b^2$.",
+    "summaryZh": "复数 $x,y,z$ 满足 $xy=-80-320i$、$yz=60$、$zx=-96+24i$。设 $x+y+z=a+bi$，其中 $a,b$ 为实数，求 $a^2+b^2$。",
+    "answer": "074",
+    "answerZh": "074",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/5",
+    "methods": [{
+      "title": "Recover the three numbers from their pairwise products",
+      "titleZh": "由两两乘积还原三个复数",
+      "topics": [{"en":"Complex numbers","zh":"复数"},{"en":"Algebraic manipulation","zh":"代数变形"}],
+      "steps": [
+        "Multiplying the three equations gives $(xyz)^2=(-80-320i)\\cdot60\\cdot(-96+24i)=240^2(16+30i)$.",
+        "Since $16+30i=(5+3i)^2$, we have $xyz=\\pm240(5+3i)$.",
+        "Divide by the pairwise products: $x=\\pm(20+12i)$, $y=\\pm(-10-10i)$, and $z=\\pm(-3+3i)$, with the same overall sign.",
+        "Thus $x+y+z=\\pm(7+5i)$, and $a^2+b^2=7^2+5^2=74$, recorded as $074$."
+      ],
+      "stepsZh": [
+        "三式相乘得 $(xyz)^2=(-80-320i)\\cdot60\\cdot(-96+24i)=240^2(16+30i)$。",
+        "因为 $16+30i=(5+3i)^2$，所以 $xyz=\\pm240(5+3i)$。",
+        "分别除以两两乘积，得到 $x=\\pm(20+12i)$、$y=\\pm(-10-10i)$、$z=\\pm(-3+3i)$，三者取相同的整体符号。",
+        "因此 $x+y+z=\\pm(7+5i)$，故 $a^2+b^2=7^2+5^2=74$，记为 $074$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q6": {
+    "summary": "Choose $a$ uniformly from $[-20,18]$. For what fraction of choices do all roots of $x^4+2ax^3+(2a-2)x^2+(-4a+3)x-2$ remain real? If the probability is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "从区间 $[-20,18]$ 均匀选取实数 $a$。求多项式 $x^4+2ax^3+(2a-2)x^2+(-4a+3)x-2$ 的四个根全为实数的概率。若概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": "037",
+    "answerZh": "037",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/6",
+    "methods": [{
+      "title": "Factor before applying the discriminant",
+      "titleZh": "先因式分解再用判别式",
+      "topics": [{"en":"Polynomial factorisation","zh":"多项式因式分解"},{"en":"Quadratic discriminant","zh":"二次判别式"},{"en":"Geometric probability","zh":"几何概率"}],
+      "steps": [
+        "Direct substitution shows that $1$ and $-2$ are roots for every $a$. Factoring gives $(x-1)(x+2)(x^2+(2a-1)x+1)$.",
+        "The first two roots are real. The remaining two are real exactly when $(2a-1)^2-4\\ge0$, or $a\\le-1/2$ or $a\\ge3/2$.",
+        "The full interval has length $38$. The excluded open interval $(-1/2,3/2)$ has length $2$, so the favourable length is $36$.",
+        "The probability is $36/38=18/19$, giving $m+n=37$, recorded as $037$."
+      ],
+      "stepsZh": [
+        "直接代入可知 $1,-2$ 对任意 $a$ 都是根。因式分解得 $(x-1)(x+2)(x^2+(2a-1)x+1)$。",
+        "前两个根为实数；后二次因子的根全为实数当且仅当 $(2a-1)^2-4\\ge0$，即 $a\\le-1/2$ 或 $a\\ge3/2$。",
+        "整个区间长度为 $38$，被排除的开区间 $(-1/2,3/2)$ 长度为 $2$，故有利长度为 $36$。",
+        "概率为 $36/38=18/19$，所以 $m+n=37$，记为 $037$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q7": {
+    "summary": "Triangle $ABC$ has $AB=9$, $AC=12$, and $BC=5\\sqrt3$. Points $P_0=A,P_1,\\ldots,P_{2450}=B$ lie in order on $AB$, and $Q_0=A,Q_1,\\ldots,Q_{2450}=C$ lie in order on $AC$. For $1\\le k\\le2449$, $P_kQ_k\\parallel BC$, and these segments divide the triangle into $2450$ regions of equal area. Among $P_kQ_k$ for $1\\le k\\le2450$, how many have rational length?",
+    "summaryZh": "三角形 $ABC$ 满足 $AB=9$、$AC=12$、$BC=5\\sqrt3$。点 $P_0=A,P_1,\\ldots,P_{2450}=B$ 依次位于 $AB$ 上，点 $Q_0=A,Q_1,\\ldots,Q_{2450}=C$ 依次位于 $AC$ 上。对 $1\\le k\\le2449$，均有 $P_kQ_k\\parallel BC$，并把三角形分成 $2450$ 个等面积区域。问 $1\\le k\\le2450$ 中有多少条 $P_kQ_k$ 的长度为有理数？",
+    "answer": "020",
+    "answerZh": "020",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/7",
+    "methods": [{
+      "title": "Convert equal areas into a square condition",
+      "titleZh": "把等面积条件转化为完全平方条件",
+      "topics": [{"en":"Similar triangles","zh":"相似三角形"},{"en":"Area scaling","zh":"面积比"},{"en":"Perfect squares","zh":"完全平方数"}],
+      "steps": [
+        "Triangle $AP_kQ_k$ contains the first $k$ equal-area regions, so its area is $k/2450$ of the area of $ABC$.",
+        "By similarity, length ratios are square roots of area ratios. Hence $P_kQ_k=5\\sqrt3\\sqrt{k/2450}=\\sqrt{6k}/14$.",
+        "This length is rational exactly when $6k$ is a perfect square. Thus $k=6j^2$ for a positive integer $j$.",
+        "The bound $6j^2\\le2450$ gives $j^2\\le408$, hence $1\\le j\\le20$. The count is $20$, recorded as $020$."
+      ],
+      "stepsZh": [
+        "三角形 $AP_kQ_k$ 包含从顶点 $A$ 起的前 $k$ 个等面积区域，所以其面积是 $\\triangle ABC$ 面积的 $k/2450$。",
+        "由相似三角形，长度比等于面积比的平方根，因此 $P_kQ_k=5\\sqrt3\\sqrt{k/2450}=\\sqrt{6k}/14$。",
+        "该长度为有理数当且仅当 $6k$ 为完全平方数，即 $k=6j^2$，其中 $j$ 为正整数。",
+        "由 $6j^2\\le2450$ 得 $j^2\\le408$，所以 $1\\le j\\le20$。共有 $20$ 条，记为 $020$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q8": {
+    "summary": "A frog starts at $(0,0)$. From $(x,y)$ it may jump to $(x+1,y)$, $(x+2,y)$, $(x,y+1)$, or $(x,y+2)$. Count the distinct jump sequences that end at $(4,4)$.",
+    "summaryZh": "一只青蛙从 $(0,0)$ 出发。它在 $(x,y)$ 时可跳到 $(x+1,y)$、$(x+2,y)$、$(x,y+1)$ 或 $(x,y+2)$。求恰好到达 $(4,4)$ 的不同跳跃序列数。",
+    "answer": "556",
+    "answerZh": "556",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/8",
+    "methods": [{
+      "title": "Classify horizontal and vertical step multisets",
+      "titleZh": "按横向、纵向步长多重集分类",
+      "topics": [{"en":"Multinomial coefficients","zh":"多项式系数"},{"en":"Casework","zh":"分类讨论"},{"en":"Compositions","zh":"整数分拆与合成"}],
+      "steps": [
+        "The horizontal step lengths must sum to $4$, so their multiset is one of $\\{1,1,1,1\\}$, $\\{1,1,2\\}$, or $\\{2,2\\}$. The vertical steps have the same three possibilities.",
+        "For each of the nine pairs of multisets, every ordering is valid. The multinomial counts are arranged symmetrically as $70,105,15;105,180,30;15,30,6$.",
+        "Adding gives $70+2(105)+2(15)+180+2(30)+6=556$."
+      ],
+      "stepsZh": [
+        "横向步长之和必须为 $4$，故其多重集只能是 $\\{1,1,1,1\\}$、$\\{1,1,2\\}$ 或 $\\{2,2\\}$；纵向也有同样三种可能。",
+        "对这九种横纵组合，所有排列都合法。相应多项式系数按对称矩阵排列为 $70,105,15;105,180,30;15,30,6$。",
+        "相加得 $70+2(105)+2(15)+180+2(30)+6=556$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q9": {
+    "summary": "A $23\\times27$ rectangle has a $6$-$8$-$10$ right triangle removed from each corner, producing convex octagon $ABCDEFGH$ with $AB=CD=EF=GH=10$ and $BC=DE=FG=HA=11$; side $AH$ lies on a short side of the rectangle. Let $J$ be the midpoint of $AH$. Joining $J$ to $B,C,D,E,F,G$ partitions the octagon into seven triangles. Find the area of the convex heptagon formed by the seven triangle centroids.",
+    "summaryZh": "从一个 $23\\times27$ 的矩形四角各切去一个 $6$-$8$-$10$ 直角三角形，得到凸八边形 $ABCDEFGH$，其中 $AB=CD=EF=GH=10$，$BC=DE=FG=HA=11$，且边 $AH$ 位于矩形的一条短边上。令 $J$ 为 $AH$ 中点，连接 $J$ 与 $B,C,D,E,F,G$，把八边形分成七个三角形。求这七个三角形重心所围成凸七边形的面积。",
+    "answer": "184",
+    "answerZh": "184",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/9",
+    "methods": [{
+      "title": "Dilate the side-midpoint heptagon",
+      "titleZh": "把边中点七边形作位似",
+      "topics": [{"en":"Centroids","zh":"重心"},{"en":"Dilation","zh":"位似"},{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Area decomposition","zh":"面积分割"}],
+      "steps": [
+        "For any triangle $JVW$, its centroid is two-thirds of the way from $J$ to the midpoint of $VW$. Thus the centroid heptagon is a dilation by $2/3$ of the heptagon formed by the midpoints of $AB,BC,\\ldots,GH$, and its area is $4/9$ as large.",
+        "Use coordinates $A=(0,6),B=(8,0),C=(19,0),D=(27,6),E=(27,17),F=(19,23),G=(8,23),H=(0,17)$. The seven midpoints are $(4,3),(27/2,0),(23,3),(27,23/2),(23,20),(27/2,23),(4,20)$.",
+        "Vertical slicing at $x=4,27/2,23$ gives two congruent trapezoids and one triangle. Their total area is $2\\cdot\\frac{17+23}{2}\\cdot\\frac{19}{2}+\\frac{17\\cdot4}{2}=414$.",
+        "Therefore the centroid heptagon has area $\\frac49\\cdot414=184$."
+      ],
+      "stepsZh": [
+        "对任一三角形 $JVW$，其重心位于从 $J$ 指向 $VW$ 中点的线段上，且距 $J$ 为该中线的 $2/3$。故重心七边形是由 $AB,BC,\\ldots,GH$ 的中点七边形以 $J$ 为中心、比为 $2/3$ 位似得到，面积缩放为 $4/9$。",
+        "取坐标 $A=(0,6),B=(8,0),C=(19,0),D=(27,6),E=(27,17),F=(19,23),G=(8,23),H=(0,17)$。七个边中点为 $(4,3),(27/2,0),(23,3),(27,23/2),(23,20),(27/2,23),(4,20)$。",
+        "在 $x=4,27/2,23$ 处作竖直分割，中点七边形分成两个全等梯形和一个三角形，总面积为 $2\\cdot\\frac{17+23}{2}\\cdot\\frac{19}{2}+\\frac{17\\cdot4}{2}=414$。",
+        "因此重心七边形面积为 $\\frac49\\cdot414=184$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q10": {
+    "summary": "Count the functions $f:\\{1,2,3,4,5\\}\\to\\{1,2,3,4,5\\}$ satisfying $f(f(x))=f(f(f(x)))$ for every $x$.",
+    "summaryZh": "求满足对每个 $x\\in\\{1,2,3,4,5\\}$ 都有 $f(f(x))=f(f(f(x)))$ 的函数 $f:\\{1,2,3,4,5\\}\\to\\{1,2,3,4,5\\}$ 的个数。",
+    "answer": "756",
+    "answerZh": "756",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/10",
+    "methods": [{
+      "title": "Count functional digraphs by levels",
+      "titleZh": "按函数图的层级计数",
+      "topics": [{"en":"Functions","zh":"函数"},{"en":"Combinatorial counting","zh":"组合计数"},{"en":"Functional digraphs","zh":"函数有向图"}],
+      "steps": [
+        "The equation says $f(f(x))$ is a fixed point of $f$. Hence every element is either fixed, maps directly to a fixed point, or maps to an element of the second type.",
+        "Suppose there are $i\\ge1$ fixed points and $j\\ge1$ nonfixed elements that map directly to them. Choose these sets in $\\binom5i\\binom{5-i}j$ ways, map the middle level in $i^j$ ways, and map each remaining element to one of the $j$ middle elements in $j^{5-i-j}$ ways.",
+        "Sum $\\binom5i\\binom{5-i}j i^j j^{5-i-j}$ over $1\\le i\\le4$ and $1\\le j\\le5-i$, then add the identity map ($i=5$). The contributions are $20+120+60+5+60+240+80+60+90+20+1$.",
+        "The total is $756$."
+      ],
+      "stepsZh": [
+        "等式表示 $f(f(x))$ 是 $f$ 的不动点。因此每个元素只有三种层级：自身为不动点、直接映到不动点、或映到第二层元素。",
+        "设有 $i\\ge1$ 个不动点及 $j\\ge1$ 个直接映到不动点的非不动点。选取两层有 $\\binom5i\\binom{5-i}j$ 种，第二层的像有 $i^j$ 种，其余元素各映到第二层，有 $j^{5-i-j}$ 种。",
+        "对 $1\\le i\\le4$、$1\\le j\\le5-i$ 求和，再加恒等函数（$i=5$）。各项贡献为 $20+120+60+5+60+240+80+60+90+20+1$。",
+        "总数为 $756$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q11": {
+    "summary": "Count the permutations of $1,2,3,4,5,6$ such that, for every $1\\le k\\le5$, at least one of the first $k$ entries is greater than $k$.",
+    "summaryZh": "求 $1,2,3,4,5,6$ 的排列个数，使得对每个 $1\\le k\\le5$，排列前 $k$ 项中至少有一项大于 $k$。",
+    "answer": "461",
+    "answerZh": "461",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/11",
+    "methods": [{
+      "title": "Use the shortest closed prefix",
+      "titleZh": "利用最短封闭前缀递推",
+      "topics": [{"en":"Permutations","zh":"排列"},{"en":"Recursive counting","zh":"递推计数"},{"en":"Complementary structure","zh":"补集结构"}],
+      "steps": [
+        "A condition fails at $k$ exactly when the first $k$ entries are precisely the set $\\{1,\\ldots,k\\}$. For a permutation of $1,\\ldots,n$, let its shortest such prefix have length $k$.",
+        "Let $c_k$ count permutations whose shortest closed prefix is the full length $k$. Every permutation has a unique shortest closed prefix, so $\\sum_{k=1}^n c_k(n-k)!=n!$.",
+        "Starting with $c_1=1$, the recurrence gives $c_2=1,c_3=3,c_4=13,c_5=71$.",
+        "Therefore $c_6=720-(120\\cdot1+24\\cdot1+6\\cdot3+2\\cdot13+71)=720-259=461$."
+      ],
+      "stepsZh": [
+        "条件在某个 $k$ 处失败，当且仅当前 $k$ 项恰好组成集合 $\\{1,\\ldots,k\\}$。对 $1,\\ldots,n$ 的任一排列，考虑首次出现这种“封闭前缀”的长度。",
+        "令 $c_k$ 表示最短封闭前缀长度恰为完整长度 $k$ 的排列数。每个排列的最短封闭前缀唯一，因此 $\\sum_{k=1}^n c_k(n-k)!=n!$。",
+        "从 $c_1=1$ 递推得到 $c_2=1,c_3=3,c_4=13,c_5=71$。",
+        "于是 $c_6=720-(120\\cdot1+24\\cdot1+6\\cdot3+2\\cdot13+71)=720-259=461$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q12": {
+    "summary": "A convex quadrilateral $ABCD$ has $AB=CD=10$, $BC=14$, and $AD=2\\sqrt{65}$. Its diagonals meet at $P$, and $[APB]+[CPD]=[BPC]+[APD]$. Find the area of $ABCD$.",
+    "summaryZh": "凸四边形 $ABCD$ 满足 $AB=CD=10$、$BC=14$、$AD=2\\sqrt{65}$。两条对角线交于 $P$，且 $[APB]+[CPD]=[BPC]+[APD]$。求四边形 $ABCD$ 的面积。",
+    "answer": "112",
+    "answerZh": "112",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/12",
+    "methods": [{
+      "title": "Factor the area condition and use cosine laws",
+      "titleZh": "分解面积条件并使用余弦定理",
+      "topics": [{"en":"Law of cosines","zh":"余弦定理"},{"en":"Triangle area","zh":"三角形面积"},{"en":"System of equations","zh":"方程组"}],
+      "steps": [
+        "Set $a=AP,b=BP,c=CP,d=DP$ and $\\theta=\\angle CPD$. The four triangle areas share the factor $\\frac12\\sin\\theta$, so the given equality becomes $(a-c)(d-b)=0$. Relabelling in the symmetric alternative allows us to take $a=c$.",
+        "Apply the cosine law to the two triangles with sides $BC,AB$: $a^2+b^2+2ab\\cos\\theta=196$ and $a^2+b^2-2ab\\cos\\theta=100$. Hence $a^2+b^2=148$ and $ab\\cos\\theta=24$.",
+        "Similarly, using $AD,CD$ gives $a^2+d^2=180$ and $ad\\cos\\theta=40$. Thus $d/b=5/3$ and $d^2-b^2=32$, so $b=3\\sqrt2,d=5\\sqrt2,a^2=130$, and $\\sin\\theta=7/\\sqrt{65}$.",
+        "The quadrilateral area is $\\frac12(a+c)(b+d)\\sin\\theta=a(b+d)\\sin\\theta=\\sqrt{130}\\cdot8\\sqrt2\\cdot\\frac7{\\sqrt{65}}=112$."
+      ],
+      "stepsZh": [
+        "设 $a=AP,b=BP,c=CP,d=DP$，且 $\\theta=\\angle CPD$。四个三角形面积都有因子 $\\frac12\\sin\\theta$，题设等式化为 $(a-c)(d-b)=0$。利用对称重标号，可不失一般性地取 $a=c$。",
+        "对涉及边 $BC,AB$ 的两个三角形用余弦定理：$a^2+b^2+2ab\\cos\\theta=196$、$a^2+b^2-2ab\\cos\\theta=100$。故 $a^2+b^2=148$、$ab\\cos\\theta=24$。",
+        "类似地由 $AD,CD$ 得 $a^2+d^2=180$、$ad\\cos\\theta=40$。于是 $d/b=5/3$ 且 $d^2-b^2=32$，解得 $b=3\\sqrt2,d=5\\sqrt2,a^2=130$，并有 $\\sin\\theta=7/\\sqrt{65}$。",
+        "四边形面积为 $\\frac12(a+c)(b+d)\\sin\\theta=a(b+d)\\sin\\theta=\\sqrt{130}\\cdot8\\sqrt2\\cdot\\frac7{\\sqrt{65}}=112$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q13": {
+    "summary": "A fair six-sided die is rolled until the consecutive pattern $1,2,3$ first appears. If the probability that the total number of rolls is odd is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "反复掷一枚公平六面骰子，直到连续三次点数首次出现 $1,2,3$。若总掷骰次数为奇数的概率是最简分数 $m/n$，求 $m+n$。",
+    "answer": "647",
+    "answerZh": "647",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/13",
+    "methods": [{
+      "title": "Track pattern states together with parity",
+      "titleZh": "同时追踪匹配状态与奇偶性",
+      "topics": [{"en":"Recursive probability","zh":"递推概率"},{"en":"Pattern matching","zh":"模式匹配"},{"en":"Parity","zh":"奇偶性"}],
+      "steps": [
+        "Let $a$ be the desired probability from a fresh start, $b$ the corresponding probability after the current suffix is $1$, and $c$ after the suffix is $1,2$. Accounting for whether discarded rolls flip the required parity gives $6a=b+5(1-a)$, $6b=(1-b)+c+4a$, and $6c=b+1+4(1-a)$.",
+        "The first equation gives $b=11a-5$. Eliminating $c$ from the other two equations gives $41b=11+20a$.",
+        "Thus $41(11a-5)=11+20a$, so $431a=216$ and $a=216/431$.",
+        "$431$ is prime, hence the fraction is reduced and $m+n=216+431=647$."
+      ],
+      "stepsZh": [
+        "令 $a$ 为从空状态开始最终在奇数次结束的概率，$b$ 为当前后缀已匹配 $1$ 时的相应概率，$c$ 为已匹配 $1,2$ 时的相应概率。考虑被丢弃步数是否改变奇偶要求，得到 $6a=b+5(1-a)$、$6b=(1-b)+c+4a$、$6c=b+1+4(1-a)$。",
+        "第一式给出 $b=11a-5$；由后两式消去 $c$，得到 $41b=11+20a$。",
+        "因此 $41(11a-5)=11+20a$，即 $431a=216$，所以 $a=216/431$。",
+        "$431$ 为质数，分数已最简，故 $m+n=216+431=647$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q14": {
+    "summary": "The incircle $\\omega$ of triangle $ABC$ touches $BC$ at $X$. Line $AX$ meets $\\omega$ again at $Y\\ne X$. Points $P\\in AB$ and $Q\\in AC$ are chosen so that $PQ$ is tangent to $\\omega$ at $Y$. Given $AP=3$, $PB=4$, $AC=8$, and $AQ=m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "三角形 $ABC$ 的内切圆 $\\omega$ 与 $BC$ 相切于 $X$；直线 $AX$ 与 $\\omega$ 的另一交点为 $Y\\ne X$。点 $P\\in AB$、$Q\\in AC$，且 $PQ$ 在 $Y$ 处与 $\\omega$ 相切。已知 $AP=3$、$PB=4$、$AC=8$，并设最简分数 $AQ=m/n$，求 $m+n$。",
+    "answer": "227",
+    "answerZh": "227",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/14",
+    "methods": [{
+      "title": "Derive a harmonic-mean tangent relation",
+      "titleZh": "推导切线长度的调和平均关系",
+      "topics": [{"en":"Incircle tangents","zh":"内切圆切线"},{"en":"Tangent-chord theorem","zh":"切线弦定理"},{"en":"Law of sines","zh":"正弦定理"}],
+      "steps": [
+        "Let the incircle touch $AB$ at $Z$ and $AC$ at $W$. Put $\\alpha=\\angle BAX$ and $\\beta=\\angle AXC$. The tangent-chord theorem and vertical angles give $\\angle AYP=\\beta$.",
+        "The sine law in $\\triangle APY$ gives $PY/AP=\\sin\\alpha/\\sin\\beta$. Since $PZ=PY$, $AZ/AP=1+\\sin\\alpha/\\sin\\beta$. Applying the sine law in $\\triangle ABX$ and using $BZ=BX$ similarly gives $AZ/AB=1-\\sin\\alpha/\\sin\\beta$.",
+        "Adding yields $AZ(1/AP+1/AB)=2$. With $AP=3$ and $AB=7$, $AZ=21/5$. The same argument on side $AC$ gives $AW(1/AQ+1/AC)=2$, while equal tangents from $A$ give $AW=AZ=21/5$.",
+        "Hence $1/AQ=10/21-1/8=59/168$, so $AQ=168/59$ and $m+n=227$."
+      ],
+      "stepsZh": [
+        "设内切圆分别与 $AB,AC$ 相切于 $Z,W$。令 $\\alpha=\\angle BAX$、$\\beta=\\angle AXC$。由切线弦定理及对顶角可得 $\\angle AYP=\\beta$。",
+        "在 $\\triangle APY$ 中用正弦定理，得 $PY/AP=\\sin\\alpha/\\sin\\beta$。又 $PZ=PY$，故 $AZ/AP=1+\\sin\\alpha/\\sin\\beta$。在 $\\triangle ABX$ 中同理并利用 $BZ=BX$，得 $AZ/AB=1-\\sin\\alpha/\\sin\\beta$。",
+        "两式相加得 $AZ(1/AP+1/AB)=2$。代入 $AP=3,AB=7$，得 $AZ=21/5$。在边 $AC$ 上同理有 $AW(1/AQ+1/AC)=2$；从 $A$ 引出的切线等长，故 $AW=AZ=21/5$。",
+        "因此 $1/AQ=10/21-1/8=59/168$，所以 $AQ=168/59$，最终 $m+n=227$。"
+      ]
+    }]
+  },
+  "aime-2018ii-q15": {
+    "summary": "Count the functions $f:\\{0,1,2,3,4,5,6\\}\\to\\mathbb Z$ such that $f(0)=0$, $f(6)=12$, and $|x-y|\\le|f(x)-f(y)|\\le3|x-y|$ for every pair $x,y$ in the domain.",
+    "summaryZh": "求函数 $f:\\{0,1,2,3,4,5,6\\}\\to\\mathbb Z$ 的个数，使得 $f(0)=0$、$f(6)=12$，且对定义域中任意 $x,y$ 都有 $|x-y|\\le|f(x)-f(y)|\\le3|x-y|$。",
+    "answer": "185",
+    "answerZh": "185",
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2018II/problem/15",
+    "methods": [{
+      "title": "Classify the six consecutive differences",
+      "titleZh": "分类六个相邻差分",
+      "topics": [{"en":"Finite differences","zh":"有限差分"},{"en":"Multiset permutations","zh":"多重集排列"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": [
+        "Set $d_i=f(i)-f(i-1)$. Then $|d_i|\\in\\{1,2,3\\}$ and $\\sum d_i=12$. If $k$ differences were negative, the sum would be at most $3(6-k)-k=18-4k$, so $k\\le1$.",
+        "With no negative difference, let $a,b,c$ count the $1$'s, $2$'s, $3$'s. Solving $a+b+c=6$ and $a+2b+3c=12$ gives $(0,6,0),(1,4,1),(2,2,2),(3,0,3)$. Their multinomial counts total $1+30+90+20=141$.",
+        "If the unique negative difference is at an endpoint, it must be $-1$ next to a $3$. The remaining four positive differences sum to $10$, giving $10$ arrangements at each end, hence $20$.",
+        "If it is in one of four interior positions, the lower bounds force the local pattern $3,-1,3$. The other three differences sum to $7$ and are either $3,3,1$ or $3,2,2$, giving $6$ choices per position and $24$ total. All longer-interval inequalities then hold. The grand total is $141+20+24=185$."
+      ],
+      "stepsZh": [
+        "令 $d_i=f(i)-f(i-1)$。则 $|d_i|\\in\\{1,2,3\\}$ 且 $\\sum d_i=12$。若有 $k$ 个负差分，总和至多为 $3(6-k)-k=18-4k$，所以 $k\\le1$。",
+        "没有负差分时，令 $a,b,c$ 分别为 $1,2,3$ 的个数。由 $a+b+c=6$、$a+2b+3c=12$ 得 $(0,6,0),(1,4,1),(2,2,2),(3,0,3)$，多重集排列数之和为 $1+30+90+20=141$。",
+        "若唯一负差分位于端点，则它必须为 $-1$ 且相邻差分为 $3$。余下四个正差分之和为 $10$，每个端点有 $10$ 种，共 $20$ 种。",
+        "若负差分位于四个内部位置之一，下界条件强制局部形态为 $3,-1,3$。其余三个差分之和为 $7$，只能是 $3,3,1$ 或 $3,2,2$，每个位置有 $6$ 种，共 $24$ 种；更长区间的不等式也随之成立。总数为 $141+20+24=185$。"
+      ]
+    }]
+  }
+}
