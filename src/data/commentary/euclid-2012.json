@@ -1,0 +1,250 @@
+{
+  "euclid-2012-q1": {
+    "summary": "(a) John buys $10$ bags containing $20$ apples each and eats $8$ apples per day. How many days will the apples last? (b) Evaluate $\\sin0^\\circ+\\sin60^\\circ+\\sin120^\\circ+\\sin180^\\circ+\\sin240^\\circ+\\sin300^\\circ+\\sin360^\\circ$. (c) A finite set of integers has sum $420$ and average $60$. One member is $120$. Find the average of the remaining integers.",
+    "summaryZh": "(a) John 买了 $10$ 袋苹果，每袋 $20$ 个；他每天吃 $8$ 个。多少天可以吃完？(b) 计算 $\\sin0^\\circ+\\sin60^\\circ+\\sin120^\\circ+\\sin180^\\circ+\\sin240^\\circ+\\sin300^\\circ+\\sin360^\\circ$。(c) 一个有限整数集的总和为 $420$、平均数为 $60$，其中一个数是 $120$。求其余整数的平均数。",
+    "answer": "(a) $25$ days. (b) $0$. (c) $50$.",
+    "answerZh": "(a) $25$ 天。(b) $0$。(c) $50$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Count the total, pair supplementary angles, and recover the set size",
+      "titleZh": "先求总量、配对互补角，再由总和与平均数求项数",
+      "topics": [{"en":"Rates and unit conversion","zh":"速率与单位换算"},{"en":"Trigonometric identities","zh":"三角恒等式"},{"en":"Arithmetic mean","zh":"算术平均数"}],
+      "steps": [
+        "(a) The purchase contains $10\\cdot20=200$ apples. At $8$ apples per day, the number of days is $200/8=25$.",
+        "(b) The three terms at $0^\\circ,180^\\circ,360^\\circ$ vanish. Also $\\sin60^\\circ=-\\sin300^\\circ$ and $\\sin120^\\circ=-\\sin240^\\circ$, so every remaining term cancels and the sum is $0$.",
+        "(c) If the set has $n$ members, then $420/n=60$, hence $n=7$. Removing $120$ leaves six integers with sum $420-120=300$, so their average is $300/6=50$."
+      ],
+      "stepsZh": [
+        "(a) 苹果总数为 $10\\cdot20=200$。每天吃 $8$ 个，所需天数为 $200/8=25$。",
+        "(b) $0^\\circ,180^\\circ,360^\\circ$ 对应的三项均为 $0$；同时 $\\sin60^\\circ=-\\sin300^\\circ$、$\\sin120^\\circ=-\\sin240^\\circ$。其余各项两两抵消，故总和为 $0$。",
+        "(c) 若集合有 $n$ 个数，则 $420/n=60$，所以 $n=7$。删去 $120$ 后剩六个数，总和为 $420-120=300$，平均数为 $300/6=50$。"
+      ]
+    }]
+  },
+  "euclid-2012-q2": {
+    "summary": "(a) If $ax+ay=4$ and $x+y=12$, find $a$. (b) The lines $4x+6y=5$ and $6x+ky=3$ are parallel. Find $k$. (c) Solve the system $x+y=0$, $x^2-y=2$.",
+    "summaryZh": "(a) 若 $ax+ay=4$ 且 $x+y=12$，求 $a$。(b) 直线 $4x+6y=5$ 与 $6x+ky=3$ 平行，求 $k$。(c) 解方程组 $x+y=0$、$x^2-y=2$。",
+    "answer": "(a) $a=1/3$. (b) $k=9$. (c) $(x,y)=(-2,2)$ or $(1,-1)$.",
+    "answerZh": "(a) $a=1/3$。(b) $k=9$。(c) $(x,y)=(-2,2)$ 或 $(1,-1)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Factor, compare slopes, and substitute",
+      "titleZh": "提取公因式、比较斜率并代入消元",
+      "topics": [{"en":"Algebraic manipulation","zh":"代数变形"},{"en":"Parallel lines","zh":"平行直线"},{"en":"Systems of equations","zh":"方程组"}],
+      "steps": [
+        "(a) Factor the left side: $a(x+y)=4$. Since $x+y=12$, we get $12a=4$ and hence $a=1/3$.",
+        "(b) The first line has slope $-4/6=-2/3$. The second cannot be vertical because it is parallel to the first, so $k\\ne0$ and its slope is $-6/k$. Equality of slopes gives $-6/k=-2/3$, hence $k=9$.",
+        "(c) From $x+y=0$, $y=-x$. Substitution in $x^2-y=2$ gives $x^2+x-2=(x+2)(x-1)=0$. Thus $x=-2$ or $1$, producing $(-2,2)$ and $(1,-1)$. Direct substitution verifies both pairs."
+      ],
+      "stepsZh": [
+        "(a) 左边提取公因式得 $a(x+y)=4$。由 $x+y=12$，有 $12a=4$，故 $a=1/3$。",
+        "(b) 第一条直线的斜率为 $-4/6=-2/3$。第二条直线与它平行，因而不是竖直线，故 $k\\ne0$，斜率为 $-6/k$。令两斜率相等，得 $-6/k=-2/3$，所以 $k=9$。",
+        "(c) 由 $x+y=0$ 得 $y=-x$。代入 $x^2-y=2$ 得 $x^2+x-2=(x+2)(x-1)=0$，所以 $x=-2$ 或 $1$，相应得到 $(-2,2)$、$(1,-1)$；代回均成立。"
+      ]
+    }]
+  },
+  "euclid-2012-q3": {
+    "summary": "(a) A $200$ g salt-water solution is $25\\%$ salt by mass. How many grams of water must be added to make it $10\\%$ salt? (b) The exact Celsius-to-Fahrenheit conversion is $F=\\frac95C+32$. Gordie uses $f=2C+30$. For $-20\\le C\\le35$, the error is $|F-f|$. Find its largest possible value.",
+    "summaryZh": "(a) 一份 $200$ 克的盐水按质量计含盐 $25\\%$。需加入多少克水，才能使含盐率变为 $10\\%$？(b) 摄氏温度到华氏温度的准确换算为 $F=\\frac95C+32$，Gordie 用 $f=2C+30$ 估算。对 $-20\\le C\\le35$，误差定义为 $|F-f|$。求最大可能误差。",
+    "answer": "(a) $300$ g. (b) $6^\\circ\\!F$.",
+    "answerZh": "(a) $300$ 克。(b) $6^\\circ\\!F$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Conserve the salt and maximize an absolute linear function",
+      "titleZh": "利用盐的质量守恒，并求绝对值一次函数的最大值",
+      "topics": [{"en":"Percentages","zh":"百分数"},{"en":"Conservation equations","zh":"守恒方程"},{"en":"Piecewise linear functions","zh":"分段一次函数"}],
+      "steps": [
+        "(a) The salt mass is fixed at $0.25\\cdot200=50$ g. If the final mass is $M$, then $50/M=0.10$, so $M=500$ g. Therefore $500-200=300$ g of water must be added.",
+        "(b) The signed difference is $F-f=(\\frac95C+32)-(2C+30)=2-\\frac15C$. Hence the error is $|2-C/5|$.",
+        "An absolute value of a linear function is convex, so on the closed interval its maximum occurs at an endpoint. At $C=-20$ the error is $|2+4|=6$; at $C=35$ it is $|2-7|=5$. The maximum is therefore $6$."
+      ],
+      "stepsZh": [
+        "(a) 盐的质量始终为 $0.25\\cdot200=50$ 克。设最终总质量为 $M$，则 $50/M=0.10$，所以 $M=500$ 克。因此需加入 $500-200=300$ 克水。",
+        "(b) 带符号的差为 $F-f=(\\frac95C+32)-(2C+30)=2-\\frac15C$，故误差为 $|2-C/5|$。",
+        "一次函数绝对值是凸函数，在闭区间上的最大值必出现在端点。$C=-20$ 时误差为 $|2+4|=6$；$C=35$ 时为 $|2-7|=5$，所以最大误差为 $6$。"
+      ]
+    }]
+  },
+  "euclid-2012-q4": {
+    "summary": "(a) The horizontal line $y=k$ cuts the parabola $y=2(x-3)(x-5)$ at $A$ and $B$. If $AB=6$, find $k$. (b) Find three pairs of positive integers $(a,b)$ for which $(3a+6a+9a+12a+15a)+(6b+12b+18b+24b+30b)$ is a perfect square.",
+    "summaryZh": "(a) 水平直线 $y=k$ 与抛物线 $y=2(x-3)(x-5)$ 交于 $A,B$。若 $AB=6$，求 $k$。(b) 求三组正整数 $(a,b)$，使 $(3a+6a+9a+12a+15a)+(6b+12b+18b+24b+30b)$ 为完全平方数。",
+    "answer": "(a) $k=16$. (b) For example, $(a,b)=(3,1),(1,2),(18,1)$.",
+    "answerZh": "(a) $k=16$。(b) 例如 $(a,b)=(3,1),(1,2),(18,1)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+    "methods": [
+      {
+        "title": "Use symmetry of the parabola and factor the integer expression",
+        "titleZh": "利用抛物线的对称性，并分解整数表达式",
+        "topics": [{"en":"Parabola symmetry","zh":"抛物线对称性"},{"en":"Perfect squares","zh":"完全平方数"},{"en":"Constructive examples","zh":"构造法"}],
+        "steps": [
+          "(a) The zeros $3$ and $5$ show that the axis of symmetry is $x=4$. A horizontal chord of length $6$ has endpoints three units on either side of the axis, so their $x$-coordinates are $1$ and $7$. Substitution gives $k=2(1-3)(1-5)=16$.",
+          "(b) Combine like terms: the expression equals $45a+90b=45(a+2b)$. If $a+2b=5$, the value is $45\\cdot5=225=15^2$, giving $(a,b)=(3,1)$ and $(1,2)$.",
+          "If $a+2b=20$, the value is $45\\cdot20=900=30^2$, and $(a,b)=(18,1)$ works. These are three positive-integer pairs, as requested; direct substitution verifies each."
+        ],
+        "stepsZh": [
+          "(a) 抛物线的两个零点为 $3,5$，故对称轴是 $x=4$。长度为 $6$ 的水平弦两端距对称轴各 $3$，横坐标为 $1,7$。代入得 $k=2(1-3)(1-5)=16$。",
+          "(b) 合并同类项，原式为 $45a+90b=45(a+2b)$。若 $a+2b=5$，原式为 $45\\cdot5=225=15^2$，给出 $(a,b)=(3,1)$ 与 $(1,2)$。",
+          "再令 $a+2b=20$，原式为 $45\\cdot20=900=30^2$，可取 $(a,b)=(18,1)$。这三组均为正整数，且代回验证成立。"
+        ]
+      },
+      {
+        "title": "A quadratic-root-spacing check for part (a)",
+        "titleZh": "第 (a) 问的另一方法：利用二次方程两根之差",
+        "topics": [{"en":"Quadratic formula","zh":"二次公式"},{"en":"Distance between roots","zh":"两根之差"}],
+        "steps": [
+          "Intersections satisfy $2x^2-16x+30-k=0$. Its roots are $x=4\\pm\\frac14\\sqrt{16+8k}$, so their separation is $\\frac12\\sqrt{16+8k}$.",
+          "Setting this distance equal to $6$ gives $\\sqrt{16+8k}=12$, hence $16+8k=144$ and $k=16$."
+        ],
+        "stepsZh": [
+          "交点横坐标满足 $2x^2-16x+30-k=0$，两根为 $x=4\\pm\\frac14\\sqrt{16+8k}$，故两根之差为 $\\frac12\\sqrt{16+8k}$。",
+          "令该距离等于 $6$，得到 $\\sqrt{16+8k}=12$，从而 $16+8k=144$，即 $k=16$。"
+        ]
+      }
+    ]
+  },
+  "euclid-2012-q5": {
+    "summary": "(a) Triangle $ABC$ has $A=(0,5)$, $B=(3,0)$, and $C=(8,3)$. Find $\\angle ACB$. (b) In isosceles trapezoid $PQRS$, the parallel bases are $PQ=7$ and $SR=15$, while the equal legs satisfy $PS=QR=8$. Find diagonal $PR$.",
+    "summaryZh": "(a) 三角形 $ABC$ 的顶点为 $A=(0,5)$、$B=(3,0)$、$C=(8,3)$，求 $\\angle ACB$。(b) 等腰梯形 $PQRS$ 的平行底边为 $PQ=7$、$SR=15$，两腰 $PS=QR=8$，求对角线 $PR$。",
+    "answer": "(a) $45^\\circ$. (b) $PR=13$.",
+    "answerZh": "(a) $45^\\circ$。(b) $PR=13$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use coordinate distances and decompose the isosceles trapezoid",
+      "titleZh": "使用坐标距离，并分解等腰梯形",
+      "topics": [{"en":"Coordinate geometry","zh":"坐标几何"},{"en":"Isosceles trapezoids","zh":"等腰梯形"},{"en":"Pythagorean theorem","zh":"勾股定理"}],
+      "steps": [
+        "(a) The squared side lengths are $AB^2=34$, $BC^2=34$, and $AC^2=68$. Thus $AB=BC$ and $AC^2=AB^2+BC^2$, so the triangle is right isosceles with the right angle at $B$. Its two remaining angles are $45^\\circ$, hence $\\angle ACB=45^\\circ$.",
+        "(b) Drop perpendiculars from $P,Q$ to $SR$ at $X,Y$. The central rectangle has $XY=PQ=7$. Congruent end triangles give $SX=YR=(15-7)/2=4$.",
+        "In right triangle $PSX$, the height satisfies $PX^2=8^2-4^2=48$. Also $XR=XY+YR=7+4=11$. Therefore $PR^2=PX^2+XR^2=48+121=169$, so $PR=13$."
+      ],
+      "stepsZh": [
+        "(a) 三边平方为 $AB^2=34$、$BC^2=34$、$AC^2=68$。因此 $AB=BC$ 且 $AC^2=AB^2+BC^2$，三角形是在 $B$ 处为直角的等腰直角三角形，故 $\\angle ACB=45^\\circ$。",
+        "(b) 从 $P,Q$ 向 $SR$ 作垂线，垂足为 $X,Y$。中间矩形满足 $XY=PQ=7$；两端直角三角形全等，所以 $SX=YR=(15-7)/2=4$。",
+        "在直角三角形 $PSX$ 中，$PX^2=8^2-4^2=48$；又 $XR=XY+YR=7+4=11$。因此 $PR^2=PX^2+XR^2=48+121=169$，所以 $PR=13$。"
+      ]
+    }]
+  },
+  "euclid-2012-q6": {
+    "summary": "(a) Equally skilled players Blaise and Pierre play six squash games, with no ties and independent probability $1/2$ for either player in each game. The probability that each wins three games is $5/16$. Find the probability that Blaise wins more games than Pierre. (b) Solve $3^{x+2}+2^{x+2}+2^x=2^{x+5}+3^x$ over the reals.",
+    "summaryZh": "(a) 实力相同的 Blaise 与 Pierre 进行六局壁球比赛，每局无平局且两人各以 $1/2$ 的概率获胜。已知两人各胜三局的概率为 $5/16$，求 Blaise 胜局数多于 Pierre 的概率。(b) 求方程 $3^{x+2}+2^{x+2}+2^x=2^{x+5}+3^x$ 的全部实数解。",
+    "answer": "(a) $11/32$. (b) $x=3$.",
+    "answerZh": "(a) $11/32$。(b) $x=3$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use symmetry of outcomes and collect exponential terms",
+      "titleZh": "利用结果对称性，并合并指数项",
+      "topics": [{"en":"Probability symmetry","zh":"概率对称性"},{"en":"Binomial outcomes","zh":"二项结果"},{"en":"Exponential equations","zh":"指数方程"}],
+      "steps": [
+        "(a) Apart from a $3$-$3$ tie, exactly one player wins more games. Thus the probability that someone wins more is $1-5/16=11/16$. Interchanging the players preserves every probability, so the two strict-win events have equal probability. Blaise's probability is therefore $(11/16)/2=11/32$.",
+        "(b) Expand the shifted powers and collect bases: $9\\cdot3^x+(4+1)2^x=32\\cdot2^x+3^x$. Hence $8\\cdot3^x=27\\cdot2^x$.",
+        "Dividing by $8\\cdot2^x>0$ gives $(3/2)^x=27/8=(3/2)^3$. Because the base $3/2$ is positive and not $1$, the exponential is one-to-one, so $x=3$."
+      ],
+      "stepsZh": [
+        "(a) 除了 $3$ 比 $3$ 的平局外，必有且仅有一人的胜局更多。因此有人严格获胜的概率为 $1-5/16=11/16$。交换两位选手不会改变概率，两个严格获胜事件概率相等，故 Blaise 的概率为 $(11/16)/2=11/32$。",
+        "(b) 展开移位指数并按底数合并：$9\\cdot3^x+(4+1)2^x=32\\cdot2^x+3^x$，所以 $8\\cdot3^x=27\\cdot2^x$。",
+        "两边除以正数 $8\\cdot2^x$，得 $(3/2)^x=27/8=(3/2)^3$。底数 $3/2$ 为正且不等于 $1$，指数函数单调，故 $x=3$。"
+      ]
+    }]
+  },
+  "euclid-2012-q7": {
+    "summary": "(a) In triangle $ABC$, $AB=AC$ and $\\angle BAC=\\theta<60^\\circ$. Point $D$ lies on segment $AC$ with $BC=BD$, and point $E$ lies on segment $AB$ with $BE=ED$. Determine $\\angle BED$ in terms of $\\theta$. (b) A Ferris wheel has diameter $18$ m and its lowest passenger position is $1$ m above the ground. It rotates at constant speed. At a rising point $P$, Kolapo is $16$ m above the ground and reaches the top $T$ four seconds later. After another eight seconds he reaches $Q$. Find his height at $Q$.",
+    "summaryZh": "(a) 在三角形 $ABC$ 中，$AB=AC$ 且 $\\angle BAC=\\theta<60^\\circ$。点 $D$ 在线段 $AC$ 上并满足 $BC=BD$；点 $E$ 在线段 $AB$ 上并满足 $BE=ED$。用 $\\theta$ 表示 $\\angle BED$。(b) 摩天轮直径为 $18$ 米，乘客最低位置离地 $1$ 米，并以恒定速度转动。Kolapo 上升到点 $P$ 时离地 $16$ 米，四秒后到达最高点 $T$；再过八秒到达 $Q$。求他在 $Q$ 处的离地高度。",
+    "answer": "(a) $\\angle BED=3\\theta$. (b) $9$ m.",
+    "answerZh": "(a) $\\angle BED=3\\theta$。(b) $9$ 米。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Chase isosceles-triangle angles and use a double-angle height",
+      "titleZh": "追踪等腰三角形角度，并用二倍角计算高度",
+      "topics": [{"en":"Angle chasing","zh":"角度追踪"},{"en":"Isosceles triangles","zh":"等腰三角形"},{"en":"Double-angle identity","zh":"二倍角公式"}],
+      "steps": [
+        "(a) Since $AB=AC$, $\\angle ABC=\\angle ACB=90^\\circ-\\theta/2$. Because $D$ lies on $AC$ and $BC=BD$, triangle $BCD$ is isosceles and $\\angle BCD=\\angle CDB=90^\\circ-\\theta/2$. Thus $\\angle CBD=\\theta$.",
+        "At $B$, $\\angle EBD=\\angle ABC-\\angle DBC=90^\\circ-3\\theta/2$. Since $BE=ED$, triangle $BED$ is isosceles, so $\\angle EDB$ has the same value. Therefore $\\angle BED=180^\\circ-2(90^\\circ-3\\theta/2)=3\\theta$.",
+        "(b) The radius is $9$ m and the centre is $10$ m above the ground. Let $\\phi$ be the central angle from the upward vertical radius $OT$ to $OP$. At $P$, the vertical displacement from the centre is $16-10=6$, so $9\\cos\\phi=6$ and $\\cos\\phi=2/3$.",
+        "The wheel takes four seconds to move through angle $\\phi$ from $P$ to $T$, so in the next eight seconds it moves through $2\\phi$ from $T$ to $Q$. Hence the height at $Q$ is $10+9\\cos(2\\phi)=10+9(2(2/3)^2-1)=10-1=9$ m."
+      ],
+      "stepsZh": [
+        "(a) 由 $AB=AC$，有 $\\angle ABC=\\angle ACB=90^\\circ-\\theta/2$。因 $D$ 在 $AC$ 上且 $BC=BD$，三角形 $BCD$ 为等腰三角形，故 $\\angle BCD=\\angle CDB=90^\\circ-\\theta/2$，从而 $\\angle CBD=\\theta$。",
+        "在点 $B$，$\\angle EBD=\\angle ABC-\\angle DBC=90^\\circ-3\\theta/2$。又因 $BE=ED$，三角形 $BED$ 为等腰三角形，$\\angle EDB$ 与其相等。因此 $\\angle BED=180^\\circ-2(90^\\circ-3\\theta/2)=3\\theta$。",
+        "(b) 半径为 $9$ 米，圆心离地 $10$ 米。设向上的半径 $OT$ 与 $OP$ 的圆心角为 $\\phi$。在 $P$ 处，相对圆心的竖直位移为 $16-10=6$，故 $9\\cos\\phi=6$，即 $\\cos\\phi=2/3$。",
+        "从 $P$ 到 $T$ 用四秒并转过 $\\phi$，所以从 $T$ 再走八秒转过 $2\\phi$ 到达 $Q$。于是 $Q$ 的离地高度为 $10+9\\cos(2\\phi)=10+9(2(2/3)^2-1)=9$ 米。"
+      ]
+    }]
+  },
+  "euclid-2012-q8": {
+    "summary": "(a) Jimmy starts painting between 9:00 and 10:00 a.m. and finishes between 10:00 and 11:00 a.m. At the finish, the hour hand is exactly where the minute hand was at the start, and the minute hand is exactly where the hour hand was at the start. If he paints for $t$ hours, find $t$. (b) Solve $$\\log_{5x+9}(x^2+6x+9)+\\log_{x+3}(5x^2+24x+27)=4.$$, including all logarithm-domain restrictions.",
+    "summaryZh": "(a) Jimmy 在上午 9:00 至 10:00 之间开始涂玩具，在 10:00 至 11:00 之间结束。结束时，时针恰在开始时分针的位置，分针恰在开始时时针的位置。若涂了 $t$ 小时，求 $t$。(b) 在完整考虑对数定义域的前提下，解方程 $$\\log_{5x+9}(x^2+6x+9)+\\log_{x+3}(5x^2+24x+27)=4.$$",
+    "answer": "(a) $t=12/13$ hours. (b) $x\\in\\{-3/2,-1,0\\}$.",
+    "answerZh": "(a) $t=12/13$ 小时。(b) $x\\in\\{-3/2,-1,0\\}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Compare angular speeds and reduce the logarithms to one ratio",
+      "titleZh": "比较指针角速度，并把对数方程化为一个比值",
+      "topics": [{"en":"Angular rates","zh":"角速度"},{"en":"Logarithm laws","zh":"对数运算律"},{"en":"Domain restrictions","zh":"定义域限制"}],
+      "steps": [
+        "(a) During the painting interval, the hour hand moves through some angle $u$. Since the hands exchange positions and do not complete extra revolutions in the stated time windows, the minute hand moves through $360^\\circ-u$. Its angular speed is $12$ times the hour hand's, so $(360-u)/u=12$. Thus $u=360/13$ degrees.",
+        "The hour hand turns $30^\\circ$ per hour. Therefore $30t=360/13$, which gives $t=12/13$ hours.",
+        "(b) The logarithms require $x>-9/5$, $x\\ne-8/5$, and positive arguments. On this domain, $x+3>0$ and $5x+9>0$, while $x^2+6x+9=(x+3)^2$ and $5x^2+24x+27=(5x+9)(x+3)$ are positive.",
+        "Set $r=\\log(x+3)/\\log(5x+9)$. The denominator is nonzero by the base restriction, and $r\\ne0$. The equation becomes $2r+(1+1/r)=4$, so $2r^2-3r+1=(2r-1)(r-1)=0$.",
+        "If $r=1$, then $x+3=5x+9$, giving $x=-3/2$. If $r=1/2$, then $(x+3)^2=5x+9$, giving $x(x+1)=0$ and hence $x=0$ or $-1$. All three satisfy the domain conditions and the original equation."
+      ],
+      "stepsZh": [
+        "(a) 在涂玩具期间，设时针转过角 $u$。两指针互换位置，且由给定时间区间可知不存在额外整圈，因此分针转过 $360^\\circ-u$。分针角速度是时针的 $12$ 倍，故 $(360-u)/u=12$，解得 $u=360/13$ 度。",
+        "时针每小时转 $30^\\circ$，所以 $30t=360/13$，从而 $t=12/13$ 小时。",
+        "(b) 对数要求 $x>-9/5$、$x\\ne-8/5$ 且真数为正。在此范围内 $x+3>0$、$5x+9>0$，并且 $x^2+6x+9=(x+3)^2$、$5x^2+24x+27=(5x+9)(x+3)$ 均为正。",
+        "令 $r=\\log(x+3)/\\log(5x+9)$。由底数限制，分母非零，且 $r\\ne0$。原方程化为 $2r+(1+1/r)=4$，即 $2r^2-3r+1=(2r-1)(r-1)=0$。",
+        "若 $r=1$，则 $x+3=5x+9$，得 $x=-3/2$；若 $r=1/2$，则 $(x+3)^2=5x+9$，得 $x(x+1)=0$，所以 $x=0$ 或 $-1$。三者均满足定义域并可代回原式。"
+      ]
+    }]
+  },
+  "euclid-2012-q9": {
+    "summary": "(a) An auditorium has a rectangular array of chairs. Every row contains exactly $14$ boys, every column exactly $10$ girls, and exactly $3$ chairs are empty. Prove that the auditorium has at least $567$ chairs. (b) In quadrilateral $ABCD$, points $M\\in AB$ and $N\\in DC$ satisfy $AM/AB=NC/DC$. Segments $AN$ and $DM$ meet at $P$, while $BN$ and $CM$ meet at $Q$. Prove that $[PMQN]=[APD]+[BQC]$.",
+    "summaryZh": "(a) 一个礼堂的座椅排成矩形阵列。每行恰有 $14$ 名男生，每列恰有 $10$ 名女生，另有恰好 $3$ 个空座。证明座椅总数至少为 $567$。(b) 在四边形 $ABCD$ 中，点 $M\\in AB$、$N\\in DC$ 满足 $AM/AB=NC/DC$。线段 $AN$ 与 $DM$ 交于 $P$，线段 $BN$ 与 $CM$ 交于 $Q$。证明 $[PMQN]=[APD]+[BQC]$。",
+    "answer": "(a) The minimum is $567$ chairs. (b) The stated area identity holds.",
+    "answerZh": "(a) 最少有 $567$ 个座位。(b) 所述面积恒等式成立。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Factor the seating equation and compare areas using interpolated heights",
+      "titleZh": "分解座椅方程，并用线性插值高度比较面积",
+      "topics": [{"en":"Diophantine equations","zh":"丢番图方程"},{"en":"Divisibility","zh":"整除性"},{"en":"Area decomposition","zh":"面积分割"},{"en":"Affine interpolation","zh":"仿射插值"}],
+      "steps": [
+        "(a) Let there be $r$ rows and $c$ columns. Counting boys, girls, and empty seats gives $rc=14r+10c+3$, with $c\\ge14$ and $r\\ge10$.",
+        "Thus $(r-10)(c-14)=143=11\\cdot13$. The positive divisor pairs give $(r-10,c-14)=(143,1),(13,11),(11,13),(1,143)$, hence $rc=2295,575,567,1727$. The least is $567$.",
+        "(b) Put $DC=x$ and $DN=tx$, so $NC=(1-t)x$. Let the perpendicular heights of $A,B,M$ above $DC$ be $a,b,m$. Since $AM/AB=1-t$, affine interpolation gives $m=ta+(1-t)b$.",
+        "Adding $DPN$ and $CQN$ to $PMQN$ gives $DMC$; adding them instead to $APD$ and $BQC$ gives $ADN$ and $BCN$. It therefore suffices to prove $[DMC]=[ADN]+[BCN]$.",
+        "Using bases on line $DC$, $[DMC]=\\frac12xm$, while $[ADN]+[BCN]=\\frac12(tx)a+\\frac12((1-t)x)b=\\frac12x(ta+(1-t)b)=\\frac12xm$. Hence the areas are equal."
+      ],
+      "stepsZh": [
+        "(a) 设有 $r$ 行、$c$ 列。按男生、女生和空座计数，得 $rc=14r+10c+3$，且 $c\\ge14$、$r\\ge10$。",
+        "于是 $(r-10)(c-14)=143=11\\cdot13$。枚举正约数配对，得 $(r-10,c-14)=(143,1),(13,11),(11,13),(1,143)$，故 $rc=2295,575,567,1727$，最小值为 $567$。",
+        "(b) 令 $DC=x$、$DN=tx$，则 $NC=(1-t)x$。记 $A,B,M$ 到 $DC$ 的垂直高度为 $a,b,m$。由 $AM/AB=1-t$，仿射插值得 $m=ta+(1-t)b$。",
+        "把 $DPN,CQN$ 补到 $PMQN$ 得 $DMC$；改为补到 $APD,BQC$ 则得 $ADN,BCN$。因此只需证明 $[DMC]=[ADN]+[BCN]$。",
+        "以直线 $DC$ 上的线段为底，$[DMC]=\\frac12xm$，而 $[ADN]+[BCN]=\\frac12(tx)a+\\frac12((1-t)x)b=\\frac12x(ta+(1-t)b)=\\frac12xm$，故原面积恒等式成立。"
+      ]
+    }]
+  },
+  "euclid-2012-q10": {
+    "summary": "For a positive integer $N$, an Eden sequence from $\\{1,2,\\ldots,N\\}$ is a nonempty increasing sequence whose terms all lie in that set, with odd entries in odd-numbered positions and even entries in even-numbered positions. Let $e(N)$ count these sequences. (a) Find $e(5)$. (b) Given $e(17)=4180$ and $e(20)=17710$, determine $e(18)$ and $e(19)$, proving the recurrence you use.",
+    "summaryZh": "对正整数 $N$，定义集合 $\\{1,2,\\ldots,N\\}$ 上的 Eden 序列为非空严格递增序列，所有项均来自该集合，且奇数位置上的项为奇数、偶数位置上的项为偶数。记这种序列的个数为 $e(N)$。(a) 求 $e(5)$。(b) 已知 $e(17)=4180$、$e(20)=17710$，求 $e(18),e(19)$，并证明所用递推关系。",
+    "answer": "(a) $e(5)=12$. (b) $e(18)=6764$ and $e(19)=10945$.",
+    "answerZh": "(a) $e(5)=12$。(b) $e(18)=6764$、$e(19)=10945$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2012/2012EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Enumerate the small case and prove a bijective recurrence",
+      "titleZh": "枚举小规模情形，并用双射证明递推式",
+      "topics": [{"en":"Combinatorial recurrence","zh":"组合递推"},{"en":"Bijections","zh":"双射"},{"en":"Parity","zh":"奇偶性"}],
+      "steps": [
+        "(a) The Eden sequences are the singletons $1,3,5$; the length-two sequences $(1,2),(1,4),(3,4)$; the length-three sequences $(1,2,3),(1,2,5),(1,4,5),(3,4,5)$; the length-four sequence $(1,2,3,4)$; and the length-five sequence $(1,2,3,4,5)$. Thus $e(5)=3+3+4+1+1=12$.",
+        "For $N\\ge3$, partition the Eden sequences into: the singleton $(1)$; sequences beginning with $1$ and having more terms; and sequences not beginning with $1$.",
+        "For the second class, remove the initial $1$ and subtract $1$ from every remaining entry. The position parity flips when the first term is removed, and subtracting $1$ flips the value parity, so this is a bijection with all Eden sequences from $\\{1,\\ldots,N-1\\}$. For the third class, every term is at least $3$; subtracting $2$ from every term is a bijection with all Eden sequences from $\\{1,\\ldots,N-2\\}$. Therefore $$e(N)=1+e(N-1)+e(N-2).$$",
+        "Now $e(19)=1+e(18)+e(17)=e(18)+4181$, and $e(20)=1+e(19)+e(18)=2e(18)+4182$. Hence $17710=2e(18)+4182$, so $e(18)=6764$ and $e(19)=6764+4181=10945$."
+      ],
+      "stepsZh": [
+        "(a) 单项序列为 $1,3,5$；二项序列为 $(1,2),(1,4),(3,4)$；三项序列为 $(1,2,3),(1,2,5),(1,4,5),(3,4,5)$；四项序列只有 $(1,2,3,4)$；五项序列只有 $(1,2,3,4,5)$。故 $e(5)=3+3+4+1+1=12$。",
+        "对 $N\\ge3$，把 Eden 序列分为三类：单项序列 $(1)$；以 $1$ 开头且还有其他项的序列；不以 $1$ 开头的序列。",
+        "对第二类，删去首项 $1$，再把其余各项减 $1$。删首项使位置奇偶互换，减 $1$ 又使数值奇偶互换，因而得到与 $\\{1,\\ldots,N-1\\}$ 上全部 Eden 序列的双射。对第三类，所有项至少为 $3$，各项减 $2$ 即与 $\\{1,\\ldots,N-2\\}$ 上的 Eden 序列构成双射。因此 $$e(N)=1+e(N-1)+e(N-2)$$。",
+        "于是 $e(19)=1+e(18)+e(17)=e(18)+4181$，且 $e(20)=1+e(19)+e(18)=2e(18)+4182$。由 $17710=2e(18)+4182$ 得 $e(18)=6764$，进而 $e(19)=6764+4181=10945$。"
+      ]
+    }]
+  }
+}
+
