@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" role="img" aria-labelledby="title desc">
+  <title id="title">Three nested rectangular regions</title>
+  <desc id="desc">An inner one-by-L rectangle surrounded by two borders, each one unit wide.</desc>
+  <rect width="560" height="250" fill="#fff"/>
+  <rect x="45" y="25" width="470" height="200" rx="3" fill="#dce9f7" stroke="#17365d" stroke-width="3"/>
+  <rect x="95" y="65" width="370" height="120" fill="#f4d9a6" stroke="#17365d" stroke-width="3"/>
+  <rect x="145" y="105" width="270" height="40" fill="#e6f3df" stroke="#17365d" stroke-width="3"/>
+  <text x="280" y="132" text-anchor="middle" font-family="serif" font-size="22" fill="#111">1 × L</text>
+  <line x1="145" y1="158" x2="415" y2="158" stroke="#111" stroke-width="1.8"/>
+  <line x1="145" y1="152" x2="145" y2="164" stroke="#111" stroke-width="1.8"/>
+  <line x1="415" y1="152" x2="415" y2="164" stroke="#111" stroke-width="1.8"/>
+  <text x="280" y="181" text-anchor="middle" font-family="serif" font-size="18">L</text>
+  <text x="120" y="92" text-anchor="middle" font-family="serif" font-size="17">1</text>
+  <text x="70" y="52" text-anchor="middle" font-family="serif" font-size="17">1</text>
+</svg>

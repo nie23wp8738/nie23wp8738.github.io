@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="title desc">
+  <title id="title">Shaded diagonal band in an eight-by-five rectangle</title>
+  <desc id="desc">The four intercepts of the band are one unit from the upper-left or lower-right corner.</desc>
+  <rect width="560" height="360" fill="#fff"/>
+  <rect x="60" y="40" width="440" height="275" fill="#fff" stroke="#17365d" stroke-width="4"/>
+  <polygon points="115,40 445,315 500,315 500,260 115,40 60,40 60,95 445,315" fill="#9fbce0" fill-opacity="0.75" stroke="#17365d" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="60" y1="40" x2="500" y2="315" stroke="#b33a3a" stroke-width="2.5" stroke-dasharray="9 7"/>
+  <text x="280" y="344" text-anchor="middle" font-family="serif" font-size="20">8</text>
+  <text x="30" y="185" text-anchor="middle" font-family="serif" font-size="20">5</text>
+  <text x="87" y="29" text-anchor="middle" font-family="serif" font-size="18">1</text>
+  <text x="48" y="70" text-anchor="middle" font-family="serif" font-size="18">1</text>
+  <text x="473" y="337" text-anchor="middle" font-family="serif" font-size="18">1</text>
+  <text x="515" y="292" text-anchor="middle" font-family="serif" font-size="18">1</text>
+</svg>

@@ -23,5 +23,799 @@
       }
     ],
     "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/1"
+  },
+  "amc10-2016a-q2": {
+    "summary": "Solve $10^x\\cdot100^{2x}=1000^5$ for $x$.",
+    "summaryZh": "解方程 $10^x\\cdot100^{2x}=1000^5$。",
+    "answer": "C. $3$.",
+    "answerZh": "C。$3$。",
+    "methods": [
+      {
+        "title": "Use a common base",
+        "titleZh": "统一为同一底数",
+        "topics": [
+          {
+            "en": "Laws of exponents",
+            "zh": "指数运算律"
+          }
+        ],
+        "steps": [
+          "Write $100=10^2$ and $1000=10^3$. Then the equation becomes $10^{x+4x}=10^{15}$.",
+          "Equal positive bases give $5x=15$, hence $x=3$."
+        ],
+        "stepsZh": [
+          "把 $100$ 写成 $10^2$，把 $1000$ 写成 $10^3$，原方程化为 $10^{x+4x}=10^{15}$。",
+          "同底数幂相等时指数相等，所以 $5x=15$，从而 $x=3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/2"
+  },
+  "amc10-2016a-q3": {
+    "summary": "For every dollar Ben spends, David spends $0.75$ dollars. Ben spends $12.50$ dollars more than David. Find their combined spending.",
+    "summaryZh": "Ben 每花 $1$ 美元，David 花 $0.75$ 美元；Ben 比 David 多花 $12.50$ 美元。求两人的总花费。",
+    "answer": "C. $87.50$ dollars.",
+    "answerZh": "C。$87.50$ 美元。",
+    "methods": [
+      {
+        "title": "Scale from the spending difference",
+        "titleZh": "利用花费差按比例还原",
+        "topics": [
+          {
+            "en": "Ratio and proportion",
+            "zh": "比与比例"
+          },
+          {
+            "en": "Money",
+            "zh": "货币计算"
+          }
+        ],
+        "steps": [
+          "David's spending is $75\\%$ of Ben's, so their difference is $25\\%$ of Ben's spending.",
+          "Thus Ben spends $12.50/0.25=50$ dollars and David spends $0.75\\cdot50=37.50$ dollars.",
+          "Their total is $50+37.50=87.50$ dollars."
+        ],
+        "stepsZh": [
+          "David 的花费是 Ben 的 $75\\%$，所以二人的差额是 Ben 花费的 $25\\%$。",
+          "Ben 花费 $12.50/0.25=50$ 美元，David 花费 $0.75\\cdot50=37.50$ 美元。",
+          "总花费为 $50+37.50=87.50$ 美元。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/3"
+  },
+  "amc10-2016a-q4": {
+    "summary": "For $y\\ne0$, define $\\operatorname{rem}(x,y)=x-y\\left\\lfloor x/y\\right\\rfloor$. Evaluate $\\operatorname{rem}(3/8,-2/5)$.",
+    "summaryZh": "对 $y\\ne0$ 定义 $\\operatorname{rem}(x,y)=x-y\\left\\lfloor x/y\\right\\rfloor$。求 $\\operatorname{rem}(3/8,-2/5)$。",
+    "answer": "B. $-\\dfrac1{40}$.",
+    "answerZh": "B。$-\\dfrac1{40}$。",
+    "methods": [
+      {
+        "title": "Apply the floor definition carefully",
+        "titleZh": "谨慎代入下取整定义",
+        "topics": [
+          {
+            "en": "Floor function",
+            "zh": "下取整函数"
+          },
+          {
+            "en": "Fraction arithmetic",
+            "zh": "分数运算"
+          }
+        ],
+        "steps": [
+          "The quotient is $(3/8)/(-2/5)=-15/16$, so $\\lfloor-15/16\\rfloor=-1$.",
+          "Substitution gives $3/8-(-2/5)(-1)=3/8-2/5=-1/40$."
+        ],
+        "stepsZh": [
+          "商为 $(3/8)/(-2/5)=-15/16$，因此 $\\lfloor-15/16\\rfloor=-1$。",
+          "代入定义得到 $3/8-(-2/5)(-1)=3/8-2/5=-1/40$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/4"
+  },
+  "amc10-2016a-q5": {
+    "summary": "A rectangular box has positive integer edge lengths in the ratio $1:3:4$. Which of $48,56,64,96,144$ can be its volume?",
+    "summaryZh": "一个长方体的三条棱长为正整数，且比为 $1:3:4$。在 $48,56,64,96,144$ 中，哪一个可能是它的体积？",
+    "answer": "D. $96$.",
+    "answerZh": "D。$96$。",
+    "methods": [
+      {
+        "title": "Parameterise the edge lengths",
+        "titleZh": "用参数表示三条棱",
+        "topics": [
+          {
+            "en": "Volume",
+            "zh": "体积"
+          },
+          {
+            "en": "Integer ratios",
+            "zh": "整数比"
+          }
+        ],
+        "steps": [
+          "The edge lengths are $s,3s,4s$ for a positive integer $s$, so the volume is $12s^3$.",
+          "Among the choices, $96=12\\cdot2^3$ has this form. The other four quotients by $12$ are not positive integer cubes."
+        ],
+        "stepsZh": [
+          "三条棱可写成 $s,3s,4s$，其中 $s$ 为正整数，所以体积为 $12s^3$。",
+          "选项中 $96=12\\cdot2^3$ 符合该形式；其余四个数除以 $12$ 后都不是正整数立方。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/5"
+  },
+  "amc10-2016a-q6": {
+    "summary": "Write the integers $1$ through $30$. In a copied list, replace every digit $2$ by $1$. By how much does the original sum exceed the copied sum?",
+    "summaryZh": "列出整数 $1$ 到 $30$。复制时把每个数字 $2$ 都改成 $1$。原数列之和比复制后的数列之和大多少？",
+    "answer": "D. $103$.",
+    "answerZh": "D。$103$。",
+    "methods": [
+      {
+        "title": "Count losses by place value",
+        "titleZh": "按数位统计减少量",
+        "topics": [
+          {
+            "en": "Place value",
+            "zh": "数位"
+          },
+          {
+            "en": "Systematic counting",
+            "zh": "分类计数"
+          }
+        ],
+        "steps": [
+          "A units digit $2$ occurs in $2,12,22$; each replacement decreases the number by $1$, for a total loss of $3$.",
+          "A tens digit $2$ occurs in $20,21,\\ldots,29$; each replacement decreases the number by $10$, for a total loss of $100$.",
+          "The original sum therefore exceeds the copied sum by $3+100=103$."
+        ],
+        "stepsZh": [
+          "个位上的 $2$ 出现在 $2,12,22$ 中，每次改写使数值减少 $1$，共减少 $3$。",
+          "十位上的 $2$ 出现在 $20,21,\\ldots,29$ 中，每次改写使数值减少 $10$，共减少 $100$。",
+          "所以原数列之和大 $3+100=103$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/6"
+  },
+  "amc10-2016a-q7": {
+    "summary": "The mean, median and mode of $60,100,x,40,50,200,90$ are all equal to $x$. Determine $x$.",
+    "summaryZh": "数据 $60,100,x,40,50,200,90$ 的平均数、中位数和众数都等于 $x$。求 $x$。",
+    "answer": "D. $90$.",
+    "answerZh": "D。$90$。",
+    "methods": [
+      {
+        "title": "Use the mean, then verify",
+        "titleZh": "先用平均数求值，再验证",
+        "topics": [
+          {
+            "en": "Mean, median and mode",
+            "zh": "平均数、中位数与众数"
+          }
+        ],
+        "steps": [
+          "The fixed six values sum to $540$. Since the mean is $x$, $(540+x)/7=x$, so $x=90$.",
+          "The ordered list becomes $40,50,60,90,90,100,200$; its middle entry and unique most frequent value are both $90$."
+        ],
+        "stepsZh": [
+          "其余六个数之和为 $540$。由平均数为 $x$，有 $(540+x)/7=x$，解得 $x=90$。",
+          "排序后为 $40,50,60,90,90,100,200$；中间项与唯一出现次数最多的数都是 $90$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/7"
+  },
+  "amc10-2016a-q8": {
+    "summary": "At each of three bridge crossings, a fox's coins are first doubled and then $40$ coins are paid as toll. After the third crossing no coins remain. How many coins were present initially?",
+    "summaryZh": "狐狸每次过桥后，金币数先翻倍，再支付 $40$ 枚通行费。连续过桥三次后恰好没有金币。最初有多少枚金币？",
+    "answer": "C. $35$.",
+    "answerZh": "C。$35$。",
+    "methods": [
+      {
+        "title": "Reverse the three operations",
+        "titleZh": "逆向还原三次操作",
+        "topics": [
+          {
+            "en": "Working backwards",
+            "zh": "逆推法"
+          },
+          {
+            "en": "Recursion",
+            "zh": "递推"
+          }
+        ],
+        "steps": [
+          "Reverse one crossing by adding $40$ and then halving.",
+          "Starting from $0$, the balances immediately before the third, second and first crossings are $(0+40)/2=20$, $(20+40)/2=30$, and $(30+40)/2=35$.",
+          "Thus the initial balance is $35$ coins."
+        ],
+        "stepsZh": [
+          "逆向恢复一次过桥操作时，应先加回 $40$，再除以 $2$。",
+          "从末尾的 $0$ 开始，第三次、第二次、第一次过桥前依次有 $(0+40)/2=20$、$(20+40)/2=30$、$(30+40)/2=35$ 枚。",
+          "所以最初有 $35$ 枚金币。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/8"
+  },
+  "amc10-2016a-q9": {
+    "summary": "A triangular array contains $1,2,\\ldots,N$ coins in successive rows and $2016$ coins in total. Find the sum of the digits of $N$.",
+    "summaryZh": "一个三角形阵列的各行依次含 $1,2,\\ldots,N$ 枚硬币，总数为 $2016$。求 $N$ 的各位数字之和。",
+    "answer": "D. $9$.",
+    "answerZh": "D。$9$。",
+    "methods": [
+      {
+        "title": "Invert the triangular-number formula",
+        "titleZh": "反解三角数公式",
+        "topics": [
+          {
+            "en": "Triangular numbers",
+            "zh": "三角数"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ],
+        "steps": [
+          "The total is $N(N+1)/2=2016$, hence $N^2+N-4032=0$.",
+          "Factor as $(N-63)(N+64)=0$. Positivity gives $N=63$.",
+          "The requested digit sum is $6+3=9$."
+        ],
+        "stepsZh": [
+          "硬币总数满足 $N(N+1)/2=2016$，即 $N^2+N-4032=0$。",
+          "因式分解为 $(N-63)(N+64)=0$，由 $N>0$ 得 $N=63$。",
+          "所求数字和为 $6+3=9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/9"
+  },
+  "amc10-2016a-q10": {
+    "summary": "A rug consists of three nested rectangular colour regions. The inner rectangle has width $1$ and unknown length $L$. Each surrounding border has uniform width $1$, so the three outer rectangles have dimensions $1\\times L$, $3\\times(L+2)$ and $5\\times(L+4)$. If the three colour-region areas form an arithmetic progression in that order, find $L$.",
+    "summaryZh": "一张地毯由三层套叠的矩形色块组成。内层矩形宽为 $1$、长为 $L$；外面两圈边框的宽都为 $1$，故三层外接矩形的尺寸依次为 $1\\times L$、$3\\times(L+2)$、$5\\times(L+4)$。若三个色块面积依次构成等差数列，求 $L$。",
+    "answer": "B. $2$ feet.",
+    "answerZh": "B。$2$ 英尺。",
+    "figure": {
+      "url": "/commentary-figures/amc10-2016a-q10.svg",
+      "alt": "Three nested rectangles: an inner 1 by L rectangle and two concentric borders, each one unit wide.",
+      "altZh": "三层套叠矩形：内层为宽 1、长 L 的矩形，外面有两圈宽均为 1 的边框。",
+      "printHeightPt": 120
+    },
+    "methods": [
+      {
+        "title": "Compare the three ring areas",
+        "titleZh": "比较三层色块面积",
+        "topics": [
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          },
+          {
+            "en": "Arithmetic progressions",
+            "zh": "等差数列"
+          }
+        ],
+        "steps": [
+          "The three colour-region areas are $A_1=L$, $A_2=3(L+2)-L=2L+6$, and $A_3=5(L+4)-3(L+2)=2L+14$.",
+          "For an arithmetic progression, $2A_2=A_1+A_3$. Thus $2(2L+6)=L+(2L+14)$.",
+          "Solving gives $L=2$."
+        ],
+        "stepsZh": [
+          "三个色块面积分别为 $A_1=L$、$A_2=3(L+2)-L=2L+6$、$A_3=5(L+4)-3(L+2)=2L+14$。",
+          "等差数列满足 $2A_2=A_1+A_3$，所以 $2(2L+6)=L+(2L+14)$。",
+          "解得 $L=2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/10"
+  },
+  "amc10-2016a-q11": {
+    "summary": "In an $8\\times5$ rectangle, mark points one unit from the upper-left corner on its top and left sides, and points one unit from the lower-right corner on its bottom and right sides. Join the two top/bottom marked points and the two left/right marked points. The band between these segments, including the upper-left and lower-right corner triangles, is shaded. Find its area.",
+    "summaryZh": "在一个 $8\\times5$ 矩形中，在上边和左边各取距左上角 $1$ 的点，在下边和右边各取距右下角 $1$ 的点。分别连接上、下两个标记点以及左、右两个标记点；两条线段之间、并含左上角与右下角两个角部三角形的带状区域被涂色。求涂色面积。",
+    "answer": "D. $\\dfrac{13}{2}$.",
+    "answerZh": "D。$\\dfrac{13}{2}$。",
+    "figure": {
+      "url": "/commentary-figures/amc10-2016a-q11.svg",
+      "alt": "An 8 by 5 rectangle with a diagonal shaded band whose four boundary intercepts are one unit from the upper-left and lower-right corners.",
+      "altZh": "一个 8×5 矩形，其中有一条对角带状涂色区域；四个边界截点分别距左上角或右下角 1 个单位。",
+      "printHeightPt": 130
+    },
+    "methods": [
+      {
+        "title": "Split the band along the main diagonal",
+        "titleZh": "沿主对角线分割带状区域",
+        "topics": [
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          },
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          }
+        ],
+        "steps": [
+          "The diagonal from the upper-left to the lower-right corner divides the shaded band into four triangles.",
+          "Two triangles have base $1$ on a horizontal side and altitude $5/2$; their total area is $2\\cdot\\frac12\\cdot1\\cdot\\frac52=\\frac52$.",
+          "The other two have base $1$ on a vertical side and altitude $8/2=4$; their total area is $2\\cdot\\frac12\\cdot1\\cdot4=4$. Hence the shaded area is $\\frac52+4=\\frac{13}{2}$."
+        ],
+        "stepsZh": [
+          "连接左上角与右下角的对角线，把涂色带分成四个三角形。",
+          "其中两个三角形在水平边上的底为 $1$，高为 $5/2$，总面积为 $2\\cdot\\frac12\\cdot1\\cdot\\frac52=\\frac52$。",
+          "另两个三角形在竖直边上的底为 $1$，高为 $8/2=4$，总面积为 $2\\cdot\\frac12\\cdot1\\cdot4=4$。故涂色面积为 $\\frac52+4=\\frac{13}{2}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/11"
+  },
+  "amc10-2016a-q12": {
+    "summary": "Choose three distinct integers uniformly from $1,2,\\ldots,2016$. If $p$ is the probability that their product is odd, determine which interval contains $p$.",
+    "summaryZh": "从 $1,2,\\ldots,2016$ 中等可能地选取三个互不相同的整数。设三数乘积为奇数的概率为 $p$，判断 $p$ 所在的区间。",
+    "answer": "A. $p<\\dfrac18$.",
+    "answerZh": "A。$p<\\dfrac18$。",
+    "methods": [
+      {
+        "title": "Require three odd selections without replacement",
+        "titleZh": "不放回地连续选取三个奇数",
+        "topics": [
+          {
+            "en": "Probability without replacement",
+            "zh": "不放回抽样"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "The product is odd exactly when all three selected integers are odd. There are $1008$ odd integers among the $2016$ integers.",
+          "Thus $p=\\frac{1008}{2016}\\cdot\\frac{1007}{2015}\\cdot\\frac{1006}{2014}$.",
+          "The first factor is $1/2$ and each later factor is less than $1/2$, so $p<1/8$."
+        ],
+        "stepsZh": [
+          "乘积为奇数当且仅当三个被选整数全为奇数；$1$ 到 $2016$ 中有 $1008$ 个奇数。",
+          "所以 $p=\\frac{1008}{2016}\\cdot\\frac{1007}{2015}\\cdot\\frac{1006}{2014}$。",
+          "第一因子为 $1/2$，后两因子都小于 $1/2$，故 $p<1/8$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/12"
+  },
+  "amc10-2016a-q13": {
+    "summary": "Five friends occupy seats $1$ through $5$. Ada leaves. Bea moves two seats right, Ceci moves one seat left, and Dee and Edie exchange seats, leaving an end seat for Ada. Determine Ada's original seat.",
+    "summaryZh": "五位朋友坐在编号 $1$ 至 $5$ 的一排座位上。Ada 离开后，Bea 向右移动两座，Ceci 向左移动一座，Dee 与 Edie 互换座位，最后给 Ada 留下一个端点座位。求 Ada 原来的座位号。",
+    "answer": "B. Seat $2$.",
+    "answerZh": "B。第 $2$ 号座位。",
+    "methods": [
+      {
+        "title": "Conserve the sum of seat numbers",
+        "titleZh": "利用座位编号总和不变",
+        "topics": [
+          {
+            "en": "Invariant",
+            "zh": "不变量"
+          },
+          {
+            "en": "Displacement",
+            "zh": "位移"
+          }
+        ],
+        "steps": [
+          "The sum of occupied seat numbers remains $1+2+3+4+5$. Dee and Edie's swap has total displacement $0$.",
+          "Bea and Ceci contribute displacements $+2$ and $-1$, so Ada's displacement must be $-1$.",
+          "Ada ends in an end seat. A one-seat move to the left can reach an end only by moving from seat $2$ to seat $1$."
+        ],
+        "stepsZh": [
+          "五个座位编号之和始终为 $1+2+3+4+5$；Dee 与 Edie 互换的总位移为 $0$。",
+          "Bea 与 Ceci 的位移分别为 $+2$ 和 $-1$，所以 Ada 的位移必须为 $-1$。",
+          "Ada 最终坐在端点座位；向左一座到达端点只能是从第 $2$ 座移到第 $1$ 座。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/13"
+  },
+  "amc10-2016a-q14": {
+    "summary": "Count the nonnegative integer solutions of $2x+3y=2016$; equivalently, count unordered representations of $2016$ as a sum of twos and threes.",
+    "summaryZh": "求方程 $2x+3y=2016$ 的非负整数解数；等价地，求用若干个 $2$ 与 $3$（不计顺序）表示 $2016$ 的方法数。",
+    "answer": "C. $337$.",
+    "answerZh": "C。$337$。",
+    "methods": [
+      {
+        "title": "Count the admissible values of $y$",
+        "titleZh": "统计可行的 $y$",
+        "topics": [
+          {
+            "en": "Linear Diophantine equations",
+            "zh": "线性丢番图方程"
+          },
+          {
+            "en": "Parity",
+            "zh": "奇偶性"
+          }
+        ],
+        "steps": [
+          "Because $2016-3y$ must be even, $y$ must be even. Also $0\\le y\\le672$.",
+          "Thus $y$ can be $0,2,4,\\ldots,672$, giving $672/2+1=337$ values.",
+          "For each such $y$, $x=(2016-3y)/2$ is uniquely determined and nonnegative."
+        ],
+        "stepsZh": [
+          "因为 $2016-3y$ 必须为偶数，所以 $y$ 必须为偶数；同时 $0\\le y\\le672$。",
+          "$y$ 可取 $0,2,4,\\ldots,672$，共有 $672/2+1=337$ 个。",
+          "每个这样的 $y$ 都唯一确定非负整数 $x=(2016-3y)/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/14"
+  },
+  "amc10-2016a-q15": {
+    "summary": "Seven unit-radius circles are cut from one circular sheet: one is central and the other six surround it, each tangent to the central circle, its two neighbours and the sheet boundary. The leftover material is reshaped, without changing thickness, into one circle. Find its radius.",
+    "summaryZh": "从一张圆形面片中切出七个半径为 $1$ 的圆：一个在中心，另外六个环绕中心圆，每个都与中心圆、相邻两个圆及面片边界相切。把剩余材料在厚度不变的条件下重塑为一个圆，求其半径。",
+    "answer": "A. $\\sqrt2$.",
+    "answerZh": "A。$\\sqrt2$。",
+    "figure": {
+      "url": "/commentary-figures/amc10-2016a-q15.svg",
+      "alt": "Six unit circles surround a central unit circle inside a larger circle of radius three.",
+      "altZh": "六个单位圆环绕一个中心单位圆，并共同位于半径为 3 的大圆内。",
+      "printHeightPt": 150
+    },
+    "methods": [
+      {
+        "title": "Conserve area",
+        "titleZh": "利用面积守恒",
+        "topics": [
+          {
+            "en": "Circle area",
+            "zh": "圆面积"
+          },
+          {
+            "en": "Tangency",
+            "zh": "相切"
+          }
+        ],
+        "steps": [
+          "The centres of the six outer circles are $2$ units from the sheet centre, and each outer circle has radius $1$. Hence the sheet radius is $3$.",
+          "The leftover area is $\\pi\\cdot3^2-7\\pi\\cdot1^2=2\\pi$.",
+          "If the reshaped circle has radius $r$, then $\\pi r^2=2\\pi$, so $r=\\sqrt2$."
+        ],
+        "stepsZh": [
+          "六个外圆的圆心距面片中心为 $2$，外圆半径为 $1$，所以面片半径为 $3$。",
+          "剩余面积为 $\\pi\\cdot3^2-7\\pi\\cdot1^2=2\\pi$。",
+          "若重塑后的圆半径为 $r$，则 $\\pi r^2=2\\pi$，所以 $r=\\sqrt2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/15"
+  },
+  "amc10-2016a-q16": {
+    "summary": "Reflect the triangle with vertices $(0,2),(-3,2),(-3,0)$ in the $x$-axis, then rotate its image $90^\\circ$ counterclockwise about the origin. Which single reflection returns the final triangle to the original one?",
+    "summaryZh": "把顶点为 $(0,2),(-3,2),(-3,0)$ 的三角形先关于 $x$ 轴反射，再绕原点逆时针旋转 $90^\\circ$。问哪一次轴反射可把最终图形恢复为原三角形？",
+    "answer": "D. Reflection in the line $y=x$.",
+    "answerZh": "D。关于直线 $y=x$ 反射。",
+    "methods": [
+      {
+        "title": "Compose the coordinate maps",
+        "titleZh": "复合坐标变换",
+        "topics": [
+          {
+            "en": "Transformations",
+            "zh": "平面变换"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "Reflection in the $x$-axis sends $(x,y)$ to $(x,-y)$.",
+          "A $90^\\circ$ counterclockwise rotation then sends $(x,-y)$ to $(y,x)$.",
+          "Reflection in $y=x$ sends $(y,x)$ back to $(x,y)$, so it reverses the combined map for every point."
+        ],
+        "stepsZh": [
+          "关于 $x$ 轴反射把 $(x,y)$ 变为 $(x,-y)$。",
+          "再逆时针旋转 $90^\\circ$，得到 $(y,x)$。",
+          "关于 $y=x$ 反射把 $(y,x)$ 变回 $(x,y)$，因而对每一点都逆转了前面的复合变换。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/16"
+  },
+  "amc10-2016a-q17": {
+    "summary": "Let $N$ be a positive multiple of $5$. Place one red ball and $N$ green balls uniformly at random in a line. Let $P(N)$ be the probability that at least $3N/5$ green balls lie on one side of the red ball. Find the digit sum of the least $N$ for which $P(N)<321/400$.",
+    "summaryZh": "设 $N$ 为 $5$ 的正倍数。把一个红球和 $N$ 个绿球等可能地排成一列。令 $P(N)$ 为红球某一侧至少有 $3N/5$ 个绿球的概率。求满足 $P(N)<321/400$ 的最小 $N$ 的各位数字和。",
+    "answer": "A. $12$ (the least $N$ is $480$).",
+    "answerZh": "A。$12$（最小的 $N$ 为 $480$）。",
+    "methods": [
+      {
+        "title": "Count the red ball's possible gaps",
+        "titleZh": "统计红球可处的间隙",
+        "topics": [
+          {
+            "en": "Discrete probability",
+            "zh": "离散概率"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          }
+        ],
+        "steps": [
+          "Place the green balls first. The red ball has $N+1$ equally likely gaps; if $k$ green balls lie to its left, the event occurs when $k\\le2N/5$ or $k\\ge3N/5$.",
+          "The excluded gaps are $2N/5+1,\\ldots,3N/5-1$, a total of $N/5-1$. Hence $P(N)=1-\\frac{N/5-1}{N+1}=\\frac{4N+10}{5N+5}$.",
+          "Solving $\\frac{4N+10}{5N+5}<\\frac{321}{400}$ gives $N>479$. The least multiple of $5$ is $480$, whose digit sum is $4+8+0=12$."
+        ],
+        "stepsZh": [
+          "先排好绿球，红球有 $N+1$ 个等可能间隙。若其左侧有 $k$ 个绿球，则所求事件等价于 $k\\le2N/5$ 或 $k\\ge3N/5$。",
+          "不满足事件的间隙对应 $2N/5+1,\\ldots,3N/5-1$，共 $N/5-1$ 个。因此 $P(N)=1-\\frac{N/5-1}{N+1}=\\frac{4N+10}{5N+5}$。",
+          "解不等式 $\\frac{4N+10}{5N+5}<\\frac{321}{400}$ 得 $N>479$。最小的 $5$ 的倍数是 $480$，数字和为 $12$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/17"
+  },
+  "amc10-2016a-q18": {
+    "summary": "Label the vertices of a cube with $1,2,\\ldots,8$, each once, so that every face has the same vertex sum. Count the labelings up to rotations of the cube.",
+    "summaryZh": "用 $1,2,\\ldots,8$ 各一次标记立方体的八个顶点，使每个面的四个顶点数字之和相同。把可通过立方体旋转互相得到的标记视为同一种，求种数。",
+    "answer": "C. $6$.",
+    "answerZh": "C。$6$。",
+    "methods": [
+      {
+        "title": "Fix one vertex and force the remaining labels",
+        "titleZh": "固定一个顶点并逐步确定其余标记",
+        "topics": [
+          {
+            "en": "Cube symmetry",
+            "zh": "立方体对称"
+          },
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "Opposite faces together contain all labels, whose sum is $36$, so each face sum must be $18$. Rotate the cube so label $1$ is at a fixed vertex, and call its three neighbours $a<b<c$.",
+          "The three vertices completing the adjacent faces are $17-a-b$, $17-a-c$, $17-b-c$, and the opposite vertex is $a+b+c-16$. Requiring the eight labels to be exactly $1,\\ldots,8$ leaves the neighbour sets $\\{4,6,8\\}$, $\\{4,7,8\\}$ and $\\{6,7,8\\}$.",
+          "For each set, the six cyclic orders split into two rotation classes because a $120^\\circ$ rotation about the body diagonal cycles the three neighbours. Hence the total is $3\\cdot2=6$."
+        ],
+        "stepsZh": [
+          "一对相对面合起来包含全部标记，总和为 $36$，所以每个面的和必须为 $18$。旋转立方体，把数字 $1$ 固定在一个顶点，并设其三个相邻顶点为 $a<b<c$。",
+          "三个相邻面上的其余顶点依次被确定为 $17-a-b,17-a-c,17-b-c$，对顶点为 $a+b+c-16$。要求八个标记恰为 $1$ 到 $8$，只留下邻点集合 $\\{4,6,8\\},\\{4,7,8\\},\\{6,7,8\\}$。",
+          "对每个集合，三个数的六种环绕次序在绕体对角线的 $120^\\circ$ 旋转下分成两类。因此总数为 $3\\cdot2=6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/18"
+  },
+  "amc10-2016a-q19": {
+    "summary": "In rectangle $ABCD$, $AB=6$, $BC=3$, and points $E,F$ trisect $BC$ in the order $B,E,F,C$. Lines $AE,AF$ meet diagonal $BD$ at $P,Q$. Write $BP:PQ:QD=r:s:t$ in lowest integer terms and find $r+s+t$.",
+    "summaryZh": "在矩形 $ABCD$ 中，$AB=6,BC=3$，点 $E,F$ 按 $B,E,F,C$ 的顺序三等分 $BC$。直线 $AE,AF$ 分别与对角线 $BD$ 交于 $P,Q$。把 $BP:PQ:QD$ 写成最简整数比 $r:s:t$，求 $r+s+t$。",
+    "answer": "E. $20$.",
+    "answerZh": "E。$20$。",
+    "methods": [
+      {
+        "title": "Use similar triangles on the diagonal",
+        "titleZh": "利用对角线上的相似三角形",
+        "topics": [
+          {
+            "en": "Similar triangles",
+            "zh": "相似三角形"
+          },
+          {
+            "en": "Segment ratios",
+            "zh": "线段比"
+          }
+        ],
+        "steps": [
+          "Here $BE=1$, $BF=2$, and $AD=3$. Similar triangles give $BP/BD=BE/(AD+BE)=1/4$.",
+          "Likewise $BQ/BD=BF/(AD+BF)=2/5$.",
+          "Thus $BP:PQ:QD=\\frac14:(\\frac25-\\frac14):(1-\\frac25)=\\frac14:\\frac3{20}:\\frac35=5:3:12$. Therefore $r+s+t=20$."
+        ],
+        "stepsZh": [
+          "有 $BE=1,BF=2,AD=3$。由相似三角形得 $BP/BD=BE/(AD+BE)=1/4$。",
+          "同理 $BQ/BD=BF/(AD+BF)=2/5$。",
+          "所以 $BP:PQ:QD=\\frac14:(\\frac25-\\frac14):(1-\\frac25)=\\frac14:\\frac3{20}:\\frac35=5:3:12$，故 $r+s+t=20$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/19"
+  },
+  "amc10-2016a-q20": {
+    "summary": "For a positive integer $N$, expand $(a+b+c+d+1)^N$ and combine like terms. Exactly $1001$ resulting monomials contain each of $a,b,c,d$ to a positive power. Determine $N$.",
+    "summaryZh": "设 $N$ 为正整数。展开 $(a+b+c+d+1)^N$ 并合并同类项后，恰有 $1001$ 个单项式中 $a,b,c,d$ 的次数都为正。求 $N$。",
+    "answer": "B. $14$.",
+    "answerZh": "B。$14$。",
+    "methods": [
+      {
+        "title": "Convert exponent choices to stars and bars",
+        "titleZh": "把指数选择转化为隔板法",
+        "topics": [
+          {
+            "en": "Stars and bars",
+            "zh": "隔板法"
+          },
+          {
+            "en": "Multinomial expansion",
+            "zh": "多项式展开"
+          }
+        ],
+        "steps": [
+          "Such a monomial has exponents $v,w,x,y\\ge1$ on $a,b,c,d$ and exponent $z\\ge0$ on $1$, with $v+w+x+y+z=N$.",
+          "After subtracting $1$ from the first four exponents, the number of nonnegative solutions is $\\binom{(N-4)+5-1}{5-1}=\\binom N4$.",
+          "Since $\\binom{14}{4}=1001$ and $\\binom N4$ increases for $N\\ge4$, the required value is $N=14$."
+        ],
+        "stepsZh": [
+          "相应单项式中 $a,b,c,d$ 的次数 $v,w,x,y\\ge1$，而常数项 $1$ 的选择次数 $z\\ge0$，并满足 $v+w+x+y+z=N$。",
+          "把前四个变量各减去 $1$ 后，非负整数解数为 $\\binom{(N-4)+5-1}{5-1}=\\binom N4$。",
+          "因为 $\\binom{14}{4}=1001$，且 $N\\ge4$ 时该组合数递增，所以 $N=14$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/20"
+  },
+  "amc10-2016a-q21": {
+    "summary": "Three circles of radii $1,2,3$ lie above and are tangent to the same line. Their tangency points occur in the order corresponding to centres $P,Q,R$, and the radius-$2$ circle is externally tangent to each other circle. Find the area of $\\triangle PQR$.",
+    "summaryZh": "三个半径为 $1,2,3$ 的圆都位于同一直线上方并与该直线相切；切点按圆心 $P,Q,R$ 的顺序排列，且半径为 $2$ 的圆分别与另外两圆外切。求 $\\triangle PQR$ 的面积。",
+    "answer": "D. $\\sqrt6-\\sqrt2$.",
+    "answerZh": "D。$\\sqrt6-\\sqrt2$。",
+    "methods": [
+      {
+        "title": "Locate the centres above the tangent line",
+        "titleZh": "在公切线上方建立圆心坐标",
+        "topics": [
+          {
+            "en": "Tangent circles",
+            "zh": "相切圆"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "The vertical separations $PQ$ and $QR$ are both $1$, while the centre distances are $3$ and $5$. Their horizontal separations are therefore $\\sqrt{3^2-1^2}=\\sqrt8$ and $\\sqrt{5^2-1^2}=\\sqrt{24}$.",
+          "Take $P=(0,1)$, $Q=(\\sqrt8,2)$, and $R=(\\sqrt8+\\sqrt{24},3)$.",
+          "The determinant formula gives area $\\frac12|2\\sqrt8-(\\sqrt8+\\sqrt{24})|=\\frac12(\\sqrt{24}-\\sqrt8)=\\sqrt6-\\sqrt2$."
+        ],
+        "stepsZh": [
+          "圆心 $P,Q$ 以及 $Q,R$ 的竖直距离都为 $1$，而圆心距分别为 $3$ 与 $5$，故水平距离分别为 $\\sqrt{3^2-1^2}=\\sqrt8$ 与 $\\sqrt{5^2-1^2}=\\sqrt{24}$。",
+          "可取 $P=(0,1),Q=(\\sqrt8,2),R=(\\sqrt8+\\sqrt{24},3)$。",
+          "用行列式面积公式得到 $\\frac12|2\\sqrt8-(\\sqrt8+\\sqrt{24})|=\\frac12(\\sqrt{24}-\\sqrt8)=\\sqrt6-\\sqrt2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/21"
+  },
+  "amc10-2016a-q22": {
+    "summary": "For a positive integer $n$, the number $110n^3$ has exactly $110$ positive divisors. Determine the number of positive divisors of $81n^4$.",
+    "summaryZh": "设 $n$ 为正整数，$110n^3$ 恰有 $110$ 个正因数。求 $81n^4$ 的正因数个数。",
+    "answer": "D. $325$.",
+    "answerZh": "D。$325$。",
+    "methods": [
+      {
+        "title": "Determine the possible prime exponents",
+        "titleZh": "确定可能的素因子指数",
+        "topics": [
+          {
+            "en": "Divisor-count function",
+            "zh": "因数个数公式"
+          },
+          {
+            "en": "Prime factorisation",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "The number $110n^3$ already contains primes $2,5,11$. Since $110=2\\cdot5\\cdot11$ is its divisor count, there can be no further prime factor. Each exponent is $1\\pmod3$, so the three exponents must be $1,4,10$ in some order.",
+          "After removing the exponent $1$ contributed by $110=2\\cdot5\\cdot11$ and dividing by $3$, the exponents in $n$ are $0,1,3$. Thus $n$ has exponent pattern $(3,1)$ on two of $2,5,11$ and is not divisible by $3$.",
+          "In $81n^4$, the exponents are $4,12$, together with exponent $4$ on the new prime $3$. Hence the divisor count is $(4+1)(12+1)(4+1)=5\\cdot13\\cdot5=325$."
+        ],
+        "stepsZh": [
+          "$110n^3$ 已含素数 $2,5,11$。其因数个数 $110=2\\cdot5\\cdot11$ 只有三个大于 $1$ 的因子，因此不能再出现其他素数。各指数都模 $3$ 余 $1$，故三个指数只能是 $1,4,10$ 的某种排列。",
+          "扣除 $110=2\\cdot5\\cdot11$ 各贡献的指数 $1$，再除以 $3$，得到 $n$ 中的指数为 $0,1,3$。所以 $n$ 只在 $2,5,11$ 中的两个素数上有指数 $3,1$，且 $3\\nmid n$。",
+          "在 $81n^4$ 中，相应指数为 $12,4$，新素数 $3$ 的指数也为 $4$。因数个数为 $(12+1)(4+1)(4+1)=325$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/22"
+  },
+  "amc10-2016a-q23": {
+    "summary": "A binary operation on nonzero reals satisfies $a\\diamond(b\\diamond c)=(a\\diamond b)c$ and $a\\diamond a=1$. If $2016\\diamond(6\\diamond x)=100$ and $x=p/q$ in lowest positive terms, find $p+q$.",
+    "summaryZh": "非零实数上的二元运算满足 $a\\diamond(b\\diamond c)=(a\\diamond b)c$ 及 $a\\diamond a=1$。若 $2016\\diamond(6\\diamond x)=100$，且最简正分数 $x=p/q$，求 $p+q$。",
+    "answer": "A. $109$.",
+    "answerZh": "A。$109$。",
+    "methods": [
+      {
+        "title": "Identify the operation",
+        "titleZh": "确定运算的具体形式",
+        "topics": [
+          {
+            "en": "Functional equations",
+            "zh": "函数方程"
+          },
+          {
+            "en": "Binary operations",
+            "zh": "二元运算"
+          }
+        ],
+        "steps": [
+          "Set $c=b$. Since $b\\diamond b=1$, the first law gives $a\\diamond1=(a\\diamond b)b$.",
+          "Also $a\\diamond(a\\diamond a)=(a\\diamond a)a$ gives $a\\diamond1=a$. Therefore $a\\diamond b=a/b$ for all nonzero $a,b$.",
+          "The equation becomes $2016/(6/x)=336x=100$, so $x=25/84$ and $p+q=109$."
+        ],
+        "stepsZh": [
+          "令 $c=b$。由 $b\\diamond b=1$，第一条性质给出 $a\\diamond1=(a\\diamond b)b$。",
+          "另一方面，$a\\diamond(a\\diamond a)=(a\\diamond a)a$ 给出 $a\\diamond1=a$。因此对任意非零 $a,b$，有 $a\\diamond b=a/b$。",
+          "原方程化为 $2016/(6/x)=336x=100$，所以 $x=25/84$，从而 $p+q=109$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/23"
+  },
+  "amc10-2016a-q24": {
+    "summary": "A cyclic quadrilateral lies in a circle of radius $200\\sqrt2$ and has three consecutive sides of length $200$. Find the fourth side.",
+    "summaryZh": "一个圆内接四边形的外接圆半径为 $200\\sqrt2$，其中三条连续边的长度都是 $200$。求第四条边长。",
+    "answer": "E. $500$.",
+    "answerZh": "E。$500$。",
+    "methods": [
+      {
+        "title": "Use equal chords and the triple-angle identity",
+        "titleZh": "利用等弦与三倍角公式",
+        "topics": [
+          {
+            "en": "Chord length",
+            "zh": "弦长"
+          },
+          {
+            "en": "Triple-angle identity",
+            "zh": "三倍角公式"
+          }
+        ],
+        "steps": [
+          "Let each $200$-unit chord subtend central angle $2\\theta$. Then $200=2(200\\sqrt2)\\sin\\theta$, so $\\sin\\theta=1/(2\\sqrt2)$.",
+          "The three consecutive equal chords together subtend angle $6\\theta$, so the fourth side has length $2(200\\sqrt2)\\sin3\\theta$.",
+          "Now $\\sin3\\theta=3\\sin\\theta-4\\sin^3\\theta=5/(4\\sqrt2)$. Hence the fourth side is $400\\sqrt2\\cdot5/(4\\sqrt2)=500$."
+        ],
+        "stepsZh": [
+          "设每条长为 $200$ 的弦所对圆心角为 $2\\theta$。则 $200=2(200\\sqrt2)\\sin\\theta$，所以 $\\sin\\theta=1/(2\\sqrt2)$。",
+          "三条连续等弦合计所对圆心角为 $6\\theta$，故第四边长为 $2(200\\sqrt2)\\sin3\\theta$。",
+          "由 $\\sin3\\theta=3\\sin\\theta-4\\sin^3\\theta=5/(4\\sqrt2)$，第四边长为 $400\\sqrt2\\cdot5/(4\\sqrt2)=500$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/24"
+  },
+  "amc10-2016a-q25": {
+    "summary": "Count the ordered triples of positive integers $(x,y,z)$ satisfying $\\operatorname{lcm}(x,y)=72$, $\\operatorname{lcm}(x,z)=600$, and $\\operatorname{lcm}(y,z)=900$.",
+    "summaryZh": "求满足 $\\operatorname{lcm}(x,y)=72$、$\\operatorname{lcm}(x,z)=600$、$\\operatorname{lcm}(y,z)=900$ 的正整数有序三元组 $(x,y,z)$ 的个数。",
+    "answer": "A. $15$.",
+    "answerZh": "A。$15$。",
+    "methods": [
+      {
+        "title": "Handle each prime exponent independently",
+        "titleZh": "分别处理各素数的指数",
+        "topics": [
+          {
+            "en": "Least common multiples",
+            "zh": "最小公倍数"
+          },
+          {
+            "en": "Prime exponents",
+            "zh": "素因子指数"
+          }
+        ],
+        "steps": [
+          "From $72=2^3 3^2$, $600=2^3 3\\cdot5^2$, and $900=2^2 3^2 5^2$, the prime $5$ forces exponent $2$ in $z$ and $0$ in $x,y$; the prime $3$ forces exponent $2$ in $y$ and exponents at most $1$ in $x,z$; and $x$ must have exponent $3$ on $2$.",
+          "Write $x=2^3 3^j$, $y=2^k3^2$, and $z=2^m3^n5^2$. The remaining conditions are $\\max(j,n)=1$ and $\\max(k,m)=2$.",
+          "The first ordered exponent pair has $3$ choices: $(1,0),(0,1),(1,1)$. The second has $5$ choices: $(2,0),(2,1),(2,2),(0,2),(1,2)$. Thus there are $3\\cdot5=15$ triples."
+        ],
+        "stepsZh": [
+          "由 $72=2^3 3^2$、$600=2^3 3\\cdot5^2$、$900=2^2 3^2 5^2$ 可知：素数 $5$ 在 $z$ 中指数为 $2$，在 $x,y$ 中为 $0$；素数 $3$ 在 $y$ 中指数为 $2$，在 $x,z$ 中至多为 $1$；素数 $2$ 在 $x$ 中指数为 $3$。",
+          "写成 $x=2^3 3^j$、$y=2^k3^2$、$z=2^m3^n5^2$，剩余条件为 $\\max(j,n)=1$ 与 $\\max(k,m)=2$。",
+          "第一对指数有 $(1,0),(0,1),(1,1)$ 共 $3$ 种；第二对有 $(2,0),(2,1),(2,2),(0,2),(1,2)$ 共 $5$ 种。因此共有 $3\\cdot5=15$ 个三元组。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2016A/problem/25"
   }
 }

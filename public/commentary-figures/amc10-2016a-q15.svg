@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" role="img" aria-labelledby="title desc">
+  <title id="title">Seven unit circles in a circle of radius three</title>
+  <desc id="desc">Six congruent circles surround a central congruent circle and touch the boundary of the large circle.</desc>
+  <rect width="440" height="440" fill="#fff"/>
+  <circle cx="220" cy="220" r="180" fill="#f8fbff" stroke="#17365d" stroke-width="4"/>
+  <g fill="#dce9f7" stroke="#17365d" stroke-width="3">
+    <circle cx="220" cy="220" r="60"/>
+    <circle cx="340" cy="220" r="60"/>
+    <circle cx="280" cy="116.077" r="60"/>
+    <circle cx="160" cy="116.077" r="60"/>
+    <circle cx="100" cy="220" r="60"/>
+    <circle cx="160" cy="323.923" r="60"/>
+    <circle cx="280" cy="323.923" r="60"/>
+  </g>
+  <line x1="220" y1="220" x2="400" y2="220" stroke="#b33a3a" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="310" y="208" text-anchor="middle" font-family="serif" font-size="20">3</text>
+  <text x="250" y="208" text-anchor="middle" font-family="serif" font-size="18">1</text>
+</svg>
