@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="title desc">
+  <title id="title">Oppositely oriented unit triangles inside an equilateral triangle</title>
+  <desc id="desc">A large upward equilateral triangle containing several disjoint downward equilateral triangles with parallel sides.</desc>
+  <rect width="480" height="360" fill="#fffdf8"/>
+  <path d="M240 28 L55 335 L425 335 Z" fill="#f5f8fb" stroke="#173b63" stroke-width="4"/>
+  <g fill="#f5c96b" stroke="#9b5b18" stroke-width="3" stroke-linejoin="round">
+    <path d="M168 120 L226 120 L197 170 Z"/>
+    <path d="M268 120 L326 120 L297 170 Z"/>
+    <path d="M118 220 L176 220 L147 270 Z"/>
+    <path d="M211 218 L269 218 L240 268 Z"/>
+    <path d="M304 220 L362 220 L333 270 Z"/>
+  </g>
+  <g fill="#132f4c" font-family="Georgia, serif" font-size="18">
+    <text x="236" y="22">Δ</text><text x="33" y="344">L</text><text x="187" y="145">1</text>
+  </g>
+</svg>

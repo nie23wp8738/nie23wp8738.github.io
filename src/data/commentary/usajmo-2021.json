@@ -1,0 +1,282 @@
+{
+  "usajmo-2021-q1": {
+    "summary": "Find all functions $f:\\mathbb N\\to\\mathbb N$ such that, for all positive integers $a,b$, $$f(a^2+b^2)=f(a)f(b)\\quad\\text{and}\\quad f(a^2)=f(a)^2.$$",
+    "summaryZh": "求所有函数 $f:\\mathbb N\\to\\mathbb N$，使得对任意正整数 $a,b$，都有 $$f(a^2+b^2)=f(a)f(b)\\quad\\text{且}\\quad f(a^2)=f(a)^2.$$",
+    "answer": "The unique solution is $f(n)=1$ for every positive integer $n$.",
+    "answerZh": "唯一解为：对每个正整数 $n$，均有 $f(n)=1$。",
+    "methods": [
+      {
+        "title": "Propagate the value 1 by a sum-of-two-squares identity",
+        "titleZh": "利用平方和恒等式传递函数值 1",
+        "topics": [
+          {
+            "en": "Functional equations",
+            "zh": "函数方程"
+          },
+          {
+            "en": "Sums of two squares",
+            "zh": "两平方和"
+          },
+          {
+            "en": "Strong induction",
+            "zh": "强归纳法"
+          }
+        ],
+        "steps": [
+          "The constant function $f\\equiv1$ plainly works. We prove that every solution must be this function. From $f(a^2)=f(a)^2$ and the first equation, positivity gives, whenever $f(u)=f(v)=1$ and $u>v$, $$1=f(u^2+v^2)=\\sqrt{f((u^2+v^2)^2)}.$$",
+          "Use $(u^2+v^2)^2=(u^2-v^2)^2+(2uv)^2$. Applying both functional identities yields $$1=\\sqrt{f(u^2-v^2)f(2uv)}.$$ Both factors are positive integers, so $$f(u^2-v^2)=f(2uv)=1.$$",
+          "Putting $a=b=1$ in the first equation and using the second gives $f(2)=f(1)^2=f(1)$, hence $f(1)=f(2)=1$ because $f(1)$ is positive.",
+          "Apply strong induction. If $n=2k$, then $f(k)=f(1)=1$ and the preceding lemma with $(u,v)=(k,1)$ gives $f(2k)=1$. If $n=2k+1>1$, take $(u,v)=(k+1,k)$; both arguments are smaller than $n$, so the lemma gives $f((k+1)^2-k^2)=f(n)=1$. Thus $f(n)=1$ for all $n$."
+        ],
+        "stepsZh": [
+          "常值函数 $f\\equiv1$ 显然满足条件。下面证明不存在其他解。若 $f(u)=f(v)=1$ 且 $u>v$，则由 $f(a^2)=f(a)^2$ 与第一式，并利用函数值为正整数，得到 $$1=f(u^2+v^2)=\\sqrt{f((u^2+v^2)^2)}.$$",
+          "利用恒等式 $(u^2+v^2)^2=(u^2-v^2)^2+(2uv)^2$，再次代入两个函数方程可得 $$1=\\sqrt{f(u^2-v^2)f(2uv)}.$$ 两个因子都是正整数，所以必有 $$f(u^2-v^2)=f(2uv)=1.$$",
+          "在第一式中取 $a=b=1$，再结合第二式，得到 $f(2)=f(1)^2=f(1)$。由于 $f(1)$ 为正整数，故 $f(1)=f(2)=1$。",
+          "作强归纳。若 $n=2k$，则归纳假设给出 $f(k)=f(1)=1$，在上面的引理中取 $(u,v)=(k,1)$，得到 $f(2k)=1$。若 $n=2k+1>1$，取 $(u,v)=(k+1,k)$；二者均小于 $n$，故引理给出 $f((k+1)^2-k^2)=f(n)=1$。因此对所有正整数 $n$ 都有 $f(n)=1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2021_USAJMO_Problems/Problem_1"
+  },
+  "usajmo-2021-q2": {
+    "summary": "Outside an acute triangle $ABC$, construct rectangles $BCC_1B_2$, $CAA_1C_2$, and $ABB_1A_2$ on sides $BC,CA,AB$, respectively. Suppose $$\\angle BC_1C+\\angle CA_1A+\\angle AB_1B=180^\\circ.$$ Prove that $B_1C_2$, $C_1A_2$, and $A_1B_2$ are concurrent.",
+    "summaryZh": "在锐角三角形 $ABC$ 的三边 $BC,CA,AB$ 外侧分别作矩形 $BCC_1B_2$、$CAA_1C_2$、$ABB_1A_2$。已知 $$\\angle BC_1C+\\angle CA_1A+\\angle AB_1B=180^\\circ.$$ 证明直线 $B_1C_2$、$C_1A_2$、$A_1B_2$ 共点。",
+    "answer": "The three lines are concurrent.",
+    "answerZh": "三条直线共点。",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2021-q2.svg",
+      "alt": "An acute triangle with an exterior rectangle erected on each side.",
+      "altZh": "锐角三角形三边外侧分别作一个矩形。",
+      "printHeightPt": 190
+    },
+    "methods": [
+      {
+        "title": "Make the three rectangle circumcircles share a point",
+        "titleZh": "证明三个矩形外接圆具有公共点",
+        "topics": [
+          {
+            "en": "Cyclic quadrilaterals",
+            "zh": "四点共圆"
+          },
+          {
+            "en": "Directed angles",
+            "zh": "有向角"
+          },
+          {
+            "en": "Thales' theorem",
+            "zh": "泰勒斯定理"
+          }
+        ],
+        "steps": [
+          "Let $\\omega_a$ be the circumcircle of rectangle $BCC_1B_2$ and $\\omega_b$ the circumcircle of rectangle $CAA_1C_2$. Besides their common point $C$, let their second intersection be $P$.",
+          "Because $A,C,A_1,P$ are cyclic, $\\angle APC=\\angle AA_1C=\\angle CA_1A$. Likewise, because $B,C,C_1,P$ are cyclic, $\\angle CPB=\\angle CC_1B=\\angle BC_1C$. Hence, using directed angles, $$\\angle APB=\\angle CA_1A+\\angle BC_1C=180^\\circ-\\angle AB_1B.$$ Therefore $A,B,B_1,P$ are cyclic, so $P$ also lies on the circumcircle of rectangle $ABB_1A_2$.",
+          "On $\\omega_a$, the angle $\\angle CPB_2$ subtends diagonal $CB_2$ of the rectangle, so it equals $90^\\circ$. On $\\omega_b$, $\\angle CPA_1=90^\\circ$. Thus both $PB_2$ and $PA_1$ are perpendicular to $PC$, which proves that $A_1,P,B_2$ are collinear.",
+          "Cycling the same argument gives $B_1,P,C_2$ collinear and $C_1,P,A_2$ collinear. Consequently the three required lines all pass through $P$."
+        ],
+        "stepsZh": [
+          "设 $\\omega_a$ 为矩形 $BCC_1B_2$ 的外接圆，$\\omega_b$ 为矩形 $CAA_1C_2$ 的外接圆。两圆除公共点 $C$ 外的另一个交点记为 $P$。",
+          "由 $A,C,A_1,P$ 共圆，$\\angle APC=\\angle AA_1C=\\angle CA_1A$；由 $B,C,C_1,P$ 共圆，$\\angle CPB=\\angle CC_1B=\\angle BC_1C$。使用有向角可得 $$\\angle APB=\\angle CA_1A+\\angle BC_1C=180^\\circ-\\angle AB_1B.$$ 因而 $A,B,B_1,P$ 共圆，即 $P$ 也在矩形 $ABB_1A_2$ 的外接圆上。",
+          "在 $\\omega_a$ 上，$\\angle CPB_2$ 所对的是矩形的对角线 $CB_2$，故该角为 $90^\\circ$。同理，在 $\\omega_b$ 上有 $\\angle CPA_1=90^\\circ$。于是 $PB_2$ 与 $PA_1$ 都垂直于 $PC$，从而 $A_1,P,B_2$ 共线。",
+          "循环使用同一论证，得到 $B_1,P,C_2$ 共线以及 $C_1,P,A_2$ 共线。因此题设三条直线都经过 $P$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2021_USAJMO_Problems/Problem_2"
+  },
+  "usajmo-2021-q3": {
+    "summary": "An equilateral triangle $\\Delta$ has side length $L>0$. Inside it are $n$ equilateral triangles of side length $1$ with pairwise non-overlapping interiors. Their sides are parallel to those of $\\Delta$, but their orientation is opposite to that of $\\Delta$. Prove that $$n\\le \\frac23L^2.$$",
+    "summaryZh": "等边三角形 $\\Delta$ 的边长为 $L>0$。在其内部画出 $n$ 个边长为 $1$、内部两两不相交的等边三角形；每个小三角形的边都与 $\\Delta$ 的边平行，但方向与 $\\Delta$ 相反。证明 $$n\\le \\frac23L^2.$$",
+    "answer": "$n\\le \\dfrac23L^2$.",
+    "answerZh": "$n\\le \\dfrac23L^2$。",
+    "figure": {
+      "url": "/commentary-figures/usajmo-2021-q3.svg",
+      "alt": "An upward equilateral triangle containing several disjoint downward unit equilateral triangles.",
+      "altZh": "一个向上的等边三角形内含若干内部不交的向下单位等边三角形。",
+      "printHeightPt": 180
+    },
+    "methods": [
+      {
+        "title": "Replace every small triangle by its difference-body hexagon",
+        "titleZh": "用差体六边形替换每个小三角形",
+        "topics": [
+          {
+            "en": "Affine coordinates",
+            "zh": "仿射坐标"
+          },
+          {
+            "en": "Difference bodies",
+            "zh": "差体"
+          },
+          {
+            "en": "Area packing",
+            "zh": "面积装填"
+          }
+        ],
+        "steps": [
+          "Use oblique coordinates along two sides of $\\Delta$. Then $$\\Delta=\\{(x,y):x\\ge0,\\ y\\ge0,\\ x+y\\le L\\}.$$ A downward unit equilateral triangle is a translate of $$T=\\operatorname{conv}\\{(0,1),(1,0),(1,1)\\}.$$ If its translation vector is $(p,q)$, containment in $\\Delta$ gives $p,q\\ge0$ and $p+q+2\\le L$.",
+          "The centroid of this translate is $c=(p+2/3,q+2/3)$. Associate with it $$H=c+\\frac12(T-T).$$ In the ordinary Euclidean plane, $H$ is a regular hexagon of side length $1/2$, hence has area $3\\sqrt3/8$.",
+          "The six coordinate displacements from $c$ are $\\pm(1/2,0)$, $\\pm(0,1/2)$, and $\\pm(1/2,-1/2)$. Thus every point of $H$ has positive coordinates, because its smallest possible $x$ or $y$ is at least $p+1/6$ or $q+1/6$. Also $$x+y\\le p+q+\\frac43+\\frac12=p+q+\\frac{11}{6}<p+q+2\\le L.$$ Hence every associated hexagon lies inside $\\Delta$.",
+          "The hexagons have disjoint interiors. Indeed, if two of them overlapped internally, the difference of their centres would lie in the interior of $H-H=T-T$. This is exactly the condition that the interiors of the corresponding two translates of $T$ overlap, contrary to the hypothesis.",
+          "Therefore the total area of the hexagons does not exceed the area of $\\Delta$: $$n\\cdot\\frac{3\\sqrt3}{8}\\le\\frac{\\sqrt3}{4}L^2.$$ Cancelling $\\sqrt3$ gives $n\\le\\frac23L^2$, as required."
+        ],
+        "stepsZh": [
+          "沿 $\\Delta$ 的两条边建立斜坐标，则 $$\\Delta=\\{(x,y):x\\ge0,\\ y\\ge0,\\ x+y\\le L\\}.$$ 一个反向单位等边三角形是 $$T=\\operatorname{conv}\\{(0,1),(1,0),(1,1)\\}$$ 的平移。若平移向量为 $(p,q)$，由其包含在 $\\Delta$ 内可得 $p,q\\ge0$ 且 $p+q+2\\le L$。",
+          "该小三角形的重心为 $c=(p+2/3,q+2/3)$。为它配置集合 $$H=c+\\frac12(T-T).$$ 在通常的欧氏平面中，$H$ 是边长为 $1/2$ 的正六边形，其面积为 $3\\sqrt3/8$。",
+          "相对于 $c$，六个顶点的坐标位移为 $\\pm(1/2,0)$、$\\pm(0,1/2)$、$\\pm(1/2,-1/2)$。因此 $H$ 中点的两个坐标均为正，因为最小的 $x,y$ 分别不小于 $p+1/6,q+1/6$。又有 $$x+y\\le p+q+\\frac43+\\frac12=p+q+\\frac{11}{6}<p+q+2\\le L.$$ 所以每个六边形都位于 $\\Delta$ 内。",
+          "这些六边形的内部两两不交。否则，若两个六边形内部相交，则其中心之差位于 $H-H=T-T$ 的内部；这等价于对应的两个 $T$ 的平移副本内部相交，与题设矛盾。",
+          "所以所有六边形的面积之和不超过 $\\Delta$ 的面积：$$n\\cdot\\frac{3\\sqrt3}{8}\\le\\frac{\\sqrt3}{4}L^2.$$ 约去 $\\sqrt3$ 即得 $n\\le\\frac23L^2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2021_USAJMO_Problems/Problem_3"
+  },
+  "usajmo-2021-q4": {
+    "summary": "Three labelled pins $A,B,C$ start at the origin. In one move, one pin may be moved to an adjacent lattice point at distance $1$. Determine the least total number of moves needed to make triangle $ABC$ have area $2021$.",
+    "summaryZh": "三个分别标为 $A,B,C$ 的图钉最初都位于坐标原点。每次操作可把一个图钉移动到距离为 $1$ 的相邻格点。求使三角形 $ABC$ 的面积等于 $2021$ 所需的最少总操作次数。",
+    "answer": "$128$ moves.",
+    "answerZh": "$128$ 次。",
+    "methods": [
+      {
+        "title": "Bound the area by the bounding box and match the bound",
+        "titleZh": "用外接矩形估计面积并构造取到下界",
+        "topics": [
+          {
+            "en": "Lattice geometry",
+            "zh": "格点几何"
+          },
+          {
+            "en": "Bounding boxes",
+            "zh": "外接矩形"
+          },
+          {
+            "en": "AM-GM inequality",
+            "zh": "均值不等式"
+          }
+        ],
+        "steps": [
+          "After $N$ moves, let the smallest axis-parallel rectangle containing the three pins have width $w$ and height $h$. Creating horizontal range $w$ requires at least $w$ horizontal moves in total, and similarly at least $h$ vertical moves, so $w+h\\le N$.",
+          "Any triangle contained in this rectangle has area at most $wh/2$. (For fixed two coordinates the signed determinant is linear, so its maximum over the rectangle occurs at corners; equivalently, a diagonal divides the rectangle into two triangles of area $wh/2$.) Therefore $$2021\\le\\frac{wh}{2}\\le\\frac{(w+h)^2}{8}\\le\\frac{N^2}{8}.$$",
+          "Because $127^2=16129<8\\cdot2021=16168$, the inequality forces $N\\ge128$.",
+          "The bound is attainable. Move the pins to $$A=(-3,-18),\\qquad B=(61,0),\\qquad C=(0,46).$$ The total number of moves is $21+61+46=128$, while $$[ABC]=\\frac12|64\\cdot64-18\\cdot3|=\\frac{4042}{2}=2021.$$ Hence the minimum is $128$."
+        ],
+        "stepsZh": [
+          "完成 $N$ 次移动后，设包含三个图钉的最小轴平行矩形的宽、高分别为 $w,h$。形成横向跨度 $w$ 至少需要总计 $w$ 次水平移动，形成纵向跨度 $h$ 至少需要总计 $h$ 次竖直移动，因此 $w+h\\le N$。",
+          "矩形内任意三角形的面积至多为 $wh/2$。（固定部分坐标后，有向面积行列式是线性的，最大值在矩形顶点处取得；也可用矩形对角线将其分成两个面积均为 $wh/2$ 的三角形来理解。）于是 $$2021\\le\\frac{wh}{2}\\le\\frac{(w+h)^2}{8}\\le\\frac{N^2}{8}.$$",
+          "由于 $127^2=16129<8\\cdot2021=16168$，上式迫使 $N\\ge128$。",
+          "该下界可以达到。把三个图钉分别移动到 $$A=(-3,-18),\\qquad B=(61,0),\\qquad C=(0,46).$$ 总移动次数为 $21+61+46=128$，且 $$[ABC]=\\frac12|64\\cdot64-18\\cdot3|=\\frac{4042}{2}=2021.$$ 因此最小值为 $128$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2021_USAJMO_Problems/Problem_4"
+  },
+  "usajmo-2021-q5": {
+    "summary": "A finite set $S$ of positive integers has the following property: for every $s\\in S$ and every positive divisor $d$ of $s$, there is a unique $t\\in S$ such that $\\gcd(s,t)=d$ (possibly $s=t$). Determine all possible values of $|S|$.",
+    "summaryZh": "有限正整数集合 $S$ 满足：对每个 $s\\in S$ 以及 $s$ 的每个正因数 $d$，都存在唯一的 $t\\in S$ 使得 $\\gcd(s,t)=d$（允许 $s=t$）。求 $|S|$ 的所有可能值。",
+    "answer": "$|S|=0$ or $|S|=2^k$ for a nonnegative integer $k$.",
+    "answerZh": "$|S|=0$，或 $|S|=2^k$，其中 $k$ 为非负整数。",
+    "methods": [
+      {
+        "title": "Count gcd fibres and force every element to be squarefree",
+        "titleZh": "计算最大公因数原像并迫使所有元素无平方因子",
+        "topics": [
+          {
+            "en": "Greatest common divisors",
+            "zh": "最大公因数"
+          },
+          {
+            "en": "Divisor counting",
+            "zh": "因数计数"
+          },
+          {
+            "en": "Squarefree integers",
+            "zh": "无平方因子整数"
+          }
+        ],
+        "steps": [
+          "The empty set works vacuously. Assume $S$ is nonempty. For fixed $s\\in S$, the map $t\\mapsto\\gcd(s,t)$ sends $S$ bijectively onto the set of positive divisors of $s$. Hence $$|S|=\\tau(s)\\qquad\\text{for every }s\\in S.$$",
+          "We show that every $s\\in S$ is squarefree. Suppose $p^e\\Vert s$ with $e\\ge2$. Under the above bijection, the number of elements $t\\in S$ divisible by $p$ equals the number of divisors of $s$ divisible by $p$, namely $$\\frac{e}{e+1}|S|.$$",
+          "The divisor $p$ of $s$ has a unique preimage $y\\in S$ with $\\gcd(s,y)=p$, so $p\\Vert y$. Applying the same count to $y$, exactly half of the elements of $S$ are divisible by $p$. Thus $$\\frac{e}{e+1}|S|=\\frac12|S|,$$ which gives $e=1$, a contradiction. Hence every element is squarefree.",
+          "Consequently $|S|=\\tau(s)=2^{\\omega(s)}$ is a power of two. It remains to construct every such size. Choose $2k$ distinct primes $p_1,q_1,\\ldots,p_k,q_k$ and let $S$ consist of the $2^k$ products obtained by choosing exactly one prime from each pair $(p_i,q_i)$.",
+          "For a fixed $s$ in this construction, each divisor $d$ of $s$ specifies exactly which chosen primes must also occur in $t$: keep the same prime in pair $i$ precisely when it divides $d$, and choose the other prime otherwise. This gives a unique $t$ with $\\gcd(s,t)=d$. Thus every $2^k$ occurs; $k=0$ gives $S=\\{1\\}$."
+        ],
+        "stepsZh": [
+          "空集显然真空地满足条件。以下设 $S$ 非空。固定 $s\\in S$，映射 $t\\mapsto\\gcd(s,t)$ 将 $S$ 双射到 $s$ 的所有正因数，因此对每个 $s\\in S$ 都有 $$|S|=\\tau(s).$$",
+          "证明每个 $s\\in S$ 都是无平方因子的。反设 $p^e\\Vert s$，其中 $e\\ge2$。在上述双射下，$S$ 中能被 $p$ 整除的元素个数等于 $s$ 的因数中能被 $p$ 整除的因数个数，即 $$\\frac{e}{e+1}|S|.$$",
+          "$s$ 的因数 $p$ 有唯一原像 $y\\in S$，满足 $\\gcd(s,y)=p$，所以 $p\\Vert y$。对 $y$ 作同样计数，$S$ 中恰有一半元素能被 $p$ 整除。因此 $$\\frac{e}{e+1}|S|=\\frac12|S|,$$ 从而 $e=1$，矛盾。故 $S$ 的每个元素都是无平方因子的。",
+          "于是 $|S|=\\tau(s)=2^{\\omega(s)}$ 必为 2 的幂。下面构造所有这些大小：取两两不同的素数 $p_1,q_1,\\ldots,p_k,q_k$，令 $S$ 为从每一对 $(p_i,q_i)$ 中恰选一个素数并相乘所得的全部 $2^k$ 个乘积。",
+          "固定构造中的 $s$。对 $s$ 的任一因数 $d$，在第 $i$ 对素数中，当且仅当 $d$ 含有 $s$ 所选的那个素数时，$t$ 也选同一个；否则 $t$ 选这一对中的另一个素数。这样唯一确定 $t$，且 $\\gcd(s,t)=d$。所以每个 $2^k$ 都可实现；$k=0$ 时得到 $S=\\{1\\}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2021_USAJMO_Problems/Problem_5"
+  },
+  "usajmo-2021-q6": {
+    "summary": "Let $n\\ge4$. Find all positive real solutions $(a_1,\\ldots,a_{2n})$ to the cyclic system $$a_{2k-1}=\\frac1{a_{2k-2}}+\\frac1{a_{2k}},\\qquad a_{2k}=a_{2k-1}+a_{2k+1}\\quad(k=1,\\ldots,n),$$ where indices are taken modulo $2n$.",
+    "summaryZh": "设 $n\\ge4$。求循环方程组的所有正实数解 $(a_1,\\ldots,a_{2n})$：$$a_{2k-1}=\\frac1{a_{2k-2}}+\\frac1{a_{2k}},\\qquad a_{2k}=a_{2k-1}+a_{2k+1}\\quad(k=1,\\ldots,n),$$ 其中下标按模 $2n$ 理解。",
+    "answer": "The unique solution is $(a_1,a_2,\\ldots,a_{2n})=(1,2,1,2,\\ldots,1,2)$.",
+    "answerZh": "唯一解为 $(a_1,a_2,\\ldots,a_{2n})=(1,2,1,2,\\ldots,1,2)$。",
+    "methods": [
+      {
+        "title": "Eliminate the odd terms and compare the minimum and maximum",
+        "titleZh": "消去奇数项并比较偶数项的最小值与最大值",
+        "topics": [
+          {
+            "en": "Cyclic systems",
+            "zh": "循环方程组"
+          },
+          {
+            "en": "Extremal principle",
+            "zh": "极值原理"
+          },
+          {
+            "en": "Inequalities",
+            "zh": "不等式"
+          }
+        ],
+        "steps": [
+          "Write $b_k=a_{2k}$ and use cyclic subscripts. The odd equations give $$a_{2k-1}=\\frac1{b_{k-1}}+\\frac1{b_k},$$ while the even equations give $b_k=a_{2k-1}+a_{2k+1}$. Eliminating the odd terms yields $$b_k=\\frac1{b_{k-1}}+\\frac2{b_k}+\\frac1{b_{k+1}}.\\tag{1}$$",
+          "Let $m=\\min b_k$ and $M=\\max b_k$. At an index attaining $m$, equation (1) gives $$m\\ge\\frac2m+\\frac2M.$$ At an index attaining $M$, it gives $$M\\le\\frac2M+\\frac2m.$$ The two right-hand sides are equal, so $m\\ge M$.",
+          "Since always $m\\le M$, all the $b_k$ are equal to some positive number $r$. Substituting in (1) gives $$r=\\frac4r,$$ hence $r=2$.",
+          "The odd equations now give $a_{2k-1}=1/2+1/2=1$ for every $k$. Direct substitution verifies that $(1,2,1,2,\\ldots,1,2)$ satisfies the complete system, so it is the unique positive solution."
+        ],
+        "stepsZh": [
+          "记 $b_k=a_{2k}$，下标按循环方式理解。奇数下标方程给出 $$a_{2k-1}=\\frac1{b_{k-1}}+\\frac1{b_k},$$ 偶数下标方程为 $b_k=a_{2k-1}+a_{2k+1}$。消去所有奇数项，得到 $$b_k=\\frac1{b_{k-1}}+\\frac2{b_k}+\\frac1{b_{k+1}}.\\tag{1}$$",
+          "令 $m=\\min b_k$，$M=\\max b_k$。在取得最小值的下标处，由式 (1) 得 $$m\\ge\\frac2m+\\frac2M.$$ 在取得最大值的下标处，同理有 $$M\\le\\frac2M+\\frac2m.$$ 两个右端相同，所以 $m\\ge M$。",
+          "另一方面恒有 $m\\le M$，因此所有 $b_k$ 都等于同一个正数 $r$。代入式 (1)，得到 $$r=\\frac4r,$$ 故 $r=2$。",
+          "再由奇数下标方程，$a_{2k-1}=1/2+1/2=1$。直接代入可验证 $(1,2,1,2,\\ldots,1,2)$ 满足全部方程，因此它是唯一的正实数解。"
+        ]
+      },
+      {
+        "title": "Sum the recurrence and force equality in Cauchy",
+        "titleZh": "对递推式求和并利用柯西等号条件",
+        "topics": [
+          {
+            "en": "Cauchy-Schwarz inequality",
+            "zh": "柯西不等式"
+          },
+          {
+            "en": "Equality cases",
+            "zh": "等号条件"
+          },
+          {
+            "en": "Cyclic sums",
+            "zh": "循环求和"
+          }
+        ],
+        "steps": [
+          "Retain equation (1) from Method 1 and put $S=\\sum_k b_k$ and $T=\\sum_k 1/b_k$. Summing (1) cyclically gives $$S=4T.$$ By Cauchy-Schwarz, $ST\\ge n^2$, so $4T^2\\ge n^2$ and therefore $T\\ge n/2$.",
+          "Divide equation (1) by $b_k$ and sum over $k$. The cyclic cross terms combine to give $$n=\\sum_k\\left(\\frac1{b_k}+\\frac1{b_{k+1}}\\right)^2.$$",
+          "Another application of Cauchy-Schwarz yields $$n\\ge\\frac1n\\left(\\sum_k\\frac1{b_k}+\\frac1{b_{k+1}}\\right)^2=\\frac{4T^2}{n},$$ hence $T\\le n/2$.",
+          "Thus $T=n/2$, and equality holds in the last Cauchy inequality. Therefore all numbers $1/b_k+1/b_{k+1}$ are equal. Equality also holds in $ST\\ge n^2$, so all $b_k$ are equal. Equation (1) then gives $b_k=2$, and the odd variables are all $1$."
+        ],
+        "stepsZh": [
+          "保留方法一中的式 (1)，并记 $S=\\sum_k b_k$、$T=\\sum_k 1/b_k$。对式 (1) 循环求和，得到 $$S=4T.$$ 由柯西不等式 $ST\\ge n^2$，可得 $4T^2\\ge n^2$，所以 $T\\ge n/2$。",
+          "将式 (1) 除以 $b_k$ 后对 $k$ 求和。循环相邻交叉项合并为 $$n=\\sum_k\\left(\\frac1{b_k}+\\frac1{b_{k+1}}\\right)^2.$$",
+          "再次使用柯西不等式：$$n\\ge\\frac1n\\left(\\sum_k\\frac1{b_k}+\\frac1{b_{k+1}}\\right)^2=\\frac{4T^2}{n},$$ 从而 $T\\le n/2$。",
+          "因此 $T=n/2$，且最后一次柯西不等式取等；于是所有 $1/b_k+1/b_{k+1}$ 相等。同时 $ST\\ge n^2$ 也取等，故所有 $b_k$ 相等。代回式 (1) 得 $b_k=2$，进而所有奇数项都等于 $1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2021_USAJMO_Problems/Problem_6"
+  }
+}

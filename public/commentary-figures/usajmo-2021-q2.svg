@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 350" role="img" aria-labelledby="title desc">
+  <title id="title">Three rectangles erected outside a triangle</title>
+  <desc id="desc">Acute triangle ABC with one exterior rectangle on each side and all auxiliary vertices labelled.</desc>
+  <rect width="480" height="350" fill="#fffdf8"/>
+  <g fill="none" stroke="#173b63" stroke-width="3" stroke-linejoin="round">
+    <path d="M240 70 L110 250 L370 250 Z" fill="#f4f7fb"/>
+    <path d="M110 250 L370 250 L370 315 L110 315 Z" fill="#dceaf6" fill-opacity=".65"/>
+    <path d="M370 250 L240 70 L294 31 L424 211 Z" fill="#f8e7bd" fill-opacity=".72"/>
+    <path d="M240 70 L110 250 L56 211 L186 31 Z" fill="#e6f1d8" fill-opacity=".72"/>
+  </g>
+  <g fill="#132f4c" font-family="Georgia, serif" font-size="18">
+    <text x="234" y="64">A</text><text x="94" y="253">B</text><text x="377" y="253">C</text>
+    <text x="377" y="326">C₁</text><text x="82" y="326">B₂</text>
+    <text x="298" y="27">A₁</text><text x="429" y="214">C₂</text>
+    <text x="29" y="214">B₁</text><text x="158" y="27">A₂</text>
+  </g>
+</svg>
