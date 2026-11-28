@@ -1,0 +1,179 @@
+{
+  "usamo-1975-q1": {
+    "summary": "For a real number $t$, let $\\lfloor t\\rfloor$ denote its greatest integer not exceeding $t$. (a) Prove that for all nonnegative real numbers $x,y$, $$\\lfloor5x\\rfloor+\\lfloor5y\\rfloor\\ge\\lfloor3x+y\\rfloor+\\lfloor x+3y\\rfloor.$$ (b) Deduce that for all positive integers $m,n$, the number $$\\frac{(5m)!(5n)!}{m!n!(3m+n)!(m+3n)!}$$ is an integer.",
+    "summaryZh": "对实数 $t$，以 $\\lfloor t\\rfloor$ 表示不超过 $t$ 的最大整数。(a) 证明：对任意非负实数 $x,y$，均有 $$\\lfloor5x\\rfloor+\\lfloor5y\\rfloor\\ge\\lfloor3x+y\\rfloor+\\lfloor x+3y\\rfloor.$$ (b) 由此证明：对任意正整数 $m,n$，数 $$\\frac{(5m)!(5n)!}{m!n!(3m+n)!(m+3n)!}$$ 都是整数。",
+    "answer": "The inequality holds; the factorial quotient is a positive integer.",
+    "answerZh": "该取整不等式成立，且所给阶乘商为正整数。",
+    "methods": [
+      {
+        "title": "Reduce modulo one, then compare every fifth",
+        "titleZh": "先模一化简，再按五等分比较",
+        "topics": [
+          {"en": "Floor functions", "zh": "取整函数"},
+          {"en": "Legendre's formula", "zh": "勒让德公式"},
+          {"en": "Prime valuations", "zh": "素数赋值"}
+        ],
+        "steps": [
+          "We prove the stronger inequality $$\\lfloor5x\\rfloor+\\lfloor5y\\rfloor\\ge\\lfloor x\\rfloor+\\lfloor y\\rfloor+\\lfloor3x+y\\rfloor+\\lfloor x+3y\\rfloor.\\tag{1}$$ Write $x=a+u$ and $y=b+v$, where $a,b$ are nonnegative integers and $0\\le u,v<1$. The two sides of (1) acquire the same total contribution $5a+5b$, so it is enough to prove the original two-term inequality for $u,v$.",
+          "By symmetry assume $u\\le v$, and put $i=\\lfloor5u\\rfloor$, $j=\\lfloor5v\\rfloor$. Thus $0\\le i\\le j\\le4$, $u<(i+1)/5$, and $v<(j+1)/5$. Consequently $$\\lfloor3u+v\\rfloor\\le\\left\\lceil\\frac{3i+j+4}{5}\\right\\rceil-1,\\qquad \\lfloor u+3v\\rfloor\\le\\left\\lceil\\frac{i+3j+4}{5}\\right\\rceil-1.$$",
+          "For the fifteen possible pairs $0\\le i\\le j\\le4$, the resulting upper bounds for the sum on the right are $$\\begin{array}{c|ccccc}i\\backslash j&0&1&2&3&4\\\\\\hline0&0&1&2&3&4\\\\1&&2&3&3&5\\\\2&&&4&4&5\\\\3&&&&6&6\\\\4&&&&&6\\end{array}$$ and every displayed entry is at most $i+j=\\lfloor5u\\rfloor+\\lfloor5v\\rfloor$. This proves (1), and hence part (a).",
+          "For part (b), fix a prime $p$. Legendre's formula gives the exponent of $p$ in the factorial quotient as the sum over $r\\ge1$ of $$\\left\\lfloor\\frac{5m}{p^r}\\right\\rfloor+\\left\\lfloor\\frac{5n}{p^r}\\right\\rfloor-\\left\\lfloor\\frac m{p^r}\\right\\rfloor-\\left\\lfloor\\frac n{p^r}\\right\\rfloor-\\left\\lfloor\\frac{3m+n}{p^r}\\right\\rfloor-\\left\\lfloor\\frac{m+3n}{p^r}\\right\\rfloor.$$",
+          "Apply (1) with $x=m/p^r$ and $y=n/p^r$. Every summand is nonnegative, so every prime has a nonnegative exponent in the quotient. The quotient is rational with no prime in its denominator; therefore it is an integer."
+        ],
+        "stepsZh": [
+          "我们证明更强的不等式 $$\\lfloor5x\\rfloor+\\lfloor5y\\rfloor\\ge\\lfloor x\\rfloor+\\lfloor y\\rfloor+\\lfloor3x+y\\rfloor+\\lfloor x+3y\\rfloor.\\tag{1}$$ 写成 $x=a+u,y=b+v$，其中 $a,b$ 为非负整数，$0\\le u,v<1$。在 (1) 两边，整数部分带来的总贡献都是 $5a+5b$，所以只需对 $u,v$ 证明题目中的两项不等式。",
+          "由对称性可设 $u\\le v$，并记 $i=\\lfloor5u\\rfloor,j=\\lfloor5v\\rfloor$。于是 $0\\le i\\le j\\le4$，且 $u<(i+1)/5,v<(j+1)/5$。从而 $$\\lfloor3u+v\\rfloor\\le\\left\\lceil\\frac{3i+j+4}{5}\\right\\rceil-1,\\qquad \\lfloor u+3v\\rfloor\\le\\left\\lceil\\frac{i+3j+4}{5}\\right\\rceil-1.$$",
+          "对十五组可能的 $0\\le i\\le j\\le4$，右端两项之和的上述上界依次为 $$\\begin{array}{c|ccccc}i\\backslash j&0&1&2&3&4\\\\\\hline0&0&1&2&3&4\\\\1&&2&3&3&5\\\\2&&&4&4&5\\\\3&&&&6&6\\\\4&&&&&6\\end{array}$$；每个表项都不超过 $i+j=\\lfloor5u\\rfloor+\\lfloor5v\\rfloor$。因此 (1) 成立，(a) 得证。",
+          "对 (b)，固定任意素数 $p$。由勒让德公式，所给阶乘商中 $p$ 的指数等于对所有 $r\\ge1$ 求和：$$\\left\\lfloor\\frac{5m}{p^r}\\right\\rfloor+\\left\\lfloor\\frac{5n}{p^r}\\right\\rfloor-\\left\\lfloor\\frac m{p^r}\\right\\rfloor-\\left\\lfloor\\frac n{p^r}\\right\\rfloor-\\left\\lfloor\\frac{3m+n}{p^r}\\right\\rfloor-\\left\\lfloor\\frac{m+3n}{p^r}\\right\\rfloor.$$",
+          "在 (1) 中取 $x=m/p^r,y=n/p^r$，便知每个求和项均非负。因此任意素数在该阶乘商中的指数都非负；这个有理数的分母不含任何素因子，故它是整数。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1975_USAMO_Problems/Problem_1"
+  },
+  "usamo-1975-q2": {
+    "summary": "For arbitrary points $A,B,C,D$ in three-dimensional space, prove $$AC^2+BD^2+AD^2+BC^2\\ge AB^2+CD^2,$$ and identify the equality case.",
+    "summaryZh": "对三维空间中的任意四点 $A,B,C,D$，证明 $$AC^2+BD^2+AD^2+BC^2\\ge AB^2+CD^2,$$ 并确定等号成立条件。",
+    "answer": "The inequality always holds. Equality occurs exactly when the midpoints of $AB$ and $CD$ coincide.",
+    "answerZh": "不等式恒成立；等号当且仅当线段 $AB$ 与 $CD$ 的中点重合。",
+    "methods": [
+      {
+        "title": "Separate the midpoint displacement",
+        "titleZh": "分离两中点的位移",
+        "topics": [
+          {"en": "Vectors", "zh": "向量"},
+          {"en": "Parallelogram identity", "zh": "平行四边形恒等式"},
+          {"en": "Midpoints", "zh": "中点"}
+        ],
+        "steps": [
+          "Let the position vectors of the four points be $a,b,c,d$, and let $M=(a+b)/2$ and $N=(c+d)/2$ be the midpoints of $AB$ and $CD$.",
+          "Write $a=M+u,b=M-u,c=N+v,d=N-v$. Then $AB^2=4|u|^2$ and $CD^2=4|v|^2$.",
+          "Expanding the four cross-distances and cancelling mixed terms gives $$AC^2+AD^2+BC^2+BD^2=4|M-N|^2+4|u|^2+4|v|^2.$$ Hence $$AC^2+BD^2+AD^2+BC^2-AB^2-CD^2=4|M-N|^2\\ge0.$$",
+          "Equality holds precisely when $M=N$, that is, when the two segments have the same midpoint. This includes coincident or degenerate points without requiring a separate case."
+        ],
+        "stepsZh": [
+          "设四点的位置向量分别为 $a,b,c,d$，并令 $M=(a+b)/2,N=(c+d)/2$ 分别为 $AB,CD$ 的中点。",
+          "写成 $a=M+u,b=M-u,c=N+v,d=N-v$。于是 $AB^2=4|u|^2,CD^2=4|v|^2$。",
+          "展开四个交叉距离并消去混合项，得到 $$AC^2+AD^2+BC^2+BD^2=4|M-N|^2+4|u|^2+4|v|^2.$$ 因而 $$AC^2+BD^2+AD^2+BC^2-AB^2-CD^2=4|M-N|^2\\ge0.$$",
+          "等号成立当且仅当 $M=N$，即两条线段的中点重合。即使某些点重合或线段退化，此结论也无需另作讨论。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1975_USAMO_Problems/Problem_2"
+  },
+  "usamo-1975-q3": {
+    "summary": "Let $P$ be a polynomial of degree $n$ such that $$P(k)=\\frac{k}{k+1}\\qquad(k=0,1,\\ldots,n).$$ Determine $P(n+1)$.",
+    "summaryZh": "设 $P$ 是次数为 $n$ 的多项式，并满足 $$P(k)=\\frac{k}{k+1}\\qquad(k=0,1,\\ldots,n).$$ 求 $P(n+1)$。",
+    "answer": "$\\displaystyle P(n+1)=\\frac{n+1+(-1)^{n+1}}{n+2}$.",
+    "answerZh": "$\\displaystyle P(n+1)=\\frac{n+1+(-1)^{n+1}}{n+2}$。",
+    "methods": [
+      {
+        "title": "Create a polynomial with known consecutive roots",
+        "titleZh": "构造具有连续已知根的多项式",
+        "topics": [
+          {"en": "Polynomial interpolation", "zh": "多项式插值"},
+          {"en": "Factor theorem", "zh": "因式定理"},
+          {"en": "Consecutive roots", "zh": "连续整数根"}
+        ],
+        "steps": [
+          "Define $Q(x)=(x+1)P(x)-x$. Its degree is at most $n+1$, and the given data imply $Q(k)=0$ for every $k=0,1,\\ldots,n$.",
+          "Therefore $$Q(x)=c\\,x(x-1)\\cdots(x-n)$$ for some constant $c$. Evaluating at $x=-1$ avoids knowing any coefficient of $P$: $$1=Q(-1)=c(-1)(-2)\\cdots(-n-1)=c(-1)^{n+1}(n+1)!.$$ Thus $c=(-1)^{n+1}/(n+1)!$.",
+          "At $x=n+1$, $$Q(n+1)=c(n+1)!=(-1)^{n+1}.$$ On the other hand, $Q(n+1)=(n+2)P(n+1)-(n+1)$.",
+          "Solving gives $$P(n+1)=\\frac{n+1+(-1)^{n+1}}{n+2}.$$"
+        ],
+        "stepsZh": [
+          "定义 $Q(x)=(x+1)P(x)-x$。它的次数不超过 $n+1$，且由题设知 $Q(k)=0$ 对每个 $k=0,1,\\ldots,n$ 都成立。",
+          "因此存在常数 $c$，使得 $$Q(x)=c\\,x(x-1)\\cdots(x-n).$$ 取 $x=-1$，无需知道 $P$ 的任何系数便有 $$1=Q(-1)=c(-1)(-2)\\cdots(-n-1)=c(-1)^{n+1}(n+1)!.$$ 故 $c=(-1)^{n+1}/(n+1)!$。",
+          "再取 $x=n+1$，得到 $$Q(n+1)=c(n+1)!=(-1)^{n+1}.$$ 另一方面，$Q(n+1)=(n+2)P(n+1)-(n+1)$。",
+          "解得 $$P(n+1)=\\frac{n+1+(-1)^{n+1}}{n+2}.$$"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1975_USAMO_Problems/Problem_3"
+  },
+  "usamo-1975-q4": {
+    "summary": "Two distinct circles meet at $P$ and $Q$. A line through $P$ meets the first circle again at $A$ and the second again at $B$, with $P$ lying on segment $AB$. Construct the line for which $AP\\cdot PB$ is greatest, and justify the construction.",
+    "summaryZh": "两个不同的圆交于 $P,Q$。过 $P$ 的一条直线再次交第一圆于 $A$、第二圆于 $B$，且 $P$ 在线段 $AB$ 上。作出使 $AP\\cdot PB$ 最大的直线，并证明该作法正确。",
+    "answer": "If the circle centres are $O_1,O_2$, draw from $P$ the internal bisector of the angle between the ray $PO_1$ and the ray opposite to $PO_2$; extend it in both directions. Its second intersections with the circles are the required $A,B$.",
+    "answerZh": "设两圆圆心为 $O_1,O_2$。在 $P$ 点作射线 $PO_1$ 与 $PO_2$ 反向射线所成角的内角平分线，并向两端延长；它与两圆的另一个交点即为所求的 $A,B$。",
+    "methods": [
+      {
+        "title": "Maximise two projections",
+        "titleZh": "最大化两个投影的乘积",
+        "topics": [
+          {"en": "Circle chords", "zh": "圆弦"},
+          {"en": "Vectors and projections", "zh": "向量与投影"},
+          {"en": "Angle bisectors", "zh": "角平分线"}
+        ],
+        "steps": [
+          "Let the centres and radii be $O_1,O_2$ and $R_1,R_2$. Choose a unit vector $u$ from $P$ toward $A$; then $B$ lies on the opposite ray. Put $U=O_1-P$ and $V=P-O_2$. The ray enters the appropriate circle exactly when $u\\cdot U>0$ and $u\\cdot V>0$.",
+          "Substituting $A=P+tu$ in $|A-O_1|=R_1=|P-O_1|$ gives $t=2u\\cdot U$, so $AP=2u\\cdot U$. Similarly, writing $B=P-su$ gives $PB=2u\\cdot V$.",
+          "Let $e=U/R_1$ and $f=V/R_2$, and let $\\theta$ be the angle between these unit vectors. Measure the signed angle $t$ of $u$ from their internal angle bisector, so $e$ and $f$ have signed angles $-\\theta/2$ and $\\theta/2$ from that bisector. Then, for every direction $u$, $$AP\\cdot PB=4R_1R_2\\cos(t+\\theta/2)\\cos(t-\\theta/2)=4R_1R_2\\bigl(\\cos^2t-\\sin^2(\\theta/2)\\bigr).$$",
+          "Because $\\cos^2t\\le1$, the product is at most $4R_1R_2\\cos^2(\\theta/2)$. Equality holds for the feasible orientation exactly when $t=0$. Thus $u$ must bisect the angle between the ray $PO_1$ and the ray in the direction $P-O_2$, which is the ray opposite to $PO_2$.",
+          "Construction: locate the two centres, reverse the ray $PO_2$ through $P$, bisect the resulting angle with $PO_1$, and extend the bisector as a full line. The second intersections on its two sides are $A$ and $B$, and the preceding equality condition proves maximality."
+        ],
+        "stepsZh": [
+          "设两圆的圆心与半径分别为 $O_1,O_2$ 和 $R_1,R_2$。取从 $P$ 指向 $A$ 的单位向量 $u$，则 $B$ 位于反向射线上。记 $U=O_1-P,V=P-O_2$。直线朝相应方向进入两个圆的条件正是 $u\\cdot U>0,u\\cdot V>0$。",
+          "把 $A=P+tu$ 代入 $|A-O_1|=R_1=|P-O_1|$，可得 $t=2u\\cdot U$，即 $AP=2u\\cdot U$。同理，写成 $B=P-su$ 可得 $PB=2u\\cdot V$。",
+          "令 $e=U/R_1,f=V/R_2$，并设这两个单位向量的夹角为 $\\theta$。以它们的内角平分线为基准，记 $u$ 的有向角为 $t$；则 $e,f$ 相对该平分线的有向角分别为 $-\\theta/2,\\theta/2$。因此对任意方向 $u$，都有 $$AP\\cdot PB=4R_1R_2\\cos(t+\\theta/2)\\cos(t-\\theta/2)=4R_1R_2\\bigl(\\cos^2t-\\sin^2(\\theta/2)\\bigr).$$",
+          "因为 $\\cos^2t\\le1$，乘积至多为 $4R_1R_2\\cos^2(\\theta/2)$；对可行的取向，等号恰在 $t=0$ 时成立。因此 $u$ 必须平分射线 $PO_1$ 与方向为 $P-O_2$ 的射线之间的角；后一条射线正是 $PO_2$ 的反向射线。",
+          "作法如下：确定两圆圆心，在 $P$ 处作 $PO_2$ 的反向射线，再作它与 $PO_1$ 所成角的内角平分线，并延长为整条直线。直线两侧与两圆的另一个交点即为 $A,B$；上述等号条件同时证明乘积最大。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1975_USAMO_Problems/Problem_4"
+  },
+  "usamo-1975-q5": {
+    "summary": "A deck has $n$ cards, exactly three of which are aces. After a uniformly random shuffle, cards are turned over from the top until the second ace appears. Prove that the expected number of cards turned over is $(n+1)/2$.",
+    "summaryZh": "一副牌共有 $n$ 张，其中恰有三张 A。充分随机洗牌后，从顶端依次翻牌，直到第二张 A 出现为止。证明所翻牌数的期望为 $(n+1)/2$。",
+    "answer": "$\\displaystyle \\mathbb E[X_2]=\\frac{n+1}{2}$.",
+    "answerZh": "$\\displaystyle \\mathbb E[X_2]=\\frac{n+1}{2}$。",
+    "methods": [
+      {
+        "title": "Use the four exchangeable gaps",
+        "titleZh": "利用四个可交换空隙",
+        "topics": [
+          {"en": "Order statistics", "zh": "次序统计量"},
+          {"en": "Symmetry of gaps", "zh": "空隙对称性"},
+          {"en": "Linearity of expectation", "zh": "期望的线性性"}
+        ],
+        "steps": [
+          "Let the ace positions be $1\\le X_1<X_2<X_3\\le n$. Every three-element subset of positions is equally likely.",
+          "Define the numbers of non-aces in the four gaps by $$G_0=X_1-1,\\quad G_1=X_2-X_1-1,\\quad G_2=X_3-X_2-1,\\quad G_3=n-X_3.$$ These are nonnegative and satisfy $G_0+G_1+G_2+G_3=n-3$.",
+          "Each ace-position set corresponds bijectively to one ordered quadruple of nonnegative integers with sum $n-3$. Because the position sets are uniform, these quadruples are uniform; permuting their four coordinates preserves the sample space. Thus the four gaps have the same expectation.",
+          "Taking expectations in their sum gives $\\mathbb E[G_i]=(n-3)/4$ for every $i$.",
+          "The second ace occurs after the first two gaps and two aces, so $X_2=G_0+G_1+2$. Hence $$\\mathbb E[X_2]=2\\cdot\\frac{n-3}{4}+2=\\frac{n+1}{2}.$$"
+        ],
+        "stepsZh": [
+          "设三张 A 的位置为 $1\\le X_1<X_2<X_3\\le n$。任意三个位置组成的子集都等可能。",
+          "定义四段非 A 牌的张数：$$G_0=X_1-1,\\quad G_1=X_2-X_1-1,\\quad G_2=X_3-X_2-1,\\quad G_3=n-X_3.$$ 它们都是非负整数，且 $G_0+G_1+G_2+G_3=n-3$。",
+          "每组三个 A 的位置与一组总和为 $n-3$ 的有序非负整数四元组一一对应。由于位置集合等可能，这些四元组也等可能；交换四个坐标仍保持样本空间不变。因此四个空隙具有相同期望。",
+          "对空隙总和取期望，得到每个 $i$ 都有 $\\mathbb E[G_i]=(n-3)/4$。",
+          "第二张 A 之前包含前两个空隙和两张 A，所以 $X_2=G_0+G_1+2$。因此 $$\\mathbb E[X_2]=2\\cdot\\frac{n-3}{4}+2=\\frac{n+1}{2}.$$"
+        ]
+      },
+      {
+        "title": "Pair every shuffle with its reversal",
+        "titleZh": "把每种排列与逆序排列配对",
+        "topics": [
+          {"en": "Symmetry", "zh": "对称性"},
+          {"en": "Reversal involution", "zh": "逆序对合"},
+          {"en": "Expected value", "zh": "期望"}
+        ],
+        "steps": [
+          "If a shuffle has ace positions $X_1<X_2<X_3$, reversing the entire deck produces ace positions $n+1-X_3<n+1-X_2<n+1-X_1$.",
+          "Therefore the position of the second ace in the reversed shuffle is exactly $n+1-X_2$.",
+          "Reversal is a bijection of the equally likely shuffles. Pairing each shuffle with its reversal, the two second-ace positions always sum to $n+1$.",
+          "The average within every pair is $(n+1)/2$, so the expected number of cards turned over is $(n+1)/2$."
+        ],
+        "stepsZh": [
+          "若某一排列中三张 A 的位置为 $X_1<X_2<X_3$，把整副牌完全逆序后，三张 A 的位置变为 $n+1-X_3<n+1-X_2<n+1-X_1$。",
+          "所以逆序排列中第二张 A 的位置恰为 $n+1-X_2$。",
+          "逆序操作是所有等可能排列上的双射。将每个排列与其逆序排列配对，两者的第二张 A 位置之和恒为 $n+1$。",
+          "每一对的平均值都是 $(n+1)/2$，故所翻牌数的期望为 $(n+1)/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1975_USAMO_Problems/Problem_5"
+  }
+}
