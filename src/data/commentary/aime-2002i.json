@@ -1,0 +1,212 @@
+{
+  "aime-2002i-q1": {
+    "summary": "A license plate consists of three letters followed by three digits, with every such arrangement equally likely. A block of three symbols is called a palindrome when it reads the same in both directions. If the probability that at least the letter block or the digit block is a palindrome is $m/n$ in lowest terms, find $m+n$.",
+    "summaryZh": "一种车牌由三个字母后接三个数字组成，所有排列等可能。若一个三位符号串正读反读相同，则称其为回文。设字母串或数字串至少有一个是回文的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": "059",
+    "answerZh": "059",
+    "methods": [{
+      "title": "Apply inclusion-exclusion",
+      "titleZh": "使用容斥原理",
+      "topics": [{"en":"Probability","zh":"概率"},{"en":"Inclusion-exclusion","zh":"容斥原理"},{"en":"Palindromes","zh":"回文"}],
+      "steps": ["A three-letter block is palindromic exactly when its third letter equals its first, so its probability is $1/26$.", "Likewise, the probability that the three-digit block is palindromic is $1/10$.", "The two blocks are chosen independently, so the probability that both are palindromes is $1/(26\\cdot10)=1/260$.", "Inclusion-exclusion gives $1/26+1/10-1/260=35/260=7/52$. Therefore $m+n=7+52=59$, recorded as $059$."],
+      "stepsZh": ["三字母串为回文，当且仅当第三个字母与第一个相同，所以概率为 $1/26$。", "同理，三数字串为回文的概率为 $1/10$。", "两个部分独立选取，因此它们同时为回文的概率为 $1/(26\\cdot10)=1/260$。", "由容斥原理，所求概率为 $1/26+1/10-1/260=35/260=7/52$。故 $m+n=7+52=59$，记为 $059$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/1"
+  },
+  "aime-2002i-q2": {
+    "summary": "Twenty congruent circles fill a rectangle in three staggered rows: seven tangent circles in the top row, six in the middle row sitting in the gaps, and seven in the bottom row. The outer rows are aligned, adjacent circles are tangent, and the boundary circles touch the rectangle. If the longer-to-shorter side ratio is $\\tfrac12(\\sqrt p-q)$, find $p+q$.",
+    "summaryZh": "二十个全等圆按三排交错放入一个矩形：上、下排各有七个相切圆且彼此对齐，中排有六个圆，圆心位于外排相邻两圆的间隙处。相邻圆两两相切，边缘圆与矩形边相切。若矩形长边与短边之比为 $\\tfrac12(\\sqrt p-q)$，求 $p+q$。",
+    "answer": "154",
+    "answerZh": "154",
+    "methods": [{
+      "title": "Use the equilateral triangle of centers",
+      "titleZh": "利用圆心构成的正三角形",
+      "topics": [{"en":"Tangent circles","zh":"相切圆"},{"en":"Equilateral triangles","zh":"正三角形"},{"en":"Radical simplification","zh":"根式化简"}],
+      "steps": ["Let every circle have radius $r$. Seven diameters span the rectangle horizontally, so its length is $L=14r$.", "The centers of three mutually tangent circles form an equilateral triangle of side $2r$, whose altitude is $r\\sqrt3$. The vertical separation between the top and bottom center rows is therefore $2r\\sqrt3$.", "Adding one radius above and below gives the height $W=2r+2r\\sqrt3=2r(1+\\sqrt3)$.", "Hence $L/W=7/(1+\\sqrt3)=7(\\sqrt3-1)/2=(\\sqrt{147}-7)/2$. Thus $p=147$, $q=7$, and $p+q=154$."],
+      "stepsZh": ["设每个圆半径为 $r$。水平方向共有七个直径，所以矩形长为 $L=14r$。", "三个两两相切圆的圆心构成边长 $2r$ 的正三角形，其高为 $r\\sqrt3$。因此上、下两排圆心的竖直距离为 $2r\\sqrt3$。", "上下再各加一个半径，矩形宽为 $W=2r+2r\\sqrt3=2r(1+\\sqrt3)$。", "所以 $L/W=7/(1+\\sqrt3)=7(\\sqrt3-1)/2=(\\sqrt{147}-7)/2$。故 $p=147$、$q=7$，答案为 $154$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/2"
+  },
+  "aime-2002i-q3": {
+    "summary": "Jane is now $25$. Dick is older. After a positive integer number $n$ of years, both ages are two-digit numbers and Jane's age is obtained by reversing the digits of Dick's age. If Dick's present age is $d$, how many ordered pairs $(d,n)$ are possible?",
+    "summaryZh": "Jane 现在 $25$ 岁，Dick 比她年长。经过正整数年 $n$ 后，两人的年龄都是两位数，且 Jane 的年龄恰为 Dick 年龄的数码倒序。设 Dick 现在 $d$ 岁，问有多少个有序对 $(d,n)$？",
+    "answer": "025",
+    "answerZh": "025",
+    "methods": [{
+      "title": "Count the possible reversed digit pairs",
+      "titleZh": "枚举可行的倒序数码对",
+      "topics": [{"en":"Decimal digits","zh":"十进制数码"},{"en":"Systematic counting","zh":"系统计数"},{"en":"Ages","zh":"年龄问题"}],
+      "steps": ["Write Jane's future age as $10a+b$ and Dick's as $10b+a$. Because Dick is older, $b>a$.", "Since Jane is now $25$, $n=10a+b-25$ must be positive. Dick's present age is then $d=10b+a-n=25+9(b-a)$, so every admissible digit pair gives one ordered pair $(d,n)$.", "For $a=2$, the condition $10a+b>25$ allows $b=6,7,8,9$, giving $4$ choices. For $a=3,4,5,6,7,8$, the numbers of choices with $b>a$ are respectively $6,5,4,3,2,1$.", "The total is $4+6+5+4+3+2+1=25$, so the answer is $025$."],
+      "stepsZh": ["把 Jane 将来的年龄写成 $10a+b$，则 Dick 将来的年龄为 $10b+a$。因为 Dick 年长，所以 $b>a$。", "Jane 现在 $25$ 岁，故 $n=10a+b-25$ 必须为正。此时 Dick 现在的年龄为 $d=10b+a-n=25+9(b-a)$，所以每个合格数码对唯一对应一个 $(d,n)$。", "$a=2$ 时，由 $10a+b>25$ 得 $b=6,7,8,9$，共 $4$ 种；$a=3,4,5,6,7,8$ 时，满足 $b>a$ 的选择数依次为 $6,5,4,3,2,1$。", "总数为 $4+6+5+4+3+2+1=25$，故答案为 $025$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/3"
+  },
+  "aime-2002i-q4": {
+    "summary": "Let $a_k=1/(k^2+k)$ for $k\\ge1$. Positive integers $m<n$ satisfy $a_m+a_{m+1}+\\cdots+a_{n-1}=1/29$. Find $m+n$.",
+    "summaryZh": "定义 $a_k=1/(k^2+k)$（$k\\ge1$）。正整数 $m<n$ 满足 $a_m+a_{m+1}+\\cdots+a_{n-1}=1/29$。求 $m+n$。",
+    "answer": "840",
+    "answerZh": "840",
+    "methods": [{
+      "title": "Telescope and factor",
+      "titleZh": "裂项求和并因式分解",
+      "topics": [{"en":"Telescoping series","zh":"裂项求和"},{"en":"Diophantine equations","zh":"丢番图方程"}],
+      "steps": ["Since $a_k=1/[k(k+1)]=1/k-1/(k+1)$, the sum telescopes to $1/m-1/n=1/29$.", "Multiplying through and rearranging gives $mn+29m-29n=0$, hence $(29-m)(29+n)=29^2$.", "Here $29+n>29-m>0$. Because $29$ is prime, the only factor pair with unequal positive factors is $29-m=1$ and $29+n=29^2$.", "Thus $m=28$, $n=812$, and $m+n=840$."],
+      "stepsZh": ["因为 $a_k=1/[k(k+1)]=1/k-1/(k+1)$，所以原和式裂项后为 $1/m-1/n=1/29$。", "通分整理得 $mn+29m-29n=0$，即 $(29-m)(29+n)=29^2$。", "这里 $29+n>29-m>0$。由于 $29$ 是质数，唯一合格的正因数分解为 $29-m=1$、$29+n=29^2$。", "因此 $m=28$、$n=812$，故 $m+n=840$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/4"
+  },
+  "aime-2002i-q5": {
+    "summary": "Let $A_1,A_2,\\ldots,A_{12}$ be the vertices of a regular dodecagon. Count all distinct squares in its plane that have at least two vertices among these twelve points.",
+    "summaryZh": "设 $A_1,A_2,\\ldots,A_{12}$ 为正十二边形的顶点。求平面内至少有两个顶点属于这十二个点的不同正方形总数。",
+    "answer": "183",
+    "answerZh": "183",
+    "methods": [{
+      "title": "Generate squares from every vertex pair",
+      "titleZh": "由每对顶点生成正方形",
+      "topics": [{"en":"Regular polygons","zh":"正多边形"},{"en":"Double counting","zh":"重复计数"},{"en":"Squares","zh":"正方形"}],
+      "steps": ["Choose any two of the $12$ vertices. They determine three squares: one using the segment as a diagonal and two, one on each side, using it as a side.", "This initially gives $3\\binom{12}{2}=198$ generated squares.", "A square is counted more than once only when all four of its vertices belong to the dodecagon. There are exactly three such squares: $A_1A_4A_7A_{10}$, $A_2A_5A_8A_{11}$, and $A_3A_6A_9A_{12}$.", "Each of these three squares is generated by all $\\binom42=6$ pairs of its vertices but should be counted once, so subtract $5$ for each. The answer is $198-3\\cdot5=183$."],
+      "stepsZh": ["任取十二边形的两个顶点。把连线作为对角线可确定一个正方形，把它作为边并分别向两侧作图可再确定两个正方形，因此每对点生成三个。", "初步计数为 $3\\binom{12}{2}=198$。", "只有当一个正方形的四个顶点全是十二边形顶点时才会被重复计数。这样的正方形恰有三个：$A_1A_4A_7A_{10}$、$A_2A_5A_8A_{11}$、$A_3A_6A_9A_{12}$。", "每个这样的正方形被其 $\\binom42=6$ 对顶点各生成一次，却只应计一次，所以每个多计 $5$ 次。答案为 $198-3\\cdot5=183$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/5"
+  },
+  "aime-2002i-q6": {
+    "summary": "The system $\\log_{225}x+\\log_{64}y=4$ and $\\log_x225-\\log_y64=1$ has solutions $(x_1,y_1)$ and $(x_2,y_2)$. Find $\\log_{30}(x_1y_1x_2y_2)$.",
+    "summaryZh": "方程组 $\\log_{225}x+\\log_{64}y=4$、$\\log_x225-\\log_y64=1$ 的两个解为 $(x_1,y_1)$ 与 $(x_2,y_2)$。求 $\\log_{30}(x_1y_1x_2y_2)$。",
+    "answer": "012",
+    "answerZh": "012",
+    "methods": [{
+      "title": "Substitute reciprocal logarithms and use Vieta",
+      "titleZh": "代换互为倒数的对数并使用韦达定理",
+      "topics": [{"en":"Logarithms","zh":"对数"},{"en":"Vieta's formulas","zh":"韦达定理"},{"en":"Substitution","zh":"代换"}],
+      "steps": ["Set $p=\\log_{225}x$ and $q=\\log_{64}y$. Then $\\log_x225=1/p$ and $\\log_y64=1/q$, so $p+q=4$ and $1/p-1/q=1$.", "Using $q=4-p$, the second equation becomes $p^2-6p+4=0$. Thus the two $p$-values sum to $6$, and the corresponding two $q$-values sum to $8-6=2$.", "Because $x=225^p$ and $y=64^q$, we obtain $x_1x_2=225^6$ and $y_1y_2=64^2$.", "Therefore $x_1y_1x_2y_2=15^{12}\\cdot8^4=15^{12}\\cdot2^{12}=30^{12}$, so the requested logarithm is $12$, recorded as $012$."],
+      "stepsZh": ["令 $p=\\log_{225}x$、$q=\\log_{64}y$。则 $\\log_x225=1/p$、$\\log_y64=1/q$，所以 $p+q=4$ 且 $1/p-1/q=1$。", "代入 $q=4-p$，第二式化为 $p^2-6p+4=0$。两个 $p$ 值之和为 $6$，对应的两个 $q$ 值之和为 $8-6=2$。", "由于 $x=225^p$、$y=64^q$，可得 $x_1x_2=225^6$、$y_1y_2=64^2$。", "因此 $x_1y_1x_2y_2=15^{12}\\cdot8^4=15^{12}\\cdot2^{12}=30^{12}$，所求对数为 $12$，记为 $012$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/6"
+  },
+  "aime-2002i-q7": {
+    "summary": "Using the generalized binomial expansion, determine the first three digits after the decimal point of $(10^{2002}+1)^{10/7}$.",
+    "summaryZh": "利用广义二项式展开，求 $(10^{2002}+1)^{10/7}$ 的十进制表示中小数点后的前三位数字。",
+    "answer": "428",
+    "answerZh": "428",
+    "methods": [{
+      "title": "Isolate the only term affecting the requested digits",
+      "titleZh": "找出唯一影响前三位小数的项",
+      "topics": [{"en":"Generalized binomial theorem","zh":"广义二项式定理"},{"en":"Repeating decimals","zh":"循环小数"},{"en":"Error bounds","zh":"误差界"}],
+      "steps": ["Apply the expansion with $x=10^{2002}$ and $y=1$. The first terms are $10^{2860}+(10/7)10^{858}+\\frac{(10/7)(3/7)}2\\,10^{-1144}+\\cdots$.", "The first term is an integer. The second term equals $10^{859}/7$.", "Since $10^6\\equiv1\\pmod7$ and $859\\equiv1\\pmod6$, $10^{859}$ leaves remainder $3$ modulo $7$. Hence the fractional part of $10^{859}/7$ is $3/7=0.\\overline{428571}$.", "The absolute sum of all later terms is far below $10^{-1000}$, so it cannot affect the first three decimal places. They are therefore $428$."],
+      "stepsZh": ["在广义二项式展开中取 $x=10^{2002}$、$y=1$，前几项为 $10^{2860}+(10/7)10^{858}+\\frac{(10/7)(3/7)}2\\,10^{-1144}+\\cdots$。", "第一项是整数，第二项等于 $10^{859}/7$。", "因为 $10^6\\equiv1\\pmod7$ 且 $859\\equiv1\\pmod6$，所以 $10^{859}$ 除以 $7$ 的余数为 $3$。因此 $10^{859}/7$ 的小数部分是 $3/7=0.\\overline{428571}$。", "其后各项绝对值总和远小于 $10^{-1000}$，不会改变小数点后三位，故答案为 $428$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/7"
+  },
+  "aime-2002i-q8": {
+    "summary": "Find the least integer $k$ for which more than one nondecreasing sequence of positive integers satisfies $a_n=a_{n-1}+a_{n-2}$ for every $n>2$ and $a_9=k$.",
+    "summaryZh": "求最小整数 $k$，使得存在不止一个正整数非降序列满足对所有 $n>2$ 都有 $a_n=a_{n-1}+a_{n-2}$，且 $a_9=k$。",
+    "answer": "748",
+    "answerZh": "748",
+    "methods": [{
+      "title": "Reduce to two representations by a linear form",
+      "titleZh": "化为线性式的两种表示",
+      "topics": [{"en":"Recurrences","zh":"递推数列"},{"en":"Diophantine equations","zh":"丢番图方程"},{"en":"Extremal argument","zh":"极值论证"}],
+      "steps": ["Repeated substitution gives $a_9=13a_1+21a_2$. The sequence is nondecreasing exactly when $0<a_1\\le a_2$.", "Suppose two different admissible pairs $(x,y)$ and $(u,v)$ give the same value, ordered so that $x<u$. Then $13x+21y=13u+21v$, so $u-x=21t$ and $y-v=13t$ for some positive integer $t$.", "Thus $u\\ge x+21\\ge22$ and $v\\ge u\\ge22$. Consequently $k=13u+21v\\ge(13+21)22=748$.", "Equality is attained twice: $(a_1,a_2)=(22,22)$ and $(1,35)$ both give $a_9=748$, and both start nondecreasing positive sequences. Hence the least $k$ is $748$."],
+      "stepsZh": ["反复代入递推式可得 $a_9=13a_1+21a_2$。序列非降当且仅当 $0<a_1\\le a_2$。", "设两个不同的合格数对 $(x,y)$、$(u,v)$ 给出同一数值，并令 $x<u$。则 $13x+21y=13u+21v$，所以存在正整数 $t$ 使 $u-x=21t$、$y-v=13t$。", "于是 $u\\ge x+21\\ge22$ 且 $v\\ge u\\ge22$，从而 $k=13u+21v\\ge(13+21)22=748$。", "下界可以达到：$(a_1,a_2)=(22,22)$ 与 $(1,35)$ 都给出 $a_9=748$，且均生成正整数非降序列。因此最小值为 $748$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/8"
+  },
+  "aime-2002i-q9": {
+    "summary": "Harold paints pickets numbered $1,1+h,1+2h,\\ldots$; Tanya paints $2,2+t,2+2t,\\ldots$; and Ulysses paints $3,3+u,3+2u,\\ldots$. Call $100h+10t+u$ paintable when every positive-numbered picket is painted exactly once. Find the sum of all paintable integers.",
+    "summaryZh": "把栅栏桩依次编号。Harold 粉刷 $1,1+h,1+2h,\\ldots$ 号；Tanya 粉刷 $2,2+t,2+2t,\\ldots$ 号；Ulysses 粉刷 $3,3+u,3+2u,\\ldots$ 号。若每个正整数编号恰被粉刷一次，则称 $100h+10t+u$ 为可粉刷数。求所有可粉刷数之和。",
+    "answer": "757",
+    "answerZh": "757",
+    "methods": [{
+      "title": "Force the three arithmetic progressions",
+      "titleZh": "逐步确定三个等差数列",
+      "topics": [{"en":"Arithmetic progressions","zh":"等差数列"},{"en":"Partitioning","zh":"集合划分"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": ["The three progressions must partition the positive integers. Clearly $h,t,u>1$. Also $h\\ne2$, since then Harold would also paint picket $3$.", "If $h\\ge5$, picket $4$ must belong to Tanya, forcing $t=2$; then picket $5$ forces $u=2$, but no remaining progression can contain the next uncovered numbers consistently. Hence $h=3$ or $4$.", "If $h=3$, Harold paints numbers congruent to $1\\pmod3$. Picket $5$ must then be Tanya's (otherwise Ulysses would also reach $7$, already Harold's), so $t=3$ and the remaining class gives $u=3$. This yields $333$.", "If $h=4$, picket $4$ must be Tanya's, so $t=2$; the remaining numbers are $3,7,11,\\ldots$, giving $u=4$. This yields $424$.", "Both triples partition all positive integers, and no other case is possible. Their sum is $333+424=757$."],
+      "stepsZh": ["三个等差数列必须把正整数集恰好划分。显然 $h,t,u>1$；又因 $h=2$ 会使 Harold 也粉刷 $3$ 号桩，所以 $h\\ne2$。", "若 $h\\ge5$，则 $4$ 号只能由 Tanya 粉刷，迫使 $t=2$；随后 $5$ 号迫使 $u=2$，但余下数无法继续由三个不相交数列覆盖。因此只有 $h=3$ 或 $4$。", "$h=3$ 时，Harold 粉刷模 $3$ 余 $1$ 的桩。$5$ 号必须属于 Tanya，否则 Ulysses 的数列还会包含已由 Harold 粉刷的 $7$ 号；故 $t=3$，剩余类给出 $u=3$，得到 $333$。", "$h=4$ 时，$4$ 号必须属于 Tanya，所以 $t=2$；剩余编号为 $3,7,11,\\ldots$，故 $u=4$，得到 $424$。", "两组三元组确实分别构成正整数划分，且无其他情形。总和为 $333+424=757$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/9"
+  },
+  "aime-2002i-q10": {
+    "summary": "Triangle $ABC$ is right at $B$, with $AB=AE+EB=3+9=12$ and $AC=AF+FC=10+27=37$. Point $D$ lies on $BC$ and $AD$ bisects $\\angle CAB$. Points $E\\in AB$ and $F\\in AC$ satisfy the given segment lengths, and $G=AD\\cap EF$. Find the nearest integer to the area of quadrilateral $DCFG$.",
+    "summaryZh": "三角形 $ABC$ 在 $B$ 处为直角，$AB=AE+EB=3+9=12$，$AC=AF+FC=10+27=37$。点 $D$ 在 $BC$ 上，$AD$ 平分 $\\angle CAB$；点 $E\\in AB$、$F\\in AC$ 满足上述分段长度，且 $G=AD\\cap EF$。求四边形 $DCFG$ 面积的最近整数。",
+    "answer": "148",
+    "answerZh": "148",
+    "methods": [{
+      "title": "Use two angle-bisector area ratios",
+      "titleZh": "两次使用角平分线面积比",
+      "topics": [{"en":"Angle bisector theorem","zh":"角平分线定理"},{"en":"Area ratios","zh":"面积比"},{"en":"Pythagorean theorem","zh":"勾股定理"}],
+      "steps": ["Since $AB=12$ and $AC=37$, the right triangle has $BC=\\sqrt{37^2-12^2}=35$ and area $[ABC]=210$.", "The angle-bisector theorem gives $BD:DC=12:37$, so $[ADC]=(37/49)[ABC]$.", "In triangle $AEF$, the same line $AG$ bisects $\\angle EAF$, so $EG:GF=AE:AF=3:10$ and $[AGF]=(10/13)[AEF]$.", "Using common altitudes, $[AEF]/[ABF]=AE/AB=3/12$ and $[ABF]/[ABC]=AF/AC=10/37$. Thus $[AGF]=(10/13)(3/12)(10/37)[ABC]$.", "Therefore $[DCFG]=[ADC]-[AGF]=(37/49-25/481)210\\approx147.657$. The nearest integer is $148$."],
+      "stepsZh": ["由 $AB=12$、$AC=37$，勾股定理得 $BC=\\sqrt{37^2-12^2}=35$，所以 $[ABC]=210$。", "角平分线定理给出 $BD:DC=12:37$，因此 $[ADC]=(37/49)[ABC]$。", "在三角形 $AEF$ 中，同一条直线 $AG$ 也平分 $\\angle EAF$，故 $EG:GF=AE:AF=3:10$，从而 $[AGF]=(10/13)[AEF]$。", "利用同高面积比，$[AEF]/[ABF]=AE/AB=3/12$，且 $[ABF]/[ABC]=AF/AC=10/37$。因此 $[AGF]=(10/13)(3/12)(10/37)[ABC]$。", "所以 $[DCFG]=[ADC]-[AGF]=(37/49-25/481)210\\approx147.657$，最近整数为 $148$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/10"
+  },
+  "aime-2002i-q11": {
+    "summary": "In a cube of side $12$, let adjacent faces be $ABCD$ and $BCFG$. A light ray leaves vertex $A$, first hits face $BCFG$ at a point $P$ whose perpendicular distances from edges $BG$ and $BC$ are $7$ and $5$, and then reflects specularly from cube faces. If the path length until it next reaches a vertex is $m\\sqrt n$ with squarefree $n$, find $m+n$.",
+    "summaryZh": "在边长为 $12$ 的立方体中，$ABCD$ 与 $BCFG$ 是相邻面。一束光从顶点 $A$ 出发，首次射到面 $BCFG$ 上的点 $P$；$P$ 到棱 $BG$、$BC$ 的垂直距离分别为 $7$、$5$，之后按镜面反射继续传播。若光线下一次到达顶点前的路程为 $m\\sqrt n$，其中 $n$ 无平方因子，求 $m+n$。",
+    "answer": "230",
+    "answerZh": "230",
+    "methods": [{
+      "title": "Unfold the reflected cubes",
+      "titleZh": "展开反射后的立方体",
+      "topics": [{"en":"Cube unfolding","zh":"立方体展开"},{"en":"Reflection","zh":"反射"},{"en":"Least common multiple","zh":"最小公倍数"}],
+      "steps": ["Choose coordinates $A=(0,0,0)$ and the first hit point $P=(12,7,5)$. Reflecting the cube across each struck face straightens the entire light path into the ray $(12t,7t,5t)$ in a cubic lattice.", "A reflected copy of a cube has a vertex whenever all three coordinates are multiples of $12$. Thus we need the least positive $t$ for which $7t$ and $5t$ are both divisible by $12$.", "Because $5$ and $7$ are each coprime to $12$, the least such value is $t=12$. The first vertex reached in the unfolding is $(144,84,60)$.", "The path length is its distance from the origin: $\\sqrt{144^2+84^2+60^2}=12\\sqrt{12^2+7^2+5^2}=12\\sqrt{218}$.", "Since $218=2\\cdot109$ is squarefree, $m+n=12+218=230$."],
+      "stepsZh": ["取坐标 $A=(0,0,0)$，首次碰撞点为 $P=(12,7,5)$。每次碰到面时把立方体关于该面反射，折线路径便展开为立方格点空间中的直线 $(12t,7t,5t)$。", "展开后的某个立方体顶点要求三个坐标都为 $12$ 的倍数。因此要找最小正数 $t$，使 $7t$ 与 $5t$ 都能被 $12$ 整除。", "因为 $5,7$ 都与 $12$ 互质，最小值为 $t=12$，对应点为 $(144,84,60)$。", "路程等于该点到原点的距离：$\\sqrt{144^2+84^2+60^2}=12\\sqrt{12^2+7^2+5^2}=12\\sqrt{218}$。", "$218=2\\cdot109$ 无平方因子，所以 $m+n=12+218=230$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/11"
+  },
+  "aime-2002i-q12": {
+    "summary": "For $z\\ne i$, let $F(z)=(z+i)/(z-i)$ and define $z_n=F(z_{n-1})$. Given $z_0=1/137+i$ and $z_{2002}=a+bi$ for real $a,b$, find $a+b$.",
+    "summaryZh": "对 $z\\ne i$ 定义 $F(z)=(z+i)/(z-i)$，并令 $z_n=F(z_{n-1})$。已知 $z_0=1/137+i$，且 $z_{2002}=a+bi$，其中 $a,b$ 为实数，求 $a+b$。",
+    "answer": "275",
+    "answerZh": "275",
+    "methods": [{
+      "title": "Show that the transformation has period three",
+      "titleZh": "证明变换的周期为三",
+      "topics": [{"en":"Complex numbers","zh":"复数"},{"en":"Function iteration","zh":"函数迭代"},{"en":"Periodicity","zh":"周期性"}],
+      "steps": ["Direct composition gives $F(F(z))=i(z+1)/(z-1)$.", "Applying $F$ once more, $F(F(F(z)))=\\frac{i(z+1)/(z-1)+i}{i(z+1)/(z-1)-i}=z$. Thus the iterates repeat every three steps.", "Because $2002\\equiv1\\pmod3$, $z_{2002}=z_1$.", "Finally $z_1=\\frac{1/137+2i}{1/137}=1+274i$. Hence $a+b=1+274=275$."],
+      "stepsZh": ["直接复合可得 $F(F(z))=i(z+1)/(z-1)$。", "再作用一次，$F(F(F(z)))=\\frac{i(z+1)/(z-1)+i}{i(z+1)/(z-1)-i}=z$，所以迭代序列每三步重复。", "由于 $2002\\equiv1\\pmod3$，故 $z_{2002}=z_1$。", "最后 $z_1=\\frac{1/137+2i}{1/137}=1+274i$，所以 $a+b=275$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/12"
+  },
+  "aime-2002i-q13": {
+    "summary": "In triangle $ABC$, medians $AD$ and $CE$ have lengths $18$ and $27$, and $AB=24$. Extend $CE$ through $E$ to meet the circumcircle again at $F$. If $[AFB]=m\\sqrt n$ with squarefree $n$, find $m+n$.",
+    "summaryZh": "在三角形 $ABC$ 中，中线 $AD$、$CE$ 的长度分别为 $18$、$27$，且 $AB=24$。把 $CE$ 过 $E$ 延长并再次交三角形外接圆于 $F$。若 $[AFB]=m\\sqrt n$，其中 $n$ 无平方因子，求 $m+n$。",
+    "answer": "063",
+    "answerZh": "063",
+    "methods": [{
+      "title": "Combine the centroid with power of a point",
+      "titleZh": "结合重心与点幂",
+      "topics": [{"en":"Centroid","zh":"重心"},{"en":"Power of a point","zh":"点幂"},{"en":"Area ratios","zh":"面积比"}],
+      "steps": ["Let $P=AD\\cap CE$ be the centroid. Since $E$ is the midpoint of $AB$, $AE=EB=12$. Also $AP=(2/3)AD=12$ and $PE=(1/3)CE=9$.", "Power of point $E$ with respect to the circumcircle gives $EA\\cdot EB=EC\\cdot EF$, so $EF=144/27=16/3$.", "Triangle $AEP$ has sides $AE=AP=12$ and base $EP=9$. Its altitude to $EP$ is $\\sqrt{12^2-(9/2)^2}=3\\sqrt{55}/2$, hence $[AEP]=27\\sqrt{55}/4$.", "Triangles $AEF$ and $AEP$ share the altitude from $A$ to line $CEF$, so $[AEF]/[AEP]=EF/EP=(16/3)/9=16/27$. Thus $[AEF]=4\\sqrt{55}$.", "Because $E$ is the midpoint of $AB$, triangles $AEF$ and $BEF$ have equal areas. Therefore $[AFB]=8\\sqrt{55}$ and $m+n=8+55=63$, recorded as $063$."],
+      "stepsZh": ["设 $P=AD\\cap CE$ 为重心。由于 $E$ 是 $AB$ 中点，$AE=EB=12$；又有 $AP=(2/3)AD=12$、$PE=(1/3)CE=9$。", "由点 $E$ 关于外接圆的幂，$EA\\cdot EB=EC\\cdot EF$，故 $EF=144/27=16/3$。", "三角形 $AEP$ 中 $AE=AP=12$、底 $EP=9$。其底边上的高为 $\\sqrt{12^2-(9/2)^2}=3\\sqrt{55}/2$，所以 $[AEP]=27\\sqrt{55}/4$。", "三角形 $AEF$ 与 $AEP$ 对直线 $CEF$ 共高，故 $[AEF]/[AEP]=EF/EP=(16/3)/9=16/27$，从而 $[AEF]=4\\sqrt{55}$。", "因为 $E$ 是 $AB$ 中点，三角形 $AEF$ 与 $BEF$ 等面积。因此 $[AFB]=8\\sqrt{55}$，$m+n=8+55=63$，记为 $063$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/13"
+  },
+  "aime-2002i-q14": {
+    "summary": "A set $S$ of distinct positive integers has the property that after deleting any element, the arithmetic mean of the remaining elements is an integer. Given $1\\in S$ and that $2002$ is the largest element, find the greatest possible size of $S$.",
+    "summaryZh": "互异正整数集合 $S$ 满足：删去任意一个元素后，其余元素的算术平均数都是整数。已知 $1\\in S$，且 $2002$ 是最大元素，求 $S$ 的最大可能元素个数。",
+    "answer": "030",
+    "answerZh": "030",
+    "methods": [{
+      "title": "Derive a congruence and construct the extremal set",
+      "titleZh": "推出同余条件并构造极值集合",
+      "topics": [{"en":"Modular arithmetic","zh":"模运算"},{"en":"Arithmetic mean","zh":"算术平均数"},{"en":"Extremal construction","zh":"极值构造"}],
+      "steps": ["Let $|S|=n$, let the total sum be $T$, and write $s_x=(T-x)/(n-1)$. Each $s_x$ is an integer.", "For any $x,y\\in S$, $s_x-s_y=(y-x)/(n-1)$ is an integer. Hence all elements of $S$ are congruent modulo $n-1$.", "Because $1,2002\\in S$, we have $n-1\\mid2001=3\\cdot23\\cdot29$. Also $n$ distinct positive integers in one residue class, starting with $1$, force $2002\\ge1+(n-1)^2$, so $n-1\\le44$.", "The largest divisor of $2001$ not exceeding $44$ is $29$, so $n\\le30$.", "This bound is attained by $S=\\{1,30,59,\\ldots,813,2002\\}$: it has $30$ elements, all congruent to $1\\pmod{29}$, and its total sum is also $1\\pmod{29}$. Thus every $T-x$ is divisible by $29=n-1$. The maximum is $030$."],
+      "stepsZh": ["设 $|S|=n$、总和为 $T$，并记 $s_x=(T-x)/(n-1)$。题设说明每个 $s_x$ 都是整数。", "对任意 $x,y\\in S$，$s_x-s_y=(y-x)/(n-1)$ 为整数，因此 $S$ 中所有元素模 $n-1$ 同余。", "由于 $1,2002\\in S$，有 $n-1\\mid2001=3\\cdot23\\cdot29$。此外，同一剩余类中从 $1$ 开始取 $n$ 个不同正整数，至少需要 $2002\\ge1+(n-1)^2$，故 $n-1\\le44$。", "$2001$ 不超过 $44$ 的最大因数是 $29$，所以 $n\\le30$。", "取 $S=\\{1,30,59,\\ldots,813,2002\\}$ 可达到上界：它有 $30$ 个元素，均模 $29$ 余 $1$，且总和也模 $29$ 余 $1$，所以每个 $T-x$ 都能被 $29=n-1$ 整除。最大值为 $030$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/14"
+  },
+  "aime-2002i-q15": {
+    "summary": "Polyhedron $ABCDEFG$ has six faces. $ABCD$ is a square with $AB=12$. $ABFG$ is an isosceles trapezoid with $AB\\parallel GF$, $AG=BF=8$, and $GF=6$. Triangle $CDE$ has $CE=DE=14$; the other faces are $ADEG$, $BCEF$, and $EFG$. The distance from $E$ to plane $ABCD$ is $12$. If $EG^2=p-q\\sqrt r$ with squarefree $r$, find $p+q+r$.",
+    "summaryZh": "六面体 $ABCDEFG$ 中，$ABCD$ 是边长 $12$ 的正方形；$ABFG$ 是等腰梯形，$AB\\parallel GF$，$AG=BF=8$、$GF=6$；三角形 $CDE$ 满足 $CE=DE=14$；其余三个面为 $ADEG$、$BCEF$、$EFG$。点 $E$ 到平面 $ABCD$ 的距离为 $12$。若 $EG^2=p-q\\sqrt r$，其中 $r$ 无平方因子，求 $p+q+r$。",
+    "answer": "163",
+    "answerZh": "163",
+    "methods": [{
+      "title": "Place the polyhedron in coordinates",
+      "titleZh": "建立空间直角坐标系",
+      "topics": [{"en":"3D coordinate geometry","zh":"空间解析几何"},{"en":"Planar faces","zh":"共面条件"},{"en":"Distance formula","zh":"距离公式"}],
+      "steps": ["Set $D=(0,0,0)$, $C=(12,0,0)$, $B=(12,12,0)$, and $A=(0,12,0)$. Write $E=(x,y,12)$, using its distance from the base plane.", "The equality $CE=DE$ gives $x=6$. Then $DE=14$ gives $6^2+y^2+12^2=14^2$, so the placement inside the solid has $y=4$ and $E=(6,4,12)$.", "Because $ABFG$ is an isosceles trapezoid with bases of lengths $12$ and $6$, symmetry gives $G=(3,s,z)$ and $F=(9,s,z)$. The face $ADEG$ is planar. The plane through $A,D,E$ is $z=2x$, so $z=6$ at $G$.", "Now $AG=8$ yields $3^2+(s-12)^2+6^2=64$, hence $s=12\\pm\\sqrt{19}$. The branch compatible with the stated convex face order is $s=12-\\sqrt{19}$.", "Therefore $EG^2=(3-6)^2+(12-\\sqrt{19}-4)^2+(6-12)^2=45+(8-\\sqrt{19})^2=128-16\\sqrt{19}$.", "Thus $p=128$, $q=16$, $r=19$, and $p+q+r=163$."],
+      "stepsZh": ["取 $D=(0,0,0)$、$C=(12,0,0)$、$B=(12,12,0)$、$A=(0,12,0)$。由 $E$ 到底面的距离，设 $E=(x,y,12)$。", "$CE=DE$ 给出 $x=6$；再由 $DE=14$，有 $6^2+y^2+12^2=14^2$，在六面体内部的放置中 $y=4$，故 $E=(6,4,12)$。", "因为 $ABFG$ 是底边长分别为 $12$、$6$ 的等腰梯形，由对称性可设 $G=(3,s,z)$、$F=(9,s,z)$。面 $ADEG$ 共面，而过 $A,D,E$ 的平面方程为 $z=2x$，所以 $G$ 的 $z$ 坐标为 $6$。", "由 $AG=8$ 得 $3^2+(s-12)^2+6^2=64$，所以 $s=12\\pm\\sqrt{19}$。与题设凸六面体各面的连接次序相符的分支是 $s=12-\\sqrt{19}$。", "因此 $EG^2=(3-6)^2+(12-\\sqrt{19}-4)^2+(6-12)^2=45+(8-\\sqrt{19})^2=128-16\\sqrt{19}$。", "故 $p=128$、$q=16$、$r=19$，答案为 $163$。"]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/aime/2002I/problem/15"
+  }
+}
