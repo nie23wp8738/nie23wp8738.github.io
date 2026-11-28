@@ -1,0 +1,451 @@
+{
+  "tmua-2017-p1-q1": {
+    "summary": "Given $\\frac{dy}{dx}=3x^2-\\frac{2-3x}{x^3}$ for $x\\ne0$ and $y=5$ when $x=1$, find $y$ in terms of $x$.",
+    "summaryZh": "已知 $x\\ne0$ 时 $\\frac{dy}{dx}=3x^2-\\frac{2-3x}{x^3}$，且 $x=1$ 时 $y=5$，求 $y$ 关于 $x$ 的表达式。",
+    "answer": "C. $y=x^3+x^{-2}-3x^{-1}+6$",
+    "answerZh": "C．$y=x^3+x^{-2}-3x^{-1}+6$",
+    "methods": [{
+      "title": "Integrate and use the initial value",
+      "titleZh": "积分并代入初值",
+      "topics": [{"en":"Antiderivatives","zh":"原函数"},{"en":"Initial conditions","zh":"初始条件"}],
+      "steps": [
+        "Rewrite the derivative as $3x^2-2x^{-3}+3x^{-2}$. Term-by-term integration gives $y=x^3+x^{-2}-3x^{-1}+C$.",
+        "At $x=1$, the nonconstant part equals $1+1-3=-1$. Since $y=5$, $C=6$, giving option C on the connected branch $x>0$.",
+        "Strictly, the differential equation is undefined at $x=0$, so the initial value does not determine the integration constant on $x<0$. The multiple-choice question uses the usual school-level convention that one displayed formula is required on both parts of the stated domain."
+      ],
+      "stepsZh": [
+        "把导数改写为 $3x^2-2x^{-3}+3x^{-2}$，逐项积分得 $y=x^3+x^{-2}-3x^{-1}+C$。",
+        "当 $x=1$ 时，非恒定部分为 $1+1-3=-1$。由 $y=5$ 得 $C=6$，所以在包含初值的连通区间 $x>0$ 上选 C。",
+        "严格来说，微分方程在 $x=0$ 处无定义，初值不能决定 $x<0$ 分支的积分常数。本选择题采用学校数学中的通常约定：在所给定义域两部分使用同一个显示公式。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=3"
+  },
+  "tmua-2017-p1-q2": {
+    "summary": "For $x\\ne0$, let $f(x)=\\left(\\frac2x-\\frac1{2x^2}\\right)^2$. Find $f''(1)$.",
+    "summaryZh": "对 $x\\ne0$，定义 $f(x)=\\left(\\frac2x-\\frac1{2x^2}\\right)^2$，求 $f''(1)$。",
+    "answer": "C. $5$",
+    "answerZh": "C．$5$",
+    "methods": [{
+      "title": "Expand into powers before differentiating",
+      "titleZh": "先展开成幂函数再求导",
+      "topics": [{"en":"Second derivatives","zh":"二阶导数"},{"en":"Laws of indices","zh":"指数运算"}],
+      "steps": [
+        "Expand to $f(x)=4x^{-2}-2x^{-3}+\\tfrac14x^{-4}$.",
+        "Hence $f'(x)=-8x^{-3}+6x^{-4}-x^{-5}$ and $f''(x)=24x^{-4}-24x^{-5}+5x^{-6}$.",
+        "Substitution of $x=1$ gives $24-24+5=5$."
+      ],
+      "stepsZh": [
+        "展开得 $f(x)=4x^{-2}-2x^{-3}+\\tfrac14x^{-4}$。",
+        "于是 $f'(x)=-8x^{-3}+6x^{-4}-x^{-5}$，$f''(x)=24x^{-4}-24x^{-5}+5x^{-6}$。",
+        "代入 $x=1$ 得 $24-24+5=5$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=4"
+  },
+  "tmua-2017-p1-q3": {
+    "summary": "The line $l$ is $y=6-2x$. A second line is perpendicular to $l$ and passes through $(-6,0)$. Find the area enclosed by the two lines and the $x$-axis.",
+    "summaryZh": "直线 $l$ 的方程为 $y=6-2x$。另一条直线与 $l$ 垂直并经过 $(-6,0)$。求两直线与 $x$ 轴围成区域的面积。",
+    "answer": "A. $16\\frac15$",
+    "answerZh": "A．$16\\frac15$",
+    "methods": [{
+      "title": "Find the triangle's base and height",
+      "titleZh": "求三角形的底与高",
+      "topics": [{"en":"Perpendicular gradients","zh":"垂直直线斜率"},{"en":"Triangle area","zh":"三角形面积"}],
+      "steps": [
+        "$l$ meets the $x$-axis at $(3,0)$. The perpendicular line has slope $1/2$ and equation $y=\\tfrac12(x+6)$.",
+        "Solving $6-2x=\\tfrac12x+3$ gives the intersection height $y=18/5$.",
+        "The base on the $x$-axis has length $3-(-6)=9$, so the area is $\\tfrac12\\cdot9\\cdot18/5=81/5=16\\tfrac15$."
+      ],
+      "stepsZh": [
+        "$l$ 与 $x$ 轴交于 $(3,0)$。垂线斜率为 $1/2$，方程为 $y=\\tfrac12(x+6)$。",
+        "联立 $6-2x=\\tfrac12x+3$，交点的纵坐标为 $18/5$。",
+        "$x$ 轴上的底长为 $3-(-6)=9$，故面积为 $\\tfrac12\\cdot9\\cdot18/5=81/5=16\\tfrac15$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=5"
+  },
+  "tmua-2017-p1-q4": {
+    "summary": "The polynomial $(3x^2+8x-3)(px-1)$ leaves remainder $24$ when divided by $x+1$. Find $p$.",
+    "summaryZh": "多项式 $(3x^2+8x-3)(px-1)$ 除以 $x+1$ 的余数为 $24$，求 $p$。",
+    "answer": "B. $2$",
+    "answerZh": "B．$2$",
+    "methods": [{
+      "title": "Apply the remainder theorem without expanding",
+      "titleZh": "不展开，直接使用余数定理",
+      "topics": [{"en":"Remainder theorem","zh":"余数定理"}],
+      "steps": [
+        "If $F(x)=(3x^2+8x-3)(px-1)$, division by $x+1$ leaves remainder $F(-1)$.",
+        "$F(-1)=(3-8-3)(-p-1)=8(p+1)$. Equating this to $24$ gives $p=2$."
+      ],
+      "stepsZh": [
+        "令 $F(x)=(3x^2+8x-3)(px-1)$。由余数定理，除以 $x+1$ 的余数为 $F(-1)$。",
+        "$F(-1)=(3-8-3)(-p-1)=8(p+1)$。令其等于 $24$，得 $p=2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=6"
+  },
+  "tmua-2017-p1-q5": {
+    "summary": "Let $S$ be the set of real $x$ satisfying both $x^2-8x+12<0$ and $2x+1>9$. Express $S$ as one quadratic inequality.",
+    "summaryZh": "设 $S$ 为同时满足 $x^2-8x+12<0$ 与 $2x+1>9$ 的实数 $x$ 的集合，把 $S$ 表示为一个二次不等式。",
+    "answer": "C. $x^2-10x+24<0$",
+    "answerZh": "C．$x^2-10x+24<0$",
+    "methods": [{
+      "title": "Intersect intervals and rebuild a quadratic",
+      "titleZh": "先求交集，再构造二次不等式",
+      "topics": [{"en":"Quadratic inequalities","zh":"二次不等式"},{"en":"Interval intersections","zh":"区间交集"}],
+      "steps": [
+        "Factor the first inequality: $(x-2)(x-6)<0$, so $2<x<6$. The second gives $x>4$.",
+        "Their intersection is $4<x<6$, which is exactly $(x-4)(x-6)<0$, or $x^2-10x+24<0$."
+      ],
+      "stepsZh": [
+        "第一式因式分解为 $(x-2)(x-6)<0$，故 $2<x<6$；第二式给出 $x>4$。",
+        "交集为 $4<x<6$，等价于 $(x-4)(x-6)<0$，即 $x^2-10x+24<0$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=7"
+  },
+  "tmua-2017-p1-q6": {
+    "summary": "A tangent to $x^2+y^2=144$ passes through $(20,0)$ and crosses the positive $y$-axis. Find its $y$-intercept.",
+    "summaryZh": "圆 $x^2+y^2=144$ 的一条切线经过 $(20,0)$ 并与 $y$ 轴正半轴相交，求其纵截距。",
+    "answer": "B. $15$",
+    "answerZh": "B．$15$",
+    "methods": [
+      {
+        "title": "Use the right-triangle similarity",
+        "titleZh": "利用直角三角形相似",
+        "topics": [{"en":"Tangents to circles","zh":"圆的切线"},{"en":"Similar triangles","zh":"相似三角形"}],
+        "steps": [
+          "Let the external point be $R=(20,0)$ and the tangency point be $Q$. Since the radius is perpendicular to the tangent, $OQ=12$ and $OR=20$ give $QR=16$.",
+          "If the tangent meets the $y$-axis at $P=(0,k)$, the standard altitude similarity in right triangle $POR$ gives $PO/OQ=OR/QR$.",
+          "Thus $k/12=20/16$, so $k=15$."
+        ],
+        "stepsZh": [
+          "设外点为 $R=(20,0)$、切点为 $Q$。半径垂直切线，且 $OQ=12,OR=20$，故 $QR=16$。",
+          "若切线与 $y$ 轴交于 $P=(0,k)$，直角三角形 $POR$ 中的相似关系给出 $PO/OQ=OR/QR$。",
+          "于是 $k/12=20/16$，得到 $k=15$。"
+        ]
+      },
+      {
+        "title": "Force a repeated intersection",
+        "titleZh": "用相切时的重根条件",
+        "topics": [{"en":"Quadratic discriminant","zh":"二次方程判别式"}],
+        "steps": [
+          "Write the tangent through $(20,0)$ as $y=m(x-20)$. Substitution in the circle gives $(m^2+1)x^2-40m^2x+400m^2-144=0$.",
+          "Tangency requires discriminant zero, giving $64m^2=36$. The positive $y$-intercept requires $m=-3/4$.",
+          "At $x=0$, $y=-20m=15$."
+        ],
+        "stepsZh": [
+          "把经过 $(20,0)$ 的切线写成 $y=m(x-20)$。代入圆方程得 $(m^2+1)x^2-40m^2x+400m^2-144=0$。",
+          "相切要求判别式为零，化简得 $64m^2=36$。纵截距为正，因此 $m=-3/4$。",
+          "令 $x=0$，得 $y=-20m=15$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=8"
+  },
+  "tmua-2017-p1-q7": {
+    "summary": "The first three terms of an arithmetic progression are $p,q,p^2$, where $p<0$. The first three terms of a geometric progression are $p,p^2,q$. Find the sum of the first ten arithmetic terms.",
+    "summaryZh": "某等差数列前三项为 $p,q,p^2$，其中 $p<0$；某等比数列前三项为 $p,p^2,q$。求该等差数列前十项之和。",
+    "answer": "B. $95/8$",
+    "answerZh": "B．$95/8$",
+    "methods": [{
+      "title": "Link the two progressions",
+      "titleZh": "联立两种数列关系",
+      "topics": [{"en":"Arithmetic progressions","zh":"等差数列"},{"en":"Geometric progressions","zh":"等比数列"}],
+      "steps": [
+        "The geometric ratio is $p$, so $q=p^3$. If the arithmetic difference is $d$, then $p^3=p+d$ and $p^2=p+2d$.",
+        "Eliminating $d$ gives $p(2p+1)(p-1)=0$. Since $p<0$, $p=-1/2$, and then $d=p^3-p=3/8$.",
+        "$S_{10}=5(2p+9d)=5(-1+27/8)=95/8$."
+      ],
+      "stepsZh": [
+        "等比数列的公比为 $p$，故 $q=p^3$。设等差数列公差为 $d$，则 $p^3=p+d$、$p^2=p+2d$。",
+        "消去 $d$ 得 $p(2p+1)(p-1)=0$。由 $p<0$，知 $p=-1/2$，进而 $d=p^3-p=3/8$。",
+        "$S_{10}=5(2p+9d)=5(-1+27/8)=95/8$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=9"
+  },
+  "tmua-2017-p1-q8": {
+    "summary": "Find all $x$ in $[0,\\pi]$ satisfying $(1-2\\sin x)\\cos x\\ge0$.",
+    "summaryZh": "求区间 $[0,\\pi]$ 内满足 $(1-2\\sin x)\\cos x\\ge0$ 的所有 $x$。",
+    "answer": "A. $0\\le x\\le\\pi/6$ or $\\pi/2\\le x\\le5\\pi/6$",
+    "answerZh": "A．$0\\le x\\le\\pi/6$ 或 $\\pi/2\\le x\\le5\\pi/6$",
+    "methods": [{
+      "title": "Make a sign chart for both factors",
+      "titleZh": "分别作两因子的符号表",
+      "topics": [{"en":"Trigonometric inequalities","zh":"三角不等式"},{"en":"Sign analysis","zh":"符号分析"}],
+      "steps": [
+        "$1-2\\sin x$ is nonnegative on $[0,\\pi/6]\\cup[5\\pi/6,\\pi]$ and nonpositive between those intervals.",
+        "$\\cos x$ is nonnegative on $[0,\\pi/2]$ and nonpositive on $[\\pi/2,\\pi]$.",
+        "The factors have the same sign on $[0,\\pi/6]$ and $[\\pi/2,5\\pi/6]$. Endpoints are included because equality is allowed."
+      ],
+      "stepsZh": [
+        "$1-2\\sin x$ 在 $[0,\\pi/6]\\cup[5\\pi/6,\\pi]$ 上非负，在中间区间非正。",
+        "$\\cos x$ 在 $[0,\\pi/2]$ 上非负，在 $[\\pi/2,\\pi]$ 上非正。",
+        "两因子同号的区间为 $[0,\\pi/6]$ 与 $[\\pi/2,5\\pi/6]$。因允许等号，端点均保留。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=10"
+  },
+  "tmua-2017-p1-q9": {
+    "summary": "A regular hexagon is inscribed in the circle $x^2+y^2-18x-22y+178=0$. Find the area of the hexagon.",
+    "summaryZh": "正六边形内接于圆 $x^2+y^2-18x-22y+178=0$，求六边形面积。",
+    "answer": "F. $36\\sqrt3$",
+    "answerZh": "F．$36\\sqrt3$",
+    "methods": [{
+      "title": "Complete the square and split the hexagon",
+      "titleZh": "配方后分割正六边形",
+      "topics": [{"en":"Circle equations","zh":"圆的方程"},{"en":"Regular hexagons","zh":"正六边形"}],
+      "steps": [
+        "Completing squares gives $(x-9)^2+(y-11)^2=24$, so the squared radius is $r^2=24$.",
+        "The hexagon is six equilateral triangles of side $r$. Each has area $\\frac{\\sqrt3}{4}r^2=6\\sqrt3$.",
+        "Therefore the hexagon has area $36\\sqrt3$."
+      ],
+      "stepsZh": [
+        "配方得 $(x-9)^2+(y-11)^2=24$，所以 $r^2=24$。",
+        "正六边形可分成六个边长为 $r$ 的正三角形，每个面积为 $\\frac{\\sqrt3}{4}r^2=6\\sqrt3$。",
+        "故总面积为 $36\\sqrt3$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=11"
+  },
+  "tmua-2017-p1-q10": {
+    "summary": "Let $f(x)=p^3-6p^2x+3px^2-x^3$, where $p$ is real. The normal to $y=f(x)$ at $x=-1$ has gradient $M$. Find the greatest possible $M$.",
+    "summaryZh": "设 $f(x)=p^3-6p^2x+3px^2-x^3$，其中 $p$ 为实数。曲线在 $x=-1$ 处法线斜率为 $M$，求 $M$ 的最大值。",
+    "answer": "E. $2/3$",
+    "answerZh": "E．$2/3$",
+    "methods": [{
+      "title": "Minimise the tangent-gradient denominator",
+      "titleZh": "最小化法线斜率的分母",
+      "topics": [{"en":"Tangents and normals","zh":"切线与法线"},{"en":"Completing the square","zh":"配方法"}],
+      "steps": [
+        "$f'(x)=-6p^2+6px-3x^2$, so at $x=-1$ the tangent gradient is $-3(2p^2+2p+1)$.",
+        "The normal gradient is $M=1/[3(2p^2+2p+1)]$.",
+        "Since $2p^2+2p+1=2(p+1/2)^2+1/2$, its minimum is $1/2$, giving $M_{\\max}=2/3$."
+      ],
+      "stepsZh": [
+        "$f'(x)=-6p^2+6px-3x^2$，故 $x=-1$ 处切线斜率为 $-3(2p^2+2p+1)$。",
+        "法线斜率为 $M=1/[3(2p^2+2p+1)]$。",
+        "由 $2p^2+2p+1=2(p+1/2)^2+1/2$，分母括号内最小为 $1/2$，所以 $M_{\\max}=2/3$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=12"
+  },
+  "tmua-2017-p1-q11": {
+    "summary": "The sequence satisfies $x_1=7$ and $x_{n+1}=\\frac{23x_n-53}{5x_n+1}$. Its first three terms are $7,3,1$. Find $x_{100}$.",
+    "summaryZh": "数列满足 $x_1=7$ 及 $x_{n+1}=\\frac{23x_n-53}{5x_n+1}$，前三项为 $7,3,1$。求 $x_{100}$。",
+    "answer": "A. $-5$",
+    "answerZh": "A．$-5$",
+    "methods": [{
+      "title": "Detect the four-term cycle",
+      "titleZh": "找出四项循环",
+      "topics": [{"en":"Recurrence relations","zh":"递推数列"},{"en":"Periodicity","zh":"周期性"}],
+      "steps": [
+        "Continuing the recurrence gives $x_4=(23-53)/6=-5$ and $x_5=(-115-53)/(-24)=7$.",
+        "The deterministic recurrence therefore repeats $7,3,1,-5$ with period four.",
+        "Since $100$ is divisible by $4$, $x_{100}$ is the fourth entry of the cycle, namely $-5$."
+      ],
+      "stepsZh": [
+        "继续计算得 $x_4=(23-53)/6=-5$，且 $x_5=(-115-53)/(-24)=7$。",
+        "递推式由当前项唯一决定下一项，因此 $7,3,1,-5$ 以四为周期重复。",
+        "因为 $100$ 能被 $4$ 整除，$x_{100}$ 是循环中的第四项，即 $-5$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=13"
+  },
+  "tmua-2017-p1-q12": {
+    "summary": "A polynomial $f$ is positive for every real $x$ and $\\int_2^4 f(x)\\,dx=A$. Determine $\\int_0^2[f(x+2)+1]\\,dx$.",
+    "summaryZh": "多项式 $f$ 对所有实数 $x$ 均为正，且 $\\int_2^4 f(x)\\,dx=A$。求 $\\int_0^2[f(x+2)+1]\\,dx$。",
+    "answer": "B. $A+2$",
+    "answerZh": "B．$A+2$",
+    "methods": [{
+      "title": "Translate the integral",
+      "titleZh": "平移积分区间",
+      "topics": [{"en":"Definite integrals","zh":"定积分"},{"en":"Substitution","zh":"换元法"}],
+      "steps": [
+        "With $u=x+2$, $\\int_0^2f(x+2)\\,dx=\\int_2^4f(u)\\,du=A$.",
+        "Also $\\int_0^2 1\\,dx=2$, so the required value is $A+2$."
+      ],
+      "stepsZh": [
+        "令 $u=x+2$，则 $\\int_0^2f(x+2)\\,dx=\\int_2^4f(u)\\,du=A$。",
+        "又 $\\int_0^2 1\\,dx=2$，故所求为 $A+2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=14"
+  },
+  "tmua-2017-p1-q13": {
+    "summary": "In $(a+bx)^5$, the coefficient of $x^4$ is eight times the coefficient of $x^2$. Given positive integers $a,b$, find the least possible $a+b$.",
+    "summaryZh": "在 $(a+bx)^5$ 的展开式中，$x^4$ 的系数是 $x^2$ 系数的八倍。已知 $a,b$ 为正整数，求 $a+b$ 的最小值。",
+    "answer": "C. $5$",
+    "answerZh": "C．$5$",
+    "methods": [{
+      "title": "Compare the two binomial coefficients",
+      "titleZh": "比较两个二项式项的系数",
+      "topics": [{"en":"Binomial theorem","zh":"二项式定理"},{"en":"Integer optimisation","zh":"整数最优化"}],
+      "steps": [
+        "The $x^4$ coefficient is $5ab^4$, while the $x^2$ coefficient is $10a^3b^2$.",
+        "$5ab^4=8(10a^3b^2)$ reduces, since $a,b>0$, to $b^2=16a^2$, hence $b=4a$.",
+        "Thus $a+b=5a$, whose least positive value is $5$ at $(a,b)=(1,4)$."
+      ],
+      "stepsZh": [
+        "$x^4$ 的系数为 $5ab^4$，$x^2$ 的系数为 $10a^3b^2$。",
+        "$5ab^4=8(10a^3b^2)$。因 $a,b>0$，约去公因子后得 $b^2=16a^2$，故 $b=4a$。",
+        "于是 $a+b=5a$，最小正整数值在 $(a,b)=(1,4)$ 时为 $5$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=15"
+  },
+  "tmua-2017-p1-q14": {
+    "summary": "The simultaneous equations $2^x+3\\cdot2^y=3$ and $2^{2x}-9\\cdot2^{2y}=6$ have solution $x=p,y=q$. Find $p-q$.",
+    "summaryZh": "方程组 $2^x+3\\cdot2^y=3$、$2^{2x}-9\\cdot2^{2y}=6$ 的解为 $x=p,y=q$，求 $p-q$。",
+    "answer": "F. $\\log_2 15$",
+    "answerZh": "F．$\\log_2 15$",
+    "methods": [{
+      "title": "Use a difference of squares",
+      "titleZh": "利用平方差",
+      "topics": [{"en":"Exponential substitutions","zh":"指数换元"},{"en":"Logarithms","zh":"对数"}],
+      "steps": [
+        "Put $a=2^x$ and $b=2^y$. The equations are $a+3b=3$ and $(a+3b)(a-3b)=6$.",
+        "The first equation makes the second give $a-3b=2$. Solving yields $a=5/2$ and $b=1/6$.",
+        "$p-q=\\log_2(5/2)-\\log_2(1/6)=\\log_2 15$."
+      ],
+      "stepsZh": [
+        "令 $a=2^x,b=2^y$。方程组化为 $a+3b=3$ 与 $(a+3b)(a-3b)=6$。",
+        "由第一式，第二式给出 $a-3b=2$。联立得 $a=5/2,b=1/6$。",
+        "$p-q=\\log_2(5/2)-\\log_2(1/6)=\\log_2 15$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=16"
+  },
+  "tmua-2017-p1-q15": {
+    "summary": "Let $f(x)=-2x^2+10$. On $0\\le x\\le1$, compare trapezium-rule estimates for (1) $y=f(x)$, (2) $y=f(x+1)$, and (3) the graph of $y=f(x+1)$ reflected in $y=6$.",
+    "summaryZh": "设 $f(x)=-2x^2+10$。在 $0\\le x\\le1$ 上，判断梯形法则对以下三条曲线所得估计是偏大还是偏小：(1) $y=f(x)$；(2) $y=f(x+1)$；(3) $y=f(x+1)$ 关于 $y=6$ 的对称图像。",
+    "answer": "B. underestimate, underestimate, overestimate",
+    "answerZh": "B．依次为低估、低估、高估",
+    "methods": [{
+      "title": "Read the sign of the second derivative",
+      "titleZh": "利用二阶导数判断凹凸性",
+      "topics": [{"en":"Trapezium rule","zh":"梯形法则"},{"en":"Concavity","zh":"凹凸性"}],
+      "steps": [
+        "$f''(x)=-4<0$, so $f$ is concave down and each chord lies below the curve: the trapezium rule underestimates (1).",
+        "Horizontal translation does not change the second derivative, so (2) is also underestimated.",
+        "Reflection in $y=6$ gives $y=12-f(x+1)$, whose second derivative is $4>0$. Its chords lie above the curve, so (3) is overestimated."
+      ],
+      "stepsZh": [
+        "$f''(x)=-4<0$，故图像开口向下，弦在曲线下方，梯形法则对 (1) 低估。",
+        "水平平移不改变二阶导数，所以对 (2) 仍为低估。",
+        "关于 $y=6$ 对称后方程为 $y=12-f(x+1)$，二阶导数为 $4>0$，弦在曲线上方，故对 (3) 高估。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=17"
+  },
+  "tmua-2017-p1-q16": {
+    "summary": "Let $f(x)=3x^2+12x+4$ and $g(x)=x^3+6x^2+9x-8$. Find all $x$ for which one function is increasing and the other decreasing, using non-strict derivative signs.",
+    "summaryZh": "设 $f(x)=3x^2+12x+4$、$g(x)=x^3+6x^2+9x-8$。按导数非负表示递增、非正表示递减，求一增一减时所有 $x$。",
+    "answer": "E. $x\\le-3$ or $-2\\le x\\le-1$",
+    "answerZh": "E．$x\\le-3$ 或 $-2\\le x\\le-1$",
+    "methods": [{
+      "title": "Compare derivative sign charts",
+      "titleZh": "比较两个导数的符号表",
+      "topics": [{"en":"Monotonicity","zh":"单调性"},{"en":"Simultaneous inequalities","zh":"联立不等式"}],
+      "steps": [
+        "$f'(x)=6(x+2)$ changes sign at $-2$. Also $g'(x)=3(x+1)(x+3)$ is nonnegative outside $[-3,-1]$ and nonpositive inside.",
+        "$f'\\le0,g'\\ge0$ gives $x\\le-3$. The opposite signs $f'\\ge0,g'\\le0$ give $-2\\le x\\le-1$.",
+        "Taking the union yields the stated set."
+      ],
+      "stepsZh": [
+        "$f'(x)=6(x+2)$ 在 $-2$ 处变号；$g'(x)=3(x+1)(x+3)$ 在区间 $[-3,-1]$ 外非负、区间内非正。",
+        "$f'\\le0,g'\\ge0$ 给出 $x\\le-3$；反向符号 $f'\\ge0,g'\\le0$ 给出 $-2\\le x\\le-1$。",
+        "取并集即得答案。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=18"
+  },
+  "tmua-2017-p1-q17": {
+    "summary": "For positive integers $n$, define $F(n)=\\frac1n\\int_0^n(n-x)\\,dx$ and $G(n)=\\sum_{r=1}^nF(r)$. Find the least $n$ for which $G(n)>150$.",
+    "summaryZh": "对正整数 $n$，定义 $F(n)=\\frac1n\\int_0^n(n-x)\\,dx$、$G(n)=\\sum_{r=1}^nF(r)$。求使 $G(n)>150$ 的最小 $n$。",
+    "answer": "D. $25$",
+    "answerZh": "D．$25$",
+    "methods": [{
+      "title": "Evaluate the integral and sum",
+      "titleZh": "先积分，再求和",
+      "topics": [{"en":"Definite integrals","zh":"定积分"},{"en":"Finite sums","zh":"有限求和"}],
+      "steps": [
+        "$\\int_0^n(n-x)\\,dx=n^2/2$, so $F(n)=n/2$.",
+        "$G(n)=\\frac12\\sum_{r=1}^nr=\\frac14n(n+1)$.",
+        "Thus $G(n)>150$ means $n(n+1)>600$. Since $24\\cdot25=600$ but $25\\cdot26=650$, the least $n$ is $25$."
+      ],
+      "stepsZh": [
+        "$\\int_0^n(n-x)\\,dx=n^2/2$，所以 $F(n)=n/2$。",
+        "$G(n)=\\frac12\\sum_{r=1}^nr=\\frac14n(n+1)$。",
+        "$G(n)>150$ 等价于 $n(n+1)>600$。因 $24\\cdot25=600$、$25\\cdot26=650$，最小 $n$ 为 $25$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=19"
+  },
+  "tmua-2017-p1-q18": {
+    "summary": "The graph $y=\\log_{10}x$ is translated upward by $2$. This is equivalent to a horizontal stretch by factor $k$. Find $k$.",
+    "summaryZh": "把 $y=\\log_{10}x$ 的图像向上平移 $2$ 个单位，这等价于水平方向伸缩因子为 $k$ 的变换。求 $k$。",
+    "answer": "A. $0.01$",
+    "answerZh": "A．$0.01$",
+    "methods": [{
+      "title": "Match the transformed function",
+      "titleZh": "比较变换后的函数式",
+      "topics": [{"en":"Graph transformations","zh":"函数图像变换"},{"en":"Logarithms","zh":"对数"}],
+      "steps": [
+        "An upward translation gives $\\log_{10}x+2$. A horizontal stretch by factor $k$ gives $\\log_{10}(x/k)$.",
+        "Equating them for all $x>0$ gives $-\\log_{10}k=2$, hence $k=10^{-2}=0.01$."
+      ],
+      "stepsZh": [
+        "向上平移得到 $\\log_{10}x+2$；水平方向伸缩因子为 $k$ 后得到 $\\log_{10}(x/k)$。",
+        "令二者对所有 $x>0$ 相等，得 $-\\log_{10}k=2$，故 $k=10^{-2}=0.01$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=20"
+  },
+  "tmua-2017-p1-q19": {
+    "summary": "The solutions of $x^2+bx+c<0$ form $p<x<q$, where $c<0$. Find the solution interval of $x^2+bcx+c^3<0$.",
+    "summaryZh": "不等式 $x^2+bx+c<0$ 的解集为 $p<x<q$，且 $c<0$。求 $x^2+bcx+c^3<0$ 的解区间。",
+    "answer": "D. $qc<x<pc$",
+    "answerZh": "D．$qc<x<pc$",
+    "methods": [{
+      "title": "Scale the original inequality",
+      "titleZh": "缩放原不等式",
+      "topics": [{"en":"Quadratic inequalities","zh":"二次不等式"},{"en":"Substitution","zh":"换元法"}],
+      "steps": [
+        "Divide the new inequality by $c^2>0$ to obtain $(x/c)^2+b(x/c)+c<0$.",
+        "By the given information, this is equivalent to $p<x/c<q$.",
+        "Multiplication by $c<0$ reverses both inequalities, giving $pc>x>qc$, or $qc<x<pc$."
+      ],
+      "stepsZh": [
+        "新不等式除以 $c^2>0$，得到 $(x/c)^2+b(x/c)+c<0$。",
+        "由已知条件，这等价于 $p<x/c<q$。",
+        "再乘以 $c<0$ 时不等号反向，得 $pc>x>qc$，即 $qc<x<pc$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=21"
+  },
+  "tmua-2017-p1-q20": {
+    "summary": "Triangle $PQR$ has side lengths $QR=a$, $RP=a+d$, and $PQ=a+2d$, where $a,d>0$ and $3d>2a$. Find the full possible range of $\\angle PRQ$.",
+    "summaryZh": "三角形 $PQR$ 的边长依次为 $QR=a$、$RP=a+d$、$PQ=a+2d$，其中 $a,d>0$ 且 $3d>2a$。求 $\\angle PRQ$ 的完整取值范围。",
+    "answer": "E. $120^\\circ<\\angle PRQ<180^\\circ$",
+    "answerZh": "E．$120^\\circ<\\angle PRQ<180^\\circ$",
+    "methods": [{
+      "title": "Use the cosine rule and triangle inequality",
+      "titleZh": "利用余弦定理与三角形不等式",
+      "topics": [{"en":"Cosine rule","zh":"余弦定理"},{"en":"Triangle inequality","zh":"三角形不等式"}],
+      "steps": [
+        "Writing $\\theta=\\angle PRQ$, the cosine rule gives $(a+2d)^2=a^2+(a+d)^2-2a(a+d)\\cos\\theta$.",
+        "Simplification yields $\\cos\\theta=(a-3d)/(2a)$. Since $3d>2a$, $\\cos\\theta<-1/2$, so $\\theta>120^\\circ$.",
+        "The triangle inequality $a+2d<a+(a+d)$ gives $d<a$, hence $\\cos\\theta>-1$ and $\\theta<180^\\circ$. Both bounds can be approached, so the full range is open at each end."
+      ],
+      "stepsZh": [
+        "令 $\\theta=\\angle PRQ$。余弦定理给出 $(a+2d)^2=a^2+(a+d)^2-2a(a+d)\\cos\\theta$。",
+        "化简得 $\\cos\\theta=(a-3d)/(2a)$。由 $3d>2a$，有 $\\cos\\theta<-1/2$，故 $\\theta>120^\\circ$。",
+        "三角形不等式 $a+2d<a+(a+d)$ 给出 $d<a$，所以 $\\cos\\theta>-1$、$\\theta<180^\\circ$。两个界均可无限逼近，故均为开端点。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf#page=22"
+  }
+}
