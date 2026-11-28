@@ -1,0 +1,208 @@
+{
+  "imo-1976-q1": {
+    "summary": "A convex quadrilateral has area $32$. The sum of the lengths of two opposite sides and one diagonal is $16$. Determine all possible lengths of the other diagonal.",
+    "summaryZh": "一个平面凸四边形的面积为 $32$。它的一组对边与一条对角线的长度之和为 $16$。求另一条对角线所有可能的长度。",
+    "answer": "The other diagonal must have length $8\\sqrt2$.",
+    "answerZh": "另一条对角线的长度只能是 $8\\sqrt2$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Force equality in the area bounds",
+        "titleZh": "由面积估计中的等号条件锁定图形",
+        "topics": [
+          {"en": "Area inequalities", "zh": "面积不等式"},
+          {"en": "Equality cases", "zh": "等号条件"},
+          {"en": "Coordinate geometry", "zh": "坐标几何"}
+        ],
+        "steps": [
+          "Label the vertices $A,B,C,D$ in order so that $AB+CD+AC=16$. Put $a=AB$, $c=CD$, and $e=AC$.",
+          "The diagonal $AC$ divides the quadrilateral into two triangles. Their altitudes to $AC$ are at most $a$ and $c$, respectively, so $$32=[ABC]+[ACD]\\le\\frac12e(a+c).$$",
+          "Also, $4e(a+c)\\le(e+a+c)^2$ because $(e-a-c)^2\\ge0$. Therefore $$32\\le\\frac12e(a+c)\\le\\frac{(e+a+c)^2}{8}=\\frac{16^2}{8}=32.$$ Equality must hold everywhere.",
+          "Equality in the second bound gives $e=a+c$. Together with $e+a+c=16$, this yields $$AC=e=8,\\qquad AB+CD=a+c=8.$$ Equality in the altitude bounds gives $AB\\perp AC$ and $CD\\perp AC$.",
+          "Convexity places $B$ and $D$ on opposite sides of $AC$. Choose coordinates $$A=(0,0),\\quad C=(8,0),\\quad B=(0,a),\\quad D=(8,-c).$$ Then $$BD^2=8^2+(a+c)^2=64+64=128,$$ so $BD=8\\sqrt2$.",
+          "The value is attainable: take $a=c=4$ in these coordinates. The resulting convex parallelogram has area $32$, satisfies $AB+CD+AC=4+4+8=16$, and has other diagonal $8\\sqrt2$. Hence this is the unique possible length."
+        ],
+        "stepsZh": [
+          "依次把四个顶点记为 $A,B,C,D$，并设 $AB+CD+AC=16$。记 $a=AB$、$c=CD$、$e=AC$。",
+          "对角线 $AC$ 把四边形分成两个三角形。它们以 $AC$ 为底的高分别不超过 $a,c$，所以 $$32=[ABC]+[ACD]\\le\\frac12e(a+c)$$。",
+          "又因 $(e-a-c)^2\\ge0$，有 $4e(a+c)\\le(e+a+c)^2$。于是 $$32\\le\\frac12e(a+c)\\le\\frac{(e+a+c)^2}{8}=\\frac{16^2}{8}=32$$。因此所有不等式都必须取等。",
+          "第二个估计取等给出 $e=a+c$。结合 $e+a+c=16$，得到 $$AC=e=8,\\qquad AB+CD=a+c=8$$。高度估计取等则给出 $AB\\perp AC$ 且 $CD\\perp AC$。",
+          "由凸性，$B,D$ 位于 $AC$ 两侧。取坐标 $$A=(0,0),\\quad C=(8,0),\\quad B=(0,a),\\quad D=(8,-c)$$，则 $$BD^2=8^2+(a+c)^2=64+64=128,$$ 所以 $BD=8\\sqrt2$。",
+          "这个值确实能够达到：在上述坐标中取 $a=c=4$，所得凸平行四边形面积为 $32$，满足 $AB+CD+AC=4+4+8=16$，另一条对角线长为 $8\\sqrt2$。故答案唯一。"
+        ]
+      }
+    ]
+  },
+  "imo-1976-q2": {
+    "summary": "Define $P_1(x)=x^2-2$ and $P_j(x)=P_1(P_{j-1}(x))$ for $j=2,3,\\ldots$. Prove that for every positive integer $n$, all roots of $P_n(x)=x$ are real and distinct.",
+    "summaryZh": "定义 $P_1(x)=x^2-2$，并对 $j=2,3,\\ldots$ 定义 $P_j(x)=P_1(P_{j-1}(x))$。证明：对每个正整数 $n$，方程 $P_n(x)=x$ 的所有根都是互不相同的实数。",
+    "answer": "$P_n(x)-x$ has degree $2^n$ and exactly $2^n$ distinct real zeros.",
+    "answerZh": "$P_n(x)-x$ 的次数为 $2^n$，并且恰有 $2^n$ 个互不相同的实零点。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use the cosine doubling identity and alternating signs",
+        "titleZh": "利用余弦倍角公式与交替符号",
+        "topics": [
+          {"en": "Polynomial iteration", "zh": "多项式迭代"},
+          {"en": "Trigonometric substitution", "zh": "三角代换"},
+          {"en": "Intermediate value theorem", "zh": "介值定理"}
+        ],
+        "steps": [
+          "The double-angle identity gives $$P_1(2\\cos\\theta)=4\\cos^2\\theta-2=2\\cos2\\theta.$$ Induction on the iteration therefore yields $$P_n(2\\cos\\theta)=2\\cos(2^n\\theta).$$",
+          "Fix $n$ and set $m=2^n$ and $Q(x)=P_n(x)-x$. Every iteration doubles the degree, so $Q$ has degree $m$.",
+          "For $k=0,1,\\ldots,m$, put $$x_k=2\\cos\\frac{k\\pi}{m}.$$ Cosine is strictly decreasing on $[0,\\pi]$, hence $$2=x_0>x_1>\\cdots>x_m=-2.$$",
+          "The identity from Step 1 gives $$Q(x_k)=2\\cos(k\\pi)-x_k=2(-1)^k-x_k.$$ Thus $Q(x_0)=0$. For $1\\le k\\le m-1$, we have $-2<x_k<2$, so $Q(x_k)>0$ for even $k$ and $Q(x_k)<0$ for odd $k$. Since $m$ is even, $Q(x_m)=4>0$.",
+          "Consequently $Q(x_k)$ and $Q(x_{k+1})$ have opposite signs for every $k=1,\\ldots,m-1$. The intermediate value theorem supplies one zero in each of the $m-1$ disjoint intervals $(x_{k+1},x_k)$.",
+          "Together with the zero $x_0=2$, these are $m$ distinct real zeros. A degree-$m$ polynomial cannot have more than $m$ distinct zeros, so these are all the roots and each is simple. Hence every root of $P_n(x)=x$ is real and distinct."
+        ],
+        "stepsZh": [
+          "倍角公式给出 $$P_1(2\\cos\\theta)=4\\cos^2\\theta-2=2\\cos2\\theta$$。对迭代次数归纳可得 $$P_n(2\\cos\\theta)=2\\cos(2^n\\theta)$$。",
+          "固定 $n$，令 $m=2^n$、$Q(x)=P_n(x)-x$。每次迭代都会使次数加倍，所以 $Q$ 的次数为 $m$。",
+          "对 $k=0,1,\\ldots,m$，令 $$x_k=2\\cos\\frac{k\\pi}{m}$$。余弦函数在 $[0,\\pi]$ 上严格递减，故 $$2=x_0>x_1>\\cdots>x_m=-2$$。",
+          "由第一步恒等式，$$Q(x_k)=2\\cos(k\\pi)-x_k=2(-1)^k-x_k$$。因此 $Q(x_0)=0$。对 $1\\le k\\le m-1$，有 $-2<x_k<2$，所以偶数 $k$ 时 $Q(x_k)>0$，奇数 $k$ 时 $Q(x_k)<0$。又因 $m$ 为偶数，$Q(x_m)=4>0$。",
+          "于是对每个 $k=1,\\ldots,m-1$，$Q(x_k)$ 与 $Q(x_{k+1})$ 异号。由介值定理，每个互不相交的区间 $(x_{k+1},x_k)$ 中至少有一个零点。",
+          "再加上零点 $x_0=2$，共得到 $m$ 个不同实零点。$m$ 次多项式不可能有更多不同零点，所以这些就是全部根，并且每个都是单根。因此 $P_n(x)=x$ 的所有根均为互异实数。"
+        ]
+      }
+    ]
+  },
+  "imo-1976-q3": {
+    "summary": "A rectangular box can be tiled by unit cubes. Cubes of volume $2$ are then packed into it with their edges parallel to the box, using as many as possible; they occupy exactly $40\\%$ of the box. Determine all possible box dimensions.",
+    "summaryZh": "一个长方体能够被单位立方体完全铺满。现把体积为 $2$ 的立方体按棱与长方体棱平行的方式尽可能多地装入其中，恰好占长方体体积的 $40\\%$。求长方体所有可能的尺寸。",
+    "answer": "Up to permutation, the dimensions are $2\\times3\\times5$ and $2\\times5\\times6$.",
+    "answerZh": "不计棱长的排列，尺寸为 $2\\times3\\times5$ 或 $2\\times5\\times6$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Count axis-parallel cubes and classify the floor ratios",
+        "titleZh": "计数平行立方体并分类取整比值",
+        "topics": [
+          {"en": "Packing", "zh": "装填问题"},
+          {"en": "Floor functions", "zh": "取整函数"},
+          {"en": "Diophantine classification", "zh": "丢番图分类"}
+        ],
+        "steps": [
+          "Let the box dimensions be $a,b,c$. The unit-cube tiling forces $a,b,c$ to be positive integers. Since a positive volume is filled by the larger cubes, each dimension is at least $2$.",
+          "Put $$s=\\sqrt[3]{2},\\qquad f(n)=\\left\\lfloor\\frac ns\\right\\rfloor.$$ A large cube has side $s$. The maximum number of such axis-parallel cubes is $$N=f(a)f(b)f(c).$$ A rectangular grid attains this number.",
+          "For completeness, the number cannot be larger. Label a cube whose lower corner is $(x,y,z)$ by $(\\lfloor x/s\\rfloor,\\lfloor y/s\\rfloor,\\lfloor z/s\\rfloor)$. There are only $f(a)f(b)f(c)$ labels. Two cubes with the same label would have lower coordinates differing by less than $s$ in all three directions, so their interiors would overlap.",
+          "The $40\\%$ condition gives $$2f(a)f(b)f(c)=\\frac25abc.$$ With $R(n)=f(n)/n$, this is $$R(a)R(b)R(c)=\\frac15.\\tag{1}$$",
+          "Since $5/4<s<9/7$, $$f(2)=1,\\quad f(3)=2,\\quad f(4)=3,\\quad f(5)=3,$$ and always $R(n)\\le1/s<4/5$. We also have $$R(n)\\ge\\frac23\\quad(n\\ge3,\\ n\\ne5).\\tag{2}$$ Indeed, every such $n$ is $3u+4v$ with $u,v\\ge0$, and superadditivity of the floor gives $f(n)\\ge2u+3v\\ge2n/3$. Thus $R(n)\\ge3/5$ for every $n\\ge3$.",
+          "If all $a,b,c\\ge3$, then their ratio product is at least $(3/5)^3=27/125>1/5$, contradicting (1). Hence one dimension is $2$; say $a=2$. A second dimension cannot equal $2$, since then the product would be less than $(1/2)^2(4/5)=1/5$.",
+          "Now $b,c\\ge3$ and (1) becomes $R(b)R(c)=2/5$. If neither dimension were $5$, (2) would give a product at least $4/9>2/5$. Hence, after interchanging $b,c$, we have $b=5$ and $R(c)=2/3$.",
+          "The equality $f(c)=2c/3$ implies $c=3k$. Since $f(3k)=2k$, we have $3k/s<2k+1$, so $$k<\\frac{s}{3-2s}<3.$$ Therefore $k=1$ or $2$, giving $c=3$ or $6$.",
+          "Finally, $f(6)=4$. The maximum filled fractions for $2\\times3\\times5$ and $2\\times5\\times6$ are respectively $$\\frac{2(1\\cdot2\\cdot3)}{2\\cdot3\\cdot5}=\\frac25,\\qquad \\frac{2(1\\cdot3\\cdot4)}{2\\cdot5\\cdot6}=\\frac25.$$ Both boxes work, and the list is complete."
+        ],
+        "stepsZh": [
+          "设长方体三条棱长为 $a,b,c$。单位立方体铺砌使 $a,b,c$ 均为正整数。由于体积为 $2$ 的立方体装入了正体积，每条棱长至少为 $2$。",
+          "令 $$s=\\sqrt[3]{2},\\qquad f(n)=\\left\\lfloor\\frac ns\\right\\rfloor$$。大立方体的棱长为 $s$。能装入的平行大立方体最大个数为 $$N=f(a)f(b)f(c)$$，按长方体网格排列即可达到。",
+          "说明它也是上界。把下方顶点为 $(x,y,z)$ 的大立方体标记为 $(\\lfloor x/s\\rfloor,\\lfloor y/s\\rfloor,\\lfloor z/s\\rfloor)$，总共只有 $f(a)f(b)f(c)$ 种标记。若两个立方体标记相同，则它们三个方向的下端坐标差都小于 $s$，因而内部必相交，矛盾。",
+          "占体积 $40\\%$ 给出 $$2f(a)f(b)f(c)=\\frac25abc$$。记 $R(n)=f(n)/n$，则 $$R(a)R(b)R(c)=\\frac15.\\tag{1}$$",
+          "由 $5/4<s<9/7$，有 $$f(2)=1,\\quad f(3)=2,\\quad f(4)=3,\\quad f(5)=3,$$ 且总有 $R(n)\\le1/s<4/5$。另外，$$R(n)\\ge\\frac23\\quad(n\\ge3,\\ n\\ne5).\\tag{2}$$ 事实上，每个这样的 $n$ 都可写成 $3u+4v$，其中 $u,v\\ge0$；利用取整函数的超可加性，$f(n)\\ge2u+3v\\ge2n/3$。因此对所有 $n\\ge3$，至少有 $R(n)\\ge3/5$。",
+          "若 $a,b,c$ 都至少为 $3$，则三个比值之积至少为 $(3/5)^3=27/125>1/5$，与 (1) 矛盾。因此有一条棱长为 $2$，不妨设 $a=2$。不可能再有一条棱长为 $2$，否则乘积小于 $(1/2)^2(4/5)=1/5$。",
+          "现在 $b,c\\ge3$，且 (1) 化为 $R(b)R(c)=2/5$。若 $b,c$ 都不等于 $5$，由 (2) 乘积至少为 $4/9>2/5$。故交换二者后可设 $b=5$，并有 $R(c)=2/3$。",
+          "等式 $f(c)=2c/3$ 说明 $c=3k$。由 $f(3k)=2k$ 得 $3k/s<2k+1$，所以 $$k<\\frac{s}{3-2s}<3$$。因此 $k=1$ 或 $2$，即 $c=3$ 或 $6$。",
+          "最后 $f(6)=4$。尺寸 $2\\times3\\times5$ 与 $2\\times5\\times6$ 的最大装填比例分别为 $$\\frac{2(1\\cdot2\\cdot3)}{2\\cdot3\\cdot5}=\\frac25,\\qquad \\frac{2(1\\cdot3\\cdot4)}{2\\cdot5\\cdot6}=\\frac25$$。两者都满足条件，分类完成。"
+        ]
+      }
+    ]
+  },
+  "imo-1976-q4": {
+    "summary": "Determine, with proof, the largest possible product of positive integers whose sum is $1976$.",
+    "summaryZh": "若干个正整数之和为 $1976$，求它们乘积的最大可能值，并证明。",
+    "answer": "The maximum is $2\\cdot3^{658}$, attained by one factor $2$ and $658$ factors equal to $3$.",
+    "answerZh": "最大值为 $2\\cdot3^{658}$，由一个因数 $2$ 和 $658$ 个因数 $3$ 取得。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Improve every maximizing partition until only $2$ and $3$ remain",
+        "titleZh": "逐步改进最优分拆，直至只剩 $2$ 与 $3$",
+        "topics": [
+          {"en": "Integer optimization", "zh": "整数最优化"},
+          {"en": "Exchange argument", "zh": "交换论证"},
+          {"en": "Congruences", "zh": "同余"}
+        ],
+        "steps": [
+          "A maximum exists because there are only finitely many unordered lists of positive integers with sum $1976$. Choose a list with maximum product.",
+          "It contains no $1$. If $1$ and another entry $a$ occur, replacing them by $a+1$ preserves the sum and increases the product.",
+          "It contains no entry $a\\ge5$, because replacing $a$ by $3$ and $a-3$ preserves the sum and changes the product from $a$ to $3(a-3)>a$.",
+          "Thus every entry is $2,3$, or $4$. Replace every $4$ by two $2$'s; this preserves both sum and product. There cannot be three $2$'s, because replacing $2+2+2$ by $3+3$ increases the product from $8$ to $9$.",
+          "Let $t\\in\\{0,1,2\\}$ be the number of $2$'s and let $s$ be the number of $3$'s. Then $$2t+3s=1976.$$ Reducing modulo $3$ gives $2t\\equiv2\\pmod3$, so $t=1$, and then $s=(1976-2)/3=658$.",
+          "Therefore every maximum equals $2\\cdot3^{658}$. The partition $1976=2+3+\\cdots+3$ with $658$ copies of $3$ attains this value, completing the proof."
+        ],
+        "stepsZh": [
+          "和为 $1976$ 的正整数无序分拆只有有限种，所以最大乘积必然存在。取一个乘积最大的分拆。",
+          "其中不能出现 $1$。若同时有 $1$ 与另一项 $a$，把它们换成 $a+1$，总和不变而乘积增大。",
+          "其中不能出现 $a\\ge5$。把 $a$ 换成 $3$ 与 $a-3$，总和不变，而乘积从 $a$ 变为 $3(a-3)>a$。",
+          "因此每项只能是 $2,3,4$。把每个 $4$ 换成两个 $2$，总和与乘积均不变。$2$ 不能有三个，因为把 $2+2+2$ 换成 $3+3$ 会使乘积从 $8$ 增至 $9$。",
+          "设 $2$ 的个数为 $t\\in\\{0,1,2\\}$，$3$ 的个数为 $s$，则 $$2t+3s=1976$$。模 $3$ 化简得 $2t\\equiv2\\pmod3$，所以 $t=1$，继而 $s=(1976-2)/3=658$。",
+          "因此最大乘积只能是 $2\\cdot3^{658}$。分拆 $1976=2+3+\\cdots+3$（共有 $658$ 个 $3$）确实达到该值，证明完成。"
+        ]
+      }
+    ]
+  },
+  "imo-1976-q5": {
+    "summary": "A homogeneous system has $p$ equations and $q=2p$ unknowns $x_1,\\ldots,x_q$, with every coefficient in $\\{-1,0,1\\}$. Prove that it has a nonzero integer solution satisfying $|x_j|\\le q$ for every $j$.",
+    "summaryZh": "一个齐次线性方程组含 $p$ 个方程与 $q=2p$ 个未知数 $x_1,\\ldots,x_q$，每个系数均属于 $\\{-1,0,1\\}$。证明它存在一个非零整数解，并且对每个 $j$ 都有 $|x_j|\\le q$。",
+    "answer": "Such a nonzero integer solution always exists; it is obtained as the difference of two bounded integer vectors with the same image.",
+    "answerZh": "这样的非零整数解总是存在；可由两个具有相同方程组像值的有界整数向量之差得到。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Apply the pigeonhole principle to bounded integer vectors",
+        "titleZh": "对有界整数向量应用抽屉原理",
+        "topics": [
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"},
+          {"en": "Linear systems", "zh": "线性方程组"},
+          {"en": "Integer solutions", "zh": "整数解"}
+        ],
+        "steps": [
+          "Let $A=(a_{ij})$ be the coefficient matrix and consider $$S=\\{-p,-p+1,\\ldots,p\\}^{q}.$$ Since $q=2p$, this set contains $$(2p+1)^q=(q+1)^{2p}$$ integer vectors.",
+          "For $y=(y_1,\\ldots,y_q)\\in S$, define $$F(y)=Ay=\\left(\\sum_{j=1}^qa_{1j}y_j,\\ldots,\\sum_{j=1}^qa_{pj}y_j\\right).$$",
+          "Each coordinate of $F(y)$ is an integer of absolute value at most $$\\sum_{j=1}^q|a_{ij}|\\,|y_j|\\le pq.$$ Hence each coordinate has at most $2pq+1=q^2+1$ possible values, so $F$ takes at most $(q^2+1)^p$ values on $S$.",
+          "But $$|S|=(q+1)^{2p}=(q^2+2q+1)^p>(q^2+1)^p.$$ By the pigeonhole principle, distinct vectors $u,v\\in S$ satisfy $F(u)=F(v)$.",
+          "Set $x=u-v$. Then $x$ is an integer vector, $x\\ne0$, and $$Ax=F(u)-F(v)=0.$$ Moreover, for every coordinate, $$|x_j|\\le|u_j|+|v_j|\\le2p=q.$$ Thus $x$ satisfies all three required conditions."
+        ],
+        "stepsZh": [
+          "令 $A=(a_{ij})$ 为系数矩阵，并考虑集合 $$S=\\{-p,-p+1,\\ldots,p\\}^{q}$$。因为 $q=2p$，其中共有 $$(2p+1)^q=(q+1)^{2p}$$ 个整数向量。",
+          "对 $y=(y_1,\\ldots,y_q)\\in S$，定义 $$F(y)=Ay=\\left(\\sum_{j=1}^qa_{1j}y_j,\\ldots,\\sum_{j=1}^qa_{pj}y_j\\right)$$。",
+          "$F(y)$ 的每个坐标都是整数，且绝对值不超过 $$\\sum_{j=1}^q|a_{ij}|\\,|y_j|\\le pq$$。因此每个坐标至多有 $2pq+1=q^2+1$ 种取值，$F$ 在 $S$ 上至多取 $(q^2+1)^p$ 个不同值。",
+          "然而 $$|S|=(q+1)^{2p}=(q^2+2q+1)^p>(q^2+1)^p$$。由抽屉原理，存在两个不同向量 $u,v\\in S$，使 $F(u)=F(v)$。",
+          "令 $x=u-v$。则 $x$ 是整数向量，$x\\ne0$，并且 $$Ax=F(u)-F(v)=0$$。此外每个坐标都满足 $$|x_j|\\le|u_j|+|v_j|\\le2p=q$$。所以 $x$ 满足题目全部三个条件。"
+        ]
+      }
+    ]
+  },
+  "imo-1976-q6": {
+    "summary": "Define $u_0=2$, $u_1=5/2$, and $$u_{n+1}=u_n(u_{n-1}^2-2)-u_1\\qquad(n=1,2,\\ldots).$$ Prove that for every positive integer $n$, $$\\lfloor u_n\\rfloor=2^{(2^n-(-1)^n)/3}.$$",
+    "summaryZh": "定义 $u_0=2$、$u_1=5/2$，并令 $$u_{n+1}=u_n(u_{n-1}^2-2)-u_1\\qquad(n=1,2,\\ldots)$$。证明：对每个正整数 $n$，$$\\lfloor u_n\\rfloor=2^{(2^n-(-1)^n)/3}$$。",
+    "answer": "In fact, if $a_n=(2^n-(-1)^n)/3$, then $u_n=2^{a_n}+2^{-a_n}$; hence $\\lfloor u_n\\rfloor=2^{a_n}$ for $n\\ge1$.",
+    "answerZh": "事实上，若 $a_n=(2^n-(-1)^n)/3$，则 $u_n=2^{a_n}+2^{-a_n}$；因此对 $n\\ge1$，有 $\\lfloor u_n\\rfloor=2^{a_n}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Discover and prove the stronger closed form",
+        "titleZh": "发现并证明更强的闭式",
+        "topics": [
+          {"en": "Recurrence relations", "zh": "递推关系"},
+          {"en": "Mathematical induction", "zh": "数学归纳法"},
+          {"en": "Floor functions", "zh": "取整函数"}
+        ],
+        "steps": [
+          "Define $$a_n=\\frac{2^n-(-1)^n}{3}\\qquad(n\\ge0).$$ Since $2\\equiv-1\\pmod3$, every $a_n$ is an integer. Also $a_0=0$, $a_1=1$, and direct calculation gives $$a_n+2a_{n-1}=a_{n+1},\\qquad a_n-2a_{n-1}=(-1)^{n-1}.\\tag{1}$$",
+          "We prove the stronger identity $$u_n=2^{a_n}+2^{-a_n}.\\tag{2}$$ It holds for $n=0,1$ because $u_0=2=2^0+2^0$ and $u_1=5/2=2+1/2$.",
+          "Assume (2) holds at indices $n-1$ and $n$. Then $$u_{n-1}^2-2=2^{2a_{n-1}}+2^{-2a_{n-1}}.$$ Substitution into the recurrence gives four powers of $2$ before subtracting $5/2$.",
+          "Using (1), the two outer powers are $$2^{a_n+2a_{n-1}}+2^{-a_n-2a_{n-1}}=2^{a_{n+1}}+2^{-a_{n+1}}.$$ The two remaining powers have exponents $a_n-2a_{n-1}=\\pm1$ and its negative, so their sum is $2+1/2=5/2$ and is cancelled by $u_1$.",
+          "Thus $u_{n+1}=2^{a_{n+1}}+2^{-a_{n+1}}$, completing the induction. For $n\\ge1$, $a_n\\ge1$, so $2^{a_n}$ is an integer and $0<2^{-a_n}\\le1/2<1$. Therefore $$\\lfloor u_n\\rfloor=2^{a_n}=2^{(2^n-(-1)^n)/3}.$$"
+        ],
+        "stepsZh": [
+          "定义 $$a_n=\\frac{2^n-(-1)^n}{3}\\qquad(n\\ge0)$$。因为 $2\\equiv-1\\pmod3$，每个 $a_n$ 都是整数。又有 $a_0=0$、$a_1=1$，直接计算可得 $$a_n+2a_{n-1}=a_{n+1},\\qquad a_n-2a_{n-1}=(-1)^{n-1}.\\tag{1}$$",
+          "我们证明更强的恒等式 $$u_n=2^{a_n}+2^{-a_n}.\\tag{2}$$ 当 $n=0,1$ 时成立，因为 $u_0=2=2^0+2^0$，且 $u_1=5/2=2+1/2$。",
+          "假设 (2) 对下标 $n-1,n$ 成立，则 $$u_{n-1}^2-2=2^{2a_{n-1}}+2^{-2a_{n-1}}$$。代入递推式并减去 $5/2$ 以前，会得到四个 $2$ 的幂。",
+          "由 (1)，其中两个外侧项为 $$2^{a_n+2a_{n-1}}+2^{-a_n-2a_{n-1}}=2^{a_{n+1}}+2^{-a_{n+1}}$$。另外两项的指数分别是 $a_n-2a_{n-1}=\\pm1$ 及其相反数，所以它们之和为 $2+1/2=5/2$，恰被 $u_1$ 抵消。",
+          "因此 $u_{n+1}=2^{a_{n+1}}+2^{-a_{n+1}}$，归纳完成。对 $n\\ge1$，$a_n\\ge1$，故 $2^{a_n}$ 是整数且 $0<2^{-a_n}\\le1/2<1$。于是 $$\\lfloor u_n\\rfloor=2^{a_n}=2^{(2^n-(-1)^n)/3}$$。"
+        ]
+      }
+    ]
+  }
+}
