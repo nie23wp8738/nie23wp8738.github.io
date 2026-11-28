@@ -1,0 +1,567 @@
+{
+  "amc8-1990-q1": {
+    "summary": "Use each of the digits $4,5,6,7,8,9$ exactly once to form two three-digit numbers. What is the smallest possible sum?",
+    "summaryZh": "把数字 $4,5,6,7,8,9$ 各用一次组成两个三位数。两数之和的最小值是多少？",
+    "answer": "C. $1047$.",
+    "answerZh": "C．$1047$。",
+    "methods": [{
+      "title": "Assign small digits to large place values",
+      "titleZh": "把较小数字放在较高数位",
+      "topics": [{"en":"Place value","zh":"数位"},{"en":"Greedy optimisation","zh":"贪心优化"}],
+      "steps": [
+        "The two hundreds digits contribute $100$ times their sum, so they should be the two smallest digits, $4$ and $5$.",
+        "Likewise, use $6,7$ in the tens places and $8,9$ in the units places.",
+        "The minimum sum is $100(4+5)+10(6+7)+(8+9)=900+130+17=1047$. Swapping digits within the same place value does not change the sum."
+      ],
+      "stepsZh": [
+        "两个百位数字对总和的贡献是其和的 $100$ 倍，因此应放最小的两个数字 $4,5$。",
+        "同理，十位放 $6,7$，个位放 $8,9$。",
+        "最小和为 $100(4+5)+10(6+7)+(8+9)=900+130+17=1047$。同一数位上的两个数字互换不改变总和。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/1"
+  },
+  "amc8-1990-q2": {
+    "summary": "In the decimal $0.12345$, exactly one displayed digit is replaced by $9$. Which original digit should be replaced to make the resulting number as large as possible?",
+    "summaryZh": "在小数 $0.12345$ 中，把其中一个数字改成 $9$。应改动哪个原数字，才能使新数最大？",
+    "answer": "A. Replace the digit $1$.",
+    "answerZh": "A．把数字 $1$ 改成 $9$。",
+    "methods": [{
+      "title": "Compare place values",
+      "titleZh": "比较数位权重",
+      "topics": [{"en":"Decimals","zh":"小数"},{"en":"Place value","zh":"数位"}],
+      "steps": [
+        "Changing the tenths digit $1$ to $9$ increases the number by $8/10=0.8$.",
+        "Changing any later digit changes the value by at most $7/100=0.07$, so no later replacement can produce a larger number.",
+        "Thus the largest result is $0.92345$, obtained by replacing $1$."
+      ],
+      "stepsZh": [
+        "把十分位的 $1$ 改为 $9$，数值增加 $8/10=0.8$。",
+        "改动后面的任何一位，增加量至多为 $7/100=0.07$，不可能超过前者。",
+        "所以最大结果是 $0.92345$，应改动数字 $1$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/2"
+  },
+  "amc8-1990-q3": {
+    "summary": "A square is divided by one corner-to-corner diagonal and additional segments into paired regions. Reflection across the diagonal exchanges every shaded component with a congruent unshaded component. What fraction of the square is shaded?",
+    "summaryZh": "一个正方形由一条对角线及若干线段分成成对区域。关于该对角线反射时，每个阴影部分都与一个全等的非阴影部分对应。阴影面积占正方形面积的几分之几？",
+    "answer": "E. $\\frac12$.",
+    "answerZh": "E．$\\frac12$。",
+    "methods": [{
+      "title": "Pair regions by reflection",
+      "titleZh": "利用反射配对区域",
+      "topics": [{"en":"Symmetry","zh":"对称"},{"en":"Area","zh":"面积"}],
+      "steps": [
+        "Reflection preserves area and pairs each shaded region with a congruent unshaded region.",
+        "These pairs cover the square, so the total shaded area equals the total unshaded area.",
+        "The two areas sum to the area of the square; hence each occupies $1/2$ of it."
+      ],
+      "stepsZh": [
+        "反射保持面积不变，并把每个阴影区域与一个全等的非阴影区域配对。",
+        "这些配对覆盖整个正方形，所以阴影总面积等于非阴影总面积。",
+        "两部分面积之和为正方形面积，因此阴影占 $1/2$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/3"
+  },
+  "amc8-1990-q4": {
+    "summary": "Which of $1,4,5,6,8$ cannot be the units digit of the square of a whole number?",
+    "summaryZh": "在 $1,4,5,6,8$ 中，哪一个不可能是整数平方的个位数字？",
+    "answer": "E. $8$.",
+    "answerZh": "E．$8$。",
+    "methods": [{
+      "title": "Check the ten possible final digits",
+      "titleZh": "检查十种个位数字",
+      "topics": [{"en":"Units digits","zh":"个位数字"},{"en":"Modular arithmetic","zh":"模运算"}],
+      "steps": [
+        "A square's units digit depends only on the original number's units digit.",
+        "Squaring $0,1,2,\\ldots,9$ gives possible final digits $0,1,4,9,6,5,6,9,4,1$.",
+        "Thus $8$ never occurs, while $1,4,5,6$ do occur."
+      ],
+      "stepsZh": [
+        "一个平方数的个位只由原数的个位决定。",
+        "把 $0,1,2,\\ldots,9$ 分别平方，所得个位依次为 $0,1,4,9,6,5,6,9,4,1$。",
+        "因此 $8$ 从不出现，而 $1,4,5,6$ 都能出现。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/4"
+  },
+  "amc8-1990-q5": {
+    "summary": "Which of $0.011,0.110,1.10,11.0,110$ is closest to $(0.48017)^3$?",
+    "summaryZh": "在 $0.011,0.110,1.10,11.0,110$ 中，哪一个最接近 $(0.48017)^3$？",
+    "answer": "B. $0.110$.",
+    "answerZh": "B．$0.110$。",
+    "methods": [{
+      "title": "Estimate with one half",
+      "titleZh": "用二分之一估算",
+      "topics": [{"en":"Estimation","zh":"估算"},{"en":"Powers","zh":"乘方"}],
+      "steps": [
+        "$0.48017$ is close to $0.5$, so its cube is close to $(1/2)^3=1/8=0.125$.",
+        "Because $0.48017<0.5$, the actual cube is a little below $0.125$.",
+        "Among the choices, $0.110$ is the only value of this size and is the closest."
+      ],
+      "stepsZh": [
+        "$0.48017$ 接近 $0.5$，所以其立方接近 $(1/2)^3=1/8=0.125$。",
+        "由于 $0.48017<0.5$，实际立方值略小于 $0.125$。",
+        "选项中只有 $0.110$ 的数量级相符，并且最接近。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/5"
+  },
+  "amc8-1990-q6": {
+    "summary": "Among $13579+\\frac1{2468}$, $13579-\\frac1{2468}$, $13579\\cdot\\frac1{2468}$, $13579\\div\\frac1{2468}$, and $13579.2468$, which is largest?",
+    "summaryZh": "在 $13579+\\frac1{2468}$、$13579-\\frac1{2468}$、$13579\\cdot\\frac1{2468}$、$13579\\div\\frac1{2468}$ 与 $13579.2468$ 中，哪一个最大？",
+    "answer": "D. $13579\\div\\frac1{2468}$.",
+    "answerZh": "D．$13579\\div\\frac1{2468}$。",
+    "methods": [{
+      "title": "Compare the effect of each operation",
+      "titleZh": "比较各运算的作用",
+      "topics": [{"en":"Fractions","zh":"分数"},{"en":"Division","zh":"除法"}],
+      "steps": [
+        "Adding or subtracting $1/2468$ changes $13579$ only slightly, and multiplying by $1/2468$ makes it much smaller.",
+        "The decimal $13579.2468$ is only slightly larger than $13579$.",
+        "But $13579\\div(1/2468)=13579\\cdot2468$, which is far larger than all the other choices."
+      ],
+      "stepsZh": [
+        "加上或减去 $1/2468$ 只会略微改变 $13579$，乘以 $1/2468$ 则会使它大幅变小。",
+        "小数 $13579.2468$ 也只比 $13579$ 稍大。",
+        "而 $13579\\div(1/2468)=13579\\cdot2468$，远大于其他选项。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/6"
+  },
+  "amc8-1990-q7": {
+    "summary": "Choose three distinct numbers from $\\{-3,-2,-1,4,5\\}$ and multiply them. What is the largest possible product?",
+    "summaryZh": "从 $\\{-3,-2,-1,4,5\\}$ 中选三个不同的数相乘。乘积的最大可能值是多少？",
+    "answer": "C. $30$.",
+    "answerZh": "C．$30$。",
+    "methods": [{
+      "title": "Control the sign, then maximise magnitude",
+      "titleZh": "先控制符号，再最大化绝对值",
+      "topics": [{"en":"Signed numbers","zh":"有理数符号"},{"en":"Optimisation","zh":"最优化"}],
+      "steps": [
+        "A largest product should be positive. Using two negative numbers and one positive number produces a positive result.",
+        "Choose the two negative numbers with greatest magnitudes, $-3,-2$, and the largest positive number, $5$.",
+        "Their product is $(-3)(-2)(5)=30$. Other positive candidates, such as $(-3)(-2)(4)=24$, are smaller."
+      ],
+      "stepsZh": [
+        "最大乘积应为正数。选两个负数和一个正数可以得到正积。",
+        "取绝对值最大的两个负数 $-3,-2$，以及最大的正数 $5$。",
+        "乘积为 $(-3)(-2)(5)=30$。其他正积如 $(-3)(-2)(4)=24$ 更小。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/7"
+  },
+  "amc8-1990-q8": {
+    "summary": "A dress costs $80$ dollars. Its price is reduced by $25\\%$, and then a $10\\%$ sales tax is applied to the reduced price. Find the final price.",
+    "summaryZh": "一件连衣裙原价 $80$ 美元，先降价 $25\\%$，再按折后价征收 $10\\%$ 的销售税。求最终售价。",
+    "answer": "D. $66$ dollars.",
+    "answerZh": "D．$66$ 美元。",
+    "methods": [{
+      "title": "Apply the two percentage multipliers",
+      "titleZh": "依次使用两个百分比乘数",
+      "topics": [{"en":"Percentages","zh":"百分数"},{"en":"Successive change","zh":"连续变化"}],
+      "steps": [
+        "After the $25\\%$ discount, the price is $80(1-0.25)=80\\cdot0.75=60$ dollars.",
+        "The tax is $10\\%$ of $60$, namely $6$ dollars.",
+        "Therefore the final price is $60+6=66$ dollars."
+      ],
+      "stepsZh": [
+        "降价 $25\\%$ 后，价格为 $80(1-0.25)=80\\cdot0.75=60$ 美元。",
+        "税额为 $60$ 的 $10\\%$，即 $6$ 美元。",
+        "所以最终售价为 $60+6=66$ 美元。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/8"
+  },
+  "amc8-1990-q9": {
+    "summary": "A class uses the grade bands $93$–$100$: A, $85$–$92$: B, $75$–$84$: C, $70$–$74$: D, and $0$–$69$: F. The 15 scores are $89,72,54,97,77,92,85,74,75,63,84,78,71,80,90$. What percentage earned a C?",
+    "summaryZh": "某班成绩等级为：$93$–$100$ 为 A，$85$–$92$ 为 B，$75$–$84$ 为 C，$70$–$74$ 为 D，$0$–$69$ 为 F。15 个分数为 $89,72,54,97,77,92,85,74,75,63,84,78,71,80,90$。获得 C 的百分比是多少？",
+    "answer": "D. $33\\frac13\\%$.",
+    "answerZh": "D．$33\\frac13\\%$。",
+    "methods": [{
+      "title": "Count scores in the C interval",
+      "titleZh": "统计落在 C 区间的分数",
+      "topics": [{"en":"Data interpretation","zh":"数据解读"},{"en":"Percentages","zh":"百分数"}],
+      "steps": [
+        "The scores in the inclusive interval $75$–$84$ are $77,75,84,78,80$, so there are $5$ C grades.",
+        "There are $15$ scores in total, giving the fraction $5/15=1/3$.",
+        "Thus the percentage is $(1/3)\\cdot100\\%=33\\frac13\\%$."
+      ],
+      "stepsZh": [
+        "落在闭区间 $75$–$84$ 内的分数是 $77,75,84,78,80$，共有 $5$ 个 C。",
+        "总共有 $15$ 个分数，所以所占比例为 $5/15=1/3$。",
+        "因此百分比为 $(1/3)\\cdot100\\%=33\\frac13\\%$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/9"
+  },
+  "amc8-1990-q10": {
+    "summary": "In a calendar grid, moving one square right adds $1$ and moving one square down adds $7$. The labelled cells satisfy $A=C+1$, $B=C+13$, and $P=C+14$. Which labelled cell $X$ satisfies $X+C=A+B$?",
+    "summaryZh": "在日历方格中，向右一格日期增加 $1$，向下一格日期增加 $7$。图中标记满足 $A=C+1$、$B=C+13$、$P=C+14$。哪个标记格 $X$ 满足 $X+C=A+B$？",
+    "answer": "A. $P$.",
+    "answerZh": "A．$P$。",
+    "methods": [{
+      "title": "Use calendar offsets",
+      "titleZh": "使用日历偏移量",
+      "topics": [{"en":"Calendar arithmetic","zh":"日历运算"},{"en":"Substitution","zh":"代入"}],
+      "steps": [
+        "$A+B=(C+1)+(C+13)=2C+14$.",
+        "The equation $X+C=A+B$ therefore gives $X+C=2C+14$, so $X=C+14$.",
+        "The cell two rows below $C$ is labelled $P$ and has value $C+14$, hence $X=P$."
+      ],
+      "stepsZh": [
+        "$A+B=(C+1)+(C+13)=2C+14$。",
+        "由 $X+C=A+B$ 得 $X+C=2C+14$，所以 $X=C+14$。",
+        "$C$ 正下方两行的格子标记为 $P$，其值是 $C+14$，因此 $X=P$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/10"
+  },
+  "amc8-1990-q11": {
+    "summary": "The six faces of a cube are labelled with six consecutive whole numbers. The visible faces include $11,14,15$, and the sums on all three pairs of opposite faces are equal. Find the sum of the six face labels.",
+    "summaryZh": "一个正方体的六个面标有六个连续整数；可见面中有 $11,14,15$，且三对相对面的数字之和相等。求六个面上数字的总和。",
+    "answer": "E. $81$.",
+    "answerZh": "E．$81$。",
+    "methods": [{
+      "title": "Determine the consecutive block",
+      "titleZh": "确定连续整数区间",
+      "topics": [{"en":"Consecutive integers","zh":"连续整数"},{"en":"Pairing","zh":"配对"}],
+      "steps": [
+        "Six consecutive integers containing both $11$ and $15$ can start only at $10$ or $11$.",
+        "Equal opposite sums require pairing the smallest with the largest, the next smallest with the next largest, and the middle two. The visible adjacency in the cube rules out $10$–$15$ and gives $11,12,13,14,15,16$.",
+        "Pairing extremes gives $(11+16)+(12+15)+(13+14)=27+27+27=81$."
+      ],
+      "stepsZh": [
+        "包含 $11$ 与 $15$ 的六个连续整数，只可能从 $10$ 或 $11$ 开始。",
+        "相对面和相等时，应把最小与最大、次小与次大、中间两数配对；结合图中的相邻关系可排除 $10$–$15$，得到 $11,12,13,14,15,16$。",
+        "首尾配对可得 $(11+16)+(12+15)+(13+14)=27+27+27=81$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/11"
+  },
+  "amc8-1990-q12": {
+    "summary": "Form all $24$ four-digit numbers that use each of $2,4,5,7$ exactly once. When arranged from smallest to largest, what is the $17$th number?",
+    "summaryZh": "用 $2,4,5,7$ 各一次组成全部 $24$ 个四位数，并按从小到大排列。第 $17$ 个数是什么？",
+    "answer": "B. $5724$.",
+    "answerZh": "B．$5724$。",
+    "methods": [{
+      "title": "Count blocks by the leading digit",
+      "titleZh": "按首位数字分块",
+      "topics": [{"en":"Permutations","zh":"排列"},{"en":"Lexicographic order","zh":"字典序"}],
+      "steps": [
+        "For each fixed leading digit, the remaining three digits have $3!=6$ orders. Positions $1$–$6$, $7$–$12$, $13$–$18$, and $19$–$24$ therefore begin with $2,4,5,7$, respectively.",
+        "The $17$th number is the fifth number in the block beginning with $5$.",
+        "That block is $5247,5274,5427,5472,5724,5742$, so the fifth entry is $5724$."
+      ],
+      "stepsZh": [
+        "固定首位后，其余三个数字有 $3!=6$ 种排列。因此第 $1$–$6$、$7$–$12$、$13$–$18$、$19$–$24$ 个数的首位依次为 $2,4,5,7$。",
+        "第 $17$ 个数是首位为 $5$ 的分块中的第 $5$ 个。",
+        "该分块为 $5247,5274,5427,5472,5724,5742$，所以第 $5$ 个是 $5724$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/12"
+  },
+  "amc8-1990-q13": {
+    "summary": "Postage costs $30$ cents for the first ounce and $22$ cents for each additional ounce or fraction of an ounce. Find the postage for a $4.5$-ounce letter.",
+    "summaryZh": "邮资为：第一盎司 $30$ 美分，此后每增加一盎司或不足一盎司均收 $22$ 美分。求一封重 $4.5$ 盎司信件的邮资。",
+    "answer": "C. $1.18$ dollars.",
+    "answerZh": "C．$1.18$ 美元。",
+    "methods": [{
+      "title": "Round the additional weight upward",
+      "titleZh": "把额外重量向上取整",
+      "topics": [{"en":"Rates","zh":"费率"},{"en":"Ceiling function","zh":"向上取整"}],
+      "steps": [
+        "After the first ounce, $4.5-1=3.5$ ounces remain.",
+        "Because any fraction is charged as a full additional ounce, $3.5$ ounces produce $4$ additional charges.",
+        "The cost is $30+4\\cdot22=118$ cents, or $1.18$ dollars."
+      ],
+      "stepsZh": [
+        "除去第一盎司后，还剩 $4.5-1=3.5$ 盎司。",
+        "不足一盎司也按一盎司收费，所以 $3.5$ 盎司对应 $4$ 次额外收费。",
+        "总邮资为 $30+4\\cdot22=118$ 美分，即 $1.18$ 美元。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/13"
+  },
+  "amc8-1990-q14": {
+    "summary": "A bag contains only blue and green balls. There are $6$ blue balls, and a random draw is blue with probability $1/4$. How many green balls are in the bag?",
+    "summaryZh": "袋中只有蓝球和绿球。蓝球有 $6$ 个，随机抽到蓝球的概率为 $1/4$。袋中有多少个绿球？",
+    "answer": "B. $18$.",
+    "answerZh": "B．$18$。",
+    "methods": [{
+      "title": "Scale from one quarter",
+      "titleZh": "由四分之一按比例放大",
+      "topics": [{"en":"Probability","zh":"概率"},{"en":"Ratios","zh":"比例"}],
+      "steps": [
+        "If $6$ blue balls are $1/4$ of the bag, the total number of balls is $6\\div(1/4)=24$.",
+        "The remaining balls are green, so their number is $24-6=18$."
+      ],
+      "stepsZh": [
+        "若 $6$ 个蓝球占总数的 $1/4$，则球的总数为 $6\\div(1/4)=24$。",
+        "其余均为绿球，所以绿球有 $24-6=18$ 个。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/14"
+  },
+  "amc8-1990-q15": {
+    "summary": "Four congruent squares form an S-shaped tetromino: two adjacent squares in the upper row and two adjacent squares in the lower row, shifted one square horizontally. The total area is $100\\text{ cm}^2$. Find the perimeter.",
+    "summaryZh": "四个全等正方形组成一个 S 形四连方：上排有两个相邻正方形，下排也有两个相邻正方形，并水平错开一格。总面积为 $100\\text{ cm}^2$。求周长。",
+    "answer": "E. $50\\text{ cm}$.",
+    "answerZh": "E．$50\\text{ cm}$。",
+    "methods": [{
+      "title": "Find one side and count exposed edges",
+      "titleZh": "求边长并统计外露边",
+      "topics": [{"en":"Area","zh":"面积"},{"en":"Perimeter","zh":"周长"}],
+      "steps": [
+        "Each small square has area $100/4=25\\text{ cm}^2$, so its side length is $5$ cm.",
+        "Four separate squares have $16$ unit edges. The S tetromino has three shared edges, each removing two boundary edges, so $16-2\\cdot3=10$ small-square edges are exposed.",
+        "The perimeter is $10\\cdot5=50$ cm."
+      ],
+      "stepsZh": [
+        "每个小正方形面积为 $100/4=25\\text{ cm}^2$，故边长为 $5$ cm。",
+        "四个分离正方形共有 $16$ 条单位边；S 形中有三条公共边，每条公共边使边界减少两条，因此外露边数为 $16-2\\cdot3=10$。",
+        "周长为 $10\\cdot5=50$ cm。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/15"
+  },
+  "amc8-1990-q16": {
+    "summary": "Evaluate $1990-1980+1970-1960+\\cdots-20+10$.",
+    "summaryZh": "计算 $1990-1980+1970-1960+\\cdots-20+10$。",
+    "answer": "D. $1000$.",
+    "answerZh": "D．$1000$。",
+    "methods": [{
+      "title": "Pair adjacent terms",
+      "titleZh": "相邻项配对",
+      "topics": [{"en":"Pairing","zh":"配对"},{"en":"Arithmetic sequences","zh":"等差数列"}],
+      "steps": [
+        "Pair the alternating terms: $(1990-1980)+(1970-1960)+\\cdots+(30-20)+10$.",
+        "There are $99$ parenthesised pairs, and each pair equals $10$.",
+        "Including the final unpaired $10$, the sum is $99\\cdot10+10=1000$."
+      ],
+      "stepsZh": [
+        "把交错项配对：$(1990-1980)+(1970-1960)+\\cdots+(30-20)+10$。",
+        "括号内共有 $99$ 对，每对都等于 $10$。",
+        "再加最后未配对的 $10$，总和为 $99\\cdot10+10=1000$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/16"
+  },
+  "amc8-1990-q17": {
+    "summary": "A straight sidewalk is $3$ feet wide, $60$ feet long, and $3$ inches thick. Concrete must be ordered in a whole number of cubic yards. What is the least order that is sufficient?",
+    "summaryZh": "一条直人行道宽 $3$ 英尺、长 $60$ 英尺、厚 $3$ 英寸。混凝土必须按整立方码订购。至少要订购多少立方码？",
+    "answer": "A. $2$ cubic yards.",
+    "answerZh": "A．$2$ 立方码。",
+    "methods": [{
+      "title": "Convert units before finding volume",
+      "titleZh": "先统一单位再求体积",
+      "topics": [{"en":"Volume","zh":"体积"},{"en":"Unit conversion","zh":"单位换算"}],
+      "steps": [
+        "$3$ inches is $3/12=1/4$ foot, so the volume is $3\\cdot60\\cdot(1/4)=45$ cubic feet.",
+        "One cubic yard is $3^3=27$ cubic feet, so the required amount is $45/27=5/3$ cubic yards.",
+        "A whole-number order must be rounded upward, giving $2$ cubic yards."
+      ],
+      "stepsZh": [
+        "$3$ 英寸等于 $3/12=1/4$ 英尺，所以体积为 $3\\cdot60\\cdot(1/4)=45$ 立方英尺。",
+        "一立方码等于 $3^3=27$ 立方英尺，所需量为 $45/27=5/3$ 立方码。",
+        "订购量必须为整数并向上取整，因此需订购 $2$ 立方码。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/17"
+  },
+  "amc8-1990-q18": {
+    "summary": "A rectangular box has each of its eight corners cut off by a small plane, with the cuts disjoint. Each cut replaces one corner by a triangular face. How many edges does the resulting solid have?",
+    "summaryZh": "一个长方体的八个顶点都被一个小平面截去，且各截面互不相交。每次截角产生一个三角形新面。所得立体有多少条棱？",
+    "answer": "C. $36$.",
+    "answerZh": "C．$36$。",
+    "methods": [{
+      "title": "Count surviving and new edges",
+      "titleZh": "分别统计保留棱与新增棱",
+      "topics": [{"en":"Polyhedra","zh":"多面体"},{"en":"Counting","zh":"计数"}],
+      "steps": [
+        "The original box has $12$ edges. Cutting near a corner shortens its three incident edges but does not eliminate them, so all $12$ survive.",
+        "Each of the $8$ triangular cut faces contributes $3$ new edges, for $8\\cdot3=24$ new edges.",
+        "The total is $12+24=36$ edges."
+      ],
+      "stepsZh": [
+        "原长方体有 $12$ 条棱。截去顶点只会缩短与之相连的三条棱，并不会消除它们，所以原有 $12$ 条棱都保留。",
+        "每个三角形截面产生 $3$ 条新棱，八个截面共新增 $8\\cdot3=24$ 条。",
+        "总棱数为 $12+24=36$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/18"
+  },
+  "amc8-1990-q19": {
+    "summary": "There are $120$ seats in one row. What is the fewest number of occupied seats that guarantees every remaining empty seat is adjacent to an occupied seat, so the next person must sit next to someone?",
+    "summaryZh": "一排有 $120$ 个座位。至少坐多少人，才能保证每个剩余空位都与某个已占座位相邻，从而下一位入座者必定坐在别人旁边？",
+    "answer": "B. $40$.",
+    "answerZh": "B．$40$。",
+    "methods": [{
+      "title": "Cover the row in blocks of three",
+      "titleZh": "用三座位分块覆盖",
+      "topics": [{"en":"Extremal counting","zh":"极值计数"},{"en":"Covering","zh":"覆盖"}],
+      "steps": [
+        "One occupied seat can account for at most itself and its two neighbouring seats, a block of at most $3$ seats.",
+        "Therefore at least $\\lceil120/3\\rceil=40$ occupied seats are necessary.",
+        "They are sufficient: repeat the pattern empty–occupied–empty in $40$ blocks. Then every empty seat is adjacent to an occupied one."
+      ],
+      "stepsZh": [
+        "一个已占座位至多覆盖自身及左右两个相邻座位，即最多覆盖 $3$ 个座位。",
+        "因此至少需要 $\\lceil120/3\\rceil=40$ 个已占座位。",
+        "这也能实现：把“空—占—空”的模式重复 $40$ 次，则每个空位都与已占座位相邻。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/19"
+  },
+  "amc8-1990-q20": {
+    "summary": "A data set contains the annual incomes of $1000$ families. One income of $98{,}000$ dollars was mistakenly entered as $980{,}000$ dollars. By how much is the incorrect mean larger than the correct mean?",
+    "summaryZh": "一组数据记录 $1000$ 个家庭的年收入，其中 $98{,}000$ 美元被误录为 $980{,}000$ 美元。错误平均数比正确平均数大多少？",
+    "answer": "A. $882$ dollars.",
+    "answerZh": "A．$882$ 美元。",
+    "methods": [{
+      "title": "Spread the single error across the data set",
+      "titleZh": "把单个误差均摊到整组数据",
+      "topics": [{"en":"Mean","zh":"平均数"},{"en":"Error analysis","zh":"误差分析"}],
+      "steps": [
+        "The incorrect total exceeds the correct total by $980000-98000=882000$ dollars.",
+        "A mean divides the total by $1000$, so the mean is too large by $882000/1000=882$ dollars."
+      ],
+      "stepsZh": [
+        "错误总和比正确总和多 $980000-98000=882000$ 美元。",
+        "平均数是总和除以 $1000$，所以错误平均数多出 $882000/1000=882$ 美元。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/20"
+  },
+  "amc8-1990-q21": {
+    "summary": "A list has eight terms. Starting from two initial numbers, every later term is the product of the previous two. The final three terms are $16,64,1024$. Find the first term.",
+    "summaryZh": "一个数列有八项。给定前两项后，每一项都等于前两项的乘积。最后三项为 $16,64,1024$。求第一项。",
+    "answer": "B. $\\frac14$.",
+    "answerZh": "B．$\\frac14$。",
+    "methods": [{
+      "title": "Reverse the recurrence by division",
+      "titleZh": "用除法逆推递推关系",
+      "topics": [{"en":"Recurrence","zh":"递推"},{"en":"Working backwards","zh":"倒推"}],
+      "steps": [
+        "Write the terms as $t_1,\\ldots,t_8$, with $t_n=t_{n-1}t_{n-2}$ and $(t_6,t_7,t_8)=(16,64,1024)$.",
+        "Reverse one step at a time: $t_5=64/16=4$, $t_4=16/4=4$, $t_3=4/4=1$, $t_2=4/1=4$, and $t_1=1/4$.",
+        "Forward checking gives $1/4,4,1,4,4,16,64,1024$, so the result is consistent."
+      ],
+      "stepsZh": [
+        "记八项为 $t_1,\\ldots,t_8$，满足 $t_n=t_{n-1}t_{n-2}$，且 $(t_6,t_7,t_8)=(16,64,1024)$。",
+        "逐步逆推：$t_5=64/16=4$，$t_4=16/4=4$，$t_3=4/4=1$，$t_2=4/1=4$，$t_1=1/4$。",
+        "顺推得到 $1/4,4,1,4,4,16,64,1024$，与已知条件一致。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/21"
+  },
+  "amc8-1990-q22": {
+    "summary": "Students sit around a circular table and pass a bag containing $100$ candies. Each student takes one candy before passing the bag to the next person. Chris takes both the first and the last candy. Which of $10,11,19,20,25$ could be the number of students?",
+    "summaryZh": "若干学生围坐圆桌，依次传递装有 $100$ 颗糖的袋子；每人取一颗后传给下一人。Chris 既取到第一颗糖，也取到最后一颗糖。在 $10,11,19,20,25$ 中，哪一个可能是学生人数？",
+    "answer": "B. $11$.",
+    "answerZh": "B．$11$。",
+    "methods": [{
+      "title": "Use divisibility of the lap length",
+      "titleZh": "利用整圈长度的整除性",
+      "topics": [{"en":"Divisibility","zh":"整除"},{"en":"Cyclic processes","zh":"循环过程"}],
+      "steps": [
+        "With $n$ students, Chris receives candies numbered $1,1+n,1+2n,\\ldots$.",
+        "For candy $100$ also to go to Chris, $100-1=99$ must be divisible by $n$.",
+        "Among the choices, only $11$ divides $99$. Indeed Chris receives $1,12,23,\\ldots,100$."
+      ],
+      "stepsZh": [
+        "若有 $n$ 名学生，Chris 取到的糖编号为 $1,1+n,1+2n,\\ldots$。",
+        "要使第 $100$ 颗也由 Chris 取到，必须有 $n\\mid(100-1)=99$。",
+        "选项中只有 $11$ 整除 $99$；此时 Chris 依次取到第 $1,12,23,\\ldots,100$ 颗。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/22"
+  },
+  "amc8-1990-q23": {
+    "summary": "A plane's cumulative distance graph gives the following approximate distances, in miles, at hours $0$ through $12$: $0,400,900,1050,1150,1250,1350,1450,1550,1750,1800,1850,1875$. During which of the first, second, third, ninth, or last one-hour intervals was its average speed greatest?",
+    "summaryZh": "一架飞机在第 $0$ 至第 $12$ 小时的累计路程（英里）近似为 $0,400,900,1050,1150,1250,1350,1450,1550,1750,1800,1850,1875$。在第一、第二、第三、第九或最后一个一小时区间中，哪个区间的平均速度最大？",
+    "answer": "B. The second hour, from $1$ to $2$.",
+    "answerZh": "B．第二小时，即 $1$ 到 $2$ 小时。",
+    "methods": [{
+      "title": "Compare one-hour rises",
+      "titleZh": "比较每小时路程增量",
+      "topics": [{"en":"Distance-time graphs","zh":"路程—时间图"},{"en":"Slope","zh":"斜率"}],
+      "steps": [
+        "Each interval has length $1$ hour, so average speed equals the increase in cumulative distance over that interval.",
+        "For the listed choices, the increases are about $400,500,150,200,25$ miles, respectively.",
+        "The largest increase, $500$ miles, occurs from hour $1$ to hour $2$."
+      ],
+      "stepsZh": [
+        "每个区间长度都是 $1$ 小时，因此平均速度等于该小时内累计路程的增加量。",
+        "各小时的增加量约为 $400,500,300,200,100$ 英里。",
+        "最大增加量 $500$ 英里出现在第 $1$ 到第 $2$ 小时。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/23"
+  },
+  "amc8-1990-q24": {
+    "summary": "Balanced scales encode $3T+D=9C$ and $T=D+C$, where $T,D,C$ are the weights of a triangle, diamond, and circle. How many circles balance two diamonds?",
+    "summaryZh": "天平平衡关系为 $3T+D=9C$ 与 $T=D+C$，其中 $T,D,C$ 分别表示三角形、菱形和圆形的重量。两个菱形相当于多少个圆形？",
+    "answer": "C. $3$ circles.",
+    "answerZh": "C．$3$ 个圆形。",
+    "methods": [
+      {
+        "title": "Substitute the second balance into the first",
+        "titleZh": "把第二个平衡关系代入第一个",
+        "topics": [{"en":"Simultaneous equations","zh":"方程组"},{"en":"Substitution","zh":"代入"}],
+        "steps": [
+          "Substitute $T=D+C$ into $3T+D=9C$.",
+          "This gives $3(D+C)+D=9C$, so $4D+3C=9C$ and therefore $4D=6C$.",
+          "Dividing by $2$ yields $2D=3C$, so two diamonds balance three circles."
+        ],
+        "stepsZh": [
+          "把 $T=D+C$ 代入 $3T+D=9C$。",
+          "得到 $3(D+C)+D=9C$，即 $4D+3C=9C$，所以 $4D=6C$。",
+          "两边除以 $2$ 得 $2D=3C$，故两个菱形等于三个圆形。"
+        ]
+      },
+      {
+        "title": "Eliminate triangles on the scales",
+        "titleZh": "在天平上消去三角形",
+        "topics": [{"en":"Equivalent transformations","zh":"等价变形"}],
+        "steps": [
+          "The second balance says each triangle may be replaced by one diamond and one circle.",
+          "Replacing the three triangles on the first scale gives four diamonds plus three circles balancing nine circles.",
+          "Remove three circles from both sides: four diamonds balance six circles. Halving both sides gives two diamonds balancing three circles."
+        ],
+        "stepsZh": [
+          "第二个天平表明，每个三角形都可替换为一个菱形和一个圆形。",
+          "把第一个天平上的三个三角形全部替换后，左侧变成四个菱形加三个圆形，右侧为九个圆形。",
+          "两边各去掉三个圆形，得到四个菱形等于六个圆形；再减半即两个菱形等于三个圆形。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/24"
+  },
+  "amc8-1990-q25": {
+    "summary": "Exactly two cells of a $3\\times3$ grid are shaded. Two patterns are considered the same if a rotation or reflection of the square transforms one into the other. How many distinct patterns are possible?",
+    "summaryZh": "在 $3\\times3$ 方格中恰好涂黑两个格子。若两个图案可通过正方形的旋转或反射互相得到，则视为相同。共有多少种不同图案？",
+    "answer": "C. $8$.",
+    "answerZh": "C．$8$。",
+    "methods": [{
+      "title": "Classify cells and relative positions",
+      "titleZh": "按格子类型和相对位置分类",
+      "topics": [{"en":"Symmetry","zh":"对称"},{"en":"Casework","zh":"分类讨论"}],
+      "steps": [
+        "Under the square's symmetries, cells have three types: the centre, four edge-middle cells, and four corner cells.",
+        "Centre–edge and centre–corner give one pattern each. Two edge cells give two patterns: adjacent or opposite. Two corner cells likewise give two: adjacent or diagonal.",
+        "A corner and an edge-middle cell give two patterns according as they touch or lie on the far side.",
+        "The total is $1+1+2+2+2=8$."
+      ],
+      "stepsZh": [
+        "在正方形的对称变换下，九个格子分成三类：中心格、四个边中格、四个角格。",
+        "中心—边中与中心—角各有一种；两个边中格有相邻或相对两种；两个角格也有同边相邻或对角两种。",
+        "一个角格与一个边中格，根据是否相接或位于远侧又有两种。",
+        "总数为 $1+1+2+2+2=8$。"
+      ]
+    }],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/1990/problem/25"
+  }
+}
