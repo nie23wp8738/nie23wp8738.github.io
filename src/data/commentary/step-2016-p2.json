@@ -1,0 +1,461 @@
+{
+  "step-2016-p2-q1": {
+    "summary": "The curve $C_1$ is parametrised by $x=t^2$, $y=t^3$ for real $t$, with $O=(0,0)$. Points $P,Q\\in C_1$ satisfy $\\angle POQ=90^\\circ$. Prove that their tangents meet on $C_2:4y^2=3x-1$, decide whether $C_1$ and $C_2$ meet, and sketch both curves on the same axes.",
+    "summaryZh": "曲线 $C_1$ 的参数方程为 $x=t^2,\\ y=t^3$（$t$ 为实数），且 $O=(0,0)$。点 $P,Q\\in C_1$ 满足 $\\angle POQ=90^\\circ$。证明两点处的切线交于 $C_2:4y^2=3x-1$ 上，判断 $C_1,C_2$ 是否相交，并在同一坐标系中画出两曲线。",
+    "answer": "The tangent intersection lies on $C_2$. The curves touch at $(1/2,\\pm1/(2\\sqrt2))$. Here $C_1:y^2=x^3$ is a right-opening cusp and $C_2:x=(4y^2+1)/3$ is a right-opening parabola with vertex $(1/3,0)$ lying inside the cusp.",
+    "answerZh": "切线交点属于 $C_2$。两曲线相切于 $(1/2,\\pm1/(2\\sqrt2))$。其中 $C_1:y^2=x^3$ 是向右的尖点曲线，$C_2:x=(4y^2+1)/3$ 是顶点为 $(1/3,0)$ 的向右抛物线，位于尖点内部。",
+    "methods": [
+      {
+        "title": "Use the two point parameters and eliminate them",
+        "titleZh": "利用两点参数并消元",
+        "topics": [
+          {
+            "en": "Parametric differentiation",
+            "zh": "参数方程求导"
+          },
+          {
+            "en": "Dot products",
+            "zh": "点积"
+          },
+          {
+            "en": "Curve sketching",
+            "zh": "曲线草图"
+          }
+        ],
+        "steps": [
+          "At parameter $t$, $dy/dx=3t/2$, so the tangent is $2y=3tx-t^3$. Write $P=(p^2,p^3)$ and $Q=(q^2,q^3)$. The right-angle condition gives $p^2q^2(1+pq)=0$; since neither point is $O$, $pq=-1$.",
+          "Subtracting the two tangent equations gives $3x=p^2+pq+q^2=p^2+q^2-1$. Substitution back gives $2y=pq(p+q)=-(p+q)$. Hence $4y^2=(p+q)^2=p^2+q^2-2=3x-1$.",
+          "For an intersection of the two curves, put $x=t^2,y=t^3$ in $C_2$. With $u=t^2\\ge0$, $(u+1)(2u-1)^2=0$, so $u=1/2$ and the two points are $(1/2,\\pm1/(2\\sqrt2))$. The repeated factor, or equality of gradients, shows tangency.",
+          "For the sketch, use $C_1:y^2=x^3$ (symmetric about the $x$-axis, cusp at $O$) and $C_2:x=(4y^2+1)/3$ (vertex $(1/3,0)$). Since $(u+1)(2u-1)^2\\ge0$ for $u\\ge0$, the parabola stays between the two branches and only touches them at the stated points."
+        ],
+        "stepsZh": [
+          "参数为 $t$ 时，$dy/dx=3t/2$，故切线为 $2y=3tx-t^3$。设 $P=(p^2,p^3),Q=(q^2,q^3)$。直角条件给出 $p^2q^2(1+pq)=0$；两点均非 $O$，所以 $pq=-1$。",
+          "两条切线方程相减，得 $3x=p^2+pq+q^2=p^2+q^2-1$；代回得 $2y=pq(p+q)=-(p+q)$。于是 $4y^2=(p+q)^2=p^2+q^2-2=3x-1$。",
+          "求两曲线交点时，将 $x=t^2,y=t^3$ 代入 $C_2$。令 $u=t^2\\ge0$，得到 $(u+1)(2u-1)^2=0$，故 $u=1/2$，交点为 $(1/2,\\pm1/(2\\sqrt2))$。重因子或两曲线斜率相同均说明它们相切。",
+          "作图时，$C_1:y^2=x^3$ 关于 $x$ 轴对称并在 $O$ 有尖点；$C_2:x=(4y^2+1)/3$ 的顶点为 $(1/3,0)$。因 $(u+1)(2u-1)^2\\ge0$，抛物线位于两分支之间，仅在上述两点相切。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q1"
+  },
+  "step-2016-p2-q2": {
+    "summary": "Apply the factor theorem to $F=(a+b+c)^3-6(a+b+c)(a^2+b^2+c^2)+8(a^3+b^3+c^3)$, factor $F$ completely, and use it to solve $(x+1)^3-3(x+1)(2x^2+5)+2(4x^3+13)=0$. Then prove that $a+b-d-e$ divides $G=(a+b+d+e)^3-6(a+b+d+e)(a^2+b^2+d^2+e^2)+8(a^3+b^3+d^3+e^3)$, factor $G$ completely, and solve $(x+6)^3-6(x+6)(x^2+14)+8(x^3+36)=0$.",
+    "summaryZh": "对 $F=(a+b+c)^3-6(a+b+c)(a^2+b^2+c^2)+8(a^3+b^3+c^3)$ 使用因式定理并完全分解，再解 $(x+1)^3-3(x+1)(2x^2+5)+2(4x^3+13)=0$。随后证明 $a+b-d-e$ 整除 $G=(a+b+d+e)^3-6(a+b+d+e)(a^2+b^2+d^2+e^2)+8(a^3+b^3+d^3+e^3)$，完全分解 $G$，并解 $(x+6)^3-6(x+6)(x^2+14)+8(x^3+36)=0$。",
+    "answer": "$F=-3(a+b-c)(b+c-a)(c+a-b)$. The first equation has $x=-2,1,2$. The four-variable expression equals $3(a+b-d-e)(a+d-b-e)(a+e-b-d)$, and the second equation has $x=0,2,4$.",
+    "answerZh": "$F=-3(a+b-c)(b+c-a)(c+a-b)$。第一方程的根为 $x=-2,1,2$。四变量式为 $3(a+b-d-e)(a+d-b-e)(a+e-b-d)$，第二方程的根为 $x=0,2,4$。",
+    "methods": [
+      {
+        "title": "Factor by symmetry and match the equations",
+        "titleZh": "利用对称性分解并匹配方程",
+        "topics": [
+          {
+            "en": "Factor theorem",
+            "zh": "因式定理"
+          },
+          {
+            "en": "Symmetric polynomials",
+            "zh": "对称多项式"
+          }
+        ],
+        "steps": [
+          "Substitute $c=a+b$ and use $a^2+b^2=(a+b)^2-2ab$, $a^3+b^3=(a+b)^3-3ab(a+b)$; the result is zero. Thus $a+b-c$ is a factor. Symmetry supplies the other two linear factors. Degree comparison and $a=b=c=1$ give $F=-3(a+b-c)(b+c-a)(c+a-b)$.",
+          "For the first equation choose $(a,b,c)=(x,3/2,-1/2)$. The three factors become $x+2,1-x,x-2$, so $x=-2,1,2$.",
+          "For four variables, substituting $a+b=d+e$ makes the expression zero. Symmetry gives the three pair-splitting factors, and evaluation at $(1,0,0,0)$ fixes the constant as $3$.",
+          "For the final equation take $(a,b,d,e)=(x,1,2,3)$. The factorisation becomes $3(x-4)(x-2)x$, giving $x=0,2,4$."
+        ],
+        "stepsZh": [
+          "代入 $c=a+b$，并使用 $a^2+b^2=(a+b)^2-2ab$、$a^3+b^3=(a+b)^3-3ab(a+b)$，原式为零，故 $a+b-c$ 是因式。由对称性得到其余两个一次因式；比较次数并代入 $a=b=c=1$，得 $F=-3(a+b-c)(b+c-a)(c+a-b)$。",
+          "第一方程取 $(a,b,c)=(x,3/2,-1/2)$，三个因式化为 $x+2,1-x,x-2$，故 $x=-2,1,2$。",
+          "四变量情形代入 $a+b=d+e$ 后原式为零。由对称性得到三种二二分组对应的一次因式，代入 $(1,0,0,0)$ 确定常数为 $3$。",
+          "最后取 $(a,b,d,e)=(x,1,2,3)$，原方程化为 $3(x-4)(x-2)x=0$，故 $x=0,2,4$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q2"
+  },
+  "step-2016-p2-q3": {
+    "summary": "For $f_n(x)=\\sum_{k=0}^n x^k/k!$, prove $f_n'=f_{n-1}$, show every real root of $f_n$ is negative, and prove that two distinct real roots would force another between them. Deduce the maximum number of real roots and determine the number for odd and even $n$.",
+    "summaryZh": "设 $f_n(x)=\\sum_{k=0}^n x^k/k!$。证明 $f_n'=f_{n-1}$，说明 $f_n$ 的每个实根均为负数，并证明若有两个不同实根，则二者之间还存在实根。由此确定实根数的上界，并分别求奇数、偶数 $n$ 时的实根数。",
+    "answer": "$f_n$ has at most one real root. It has exactly one when $n$ is odd and none when $n$ is even.",
+    "answerZh": "$f_n$ 至多有一个实根；$n$ 为奇数时恰有一个实根，$n$ 为偶数时没有实根。",
+    "methods": [
+      {
+        "title": "Read the slope at a root from the truncated exponential",
+        "titleZh": "由截断指数式直接读出根处斜率",
+        "topics": [
+          {
+            "en": "Polynomial roots",
+            "zh": "多项式根"
+          },
+          {
+            "en": "Intermediate value theorem",
+            "zh": "介值定理"
+          }
+        ],
+        "steps": [
+          "Termwise differentiation gives $f_n'(x)=\\sum_{j=0}^{n-1}x^j/j!=f_{n-1}(x)$. Also $f_n(x)>0$ for $x\\ge0$, so every real root is negative.",
+          "Since $f_n=f_{n-1}+x^n/n!$, at a root $a$ we have $f_n'(a)=-a^n/n!$. Hence for distinct roots $a,b$, $f_n'(a)f_n'(b)=(ab)^n/(n!)^2>0$.",
+          "Thus the graph crosses the axis in the same direction at both roots. Continuity forces an additional crossing between them. Choosing two consecutive roots would contradict this, so there is at most one real root.",
+          "For odd $n$, the leading term has odd degree and positive coefficient, so the end behaviours have opposite signs and exactly one root exists. For even $n$, a global minimum occurs where $f_{n-1}=0$; there $f_n=x^n/n!>0$, so no real root exists."
+        ],
+        "stepsZh": [
+          "逐项求导得 $f_n'(x)=\\sum_{j=0}^{n-1}x^j/j!=f_{n-1}(x)$。又因 $x\\ge0$ 时 $f_n(x)>0$，所以所有实根均为负数。",
+          "由 $f_n=f_{n-1}+x^n/n!$，若 $a$ 是根，则 $f_n'(a)=-a^n/n!$。因此两个不同根 $a,b$ 满足 $f_n'(a)f_n'(b)=(ab)^n/(n!)^2>0$。",
+          "曲线在两个根处以同一方向穿过横轴，连续性迫使二者之间再出现一次穿越。若取相邻两根便产生矛盾，故至多有一个实根。",
+          "$n$ 为奇数时，首项次数为奇且系数为正，两端异号，故恰有一根。$n$ 为偶数时，全局最小点满足 $f_{n-1}=0$，此时 $f_n=x^n/n!>0$，故无实根。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q3"
+  },
+  "step-2016-p2-q4": {
+    "summary": "Let $y=(x^2+x\\sin\\theta+1)/(x^2+x\\cos\\theta+1)$ for real $x$. Prove $(y\\cos\\theta-\\sin\\theta)^2\\ge4(y-1)^2$, deduce $y^2+1\\ge4(y-1)^2$ and hence $(4-\\sqrt7)/3\\le y\\le(4+\\sqrt7)/3$. At the upper endpoint, find $x$ and $\\tan\\theta$.",
+    "summaryZh": "设实数 $x$ 满足 $y=(x^2+x\\sin\\theta+1)/(x^2+x\\cos\\theta+1)$。证明 $(y\\cos\\theta-\\sin\\theta)^2\\ge4(y-1)^2$，推出 $y^2+1\\ge4(y-1)^2$，从而得到 $(4-\\sqrt7)/3\\le y\\le(4+\\sqrt7)/3$。当 $y$ 取上端点时，求 $x$ 与 $\\tan\\theta$。",
+    "answer": "The stated interval is the full bound. At $y=(4+\\sqrt7)/3$, $x=\\pm1$ and $\\tan\\theta=(\\sqrt7-4)/3$.",
+    "answerZh": "所得区间即所需范围。当 $y=(4+\\sqrt7)/3$ 时，$x=\\pm1$，且 $\\tan\\theta=(\\sqrt7-4)/3$。",
+    "methods": [
+      {
+        "title": "Use the quadratic discriminant and equality conditions",
+        "titleZh": "利用二次方程判别式与等号条件",
+        "topics": [
+          {
+            "en": "Discriminants",
+            "zh": "判别式"
+          },
+          {
+            "en": "Cauchy–Schwarz inequality",
+            "zh": "柯西不等式"
+          }
+        ],
+        "steps": [
+          "The denominator is always positive. Clearing it gives $(y-1)x^2+(y\\cos\\theta-\\sin\\theta)x+(y-1)=0$. Real $x$ therefore implies the stated discriminant inequality (also valid when $y=1$).",
+          "Cauchy–Schwarz gives $(y\\cos\\theta-\\sin\\theta)^2\\le y^2+1$. Thus $3y^2-8y+3\\le0$, whose roots are $(4\\pm\\sqrt7)/3$.",
+          "At the upper endpoint the two ends of the inequality chain are equal. Equality in Cauchy–Schwarz gives $y\\sin\\theta+\\cos\\theta=0$, so $\\tan\\theta=-1/y=(\\sqrt7-4)/3$.",
+          "The quadratic discriminant is also zero, so its repeated root is $x=-(y\\cos\\theta-\\sin\\theta)/(2(y-1))$. The equality magnitude is $2(y-1)$, giving $x=\\pm1$."
+        ],
+        "stepsZh": [
+          "分母恒正。移项后得到 $(y-1)x^2+(y\\cos\\theta-\\sin\\theta)x+(y-1)=0$。实数 $x$ 要求判别式非负，因而得到题设不等式（$y=1$ 时也成立）。",
+          "由柯西不等式，$(y\\cos\\theta-\\sin\\theta)^2\\le y^2+1$。于是 $3y^2-8y+3\\le0$，两根为 $(4\\pm\\sqrt7)/3$。",
+          "在上端点，不等式链两端相等。柯西等号条件给出 $y\\sin\\theta+\\cos\\theta=0$，所以 $\\tan\\theta=-1/y=(\\sqrt7-4)/3$。",
+          "此时二次方程判别式也为零，重根为 $x=-(y\\cos\\theta-\\sin\\theta)/(2(y-1))$。等号处绝对值为 $2(y-1)$，故 $x=\\pm1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q4"
+  },
+  "step-2016-p2-q5": {
+    "summary": "Using the convention $\\binom pq=p!/[q!(p-q)!]$ for $p\\ge q\\ge0$ and $0$ otherwise: derive $(1-x)^{-N}=\\sum_{n\\ge0}\\binom{N+n-1}{n}x^n$ and prove $\\sum_{j=0}^n\\binom{N+j-1}{j}=\\binom{N+n}{n}$; prove Vandermonde's identity $\\binom{m+n}{r}=\\sum_{j=0}^r\\binom mj\\binom n{r-j}$; and prove $\\sum_{j=0}^n(-1)^j\\binom{N+m}{n-j}\\binom{m+j-1}{j}=\\binom Nn$.",
+    "summaryZh": "采用约定：$p\\ge q\\ge0$ 时 $\\binom pq=p!/[q!(p-q)!]$，否则为 $0$。推导 $(1-x)^{-N}=\\sum_{n\\ge0}\\binom{N+n-1}{n}x^n$，并证明 $\\sum_{j=0}^n\\binom{N+j-1}{j}=\\binom{N+n}{n}$；证明范德蒙德恒等式 $\\binom{m+n}{r}=\\sum_{j=0}^r\\binom mj\\binom n{r-j}$；再证明 $\\sum_{j=0}^n(-1)^j\\binom{N+m}{n-j}\\binom{m+j-1}{j}=\\binom Nn$。",
+    "answer": "The coefficient identities follow respectively from $(1-x)^{-1}(1-x)^{-N}=(1-x)^{-(N+1)}$, $(1+x)^m(1+x)^n=(1+x)^{m+n}$, and $(1+x)^{N+m}(1+x)^{-m}=(1+x)^N$.",
+    "answerZh": "三个系数恒等式分别由 $(1-x)^{-1}(1-x)^{-N}=(1-x)^{-(N+1)}$、$(1+x)^m(1+x)^n=(1+x)^{m+n}$ 与 $(1+x)^{N+m}(1+x)^{-m}=(1+x)^N$ 比较系数得到。",
+    "methods": [
+      {
+        "title": "Compare coefficients in three product expansions",
+        "titleZh": "在三个乘积展开式中比较系数",
+        "topics": [
+          {
+            "en": "Binomial series",
+            "zh": "二项级数"
+          },
+          {
+            "en": "Coefficient extraction",
+            "zh": "系数提取"
+          }
+        ],
+        "steps": [
+          "The coefficient of $x^n$ in $(1-x)^{-N}$ is $\\binom{N+n-1}{n}$, so $(1-x)^{-N}=\\sum_{n\\ge0}\\binom{N+n-1}{n}x^n$. Comparing $x^n$ in the first product gives $\\sum_{j=0}^n\\binom{N+j-1}{j}=\\binom{N+n}{n}$.",
+          "Compare the coefficient of $x^r$ in $(1+x)^m(1+x)^n=(1+x)^{m+n}$. The pairs of powers have indices $j$ and $r-j$, yielding Vandermonde's identity; out-of-range terms vanish by the convention.",
+          "Replace $x$ by $-x$ in the negative-binomial expansion: $(1+x)^{-m}=\\sum_{j\\ge0}(-1)^j\\binom{m+j-1}{j}x^j$.",
+          "Now compare $x^n$ in $(1+x)^{N+m}(1+x)^{-m}=(1+x)^N$. The convolution on the left is exactly the required alternating sum, while the right coefficient is $\\binom Nn$."
+        ],
+        "stepsZh": [
+          "$(1-x)^{-N}$ 中 $x^n$ 的系数为 $\\binom{N+n-1}{n}$，故 $(1-x)^{-N}=\\sum_{n\\ge0}\\binom{N+n-1}{n}x^n$。比较第一个乘积中 $x^n$ 的系数，得 $\\sum_{j=0}^n\\binom{N+j-1}{j}=\\binom{N+n}{n}$。",
+          "比较 $(1+x)^m(1+x)^n=(1+x)^{m+n}$ 两端 $x^r$ 的系数。配对幂次为 $j$ 与 $r-j$，得到范德蒙德恒等式；越界项按约定为零。",
+          "在负二项展开中把 $x$ 换成 $-x$：$(1+x)^{-m}=\\sum_{j\\ge0}(-1)^j\\binom{m+j-1}{j}x^j$。",
+          "比较 $(1+x)^{N+m}(1+x)^{-m}=(1+x)^N$ 中 $x^n$ 的系数。左端卷积正是所求交错和，右端系数为 $\\binom Nn$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q5"
+  },
+  "step-2016-p2-q6": {
+    "summary": "For positive integer $k$, let $y_k$ be the unique solution of $(1-x^2)(dy/dx)^2+k^2y^2=k^2$ with $y_k(1)=1$. Verify $y_1=x$ and $y_2=2x^2-1$; prove $y_{2n}=2y_n^2-1$ and the composition law $y_n(y_m(x))=y_{mn}(x)$.",
+    "summaryZh": "对正整数 $k$，设 $y_k$ 是方程 $(1-x^2)(dy/dx)^2+k^2y^2=k^2$ 满足 $y_k(1)=1$ 的唯一解。验证 $y_1=x$、$y_2=2x^2-1$；证明 $y_{2n}=2y_n^2-1$ 以及复合律 $y_n(y_m(x))=y_{mn}(x)$。",
+    "answer": "$y_1=x$, $y_2=2x^2-1$, $y_{2n}=2y_n^2-1$, and $y_n\\circ y_m=y_{mn}$.",
+    "answerZh": "$y_1=x$，$y_2=2x^2-1$，$y_{2n}=2y_n^2-1$，且 $y_n\\circ y_m=y_{mn}$。",
+    "methods": [
+      {
+        "title": "Verify the differential equation and invoke uniqueness",
+        "titleZh": "验证微分方程并使用唯一性",
+        "topics": [
+          {
+            "en": "Differential equations",
+            "zh": "微分方程"
+          },
+          {
+            "en": "Function composition",
+            "zh": "函数复合"
+          }
+        ],
+        "steps": [
+          "Direct substitution verifies $(1-x^2)+x^2=1$ for $y=x$, and $(1-x^2)(4x)^2+4(2x^2-1)^2=4$. Both equal $1$ at $x=1$, so uniqueness gives the first two results.",
+          "Set $z=2y_n^2-1$. Then $z'=4y_ny_n'$. Using $(1-x^2)y_n'^2=n^2(1-y_n^2)$, expansion gives $(1-x^2)z'^2+4n^2z^2=4n^2$.",
+          "Also $z(1)=1$, so $z$ is the unique solution for index $2n$: $y_{2n}=2y_n^2-1$.",
+          "For $v(x)=y_n(y_m(x))$, the chain rule and the equations for $y_m$ and $y_n$ give $(1-x^2)v'^2=m^2n^2(1-v^2)$. Since $v(1)=1$, uniqueness yields $v=y_{mn}$."
+        ],
+        "stepsZh": [
+          "直接代入可验证：$y=x$ 时 $(1-x^2)+x^2=1$；$y=2x^2-1$ 时 $(1-x^2)(4x)^2+4(2x^2-1)^2=4$。二者在 $x=1$ 都取 $1$，由唯一性得到前两式。",
+          "令 $z=2y_n^2-1$，则 $z'=4y_ny_n'$。利用 $(1-x^2)y_n'^2=n^2(1-y_n^2)$ 展开可得 $(1-x^2)z'^2+4n^2z^2=4n^2$。",
+          "又 $z(1)=1$，所以 $z$ 是指标 $2n$ 的唯一解，即 $y_{2n}=2y_n^2-1$。",
+          "对 $v(x)=y_n(y_m(x))$ 使用链式法则，再分别代入 $y_m,y_n$ 的方程，得 $(1-x^2)v'^2=m^2n^2(1-v^2)$。且 $v(1)=1$，故由唯一性 $v=y_{mn}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q6"
+  },
+  "step-2016-p2-q7": {
+    "summary": "Prove $\\int_0^a f(x)dx=\\int_0^a f(a-x)dx$. Use this reflection to evaluate $\\int_0^{\\pi/2}\\frac{\\sin x}{\\cos x+\\sin x}dx$, $\\int_0^{\\pi/4}\\frac{\\sin x}{\\cos x+\\sin x}dx$, $\\int_0^{\\pi/4}\\ln(1+\\tan x)dx$, and $\\int_0^{\\pi/4}\\frac{x}{\\cos x(\\cos x+\\sin x)}dx$.",
+    "summaryZh": "证明 $\\int_0^a f(x)dx=\\int_0^a f(a-x)dx$。利用区间反射求四个积分：$\\int_0^{\\pi/2}\\frac{\\sin x}{\\cos x+\\sin x}dx$、$\\int_0^{\\pi/4}\\frac{\\sin x}{\\cos x+\\sin x}dx$、$\\int_0^{\\pi/4}\\ln(1+\\tan x)dx$ 以及 $\\int_0^{\\pi/4}\\frac{x}{\\cos x(\\cos x+\\sin x)}dx$。",
+    "answer": "The four integrals are respectively $\\pi/4$, $\\pi/8-(1/4)\\ln2$, $(\\pi/8)\\ln2$, and $(\\pi/8)\\ln2$.",
+    "answerZh": "四个积分依次为 $\\pi/4$、$\\pi/8-(1/4)\\ln2$、$(\\pi/8)\\ln2$、$(\\pi/8)\\ln2$。",
+    "methods": [
+      {
+        "title": "Reflect the interval and pair the integrands",
+        "titleZh": "反射积分区间并配对被积函数",
+        "topics": [
+          {
+            "en": "Definite-integral symmetry",
+            "zh": "定积分对称性"
+          },
+          {
+            "en": "Integration by parts",
+            "zh": "分部积分"
+          }
+        ],
+        "steps": [
+          "The substitution $u=a-x$ proves the reflection identity. On $[0,\\pi/2]$ it swaps sine and cosine; adding the two forms makes the integrand $1$, so the first value is $\\pi/4$.",
+          "On $[0,\\pi/4]$, write the second integrand as $\\tan x/(1+\\tan x)$. Since $\\tan(\\pi/4-x)=(1-\\tan x)/(1+\\tan x)$, reflection turns it into $1/2-(1/2)\\tan x$. Integration gives $\\pi/8-(1/4)\\ln2$.",
+          "Reflection sends $\\ln(1+\\tan x)$ to $\\ln2-\\ln(1+\\tan x)$. Adding gives twice the integral as $(\\pi/4)\\ln2$, hence $(\\pi/8)\\ln2$.",
+          "The last integrand is $x\\sec^2x/(1+\\tan x)$. Integrate by parts with antiderivative $\\ln(1+\\tan x)$; the boundary term is $(\\pi/4)\\ln2$ and subtracting the third integral leaves $(\\pi/8)\\ln2$."
+        ],
+        "stepsZh": [
+          "代换 $u=a-x$ 即得反射恒等式。在 $[0,\\pi/2]$ 上它交换正弦与余弦；将原式与反射式相加，被积函数变为 $1$，故第一积分为 $\\pi/4$。",
+          "在 $[0,\\pi/4]$ 上将第二个被积函数写成 $\\tan x/(1+\\tan x)$。由 $\\tan(\\pi/4-x)=(1-\\tan x)/(1+\\tan x)$，反射后化为 $1/2-(1/2)\\tan x$，积分得 $\\pi/8-(1/4)\\ln2$。",
+          "反射把 $\\ln(1+\\tan x)$ 变为 $\\ln2-\\ln(1+\\tan x)$。相加得两倍积分为 $(\\pi/4)\\ln2$，故结果为 $(\\pi/8)\\ln2$。",
+          "最后一个被积函数为 $x\\sec^2x/(1+\\tan x)$。以 $\\ln(1+\\tan x)$ 为原函数作分部积分，边界项为 $(\\pi/4)\\ln2$，再减第三问结果，得到 $(\\pi/8)\\ln2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q7"
+  },
+  "step-2016-p2-q8": {
+    "summary": "Evaluate $\\int_{m-1/2}^{\\infty}x^{-2}dx$ and use a midpoint-rectangle sketch to justify $\\sum_{r=m}^n r^{-2}\\approx\\int_{m-1/2}^{n+1/2}x^{-2}dx$. Use it to obtain $E=\\sum_{r=1}^{\\infty}r^{-2}\\approx2,5/3,33/20$. Estimate the one-strip error by $1/(4r^4)$ and, given $E\\approx1.645$, show $\\sum_{r=1}^{\\infty}r^{-4}\\approx1.08$.",
+    "summaryZh": "计算 $\\int_{m-1/2}^{\\infty}x^{-2}dx$，并用以整数为中心的矩形与曲线草图说明 $\\sum_{r=m}^n r^{-2}\\approx\\int_{m-1/2}^{n+1/2}x^{-2}dx$。据此依次得到 $E=\\sum_{r=1}^{\\infty}r^{-2}\\approx2,5/3,33/20$。再证明单段误差约为 $1/(4r^4)$；已知 $E\\approx1.645$，推出 $\\sum_{r=1}^{\\infty}r^{-4}\\approx1.08$。",
+    "answer": "The tail integral is $2/(2m-1)$. The successive approximations are $2,5/3,33/20$, the strip error is asymptotic to $1/(4r^4)$, and the final fourth-power sum is approximately $1.08$.",
+    "answerZh": "尾积分为 $2/(2m-1)$；三个近似依次为 $2,5/3,33/20$；单段误差渐近于 $1/(4r^4)$；最终四次方倒数和约为 $1.08$。",
+    "methods": [
+      {
+        "title": "Use midpoint strips and sum their errors",
+        "titleZh": "使用中点条带并累加误差",
+        "topics": [
+          {
+            "en": "Integral approximation",
+            "zh": "积分近似"
+          },
+          {
+            "en": "Series estimation",
+            "zh": "级数估计"
+          }
+        ],
+        "steps": [
+          "$\\int_{m-1/2}^{\\infty}x^{-2}dx=2/(2m-1)$. A width-one rectangle centred at $r$ has area $1/r^2$ and nearly matches the area under $1/x^2$ from $r-1/2$ to $r+1/2$; adjoining the strips gives the stated approximation.",
+          "Letting $n\\to\\infty$ and keeping zero, one or two initial terms exact gives $E\\approx2$, $1+2/3=5/3$, and $1+1/4+2/5=33/20$.",
+          "The exact strip integral is $4/(4r^2-1)$. Its excess over $1/r^2$ is $1/[r^2(4r^2-1)]=[1/(4r^4)]/[1-1/(4r^2)]\\sim1/(4r^4)$.",
+          "Use the approximation only from $r=3$ onward: $\\frac14\\sum_{r=3}^{\\infty}r^{-4}\\approx2/5-(E-1-1/4)=0.005$. Thus the full sum is about $1+1/16+0.02=1.0825\\approx1.08$."
+        ],
+        "stepsZh": [
+          "$\\int_{m-1/2}^{\\infty}x^{-2}dx=2/(2m-1)$。以整数 $r$ 为中心、宽为 $1$、高为 $1/r^2$ 的矩形面积为 $1/r^2$，与 $[r-1/2,r+1/2]$ 下的曲线面积近似相等；拼接各条带得到题设近似。",
+          "令 $n\\to\\infty$，并分别精确保留零项、一项、两项，得到 $E\\approx2$、$1+2/3=5/3$、$1+1/4+2/5=33/20$。",
+          "单个条带的精确积分是 $4/(4r^2-1)$。它比 $1/r^2$ 多 $1/[r^2(4r^2-1)]=[1/(4r^4)]/[1-1/(4r^2)]\\sim1/(4r^4)$。",
+          "只从 $r=3$ 起使用误差近似：$\\frac14\\sum_{r=3}^{\\infty}r^{-4}\\approx2/5-(E-1-1/4)=0.005$。故总和约为 $1+1/16+0.02=1.0825\\approx1.08$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q8"
+  },
+  "step-2016-p2-q9": {
+    "summary": "A bullet of mass $m$ enters a wooden block of mass $M$ at speed $u$ and experiences constant resistance $R$. With the block fixed it stops after distance $a$. With the block free on a smooth table, find the bullet's distance $b$ through the block and the block's displacement $c$ when their relative motion ceases, in terms of $M,m,a$.",
+    "summaryZh": "质量为 $m$ 的子弹以速度 $u$ 射入质量为 $M$ 的木块，并受到恒定阻力 $R$。木块固定时，子弹在块内前进距离 $a$ 后停止。若木块可在光滑水平面上运动，求相对运动停止时子弹在木块内前进的距离 $b$ 与木块位移 $c$，并用 $M,m,a$ 表示。",
+    "answer": "$a=mu^2/(2R)$, $b=Ma/(M+m)$, and $c=mMa/(M+m)^2$.",
+    "answerZh": "$a=mu^2/(2R)$，$b=Ma/(M+m)$，$c=mMa/(M+m)^2$。",
+    "methods": [
+      {
+        "title": "Combine momentum with work–energy",
+        "titleZh": "结合动量守恒与功能关系",
+        "topics": [
+          {
+            "en": "Conservation of momentum",
+            "zh": "动量守恒"
+          },
+          {
+            "en": "Work–energy principle",
+            "zh": "功能原理"
+          }
+        ],
+        "steps": [
+          "For the fixed block, $Ra=mu^2/2$, so $a=mu^2/(2R)$.",
+          "For the free block there is no external horizontal force. At common final speed $V$, $mu=(M+m)V$, hence $V=mu/(M+m)$.",
+          "The two internal resistance forces do net work $-Rb$ on the bullet-block system because $b$ is the relative displacement. Thus $Rb=mu^2/2-(M+m)V^2/2$, which gives $b=Ma/(M+m)$.",
+          "For the block alone, $Rc=MV^2/2$. Substitute $V$ and $Ra=mu^2/2$ to obtain $c=mMa/(M+m)^2$."
+        ],
+        "stepsZh": [
+          "木块固定时，由 $Ra=mu^2/2$，得 $a=mu^2/(2R)$。",
+          "木块可动时，系统无外部水平力。最终共同速度 $V$ 满足 $mu=(M+m)V$，所以 $V=mu/(M+m)$。",
+          "两内力对子弹—木块系统所做的总功为 $-Rb$，因为 $b$ 是相对位移。故 $Rb=mu^2/2-(M+m)V^2/2$，得到 $b=Ma/(M+m)$。",
+          "单独对木块用功能关系：$Rc=MV^2/2$。代入 $V$ 及 $Ra=mu^2/2$，得到 $c=mMa/(M+m)^2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q9"
+  },
+  "step-2016-p2-q10": {
+    "summary": "A uniform thin wire is bent into isosceles triangle $ABC$ with $AB=AC$ and $\\angle A=2\\theta$. It hangs in a vertical plane from a rough horizontal peg touching side $BC$. Prove that equilibrium is possible for every contact point on $BC$ provided $\\mu\\ge2\\tan\\theta(1+\\sin\\theta)$.",
+    "summaryZh": "均匀细铁丝弯成等腰三角形 $ABC$，其中 $AB=AC$、$\\angle A=2\\theta$。三角形在竖直平面内悬挂于粗糙水平小钉上，小钉与边 $BC$ 接触。证明若 $\\mu\\ge2\\tan\\theta(1+\\sin\\theta)$，则接触点位于 $BC$ 上任意位置时都可平衡。",
+    "answer": "The centre of mass is at perpendicular distance $d=b\\cos\\theta/[2(1+\\sin\\theta)]$ from $BC$ when $AB=AC=b$. The worst contact point is an endpoint of $BC$, giving the stated sufficient condition.",
+    "answerZh": "若 $AB=AC=b$，质心到 $BC$ 的垂直距离为 $d=b\\cos\\theta/[2(1+\\sin\\theta)]$。最不利接触点是 $BC$ 的端点，从而得到题设充分条件。",
+    "methods": [
+      {
+        "title": "Locate the centre of mass and resolve the peg force",
+        "titleZh": "确定质心并分解小钉作用力",
+        "topics": [
+          {
+            "en": "Centre of mass",
+            "zh": "质心"
+          },
+          {
+            "en": "Limiting friction",
+            "zh": "极限摩擦"
+          }
+        ],
+        "steps": [
+          "Let $AB=AC=b$ and $M$ be the midpoint of $BC$. Then $BC=2b\\sin\\theta$, $AM=b\\cos\\theta$. Treating the sides as rods gives $GM=d=b\\cos\\theta/[2(1+\\sin\\theta)]$.",
+          "If the peg touches at $P$ with $MP=x$, the only external forces are weight at $G$ and the contact force at $P$. Two-force equilibrium requires $PG$ vertical, so the triangle rotates until $\\tan\\alpha=x/d$, where $\\alpha$ is the inclination of the normal to the vertical.",
+          "Resolving the vertical contact force normal and parallel to $BC$ gives $R=W\\cos\\alpha$, $F=W\\sin\\alpha$. No slip requires $F\\le\\mu R$, so $\\mu\\ge x/d$.",
+          "The largest possible $x$ is $b\\sin\\theta$. Therefore it suffices that $\\mu\\ge b\\sin\\theta/d=2\\tan\\theta(1+\\sin\\theta)$; then every smaller $x$ is also allowed."
+        ],
+        "stepsZh": [
+          "令 $AB=AC=b$，$M$ 为 $BC$ 中点，则 $BC=2b\\sin\\theta$、$AM=b\\cos\\theta$。把三边视为均匀细杆，可得质心到 $BC$ 的距离 $GM=d=b\\cos\\theta/[2(1+\\sin\\theta)]$。",
+          "若小钉在 $P$ 接触且 $MP=x$，外力只有作用于 $G$ 的重力与作用于 $P$ 的接触力。二力平衡要求 $PG$ 竖直，故三角形转至 $\\tan\\alpha=x/d$，其中 $\\alpha$ 为法线与竖直方向的夹角。",
+          "把竖直接触力沿 $BC$ 法向与切向分解，得 $R=W\\cos\\alpha$、$F=W\\sin\\alpha$。不滑动要求 $F\\le\\mu R$，即 $\\mu\\ge x/d$。",
+          "$x$ 的最大值为 $b\\sin\\theta$。因此只要 $\\mu\\ge b\\sin\\theta/d=2\\tan\\theta(1+\\sin\\theta)$，所有较小的 $x$ 也均可平衡。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q10"
+  },
+  "step-2016-p2-q11": {
+    "summary": "Two particles with positions $(a+ut\\cos\\alpha,ut\\sin\\alpha)$ and $(vt\\cos\\beta,b+vt\\sin\\beta)$ collide; prove $u\\sin(\\theta+\\alpha)=v\\sin(\\theta+\\beta)$ where $\\tan\\theta=b/a$. Apply this to a bullet fired from a tower of height $b$ and a target launched from ground distance $a$ to prove $2u\\sin\\alpha(u\\sin\\alpha-v\\sin\\beta)>bg$ for a hit above ground, and explain why $\\alpha>\\beta$ is necessary.",
+    "summaryZh": "两粒子的位置分别为 $(a+ut\\cos\\alpha,ut\\sin\\alpha)$ 与 $(vt\\cos\\beta,b+vt\\sin\\beta)$，且发生碰撞。证明当 $\\tan\\theta=b/a$ 时，$u\\sin(\\theta+\\alpha)=v\\sin(\\theta+\\beta)$。再应用于塔高为 $b$ 的枪弹与距塔脚水平距离 $a$ 处发射的目标，证明在落地前击中必须满足 $2u\\sin\\alpha(u\\sin\\alpha-v\\sin\\beta)>bg$，并解释为何必有 $\\alpha>\\beta$。",
+    "answer": "The collision relation is $u\\sin(\\theta+\\alpha)=v\\sin(\\theta+\\beta)$. A hit above ground requires the displayed strict inequality, and necessarily $\\alpha>\\beta$.",
+    "answerZh": "碰撞关系为 $u\\sin(\\theta+\\alpha)=v\\sin(\\theta+\\beta)$。在落地前击中必须满足题设严格不等式，并且必有 $\\alpha>\\beta$。",
+    "methods": [
+      {
+        "title": "Eliminate collision time and use relative motion",
+        "titleZh": "消去碰撞时间并使用相对运动",
+        "topics": [
+          {
+            "en": "Projectile motion",
+            "zh": "抛体运动"
+          },
+          {
+            "en": "Relative motion",
+            "zh": "相对运动"
+          }
+        ],
+        "steps": [
+          "Equating coordinates at collision gives $t(v\\cos\\beta-u\\cos\\alpha)=a$ and $t(u\\sin\\alpha-v\\sin\\beta)=b$. Divide and use $b/a=\\tan\\theta$; after cross-multiplication the sine addition formula gives the required relation.",
+          "For the projectile problem, both bullet and target acquire the same vertical displacement $-gt^2/2$, which cancels in their relative position. Hence the same collision equations hold, and $t=b/(u\\sin\\alpha-v\\sin\\beta)$ with positive denominator.",
+          "The target is above ground when $ut\\sin\\alpha-gt^2/2>0$, equivalently $t<2u\\sin\\alpha/g$. Substitute the collision time and multiply by the positive denominator to obtain $2u\\sin\\alpha(u\\sin\\alpha-v\\sin\\beta)>bg$.",
+          "Divide the collision equality by $u\\sin\\alpha>v\\sin\\beta$. Using $\\sin(\\theta+\\alpha)/\\sin\\alpha=\\sin\\theta\\cot\\alpha+\\cos\\theta$ yields $\\cot\\alpha<\\cot\\beta$; cotangent decreases on $(0,\\pi/2)$, so $\\alpha>\\beta$."
+        ],
+        "stepsZh": [
+          "碰撞时横、纵坐标相等，得到 $t(v\\cos\\beta-u\\cos\\alpha)=a$ 与 $t(u\\sin\\alpha-v\\sin\\beta)=b$。两式相除并用 $b/a=\\tan\\theta$，交叉相乘后由正弦和角公式得到所求关系。",
+          "在抛体问题中，枪弹与目标的竖直位移都含相同的 $-gt^2/2$，在相对位置中抵消。因此碰撞方程不变，并且 $t=b/(u\\sin\\alpha-v\\sin\\beta)$，分母为正。",
+          "目标仍在地面上方要求 $ut\\sin\\alpha-gt^2/2>0$，即 $t<2u\\sin\\alpha/g$。代入碰撞时刻并乘以正分母，得到 $2u\\sin\\alpha(u\\sin\\alpha-v\\sin\\beta)>bg$。",
+          "用碰撞等式除以 $u\\sin\\alpha>v\\sin\\beta$。利用 $\\sin(\\theta+\\alpha)/\\sin\\alpha=\\sin\\theta\\cot\\alpha+\\cos\\theta$ 得 $\\cot\\alpha<\\cot\\beta$；余切在 $(0,\\pi/2)$ 上递减，故 $\\alpha>\\beta$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q11"
+  },
+  "step-2016-p2-q12": {
+    "summary": "Derive inclusion–exclusion for three events and state it for four. A random permutation of cards $1,\\ldots,n$ has event $E_i$ that card $i$ occupies position $i$. Find the probabilities of one, two and three prescribed matches; hence find the probability of at least one match and then exactly one match.",
+    "summaryZh": "推导三个事件的容斥公式并写出四事件公式。将编号 $1,\\ldots,n$ 的卡片随机排列，$E_i$ 表示卡片 $i$ 位于第 $i$ 个位置。求一个、两个、三个指定位置同时匹配的概率；进而求至少一个位置匹配以及恰好一个位置匹配的概率。",
+    "answer": "$P(E_i)=1/n$, $P(E_iE_j)=1/[n(n-1)]$, $P(E_iE_jE_k)=1/[n(n-1)(n-2)]$. At least one match has probability $1-1/2!+1/3!-\\cdots+(-1)^{n+1}/n!$. Exactly one has probability $\\sum_{r=0}^{n-1}(-1)^r/r!$.",
+    "answerZh": "$P(E_i)=1/n$，$P(E_iE_j)=1/[n(n-1)]$，$P(E_iE_jE_k)=1/[n(n-1)(n-2)]$。至少一个匹配的概率为 $1-1/2!+1/3!-\\cdots+(-1)^{n+1}/n!$；恰好一个匹配的概率为 $\\sum_{r=0}^{n-1}(-1)^r/r!$。",
+    "methods": [
+      {
+        "title": "Apply inclusion–exclusion to fixed points of a permutation",
+        "titleZh": "把容斥原理用于排列的不动点",
+        "topics": [
+          {
+            "en": "Inclusion–exclusion",
+            "zh": "容斥原理"
+          },
+          {
+            "en": "Derangements",
+            "zh": "错排"
+          }
+        ],
+        "steps": [
+          "Apply the two-event rule first to $(A\\cup B)\\cup C$ and then to $(A\\cap C)\\cup(B\\cap C)$. This gives singles minus pairs plus the triple. For four events the signs continue: singles, minus pairs, plus triples, minus the quadruple intersection.",
+          "If $r$ specified cards are fixed, the other $n-r$ cards can be arranged in $(n-r)!$ ways out of $n!$. This yields the three requested probabilities.",
+          "For at least one match, the $r$th inclusion–exclusion layer has $\\binom nr$ intersections, each of probability $(n-r)!/n!$, and hence contributes $(-1)^{r+1}/r!$. Summing gives the stated alternating series.",
+          "For exactly one match, choose its card. Given that it matches, the remaining $n-1$ cards must form a derangement. The total probability is therefore the no-match probability for $n-1$ cards, $\\sum_{r=0}^{n-1}(-1)^r/r!$."
+        ],
+        "stepsZh": [
+          "先对 $(A\\cup B)\\cup C$ 使用二事件公式，再对 $(A\\cap C)\\cup(B\\cap C)$ 使用一次，得到单事件之和减两两交集再加三重交集。四事件时符号继续交替：单项、减二重、加三重、减四重。",
+          "若指定 $r$ 张卡片位置正确，其余 $n-r$ 张有 $(n-r)!$ 种排法，总数为 $n!$，由此得到题目要求的三个概率。",
+          "至少一个匹配时，容斥第 $r$ 层有 $\\binom nr$ 个交集，每个概率为 $(n-r)!/n!$，故该层贡献 $(-1)^{r+1}/r!$。求和得到题设交错级数。",
+          "恰好一个匹配时，先选出匹配卡片；在它已匹配的条件下，其余 $n-1$ 张必须形成错排。因此总概率等于 $n-1$ 张卡片无匹配的概率，即 $\\sum_{r=0}^{n-1}(-1)^r/r!$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q12"
+  },
+  "step-2016-p2-q13": {
+    "summary": "Use the standard normal density to approximate the central probability for $X\\sim\\operatorname{Bin}(16,1/2)$ and show $P(X=8)\\approx1/(2\\sqrt{2\\pi})$. Then use central probabilities for $\\operatorname{Bin}(2n,1/2)$ and $\\operatorname{Po}(n)$ to derive the central-binomial factorial approximation and Stirling's formula.",
+    "summaryZh": "用标准正态密度近似 $X\\sim\\operatorname{Bin}(16,1/2)$ 的中心概率，证明 $P(X=8)\\approx1/(2\\sqrt{2\\pi})$。再分别利用 $\\operatorname{Bin}(2n,1/2)$ 与 $\\operatorname{Po}(n)$ 的中心概率，推导中心二项式阶乘近似及斯特林公式。",
+    "answer": "$P(X=8)\\approx1/(2\\sqrt{2\\pi})$; $(2n)!\\approx2^{2n}(n!)^2/\\sqrt{n\\pi}$; and $n!\\approx\\sqrt{2\\pi n}\\,e^{-n}n^n$.",
+    "answerZh": "$P(X=8)\\approx1/(2\\sqrt{2\\pi})$；$(2n)!\\approx2^{2n}(n!)^2/\\sqrt{n\\pi}$；$n!\\approx\\sqrt{2\\pi n}\\,e^{-n}n^n$。",
+    "methods": [
+      {
+        "title": "Approximate a central probability by one normal-density bar",
+        "titleZh": "用一条正态密度柱近似中心概率",
+        "topics": [
+          {
+            "en": "Normal approximation",
+            "zh": "正态近似"
+          },
+          {
+            "en": "Stirling's formula",
+            "zh": "斯特林公式"
+          }
+        ],
+        "steps": [
+          "For an integer-valued variable with mean $\\mu$, standard deviation $\\sigma$ and a good normal approximation, the central unit-width bar satisfies $P(W=\\mu)\\approx1/(\\sigma\\sqrt{2\\pi})$.",
+          "For $X\\sim\\operatorname{Bin}(16,1/2)$, $\\mu=8$ and $\\sigma=2$, giving $P(X=8)\\approx1/(2\\sqrt{2\\pi})$.",
+          "For $Y\\sim\\operatorname{Bin}(2n,1/2)$, the exact central probability is $(2n)!/[2^{2n}(n!)^2]$, while the normal approximation is $1/\\sqrt{n\\pi}$. Equating them yields $(2n)!\\approx2^{2n}(n!)^2/\\sqrt{n\\pi}$.",
+          "For $Z\\sim\\operatorname{Po}(n)$, the exact central probability is $e^{-n}n^n/n!$ and the normal approximation is $1/\\sqrt{2\\pi n}$. Rearranging gives $n!\\approx\\sqrt{2\\pi n}\\,e^{-n}n^n$."
+        ],
+        "stepsZh": [
+          "若整数值随机变量的均值为 $\\mu$、标准差为 $\\sigma$，且正态近似良好，则中心处宽度为 $1$ 的概率柱满足 $P(W=\\mu)\\approx1/(\\sigma\\sqrt{2\\pi})$。",
+          "对 $X\\sim\\operatorname{Bin}(16,1/2)$，$\\mu=8$、$\\sigma=2$，故 $P(X=8)\\approx1/(2\\sqrt{2\\pi})$。",
+          "对 $Y\\sim\\operatorname{Bin}(2n,1/2)$，中心概率精确值为 $(2n)!/[2^{2n}(n!)^2]$，正态近似为 $1/\\sqrt{n\\pi}$。令二者相等，得到 $(2n)!\\approx2^{2n}(n!)^2/\\sqrt{n\\pi}$。",
+          "对 $Z\\sim\\operatorname{Po}(n)$，中心概率精确值为 $e^{-n}n^n/n!$，正态近似为 $1/\\sqrt{2\\pi n}$。整理得 $n!\\approx\\sqrt{2\\pi n}\\,e^{-n}n^n$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/questions/16-s2-q13"
+  }
+}
