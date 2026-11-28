@@ -1,0 +1,168 @@
+{
+  "usajmo-2020-q1": {
+    "summary": "There are $n\\ge2$ books with pairwise distinct heights and pairwise distinct widths. Initially they are ordered by increasing height. A move swaps two adjacent books when the left one is shorter but wider than the right one. Prove that every sequence of moves terminates and that the final order is increasing by width.",
+    "summaryZh": "有 $n\\ge2$ 本书，任意两本书的高度不同、宽度也不同。开始时书本按高度从左到右递增排列。若相邻两本书中左边较矮但较宽，就可以交换它们。证明：无论怎样选择操作，过程都将在有限步后停止，且停止时书本按宽度从左到右递增。",
+    "answer": "Every play terminates, and its terminal arrangement is the unique increasing-width order.",
+    "answerZh": "任意操作过程都会停止，且终局必为唯一的宽度递增排列。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2020_USOJMO_Problems/Problem_1",
+    "methods": [{
+      "title": "Count width inversions and rule out a bad adjacent pair",
+      "titleZh": "计数宽度逆序对，并排除终局中的坏相邻对",
+      "topics": [{"en":"Inversion counting","zh":"逆序对计数"},{"en":"Monovariants","zh":"单调量"},{"en":"Termination proofs","zh":"终止性证明"}],
+      "steps": [
+        "Call a pair width-inverted if the wider book is to its left. A legal move swaps exactly one adjacent width-inverted pair. The relative order of every other pair is unchanged, so the number $W$ of width inversions decreases by exactly $1$.",
+        "Since $0\\le W\\le\\binom n2$, only finitely many moves are possible. It remains to identify a terminal arrangement.",
+        "Suppose a terminal arrangement is not increasing by width. Any non-increasing permutation has an adjacent inversion, so take adjacent books $X,Y$ with $X$ wider than $Y$. No move is available, hence $X$ must also be taller than $Y$.",
+        "Initially the shorter book $Y$ was to the left of the taller book $X$. For $X$ to end to the left of $Y$, this pair itself must at some time have been swapped. Immediately before that swap, however, $Y$ was on the left, and legality would require $Y$ to be wider than $X$, contradicting their fixed widths.",
+        "Thus no width inversion remains at termination. Because all widths are distinct, the books are in increasing order of width."
+      ],
+      "stepsZh": [
+        "若一对书中较宽者位于左边，称其为宽度逆序对。一次合法操作恰好交换一个相邻宽度逆序对；其他任意一对书的相对次序不变。因此宽度逆序对数 $W$ 每次恰减少 $1$。",
+        "由于 $0\\le W\\le\\binom n2$，操作次数必有限。下面确定终局。",
+        "若终局没有按宽度递增排列，则排列中必有相邻逆序对。设相邻的 $X,Y$ 满足 $X$ 比 $Y$ 宽。终局不能再操作，所以 $X$ 还必须比 $Y$ 高。",
+        "开始时按高度递增，故较矮的 $Y$ 位于较高的 $X$ 左边。若终局中 $X$ 跑到 $Y$ 左边，这一对书本身必曾被交换。可是在交换前 $Y$ 位于左边，合法性要求 $Y$ 比 $X$ 宽，与书本宽度固定且 $X$ 更宽矛盾。",
+        "所以终局不存在宽度逆序对。所有宽度互不相同，故书本必按宽度严格递增排列。"
+      ]
+    }]
+  },
+  "usajmo-2020-q2": {
+    "summary": "Let $\\omega$ be the incircle of a fixed equilateral triangle $ABC$, with centre $I$ and inradius $r$. A variable tangent line $\\ell$ to $\\omega$ meets the interiors of $BC$ and $CA$ at $P$ and $Q$. A point $R$ satisfies $PR=PA$ and $QR=QB$. Determine the complete locus of $R$ as $\\ell$ varies.",
+    "summaryZh": "设 $\\omega$ 为固定等边三角形 $ABC$ 的内切圆，圆心为 $I$、内切圆半径为 $r$。圆 $\\omega$ 的一条可变切线 $\\ell$ 分别交边 $BC,CA$ 的内部于 $P,Q$。点 $R$ 满足 $PR=PA$ 且 $QR=QB$。求 $\\ell$ 变化时 $R$ 的全部轨迹。",
+    "answer": "Two open $120^\\circ$ arcs: the arc $AB$ of the circumcircle not containing $C$, and an open $120^\\circ$ arc on the circle centred at $I$ with radius $4r$, described precisely in the solution.",
+    "answerZh": "轨迹由两段不含端点的 $120^\\circ$ 圆弧组成：外接圆上不含 $C$ 的弧 $AB$，以及以 $I$ 为圆心、半径 $4r$ 的一段圆弧；端点在解答中精确定义。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2020_USOJMO_Problems/Problem_2",
+    "methods": [{
+      "title": "Normalize the incircle and locate both circle intersections",
+      "titleZh": "把内切圆标准化，并求出两圆的两个交点",
+      "topics": [{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Circle intersections","zh":"两圆交点"},{"en":"Locus problems","zh":"轨迹问题"}],
+      "steps": [
+        "Scale so that $r=1$ and place $I=(0,0)$. Let the touchpoints of $\\omega$ with $BC$ and $CA$ be $D=(1,0)$ and $E=(-1/2,\\sqrt3/2)$. Then $A=-2D=(-2,0)$ and $B=-2E=(1,-\\sqrt3)$.",
+        "Write the tangency point of $\\ell$ as $T=(\\cos\\theta,\\sin\\theta)$, where $0<\\theta<2\\pi/3$. The tangent at $D$ is $x=1$, so $$P=\\left(1,\\frac{1-\\cos\\theta}{\\sin\\theta}\\right)=(1,t),\\qquad t=\\tan\\frac\\theta2.$$",
+        "Define $R_1=-2T$ and $R_2=4T$. With $\\cos\\theta=(1-t^2)/(1+t^2)$ and $\\sin\\theta=2t/(1+t^2)$, direct expansion gives $$PR_1^2=PR_2^2=9+t^2=PA^2.$$",
+        "The same calculation after rotating the coordinates by $120^\\circ$ gives $QR_1=QR_2=QB$. Thus $R_1,R_2$ are the two intersections of the circle centred at $P$ with radius $PA$ and the circle centred at $Q$ with radius $QB$; there can be no other choices for $R$.",
+        "As $T$ traverses the open minor arc $DE$ of the incircle, $R_1=-2T$ traverses the open arc $AB$ of the circumcircle that does not contain $C$. Meanwhile $R_2=4T$ traverses an open $120^\\circ$ arc of the circle $|X-I|=4r$.",
+        "More explicitly, if $D_4,E_4$ lie on rays $ID,IE$ and satisfy $ID_4=IE_4=4r$, the second locus is the open minor arc $D_4E_4$. The endpoints are excluded because $P,Q$ must lie in the interiors of their sides."
+      ],
+      "stepsZh": [
+        "先缩放使 $r=1$，并取 $I=(0,0)$。设内切圆在 $BC,CA$ 上的切点分别为 $D=(1,0)$、$E=(-1/2,\\sqrt3/2)$。于是 $A=-2D=(-2,0)$、$B=-2E=(1,-\\sqrt3)$。",
+        "设 $\\ell$ 的切点为 $T=(\\cos\\theta,\\sin\\theta)$，其中 $0<\\theta<2\\pi/3$。$D$ 处切线为 $x=1$，故 $$P=\\left(1,\\frac{1-\\cos\\theta}{\\sin\\theta}\\right)=(1,t),\\qquad t=\\tan\\frac\\theta2.$$",
+        "定义 $R_1=-2T$、$R_2=4T$。代入 $\\cos\\theta=(1-t^2)/(1+t^2)$、$\\sin\\theta=2t/(1+t^2)$ 并展开，得到 $$PR_1^2=PR_2^2=9+t^2=PA^2.$$",
+        "把坐标旋转 $120^\\circ$ 后作相同计算，得到 $QR_1=QR_2=QB$。所以 $R_1,R_2$ 正是以 $P$ 为圆心、$PA$ 为半径的圆与以 $Q$ 为圆心、$QB$ 为半径的圆的两个交点，不再有其他可能。",
+        "当 $T$ 走过内切圆上不含端点的短弧 $DE$ 时，$R_1=-2T$ 走过三角形外接圆上不含 $C$ 的开弧 $AB$；$R_2=4T$ 走过以 $I$ 为圆心、半径 $4r$ 的一段开圆弧。",
+        "精确地说，在射线 $ID,IE$ 上分别取 $D_4,E_4$，使 $ID_4=IE_4=4r$，第二段轨迹就是短开弧 $D_4E_4$。因为 $P,Q$ 必须位于边的内部，所以两段圆弧均不含端点。"
+      ]
+    }]
+  },
+  "usajmo-2020-q3": {
+    "summary": "Inside a $2020\\times2020\\times2020$ cube, place $1\\times1\\times2020$ beams parallel to coordinate axes. Their end faces occupy unit cells on opposite cube faces, interiors do not overlap, and every long side face of every beam must touch either the cube boundary or another beam along its interior. Find the smallest positive number of beams.",
+    "summaryZh": "在一个 $2020\\times2020\\times2020$ 立方体内放置若干根 $1\\times1\\times2020$ 的长梁，每根梁平行于一条坐标轴，两端的 $1\\times1$ 面落在立方体相对表面的单位方格上。梁的内部互不相交，且每根梁的四个长侧面的内部都必须接触立方体边界或另一根梁的侧面。求最少需要多少根梁。",
+    "answer": "$3030$ beams.",
+    "answerZh": "最少需要 $3030$ 根梁。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2020_USOJMO_Problems/Problem_3",
+    "methods": [{
+      "title": "Build a three-direction weave and prove three layer inequalities",
+      "titleZh": "构造三方向交织，并证明三个分层不等式",
+      "topics": [{"en":"Extremal combinatorics","zh":"极值组合"},{"en":"Three-dimensional grids","zh":"三维网格"},{"en":"Double counting","zh":"重复计数"}],
+      "steps": [
+        "We prove the more general answer $3n/2$ for even $n$. Use coordinates from $0$ to $n$. For each $k=0,2,\\ldots,n-2$, place the three beams $$[k,k+1]\\times[k,k+1]\\times[0,n],$$ $$[k+1,k+2]\\times[0,n]\\times[k,k+1],$$ $$[0,n]\\times[k+1,k+2]\\times[k+1,k+2].$$",
+        "There are $n/2$ beams in each of the three directions, hence $3n/2$ in total. Their interiors are disjoint. Looking at successive unit layers shows a cyclic staircase: each non-boundary long face is met by the next family, while the remaining long faces lie on the cube boundary. Thus the support condition is satisfied.",
+        "For the lower bound, let $N_x,N_y,N_z$ be the numbers of beams parallel to the three axes. If one number is zero, say $N_z=0$, the side-contact condition in each horizontal unit layer forces the layer to be completely filled by $x$- and $y$-beams; this already requires at least $n^2\\ge3n/2$ beams.",
+        "Now assume all three numbers are positive. Look at the fixed nonempty set $S$ of unit cells occupied by the cross-sections of the $z$-beams. If $S$ were the whole $n\\times n$ grid, then $N_z=n^2$ and the desired lower bound would already hold. Otherwise $S$ has an edge separating one of its cells from an unoccupied neighbouring cell. Along that entire vertical side, the corresponding $z$-beam needs support in every one of the $n$ horizontal unit layers. Only an $x$- or $y$-beam lying in that layer can provide it. Distinct layers require distinct transverse beams, so $$N_x+N_y\\ge n.$$",
+        "By cyclic symmetry, $N_y+N_z\\ge n$ and $N_z+N_x\\ge n$. Adding gives $2(N_x+N_y+N_z)\\ge3n$, so at least $3n/2$ beams are necessary.",
+        "Taking $n=2020$ gives $3n/2=3030$, matching the construction."
+      ],
+      "stepsZh": [
+        "先对任意偶数 $n$ 证明答案为 $3n/2$。取坐标范围 $0$ 到 $n$。对每个 $k=0,2,\\ldots,n-2$，放置三根梁：$$[k,k+1]\\times[k,k+1]\\times[0,n],$$ $$[k+1,k+2]\\times[0,n]\\times[k,k+1],$$ $$[0,n]\\times[k+1,k+2]\\times[k+1,k+2].$$",
+        "三个方向各有 $n/2$ 根梁，共 $3n/2$ 根。它们的内部互不相交；逐层观察可见一个循环阶梯结构：每个不在立方体边界上的长侧面都与下一方向的一根梁接触，其余长侧面位于立方体边界，因此构造满足条件。",
+        "下面证明下界。令 $N_x,N_y,N_z$ 分别为三个方向的梁数。若其中一个为零，例如 $N_z=0$，则在每个水平单位层内，侧面接触条件迫使 $x,y$ 方向的梁填满整层；这已经需要至少 $n^2\\ge3n/2$ 根梁。",
+        "现设三个数均为正。考察所有 $z$ 方向梁在水平截面上占据的非空单位格集合 $S$。若 $S$ 是整个 $n\\times n$ 方格，则 $N_z=n^2$，下界已经成立；否则，$S$ 中必有一条边与某个未占据的相邻格分界。相应 $z$ 方向梁沿这条竖直侧面在每一个水平单位层中都需要支撑，而能在该层提供支撑的只能是位于该层的 $x$ 或 $y$ 方向梁。不同层需要不同的横向梁，因此 $$N_x+N_y\\ge n.$$",
+        "循环交换三个方向，同理有 $N_y+N_z\\ge n$、$N_z+N_x\\ge n$。三式相加得 $2(N_x+N_y+N_z)\\ge3n$，故至少需要 $3n/2$ 根梁。",
+        "取 $n=2020$，得到最小值 $3n/2=3030$，与构造一致。"
+      ]
+    }]
+  },
+  "usajmo-2020-q4": {
+    "summary": "A convex cyclic quadrilateral $ABCD$ satisfies $DA<AB=BC<CD$. Point $E$ lies on $CD$ and point $F$ lies on $AB$, with $BE\\perp AC$ and $EF\\parallel BC$. Prove that $FB=FD$.",
+    "summaryZh": "凸圆内接四边形 $ABCD$ 满足 $DA<AB=BC<CD$。点 $E$ 位于边 $CD$ 上，点 $F$ 位于边 $AB$ 上，并且 $BE\\perp AC$、$EF\\parallel BC$。证明 $FB=FD$。",
+    "answer": "$FB=FD$.",
+    "answerZh": "$FB=FD$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2020_USOJMO_Problems/Problem_4",
+    "methods": [{
+      "title": "Recognize an isosceles triangle and its circumcircle",
+      "titleZh": "识别等腰三角形及其外接圆",
+      "topics": [{"en":"Cyclic quadrilaterals","zh":"圆内接四边形"},{"en":"Isosceles triangles","zh":"等腰三角形"},{"en":"Central and inscribed angles","zh":"圆心角与圆周角"}],
+      "steps": [
+        "Because $AB=BC$, point $B$ lies on the perpendicular bisector of $AC$. Since $BE\\perp AC$, the line $BE$ is that perpendicular bisector and also the angle bisector of $\\angle ABC$.",
+        "Put $\\theta=\\angle CBE=\\angle EBA$. As $F$ lies on $AB$, $\\angle EBF=\\theta$. Also $EF\\parallel BC$, so $\\angle FEB=\\theta$. Hence triangle $BEF$ is isosceles and $FB=FE$.",
+        "The base angles of isosceles triangle $ABC$ are $90^\\circ-\\theta$. Since $ABCD$ is cyclic and $D,E,C$ are collinear, $$\\angle BDE=\\angle BDC=\\angle BAC=90^\\circ-\\theta.$$",
+        "In triangle $BEF$, $$\\angle BFE=180^\\circ-2\\theta=2\\angle BDE.$$ Thus $D$ sees chord $BE$ under half the central angle $\\angle BFE$ of the circle centred at $F$ through $B,E$.",
+        "The convexity and the stated side inequalities put $D$ on the corresponding arc of this circle. Therefore $FD=FB=FE$, and in particular $FB=FD$."
+      ],
+      "stepsZh": [
+        "由 $AB=BC$，点 $B$ 位于线段 $AC$ 的垂直平分线上。又因 $BE\\perp AC$，直线 $BE$ 正是这条垂直平分线，同时平分 $\\angle ABC$。",
+        "令 $\\theta=\\angle CBE=\\angle EBA$。由于 $F$ 在 $AB$ 上，$\\angle EBF=\\theta$；又因 $EF\\parallel BC$，$\\angle FEB=\\theta$。故三角形 $BEF$ 为等腰三角形，$FB=FE$。",
+        "等腰三角形 $ABC$ 的两个底角均为 $90^\\circ-\\theta$。由 $ABCD$ 共圆且 $D,E,C$ 共线，$$\\angle BDE=\\angle BDC=\\angle BAC=90^\\circ-\\theta.$$",
+        "在三角形 $BEF$ 中，$$\\angle BFE=180^\\circ-2\\theta=2\\angle BDE.$$ 因此对于以 $F$ 为圆心、经过 $B,E$ 的圆，点 $D$ 所见弦 $BE$ 的圆周角恰为圆心角 $\\angle BFE$ 的一半。",
+        "凸性及题设边长次序保证 $D$ 位于该圆的相应圆弧上。因此 $FD=FB=FE$，特别地 $FB=FD$。"
+      ]
+    }]
+  },
+  "usajmo-2020-q5": {
+    "summary": "Choose $100$ distinct ordered pairs $(a_i,b_i)$ of nonnegative integers. Let $N$ count pairs $i<j$ for which $|a_i b_j-a_j b_i|=1$. Determine the largest possible value of $N$.",
+    "summaryZh": "取 $100$ 个互不相同的非负整数有序对 $(a_i,b_i)$。记满足 $i<j$ 且 $|a_i b_j-a_j b_i|=1$ 的指标对数量为 $N$。求 $N$ 的最大值。",
+    "answer": "$N_{\\max}=197$.",
+    "answerZh": "$N$ 的最大值为 $197$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2020_USOJMO_Problems/Problem_5",
+    "methods": [{
+      "title": "Bound the degree of a farthest lattice point",
+      "titleZh": "限制最远格点的相邻数",
+      "topics": [{"en":"Lattice geometry","zh":"格点几何"},{"en":"Determinants","zh":"行列式"},{"en":"Extremal induction","zh":"极值归纳"}],
+      "steps": [
+        "For a general set of $n\\ge2$ points $P_i=(a_i,b_i)$ in the first quadrant, call $P_iP_j$ a good edge when $|\\det(P_i,P_j)|=1$. We prove by induction that there are at most $2n-3$ good edges.",
+        "Choose a point $P=(a,b)$ farthest from the origin. If $\\gcd(a,b)>1$, it lies on no good edge. Otherwise $P$ is primitive. For each sign, the integer solutions $Q=(u,v)$ to $av-bu=\\pm1$ lie on one line parallel to $OP$, and consecutive solutions differ by $P$.",
+        "On either such line, at most one nonnegative solution $Q$ can satisfy $|OQ|\\le|OP|$. Indeed two such solutions differ by $P$; coordinatewise nonnegativity then makes the farther one at least as far as $P$, with equality unable to give determinant $1$. Hence the farthest point belongs to at most two good edges.",
+        "Delete $P$. The induction hypothesis gives at most $2(n-1)-3$ edges among the remaining points, and restoring $P$ adds at most two. Thus the total is at most $2n-3$.",
+        "The bound is attained by $$(1,0),(1,1),(2,1),\\ldots,(n-1,1).$$ There are $n-1$ good edges from $(1,0)$ to the other points and $n-2$ good edges between consecutive points $(k,1),(k+1,1)$, totaling $2n-3$.",
+        "For $n=100$, the maximum is $2\\cdot100-3=197$."
+      ],
+      "stepsZh": [
+        "先考虑一般的 $n\\ge2$ 个第一象限格点 $P_i=(a_i,b_i)$。若 $|\\det(P_i,P_j)|=1$，称 $P_iP_j$ 为好边。用归纳法证明好边至多有 $2n-3$ 条。",
+        "取离原点最远的点 $P=(a,b)$。若 $\\gcd(a,b)>1$，则它不可能属于任何好边。否则 $P$ 为本原格点。对每个正负号，方程 $av-bu=\\pm1$ 的整数解 $Q=(u,v)$ 位于一条平行于 $OP$ 的直线上，相邻解之差为 $P$。",
+        "在每一条这样的直线上，至多有一个非负解 $Q$ 满足 $|OQ|\\le|OP|$。因为两个解之差为 $P$；结合坐标非负性，较远的一个到原点的距离至少为 $|OP|$，而等号情形又不可能给出行列式 $1$。所以最远点最多属于两条好边。",
+        "删去 $P$ 后，由归纳假设，其余点间至多有 $2(n-1)-3$ 条好边；放回 $P$ 至多增加两条。因此总数至多为 $2n-3$。",
+        "上界可由以下点集达到：$$(1,0),(1,1),(2,1),\\ldots,(n-1,1).$$ $(1,0)$ 与其余 $n-1$ 个点各形成一条好边，相邻点 $(k,1),(k+1,1)$ 又给出 $n-2$ 条好边，总数为 $2n-3$。",
+        "取 $n=100$，最大值为 $2\\cdot100-3=197$。"
+      ]
+    }]
+  },
+  "usajmo-2020-q6": {
+    "summary": "Let $n\\ge2$. A nonconstant real polynomial $P(x_1,\\ldots,x_n)$ vanishes whenever two of its arguments are equal. Prove that, after like monomials are collected, $P$ contains at least $n!$ nonzero monomial terms.",
+    "summaryZh": "设 $n\\ge2$。非恒定实系数多项式 $P(x_1,\\ldots,x_n)$ 在任意两个自变量相等时都为零。证明：合并同类项后，$P$ 至少含有 $n!$ 个系数非零的单项式。",
+    "answer": "Every such nonzero polynomial has at least $n!$ monomials; the Vandermonde polynomial shows that the bound is sharp.",
+    "answerZh": "任意这样的非零多项式至少有 $n!$ 个单项式；范德蒙德多项式表明下界可以达到。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=2020_USOJMO_Problems/Problem_6",
+    "methods": [{
+      "title": "Strip common variable factors and induct on the number of variables",
+      "titleZh": "去除公共变量因子，并对变量个数归纳",
+      "topics": [{"en":"Polynomial identities","zh":"多项式恒等式"},{"en":"Induction","zh":"归纳法"},{"en":"Vandermonde polynomial","zh":"范德蒙德多项式"}],
+      "steps": [
+        "First divide out the largest common monomial $x_1^{e_1}\\cdots x_n^{e_n}$ from all terms of $P$, obtaining $Q$. This does not change the number of monomials. The quotient still vanishes on every hyperplane $x_i=x_j$: polynomial rings over $\\mathbb R$ are integral domains, so canceling a monomial from an identity on that hyperplane is valid.",
+        "Thus no single variable divides $Q$. For each $i$, the restriction $$Q_i=Q(x_1,\\ldots,x_{i-1},0,x_{i+1},\\ldots,x_n)$$ is nonzero and vanishes whenever two of its remaining $n-1$ arguments are equal.",
+        "We use induction on $n$. For $n=2$, the two nonzero restrictions $Q(0,x_2)$ and $Q(x_1,0)$ already supply two distinct monomials.",
+        "For $n>2$, the induction hypothesis says every $Q_i$ contains at least $(n-1)!$ monomials.",
+        "No monomial of $Q$ can occur in both $Q_i$ and $Q_j$ for $i\\ne j$. Such a monomial would omit both $x_i$ and $x_j$; setting $x_i=x_j=0$ would leave it in the zero polynomial, impossible after like terms have been collected.",
+        "Therefore the $n$ restrictions account for disjoint sets of at least $(n-1)!$ monomials of $Q$. Hence $P$ has the same number of terms as $Q$, at least $n(n-1)!=n!$.",
+        "Sharpness is witnessed by the Vandermonde polynomial $\\prod_{i<j}(x_j-x_i)$, whose determinant expansion has exactly $n!$ nonzero monomials and which vanishes whenever two variables are equal."
+      ],
+      "stepsZh": [
+        "先从 $P$ 的所有项中除去最大的公共单项式因子 $x_1^{e_1}\\cdots x_n^{e_n}$，得到 $Q$。这不会改变单项式个数。$Q$ 仍在每个超平面 $x_i=x_j$ 上恒为零：在该超平面的多项式环中没有零因子，因此可以从恒等式中约去单项式。",
+        "这样处理后，没有任何单个变量能整除 $Q$。对每个 $i$，限制多项式 $$Q_i=Q(x_1,\\ldots,x_{i-1},0,x_{i+1},\\ldots,x_n)$$ 非零，并且当其余 $n-1$ 个变量中任意两个相等时为零。",
+        "对 $n$ 归纳。$n=2$ 时，两个非零限制 $Q(0,x_2)$ 与 $Q(x_1,0)$ 已经给出两个不同的单项式。",
+        "当 $n>2$ 时，由归纳假设，每个 $Q_i$ 至少含有 $(n-1)!$ 个单项式。",
+        "若 $i\\ne j$，$Q_i$ 与 $Q_j$ 不可能来自 $Q$ 的同一个单项式。否则该项同时不含 $x_i,x_j$；令 $x_i=x_j=0$ 后它会保留在恒等于零的多项式中，与同类项已经合并矛盾。",
+        "因此这 $n$ 个限制对应 $Q$ 中两两不交的单项式集合，每个集合至少有 $(n-1)!$ 项。故 $P,Q$ 的项数相同，且至少为 $n(n-1)!=n!$。",
+        "下界可由范德蒙德多项式 $\\prod_{i<j}(x_j-x_i)$ 达到。它的行列式展开恰有 $n!$ 个非零单项式，并且在任意两个变量相等时为零。"
+      ]
+    }]
+  }
+}
