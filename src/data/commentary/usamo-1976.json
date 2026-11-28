@@ -1,0 +1,155 @@
+{
+  "usamo-1976-q1": {
+    "summary": "A $4\\times7$ board has every unit square coloured red or blue. (a) Prove that some rectangle determined by two rows and two columns has four distinct corner squares of one colour. (b) Give a red-blue colouring of a $4\\times6$ board for which no such monochromatic-corner rectangle exists.",
+    "summaryZh": "将一个 $4\\times7$ 方格板的每个单位方格染成红色或蓝色。(a) 证明：必能选出两行与两列，使它们交出的四个不同角格同色。(b) 给出一个 $4\\times6$ 方格板的红蓝染色，使任何这类矩形的四个角格都不全同色。",
+    "answer": "Every $4\\times7$ colouring contains such a rectangle. For $4\\times6$, one counterexample (rows shown from top to bottom) is $$\\begin{array}{cccccc}R&B&R&B&R&B\\\\R&B&B&R&B&R\\\\B&R&R&B&B&R\\\\B&R&B&R&R&B\\end{array}.$$",
+    "answerZh": "任意 $4\\times7$ 染色都含有所求矩形。$4\\times6$ 的一个反例（逐行列出）为 $$\\begin{array}{cccccc}R&B&R&B&R&B\\\\R&B&B&R&B&R\\\\B&R&R&B&B&R\\\\B&R&B&R&R&B\\end{array}.$$",
+    "methods": [
+      {
+        "title": "Encode each column by a pair of rows",
+        "titleZh": "用行对编码每一列",
+        "topics": [
+          {"en": "Pigeonhole principle", "zh": "抽屉原理"},
+          {"en": "Extremal colouring", "zh": "极值染色"},
+          {"en": "Complementary row pairs", "zh": "互补行对"}
+        ],
+        "steps": [
+          "Number the four rows $1,2,3,4$. Suppose first that one column contains red squares in at least three rows; choose three such rows. To avoid a red-corner rectangle with this column, every other column may contain red in at most one of the chosen rows.",
+          "Hence each of the other six columns contains blue in at least two of those three rows. There are only $\\binom32=3$ pairs of chosen rows, so two of the six columns contain blue in the same pair. Those two columns and two rows form a blue-corner rectangle, a contradiction. Interchanging the colours shows that no column can contain blue in three or four rows either.",
+          "Therefore every column of a rectangle-free $4\\times7$ colouring would have exactly two red and two blue squares. A column is then encoded by the pair of rows containing red. Only $\\binom42=6$ red row-pairs exist, but there are seven columns. Two columns have the same red pair, and those columns form a red-corner rectangle. This proves part (a).",
+          "For part (b), use the displayed $4\\times6$ array. Reading down the columns, the red row-pairs are $$\\{1,2\\},\\{3,4\\},\\{1,3\\},\\{2,4\\},\\{1,4\\},\\{2,3\\},$$ so every possible pair occurs exactly once. Thus no two columns share a red pair. The blue pairs are their six complements and are also all distinct, so no blue-corner rectangle exists either."
+        ],
+        "stepsZh": [
+          "把四行编号为 $1,2,3,4$。先假设某一列至少有三个红格，并从中选取三行。为了避免该列与另一列形成红色四角矩形，其余每一列在这三行中至多只能有一个红格。",
+          "因此其余六列在这三行中都至少有两个蓝格，而三行中只有 $\\binom32=3$ 个行对。由抽屉原理，六列中必有两列在同一行对上都是蓝色，从而形成蓝色四角矩形，矛盾。交换红蓝两色可知，任何一列也不能含有三个或四个蓝格。",
+          "所以若 $4\\times7$ 染色不存在所求矩形，则每列都必须恰有两个红格与两个蓝格。用红格所在的两行编码一列，编码总数只有 $\\binom42=6$，但共有七列；两列必有相同编码，于是这两列在同一行对上形成红色四角矩形。(a) 得证。",
+          "对 (b)，采用答案中给出的 $4\\times6$ 阵列。逐列读取，红格对应的行对依次为 $$\\{1,2\\},\\{3,4\\},\\{1,3\\},\\{2,4\\},\\{1,4\\},\\{2,3\\},$$ 六个行对各出现一次，所以不存在红色四角矩形。蓝格行对正是这些行对的补集，也各不相同，因此蓝色四角矩形同样不存在。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1976_USAMO_Problems/Problem_1"
+  },
+  "usamo-1976-q2": {
+    "summary": "Fixed distinct points $A,B$ lie on a circle $\\Gamma$ with centre $O$, and $AB$ is not a diameter. A variable diameter $XY$ of $\\Gamma$ is chosen, and $P$ is the intersection of the lines $AX$ and $BY$. Determine the locus of $P$ as $XY$ varies.",
+    "summaryZh": "定圆 $\\Gamma$ 的圆心为 $O$，不同的定点 $A,B$ 位于圆上，且 $AB$ 不是直径。令 $XY$ 在 $\\Gamma$ 上遍历所有直径，直线 $AX$ 与 $BY$ 交于 $P$。求点 $P$ 的轨迹。",
+    "answer": "The locus is the unique circle through $A$ and $B$ that is orthogonal to $\\Gamma$. If $M$ is the midpoint of $AB$ and $R$ is the radius of $\\Gamma$, its centre $O'$ lies on $OM$ and satisfies $OM\\cdot OO'=R^2$.",
+    "answerZh": "轨迹是经过 $A,B$ 且与 $\\Gamma$ 正交的唯一圆。若 $M$ 为 $AB$ 的中点、$R$ 为 $\\Gamma$ 的半径，则轨迹圆圆心 $O'$ 位于直线 $OM$ 上，并满足 $OM\\cdot OO'=R^2$。",
+    "methods": [
+      {
+        "title": "Use the angle formed by two secants",
+        "titleZh": "利用两条割线所成的角",
+        "topics": [
+          {"en": "Directed angles", "zh": "有向角"},
+          {"en": "Intersecting chords and secants", "zh": "相交弦与割线"},
+          {"en": "Orthogonal circles", "zh": "正交圆"},
+          {"en": "Circle inversion", "zh": "圆反演"}
+        ],
+        "steps": [
+          "Let $\\theta=\\angle AOB$ be the measure of the minor arc $AB$. Because $XY$ is a diameter, its arc has measure $180^\\circ$. If $P$ lies inside $\\Gamma$, the intersecting-chords theorem gives $$\\angle APB=\\frac12(180^\\circ+\\theta)=90^\\circ+\\frac{\\theta}{2}.$$ If $P$ is outside, the external-secant theorem gives the supplementary angle $90^\\circ-\\theta/2$. Thus the directed angle $\\angle APB$ modulo $180^\\circ$ is fixed.",
+          "A fixed segment $AB$ seen under a fixed directed angle determines one circle $\\Omega$ through $A$ and $B$. Hence every finite intersection $P=AX\\cap BY$ lies on $\\Omega$.",
+          "Let $O'$ be the centre of $\\Omega$. The smaller central angle subtending $AB$ in $\\Omega$ is $180^\\circ-\\theta$, whereas $\\angle AOB=\\theta$. In the kite $OAO'B$, the angles at $A$ and $B$ are equal; since the two central angles sum to $180^\\circ$, each of the remaining two angles is $90^\\circ$. Thus $OA\\perp O'A$, so $\\Omega$ and $\\Gamma$ are orthogonal.",
+          "Conversely, take any $P$ on this orthogonal circle, with $P\\ne A,B$, and let $AP,BP$ meet $\\Gamma$ again at $X,Y$. Reversing the same chord-angle calculation shows that the arc $XY$ has measure $180^\\circ$, so $XY$ is a diameter. The endpoints $A$ and $B$ themselves also occur: choose respectively $Y=A$ or $X=B$. Therefore the whole circle $\\Omega$ is the locus.",
+          "For a direct construction, let $M$ be the midpoint of $AB$. The line of centres is $OM$, and $AM$ is perpendicular to it. Triangle $OAO'$ is right-angled at $A$, with $M$ the foot of the altitude to its hypotenuse. The right-triangle projection theorem gives $$OA^2=OM\\cdot OO'.$$ Hence $O'$ is the inverse of $M$ in $\\Gamma$; drawing the circle centred at $O'$ through $A$ produces the locus."
+        ],
+        "stepsZh": [
+          "令 $\\theta=\\angle AOB$，即小弧 $AB$ 的度数。由于 $XY$ 是直径，其对应弧为 $180^\\circ$。若 $P$ 在 $\\Gamma$ 内部，由相交弦定理，$$\\angle APB=\\frac12(180^\\circ+\\theta)=90^\\circ+\\frac{\\theta}{2}.$$ 若 $P$ 在圆外，由外部割线定理得到其补角 $90^\\circ-\\theta/2$。因此模 $180^\\circ$ 意义下的有向角 $\\angle APB$ 恒定。",
+          "定线段 $AB$ 对应一个固定有向圆周角，便唯一确定一个经过 $A,B$ 的圆 $\\Omega$。所以每个有限交点 $P=AX\\cap BY$ 都在 $\\Omega$ 上。",
+          "设 $O'$ 为 $\\Omega$ 的圆心。$\\Omega$ 中弦 $AB$ 所对的较小圆心角为 $180^\\circ-\\theta$，而 $\\angle AOB=\\theta$。在风筝形 $OAO'B$ 中，$A,B$ 两处的角相等；两个圆心角之和为 $180^\\circ$，故其余两个角都等于 $90^\\circ$。于是 $OA\\perp O'A$，即 $\\Omega$ 与 $\\Gamma$ 正交。",
+          "反过来，任取正交圆上的点 $P\\ne A,B$，令直线 $AP,BP$ 再次交 $\\Gamma$ 于 $X,Y$。把上述弦角计算倒推，可得弧 $XY$ 的度数为 $180^\\circ$，所以 $XY$ 是直径。点 $A,B$ 本身也能取得：分别令 $Y=A$ 或 $X=B$ 即可。因此整个圆 $\\Omega$ 都是轨迹。",
+          "作图时，令 $M$ 为 $AB$ 的中点。两圆圆心连线为 $OM$，且 $AM$ 与其垂直。直角三角形 $OAO'$ 在 $A$ 处为直角，而 $M$ 是斜边上的高足。由直角三角形射影定理，$$OA^2=OM\\cdot OO'.$$ 因而 $O'$ 是 $M$ 关于 $\\Gamma$ 的反演点；以 $O'$ 为圆心、过 $A$ 作圆，即得到所求轨迹。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1976_USAMO_Problems/Problem_2"
+  },
+  "usamo-1976-q3": {
+    "summary": "Determine all integer triples $(a,b,c)$ satisfying $$a^2+b^2+c^2=a^2b^2.$$",
+    "summaryZh": "求方程 $$a^2+b^2+c^2=a^2b^2$$ 的全部整数解 $(a,b,c)$。",
+    "answer": "The only integer solution is $(a,b,c)=(0,0,0)$.",
+    "answerZh": "唯一整数解为 $(a,b,c)=(0,0,0)$。",
+    "methods": [
+      {
+        "title": "Infinite descent modulo four",
+        "titleZh": "模四的无限递降",
+        "topics": [
+          {"en": "Quadratic residues modulo four", "zh": "模四平方剩余"},
+          {"en": "Infinite descent", "zh": "无限递降"},
+          {"en": "Diophantine equations", "zh": "丢番图方程"}
+        ],
+        "steps": [
+          "Every square is congruent to $0$ or $1$ modulo $4$. If both $a$ and $b$ were odd, then the right side would be $1$ modulo $4$, while the left side would be $1+1+c^2$, congruent to $2$ or $3$. This is impossible.",
+          "Thus at least one of $a,b$ is even, so $a^2b^2$ is divisible by $4$. The congruence $$a^2+b^2+c^2\\equiv0\\pmod4$$ then forces all three squares, and hence $a,b,c$, to be even.",
+          "Write $a=2a_1,b=2b_1,c=2c_1$ and divide the equation by $4$. We obtain $$a_1^2+b_1^2+c_1^2=4a_1^2b_1^2.$$ The right side is again divisible by $4$, so the same residue argument forces $a_1,b_1,c_1$ to be even.",
+          "Repeating shows that $a,b,c$ are divisible by $2^n$ for every positive integer $n$. The only integers with this property are zero. Substitution confirms that $(0,0,0)$ is indeed a solution."
+        ],
+        "stepsZh": [
+          "任意平方数模 $4$ 只可能为 $0$ 或 $1$。若 $a,b$ 都是奇数，则右端模 $4$ 为 $1$，而左端 $1+1+c^2$ 模 $4$ 为 $2$ 或 $3$，矛盾。",
+          "所以 $a,b$ 中至少一个为偶数，因而 $a^2b^2$ 被 $4$ 整除。由 $$a^2+b^2+c^2\\equiv0\\pmod4$$ 可知三个平方数都必须模 $4$ 为 $0$，即 $a,b,c$ 全为偶数。",
+          "写成 $a=2a_1,b=2b_1,c=2c_1$，并把原方程除以 $4$，得到 $$a_1^2+b_1^2+c_1^2=4a_1^2b_1^2.$$ 右端仍被 $4$ 整除，所以同样的平方剩余论证说明 $a_1,b_1,c_1$ 也全为偶数。",
+          "不断重复可知，对任意正整数 $n$，$a,b,c$ 都被 $2^n$ 整除。满足这一性质的整数只能是零；代回原方程可验证 $(0,0,0)$ 确为解。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1976_USAMO_Problems/Problem_3"
+  },
+  "usamo-1976-q4": {
+    "summary": "In a trirectangular tetrahedron $PABC$, the three edges $PA,PB,PC$ are pairwise perpendicular. The sum of all six edge lengths is $S$. Determine the largest possible volume and the equality case.",
+    "summaryZh": "在三直角四面体 $PABC$ 中，棱 $PA,PB,PC$ 两两垂直。六条棱长之和为 $S$。求四面体体积的最大值，并确定等号情形。",
+    "answer": "The maximum volume is $$\\frac{(5\\sqrt2-7)S^3}{162}.$$ It is attained when $PA=PB=PC=S(\\sqrt2-1)/3$.",
+    "answerZh": "最大体积为 $$\\frac{(5\\sqrt2-7)S^3}{162}.$$ 当 $PA=PB=PC=S(\\sqrt2-1)/3$ 时取得最大值。",
+    "methods": [
+      {
+        "title": "Bound the six-edge sum by geometric means",
+        "titleZh": "用几何平均数估计六棱之和",
+        "topics": [
+          {"en": "Three-dimensional geometry", "zh": "立体几何"},
+          {"en": "AM-GM inequality", "zh": "算术—几何平均不等式"},
+          {"en": "Equality conditions", "zh": "等号条件"}
+        ],
+        "steps": [
+          "Put $PA=x,PB=y,PC=z>0$. The three opposite edges have lengths $\\sqrt{x^2+y^2}$, $\\sqrt{y^2+z^2}$, and $\\sqrt{z^2+x^2}$, while the volume is $$V=\\frac{xyz}{6}.$$",
+          "Let $g=(xyz)^{1/3}$. AM-GM gives $x+y+z\\ge3g$. Also $$\\sqrt{x^2+y^2}\\ge\\sqrt{2xy},$$ and similarly for the other two opposite edges. Therefore $$\\sum_{\\rm opposite}\\!\\!\\text{edge}\\ge\\sqrt2(\\sqrt{xy}+\\sqrt{yz}+\\sqrt{zx})\\ge3\\sqrt2\\,g.$$",
+          "Adding the two estimates yields $$S\\ge3(1+\\sqrt2)g,$$ so $$xyz=g^3\\le\\frac{S^3}{27(1+\\sqrt2)^3}=\\frac{(5\\sqrt2-7)S^3}{27}.$$",
+          "Consequently $$V\\le\\frac{(5\\sqrt2-7)S^3}{162}.$$ Equality in every inequality requires and is achieved by $x=y=z=S/[3(1+\\sqrt2)]=S(\\sqrt2-1)/3$. Then each opposite edge is $\\sqrt2x=S(2-\\sqrt2)/3$, and the six lengths indeed sum to $S$."
+        ],
+        "stepsZh": [
+          "记 $PA=x,PB=y,PC=z>0$。另外三条棱分别长 $\\sqrt{x^2+y^2},\\sqrt{y^2+z^2},\\sqrt{z^2+x^2}$，而体积为 $$V=\\frac{xyz}{6}.$$",
+          "令 $g=(xyz)^{1/3}$。由 AM-GM，$x+y+z\\ge3g$。又有 $$\\sqrt{x^2+y^2}\\ge\\sqrt{2xy},$$ 其余两项同理。因此 $$\\sum_{\\text{三条对棱}}\\text{棱长}\\ge\\sqrt2(\\sqrt{xy}+\\sqrt{yz}+\\sqrt{zx})\\ge3\\sqrt2\\,g.$$",
+          "两式相加得到 $$S\\ge3(1+\\sqrt2)g,$$ 从而 $$xyz=g^3\\le\\frac{S^3}{27(1+\\sqrt2)^3}=\\frac{(5\\sqrt2-7)S^3}{27}.$$",
+          "故 $$V\\le\\frac{(5\\sqrt2-7)S^3}{162}.$$ 所有不等式同时取等当且仅当 $x=y=z=S/[3(1+\\sqrt2)]=S(\\sqrt2-1)/3$。此时另外三棱均为 $\\sqrt2x=S(2-\\sqrt2)/3$，六棱之和确为 $S$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1976_USAMO_Problems/Problem_4"
+  },
+  "usamo-1976-q5": {
+    "summary": "Polynomials $P,Q,R,S$ satisfy $$P(x^5)+xQ(x^5)+x^2R(x^5)=(1+x+x^2+x^3+x^4)S(x).$$ Prove that $x-1$ divides $P(x)$.",
+    "summaryZh": "多项式 $P,Q,R,S$ 满足 $$P(x^5)+xQ(x^5)+x^2R(x^5)=(1+x+x^2+x^3+x^4)S(x).$$ 证明 $x-1$ 是 $P(x)$ 的因式。",
+    "answer": "$P(1)=0$, so the factor theorem gives $(x-1)\\mid P(x)$.",
+    "answerZh": "$P(1)=0$，故由因式定理知 $(x-1)\\mid P(x)$。",
+    "methods": [
+      {
+        "title": "Evaluate at the nontrivial fifth roots of unity",
+        "titleZh": "代入非平凡五次单位根",
+        "topics": [
+          {"en": "Roots of unity", "zh": "单位根"},
+          {"en": "Polynomial root bound", "zh": "多项式根数界"},
+          {"en": "Factor theorem", "zh": "因式定理"}
+        ],
+        "steps": [
+          "Let $\\zeta$ range over the four nontrivial fifth roots of unity. Then $\\zeta^5=1$ and $$1+\\zeta+\\zeta^2+\\zeta^3+\\zeta^4=0.$$",
+          "Substituting $x=\\zeta$ into the given identity makes its right side zero and gives $$P(1)+\\zeta Q(1)+\\zeta^2R(1)=0.$$",
+          "Define the polynomial in a new variable $$F(t)=P(1)+tQ(1)+t^2R(1).$$ Its degree is at most $2$, but the preceding equation says that all four distinct nontrivial fifth roots of unity are roots of $F$.",
+          "A nonzero polynomial of degree at most $2$ cannot have four distinct roots. Hence $F$ is identically zero, and in particular its constant coefficient is $P(1)=0$. The factor theorem now yields $(x-1)\\mid P(x)$."
+        ],
+        "stepsZh": [
+          "令 $\\zeta$ 遍历四个非平凡五次单位根。则 $\\zeta^5=1$，并且 $$1+\\zeta+\\zeta^2+\\zeta^3+\\zeta^4=0.$$",
+          "在题设恒等式中代入 $x=\\zeta$，右端变为零，左端给出 $$P(1)+\\zeta Q(1)+\\zeta^2R(1)=0.$$",
+          "对新变量 $t$ 定义 $$F(t)=P(1)+tQ(1)+t^2R(1).$$ 它的次数至多为 $2$，但上式表明四个互不相同的非平凡五次单位根都是 $F$ 的根。",
+          "次数至多为 $2$ 的非零多项式不可能有四个不同的根，所以 $F$ 恒为零，尤其其常数项 $P(1)=0$。由因式定理立即得到 $(x-1)\\mid P(x)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1976_USAMO_Problems/Problem_5"
+  }
+}
