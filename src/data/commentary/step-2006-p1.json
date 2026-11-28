@@ -1,0 +1,429 @@
+{
+  "step-2006-p1-q1": {
+    "summary": "First locate the integer $n$ for which $n^2<33127<(n+1)^2$. Find a small integer $m$ such that $(n+m)^2-33127$ is a square, use it to factor $33127$, and then prove from all possible factor pairs that exactly two positive upward shifts $m$ work.",
+    "summaryZh": "先求满足 $n^2<33127<(n+1)^2$ 的整数 $n$。再找一个较小整数 $m$，使 $(n+m)^2-33127$ 为完全平方数，由此分解 $33127$；最后从全部因数对证明正向移动时恰有两个 $m$ 可行。",
+    "answer": "$n=182$. The factorisation is $33127=157\\times211$. The two values are $m=2$ and $m=16382$.",
+    "answerZh": "$n=182$，且 $33127=157\\times211$。两个可行值为 $m=2$ 与 $m=16382$。",
+    "methods": [
+      {
+        "title": "Convert every square difference into a factor pair",
+        "titleZh": "把每个平方差与因数对一一对应",
+        "topics": [
+          { "en": "Difference of two squares", "zh": "平方差" },
+          { "en": "Prime factorisation", "zh": "质因数分解" },
+          { "en": "Bijection", "zh": "一一对应" }
+        ],
+        "steps": [
+          "$182^2=33124<33127<33489=183^2$, so $n=182$. Trying the first shifts gives $183^2-33127=362$, whereas $184^2-33127=729=27^2$; hence $m=2$ works.",
+          "Therefore $33127=184^2-27^2=(184-27)(184+27)=157\\cdot211$. Trial division up to $\\sqrt{157}<13$ and $\\sqrt{211}<15$ shows that both factors are prime.",
+          "If $(182+m)^2-33127=k^2$, put $a=182+m>0$. Then $(a-k)(a+k)=33127$. Its positive factor pairs are only $(1,33127)$ and $(157,211)$.",
+          "Conversely, each factor pair $(u,v)$ gives uniquely $a=(u+v)/2$ and $k=(v-u)/2$; both are integers because $u,v$ are odd. The two pairs yield $a=16564$ and $a=184$, hence $m=16382$ and $m=2$. This also proves that no other positive upward shift is possible."
+        ],
+        "stepsZh": [
+          "$182^2=33124<33127<33489=183^2$，故 $n=182$。逐个试小的移动量：$183^2-33127=362$ 不是平方数，而 $184^2-33127=729=27^2$，所以 $m=2$ 可行。",
+          "于是 $33127=184^2-27^2=(184-27)(184+27)=157\\cdot211$。分别试除到 $\\sqrt{157}<13$ 与 $\\sqrt{211}<15$，可知两因子均为质数。",
+          "若 $(182+m)^2-33127=k^2$，令 $a=182+m>0$，则 $(a-k)(a+k)=33127$。正因数对只有 $(1,33127)$ 与 $(157,211)$。",
+          "反过来，每个因数对 $(u,v)$ 唯一给出 $a=(u+v)/2$、$k=(v-u)/2$；因 $u,v$ 均为奇数，它们都是整数。两对分别给出 $a=16564,184$，因此 $m=16382,2$，并排除了其他可能。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=2"
+  },
+  "step-2006-p1-q2": {
+    "summary": "A goat is tied at an arbitrary point of one side of a square barn of side $2a$ by a rope of length $4a$. If $A$ is the total reachable grass area after the rope may wrap around corners, prove $A\\le14\\pi a^2$ and determine the minimum possible $A$.",
+    "summaryZh": "一只羊用长 $4a$ 的绳子拴在边长 $2a$ 的正方形谷仓某边上一点；绳子可绕过墙角。设可吃到的草地总面积为 $A$，证明 $A\\le14\\pi a^2$，并求 $A$ 的最小值。",
+    "answer": "If the tether point is distance $x$ from one corner, $A=\\pi[(x-a)^2+13a^2]$. Thus $13\\pi a^2\\le A\\le14\\pi a^2$; the minimum occurs at the midpoint of a side and the maximum at a corner.",
+    "answerZh": "若拴点距一端点为 $x$，则 $A=\\pi[(x-a)^2+13a^2]$。故 $13\\pi a^2\\le A\\le14\\pi a^2$；边中点取最小值，角点取最大值。",
+    "methods": [
+      {
+        "title": "Decompose the reachable set into circular sectors",
+        "titleZh": "把可达区域分解为若干圆扇形",
+        "topics": [
+          { "en": "Circular sectors", "zh": "圆扇形" },
+          { "en": "Geometric optimisation", "zh": "几何最优化" }
+        ],
+        "steps": [
+          "Label the tethered side $PQ$ and let $PT=x$, so $TQ=2a-x$ with $0\\le x\\le2a$. In front of the barn the goat sweeps a semicircle of radius $4a$.",
+          "After wrapping around $P$ or $Q$, the two side regions are quarter-circles of radii $4a-x$ and $2a+x$. Continuing around the next corners gives two rear quarter-circles of radii $2a-x$ and $x$.",
+          "The two rear radii add to $2a$, the distance between their centres, so those pieces merely touch and do not overlap. The other sectors occupy disjoint sides of the barn. Hence the description is complete and there is no double counting.",
+          "Add the sectors: $A=\\tfrac12\\pi(4a)^2+\\tfrac14\\pi[(4a-x)^2+(2a+x)^2+(2a-x)^2+x^2]=\\pi[(x-a)^2+13a^2]$.",
+          "Since $0\\le(x-a)^2\\le a^2$ on $[0,2a]$, the claimed upper bound follows. The minimum $13\\pi a^2$ occurs at $x=a$; the maximum $14\\pi a^2$ occurs at $x=0$ or $2a$."
+        ],
+        "stepsZh": [
+          "把拴点所在边记为 $PQ$，令 $PT=x$，则 $TQ=2a-x$，其中 $0\\le x\\le2a$。谷仓正面可达区域是半径 $4a$ 的半圆。",
+          "绳子分别绕过 $P,Q$ 后，侧面形成半径 $4a-x$、$2a+x$ 的两个四分之一圆；再绕过后方两角，形成半径 $2a-x$、$x$ 的两个四分之一圆。",
+          "后方两圆半径之和为 $2a$，恰等于圆心距离，所以只相切而不重叠；其余扇形位于谷仓不同侧面，也互不重叠。因此没有漏算或重复。",
+          "面积相加得 $A=\\tfrac12\\pi(4a)^2+\\tfrac14\\pi[(4a-x)^2+(2a+x)^2+(2a-x)^2+x^2]=\\pi[(x-a)^2+13a^2]$。",
+          "在 $[0,2a]$ 上有 $0\\le(x-a)^2\\le a^2$。故中点 $x=a$ 时最小为 $13\\pi a^2$，角点 $x=0$ 或 $2a$ 时最大为 $14\\pi a^2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=2"
+  },
+  "step-2006-p1-q3": {
+    "summary": "For real parameters, analyse roots graphically and algebraically. (i) Decide whether $c<0$ is sufficient and/or necessary for $x^2+bx+c=0$ to have distinct real roots. (ii) Give necessary and sufficient conditions for two distinct positive roots. (iii) For $x^3+px+q=0$ with $q<0$, classify the roots first when $p>0$, and then when $p<0$ according to the sign of $4p^3+27q^2$.",
+    "summaryZh": "对实参数作根的图像与代数分类：(i) 判断 $c<0$ 是否为二次方程 $x^2+bx+c=0$ 有两个不等实根的充分或必要条件；(ii) 给出有两个不等正根的充要条件；(iii) 在 $q<0$ 时先讨论 $p>0$，再按 $4p^3+27q^2$ 的符号分类三次方程 $x^3+px+q=0$ 的根。",
+    "answer": "(i) $c<0$ is sufficient but not necessary. (ii) Exactly $b^2>4c$, $b<0$, $c>0$. (iii) For $p>0$: one positive real root and one non-real conjugate pair. For $p<0$: if $4p^3+27q^2>0$ the same classification holds; if it is $0$, there is a negative double root and a positive simple root; if it is $<0$, there are three distinct real roots, two negative and one positive.",
+    "answerZh": "(i) $c<0$ 是充分条件但非必要条件。(ii) 充要条件为 $b^2>4c$、$b<0$、$c>0$。(iii) $p>0$ 时有一个正实根及一对非实共轭根；$p<0$ 时，若 $4p^3+27q^2>0$，结论相同；等于 0 时有一个负二重根和一个正单根；小于 0 时有三个不等实根，其中两个负、一个正。",
+    "methods": [
+      {
+        "title": "Use signs, Vieta's formulae and turning points",
+        "titleZh": "结合函数符号、韦达定理与转折点",
+        "topics": [
+          { "en": "Polynomial roots", "zh": "多项式根" },
+          { "en": "Discriminant", "zh": "判别式" },
+          { "en": "First derivative test", "zh": "一阶导数判别" }
+        ],
+        "steps": [
+          "For $f(x)=x^2+bx+c$, if $c=f(0)<0$ while $f(x)\\to+\\infty$ at both ends, continuity forces one root on each side of zero. It is not necessary: $x^2-3x+2$ has roots $1,2$ but $c=2$.",
+          "If the distinct roots are $\\alpha,\\beta>0$, then $c=\\alpha\\beta>0$, $b=-(\\alpha+\\beta)<0$, and $b^2-4c=(\\alpha-\\beta)^2>0$. Conversely these three inequalities give distinct real roots with positive product and positive sum, so both roots are positive.",
+          "For $g(x)=x^3+px+q$ with $p>0$, $g'(x)=3x^2+p>0$ everywhere. Thus $g$ crosses the axis exactly once; because $g(0)=q<0$, this root is positive.",
+          "When $p<0$, write $p=-3a^2$. The turning points are $-a$ (local maximum) and $a$ (local minimum), with $g(-a)=q+2a^3$ and $g(a)=q-2a^3<0$. Moreover $g(-a)g(a)=(4p^3+27q^2)/27$, so the maximum is negative, zero or positive according as this expression is positive, zero or negative.",
+          "A negative maximum gives only the positive crossing; a zero maximum gives a negative double root and a positive simple root; a positive maximum gives two negative crossings plus the positive crossing. Non-real roots occur as a conjugate pair."
+        ],
+        "stepsZh": [
+          "对 $f(x)=x^2+bx+c$，若 $c=f(0)<0$，而两端均有 $f(x)\\to+\\infty$，连续性迫使零点分别位于原点两侧。该条件非必要，例如 $x^2-3x+2$ 的根为 $1,2$，但 $c=2$。",
+          "若不等根 $\\alpha,\\beta>0$，则 $c=\\alpha\\beta>0$、$b=-(\\alpha+\\beta)<0$，且 $b^2-4c=(\\alpha-\\beta)^2>0$。反之，这三条件给出两个不等实根，且积与和均为正，所以两根都为正。",
+          "当 $p>0$ 时，$g'(x)=3x^2+p>0$，故三次函数严格递增且仅有一个实根；又 $g(0)=q<0$，所以该根为正。",
+          "当 $p<0$ 时写成 $p=-3a^2$。转折点为 $-a$（极大）与 $a$（极小），且 $g(-a)=q+2a^3$、$g(a)=q-2a^3<0$。又 $g(-a)g(a)=(4p^3+27q^2)/27$，故极大值的符号与该式相反。",
+          "极大值为负时只有一个正交点；为零时出现负二重根与正单根；为正时有两个负交点和一个正交点。其余非实根必成共轭对。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=2"
+  },
+  "step-2006-p1-q4": {
+    "summary": "Compare $y=\\sin x$ with $y=x$ to establish $x>\\sin x$ for $x>0$ and $\\sin x/x\\approx1$ for small $x$. A regular $n$-gon has fixed perimeter $P$: derive its area, prove by treating $n$ continuously that the area increases with $n$, and show that for large $n$ its area is approximately that of its smallest containing circle.",
+    "summaryZh": "比较 $y=\\sin x$ 与 $y=x$，说明 $x>\\sin x$（$x>0$）以及小 $x$ 时 $\\sin x/x\\approx1$。对周长固定为 $P$ 的正 $n$ 边形，推导面积公式，把 $n$ 视作连续变量证明面积随 $n$ 增大，并证明大 $n$ 时其面积近似等于最小外接圆面积。",
+    "answer": "$A=P^2/[4n\\tan(\\pi/n)]$, and $A$ increases with $n$. If $R$ is the circumradius, $A/(\\pi R^2)=\\sin(2\\pi/n)/(2\\pi/n)\\to1$.",
+    "answerZh": "$A=P^2/[4n\\tan(\\pi/n)]$，且 $A$ 随 $n$ 增大。若 $R$ 为外接圆半径，则 $A/(\\pi R^2)=\\sin(2\\pi/n)/(2\\pi/n)\\to1$。",
+    "methods": [
+      {
+        "title": "Reduce the polygon to one central triangle",
+        "titleZh": "把正多边形化为一个中心三角形",
+        "topics": [
+          { "en": "Regular polygons", "zh": "正多边形" },
+          { "en": "Trigonometric limits", "zh": "三角函数极限" },
+          { "en": "Differentiation", "zh": "微分" }
+        ],
+        "steps": [
+          "The line $y=x$ is tangent to $y=\\sin x$ at zero and the sine curve bends below it. Equivalently, $x-\\sin x$ has derivative $1-\\cos x\\ge0$ near each relevant interval, giving $x>\\sin x$ for $x>0$. Tangency gives $\\sin x/x\\to1$ as $x\\to0$.",
+          "Split the polygon into $n$ congruent central triangles. With side $s=P/n$ and half-angle $\\theta=\\pi/n$, the apothem is $s/(2\\tan\\theta)$; hence $A=n(1/2)s[s/(2\\tan\\theta)]=P^2/(4n\\tan\\theta)$.",
+          "Put $f(n)=n\\tan(\\pi/n)$. Then $A=P^2/(4f)$ and $f'(n)=\\tan\\theta-\\theta\\sec^2\\theta=\\tfrac12\\sec^2\\theta(\\sin2\\theta-2\\theta)<0$. Therefore $A'(n)>0$.",
+          "The circumradius satisfies $R=P/(2n\\sin\\theta)$. Substitution gives $A/(\\pi R^2)=\\sin2\\theta/(2\\theta)=\\sin(2\\pi/n)/(2\\pi/n)$, which tends to $1$."
+        ],
+        "stepsZh": [
+          "$y=x$ 是 $y=\\sin x$ 在原点的切线，且正弦曲线向下弯曲；也可考察 $x-\\sin x$ 的导数 $1-\\cos x$。因此 $x>\\sin x$，而切线近似给出 $x\\to0$ 时 $\\sin x/x\\to1$。",
+          "把正多边形分成 $n$ 个全等中心三角形。边长 $s=P/n$，半中心角 $\\theta=\\pi/n$，内切圆半径为 $s/(2\\tan\\theta)$，故 $A=n\\cdot\\tfrac12s\\cdot s/(2\\tan\\theta)=P^2/(4n\\tan\\theta)$。",
+          "令 $f(n)=n\\tan(\\pi/n)$，则 $A=P^2/(4f)$。微分得 $f'(n)=\\tan\\theta-\\theta\\sec^2\\theta=\\tfrac12\\sec^2\\theta(\\sin2\\theta-2\\theta)<0$，所以 $A'(n)>0$。",
+          "外接圆半径 $R=P/(2n\\sin\\theta)$。代入即得 $A/(\\pi R^2)=\\sin2\\theta/(2\\theta)=\\sin(2\\pi/n)/(2\\pi/n)\\to1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=3"
+  },
+  "step-2006-p1-q5": {
+    "summary": "(i) For $x>4$, evaluate $\\int 3/[(x-4)\\sqrt{2x+1}]\\,dx$ using $u^2=2x+1$. (ii) Evaluate $\\int_{\\ln3}^{\\ln8}2/[e^x\\sqrt{e^x+1}]\\,dx$.",
+    "summaryZh": "(i) 对 $x>4$，用 $u^2=2x+1$ 求 $\\int 3/[(x-4)\\sqrt{2x+1}]\\,dx$；(ii) 计算 $\\int_{\\ln3}^{\\ln8}2/[e^x\\sqrt{e^x+1}]\\,dx$。",
+    "answer": "(i) $\\ln[(\\sqrt{2x+1}-3)/(\\sqrt{2x+1}+3)]+K$. (ii) $7/12+\\ln(2/3)$.",
+    "answerZh": "(i) $\\ln[(\\sqrt{2x+1}-3)/(\\sqrt{2x+1}+3)]+K$；(ii) $7/12+\\ln(2/3)$。",
+    "methods": [
+      {
+        "title": "Remove each square root and use partial fractions",
+        "titleZh": "消去根式后作部分分式分解",
+        "topics": [
+          { "en": "Integration by substitution", "zh": "换元积分" },
+          { "en": "Partial fractions", "zh": "部分分式" }
+        ],
+        "steps": [
+          "For (i), set $u=\\sqrt{2x+1}>3$. Then $dx=u\\,du$ and $x-4=(u^2-9)/2$, so the integral becomes $\\int6/(u^2-9)\\,du$.",
+          "Since $6/(u^2-9)=1/(u-3)-1/(u+3)$, integration gives $\\ln[(u-3)/(u+3)]+K$; substitute back. The assumption $x>4$ removes any ambiguity from the logarithms.",
+          "For (ii), put $w=\\sqrt{e^x+1}$. Then $dx=2w/(w^2-1)\\,dw$, and the limits $x=\\ln3,\\ln8$ become $w=2,3$. Thus the integral is $\\int_2^3 4/(w^2-1)^2\\,dw$.",
+          "Use $4/(w^2-1)^2=1/(w-1)^2+1/(w+1)^2-1/(w-1)+1/(w+1)$. An antiderivative is $-1/(w-1)-1/(w+1)-\\ln[(w-1)/(w+1)]$; evaluating from $2$ to $3$ gives $7/12+\\ln(2/3)$."
+        ],
+        "stepsZh": [
+          "对 (i)，令 $u=\\sqrt{2x+1}>3$。则 $dx=u\\,du$，且 $x-4=(u^2-9)/2$，原积分化为 $\\int6/(u^2-9)\\,du$。",
+          "由 $6/(u^2-9)=1/(u-3)-1/(u+3)$，积分后得 $\\ln[(u-3)/(u+3)]+K$，再换回 $x$。条件 $x>4$ 保证对数内各量为正。",
+          "对 (ii)，令 $w=\\sqrt{e^x+1}$。则 $dx=2w/(w^2-1)\\,dw$，上下限由 $\\ln3,\\ln8$ 变为 $2,3$，积分化为 $\\int_2^3 4/(w^2-1)^2\\,dw$。",
+          "分解 $4/(w^2-1)^2=1/(w-1)^2+1/(w+1)^2-1/(w-1)+1/(w+1)$。原函数为 $-1/(w-1)-1/(w+1)-\\ln[(w-1)/(w+1)]$，代入 $2,3$ 得 $7/12+\\ln(2/3)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=3"
+  },
+  "step-2006-p1-q6": {
+    "summary": "Study linear maps that preserve Pell-type curves. (i) Prove that $(a,b)$ on $x^2-2y^2=1$ is sent to another point by $(a,b)\\mapsto(3a+4b,2a+3b)$. (ii) Find the smallest positive $M,N$ for which $(5a+6b,4a+5b)$ preserves $Mx^2-Ny^2=1$. (iii) For $a^2-3b^2=1$, find positive $P,Q,R,S$ so that $(Pa+Qb,Ra+Sb)$ also lies on the curve.",
+    "summaryZh": "研究保持佩尔型曲线不变的线性变换：(i) 证明 $(a,b)\\mapsto(3a+4b,2a+3b)$ 保持 $x^2-2y^2=1$；(ii) 求使 $(5a+6b,4a+5b)$ 保持 $Mx^2-Ny^2=1$ 的最小正整数 $M,N$；(iii) 若 $a^2-3b^2=1$，求正整数 $P,Q,R,S$，使 $(Pa+Qb,Ra+Sb)$ 仍在曲线上。",
+    "answer": "(ii) $(M,N)=(2,3)$. One valid answer to (iii) is $(P,Q,R,S)=(2,3,1,2)$.",
+    "answerZh": "(ii) $(M,N)=(2,3)$；(iii) 一组可行答案为 $(P,Q,R,S)=(2,3,1,2)$。",
+    "methods": [
+      {
+        "title": "Preserve the quadratic form coefficient by coefficient",
+        "titleZh": "逐项比较二次型系数",
+        "topics": [
+          { "en": "Pell equations", "zh": "佩尔方程" },
+          { "en": "Quadratic forms", "zh": "二次型" }
+        ],
+        "steps": [
+          "Direct expansion gives $(3a+4b)^2-2(2a+3b)^2=a^2-2b^2$, proving (i).",
+          "For (ii), subtract $Ma^2-Nb^2$ from $M(5a+6b)^2-N(4a+5b)^2$. The result factors as $4(3M-2N)(2a+3b)(a+b)$.",
+          "The last two linear factors cannot vanish on every point of the hyperbola, so preservation for every point requires and is ensured by $3M=2N$. The smallest positive pair is $(2,3)$; substitution verifies the identity.",
+          "For (iii), coefficient comparison in $(Pa+Qb)^2-3(Ra+Sb)^2=a^2-3b^2$ gives $P^2-3R^2=1$, $PQ=3RS$, $Q^2-3S^2=-3$. Choosing the smallest positive Pell solution $(P,R)=(2,1)$ gives $Q=3$, $S=2$.",
+          "Indeed $(2a+3b)^2-3(a+2b)^2=a^2-3b^2=1$, completing the verification."
+        ],
+        "stepsZh": [
+          "直接展开可得 $(3a+4b)^2-2(2a+3b)^2=a^2-2b^2$，从而完成 (i)。",
+          "对 (ii)，从 $M(5a+6b)^2-N(4a+5b)^2$ 中减去 $Ma^2-Nb^2$，结果分解为 $4(3M-2N)(2a+3b)(a+b)$。",
+          "后两个线性因子不可能在整条双曲线上恒为零，故对每一点保持不变的充要条件是 $3M=2N$。最小正整数解为 $(2,3)$，代回即可验证。",
+          "对 (iii)，比较恒等式 $(Pa+Qb)^2-3(Ra+Sb)^2=a^2-3b^2$ 的系数，得 $P^2-3R^2=1$、$PQ=3RS$、$Q^2-3S^2=-3$。取最小正佩尔解 $(P,R)=(2,1)$，得到 $Q=3,S=2$。",
+          "确有 $(2a+3b)^2-3(a+2b)^2=a^2-3b^2=1$，故验证完成。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=3"
+  },
+  "step-2006-p1-q7": {
+    "summary": "(i) On $0<x<\\pi$, compare $\\csc x$ with $2x/\\pi$ to show $x\\sin x=\\pi/2$ has exactly two roots, $\\pi/2$ and a larger root $\\alpha$. Evaluate $\\int_{\\pi/2}^{\\pi}|x\\sin x-\\pi/2|\\,dx$ in terms of $\\alpha$. (ii) Find the area enclosed by the positive axes and $y=\\bigl||e^x-1|-1\\bigr|$.",
+    "summaryZh": "(i) 在 $0<x<\\pi$ 上比较 $\\csc x$ 与 $2x/\\pi$，证明 $x\\sin x=\\pi/2$ 恰有两根 $\\pi/2$ 与较大根 $\\alpha$，并用 $\\alpha$ 表示 $\\int_{\\pi/2}^{\\pi}|x\\sin x-\\pi/2|\\,dx$；(ii) 求正坐标轴与 $y=\\bigl||e^x-1|-1\\bigr|$ 围成的面积。",
+    "answer": "The roots are $\\pi/2$ and $\\alpha\\in(\\pi/2,\\pi)$. The integral is $2\\sin\\alpha+3\\pi^2/4-\\alpha\\pi-\\pi-2\\alpha\\cos\\alpha-1$. The area in (ii) is $\\ln4-1$.",
+    "answerZh": "两根为 $\\pi/2$ 与 $\\alpha\\in(\\pi/2,\\pi)$。积分等于 $2\\sin\\alpha+3\\pi^2/4-\\alpha\\pi-\\pi-2\\alpha\\cos\\alpha-1$；(ii) 的面积为 $\\ln4-1$。",
+    "methods": [
+      {
+        "title": "Locate sign changes before removing each modulus",
+        "titleZh": "先定位变号点，再拆绝对值",
+        "topics": [
+          { "en": "Convexity", "zh": "凸性" },
+          { "en": "Definite integrals", "zh": "定积分" },
+          { "en": "Modulus functions", "zh": "绝对值函数" }
+        ],
+        "steps": [
+          "On $(0,\\pi)$ the equation is equivalent to $\\csc x=2x/\\pi$. The first intersection is $x=\\pi/2$. For $h(x)=\\csc x-2x/\\pi$, $h''(x)=\\csc x(\\csc^2x+\\cot^2x)>0$, so $h$ is strictly convex and has at most two zeros. Since it is negative just right of $\\pi/2$ and tends to $+\\infty$ at $\\pi^-$, exactly one further zero $\\alpha$ exists.",
+          "$x\\sin x-\\pi/2$ is nonnegative on $[\\pi/2,\\alpha]$ and nonpositive on $[\\alpha,\\pi]$. With $F(x)=\\sin x-x\\cos x-\\pi x/2$, the modulus integral is $2F(\\alpha)-F(\\pi/2)-F(\\pi)$, which simplifies to the stated expression.",
+          "For $x\\ge0$, $|e^x-1|=e^x-1$, so the curve is $y=|e^x-2|$. The only bounded region against the positive axes lies on $0\\le x\\le\\ln2$, where $y=2-e^x$.",
+          "Its area is $\\int_0^{\\ln2}(2-e^x)\\,dx=[2x-e^x]_0^{\\ln2}=2\\ln2-1=\\ln4-1$."
+        ],
+        "stepsZh": [
+          "在 $(0,\\pi)$ 上，方程等价于 $\\csc x=2x/\\pi$。第一交点为 $x=\\pi/2$。令 $h(x)=\\csc x-2x/\\pi$，则 $h''(x)=\\csc x(\\csc^2x+\\cot^2x)>0$，故严格凸且至多有两零点；又在 $\\pi/2$ 右侧为负，在 $\\pi^-$ 趋于正无穷，因此恰有一个额外零点 $\\alpha$。",
+          "$x\\sin x-\\pi/2$ 在 $[\\pi/2,\\alpha]$ 非负，在 $[\\alpha,\\pi]$ 非正。取原函数 $F(x)=\\sin x-x\\cos x-\\pi x/2$，绝对值积分为 $2F(\\alpha)-F(\\pi/2)-F(\\pi)$，化简即得答案。",
+          "对 $x\\ge0$，有 $|e^x-1|=e^x-1$，故曲线化为 $y=|e^x-2|$。与正坐标轴围成的唯一有界区域对应 $0\\le x\\le\\ln2$，此时 $y=2-e^x$。",
+          "面积为 $\\int_0^{\\ln2}(2-e^x)\\,dx=[2x-e^x]_0^{\\ln2}=2\\ln2-1=\\ln4-1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=4"
+  },
+  "step-2006-p1-q8": {
+    "summary": "Let $O=(0,0,0)$, $A=(a,0,0)$, $B=(0,b,0)$ and $C=(0,0,c)$ with $a,b,c>0$. Find the volume of tetrahedron $OABC$. If $\\angle ACB=\\theta$, find $\\cos\\theta$ and the area of $ABC$, then deduce the perpendicular distance $d$ from $O$ to the plane $ABC$.",
+    "summaryZh": "设 $O=(0,0,0)$、$A=(a,0,0)$、$B=(0,b,0)$、$C=(0,0,c)$，其中 $a,b,c>0$。求四面体 $OABC$ 的体积；若 $\\angle ACB=\\theta$，求 $\\cos\\theta$ 与三角形 $ABC$ 面积，再推出 $O$ 到平面 $ABC$ 的垂距 $d$。",
+    "answer": "$V=abc/6$, $\\cos\\theta=c^2/\\sqrt{(a^2+c^2)(b^2+c^2)}$, $[ABC]=\\tfrac12\\sqrt{a^2b^2+b^2c^2+c^2a^2}$, and $1/d^2=1/a^2+1/b^2+1/c^2$.",
+    "answerZh": "$V=abc/6$，$\\cos\\theta=c^2/\\sqrt{(a^2+c^2)(b^2+c^2)}$，$[ABC]=\\tfrac12\\sqrt{a^2b^2+b^2c^2+c^2a^2}$，且 $1/d^2=1/a^2+1/b^2+1/c^2$。",
+    "methods": [
+      {
+        "title": "Compute the same tetrahedral volume from two bases",
+        "titleZh": "以两个不同底面计算同一四面体体积",
+        "topics": [
+          { "en": "Vectors in three dimensions", "zh": "三维向量" },
+          { "en": "Tetrahedral volume", "zh": "四面体体积" }
+        ],
+        "steps": [
+          "Using right triangle $OAB$ as base, its area is $ab/2$ and the height is $c$. Thus $V=(1/3)(ab/2)c=abc/6$.",
+          "The vectors from $C$ are $\\overrightarrow{CA}=(a,0,-c)$ and $\\overrightarrow{CB}=(0,b,-c)$. Their dot product is $c^2$, giving the stated cosine.",
+          "From $\\sin^2\\theta=1-\\cos^2\\theta$, obtain $\\sin\\theta=\\sqrt{a^2b^2+b^2c^2+c^2a^2}/\\sqrt{(a^2+c^2)(b^2+c^2)}$. Hence $[ABC]=\\tfrac12|CA||CB|\\sin\\theta=\\tfrac12\\sqrt{a^2b^2+b^2c^2+c^2a^2}$.",
+          "Taking $ABC$ as the base gives $abc/6=(1/3)[ABC]d$. Therefore $d=abc/\\sqrt{a^2b^2+b^2c^2+c^2a^2}$; squaring and inverting yields the required reciprocal-square identity."
+        ],
+        "stepsZh": [
+          "以直角三角形 $OAB$ 为底，其面积为 $ab/2$，高为 $c$，所以 $V=(1/3)(ab/2)c=abc/6$。",
+          "从 $C$ 出发的向量为 $\\overrightarrow{CA}=(a,0,-c)$、$\\overrightarrow{CB}=(0,b,-c)$，点积为 $c^2$，故得到答案中的余弦。",
+          "由 $\\sin^2\\theta=1-\\cos^2\\theta$ 得 $\\sin\\theta=\\sqrt{a^2b^2+b^2c^2+c^2a^2}/\\sqrt{(a^2+c^2)(b^2+c^2)}$。所以 $[ABC]=\\tfrac12|CA||CB|\\sin\\theta=\\tfrac12\\sqrt{a^2b^2+b^2c^2+c^2a^2}$。",
+          "再以 $ABC$ 为底，$abc/6=(1/3)[ABC]d$，故 $d=abc/\\sqrt{a^2b^2+b^2c^2+c^2a^2}$。平方取倒数即得所需恒等式。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=4"
+  },
+  "step-2006-p1-q9": {
+    "summary": "A $4$ kg block lies on a smooth table between two pulleys. Separate strings connect it to hanging masses $x$ kg and $y$ kg, where $x>y$ and $x+y=6$. The system starts from rest; after the block has travelled distance $d$ toward the heavier mass, that string is cut. Derive the total time until the block first returns to rest as $\\sqrt{d/(5g)}\\,f(y)$, where $f(y)=10/\\sqrt{6-2y}+(1+4/y)\\sqrt{6-2y}$, and solve $f'(y)=0$.",
+    "summaryZh": "质量 $4$ kg 的物块置于光滑水平桌面，两侧经光滑滑轮分别连接悬挂质量 $x$ kg、$y$ kg，其中 $x>y$ 且 $x+y=6$。系统由静止释放；物块向较重一侧移动距离 $d$ 后，该侧绳被剪断。证明物块首次重新静止的总时间为 $\\sqrt{d/(5g)}\\,f(y)$，其中 $f(y)=10/\\sqrt{6-2y}+(1+4/y)\\sqrt{6-2y}$，并解 $f'(y)=0$。",
+    "answer": "$f'(y)=0$ gives $y=2$ (so $x=4$). This is the unique minimum on $0<y<3$; $f(2)=8\\sqrt2$.",
+    "answerZh": "$f'(y)=0$ 的解为 $y=2$（因而 $x=4$）。这是 $0<y<3$ 上唯一最小点，且 $f(2)=8\\sqrt2$。",
+    "methods": [
+      {
+        "title": "Join two constant-acceleration stages",
+        "titleZh": "连接两个匀加速运动阶段",
+        "topics": [
+          { "en": "Connected particles", "zh": "连接质点" },
+          { "en": "Constant acceleration", "zh": "匀加速运动" },
+          { "en": "Optimisation", "zh": "最优化" }
+        ],
+        "steps": [
+          "Before the cut, add Newton's equations for all three moving bodies. The common acceleration is $a_1=(x-y)g/(x+y+4)=(6-2y)g/10$.",
+          "Starting from rest and travelling $d$, the time is $t_1=\\sqrt{d/(5g)}\\,10/\\sqrt{6-2y}$ and the cutting speed satisfies $V^2=2a_1d$.",
+          "After the cut, the remaining block-plus-$y$ system decelerates at $a_2=yg/(4+y)$. The string remains taut because its tension $4a_2$ is positive. Thus $t_2=V/a_2=\\sqrt{d/(5g)}(1+4/y)\\sqrt{6-2y}$.",
+          "Adding $t_1+t_2$ yields the required $f(y)$. Differentiating, multiplying $f'(y)$ by the positive factor $y^2(6-2y)^{3/2}$, and simplifying gives $2(y-2)(y^2+36)=0$.",
+          "The physical range is $0<y<3$, so $y=2$ is the only stationary value. Since $f(y)\\to\\infty$ at both ends, it is the global minimum."
+        ],
+        "stepsZh": [
+          "剪断前，把三个物体的牛顿方程相加，得到共同加速度 $a_1=(x-y)g/(x+y+4)=(6-2y)g/10$。",
+          "从静止移动 $d$，第一阶段时间为 $t_1=\\sqrt{d/(5g)}\\,10/\\sqrt{6-2y}$，剪断瞬间速度满足 $V^2=2a_1d$。",
+          "剪断后，只剩物块与质量 $y$ 的质点相连，减速度 $a_2=yg/(4+y)$。张力 $4a_2>0$，故绳保持绷紧；第二阶段时间 $t_2=V/a_2=\\sqrt{d/(5g)}(1+4/y)\\sqrt{6-2y}$。",
+          "相加即得所给 $f(y)$。微分后乘以正因子 $y^2(6-2y)^{3/2}$ 并化简，得到 $2(y-2)(y^2+36)=0$。",
+          "物理范围为 $0<y<3$，故唯一驻点是 $y=2$。又 $f$ 在两端都趋于无穷，因此这是全局最小值。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=5"
+  },
+  "step-2006-p1-q10": {
+    "summary": "A projectile $P$ is launched from the origin at speed $V$ and angle $45^\\circ$. A barn roof is the line $y=x\\tan\\alpha+b$, where $b>0$ and $\\alpha$ is acute. Find the trajectory, derive the condition for $P$ just to touch the roof and the touching time. A second particle $Q$ starts simultaneously from $(0,b)$ with speed $U$ along a smooth rail under the roof; derive the condition for the two particles just to meet.",
+    "summaryZh": "质点 $P$ 从原点以速率 $V$、仰角 $45^\\circ$ 斜抛；谷仓屋顶为直线 $y=x\\tan\\alpha+b$，其中 $b>0$、$\\alpha$ 为锐角。求轨迹、恰与屋顶相切的条件及相切时刻。另一质点 $Q$ 同时从 $(0,b)$ 出发，以速率 $U$ 沿屋顶下方的光滑直轨运动；求两质点恰相遇的条件。",
+    "answer": "$P$ follows $y=x-gx^2/V^2$. Tangency requires $V(-1+\\tan\\alpha)=-2\\sqrt{bg}$ and occurs at $T=V(1-\\tan\\alpha)/(\\sqrt2g)$. Meeting requires $2\\sqrt2\\,U\\cos\\alpha=V(2+\\sin\\alpha\\cos\\alpha-\\sin^2\\alpha)$.",
+    "answerZh": "$P$ 的轨迹为 $y=x-gx^2/V^2$。相切条件为 $V(-1+\\tan\\alpha)=-2\\sqrt{bg}$，时刻为 $T=V(1-\\tan\\alpha)/(\\sqrt2g)$。相遇条件为 $2\\sqrt2\\,U\\cos\\alpha=V(2+\\sin\\alpha\\cos\\alpha-\\sin^2\\alpha)$。",
+    "methods": [
+      {
+        "title": "Use a repeated root for tangency and synchronize the motions",
+        "titleZh": "用重根刻画相切，再同步两质点运动",
+        "topics": [
+          { "en": "Projectile motion", "zh": "抛体运动" },
+          { "en": "Tangency", "zh": "相切" },
+          { "en": "Constrained motion", "zh": "约束运动" }
+        ],
+        "steps": [
+          "For $P$, $x=Vt/\\sqrt2$ and $y=Vt/\\sqrt2-gt^2/2$. Eliminating $t$ gives $y=x-gx^2/V^2$.",
+          "Intersecting with the roof gives $(g/V^2)x^2+(\\tan\\alpha-1)x+b=0$. Tangency means zero discriminant, so $V(\\tan\\alpha-1)=\\pm2\\sqrt{bg}$. The repeated root must have $x>0$, forcing $\\tan\\alpha<1$ and the negative sign.",
+          "The repeated root is $x_0=V^2(1-\\tan\\alpha)/(2g)$, hence $T=\\sqrt2x_0/V=V(1-\\tan\\alpha)/(\\sqrt2g)$.",
+          "Along the smooth rail, $Q$ has acceleration $-g\\sin\\alpha$. Its distance along the roof is $s=Ut-gt^2\\sin\\alpha/2$, so its horizontal coordinate is $s\\cos\\alpha$.",
+          "The particles can meet only at the tangency point. Set $s(T)\\cos\\alpha=VT/\\sqrt2$, divide by $T$, substitute $gT=V(1-\\tan\\alpha)/\\sqrt2$, and simplify to the stated relation."
+        ],
+        "stepsZh": [
+          "对 $P$，有 $x=Vt/\\sqrt2$、$y=Vt/\\sqrt2-gt^2/2$，消去 $t$ 得 $y=x-gx^2/V^2$。",
+          "与屋顶联立得 $(g/V^2)x^2+(\\tan\\alpha-1)x+b=0$。相切要求判别式为零，所以 $V(\\tan\\alpha-1)=\\pm2\\sqrt{bg}$。重根必须满足 $x>0$，故 $\\tan\\alpha<1$ 且只能取负号。",
+          "重根 $x_0=V^2(1-\\tan\\alpha)/(2g)$，因此 $T=\\sqrt2x_0/V=V(1-\\tan\\alpha)/(\\sqrt2g)$。",
+          "沿光滑轨道方向，$Q$ 的加速度为 $-g\\sin\\alpha$，路程 $s=Ut-gt^2\\sin\\alpha/2$，水平坐标为 $s\\cos\\alpha$。",
+          "两质点只能在切点相遇。令 $s(T)\\cos\\alpha=VT/\\sqrt2$，除以 $T$，代入 $gT=V(1-\\tan\\alpha)/\\sqrt2$ 并化简，即得所给关系。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=5"
+  },
+  "step-2006-p1-q11": {
+    "summary": "Particles $A_1,\\ldots,A_n$ rest in order in a smooth straight trough. The masses of $A_{n-1}$ and $A_n$ are $m$ and $\\lambda m$ with $\\lambda>1$. A mass-$m$ particle $A_0$ approaches at speed $u$; every collision conserves momentum and energy. Rule out final states with (i) exactly one moving particle, (ii) only $A_{n-1},A_n$ moving, and (iii) only $A_{n-2},A_{n-1},A_n$ moving. If exactly two particles move finally, identify them and find their speeds.",
+    "summaryZh": "质点 $A_1,\\ldots,A_n$ 依次静止在光滑直槽中，其中 $A_{n-1},A_n$ 的质量为 $m,\\lambda m$，且 $\\lambda>1$。质量为 $m$ 的 $A_0$ 以速率 $u$ 撞向它们，所有碰撞均守恒动量和能量。排除最终 (i) 仅一粒运动，(ii) 仅 $A_{n-1},A_n$ 运动，(iii) 仅 $A_{n-2},A_{n-1},A_n$ 运动；若最终恰有两粒运动，确定它们及速率。",
+    "answer": "The first three proposed final states are impossible. If exactly two particles move, they are $A_0$ backwards with speed $(\\lambda-1)u/(\\lambda+1)$ and $A_n$ forwards with speed $2u/(\\lambda+1)$.",
+    "answerZh": "前三种最终状态均不可能。若恰有两粒运动，则 $A_0$ 以 $(\\lambda-1)u/(\\lambda+1)$ 向后运动，$A_n$ 以 $2u/(\\lambda+1)$ 向前运动。",
+    "methods": [
+      {
+        "title": "Combine conservation laws with the final velocity order",
+        "titleZh": "把守恒律与最终速度次序结合",
+        "topics": [
+          { "en": "Elastic collisions", "zh": "弹性碰撞" },
+          { "en": "Conservation laws", "zh": "守恒律" },
+          { "en": "Extremal argument", "zh": "极值论证" }
+        ],
+        "steps": [
+          "Let $v_k$ be the final velocity and $m_k$ the mass. Conservation gives $\\sum m_kv_k=mu$ and $\\sum m_kv_k^2=mu^2$. Since no later collision is possible, particles in their fixed order must satisfy $v_0\\le v_1\\le\\cdots\\le v_n$.",
+          "If only one particle moved, dividing energy conservation by momentum conservation would give its velocity $u$ and its mass $m$. The order condition would force it to be $A_n$, but $A_n$ has mass $\\lambda m$, a contradiction.",
+          "If only $A_{n-1},A_n$ moved with velocities $p,q$, then $p+\\lambda q=u$ and $p^2+\\lambda q^2=u^2$. Thus $q=2u/(1+\\lambda)$ and $p=-(\\lambda-1)u/(1+\\lambda)<0$, contradicting a stationary particle immediately behind $A_{n-1}$.",
+          "At least one final velocity is negative: otherwise $mu^2=\\sum m_kv_k^2\\le v_n\\sum m_kv_k=v_nmu$ gives $v_n\\ge u$, while $\\lambda mv_n\\le mu$ gives $v_n\\le u/\\lambda<u$. This lemma rules out the three-particle state when $n\\ge3$; the $n=2$ collision sequence ends with the middle particle stationary, so it is ruled out too.",
+          "With exactly two movers, the negative one must be the rearmost $A_0$ and the positive one the foremost $A_n$. Solving the same two conservation equations gives velocities $-(\\lambda-1)u/(\\lambda+1)$ and $2u/(\\lambda+1)$, respectively."
+        ],
+        "stepsZh": [
+          "设最终速度为 $v_k$、质量为 $m_k$。守恒律给出 $\\sum m_kv_k=mu$、$\\sum m_kv_k^2=mu^2$。由于已无后续碰撞，按槽中次序必须有 $v_0\\le v_1\\le\\cdots\\le v_n$。",
+          "若最终仅一粒运动，将能量守恒除以动量守恒可得其速度为 $u$、质量为 $m$。速度次序又迫使它是最前端的 $A_n$，但其质量为 $\\lambda m$，矛盾。",
+          "若仅 $A_{n-1},A_n$ 运动，速度记为 $p,q$，则 $p+\\lambda q=u$、$p^2+\\lambda q^2=u^2$。解得 $q=2u/(1+\\lambda)$、$p=-(\\lambda-1)u/(1+\\lambda)<0$，会撞上其后静止粒子，违背最终次序。",
+          "最终至少一粒反向运动：若所有速度非负，则 $mu^2=\\sum m_kv_k^2\\le v_n\\sum m_kv_k=v_nmu$ 给出 $v_n\\ge u$；但 $\\lambda mv_n\\le mu$ 又给出 $v_n\\le u/\\lambda<u$。该引理排除 $n\\ge3$ 的三粒运动情形；$n=2$ 时直接追踪碰撞会发现中间粒子最终静止。",
+          "若最终恰有两粒运动，反向者只能是最后方的 $A_0$，正向者只能是最前方的 $A_n$。解两条守恒方程即得相应速度 $-(\\lambda-1)u/(\\lambda+1)$ 与 $2u/(\\lambda+1)$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=6"
+  },
+  "step-2006-p1-q12": {
+    "summary": "Two towns are joined by three independent roads: two roads each contain two flood-prone sections and the third contains one. Every section is blocked independently with probability $p$. Find the probability that all routes fail. Then a traveller chooses a road uniformly and observes it is open; find the conditional probability that both alternative roads are blocked, and interpret the limit as $p\\to1$.",
+    "summaryZh": "两城之间有三条相互独立的道路：两条各含两个可能被洪水阻断的路段，第三条含一个路段；每个路段独立地以概率 $p$ 被阻断。求两城完全不通的概率。随后旅行者等概率选一条路并发现其畅通，求另外两条路都被阻断的条件概率，并解释 $p\\to1$ 时的极限。",
+    "answer": "The cut-off probability is $p^3(2-p)^2$. Given that the chosen road is open, the required probability is $p^2(2-p)(4-3p)/(3-2p)$, which tends to $1$ as $p\\to1$.",
+    "answerZh": "完全不通的概率为 $p^3(2-p)^2$。已知所选道路畅通时，所求条件概率为 $p^2(2-p)(4-3p)/(3-2p)$，且 $p\\to1$ 时趋于 $1$。",
+    "methods": [
+      {
+        "title": "Condition on which road was chosen",
+        "titleZh": "按所选择的道路分类条件化",
+        "topics": [
+          { "en": "Conditional probability", "zh": "条件概率" },
+          { "en": "Reliability networks", "zh": "可靠性网络" }
+        ],
+        "steps": [
+          "A two-section road is open only if both sections are open, so it is blocked with probability $1-(1-p)^2=p(2-p)$. The one-section road is blocked with probability $p$. Independence gives $p(2-p)\\cdot p(2-p)\\cdot p=p^3(2-p)^2$.",
+          "Let $O$ be that the selected road is open. Averaging over the three equally likely choices, $P(O)=\\tfrac13[2(1-p)^2+(1-p)]=\\tfrac13(1-p)(3-2p)$.",
+          "Let $B$ be that the two unchosen roads are both blocked. If a two-section road was chosen, the joint probability of that choice, $O$ and $B$ is $\\tfrac13(1-p)^2p(2-p)p$; there are two such choices. For the one-section choice it is $\\tfrac13(1-p)[p(2-p)]^2$.",
+          "Adding and factoring gives $P(B\\cap O)=\\tfrac13p^2(1-p)(2-p)(4-3p)$. Divide by $P(O)$ to obtain the answer. Each remaining factor tends to one as $p\\to1$, so the limit is one; at $p=1$ itself the conditioning event has probability zero."
+        ],
+        "stepsZh": [
+          "含两个路段的道路只有在两段都畅通时才畅通，所以其阻断概率为 $1-(1-p)^2=p(2-p)$；单路段道路阻断概率为 $p$。利用独立性，完全不通概率为 $p(2-p)\\cdot p(2-p)\\cdot p=p^3(2-p)^2$。",
+          "设 $O$ 表示所选道路畅通。对三种等概率选择取全概率：$P(O)=\\tfrac13[2(1-p)^2+(1-p)]=\\tfrac13(1-p)(3-2p)$。",
+          "设 $B$ 表示另外两路均阻断。若选中两路段道路，则选择该路、该路畅通且另两路阻断的联合概率为 $\\tfrac13(1-p)^2p(2-p)p$，共有两种；若选中单路段道路，则为 $\\tfrac13(1-p)[p(2-p)]^2$。",
+          "相加并因式分解得 $P(B\\cap O)=\\tfrac13p^2(1-p)(2-p)(4-3p)$。除以 $P(O)$ 得答案。$p\\to1$ 时剩余各因子都趋于 1；但在 $p=1$ 本身，条件事件概率为零。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=7"
+  },
+  "step-2006-p1-q13": {
+    "summary": "Diamonds occur independently in chocolate at mean rate one per kilogram. (i) A fair die score $N$ determines a purchase of $100N$ grams; find the probability of no diamond and the expected count. (ii) Instead roll until the first six, and buy $100T$ grams if it occurs on throw $T$; again find the no-diamond probability and the expectation.",
+    "summaryZh": "钻石独立地混入巧克力，平均每千克一颗。(i) 掷一次公平骰子，点数为 $N$ 时购买 $100N$ 克，求没有钻石的概率与钻石数期望；(ii) 改为不断掷到第一次出现 6，若在第 $T$ 次出现则购买 $100T$ 克，再求没有钻石的概率与期望。",
+    "answer": "(i) $P(D=0)=e^{-0.1}(1-e^{-0.6})/[6(1-e^{-0.1})]$ and $E(D)=0.35$. (ii) $P(D=0)=e^{-0.1}/(6-5e^{-0.1})$ and $E(D)=0.6$.",
+    "answerZh": "(i) $P(D=0)=e^{-0.1}(1-e^{-0.6})/[6(1-e^{-0.1})]$，$E(D)=0.35$；(ii) $P(D=0)=e^{-0.1}/(6-5e^{-0.1})$，$E(D)=0.6$。",
+    "methods": [
+      {
+        "title": "Mix Poisson laws over the random purchase mass",
+        "titleZh": "对随机购买质量作泊松混合",
+        "topics": [
+          { "en": "Poisson distribution", "zh": "泊松分布" },
+          { "en": "Conditional expectation", "zh": "条件期望" },
+          { "en": "Geometric series", "zh": "等比级数" }
+        ],
+        "steps": [
+          "For a purchase of $m$ kg, $D\\sim\\operatorname{Poisson}(m)$, so $P(D=0\\mid m)=e^{-m}$ and $E(D\\mid m)=m$.",
+          "In (i), condition on $N=n$. Then $m=0.1n$, so $P(D=0)=\\tfrac16\\sum_{n=1}^6e^{-0.1n}$. Summing this finite geometric series gives the stated expression, while $E(D)=0.1E(N)=0.1(3.5)=0.35$.",
+          "In (ii), $P(T=t)=(5/6)^{t-1}(1/6)$. Therefore $P(D=0)=\\sum_{t\\ge1}(5/6)^{t-1}(1/6)e^{-0.1t}$, a geometric series with ratio $(5/6)e^{-0.1}$; its sum is the displayed fraction.",
+          "Finally $E(D)=0.1E(T)$. A geometric waiting time with success probability $1/6$ has mean $6$ (or use $\\sum_{t\\ge1}t(5/6)^{t-1}=36$), so $E(D)=0.6$."
+        ],
+        "stepsZh": [
+          "购买 $m$ 千克时，$D\\sim\\operatorname{Poisson}(m)$，所以 $P(D=0\\mid m)=e^{-m}$，且 $E(D\\mid m)=m$。",
+          "在 (i) 中按 $N=n$ 条件化，此时 $m=0.1n$，故 $P(D=0)=\\tfrac16\\sum_{n=1}^6e^{-0.1n}$。求有限等比和即得所给式；同时 $E(D)=0.1E(N)=0.1\\times3.5=0.35$。",
+          "在 (ii) 中，$P(T=t)=(5/6)^{t-1}(1/6)$。因此 $P(D=0)=\\sum_{t\\ge1}(5/6)^{t-1}(1/6)e^{-0.1t}$，其公比为 $(5/6)e^{-0.1}$，求和得答案。",
+          "最后 $E(D)=0.1E(T)$。成功概率为 $1/6$ 的几何等待时间均值为 $6$（也可用 $\\sum_{t\\ge1}t(5/6)^{t-1}=36$），故 $E(D)=0.6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=7"
+  },
+  "step-2006-p1-q14": {
+    "summary": "A bag contains one red sweet and $n$ blue sweets. (i) Draw with replacement until the red sweet appears; find the probability that it first appears on attempt $r$ and, for fixed $r$, the integer $n$ that maximises this probability. (ii) Repeat without replacement and answer the same questions, including the impossible range.",
+    "summaryZh": "袋中有一颗红糖和 $n$ 颗蓝糖。(i) 每次取出后放回，直到首次取到红糖；求它恰在第 $r$ 次出现的概率，并对固定 $r$ 求使该概率最大的整数 $n$。(ii) 改为不放回抽取，回答同样问题，并写清不可能发生的范围。",
+    "answer": "(i) $P(R=r)=n^{r-1}/(n+1)^r$, maximised at $n=r-1$ with value $(r-1)^{r-1}/r^r$ (interpreted as $1$ when $r=1$). (ii) $P(R=r)=1/(n+1)$ for $1\\le r\\le n+1$ and $0$ otherwise; it is again maximised at $n=r-1$, now with value $1/r$.",
+    "answerZh": "(i) $P(R=r)=n^{r-1}/(n+1)^r$，在 $n=r-1$ 时最大，最大值为 $(r-1)^{r-1}/r^r$（$r=1$ 时按 1 理解）；(ii) 当 $1\\le r\\le n+1$ 时 $P(R=r)=1/(n+1)$，否则为 0；仍在 $n=r-1$ 时最大，最大值为 $1/r$。",
+    "methods": [
+      {
+        "title": "Use independence with replacement and symmetry without replacement",
+        "titleZh": "放回时用独立性，不放回时用位置对称性",
+        "topics": [
+          { "en": "Geometric distribution", "zh": "几何分布" },
+          { "en": "Sampling without replacement", "zh": "不放回抽样" },
+          { "en": "Discrete optimisation", "zh": "离散最优化" }
+        ],
+        "steps": [
+          "With replacement, the first $r-1$ draws must be blue and the $r$th red. Independence gives $P(R=r)=[n/(n+1)]^{r-1}[1/(n+1)]=n^{r-1}/(n+1)^r$.",
+          "For $r\\ge2$, treat $n>0$ continuously. The logarithmic derivative is $(r-1)/n-r/(n+1)=[(r-1)-n]/[n(n+1)]$, so the function increases up to $n=r-1$ and decreases after it. The $r=1$ case also gives $n=0=r-1$.",
+          "Without replacement, imagine ordering all $n+1$ sweets. The red sweet is equally likely to occupy any position, so $P(R=r)=1/(n+1)$ if $r\\le n+1$, and zero otherwise.",
+          "For fixed $r$, admissibility requires $n\\ge r-1$, and $1/(n+1)$ decreases with $n$. Thus the smallest admissible value $n=r-1$ is optimal, with maximum $1/r$."
+        ],
+        "stepsZh": [
+          "放回抽取时，前 $r-1$ 次必须为蓝糖、第 $r$ 次为红糖。由独立性，$P(R=r)=[n/(n+1)]^{r-1}[1/(n+1)]=n^{r-1}/(n+1)^r$。",
+          "当 $r\\ge2$ 时，把 $n>0$ 暂视为连续变量。对数导数为 $(r-1)/n-r/(n+1)=[(r-1)-n]/[n(n+1)]$，故函数在 $n=r-1$ 前递增、之后递减。$r=1$ 时同样得到 $n=0=r-1$。",
+          "不放回时，可想象先将全部 $n+1$ 颗糖随机排成一列。红糖处在每个位置的概率相同，所以 $r\\le n+1$ 时 $P(R=r)=1/(n+1)$，否则为 0。",
+          "固定 $r$ 时必须有 $n\\ge r-1$，而 $1/(n+1)$ 随 $n$ 递减。因此最小可行值 $n=r-1$ 最优，最大概率为 $1/r$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://step.maths.org/sites/default/files/stepdbquestions/06/06-S1.pdf#page=7"
+  }
+}
