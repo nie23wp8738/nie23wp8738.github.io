@@ -23,5 +23,905 @@
       }
     ],
     "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/1"
+  },
+  "amc12-2016a-q2": {
+    "summary": "Solve $10^x\\cdot100^{2x}=1000^5$ for $x$.",
+    "summaryZh": "解方程 $10^x\\cdot100^{2x}=1000^5$。",
+    "answer": "C. $3$.",
+    "answerZh": "C。$3$。",
+    "methods": [
+      {
+        "title": "Use a common base",
+        "titleZh": "统一为同一底数",
+        "topics": [
+          {
+            "en": "Laws of exponents",
+            "zh": "指数运算律"
+          }
+        ],
+        "steps": [
+          "Write $100=10^2$ and $1000=10^3$. Then the equation becomes $10^{x+4x}=10^{15}$.",
+          "Equal positive bases give $5x=15$, hence $x=3$."
+        ],
+        "stepsZh": [
+          "把 $100$ 写成 $10^2$，把 $1000$ 写成 $10^3$，原方程化为 $10^{x+4x}=10^{15}$。",
+          "同底数幂相等时指数相等，所以 $5x=15$，从而 $x=3$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/2"
+  },
+  "amc12-2016a-q3": {
+    "summary": "For $y\\ne0$, define $\\operatorname{rem}(x,y)=x-y\\left\\lfloor x/y\\right\\rfloor$. Evaluate $\\operatorname{rem}(3/8,-2/5)$.",
+    "summaryZh": "对 $y\\ne0$ 定义 $\\operatorname{rem}(x,y)=x-y\\left\\lfloor x/y\\right\\rfloor$。求 $\\operatorname{rem}(3/8,-2/5)$。",
+    "answer": "B. $-\\dfrac1{40}$.",
+    "answerZh": "B。$-\\dfrac1{40}$。",
+    "methods": [
+      {
+        "title": "Apply the floor definition carefully",
+        "titleZh": "谨慎代入下取整定义",
+        "topics": [
+          {
+            "en": "Floor function",
+            "zh": "下取整函数"
+          },
+          {
+            "en": "Fraction arithmetic",
+            "zh": "分数运算"
+          }
+        ],
+        "steps": [
+          "The quotient is $(3/8)/(-2/5)=-15/16$, so $\\lfloor-15/16\\rfloor=-1$.",
+          "Substitution gives $3/8-(-2/5)(-1)=3/8-2/5=-1/40$."
+        ],
+        "stepsZh": [
+          "商为 $(3/8)/(-2/5)=-15/16$，因此 $\\lfloor-15/16\\rfloor=-1$。",
+          "代入定义得到 $3/8-(-2/5)(-1)=3/8-2/5=-1/40$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/3"
+  },
+  "amc12-2016a-q4": {
+    "summary": "The mean, median and mode of $60,100,x,40,50,200,90$ are all equal to $x$. Determine $x$.",
+    "summaryZh": "数据 $60,100,x,40,50,200,90$ 的平均数、中位数和众数都等于 $x$。求 $x$。",
+    "answer": "D. $90$.",
+    "answerZh": "D。$90$。",
+    "methods": [
+      {
+        "title": "Use the mean, then verify",
+        "titleZh": "先用平均数求值，再验证",
+        "topics": [
+          {
+            "en": "Mean, median and mode",
+            "zh": "平均数、中位数与众数"
+          }
+        ],
+        "steps": [
+          "The fixed six values sum to $540$. Since the mean is $x$, $(540+x)/7=x$, so $x=90$.",
+          "The ordered list becomes $40,50,60,90,90,100,200$; its middle entry and unique most frequent value are both $90$."
+        ],
+        "stepsZh": [
+          "其余六个数之和为 $540$。由平均数为 $x$，有 $(540+x)/7=x$，解得 $x=90$。",
+          "排序后为 $40,50,60,90,90,100,200$；中间项与唯一出现次数最多的数都是 $90$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/4"
+  },
+  "amc12-2016a-q5": {
+    "summary": "Goldbach's conjecture says that every even integer greater than $2$ is a sum of two primes. Identify what a counterexample to this conjecture would have to be.",
+    "summaryZh": "哥德巴赫猜想断言：每个大于 $2$ 的偶数都能写成两个质数之和。说明要推翻这一猜想，反例必须具有什么性质。",
+    "answer": "E. An even integer greater than $2$ that cannot be expressed as the sum of two primes.",
+    "answerZh": "E。一个大于 $2$、但不能表示为两个质数之和的偶数。",
+    "methods": [
+      {
+        "title": "Negate the conclusion while keeping the hypothesis",
+        "titleZh": "保留条件并否定结论",
+        "topics": [
+          {
+            "en": "Counterexamples",
+            "zh": "反例"
+          },
+          {
+            "en": "Logical implication",
+            "zh": "逻辑蕴含"
+          }
+        ],
+        "steps": [
+          "The conjecture has the form: if an integer $n$ is even and $n>2$, then $n$ is the sum of two primes.",
+          "A counterexample must satisfy every hypothesis, so it must still be an even integer greater than $2$.",
+          "It must make the conclusion false, meaning that no pair of primes has sum $n$. This is exactly the description in choice E."
+        ],
+        "stepsZh": [
+          "该猜想具有如下逻辑形式：若整数 $n$ 为偶数且 $n>2$，则 $n$ 能表示成两个质数之和。",
+          "反例必须满足命题的全部前提，因此它仍应当是一个大于 $2$ 的偶数。",
+          "同时它必须使结论不成立，即不存在两个质数之和等于 $n$。这正是选项 E 的描述。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/5"
+  },
+  "amc12-2016a-q6": {
+    "summary": "A triangular array contains $1,2,\\ldots,N$ coins in successive rows and $2016$ coins in total. Find the sum of the digits of $N$.",
+    "summaryZh": "一个三角形阵列的各行依次含 $1,2,\\ldots,N$ 枚硬币，总数为 $2016$。求 $N$ 的各位数字之和。",
+    "answer": "D. $9$.",
+    "answerZh": "D。$9$。",
+    "methods": [
+      {
+        "title": "Invert the triangular-number formula",
+        "titleZh": "反解三角数公式",
+        "topics": [
+          {
+            "en": "Triangular numbers",
+            "zh": "三角数"
+          },
+          {
+            "en": "Quadratic equations",
+            "zh": "一元二次方程"
+          }
+        ],
+        "steps": [
+          "The total is $N(N+1)/2=2016$, hence $N^2+N-4032=0$.",
+          "Factor as $(N-63)(N+64)=0$. Positivity gives $N=63$.",
+          "The requested digit sum is $6+3=9$."
+        ],
+        "stepsZh": [
+          "硬币总数满足 $N(N+1)/2=2016$，即 $N^2+N-4032=0$。",
+          "因式分解为 $(N-63)(N+64)=0$，由 $N>0$ 得 $N=63$。",
+          "所求数字和为 $6+3=9$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/6"
+  },
+  "amc12-2016a-q7": {
+    "summary": "Describe the graph of the equation $x^2(x+y+1)=y^2(x+y+1)$.",
+    "summaryZh": "描述方程 $x^2(x+y+1)=y^2(x+y+1)$ 所表示的图形。",
+    "answer": "D. Three lines that do not all pass through one common point.",
+    "answerZh": "D。三条直线，但它们不全经过同一个点。",
+    "methods": [
+      {
+        "title": "Factor the zero set",
+        "titleZh": "因式分解零点集",
+        "topics": [
+          {
+            "en": "Factoring",
+            "zh": "因式分解"
+          },
+          {
+            "en": "Difference of squares",
+            "zh": "平方差"
+          },
+          {
+            "en": "Graphs of equations",
+            "zh": "方程的图像"
+          }
+        ],
+        "steps": [
+          "Move the right side to the left and factor: $$(x^2-y^2)(x+y+1)=0.$$",
+          "Using $x^2-y^2=(x-y)(x+y)$, the equation becomes $$(x-y)(x+y)(x+y+1)=0.$$",
+          "Thus the graph is the union of $x=y$, $x+y=0$, and $x+y=-1$. The last two are distinct parallel lines, so the three lines cannot all meet at one point."
+        ],
+        "stepsZh": [
+          "把右端移到左端并提取公因式：$$(x^2-y^2)(x+y+1)=0.$$",
+          "再利用 $x^2-y^2=(x-y)(x+y)$，方程化为 $$(x-y)(x+y)(x+y+1)=0.$$",
+          "所以图形是直线 $x=y$、$x+y=0$ 与 $x+y=-1$ 的并。后两条直线互相平行且不同，因此三条直线不可能共点。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/7"
+  },
+  "amc12-2016a-q8": {
+    "summary": "In an $8\\times5$ rectangle, mark points one unit from the upper-left corner on its top and left sides, and points one unit from the lower-right corner on its bottom and right sides. Join the two top/bottom marked points and the two left/right marked points. The band between these segments, including the upper-left and lower-right corner triangles, is shaded. Find its area.",
+    "summaryZh": "在一个 $8\\times5$ 矩形中，在上边和左边各取距左上角 $1$ 的点，在下边和右边各取距右下角 $1$ 的点。分别连接上、下两个标记点以及左、右两个标记点；两条线段之间、并含左上角与右下角两个角部三角形的带状区域被涂色。求涂色面积。",
+    "answer": "D. $\\dfrac{13}{2}$.",
+    "answerZh": "D。$\\dfrac{13}{2}$。",
+    "figure": {
+      "url": "/commentary-figures/amc10-2016a-q11.svg",
+      "alt": "An 8 by 5 rectangle with a diagonal shaded band whose four boundary intercepts are one unit from the upper-left and lower-right corners.",
+      "altZh": "一个 8×5 矩形，其中有一条对角带状涂色区域；四个边界截点分别距左上角或右下角 1 个单位。",
+      "printHeightPt": 130
+    },
+    "methods": [
+      {
+        "title": "Split the band along the main diagonal",
+        "titleZh": "沿主对角线分割带状区域",
+        "topics": [
+          {
+            "en": "Triangle area",
+            "zh": "三角形面积"
+          },
+          {
+            "en": "Area decomposition",
+            "zh": "面积分割"
+          }
+        ],
+        "steps": [
+          "The diagonal from the upper-left to the lower-right corner divides the shaded band into four triangles.",
+          "Two triangles have base $1$ on a horizontal side and altitude $5/2$; their total area is $2\\cdot\\frac12\\cdot1\\cdot\\frac52=\\frac52$.",
+          "The other two have base $1$ on a vertical side and altitude $8/2=4$; their total area is $2\\cdot\\frac12\\cdot1\\cdot4=4$. Hence the shaded area is $\\frac52+4=\\frac{13}{2}$."
+        ],
+        "stepsZh": [
+          "连接左上角与右下角的对角线，把涂色带分成四个三角形。",
+          "其中两个三角形在水平边上的底为 $1$，高为 $5/2$，总面积为 $2\\cdot\\frac12\\cdot1\\cdot\\frac52=\\frac52$。",
+          "另两个三角形在竖直边上的底为 $1$，高为 $8/2=4$，总面积为 $2\\cdot\\frac12\\cdot1\\cdot4=4$。故涂色面积为 $\\frac52+4=\\frac{13}{2}$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/8"
+  },
+  "amc12-2016a-q9": {
+    "summary": "Five congruent squares with disjoint interiors lie inside a unit square. One is central and rotated; each side midpoint of the central square is a vertex of one of the four corner squares, as shown. If their common side length is $(a-\\sqrt2)/b$ for positive integers $a,b$, find $a+b$.",
+    "summaryZh": "单位正方形内放有五个内部互不相交的全等小正方形：中间一个旋转放置，其每条边的中点都与一个角部小正方形的顶点重合，如图。若小正方形边长为 $(a-\\sqrt2)/b$，其中 $a,b$ 为正整数，求 $a+b$。",
+    "answer": "E. $11$.",
+    "answerZh": "E。$11$。",
+    "figure": {
+      "url": "/commentary-figures/amc12-2016a-q9.svg",
+      "alt": "A unit square containing four congruent corner squares and a congruent central square rotated by 45 degrees.",
+      "altZh": "一个单位正方形内含四个角部全等正方形，以及一个旋转 45 度的中心全等正方形。",
+      "printHeightPt": 150
+    },
+    "methods": [
+      {
+        "title": "Read the outer diagonal",
+        "titleZh": "沿大正方形对角线列式",
+        "topics": [
+          {
+            "en": "Square diagonals",
+            "zh": "正方形对角线"
+          },
+          {
+            "en": "Length decomposition",
+            "zh": "长度分解"
+          },
+          {
+            "en": "Rationalizing denominators",
+            "zh": "分母有理化"
+          }
+        ],
+        "steps": [
+          "Let the common side length be $s$. Along a diagonal of the unit square, the first corner square contributes a diagonal $s\\sqrt2$, the central rotated square contributes one side $s$, and the opposite corner square contributes another diagonal $s\\sqrt2$.",
+          "Since the unit square has diagonal $\\sqrt2$, $$2s\\sqrt2+s=\\sqrt2,$$ so $$s=\\frac{\\sqrt2}{2\\sqrt2+1}.$$",
+          "Rationalizing gives $$s=\\frac{\\sqrt2(2\\sqrt2-1)}{(2\\sqrt2+1)(2\\sqrt2-1)}=\\frac{4-\\sqrt2}{7}.$$ Hence $a=4$, $b=7$, and $a+b=11$."
+        ],
+        "stepsZh": [
+          "设全等小正方形的边长为 $s$。沿单位正方形的一条对角线，前一个角部小正方形贡献长度 $s\\sqrt2$，旋转后的中心正方形贡献一条边长 $s$，对角的角部小正方形再贡献 $s\\sqrt2$。",
+          "单位正方形的对角线长为 $\\sqrt2$，故 $$2s\\sqrt2+s=\\sqrt2,$$ 从而 $$s=\\frac{\\sqrt2}{2\\sqrt2+1}.$$",
+          "将分母有理化：$$s=\\frac{\\sqrt2(2\\sqrt2-1)}{(2\\sqrt2+1)(2\\sqrt2-1)}=\\frac{4-\\sqrt2}{7}.$$ 因此 $a=4,b=7$，所求为 $a+b=11$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/9"
+  },
+  "amc12-2016a-q10": {
+    "summary": "Five friends occupy seats $1$ through $5$. Ada leaves. Bea moves two seats right, Ceci moves one seat left, and Dee and Edie exchange seats, leaving an end seat for Ada. Determine Ada's original seat.",
+    "summaryZh": "五位朋友坐在编号 $1$ 至 $5$ 的一排座位上。Ada 离开后，Bea 向右移动两座，Ceci 向左移动一座，Dee 与 Edie 互换座位，最后给 Ada 留下一个端点座位。求 Ada 原来的座位号。",
+    "answer": "B. Seat $2$.",
+    "answerZh": "B。第 $2$ 号座位。",
+    "methods": [
+      {
+        "title": "Conserve the sum of seat numbers",
+        "titleZh": "利用座位编号总和不变",
+        "topics": [
+          {
+            "en": "Invariant",
+            "zh": "不变量"
+          },
+          {
+            "en": "Displacement",
+            "zh": "位移"
+          }
+        ],
+        "steps": [
+          "The sum of occupied seat numbers remains $1+2+3+4+5$. Dee and Edie's swap has total displacement $0$.",
+          "Bea and Ceci contribute displacements $+2$ and $-1$, so Ada's displacement must be $-1$.",
+          "Ada ends in an end seat. A one-seat move to the left can reach an end only by moving from seat $2$ to seat $1$."
+        ],
+        "stepsZh": [
+          "五个座位编号之和始终为 $1+2+3+4+5$；Dee 与 Edie 互换的总位移为 $0$。",
+          "Bea 与 Ceci 的位移分别为 $+2$ 和 $-1$，所以 Ada 的位移必须为 $-1$。",
+          "Ada 最终坐在端点座位；向左一座到达端点只能是从第 $2$ 座移到第 $1$ 座。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/10"
+  },
+  "amc12-2016a-q11": {
+    "summary": "At a camp of $100$ students, every student can sing, dance, or act, and nobody has all three talents. Respectively $42$, $65$, and $29$ students cannot sing, cannot dance, and cannot act. How many students have exactly two talents?",
+    "summaryZh": "某夏令营有 $100$ 名学生，每人至少会唱歌、跳舞或表演中的一项，且无人三项全会。不会唱歌、不会跳舞、不会表演的学生分别有 $42,65,29$ 人。求恰会两项的学生人数。",
+    "answer": "E. $64$.",
+    "answerZh": "E。$64$。",
+    "methods": [
+      {
+        "title": "Double-count talent memberships",
+        "titleZh": "重复计数才能归属",
+        "topics": [
+          {
+            "en": "Double counting",
+            "zh": "重复计数"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          },
+          {
+            "en": "Inclusion-exclusion",
+            "zh": "容斥原理"
+          }
+        ],
+        "steps": [
+          "The numbers who can sing, dance, and act are $100-42=58$, $100-65=35$, and $100-29=71$.",
+          "Counting student-talent memberships gives $58+35+71=164$. A one-talent student contributes $1$, while a two-talent student contributes $2$; there are no three-talent students.",
+          "All $100$ students are counted at least once, and each two-talent student accounts for exactly one count beyond that first count. Therefore the number with two talents is $164-100=64$."
+        ],
+        "stepsZh": [
+          "会唱歌、会跳舞、会表演的人数分别为 $100-42=58$、$100-65=35$、$100-29=71$。",
+          "按“学生—才能”归属关系计数，共得到 $58+35+71=164$ 次。只会一项的学生贡献 $1$ 次，会两项的学生贡献 $2$ 次；题设保证无人贡献 $3$ 次。",
+          "全部 $100$ 名学生先各计一次，而每位会两项的学生恰好再多计一次。因此会两项的人数为 $164-100=64$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/11"
+  },
+  "amc12-2016a-q12": {
+    "summary": "In $\\triangle ABC$, $AB=6$, $BC=7$, and $CA=8$. The internal angle bisector from $A$ meets $BC$ at $D$, and the internal angle bisector from $B$ meets $AC$ at $E$. The two bisectors meet at $F$. Find $AF:FD$.",
+    "summaryZh": "在 $\\triangle ABC$ 中，$AB=6,BC=7,CA=8$。$A$ 的内角平分线交 $BC$ 于 $D$，$B$ 的内角平分线交 $AC$ 于 $E$，两条角平分线交于 $F$。求 $AF:FD$。",
+    "answer": "C. $2:1$.",
+    "answerZh": "C。$2:1$。",
+    "figure": {
+      "url": "/commentary-figures/amc12-2016a-q12.svg",
+      "alt": "Triangle ABC with angle bisectors AD and BE meeting at F, with D on BC and E on AC.",
+      "altZh": "三角形 ABC 中，角平分线 AD 与 BE 交于 F，D 位于 BC 上，E 位于 AC 上。",
+      "printHeightPt": 145
+    },
+    "methods": [
+      {
+        "title": "Apply the angle-bisector theorem twice",
+        "titleZh": "两次使用角平分线定理",
+        "topics": [
+          {
+            "en": "Angle-bisector theorem",
+            "zh": "角平分线定理"
+          },
+          {
+            "en": "Ratios in triangles",
+            "zh": "三角形中的比例"
+          },
+          {
+            "en": "Incenter",
+            "zh": "内心"
+          }
+        ],
+        "steps": [
+          "In $\\triangle ABC$, the angle-bisector theorem gives $$\\frac{BD}{DC}=\\frac{AB}{AC}=\\frac68=\\frac34.$$ Since $BC=7$, we obtain $BD=3$ and $DC=4$.",
+          "Because $F$ lies on the angle bisector from $B$ and $D$ lies on $BC$, the segment $BF$ bisects $\\angle ABD$ in $\\triangle ABD$.",
+          "Applying the theorem again in $\\triangle ABD$ gives $$\\frac{AF}{FD}=\\frac{AB}{BD}=\\frac63=2,$$ so $AF:FD=2:1$."
+        ],
+        "stepsZh": [
+          "在 $\\triangle ABC$ 中，由角平分线定理，$$\\frac{BD}{DC}=\\frac{AB}{AC}=\\frac68=\\frac34.$$ 又因 $BC=7$，故 $BD=3,DC=4$。",
+          "点 $F$ 位于从 $B$ 引出的角平分线上，且 $D$ 位于 $BC$ 上，所以在 $\\triangle ABD$ 中，$BF$ 平分 $\\angle ABD$。",
+          "再次应用角平分线定理，$$\\frac{AF}{FD}=\\frac{AB}{BD}=\\frac63=2,$$ 因此 $AF:FD=2:1$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/12"
+  },
+  "amc12-2016a-q13": {
+    "summary": "Let $N$ be a positive multiple of $5$. Place one red ball and $N$ green balls uniformly at random in a line. Let $P(N)$ be the probability that at least $3N/5$ green balls lie on one side of the red ball. Find the digit sum of the least $N$ for which $P(N)<321/400$.",
+    "summaryZh": "设 $N$ 为 $5$ 的正倍数。把一个红球和 $N$ 个绿球等可能地排成一列。令 $P(N)$ 为红球某一侧至少有 $3N/5$ 个绿球的概率。求满足 $P(N)<321/400$ 的最小 $N$ 的各位数字和。",
+    "answer": "A. $12$ (the least $N$ is $480$).",
+    "answerZh": "A。$12$（最小的 $N$ 为 $480$）。",
+    "methods": [
+      {
+        "title": "Count the red ball's possible gaps",
+        "titleZh": "统计红球可处的间隙",
+        "topics": [
+          {
+            "en": "Discrete probability",
+            "zh": "离散概率"
+          },
+          {
+            "en": "Complementary counting",
+            "zh": "补集计数"
+          }
+        ],
+        "steps": [
+          "Place the green balls first. The red ball has $N+1$ equally likely gaps; if $k$ green balls lie to its left, the event occurs when $k\\le2N/5$ or $k\\ge3N/5$.",
+          "The excluded gaps are $2N/5+1,\\ldots,3N/5-1$, a total of $N/5-1$. Hence $P(N)=1-\\frac{N/5-1}{N+1}=\\frac{4N+10}{5N+5}$.",
+          "Solving $\\frac{4N+10}{5N+5}<\\frac{321}{400}$ gives $N>479$. The least multiple of $5$ is $480$, whose digit sum is $4+8+0=12$."
+        ],
+        "stepsZh": [
+          "先排好绿球，红球有 $N+1$ 个等可能间隙。若其左侧有 $k$ 个绿球，则所求事件等价于 $k\\le2N/5$ 或 $k\\ge3N/5$。",
+          "不满足事件的间隙对应 $2N/5+1,\\ldots,3N/5-1$，共 $N/5-1$ 个。因此 $P(N)=1-\\frac{N/5-1}{N+1}=\\frac{4N+10}{5N+5}$。",
+          "解不等式 $\\frac{4N+10}{5N+5}<\\frac{321}{400}$ 得 $N>479$。最小的 $5$ 的倍数是 $480$，数字和为 $12$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/13"
+  },
+  "amc12-2016a-q14": {
+    "summary": "Label the vertices of a cube with $1,2,\\ldots,8$, each once, so that every face has the same vertex sum. Count the labelings up to rotations of the cube.",
+    "summaryZh": "用 $1,2,\\ldots,8$ 各一次标记立方体的八个顶点，使每个面的四个顶点数字之和相同。把可通过立方体旋转互相得到的标记视为同一种，求种数。",
+    "answer": "C. $6$.",
+    "answerZh": "C。$6$。",
+    "methods": [
+      {
+        "title": "Fix one vertex and force the remaining labels",
+        "titleZh": "固定一个顶点并逐步确定其余标记",
+        "topics": [
+          {
+            "en": "Cube symmetry",
+            "zh": "立方体对称"
+          },
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          }
+        ],
+        "steps": [
+          "Opposite faces together contain all labels, whose sum is $36$, so each face sum must be $18$. Rotate the cube so label $1$ is at a fixed vertex, and call its three neighbours $a<b<c$.",
+          "The three vertices completing the adjacent faces are $17-a-b$, $17-a-c$, $17-b-c$, and the opposite vertex is $a+b+c-16$. Requiring the eight labels to be exactly $1,\\ldots,8$ leaves the neighbour sets $\\{4,6,8\\}$, $\\{4,7,8\\}$ and $\\{6,7,8\\}$.",
+          "For each set, the six cyclic orders split into two rotation classes because a $120^\\circ$ rotation about the body diagonal cycles the three neighbours. Hence the total is $3\\cdot2=6$."
+        ],
+        "stepsZh": [
+          "一对相对面合起来包含全部标记，总和为 $36$，所以每个面的和必须为 $18$。旋转立方体，把数字 $1$ 固定在一个顶点，并设其三个相邻顶点为 $a<b<c$。",
+          "三个相邻面上的其余顶点依次被确定为 $17-a-b,17-a-c,17-b-c$，对顶点为 $a+b+c-16$。要求八个标记恰为 $1$ 到 $8$，只留下邻点集合 $\\{4,6,8\\},\\{4,7,8\\},\\{6,7,8\\}$。",
+          "对每个集合，三个数的六种环绕次序在绕体对角线的 $120^\\circ$ 旋转下分成两类。因此总数为 $3\\cdot2=6$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/14"
+  },
+  "amc12-2016a-q15": {
+    "summary": "Three circles of radii $1,2,3$ lie above and are tangent to the same line. Their tangency points occur in the order corresponding to centres $P,Q,R$, and the radius-$2$ circle is externally tangent to each other circle. Find the area of $\\triangle PQR$.",
+    "summaryZh": "三个半径为 $1,2,3$ 的圆都位于同一直线上方并与该直线相切；切点按圆心 $P,Q,R$ 的顺序排列，且半径为 $2$ 的圆分别与另外两圆外切。求 $\\triangle PQR$ 的面积。",
+    "answer": "D. $\\sqrt6-\\sqrt2$.",
+    "answerZh": "D。$\\sqrt6-\\sqrt2$。",
+    "methods": [
+      {
+        "title": "Locate the centres above the tangent line",
+        "titleZh": "在公切线上方建立圆心坐标",
+        "topics": [
+          {
+            "en": "Tangent circles",
+            "zh": "相切圆"
+          },
+          {
+            "en": "Coordinate geometry",
+            "zh": "坐标几何"
+          }
+        ],
+        "steps": [
+          "The vertical separations $PQ$ and $QR$ are both $1$, while the centre distances are $3$ and $5$. Their horizontal separations are therefore $\\sqrt{3^2-1^2}=\\sqrt8$ and $\\sqrt{5^2-1^2}=\\sqrt{24}$.",
+          "Take $P=(0,1)$, $Q=(\\sqrt8,2)$, and $R=(\\sqrt8+\\sqrt{24},3)$.",
+          "The determinant formula gives area $\\frac12|2\\sqrt8-(\\sqrt8+\\sqrt{24})|=\\frac12(\\sqrt{24}-\\sqrt8)=\\sqrt6-\\sqrt2$."
+        ],
+        "stepsZh": [
+          "圆心 $P,Q$ 以及 $Q,R$ 的竖直距离都为 $1$，而圆心距分别为 $3$ 与 $5$，故水平距离分别为 $\\sqrt{3^2-1^2}=\\sqrt8$ 与 $\\sqrt{5^2-1^2}=\\sqrt{24}$。",
+          "可取 $P=(0,1),Q=(\\sqrt8,2),R=(\\sqrt8+\\sqrt{24},3)$。",
+          "用行列式面积公式得到 $\\frac12|2\\sqrt8-(\\sqrt8+\\sqrt{24})|=\\frac12(\\sqrt{24}-\\sqrt8)=\\sqrt6-\\sqrt2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/15"
+  },
+  "amc12-2016a-q16": {
+    "summary": "The four graphs $y=\\log_3x$, $y=\\log_x3$, $y=\\log_{1/3}x$, and $y=\\log_x(1/3)$ are drawn together. Count the points with positive $x$-coordinate that lie on at least two graphs.",
+    "summaryZh": "在同一坐标系中画出 $y=\\log_3x$、$y=\\log_x3$、$y=\\log_{1/3}x$ 与 $y=\\log_x(1/3)$。求横坐标为正且至少位于其中两条图像上的点数。",
+    "answer": "D. $5$.",
+    "answerZh": "D。$5$。",
+    "methods": [
+      {
+        "title": "Reduce all four functions to one parameter",
+        "titleZh": "用同一参数表示四个函数",
+        "topics": [
+          {
+            "en": "Logarithms",
+            "zh": "对数"
+          },
+          {
+            "en": "Change of base",
+            "zh": "换底公式"
+          },
+          {
+            "en": "Graph intersections",
+            "zh": "图像交点"
+          }
+        ],
+        "steps": [
+          "Put $u=\\log_3x$. Then the four ordinates are $$u,\\quad \\frac1u,\\quad -u,\\quad -\\frac1u,$$ where the reciprocal expressions require $u\\ne0$.",
+          "The first two are equal when $u^2=1$, giving $(3,1)$ and $(1/3,-1)$. Likewise, $-u=-1/u$ gives $(3,-1)$ and $(1/3,1)$.",
+          "The equality $u=-u$ gives $u=0$, hence $(x,y)=(1,0)$ on the first and third graphs. At $x=1$ the logarithms with base $x$ are undefined, so no extra graph passes through this point.",
+          "The remaining cross-equalities require $u^2=-1$ or $1/u=-1/u$, and have no real solution. Thus the five listed points are all the intersections."
+        ],
+        "stepsZh": [
+          "令 $u=\\log_3x$。四条图像的纵坐标依次可写成 $$u,\\quad \\frac1u,\\quad -u,\\quad -\\frac1u,$$ 其中含倒数的两式要求 $u\\ne0$。",
+          "前两式相等时 $u^2=1$，得到交点 $(3,1)$ 与 $(1/3,-1)$。同理，$-u=-1/u$ 给出 $(3,-1)$ 与 $(1/3,1)$。",
+          "由 $u=-u$ 得 $u=0$，于是第一、三条图像交于 $(x,y)=(1,0)$。当 $x=1$ 时，以 $x$ 为底的对数没有定义，所以另两条图像不经过该点。",
+          "其余配对会导出 $u^2=-1$ 或 $1/u=-1/u$，均无实数解。因此全部交点恰为上述五个。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/16"
+  },
+  "amc12-2016a-q17": {
+    "summary": "For square $ABCD$, construct exterior equilateral triangles on $AB,BC,CD,DA$. Let their centers be $E,F,G,H$, respectively. Find $[EFGH]/[ABCD]$.",
+    "summaryZh": "在正方形 $ABCD$ 的四边 $AB,BC,CD,DA$ 外侧分别作等边三角形，其中心依次为 $E,F,G,H$。求面积比 $[EFGH]/[ABCD]$。",
+    "answer": "B. $\\dfrac{2+\\sqrt3}{3}$.",
+    "answerZh": "B。$\\dfrac{2+\\sqrt3}{3}$。",
+    "figure": {
+      "url": "/commentary-figures/amc12-2016a-q17.svg",
+      "alt": "A square with an exterior equilateral triangle on each side; the four triangle centers form a larger rotated square.",
+      "altZh": "正方形四边外侧各作一个等边三角形，四个三角形中心连接成一个更大的旋转正方形。",
+      "printHeightPt": 155
+    },
+    "methods": [
+      {
+        "title": "Compare the diagonals of the two squares",
+        "titleZh": "比较两个正方形的对角线",
+        "topics": [
+          {
+            "en": "Equilateral triangles",
+            "zh": "等边三角形"
+          },
+          {
+            "en": "Centroids",
+            "zh": "重心"
+          },
+          {
+            "en": "Area scaling",
+            "zh": "面积缩放"
+          }
+        ],
+        "steps": [
+          "Let $ABCD$ have side length $s$. An equilateral triangle of side $s$ has altitude $s\\sqrt3/2$, and its center is one third of the altitude from its base, a distance $s\\sqrt3/6$ outside the square.",
+          "Opposite centers, such as $E$ and $G$, lie on the same perpendicular bisector. Hence the diagonal of square $EFGH$ is $$EG=s+2\\left(\\frac{s\\sqrt3}{6}\\right)=s\\left(1+\\frac{\\sqrt3}{3}\\right).$$",
+          "The diagonal of $ABCD$ is $s\\sqrt2$. Since the area of a square is half the square of its diagonal, $$\\frac{[EFGH]}{[ABCD]}=\\left(\\frac{1+\\sqrt3/3}{\\sqrt2}\\right)^2=\\frac{2+\\sqrt3}{3}.$$"
+        ],
+        "stepsZh": [
+          "设正方形 $ABCD$ 的边长为 $s$。边长为 $s$ 的等边三角形高为 $s\\sqrt3/2$，其中心到该边的距离为高的三分之一，即向正方形外侧偏移 $s\\sqrt3/6$。",
+          "相对的两个中心（如 $E,G$）位于同一条垂直平分线上，所以正方形 $EFGH$ 的对角线为 $$EG=s+2\\left(\\frac{s\\sqrt3}{6}\\right)=s\\left(1+\\frac{\\sqrt3}{3}\\right).$$",
+          "$ABCD$ 的对角线为 $s\\sqrt2$。正方形面积等于对角线平方的一半，故 $$\\frac{[EFGH]}{[ABCD]}=\\left(\\frac{1+\\sqrt3/3}{\\sqrt2}\\right)^2=\\frac{2+\\sqrt3}{3}.$$"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/17"
+  },
+  "amc12-2016a-q18": {
+    "summary": "For a positive integer $n$, the number $110n^3$ has exactly $110$ positive divisors. Determine the number of positive divisors of $81n^4$.",
+    "summaryZh": "设 $n$ 为正整数，$110n^3$ 恰有 $110$ 个正因数。求 $81n^4$ 的正因数个数。",
+    "answer": "D. $325$.",
+    "answerZh": "D。$325$。",
+    "methods": [
+      {
+        "title": "Determine the possible prime exponents",
+        "titleZh": "确定可能的素因子指数",
+        "topics": [
+          {
+            "en": "Divisor-count function",
+            "zh": "因数个数公式"
+          },
+          {
+            "en": "Prime factorisation",
+            "zh": "质因数分解"
+          }
+        ],
+        "steps": [
+          "The number $110n^3$ already contains primes $2,5,11$. Since $110=2\\cdot5\\cdot11$ is its divisor count, there can be no further prime factor. Each exponent is $1\\pmod3$, so the three exponents must be $1,4,10$ in some order.",
+          "After removing the exponent $1$ contributed by $110=2\\cdot5\\cdot11$ and dividing by $3$, the exponents in $n$ are $0,1,3$. Thus $n$ has exponent pattern $(3,1)$ on two of $2,5,11$ and is not divisible by $3$.",
+          "In $81n^4$, the exponents are $4,12$, together with exponent $4$ on the new prime $3$. Hence the divisor count is $(4+1)(12+1)(4+1)=5\\cdot13\\cdot5=325$."
+        ],
+        "stepsZh": [
+          "$110n^3$ 已含素数 $2,5,11$。其因数个数 $110=2\\cdot5\\cdot11$ 只有三个大于 $1$ 的因子，因此不能再出现其他素数。各指数都模 $3$ 余 $1$，故三个指数只能是 $1,4,10$ 的某种排列。",
+          "扣除 $110=2\\cdot5\\cdot11$ 各贡献的指数 $1$，再除以 $3$，得到 $n$ 中的指数为 $0,1,3$。所以 $n$ 只在 $2,5,11$ 中的两个素数上有指数 $3,1$，且 $3\\nmid n$。",
+          "在 $81n^4$ 中，相应指数为 $12,4$，新素数 $3$ 的指数也为 $4$。因数个数为 $(12+1)(4+1)(4+1)=325$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/18"
+  },
+  "amc12-2016a-q19": {
+    "summary": "Starting at $0$, Jerry makes eight independent steps on the number line, moving $+1$ after a head and $-1$ after a tail. If the probability that he reaches $4$ at some time is $a/b$ in lowest terms, find $a+b$.",
+    "summaryZh": "Jerry 从数轴原点出发，独立掷公平硬币八次：正面向右走 $1$，反面向左走 $1$。若过程中某时刻到达 $4$ 的概率为最简分数 $a/b$，求 $a+b$。",
+    "answer": "B. $151$.",
+    "answerZh": "B。$151$。",
+    "methods": [
+      {
+        "title": "Count by the total number of tails",
+        "titleZh": "按反面总数分类计数",
+        "topics": [
+          {
+            "en": "Random walks",
+            "zh": "随机游走"
+          },
+          {
+            "en": "Casework",
+            "zh": "分类讨论"
+          },
+          {
+            "en": "Binomial coefficients",
+            "zh": "二项式系数"
+          }
+        ],
+        "steps": [
+          "With at most two tails, the final position is at least $4$, so the walk must have visited $4$. This gives $\\binom80+\\binom81+\\binom82=37$ sequences.",
+          "With exactly three tails, first reaching $4$ at step $4$ gives HHHH followed by one head and three tails in any order, hence $4$ sequences. First reaching $4$ at step $6$ gives three heads and one tail in the first four positions, then HH and finally TT, giving another $4$.",
+          "With four tails, only HHHHTTTT reaches $4$; with more tails there are fewer than four heads. Thus there are $37+8+1=46$ favorable sequences.",
+          "The probability is $46/2^8=23/128$, so $a+b=23+128=151$."
+        ],
+        "stepsZh": [
+          "若反面不超过两次，则最终位置至少为 $4$，途中必然到达过 $4$。这样的序列共有 $\\binom80+\\binom81+\\binom82=37$ 个。",
+          "恰有三次反面时，若第 $4$ 步首次到达 $4$，则前四次为 HHHH，余下四次中安排一个正面，共 $4$ 种；若第 $6$ 步首次到达 $4$，则前四次含三个正面、一个反面，随后为 HH、TT，也有 $4$ 种。",
+          "恰有四次反面时，只有 HHHHTTTT 能到达 $4$；反面更多时正面不足四次。因此有利序列总数为 $37+8+1=46$。",
+          "所求概率为 $46/2^8=23/128$，所以 $a+b=23+128=151$。"
+        ]
+      },
+      {
+        "title": "Use reflection at the first visit to 4",
+        "titleZh": "在首次到达 4 后作反射",
+        "topics": [
+          {
+            "en": "Reflection principle",
+            "zh": "反射原理"
+          },
+          {
+            "en": "Random walks",
+            "zh": "随机游走"
+          }
+        ],
+        "steps": [
+          "Walks ending at $4,6,8$ must hit $4$, contributing $\\binom86+\\binom87+\\binom88=28+8+1=37$.",
+          "A walk ending at $2$ that hits $4$ is reflected after its first visit to $4$; this bijects it with a walk ending at $6$, giving $\\binom87=8$ walks. Similarly, walks ending at $0$ that hit $4$ correspond to walks ending at $8$, giving $1$ walk.",
+          "Lower final positions cannot be reached in eight steps after visiting $4$. Hence the favorable count is again $37+8+1=46$, and the probability is $23/128$."
+        ],
+        "stepsZh": [
+          "终点为 $4,6,8$ 的路径必定到达过 $4$，共有 $\\binom86+\\binom87+\\binom88=28+8+1=37$ 条。",
+          "对终点为 $2$ 且到达过 $4$ 的路径，在首次到达 $4$ 后把余下部分反射；它与终点为 $6$ 的路径一一对应，因此有 $\\binom87=8$ 条。同理，终点为 $0$ 且到达过 $4$ 的路径对应终点为 $8$ 的路径，只有 $1$ 条。",
+          "从 $4$ 出发后不可能在八步总长内到达更低的其余终点。因此有利路径仍为 $37+8+1=46$ 条，概率为 $23/128$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/19"
+  },
+  "amc12-2016a-q20": {
+    "summary": "A binary operation on nonzero reals satisfies $a\\diamond(b\\diamond c)=(a\\diamond b)c$ and $a\\diamond a=1$. If $2016\\diamond(6\\diamond x)=100$ and $x=p/q$ in lowest positive terms, find $p+q$.",
+    "summaryZh": "非零实数上的二元运算满足 $a\\diamond(b\\diamond c)=(a\\diamond b)c$ 及 $a\\diamond a=1$。若 $2016\\diamond(6\\diamond x)=100$，且最简正分数 $x=p/q$，求 $p+q$。",
+    "answer": "A. $109$.",
+    "answerZh": "A。$109$。",
+    "methods": [
+      {
+        "title": "Identify the operation",
+        "titleZh": "确定运算的具体形式",
+        "topics": [
+          {
+            "en": "Functional equations",
+            "zh": "函数方程"
+          },
+          {
+            "en": "Binary operations",
+            "zh": "二元运算"
+          }
+        ],
+        "steps": [
+          "Set $c=b$. Since $b\\diamond b=1$, the first law gives $a\\diamond1=(a\\diamond b)b$.",
+          "Also $a\\diamond(a\\diamond a)=(a\\diamond a)a$ gives $a\\diamond1=a$. Therefore $a\\diamond b=a/b$ for all nonzero $a,b$.",
+          "The equation becomes $2016/(6/x)=336x=100$, so $x=25/84$ and $p+q=109$."
+        ],
+        "stepsZh": [
+          "令 $c=b$。由 $b\\diamond b=1$，第一条性质给出 $a\\diamond1=(a\\diamond b)b$。",
+          "另一方面，$a\\diamond(a\\diamond a)=(a\\diamond a)a$ 给出 $a\\diamond1=a$。因此对任意非零 $a,b$，有 $a\\diamond b=a/b$。",
+          "原方程化为 $2016/(6/x)=336x=100$，所以 $x=25/84$，从而 $p+q=109$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/20"
+  },
+  "amc12-2016a-q21": {
+    "summary": "A cyclic quadrilateral lies in a circle of radius $200\\sqrt2$ and has three consecutive sides of length $200$. Find the fourth side.",
+    "summaryZh": "一个圆内接四边形的外接圆半径为 $200\\sqrt2$，其中三条连续边的长度都是 $200$。求第四条边长。",
+    "answer": "E. $500$.",
+    "answerZh": "E。$500$。",
+    "methods": [
+      {
+        "title": "Use equal chords and the triple-angle identity",
+        "titleZh": "利用等弦与三倍角公式",
+        "topics": [
+          {
+            "en": "Chord length",
+            "zh": "弦长"
+          },
+          {
+            "en": "Triple-angle identity",
+            "zh": "三倍角公式"
+          }
+        ],
+        "steps": [
+          "Let each $200$-unit chord subtend central angle $2\\theta$. Then $200=2(200\\sqrt2)\\sin\\theta$, so $\\sin\\theta=1/(2\\sqrt2)$.",
+          "The three consecutive equal chords together subtend angle $6\\theta$, so the fourth side has length $2(200\\sqrt2)\\sin3\\theta$.",
+          "Now $\\sin3\\theta=3\\sin\\theta-4\\sin^3\\theta=5/(4\\sqrt2)$. Hence the fourth side is $400\\sqrt2\\cdot5/(4\\sqrt2)=500$."
+        ],
+        "stepsZh": [
+          "设每条长为 $200$ 的弦所对圆心角为 $2\\theta$。则 $200=2(200\\sqrt2)\\sin\\theta$，所以 $\\sin\\theta=1/(2\\sqrt2)$。",
+          "三条连续等弦合计所对圆心角为 $6\\theta$，故第四边长为 $2(200\\sqrt2)\\sin3\\theta$。",
+          "由 $\\sin3\\theta=3\\sin\\theta-4\\sin^3\\theta=5/(4\\sqrt2)$，第四边长为 $400\\sqrt2\\cdot5/(4\\sqrt2)=500$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/21"
+  },
+  "amc12-2016a-q22": {
+    "summary": "Count the ordered triples of positive integers $(x,y,z)$ satisfying $\\operatorname{lcm}(x,y)=72$, $\\operatorname{lcm}(x,z)=600$, and $\\operatorname{lcm}(y,z)=900$.",
+    "summaryZh": "求满足 $\\operatorname{lcm}(x,y)=72$、$\\operatorname{lcm}(x,z)=600$、$\\operatorname{lcm}(y,z)=900$ 的正整数有序三元组 $(x,y,z)$ 的个数。",
+    "answer": "A. $15$.",
+    "answerZh": "A。$15$。",
+    "methods": [
+      {
+        "title": "Handle each prime exponent independently",
+        "titleZh": "分别处理各素数的指数",
+        "topics": [
+          {
+            "en": "Least common multiples",
+            "zh": "最小公倍数"
+          },
+          {
+            "en": "Prime exponents",
+            "zh": "素因子指数"
+          }
+        ],
+        "steps": [
+          "From $72=2^3 3^2$, $600=2^3 3\\cdot5^2$, and $900=2^2 3^2 5^2$, the prime $5$ forces exponent $2$ in $z$ and $0$ in $x,y$; the prime $3$ forces exponent $2$ in $y$ and exponents at most $1$ in $x,z$; and $x$ must have exponent $3$ on $2$.",
+          "Write $x=2^3 3^j$, $y=2^k3^2$, and $z=2^m3^n5^2$. The remaining conditions are $\\max(j,n)=1$ and $\\max(k,m)=2$.",
+          "The first ordered exponent pair has $3$ choices: $(1,0),(0,1),(1,1)$. The second has $5$ choices: $(2,0),(2,1),(2,2),(0,2),(1,2)$. Thus there are $3\\cdot5=15$ triples."
+        ],
+        "stepsZh": [
+          "由 $72=2^3 3^2$、$600=2^3 3\\cdot5^2$、$900=2^2 3^2 5^2$ 可知：素数 $5$ 在 $z$ 中指数为 $2$，在 $x,y$ 中为 $0$；素数 $3$ 在 $y$ 中指数为 $2$，在 $x,z$ 中至多为 $1$；素数 $2$ 在 $x$ 中指数为 $3$。",
+          "写成 $x=2^3 3^j$、$y=2^k3^2$、$z=2^m3^n5^2$，剩余条件为 $\\max(j,n)=1$ 与 $\\max(k,m)=2$。",
+          "第一对指数有 $(1,0),(0,1),(1,1)$ 共 $3$ 种；第二对有 $(2,0),(2,1),(2,2),(0,2),(1,2)$ 共 $5$ 种。因此共有 $3\\cdot5=15$ 个三元组。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/22"
+  },
+  "amc12-2016a-q23": {
+    "summary": "Choose three numbers independently and uniformly from $[0,1]$. Find the probability that they are the side lengths of a triangle with positive area.",
+    "summaryZh": "从区间 $[0,1]$ 中独立均匀地选取三个数。求它们能够作为一个正面积三角形三边长的概率。",
+    "answer": "C. $\\dfrac12$.",
+    "answerZh": "C。$\\dfrac12$。",
+    "methods": [
+      {
+        "title": "Remove three tetrahedra from the unit cube",
+        "titleZh": "从单位立方体中去掉三个四面体",
+        "topics": [
+          {
+            "en": "Geometric probability",
+            "zh": "几何概率"
+          },
+          {
+            "en": "Triangle inequality",
+            "zh": "三角不等式"
+          },
+          {
+            "en": "Tetrahedron volume",
+            "zh": "四面体体积"
+          }
+        ],
+        "steps": [
+          "The ordered triple $(x,y,z)$ is uniformly distributed in the unit cube, whose volume is $1$.",
+          "Failure occurs when one coordinate is at least the sum of the other two. For example, $z\\ge x+y$ forms a tetrahedron of volume $1/6$ inside the cube.",
+          "The analogous three failure regions have disjoint interiors and equal volumes. Their total volume is $3(1/6)=1/2$, so the success probability is $1-1/2=1/2$. Boundary cases have volume zero and do not affect the probability."
+        ],
+        "stepsZh": [
+          "有序三元组 $(x,y,z)$ 在体积为 $1$ 的单位立方体内均匀分布。",
+          "不能构成正面积三角形，当且仅当某一个坐标不小于另外两个坐标之和。例如区域 $z\\ge x+y$ 是单位立方体内体积为 $1/6$ 的四面体。",
+          "三个失败区域内部互不相交，且体积相同，总体积为 $3(1/6)=1/2$。因此成功概率为 $1-1/2=1/2$。边界的体积为零，不影响概率。"
+        ]
+      },
+      {
+        "title": "Integrate one failure event",
+        "titleZh": "积分计算一个失败事件",
+        "topics": [
+          {
+            "en": "Double integration",
+            "zh": "二重积分"
+          },
+          {
+            "en": "Symmetry",
+            "zh": "对称性"
+          }
+        ],
+        "steps": [
+          "For fixed $y,z$ with $y+z\\le1$, the values of $x$ that violate the triangle inequality through $x\\ge y+z$ have total length $1-y-z$.",
+          "Thus $$P(x\\ge y+z)=\\int_0^1\\int_0^{1-y}(1-y-z)\\,dz\\,dy=\\frac16.$$",
+          "By symmetry, any one of the three variables can be the offending largest side, and these events overlap only on zero-volume boundaries. Hence the failure probability is $3/6=1/2$, leaving probability $1/2$."
+        ],
+        "stepsZh": [
+          "固定满足 $y+z\\le1$ 的 $y,z$ 后，使 $x\\ge y+z$、从而违反三角不等式的 $x$ 取值区间长度为 $1-y-z$。",
+          "因此 $$P(x\\ge y+z)=\\int_0^1\\int_0^{1-y}(1-y-z)\\,dz\\,dy=\\frac16.$$",
+          "由对称性，三个变量中的任意一个都可能成为过大的边；这些事件只在零体积边界上重叠。因此失败概率为 $3/6=1/2$，成功概率为 $1/2$。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/23"
+  },
+  "amc12-2016a-q24": {
+    "summary": "Let $a,b>0$. Among cubics $x^3-ax^2+bx-a$ whose three roots are all real, there is a smallest possible $a$, and for that $a$ the value of $b$ is unique. Find $b$.",
+    "summaryZh": "设 $a,b>0$。在三次多项式 $x^3-ax^2+bx-a$ 的三个根全为实数的情形中，$a$ 存在最小可能值；在该最小值下，$b$ 唯一。求 $b$。",
+    "answer": "B. $9$.",
+    "answerZh": "B。$9$。",
+    "methods": [
+      {
+        "title": "Combine Vieta's formulas with AM-GM",
+        "titleZh": "结合韦达定理与 AM-GM",
+        "topics": [
+          {
+            "en": "Vieta's formulas",
+            "zh": "韦达定理"
+          },
+          {
+            "en": "AM-GM inequality",
+            "zh": "算术—几何平均不等式"
+          },
+          {
+            "en": "Equality cases",
+            "zh": "等号条件"
+          }
+        ],
+        "steps": [
+          "Let the three real roots be $r,s,t$. Vieta's formulas give $$r+s+t=a,\\qquad rs+st+tr=b,\\qquad rst=a,$$ so $r+s+t=rst$.",
+          "The positive product allows either three positive roots or one positive and two negative roots. In the latter case write $-u,-v,w$ with $u,v,w>0$. Since the sum is positive, $w>u+v$, which would give $b=uv-w(u+v)<0$, contradicting $b>0$. Hence all roots are positive.",
+          "AM-GM yields $$a=r+s+t\\ge3(rst)^{1/3}=3a^{1/3},$$ hence $a\\ge3\\sqrt3$. Equality holds only when $r=s=t=\\sqrt3$.",
+          "At this smallest $a$, the roots are forced to be equal, so $$b=rs+st+tr=3(\\sqrt3)^2=9.$$ This also proves the stated uniqueness."
+        ],
+        "stepsZh": [
+          "设三个实根为 $r,s,t$。由韦达定理，$$r+s+t=a,\\qquad rs+st+tr=b,\\qquad rst=a,$$ 因而 $r+s+t=rst$。",
+          "乘积为正时，三个根要么全正，要么一正两负。后一情形可写成 $-u,-v,w$，其中 $u,v,w>0$。由于根之和为正，必有 $w>u+v$，于是 $b=uv-w(u+v)<0$，与 $b>0$ 矛盾。因此三个根全为正数。",
+          "由 AM-GM，$$a=r+s+t\\ge3(rst)^{1/3}=3a^{1/3},$$ 所以 $a\\ge3\\sqrt3$。等号仅在 $r=s=t=\\sqrt3$ 时成立。",
+          "当 $a$ 取得最小值时，三个根被唯一确定为相等，因此 $$b=rs+st+tr=3(\\sqrt3)^2=9.$$ 这也说明了 $b$ 的唯一性。"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/24"
+  },
+  "amc12-2016a-q25": {
+    "summary": "For a positive integer $k$, begin with the smallest perfect square having $k+1$ digits and list successive squares. After each square is written, erase its last $k$ digits. Stop when two consecutive displayed values differ by at least $2$, and let $f(k)$ be the smallest positive integer never displayed. Find the digit sum of $f(2)+f(4)+\\cdots+f(2016)$.",
+    "summaryZh": "对正整数 $k$，从最小的 $k+1$ 位完全平方数开始依次写出完全平方数；每写一个数，就擦去其末 $k$ 位。当相邻两次保留的数之差首次至少为 $2$ 时停止，并令 $f(k)$ 为从未出现的最小正整数。求 $f(2)+f(4)+\\cdots+f(2016)$ 的各位数字之和。",
+    "answer": "E. $8064$.",
+    "answerZh": "E。$8064$。",
+    "methods": [
+      {
+        "title": "Locate the first jump in the truncated squares",
+        "titleZh": "定位截断平方数序列的首次跳跃",
+        "topics": [
+          {
+            "en": "Floor functions",
+            "zh": "取整函数"
+          },
+          {
+            "en": "Perfect squares",
+            "zh": "完全平方数"
+          },
+          {
+            "en": "Digit sums",
+            "zh": "数字和"
+          }
+        ],
+        "steps": [
+          "Write $k=2j$ and $M=10^k$. The first square with $k+1$ digits is $M=(10^j)^2$. After erasing the last $k$ digits, the displayed value from $n^2$ is $\\lfloor n^2/M\\rfloor$.",
+          "Near the first possible gap, write $n=M/2+m$. Since $4\\mid M$, the two consecutive displayed values are $$A=\\frac M4+m+\\left\\lfloor\\frac{m^2}{M}\\right\\rfloor,$$ $$B=\\frac M4+m+1+\\left\\lfloor\\frac{(m+1)^2}{M}\\right\\rfloor.$$",
+          "The first jump of at least $2$ occurs when $m^2<M\\le(m+1)^2$. Because $\\sqrt M=10^j$, this first happens at $m=10^j-1$. The last value before the gap is $M/4+10^j-1$, so $$f(2j)=\\frac{10^{2j}}4+10^j.$$",
+          "Summing for $j=1,\\ldots,1008$ gives $$25\\sum_{r=0}^{1007}10^{2r}+10\\sum_{r=0}^{1007}10^r.$$ The first term is the $2016$-digit string $2525\\ldots25$; the second adds $1$ to each of $1008$ non-unit positions without any carry.",
+          "Therefore the digit sum is $$1008(2+5)+1008=1008\\cdot8=8064.$$"
+        ],
+        "stepsZh": [
+          "令 $k=2j$，并记 $M=10^k$。最小的 $k+1$ 位完全平方数为 $M=(10^j)^2$。擦去 $n^2$ 的末 $k$ 位后，黑板上保留的是 $\\lfloor n^2/M\\rfloor$。",
+          "在首次可能出现缺口的位置附近，写成 $n=M/2+m$。由于 $4\\mid M$，相邻两次保留值分别为 $$A=\\frac M4+m+\\left\\lfloor\\frac{m^2}{M}\\right\\rfloor,$$ $$B=\\frac M4+m+1+\\left\\lfloor\\frac{(m+1)^2}{M}\\right\\rfloor.$$",
+          "首次出现至少为 $2$ 的跳跃，恰在 $m^2<M\\le(m+1)^2$ 首次成立时。因为 $\\sqrt M=10^j$，故 $m=10^j-1$。跳跃前最后出现的数是 $M/4+10^j-1$，所以 $$f(2j)=\\frac{10^{2j}}4+10^j.$$",
+          "对 $j=1,\\ldots,1008$ 求和，得到 $$25\\sum_{r=0}^{1007}10^{2r}+10\\sum_{r=0}^{1007}10^r.$$ 第一项是一个 $2016$ 位的数字串 $2525\\ldots25$；第二项在其中 $1008$ 个非个位位置各加 $1$，且不会产生进位。",
+          "因此总数字和为 $$1008(2+5)+1008=1008\\cdot8=8064.$$"
+        ]
+      }
+    ],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc12/2016A/problem/25"
   }
 }

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">Five congruent squares inside a unit square</title>
+  <desc id="desc">Four congruent axis-aligned squares occupy the corners, and a congruent square rotated by 45 degrees lies at the centre.</desc>
+  <rect width="360" height="360" fill="#fff"/>
+  <rect x="40" y="40" width="280" height="280" fill="#f8fbff" stroke="#17365d" stroke-width="4"/>
+  <g fill="#dce9f7" stroke="#17365d" stroke-width="3">
+    <rect x="40" y="40" width="103.45" height="103.45"/>
+    <rect x="216.55" y="40" width="103.45" height="103.45"/>
+    <rect x="40" y="216.55" width="103.45" height="103.45"/>
+    <rect x="216.55" y="216.55" width="103.45" height="103.45"/>
+    <polygon points="180,106.86 253.14,180 180,253.14 106.86,180" fill="#f6dfa6"/>
+  </g>
+  <line x1="40" y1="40" x2="320" y2="320" stroke="#b33a3a" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="89" y="105" text-anchor="middle" font-family="serif" font-size="18">s√2</text>
+  <text x="205" y="166" text-anchor="middle" font-family="serif" font-size="18">s</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Exterior equilateral triangles on a square</title>
+  <desc id="desc">An equilateral triangle is constructed externally on each side of square ABCD, and their centres EFGH form a larger rotated square.</desc>
+  <rect width="500" height="500" fill="#fff"/>
+  <g fill="#eef4fb" stroke="#17365d" stroke-width="3">
+    <polygon points="170,170 330,170 250,31.44"/>
+    <polygon points="330,170 330,330 468.56,250"/>
+    <polygon points="330,330 170,330 250,468.56"/>
+    <polygon points="170,330 170,170 31.44,250"/>
+    <rect x="170" y="170" width="160" height="160" fill="#fff"/>
+  </g>
+  <polygon points="250,123.81 376.19,250 250,376.19 123.81,250" fill="#f6dfa6" fill-opacity="0.6" stroke="#b33a3a" stroke-width="3"/>
+  <g fill="#b33a3a">
+    <circle cx="250" cy="123.81" r="5"/><circle cx="376.19" cy="250" r="5"/>
+    <circle cx="250" cy="376.19" r="5"/><circle cx="123.81" cy="250" r="5"/>
+  </g>
+  <g font-family="serif" font-size="20" fill="#111">
+    <text x="154" y="165">A</text><text x="334" y="165">B</text><text x="334" y="348">C</text><text x="154" y="348">D</text>
+    <text x="255" y="116">E</text><text x="385" y="255">F</text><text x="255" y="397">G</text><text x="101" y="255">H</text>
+  </g>
+</svg>

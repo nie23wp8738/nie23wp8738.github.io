@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 310" role="img" aria-labelledby="title desc">
+  <title id="title">Two angle bisectors in triangle ABC</title>
+  <desc id="desc">The angle bisectors AD and BE intersect at F, with D on BC and E on AC.</desc>
+  <rect width="440" height="310" fill="#fff"/>
+  <polygon points="200,30 50,270 390,270" fill="#f8fbff" stroke="#17365d" stroke-width="4"/>
+  <line x1="200" y1="30" x2="195.7" y2="270" stroke="#b33a3a" stroke-width="3"/>
+  <line x1="50" y1="270" x2="287.7" y2="136.2" stroke="#3b6f46" stroke-width="3"/>
+  <g fill="#17365d">
+    <circle cx="200" cy="30" r="4"/><circle cx="50" cy="270" r="4"/><circle cx="390" cy="270" r="4"/>
+    <circle cx="195.7" cy="270" r="4"/><circle cx="287.7" cy="136.2" r="4"/><circle cx="197.1" cy="183.3" r="5"/>
+  </g>
+  <g font-family="serif" font-size="20" fill="#111">
+    <text x="198" y="22">A</text><text x="30" y="288">B</text><text x="397" y="288">C</text>
+    <text x="188" y="295">D</text><text x="296" y="134">E</text><text x="207" y="183">F</text>
+    <text x="112" y="142">6</text><text x="300" y="198">8</text><text x="285" y="292">7</text>
+  </g>
+</svg>
