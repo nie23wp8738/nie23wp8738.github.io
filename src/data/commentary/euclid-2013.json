@@ -1,0 +1,248 @@
+{
+  "euclid-2013-q1": {
+    "summary": "(a) Find the smallest positive integer $x$ for which $\\sqrt{113+x}$ is an integer. (b) The average of $3$ and $11$ is $a$, and the average of $a$ and $b$ is $11$; find $b$. (c) Charlie is $30$ years older than his daughter Bella and is six times her age; find Charlie's age.",
+    "summaryZh": "(a) 求使 $\\sqrt{113+x}$ 为整数的最小正整数 $x$。(b) $3$ 与 $11$ 的平均数为 $a$，$a$ 与 $b$ 的平均数为 $11$，求 $b$。(c) Charlie 比女儿 Bella 大 $30$ 岁，同时年龄是 Bella 的六倍，求 Charlie 的年龄。",
+    "answer": "(a) $x=8$. (b) $b=15$. (c) Charlie is $36$ years old.",
+    "answerZh": "(a) $x=8$。(b) $b=15$。(c) Charlie 为 $36$ 岁。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Use the next square and translate the words into equations",
+      "titleZh": "寻找下一个完全平方数，并把文字条件化为方程",
+      "topics": [{"en":"Perfect squares","zh":"完全平方数"},{"en":"Arithmetic mean","zh":"算术平均数"},{"en":"Linear equations","zh":"线性方程"}],
+      "steps": [
+        "(a) The consecutive squares around $113$ are $10^2=100$ and $11^2=121$. Thus the smallest positive addition making $113+x$ a square is $121-113=8$.",
+        "(b) First, $a=(3+11)/2=7$. Then $(a+b)/2=11$ gives $7+b=22$, so $b=15$.",
+        "(c) Let Bella's age be $d$. Charlie's age is both $d+30$ and $6d$. Hence $6d=d+30$, so $d=6$ and Charlie is $6d=36$ years old. Both the difference and ratio conditions are satisfied."
+      ],
+      "stepsZh": [
+        "(a) $113$ 两侧相邻的完全平方数为 $10^2=100$ 与 $11^2=121$。因此最小正增量为 $121-113=8$。",
+        "(b) 先得 $a=(3+11)/2=7$。再由 $(a+b)/2=11$ 得 $7+b=22$，所以 $b=15$。",
+        "(c) 设 Bella 的年龄为 $d$。Charlie 的年龄既是 $d+30$，又是 $6d$，故 $6d=d+30$。于是 $d=6$，Charlie 为 $6d=36$ 岁；年龄差与倍数条件均满足。"
+      ]
+    }]
+  },
+  "euclid-2013-q2": {
+    "summary": "(a) If $21/x=7/y$, where $x,y\\ne0$, find $x/y$. (b) Find the positive integer $n$ for which $1/(n+1)<0.2013<1/n$. (c) In triangle $ABC$, point $H$ lies on $BC$, $AH\\perp BC$, $AB=10$, $AH=8$, and the area is $84$. Find the perimeter of triangle $ABC$.",
+    "summaryZh": "(a) 若 $21/x=7/y$ 且 $x,y\\ne0$，求 $x/y$。(b) 求满足 $1/(n+1)<0.2013<1/n$ 的正整数 $n$。(c) 在三角形 $ABC$ 中，$H$ 位于 $BC$ 上且 $AH\\perp BC$；已知 $AB=10$、$AH=8$、面积为 $84$，求三角形 $ABC$ 的周长。",
+    "answer": "(a) $3$. (b) $n=4$. (c) The perimeter is $48$.",
+    "answerZh": "(a) $3$。(b) $n=4$。(c) 周长为 $48$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Cross-multiply, bracket the decimal, and use two right triangles",
+      "titleZh": "交叉相乘、夹逼小数，并使用两个直角三角形",
+      "topics": [{"en":"Ratios and proportions","zh":"比例"},{"en":"Inequalities","zh":"不等式"},{"en":"Pythagorean theorem","zh":"勾股定理"}],
+      "steps": [
+        "(a) Cross-multiplication gives $21y=7x$. Since $y\\ne0$, division by $7y$ yields $x/y=3$.",
+        "(b) We have $1/5=0.2<0.2013<0.25=1/4$, so $n=4$. Uniqueness follows because $1/n$ strictly decreases for positive integers.",
+        "(c) The area formula gives $84=\\tfrac12(BC)(8)$, hence $BC=21$. In right triangle $ABH$, $BH=\\sqrt{10^2-8^2}=6$, so $HC=21-6=15$.",
+        "Right triangle $AHC$ then gives $AC=\\sqrt{8^2+15^2}=17$. Therefore the perimeter is $AB+BC+AC=10+21+17=48$."
+      ],
+      "stepsZh": [
+        "(a) 交叉相乘得 $21y=7x$。由于 $y\\ne0$，两边除以 $7y$，得到 $x/y=3$。",
+        "(b) 因为 $1/5=0.2<0.2013<0.25=1/4$，所以 $n=4$。又 $1/n$ 随正整数 $n$ 严格递减，故答案唯一。",
+        "(c) 由面积公式，$84=\\tfrac12(BC)(8)$，所以 $BC=21$。在直角三角形 $ABH$ 中，$BH=\\sqrt{10^2-8^2}=6$，故 $HC=21-6=15$。",
+        "再在直角三角形 $AHC$ 中，$AC=\\sqrt{8^2+15^2}=17$。因此周长为 $AB+BC+AC=10+21+17=48$。"
+      ]
+    }]
+  },
+  "euclid-2013-q3": {
+    "summary": "(a) In the Fibonacci sequence $1,1,2,3,5,\\ldots$, how many of the first $100$ terms are odd? (b) In an arithmetic sequence, the sum of the first and third terms is $6$, while the sum of the second and fourth terms is $20$. Find the tenth term.",
+    "summaryZh": "(a) 在 Fibonacci 数列 $1,1,2,3,5,\\ldots$ 中，前 $100$ 项有多少项为奇数？(b) 一个等差数列的第一项与第三项之和为 $6$，第二项与第四项之和为 $20$，求第十项。",
+    "answer": "(a) $67$. (b) The tenth term is $59$.",
+    "answerZh": "(a) $67$。(b) 第十项为 $59$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=2",
+    "methods": [{
+      "title": "Track parity modulo two and solve for the common difference",
+      "titleZh": "模二追踪奇偶性，并求等差数列公差",
+      "topics": [{"en":"Fibonacci sequence","zh":"Fibonacci 数列"},{"en":"Parity","zh":"奇偶性"},{"en":"Arithmetic sequences","zh":"等差数列"}],
+      "steps": [
+        "(a) Modulo $2$, the Fibonacci recurrence produces the repeating pattern $1,1,0$. Thus every block of three terms contains two odd terms.",
+        "The first $99=33\\cdot3$ terms contain $33\\cdot2=66$ odd terms. Term $100$ begins the next pattern and is odd, giving $67$ in total.",
+        "(b) Write the first four terms as $a,a+d,a+2d,a+3d$. The conditions give $2a+2d=6$ and $2a+4d=20$, or $a+d=3$ and $a+2d=10$.",
+        "Subtracting gives $d=7$, and then $a=-4$. The tenth term is $a+9d=-4+63=59$."
+      ],
+      "stepsZh": [
+        "(a) 对 Fibonacci 递推式模 $2$，奇偶性按 $1,1,0$ 循环，因此每连续三个位置中恰有两个奇数项。",
+        "前 $99=33\\cdot3$ 项含 $33\\cdot2=66$ 个奇数项；第 $100$ 项开启下一周期，也是奇数，所以共有 $67$ 项。",
+        "(b) 前四项写为 $a,a+d,a+2d,a+3d$。条件给出 $2a+2d=6$ 与 $2a+4d=20$，即 $a+d=3$、$a+2d=10$。",
+        "两式相减得 $d=7$，继而 $a=-4$。第十项为 $a+9d=-4+63=59$。"
+      ]
+    }]
+  },
+  "euclid-2013-q4": {
+    "summary": "(a) How many positive integers less than $1000$ have only odd digits? (b) Determine all ordered pairs $(a,b)$ satisfying $a+b=16$ and $4/7=1/a+1/b$.",
+    "summaryZh": "(a) 小于 $1000$ 且每一位都是奇数的正整数有多少个？(b) 求满足 $a+b=16$ 且 $4/7=1/a+1/b$ 的所有有序数对 $(a,b)$。",
+    "answer": "(a) $155$. (b) $(a,b)=(14,2)$ or $(2,14)$.",
+    "answerZh": "(a) $155$。(b) $(a,b)=(14,2)$ 或 $(2,14)$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Count by number of digits and use sum and product",
+      "titleZh": "按位数计数，并利用两数的和与积",
+      "topics": [{"en":"Counting principle","zh":"乘法原理"},{"en":"Systems of equations","zh":"方程组"},{"en":"Quadratic equations","zh":"二次方程"}],
+      "steps": [
+        "(a) Each digit may be one of $1,3,5,7,9$. There are $5$ one-digit, $5^2=25$ two-digit, and $5^3=125$ three-digit possibilities. The total is $5+25+125=155$.",
+        "(b) The reciprocal equation becomes $4/7=(a+b)/(ab)=16/(ab)$, so $ab=28$. The denominators are nonzero automatically for any solution.",
+        "Using $b=16-a$ gives $a(16-a)=28$, or $a^2-16a+28=0=(a-2)(a-14)$. Hence the ordered pairs are $(2,14)$ and $(14,2)$, and direct substitution verifies both."
+      ],
+      "stepsZh": [
+        "(a) 每一位都可从 $1,3,5,7,9$ 中选择。一位数、两位数、三位数分别有 $5,5^2,5^3$ 个，所以总数为 $5+25+125=155$。",
+        "(b) 倒数方程化为 $4/7=(a+b)/(ab)=16/(ab)$，所以 $ab=28$；所有解的分母自然非零。",
+        "代入 $b=16-a$，得到 $a(16-a)=28$，即 $a^2-16a+28=(a-2)(a-14)=0$。故有序数对为 $(2,14)$、$(14,2)$；代回均成立。"
+      ]
+    }]
+  },
+  "euclid-2013-q5": {
+    "summary": "(a) Two six-faced dice have faces numbered $2,3,5,7,11,13$. Find the probability that the sum of the top faces is prime. (b) The parabola $y=-x^2+4x+1$ has vertex $V$ and meets the line $y=-x+1$ at $A$ and $B$. Find $AV^2+BV^2-AB^2$.",
+    "summaryZh": "(a) 两枚六面骰子的面分别标有 $2,3,5,7,11,13$。掷出两枚骰子，求朝上数字之和为素数的概率。(b) 抛物线 $y=-x^2+4x+1$ 的顶点为 $V$，它与直线 $y=-x+1$ 交于 $A,B$，求 $AV^2+BV^2-AB^2$。",
+    "answer": "(a) $1/6$. (b) $60$.",
+    "answerZh": "(a) $1/6$。(b) $60$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Exploit parity, then use coordinates",
+      "titleZh": "利用奇偶性筛选，再使用坐标法",
+      "topics": [{"en":"Probability","zh":"概率"},{"en":"Prime numbers","zh":"素数"},{"en":"Coordinate geometry","zh":"坐标几何"}],
+      "steps": [
+        "(a) There are $6^2=36$ equally likely ordered outcomes. Every face except $2$ is odd; a prime sum greater than $2$ must be odd, so exactly one die must show $2$.",
+        "The successful ordered outcomes are $(2,3),(3,2),(2,5),(5,2),(2,11),(11,2)$, giving probability $6/36=1/6$.",
+        "(b) Completing the square gives $y=-(x-2)^2+5$, so $V=(2,5)$. Intersections satisfy $-x+1=-x^2+4x+1$, or $x(x-5)=0$, hence $A=(0,1)$ and $B=(5,-4)$.",
+        "The squared distances are $AV^2=2^2+4^2=20$, $BV^2=3^2+9^2=90$, and $AB^2=5^2+5^2=50$. Therefore $AV^2+BV^2-AB^2=20+90-50=60$."
+      ],
+      "stepsZh": [
+        "(a) 共有 $6^2=36$ 个等可能有序结果。除 $2$ 外其余面均为奇数，而大于 $2$ 的素数必须为奇数，所以恰有一枚骰子应掷出 $2$。",
+        "成功结果为 $(2,3),(3,2),(2,5),(5,2),(2,11),(11,2)$，故概率为 $6/36=1/6$。",
+        "(b) 配方得 $y=-(x-2)^2+5$，所以 $V=(2,5)$。交点满足 $-x+1=-x^2+4x+1$，即 $x(x-5)=0$，故 $A=(0,1)$、$B=(5,-4)$。",
+        "距离平方分别为 $AV^2=2^2+4^2=20$、$BV^2=3^2+9^2=90$、$AB^2=5^2+5^2=50$。因此所求为 $20+90-50=60$。"
+      ]
+    }]
+  },
+  "euclid-2013-q6": {
+    "summary": "(a) $ABC$ is a quarter-circle pizza sector with centre $A$, radius $20$ cm, and $\\angle BAC=90^\\circ$. It is placed on a circular pan so that $A,B,C$ lie on the pan's circumference. What fraction of the pan is covered? (b) A deck $AB$ is $8$ m long. The mast is perpendicular to the deck at $F$, with top $M$. Rope $AM$ makes a $60^\\circ$ angle with the deck. Point $P$ is on the mast $2$ m below $M$, and rope $BP$ makes angle $\\theta$ with the deck. Find $MF$ in terms of $\\theta$.",
+    "summaryZh": "(a) $ABC$ 是以 $A$ 为圆心、半径为 $20$ cm、圆心角 $\\angle BAC=90^\\circ$ 的四分之一圆披萨。把它放在圆形烤盘上，使 $A,B,C$ 均在烤盘圆周上。求披萨覆盖烤盘的面积比例。(b) 甲板 $AB$ 长 $8$ m，桅杆在 $F$ 处垂直甲板，顶端为 $M$。绳索 $AM$ 与甲板成 $60^\\circ$；点 $P$ 在桅杆上且比 $M$ 低 $2$ m，绳索 $BP$ 与甲板成 $\\theta$。用 $\\theta$ 表示桅杆高 $MF$。",
+    "answer": "(a) $1/2$. (b) $\\displaystyle MF=\\frac{8\\sqrt3\\tan\\theta+2\\sqrt3}{\\tan\\theta+\\sqrt3}\\text{ m}$.",
+    "answerZh": "(a) $1/2$。(b) $\\displaystyle MF=\\frac{8\\sqrt3\\tan\\theta+2\\sqrt3}{\\tan\\theta+\\sqrt3}\\text{ m}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Use the diameter theorem and two tangent ratios",
+      "titleZh": "使用直径定理与两个正切比",
+      "topics": [{"en":"Circle geometry","zh":"圆几何"},{"en":"Area ratios","zh":"面积比"},{"en":"Trigonometric ratios","zh":"三角比"}],
+      "steps": [
+        "(a) Since $\\angle BAC=90^\\circ$ and $A,B,C$ lie on the pan's circle, $BC$ is a diameter. Triangle $ABC$ is right isosceles with legs $20$, so $BC=20\\sqrt2$ and the pan radius is $10\\sqrt2$.",
+        "The pan area is $\\pi(10\\sqrt2)^2=200\\pi$, while the quarter-circle pizza area is $\\tfrac14\\pi(20)^2=100\\pi$. The covered fraction is $100\\pi/(200\\pi)=1/2$.",
+        "(b) Put $AF=x$, so $FB=8-x$. From right triangle $AFM$, $\\tan60^\\circ=MF/AF$, hence $MF=\\sqrt3x$. Since $P$ is $2$ m below $M$, $PF=\\sqrt3x-2$.",
+        "In right triangle $BFP$, $\\tan\\theta=PF/FB=(\\sqrt3x-2)/(8-x)$. Thus $(8-x)\\tan\\theta=\\sqrt3x-2$ and $$x=\\frac{8\\tan\\theta+2}{\\tan\\theta+\\sqrt3}.$$ Multiplying by $\\sqrt3$ gives the stated height."
+      ],
+      "stepsZh": [
+        "(a) 因 $\\angle BAC=90^\\circ$ 且 $A,B,C$ 位于烤盘圆周上，$BC$ 是直径。三角形 $ABC$ 为两直角边均为 $20$ 的等腰直角三角形，所以 $BC=20\\sqrt2$，烤盘半径为 $10\\sqrt2$。",
+        "烤盘面积为 $\\pi(10\\sqrt2)^2=200\\pi$，披萨四分之一圆面积为 $\\tfrac14\\pi(20)^2=100\\pi$，覆盖比例为 $100\\pi/(200\\pi)=1/2$。",
+        "(b) 令 $AF=x$，则 $FB=8-x$。在直角三角形 $AFM$ 中，$\\tan60^\\circ=MF/AF$，所以 $MF=\\sqrt3x$。又 $P$ 比 $M$ 低 $2$ m，故 $PF=\\sqrt3x-2$。",
+        "在直角三角形 $BFP$ 中，$\\tan\\theta=PF/FB=(\\sqrt3x-2)/(8-x)$。于是 $(8-x)\\tan\\theta=\\sqrt3x-2$，从而 $$x=\\frac{8\\tan\\theta+2}{\\tan\\theta+\\sqrt3}.$$ 再乘 $\\sqrt3$ 即得所述桅杆高度。"
+      ]
+    }]
+  },
+  "euclid-2013-q7": {
+    "summary": "(a) If $\\sec x-\\tan x=3$, find the numerical value of $\\sin x$. (b) Find every linear function $f(x)=ax+b$ such that, with $g=f^{-1}$, the identity $f(x)-g(x)=44$ holds for all real $x$.",
+    "summaryZh": "(a) 若 $\\sec x-\\tan x=3$，求 $\\sin x$ 的数值。(b) 求所有线性函数 $f(x)=ax+b$，使其反函数 $g=f^{-1}$ 满足恒等式 $f(x)-g(x)=44$（对所有实数 $x$ 成立）。",
+    "answer": "(a) $\\sin x=-4/5$. (b) $f(x)=x+22$.",
+    "answerZh": "(a) $\\sin x=-4/5$。(b) $f(x)=x+22$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=3",
+    "methods": [{
+      "title": "Eliminate cosine and compare coefficients",
+      "titleZh": "消去余弦并比较系数",
+      "topics": [{"en":"Trigonometric identities","zh":"三角恒等式"},{"en":"Inverse functions","zh":"反函数"},{"en":"Polynomial identities","zh":"恒等式"}],
+      "steps": [
+        "(a) The equation is $(1-\\sin x)/\\cos x=3$, so $\\cos x\\ne0$. Squaring $1-\\sin x=3\\cos x$ and using $\\cos^2x=1-\\sin^2x$ gives $$5\\sin^2x-\\sin x-4=0=(5\\sin x+4)(\\sin x-1).$$",
+        "The root $\\sin x=1$ makes $\\cos x=0$ and is inadmissible. Thus $\\sin x=-4/5$. The original unsquared equation selects $\\cos x=3/5$, confirming that this sine value is attained.",
+        "(b) Invertibility requires $a\\ne0$, and solving $y=ax+b$ for $x$ gives $g(x)=x/a-b/a$. Hence $$f(x)-g(x)=\\left(a-\\frac1a\\right)x+\\left(b+\\frac ba\\right).$$",
+        "For this expression to equal $44$ for every $x$, $a-1/a=0$ and $b+b/a=44$. Thus $a=\\pm1$. When $a=-1$, the constant equation reads $0=44$, impossible; when $a=1$, it gives $2b=44$. Therefore the only function is $f(x)=x+22$, whose inverse is $x-22$."
+      ],
+      "stepsZh": [
+        "(a) 原式为 $(1-\\sin x)/\\cos x=3$，故 $\\cos x\\ne0$。把 $1-\\sin x=3\\cos x$ 平方，再用 $\\cos^2x=1-\\sin^2x$，得到 $$5\\sin^2x-\\sin x-4=(5\\sin x+4)(\\sin x-1)=0$$。",
+        "根 $\\sin x=1$ 会使 $\\cos x=0$，不合定义域。因此 $\\sin x=-4/5$。代回未平方的原式可知应取 $\\cos x=3/5$，说明这个正弦值确实可取。",
+        "(b) 可逆性要求 $a\\ne0$。由 $y=ax+b$ 解出自变量，得到 $g(x)=x/a-b/a$，所以 $$f(x)-g(x)=\\left(a-\\frac1a\\right)x+\\left(b+\\frac ba\\right)$$。",
+        "该式要对所有 $x$ 恒等于 $44$，必须有 $a-1/a=0$ 且 $b+b/a=44$。于是 $a=\\pm1$。当 $a=-1$ 时常数方程变为 $0=44$，不可能；当 $a=1$ 时 $2b=44$。故唯一函数为 $f(x)=x+22$，其反函数为 $x-22$。"
+      ]
+    }]
+  },
+  "euclid-2013-q8": {
+    "summary": "(a) Determine all pairs $(a,b)$ of positive integers satisfying $a^3+2ab=2013$. (b) Find all real $x$ satisfying $\\log_2(2^{x-1}+3^{x+1})=2x-\\log_2(3^x)$.",
+    "summaryZh": "(a) 求满足 $a^3+2ab=2013$ 的所有正整数对 $(a,b)$。(b) 求满足 $\\log_2(2^{x-1}+3^{x+1})=2x-\\log_2(3^x)$ 的所有实数 $x$。",
+    "answer": "(a) $(1,1006),(3,331),(11,31)$. (b) $\\displaystyle x=\\frac{\\log2}{\\log2-\\log3}$.",
+    "answerZh": "(a) $(1,1006),(3,331),(11,31)$。(b) $\\displaystyle x=\\frac{\\log2}{\\log2-\\log3}$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Classify divisor pairs and factor after an exponential substitution",
+      "titleZh": "分类因数对，并在指数代换后因式分解",
+      "topics": [{"en":"Divisibility","zh":"整除"},{"en":"Integer solutions","zh":"整数解"},{"en":"Logarithmic equations","zh":"对数方程"}],
+      "steps": [
+        "(a) Factor the equation as $a(a^2+2b)=2013=3\\cdot11\\cdot61$. Since $b>0$, the second factor is larger than $a$. The possible divisor pairs $(a,a^2+2b)$ are therefore $(1,2013),(3,671),(11,183),(33,61)$.",
+        "Solving for $b$ gives respectively $1006,331,31,-514$. Positivity removes the last case, leaving $(a,b)=(1,1006),(3,331),(11,31)$; substitution verifies all three.",
+        "(b) All logarithm arguments are positive for every real $x$. Move $\\log_2(3^x)$ to the left and combine logs, then exponentiate: $$(2^{x-1}+3^{x+1})3^x=2^{2x}.$$",
+        "Put $A=2^x>0$ and $B=3^x>0$. After multiplying by $2$, the equation becomes $AB+6B^2=2A^2$, or $$(A-2B)(2A+3B)=0.$$ The second factor is positive, so $A=2B$.",
+        "Thus $2^x=2\\cdot3^x$. Taking logarithms gives $x(\\log2-\\log3)=\\log2$, hence $$x=\\frac{\\log2}{\\log2-\\log3}.$$ Every transformation was reversible, so this is the unique solution."
+      ],
+      "stepsZh": [
+        "(a) 原方程化为 $a(a^2+2b)=2013=3\\cdot11\\cdot61$。因 $b>0$，第二个因子大于 $a$，所以可能的因数对 $(a,a^2+2b)$ 只有 $(1,2013),(3,671),(11,183),(33,61)$。",
+        "依次解出 $b$，得到 $1006,331,31,-514$。由正性排除最后一种，留下 $(1,1006),(3,331),(11,31)$；代回均成立。",
+        "(b) 对每个实数 $x$，所有对数真数均为正。把 $\\log_2(3^x)$ 移到左边、合并对数并取指数，得到 $$(2^{x-1}+3^{x+1})3^x=2^{2x}$$。",
+        "令 $A=2^x>0$、$B=3^x>0$。两边乘 $2$ 后化为 $AB+6B^2=2A^2$，即 $$(A-2B)(2A+3B)=0$$。第二因子为正，故 $A=2B$。",
+        "于是 $2^x=2\\cdot3^x$。取对数得 $x(\\log2-\\log3)=\\log2$，所以 $$x=\\frac{\\log2}{\\log2-\\log3}$$。以上变形均可逆，故解唯一。"
+      ]
+    }]
+  },
+  "euclid-2013-q9": {
+    "summary": "(a) A square $WXYZ$ of side $6$ lies strictly inside a square $EFGH$ of side $10$, with $WX\\parallel EF$. Prove that the sum of the areas of trapezoids $EFXW$ and $GHZY$ is independent of the position of $WXYZ$. (b) A smaller square $PQRS$ lies strictly inside square $ABCD$, with nonparallel corresponding sides. Segments $AP,BQ,CR,DS$ divide the intervening region into four convex quadrilaterals. Prove $[APSD]+[BCRQ]=[ABQP]+[CDSR]$.",
+    "summaryZh": "(a) 边长为 $6$ 的正方形 $WXYZ$ 严格位于边长为 $10$ 的正方形 $EFGH$ 内，且 $WX\\parallel EF$。证明：梯形 $EFXW$ 与 $GHZY$ 的面积和与 $WXYZ$ 的位置无关。(b) 较小正方形 $PQRS$ 严格位于正方形 $ABCD$ 内，且两正方形的对应边不平行。线段 $AP,BQ,CR,DS$ 把两正方形之间分成四个凸四边形。证明 $[APSD]+[BCRQ]=[ABQP]+[CDSR]$。",
+    "answer": "(a) The constant sum is $32$. (b) The two sums of opposite quadrilateral areas are equal.",
+    "answerZh": "(a) 面积和恒为 $32$。(b) 两组相对四边形的面积和相等。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Use complementary heights and a coordinate area identity",
+      "titleZh": "利用互补高度与坐标面积恒等式",
+      "topics": [{"en":"Trapezoid areas","zh":"梯形面积"},{"en":"Coordinate geometry","zh":"坐标几何"},{"en":"Shoelace formula","zh":"鞋带公式"}],
+      "steps": [
+        "(a) Let the distance from $EF$ to $WX$ be $t$. The distance from $ZY$ to $GH$ is then $10-6-t=4-t$. The two trapezoid areas are $\\tfrac12t(10+6)=8t$ and $\\tfrac12(4-t)(10+6)=32-8t$. Their sum is always $32$.",
+        "(b) The following coordinates reproduce the full configuration without a diagram. Put $$A=(0,L),\\ B=(L,L),\\ C=(L,0),\\ D=(0,0),\\quad P=(p,q).$$ Write $\\overrightarrow{PQ}=(u,v)$. Because $PQRS$ is a square with the same cyclic orientation as $ABCD$, $\\overrightarrow{PS}=(v,-u)$, so $$Q=(p+u,q+v),\\ S=(p+v,q-u),\\ R=(p+u+v,q+v-u).$$",
+        "All four quadrilaterals are convex and listed clockwise. Applying the shoelace formula gives $$2[APSD]=Lp+pu+qv,$$ $$2[BCRQ]=L^2-Lp-pu-qv-u^2-v^2.$$ Therefore $$2([APSD]+[BCRQ])=L^2-u^2-v^2.\\tag{1}$$",
+        "The same formula gives $$2[ABQP]=L^2-Lq+Lu-Lv+pv-qu,$$ $$2[CDSR]=Lq-Lu+Lv-pv+qu-u^2-v^2.$$ Adding yields $$2([ABQP]+[CDSR])=L^2-u^2-v^2.\\tag{2}$$",
+        "The right sides of (1) and (2) are equal, proving the required area identity. The non-touching and convexity assumptions ensure that these shoelace expressions are the ordinary positive areas of the four stated regions."
+      ],
+      "stepsZh": [
+        "(a) 设 $EF$ 与 $WX$ 的距离为 $t$，则 $ZY$ 与 $GH$ 的距离为 $10-6-t=4-t$。两个梯形面积分别为 $\\tfrac12t(10+6)=8t$ 与 $\\tfrac12(4-t)(10+6)=32-8t$，所以面积和恒为 $32$。",
+        "(b) 以下坐标可完整复原构型，无须依赖图形。取 $$A=(0,L),\\ B=(L,L),\\ C=(L,0),\\ D=(0,0),\\quad P=(p,q)$$，并设 $\\overrightarrow{PQ}=(u,v)$。由于 $PQRS$ 是与 $ABCD$ 同向编号的正方形，$\\overrightarrow{PS}=(v,-u)$，故 $$Q=(p+u,q+v),\\ S=(p+v,q-u),\\ R=(p+u+v,q+v-u)$$。",
+        "四个四边形均为凸形，且顶点按顺时针列出。应用鞋带公式，得到 $$2[APSD]=Lp+pu+qv,$$ $$2[BCRQ]=L^2-Lp-pu-qv-u^2-v^2$$，所以 $$2([APSD]+[BCRQ])=L^2-u^2-v^2.\\tag{1}$$",
+        "同理，$$2[ABQP]=L^2-Lq+Lu-Lv+pv-qu,$$ $$2[CDSR]=Lq-Lu+Lv-pv+qu-u^2-v^2$$。相加得到 $$2([ABQP]+[CDSR])=L^2-u^2-v^2.\\tag{2}$$",
+        "(1)、(2) 右侧相同，故所需面积恒等式成立。不相交与凸性条件保证这些鞋带公式的表达式正是四个区域的普通正面积。"
+      ]
+    }]
+  },
+  "euclid-2013-q10": {
+    "summary": "A multiplicative partition of $n\\ge2$ writes $n$ as an unordered product of factors greater than $1$; let $P(n)$ be the number of such partitions and set $P(1)=1$. (a) Find $P(64)$. (b) Find $P(1000)$. (c) Find and prove a sequence $a_0,a_1,\\ldots$ such that, for every positive integer $m$, $$P(4\\cdot5^m)=\\sum_{s=0}^m a_sP(2^{m-s}).$$",
+    "summaryZh": "正整数 $n\\ge2$ 的乘法分拆是把 $n$ 写成若干个大于 $1$ 的因子的无序乘积；记分拆数为 $P(n)$，并规定 $P(1)=1$。(a) 求 $P(64)$。(b) 求 $P(1000)$。(c) 求出并证明一个整数数列 $a_0,a_1,\\ldots$，使每个正整数 $m$ 都满足 $$P(4\\cdot5^m)=\\sum_{s=0}^m a_sP(2^{m-s})$$。",
+    "answer": "(a) $P(64)=11$. (b) $P(1000)=31$. (c) $\\displaystyle a_s=1+\\left\\lfloor\\frac{s+2}{2}\\right\\rfloor$, so the sequence is $2,2,3,3,4,4,\\ldots$.",
+    "answerZh": "(a) $P(64)=11$。(b) $P(1000)=31$。(c) $\\displaystyle a_s=1+\\left\\lfloor\\frac{s+2}{2}\\right\\rfloor$，即数列为 $2,2,3,3,4,4,\\ldots$。",
+    "sourceUrl": "https://cemc.uwaterloo.ca/sites/default/files/documents/2013/2013EuclidContest.pdf#page=4",
+    "methods": [{
+      "title": "Translate factorisations into exponent partitions",
+      "titleZh": "把因式分解转化为指数分拆",
+      "topics": [{"en":"Multiplicative partitions","zh":"乘法分拆"},{"en":"Integer partitions","zh":"整数分拆"},{"en":"Counting by cases","zh":"分类计数"}],
+      "steps": [
+        "(a) Since $64=2^6$, every multiplicative partition corresponds uniquely to an additive partition of the exponent $6$. The eleven exponent partitions are $$6;\\ 5+1;\\ 4+2;\\ 4+1+1;\\ 3+3;\\ 3+2+1;\\ 3+1+1+1;$$ $$2+2+2;\\ 2+2+1+1;\\ 2+1+1+1+1;\\ 1+1+1+1+1+1.$$ Hence $P(64)=11$.",
+        "(b) Write $1000=p^3q^3$ with $p=2,q=5$. The three copies of each prime can occupy one, two, or three prime-bearing parts, according to exponent partitions $3$, $2+1$, or $1+1+1$.",
+        "Count according to the numbers of $p$-bearing and $q$-bearing parts. The resulting table is $$\\begin{array}{c|ccc}&1&2&3\\\\\\hline1&2&3&2\\\\2&3&7&4\\\\3&2&4&4\\end{array}.$$ For completeness: the $(1,1)$ cell has the primes together or separate; $(1,2)$ has the $p^3$ separate or attached to the $q$ or $q^2$ part; $(1,3)$ has it separate or attached to one identical $q$ part. In $(2,2)$ there are $1,4,2$ possibilities with respectively $0,1,2$ mixed parts; in $(2,3)$ there are $1,2,1$ possibilities; in $(3,3)$ the number of mixed $pq$ parts may be $0,1,2,3$. Symmetry supplies the opposite cells. The entries sum to $31$.",
+        "(c) The count depends only on prime-exponent structure, so $$P(4\\cdot5^m)=P(2^2 5^m)=P(5^2 2^m).$$ Count partitions of $5^2 2^m$ according to whether the two copies of $5$ lie in the same part or in different parts.",
+        "If the two $5$'s are together, their part is $5^2 2^k$ for one $0\\le k\\le m$; the remaining factors form any partition of $2^{m-k}$. This contributes $$\\sum_{s=0}^m P(2^{m-s}).\\tag{1}$$",
+        "If the two $5$'s are separate, their parts are $5\\cdot2^r$ and $5\\cdot2^t$ with $0\\le r\\le t$ and $r+t=s\\le m$. The remaining factors have $P(2^{m-s})$ partitions. For fixed $s$, the number of pairs $(r,t)$ is $\\lfloor s/2\\rfloor+1=\\lfloor(s+2)/2\\rfloor$. Thus this case contributes $$\\sum_{s=0}^m\\left\\lfloor\\frac{s+2}{2}\\right\\rfloor P(2^{m-s}).\\tag{2}$$",
+        "Adding (1) and (2) gives the required identity with $$a_s=1+\\left\\lfloor\\frac{s+2}{2}\\right\\rfloor.$$ Therefore $a_0,a_1,a_2,\\ldots=2,2,3,3,4,4,\\ldots$, and the argument proves the formula for every positive integer $m$."
+      ],
+      "stepsZh": [
+        "(a) 因 $64=2^6$，每个乘法分拆都唯一对应于指数 $6$ 的一个加法分拆。十一个指数分拆为 $$6;\\ 5+1;\\ 4+2;\\ 4+1+1;\\ 3+3;\\ 3+2+1;\\ 3+1+1+1;$$ $$2+2+2;\\ 2+2+1+1;\\ 2+1+1+1+1;\\ 1+1+1+1+1+1$$，所以 $P(64)=11$。",
+        "(b) 写成 $1000=p^3q^3$，其中 $p=2,q=5$。三个相同素因子可按指数分拆 $3$、$2+1$、$1+1+1$ 分布到一个、两个或三个含该素数的因子中。",
+        "按含 $p$ 与含 $q$ 的因子个数分类，得到表格 $$\\begin{array}{c|ccc}&1&2&3\\\\\\hline1&2&3&2\\\\2&3&7&4\\\\3&2&4&4\\end{array}$$。具体地，$(1,1)$ 格对应两组素因子合并或分开；$(1,2)$ 中 $p^3$ 可独立，或与 $q,q^2$ 之一合并；$(1,3)$ 中可独立或与一个相同的 $q$ 合并。$(2,2)$ 按混合因子数为 $0,1,2$ 分别有 $1,4,2$ 种；$(2,3)$ 分别有 $1,2,1$ 种；$(3,3)$ 中混合因子 $pq$ 的个数可为 $0,1,2,3$。其余由对称性得到。全表相加为 $31$。",
+        "(c) 分拆数只取决于素因子指数结构，所以 $$P(4\\cdot5^m)=P(2^25^m)=P(5^22^m)$$。按两个素因子 $5$ 位于同一乘积因子或不同因子分类。",
+        "若两个 $5$ 在同一因子中，该因子为 $5^22^k$，其中 $0\\le k\\le m$；剩余因子可任取 $2^{m-k}$ 的一个乘法分拆。因此贡献为 $$\\sum_{s=0}^mP(2^{m-s}).\\tag{1}$$",
+        "若两个 $5$ 分开，它们所在因子为 $5\\cdot2^r$、$5\\cdot2^t$，其中 $0\\le r\\le t$ 且 $r+t=s\\le m$。剩余因子共有 $P(2^{m-s})$ 种分拆。固定 $s$ 时，数对 $(r,t)$ 有 $\\lfloor s/2\\rfloor+1=\\lfloor(s+2)/2\\rfloor$ 个，所以此类贡献为 $$\\sum_{s=0}^m\\left\\lfloor\\frac{s+2}{2}\\right\\rfloor P(2^{m-s}).\\tag{2}$$",
+        "把 (1)、(2) 相加，得到 $$a_s=1+\\left\\lfloor\\frac{s+2}{2}\\right\\rfloor$$。因此 $a_0,a_1,a_2,\\ldots=2,2,3,3,4,4,\\ldots$；上述分类同时证明了公式对每个正整数 $m$ 均成立。"
+      ]
+    }]
+  }
+}
