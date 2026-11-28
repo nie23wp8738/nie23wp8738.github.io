@@ -1,0 +1,202 @@
+{
+  "amc10-2023a-q1": {
+    "summary": "Cities $A$ and $B$ are $45$ miles apart. Alicia leaves $A$ toward $B$ at $18$ mph while Beth simultaneously leaves $B$ toward $A$ at $12$ mph. How far from $A$ are they when they meet?",
+    "summaryZh": "城市 $A,B$ 相距 $45$ 英里。Alicia 从 $A$ 出发以 $18$ 英里/小时驶向 $B$，Beth 同时从 $B$ 出发以 $12$ 英里/小时驶向 $A$。相遇点距 $A$ 多远？",
+    "answer": "E. $27$ miles",
+    "answerZh": "E．$27$ 英里",
+    "methods": [{"title":"Use relative speed","titleZh":"使用相对速度","topics":[{"en":"Relative speed","zh":"相对速度"},{"en":"Distance-rate-time","zh":"路程、速度与时间"}],"steps":["Their closing speed is $18+12=30$ mph, so the meeting time is $45/30=3/2$ hours.","Alicia travels $18\\cdot(3/2)=27$ miles from $A$."],"stepsZh":["两人的接近速度为 $18+12=30$ 英里/小时，因此相遇时间为 $45/30=3/2$ 小时。","Alicia 从 $A$ 出发的路程为 $18\\cdot(3/2)=27$ 英里。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/1"
+  },
+  "amc10-2023a-q2": {
+    "summary": "One third of a large pizza together with $3\\tfrac12$ cups of orange slices weighs the same as three quarters of the pizza together with $\\tfrac12$ cup of slices. Each cup of slices weighs $\\tfrac14$ pound. Find the pizza's weight.",
+    "summaryZh": "一个大披萨的 $\\tfrac13$ 加 $3\\tfrac12$ 杯橙子片，与该披萨的 $\\tfrac34$ 加 $\\tfrac12$ 杯橙子片同重。每杯橙子片重 $\\tfrac14$ 磅。求披萨的重量。",
+    "answer": "A. $\\dfrac95$ pounds",
+    "answerZh": "A．$\\dfrac95$ 磅",
+    "methods": [{"title":"Set up a weight equation","titleZh":"列重量方程","topics":[{"en":"Linear equations","zh":"一元一次方程"},{"en":"Fractions","zh":"分数"}],"steps":["Let the pizza weigh $P$ pounds. The two slice portions weigh $(7/2)(1/4)=7/8$ and $(1/2)(1/4)=1/8$ pounds.","Thus $P/3+7/8=3P/4+1/8$.","So $3/4=(3/4-1/3)P=5P/12$, giving $P=9/5$."],"stepsZh":["设披萨重 $P$ 磅。两份橙子片分别重 $(7/2)(1/4)=7/8$ 磅和 $(1/2)(1/4)=1/8$ 磅。","由题意，$P/3+7/8=3P/4+1/8$。","因此 $3/4=(3/4-1/3)P=5P/12$，解得 $P=9/5$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/2"
+  },
+  "amc10-2023a-q3": {
+    "summary": "How many positive perfect squares less than $2023$ are divisible by $5$?",
+    "summaryZh": "小于 $2023$ 且能被 $5$ 整除的正完全平方数有多少个？",
+    "answer": "A. $8$",
+    "answerZh": "A．$8$",
+    "methods": [{"title":"Count possible square roots","titleZh":"计算可能的平方根","topics":[{"en":"Perfect squares","zh":"完全平方数"},{"en":"Divisibility","zh":"整除性"}],"steps":["If a square is divisible by $5$, its positive integer square root is divisible by $5$.","Because $44^2<2023<45^2$, the possible roots are $5,10,15,\\ldots,40$.","There are $8$ such roots and hence $8$ squares."],"stepsZh":["一个平方数若能被 $5$ 整除，则其正整数平方根也能被 $5$ 整除。","因 $44^2<2023<45^2$，可能的平方根为 $5,10,15,\\ldots,40$。","共有 $8$ 个平方根，因此有 $8$ 个平方数。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/3"
+  },
+  "amc10-2023a-q4": {
+    "summary": "A quadrilateral has integer side lengths, perimeter $26$, and one side of length $4$. Find the greatest possible length of a side.",
+    "summaryZh": "一个四边形的边长均为整数，周长为 $26$，且有一条边长为 $4$。求其中一条边可能达到的最大长度。",
+    "answer": "D. $12$",
+    "answerZh": "D．$12$",
+    "methods": [{"title":"Apply the polygon inequality","titleZh":"使用多边形边长不等式","topics":[{"en":"Polygon inequality","zh":"多边形边长不等式"},{"en":"Extremal argument","zh":"极值思想"}],"steps":["If the longest side is $s$, it must be shorter than the sum $26-s$ of the other three sides.","Thus $s<13$, so the integer $s$ is at most $12$.","The side lengths $12,9,4,1$ have perimeter $26$ and satisfy $12<9+4+1$, so $12$ is attainable."],"stepsZh":["设最长边为 $s$，则它必须小于其余三边之和 $26-s$。","因此 $s<13$，故整数 $s$ 至多为 $12$。","边长 $12,9,4,1$ 的周长为 $26$，且 $12<9+4+1$，所以 $12$ 可以取到。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/4"
+  },
+  "amc10-2023a-q5": {
+    "summary": "How many digits are in the base-ten representation of $8^5\\cdot5^{10}\\cdot15^5$?",
+    "summaryZh": "$8^5\\cdot5^{10}\\cdot15^5$ 的十进制表示共有多少位数字？",
+    "answer": "E. $18$",
+    "answerZh": "E．$18$",
+    "methods": [{"title":"Pair factors of 2 and 5","titleZh":"配对因数 2 与 5","topics":[{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Decimal digits","zh":"十进制位数"}],"steps":["Factor the product: $8^5\\cdot5^{10}\\cdot15^5=2^{15}5^{10}(3^5 5^5)$.","This is $3^5(2\\cdot5)^{15}=243\\cdot10^{15}$.","It is $243$ followed by $15$ zeros, so it has $3+15=18$ digits."],"stepsZh":["质因数分解：$8^5\\cdot5^{10}\\cdot15^5=2^{15}5^{10}(3^5 5^5)$。","该数等于 $3^5(2\\cdot5)^{15}=243\\cdot10^{15}$。","它是 $243$ 后接 $15$ 个零，共有 $3+15=18$ 位。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/5"
+  },
+  "amc10-2023a-q6": {
+    "summary": "Integers are assigned to the eight vertices of a cube and sum to $21$. Each edge is valued by the sum at its endpoints; each face by the sum of its four edge values; and the cube by the sum of its six face values. Find the cube's value.",
+    "summaryZh": "在立方体八个顶点上各放一个整数，总和为 $21$。每条棱的值为其两端顶点数之和，每个面的值为其四条边的值之和，立方体的值为六个面的值之和。求立方体的值。",
+    "answer": "D. $126$",
+    "answerZh": "D．$126$",
+    "methods": [{"title":"Double-count incidences","titleZh":"二次计数关联关系","topics":[{"en":"Double counting","zh":"二次计数"},{"en":"Cube geometry","zh":"立方体几何"}],"steps":["Each edge belongs to two faces, so the cube value is twice the sum of all edge values.","Each vertex belongs to three edges, so the sum of all edge values is three times the vertex sum.","Therefore the cube value is $2\\cdot3\\cdot21=126$."],"stepsZh":["每条棱属于两个面，因此立方体的值等于所有棱值总和的两倍。","每个顶点连接三条棱，因此所有棱值之和等于顶点数值总和的三倍。","故立方体的值为 $2\\cdot3\\cdot21=126$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/6"
+  },
+  "amc10-2023a-q7": {
+    "summary": "Janet rolls a fair six-sided die four times and records the running total. Find the probability that the running total equals $3$ at some point.",
+    "summaryZh": "Janet 连续掷一枚公平六面骰子四次，并记录累计点数。求累计点数曾经等于 $3$ 的概率。",
+    "answer": "B. $\\dfrac{49}{216}$",
+    "answerZh": "B．$\\dfrac{49}{216}$",
+    "methods": [{"title":"List the possible openings","titleZh":"枚举可能的开头","topics":[{"en":"Probability","zh":"概率"},{"en":"Casework","zh":"分类讨论"}],"steps":["The running total strictly increases, so it reaches $3$ only through one of the disjoint initial sequences $(3),(1,2),(2,1),(1,1,1)$.","Their probabilities are $1/6,1/36,1/36,1/216$.","The sum is $(36+6+6+1)/216=49/216$."],"stepsZh":["累计点数严格增加，因此到达 $3$ 只可能由互斥的开头 $(3),(1,2),(2,1),(1,1,1)$ 实现。","这些情形的概率分别为 $1/6,1/36,1/36,1/216$。","概率之和为 $(36+6+6+1)/216=49/216$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/7"
+  },
+  "amc10-2023a-q8": {
+    "summary": "The Breadus temperature scale is linear in Fahrenheit: $110^\\circ$F corresponds to $0$ Breadus and $350^\\circ$F to $100$ Breadus. What Breadus reading corresponds to $200^\\circ$F?",
+    "summaryZh": "Breadus 温标与华氏温标成线性关系：$110^\\circ$F 对应 $0$ Breadus，$350^\\circ$F 对应 $100$ Breadus。$200^\\circ$F 对应多少 Breadus？",
+    "answer": "D. $37.5$",
+    "answerZh": "D．$37.5$",
+    "methods": [{"title":"Interpolate linearly","titleZh":"线性插值","topics":[{"en":"Linear functions","zh":"线性函数"},{"en":"Slope","zh":"斜率"}],"steps":["If $F$ is Fahrenheit and $B$ is Breadus, then $B=\\dfrac{100}{350-110}(F-110)=\\dfrac5{12}(F-110)$.","At $F=200$, $B=(5/12)(90)=37.5$."],"stepsZh":["设华氏温度为 $F$、Breadus 读数为 $B$，则 $B=\\dfrac{100}{350-110}(F-110)=\\dfrac5{12}(F-110)$。","代入 $F=200$，得 $B=(5/12)(90)=37.5$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/8"
+  },
+  "amc10-2023a-q9": {
+    "summary": "A date in 2023 is displayed as the eight digits YYYYMMDD. For how many valid dates does every decimal digit occur an even number of times in the display?",
+    "summaryZh": "2023 年的日期按八位数字 YYYYMMDD 显示。共有多少个合法日期使得每个十进制数字在显示中出现偶数次？",
+    "answer": "E. $9$",
+    "answerZh": "E．$9$",
+    "methods": [{"title":"Track digit parities","titleZh":"追踪数字出现次数的奇偶性","topics":[{"en":"Parity","zh":"奇偶性"},{"en":"Systematic enumeration","zh":"系统枚举"}],"steps":["The year digits $2,0,2,3$ make the counts of $0$ and $3$ odd and that of $2$ even.","Thus MMDD must contain an odd number of $0$s, an odd number of $3$s, and even counts of all other digits. With four places, it consists of one $0$, one $3$, and a repeated pair (possibly $00$ or $33$).","Checking valid months and days gives $01$-13, $01$-31, $02$-23, $03$-11, $03$-22, $10$-13, $10$-31, $11$-03, and $11$-30: $9$ dates."],"stepsZh":["年份数字 $2,0,2,3$ 使 $0,3$ 的出现次数为奇数，而 $2$ 的出现次数为偶数。","因此 MMDD 中 $0,3$ 都须出现奇数次，其余数字均出现偶数次。四个位置只能由一个 $0$、一个 $3$ 及一对相同数字组成（该对也可为 $00$ 或 $33$）。","检查合法月份和日期得到 $01$-13、$01$-31、$02$-23、$03$-11、$03$-22、$10$-13、$10$-31、$11$-03、$11$-30，共 $9$ 个日期。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/9"
+  },
+  "amc10-2023a-q10": {
+    "summary": "If Maureen scores $11$ on her next quiz, her current mean rises by $1$. If she scores $11$ on each of her next three quizzes, the current mean rises by $2$. Find her current mean.",
+    "summaryZh": "若 Maureen 下一次测验得 $11$ 分，她目前的平均分将提高 $1$；若接下来三次都得 $11$ 分，平均分将提高 $2$。求她目前的平均分。",
+    "answer": "D. $7$",
+    "answerZh": "D．$7$",
+    "methods": [{"title":"Solve for the mean and count","titleZh":"联立平均分与测验次数","topics":[{"en":"Mean","zh":"平均数"},{"en":"Systems of equations","zh":"方程组"}],"steps":["Let the current mean be $m$ across $n$ quizzes, so the total is $mn$.","The first condition gives $(mn+11)/(n+1)=m+1$, hence $m+n=10$.","The second gives $(mn+33)/(n+3)=m+2$, hence $3m+2n=27$. Solving gives $m=7$."],"stepsZh":["设目前 $n$ 次测验的平均分为 $m$，则总分为 $mn$。","第一种情况给出 $(mn+11)/(n+1)=m+1$，化简得 $m+n=10$。","第二种情况给出 $(mn+33)/(n+3)=m+2$，化简得 $3m+2n=27$。联立解得 $m=7$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/10"
+  },
+  "amc10-2023a-q11": {
+    "summary": "A square of area $2$ is rotated inside a square of area $3$ so that its four vertices lie one on each side of the outer square. The four corner gaps are congruent right triangles. Find the ratio of a shorter leg to a longer leg of one such triangle.",
+    "summaryZh": "面积为 $2$ 的正方形旋转后内接于面积为 $3$ 的正方形，内正方形的四个顶点分别落在外正方形四边上，四个角部空隙为全等直角三角形。求其中一个三角形的短直角边与长直角边之比。",
+    "answer": "C. $2-\\sqrt3$",
+    "answerZh": "C．$2-\\sqrt3$",
+    "methods": [{"title":"Use the side sum and Pythagorean theorem","titleZh":"利用边长和与勾股定理","topics":[{"en":"Pythagorean theorem","zh":"勾股定理"},{"en":"Vieta's formulas","zh":"韦达定理"}],"steps":["Let the right-triangle legs be $p<q$. Along an outer side, $p+q=\\sqrt3$; the hypotenuse is an inner-square side, so $p^2+q^2=2$.","Squaring the first equation gives $2pq=1$. Thus $p,q$ are the roots of $t^2-\\sqrt3t+1/2=0$, namely $(\\sqrt3\\mp1)/2$.","Hence $p/q=(\\sqrt3-1)/(\\sqrt3+1)=2-\\sqrt3$."],"stepsZh":["设直角三角形两直角边为 $p<q$。沿外正方形一边有 $p+q=\\sqrt3$；斜边等于内正方形边长，故 $p^2+q^2=2$。","平方第一式得 $2pq=1$。因此 $p,q$ 是方程 $t^2-\\sqrt3t+1/2=0$ 的两根，即 $(\\sqrt3\\mp1)/2$。","故 $p/q=(\\sqrt3-1)/(\\sqrt3+1)=2-\\sqrt3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/11"
+  },
+  "amc10-2023a-q12": {
+    "summary": "How many three-digit positive integers $N$ are divisible by $7$ and have a digit reversal (after dropping leading zeros) divisible by $5$?",
+    "summaryZh": "有多少个三位正整数 $N$ 同时满足：$N$ 能被 $7$ 整除，且其数字倒序所得整数（去掉前导零）能被 $5$ 整除？",
+    "answer": "B. $14$",
+    "answerZh": "B．$14$",
+    "methods": [{"title":"Restrict the leading digit","titleZh":"限制首位数字","topics":[{"en":"Divisibility","zh":"整除性"},{"en":"Counting multiples","zh":"倍数计数"}],"steps":["The reversed number ends in the leading digit of $N$. Divisibility by $5$ forces that digit to be $0$ or $5$.","A three-digit number cannot start with $0$, so $500\\le N\\le599$.","The multiples of $7$ in this interval are $7\\cdot72$ through $7\\cdot85$, giving $85-72+1=14$ numbers."],"stepsZh":["倒序后的数以 $N$ 的首位数字结尾。能被 $5$ 整除要求该数字为 $0$ 或 $5$。","三位数不能以 $0$ 开头，所以 $500\\le N\\le599$。","此区间内 $7$ 的倍数从 $7\\cdot72$ 到 $7\\cdot85$，共有 $85-72+1=14$ 个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/12"
+  },
+  "amc10-2023a-q13": {
+    "summary": "Abdul and Chiang are $48$ feet apart. Bharat is chosen as far from Abdul as possible subject to $\\angle ABC=60^\\circ$, where $A,B,C$ denote Abdul, Bharat, and Chiang. Find $AB^2$.",
+    "summaryZh": "Abdul 与 Chiang 相距 $48$ 英尺。分别用 $A,B,C$ 表示 Abdul、Bharat、Chiang，并要求 $\\angle ABC=60^\\circ$。在 Bharat 距 Abdul 尽可能远时，求 $AB^2$。",
+    "answer": "C. $3072$",
+    "answerZh": "C．$3072$",
+    "methods": [{"title":"Maximise a chord on the circumcircle","titleZh":"在外接圆上最大化弦长","topics":[{"en":"Law of sines","zh":"正弦定理"},{"en":"Circumcircles","zh":"外接圆"}],"steps":["The extended law of sines gives the circumdiameter $2R=AC/\\sin60^\\circ=48/(\\sqrt3/2)=32\\sqrt3$.","The chord $AB$ cannot exceed the diameter. Equality is attainable when $AB$ itself is a diameter, equivalently $\\angle C=90^\\circ$.","Thus $AB_{\\max}=32\\sqrt3$ and $AB^2=32^2\\cdot3=3072$."],"stepsZh":["由正弦定理的推广，外接圆直径 $2R=AC/\\sin60^\\circ=48/(\\sqrt3/2)=32\\sqrt3$。","弦 $AB$ 不超过直径；当 $AB$ 为直径，即 $\\angle C=90^\\circ$ 时可以取等号。","故 $AB_{\\max}=32\\sqrt3$，从而 $AB^2=32^2\\cdot3=3072$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/13"
+  },
+  "amc10-2023a-q14": {
+    "summary": "Choose an integer uniformly from $1$ through $100$, then choose one of its positive divisors uniformly. Find the probability that the chosen divisor is divisible by $11$.",
+    "summaryZh": "先从 $1$ 到 $100$ 中等概率选一个整数，再从它的正因数中等概率选一个。求所选因数能被 $11$ 整除的概率。",
+    "answer": "B. $\\dfrac9{200}$",
+    "answerZh": "B．$\\dfrac9{200}$",
+    "methods": [{"title":"Condition on multiples of 11","titleZh":"按 11 的倍数分类","topics":[{"en":"Divisor counting","zh":"因数计数"},{"en":"Conditional probability","zh":"条件概率"}],"steps":["Only $n=11m$ with $1\\le m\\le9$ can contribute.","Because $11\\nmid m$, the divisors of $11m$ split equally into those containing the factor $11$ and those not containing it. The conditional probability is $1/2$.","There are $9$ such starting numbers among $100$, so the required probability is $(9/100)(1/2)=9/200$."],"stepsZh":["只有 $n=11m$ 且 $1\\le m\\le9$ 时才可能选到能被 $11$ 整除的因数。","由于 $11\\nmid m$，$11m$ 的因数恰好一半含因数 $11$、一半不含，因此条件概率为 $1/2$。","在 $100$ 个起始数中有 $9$ 个符合条件，所求概率为 $(9/100)(1/2)=9/200$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/14"
+  },
+  "amc10-2023a-q15": {
+    "summary": "An even number of circles of radii $1,2,3,\\ldots$ share a common point. Shade the annuli between radii $1$ and $2$, $3$ and $4$, and so on. Find the least number of circles for which the shaded area is at least $2023\\pi$.",
+    "summaryZh": "偶数个半径依次为 $1,2,3,\\ldots$ 的圆共用同一点。将半径 $1,2$ 之间、$3,4$ 之间等相隔一层的环形区域涂色。求使涂色总面积至少为 $2023\\pi$ 所需的最少圆数。",
+    "answer": "E. $64$",
+    "answerZh": "E．$64$",
+    "methods": [{"title":"Sum alternating annular areas","titleZh":"求交替圆环面积之和","topics":[{"en":"Circle area","zh":"圆面积"},{"en":"Arithmetic series","zh":"等差数列求和"}],"steps":["With $2n$ circles, the $k$th shaded annulus has area $\\pi((2k)^2-(2k-1)^2)=(4k-1)\\pi$.","The total is $\\pi\\sum_{k=1}^n(4k-1)=\\pi(2n^2+n)$.","At $n=31$ the coefficient is $1953<2023$, while at $n=32$ it is $2080$. Hence $2n=64$ circles are needed."],"stepsZh":["若共有 $2n$ 个圆，第 $k$ 个涂色圆环面积为 $\\pi((2k)^2-(2k-1)^2)=(4k-1)\\pi$。","总面积为 $\\pi\\sum_{k=1}^n(4k-1)=\\pi(2n^2+n)$。","$n=31$ 时系数为 $1953<2023$，$n=32$ 时为 $2080$，故需要 $2n=64$ 个圆。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/15"
+  },
+  "amc10-2023a-q16": {
+    "summary": "In a round-robin table-tennis tournament there are twice as many right-handed as left-handed players. Left-handed players win $40\\%$ more games than right-handed players; there are no ties. Find the total number of games.",
+    "summaryZh": "一次乒乓球循环赛中，每两人恰比赛一次，右手选手人数是左手选手的两倍。左手选手赢得的场次数比右手选手多 $40\\%$，且无平局。求比赛总场数。",
+    "answer": "B. $36$",
+    "answerZh": "B．$36$",
+    "methods": [{"title":"Combine integrality and a maximum bound","titleZh":"结合整除条件与上界","topics":[{"en":"Combinations","zh":"组合数"},{"en":"Extremal counting","zh":"极值计数"}],"steps":["Let there be $L$ left-handers and $2L$ right-handers. If right-handers win $R$ games, left-handers win $7R/5$, so the total $12R/5$ is a multiple of $12$.","Left-handers can win at most $\\binom L2+2L^2=(5L^2-L)/2$ games. They must win $7/12$ of all $\\binom{3L}2$ games. Comparing gives $L\\le3$.","For $L=1,2,3$, the game totals are $3,15,36$; only $36$ is divisible by $12$. It is attainable with $21$ left-handed wins and $15$ right-handed wins."],"stepsZh":["设左手选手有 $L$ 人，右手选手有 $2L$ 人。若右手选手赢 $R$ 场，则左手选手赢 $7R/5$ 场，所以总场数 $12R/5$ 必为 $12$ 的倍数。","左手选手至多赢下所有至少含一名左手选手的比赛，共 $\\binom L2+2L^2=(5L^2-L)/2$ 场；同时他们必须赢总场数 $\\binom{3L}2$ 的 $7/12$。比较得 $L\\le3$。","$L=1,2,3$ 时总场数分别为 $3,15,36$，只有 $36$ 是 $12$ 的倍数。取左手胜 $21$ 场、右手胜 $15$ 场可以实现。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/16"
+  },
+  "amc10-2023a-q17": {
+    "summary": "Rectangle $ABCD$ has $AB=30$ and $BC=28$. Points $P$ on $BC$ and $Q$ on $CD$ make every side of right triangles $ABP$, $PCQ$, and $QDA$ an integer. Find the perimeter of $\\triangle APQ$.",
+    "summaryZh": "矩形 $ABCD$ 中 $AB=30,BC=28$。点 $P$ 在 $BC$ 上、点 $Q$ 在 $CD$ 上，使直角三角形 $ABP,PCQ,QDA$ 的各边长均为整数。求 $\\triangle APQ$ 的周长。",
+    "answer": "A. $84$",
+    "answerZh": "A．$84$",
+    "methods": [{"title":"Enumerate compatible Pythagorean triples","titleZh":"枚举相容的勾股数组","topics":[{"en":"Pythagorean triples","zh":"勾股数组"},{"en":"Coordinate geometry","zh":"解析几何"}],"steps":["Set $A=(0,0),B=(30,0),C=(30,28),D=(0,28)$, with $P=(30,p)$ and $Q=(30-q,28)$.","Requiring $AP=\\sqrt{30^2+p^2}$ integral for $0\\le p\\le28$ gives $p=0$ or $16$; requiring $AQ=\\sqrt{28^2+(30-q)^2}$ integral gives $30-q=0$ or $21$.","Testing the four pairs in $PQ^2=(28-p)^2+q^2$, only $p=16,q=9$ makes $PQ$ integral. Then $AP=34$, $AQ=35$, $PQ=15$, and the perimeter is $84$."],"stepsZh":["取 $A=(0,0),B=(30,0),C=(30,28),D=(0,28)$，设 $P=(30,p),Q=(30-q,28)$。","要求 $AP=\\sqrt{30^2+p^2}$ 为整数且 $0\\le p\\le28$，得 $p=0$ 或 $16$；要求 $AQ=\\sqrt{28^2+(30-q)^2}$ 为整数，得 $30-q=0$ 或 $21$。","把四种组合代入 $PQ^2=(28-p)^2+q^2$，只有 $p=16,q=9$ 使 $PQ$ 为整数。此时 $AP=34,AQ=35,PQ=15$，周长为 $84$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/17"
+  },
+  "amc10-2023a-q18": {
+    "summary": "A rhombic dodecahedron has $12$ congruent rhombic faces. At every vertex either $3$ or $4$ edges meet. How many vertices have degree $3$?",
+    "summaryZh": "菱形十二面体有 $12$ 个全等菱形面，每个顶点连接 $3$ 条或 $4$ 条棱。求恰连接 $3$ 条棱的顶点数。",
+    "answer": "D. $8$",
+    "answerZh": "D．$8$",
+    "methods": [{"title":"Use Euler's formula and degree sum","titleZh":"使用欧拉公式与度数和","topics":[{"en":"Euler's polyhedron formula","zh":"欧拉多面体公式"},{"en":"Handshake lemma","zh":"握手定理"}],"steps":["Double-counting face edges gives $E=12\\cdot4/2=24$.","Euler's formula $V-E+F=2$ gives $V=24-12+2=14$.","If $x$ vertices have degree $3$, then $3x+4(14-x)=2E=48$, so $x=8$."],"stepsZh":["二次计算各面的边，得 $E=12\\cdot4/2=24$。","由欧拉公式 $V-E+F=2$，得 $V=24-12+2=14$。","若有 $x$ 个三度顶点，则 $3x+4(14-x)=2E=48$，解得 $x=8$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/18"
+  },
+  "amc10-2023a-q19": {
+    "summary": "A rotation about $P(r,s)$ maps $A(1,2)$ to $A'(3,1)$ and $B(3,3)$ to $B'(4,3)$. Find $|r-s|$.",
+    "summaryZh": "以 $P(r,s)$ 为中心的旋转把 $A(1,2)$ 映到 $A'(3,1)$，把 $B(3,3)$ 映到 $B'(4,3)$。求 $|r-s|$。",
+    "answer": "E. $1$",
+    "answerZh": "E．$1$",
+    "methods": [{"title":"Intersect perpendicular bisectors","titleZh":"求两条垂直平分线的交点","topics":[{"en":"Rotations","zh":"旋转变换"},{"en":"Perpendicular bisectors","zh":"垂直平分线"}],"steps":["The rotation center is equidistant from each point and its image, so it lies on the perpendicular bisectors of $AA'$ and $BB'$.","The perpendicular bisector of $BB'$ is $x=7/2$; that of $AA'$ is $2x-y=5/2$.","Their intersection is $P=(7/2,9/2)$, so $|r-s|=1$."],"stepsZh":["旋转中心到每个点及其像的距离相等，因此它在 $AA'$ 与 $BB'$ 的垂直平分线上。","$BB'$ 的垂直平分线为 $x=7/2$；$AA'$ 的垂直平分线为 $2x-y=5/2$。","两线交于 $P=(7/2,9/2)$，故 $|r-s|=1$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/19"
+  },
+  "amc10-2023a-q20": {
+    "summary": "Color the nine cells of a $3\\times3$ grid with four colors so that every contiguous $2\\times2$ block contains all four colors exactly once. How many colorings are possible?",
+    "summaryZh": "用四种颜色给 $3\\times3$ 方格的九个小格染色，要求每个相邻的 $2\\times2$ 子方格恰好各含四种颜色一次。共有多少种染色？",
+    "answer": "D. $72$",
+    "answerZh": "D．$72$",
+    "methods": [{"title":"Build the grid block by block","titleZh":"逐个子方格构造","topics":[{"en":"Restricted arrangements","zh":"限制排列"},{"en":"Casework","zh":"分类讨论"}],"steps":["Label the cells row-wise $a,b,c;d,e,f;g,h,i$. The top-left block $a,b,d,e$ can be colored in $4!=24$ ways.","Then $c,f$ are the two colors missing from $b,e$, in either order; likewise $g,h$ are the two missing from $d,e$, in either order.","Among the four order pairs, exactly three have $f\\ne h$; then $i$ is uniquely the fourth color in the bottom-right block. Thus there are $24\\cdot3=72$ colorings."],"stepsZh":["按行把九格记为 $a,b,c;d,e,f;g,h,i$。左上 $2\\times2$ 块 $a,b,d,e$ 可按 $4!=24$ 种方式使用四种颜色。","随后 $c,f$ 必须是 $b,e$ 未使用的两色，次序有两种；同理，$g,h$ 是 $d,e$ 未使用的两色，次序有两种。","四种次序组合中恰有三种满足 $f\\ne h$，此时 $i$ 被右下子方格唯一确定。因此共有 $24\\cdot3=72$ 种。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/20"
+  },
+  "amc10-2023a-q21": {
+    "summary": "Let $P(x)$ be the monic polynomial of least degree such that $1$ is a root of $P(x)-1$, $2$ a root of $P(x-2)$, $3$ a root of $P(3x)$, and $4$ a root of $4P(x)$. Exactly one root of $P$ is nonintegral, written $m/n$ in lowest terms. Find $m+n$.",
+    "summaryZh": "设 $P(x)$ 是满足下列条件的最低次数首一多项式：$1$ 是 $P(x)-1$ 的根，$2$ 是 $P(x-2)$ 的根，$3$ 是 $P(3x)$ 的根，$4$ 是 $4P(x)$ 的根。$P$ 恰有一个非整数根，既约写为 $m/n$。求 $m+n$。",
+    "answer": "D. $47$",
+    "answerZh": "D．$47$",
+    "methods": [{"title":"Translate the root conditions","titleZh":"转化各个根条件","topics":[{"en":"Polynomials","zh":"多项式"},{"en":"Substitution","zh":"代入法"}],"steps":["The conditions give $P(1)=1$ and roots $0,9,4$ of $P$.","The monic cubic $x(x-4)(x-9)$ takes value $24$ at $1$, so degree $3$ is impossible. The least possible form is $P(x)=x(x-4)(x-9)(x-c)$.","Using $P(1)=24(1-c)=1$ gives $c=23/24$. Hence $m+n=23+24=47$."],"stepsZh":["这些条件给出 $P(1)=1$，并说明 $0,9,4$ 是 $P$ 的根。","首一三次多项式 $x(x-4)(x-9)$ 在 $x=1$ 时取值 $24$，故三次不可能。最低次数形式为 $P(x)=x(x-4)(x-9)(x-c)$。","代入 $P(1)=24(1-c)=1$，得 $c=23/24$，所以 $m+n=23+24=47$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/21"
+  },
+  "amc10-2023a-q22": {
+    "summary": "Two unit circles have centers $O_1=(-1/4,0)$ and $O_2=(1/4,0)$. The largest circle inside and internally tangent to both is $C_3$. A circle $C_4$, also inside and tangent to both unit circles, is externally tangent to $C_3$. Find the radius of $C_4$.",
+    "summaryZh": "两个单位圆的圆心为 $O_1=(-1/4,0),O_2=(1/4,0)$。同时内切于两单位圆的最大内含圆为 $C_3$。圆 $C_4$ 也同时内切于两单位圆，并与 $C_3$ 外切。求 $C_4$ 的半径。",
+    "answer": "D. $\\dfrac3{28}$",
+    "answerZh": "D．$\\dfrac3{28}$",
+    "methods": [{"title":"Use symmetry and tangency distances","titleZh":"利用对称性与相切距离","topics":[{"en":"Tangent circles","zh":"相切圆"},{"en":"Coordinate geometry","zh":"解析几何"}],"steps":["By symmetry, $C_3$ is centered at the origin. Its center is $1/4$ from each unit-circle center, so its radius is $3/4$.","Let $C_4$ have radius $r$ and center $(0,k)$ above the axis. Tangency to $C_3$ gives $k=3/4+r$, while tangency inside a unit circle gives $\\sqrt{k^2+1/16}=1-r$.","Squaring and substituting yields $1/16+(3/4+r)^2=(1-r)^2$, hence $r=3/28$."],"stepsZh":["由对称性，$C_3$ 的圆心在原点。它到两个单位圆圆心的距离均为 $1/4$，所以半径为 $3/4$。","设 $C_4$ 半径为 $r$、圆心为轴线上方的 $(0,k)$。与 $C_3$ 外切给出 $k=3/4+r$；内切于单位圆给出 $\\sqrt{k^2+1/16}=1-r$。","平方并代入得 $1/16+(3/4+r)^2=(1-r)^2$，解得 $r=3/28$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/22"
+  },
+  "amc10-2023a-q23": {
+    "summary": "Positive divisors $a,b$ of $N$ are complementary if $ab=N$. The integer $N$ has a complementary pair differing by $20$ and another pair differing by $23$. Find the sum of the digits of $N$.",
+    "summaryZh": "若 $N$ 的正因数 $a,b$ 满足 $ab=N$，则称其为互补因数。整数 $N$ 有一对互补因数相差 $20$，另有一对相差 $23$。求 $N$ 的各位数字之和。",
+    "answer": "C. $15$",
+    "answerZh": "C．$15$",
+    "methods": [{"title":"Convert both conditions to squares","titleZh":"把两个条件转化为平方数","topics":[{"en":"Difference of squares","zh":"平方差"},{"en":"Diophantine equations","zh":"丢番图方程"}],"steps":["If one pair is $b,b+20$, then $N=b(b+20)$, so $N+100=(b+10)^2=k^2$.","A pair differing by $23$ similarly gives $4N+529=m^2$. Eliminating $N$ yields $m^2-4k^2=129$, or $(m-2k)(m+2k)=129$.","The factor pair $1,129$ gives $k=32$ and $N=32^2-100=924$; the pair $3,43$ gives inadmissible $N=0$. Thus the digit sum is $9+2+4=15$."],"stepsZh":["若一对互补因数为 $b,b+20$，则 $N=b(b+20)$，所以 $N+100=(b+10)^2=k^2$。","另一对相差 $23$ 同理给出 $4N+529=m^2$。消去 $N$ 得 $m^2-4k^2=129$，即 $(m-2k)(m+2k)=129$。","因数对 $1,129$ 给出 $k=32$、$N=32^2-100=924$；因数对 $3,43$ 只给出不合要求的 $N=0$。故数位和为 $9+2+4=15$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/23"
+  },
+  "amc10-2023a-q24": {
+    "summary": "Six regular hexagonal blocks of side $1$ lie cyclically inside a regular hexagonal frame, one along each inside edge, in three straight aligned chains as in the standard arrangement. Equivalently, extending the aligned block edges partitions each frame side into consecutive lengths $d,1,1,1-d$, where the corner gap is $d=3/7$. Find the area inside the frame not covered by the six blocks.",
+    "summaryZh": "六个边长为 $1$ 的正六边形小块循环排列在一个正六边形框架内，每个小块沿框架的一条内边放置，并形成三组直线对齐链。等价地，将对齐的小块边延伸后，框架每条边依次分成长度 $d,1,1,1-d$，其中角部间距 $d=3/7$。求框架内未被六个小块覆盖的面积。",
+    "answer": "C. $\\dfrac{9\\sqrt3}{2}$",
+    "answerZh": "C．$\\dfrac{9\\sqrt3}{2}$",
+    "methods": [{"title":"Subtract the six block areas","titleZh":"用框架面积减去六个小块面积","topics":[{"en":"Regular hexagons","zh":"正六边形"},{"en":"Area decomposition","zh":"面积分割"}],"steps":["The equivalent side partition gives the frame side length $d+1+1+(1-d)=3$.","A regular hexagon of side $t$ has area $3\\sqrt3t^2/2$.","Therefore the uncovered area is $(3\\sqrt3/2)3^2-6(3\\sqrt3/2)1^2=27\\sqrt3/2-9\\sqrt3=9\\sqrt3/2$."],"stepsZh":["由等价的边长分割，框架边长为 $d+1+1+(1-d)=3$。","边长为 $t$ 的正六边形面积为 $3\\sqrt3t^2/2$。","故未覆盖面积为 $(3\\sqrt3/2)3^2-6(3\\sqrt3/2)1^2=27\\sqrt3/2-9\\sqrt3=9\\sqrt3/2$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/24"
+  },
+  "amc10-2023a-q25": {
+    "summary": "For vertices $X,Y$ of a regular icosahedron, let $d(X,Y)$ be the fewest edges in a path joining them. Choose distinct vertices $Q,R,S$ uniformly. Find $P(d(Q,R)>d(R,S))$.",
+    "summaryZh": "对正二十面体的顶点 $X,Y$，定义 $d(X,Y)$ 为连接二者所需经过的最少棱数。等概率选取三个互不相同的顶点 $Q,R,S$，求 $P(d(Q,R)>d(R,S))$。",
+    "answer": "A. $\\dfrac7{22}$",
+    "answerZh": "A．$\\dfrac7{22}$",
+    "methods": [{"title":"Use distance layers and symmetry","titleZh":"利用距离分层与对称性","topics":[{"en":"Graph distance","zh":"图距离"},{"en":"Symmetry","zh":"对称性"}],"steps":["Fix $R$. Among the other $11$ vertices, $5$ are at distance $1$, $5$ at distance $2$, and the antipodal vertex is at distance $3$.","For ordered distinct $Q,S$, equality of the two distances occurs in $(5\\cdot4+5\\cdot4)/(11\\cdot10)=4/11$ of cases; the distance-$3$ layer has only one vertex and contributes no ordered distinct pair.","Swapping $Q$ and $S$ exchanges the events $>$ and $<$. Therefore each has probability $(1-4/11)/2=7/22$."],"stepsZh":["固定 $R$。其余 $11$ 个顶点中，距 $R$ 为 $1$ 的有 $5$ 个，为 $2$ 的有 $5$ 个，另有一个对踵顶点距离为 $3$。","对有序且不同的 $Q,S$，两距离相等的概率为 $(5\\cdot4+5\\cdot4)/(11\\cdot10)=4/11$；距离 $3$ 的层只有一个点，不能贡献不同的有序点对。","交换 $Q,S$ 会互换事件 $>$ 与 $<$，故二者概率相同，所求为 $(1-4/11)/2=7/22$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc10/2023A/problem/25"
+  }
+}
