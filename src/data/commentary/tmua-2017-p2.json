@@ -1,0 +1,440 @@
+{
+  "tmua-2017-p2-q1": {
+    "summary": "For $x>0$, let $y=\\dfrac{(1-3x)^2}{2x^{3/2}}$. Find $dy/dx$.",
+    "summaryZh": "当 $x>0$ 时，设 $y=\\dfrac{(1-3x)^2}{2x^{3/2}}$，求 $dy/dx$。",
+    "answer": "A. $\\dfrac94x^{-1/2}+\\dfrac32x^{-3/2}-\\dfrac34x^{-5/2}$",
+    "answerZh": "A．$\\dfrac94x^{-1/2}+\\dfrac32x^{-3/2}-\\dfrac34x^{-5/2}$",
+    "methods": [{
+      "title": "Expand into powers before differentiating",
+      "titleZh": "先展开为幂函数再求导",
+      "topics": [{"en":"Differentiation","zh":"微分"},{"en":"Laws of indices","zh":"指数运算"}],
+      "steps": [
+        "Expand the numerator and divide term by term: $y=\\tfrac12x^{-3/2}-3x^{-1/2}+\\tfrac92x^{1/2}$.",
+        "The power rule gives $y'=-\\tfrac34x^{-5/2}+\\tfrac32x^{-3/2}+\\tfrac94x^{-1/2}$, which is option A."
+      ],
+      "stepsZh": [
+        "展开分子并逐项相除：$y=\\tfrac12x^{-3/2}-3x^{-1/2}+\\tfrac92x^{1/2}$。",
+        "由幂函数求导法则，$y'=-\\tfrac34x^{-5/2}+\\tfrac32x^{-3/2}+\\tfrac94x^{-1/2}$，故选 A。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=3"
+  },
+  "tmua-2017-p2-q2": {
+    "summary": "Rectangle $PQRS$ has $P=(0,6)$ and $Q=(1,8)$. The line through $Q$ perpendicular to $PQ$ meets the $x$-axis at $R$. Find the area of the rectangle.",
+    "summaryZh": "矩形 $PQRS$ 中 $P=(0,6)$、$Q=(1,8)$。过 $Q$ 作 $PQ$ 的垂线，与 $x$ 轴交于 $R$。求矩形面积。",
+    "answer": "E. $40$",
+    "answerZh": "E．$40$",
+    "methods": [{
+      "title": "Find the adjacent side from its gradient",
+      "titleZh": "利用斜率求相邻边长",
+      "topics": [{"en":"Coordinate geometry","zh":"解析几何"},{"en":"Perpendicular gradients","zh":"垂直直线斜率"}],
+      "steps": [
+        "$PQ=\\sqrt{1^2+2^2}=\\sqrt5$, and its gradient is $2$, so $QR$ has gradient $-1/2$.",
+        "Writing $R=(r,0)$ gives $(0-8)/(r-1)=-1/2$, hence $r-1=16$.",
+        "Thus $QR=\\sqrt{16^2+8^2}=8\\sqrt5$, and the area is $\\sqrt5(8\\sqrt5)=40$."
+      ],
+      "stepsZh": [
+        "$PQ=\\sqrt{1^2+2^2}=\\sqrt5$，其斜率为 $2$，故 $QR$ 的斜率为 $-1/2$。",
+        "设 $R=(r,0)$，则 $(0-8)/(r-1)=-1/2$，所以 $r-1=16$。",
+        "因此 $QR=\\sqrt{16^2+8^2}=8\\sqrt5$，面积为 $\\sqrt5(8\\sqrt5)=40$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=4"
+  },
+  "tmua-2017-p2-q3": {
+    "summary": "A geometric progression has first term $2\\sqrt3$ and fourth term $9/4$. Find its sum to infinity.",
+    "summaryZh": "一等比数列的首项为 $2\\sqrt3$，第四项为 $9/4$。求其无穷和。",
+    "answer": "G. $4(2\\sqrt3+3)$",
+    "answerZh": "G．$4(2\\sqrt3+3)$",
+    "methods": [{
+      "title": "Recover the common ratio",
+      "titleZh": "先求公比",
+      "topics": [{"en":"Geometric progressions","zh":"等比数列"},{"en":"Surds","zh":"根式"}],
+      "steps": [
+        "If the common ratio is $r$, then $2\\sqrt3\\,r^3=9/4$, so $r^3=3\\sqrt3/8=(\\sqrt3/2)^3$ and $r=\\sqrt3/2$.",
+        "$S_\\infty=2\\sqrt3/(1-\\sqrt3/2)=4\\sqrt3/(2-\\sqrt3)$. Rationalising gives $4\\sqrt3(2+\\sqrt3)=4(2\\sqrt3+3)$."
+      ],
+      "stepsZh": [
+        "设公比为 $r$，则 $2\\sqrt3\\,r^3=9/4$，所以 $r^3=3\\sqrt3/8=(\\sqrt3/2)^3$，即 $r=\\sqrt3/2$。",
+        "$S_\\infty=2\\sqrt3/(1-\\sqrt3/2)=4\\sqrt3/(2-\\sqrt3)$。分母有理化得 $4\\sqrt3(2+\\sqrt3)=4(2\\sqrt3+3)$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=5"
+  },
+  "tmua-2017-p2-q4": {
+    "summary": "A student argues that $\\tan x=\\sqrt3$ implies $x=60^\\circ$, hence $\\sin 2x=\\sqrt3/2$. Decide whether the value is unique and whether the reasoning is complete.",
+    "summaryZh": "一名学生认为 $\\tan x=\\sqrt3$ 推出 $x=60^\\circ$，因而 $\\sin 2x=\\sqrt3/2$。判断该值是否唯一，以及论证是否完整。",
+    "answer": "B. $\\sqrt3/2$ is the only value, but other solutions of $\\tan x=\\sqrt3$ must be considered.",
+    "answerZh": "B．$\\sqrt3/2$ 是唯一值，但必须考虑 $\\tan x=\\sqrt3$ 的其他解。",
+    "methods": [{
+      "title": "Compare the two periods",
+      "titleZh": "比较两个周期",
+      "topics": [{"en":"Trigonometric periodicity","zh":"三角函数周期性"},{"en":"Completeness of arguments","zh":"论证完整性"}],
+      "steps": [
+        "All solutions are $x=60^\\circ+180^\\circ n$ for $n\\in\\mathbb Z$, so the student's first implication omitted infinitely many possibilities.",
+        "But $2x=120^\\circ+360^\\circ n$, and sine has period $360^\\circ$. Every solution therefore gives $\\sin2x=\\sin120^\\circ=\\sqrt3/2$.",
+        "The numerical conclusion is unique, while the supplied reasoning is incomplete."
+      ],
+      "stepsZh": [
+        "全部解为 $x=60^\\circ+180^\\circ n$（$n\\in\\mathbb Z$），因此学生的第一步遗漏了无穷多个可能值。",
+        "但 $2x=120^\\circ+360^\\circ n$，而正弦函数周期为 $360^\\circ$，故所有解都给出 $\\sin2x=\\sin120^\\circ=\\sqrt3/2$。",
+        "数值结论唯一，但原论证不完整。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=6"
+  },
+  "tmua-2017-p2-q5": {
+    "summary": "Three claims are given: (1) $10p^2\\pm1$ are both prime whenever $p$ is an odd prime; (2) every prime above $5$ is $6n+1$; (3) no multiple of $7$ above $7$ is prime. For which claims does $91=7\\cdot13$ provide a counterexample?",
+    "summaryZh": "给出三条命题：(1) 当 $p$ 为奇素数时，$10p^2\\pm1$ 都是素数；(2) 每个大于 $5$ 的素数都形如 $6n+1$；(3) 大于 $7$ 的 $7$ 的倍数都不是素数。$91=7\\cdot13$ 能反驳哪些命题？",
+    "answer": "B. Statement 1 only",
+    "answerZh": "B．仅命题 1",
+    "methods": [{
+      "title": "Check the hypothesis and conclusion separately",
+      "titleZh": "分别检查前提与结论",
+      "topics": [{"en":"Counterexamples","zh":"反例"},{"en":"Prime numbers","zh":"素数"}],
+      "steps": [
+        "For claim 1 choose the odd prime $p=3$. Then $10p^2+1=91$ is composite, so $91=7\\cdot13$ is a genuine counterexample.",
+        "Claim 2 concerns numbers that are prime; $91$ is not prime, so it cannot be a counterexample to that implication.",
+        "For claim 3, $91$ is a multiple of $7$ above $7$ and is indeed not prime, so it confirms rather than refutes the claim."
+      ],
+      "stepsZh": [
+        "对命题 1 取奇素数 $p=3$，则 $10p^2+1=91$ 为合数，所以 $91=7\\cdot13$ 构成真正反例。",
+        "命题 2 的前提要求该数为素数；$91$ 不是素数，不能构成该蕴含的反例。",
+        "对命题 3，$91$ 是大于 $7$ 的 $7$ 的倍数且确实不是素数，因此它验证而非反驳该命题。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=7"
+  },
+  "tmua-2017-p2-q6": {
+    "summary": "Define $u_0=1$ and $u_n=\\int_0^1 4x\\,u_{n-1}\\,dx$ for $n\\ge1$. Find $u_{1000}$.",
+    "summaryZh": "定义 $u_0=1$，且对 $n\\ge1$，$u_n=\\int_0^1 4x\\,u_{n-1}\\,dx$。求 $u_{1000}$。",
+    "answer": "A. $2^{1000}$",
+    "answerZh": "A．$2^{1000}$",
+    "methods": [{
+      "title": "Reduce the integral to a recurrence",
+      "titleZh": "把积分化为递推关系",
+      "topics": [{"en":"Recurrence relations","zh":"递推关系"},{"en":"Mathematical induction","zh":"数学归纳法"}],
+      "steps": [
+        "$u_{n-1}$ is constant with respect to $x$, hence $u_n=u_{n-1}\\int_0^1 4x\\,dx=2u_{n-1}$.",
+        "Starting from $u_0=1$, repeated multiplication gives $u_n=2^n$. Equivalently, this is an immediate induction on $n$.",
+        "Therefore $u_{1000}=2^{1000}$."
+      ],
+      "stepsZh": [
+        "$u_{n-1}$ 与积分变量 $x$ 无关，故 $u_n=u_{n-1}\\int_0^1 4x\\,dx=2u_{n-1}$。",
+        "由 $u_0=1$ 出发反复乘以 $2$，得 $u_n=2^n$；也可直接用数学归纳法证明。",
+        "所以 $u_{1000}=2^{1000}$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=8"
+  },
+  "tmua-2017-p2-q7": {
+    "summary": "A solid graph $y=a^x$ and a dashed graph $y=f(x)$ both pass through $(0,1)$, with the dashed curve above the solid one for $x>0$ and below it for $x<0$. Decide which could hold: (1) $f(x)=b^x$ with $b>a$; (2) $b<a$; (3) $f(x)=a^{kx}$ with $k>1$; (4) $k<1$.",
+    "summaryZh": "实线图像为 $y=a^x$，虚线图像为 $y=f(x)$；两者都过 $(0,1)$，且当 $x>0$ 时虚线在实线上方、当 $x<0$ 时虚线在实线下方。判断哪些可能成立：(1) $f(x)=b^x$ 且 $b>a$；(2) $b<a$；(3) $f(x)=a^{kx}$ 且 $k>1$；(4) $k<1$。",
+    "answer": "E. Statements 1 and 3 only",
+    "answerZh": "E．仅命题 1 和 3",
+    "methods": [{
+      "title": "Test the curves at $x=1$",
+      "titleZh": "在 $x=1$ 处比较图像",
+      "topics": [{"en":"Exponential functions","zh":"指数函数"},{"en":"Graph transformations","zh":"函数图像变换"}],
+      "steps": [
+        "The solid curve is increasing, so $a>1$. At $x=1$ the diagram gives $f(1)>a$.",
+        "If $f(x)=b^x$, then $f(1)=b$, so $b>a$: statement 1 can hold and statement 2 cannot.",
+        "If $f(x)=a^{kx}$, then $f(1)=a^k>a$ exactly when $k>1$: statement 3 can hold and statement 4 cannot.",
+        "Indeed $a^{kx}=(a^k)^x$, so statements 1 and 3 describe the same faster-growing exponential curve."
+      ],
+      "stepsZh": [
+        "实线递增，因此 $a>1$。由图在 $x=1$ 处可知 $f(1)>a$。",
+        "若 $f(x)=b^x$，则 $f(1)=b$，故必须 $b>a$：命题 1 可能成立，命题 2 不可能。",
+        "若 $f(x)=a^{kx}$，则 $f(1)=a^k>a$ 当且仅当 $k>1$：命题 3 可能成立，命题 4 不可能。",
+        "并且 $a^{kx}=(a^k)^x$，所以命题 1 与 3 实质上描述同一类增长更快的指数图像。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=9"
+  },
+  "tmua-2017-p2-q8": {
+    "summary": "Find the smallest of $\\log_2 7$, $(2^{-3}+2^{-2})^{-1}$, $2^{\\pi/3}$, $[4(\\sqrt2-1)^3]^{-1}$, and $4\\sin^2(\\pi/4)$.",
+    "summaryZh": "比较 $\\log_2 7$、$(2^{-3}+2^{-2})^{-1}$、$2^{\\pi/3}$、$[4(\\sqrt2-1)^3]^{-1}$ 与 $4\\sin^2(\\pi/4)$，求其中最小者。",
+    "answer": "E. $4\\sin^2(\\pi/4)=2$",
+    "answerZh": "E．$4\\sin^2(\\pi/4)=2$",
+    "methods": [{
+      "title": "Bound each candidate",
+      "titleZh": "分别估计每个候选值",
+      "topics": [{"en":"Estimation","zh":"估值"},{"en":"Surds and logarithms","zh":"根式与对数"}],
+      "steps": [
+        "$2<\\log_2 7<3$, while $(1/8+1/4)^{-1}=8/3>2$ and $2^{\\pi/3}>2$ because $\\pi/3>1$.",
+        "Also $[4(\\sqrt2-1)^3]^{-1}=(5\\sqrt2+7)/4>3$ after rationalisation.",
+        "Finally $4\\sin^2(\\pi/4)=4(1/2)=2$, which is strictly smaller than all the others."
+      ],
+      "stepsZh": [
+        "$2<\\log_2 7<3$；$(1/8+1/4)^{-1}=8/3>2$；又因 $\\pi/3>1$，有 $2^{\\pi/3}>2$。",
+        "分母有理化后 $[4(\\sqrt2-1)^3]^{-1}=(5\\sqrt2+7)/4>3$。",
+        "最后 $4\\sin^2(\\pi/4)=4(1/2)=2$，严格小于其余各项。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=10"
+  },
+  "tmua-2017-p2-q9": {
+    "summary": "An attempted proof of the true statement that $a^3+b^3=c^3$ has no positive-integer solutions factors $a^3=(c-b)(c^2+cb+b^2)$, then claims $a=c-b$ and $a^2=c^2+cb+b^2$ because the first factors are no larger than the second factors. Identify the first invalid line.",
+    "summaryZh": "一个证明试图说明 $a^3+b^3=c^3$ 没有正整数解。它先分解为 $a^3=(c-b)(c^2+cb+b^2)$，随后仅因两边第一个因子均不大于第二个因子，就断言 $a=c-b$ 且 $a^2=c^2+cb+b^2$。找出首次错误。",
+    "answer": "D. Line III",
+    "answerZh": "D．第 III 行",
+    "methods": [{
+      "title": "Check what equality of products actually implies",
+      "titleZh": "检查乘积相等究竟能推出什么",
+      "topics": [{"en":"Proof analysis","zh":"证明辨析"},{"en":"Factorisation","zh":"因式分解"}],
+      "steps": [
+        "Lines I and II are valid rearrangement and the identity $c^3-b^3=(c-b)(c^2+cb+b^2)$.",
+        "From $a\\cdot a^2=(c-b)(c^2+cb+b^2)$ one cannot match factors term by term merely because each smaller factor is paired with a larger one.",
+        "A product can have many different factor pairs; for example $6^3=3\\cdot72$ rather than only $6\\cdot36$. Thus line III is the first unjustified step."
+      ],
+      "stepsZh": [
+        "第 I、II 行分别是合法移项和恒等式 $c^3-b^3=(c-b)(c^2+cb+b^2)$。",
+        "由 $a\\cdot a^2=(c-b)(c^2+cb+b^2)$，不能仅凭每组中前者不大于后者就逐项对应因子。",
+        "同一个乘积可有许多不同因子对，例如 $6^3=3\\cdot72$，并非只能写成 $6\\cdot36$。因此第 III 行首次缺乏依据。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=11"
+  },
+  "tmua-2017-p2-q10": {
+    "summary": "Let $f$ be defined for all real $x$. Which condition is sufficient for $\\int_1^3 f(x)\\,dx=0$: a single zero, zeros at both endpoints, oddness about $0$, or the antisymmetry $f(2+x)=-f(2-x)$?",
+    "summaryZh": "设 $f$ 在全体实数上有定义。以下哪类条件足以保证 $\\int_1^3 f(x)\\,dx=0$：单个零点、两个端点均为零、关于原点为奇函数，还是 $f(2+x)=-f(2-x)$ 的反对称性？",
+    "answer": "D. $f(x+2)=-f(2-x)$ for all $x$",
+    "answerZh": "D．对所有 $x$，$f(x+2)=-f(2-x)$",
+    "methods": [{
+      "title": "Pair points equally far from the midpoint",
+      "titleZh": "配对区间中点两侧的点",
+      "topics": [{"en":"Definite integrals","zh":"定积分"},{"en":"Sufficient conditions","zh":"充分条件"}],
+      "steps": [
+        "Rewrite the proposed condition as $f(2+x)=-f(2-x)$. Thus values at equal distances from the midpoint $2$ cancel.",
+        "With $x=0$ it also gives $f(2)=0$. Therefore the signed areas over $[1,2]$ and $[2,3]$ are negatives of each other, and the integral is zero.",
+        "The other local conditions do not control the whole interval; oddness about $0$ also pairs the wrong points for the interval $[1,3]$."
+      ],
+      "stepsZh": [
+        "把条件写成 $f(2+x)=-f(2-x)$，可见关于中点 $2$ 等距的函数值互为相反数。",
+        "令 $x=0$ 还得 $f(2)=0$。因此 $[1,2]$ 与 $[2,3]$ 上的有向面积互相抵消，积分为零。",
+        "其他局部条件不能控制整个区间；关于原点的奇性配对的也不是区间 $[1,3]$ 中关于中点对称的点。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=12"
+  },
+  "tmua-2017-p2-q11": {
+    "summary": "An increasing function satisfies $f(0)=0$. For $0<a<b$, the area under $y=f(x)$ from $a$ to $b$ is $R$. If $g(x)=f(x)+2f(b)$, find the corresponding area under $g$.",
+    "summaryZh": "递增函数满足 $f(0)=0$。对 $0<a<b$，$y=f(x)$ 在 $a$ 到 $b$ 间与 $x$ 轴围成的面积为 $R$。若 $g(x)=f(x)+2f(b)$，求 $g$ 的相应面积。",
+    "answer": "B. $R+2(b-a)f(b)$",
+    "answerZh": "B．$R+2(b-a)f(b)$",
+    "methods": [{
+      "title": "View the change as a vertical translation",
+      "titleZh": "把变化看作竖直平移",
+      "topics": [{"en":"Area under a curve","zh":"曲线下面积"},{"en":"Graph translations","zh":"函数图像平移"}],
+      "steps": [
+        "Because $f$ is increasing and $f(0)=0$, $f(x)\\ge0$ on $[a,b]$, so $R=\\int_a^b f(x)\\,dx$.",
+        "Adding $2f(b)$ shifts the graph upward by a constant and adds a rectangle of width $b-a$ and height $2f(b)$.",
+        "Hence the new area is $R+2(b-a)f(b)$."
+      ],
+      "stepsZh": [
+        "因 $f$ 递增且 $f(0)=0$，在 $[a,b]$ 上有 $f(x)\\ge0$，故 $R=\\int_a^b f(x)\\,dx$。",
+        "加上常数 $2f(b)$ 相当于图像整体上移，并增加一个宽为 $b-a$、高为 $2f(b)$ 的矩形。",
+        "所以新面积为 $R+2(b-a)f(b)$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=13"
+  },
+  "tmua-2017-p2-q12": {
+    "summary": "For $-\\pi/2<x<\\pi/2$, determine which ordering can never occur among $\\sin2x$, $\\cos2x$, and $\\tan x$. The six candidates are the six possible strict orderings of these three quantities.",
+    "summaryZh": "在 $-\\pi/2<x<\\pi/2$ 内，判断 $\\sin2x$、$\\cos2x$、$\\tan x$ 三者的六种严格大小顺序中，哪一种不可能出现。",
+    "answer": "C. $\\sin2x<\\cos2x<\\tan x$ never occurs.",
+    "answerZh": "C．$\\sin2x<\\cos2x<\\tan x$ 不可能出现。",
+    "methods": [{
+      "title": "Locate where tangent is the largest",
+      "titleZh": "先确定正切函数何时最大",
+      "topics": [{"en":"Trigonometric graphs","zh":"三角函数图像"},{"en":"Inequalities","zh":"不等式"}],
+      "steps": [
+        "Sketch $\\tan x$ together with the given $\\sin2x$ and $\\cos2x$ curves. For $\\tan x$ to exceed both other functions, one must be in $\\pi/4<x<\\pi/2$.",
+        "Throughout that interval, $\\cos2x<\\sin2x$: cosine is negative after $\\pi/4$, while sine remains positive until $\\pi/2$.",
+        "Thus whenever tangent is largest, the other two occur in the order $\\cos2x<\\sin2x$, so $\\sin2x<\\cos2x<\\tan x$ is impossible. Representative points in the remaining subintervals realise all five other orderings."
+      ],
+      "stepsZh": [
+        "把 $\\tan x$ 与 $\\sin2x$、$\\cos2x$ 的图像画在一起。要使 $\\tan x$ 同时大于另外两个函数，必须有 $\\pi/4<x<\\pi/2$。",
+        "在该区间内始终有 $\\cos2x<\\sin2x$：过 $\\pi/4$ 后余弦为负，而正弦直到 $\\pi/2$ 仍为正。",
+        "因此只要正切最大，另外两者必为 $\\cos2x<\\sin2x$，故 $\\sin2x<\\cos2x<\\tan x$ 不可能。其余五种顺序都可在相应小区间内取代表点实现。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=14"
+  },
+  "tmua-2017-p2-q13": {
+    "summary": "Positive numbers $a\\times10^{-3}$, $b\\times10^{-2}$ and $c\\times10^{-1}$ are each in standard form and satisfy $a\\times10^{-3}+b\\times10^{-2}=c\\times10^{-1}$. Which statements must hold: I $a>9$, II $b>9$, III $a<c$, IV $b<c$?",
+    "summaryZh": "正数 $a\\times10^{-3}$、$b\\times10^{-2}$、$c\\times10^{-1}$ 均为标准形式，且 $a\\times10^{-3}+b\\times10^{-2}=c\\times10^{-1}$。判断哪些必然成立：I $a>9$，II $b>9$，III $a<c$，IV $b<c$。",
+    "answer": "B. Statement II only",
+    "answerZh": "B．仅命题 II",
+    "methods": [{
+      "title": "Track the carry into the tenths column",
+      "titleZh": "追踪进入十分位的进位",
+      "topics": [{"en":"Standard form","zh":"科学记数法"},{"en":"Place value","zh":"数位"}],
+      "steps": [
+        "Write the equality as $0.00a_1a_2\\ldots+0.0b_1b_2\\ldots=0.c_1c_2\\ldots$. Since the right side is at least $0.1$, a carry into the tenths column is required.",
+        "That forces $b_1=9$. Equality $b=9$ would still give no carry, so in fact $b>9$; statement II is necessary.",
+        "The carry can occur with $a_1<9$, so I need not hold. Since $1\\le c<2$ while $a$ can exceed $8$ and $b>9$, neither III nor IV is forced."
+      ],
+      "stepsZh": [
+        "把等式写成 $0.00a_1a_2\\ldots+0.0b_1b_2\\ldots=0.c_1c_2\\ldots$。右端至少为 $0.1$，所以必须向十分位进位。",
+        "这迫使 $b_1=9$；若恰有 $b=9$ 仍不会进位，因此实际必须 $b>9$，命题 II 必然成立。",
+        "即使 $a_1<9$ 也可能发生进位，故 I 非必然。又 $1\\le c<2$，而 $a$ 可大于 $8$、$b>9$，所以 III、IV 都非必然。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=15"
+  },
+  "tmua-2017-p2-q14": {
+    "summary": "The upward parabola $y=x^2-2bx+c$ has vertex $P$ to the right of the $y$-axis and above the $x$-axis. When $B>b$, determine the position of the vertex of $y=x^2-2Bx+c$ relative to $P$ (the original choices show eight possible relative positions).",
+    "summaryZh": "开口向上的抛物线 $y=x^2-2bx+c$ 的顶点 $P$ 位于 $y$ 轴右侧、$x$ 轴上方。当 $B>b$ 时，判断 $y=x^2-2Bx+c$ 的顶点相对 $P$ 的位置（原题八幅选图表示八种相对位置）。",
+    "answer": "F. Its vertex is to the right of and below $P$.",
+    "answerZh": "F．新顶点位于 $P$ 的右下方。",
+    "methods": [{
+      "title": "Compare the two vertex formulae",
+      "titleZh": "比较两个顶点公式",
+      "topics": [{"en":"Completing the square","zh":"配方法"},{"en":"Parabola transformations","zh":"抛物线变换"}],
+      "steps": [
+        "$x^2-2bx+c=(x-b)^2+c-b^2$, so $P=(b,c-b^2)$. The diagram gives $b>0$.",
+        "The new vertex is $(B,c-B^2)$. Since $B>b$, it lies to the right of $P$.",
+        "Also $B>b>0$ implies $B^2>b^2$, so $c-B^2<c-b^2$: the new vertex is lower. Only sketch F has the vertex right of and below $P$."
+      ],
+      "stepsZh": [
+        "$x^2-2bx+c=(x-b)^2+c-b^2$，故 $P=(b,c-b^2)$；由图知 $b>0$。",
+        "新顶点为 $(B,c-B^2)$。因 $B>b$，它位于 $P$ 的右侧。",
+        "又因 $B>b>0$，有 $B^2>b^2$，所以 $c-B^2<c-b^2$，新顶点更低。只有图 F 的顶点位于 $P$ 的右下方。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=16"
+  },
+  "tmua-2017-p2-q15": {
+    "summary": "On positive integers, $f(1)=5$ and $f(n+1)=3f(n)+1$ if $f(n)$ is odd, otherwise $f(n+1)=f(n)/2$. Also $g(1)=3$ and $g(n+1)=g(n)+5$ if $g(n)$ is odd, otherwise $g(n+1)=g(n)/2$. Find $f(1000)-g(1000)$.",
+    "summaryZh": "在正整数上定义 $f(1)=5$；若 $f(n)$ 为奇数，则 $f(n+1)=3f(n)+1$，否则 $f(n+1)=f(n)/2$。又定义 $g(1)=3$；若 $g(n)$ 为奇数，则 $g(n+1)=g(n)+5$，否则 $g(n+1)=g(n)/2$。求 $f(1000)-g(1000)$。",
+    "answer": "D. $2$",
+    "answerZh": "D．$2$",
+    "methods": [{
+      "title": "Detect the two cycles",
+      "titleZh": "找出两个循环",
+      "topics": [{"en":"Recurrence relations","zh":"递推关系"},{"en":"Periodicity","zh":"周期性"}],
+      "steps": [
+        "The $f$-sequence begins $5,16,8,4,2,1,4,2,1,\\ldots$; after the first three terms it repeats $4,2,1$ with period $3$.",
+        "The $g$-sequence begins $3,8,4,2,1,6,3,8,4,2,1,6,\\ldots$ with period $6$.",
+        "$1000=3(333)+1$, so $f(1000)=4$. Also $1000=6(166)+4$, so $g(1000)=2$. Their difference is $2$."
+      ],
+      "stepsZh": [
+        "$f$ 数列开头为 $5,16,8,4,2,1,4,2,1,\\ldots$；前三项后以 $4,2,1$ 为周期 $3$ 循环。",
+        "$g$ 数列为 $3,8,4,2,1,6,3,8,4,2,1,6,\\ldots$，周期为 $6$。",
+        "$1000=3(333)+1$，故 $f(1000)=4$；又 $1000=6(166)+4$，故 $g(1000)=2$。两者之差为 $2$。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=17"
+  },
+  "tmua-2017-p2-q16": {
+    "summary": "Find a counterexample to: if $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$. The candidates are $(x^3+x+1)/4$, $(x^4+x^2+x)/2$, $(x^4+x^3+x^2+x)/2$, and $(x^4+2x^3+x^2)/4$.",
+    "summaryZh": "找出下述命题的反例：若对每个整数 $x$，$f(x)$ 都是整数，则对每个整数 $x$，$f'(x)$ 也是整数。候选函数为 $(x^3+x+1)/4$、$(x^4+x^2+x)/2$、$(x^4+x^3+x^2+x)/2$、$(x^4+2x^3+x^2)/4$。",
+    "answer": "C. $f(x)=\\dfrac{x^4+x^3+x^2+x}{2}$",
+    "answerZh": "C．$f(x)=\\dfrac{x^4+x^3+x^2+x}{2}$",
+    "methods": [{
+      "title": "Prove integer values, then test the derivative",
+      "titleZh": "先证明函数取整值，再检查导数",
+      "topics": [{"en":"Counterexamples","zh":"反例"},{"en":"Divisibility","zh":"整除性"}],
+      "steps": [
+        "For option C, $f(x)=x(x+1)(x^2+1)/2$. Since one of consecutive integers $x,x+1$ is even, $f(x)$ is an integer for every integer $x$.",
+        "$f'(x)=(4x^3+3x^2+2x+1)/2$, so $f'(0)=1/2$, not an integer. Thus C violates the conclusion while satisfying the hypothesis.",
+        "For comparison, option D equals $x^2(x+1)^2/4$ and has derivative $x(x+1)(2x+1)/2$; both are integer-valued on integers, so D is not a counterexample."
+      ],
+      "stepsZh": [
+        "对选项 C，$f(x)=x(x+1)(x^2+1)/2$。相邻整数 $x,x+1$ 中必有一个为偶数，故对每个整数 $x$，$f(x)$ 都是整数。",
+        "$f'(x)=(4x^3+3x^2+2x+1)/2$，所以 $f'(0)=1/2$ 不是整数。因此 C 满足前提却不满足结论。",
+        "作为对照，选项 D 为 $x^2(x+1)^2/4$，导数为 $x(x+1)(2x+1)/2$；二者在整数处都取整数值，所以 D 不是反例。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=18"
+  },
+  "tmua-2017-p2-q17": {
+    "summary": "A set $S$ of whole numbers is called stapled exactly when every $a\\in S$ has a prime factor that divides at least one other member of $S$. State the exact logical condition equivalent to a set $T$ not being stapled.",
+    "summaryZh": "若整数集合 $S$ 中每个 $a$ 都存在一个素因子，且该素因子还整除 $S$ 中至少另一个数，则称 $S$ 为 stapled。写出集合 $T$ 不是 stapled 的等价逻辑条件。",
+    "answer": "F. There exists $a\\in T$ such that no prime factor of $a$ divides any other member of $T$.",
+    "answerZh": "F．存在 $a\\in T$，使得 $a$ 的任何素因子都不整除 $T$ 中的其他数。",
+    "methods": [{
+      "title": "Negate the quantifiers from outside inward",
+      "titleZh": "由外向内否定量词",
+      "topics": [{"en":"Quantifiers","zh":"量词"},{"en":"Logical negation","zh":"逻辑否定"}],
+      "steps": [
+        "The definition has the form $\\forall a\\in T\\,\\exists p$: $p$ is a prime factor of $a$ and divides another member of $T$.",
+        "Negating $\\forall a$ gives $\\exists a$, and negating the inner existence gives that no such prime factor exists.",
+        "Therefore $T$ is not stapled exactly when some $a\\in T$ has no prime factor dividing even one other member of $T$, which is option F."
+      ],
+      "stepsZh": [
+        "定义的量词结构为 $\\forall a\\in T\\,\\exists p$：$p$ 是 $a$ 的素因子，并整除 $T$ 中另一个元素。",
+        "否定外层 $\\forall a$ 得 $\\exists a$；再否定内层存在量词，得到不存在这样的素因子。",
+        "因此，$T$ 不是 stapled 当且仅当存在某个 $a\\in T$，其任何素因子都不整除 $T$ 中其他任何一个数，即选项 F。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=19"
+  },
+  "tmua-2017-p2-q18": {
+    "summary": "A student solves $(1/4)^n<(1/32)^{10}$ for positive integer $n$ by taking logarithms to base $1/2$ without reversing the inequality, and concludes $1\\le n\\le24$. Identify the invalid step.",
+    "summaryZh": "一名学生求正整数不等式 $(1/4)^n<(1/32)^{10}$，在取以 $1/2$ 为底的对数时没有改变不等号方向，最终得到 $1\\le n\\le24$。找出无效步骤。",
+    "answer": "B. Step I, taking $\\log_{1/2}$ without reversing the inequality",
+    "answerZh": "B．第 I 步：取 $\\log_{1/2}$ 时未反向不等号",
+    "methods": [{
+      "title": "Use monotonicity of the logarithm",
+      "titleZh": "利用对数函数的单调性",
+      "topics": [{"en":"Logarithmic inequalities","zh":"对数不等式"},{"en":"Monotonicity","zh":"单调性"}],
+      "steps": [
+        "Because the base $1/2$ lies between $0$ and $1$, $\\log_{1/2}x$ is strictly decreasing. Applying it to an inequality reverses the inequality sign.",
+        "Thus the first displayed logarithmic inequality is already invalid; it should use $>$ rather than $<$.",
+        "Directly, $(1/4)^n=(1/2)^{2n}$ and $(1/32)^{10}=(1/2)^{50}$. Since powers of $1/2$ decrease, the original inequality is $2n>50$, so $n\\ge26$, confirming the stated conclusion is wrong."
+      ],
+      "stepsZh": [
+        "因底数 $1/2$ 位于 $0$ 与 $1$ 之间，$\\log_{1/2}x$ 严格递减，对不等式两边取该对数必须反向不等号。",
+        "因此第一处写出的对数不等式已经错误；应使用 $>$ 而不是 $<$。",
+        "直接计算，$(1/4)^n=(1/2)^{2n}$，$(1/32)^{10}=(1/2)^{50}$。因 $(1/2)^t$ 随 $t$ 递减，原不等式等价于 $2n>50$，即 $n\\ge26$，也证实原结论错误。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=20"
+  },
+  "tmua-2017-p2-q19": {
+    "summary": "Which listed condition is sufficient for $x^3-3x^2+a=0$ to have exactly one real root? The candidates include one-sided bounds on $a$, $|a|>4$, $|a|\\le4$, and fixed values.",
+    "summaryZh": "以下哪个条件足以保证 $x^3-3x^2+a=0$ 恰有一个实根？候选条件包括关于 $a$ 的单边界、$|a|>4$、$|a|\\le4$ 及若干固定值。",
+    "answer": "E. $|a|>4$",
+    "answerZh": "E．$|a|>4$",
+    "methods": [{
+      "title": "Place both turning points on the same side of the axis",
+      "titleZh": "让两个极值点位于横轴同侧",
+      "topics": [{"en":"Cubic graphs","zh":"三次函数图像"},{"en":"Sufficient conditions","zh":"充分条件"}],
+      "steps": [
+        "For $h(x)=x^3-3x^2+a$, $h'(x)=3x(x-2)$, so the stationary values are $h(0)=a$ and $h(2)=a-4$.",
+        "The cubic has exactly one real root when its local maximum is below the axis ($a<0$) or its local minimum is above it ($a>4$). The exact condition is therefore $a<0$ or $a>4$.",
+        "The listed condition $|a|>4$ means $a<-4$ or $a>4$, wholly contained in that valid range. It is sufficient, though not necessary."
+      ],
+      "stepsZh": [
+        "令 $h(x)=x^3-3x^2+a$，则 $h'(x)=3x(x-2)$，两个驻点函数值分别为 $h(0)=a$、$h(2)=a-4$。",
+        "当局部极大值在横轴下方（$a<0$），或局部极小值在横轴上方（$a>4$）时，三次方程恰有一个实根。因此准确条件为 $a<0$ 或 $a>4$。",
+        "选项 $|a|>4$ 表示 $a<-4$ 或 $a>4$，完全包含在上述有效范围内，所以它是充分但非必要条件。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=21"
+  },
+  "tmua-2017-p2-q20": {
+    "summary": "A password is a permutation of $a,b,c,d,e$. Attempts $abcde$, $cdbea$, and $eadbc$ each have zero letters in the correct position. Each new attempt reports only the number of correctly positioned letters. With an optimal strategy, how many further attempts guarantee that the password can be deduced?",
+    "summaryZh": "密码是 $a,b,c,d,e$ 的一个排列。尝试 $abcde$、$cdbea$、$eadbc$ 时，电脑都报告正确位置的字母数为零。每次新尝试只会返回位置正确的字母个数。采用最优策略，至少再尝试多少次即可保证推断出密码？",
+    "answer": "B. One further attempt",
+    "answerZh": "B．再尝试一次",
+    "methods": [{
+      "title": "Choose one attempt whose four outcomes are distinct",
+      "titleZh": "构造一次能区分四种情形的尝试",
+      "topics": [{"en":"Combinatorial search","zh":"组合搜索"},{"en":"Information strategy","zh":"信息策略"}],
+      "steps": [
+        "The three failed attempts leave positions $1,5$ equal to $b,d$ in some order, and positions $2,3,4$ equal to either $c,e,a$ or $e,a,c$. Thus exactly four passwords remain.",
+        "Try $bcead$. If both the outer pair and middle triple are correct, the response is $5$; if only the outer pair is correct it is $2$; if only the middle triple is correct it is $3$; if neither is correct it is $0$.",
+        "The four possible replies $5,2,3,0$ are distinct and identify respectively $bcead$, $beacd$, $dceab$, and $deacb$. Hence one further attempt always suffices."
+      ],
+      "stepsZh": [
+        "前三次全错后，第 $1,5$ 位只能由 $b,d$ 以两种顺序占据；第 $2,3,4$ 位只能是 $c,e,a$ 或 $e,a,c$。因此只剩四个候选密码。",
+        "尝试 $bcead$。若外侧两位和中间三位都正确，返回 $5$；仅外侧正确返回 $2$；仅中间正确返回 $3$；两组都错误返回 $0$。",
+        "四种返回值 $5,2,3,0$ 互不相同，分别确定密码为 $bcead$、$beacd$、$dceab$、$deacb$。因此再尝试一次必然足够。"
+      ]
+    }],
+    "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf#page=22"
+  }
+}
