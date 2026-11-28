@@ -1,0 +1,202 @@
+{
+  "amc8-2018-q1": {
+    "summary": "A park uses a $1:20$ scale model. The real United States Capitol is $289$ feet high. Find the replica's height, rounded to the nearest foot.",
+    "summaryZh": "某公园使用 $1:20$ 的比例模型。美国国会大厦实际高 $289$ 英尺，求模型高度并四舍五入到整数英尺。",
+    "answer": "A. $14$",
+    "answerZh": "A．$14$",
+    "methods": [{"title":"Apply the scale factor","titleZh":"应用比例尺","topics":[{"en":"Ratios","zh":"比与比例"},{"en":"Rounding","zh":"四舍五入"}],"steps":["Divide the real height by $20$: $289/20=14.45$ feet.","Rounding $14.45$ to the nearest whole number gives $14$."],"stepsZh":["把实际高度除以 $20$：$289/20=14.45$ 英尺。","$14.45$ 四舍五入到整数得到 $14$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/1"
+  },
+  "amc8-2018-q2": {
+    "summary": "Evaluate $\\left(1+\\frac11\\right)\\left(1+\\frac12\\right)\\left(1+\\frac13\\right)\\left(1+\\frac14\\right)\\left(1+\\frac15\\right)\\left(1+\\frac16\\right)$.",
+    "summaryZh": "计算 $\\left(1+\\frac11\\right)\\left(1+\\frac12\\right)\\left(1+\\frac13\\right)\\left(1+\\frac14\\right)\\left(1+\\frac15\\right)\\left(1+\\frac16\\right)$。",
+    "answer": "D. $7$",
+    "answerZh": "D．$7$",
+    "methods": [{"title":"Use telescoping cancellation","titleZh":"利用连锁约分","topics":[{"en":"Telescoping products","zh":"连乘约分"},{"en":"Fractions","zh":"分数"}],"steps":["Each factor is $1+1/n=(n+1)/n$.","The product becomes $\\frac21\\cdot\\frac32\\cdot\\frac43\\cdot\\frac54\\cdot\\frac65\\cdot\\frac76$; every intermediate factor cancels, leaving $7$."],"stepsZh":["每个因子都可写成 $1+1/n=(n+1)/n$。","原式变为 $\\frac21\\cdot\\frac32\\cdot\\frac43\\cdot\\frac54\\cdot\\frac65\\cdot\\frac76$，中间因子全部约去，结果为 $7$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/2"
+  },
+  "amc8-2018-q3": {
+    "summary": "Arn, Bob, Cyd, Dan, Eve, and Fon sit in that cyclic order and count upward, starting with Arn at $1$. A person leaves whenever their spoken number contains the digit $7$ or is divisible by $7$; counting continues around the remaining circle. Who is last?",
+    "summaryZh": "Arn、Bob、Cyd、Dan、Eve、Fon 按此顺序围成一圈，从 Arn 报 $1$ 开始依次报数。若所报数字含有数位 $7$ 或能被 $7$ 整除，该人离开；其余人继续循环报数。谁最后留下？",
+    "answer": "D. Dan",
+    "answerZh": "D．Dan",
+    "methods": [{"title":"Simulate only the elimination numbers","titleZh":"只追踪淘汰数字","topics":[{"en":"Process simulation","zh":"过程模拟"},{"en":"Divisibility","zh":"整除性"}],"steps":["The first relevant numbers are $7,14,17,21,27$. Track the current circle rather than restarting positions after each removal.","Arn leaves at $7$, Cyd at $14$, Fon at $17$, Bob at $21$, and Eve at $27$.","Dan is therefore the last remaining student."],"stepsZh":["首先需要处理的数字依次为 $7,14,17,21,27$；每次有人离开后，应在剩余圆圈中继续报数。","Arn 在 $7$ 时离开，Cyd 在 $14$，Fon 在 $17$，Bob 在 $21$，Eve 在 $27$。","因此最后留下的是 Dan。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/3"
+  },
+  "amc8-2018-q4": {
+    "summary": "A twelve-sided polygon on a $1$ cm square grid can be decomposed into a central $3\\times3$ square and four congruent right triangles, each with perpendicular legs $1$ cm and $2$ cm. Find its area.",
+    "summaryZh": "一个画在边长 $1$ cm 方格纸上的十二边形可分解为中央的 $3\\times3$ 正方形，以及四个全等直角三角形；每个三角形的两条直角边分别为 $1$ cm、$2$ cm。求其面积。",
+    "answer": "C. $13$",
+    "answerZh": "C．$13$",
+    "methods": [{"title":"Add the square and four triangles","titleZh":"正方形与四个三角形面积相加","topics":[{"en":"Area decomposition","zh":"面积分割"},{"en":"Triangle area","zh":"三角形面积"}],"steps":["The central square has area $3^2=9$.","Each right triangle has area $\\frac12(1)(2)=1$, so the four triangles contribute $4$.","The polygon's area is $9+4=13$ square centimetres."],"stepsZh":["中央正方形面积为 $3^2=9$。","每个直角三角形面积为 $\\frac12(1)(2)=1$，四个共贡献 $4$。","十二边形面积为 $9+4=13$ 平方厘米。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/4"
+  },
+  "amc8-2018-q5": {
+    "summary": "Evaluate $1+3+5+\\cdots+2017+2019-2-4-6-\\cdots-2016-2018$.",
+    "summaryZh": "计算 $1+3+5+\\cdots+2017+2019-2-4-6-\\cdots-2016-2018$。",
+    "answer": "E. $1010$",
+    "answerZh": "E．$1010$",
+    "methods": [{"title":"Pair each even term with the next odd term","titleZh":"把每个偶数与其后奇数配对","topics":[{"en":"Pairing","zh":"配对"},{"en":"Arithmetic sequences","zh":"等差数列"}],"steps":["Rewrite the expression as $1+(3-2)+(5-4)+\\cdots+(2019-2018)$.","There are $1009$ parenthesised differences, each equal to $1$.","The total is $1+1009=1010$."],"stepsZh":["把原式改写为 $1+(3-2)+(5-4)+\\cdots+(2019-2018)$。","括号内共有 $1009$ 个差，每个都等于 $1$。","总和为 $1+1009=1010$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/5"
+  },
+  "amc8-2018-q6": {
+    "summary": "Anh drives $50$ miles on a highway and $10$ miles on a coastal road. His highway speed is three times his coastal-road speed. The coastal part takes $30$ minutes. Find the total travel time.",
+    "summaryZh": "Anh 在高速公路行驶 $50$ 英里，在沿海道路行驶 $10$ 英里；高速速度是沿海道路速度的三倍。沿海道路用时 $30$ 分钟，求全程用时。",
+    "answer": "C. $80$ minutes",
+    "answerZh": "C．$80$ 分钟",
+    "methods": [{"title":"Scale the time for equal distances","titleZh":"比较相同路程所需时间","topics":[{"en":"Distance, rate and time","zh":"路程、速度与时间"},{"en":"Ratios","zh":"比例"}],"steps":["At three times the speed, $10$ highway miles would take $30/3=10$ minutes.","The highway distance is five groups of $10$ miles, so it takes $5(10)=50$ minutes.","Adding the coastal $30$ minutes gives $80$ minutes."],"stepsZh":["速度为三倍时，高速上行驶 $10$ 英里只需 $30/3=10$ 分钟。","高速路程为五个 $10$ 英里，因此用时 $5(10)=50$ 分钟。","再加沿海道路的 $30$ 分钟，共 $80$ 分钟。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/6"
+  },
+  "amc8-2018-q7": {
+    "summary": "The five-digit number $2018U$ is divisible by $9$, where $U$ is a digit. Find the remainder when the number is divided by $8$.",
+    "summaryZh": "五位数 $2018U$ 能被 $9$ 整除，其中 $U$ 为一个数字。求该数除以 $8$ 的余数。",
+    "answer": "B. $3$",
+    "answerZh": "B．$3$",
+    "methods": [{"title":"Use digit sum and the last three digits","titleZh":"利用数位和与末三位","topics":[{"en":"Divisibility rules","zh":"整除规则"},{"en":"Modular arithmetic","zh":"模运算"}],"steps":["Divisibility by $9$ requires $2+0+1+8+U=11+U$ to be a multiple of $9$, so $U=7$.","The number is $20187$. Modulo $8$, only the last three digits matter: $187=8(23)+3$.","The required remainder is $3$."],"stepsZh":["被 $9$ 整除要求数位和 $2+0+1+8+U=11+U$ 为 $9$ 的倍数，因此 $U=7$。","该数为 $20187$。模 $8$ 只需看末三位：$187=8(23)+3$。","所求余数为 $3$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/7"
+  },
+  "amc8-2018-q8": {
+    "summary": "A bar graph records exercise days and student counts as $(1,1),(2,3),(3,2),(4,6),(5,8),(6,3),(7,2)$, where each pair is (days, students). Find the mean number of exercise days, rounded to the nearest hundredth.",
+    "summaryZh": "一幅柱状图记录“锻炼天数—学生人数”为 $(1,1),(2,3),(3,2),(4,6),(5,8),(6,3),(7,2)$。求平均锻炼天数，四舍五入到百分位。",
+    "answer": "C. $4.36$",
+    "answerZh": "C．$4.36$",
+    "methods": [{"title":"Compute a weighted mean","titleZh":"计算加权平均数","topics":[{"en":"Weighted means","zh":"加权平均数"},{"en":"Data interpretation","zh":"数据解读"}],"steps":["The total number of students is $1+3+2+6+8+3+2=25$.","The total reported days are $1(1)+2(3)+3(2)+4(6)+5(8)+6(3)+7(2)=109$.","The mean is $109/25=4.36$."],"stepsZh":["学生总数为 $1+3+2+6+8+3+2=25$。","锻炼天数总和为 $1(1)+2(3)+3(2)+4(6)+5(8)+6(3)+7(2)=109$。","平均数为 $109/25=4.36$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/8"
+  },
+  "amc8-2018-q9": {
+    "summary": "A $12$-ft by $16$-ft floor has a one-tile-wide border of $1$-ft square tiles. The remaining rectangle is tiled with $2$-ft square tiles. Find the total number of tiles.",
+    "summaryZh": "一个 $12$ 英尺乘 $16$ 英尺的地面，边缘铺一圈边长 $1$ 英尺的正方形砖，内部剩余矩形用边长 $2$ 英尺的正方形砖铺满。求砖的总数。",
+    "answer": "B. $87$",
+    "answerZh": "B．$87$",
+    "methods": [{"title":"Count border and interior separately","titleZh":"分别计算边框与内部","topics":[{"en":"Tiling","zh":"铺砖问题"},{"en":"Area","zh":"面积"}],"steps":["The border contains all $1$-ft squares except the $10\\times14$ interior: $12\\cdot16-10\\cdot14=52$ tiles.","The interior has area $140$ square feet, and each $2\\times2$ tile covers $4$, so it needs $140/4=35$ tiles.","The total is $52+35=87$."],"stepsZh":["边框中的小砖数等于整个 $12\\times16$ 网格减去 $10\\times14$ 内部：$12\\cdot16-10\\cdot14=52$。","内部面积为 $140$ 平方英尺，每块 $2\\times2$ 砖面积为 $4$，需 $140/4=35$ 块。","总数为 $52+35=87$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/9"
+  },
+  "amc8-2018-q10": {
+    "summary": "The harmonic mean is the reciprocal of the average of the reciprocals. Find the harmonic mean of $1,2,4$.",
+    "summaryZh": "调和平均数定义为各数倒数的算术平均数之倒数。求 $1,2,4$ 的调和平均数。",
+    "answer": "C. $\\frac{12}{7}$",
+    "answerZh": "C．$\\frac{12}{7}$",
+    "methods": [{"title":"Apply the definition directly","titleZh":"直接使用定义","topics":[{"en":"Harmonic mean","zh":"调和平均数"},{"en":"Fractions","zh":"分数"}],"steps":["The average of the reciprocals is $\\frac{1+1/2+1/4}{3}=\\frac{7/4}{3}=7/12$.","Taking the reciprocal gives the harmonic mean $12/7$."],"stepsZh":["倒数的平均数为 $\\frac{1+1/2+1/4}{3}=\\frac{7/4}{3}=7/12$。","再取倒数，得到调和平均数 $12/7$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/10"
+  },
+  "amc8-2018-q11": {
+    "summary": "Six classmates, including Abby and Bridget, are randomly assigned to a $2\\times3$ array of seats. Find the probability that Abby and Bridget share an edge: adjacent in a row or in the same column.",
+    "summaryZh": "六名同学（包括 Abby 与 Bridget）随机坐在 $2\\times3$ 的座位阵列中。求两人共边相邻（同一行相邻或同一列）的概率。",
+    "answer": "C. $\\frac7{15}$",
+    "answerZh": "C．$\\frac7{15}$",
+    "methods": [{"title":"Count unordered pairs of seats","titleZh":"计算无序座位对","topics":[{"en":"Probability","zh":"概率"},{"en":"Combinations","zh":"组合"}],"steps":["There are $\\binom62=15$ unordered pairs of positions for Abby and Bridget.","Each row contributes $2$ adjacent pairs, giving $4$, and the three columns contribute $3$ more.","Thus $7$ of the $15$ pairs are adjacent, so the probability is $7/15$."],"stepsZh":["Abby 与 Bridget 的无序座位对共有 $\\binom62=15$ 个。","每行有 $2$ 对相邻位置，两行共 $4$ 对；三列再给出 $3$ 对。","因此 $15$ 对中有 $7$ 对相邻，概率为 $7/15$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/11"
+  },
+  "amc8-2018-q12": {
+    "summary": "At noon an accurate watch and a fast car clock agree. After $30$ real minutes the car clock shows $35$ elapsed minutes. Later the car clock reads $7{:}00$. Find the actual time.",
+    "summaryZh": "正午时准确手表与走快的汽车钟一致。实际过了 $30$ 分钟时，汽车钟显示已过 $35$ 分钟。后来汽车钟显示 $7{:}00$，求实际时间。",
+    "answer": "B. $6{:}00$",
+    "answerZh": "B．$6{:}00$",
+    "methods": [{"title":"Use the clock-rate ratio","titleZh":"利用钟表速率比","topics":[{"en":"Rates","zh":"速率"},{"en":"Proportions","zh":"比例"}],"steps":["The car clock advances $35$ minutes for every $30$ real minutes, a ratio of $7:6$.","From noon to a displayed $7{:}00$, the car clock advances $7$ hours.","The real elapsed time is $7\\cdot(6/7)=6$ hours, so the actual time is $6{:}00$."],"stepsZh":["汽车钟每走 $35$ 分钟，实际只过 $30$ 分钟，速率比为 $7:6$。","从正午到显示 $7{:}00$，汽车钟走了 $7$ 小时。","实际经过 $7\\cdot(6/7)=6$ 小时，因此实际时间为 $6{:}00$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/12"
+  },
+  "amc8-2018-q13": {
+    "summary": "Laila's first four integer test scores are equal; her fifth integer score is higher. All scores lie from $0$ to $100$, and the five-score average is $82$. How many fifth-score values are possible?",
+    "summaryZh": "Laila 前四次考试取得相同的整数分数，第五次分数更高；每次分数均在 $0$ 到 $100$ 之间，五次平均分为 $82$。第五次分数有多少种可能？",
+    "answer": "A. $4$",
+    "answerZh": "A．$4$",
+    "methods": [{"title":"Parameterise the deviation from the mean","titleZh":"用偏离平均数的量参数化","topics":[{"en":"Means","zh":"平均数"},{"en":"Integer constraints","zh":"整数约束"}],"steps":["Let each early score be $82-k$ with integer $k\\ge1$. To keep total $5(82)$, the last score must be $82+4k$.","The bound $82+4k\\le100$ gives $k\\le4$.","Thus $k=1,2,3,4$, producing last scores $86,90,94,98$: four possibilities."],"stepsZh":["设前四次分数为 $82-k$，其中整数 $k\\ge1$。为保持总分 $5(82)$，第五次必须为 $82+4k$。","由 $82+4k\\le100$ 得 $k\\le4$。","所以 $k=1,2,3,4$，第五次分数为 $86,90,94,98$，共四种。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/13"
+  },
+  "amc8-2018-q14": {
+    "summary": "Let $N$ be the greatest five-digit number whose digit product is $120$. Find the sum of its digits.",
+    "summaryZh": "设 $N$ 是各数位乘积为 $120$ 的最大五位数，求其数位和。",
+    "answer": "D. $18$",
+    "answerZh": "D．$18$",
+    "methods": [{"title":"Maximise digits from left to right","titleZh":"从左到右依次最大化数位","topics":[{"en":"Digits","zh":"数位"},{"en":"Prime factorisation","zh":"质因数分解"}],"steps":["Since $120=2^3\\cdot3\\cdot5$, the largest possible leading digit is $8$; $9$ does not divide $120$.","After using $8$, the remaining product is $15$. To maximise the next digits, use $5$, then $3$, and fill the last two positions with $1$s.","Thus $N=85311$, whose digit sum is $8+5+3+1+1=18$."],"stepsZh":["因 $120=2^3\\cdot3\\cdot5$，首位最大只能取 $8$；$9$ 不能整除 $120$。","使用 $8$ 后剩余乘积为 $15$。为使后续数位最大，依次取 $5,3$，最后两位补 $1$。","故 $N=85311$，数位和为 $8+5+3+1+1=18$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/14"
+  },
+  "amc8-2018-q15": {
+    "summary": "Two congruent small circles lie inside a large circle. A diameter of each small circle equals a radius of the large circle. The two small circles have combined area $1$. Find the area inside the large circle but outside the two small circles.",
+    "summaryZh": "两个全等小圆位于一个大圆内，每个小圆的直径都等于大圆的半径。两小圆面积之和为 $1$，求大圆内部但两小圆外部的阴影面积。",
+    "answer": "D. $1$",
+    "answerZh": "D．$1$",
+    "methods": [{"title":"Compare areas using radii","titleZh":"利用半径比比较面积","topics":[{"en":"Circle area","zh":"圆面积"},{"en":"Scale factors","zh":"比例缩放"}],"steps":["If a small-circle radius is $r$, the large-circle radius is $2r$.","The large area is $4\\pi r^2$, while the two small circles total $2\\pi r^2=1$; hence the large area is $2$.","Subtracting the two small circles leaves shaded area $2-1=1$."],"stepsZh":["设小圆半径为 $r$，则大圆半径为 $2r$。","大圆面积为 $4\\pi r^2$，两小圆总面积为 $2\\pi r^2=1$，故大圆面积为 $2$。","扣除两小圆后，阴影面积为 $2-1=1$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/15"
+  },
+  "amc8-2018-q16": {
+    "summary": "Nine distinct books consist of $2$ Arabic, $3$ German, and $4$ Spanish books. Count arrangements in which the Arabic books form one consecutive block and the Spanish books form another consecutive block.",
+    "summaryZh": "九本互不相同的书包括 $2$ 本阿拉伯语书、$3$ 本德语书和 $4$ 本西班牙语书。要求阿拉伯语书连续成一组、西班牙语书也连续成一组，求排列数。",
+    "answer": "C. $5760$",
+    "answerZh": "C．$5760$",
+    "methods": [{"title":"Treat each required block as one object","titleZh":"把每个连续组视为一个对象","topics":[{"en":"Permutations","zh":"排列"},{"en":"Block method","zh":"捆绑法"}],"steps":["Treat the Arabic block, the Spanish block, and the three individual German books as five distinct objects: they can be ordered in $5!$ ways.","The Arabic books can be ordered internally in $2!$ ways and the Spanish books in $4!$ ways.","The total is $5!\\cdot2!\\cdot4!=120\\cdot2\\cdot24=5760$."],"stepsZh":["把阿拉伯语书组、西班牙语书组及三本单独的德语书视为五个不同对象，可排列 $5!$ 种。","阿拉伯语书组内部有 $2!$ 种顺序，西班牙语书组内部有 $4!$ 种。","总数为 $5!\\cdot2!\\cdot4!=120\\cdot2\\cdot24=5760$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/16"
+  },
+  "amc8-2018-q17": {
+    "summary": "Bella walks toward Ella while Ella cycles toward Bella at five times Bella's speed. Their houses are $10{,}560$ feet apart, and each Bella step is $2.5$ feet. How many steps does Bella take before they meet?",
+    "summaryZh": "Bella 步行前往 Ella 家，同时 Ella 骑车迎面而来，速度是 Bella 的五倍。两家相距 $10{,}560$ 英尺，Bella 每步 $2.5$ 英尺。相遇前 Bella 走多少步？",
+    "answer": "A. $704$",
+    "answerZh": "A．$704$",
+    "methods": [{"title":"Split the distance in the speed ratio","titleZh":"按速度比分配路程","topics":[{"en":"Relative speed","zh":"相对速度"},{"en":"Ratios","zh":"比例"}],"steps":["In equal time, Ella travels five times Bella's distance, so Bella covers $1/(1+5)=1/6$ of the separation.","Bella walks $10{,}560/6=1760$ feet.","At $2.5=5/2$ feet per step, she takes $1760/(5/2)=704$ steps."],"stepsZh":["相同时间内，Ella 的路程是 Bella 的五倍，所以 Bella 走总距离的 $1/(1+5)=1/6$。","Bella 行走 $10{,}560/6=1760$ 英尺。","每步 $2.5=5/2$ 英尺，步数为 $1760/(5/2)=704$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/17"
+  },
+  "amc8-2018-q18": {
+    "summary": "How many positive divisors does $23{,}232$ have?",
+    "summaryZh": "$23{,}232$ 有多少个正因数？",
+    "answer": "E. $42$",
+    "answerZh": "E．$42$",
+    "methods": [{"title":"Use the divisor-count formula","titleZh":"使用因数个数公式","topics":[{"en":"Prime factorisation","zh":"质因数分解"},{"en":"Divisor counting","zh":"因数计数"}],"steps":["Prime factorisation gives $23{,}232=2^6\\cdot3\\cdot11^2$.","A divisor chooses exponents $0$ through $6$ for $2$, $0$ through $1$ for $3$, and $0$ through $2$ for $11$.","Thus the number of divisors is $(6+1)(1+1)(2+1)=7\\cdot2\\cdot3=42$."],"stepsZh":["质因数分解得 $23{,}232=2^6\\cdot3\\cdot11^2$。","一个因数中 $2$ 的指数有 $0$ 至 $6$，$3$ 的指数有 $0$ 至 $1$，$11$ 的指数有 $0$ 至 $2$。","因此因数个数为 $(6+1)(1+1)(2+1)=7\\cdot2\\cdot3=42$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/18"
+  },
+  "amc8-2018-q19": {
+    "summary": "A four-level sign pyramid starts with four bottom signs. Every cell above is $+$ when the two cells below match and $-$ when they differ. How many bottom rows produce $+$ at the top?",
+    "summaryZh": "一个四层符号金字塔底层有四个符号。上方每格在其下两格相同时填 $+$，不同时填 $-$。有多少种底层填法使顶端为 $+$？",
+    "answer": "C. $8$",
+    "answerZh": "C．$8$",
+    "methods": [{"title":"Encode signs as $\\pm1$","titleZh":"把符号编码为 $\\pm1$","topics":[{"en":"Parity","zh":"奇偶性"},{"en":"Counting","zh":"计数"}],"steps":["Encode $+$ as $1$ and $-$ as $-1$; the rule becomes multiplication.","If the bottom row is $a,b,c,d$, the next rows are $ab,bc,cd$, then $ac,bd$, and the top is $abcd$.","The top is positive exactly when an even number of the four bottom signs are negative. There are $\\binom40+\\binom42+\\binom44=1+6+1=8$ such rows."],"stepsZh":["把 $+$ 编码为 $1$、$-$ 编码为 $-1$，题目规则就等价于相乘。","若底层为 $a,b,c,d$，上一层为 $ab,bc,cd$，再上一层为 $ac,bd$，顶端为 $abcd$。","顶端为正当且仅当底层负号数为偶数，共 $\\binom40+\\binom42+\\binom44=1+6+1=8$ 种。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/19"
+  },
+  "amc8-2018-q20": {
+    "summary": "In triangle $ABC$, point $E$ divides $AB$ with $AE=1$ and $EB=2$. Through $E$, draw $ED\\parallel BC$ to $AC$ and $EF\\parallel AC$ to $BC$. Find $[CDEF]/[ABC]$.",
+    "summaryZh": "在三角形 $ABC$ 中，点 $E$ 位于 $AB$ 上，且 $AE=1,EB=2$。过 $E$ 作 $ED\\parallel BC$ 交 $AC$ 于 $D$，作 $EF\\parallel AC$ 交 $BC$ 于 $F$。求 $[CDEF]/[ABC]$。",
+    "answer": "A. $\\frac49$",
+    "answerZh": "A．$\\frac49$",
+    "methods": [{"title":"Subtract two similar corner triangles","titleZh":"扣除两个相似角部三角形","topics":[{"en":"Similar triangles","zh":"相似三角形"},{"en":"Area ratios","zh":"面积比"}],"steps":["Since $AB=3$, triangle $AED$ is similar to $ABC$ with length ratio $1/3$, so its area is $1/9$ of $[ABC]$.","Triangle $EBF$ is similar to $ABC$ with length ratio $2/3$, so its area is $4/9$ of $[ABC]$.","The remaining quadrilateral ratio is $1-1/9-4/9=4/9$."],"stepsZh":["因 $AB=3$，三角形 $AED$ 与 $ABC$ 相似，长度比为 $1/3$，面积为 $[ABC]$ 的 $1/9$。","三角形 $EBF$ 与 $ABC$ 相似，长度比为 $2/3$，面积为 $[ABC]$ 的 $4/9$。","剩余四边形面积比为 $1-1/9-4/9=4/9$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/20"
+  },
+  "amc8-2018-q21": {
+    "summary": "Count positive three-digit integers that leave remainders $2,5,7$ when divided by $6,9,11$, respectively.",
+    "summaryZh": "求正三位整数的个数，使其除以 $6,9,11$ 时余数分别为 $2,5,7$。",
+    "answer": "E. $5$",
+    "answerZh": "E．$5$",
+    "methods": [{"title":"Shift all three congruences to zero","titleZh":"平移三个同余式使余数为零","topics":[{"en":"Chinese remainder theorem","zh":"中国剩余定理"},{"en":"Least common multiples","zh":"最小公倍数"}],"steps":["Each condition becomes divisible after adding $4$: $n+4$ is divisible by $6$, $9$, and $11$.","Their least common multiple is $\\operatorname{lcm}(6,9,11)=198$, so $n=198k-4$.","The three-digit values occur for $k=1,2,3,4,5$, giving $194,392,590,788,986$: five integers."],"stepsZh":["三个条件都可通过加 $4$ 化为整除：$n+4$ 同时被 $6,9,11$ 整除。","最小公倍数为 $\\operatorname{lcm}(6,9,11)=198$，故 $n=198k-4$。","当 $k=1,2,3,4,5$ 时得到三位数 $194,392,590,788,986$，共五个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/21"
+  },
+  "amc8-2018-q22": {
+    "summary": "In square $ABCD$, $E$ is the midpoint of $CD$, and $BE$ meets diagonal $AC$ at $F$. If quadrilateral $AFED$ has area $45$, find the area of the square.",
+    "summaryZh": "在正方形 $ABCD$ 中，$E$ 是 $CD$ 的中点，$BE$ 与对角线 $AC$ 交于 $F$。若四边形 $AFED$ 的面积为 $45$，求正方形面积。",
+    "answer": "B. $108$",
+    "answerZh": "B．$108$",
+    "methods": [{"title":"Use similar triangles and area ratios","titleZh":"利用相似三角形与面积比","topics":[{"en":"Similar triangles","zh":"相似三角形"},{"en":"Square areas","zh":"正方形面积"}],"steps":["Triangles $ABF$ and $CEF$ are similar because $AB\\parallel CE$, and $AB:CE=2:1$. Their area ratio is therefore $4:1$.","Let $[CEF]=a$. Equal-base/common-altitude relations give $[DEF]=a$, $[CBF]=2a$, and $[DAF]=4a$.","Thus $[AFED]=[DAF]+[DEF]=5a=45$, so $a=9$. The entire square is $4a+2a+a+a+4a=12a=108$."],"stepsZh":["因 $AB\\parallel CE$，三角形 $ABF$ 与 $CEF$ 相似，且 $AB:CE=2:1$，故面积比为 $4:1$。","设 $[CEF]=a$。利用同底或共高关系可得 $[DEF]=a$、$[CBF]=2a$、$[DAF]=4a$。","于是 $[AFED]=[DAF]+[DEF]=5a=45$，故 $a=9$。正方形总面积为 $12a=108$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/22"
+  },
+  "amc8-2018-q23": {
+    "summary": "Choose three vertices of a regular octagon uniformly to form a triangle. Find the probability that at least one triangle side is also an octagon side.",
+    "summaryZh": "从正八边形的八个顶点中等可能地选三个组成三角形。求该三角形至少有一条边也是八边形边的概率。",
+    "answer": "D. $\\frac57$",
+    "answerZh": "D．$\\frac57$",
+    "methods": [{"title":"Count triangles containing octagon edges","titleZh":"计算含八边形边的三角形","topics":[{"en":"Inclusion-exclusion","zh":"容斥原理"},{"en":"Combinations","zh":"组合"}],"steps":["For each of the $8$ octagon sides, choose the third vertex in $6$ ways, giving $48$ incidences.","A triangle formed by three consecutive vertices contains two octagon sides; there are $8$ such triangles, each counted twice. Hence the favourable count is $48-8=40$.","There are $\\binom83=56$ triangles total, so the probability is $40/56=5/7$."],"stepsZh":["对八边形的每条边，第三个顶点有 $6$ 种选择，共计 $8\\cdot6=48$ 次计数。","由三个连续顶点组成的三角形含两条八边形边，共有 $8$ 个，且每个被重复计算一次。因此有利三角形数为 $48-8=40$。","三角形总数为 $\\binom83=56$，概率为 $40/56=5/7$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/23"
+  },
+  "amc8-2018-q24": {
+    "summary": "In a cube of edge length $s$, $C$ and $E$ are opposite vertices. Points $J$ and $I$ are the midpoints of opposite parallel edges $FB$ and $HD$. The planar cross-section $EJCI$ is a rhombus whose diagonals are $EC$ and $JI$. If $R$ is its area divided by a face area, find $R^2$.",
+    "summaryZh": "在棱长为 $s$ 的正方体中，$C,E$ 为相对顶点；$J,I$ 分别是两条相对平行棱 $FB,HD$ 的中点。平面截面 $EJCI$ 为菱形，其对角线为 $EC,JI$。若 $R$ 为截面面积与一个正方形面的面积之比，求 $R^2$。",
+    "answer": "C. $\\frac32$",
+    "answerZh": "C．$\\frac32$",
+    "methods": [{"title":"Use the rhombus diagonals","titleZh":"利用菱形对角线","topics":[{"en":"Cube geometry","zh":"正方体几何"},{"en":"Rhombus area","zh":"菱形面积"}],"steps":["The space diagonal is $EC=s\\sqrt3$. The segment between the two edge midpoints has the same length as a face diagonal, $JI=s\\sqrt2$.","The rhombus area is $\\frac12(EC)(JI)=\\frac12s^2\\sqrt6$.","Dividing by the face area $s^2$ gives $R=\\sqrt6/2$, so $R^2=6/4=3/2$."],"stepsZh":["空间对角线 $EC=s\\sqrt3$；两条相对棱中点之间的线段与面对角线等长，故 $JI=s\\sqrt2$。","菱形面积为 $\\frac12(EC)(JI)=\\frac12s^2\\sqrt6$。","除以面面积 $s^2$ 得 $R=\\sqrt6/2$，所以 $R^2=6/4=3/2$。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/24"
+  },
+  "amc8-2018-q25": {
+    "summary": "How many perfect cubes lie in the inclusive interval from $2^8+1$ to $2^{18}+1$?",
+    "summaryZh": "闭区间 $[2^8+1,\\,2^{18}+1]$ 内有多少个完全立方数？",
+    "answer": "E. $58$",
+    "answerZh": "E．$58$",
+    "methods": [{"title":"Identify the first and last cube roots","titleZh":"确定首尾立方根","topics":[{"en":"Perfect cubes","zh":"完全立方数"},{"en":"Counting integers","zh":"整数计数"}],"steps":["The lower bound is $2^8+1=257$, and $6^3=216<257<343=7^3$, so the first cube is $7^3$.","Since $2^{18}=(2^6)^3=64^3$, the largest cube not exceeding $2^{18}+1$ is $64^3$.","The cubes are $7^3,8^3,\\ldots,64^3$, a total of $64-7+1=58$."],"stepsZh":["下界为 $2^8+1=257$，而 $6^3=216<257<343=7^3$，所以第一个立方数为 $7^3$。","因 $2^{18}=(2^6)^3=64^3$，不超过 $2^{18}+1$ 的最大立方数为 $64^3$。","所求为 $7^3,8^3,\\ldots,64^3$，共 $64-7+1=58$ 个。"]}],
+    "sourceUrl": "https://live.poshenloh.com/past-contests/amc8/2018/problem/25"
+  }
+}
