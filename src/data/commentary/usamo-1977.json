@@ -1,0 +1,186 @@
+{
+  "usamo-1977-q1": {
+    "summary": "Determine all pairs of positive integers $(m,n)$ for which the polynomial $$1+x^n+x^{2n}+\\cdots+x^{mn}$$ is divisible by $$1+x+x^2+\\cdots+x^m.$$",
+    "summaryZh": "求所有正整数对 $(m,n)$，使多项式 $$1+x^n+x^{2n}+\\cdots+x^{mn}$$ 能被 $$1+x+x^2+\\cdots+x^m$$ 整除。",
+    "answer": "Exactly the pairs satisfying $\\gcd(m+1,n)=1$.",
+    "answerZh": "恰为满足 $\\gcd(m+1,n)=1$ 的所有正整数对。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1977_USAMO_Problems/Problem_1",
+    "methods": [
+      {
+        "title": "Test the nontrivial roots of unity",
+        "titleZh": "检验非平凡单位根",
+        "topics": [
+          {"en": "Roots of unity", "zh": "单位根"},
+          {"en": "Polynomial divisibility", "zh": "多项式整除"},
+          {"en": "Greatest common divisor", "zh": "最大公因数"}
+        ],
+        "steps": [
+          "Write $G(x)=1+x+\\cdots+x^m$. Its roots are precisely the nontrivial $(m+1)$st roots of unity, and they are all simple.",
+          "Let $\\zeta$ be such a root. Since $\\zeta^{m+1}=1$, $$F(\\zeta)=1+\\zeta^n+\\cdots+\\zeta^{mn}.$$ This geometric sum is $0$ exactly when $\\zeta^n\\ne1$; if $\\zeta^n=1$, its value is $m+1$.",
+          "Therefore $G$ divides $F$ exactly when no nontrivial $(m+1)$st root of unity is also an $n$th root of unity. Such a common nontrivial root exists exactly when $d=\\gcd(m+1,n)>1$, for then $e^{2\\pi i/d}$ is one. Hence divisibility holds exactly when $\\gcd(m+1,n)=1$."
+        ],
+        "stepsZh": [
+          "记 $G(x)=1+x+\\cdots+x^m$。它的根恰为所有非平凡的 $(m+1)$ 次单位根，并且这些根均为单根。",
+          "任取这样的根 $\\zeta$。由 $\\zeta^{m+1}=1$，有 $$F(\\zeta)=1+\\zeta^n+\\cdots+\\zeta^{mn}.$$ 该等比和在 $\\zeta^n\\ne1$ 时等于 $0$；若 $\\zeta^n=1$，其值为 $m+1$。",
+          "所以 $G\\mid F$ 当且仅当不存在同时为 $n$ 次单位根的非平凡 $(m+1)$ 次单位根。这样的公共非平凡单位根存在，当且仅当 $d=\\gcd(m+1,n)>1$；此时 $e^{2\\pi i/d}$ 即为一例。因此所求条件恰为 $\\gcd(m+1,n)=1$。"
+        ]
+      },
+      {
+        "title": "Use the gcd of two binomials",
+        "titleZh": "利用两个二项式多项式的最大公因式",
+        "topics": [
+          {"en": "Polynomial gcd", "zh": "多项式最大公因式"},
+          {"en": "Geometric series", "zh": "等比数列"}
+        ],
+        "steps": [
+          "The required divisibility is equivalent to $$(x^{m+1}-1)(x^n-1)\\mid(x^{n(m+1)}-1)(x-1).$$ Both binomials on the left divide $x^{n(m+1)}-1$.",
+          "Over $\\mathbb C$, $$\\gcd(x^{m+1}-1,x^n-1)=x^d-1,\\qquad d=\\gcd(m+1,n).$$ Because all roots involved are simple, the displayed product divides the right side exactly when this common factor divides the extra factor $x-1$.",
+          "Now $x^d-1\\mid x-1$ holds exactly for $d=1$. Thus again $\\gcd(m+1,n)=1$."
+        ],
+        "stepsZh": [
+          "把两个等比和写成分式，原整除关系等价于 $$(x^{m+1}-1)(x^n-1)\\mid(x^{n(m+1)}-1)(x-1).$$ 左侧的两个二项式都整除 $x^{n(m+1)}-1$。",
+          "在 $\\mathbb C[x]$ 中，$$\\gcd(x^{m+1}-1,x^n-1)=x^d-1,\\qquad d=\\gcd(m+1,n).$$ 所有相关根均为单根，故左侧乘积整除右侧，当且仅当这个公共因式能被额外因子 $x-1$ 吸收。",
+          "$x^d-1\\mid x-1$ 当且仅当 $d=1$，所以仍得到 $\\gcd(m+1,n)=1$。"
+        ]
+      }
+    ]
+  },
+  "usamo-1977-q2": {
+    "summary": "Triangles $ABC$ and $A'B'C'$ lie in the same plane, with $AA'$, $BB'$, and $CC'$ mutually parallel. For a fixed orientation of the plane, let $[XYZ]$ denote the signed area of triangle $XYZ$. Prove that $$3([ABC]+[A'B'C'])=[AB'C']+[BC'A']+[CA'B']+[A'BC]+[B'CA]+[C'AB].$$",
+    "summaryZh": "同一平面内的三角形 $ABC$ 与 $A'B'C'$ 满足 $AA',BB',CC'$ 互相平行。固定平面方向，并用 $[XYZ]$ 表示三角形 $XYZ$ 的有向面积。证明 $$3([ABC]+[A'B'C'])=[AB'C']+[BC'A']+[CA'B']+[A'BC]+[B'CA]+[C'AB].$$",
+    "answer": "The signed-area identity holds.",
+    "answerZh": "所给有向面积恒等式成立。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1977_USAMO_Problems/Problem_2",
+    "methods": [
+      {
+        "title": "Rotate the parallel direction to vertical and compare coefficients",
+        "titleZh": "把公共平行方向旋至竖直并比较系数",
+        "topics": [
+          {"en": "Oriented area", "zh": "有向面积"},
+          {"en": "Coordinate geometry", "zh": "解析几何"},
+          {"en": "Determinants", "zh": "行列式"}
+        ],
+        "steps": [
+          "Rotate coordinates so that the three parallel lines are vertical. Then for some real numbers $x_1,x_2,x_3$ we may write $A=(x_1,y_1)$, $A'=(x_1,y'_1)$, and similarly $B=(x_2,y_2)$, $B'=(x_2,y'_2)$, $C=(x_3,y_3)$, $C'=(x_3,y'_3)$.",
+          "Twice the signed area is $$D(X,Y,Z)=x_X(y_Y-y_Z)+x_Y(y_Z-y_X)+x_Z(y_X-y_Y).$$ It is therefore linear in the six height variables $y_1,y_2,y_3,y'_1,y'_2,y'_3$.",
+          "On the right-hand side, $y_1$ occurs in $D(A,B',C')$, $D(B',C,A)$, and $D(C',A,B)$, each time with coefficient $x_3-x_2$. Its total coefficient is therefore $3(x_3-x_2)$, exactly its coefficient in $3D(A,B,C)$. The same calculation with primes gives coefficient $3(x_3-x_2)$ for $y'_1$ in $3D(A',B',C')$.",
+          "Cycling the indices $1,2,3$ proves that the coefficients of all six height variables agree on the two sides. Hence the doubled signed areas, and therefore the signed areas themselves, satisfy the required identity."
+        ],
+        "stepsZh": [
+          "旋转坐标系，使三条平行线都竖直。于是可写成 $A=(x_1,y_1)$、$A'=(x_1,y'_1)$，类似地有 $B=(x_2,y_2)$、$B'=(x_2,y'_2)$、$C=(x_3,y_3)$、$C'=(x_3,y'_3)$。",
+          "有向面积的两倍为 $$D(X,Y,Z)=x_X(y_Y-y_Z)+x_Y(y_Z-y_X)+x_Z(y_X-y_Y).$$ 因而它关于六个高度变量 $y_1,y_2,y_3,y'_1,y'_2,y'_3$ 都是线性的。",
+          "在等式右端，$y_1$ 分别出现在 $D(A,B',C')$、$D(B',C,A)$、$D(C',A,B)$ 中，每次的系数均为 $x_3-x_2$，总系数为 $3(x_3-x_2)$，恰等于左端 $3D(A,B,C)$ 中的系数。对带撇变量同理，$y'_1$ 的系数也为 $3(x_3-x_2)$。",
+          "对指标 $1,2,3$ 作循环置换，即知六个高度变量在两端的系数全部一致。因此两端的二倍有向面积相等，原有向面积恒等式得证。"
+        ]
+      }
+    ]
+  },
+  "usamo-1977-q3": {
+    "summary": "The polynomial $t^4+t^3-1$ has two real roots $a$ and $b$. Prove that their product $z=ab$ is a root of $$z^6+z^4+z^3-z^2-1=0.$$",
+    "summaryZh": "多项式 $t^4+t^3-1$ 有两个实根 $a,b$。证明它们的乘积 $z=ab$ 满足 $$z^6+z^4+z^3-z^2-1=0$$。",
+    "answer": "The product $z=ab$ satisfies $z^6+z^4+z^3-z^2-1=0$.",
+    "answerZh": "乘积 $z=ab$ 满足 $z^6+z^4+z^3-z^2-1=0$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1977_USAMO_Problems/Problem_3",
+    "methods": [
+      {
+        "title": "Eliminate the sum of the two real roots",
+        "titleZh": "消去两个实根之和",
+        "topics": [
+          {"en": "Vieta's formulas", "zh": "韦达定理"},
+          {"en": "Symmetric polynomials", "zh": "对称多项式"},
+          {"en": "Elimination", "zh": "消元法"}
+        ],
+        "steps": [
+          "Let the four roots be $a,b,c,d$, and put $s=a+b$, $z=ab$. Vieta's formulas give $a+b+c+d=-1$, $ab+ac+ad+bc+bd+cd=0$, $abc+abd+acd+bcd=0$, and $abcd=-1$.",
+          "Since $a,b$ are real, $z$ is real and nonzero. We have $c+d=-1-s$ and $cd=-1/z$. The second elementary-symmetric relation becomes $$z+s(-1-s)-\\frac1z=0,$$ or $$z^2-1=zs(s+1).$$",
+          "The third relation gives $$z(c+d)+cd\\,s=0,$$ so $-z(1+s)-s/z=0$. Hence $$s(z^2+1)=-z^2,\\qquad s=-\\frac{z^2}{z^2+1},\\qquad s+1=\\frac1{z^2+1}.$$",
+          "Substitution into $z^2-1=zs(s+1)$ yields $$(z^2-1)(z^2+1)^2+z^3=0.$$ Expanding gives exactly $$z^6+z^4+z^3-z^2-1=0,$$ as required."
+        ],
+        "stepsZh": [
+          "设四个根为 $a,b,c,d$，并令 $s=a+b$、$z=ab$。由韦达定理，$a+b+c+d=-1$，$ab+ac+ad+bc+bd+cd=0$，$abc+abd+acd+bcd=0$，且 $abcd=-1$。",
+          "因 $a,b$ 为实根，$z$ 为非零实数。又有 $c+d=-1-s$、$cd=-1/z$。第二个基本对称关系化为 $$z+s(-1-s)-\\frac1z=0,$$ 即 $$z^2-1=zs(s+1)$$。",
+          "第三个关系给出 $$z(c+d)+cd\\,s=0,$$ 所以 $-z(1+s)-s/z=0$。于是 $$s(z^2+1)=-z^2,\\qquad s=-\\frac{z^2}{z^2+1},\\qquad s+1=\\frac1{z^2+1}$$。",
+          "代入 $z^2-1=zs(s+1)$，得到 $$(z^2-1)(z^2+1)^2+z^3=0$$。展开即为 $$z^6+z^4+z^3-z^2-1=0,$$ 得证。"
+        ]
+      },
+      {
+        "title": "Form the polynomial of all pairwise root products",
+        "titleZh": "构造所有两两根乘积的多项式",
+        "topics": [
+          {"en": "Vieta's formulas", "zh": "韦达定理"},
+          {"en": "Elementary symmetric functions", "zh": "基本对称函数"}
+        ],
+        "steps": [
+          "For the roots $r_1,r_2,r_3,r_4$, let $e_1,e_2,e_3,e_4$ be their elementary symmetric functions. Here $(e_1,e_2,e_3,e_4)=(-1,0,0,-1)$.",
+          "Expanding $P(z)=\\prod_{i<j}(z-r_ir_j)$ and collecting symmetric terms gives $$P(z)=z^6-e_2z^5+(e_1e_3-e_4)z^4+(-e_1^2e_4+2e_2e_4-e_3^2)z^3+(e_1e_3e_4-e_4^2)z^2-e_2e_4^2z+e_4^3.$$",
+          "Substituting the four values yields $$P(z)=z^6+z^4+z^3-z^2-1.$$ Every pairwise product of roots, in particular the product of the two real roots, is a zero of $P$."
+        ],
+        "stepsZh": [
+          "设四根为 $r_1,r_2,r_3,r_4$，其基本对称函数为 $e_1,e_2,e_3,e_4$。本题中 $(e_1,e_2,e_3,e_4)=(-1,0,0,-1)$。",
+          "展开 $P(z)=\\prod_{i<j}(z-r_ir_j)$ 并按对称项整理，得到 $$P(z)=z^6-e_2z^5+(e_1e_3-e_4)z^4+(-e_1^2e_4+2e_2e_4-e_3^2)z^3+(e_1e_3e_4-e_4^2)z^2-e_2e_4^2z+e_4^3$$。",
+          "代入四个数值，得 $$P(z)=z^6+z^4+z^3-z^2-1$$。任意两个原多项式根的乘积都是 $P$ 的根，特别地，两个实根的乘积满足所求方程。"
+        ]
+      }
+    ]
+  },
+  "usamo-1977-q4": {
+    "summary": "In tetrahedron $ABCD$, let $M$ and $N$ be the midpoints of the opposite edges $AB$ and $CD$. Prove that $MN$ is perpendicular to both $AB$ and $CD$ if and only if $$AC=BD\\quad\\text{and}\\quad AD=BC.$$",
+    "summaryZh": "在四面体 $ABCD$ 中，$M,N$ 分别为对边 $AB,CD$ 的中点。证明：$MN$ 同时垂直于 $AB$ 与 $CD$，当且仅当 $$AC=BD\\quad\\text{且}\\quad AD=BC$$。",
+    "answer": "$MN\\perp AB$ and $MN\\perp CD$ exactly when $AC=BD$ and $AD=BC$.",
+    "answerZh": "$MN\\perp AB$ 且 $MN\\perp CD$，当且仅当 $AC=BD$ 且 $AD=BC$。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1977_USAMO_Problems/Problem_4",
+    "methods": [
+      {
+        "title": "Translate both directions into dot products",
+        "titleZh": "把两个方向都化为点积恒等式",
+        "topics": [
+          {"en": "Vectors in space", "zh": "空间向量"},
+          {"en": "Dot product", "zh": "点积"},
+          {"en": "Midpoints", "zh": "中点"}
+        ],
+        "steps": [
+          "Choose an origin and denote the position vectors of the vertices by $\\mathbf a,\\mathbf b,\\mathbf c,\\mathbf d$. Since $M=(A+B)/2$ and $N=(C+D)/2$, a vector parallel to $MN$ is $$\\mathbf w=\\mathbf a+\\mathbf b-\\mathbf c-\\mathbf d.$$",
+          "Put $$E_1=\\mathbf w\\cdot(\\mathbf a-\\mathbf b),\\qquad E_2=\\mathbf w\\cdot(\\mathbf c-\\mathbf d).$$ The two perpendicularities are equivalent to $E_1=E_2=0$.",
+          "Direct expansion gives $$E_1+E_2=|\\mathbf a-\\mathbf d|^2-|\\mathbf b-\\mathbf c|^2=AD^2-BC^2$$ and $$E_1-E_2=|\\mathbf a-\\mathbf c|^2-|\\mathbf b-\\mathbf d|^2=AC^2-BD^2.$$",
+          "Thus $E_1=E_2=0$ implies $AD=BC$ and $AC=BD$. Conversely, these two length equalities make both $E_1+E_2$ and $E_1-E_2$ zero, hence $E_1=E_2=0$. This proves both implications."
+        ],
+        "stepsZh": [
+          "任取原点，以 $\\mathbf a,\\mathbf b,\\mathbf c,\\mathbf d$ 表示四个顶点的位置向量。由 $M=(A+B)/2$、$N=(C+D)/2$，向量 $$\\mathbf w=\\mathbf a+\\mathbf b-\\mathbf c-\\mathbf d$$ 与 $MN$ 平行。",
+          "令 $$E_1=\\mathbf w\\cdot(\\mathbf a-\\mathbf b),\\qquad E_2=\\mathbf w\\cdot(\\mathbf c-\\mathbf d)$$。两个垂直条件等价于 $E_1=E_2=0$。",
+          "直接展开可得 $$E_1+E_2=|\\mathbf a-\\mathbf d|^2-|\\mathbf b-\\mathbf c|^2=AD^2-BC^2$$ 以及 $$E_1-E_2=|\\mathbf a-\\mathbf c|^2-|\\mathbf b-\\mathbf d|^2=AC^2-BD^2$$。",
+          "因此 $E_1=E_2=0$ 推出 $AD=BC$、$AC=BD$。反之，这两个边长等式使 $E_1+E_2$ 与 $E_1-E_2$ 都为零，从而 $E_1=E_2=0$。两个方向均得证。"
+        ]
+      }
+    ]
+  },
+  "usamo-1977-q5": {
+    "summary": "Let $0<p\\le q$, and let $a,b,c,d,e$ be five positive real numbers in $[p,q]$. Prove that $$(a+b+c+d+e)\\left(\\frac1a+\\frac1b+\\frac1c+\\frac1d+\\frac1e\\right)\\le25+6\\left(\\sqrt{\\frac pq}-\\sqrt{\\frac qp}\\right)^2,$$ and determine all equality cases.",
+    "summaryZh": "设 $0<p\\le q$，且五个正实数 $a,b,c,d,e$ 均属于区间 $[p,q]$。证明 $$(a+b+c+d+e)\\left(\\frac1a+\\frac1b+\\frac1c+\\frac1d+\\frac1e\\right)\\le25+6\\left(\\sqrt{\\frac pq}-\\sqrt{\\frac qp}\\right)^2,$$ 并求出全部等号情形。",
+    "answer": "If $p=q$, equality is automatic. If $p<q$, equality holds exactly for a $2$-to-$3$ split between the endpoints $p$ and $q$.",
+    "answerZh": "若 $p=q$，等号自动成立。若 $p<q$，等号成立当且仅当五个数在端点 $p,q$ 之间按 $2:3$ 分配。",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php?title=1977_USAMO_Problems/Problem_5",
+    "methods": [
+      {
+        "title": "Push each variable to an endpoint by convexity",
+        "titleZh": "利用凸性把每个变量推到端点",
+        "topics": [
+          {"en": "Convexity", "zh": "凸性"},
+          {"en": "Extremal principle", "zh": "极值原理"},
+          {"en": "Equality cases", "zh": "等号条件"}
+        ],
+        "steps": [
+          "Fix four variables in $F=(a+b+c+d+e)(1/a+1/b+1/c+1/d+1/e)$ and call the fifth $x$. Then $$F=(R+x)(S+1/x)=RS+1+Sx+R/x,$$ where $R,S>0$ are constant.",
+          "Since $F''(x)=2R/x^3>0$, its maximum on $[p,q]$ is at an endpoint. Applying this successively to all five variables shows that a global maximum occurs with every variable in $\\{p,q\\}$; strict convexity makes this necessary when $p<q$.",
+          "Suppose exactly $k$ variables equal $q$ and $5-k$ equal $p$. Put $r=q/p$. Then $$F=((5-k)+kr)((5-k)+k/r)=25+k(5-k)(r+r^{-1}-2).$$",
+          "For $0\\le k\\le5$, $k(5-k)\\le6$. Thus $$F\\le25+6(r+r^{-1}-2)=25+6\\left(\\sqrt{p/q}-\\sqrt{q/p}\\right)^2.$$ If $p<q$, equality means $k=2$ or $3$; if $p=q$, the interval is a single point."
+        ],
+        "stepsZh": [
+          "在 $F=(a+b+c+d+e)(1/a+1/b+1/c+1/d+1/e)$ 中固定四个变量，把第五个记为 $x$，则 $$F=(R+x)(S+1/x)=RS+1+Sx+R/x,$$ 其中 $R,S>0$ 为常数。",
+          "因 $F''(x)=2R/x^3>0$，它在 $[p,q]$ 上的最大值必取于端点。依次对五个变量应用此结论，整体最大值在所有变量均属于 $\\{p,q\\}$ 时取得；严格凸性说明 $p<q$ 时这也是必要条件。",
+          "设恰有 $k$ 个变量等于 $q$，其余 $5-k$ 个等于 $p$，并令 $r=q/p$。则 $$F=((5-k)+kr)((5-k)+k/r)=25+k(5-k)(r+r^{-1}-2)$$。",
+          "对 $0\\le k\\le5$，有 $k(5-k)\\le6$，所以 $$F\\le25+6(r+r^{-1}-2)=25+6\\left(\\sqrt{p/q}-\\sqrt{q/p}\\right)^2$$。若 $p<q$，取等即 $k=2$ 或 $3$；若 $p=q$，区间退化为单点。"
+        ]
+      }
+    ]
+  }
+}
