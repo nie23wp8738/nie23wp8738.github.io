@@ -1,0 +1,200 @@
+{
+  "imo-1977-q1": {
+    "summary": "Inside square $ABCD$, construct equilateral triangles $ABK$, $BCL$, $CDM$, and $DAN$. Prove that the midpoints of $KL,LM,MN,NK$ and of $AK,BK,BL,CL,CM,DM,DN,AN$ are the twelve vertices of a regular dodecagon.",
+    "summaryZh": "在正方形 $ABCD$ 内部分别以四边 $AB,BC,CD,DA$ 为边作等边三角形 $ABK,BCL,CDM,DAN$。证明：线段 $KL,LM,MN,NK$ 的中点以及 $AK,BK,BL,CL,CM,DM,DN,AN$ 的中点，恰为一个正十二边形的十二个顶点。",
+    "answer": "The twelve specified midpoints lie on one circle and have consecutive central angles $30^\\circ$; hence they form a regular dodecagon.",
+    "answerZh": "这十二个中点位于同一圆上，相邻点所对圆心角均为 $30^\\circ$，因此构成正十二边形。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Locate all twelve midpoints by coordinates",
+        "titleZh": "用坐标确定十二个中点",
+        "topics": [
+          {"en": "Coordinate geometry", "zh": "坐标几何"},
+          {"en": "Equilateral triangles", "zh": "等边三角形"},
+          {"en": "Regular polygons", "zh": "正多边形"}
+        ],
+        "steps": [
+          "A similarity does not affect the conclusion, so place the square at $$A=(-1,-1),\\quad B=(1,-1),\\quad C=(1,1),\\quad D=(-1,1).$$ Put $t=\\sqrt3-1$. Each side has length $2$, so the altitude of each inward equilateral triangle is $\\sqrt3$. Therefore $$K=(0,t),\\quad L=(-t,0),\\quad M=(0,-t),\\quad N=(t,0).$$ This coordinate description completely specifies the required figure.",
+          "The midpoints of $KL,LM,MN,NK$ are the four points $$\\left(\\pm\\frac t2,\\pm\\frac t2\\right),$$ with the four independent sign combinations that occur around the square.",
+          "Set $u=2-\\sqrt3$, so that $t-1=-u$. Taking the averages of the endpoints of $AK,BK,BL,CL,CM,DM,DN,AN$ gives the other eight points $$\\left(\\pm\\frac12,\\pm\\frac u2\\right),\\qquad \\left(\\pm\\frac u2,\\pm\\frac12\\right),$$ with the appropriate independent sign choices.",
+          "The identities $$t^2=2u,\\qquad 1+u^2=4u$$ show that every point in both lists has squared distance $u$ from the origin. Thus all twelve points lie on the circle centered at the center of the square with radius $\\sqrt u$.",
+          "In the first quadrant the three points are $$P=\\left(\\frac12,\\frac u2\\right),\\quad Q=\\left(\\frac t2,\\frac t2\\right),\\quad R=\\left(\\frac u2,\\frac12\\right).$$ Since $$u=2-\\sqrt3=\\tan15^\\circ,$$ their polar angles are respectively $15^\\circ,45^\\circ,75^\\circ$.",
+          "Rotation through $90^\\circ$ about the origin preserves the entire construction. Hence the twelve polar angles are exactly $$15^\\circ+30^\\circ j\\qquad(j=0,1,\\ldots,11).$$ The points are distinct, lie on one circle, and are equally spaced in angle, so they are the vertices of a regular dodecagon."
+        ],
+        "stepsZh": [
+          "相似变换不影响结论，因此取正方形顶点为 $$A=(-1,-1),\\quad B=(1,-1),\\quad C=(1,1),\\quad D=(-1,1)$$。令 $t=\\sqrt3-1$。每条边长为 $2$，向内所作等边三角形的高为 $\\sqrt3$，故 $$K=(0,t),\\quad L=(-t,0),\\quad M=(0,-t),\\quad N=(t,0)$$。这些坐标已经完整确定了题中的构型。",
+          "$KL,LM,MN,NK$ 的四个中点为 $$\\left(\\pm\\frac t2,\\pm\\frac t2\\right),$$ 其中取沿正方形依次出现的四种符号组合。",
+          "令 $u=2-\\sqrt3$，则 $t-1=-u$。分别对 $AK,BK,BL,CL,CM,DM,DN,AN$ 的端点坐标取平均，得到另外八点 $$\\left(\\pm\\frac12,\\pm\\frac u2\\right),\\qquad \\left(\\pm\\frac u2,\\pm\\frac12\\right),$$ 符号按各边所在位置选取。",
+          "由恒等式 $$t^2=2u,\\qquad 1+u^2=4u$$ 可知，上述两组中每一点到原点的距离平方都是 $u$。所以十二点全都位于以正方形中心为圆心、半径为 $\\sqrt u$ 的同一个圆上。",
+          "第一象限中的三个点为 $$P=\\left(\\frac12,\\frac u2\\right),\\quad Q=\\left(\\frac t2,\\frac t2\\right),\\quad R=\\left(\\frac u2,\\frac12\\right)$$。因为 $$u=2-\\sqrt3=\\tan15^\\circ,$$ 所以它们的极角依次为 $15^\\circ,45^\\circ,75^\\circ$。",
+          "整个构型在绕原点旋转 $90^\\circ$ 后保持不变。因此十二个点的极角恰为 $$15^\\circ+30^\\circ j\\qquad(j=0,1,\\ldots,11)$$。它们互不相同、共圆且等角间隔，故正好是一个正十二边形的十二个顶点。"
+        ]
+      }
+    ]
+  },
+  "imo-1977-q2": {
+    "summary": "In a finite sequence of real numbers, the sum of every seven successive terms is negative, while the sum of every eleven successive terms is positive. Determine the maximum possible number of terms.",
+    "summaryZh": "一个有限实数列中，任意连续七项之和均为负数，而任意连续十一项之和均为正数。求该数列最多可以有多少项。",
+    "answer": "$16$ terms.",
+    "answerZh": "最多 $16$ 项。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Double-count overlapping blocks and give an extremal construction",
+        "titleZh": "双重计数重叠区间并给出极值构造",
+        "topics": [
+          {"en": "Sequences", "zh": "数列"},
+          {"en": "Double counting", "zh": "双重计数"},
+          {"en": "Extremal construction", "zh": "极值构造"}
+        ],
+        "steps": [
+          "Assume that at least $17$ terms $a_1,\\ldots,a_{17}$ exist. Consider the sum of all eleven consecutive seven-term sums: $$T=\\sum_{i=1}^{11}\\sum_{j=1}^{7}a_{i+j-1}.$$ Each inner sum is negative, so $T<0$.",
+          "Reverse the order of summation: $$T=\\sum_{j=1}^{7}\\sum_{i=1}^{11}a_{i+j-1}.$$ For each fixed $j$, the inner sum is an eleven-term consecutive sum, hence positive. Thus $T>0$, a contradiction. Therefore the length is at most $16$.",
+          "To attain $16$, use $$5,5,-13,5,5,5,-13,5,5,-13,5,5,5,-13,5,5.$$ This is the first $16$ terms of the period-$7$ sequence with repeating block $(5,5,-13,5,5,5,-13)$.",
+          "Every seven consecutive terms contain five $5$'s and two $-13$'s, so their sum is $$5\\cdot5-2\\cdot13=-1<0.$$",
+          "An eleven-term block can start only at positions $1$ through $6$. Each such block contains exactly eight $5$'s and three $-13$'s, so its sum is $$8\\cdot5-3\\cdot13=1>0.$$ Hence a length of $16$ is possible, and the maximum is $16$."
+        ],
+        "stepsZh": [
+          "反设至少存在 $17$ 项 $a_1,\\ldots,a_{17}$。把其中全部十一个连续七项和相加：$$T=\\sum_{i=1}^{11}\\sum_{j=1}^{7}a_{i+j-1}$$。每个内层和都是负数，所以 $T<0$。",
+          "交换求和次序：$$T=\\sum_{j=1}^{7}\\sum_{i=1}^{11}a_{i+j-1}$$。固定 $j$ 时，内层恰是连续十一项之和，因而为正，所以 $T>0$，矛盾。因此项数至多为 $16$。",
+          "为了达到 $16$，取数列 $$5,5,-13,5,5,5,-13,5,5,-13,5,5,5,-13,5,5$$。它是以 $(5,5,-13,5,5,5,-13)$ 为周期的数列的前 $16$ 项。",
+          "任意连续七项都含五个 $5$ 与两个 $-13$，其和为 $$5\\cdot5-2\\cdot13=-1<0$$。",
+          "连续十一项只能从第 $1$ 至第 $6$ 项开始；每一段都恰含八个 $5$ 与三个 $-13$，其和为 $$8\\cdot5-3\\cdot13=1>0$$。所以 $16$ 项确实可以达到，最大值就是 $16$。"
+        ]
+      }
+    ]
+  },
+  "imo-1977-q3": {
+    "summary": "For an integer $n>2$, let $V_n=\\{1+kn:k=1,2,\\ldots\\}$. An element is indecomposable in $V_n$ if it is not a product of two elements of $V_n$. Prove that some $r\\in V_n$ has two distinct factorizations into indecomposable elements, where order is ignored.",
+    "summaryZh": "给定整数 $n>2$，令 $V_n=\\{1+kn:k=1,2,\\ldots\\}$。若 $m\\in V_n$ 不能写成两个 $V_n$ 中元素的乘积，则称 $m$ 在 $V_n$ 中不可分解。证明：存在 $r\\in V_n$，它能以两种不同方式写成 $V_n$ 中不可分解元素的乘积（只改变因子次序不算不同）。",
+    "answer": "Such an $r$ always exists; one may construct $r=p^hq^h$ from two suitable primes $p\\equiv q\\pmod n$ and the multiplicative order $h$ of their common residue.",
+    "answerZh": "这样的 $r$ 总是存在；可取两个满足 $p\\equiv q\\pmod n$ 的适当素数，并用其公共剩余类的乘法阶 $h$ 构造 $r=p^hq^h$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Use equal prime residues and a minimal return exponent",
+        "titleZh": "利用同剩余素数与最小回归指数",
+        "topics": [
+          {"en": "Modular arithmetic", "zh": "模运算"},
+          {"en": "Prime divisors", "zh": "素因子"},
+          {"en": "Factorization", "zh": "因子分解"}
+        ],
+        "steps": [
+          "First show that infinitely many primes are coprime to $n$ but not congruent to $1\\pmod n$. Otherwise list all of them as $p_1,\\ldots,p_s$, put $P=p_1\\cdots p_s$ (or $P=1$ if the list is empty), and set $N=nP-1>1$.",
+          "Every prime divisor of $N$ is coprime to $n$ and is absent from the list, because $N\\equiv-1\\pmod{p_i}$. Hence every prime divisor of $N$ would be $1\\pmod n$, forcing $N\\equiv1\\pmod n$. But $N\\equiv-1\\pmod n$, impossible because $n>2$.",
+          "There are only finitely many residue classes modulo $n$. Therefore two distinct primes $p,q$ from this infinite set have the same residue $a\\pmod n$, where $\\gcd(a,n)=1$ and $a\\not\\equiv1\\pmod n$. Let $h$ be the least positive integer with $a^h\\equiv1\\pmod n$. Then $h\\ge2$.",
+          "For $0\\le i\\le h$, define $$m_i=p^iq^{h-i}.$$ Each $m_i\\equiv a^h\\equiv1\\pmod n$ and exceeds $1$, so $m_i\\in V_n$.",
+          "Every proper divisor $d>1$ of $m_i$ has the form $p^uq^v$ with $1\\le u+v<h$. Thus $$d\\equiv a^{u+v}\\not\\equiv1\\pmod n$$ by the minimality of $h$. No proper divisor of $m_i$ belongs to $V_n$, so $m_i$ is indecomposable in $V_n$.",
+          "Finally take $r=p^hq^h$. It has the two factorizations $$r=(p^h)(q^h)=(p^{h-1}q)(pq^{h-1}).$$ All four displayed factors are among the $m_i$ and hence are indecomposable. The two factorizations are distinct even when order is ignored: the first uses pure powers of the two primes, whereas each factor in the second contains both primes."
+        ],
+        "stepsZh": [
+          "先证明：与 $n$ 互素但不与 $1$ 模 $n$ 同余的素数有无穷多个。否则把它们全部列为 $p_1,\\ldots,p_s$，令 $P=p_1\\cdots p_s$（若列表为空则令 $P=1$），并取 $N=nP-1>1$。",
+          "$N$ 的每个素因子都与 $n$ 互素；又因 $N\\equiv-1\\pmod{p_i}$，它不在上述列表中。因此 $N$ 的每个素因子都只能与 $1$ 模 $n$ 同余，从而 $N\\equiv1\\pmod n$。但按定义 $N\\equiv-1\\pmod n$，因 $n>2$ 而矛盾。",
+          "模 $n$ 的剩余类只有有限个，所以这个无穷素数集合中存在两个不同素数 $p,q$，满足 $p\\equiv q\\equiv a\\pmod n$，其中 $\\gcd(a,n)=1$ 且 $a\\not\\equiv1\\pmod n$。令 $h$ 为使 $a^h\\equiv1\\pmod n$ 的最小正整数，则 $h\\ge2$。",
+          "对 $0\\le i\\le h$，定义 $$m_i=p^iq^{h-i}$$。由于 $m_i\\equiv a^h\\equiv1\\pmod n$ 且 $m_i>1$，所以 $m_i\\in V_n$。",
+          "$m_i$ 的任一大于 $1$ 的真因子都形如 $d=p^uq^v$，其中 $1\\le u+v<h$。由 $h$ 的最小性，$$d\\equiv a^{u+v}\\not\\equiv1\\pmod n$$。因此 $m_i$ 没有属于 $V_n$ 的真因子，故它在 $V_n$ 中不可分解。",
+          "最后取 $r=p^hq^h$，则 $$r=(p^h)(q^h)=(p^{h-1}q)(pq^{h-1})$$。这四个因子都是某个 $m_i$，因而均不可分解。即使忽略因子顺序，两种分解仍不同：第一种的因子分别是单个素数的幂，而第二种的每个因子都同时含有 $p,q$。"
+        ]
+      }
+    ]
+  },
+  "imo-1977-q4": {
+    "summary": "Let $$f(\\theta)=1-a\\cos\\theta-b\\sin\\theta-A\\cos2\\theta-B\\sin2\\theta,$$ where $a,b,A,B$ are real constants. Prove that if $f(\\theta)\\ge0$ for every real $\\theta$, then $a^2+b^2\\le2$ and $A^2+B^2\\le1$.",
+    "summaryZh": "设 $$f(\\theta)=1-a\\cos\\theta-b\\sin\\theta-A\\cos2\\theta-B\\sin2\\theta,$$ 其中 $a,b,A,B$ 为实常数。证明：若对所有实数 $\\theta$ 都有 $f(\\theta)\\ge0$，则 $a^2+b^2\\le2$ 且 $A^2+B^2\\le1$。",
+    "answer": "$a^2+b^2\\le2$ and $A^2+B^2\\le1$.",
+    "answerZh": "$a^2+b^2\\le2$ 且 $A^2+B^2\\le1$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Pair shifted values to cancel one harmonic at a time",
+        "titleZh": "配对平移后的函数值，逐次消去谐波项",
+        "topics": [
+          {"en": "Trigonometric identities", "zh": "三角恒等式"},
+          {"en": "Amplitude", "zh": "振幅"},
+          {"en": "Inequalities", "zh": "不等式"}
+        ],
+        "steps": [
+          "Because $f$ is nonnegative everywhere, for every real $t$ we have $$0\\le f\\left(t-\\frac\\pi4\\right)+f\\left(t+\\frac\\pi4\\right).$$ The second-harmonic terms cancel, and the addition formulas give $$0\\le2-\\sqrt2\\,(a\\cos t+b\\sin t).\\tag{1}$$",
+          "Let $R=\\sqrt{a^2+b^2}$. If $R>0$, choose $t$ with $\\cos t=a/R$ and $\\sin t=b/R$; if $R=0$, the result is immediate. Substitution into (1) yields $0\\le2-\\sqrt2R$, so $R\\le\\sqrt2$ and therefore $$a^2+b^2\\le2.$$",
+          "To isolate the second harmonic, pair opposite arguments. For every real $t$, $$0\\le f(t)+f(t+\\pi)=2-2(A\\cos2t+B\\sin2t).\\tag{2}$$ Here the first-harmonic terms cancel while the second-harmonic terms agree.",
+          "Let $S=\\sqrt{A^2+B^2}$. If $S>0$, choose $t$ so that $\\cos2t=A/S$ and $\\sin2t=B/S$; such a $t$ exists because $(A/S,B/S)$ lies on the unit circle. Equation (2) gives $0\\le2-2S$, hence $S\\le1$. Thus $$A^2+B^2\\le1,$$ completing the proof."
+        ],
+        "stepsZh": [
+          "因为 $f$ 处处非负，对任意实数 $t$ 都有 $$0\\le f\\left(t-\\frac\\pi4\\right)+f\\left(t+\\frac\\pi4\\right)$$。利用和角公式，二倍角项相互抵消，得到 $$0\\le2-\\sqrt2\\,(a\\cos t+b\\sin t)\\tag{1}$$。",
+          "令 $R=\\sqrt{a^2+b^2}$。若 $R>0$，选择 $t$ 使 $\\cos t=a/R$、$\\sin t=b/R$；若 $R=0$，结论显然。代入 (1) 得 $0\\le2-\\sqrt2R$，故 $R\\le\\sqrt2$，从而 $$a^2+b^2\\le2$$。",
+          "为了分离二倍角项，把相差 $\\pi$ 的两个函数值相加。对任意实数 $t$，$$0\\le f(t)+f(t+\\pi)=2-2(A\\cos2t+B\\sin2t)\\tag{2}$$。此时一次谐波项抵消，而二次谐波项保持相同。",
+          "令 $S=\\sqrt{A^2+B^2}$。若 $S>0$，选择 $t$ 使 $\\cos2t=A/S$、$\\sin2t=B/S$；因为 $(A/S,B/S)$ 在单位圆上，这样的 $t$ 必然存在。由 (2) 得 $0\\le2-2S$，所以 $S\\le1$。因此 $$A^2+B^2\\le1$$，证明完成。"
+        ]
+      }
+    ]
+  },
+  "imo-1977-q5": {
+    "summary": "Let $a,b$ be positive integers. Dividing $a^2+b^2$ by $a+b$ gives quotient $q$ and remainder $r$. Find all ordered pairs $(a,b)$ such that $q^2+r=1977$.",
+    "summaryZh": "设 $a,b$ 为正整数。用 $a+b$ 除 $a^2+b^2$，所得商为 $q$、余数为 $r$。求所有满足 $q^2+r=1977$ 的有序数对 $(a,b)$。",
+    "answer": "$(a,b)\\in\\{(7,50),(37,50),(50,7),(50,37)\\}$.",
+    "answerZh": "$(a,b)\\in\\{(7,50),(37,50),(50,7),(50,37)\\}$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Determine the quotient, then classify a sum of two squares",
+        "titleZh": "先锁定商，再分类平方和",
+        "topics": [
+          {"en": "Division algorithm", "zh": "带余除法"},
+          {"en": "Diophantine equations", "zh": "丢番图方程"},
+          {"en": "Modular arithmetic", "zh": "模运算"}
+        ],
+        "steps": [
+          "Put $s=a+b$. The division algorithm gives $$a^2+b^2=qs+r,\\qquad 0\\le r<s.$$ Since $a^2+b^2\\ge s^2/2$, $$\\frac{s^2}{2}\\le qs+r<(q+1)s,$$ so $s<2q+2$. Hence $s\\le2q+1$ and $r\\le s-1\\le2q$.",
+          "Therefore $$q^2\\le1977=q^2+r\\le q^2+2q<(q+1)^2.$$ Since $44^2=1936<1977<2025=45^2$, it follows that $$q=44,\\qquad r=1977-44^2=41.$$",
+          "The division equation becomes $$a^2+b^2=44(a+b)+41.$$ Completing the squares gives $$(a-22)^2+(b-22)^2=1009.\\tag{1}$$",
+          "Let $x=a-22$ and $y=b-22$. Since $1009\\equiv1\\pmod8$ and squares modulo $8$ are $0,1,4$, one of $x,y$ is odd and the other is divisible by $4$. The absolute value $t$ of the latter is one of $$0,4,8,12,16,20,24,28.$$",
+          "Checking $1009-t^2$ for these eight values gives, respectively, $$1009,993,945,865,753,609,433,225.$$ Only the last is a square, namely $225=15^2$. Thus $$\\{|x|,|y|\\}=\\{28,15\\}.$$",
+          "Because $a,b>0$, both $x,y\\ge-21$, so the coordinate with absolute value $28$ must be $28$; the other is $15$ or $-15$. Restoring $a=x+22$, $b=y+22$ and allowing the two coordinates to swap gives $$(a,b)=(50,37),(50,7),(37,50),(7,50).$$",
+          "For these pairs, $a+b$ is $87$ or $57$, so $0\\le41<a+b$. Hence the quotient and remainder really are $44$ and $41$, and $44^2+41=1977$. All four pairs work, and the list is complete."
+        ],
+        "stepsZh": [
+          "令 $s=a+b$。由带余除法，$$a^2+b^2=qs+r,\\qquad 0\\le r<s$$。又因 $a^2+b^2\\ge s^2/2$，有 $$\\frac{s^2}{2}\\le qs+r<(q+1)s$$，所以 $s<2q+2$。于是 $s\\le2q+1$ 且 $r\\le s-1\\le2q$。",
+          "因此 $$q^2\\le1977=q^2+r\\le q^2+2q<(q+1)^2$$。由于 $44^2=1936<1977<2025=45^2$，必有 $$q=44,\\qquad r=1977-44^2=41$$。",
+          "带余除法等式化为 $$a^2+b^2=44(a+b)+41$$。配方得到 $$(a-22)^2+(b-22)^2=1009\\tag{1}$$。",
+          "令 $x=a-22$、$y=b-22$。因为 $1009\\equiv1\\pmod8$，而平方模 $8$ 只能为 $0,1,4$，所以 $x,y$ 中一个为奇数，另一个能被 $4$ 整除。后者的绝对值 $t$ 只能是 $$0,4,8,12,16,20,24,28$$ 之一。",
+          "依次计算这八种情形的 $1009-t^2$，得到 $$1009,993,945,865,753,609,433,225$$。其中只有最后一个是完全平方数，即 $225=15^2$。所以 $$\\{|x|,|y|\\}=\\{28,15\\}$$。",
+          "因为 $a,b>0$，故 $x,y\\ge-21$，所以绝对值为 $28$ 的坐标只能取 $28$；另一个坐标可以是 $15$ 或 $-15$。再由 $a=x+22$、$b=y+22$ 并交换两坐标，得到 $$(a,b)=(50,37),(50,7),(37,50),(7,50)$$。",
+          "对这些数对，$a+b$ 等于 $87$ 或 $57$，所以 $0\\le41<a+b$。故商与余数确实分别为 $44,41$，并且 $44^2+41=1977$。四个数对全部成立，分类完整。"
+        ]
+      }
+    ]
+  },
+  "imo-1977-q6": {
+    "summary": "Let $f:\\mathbb Z_{>0}\\to\\mathbb Z_{>0}$. Prove that if $$f(n+1)>f(f(n))$$ for every positive integer $n$, then $f(n)=n$ for every positive integer $n$.",
+    "summaryZh": "设 $f:\\mathbb Z_{>0}\\to\\mathbb Z_{>0}$。证明：若对每个正整数 $n$ 都有 $$f(n+1)>f(f(n)),$$ 则对每个正整数 $n$ 都有 $f(n)=n$。",
+    "answer": "$f(n)=n$ for every positive integer $n$.",
+    "answerZh": "对每个正整数 $n$，都有 $f(n)=n$。",
+    "sourceUrl": "https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf#page=1",
+    "methods": [
+      {
+        "title": "Bootstrap a lower bound, then force monotonicity",
+        "titleZh": "逐级提升下界，再迫使函数单调",
+        "topics": [
+          {"en": "Functions on integers", "zh": "整数集上的函数"},
+          {"en": "Mathematical induction", "zh": "数学归纳法"},
+          {"en": "Monotonicity", "zh": "单调性"}
+        ],
+        "steps": [
+          "We first prove by induction on $k$ that $$f(m)\\ge k\\qquad\\text{for every }m\\ge k.\\tag{1}$$ For $k=1$, this is true because all values of $f$ are positive integers.",
+          "Assume (1) holds for some $k$, and let $m\\ge k+1$. Then $m-1\\ge k$, so $f(m-1)\\ge k$. Applying the induction hypothesis again, now to the argument $f(m-1)$, gives $f(f(m-1))\\ge k$. Therefore $$f(m)>f(f(m-1))\\ge k.$$ Since $f(m)$ is an integer, $f(m)\\ge k+1$. This completes the induction.",
+          "Taking $k=m$ in (1) yields $$f(m)\\ge m\\qquad(m\\ge1).\\tag{2}$$ In particular, applying (2) to the positive integer $f(n)$ gives $f(f(n))\\ge f(n)$.",
+          "The hypothesis now implies $$f(n+1)>f(f(n))\\ge f(n),$$ so $f$ is strictly increasing on the positive integers.",
+          "If $f(n)\\ge n+1$ for some $n$, strict monotonicity would give $$f(f(n))\\ge f(n+1),$$ contradicting the hypothesis. Hence $f(n)\\le n$ for every $n$. Combined with (2), this gives $$f(n)=n$$ for every positive integer $n$."
+        ],
+        "stepsZh": [
+          "先对 $k$ 归纳证明 $$f(m)\\ge k\\qquad\\text{对所有 }m\\ge k\\tag{1}$$。当 $k=1$ 时，由于 $f$ 的值都是正整数，结论成立。",
+          "假设 (1) 对某个 $k$ 成立，并取 $m\\ge k+1$。则 $m-1\\ge k$，所以 $f(m-1)\\ge k$。再把归纳假设应用于自变量 $f(m-1)$，得到 $f(f(m-1))\\ge k$。因此 $$f(m)>f(f(m-1))\\ge k$$。由于 $f(m)$ 是整数，必有 $f(m)\\ge k+1$，归纳完成。",
+          "在 (1) 中取 $k=m$，得到 $$f(m)\\ge m\\qquad(m\\ge1)\\tag{2}$$。特别地，把 (2) 用于正整数 $f(n)$，可得 $f(f(n))\\ge f(n)$。",
+          "原条件于是给出 $$f(n+1)>f(f(n))\\ge f(n)$$，所以 $f$ 在正整数上严格递增。",
+          "若某个 $n$ 满足 $f(n)\\ge n+1$，由严格递增性便有 $$f(f(n))\\ge f(n+1)$$，这与题设矛盾。因此对每个 $n$ 都有 $f(n)\\le n$。再结合 (2)，得到对所有正整数 $n$，$$f(n)=n$$。"
+        ]
+      }
+    ]
+  }
+}
